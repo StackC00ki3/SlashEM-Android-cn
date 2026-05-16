@@ -102,17 +102,23 @@ public class NHW_Status implements NH_Window
 	@Override
 	public void printString(int attr, String str, int append, int color)
 	{
-		if(mOldMode) {
-			if(append == 0 || str.length() < mRows[mCurRow].length()) {
-				mRows[mCurRow] = new SpannableStringBuilder(TextAttr.style(str, attr, color));
-			} else {
-				int nToAppend = str.length() - mRows[mCurRow].length();
-				if(nToAppend > 0)
-					mRows[mCurRow].append(TextAttr.style(str.substring(mRows[mCurRow].length(), str.length()), attr, color));
-			}
-		} else {
-			mRows[mCurRow].append(TextAttr.style(str, attr, color));
+		SpannableStringBuilder row = mRows[mCurRow];
+		String current = row.toString();
+
+		if(append == 0) {
+			mRows[mCurRow] = new SpannableStringBuilder(TextAttr.style(str, attr, color));
+			return;
 		}
+
+		if(str.startsWith(current)) {
+			int nToAppend = str.length() - current.length();
+			if(nToAppend > 0)
+				row.append(TextAttr.style(str.substring(current.length()), attr, color));
+			return;
+		}
+
+		// Status updates sometimes resend the whole row instead of a strict suffix append.
+		mRows[mCurRow] = new SpannableStringBuilder(TextAttr.style(str, attr, color));
 	}
 
 	public void redraw() {
