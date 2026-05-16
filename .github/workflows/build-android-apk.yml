@@ -5,6 +5,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   build-apk:
     runs-on: ubuntu-22.04
@@ -57,8 +60,42 @@ jobs:
       - name: Assemble debug APK
         run: gradle --no-daemon -p android-ci :app:assembleDebug
 
+      - name: Prepare release metadata
+        if: github.event_name != 'pull_request'
+        id: release_meta
+        run: |
+          tag_name="prerelease-${GITHUB_RUN_NUMBER}"
+          source_apk="$(find android-ci/app/build/outputs/apk/debug -name '*.apk' | head -n 1)"
+          if [ -z "$source_apk" ]; then
+            echo "No APK found" >&2
+            exit 1
+          fi
+          release_apk="android-ci/app/build/outputs/apk/debug/SlashEM-cn-v0.0.7E7F3-${tag_name}.apk"
+          cp "$source_apk" "$release_apk"
+          echo "tag_name=$tag_name" >> "$GITHUB_OUTPUT"
+          echo "apk_path=$release_apk" >> "$GITHUB_OUTPUT"
+
+      - name: Upload renamed APK
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: SlashEM-debug-apk
+          path: ${{ steps.release_meta.outputs.apk_path }}
+
       - name: Upload APK
+        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: SlashEM-debug-apk
           path: android-ci/app/build/outputs/apk/debug/*.apk
+
+      - name: Create prerelease tag and attach APK
+        if: github.event_name != 'pull_request'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.release_meta.outputs.tag_name }}
+          name: ${{ steps.release_meta.outputs.tag_name }}
+          prerelease: true
+          target_commitish: ${{ github.sha }}
+          files: ${{ steps.release_meta.outputs.apk_path }}
+          generate_release_notes: true
