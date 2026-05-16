@@ -1,5 +1,6 @@
 #include <string.h>
 #include <errno.h>
+#include <stdio.h>
 #include <jni.h>
 
 #include "hack.h"
@@ -100,6 +101,8 @@ static jmethodID jAskName;
 
 static boolean quit_if_possible;
 
+static void check_jni_exception(const char* where);
+
 //____________________________________________________________________________________
 //
 // Helpers
@@ -108,7 +111,13 @@ jbyteArray create_bytearray(const char* str)
 {
 	int len = str ? strlen(str) : 0;
 	jbyteArray a = (*jEnv)->NewByteArray(jEnv, len);
+	if(a == 0)
+		return 0;
+	if(len == 0)
+		return a;
 	jbyte* e = (*jEnv)->GetByteArrayElements(jEnv, a, 0);
+	if(e == 0)
+		return a;
 	memcpy(e, str, len);
 	(*jEnv)->ReleaseByteArrayElements(jEnv, a, e, 0);
 	return a;
@@ -118,12 +127,34 @@ jbyteArray create_bytearray(const char* str)
 //____________________________________________________________________________________
 void destroy_jobject(jstring jstr)
 {
-	(*jEnv)->DeleteLocalRef(jEnv, jstr);
+	if(jstr)
+		(*jEnv)->DeleteLocalRef(jEnv, jstr);
 }
 
-#define JNICallV(func, ...) (*jEnv)->CallVoidMethod(jEnv, jAppInstance, func, ## __VA_ARGS__);
-#define JNICallI(func, ...) (*jEnv)->CallIntMethod(jEnv, jAppInstance, func, ## __VA_ARGS__);
-#define JNICallO(func, ...) (*jEnv)->CallObjectMethod(jEnv, jAppInstance, func, ## __VA_ARGS__);
+#define JNICallV(func, ...) do { \
+	(*jEnv)->CallVoidMethod(jEnv, jAppInstance, func, ## __VA_ARGS__); \
+	check_jni_exception(#func); \
+} while(0)
+#define JNICallI(func, ...) ({ \
+	jint result = (*jEnv)->CallIntMethod(jEnv, jAppInstance, func, ## __VA_ARGS__); \
+	check_jni_exception(#func); \
+	result; \
+})
+#define JNICallO(func, ...) ({ \
+	jobject result = (*jEnv)->CallObjectMethod(jEnv, jAppInstance, func, ## __VA_ARGS__); \
+	check_jni_exception(#func); \
+	result; \
+})
+
+static void check_jni_exception(const char* where)
+{
+	if((*jEnv)->ExceptionCheck(jEnv))
+	{
+		fprintf(stderr, "SlashEM JNI exception in %s\n", where ? where : "(unknown)");
+		(*jEnv)->ExceptionDescribe(jEnv);
+		(*jEnv)->ExceptionClear(jEnv);
+	}
+}
 
 //____________________________________________________________________________________
 void Java_com_tbd_forkfront_NetHackIO_RunNetHack(JNIEnv* env, jobject thiz, jstring path, jstring username)
@@ -1739,4 +1770,3 @@ int doshowlog()
 	JNICallV(jShowLog, 0);
 	return 0;
 }
-
