@@ -1378,7 +1378,7 @@ boolean at_stairs, falling, portal;
 		pline_The("炽热和烟雾都不见了.");
 
 	/* the message from your quest leader */
-	if (!In_quest(&u.uz0) && at_dgn_entrance("任务") &&
+	if (!In_quest(&u.uz0) && at_dgn_entrance("The Quest") &&
 		!(u.uevent.qexpelled || u.uevent.qcompleted || quest_status.leader_is_dead)) {
 
 		if (u.uevent.qcalled) {

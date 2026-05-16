@@ -311,7 +311,7 @@ dosounds()
 	return;
     }
 #ifdef BLACKMARKET
-    if (!Is_blackmarket(&u.uz) && at_dgn_entrance("独眼龙山姆的黑市") &&
+    if (!Is_blackmarket(&u.uz) && at_dgn_entrance("One-eyed Sam's Market") &&
         !rn2(200)) {
       static const char *blkmar_msg[3] = {
         "你听见有人在抱怨价格太离谱。",
