@@ -114,19 +114,20 @@ public class NetHackIO
 	}
 
 	private static class SelectCmd implements Cmd {
-		long[] items;
+		int[] items;
 
 		SelectCmd(long id, int count) {
-			items = new long[]{id, count};
+			// Menu ids come from native ANY_P.a_int, so they are 32-bit ints.
+			items = new int[]{(int)id, count};
 		}
 
 		SelectCmd(List<MenuItem> items) {
 			if(items == null) {
 				this.items = null;
 			} else {
-				this.items = new long[items.size() * 2];
+				this.items = new int[items.size() * 2];
 				for(int i = 0; i < items.size(); i++) {
-					this.items[i * 2 + 0] = items.get(i).getId();
+					this.items[i * 2 + 0] = (int)items.get(i).getId();
 					this.items[i * 2 + 1] = items.get(i).getCount();
 				}
 			}
@@ -684,7 +685,7 @@ public class NetHackIO
 
 	// ____________________________________________________________________________________
 	@SuppressWarnings("unused")
-	private void addMenu(final int wid, final int tile, final long id, final int acc, final int groupAcc, final int attr, final byte[] text, final int bSelected, final int color)
+	private void addMenu(final int wid, final int tile, final int id, final int acc, final int groupAcc, final int attr, final byte[] text, final int bSelected, final int color)
 	{
 		final String msg = mDecoder.decode(text);
 		mHandler.post(new Runnable()
@@ -716,7 +717,7 @@ public class NetHackIO
 
 	// ____________________________________________________________________________________
 	@SuppressWarnings("unused")
-	private long[] selectMenu(final int wid, final int how, final int reentry)
+	private int[] selectMenu(final int wid, final int how, final int reentry)
 	{
 		//Log.print("nhthread: selectMenu");
 		if(reentry == 0)
@@ -735,17 +736,17 @@ public class NetHackIO
 	}
 
 	// ____________________________________________________________________________________
-	private long[] waitForSelect()
+	private int[] waitForSelect()
 	{
 		incReady();
 		
-		long[] items = null;
+		int[] items = null;
 		
 		Cmd cmd = discardUntil(CmdType.SELECT);
 		if(cmd.type() == CmdType.SELECT)
 			items = ((SelectCmd)cmd).items;
 		else
-			items = new long[1];
+			items = new int[1];
 
 		decReady();
 		return items;
