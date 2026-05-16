@@ -1,5 +1,7 @@
 package com.tbd.forkfront;
 
+import java.nio.charset.StandardCharsets;
+
 public class CP437 implements ByteDecoder
 {
 	@Override
@@ -11,10 +13,47 @@ public class CP437 implements ByteDecoder
 	@Override
 	public String decode(byte[] bytes)
 	{
+		if(looksLikeUtf8(bytes))
+			return new String(bytes, StandardCharsets.UTF_8);
+
 		StringBuilder builder = new StringBuilder(bytes.length);
 		for(byte b : bytes)
 			builder.append(UNICODE[b & 0xff]);
 		return builder.toString();
+	}
+
+	private boolean looksLikeUtf8(byte[] bytes)
+	{
+		boolean sawMultibyte = false;
+		for(int i = 0; i < bytes.length; i++)
+		{
+			int b = bytes[i] & 0xff;
+			if((b & 0x80) == 0)
+				continue;
+
+			int need;
+			if((b & 0xe0) == 0xc0)
+				need = 1;
+			else if((b & 0xf0) == 0xe0)
+				need = 2;
+			else if((b & 0xf8) == 0xf0)
+				need = 3;
+			else
+				return false;
+
+			if(i + need >= bytes.length)
+				return false;
+
+			sawMultibyte = true;
+			for(int j = 1; j <= need; j++)
+			{
+				int cont = bytes[i + j] & 0xff;
+				if((cont & 0xc0) != 0x80)
+					return false;
+			}
+			i += need;
+		}
+		return sawMultibyte;
 	}
 
 	// switched out a few characters that are either missing or look odd
