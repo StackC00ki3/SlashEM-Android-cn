@@ -87,7 +87,7 @@ SYSOBJ = ioctl.o androidmain.o unixtty.o androidunix.o
 NDK ?= /home/botdebug/android-ndk-r9d
 NDK_HOST_TAG ?= linux-x86_64
 SYSROOT ?= $(NDK)/platforms/android-9/arch-arm
-CC ?= $(NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(NDK_HOST_TAG)/bin/arm-linux-androideabi-gcc --sysroot=$(SYSROOT)
+CC = $(NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(NDK_HOST_TAG)/bin/arm-linux-androideabi-gcc --sysroot=$(SYSROOT)
 
 # arm-none-linux-gnueabi-gcc
 
@@ -139,7 +139,7 @@ CC ?= $(NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(NDK_HOST_TAG)/bin/a
 # flags for Linux
 #   compile normally
 # CFLAGS = -O2 -fomit-frame-pointer -I../include
-CFLAGS = -DANDROID -O2 -Wno-format -fsigned-char -I../include
+CFLAGS = -DANDROID -O2 -Wno-format -fsigned-char -I../include -I$(SYSROOT)/usr/include
 #CFLAGS = -DANDROID -g -Wno-format -fsigned-char -I../include
 LFLAGS = -shared -Wl,--fix-cortex-a8
 
