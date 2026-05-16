@@ -517,6 +517,11 @@ public class NHW_Map implements NH_Window
 	// ____________________________________________________________________________________
 	public void printTile(final int x, final int y, final int tile, final int ch, final int col, final int special)
 	{
+		if(x < 0 || x >= TileCols || y < 0 || y >= TileRows)
+		{
+			android.util.Log.e("ForkFront", "Ignoring out-of-bounds tile update x=" + x + " y=" + y + " tile=" + tile);
+			return;
+		}
 		mTiles[y][x].glyph = tile;
 		mTiles[y][x].ch[0] = mDecoder.decode(ch);
 		mTiles[y][x].color = col;

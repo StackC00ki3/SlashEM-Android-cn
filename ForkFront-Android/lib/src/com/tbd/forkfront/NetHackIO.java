@@ -244,7 +244,7 @@ public class NetHackIO
 			try
 			{
 				System.loadLibrary(mLibraryName);
-				RunNetHack(mDataDir);
+				RunNetHack(mDataDir, "");
 			}
 			catch(Exception e)
 			{
@@ -894,6 +894,6 @@ public class NetHackIO
 	}
 
 	// ____________________________________________________________________________________
-	private native void RunNetHack(String path);
+	private native void RunNetHack(String path, String username);
 	private native void SaveNetHackState();
 }
