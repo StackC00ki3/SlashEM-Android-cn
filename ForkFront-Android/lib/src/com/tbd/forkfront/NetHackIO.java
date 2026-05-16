@@ -239,18 +239,18 @@ public class NetHackIO
 		@Override
 		public void run()
 		{
-			Log.print("start native process");
+			android.util.Log.i("ForkFront", "Starting native process path=" + mDataDir);
 
 			try
 			{
 				System.loadLibrary(mLibraryName);
 				RunNetHack(mDataDir, "");
 			}
-			catch(Exception e)
+			catch(Throwable e)
 			{
-				Log.print("EXCEPTED");
+				android.util.Log.e("ForkFront", "Native process threw", e);
 			}
-			Log.print("native process finished");
+			android.util.Log.i("ForkFront", "Native process finished; exiting VM");
 			System.exit(0);
 		}
 	};

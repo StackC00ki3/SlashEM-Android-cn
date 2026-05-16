@@ -102,6 +102,7 @@ static jmethodID jAskName;
 static boolean quit_if_possible;
 
 static void check_jni_exception(const char* where);
+static void terminate_with_reason(int status, const char* reason);
 
 //____________________________________________________________________________________
 //
@@ -228,7 +229,7 @@ boolean SaveAndExit()
 			/* make sure they see the Saving message */
 			display_nhwindow(WIN_MESSAGE, TRUE);
 			exit_nhwindows("Be seeing you...");
-			terminate(EXIT_SUCCESS);
+			terminate_with_reason(EXIT_SUCCESS, "SaveAndExit: save succeeded");
 		}
 		return FALSE;
 	}
@@ -251,7 +252,7 @@ void quit_possible()
 		if(!SaveAndExit())
 		{
 			if(and_yn_function("Error saving game. Quit anyway?", ynchars, 'n') == 'y')
-				terminate(EXIT_SUCCESS);
+				terminate_with_reason(EXIT_SUCCESS, "quit_possible: user chose quit after save error");
 		}
 	}
 }
@@ -285,6 +286,12 @@ void debuglog(const char *fmt, ...)
 	jbyteArray jstr = create_bytearray(buf);
 	JNICallV(jDebugLog, jstr);
 	destroy_jobject(jstr);
+}
+
+static void terminate_with_reason(int status, const char* reason)
+{
+	debuglog("SlashEM exit status=%d reason=%s", status, reason ? reason : "(null)");
+	terminate(status);
 }
 
 // For STATUS_COLORS
@@ -409,7 +416,7 @@ void and_player_selection()
 		{
 		    clearlocks();
 		    and_exit_nhwindows("bye");
-		    terminate(EXIT_SUCCESS);
+		    terminate_with_reason(EXIT_SUCCESS, "and_player_selection: role selection cancelled");
 		}
 
 		/* Select a race, if necessary */
@@ -527,7 +534,7 @@ void and_get_nh_event()
 //		   if possible.
 void and_exit_nhwindows(const char *str)
 {
-	//debuglog("exit_nhwindows");
+	debuglog("and_exit_nhwindows: %s", str ? str : "(null)");
 	iflags.window_inited = FALSE;
 }
 
@@ -1528,7 +1535,7 @@ void and_askname()
 		{
 			clearlocks();
 			and_exit_nhwindows("bye");
-			terminate(EXIT_SUCCESS);
+			terminate_with_reason(EXIT_SUCCESS, "and_askname: user cancelled name prompt");
 		}
 
 		if( pChars[w] == '1' )
