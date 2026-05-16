@@ -84,9 +84,10 @@ SYSOBJ = ioctl.o androidmain.o unixtty.o androidunix.o
 # CC = arm-linux-gcc
 #
 # For cross-compiling with Android NDK
-NDK = /home/botdebug/android-ndk-r9d
-SYSROOT=$(NDK)/platforms/android-9/arch-arm
-CC = $(NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc --sysroot=$(SYSROOT)
+NDK ?= /home/botdebug/android-ndk-r9d
+NDK_HOST_TAG ?= linux-x86_64
+SYSROOT ?= $(NDK)/platforms/android-9/arch-arm
+CC ?= $(NDK)/toolchains/arm-linux-androideabi-4.6/prebuilt/$(NDK_HOST_TAG)/bin/arm-linux-androideabi-gcc --sysroot=$(SYSROOT)
 
 # arm-none-linux-gnueabi-gcc
 
