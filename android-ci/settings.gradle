@@ -1,0 +1,5 @@
+include ':app', ':forkfront'
+
+rootProject.name = 'SlashEM-Android-CI'
+
+project(':forkfront').projectDir = new File(settingsDir, '../ForkFront-Android/lib')

@@ -1,0 +1,34 @@
+plugins {
+  id 'com.android.application'
+}
+
+android {
+  compileSdkVersion 30
+  buildToolsVersion '30.0.3'
+
+  defaultConfig {
+    applicationId 'com.tbd.SlashEM'
+    minSdkVersion 7
+    targetSdkVersion 30
+    versionCode 100
+    versionName '0.0.7E7F3'
+  }
+
+  sourceSets {
+    main {
+      manifest.srcFile '../../sys/android/AndroidManifest.xml'
+      res.srcDirs = ['../../sys/android/res']
+      assets.srcDirs = ['../../sys/android/assets']
+      jniLibs.srcDirs = ['../../sys/android/libs']
+      java.srcDirs = []
+    }
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+}
+
+dependencies {
+  implementation project(':forkfront')
+}
