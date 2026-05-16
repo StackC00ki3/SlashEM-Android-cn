@@ -3,9 +3,6 @@ name: Build Android APK
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
-      - master
   pull_request:
 
 jobs:
@@ -38,7 +35,7 @@ jobs:
         run: sdkmanager "platforms;android-30" "build-tools;30.0.3"
 
       - name: Install native build dependencies
-        run: sudo apt-get update && sudo apt-get install -y bison flex
+        run: sudo apt-get update && sudo apt-get install -y bison flex gcc-multilib g++-multilib
 
       - name: Download legacy Android NDK
         run: |
