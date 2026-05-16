@@ -259,6 +259,8 @@ public class NetHackIO
 	public void sendKeyCmd(char key)
 	{
 		mNhHandler.hideDPad();
+		android.util.Log.i("ForkFront", String.format("Queue KEY 0x%02x '%s'", (int)key & 0xff,
+				key >= 32 && key < 127 ? Character.toString(key) : "?"));
 		mCmdQue.add(new KeyCmd(key));
 	}
 
@@ -266,6 +268,8 @@ public class NetHackIO
 	public void sendDirKeyCmd(char key)
 	{
 		mNhHandler.hideDPad();
+		android.util.Log.i("ForkFront", String.format("Queue DIRKEY 0x%02x '%s'", (int)key & 0xff,
+				key >= 32 && key < 127 ? Character.toString(key) : "?"));
 		mCmdQue.add(new PosCmd(key));
 	}
 
@@ -279,6 +283,7 @@ public class NetHackIO
 	// ____________________________________________________________________________________
 	public void sendLineCmd(String str)
 	{
+		android.util.Log.i("ForkFront", "Queue LINE '" + str + "'");
 		mCmdQue.add(new LineCmd(str));
 	}
 
@@ -445,7 +450,7 @@ public class NetHackIO
 	@SuppressWarnings("unused")
 	private void debugLog(final byte[] cmsg)
 	{
-		Log.print(mDecoder.decode(cmsg));
+		android.util.Log.i("ForkFront", mDecoder.decode(cmsg));
 	}
 
 	// ____________________________________________________________________________________

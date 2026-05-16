@@ -211,7 +211,9 @@ void Java_com_tbd_forkfront_NetHackIO_RunNetHack(JNIEnv* env, jobject thiz, jstr
 	params[0] = "slashem";
 	params[1] = 0;
 
+	debuglog("RunNetHack: entering NetHackMain cwd ready");
 	NetHackMain(1, params);
+	debuglog("RunNetHack: NetHackMain returned");
 }
 
 //____________________________________________________________________________________

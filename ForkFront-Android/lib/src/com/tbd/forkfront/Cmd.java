@@ -197,7 +197,8 @@ public interface Cmd
 				{
 					char ch = seq.get(0).ch;
 					EnumSet<Modifier> mod = seq.get(0).mod;
-					Log.print("cmdpanel: " + Character.toString(ch));
+					android.util.Log.i("ForkFront", "CmdPanel send ch='" + ch + "' nhKey=0x"
+							+ Integer.toHexString(Input.nhKeyFromMod(ch, mod)));
 					mState.handleKeyDown(ch, Input.nhKeyFromMod(ch, mod), Input.toKeyCode(ch), mod, 0, true);
 					seq.remove(0);
 					if(seq.size() > 0)
