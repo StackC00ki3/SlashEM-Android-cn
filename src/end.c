@@ -319,6 +319,9 @@ panic VA_DECL(const char *, str)
 	    Vsprintf(buf,str,VA_ARGS);
 	    raw_print(buf);
 	    paniclog("panic", buf);
+#ifdef ANDROID
+	    debuglog("panic: %s", buf);
+#endif
 	}
 #ifdef WIN32
 	interject(INTERJECT_PANIC);

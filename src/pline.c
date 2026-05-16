@@ -9,6 +9,10 @@
 #include "edog.h"
 #endif
 
+#ifdef ANDROID
+extern void debuglog(const char *fmt, ...);
+#endif
+
 #ifdef OVLB
 
 static boolean no_repeat = FALSE;
@@ -255,6 +259,9 @@ impossible VA_DECL(const char *, s)
 	    char pbuf[BUFSZ];
 	    Vsprintf(pbuf,s,VA_ARGS);
 	    paniclog("impossible", pbuf);
+#ifdef ANDROID
+	    debuglog("impossible: %s", pbuf);
+#endif
 	}
 	vpline(s,VA_ARGS);
 	pline("Program in disorder - perhaps you'd better #quit.");
