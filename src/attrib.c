@@ -13,10 +13,10 @@
 	/* part of the output on gain or loss of attribute */
 static
 const char	* const plusattr[] = {
-	"strong", "smart", "wise", "agile", "tough", "charismatic"
+	"强壮", "敏锐", "智慧", "敏捷", "结实", "迷人"
 },
 		* const minusattr[] = {
-	"weak", "stupid", "foolish", "clumsy", "fragile", "repulsive"
+	"虚弱", "迟钝", "愚蠢", "笨拙", "脆弱", "丑陋"
 };
 
 
@@ -28,102 +28,102 @@ const struct innate {
 	const char *gainstr, *losestr;
 }	arc_abil[] = { {	 1, &(HStealth), "", "" },
 		     {   1, &(HFast), "", "" },
-		     {  10, &(HSearching), "perceptive", "" },
+		     {  10, &(HSearching), "洞察", "" },
 		     {	 0, 0, 0, 0 } },
 
 	bar_abil[] = { {	 1, &(HPoison_resistance), "", "" },
-		     {   7, &(HFast), "quick", "slow" },
-		     {  15, &(HStealth), "stealthy", "" },
+		     {   7, &(HFast), "敏捷", "笨拙" },
+		     {  15, &(HStealth), "潜行的", "" },
 		     {	 0, 0, 0, 0 } },
 
-	cav_abil[] = { {	 7, &(HFast), "quick", "slow" },
-		     {	15, &(HWarning), "sensitive", "" },
+	cav_abil[] = { {	 7, &(HFast), "敏捷", "笨拙" },
+		     {	15, &(HWarning), "感知", "" },
 		     {	 0, 0, 0, 0 } },
 
 	fla_abil[] = { {   1, &(HFire_resistance), "", "" },
-		     {  13, &(HCold_resistance), "warm", "cooler" },
+		     {  13, &(HCold_resistance), "温暖", "凉爽" },
 		     {   0, 0, 0, 0 } },
 
 	hea_abil[] = { {	 1, &(HPoison_resistance), "", "" },
-		     {	15, &(HWarning), "sensitive", "" },
+		     {	15, &(HWarning), "敏感的", "" },
 		     {	 0, 0, 0, 0 } },
 
 	ice_abil[] = { {   1, &(HCold_resistance), "", "" },
-		     {  13, &(HFire_resistance), "cool", "warmer" },
+		     {  13, &(HFire_resistance), "寒冷的", "温暖的" },
 		     {   0, 0, 0, 0 } },
 
-	kni_abil[] = { {	 7, &(HFast), "quick", "slow" },
+	kni_abil[] = { {	 7, &(HFast), "敏捷", "笨拙" },
 		     {	 0, 0, 0, 0 } },
 
 	mon_abil[] = { {   1, &(HFast), "", "" },
 		     {   1, &(HSleep_resistance), "", "" },
 		     {   1, &(HSee_invisible), "", "" },
-		     {   3, &(HPoison_resistance), "healthy", "" },
-		     {   5, &(HStealth), "stealthy", "" },
-		     {   7, &(HWarning), "sensitive", "" },
-		     {   9, &(HSearching), "perceptive", "unaware" },
+		     {   3, &(HPoison_resistance), "健康的", "" },
+		     {   5, &(HStealth), "潜行的", "" },
+		     {   7, &(HWarning), "敏感的", "" },
+		     {   9, &(HSearching), "富有洞察力的", "迟钝的" },
 #if 0
-		     {  11, &(HFire_resistance), "cool", "warmer" },
-		     {  13, &(HCold_resistance), "warm", "cooler" },
-		     {  15, &(HShock_resistance), "insulated", "conductive" },
+		     {  11, &(HFire_resistance), "凉爽的", "温暖的" },
+		     {  13, &(HCold_resistance), "温暖的", "凉爽的" },
+		     {  15, &(HShock_resistance), "绝缘的", "导电的" },
 		     /* WAC -- made the above three attribs techs */
 #endif
-		     {  17, &(HTeleport_control), "controlled","uncontrolled" },
+		     {  17, &(HTeleport_control), "有自控力的","失控的" },
 		     {   0, 0, 0, 0 } },
 
 	nec_abil[] = { {   1, &(HDrain_resistance), "", "" },
 		     {   1, &(HSick_resistance), "", "" },
-		     {   3, &(HUndead_warning), "sensitive", "" },
+		     {   3, &(HUndead_warning), "对亡灵很敏感", "" },
 		     {   0, 0, 0, 0 } },
 
-	pri_abil[] = { {	15, &(HWarning), "sensitive", "" },
-		     {  20, &(HFire_resistance), "cool", "warmer" },
+	pri_abil[] = { {	15, &(HWarning), "敏感的", "" },
+		     {  20, &(HFire_resistance), "凉爽的", "温暖的" },
 		     {	 0, 0, 0, 0 } },
 
 	ran_abil[] = { {   1, &(HSearching), "", "" },
-		     {	 7, &(HStealth), "stealthy", "" },
+		     {	 7, &(HStealth), "潜行的", "" },
 		     {	15, &(HSee_invisible), "", "" },
 		     {	 0, 0, 0, 0 } },
 
 	rog_abil[] = { {	 1, &(HStealth), "", ""  },
-		     {  10, &(HSearching), "perceptive", "" },
+		     {  10, &(HSearching), "敏感的", "" },
 		     {	 0, 0, 0, 0 } },
 
 	sam_abil[] = { {	 1, &(HFast), "", "" },
-		     {  15, &(HStealth), "stealthy", "" },
+		     {  15, &(HStealth), "潜行的", "" },
 		     {	 0, 0, 0, 0 } },
 
-	tou_abil[] = { {	10, &(HSearching), "perceptive", "" },
-		     {	20, &(HPoison_resistance), "hardy", "" },
+	tou_abil[] = { {	10, &(HSearching), "富有洞察力的", "" },
+		     {	20, &(HPoison_resistance), "健康的", "" },
 		     {	 0, 0, 0, 0 } },
 
 	und_abil[] = { {   1, &(HStealth), "", "" },
 		     {   1, &(HDrain_resistance), "", "" },
 		     {   1, &(HSick_resistance), "", "" },
 		     {   1, &(HUndead_warning), "", "" },
-		     {   7, &(HFast), "quick", "slow" },
-		     {   9, &(HPoison_resistance), "hardy", "less healthy" },
+		     {   7, &(HFast), "敏捷", "笨拙" },
+		     {   9, &(HPoison_resistance), "结实", "不再健康的" },
 		     {   0, 0, 0, 0 } },
 
 	val_abil[] = { {	 1, &(HCold_resistance), "", "" },
 		     {	 1, &(HStealth), "", "" },
-		     {   7, &(HFast), "quick", "slow" },
+		     {   7, &(HFast), "敏捷", "笨拙" },
 		     {	 0, 0, 0, 0 } },
 
 #ifdef YEOMAN
 	yeo_abil[] = {
-		     {   7, &(HFast), "quick", "slow" },
-		     {  15, &(HSwimming), "ready to swim","afraid of the water" },
+		     {   7, &(HFast), "敏捷", "笨拙" },
+		     {  15, &(HSwimming), "随时都想下海游泳","对水很害怕" },
 		     {   0, 0, 0, 0 } },
 #endif
 
-	wiz_abil[] = { {	15, &(HWarning), "sensitive", "" },
-		     {  17, &(HTeleport_control), "controlled","uncontrolled" },
+	wiz_abil[] = { {	15, &(HWarning), "敏感的", "" },
+		     {  17, &(HTeleport_control), "有自控力的","失控的" },
 		     {	 0, 0, 0, 0 } },
 
 	/* Intrinsics conferred by race */
 	dop_abil[] = {/* {   1, &(HPolymorph), "", "" },*/
-		       {   9, &(HPolymorph_control), "your choices improve", "choiceless" },
+		       {   9, &(HPolymorph_control), "感觉有更多的选择方向的", "不再自控的" },
 		       {   0, 0, 0, 0 } },
 
 #ifdef DWARF
@@ -132,16 +132,16 @@ const struct innate {
 			{   0, 0, 0, 0 } },
 #endif
 
-	elf_abil[] = { {	4, &(HSleep_resistance), "awake", "tired" },
+	elf_abil[] = { {	4, &(HSleep_resistance), "清醒的", "困倦的" },
 		     {	 0, 0, 0, 0 } },
 
-	gno_abil[] = { {   5, &(HStealth), "stealthy", "" },
+	gno_abil[] = { {   5, &(HStealth), "潜行的", "" },
 /*		     {   9, &(HFast), "quick", "slow" },
 		     {   11, &(HSearching), "perceptive", "unaware" },*/
 		     {   0, 0, 0, 0 } },
 
 	hob_abil[] = { {  1, &(HStealth), "", "" },
-		     {   7, &(HFast), "quick", "slow" },
+		     {   7, &(HFast), "敏捷", "笨拙" },
 		     {   0, 0, 0, 0 } },
 
 
@@ -169,14 +169,14 @@ adjattrib(ndx, incr, msgflg)
 	if ((ndx == A_INT || ndx == A_WIS)
 				&& uarmh && uarmh->otyp == DUNCE_CAP) {
 		if (msgflg == 0)
-		    Your("cap constricts briefly, then relaxes again.");
+		    Your("你的帽子突然紧紧地扣住你的脑袋，过一会又松开了.");
 		return FALSE;
 	}
 
 	if (incr > 0) {
 	    if ((AMAX(ndx) >= ATTRMAX(ndx)) && (ACURR(ndx) >= AMAX(ndx))) {
 		if (msgflg == 0 && flags.verbose)
-		    pline("You're already as %s as you can get.",
+		    pline("你已经到达了你%s所能达到的极限.",
 			  plusattr[ndx]);
 		ABASE(ndx) = AMAX(ndx) = ATTRMAX(ndx); /* just in case */
 		return FALSE;
@@ -193,7 +193,7 @@ adjattrib(ndx, incr, msgflg)
 	} else {
 	    if (ABASE(ndx) <= ATTRMIN(ndx)) {
 		if (msgflg == 0 && flags.verbose)
-		    pline("You're already as %s as you can get.",
+		    pline("你已经到达了你%s所能达到的极限.",
 			  minusattr[ndx]);
 		ABASE(ndx) = ATTRMIN(ndx); /* just in case */
 		return FALSE;
@@ -210,7 +210,7 @@ adjattrib(ndx, incr, msgflg)
 	}
 	if (msgflg <= 0)
 	    You_feel("%s%s!",
-		  (incr > 1 || incr < -1) ? "very ": "",
+		  (incr > 1 || incr < -1) ? "非常": "",
 		  (incr > 0) ? plusattr[ndx] : minusattr[ndx]);
 	flags.botl = 1;
 	if (msgflg <= 1 && moves > 1 && (ndx == A_STR || ndx == A_CON))
@@ -343,7 +343,7 @@ int	i;
 boolean	inc_or_dec;
 {
 #ifdef DEBUG
-	pline("Exercise:");
+	pline("锻炼:");
 #endif
 	if (i == A_INT || i == A_CHA) return;	/* can't exercise these */
 
@@ -392,7 +392,7 @@ exerper()
 			 (u.uhunger > 0) ? WEAK : FAINTING;
 
 #ifdef DEBUG
-		pline("exerper: Hunger checks");
+		pline("调试：饥饿度测试");
 #endif
 		switch (hs) {
 		    case SATIATED:	exercise(A_DEX, FALSE);
@@ -410,7 +410,7 @@ exerper()
 
 		/* Encumberance Checks */
 #ifdef DEBUG
-		pline("exerper: Encumber checks");
+		pline("调试：负重测试");
 #endif
 		switch (near_capacity()) {
 		    case MOD_ENCUMBER:	exercise(A_STR, TRUE); break;
@@ -425,7 +425,7 @@ exerper()
 	/* status checks */
 	if(!(moves % 5)) {
 #ifdef DEBUG
-		pline("exerper: Status checks");
+		pline("调试：内在设定");
 #endif
 		/* KMH, intrinsic patch */
 		if ((HClairvoyant & (INTRINSIC|TIMEOUT)) &&
@@ -452,12 +452,12 @@ exerchk()
 
 #ifdef DEBUG
 	if(moves >= next_check)
-		pline("exerchk: ready to test. multi = %d.", multi);
+		pline("调试：已经准备好，预备执行%d.", multi);
 #endif
 	/*	Are we ready for a test?	*/
 	if(moves >= next_check && !multi) {
 #ifdef DEBUG
-	    pline("exerchk: testing.");
+	    pline("正在测试中.");
 #endif
 	    /*
 	     *	Law of diminishing returns (Part II):
@@ -479,9 +479,9 @@ exerchk()
 		if(i == A_INT || i == A_CHA) continue;/* can't exercise these */
 
 #ifdef DEBUG
-		pline("exerchk: testing %s (%d).",
-			(i == A_STR) ? "Str" : (i == A_WIS) ? "Wis" :
-			(i == A_DEX) ? "Dex" : "Con", AEXE(i));
+		pline("锻炼测试%s (%d).",
+			(i == A_STR) ? "力" : (i == A_WIS) ? "智" :
+			(i == A_DEX) ? "敏" : "体", AEXE(i));
 #endif
 		/*
 		 *	Law of diminishing returns (Part III):
@@ -494,31 +494,31 @@ exerchk()
 		mod_val = sgn(AEXE(i));
 
 #ifdef DEBUG
-		pline("exerchk: changing %d.", i);
+		pline("调试：改变状态.", i);
 #endif
 		if(adjattrib(i, mod_val, -1)) {
 #ifdef DEBUG
-		    pline("exerchk: changed %d.", i);
+		    pline("调试：改变完成%d.", i);
 #endif
 		    /* if you actually changed an attrib - zero accumulation */
 		    AEXE(i) = 0;
 		    /* then print an explanation */
 		    switch(i) {
 		    case A_STR: You((mod_val >0) ?
-				    "must have been exercising." :
-				    "must have been abusing your body.");
+				    "最近一定在锻炼身体." :
+				    "最近一定是在糟蹋自己的身体.");
 				break;
 		    case A_WIS: You((mod_val >0) ?
-				    "must have been very observant." :
-				    "haven't been paying attention.");
+				    "最近一定好好地锻炼了注意力." :
+				    "没有仔细观察事物.");
 				break;
 		    case A_DEX: You((mod_val >0) ?
-				    "must have been working on your reflexes." :
-				    "haven't been working on reflexes lately.");
+				    "最近一定在锻炼肌肉." :
+				    "没有好好地锻炼速度.");
 				break;
 		    case A_CON: You((mod_val >0) ?
-				    "must be leading a healthy life-style." :
-				    "haven't been watching your health.");
+				    "最近过得一定很健康." :
+				    "最近过得很不健康.");
 				break;
 		    }
 		}
@@ -698,7 +698,7 @@ int oldlevel, newlevel;
 			    if(*(abil->losestr))
 				You_feel("%s!", abil->losestr);
 			    else if(*(abil->gainstr))
-				You_feel("less %s!", abil->gainstr);
+				You_feel("不再%s!", abil->gainstr);
 			}
 		}
 	    if (prevabil != *(abil->ability))	/* it changed */

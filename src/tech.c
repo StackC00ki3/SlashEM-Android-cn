@@ -39,47 +39,47 @@ static NEARDATA const char revivables[] = { ALLOW_FLOOROBJ, FOOD_CLASS, 0 };
  
 STATIC_OVL NEARDATA const char *tech_names[] = {
 	"no technique",
-	"berserk",
+	"狂暴",
 	"kiii",
 	"research",
-	"surgery",
-	"reinforce memory",
+	"紧急手术",
+	"强化记忆",
 	"missile flurry",
-	"weapon practice",
+	"操练武器",
 	"eviscerate",
-	"healing hands",
-	"calm steed",
-	"turn undead",
+	"治愈之手",
+	"安抚坐骑",
+	"超度亡灵",
 	"vanish",
-	"cutthroat",
+	"割喉",
 	"blessing",
-	"elemental fist",
-	"primal roar",
-	"liquid leap",
-	"critical strike",
-	"sigil of control",
-	"sigil of tempest",
-	"sigil of discharge",
-	"raise zombies",
-	"revivification",
-	"ward against flame",
-	"ward against ice",
-	"ward against lightning",
-	"tinker",
-	"rage eruption",
+	"元素之拳",
+	"原始怒吼",
+	"液体跳跃",
+	"致命一击",
+	"控制魔印",
+	"爆破魔印",
+	"释放魔印",
+	"僵尸招来",
+	"秽土转生",
+	"火焰防御之壁！",
+	"冰霜防御之壁",
+	"闪电防御之壁",
+	"锻造升级",
+	"怒气爆发",
 	"blink",
-	"chi strike",
-	"draw energy",
-	"chi healing",
-	"disarm",
+	"气功拳",
+	"抽取能量",
+	"气功治疗",
+	"缴械",
 	"dazzle",
-	"chained blitz",
+	"地牢快打组合技",
 	"pummel",
 	"ground slam",
-	"air dash",
-	"power surge",
-	"spirit bomb",
-	"draw blood",
+	"轻盈冲刺",
+	"魔能浪涌",
+	"意识震爆",
+	"吸血",
 	""
 };
 
@@ -280,7 +280,7 @@ learntech(tech, mask, tlevel)
 	    if (i < 0) {
 		i = get_tech_no(NO_TECH);
 		if (i < 0) {
-		    impossible("No room for new technique?");
+		    impossible("没有技术栏了？");
 		    return;
 		}
 	    }
@@ -292,7 +292,7 @@ learntech(tech, mask, tlevel)
 		tech_list[i].t_intrinsic = 0;
 	    }
 	    else if (tech_list[i].t_intrinsic & mask) {
-		impossible("Tech already known.");
+		impossible("已经知道本技术了.");
 		return;
 	    }
 	    if (mask == FROMOUTSIDE) {
@@ -306,7 +306,7 @@ learntech(tech, mask, tlevel)
 	}
 	else if (tlevel < 0) {
 	    if (i < 0 || !(tech_list[i].t_intrinsic & mask)) {
-		impossible("Tech not known.");
+		impossible("未知技术。");
 		return;
 	    }
 	    tech_list[i].t_intrinsic &= ~mask;
@@ -324,7 +324,7 @@ learntech(tech, mask, tlevel)
 		    if (tp->tech_id == tech)
 			break;
 		if (!tp->tech_id)
-		    impossible("No inate technique for role?");
+		    impossible("没有该种族的内置技术？");
 		else if (tlevel < 0 || tp->ulevel - tp->tech_lev < tlevel)
 		    tlevel = tp->ulevel - tp->tech_lev;
 	    }
@@ -333,14 +333,14 @@ learntech(tech, mask, tlevel)
 		    if (tp->tech_id == tech)
 			break;
 		if (!tp->tech_id)
-		    impossible("No inate technique for race?");
+		    impossible("");
 		else if (tlevel < 0 || tp->ulevel - tp->tech_lev < tlevel)
 		    tlevel = tp->ulevel - tp->tech_lev;
 	    }
 	    tech_list[i].t_lev = tlevel;
 	}
 	else
-	    impossible("Invalid Tech Level!");
+	    impossible("技术等级错误！");
 }
 
 /*
@@ -357,7 +357,7 @@ gettech(tech_no)
 	for (ntechs = i = 0; i < MAXTECH; i++)
 	    if (techid(i) != NO_TECH) ntechs++;
 	if (ntechs == 0)  {
-            You("don't know any techniques right now.");
+            You("现在没有掌握任何技巧。");
 	    return FALSE;
 	}
 	if (flags.menu_style == MENU_TRADITIONAL) {
@@ -367,7 +367,7 @@ gettech(tech_no)
             else Sprintf(lets, "a-z A-%c", 'A' + ntechs - 27);
 
 	    for(;;)  {
-                Sprintf(qbuf, "Perform which technique? [%s ?]", lets);
+                Sprintf(qbuf, "想要施展什么技术？ [%s ?]", lets);
 		if ((ilet = yn_function(qbuf, (char *)0, '\0')) == '?')
 		    break;
 
@@ -390,7 +390,7 @@ gettech(tech_no)
 				}
 			    }
 		}
-                You("don't know that technique.");
+                You("不知道那个技术怎么施展。");
 	    }
 	}
         return dotechmenu(PICK_ONE, tech_no);
@@ -437,7 +437,7 @@ dotechmenu(how, tech_no)
 		prefix = "";
 		any.a_int = i + 1;
 	    } else {
-		prefix = "    ";
+		prefix = "";
 		any.a_int = 0;
 	    }
 #ifdef WIZARD
@@ -448,11 +448,11 @@ dotechmenu(how, tech_no)
 			    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',
 			    tech_list[i].t_intrinsic & FROMRACE ? 'R' : ' ',
 			    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',
-			    tech_inuse(techid(i)) ? "Active" :
-			    tlevel <= 0 ? "Beyond recall" :
-			    can_limitbreak() ? "LIMIT" :
-			    !techtout(i) ? "Prepared" : 
-			    techtout(i) > 100 ? "Not Ready" : "Soon",
+			    tech_inuse(techid(i)) ? "正在施展中" :
+			    tlevel <= 0 ? "无法回忆" :
+			    can_limitbreak() ? "可极限激发" :
+			    !techtout(i) ? "可施展" : 
+			    techtout(i) > 100 ? "冷却中" : "Soon",
 			    techtout(i));
 		else
 		    Sprintf(buf, "%s%s\t%2d%c%c%c\t%s(%i)",
@@ -460,30 +460,30 @@ dotechmenu(how, tech_no)
 			    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',
 			    tech_list[i].t_intrinsic & FROMRACE ? 'R' : ' ',
 			    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',
-			    tech_inuse(techid(i)) ? "Active" :
-			    tlevel <= 0 ? "Beyond recall" :
-			    can_limitbreak() ? "LIMIT" :
-			    !techtout(i) ? "Prepared" : 
-			    techtout(i) > 100 ? "Not Ready" : "Soon",
+			    tech_inuse(techid(i)) ? "正在施展中" :
+			    tlevel <= 0 ? "无法回忆" :
+			    can_limitbreak() ? "可极限激发" :
+			    !techtout(i) ? "可施展" : 
+			    techtout(i) > 100 ? "冷却中" : "Soon",
 			    techtout(i));
 	    else
 #endif
 	    if (!iflags.menu_tab_sep)			
 		Sprintf(buf, "%s%-*s %5d   %s",
 			prefix, longest, techname(i), tlevel,
-			tech_inuse(techid(i)) ? "Active" :
-			tlevel <= 0 ? "Beyond recall" :
-			can_limitbreak() ? "LIMIT" :
-			!techtout(i) ? "Prepared" : 
-			techtout(i) > 100 ? "Not Ready" : "Soon");
+			tech_inuse(techid(i)) ? "正在施展中" :
+			tlevel <= 0 ? "无法回忆" :
+			can_limitbreak() ? "可极限激发" :
+			!techtout(i) ? "可施展" : 
+			techtout(i) > 100 ? "冷却中" : "Soon");
 	    else
 		Sprintf(buf, "%s%s\t%5d\t%s",
 			prefix, techname(i), tlevel,
-			tech_inuse(techid(i)) ? "Active" :
-			tlevel <= 0 ? "Beyond recall" :
-			can_limitbreak() ? "LIMIT" :
-			!techtout(i) ? "Prepared" : 
-			techtout(i) > 100 ? "Not Ready" : "Soon");
+			tech_inuse(techid(i)) ? "正在施展中" :
+			tlevel <= 0 ? "无法回忆" :
+			can_limitbreak() ? "可极限激发" :
+			!techtout(i) ? "可施展" : 
+			techtout(i) > 100 ? "冷却中" : "Soon");
 
 	    add_menu(tmpwin, NO_GLYPH, &any,
 		    techtout(i) ? 0 : let, 0, ATR_NONE, buf, MENU_UNSELECTED);
@@ -493,8 +493,8 @@ dotechmenu(how, tech_no)
 	if (!techs_useable) 
 	    how = PICK_NONE;
 
-	end_menu(tmpwin, how == PICK_ONE ? "Choose a technique" :
-					   "Currently known techniques");
+	end_menu(tmpwin, how == PICK_ONE ? "请选择一个要施展的技巧" :
+					   "当前已掌握的技术");
 
 	n = select_menu(tmpwin, how, &selected);
 	destroy_nhwindow(tmpwin);
@@ -541,7 +541,7 @@ char *verb;
     struct obj *obj, *otmp;
     makeknown(MEDICAL_KIT);
     if (!(obj = carrying(MEDICAL_KIT))) {
-	if (feedback) You("need a medical kit to do that.");
+	if (feedback) You("需要一个医疗套装才能这么做。");
 	return (struct obj *)0;
     }
     for (otmp = invent; otmp; otmp = otmp->nobj)
@@ -557,8 +557,8 @@ char *verb;
 	    break;
     if (!otmp) {
 	if (feedback)
-	    You_cant("find any more %s in %s.",
-		    makeplural(simple_typename(type)), yname(obj));
+	    You_cant("在%s里面找到更多的%s了。",
+			yname(obj)), makeplural(simple_typename(type));
 	return (struct obj *)0;
     }
     return otmp;
@@ -583,15 +583,15 @@ int tech_no;
 
 	/* check timeout */
 	if (tech_inuse(techid(tech_no))) {
-	    pline("This technique is already active!");
+	    pline("你已经激活了这个技术！");
 	    return (0);
 	}
         if (techtout(tech_no) && !can_limitbreak()) {
-	    You("have to wait %s before using your technique again.",
+	    You("必须要%s才能再次使用技巧。",
                 (techtout(tech_no) > 100) ?
                         "for a while" : "a little longer");
 #ifdef WIZARD
-            if (!wizard || (yn("Use technique anyways?") == 'n'))
+            if (!wizard || (yn("仍要使用技术吗？") == 'n'))
 #endif
                 return(0);
         }
@@ -602,18 +602,18 @@ int tech_no;
 		/* WAC stolen from the spellcasters...'A' can identify from
         	   historical research*/
 		if(Hallucination || Stunned || Confusion) {
-		    You("can't concentrate right now!");
+		    You("现在没法集中精神！");
 		    return(0);
 		} else if((ACURR(A_INT) + ACURR(A_WIS)) < rnd(60)) {
-			pline("Nothing in your pack looks familiar.");
+			pline("你包里头的东西好像看起来都不怎么熟悉。");
                     t_timeout = rn1(500,500);
 		    break;
 		} else if(invent) {
-			You("examine your possessions.");
+			You("检查了一下你的随身物品。");
 			identify_pack((int) ((techlev(tech_no) / 10) + 1));
 		} else {
 			/* KMH -- fixed non-compliant string */
-		    You("are already quite familiar with the contents of your pack.");
+		    You("已经很熟悉包里的所有物品了。");
 		    break;
 		}
                 t_timeout = rn1(500,1500);
@@ -621,17 +621,17 @@ int tech_no;
             case T_EVISCERATE:
 		/* only when empty handed, in human form */
 		if (Upolyd || uwep || uarmg) {
-		    You_cant("do this while %s!", Upolyd ? "polymorphed" :
-			    uwep ? "holding a weapon" : "wearing gloves");
+		    You_cant("在%s的时候这么干！", Upolyd ? "被变形的" :
+			    uwep ? "holding a weapon" : "戴着手套的");
 		    return 0;
 		}
-		Your("fingernails extend into claws!");
+		Your("指甲变长，变成了金刚狼一样的爪子！");
 		aggravate();
 		techt_inuse(tech_no) = d(2,4) + techlev(tech_no)/5 + 2;
 		t_timeout = rn1(1000,1000);
 		break;
             case T_BERSERK:
-		You("fly into a berserk rage!");
+		You("瞬间进入了狂战士的狂暴状态！");
 		techt_inuse(tech_no) = d(2,8) +
                		(techlev(tech_no)/5) + 2;
 		incr_itimeout(&HFast, techt_inuse(tech_no));
@@ -640,35 +640,35 @@ int tech_no;
             case T_REINFORCE:
 		/* WAC spell-users can study their known spells*/
 		if(Hallucination || Stunned || Confusion) {
-		    You("can't concentrate right now!");
+		    You("现在没法集中精神！");
 		    break;
                	} else {
-		    You("concentrate...");
+		    You("聚精会神……");
 		    if (studyspell()) t_timeout = rn1(1000,500); /*in spell.c*/
 		}
                break;
             case T_FLURRY:
                 Your("%s %s become blurs as they reach for your quiver!",
-			uarmg ? "gloved" : "bare",      /* Del Lamb */
+			uarmg ? "戴着手套的" : "光着的",      /* Del Lamb */
 			makeplural(body_part(HAND)));
                 techt_inuse(tech_no) = rnd((int) (techlev(tech_no)/6 + 1)) + 2;
                 t_timeout = rn1(1000,500);
 		break;
             case T_PRACTICE:
                 if(!uwep || (weapon_type(uwep) == P_NONE)) {
-		    You("are not wielding a weapon!");
+		    You("没有拿着武器！");
 		    return(0);
 		} else if(uwep->known == TRUE) {
                     practice_weapon();
 		} else {
                     if (not_fully_identified(uwep)) {
-                        You("examine %s.", doname(uwep));
+                        You("仔细检查了%s。", doname(uwep));
                             if (rnd(15) <= ACURR(A_INT)) {
                                 makeknown(uwep->otyp);
                                 uwep->known = TRUE;
-                                You("discover it is %s",doname(uwep));
+                                You("认出来它其实是%s。",doname(uwep));
                                 } else
-                     pline("Unfortunately, you didn't learn anything new.");
+                     pline("不幸的是你没学到什么新东西。");
                     } 
                 /*WAC Added practicing code - in weapon.c*/
                     practice_weapon();
@@ -677,12 +677,12 @@ int tech_no;
 		break;
             case T_SURGERY:
 		if (Hallucination || Stunned || Confusion) {
-		    You("are in no condition to perform surgery!");
+		    You("现在没有进行手术的条件！");
 		    break;
 		}
 		if (Sick || Slimed) {
 		    if (carrying(SCALPEL)) {
-			pline("Using your scalpel (ow!), you cure your infection!");
+			pline("你用手术刀（好几把疼啊！）治好了自己的感染！");
 			make_sick(0L, (char *)0, TRUE, SICK_ALL);
 			Slimed = 0;
 			if (Upolyd) {
@@ -696,7 +696,7 @@ int tech_no;
                         t_timeout = rn1(500,500);
 			flags.botl = TRUE;
 			break;
-		    } else pline("If only you had a scalpel...");
+		    } else pline("前提是你手里得要有把手术刀才行啊……");
 		}
 		if (Upolyd ? u.mh < u.mhmax : u.uhp < u.uhpmax) {
 		    otmp = use_medical_kit(BANDAGE, FALSE,
@@ -710,35 +710,35 @@ int tech_no;
 			    obj_extract_self(otmp);
 			    obfree(otmp, (struct obj *)0);
 			}
-			pline("Using %s, you dress your wounds.", yname(otmp));
+			pline("你用%s处理了自己的伤口。", yname(otmp));
 			healup(techlev(tech_no) * (rnd(2)+1) + rn1(5,5),
 			  0, FALSE, FALSE);
 		    } else {
-			You("strap your wounds as best you can.");
+			You("尽全力缝合了自己的伤口。");
 			healup(techlev(tech_no) + rn1(5,5), 0, FALSE, FALSE);
 		    }
                     t_timeout = rn1(1000,500);
 		    flags.botl = TRUE;
-		} else You("don't need your healing powers!");
+		} else You("现在不需要这股治愈之力！");
 		break;
             case T_HEAL_HANDS:
 		if (Slimed) {
-		    Your("body is on fire!");
+		    Your("身体着火了！");
 		    burn_away_slime();
 		    t_timeout = 3000;
 		} else if (Sick) {
-		    You("lay your hands on the foul sickness...");
+		    You("把你的手放到了严重感染的部位上……");
 		    make_sick(0L, (char*)0, TRUE, SICK_ALL);
 		    t_timeout = 3000;
 		} else if (Upolyd ? u.mh < u.mhmax : u.uhp < u.uhpmax) {
-		    pline("A warm glow spreads through your body!");
+		    pline("一股暖流突然涌进你的身体！");
 		    healup(techlev(tech_no) * 4, 0, FALSE, FALSE);
 		    t_timeout = 3000;
 		} else
 		    pline(nothing_happens);
 		break;
             case T_KIII:
-		You("scream \"KIIILLL!\"");
+		You("大声喊道：“杀呀！！！！”");
 		aggravate();
                 techt_inuse(tech_no) = rnd((int) (techlev(tech_no)/6 + 1)) + 2;
                 t_timeout = rn1(1000,500);
@@ -746,22 +746,22 @@ int tech_no;
 #ifdef STEED
 	    case T_CALM_STEED:
                 if (u.usteed) {
-                        pline("%s gets tamer.", Monnam(u.usteed));
+                        pline("%s的驯服程度更深了一点。", Monnam(u.usteed));
                         tamedog(u.usteed, (struct obj *) 0);
                         t_timeout = rn1(1000,500);
                 } else
-                        Your("technique is only effective when riding a monster.");
+                        Your("这个技术只在骑着怪物时才能使用。");
                 break;
 #endif
             case T_TURN_UNDEAD:
                 return(turn_undead());
 	    case T_VANISH:
 		if (Invisible && Fast) {
-			You("are already quite nimble and undetectable.");
+			You("已经很灵活很让人摸不清位置了。");
 		}
                 techt_inuse(tech_no) = rn1(50,50) + techlev(tech_no);
-		if (!Invisible) pline("In a puff of smoke,  you disappear!");
-		if (!Fast) You("feel more nimble!");
+		if (!Invisible) pline("你的身影在一阵烟雾中消失了！");
+		if (!Fast) You("感觉更加灵活了！");
 		incr_itimeout(&HInvis, techt_inuse(tech_no));
 		incr_itimeout(&HFast, techt_inuse(tech_no));
 		newsym(u.ux,u.uy);      /* update position */
@@ -771,7 +771,7 @@ int tech_no;
 		if (!getdir((char *)0)) return(0);
 		if (!u.dx && !u.dy) {
 		    /* Hopefully a mistake ;B */
-		    You("decide against that idea.");
+		    You("决定还是算了吧。");
 		    return(0);
 		}
 		mtmp = m_at(u.ux + u.dx, u.uy + u.dy);
@@ -785,7 +785,7 @@ int tech_no;
 		    if (!attack(mtmp)) return(0);
 		    if (!DEADMONSTER(mtmp) && mtmp->mhp < oldhp &&
 			    !noncorporeal(mtmp->data) && !unsolid(mtmp->data)) {
-			You("strike %s vital organs!", s_suffix(mon_nam(mtmp)));
+			You("狠狠地打了%s的内脏！", s_suffix(mon_nam(mtmp)));
 			/* Base damage is always something, though it may be
 			 * reduced to zero if the hero is hampered. However,
 			 * since techlev will never be zero, stiking vital
@@ -794,7 +794,7 @@ int tech_no;
 			tmp = mtmp->mhp > 1 ? mtmp->mhp / 2 : 1;
 			if (!humanoid(mtmp->data) || is_golem(mtmp->data) ||
 				mtmp->data->mlet == S_CENTAUR) {
-			    You("are hampered by the differences in anatomy.");
+			    You("因为在解剖学上找不到脖子而收手了。");
 			    tmp /= 2;
 			}
 			tmp += techlev(tech_no);
@@ -805,18 +805,18 @@ int tech_no;
 		break;
 	    case T_CUTTHROAT:
 		if (!is_blade(uwep)) {
-		    You("need a blade to perform cutthroat!");
+		    You("需要一把带刃的武器才能施展割喉技术！");
 		    return 0;
 		}
 	    	if (!getdir((char *)0)) return 0;
 		if (!u.dx && !u.dy) {
 		    /* Hopefully a mistake ;B */
-		    pline("Things may be going badly, but that's extreme.");
+		    pline("我知道你最近有很多烦心事，但你也没必要自杀吧。");
 		    return 0;
 		}
 		mtmp = m_at(u.ux + u.dx, u.uy + u.dy);
 		if (!mtmp) {
-		    You("attack...nothing!");
+		    You("攻击了……什么也没攻击到！");
 		    return 0;
 		} else {
 		    int oldhp = mtmp->mhp;
@@ -824,7 +824,7 @@ int tech_no;
 		    if (!attack(mtmp)) return 0;
 		    if (!DEADMONSTER(mtmp) && mtmp->mhp < oldhp) {
 			if (!has_head(mtmp->data) || u.uswallow)
-			    You_cant("perform cutthroat on %s!", mon_nam(mtmp));
+			    You_cant("对%s施展了割喉！", mon_nam(mtmp));
 			else {
 			    int tmp = 0;
 
@@ -832,7 +832,7 @@ int tech_no;
 				You("sever %s head!", s_suffix(mon_nam(mtmp)));
 				tmp = mtmp->mhp;
 			    } else {
-				You("hurt %s badly!", s_suffix(mon_nam(mtmp)));
+				You("狠狠地伤害了%s！", s_suffix(mon_nam(mtmp)));
 				tmp = mtmp->mhp / 2;
 			    }
 			    tmp += techlev(tech_no);
@@ -845,8 +845,8 @@ int tech_no;
 	    case T_BLESSING:
 		allowall[0] = ALL_CLASSES; allowall[1] = '\0';
 		
-		if ( !(obj = getobj(allowall, "bless"))) return(0);
-		pline("An aura of holiness surrounds your hands!");
+		if ( !(obj = getobj(allowall, "祝福哪个？"))) return(0);
+		pline("你手中涌现出一股圣洁的光芒！");
                 if (!Blind) (void) Shk_Your(Your_buf, obj);
 		if (obj->cursed) {
                 	if (!Blind)
@@ -867,11 +867,11 @@ int tech_no;
 			obj->bknown=1;
 		} else {
 			if (obj->bknown) {
-				pline ("That object is already blessed!");
+				pline ("这个物品已经是受祝福状态了！");
 				return(0);
 			}
 			obj->bknown=1;
-			pline("The aura fades.");
+			pline("这股光芒消失了。");
 		}
 		t_timeout = rn1(1000,500);
 		break;
@@ -879,13 +879,13 @@ int tech_no;
 	    	blitz_e_fist();
 #if 0
 		str = makeplural(body_part(HAND));
-                You("focus the powers of the elements into your %s", str);
+                You("用意志导引元素之力，然后灌注进你的%s里", str);
                 techt_inuse(tech_no) = rnd((int) (techlev(tech_no)/3 + 1)) + d(1,4) + 2;
 #endif
 		t_timeout = rn1(1000,500);
 	    	break;
 	    case T_PRIMAL_ROAR:	    	
-	    	You("let out a bloodcurdling roar!");
+	    	You("放出了能把敌人吓破胆的嘶吼声！");
 	    	aggravate();
 
 		techt_inuse(tech_no) = d(2,6) + (techlev(tech_no)) + 2;
@@ -917,21 +917,21 @@ int tech_no;
 	    	coord cc;
 	    	int dx, dy, sx, sy, range;
 
-		pline("Where do you want to leap to?");
+		pline("你想跳到哪里？");
     		cc.x = sx = u.ux;
 		cc.y = sy = u.uy;
 
-		getpos(&cc, TRUE, "the desired position");
+		getpos(&cc, TRUE, "目标位置");
 		if (cc.x == -10) return 0; /* user pressed esc */
 
 		dx = cc.x - u.ux;
 		dy = cc.y - u.uy;
 		/* allow diagonals */
 	    	if (dx && dy && dx != dy && dx != -dy) {
-		    You("can only leap in straight lines!");
+		    You("只能在直线上进行跳跃！");
 		    return 0;
 	    	} else if (distu(cc.x, cc.y) > 19 + techlev(tech_no)) {
-		    pline("Too far!");
+		    pline("太远了！");
 		    return 0;
 		} else if (m_at(cc.x, cc.y) || !isok(cc.x, cc.y) ||
 			IS_ROCK(levl[cc.x][cc.y].typ) ||
@@ -940,29 +940,29 @@ int tech_no;
 		    You_cant("flow there!"); /* MAR */
 		    return 0;
 		} else {
-		    You("liquify!");
+		    You("全身都流体化了！");
 		    if (Punished) {
-			You("slip out of the iron chain.");
+			You("滑出了铁链上卡着你脚的锁。");
 			unpunish();
 		    }
 		    if(u.utrap) {
 			switch(u.utraptype) {
 			    case TT_BEARTRAP: 
-				You("slide out of the bear trap.");
+				You("的身体流出了捕兽夹。");
 				break;
 			    case TT_PIT:
-				You("leap from the pit!");
+				You("从坑里跳了出来！");
 				break;
 			    case TT_WEB:
-				You("flow through the web!");
+				You("直接穿过了蜘蛛网！");
 				break;
 			    case TT_LAVA:
-				You("separate from the lava!");
+				You("和周边的岩浆分离了！");
 				u.utrap = 0;
 				break;
 			    case TT_INFLOOR:
 				u.utrap = 0;
-				You("ooze out of the floor!");
+				You("流出了地板！");
 			}
 			u.utrap = 0;
 		    }
@@ -995,9 +995,9 @@ int tech_no;
 				/* Need to add a to-hit */
 				tmp += d(2,4);
 				tmp += rn2((int) (techlev(tech_no)/5 + 1));
-				if (!Blind) pline_The("acid burns %s!", mon_nam(mtmp));
+				if (!Blind) pline_The("酸液烧伤了%s！", mon_nam(mtmp));
 				hurtmon(mtmp, tmp);
-			    } else if (!Blind) pline_The("acid doesn't affect %s!", mon_nam(mtmp));
+			    } else if (!Blind) pline_The("酸液没有影响到%s！", mon_nam(mtmp));
 			}
 			/* Clean up */
 			tmp_at(DISP_END,0);
@@ -1007,7 +1007,7 @@ int tech_no;
 		    /* A little Sokoban guilt... */
 		    if (In_sokoban(&u.uz))
 			change_luck(-1);
-		    You("reform!");
+		    You("又重新固化了！");
 		    teleds(cc.x, cc.y, FALSE);
 		    nomul(-1);
 		    nomovemsg = "";
@@ -1019,13 +1019,13 @@ int tech_no;
 		/* Have enough power? */
 		num = 50 - techlev(tech_no)/5;
 		if (u.uen < num) {
-			You("don't have enough power to invoke the sigil!");
+			You("没有足够激活魔印的能量！");
 			return (0);
 		}
 		u.uen -= num;
 
 		/* Invoke */
-		You("invoke the sigil of tempest!");
+		You("激活了爆破魔印！");
                 techt_inuse(tech_no) = d(1,6) + rnd(techlev(tech_no)/5 + 1) + 2;
 		u_wipe_engr(2);
 		return(0);
@@ -1034,13 +1034,13 @@ int tech_no;
 		/* Have enough power? */
 		num = 30 - techlev(tech_no)/5;
 		if (u.uen < num) {
-			You("don't have enough power to invoke the sigil!");
+			You("没有足够激活魔印的能量！");
 			return (0);
 		}
 		u.uen -= num;
 
 		/* Invoke */
-		You("invoke the sigil of control!");
+		You("激活了控制魔印！");
                 techt_inuse(tech_no) = d(1,4) + rnd(techlev(tech_no)/5 + 1) + 2;
 		u_wipe_engr(2);
 		return(0);
@@ -1049,19 +1049,19 @@ int tech_no;
 		/* Have enough power? */
 		num = 100 - techlev(tech_no)/5;
 		if (u.uen < num) {
-			You("don't have enough power to invoke the sigil!");
+			You("没有足够激活魔印的能量！");
 			return (0);
 		}
 		u.uen -= num;
 
 		/* Invoke */
-		You("invoke the sigil of discharge!");
+		You("激活了释放魔印！");
                 techt_inuse(tech_no) = d(1,4) + rnd(techlev(tech_no)/5 + 1) + 2;
 		u_wipe_engr(2);
 		return(0);
 		break;
             case T_RAISE_ZOMBIES:
-            	You("chant the ancient curse...");
+            	You("吟唱了远古时期的诅咒咒文……");
 		for(i = -1; i <= 1; i++) for(j = -1; j <= 1; j++) {
 		    int corpsenm;
 
@@ -1086,7 +1086,7 @@ int tech_no;
 			    if (mtmp) {
 				if (!resist(mtmp, SPBOOK_CLASS, 0, TELL)) {
 				   mtmp = tamedog(mtmp, (struct obj *) 0);
-				   You("dominate %s!", mon_nam(mtmp));
+				   You("掌控了%s！", mon_nam(mtmp));
 				} else setmangry(mtmp);
 			    }
 			}
@@ -1129,7 +1129,7 @@ int tech_no;
 		/* Already have it intrinsically? */
 		if (HFire_resistance & FROMOUTSIDE) return (0);
 
-		You("invoke the ward against flame!");
+		You("激活了火焰防御之壁！");
 		HFire_resistance += rn1(100,50);
 		HFire_resistance += techlev(tech_no);
 		t_timeout = rn1(1000,500);
@@ -1139,7 +1139,7 @@ int tech_no;
 		/* Already have it intrinsically? */
 		if (HCold_resistance & FROMOUTSIDE) return (0);
 
-		You("invoke the ward against ice!");
+		You("激活了冰霜防御之壁！");
 		HCold_resistance += rn1(100,50);
 		HCold_resistance += techlev(tech_no);
 		t_timeout = rn1(1000,500);
@@ -1149,7 +1149,7 @@ int tech_no;
 		/* Already have it intrinsically? */
 		if (HShock_resistance & FROMOUTSIDE) return (0);
 
-		You("invoke the ward against lightning!");
+		You("激活了闪电防御之壁！");
 		HShock_resistance += rn1(100,50);
 		HShock_resistance += techlev(tech_no);
 		t_timeout = rn1(1000,500);
@@ -1157,25 +1157,25 @@ int tech_no;
 	    	break;
 	    case T_TINKER:
 		if (Blind) {
-			You("can't do any tinkering if you can't see!");
+			You("如果看不见的话就没法升级任何东西！");
 			return (0);
 		}
 		if (!uwep) {
-			You("aren't holding an object to work on!");
+			You("没拿着任何可以升级的物品！");
 			return (0);
 		}
-		You("are holding %s.", doname(uwep));
-		if (yn("Start tinkering on this?") != 'y') return(0);
-		You("start working on %s",doname(uwep));
+		You("正拿着%s。", doname(uwep));
+		if (yn("想要升级这件物品么？") != 'y') return(0);
+		You("开始%s。",doname(uwep));
 		delay=-150 + techlev(tech_no);
-		set_occupation(tinker, "tinkering", 0);
+		set_occupation(tinker, "进行升级", 0);
 		break;
 	    case T_RAGE:     	
 		if (Upolyd) {
-			You("cannot focus your anger!");
+			You("没法聚精会神的激发愤怒！");
 			return(0);
 		}
-	    	You("feel the anger inside you erupt!");
+	    	You("感觉这股心中的怒火如惊涛骇浪般爆发！");
 		num = 50 + (4 * techlev(tech_no));
 	    	techt_inuse(tech_no) = num + 1;
 		u.uhpmax += num;
@@ -1183,7 +1183,7 @@ int tech_no;
 		t_timeout = rn1(1000,500);
 		break;	    
 	    case T_BLINK:
-	    	You("feel the flow of time slow down.");
+	    	You("感觉时间的流速突然慢了下来。");
                 techt_inuse(tech_no) = rnd(techlev(tech_no) + 1) + 2;
 		t_timeout = rn1(1000,500);
 	    	break;
@@ -1193,35 +1193,35 @@ int tech_no;
 		break;
             case T_DRAW_ENERGY:
             	if (u.uen == u.uenmax) {
-            		if (Hallucination) You("are fully charged!");
-			else You("cannot hold any more energy!");
+            		if (Hallucination) You("已经充满能量了！");
+			else You("没法再吸收更多能量了！");
 			return(0);           		
             	}
-                You("begin drawing energy from your surroundings!");
+                You("开始从周边的环境中抽取能量！");
 		delay=-15;
-		set_occupation(draw_energy, "drawing energy", 0);                
+		set_occupation(draw_energy, "抽取能量", 0);                
                 t_timeout = rn1(1000,500);
 		break;
             case T_CHI_HEALING:
             	if (u.uen < 1) {
-            		You("are too weak to attempt this!");
+            		You("过于虚弱，无法这么做！");
             		return(0);
             	}
-		You("direct your internal energy to restoring your body!");
+		You("导引浑身能量，然后用这股能量治愈了自己的身体！");
                 techt_inuse(tech_no) = techlev(tech_no)*2 + 4;
                 t_timeout = rn1(1000,500);
 		break;	
 	    case T_DISARM:
 	    	if (P_SKILL(weapon_type(uwep)) == P_NONE) {
-	    		You("aren't wielding a proper weapon!");
+	    		You("手里没拿着一个属于武器的物品！");
 	    		return(0);
 	    	}
 	    	if ((P_SKILL(weapon_type(uwep)) < P_SKILLED) || (Blind)) {
-	    		You("aren't capable of doing this!");
+	    		You("现在不能做这个！");
 	    		return(0);
 	    	}
 		if (u.uswallow) {
-	    		pline("What do you think %s is?  A sword swallower?",
+	    		pline("你觉得你是谁？吞剑的卖艺小丑？",
 				mon_nam(u.ustuck));
 	    		return(0);
 		}
@@ -1229,20 +1229,20 @@ int tech_no;
 	    	if (!getdir((char *)0)) return(0);
 		if (!u.dx && !u.dy) {
 			/* Hopefully a mistake ;B */
-			pline("Why don't you try wielding something else instead.");
+			pline("你为什么不试试拿别的东西呢。");
 			return(0);
 		}
 		mtmp = m_at(u.ux + u.dx, u.uy + u.dy);
 		if (!mtmp || !canspotmon(mtmp)) {
 			if (memory_is_invisible(u.ux + u.dx, u.uy + u.dy))
-			    You("don't know where to aim for!");
+			    You("不知道该瞄准哪里！");
 			else
-			    You("don't see anything there!");
+			    You("在那什么也没看见！");
 			return (0);
 		}
 	    	obj = MON_WEP(mtmp);   /* can be null */
 	    	if (!obj) {
-	    		You_cant("disarm an unarmed foe!");
+	    		You_cant("缴械了一个本来就没拿着武器的敌人！");
 	    		return(0);
 	    	}
 		/* Blindness dealt with above */
@@ -1251,13 +1251,13 @@ int tech_no;
 				|| obj->oinvis && !See_invisible
 #endif
 				) {
-	    		You_cant("see %s weapon!", s_suffix(mon_nam(mtmp)));
+	    		You_cant("看见%s的武器！", s_suffix(mon_nam(mtmp)));
 	    		return(0);
 		}
 		num = ((rn2(techlev(tech_no) + 15)) 
 			* (P_SKILL(weapon_type(uwep)) - P_SKILLED + 1)) / 10;
 
-		You("attempt to disarm %s...",mon_nam(mtmp));
+		You("试图对%s进行缴械……",mon_nam(mtmp));
 		/* WAC can't yank out cursed items */
                 if (num > 0 && (!Fumbling || !rn2(10)) && !obj->cursed) {
 		    int roll;
@@ -1293,7 +1293,7 @@ int tech_no;
 					dmgval(obj, &youmonst),
 					obj, xname(obj));
 				if (hitu)
-				    pline("%s hits you as you try to snatch it!",
+				    pline("",
 					    The(xname(obj)));
 				place_object(obj, u.ux, u.uy);
 				stackobj(obj);
@@ -1310,17 +1310,17 @@ int tech_no;
 					polymon(PM_STONE_GOLEM))) {
 				char kbuf[BUFSZ];
 
-				Sprintf(kbuf, "%s corpse",
+				Sprintf(kbuf, "%s尸体",
 					an(mons[obj->corpsenm].mname));
-				pline("Snatching %s is a fatal mistake.", kbuf);
+				pline("去抢%s真是个能让你后悔莫及一辈子的错误。", kbuf);
 				instapetrify(kbuf);
 			    }
-			    obj = hold_another_object(obj, "You drop %s!",
+			    obj = hold_another_object(obj, "你把%s丢掉了！",
 				    doname(obj), (const char *)0);
 			    break;
 			default:
 			    /* to floor beneath mon */
-			    You("knock %s from %s grasp!", the(xname(obj)),
+			    You("把%s从%s的手里打了下来！", the(xname(obj)),
 				    s_suffix(mon_nam(mtmp)));
 			    if (obj->otyp == CRYSKNIFE &&
 				    (!obj->oerodeproof || !rn2(10))) {
@@ -1332,7 +1332,7 @@ int tech_no;
 			    break;
 		    }
 		} else if (mtmp->mcanmove && !mtmp->msleeping)
-		    pline("%s evades your attack.", Monnam(mtmp));
+		    pline("%s躲开了你的攻击。", Monnam(mtmp));
 		else
 		    You("fail to dislodge %s %s.", s_suffix(mon_nam(mtmp)),
 			    xname(obj));
@@ -1345,13 +1345,13 @@ int tech_no;
 	    case T_DAZZLE:
 	    	/* Short range stun attack */
 	    	if (Blind) {
-	    		You("can't see anything!");
+	    		You("啥也看不见！");
 	    		return(0);
 	    	}
 	    	if (!getdir((char *)0)) return(0);
 		if (!u.dx && !u.dy) {
 			/* Hopefully a mistake ;B */
-			You("can't see yourself!");
+			You("看不见自己了！");
 			return(0);
 		}
 		for(i = 0; (i  <= ((techlev(tech_no) / 8) + 1) 
@@ -1360,29 +1360,29 @@ int tech_no;
 		    if (mtmp && canseemon(mtmp)) break;
 		}
 		if (!mtmp || !canseemon(mtmp)) {
-			You("fail to make eye contact with anything!");
+			You("没法把眼神聚焦到任何物件上！");
 			return (0);
 		}
-                You("stare at %s.", mon_nam(mtmp));
+                You("死死地盯着%s。", mon_nam(mtmp));
                 if (!haseyes(mtmp->data))
-                	pline("..but %s has no eyes!", mon_nam(mtmp));
+                	pline("……但是%s没有眼睛！", mon_nam(mtmp));
                 else if (!mtmp->mcansee)
-                	pline("..but %s cannot see you!", mon_nam(mtmp));
+                	pline("……但是%s看不见你！", mon_nam(mtmp));
                 if ((rn2(6) + rn2(6) + (techlev(tech_no) - mtmp->m_lev)) > 10) {
 			You("dazzle %s!", mon_nam(mtmp));
 			mtmp->mcanmove = 0;
 			mtmp->mfrozen = rnd(10);
 		} else {
-                       pline("%s breaks the stare!", Monnam(mtmp));
+                       pline("%s打破了你们之间的视线交汇！", Monnam(mtmp));
 		}
                	t_timeout = rn1(50,25);
 	    	break;
 	    case T_BLITZ:
 	    	if (uwep || (u.twoweap && uswapwep)) {
-			You("can't do this while wielding a weapon!");
+			You("没法在拿着武器的时候这么做！");
 	    		return(0);
 	    	} else if (uarms) {
-			You("can't do this while holding a shield!");
+			You("没法在拿着盾牌的时候这么做！");
 	    		return(0);
 	    	}
 	    	if (!doblitz()) return (0);		
@@ -1391,15 +1391,15 @@ int tech_no;
 	    	break;
             case T_PUMMEL:
 	    	if (uwep || (u.twoweap && uswapwep)) {
-			You("can't do this while wielding a weapon!");
+			You("没法在拿着武器的时候这么做！");
 	    		return(0);
 	    	} else if (uarms) {
-			You("can't do this while holding a shield!");
+			You("没法在拿着盾牌的时候这么做！");
 	    		return(0);
 	    	}
 		if (!getdir((char *)0)) return(0);
 		if (!u.dx && !u.dy) {
-			You("flex your muscles.");
+			You("鼓了鼓你的肌肉。");
 			return(0);
 		}
             	if (!blitz_pummel()) return(0);
@@ -1407,15 +1407,15 @@ int tech_no;
 		break;
             case T_G_SLAM:
 	    	if (uwep || (u.twoweap && uswapwep)) {
-			You("can't do this while wielding a weapon!");
+			You("没法在拿着武器的时候这么做！");
 	    		return(0);
 	    	} else if (uarms) {
-			You("can't do this while holding a shield!");
+			You("没法在拿着盾牌的时候这么做！");
 	    		return(0);
 	    	}
 		if (!getdir((char *)0)) return(0);
 		if (!u.dx && !u.dy) {
-			You("flex your muscles.");
+			You("鼓了鼓你的肌肉。");
 			return(0);
 		}
             	if (!blitz_g_slam()) return(0);
@@ -1436,10 +1436,10 @@ int tech_no;
 		break;            	
             case T_SPIRIT_BOMB:
 	    	if (uwep || (u.twoweap && uswapwep)) {
-			You("can't do this while wielding a weapon!");
+			You("没法在拿着武器的时候这么做！");
 	    		return(0);
 	    	} else if (uarms) {
-			You("can't do this while holding a shield!");
+			You("没法在拿着盾牌的时候这么做！");
 	    		return(0);
 	    	}
 		if (!getdir((char *)0)) return(0);
@@ -1454,14 +1454,14 @@ int tech_no;
 		     * potions of vampire blood would no longer be
 		     * appropriate.
 		     */
-		    You("must be in your natural form to draw blood.");
+		    You("必须处于自己的原始形态才能抽血。");
 		    return(0);
 		}
 		obj = use_medical_kit(PHIAL, TRUE, "draw blood with");
 		if (!obj)
 		    return 0;
 		if (u.ulevel <= 1) {
-		    You_cant("seem to find a vein.");
+		    You_cant("找到瓶子。");
 		    return 0;
 		}
 		check_unpaid(obj);
@@ -1471,8 +1471,8 @@ int tech_no;
 		    obj_extract_self(obj);
 		    obfree(obj, (struct obj *)0);
 		}
-		pline("Using your medical kit, you draw off a phial of your blood.");
-		losexp("drawing blood", TRUE);
+		pline("你用医疗包的工具抽了自己一小瓶的血。");
+		losexp("抽血", TRUE);
 		if (u.uexp > 0)
 		    u.uexp = newuexp(u.ulevel - 1);
 		otmp = mksobj(POT_VAMPIRE_BLOOD, FALSE, FALSE);
@@ -1484,7 +1484,7 @@ int tech_no;
 		t_timeout = rn1(1000, 500);
 		break;
 	    default:
-	    	pline ("Error!  No such effect (%i)", tech_no);
+	    	pline ("错误！无%i效果", tech_no);
 		break;
         }
         if (!can_limitbreak())
@@ -1528,47 +1528,47 @@ tech_timeout()
 	        if (!(--techt_inuse(i)))
 	        switch (techid(i)) {
 		    case T_EVISCERATE:
-			You("retract your claws.");
+			You("收回了自己的爪子。");
 			/* You're using bare hands now,  so new msg for next attack */
 			unweapon=TRUE;
 			/* Lose berserk status */
 			repeat_hit = 0;
 			break;
 		    case T_BERSERK:
-			The("red haze in your mind clears.");
+			The("蒙住你意识的那片红色消退了。");
 			break;
 		    case T_KIII:
-			You("calm down.");
+			You("冷静下来了。");
 			break;
 		    case T_FLURRY:
 			You("relax.");
 			break;
 		    case T_E_FIST:
-			You("feel the power dissipate.");
+			You("感觉这股力量消失了。");
 			break;
 		    case T_SIGIL_TEMPEST:
-			pline_The("sigil of tempest fades.");
+			pline_The("爆破魔印消失了。");
 			break;
 		    case T_SIGIL_CONTROL:
-			pline_The("sigil of control fades.");
+			pline_The("控制魔印消失了。");
 			break;
 		    case T_SIGIL_DISCHARGE:
-			pline_The("sigil of discharge fades.");
+			pline_The("释放魔印消失了。");
 			break;
 		    case T_RAGE:
-			Your("anger cools.");
+			Your("怒气消了下去。");
 			break;
 		    case T_POWER_SURGE:
-			pline_The("awesome power within you fades.");
+			pline_The("你身上那股超棒的力量消失了。");
 			break;
 		    case T_BLINK:
-			You("sense the flow of time returning to normal.");
+			You("感觉时间的流速恢复了正常。");
 			break;
 		    case T_CHI_STRIKE:
-			You("feel the power in your hands dissipate.");
+			You("感觉手中的力量消失了。");
 			break;
 		    case T_CHI_HEALING:
-			You("feel the healing power dissipate.");
+			You("感觉那股治愈之力消失了。");
 			break;
 	            default:
 	            	break;
@@ -1606,7 +1606,7 @@ docalm()
 	    }
 	}
 	if (n)
-	    You("calm down.");
+	    You("冷静下来了。");
 }
 
 static void
@@ -1690,14 +1690,14 @@ int oldlevel, newlevel;
 	    for(; tech->tech_id; tech++)
 		if(oldlevel < tech->ulevel && newlevel >= tech->ulevel) {
 		    if (tech->ulevel != 1 && !tech_known(tech->tech_id))
-			You("learn how to perform %s!",
+			You("学会了如何施展%s！",
 			  tech_names[tech->tech_id]);
 		    learntech(tech->tech_id, mask, tech->tech_lev);
 		} else if (oldlevel >= tech->ulevel && newlevel < tech->ulevel
 		    && tech->ulevel != 1) {
 		    learntech(tech->tech_id, mask, -1);
 		    if (!tech_known(tech->tech_id))
-			You("lose the ability to perform %s!",
+			You("失去了施展%s的能力！",
 			  tech_names[tech->tech_id]);
 		}
 	}
@@ -1745,7 +1745,7 @@ tinker()
 	if (!uwep)
 		return (0);
 
-	You("finish your tinkering.");
+	You("完成了你的物品升级。");
 	chance = 5;
 /*	chance += PSKILL(P_TINKER); */
 	if (rnl(10) < chance) {		
@@ -1755,7 +1755,7 @@ tinker()
 	}
 
 	setuwep(otmp, FALSE);
-	You("now hold %s!", doname(otmp));
+	You("现在正拿着%s！", doname(otmp));
 	return(0);
 }
 
@@ -1818,29 +1818,29 @@ draw_energy()
 		flags.botl = 1;
 		return(1); /* still busy */
 	}
-	You("finish drawing energy from your surroundings.");
+	You("成功从周边的环境中抽取能量。");
 	return(0);
 }
 
 static const char 
-	*Enter_Blitz = "Enter Blitz Command[. to end]: ";
+	*Enter_Blitz = "输入地牢快打命令，按.结束输入。";
 
 /* Keep commands that reference the same blitz together 
  * Keep the BLITZ_START before the BLITZ_CHAIN before the BLITZ_END
  */
 static const struct blitz_tab blitzes[] = { 	
-	{"LLDDR", 5, blitz_chi_strike, T_CHI_STRIKE, BLITZ_START},
-	{"LLDDRDR", 7, blitz_chi_strike, T_CHI_STRIKE, BLITZ_START},
-	{"RR",  2, blitz_dash, T_DASH, BLITZ_START},
-	{"LL",  2, blitz_dash, T_DASH, BLITZ_START},
-	{"UURRDDL", 7, blitz_e_fist, T_E_FIST, BLITZ_START},
-	{"URURRDDLDL", 10, blitz_e_fist, T_E_FIST, BLITZ_START},
-	{"DDRRDDRR", 8, blitz_power_surge, T_POWER_SURGE, BLITZ_START},
-	{"DRDRDRDR", 8, blitz_power_surge, T_POWER_SURGE, BLITZ_START},
-	{"LRL", 3, blitz_pummel, T_PUMMEL, BLITZ_CHAIN},
-	{"RLR", 3, blitz_pummel, T_PUMMEL, BLITZ_CHAIN},
-	{"DDDD", 4, blitz_g_slam, T_G_SLAM, BLITZ_END},
-	{"DUDUUDDD", 8, blitz_spirit_bomb, T_SPIRIT_BOMB, BLITZ_END},
+	{"左左下下右", 5, blitz_chi_strike, T_CHI_STRIKE, BLITZ_START},
+	{"左左下下左下左", 7, blitz_chi_strike, T_CHI_STRIKE, BLITZ_START},
+	{"右右",  2, blitz_dash, T_DASH, BLITZ_START},
+	{"左左",  2, blitz_dash, T_DASH, BLITZ_START},
+	{"上上右右下下左", 7, blitz_e_fist, T_E_FIST, BLITZ_START},
+	{"上右上右右下下左下左", 10, blitz_e_fist, T_E_FIST, BLITZ_START},
+	{"下下右右下下右右", 8, blitz_power_surge, T_POWER_SURGE, BLITZ_START},
+	{"下右下右下右下右", 8, blitz_power_surge, T_POWER_SURGE, BLITZ_START},
+	{"左右左", 3, blitz_pummel, T_PUMMEL, BLITZ_CHAIN},
+	{"右左右", 3, blitz_pummel, T_PUMMEL, BLITZ_CHAIN},
+	{"下下下下", 4, blitz_g_slam, T_G_SLAM, BLITZ_END},
+	{"下上下上上下下下", 8, blitz_spirit_bomb, T_SPIRIT_BOMB, BLITZ_END},
 	{"", 0, (void *)0, 0, BLITZ_END} /* Array terminator */
 };
 
@@ -1864,7 +1864,7 @@ doblitz()
 	}
 	
 	if (u.uen < 10) {
-		You("are too weak to attempt this!");
+		You("过于虚弱，无法这么做！");
             	return(0);
 	}
 
@@ -1954,7 +1954,7 @@ doblitz()
 		}
 	    }
 	    if (!bdone) {
-		You("stumble!");
+		You("手忙脚乱了！");
 		return(1);
 	    }
     	}
@@ -1981,11 +1981,11 @@ doblitzlist()
 	start_menu(tmpwin);
 	any.a_void = 0;         /* zero out all bits */
 
-        Sprintf(buf, "%16s %10s %-17s", "[LU = Left Up]", "[U = Up]", "[RU = Right Up]");
+        Sprintf(buf, "%16s %10s %-17s", "左上就是键盘的左上方移动按钮", "上就是按移动的上键", "右上就是键盘的右上方移动按钮");
 	add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);
-        Sprintf(buf, "%16s %10s %-17s", "[L = Left]", "", "[R = Right]");
+        Sprintf(buf, "%16s %10s %-17s", "左就是向左移动的按钮", "", "[R = Right]");
 	add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);
-        Sprintf(buf, "%16s %10s %-17s", "[LD = Left Down]", "[D = Down]", "[RD = Right Down]");
+        Sprintf(buf, "%16s %10s %-17s", "左下就是键盘的左下方移动按钮", "下就是按往下的移动键", "右下就是键盘的右下方移动按钮");
 	add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        
 
         Sprintf(buf, "%-30s %10s   %s", "Name", "Type", "Command");
@@ -2001,14 +2001,14 @@ doblitzlist()
                     	(blitzes[i].blitz_type == BLITZ_CHAIN ? 
 	                    	"chain" : 
 	                    	(blitzes[i].blitz_type == BLITZ_END ? 
-                    			"finisher" : "unknown"))),
+                    			"finisher" : "未知"))),
                     blitzes[i].blitz_cmd);
 
 		add_menu(tmpwin, NO_GLYPH, &any,
                          0, 0, ATR_NONE, buf, MENU_UNSELECTED);
 	    }
 	}
-        end_menu(tmpwin, "Currently known blitz manoeuvers");
+        end_menu(tmpwin, "当前已知的地牢快打组合技");
 
 	n = select_menu(tmpwin, PICK_NONE, &selected);
 	destroy_nhwindow(tmpwin);
@@ -2027,10 +2027,10 @@ blitz_chi_strike()
 	}
 
 	if (u.uen < 1) {
-		You("are too weak to attempt this!");
+		You("过于虚弱，无法这么做！");
             	return(0);
 	}
-	You("feel energy surge through your hands!");
+	You("感到手中有一股能量涌过！");
 	techt_inuse(tech_no) = techlev(tech_no) + 4;
 	return(1);
 }
@@ -2048,7 +2048,7 @@ blitz_e_fist()
 	}
 	
 	str = makeplural(body_part(HAND));
-	You("focus the powers of the elements into your %s.", str);
+	You("用意志导引元素之力，然后灌注进你的%s里。", str);
 	techt_inuse(tech_no) = rnd((int) (techlev(tech_no)/3 + 1)) + d(1,4) + 2;
 	return 1;
 }
@@ -2065,7 +2065,7 @@ blitz_pummel()
 		return(0);
 	}
 
-	You("let loose a barrage of blows!");
+	You("连着打出了数不清的攻击！");
 
 	if (u.uswallow)
 	    mtmp = u.ustuck;
@@ -2073,7 +2073,7 @@ blitz_pummel()
 	    mtmp = m_at(u.ux + u.dx, u.uy + u.dy);
 
 	if (!mtmp) {
-		You("strike nothing.");
+		You("什么也没打到。");
 		return (0);
 	}
 	if (!attack(mtmp)) return (0);
@@ -2111,7 +2111,7 @@ blitz_g_slam()
 
 	mtmp = m_at(u.ux + u.dx, u.uy + u.dy);
 	if (!mtmp) {
-		You("strike nothing.");
+		You("什么也没打到。");
 		return (0);
 	}
 	if (!attack(mtmp)) return (0);
@@ -2156,10 +2156,10 @@ blitz_g_slam()
 	mselftouch(mtmp, "Falling, ", TRUE);
 	if (!DEADMONSTER(mtmp)) {
 	    if (objenchant < canhitmon)
-		pline("%s doesn't seem to be harmed.", Monnam(mtmp));
+		pline("%s看起来没有受伤。", Monnam(mtmp));
 	    else if ((mtmp->mhp -= tmp) <= 0) {
 		if(!cansee(u.ux + u.dx, u.uy + u.dy))
-		    pline("It is destroyed!");
+		    pline("它被摧毁了！");
 		else {
 		    You("destroy %s!", 	
 		    	mtmp->mtame
@@ -2186,7 +2186,7 @@ blitz_dash()
 	}
 	
 	if ((!Punished || carried(uball)) && !u.utrap)
-	    You("dash forwards!");
+	    You("向前猛冲！");
 	hurtle(u.dx, u.dy, 2, FALSE);
 	multi = 0;		/* No paralysis with dash */
 	return 1;
@@ -2204,10 +2204,10 @@ blitz_power_surge()
 	}
 
 	if (Upolyd) {
-		You("cannot tap into your full potential in this form.");
+		You("没法在当前的生物形态中发挥出全部潜力。");
 		return(0);
 	}
-    	You("tap into the full extent of your power!");
+    	You("释放出了自身能量的全部潜力！");
 	num = 50 + (2 * techlev(tech_no));
     	techt_inuse(tech_no) = num + 1;
 	u.uenmax += num;
@@ -2228,10 +2228,10 @@ blitz_spirit_bomb()
 		return(0);
 	}
 
-	You("gather your energy...");
+	You("聚焦自己的能量……");
 	
 	if (u.uen < 10) {
-		pline("But it fizzles out.");
+		pline("但是这股能量滋滋了几下就没影了。");
 		u.uen = 0;
 	}
 
@@ -2268,7 +2268,7 @@ wiz_debug_cmd() /* in this case, allow controlled loss of techniques */
 	if (gettech(&tech_no)) {
 		id = techid(tech_no);
 		if (id == NO_TECH) {
-		    impossible("Unknown technique ([%d])?", tech_no);
+		    impossible("未知技巧%d？", tech_no);
 		    return;
 		}
 		mask = tech_list[tech_no].t_intrinsic;
@@ -2285,7 +2285,7 @@ wiz_debug_cmd() /* in this case, allow controlled loss of techniques */
 		if (mask & FROMEXPER && !n--) mask = FROMEXPER;
 		learntech(id, mask, -1);
 		if (!tech_known(id))
-		    You("lose the ability to perform %s.", tech_names[id]);
+		    You("失去了施展%s的能力。", tech_names[id]);
 	}
 }
 #endif /* DEBUG */

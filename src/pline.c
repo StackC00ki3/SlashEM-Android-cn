@@ -116,7 +116,7 @@ You VA_DECL(const char *, line)
 	char *tmp;
 	VA_START(line);
 	VA_INIT(line, const char *);
-	vpline(YouMessage(tmp, "You ", line), VA_ARGS);
+	vpline(YouMessage(tmp, "你", line), VA_ARGS);
 	VA_END();
 }
 
@@ -136,7 +136,7 @@ You_feel VA_DECL(const char *,line)
 	char *tmp;
 	VA_START(line);
 	VA_INIT(line, const char *);
-	vpline(YouMessage(tmp, "You feel ", line), VA_ARGS);
+	vpline(YouMessage(tmp, "你感觉", line), VA_ARGS);
 	VA_END();
 }
 
@@ -147,7 +147,7 @@ You_cant VA_DECL(const char *,line)
 	char *tmp;
 	VA_START(line);
 	VA_INIT(line, const char *);
-	vpline(YouMessage(tmp, "You can't ", line), VA_ARGS);
+	vpline(YouMessage(tmp, "你没法", line), VA_ARGS);
 	VA_END();
 }
 
@@ -180,9 +180,9 @@ You_hear VA_DECL(const char *,line)
 	if (Underwater)
 		YouPrefix(tmp, "You barely hear ", line);
 	else if (u.usleep)
-		YouPrefix(tmp, "You dream that you hear ", line);
+		YouPrefix(tmp, "你在梦中梦见你听见", line);
 	else
-		YouPrefix(tmp, "You hear ", line);
+		YouPrefix(tmp, "你听见", line);
 	vpline(strcat(tmp, line), VA_ARGS);
 	VA_END();
 }

@@ -21,19 +21,19 @@ const char *goal;
     boolean doing_what_is;
     winid tmpwin = create_nhwindow(NHW_MENU);
 
-    Sprintf(sbuf, "Use [%s] to move the cursor to %s.",
+    Sprintf(sbuf, "按[%s]来把光标移动到%s.",
 	    iflags.num_pad ? "2468" : "hjkl", goal);
     putstr(tmpwin, 0, sbuf);
-    putstr(tmpwin, 0, "Use [HJKL] to move the cursor 8 units at a time.");
-    putstr(tmpwin, 0, "Or enter a background symbol (ex. <).");
+    putstr(tmpwin, 0, "使用[HJKL]来一次性移动8格光标.");
+    putstr(tmpwin, 0, "或者使用其余的按钮 (ex. <).");
     /* disgusting hack; the alternate selection characters work for any
        getpos call, but they only matter for dowhatis (and doquickwhatis) */
     doing_what_is = (goal == what_is_an_unknown_object);
-    Sprintf(sbuf, "Type a .%s when you are at the right place.",
-            doing_what_is ? " or , or ; or :" : "");
+    Sprintf(sbuf, "位置正确的时候请按一下.%s.",
+            doing_what_is ? "  ,  ;  :" : "");
     putstr(tmpwin, 0, sbuf);
     if (!force)
-	putstr(tmpwin, 0, "Type Space or Escape when you're done.");
+	putstr(tmpwin, 0, "完成后按空格或者esc键.");
     putstr(tmpwin, 0, "");
     display_nhwindow(tmpwin, TRUE);
     destroy_nhwindow(tmpwin);
@@ -55,7 +55,7 @@ const char *goal;
     if(iflags.num_pad) sdp = ndir; else sdp = sdir;	/* DICE workaround */
 
     if (flags.verbose) {
-	pline("(For instructions type a ?)");
+	pline("(按?查看介绍)");
 	msg_given = TRUE;
     }
     cx = cc->x;
@@ -155,19 +155,19 @@ const char *goal;
 			    }	/* column */
 			}	/* row */
 		    }		/* pass */
-		    pline("Can't find dungeon feature '%c'.", c);
+		    pline("无法找到 '%c'.", c);
 		    msg_given = TRUE;
 		    goto nxtc;
 		} else {
-		    pline("Unknown direction: '%s' (%s).",
+		    pline("未知按键: '%s' (%s).",
 			  visctrl((char)c),
-			  !force ? "aborted" :
-			  iflags.num_pad ? "use 2468 or ." : "use hjkl or .");
+			  !force ? "已经中断" :
+			  iflags.num_pad ? "按2468或 ." : "按hjkl或 .");
 		    msg_given = TRUE;
 		} /* k => matching */
 	    } /* !quitchars */
 	    if (force) goto nxtc;
-	    pline("Done.");
+	    pline("完成.");
 	    msg_given = FALSE;	/* suppress clear */
 	    cx = -1;
 	    cy = 0;
@@ -231,12 +231,12 @@ do_mname()
 	char qbuf[QBUFSZ];
 
 	if (Hallucination) {
-		You("would never recognize it anyway.");
+		You("反正也不会记住这个东西.");
 		return 0;
 	}
 	cc.x = u.ux;
 	cc.y = u.uy;
-	if (getpos(&cc, FALSE, "the monster you want to name") < 0 ||
+	if (getpos(&cc, FALSE, "你想命名的怪物") < 0 ||
 			(cx = cc.x) < 0)
 		return 0;
 	cy = cc.y;
@@ -247,10 +247,10 @@ do_mname()
 		mtmp = u.usteed;
 	    else {
 #endif
-		pline("This %s creature is called %s and cannot be renamed.",
+		pline("这个%s的生物叫%s.无法被命名.",
 		ACURR(A_CHA) > 14 ?
-		(flags.female ? "beautiful" : "handsome") :
-		"ugly",
+		(flags.female ? "美丽" : "帅气") :
+		"丑的要命",
 		plname);
 		return(0);
 #ifdef STEED
@@ -264,19 +264,19 @@ do_mname()
 			|| mtmp->m_ap_type == M_AP_FURNITURE
 			|| mtmp->m_ap_type == M_AP_OBJECT
 			|| (mtmp->minvis && !See_invisible)))) {
-		pline("I see no monster there.");
+		pline("我在那可没看见怪物.");
 		return(0);
 	}
 	/* special case similar to the one in lookat() */
 	(void) distant_monnam(mtmp, ARTICLE_THE, buf);
-	Sprintf(qbuf, "What do you want to call %s?", buf);
+	Sprintf(qbuf, "你想把%s叫做什么?", buf);
 	getlin(qbuf,buf);
 	if(!*buf || *buf == '\033') return(0);
 	/* strip leading and trailing spaces; unnames monster if all spaces */
 	(void)mungspaces(buf);
 
 	if (mtmp->data->geno & G_UNIQ)
-	    pline("%s doesn't like being called names!", Monnam(mtmp));
+	    pline("%s不喜欢被起别名!", Monnam(mtmp));
 	else
 	    (void) christen_monst(mtmp, buf);
 	return(0);
@@ -296,8 +296,8 @@ register struct obj *obj;
 	const char *aname;
 	short objtyp;
 
-	Sprintf(qbuf, "What do you want to name %s %s?",
-		is_plural(obj) ? "these" : "this", xname(obj));
+	Sprintf(qbuf, "你想怎么命名%s %s?",
+		is_plural(obj) ? "这些" : "这个", xname(obj));
 	getlin(qbuf, buf);
 	if(!*buf || *buf == '\033')	return;
 	/* strip leading and trailing spaces; unnames item if all spaces */
@@ -308,7 +308,7 @@ register struct obj *obj;
 		Strcpy(buf, aname);
 
 	if (obj->oartifact) {
-		pline_The("artifact seems to resist the attempt.");
+		pline_The("神器在抵抗你的命名行为.");
 		return;
 	} else if (restrict_name(obj, buf) || exist_artifact(obj->otyp, buf)) {
 		int n = rn2((int)strlen(buf));
@@ -317,9 +317,9 @@ register struct obj *obj;
 		c1 = lowc(buf[n]);
 		do c2 = 'a' + rn2('z'-'a'); while (c1 == c2);
 		buf[n] = (buf[n] == c1) ? c2 : highc(c2);  /* keep same case */
-		pline("While engraving your %s slips.", body_part(HAND));
+		pline("在雕刻的时候你的%s滑了.", body_part(HAND));
 		display_nhwindow(WIN_MESSAGE, FALSE);
-		You("engrave: \"%s\".",buf);
+		You("刻上: \"%s\".",buf);
 	}
 	obj = oname(obj, buf);
 }
@@ -453,15 +453,15 @@ ddocall()
 #ifdef REDO
 		ch =
 #endif
-		ynq("Name an individual object?")) {
-	case 'q':
+		ynq("命名一个独特物品?")) {
+	case '算了':
 		break;
-	case 'y':
+	case '好':
 #ifdef REDO
 		savech(ch);
 #endif
 		allowall[0] = ALL_CLASSES; allowall[1] = '\0';
-		obj = getobj(allowall, "name");
+		obj = getobj(allowall, "名称");
 		if(obj) do_oname(obj);
 		break;
 	default :
@@ -476,7 +476,7 @@ ddocall()
 			(void) xname(obj);
 
 			if (!obj->dknown) {
-				You("would never recognize another one.");
+				You("肯定不会认识别的.");
 				return 0;
 			}
 			docall(obj);
@@ -501,10 +501,10 @@ register struct obj *obj;
 	otemp.oxlth = 0;
 	if (objects[otemp.otyp].oc_class == POTION_CLASS && otemp.fromsink)
 	    /* kludge, meaning it's sink water */
-	    Sprintf(qbuf,"Call a stream of %s fluid:",
+	    Sprintf(qbuf,"给这个%s命名:",
 		    OBJ_DESCR(objects[otemp.otyp]));
 	else
-	    Sprintf(qbuf, "Call %s:", an(xname(&otemp)));
+	    Sprintf(qbuf, "给%s命名:", an(xname(&otemp)));
 	getlin(qbuf, buf);
 	if(!*buf || *buf == '\033')
 		return;
@@ -534,11 +534,11 @@ register struct obj *obj;
 static const char * const ghostnames[] = {
 	/* these names should have length < PL_NSIZ */
 	/* Capitalize the names for aesthetics -dgk */
-	"Adri", "Andries", "Andreas", "Bert", "David", "Dirk", "Emile",
-	"Frans", "Fred", "Greg", "Hether", "Jay", "John", "Jon", "Karnov",
-	"Kay", "Kenny", "Kevin", "Maud", "Michiel", "Mike", "Peter", "Robert",
-	"Ron", "Tom", "Wilmar", "Nick Danger", "Phoenix", "Jiro", "Mizue",
-	"Stephan", "Lance Braccus", "Shadowhawk"
+	"安娜", "安德烈", "安德莉亚", "巴特", "大卫", "狄克", "艾米莉",
+	"弗兰", "弗雷德", "格蕾", "海特", "杰克", "乔恩", "乔", "卡尔诺夫",
+	"谭静和", "肯尼", "凯文", "莫德", "曼齐尔", "麦克", "皮特", "罗伯特",
+	"东雪莲", "汤姆", "维利姆", "尼克", "曼尼克斯", "项子丹", "弥亚",
+	"曹宇时", "潘郑天", "彼得帕克"
 };
 
 /* ghost names formerly set by x_monnam(), now by makemon() instead */
@@ -646,7 +646,7 @@ boolean called;
 	    if (adjective && article == ARTICLE_THE) {
 		/* pathological case: "the angry Asidonhopo the blue dragon"
 		   sounds silly */
-		Strcpy(buf, "the ");
+		Strcpy(buf, " ");
 		Strcat(strcat(buf, adjective), " ");
 		Strcat(buf, shkname(mtmp));
 		return buf;
@@ -654,9 +654,9 @@ boolean called;
 	    Strcat(buf, shkname(mtmp));
 	    if (mdat == &mons[PM_SHOPKEEPER] && !do_invis)
 		return buf;
-	    Strcat(buf, " the ");
+	    Strcat(buf, "  ");
 	    if (do_invis)
-		Strcat(buf, "invisible ");
+		Strcat(buf, "隐身的 ");
 	    Strcat(buf, mdat->mname);
 	    return buf;
 	}
@@ -665,11 +665,11 @@ boolean called;
 	if (adjective)
 	    Strcat(strcat(buf, adjective), " ");
 	if (do_invis)
-	    Strcat(buf, "invisible ");
+	    Strcat(buf, "隐身的 ");
 #ifdef STEED
 	if (do_saddle && (mtmp->misc_worn_check & W_SADDLE) &&
 	    !Blind && !Hallucination)
-	    Strcat(buf, "saddled ");
+	    Strcat(buf, "装有马鞍的 ");
 #endif
 	if (buf[0] != 0)
 	    has_adjectives = TRUE;
@@ -685,10 +685,10 @@ boolean called;
 	    char *name = NAME(mtmp);
 
 	    if (mdat == &mons[PM_GHOST]) {
-		Sprintf(eos(buf), "%s ghost", s_suffix(name));
+		Sprintf(eos(buf), "%s的鬼魂", s_suffix(name));
 		name_at_start = TRUE;
 	    } else if (called) {
-		Sprintf(eos(buf), "%s called %s", mdat->mname, name);
+		Sprintf(eos(buf), "%s，叫做%s", mdat->mname, name);
 		name_at_start = (boolean)type_is_pname(mdat);
 	    } else if (is_mplayer(mdat) && (bp = strstri(name, " the ")) != 0) {
 		/* <name> the <adjective> <invisible> <saddled> <rank> */
@@ -732,7 +732,7 @@ boolean called;
 
 	    switch(article) {
 		case ARTICLE_YOUR:
-		    Strcpy(buf2, "your ");
+		    Strcpy(buf2, "你的 ");
 		    Strcat(buf2, buf);
 		    Strcpy(buf, buf2);
 		    return buf;
@@ -877,8 +877,8 @@ char *outbuf;
        its own obfuscation) */
     if (mon->data == &mons[PM_HIGH_PRIEST] && !Hallucination &&
 	    Is_astralevel(&u.uz) && distu(mon->mx, mon->my) > 2) {
-	Strcpy(outbuf, article == ARTICLE_THE ? "the " : "");
-	Strcat(outbuf, mon->female ? "high priestess" : "high priest");
+	Strcpy(outbuf, article == ARTICLE_THE ? " " : "");
+	Strcat(outbuf, mon->female ? "大祭司" : "大祭司");
     } else {
 	Strcpy(outbuf, x_monnam(mon, article, (char *)0, 0, TRUE));
     }
@@ -886,69 +886,69 @@ char *outbuf;
 }
 
 static const char * const bogusmons[] = {
-	"jumbo shrimp", "giant pigmy", "gnu", "killer penguin",
-	"giant cockroach", "giant slug", "pterodactyl",
-	"tyrannosaurus rex", "rot grub", "bookworm", "master lichen",
-	"hologram", "jester", "attorney", "sleazoid",
-	"killer tomato", "amazon", "robot", "battlemech",
-	"rhinovirus", "harpy", "lion-dog", "rat-ant", "Y2K bug",
+	"跳跳虾", "马云", "咕噜", "马达加斯加杀手企鹅",
+	"牛至", "巨大的小牛", "高等数学",
+	"扭曲的玩意", "腐烂的根部", "书蛇", "地衣大师",
+	"孙笑川", "小丑", "答辩", "勇次郎",
+	"赫鲁晓夫", "亚马逊", "机器人", "战斗法师",
+	"犀牛坦克", "啥比", "狮子狗子狮", "鼠鼠", "千年虫",
 						/* misc. */
-	"grue", "Christmas-tree monster", "luck sucker", "paskald",
-	"brogmoid", "dornbeast",		/* Quendor (Zork, &c.) */
-	"Ancient Multi-Hued Dragon", "Evil Iggy",
+	"家人们谁懂啊", "圣诞树杀人魔", "幸运杀手", "唐吉可德",
+	"残疾人", "脚恶魔",		/* Quendor (Zork, &c.) */
+	"古代的非常牛逼的非常伟大的一个恶魔", "瞎子",
 						/* Moria */
-	"emu", "kestrel", "xeroc", "venus flytrap",
+	"傻子", "C++", "python", "维纳斯",
 						/* Rogue */
-	"creeping coins",			/* Wizardry */
-	"siren",                                /* Greek legend */
-	"killer bunny",				/* Monty Python */
-	"rodent of unusual size",		/* The Princess Bride */
-	"Smokey the bear",	/* "Only you can prevent forest fires!" */
-	"Luggage",				/* Discworld */
-	"Ent",					/* Lord of the Rings */
-	"tangle tree", "wiggle",                /* Xanth */
-	"white rabbit", "snark",		/* Lewis Carroll */
-	"pushmi-pullyu",			/* Dr. Doolittle */
-	"smurf",				/* The Smurfs */
-	"tribble", "Klingon", "Borg",		/* Star Trek */
-	"Ewok",					/* Star Wars */
-	"Totoro",				/* Tonari no Totoro */
-	"ohmu",					/* Nausicaa */
-	"youma",				/* Sailor Moon */
-	"nyaasu",				/* Pokemon (Meowth) */
-	"Godzilla", "King Kong",		/* monster movies */
-	"earthquake beast",			/* old L of SH */
-	"Invid",				/* Robotech */
-	"Terminator",				/* The Terminator */
-	"boomer",				/* Bubblegum Crisis */
+	"乱叫的金币",			/* Wizardry */
+	"警报",                                /* Greek legend */
+	"杀人兔",				/* Monty Python */
+	"啊嗷嗷嗷嗷",		/* The Princess Bride */
+	"&*@!&#)*@!)(",	/* "Only you can prevent forest fires!" */
+	"李白",				/* Discworld */
+	"恩特",					/* Lord of the Rings */
+	"tangle tree", "威哥",                /* Xanth */
+	"黑色的白兔", "爬行的鲨鱼",		/* Lewis Carroll */
+	"浦西-浦东",			/* Dr. Doolittle */
+	"爆炸狂魔",				/* The Smurfs */
+	"星际迷航主题曲", "克林贡人", "博格",		/* Star Trek */
+	"卢克",					/* Star Wars */
+	"丰田",				/* Tonari no Totoro */
+	"呕",					/* Nausicaa */
+	"有码",				/* Sailor Moon */
+	"压缩失败",				/* Pokemon (Meowth) */
+	"哥斯拉", "金刚",		/* monster movies */
+	"地震野兽",			/* old L of SH */
+	"不存在的ID",				/* Robotech */
+	"终结者",				/* The Terminator */
+	"BOOMER!",				/* Bubblegum Crisis */
 	"Dalek",				/* Dr. Who ("Exterminate!") */
-	"microscopic space fleet", "Ravenous Bugblatter Beast of Traal",
+	"纳米机器人", "史诗级的野兽",
 						/* HGttG */
-	"teenage mutant ninja turtle",		/* TMNT */
-	"samurai rabbit",			/* Usagi Yojimbo */
-	"aardvark",				/* Cerebus */
-	"Audrey II",				/* Little Shop of Horrors */
-	"witch doctor", "one-eyed one-horned flying purple people eater",
+	"忍者神龟",		/* TMNT */
+	"巫师兔",			/* Usagi Yojimbo */
+	"啊啊啊诶",				/* Cerebus */
+	"安德鲁二",				/* Little Shop of Horrors */
+	"巫医", "独眼独脚的食人魔",
 						/* 50's rock 'n' roll */
-	"Barney the dinosaur",			/* saccharine kiddy TV */
-	"Azog the Orc King", "Morgoth",		/* Angband */
+	"贝妮的恐龙",			/* saccharine kiddy TV */
+	"答辩", "魔斯拉",		/* Angband */
 
 	/*[Tom] new wacky names */
-	"commando", "green beret", "sherman tank", 
+	"司令", "绿包子", "迷彩坦克",
 						/* Military */
-	"Jedi knight", "tie fighter", "protocol droid", "R2 unit", "Emperor",
+	"绝地武士", "天行者", "R2机器人", "光剑", "达斯维达",
 						/* Star Wars */
-	"Vorlon",				/* Babylon 5 */
-	"keg","Diet Pepsi",
+	"比萨斜塔",				/* Babylon 5 */
+	"七喜","可口可乐经典款",
 						/* drinks */
-	"questing beast",		/* King Arthur */
-	"Predator",				/* Movie */
-	"green light", "automobile", "invisible Wizard of Yendor",
-	"piece of yellowish-brown glass", "wand of nothing",
-	"ocean","ballpoint pen","paper cut",	
+	"野兽",		/* King Arthur */
+	"铁血战士",				/* Movie */
+	"绿灯侠", "自动机器人", "隐形的岩德巫师",
+	"一块毫无价值的琥珀", "未装魔法的魔杖",
+	"海洋","圆珠笔","切纸机",
 						/* misc */
-	"Rune", "Gurk", "Yuval",		/* people I know */
-	"mother-in-law"				/* common pest */
+	"符文", "顾客", "鱼儿",		/* people I know */
+	"岳母"				/* common pest */
 };
 
 /* Return a random monster name, for hallucination.
@@ -994,10 +994,10 @@ roguename() /* Name of a Rogue player */
 #ifdef OVL2
 
 static NEARDATA const char * const hcolors[] = {
-	"ultraviolet", "infrared", "bluish-orange",
-	"reddish-green", "dark white", "light black", "sky blue-pink",
-	"salty", "sweet", "sour", "bitter",
-	"striped", "spiral", "swirly", "plaid", "checkered", "argyle",
+	"超级紫色的", "恐惧色的", "很蓝的橙色的",
+	"红加绿色的", "黑白色的", "亮黑色的", "mtf色的",
+	"salty", "甜的", "酸的", "苦的",
+	"striped", "spiral", "swirly", "plaid", "付了钱的", "argyle",
 	"paisley", "blotchy", "guernsey-spotted", "polka-dotted",
 	"square", "round", "triangular",
 	"cabernet", "sangria", "fuchsia", "wisteria",

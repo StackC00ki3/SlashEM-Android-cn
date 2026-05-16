@@ -48,7 +48,7 @@ register struct monst *mtmp;
 	    mtmp->mgold += gold->quan;
 	    delobj(gold);
 	    newsym(u.ux, u.uy);
-	    pline("%s quickly snatches some gold from between your %s!",
+	    pline("%s从你%s下飞也似的抓走了一些金币！",
 		    Monnam(mtmp), makeplural(body_part(FOOT)));
 	    if(!u.ugold || !rn2(5)) {
 		if (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);
@@ -57,7 +57,7 @@ register struct monst *mtmp;
 	    }
 	} else if(u.ugold) {
 	    u.ugold -= (tmp = somegold());
-	    Your("purse feels lighter.");
+	    Your("钱包感觉变轻了。");
 	    mtmp->mgold += tmp;
 	if (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);
 	    mtmp->mavenge = 1;
@@ -117,7 +117,7 @@ register struct monst *mtmp;
             obj_extract_self(fgold);
 	    add_to_minv(mtmp, fgold);
 	    newsym(u.ux, u.uy);
-	    pline("%s quickly snatches some gold from between your %s!",
+	    pline("%s从你%s下飞也似的抓走了一些金币！",
 		    Monnam(mtmp), makeplural(body_part(FOOT)));
 	    if(!ygold || !rn2(5)) {
 		if (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);
@@ -130,7 +130,7 @@ register struct monst *mtmp;
             if (tmp < ygold->quan) ygold = splitobj(ygold, tmp);
             freeinv(ygold);
             add_to_minv(mtmp, ygold);
-	    Your("purse feels lighter.");
+	    Your("钱包感觉变轻了。");
 	    if (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);
 	    monflee(mtmp, 0, FALSE, FALSE);
 	    flags.botl = 1;
@@ -188,7 +188,7 @@ boolean unchain_ball;	/* whether to unpunish or just unwield */
 
 	if (obj->owornmask & W_ARMOR) {
 	    if (obj == uskin) {
-		impossible("Removing embedded scales?");
+		impossible("试图移除嵌入皮肤的鳞片？");
 		skinback(TRUE);		/* uarm = uskin; uskin = 0; */
 	    }
 	    if (obj == uarm) (void) Armor_off();
@@ -252,9 +252,9 @@ char *objnambuf;
 nothing_to_steal:
 	    /* Not even a thousand men in armor can strip a naked man. */
 	    if(Blind)
-	      pline("Somebody tries to rob you, but finds nothing to steal.");
+	      pline("有什么生物试图抢劫你的物品，但是你身上没有能偷的了。");
 	    else
-	      pline("%s tries to rob you, but there is nothing to steal!",
+	      pline("%s试图抢劫你的物品，但是你身上没有能偷的了！",
 		Monnam(mtmp));
 	    return(1);  /* let thief flee */
 	}
@@ -325,7 +325,7 @@ gotobj:
 	    if (ostuck || !can_carry(mtmp, otmp)) {
 		static const char * const how[] = { "steal","snatch","grab","take" };
  cant_take:
-		pline("%s tries to %s your %s but gives up.",
+		pline("%s试图%s你的%s，但最后还是放弃了。",
 		      Monnam(mtmp), how[rn2(SIZE(how))],
 		      (otmp->owornmask & W_ARMOR) ? equipname(otmp) :
 		       cxname(otmp));
@@ -417,7 +417,7 @@ gotobj:
 		    }
 		    break;
 		default:
-		    impossible("Tried to steal a strange worn thing. [%d]",
+		    impossible("试图偷窃一些奇怪的玩意 [%d]",
 			       otmp->oclass);
 		}
 	}
@@ -527,7 +527,7 @@ struct monst *mtmp;
 	/* mpickobj wont merge otmp because none of the above things
 	   to steal are mergable */
 	(void) mpickobj(mtmp,otmp);	/* may merge and free otmp */
-	pline("%s stole %s!", Monnam(mtmp), doname(otmp));
+	pline("%s偷走了%s！", Monnam(mtmp), doname(otmp));
 	if (can_teleport(mtmp->data) && !tele_restrict(mtmp))
 	    (void) rloc(mtmp, FALSE);
     }

@@ -392,7 +392,7 @@ unsigned int *stuckid, *steedid;	/* STEED */
 #endif
 	if(u.uhp <= 0 && (!Upolyd || u.mh <= 0)) {
 	    u.ux = u.uy = 0;	/* affects pline() [hence You()] */
-	    You("were not healthy enough to survive restoration.");
+	    You("没有成功活过“读取游戏”的生存检定。");
 	    /* wiz1_level.dlevel is used by mklev.c to see if lots of stuff is
 	     * uninitialized, so we only have to set it and not the other stuff.
 	     */
@@ -725,9 +725,9 @@ void
 trickery(reason)
 char *reason;
 {
-	pline("Strange, this map is not as I remember it.");
+	pline("奇怪，这地图是不是和我存储的有区别啊？");
 	pline("Somebody is trying some trickery here...");
-	pline("This game is void.");
+	pline("这把游戏作废得了。");
 	killer = reason;
 	done(TRICKED);
 }

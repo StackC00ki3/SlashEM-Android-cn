@@ -412,7 +412,7 @@ moverock()
 #endif
 				    ) {
 		if (Blind) feel_location(sx,sy);
-	    pline("You're too small to push that %s.", xname(otmp));
+	    pline("你太小了，推不动那个%s。", xname(otmp));
 	    goto cannot_push;
 	}
 	if (isok(rx,ry) && !IS_ROCK(levl[rx][ry].typ) &&
@@ -429,12 +429,12 @@ moverock()
 		/* KMH -- Sokoban doesn't let you push boulders diagonally */
 	    if (In_sokoban(&u.uz) && u.dx && u.dy) {
 	    	if (Blind) feel_location(sx,sy);
-	    	pline("%s won't roll diagonally on this %s.",
+	    	pline("%s在这片%s上是不可能斜向滚动的。",
 	        		The(xname(otmp)), surface(sx, sy));
 	    	goto cannot_push;
 	    }
 
-	    if (revive_nasty(rx, ry, "You sense movement on the other side."))
+	    if (revive_nasty(rx, ry, "你感到另一面有移动的声音。"))
 		return (-1);
 
 	    if (mtmp && !noncorporeal(mtmp->data) &&
@@ -447,7 +447,7 @@ moverock()
 		    boolean by_name = (mtmp->data->geno & G_UNIQ ||
 				       mtmp->isshk || mtmp->mnamelth);
 		    if (by_name && !Hallucination)
-			pline("%s is on the other side.", Monnam(mtmp));
+			pline("%s在另一边呢。", Monnam(mtmp));
 		    else
 			pline("There's %s on the other side.", a_monnam(mtmp));
 		} else {
@@ -455,7 +455,7 @@ moverock()
 		    map_invisible(rx, ry);
 		}
 		if (flags.verbose)
-		    pline("Perhaps that's why %s cannot move it.",
+		    pline("说不定这就是为什么%s推不动它。",
 #ifdef STEED
 				u.usteed ? y_monnam(u.usteed) :
 #endif
@@ -564,8 +564,8 @@ moverock()
 		if (!u.usteed) {
 #endif
 		  if (moves > lastmovetime+2 || moves < lastmovetime)
-		    pline("With %s effort you move %s.",
-			  throws_rocks(youmonst.data) ? "little" : "great",
+		    pline("你%s成功推动了%s。",
+			  throws_rocks(youmonst.data) ? "不费吹灰之力就" : "使出吃奶的劲才",
 			  the(xname(otmp)));
 		  exercise(A_STR, TRUE);
 #ifdef STEED
@@ -590,11 +590,11 @@ moverock()
 	nopushmsg:
 #ifdef STEED
 	  if (u.usteed)
-	    pline("%s tries to move %s, but cannot.",
+	    pline("%s试图让%s移动，但是无济于事。",
 		  upstart(y_monnam(u.usteed)), the(xname(otmp)));
 	  else
 #endif
-	    You("try to move %s, but in vain.", the(xname(otmp)));
+	    You("试图移动%s，但是压根没推动。", the(xname(otmp)));
 		 if (Blind) feel_location(sx,sy);
 	cannot_push:
 	    if (throws_rocks(youmonst.data)) {
@@ -625,7 +625,7 @@ moverock()
 		 (!u.dx || !u.dy || (IS_ROCK(levl[u.ux][sy].typ)
 				     && IS_ROCK(levl[sx][u.uy].typ))))
 		|| verysmall(youmonst.data))) {
-		pline("However, you can squeeze yourself into a small opening.");
+		pline("不过，你可以钻进巨石上的一个小裂口。");
 		if (In_sokoban(&u.uz))
 		    change_luck(-1);	/* Sokoban guilt */
 		break;
@@ -693,7 +693,7 @@ still_chewing(x,y)
 
     if (boulder) {
 	delobj(boulder);		/* boulder goes bye-bye */
-	You("eat the boulder.");	/* yum */
+	You("吃掉了巨石。");	/* yum */
 
 	/*
 	 *  The location could still block because of
@@ -714,7 +714,7 @@ still_chewing(x,y)
 	    add_damage(x, y, 10L * ACURRSTR);
 	    dmgtxt = "damage";
 	}
-	digtxt = "chew a hole in the wall.";
+	digtxt = "在墙上啃出来个洞。";
 	if (level.flags.is_maze_lev) {
 	    lev->typ = ROOM;
 	} else if (level.flags.is_cavernous_lev && !in_town(x, y)) {
@@ -724,14 +724,14 @@ still_chewing(x,y)
 	    lev->doormask = D_NODOOR;
 	}
     } else if (IS_TREE(lev->typ)) {
-	digtxt = "chew through the tree.";
+	digtxt = "直接把树啃掉了。";
 	lev->typ = ROOM;
     } else if (lev->typ == SDOOR) {
 	if (lev->doormask & D_TRAPPED) {
 	    lev->doormask = D_NODOOR;
 	    b_trapped("secret door", 0);
 	} else {
-	    digtxt = "chew through the secret door.";
+	    digtxt = "直接把暗门吃掉了。";
 	    lev->doormask = D_BROKEN;
 	}
 	lev->typ = DOOR;
@@ -745,12 +745,12 @@ still_chewing(x,y)
 	    lev->doormask = D_NODOOR;
 	    b_trapped("door", 0);
 	} else {
-	    digtxt = "chew through the door.";
+	    digtxt = "直接从地板上啃了个隧道下去。";
 	    lev->doormask = D_BROKEN;
 	}
 
     } else { /* STONE or SCORR */
-	digtxt = "chew a passage through the rock.";
+	digtxt = "在石壁上啃出了一条道路。";
 	lev->typ = CORR;
     }
 
@@ -786,7 +786,7 @@ dosinkfall()
 	register struct obj *obj;
 
 	if (is_floater(youmonst.data) || (HLevitation & FROMOUTSIDE)) {
-	    You("wobble unsteadily for a moment.");
+	    You("突然上下颠簸了一会。");
 	} else {
 	    long save_ELev = ELevitation, save_HLev = HLevitation;
 
@@ -799,7 +799,7 @@ dosinkfall()
 	    losehp(rn1(8, 25 - (int)ACURR(A_CON)),
 		   fell_on_sink, NO_KILLER_PREFIX);
 	    exercise(A_DEX, FALSE);
-	    selftouch("Falling, you");
+	    selftouch("在掉落的时候，你");
 	    for (obj = level.objects[u.ux][u.uy]; obj; obj = obj->nexthere)
 		if (obj->oclass == WEAPON_CLASS || is_weptool(obj)) {
 		    You("fell on %s.", doname(obj));
@@ -909,7 +909,7 @@ int mode;
 		return FALSE;
 	    else if (In_sokoban(&u.uz)) {
 		if (mode == DO_MOVE)
-		    pline_The("Sokoban bars resist your ability.");
+		    pline_The("仓库番抵抗了你的特殊能力。");
 		return FALSE;
 	    }
 	} else if (Passes_walls && may_passwall(x,y)) {
@@ -928,7 +928,7 @@ int mode;
 		if (Is_stronghold(&u.uz) && is_db_wall(x,y))
 		    pline_The("drawbridge is up!");
 		if (Passes_walls && !may_passwall(x,y) && In_sokoban(&u.uz))
-		    pline_The("Sokoban walls resist your ability.");
+		    pline_The("仓库番的墙抵抗了你的特殊能力。");
 	    }
 	    return FALSE;
 	}
@@ -939,7 +939,7 @@ int mode;
 	    if (artifact_door(x, y)) {
 		if (mode == DO_MOVE) {
 		    if (amorphous(youmonst.data))
-				You("try to ooze under the door, but the gap is too small.");
+				You("试图将身体挤过门，但是门缝有点实在太小了。");
 		    else if (tunnels(youmonst.data) && !needspick(youmonst.data))
 				You("hurt your teeth on the re-enforced door.");
 #ifdef AUTO_OPEN
@@ -947,9 +947,9 @@ int mode;
 				door_opened = flags.move = doopen_indir(x, y);
 #endif
 		    else if (x == u.ux || y == u.uy) {
-			if (Blind || Stunned || ACURR(A_DEX) < 10 || Fumbling) {                            pline("Ouch!  You bump into a heavy door.");
+			if (Blind || Stunned || ACURR(A_DEX) < 10 || Fumbling) {                            pline("啊呀！你撞到了一扇沉重的门上。");
 			    exercise(A_DEX, FALSE);
-			} else pline("That door is closed.");
+			} else pline("这个门是关着的。");
 		    }
 		}
 		return FALSE;
@@ -964,7 +964,7 @@ int mode;
 	    } else {
 		if (mode == DO_MOVE) {
 		    if (amorphous(youmonst.data))
-				You("try to ooze under the door, but can't squeeze your possessions through.");
+				You("试图将身体挤过门，但是你人过去了东西过不去。");
 #ifdef AUTO_OPEN
 			else if (flags.autoopen && !flags.run && !Confusion && !Stunned && !Fumbling)
 				door_opened = flags.move = doopen_indir(x, y);
@@ -978,10 +978,10 @@ int mode;
 		 	    } else
 #endif
 			    {
-			        pline("Ouch!  You bump into a door.");
+			        pline("啊呀！你撞到了一扇门上。");
 			        exercise(A_DEX, FALSE);
 			    }
-			} else pline("That door is closed.");
+			} else pline("这个门是关着的。");
 		    }
 		} else if (mode == TEST_TRAV) goto testdiag;
 		return FALSE;
@@ -1006,17 +1006,17 @@ int mode;
 	/* Move at a diagonal. */
 	if (In_sokoban(&u.uz)) {
 	    if (mode == DO_MOVE)
-		You("cannot pass that way.");
+		You("不能从那里过去。");
 	    return FALSE;
 	}
 	if (bigmonst(youmonst.data)) {
 	    if (mode == DO_MOVE)
-		Your("body is too large to fit through.");
+		Your("身体太大了，根本挤不过去。");
 	    return FALSE;
 	}
 	if (invent && (inv_weight() + weight_cap() > 600)) {
 	    if (mode == DO_MOVE)
-		You("are carrying too much to get through.");
+		You("拿的东西太多，没法挤过去。");
 	    return FALSE;
 	}
     }
@@ -1262,10 +1262,10 @@ domove()
 			: (u.uhp < 10 && u.uhp != u.uhpmax))))
 	   && !Is_airlevel(&u.uz)) {
 	    if(wtcap < OVERLOADED) {
-		You("don't have enough stamina to move.");
+		You("没有足以挪动脚步的力气。");
 		exercise(A_CON, FALSE);
 	    } else
-		You("collapse under your load.");
+		You("被你实在过重的行囊压倒。");
 	    nomul(0);
 	    return;
 	}
@@ -1285,7 +1285,7 @@ domove()
 		    case 1:
 			You_cant("control your movements very well."); break;
 		    case 2:
-			pline("It's hard to walk in thin air.");
+			pline("你在空气中很难行走。");
 			exercise(A_DEX, TRUE);
 			break;
 		    }
@@ -1316,7 +1316,7 @@ domove()
 #ifdef STEED
 		/* Check if your steed can move */
 		if (u.usteed && (!u.usteed->mcanmove || u.usteed->msleeping)) {
-		    Your("steed doesn't respond!");
+		    Your("坐骑没有任何反应！");
 		    nomul(0);
 		    return;
 		}
@@ -1401,7 +1401,7 @@ domove()
 			    if (u.ustuck->mtame &&
 				!Conflict && !u.ustuck->mconf)
 				goto pull_free;
-			    You("cannot escape from %s!", mon_nam(u.ustuck));
+			    You("无法从%s那里逃离出去！", mon_nam(u.ustuck));
 			    nomul(0);
 			    return;
 			}
@@ -1452,7 +1452,7 @@ domove()
 						    && !sensemon(mtmp))
 		    stumble_onto_mimic(mtmp);
 		else if (mtmp->mpeaceful && !Hallucination)
-		    pline("Pardon me, %s.", m_monnam(mtmp));
+		    pline("让一下，%s。", m_monnam(mtmp));
 		else
 		    You("move right into %s.", mon_nam(mtmp));
 		return;
@@ -1534,7 +1534,7 @@ domove()
 			You("free your %s.", body_part(LEG));
 		    } else if (Flying && !In_sokoban(&u.uz)) {
 			/* eg fell in pit, poly'd to a flying monster */
-			You("fly from the pit.");
+			You("从坑里直接飞了出来。");
 			u.utrap = 0;
 			fill_pit(u.ux, u.uy);
 			vision_full_recalc = 1;	/* vision limits change */
@@ -1557,7 +1557,7 @@ domove()
 #endif
 			Norep( (Hallucination && !rn2(5)) ?
 				"You've fallen, and you can't get up." :
-				"You are still in a pit." );
+				"你人还在坑里头。" );
 		    }
 		} else if (u.utraptype == TT_LAVA) {
 		    if(flags.verbose) {
@@ -1579,7 +1579,7 @@ domove()
 				    y_monnam(u.usteed));
 			    else
 #endif
-			     You("pull yourself to the edge of the lava.");
+			     You("把自己拉到岩浆池的边缘。");
 			    u.utrap = 0;
 			}
 		    }
@@ -1587,7 +1587,7 @@ domove()
 		} else if (u.utraptype == TT_WEB) {
 		    if(uwep && uwep->oartifact == ART_STING) {
 			u.utrap = 0;
-			pline("Sting cuts through the web!");
+			pline("杀兽针直接把蜘蛛网切开了！");
 			return;
 		    }
 		    if(--u.utrap) {
@@ -1604,11 +1604,11 @@ domove()
 		    } else {
 #ifdef STEED
 			if (u.usteed)
-			    pline("%s breaks out of the web.",
+			    pline("%s把蜘蛛网撕破后钻出来了。",
 				  upstart(y_monnam(u.usteed)));
 			else
 #endif
-			You("disentangle yourself.");
+			You("把自己从蜘蛛网上解开。");
 		    }
 		} else if (u.utraptype == TT_INFLOOR) {
 		    if(--u.utrap) {
@@ -1880,7 +1880,7 @@ invocation_message()
 
 	    nomul(0);		/* stop running or travelling */
 	    if (Hallucination)
-		pline("You're picking up good vibrations!");
+		pline("你感觉自己随着节奏摇摆！");
 	    else {
 #ifdef STEED
 	    if (u.usteed) Sprintf(buf, "beneath %s", y_monnam(u.usteed));
@@ -2191,7 +2191,7 @@ register boolean newlev;
 	     * but everything else gives a message only the first time */
 	    switch (rt) {
 		case ZOO:
-		    pline("Welcome to David's treasure zoo!");
+		    pline("欢迎来到戴维的宝藏动物园！");
 		    break;
 		case SWAMP:
 		    pline("It %s rather %s down here.",
@@ -2199,10 +2199,10 @@ register boolean newlev;
 			  Blind ? "humid" : "muddy");
 		    break;
 		case COURT:
-		    You("enter an opulent throne room!");
+		    You("进入了一个奢华无比的宫廷房间！");
 		    break;
 		case REALZOO:
-		    You("enter a smelly zoo!");
+		    You("进入了一个味特别大的动物园！");
 		    break;
 		case GIANTCOURT:
 		    You("enter a giant throne room!");
@@ -2211,23 +2211,23 @@ register boolean newlev;
 		    You("enter a dragon lair...");
 		    break;
 		case BADFOODSHOP:
-		    You("enter an abandoned store...");
+		    You("进入了一个被遗弃的商店……");
 		    break;
 		case LEPREHALL:
-		    You("enter a leprechaun hall!");
+		    You("进入了一座小矮妖大厅！");
 		    break;
 		case MORGUE:
 		    if(midnight()) {
 			const char *run = locomotion(youmonst.data, "Run");
 			pline("%s away!  %s away!", run, run);
 		    } else
-			You("have an uncanny feeling...");
+			You("有一种诡异的感觉……");
 		    break;
 		case BEEHIVE:
-		    You("enter a giant beehive!");
+		    You("进入了一个巨型蜂巢！");
 		    break;
 		case LEMUREPIT:
-		    You("enter a pit of screaming lemures!");
+		    You("进入了一个全是尖叫着的狐猴坑！");
 		    break;
 		case MIGOHIVE:
 		    You("enter a strange hive!");
@@ -2239,16 +2239,16 @@ register boolean newlev;
 		    You("enter a disgusting nest!");
 		    break;
 		case ANTHOLE:
-		    You("enter an anthole!");
+		    You("进入了一个蚁穴！");
 		    break;
 		case BARRACKS:
 		    if(monstinroom(&mons[PM_SOLDIER], roomno) ||
 			monstinroom(&mons[PM_SERGEANT], roomno) ||
 			monstinroom(&mons[PM_LIEUTENANT], roomno) ||
 			monstinroom(&mons[PM_CAPTAIN], roomno))
-			You("enter a military barracks!");
+			You("进入了一个有驻军的营帐！");
 		    else
-			You("enter an abandoned barracks.");
+			You("进入了一个被抛弃的营帐。");
 		    break;
 		case DELPHI:
 		    if(monstinroom(&mons[PM_ORACLE], roomno))
@@ -2327,9 +2327,9 @@ dopickup()
 		if (is_animal(u.ustuck->data)) {
 		    You("pick up %s tongue.",
 				    s_suffix(mon_nam(u.ustuck)));
-		    pline("But it's kind of slimy, so you drop it.");
+		    pline("但是它黏黏糊糊的，所以你把它丢了。");
 		} else
-		    You("don't %s anything in here to pick up.",
+		    You("没有%s任何能捡起来的东西。",
 			  Blind ? "feel" : "see");
 		return(1);
 	    } else {
@@ -2381,7 +2381,7 @@ dopickup()
 		 */
 		if ((traphere->ttyp == PIT || traphere->ttyp == SPIKED_PIT) &&
 		     (!u.utrap || (u.utrap && u.utraptype != TT_PIT))) {
-			You("cannot reach the bottom of the pit.");
+			You("没法碰到这个坑的底部。");
 			return(0);
 		}
 	}
@@ -2569,7 +2569,7 @@ maybe_wail()
 		if (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;
 
 	    pline(powercnt >= 4 ? "%s, all your powers will be lost..."
-				: "%s, your life force is running out.", who);
+				: "%s，看来你马上就要魂归黄金王座了。", who);
 	}
     } else {
 	You_hear(u.uhp == 1 ? "the wailing of the Banshee..."
@@ -2647,7 +2647,7 @@ int k_format; /* WAC k_format is an int */
 	/* [max] Invulnerable no dmg */
 	if (Invulnerable) {
 		n = 0;
-		pline("You are unharmed!");
+		pline("你没有受伤！");
 		/* NOTE: DO NOT RETURN - losehp is also called to check for death 
 		 * via u.uhp < 1
 		 */
@@ -2675,7 +2675,7 @@ int k_format; /* WAC k_format is an int */
 	if(u.uhp < 1) {
 		killer_format = k_format;
 		killer = knam;		/* the thing that killed you */
-		You("die...");
+		You("死了……");
 		done(DIED);
 	} else if (n > 0 && u.uhp*10 < u.uhpmax) {
 		maybe_wail();
@@ -2787,7 +2787,7 @@ const char *str;
 	if(str)
 	    pline(str);
 	else
-	    You_cant("do that while carrying so much stuff.");
+	    You_cant("在背着如此沉重的背包时这么做。");
 	return 1;
     }
     return 0;

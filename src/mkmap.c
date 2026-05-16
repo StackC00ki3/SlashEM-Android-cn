@@ -313,11 +313,11 @@ joinm:
      * validity in the levl structure.
      */
     for(croom = &rooms[0], croom2 = croom + 1; croom2 < &rooms[nroom]; ) {
-	/* pick random starting and end locations for "corridor" */
+	/* pick random starting and end locations for "" */
 	if(!somexy(croom, &sm) || !somexy(croom2, &em)) {
 	    /* ack! -- the level is going to be busted */
 	    /* arbitrarily pick centers of both rooms and hope for the best */
-	    impossible("No start/end room loc in join_map.");
+	    impossible("");
 	    sm.x = croom->lx + ((croom->hx - croom->lx) / 2);
 	    sm.y = croom->ly + ((croom->hy - croom->ly) / 2);
 	    em.x = croom2->lx + ((croom2->hx - croom2->lx) / 2);
@@ -388,7 +388,7 @@ remove_rooms(lx, ly, hx, hy)
 	    croom->ly < ly || croom->hy >= hy) { /* partial overlap */
 	    /* TODO: ensure remaining parts of room are still joined */
 
-	    if (!croom->irregular) impossible("regular room in joined map");
+	    if (!croom->irregular) impossible("");
 	} else {
 	    /* total overlap, remove the room */
 	    remove_room((unsigned)i);

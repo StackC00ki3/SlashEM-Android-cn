@@ -218,7 +218,7 @@ register struct obj *sobj;
 	if (sobj) {
 		char buf[BUFSZ];
 		if (youmonst.data == &mons[PM_GOLD_GOLEM]) {
-			Sprintf(buf, "You feel like a million %s!",
+			Sprintf(buf, "你感觉像是一块%s!",
 				currency(2L));
 		} else if (hidden_gold() ||
 #ifndef GOLDOBJ
@@ -227,16 +227,16 @@ register struct obj *sobj;
 			        money_cnt(invent))
 #endif
 			Strcpy(buf,
-				"You feel worried about your future financial situation.");
+				"你很担心将来钱会不会不够花的问题.");
 		else
-			Strcpy(buf, "You feel materially poor.");
+			Strcpy(buf, "你感觉自己就像个穷鬼一样.");
 		strange_feeling(sobj, buf);
         }
 	return(1);
     }
     /* only under me - no separate display required */
     if (stale) docrt();
-    You("notice some gold between your %s.", makeplural(body_part(FOOT)));
+    You("注意到了有一些金币就在你的%s那边.", makeplural(body_part(FOOT)));
     return(0);
 
 outgoldmap:
@@ -287,7 +287,7 @@ outgoldmap:
     }
     
     newsym(u.ux,u.uy);
-    You_feel("very greedy, and sense gold!");
+    You_feel("非常非常非常的贪婪，然后感觉到了很多的金币!");
     exercise(A_WIS, TRUE);
     display_nhwindow(WIN_MAP, TRUE);
     docrt();
@@ -308,7 +308,7 @@ register struct obj	*sobj;
     register int ct = 0, ctu = 0;
     boolean confused = (Confusion || (sobj && sobj->cursed)), stale;
     char oclass = confused ? POTION_CLASS : FOOD_CLASS;
-    const char *what = confused ? something : "food";
+    const char *what = confused ? something : "吃的";
     int uw = u.uinwater;
 
     stale = clear_stale_map(oclass, 0);
@@ -331,15 +331,15 @@ register struct obj	*sobj;
 	known = stale && !confused;
 	if (stale) {
 	    docrt();
-	    You("sense a lack of %s nearby.", what);
+	    You("你感觉周围缺少%s.", what);
 	    if (sobj && sobj->blessed) {
-		if (!u.uedibility) Your("%s starts to tingle.", body_part(NOSE));
+		if (!u.uedibility) Your("%s突然变得有点痒痒的.", body_part(NOSE));
 		u.uedibility = 1;
 	    }
 	} else if (sobj) {
 	    char buf[BUFSZ];
-	    Sprintf(buf, "Your %s twitches%s.", body_part(NOSE),
-			(sobj->blessed && !u.uedibility) ? " then starts to tingle" : "");
+	    Sprintf(buf, "你的%s抽搐了一下%s.", body_part(NOSE),
+			(sobj->blessed && !u.uedibility) ? " 然后开始发痒" : "");
 	    if (sobj->blessed && !u.uedibility) {
 		boolean savebeginner = flags.beginner;	/* prevent non-delivery of */
 		flags.beginner = FALSE;			/* 	message            */
@@ -352,9 +352,9 @@ register struct obj	*sobj;
 	return !stale;
     } else if (!ct) {
 	known = TRUE;
-	You("%s %s nearby.", sobj ? "smell" : "sense", what);
+	You("%s周围的%s.", sobj ? "闻到" : "感受到", what);
 	if (sobj && sobj->blessed) {
-		if (!u.uedibility) pline("Your %s starts to tingle.", body_part(NOSE));
+		if (!u.uedibility) pline("你的 %s突然发痒.", body_part(NOSE));
 		u.uedibility = 1;
 	}
     } else {
@@ -382,13 +382,13 @@ register struct obj	*sobj;
 	newsym(u.ux,u.uy);
 	if (sobj) {
 	    if (sobj->blessed) {
-	    	Your("%s %s to tingle and you smell %s.", body_part(NOSE),
-	    		u.uedibility ? "continues" : "starts", what);
+	    	Your("%s %s发痒，然后你突然能感受到周围的%s.", body_part(NOSE),
+	    		u.uedibility ? "又开始" : "开始", what);
 		u.uedibility = 1;
 	    } else
-		Your("%s tingles and you smell %s.", body_part(NOSE), what);
+		Your("%s很痒，同时你闻到了%s.", body_part(NOSE), what);
 	}
-	else You("sense %s.", what);
+	else You("感受到%s.", what);
 	display_nhwindow(WIN_MAP, TRUE);
 	exercise(A_WIS, TRUE);
 	docrt();
@@ -423,7 +423,7 @@ int		class;		/* an object class, 0 for all */
     int sym, boulder = 0;
 
     if (class < 0 || class >= MAXOCLASSES) {
-	impossible("object_detect:  illegal class %d", class);
+	impossible("物品探测错误！%d", class);
 	class = 0;
     }
 
@@ -440,8 +440,8 @@ int		class;		/* an object class, 0 for all */
     if (Hallucination || (Confusion && class == SCROLL_CLASS))
 	Strcpy(stuff, something);
     else
-    	Strcpy(stuff, class ? oclass_names[class] : "objects");
-    if (boulder && class != ROCK_CLASS) Strcat(stuff, " and/or large stones");
+    	Strcpy(stuff, class ? oclass_names[class] : "物体");
+    if (boulder && class != ROCK_CLASS) Strcat(stuff, " 可能是个石头");
 
     if (do_dknown) for(obj = invent; obj; obj = obj->nobj) do_dknown_of(obj);
 
@@ -482,11 +482,11 @@ int		class;		/* an object class, 0 for all */
     if (!clear_stale_map(!class ? ALL_CLASSES : class, 0) && !ct) {
 	if (!ctu) {
 	    if (detector)
-		strange_feeling(detector, "You feel a lack of something.");
+		strange_feeling(detector, "你感觉有什么东西在本层缺失了.");
 	    return 1;
 	}
 
-	You("sense %s nearby.", stuff);
+	You("感受到周围的%s.", stuff);
 	return 0;
     }
 
@@ -568,7 +568,7 @@ int		class;		/* an object class, 0 for all */
     }
 
     newsym(u.ux,u.uy);
-    You("detect the %s of %s.", ct ? "presence" : "absence", stuff);
+    You("认为周围%s %s.", ct ? "存在" : "不存在", stuff);
     display_nhwindow(WIN_MAP, TRUE);
     /*
      * What are we going to do when the hero does an object detect while blind
@@ -611,8 +611,8 @@ int mclass;			/* monster class, 0 for all */
     if (!mcnt) {
 	if (otmp)
 	    strange_feeling(otmp, Hallucination ?
-			    "You get the heebie jeebies." :
-			    "You feel threatened.");
+			    "你感觉自己在天上飞." :
+			    "你感觉有人要杀你.");
 	return 1;
     } else {
 	boolean woken = FALSE;
@@ -639,9 +639,9 @@ int mclass;			/* monster class, 0 for all */
 	    }
 	}
 	display_self();
-	You("sense the presence of monsters.");
+	You("感受到周围怪物的存在.");
 	if (woken)
-	    pline("Monsters sense the presence of you.");
+	    pline("怪物感受到了你.");
 	display_nhwindow(WIN_MAP, TRUE);
 	docrt();
 	if (Underwater) under_water(2);
@@ -720,12 +720,12 @@ register struct obj *sobj;
     }
     if (!found) {
 	char buf[42];
-	Sprintf(buf, "Your %s stop itching.", makeplural(body_part(TOE)));
+	Sprintf(buf, "你的%s不痒了.", makeplural(body_part(TOE)));
 	strange_feeling(sobj,buf);
 	return(1);
     }
     /* traps exist, but only under me - no separate display required */
-    Your("%s itch.", makeplural(body_part(TOE)));
+    Your("%s发痒.", makeplural(body_part(TOE)));
     return(0);
 outtrapmap:
     cls();
@@ -746,7 +746,7 @@ outtrapmap:
     }
 
     newsym(u.ux,u.uy);
-    You_feel("%s.", sobj && sobj->cursed ? "very greedy" : "entrapped");
+    You_feel("%s.", sobj && sobj->cursed ? "极其贪婪" : "被人坑了");
     display_nhwindow(WIN_MAP, TRUE);
     docrt();
     u.uinwater = uw;
@@ -764,41 +764,41 @@ d_level *where;
 
     if (ll < 0) {
 	if (ll < (-8 - rn2(3))) {
-	    if (!indun)	return "far away";
-	    else	return "far below";
+	    if (!indun)	return "距离你很深的位置";
+	    else	return "很深";
 	}
 	else if (ll < -1) {
-	    if (!indun)	return "away below you";
-	    else	return "below you";
+	    if (!indun)	return "距离你比较深的位置";
+	    else	return "在你下方附近";
 	}
 	else
-	    if (!indun)	return "in the distance";
-	    else	return "just below";
+	    if (!indun)	return "就在附近";
+	    else	return "在下面";
     } else if (ll > 0) {
 	if (ll > (8 + rn2(3))) {
-	    if (!indun)	return "far away";
-	    else	return "far above";
+	    if (!indun)	return "距离你很高的位置";
+	    else	return "很高";
 	}
 	else if (ll > 1) {
-	    if (!indun)	return "away above you";
-	    else	return "above you";
+	    if (!indun)	return "距离你比较高的位置";
+	    else	return "在你上方附近";
 	}
 	else
-	    if (!indun)	return "in the distance";
-	    else	return "just above";
+	    if (!indun)	return "就在附近";
+	    else	return "就在上面";
     } else
-	    if (!indun)	return "in the distance";
-	    else	return "near you";
+	    if (!indun)	return "就在附近";
+	    else	return "在你边上";
 }
 
 static const struct {
     const char *what;
     d_level *where;
 } level_detects[] = {
-  { "Delphi", &oracle_level },
-  { "Medusa's lair", &medusa_level },
-  { "a castle", &stronghold_level },
-  { "the Wizard of Yendor's tower", &wiz1_level },
+  { "神谕", &oracle_level },
+  { "美杜莎的巢穴", &medusa_level },
+  { "一个被守卫着的城堡", &stronghold_level },
+  { "岩德巫师之塔", &wiz1_level },
 };
 
 void
@@ -809,33 +809,33 @@ struct obj *obj;
     int oops;
 
     if (Blind) {
-	pline("Too bad you can't see %s.", the(xname(obj)));
+	pline("你看不到%s的这个事实太让人伤心了.", the(xname(obj)));
 	return;
     }
     oops = (rnd(20) > ACURR(A_INT) || obj->cursed);
     if (oops && (obj->spe > 0)) {
 	switch (rnd(obj->oartifact ? 4 : 5)) {
-	case 1 : pline("%s too much to comprehend!", Tobjnam(obj, "are"));
+	case 1 : pline("%s里头的景象太混乱了，你不能理解!", Tobjnam(obj, ""));
 	    break;
-	case 2 : pline("%s you!", Tobjnam(obj, "confuse"));
+	case 2 : pline("%s你!", Tobjnam(obj, "混乱"));
 	    make_confused(HConfusion + rnd(100),FALSE);
 	    break;
 	case 3 : if (!resists_blnd(&youmonst)) {
-		pline("%s your vision!", Tobjnam(obj, "damage"));
+		pline("%s你的眼睛!", Tobjnam(obj, "闪瞎"));
 		make_blinded(Blinded + rnd(100),FALSE);
 		if (!Blind) Your(vision_clears);
 	    } else {
-		pline("%s your vision.", Tobjnam(obj, "assault"));
-		You("are unaffected!");
+		pline("%s你的眼睛.", Tobjnam(obj, "突然袭击"));
+		You("并没有被影响!");
 	    }
 	    break;
-	case 4 : pline("%s your mind!", Tobjnam(obj, "zap"));
+	case 4 : pline("%s你的精神!", Tobjnam(obj, "扰乱"));
 	    (void) make_hallucinated(HHallucination + rnd(100),FALSE,0L);
 	    break;
-	case 5 : pline("%s!", Tobjnam(obj, "explode"));
+	case 5 : pline("%s!", Tobjnam(obj, "爆炸了"));
 	    useup(obj);
 	    obj = 0;	/* it's gone */
-	    losehp(rnd(30), "exploding crystal ball", KILLED_BY_AN);
+	    losehp(rnd(30), "突然爆炸的水晶球", KILLED_BY_AN);
 	    break;
 	}
 	if (obj) consume_obj_charge(obj, TRUE);
@@ -844,22 +844,22 @@ struct obj *obj;
 
     if (Hallucination) {
 	if (!obj->spe) {
-	    pline("All you see is funky %s haze.", hcolor((char *)0));
+	    pline("你看见了非常时髦的%s色.", hcolor((char *)0));
 	} else {
 	    switch(rnd(6)) {
-	    case 1 : You("grok some groovy globs of incandescent lava.");
+	    case 1 : You("看见了一些黏糊糊糯叽叽软趴趴的岩浆.");
 		break;
-	    case 2 : pline("Whoa!  Psychedelic colors, %s!",
-			   poly_gender() == 1 ? "babe" : "dude");
+	    case 2 : pline("妈呀！可怕的玩意！%s!",
+			   poly_gender() == 1 ? "宝贝儿" : "老兄");
 		break;
-	    case 3 : pline_The("crystal pulses with sinister %s light!",
+	    case 3 : pline_The("水晶球闪耀着神秘的魔幻的%s的光!",
 				hcolor((char *)0));
 		break;
-	    case 4 : You("see goldfish swimming above fluorescent rocks.");
+	    case 4 : You("看着金鱼在观景石里头游来游去.");
 		break;
-	    case 5 : You("see tiny snowflakes spinning around a miniature farmhouse.");
+	    case 5 : You("看见圣诞老人在球里头派送礼物.");
 		break;
-	    default: pline("Oh wow... like a kaleidoscope!");
+	    default: pline("哎呀，潜望镜!");
 		break;
 	    }
 	    consume_obj_charge(obj, TRUE);
@@ -868,18 +868,18 @@ struct obj *obj;
     }
 
     /* read a single character */
-    if (flags.verbose) You("may look for an object or monster symbol.");
-    ch = yn_function("What do you look for?", (char *)0, '\0');
+    if (flags.verbose) You("可以通过输入一个符号来查询对应物体所在地.");
+    ch = yn_function("想查找什么?", (char *)0, '\0');
     /* Don't filter out ' ' here; it has a use */
     if ((ch != def_monsyms[S_GHOST]) && index(quitchars,ch)) { 
 	if (flags.verbose) pline(Never_mind);
 	return;
     }
-    You("peer into %s...", the(xname(obj)));
+    You("往%s里头看...", the(xname(obj)));
     nomul(-rnd(10));
     nomovemsg = "";
     if (obj->spe <= 0)
-	pline_The("vision is unclear.");
+	pline_The("坏了，你看不清.");
     else {
 	int class;
 	int ret = 0;
@@ -905,7 +905,7 @@ struct obj *obj;
 		default:
 		    {
 		    int i = rn2(SIZE(level_detects));
-		    You("see %s, %s.",
+		    You("看见了 %s, %s.",
 			level_detects[i].what,
 			level_distance(level_detects[i].where));
 		    }
@@ -915,8 +915,8 @@ struct obj *obj;
 
 	if (ret) {
 	    if (!rn2(100))  /* make them nervous */
-		You("see the Wizard of Yendor gazing out at you.");
-	    else pline_The("vision is unclear.");
+		You("突然看见岩德巫师在死死的盯着你!");
+	    else pline_The("你啥也看不清.");
 	}
     }
     return;
@@ -1085,11 +1085,11 @@ genericptr_t num;
 		if(levl[zx][zy].typ == SDOOR)
 		    cvt_sdoor_to_door(&levl[zx][zy]);	/* .typ = DOOR */
 		if(levl[zx][zy].doormask & D_TRAPPED) {
-		    if(distu(zx, zy) < 3) b_trapped("door", 0);
-		    else Norep("You %s an explosion!",
-				cansee(zx, zy) ? "see" :
-				   (flags.soundok ? "hear" :
-						"feel the shock of"));
+		    if(distu(zx, zy) < 3) b_trapped("门", 0);
+		    else Norep("你%s了一扇门爆炸了!",
+				cansee(zx, zy) ? "看见" :
+				   (flags.soundok ? "听见" :
+						"感受到"));
 		    wake_nearto(zx, zy, 11*11);
 		    levl[zx][zy].doormask = D_NODOOR;
 		} else
@@ -1132,8 +1132,8 @@ openit()	/* returns number of things found and opened */
 
 	if(u.uswallow) {
 		if (is_animal(u.ustuck->data)) {
-			if (Blind) pline("Its mouth opens!");
-			else pline("%s opens its mouth!", Monnam(u.ustuck));
+			if (Blind) pline("它的嘴大张着!");
+			else pline("%s张开了它的嘴!", Monnam(u.ustuck));
 		}
 		expels(u.ustuck, u.ustuck->data, TRUE);
 		return(-1);
@@ -1170,7 +1170,7 @@ struct trap *trap;
 	cleared = TRUE;
     }
 
-    You("find %s.", an(defsyms[trap_to_defsym(tt)].explanation));
+    You("找到了 %s.", an(defsyms[trap_to_defsym(tt)].explanation));
 
     if (cleared) {
 	display_nhwindow(WIN_MAP, TRUE);	/* wait */
@@ -1197,7 +1197,7 @@ register int aflag;
 
 	if(u.uswallow) {
 		if (!aflag)
-			pline("What are you looking for?  The exit?");
+			pline("你在它里头寻摸啥呢，出口？");
 	} else {
 	    int fund = (uwep && uwep->oartifact &&
 		    spec_ability(uwep, SPFX_SEARCH)) ?
@@ -1243,11 +1243,11 @@ register int aflag;
 					 */
 					continue;
 				    } else {
-					You_feel("an unseen monster!");
+					You_feel("一个不可见的怪物!");
 					map_invisible(x, y);
 				    }
 				} else if (!sensemon(mtmp))
-				    You("find %s.", a_monnam(mtmp));
+				    You("发现了%s.", a_monnam(mtmp));
 				return(1);
 			    }
 			    if(!canspotmon(mtmp)) {

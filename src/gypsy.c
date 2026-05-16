@@ -56,22 +56,22 @@ gypsy_offer (mtmp, cost, txt)
 	long umoney;
 	umoney = money_cnt(invent);
 #endif
-	verbalize("For %ld credit I will %s!", cost, txt);
+	verbalize("如果你愿意支付给我%s的信用额度，我就%s！", cost, txt);
 	if (EGYP(mtmp)->credit >= cost) {
-		if (yn("Accept this offer?") == 'y') {
+		if (yn("接受吉普赛人的许愿机会？") == 'y') {
 			EGYP(mtmp)->credit -= cost;
 			return (TRUE);
 		}
 #ifndef GOLDOBJ
 	} else if (EGYP(mtmp)->credit + u.ugold >= cost)
-		verbalize("What a pity that I can't accept gold!");
+		verbalize("唉，我不收黄金，真可惜啊！");
 #else
 	} else if (EGYP(mtmp)->credit + umoney >= cost)
-		verbalize("What a pity that I can't accept money!");
+		verbalize("唉，我不收现金，真可惜啊！");
 #endif
 		/* Maybe you could try gambling some of it for credit... */
 	else
-		verbalize("What a pity that you don't have enough!");
+		verbalize("唉，你记的信用帐不够，真可惜啊！");
 	return (FALSE);
 }
 
@@ -93,12 +93,12 @@ gypsy_bet (mtmp, minimum)
 #else
  													umoney) {		
 #endif
-		You("don't have enough money for the minimum bet.");
+		You("身上甚至没有付最低赌注的钱。");
 		return (0L);
 	}
 
 	/* Prompt for an amount */
-	Sprintf(prompt, "Bet how much (%ld to %ld)?", minimum,
+	Sprintf(prompt, "你想赌多少钱？（下注范围：%ld到%ld）", minimum,
 			EGYP(mtmp)->credit + 
 #ifndef GOLDOBJ
 													u.ugold);
@@ -110,11 +110,11 @@ gypsy_bet (mtmp, minimum)
 
 	/* Validate the amount */
 	if (bet == 0L) {
-		pline("Never mind.");
+		pline("算了。");
 		return (0L);
 	}
 	if (bet < minimum) {
-		You("must bet at least %ld.", minimum);
+		You("至少要下注%ld。", minimum);
 		return (0L);
 	}
 	if (bet > EGYP(mtmp)->credit +
@@ -123,7 +123,7 @@ gypsy_bet (mtmp, minimum)
 #else
 								umoney) {												
 #endif
-		You("don't have that much money to bet!");
+		You("拿不出这么多钱当赌注！");
 		return (0L);
 	}
 	return (bet);
@@ -133,7 +133,7 @@ gypsy_bet (mtmp, minimum)
 /*** Card-related functions ***/
 
 static const char *suits[CARD_SUITS] =
-{ "swords", "wands",     "shields",  "rings" };          /* Special */
+{ "宝剑", "魔杖",     "盾牌",  "戒指" };          /* Special */
 /* swords    wands/rods  roses/cups  pentacles/disks/coins  Tarot */
 /* spade     bastoni     coppe       denari                 Italian */
 /* swords    batons      cups        coins                  (translated) */
@@ -141,36 +141,36 @@ static const char *suits[CARD_SUITS] =
 
 
 static const char *ranks[CARD_RANKS] =
-{ "ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-   /*none*/       "jack",       "queen", "king" }; /* French */
+{ "A", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+   /*none*/       "骑士",       "皇后", "国王" }; /* French */
 /* page/princess  knight/prince  queen    king        Tarot */
 
 
 static const char *trumps[CARD_TRUMPS] =
-{	"the Fool",               /* This is NOT a Joker */
-	"the Magician",           /* same as the Magus */
-	"the High Priestess",     /* sometimes placed after the Emperor */
+{	"愚者",               /* This is NOT a Joker */
+	"魔术师",           /* same as the Magus */
+	"女祭司",     /* sometimes placed after the Emperor */
 #if 0
-	"the Empress",            /* not included here */
-	"the Emperor",            /* not included here */
+	"女皇",            /* not included here */
+	"皇帝",            /* not included here */
 #endif
-	"the Oracle",             /* same as the Hierophant */
-	"the Lovers",
-	"the Chariot",
-	"Strength",               /* sometimes Adjustment */
-	"the Hermit",
-	"the Wheel of Fortune",   /* sometimes Fortune */
-	"Justice",                /* sometimes Lust */
-	"Punishment",             /* replaces the Hanged Man */
-	"the Devil",              /* normally #15 */
-	"Sorcery",                /* replaces Art or Temperance */
-	"Death",                  /* swapped with the Devil so it remains #13 */
-	"the Tower",              /* really! */
-	"the Star",
-	"the Moon",
-	"the Sun",
-	"Judgement",              /* sometimes Aeon */
-	"Infinity"                /* replaces the World or the Universe */
+	"神谕",             /* same as the Hierophant */
+	"恋人",
+	"战车",
+	"力量",               /* sometimes Adjustment */
+	"隐者",
+	"命运之轮",   /* sometimes Fortune */
+	"正义",                /* sometimes Lust */
+	"惩罚",             /* replaces the Hanged Man */
+	"恶魔",              /* normally #15 */
+	"咒术师",                /* replaces Art or Temperance */
+	"死神",                  /* swapped with the Devil so it remains #13 */
+	"高塔",              /* really! */
+	"星星",
+	"月亮",
+	"太阳",
+	"审判",              /* sometimes Aeon */
+	"无限"                /* replaces the World or the Universe */
 };
 
 
@@ -182,7 +182,7 @@ card_shuffle (mtmp)
 	int i, j, k;
 
 
-	pline("%s shuffles the cards.", Monnam(mtmp));
+	pline("%s把塔罗牌打乱后重新洗了一次。", Monnam(mtmp));
 	for (i = 0; i < CARD_TOTAL; i++)
 		/* Initialize the value */
 		cards[i] = i;
@@ -218,20 +218,20 @@ card_name (num, buf)
 	if (Hallucination) num = rn2(CARD_TOTAL);
 	if (num < 0 || num >= CARD_TOTAL) {
 		/* Invalid card */
-		impossible("no such card %d", num);
-		Strcpy(buf, "a card");
+		impossible("没有%d这种牌！", num);
+		Strcpy(buf, "");
 	} else if (card_istrump(num)) {
 		/* Handle trump cards */
 		r = card_trump(num);
 		if (!r)
-			Sprintf(buf, "the zero of trumps (%s)", trumps[r]);
+			Sprintf(buf, "", trumps[r]);
 		else
-			Sprintf(buf, "the %d of trumps (%s)", r, trumps[r]);
+			Sprintf(buf, "", r, trumps[r]);
 	} else {
 		/* Handle suited cards */
 		r = card_rank(num);
 		s = card_suit(num);
-		Sprintf(buf, "the %s of %s", ranks[r], suits[s]);
+		Sprintf(buf, "", ranks[r], suits[s]);
 	}
 	return;
 }
@@ -265,15 +265,15 @@ fortune_lev (mtmp, name, txt)
 	dep = lev_by_name(name);
 	if (!dep) {
 		/* Perhaps the level doesn't exist? */
-		verbalize("The vision is hazy.");
+		verbalize("你只能看到雾蒙蒙的一片。");
 		return;
 	}
 
 	if (dep == depth(&u.uz))
-		verbalize("I see %s here.", txt);
+		verbalize("我看见%s就在这里。", txt);
 	else {
-		verbalize("I see %s on level %d.", txt, (int)dep);
-/*		if (gypsy_offer(mtmp, 5000L, "teleport you there"))
+		verbalize("我看见了……%s正待在%d层中。", txt, (int)dep);
+/*		if (gypsy_offer(mtmp, 5000L, ""))
 			;*/
 	}
 	return;
@@ -298,13 +298,13 @@ fortune (mtmp)
 	if (wizard) {
 		long t = -1;
 
-		getlin("Which trump?", buf);
+		getlin("你想直接抽哪张塔罗牌？", buf);
 		(void) sscanf(buf, "%ld", &t);
 		if (t >= 0) card = t + CARD_SUITED;
 	}
 #endif
 	card_name(card, buf);
-	verbalize("You have drawn %s.", buf);
+	verbalize("你抽出了一张%s。", buf);
 
 	if (card_istrump(card))
 		switch (card_trump(card)) {
@@ -316,21 +316,21 @@ fortune (mtmp)
 			if (u.uevent.udemigod)
 				resurrect();
 			else
-				fortune_lev(mtmp, "fakewiz1",
-					"an entrance to the Wizard's tower");
+				fortune_lev(mtmp, "",
+					"这是前往巫师塔的一个入口");
 				/*fortune_lev(mtmp, &portal_level);*/
 			break;
 		case 2: /* the High Priestess */
 			if (u.uhave.amulet)
-				verbalize("I see a high altar in the heavens.");
+				verbalize("我看见……我看见在天堂之上有一个至高祭坛。");
 				/* Can only get there by ascending... */
 			else
-				verbalize("I see a high altar on level %d.",
+				verbalize("我在%d层看见了一个至高祭坛。",
 						depth(&sanctum_level));
 				/* Can only get there by invocation... */
 			break;
 		case 3: /* the Oracle */
-			fortune_lev(mtmp, "oracle", "the Oracle");
+			fortune_lev(mtmp, "神谕", "神谕");
 			/*fortune_lev(mtmp, &oracle_level);*/
 			break;
 		case 4: /* the Lovers */
@@ -339,7 +339,7 @@ fortune (mtmp)
 			break;
 		case 5: /* the Chariot */
 			if (gypsy_offer(mtmp, 5000L,
-					"teleport you to a level of your choosing")) {
+					"把你传送到你想去的楼层")) {
 				incr_itimeout(&HTeleport_control, 1);
 				level_tele();
 			}
@@ -349,16 +349,16 @@ fortune (mtmp)
 			incr_itimeout(&HHalf_physical_damage, rn1(500, 500));
 			break;
 		case 7: /* the Hermit */
-			You_feel("like hiding!");
+			You_feel("感觉自己想要躲躲藏藏！");
 			incr_itimeout(&HTeleportation, rn1(300, 300));
 			incr_itimeout(&HInvis, rn1(500, 500));
 			newsym(u.ux, u.uy);
 			break;
 		case 8: /* the Wheel of Fortune */
 			if (Hallucination)
-				pline("Where is Vanna?");
+				pline("维娜跑哪去了？");
 			else
-				You_feel("lucky!");
+				You_feel("很幸运！");
 			if (u.uluck < 0)
 				u.uluck = 0;
 			else
@@ -385,22 +385,22 @@ fortune (mtmp)
 					|| Antimagic)
 				shieldeff(u.ux, u.uy);
 			else if(Hallucination)
-				You("have an out of body experience.");
+				You("有一种灵魂出窍的感觉。");
 			else  {
 				killer_format = KILLED_BY;
-				killer = "the card of Death";
+				killer = "死神塔罗牌";
 				done(DIED);
 			}
 			break;
 		case 14: /* the Tower */
-			fortune_lev(mtmp, "vlad\'s tower", "Vlad the Impaler");
+			fortune_lev(mtmp, "", "穿刺公弗拉德");
 			/* fortune_lev(mtmp, &vlad_level); */
 			break;
 		case 15: /* the Star */
 			otyp = birthstones[getmonth()];
 			makeknown(otyp);
 			if ((otmp = mksobj(otyp, TRUE, FALSE)) != (struct obj *)0) {
-				pline("%s reaches behind your %s and pulls out %s.",
+				pline("%s把手伸到你的%s后面，然后拿出了%s。",
 						Monnam(mtmp), body_part(HEAD), doname(otmp));
 				if (pickup_object(otmp, otmp->quan, FALSE) <= 0) {
 					obj_extract_self(otmp);
@@ -418,47 +418,47 @@ fortune (mtmp)
 			flags.moonphase = phase_of_the_moon();
 			switch (flags.moonphase) {
 				case NEW_MOON:
-					pline("Be careful!  New moon tonight.");
+					pline("小心！今晚新月。");
 					break;
 				case 1:	case 2:	case 3:
-					pline_The("moon is waxing tonight.");
+					pline_The("月亮正渐渐升起。");
 					break;
 				case FULL_MOON:
-					You("are lucky!  Full moon tonight.");
+					You("很幸运！今晚是满月。");
 					change_luck(1);
 					break;
 				case 5:	case 6:	case 7:
-					pline_The("moon is waning tonight.");
+					pline_The("今晚月亮是下凸月。");
 					break;
 				default:
-					impossible("wierd moonphase %d", flags.moonphase);
+					impossible("哦%d好奇怪啊", flags.moonphase);
 					break;
 			}
 			break;
 		case 17: /* the Sun */
 			if (midnight())
-				verbalize("It is the witching hour.  Beware of the undead!");
+				verbalize("现在这个点女巫应该会出来逛，总之你要小心亡灵！");
 			else if (night())
-				verbalize("It is nighttime.  Beware of creatures of the night!");
+				verbalize("现在这个点是晚上，小心那些晚上会出来游荡的生物哦！");
 			else
-				verbalize("It is daytime.  Shouldn't you be working?");
+				verbalize("这个点是白天啊，你不去工作你搁这玩什么slashem？");
 			break;
 		case 18: /* Judgement */
-			fortune_lev(mtmp, "portal to quest",
-				"a portal to a quest");
+			fortune_lev(mtmp, "前往任务位面的传送门",
+				"前往任务位面的传送门");
 			/* fortune_lev(mtmp, &quest_level); */
 			break;
 		case 19: /* Infinity */
 			if (mtmp->mcan) {
-				verbalize("I wish I wasn't here!");
+				verbalize("我倒是想许愿我没在这里出现过！");
 				mongone(mtmp);
-			} else if (gypsy_offer(mtmp, 10000L, "grant you a wish")) {
+			} else if (gypsy_offer(mtmp, 10000L, "实现你一个愿望")) {
 				mtmp->mcan = TRUE;
 				makewish();
 			}
 			break;
 		default:
-			impossible("unknown trump %d", card_trump(card));
+			impossible("未知塔罗牌%d", card_trump(card));
 			break;
 		}	/* End trumps */
 	else
@@ -493,20 +493,20 @@ monte (mtmp)
 
 	/* Shuffle and pick */
 	if (flags.verbose)
-		pline("%s places three cards and rearranges them.", Monnam(mtmp));
+		pline("%s摆出了三张牌，然后把它们洗了一遍。", Monnam(mtmp));
 	any.a_void = 0;	/* zero out all bits */
 	win = create_nhwindow(NHW_MENU);
 	start_menu(win);
 	any.a_char = 'l';
 	add_menu(win, NO_GLYPH, &any , 'l', 0, ATR_NONE,
-			"Left card", MENU_UNSELECTED);
+			"左边的扑克牌", MENU_UNSELECTED);
 	any.a_char = 'c';
 	add_menu(win, NO_GLYPH, &any , 'c', 0, ATR_NONE,
-			"Center card", MENU_UNSELECTED);
+			"中间的扑克牌", MENU_UNSELECTED);
 	any.a_char = 'r';
 	add_menu(win, NO_GLYPH, &any , 'r', 0, ATR_NONE,
-			"Right card", MENU_UNSELECTED);
-	end_menu(win, "Pick a card:");
+			"右边的扑克牌", MENU_UNSELECTED);
+	end_menu(win, "选一张牌：");
 	while (select_menu(win, PICK_ONE, &selected) != 1) ;
 	destroy_nhwindow(win);
 
@@ -520,14 +520,14 @@ monte (mtmp)
 	for (n = bet; n > 0; n /= 10L)
 		/* Penalize big bets */
 		delta++;
-/*	pline("luck = %d; delta = %d", u.umonteluck, delta);*/
+/*	pline("", u.umonteluck, delta);*/
 
 	/* Did we win? */
 	if (u.umonteluck <= rn2(MONTE_MAX)) {
 		if (u.umonteluck == 0)
-			verbalize("You win!  Wasn't that easy?");
+			verbalize("你赢啦！你看，这游戏简单吧？");
 		else
-			verbalize("You win!");
+			verbalize("你赢了！");
 		EGYP(mtmp)->credit += bet;
 
 		/* Make it harder for next time */
@@ -535,7 +535,7 @@ monte (mtmp)
 		if (u.umonteluck > MONTE_MAX) u.umonteluck = MONTE_MAX;
 	} else {
 		card_name(rn1(2, 1), buf);
-		verbalize("Sorry, you picked %s.  Try again.", buf);
+		verbalize("对不住了，你刚刚抓的牌是%s。再试一次吧。", buf);
 		gypsy_charge(mtmp, bet);
 
 		/* Make it a little easier for next time */
@@ -657,23 +657,23 @@ ninetynine (mtmp)
 		}
 		any.a_int = NINETYNINE_HAND + 1;
 		add_menu(win, NO_GLYPH, &any , 'q', 0, ATR_NONE,
-				"Forfeit", MENU_UNSELECTED);
-		end_menu(win, "Play a card:");
+				"弃权", MENU_UNSELECTED);
+		end_menu(win, "打出一张牌：");
 		while (select_menu(win, PICK_ONE, &selected) != 1) ;
 		destroy_nhwindow(win);
 
 		/* Play the card */
 		which = selected[0].item.a_int-1;
 		if (which >= NINETYNINE_HAND) {
-			You("forfeit.");
+			You("弃权了。");
 			gypsy_charge(mtmp, bet);
 			return;
 		}
 		card_name(uhand[which], buf);
 		total = nn_play(uhand[which], total);
-		You("play %s for a total of %d.", buf, total);
+		You("打出了%s，当前总计点数为%d。", buf, total);
 		if (total < 0 || total > NINETYNINE_GOAL) {
-			You("lose!");
+			You("输了！");
 			gypsy_charge(mtmp, bet);
 			return;
 		}
@@ -681,7 +681,7 @@ ninetynine (mtmp)
 		/* Draw a new card */
 		uhand[which] = card_draw(mtmp);
 		if (uhand[which] < 0) {
-			pline_The("deck is empty.  You win!");
+			pline_The("桌上的牌已经打完了，你赢了！");
 			EGYP(mtmp)->credit += bet;
 			return;
 		}
@@ -696,7 +696,7 @@ ninetynine (mtmp)
 			}
 		if (!n) {
 			/* No playable cards */
-			pline("%s forfeits.  You win!", Monnam(mtmp));
+			pline("%s因牌库没牌而投降了。你赢了！", Monnam(mtmp));
 			EGYP(mtmp)->credit += bet;
 			return;
 		}
@@ -704,12 +704,12 @@ ninetynine (mtmp)
 		/* Play the card */
 		card_name(ghand[which], buf);
 		total = nn_play(ghand[which], total);
-		pline("%s plays %s for a total of %d.", Monnam(mtmp), buf, total);
+		pline("%s打出了一张%s，其当前总计点数为%d。", Monnam(mtmp), buf, total);
 
 		/* Draw a new card */
 		ghand[which] = card_draw(mtmp);
 		if (ghand[which] < 0) {
-			pline_The("deck is empty.  You win!");
+			pline_The("桌上的牌已经打完了，你赢了！");
 			EGYP(mtmp)->credit += bet;
 			return;
 		}
@@ -733,24 +733,24 @@ pawn (mtmp)
 
 
 	/* Prompt for an item */
-	otmp = getobj((const char *)pawnables, "pawn");
+	otmp = getobj((const char *)pawnables, "抵押");
 
 	/* Is the item valid? */
 	if (!otmp) return;
 	if (!objects[otmp->otyp].oc_name_known) {
 		/* Reject unknown objects */
-		verbalize("Is this merchandise authentic?");
+		verbalize("你确定你给我的这个宝石有人验过真假吗？");
 		return;
 	}
 	if (otmp->otyp < DILITHIUM_CRYSTAL || otmp->otyp > LAST_GEM) {
 		/* Reject glass */
-		verbalize("Don\'t bother with that junk!");
+		verbalize("去你丫的，别拿这个垃圾耍我！");
 		return;
 	}
 
 	/* Give the credit */
 	value = otmp->quan * objects[otmp->otyp].oc_cost;
-	pline("%s gives you %ld zorkmid%s credit.", Monnam(mtmp),
+	pline("%s给你算了%ldzorkmid的信用额度。", Monnam(mtmp),
 			value, plur(value));
 	EGYP(mtmp)->credit += value;
 
@@ -823,7 +823,7 @@ gypsy_chat (mtmp)
 		return;
 
 	/* Add up your available money */
-	You("have %ld zorkmid%s credit and are carrying %ld zorkmid%s.",
+	You("现在有%ld的zorkmid信用额度，同时身上有%ld的zorkmid。",
 			EGYP(mtmp)->credit, plur(EGYP(mtmp)->credit),
 #ifndef GOLDOBJ
 			u.ugold, plur(u.ugold));
@@ -846,38 +846,38 @@ gypsy_chat (mtmp)
 	any.a_char = 'f';
 	if (money >= FORTUNE_COST)
 		add_menu(win, NO_GLYPH, &any , 'f', 0, ATR_NONE,
-				"Read your fortune", MENU_UNSELECTED);
+				"给你占卜一下", MENU_UNSELECTED);
 
 	/* Three-card monte */
 	any.a_char = 'm';
 	if (money >= MONTE_COST)
 		add_menu(win, NO_GLYPH, &any , 'm', 0, ATR_NONE,
-				"Three-card monte", MENU_UNSELECTED);
+				"三张赌一张", MENU_UNSELECTED);
 
 	/* Ninety-nine */
 	any.a_char = 'n';
 	if (money >= NINETYNINE_COST)
 		add_menu(win, NO_GLYPH, &any , 'n', 0, ATR_NONE,
-				"Ninety-nine", MENU_UNSELECTED);
+				"吃墩", MENU_UNSELECTED);
 
 	/* Pawn gems (always available) */
 	any.a_char = 'p';
 	add_menu(win, NO_GLYPH, &any , 'p', 0, ATR_NONE,
-			"Pawn gems", MENU_UNSELECTED);
+			"典当宝石", MENU_UNSELECTED);
 
 	/* Yendorian Tarocchi */
 	any.a_char = 't';
 /*	if (money >= TAROCCHI_COST)
 		add_menu(win, NO_GLYPH, &any , 't', 0, ATR_NONE,
-				"Yendorian Tarocchi", MENU_UNSELECTED);*/
+				"", MENU_UNSELECTED);*/
 
 	/* Help */
 	any.a_char = '?';
 		add_menu(win, NO_GLYPH, &any , '?', 0, ATR_NONE,
-				"Help", MENU_UNSELECTED);
+				"帮助", MENU_UNSELECTED);
 
 	/* Display the menu */
-	end_menu(win, "Play which game?");
+	end_menu(win, "想玩哪个游戏？");
 	n = select_menu(win, PICK_ONE, &selected);
 	destroy_nhwindow(win);
 	if (n > 0) switch (selected[0].item.a_char) {
@@ -897,11 +897,10 @@ gypsy_chat (mtmp)
 			tarocchi(mtmp);
 			break;
 		case '?':
-			display_file_area(FILE_AREA_SHARE, "gypsy.txt", TRUE);
+			display_file_area(FILE_AREA_SHARE, "", TRUE);
 			break;
 	}
 
 	return;
 }
-
 

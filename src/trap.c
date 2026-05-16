@@ -1189,7 +1189,7 @@ glovecheck:		(void) rust_dmg(uarmg, "gauntlets", 1, TRUE, &youmonst);
 		      trap->launch2.x, trap->launch2.y, style)) {
 		    deltrap(trap);
 		    newsym(u.ux,u.uy);	/* get rid of trap symbol */
-		    pline("Fortunately for you, no boulder was released.");
+		    pline("你运气真好，周围没有可以触发机关的巨石。");
 		}
 		break;
 	    }
@@ -2455,8 +2455,7 @@ long hmask, emask;     /* might cancel timeout */
 		}
 		/* kludge alert:
 		 * drown() and lava_effects() print various messages almost
-		 * every time they're called which conflict with the "fall
-		 * into" message below.  Thus, we want to avoid printing
+		 * every time they're called which conflict with the "fall\n		 * into" message below.  Thus, we want to avoid printing
 		 * confusing, duplicate or out-of-order messages.
 		 * Use knowledge of the two routines as a hack -- this
 		 * should really be handled differently -dlc

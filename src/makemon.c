@@ -96,8 +96,7 @@ register int x, y, n;
 	 * problem went away for him and another reporter-to-newsgroup
 	 * after adding this debugging code.  This has almost got to be a
 	 * compiler bug, but until somebody tracks it down and gets it fixed,
-	 * might as well go with the "but it went away when I tried to find
-	 * it" code.
+	 * might as well go with the "but it went away when I tried to find\n	 * it" code.
 	 */
 	int cnttmp,cntdiv;
 

@@ -23,7 +23,7 @@ ballfall()
 	gets_hit = (((uball->ox != u.ux) || (uball->oy != u.uy)) &&
 		    ((uwep == uball)? FALSE : (boolean)rn2(5)));
 	if (carried(uball)) {
-		pline("Startled, you drop the iron ball.");
+		pline("你被吓到后把铁球丢掉了.");
 		if (uwep == uball)
 			setuwep((struct obj *)0, FALSE);
 		if (uswapwep == uball)
@@ -35,16 +35,16 @@ ballfall()
 	}
 	if(gets_hit){
 		int dmg = rn1(7,25);
-		pline_The("iron ball falls on your %s.",
+		pline_The("铁球径直砸到了你的%s上.",
 			body_part(HEAD));
 		if (uarmh) {
 		    if(is_metallic(uarmh)) {
-			pline("Fortunately, you are wearing a hard helmet.");
+			pline("幸运的是你戴着一个硬头盔!");
 			dmg = 3;
 		    } else if (flags.verbose)
-			Your("%s does not protect you.", xname(uarmh));
+			Your("%s并没有成功的挡住掉落物.", xname(uarmh));
 		}
-		losehp(dmg, "crunched in the head by an iron ball",
+		losehp(dmg, "被铁球砸碎脑袋",
 			NO_KILLER_PREFIX);
 	}
 }
@@ -105,7 +105,7 @@ void
 placebc()
 {
     if (!uchain || !uball) {
-	impossible("Where are your ball and chain?");
+	impossible("卧槽你铁球和铁链呢?来群里找我让我吃惊一下！");
 	return;
     }
 
@@ -165,7 +165,7 @@ bc_order()
 	if (obj == uchain) return BCPOS_CHAIN;
 	if (obj == uball) return BCPOS_BALL;
     }
-    impossible("bc_order:  ball&chain not in same location!");
+    impossible("铁球位置不对!来群里找我让我看看！");
     return BCPOS_DIFFER;
 }
 
@@ -561,8 +561,8 @@ boolean allow_drag;
 drag:
 
 	if (near_capacity() > SLT_ENCUMBER && dist2(x, y, u.ux, u.uy) <= 2) {
-	    You("cannot %sdrag the heavy iron ball.",
-			    invent ? "carry all that and also " : "");
+	    You("不能%s还拖着这么重的铁球.",
+			    invent ? "拿着这一大堆的玩意的同时 " : "");
 	    nomul(0);
 	    return FALSE;
 	}
@@ -579,12 +579,12 @@ drag:
 			 t->ttyp == TRAPDOOR)) ) {
 
 	    if (Levitation) {
-		You_feel("a tug from the iron ball.");
+		You_feel("你脚下的铁球在拽着你.");
 		if (t) t->tseen = 1;
 	    } else {
 		struct monst *victim;
 
-		You("are jerked back by the iron ball!");
+		You("被铁球狠狠的挤压了!");
 		if ((victim = m_at(uchain->ox, uchain->oy)) != 0) {
 		    int tmp;
 
@@ -657,33 +657,33 @@ xchar x, y;
 
     if (x != u.ux || y != u.uy) {
 	struct trap *t;
-	const char *pullmsg = "The ball pulls you out of the %s!";
+	const char *pullmsg = "铁球的惯性把你从%s里头拉出去了!";
 
 	if (u.utrap && u.utraptype != TT_INFLOOR) {
 	    switch(u.utraptype) {
 	    case TT_PIT:
-		pline(pullmsg, "pit");
+		pline(pullmsg, "坑");
 		break;
 	    case TT_WEB:
-		pline(pullmsg, "web");
-		pline_The("web is destroyed!");
+		pline(pullmsg, "网");
+		pline_The("蜘蛛网被扯坏了!");
 		deltrap(t_at(u.ux,u.uy));
 		break;
 	    case TT_LAVA:
-		pline(pullmsg, "lava");
+		pline(pullmsg, "岩浆");
 		break;
 	    case TT_BEARTRAP: {
 		register long side = rn2(3) ? LEFT_SIDE : RIGHT_SIDE;
-		pline(pullmsg, "bear trap");
+		pline(pullmsg, "捕兽夹");
 		set_wounded_legs(side, rn1(1000, 500));
 #ifdef STEED
 		if (!u.usteed)
 #endif
 		{
-		    Your("%s %s is severely damaged.",
-					(side == LEFT_SIDE) ? "left" : "right",
+		    Your("%s %s伤的非常严重。",
+					(side == LEFT_SIDE) ? "左" : "右",
 					body_part(LEG));
-		    losehp(2, "leg damage from being pulled out of a bear trap",
+		    losehp(2, "用铁球试图把自己从夹子里头搞出去时失血过度",
 					KILLED_BY);
 		}
 		break;
@@ -740,8 +740,8 @@ litter()
 		nextobj = otmp->nobj;
 		if ((otmp != uball) && (rnd(capacity) <= (int)otmp->owt)) {
 			if (canletgo(otmp, "")) {
-				Your("%s you down the stairs.",
-				     aobjnam(otmp, "follow"));
+				Your("%s你掉下了楼梯.",
+				     aobjnam(otmp, "跟着"));
 				dropx(otmp);
 			}
 		}
@@ -767,25 +767,25 @@ drag_down()
 	forward = carried(uball) && (uwep == uball || !uwep || !rn2(3));
 
 	if (carried(uball))
-		You("lose your grip on the iron ball.");
+		You("没抓住你的铁球.");
 
 	if (forward) {
 		if(rn2(6)) {
-			pline_The("iron ball drags you downstairs!");
-			losehp(rnd(6), "dragged downstairs by an iron ball",
+			pline_The("铁球把你拽下楼梯!");
+			losehp(rnd(6), "被铁球拽下楼梯时的碰撞致死",
 				NO_KILLER_PREFIX);
 			litter();
 		}
 	} else {
 		if(rn2(2)) {
-			pline_The("iron ball smacks into you!");
-			losehp(rnd(20), "iron ball collision", KILLED_BY_AN);
+			pline_The("铁球砸向你!");
+			losehp(rnd(20), "铁球与重力", KILLED_BY_AN);
 			exercise(A_STR, FALSE);
 			dragchance -= 2;
 		}
 		if( (int) dragchance >= rnd(6)) {
-			pline_The("iron ball drags you downstairs!");
-			losehp(rnd(3), "dragged downstairs by an iron ball",
+			pline_The("铁球把你拽下楼梯!");
+			losehp(rnd(3), "被铁球拽下楼梯后被铁球砸死",
 				NO_KILLER_PREFIX);
 			exercise(A_STR, FALSE);
 			litter();

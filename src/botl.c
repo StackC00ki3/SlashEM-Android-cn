@@ -8,31 +8,31 @@
 extern const char *hu_stat[];	/* defined in eat.c */
 
 const char *hu_abbrev_stat[] = {	/* must be kept consistent with eat.c */
-	"Sat",
-	"",
-	"Hun",
-	"Wea",
-	"Ftg",
-	"Ftd",
-	"Sta"
+	"饱腹",
+	"正常",
+	"饥饿",
+	"虚弱",
+	"极度虚弱",
+	"昏厥",
+	"饿死"
 };
 
 const char * const enc_stat[] = {
-	"",
-	"Burdened",
-	"Stressed",
-	"Strained",
-	"Overtaxed",
-	"Overloaded"
+	"无压力",
+	"负重",
+	"压力",
+	"强压",
+	"过重",
+	"超重"
 };
 
 const char *enc_abbrev_stat[] = {
-	"",
-	"Brd",
-	"Ssd",
-	"Snd",
-	"Otd",
-	"Old"
+	"无压力",
+	"负重",
+	"压力",
+	"强压",
+	"过重",
+	"超重"
 };
 
 STATIC_DCL void NDECL(bot1);
@@ -230,7 +230,7 @@ boolean female;
 	/* Try the role name, instead */
 	if (female && role->name.f) return (role->name.f);
 	else if (role->name.m) return (role->name.m);
-	return ("Player");
+	return ("玩家");
 }
 
 
@@ -402,15 +402,15 @@ bot1()
 	if((i - j) > 0)
 		Sprintf(nb = eos(nb),"%*s", i-j, " ");  /* pad with spaces */
         
-	Sprintf(nb = eos(nb), "St:%s ", botl_strength());
+	Sprintf(nb = eos(nb), "力:%s ", botl_strength());
 	Sprintf(nb = eos(nb),
-		"Dx:%-1d Co:%-1d In:%-1d Wi:%-1d Ch:%-1d",
+		"敏:%-1d 体:%-1d 感:%-1d 智:%-1d 魅:%-1d",
 		ACURR(A_DEX), ACURR(A_CON), ACURR(A_INT), ACURR(A_WIS), ACURR(A_CHA));
-	Sprintf(nb = eos(nb), (u.ualign.type == A_CHAOTIC) ? "  Chaotic" :
-			(u.ualign.type == A_NEUTRAL) ? "  Neutral" : "  Lawful");
+	Sprintf(nb = eos(nb), (u.ualign.type == A_CHAOTIC) ? "  混沌" :
+			(u.ualign.type == A_NEUTRAL) ? "  中立" : "  秩序");
 #ifdef SCORE_ON_BOTL
 	if (flags.showscore)
-	    Sprintf(nb = eos(nb), " S:%ld", botl_score());
+	    Sprintf(nb = eos(nb), " 分数:%ld", botl_score());
 #endif
 	curs(WIN_STATUS, 1, 0);
 	putstr(WIN_STATUS, 0, newbot1);
@@ -428,16 +428,16 @@ int verbose;
 	if (Is_knox(&u.uz))
 		Sprintf(buf, "%s ", dungeons[u.uz.dnum].dname);
 	else if (In_quest(&u.uz))
-		Sprintf(buf, "Home %d ", dunlev(&u.uz));
+		Sprintf(buf, "家乡:%d ", dunlev(&u.uz));
 	else if (In_endgame(&u.uz))
 		Sprintf(buf,
-			Is_astralevel(&u.uz) ? "Astral Plane " : "End Game ");
+			Is_astralevel(&u.uz) ? "星界 " : "终局 ");
 	else {
 		if (verbose)
-			Sprintf(buf, "%s, level %d ",
+			Sprintf(buf, "%s,第%d层 ",
 				dungeons[u.uz.dnum].dname, depth(&u.uz));
 		else
-		Sprintf(buf, "Dlvl:%-2d ", depth(&u.uz));
+		Sprintf(buf, "地牢层级:%-2d ", depth(&u.uz));
 		ret = 0;
 	}
 	return ret;
@@ -531,12 +531,12 @@ bot2str(char *newbot2)
 
 #ifdef SHOW_WEIGHT
 	if (flags.showweight && bot2_abbrev < 3)
-		Sprintf(nb = eos(nb), "  Wt:%ld/%ld", (long)(inv_weight()+weight_cap()),
+		Sprintf(nb = eos(nb), "  负重:%ld/%ld", (long)(inv_weight()+weight_cap()),
 				(long)weight_cap());
 #endif
 
 	if(flags.time && bot2_abbrev < 3)
-	        Sprintf(nb = eos(nb), "  T:%ld ", moves);
+	        Sprintf(nb = eos(nb), "  回:%ld ", moves);
 
 #ifdef ALLEG_FX
         if(iflags.usealleg && botl_warn && !Hallucination)
@@ -575,22 +575,22 @@ bot2str(char *newbot2)
 	/* KMH -- changed to Lev */
 	if (Levitation)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-	     	add_colored_text("Lev", newbot2);
+	     	add_colored_text("漂浮", newbot2);
 #else
-		Strcat(nb = eos(nb), " Lev");
+		Strcat(nb = eos(nb), " 漂浮");
 #endif
 	if(Confusion)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-	     	add_colored_text(bot2_abbrev >= 2 ? " Cnf" : " Conf", newbot2);
+	     	add_colored_text(bot2_abbrev >= 2 ? " 混乱" : " 混乱", newbot2);
 #else
-		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " Cnf" : " Conf");
+		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 混乱" : " 混乱");
 #endif
 	if(Sick) {
 		if (u.usick_type & SICK_VOMITABLE)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-			add_colored_text(bot2_abbrev >= 2 ? " FPs" : " FoodPois", newbot2);
+			add_colored_text(bot2_abbrev >= 2 ? " 食物中毒" : " 食物中毒", newbot2);
 #else
-			Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " FPs" : " FoodPois");
+			Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 食物中毒" : " 食物中毒");
 #endif
 		if (u.usick_type & SICK_NONVOMITABLE)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
@@ -602,33 +602,33 @@ bot2str(char *newbot2)
 
 	if(Blind)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-	     	add_colored_text(bot2_abbrev >= 2 ? " Bnd" : " Blind", newbot2);
+	     	add_colored_text(bot2_abbrev >= 2 ? " 失明" : " 失明", newbot2);
 #else
-		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " Bnd" : " Blind");
+		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 失明" : " 失明");
 #endif
 	if(Stunned)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-	     	add_colored_text(bot2_abbrev >= 2 ? " Stn" : " Stun", newbot2);
+	     	add_colored_text(bot2_abbrev >= 2 ? " 眩晕" : " 眩晕", newbot2);
 #else
-		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " Stn" : " Stun");
+		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 眩晕" : " 眩晕");
 #endif
 	if(Hallucination)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-		add_colored_text(bot2_abbrev >= 2 ? " Hal" : " Hallu", newbot2);
+		add_colored_text(bot2_abbrev >= 2 ? " 幻觉" : " 幻觉", newbot2);
 #else
-		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " Hal" : " Hallu");
+		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 幻觉" : " 幻觉");
 #endif
 	if(Slimed)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-		add_colored_text(bot2_abbrev >= 2 ? " Slm" : " Slime", newbot2);
+		add_colored_text(bot2_abbrev >= 2 ? " 史莱姆化" : " 史莱姆化", newbot2);
 #else
-		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " Slm" : " Slime");
+		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 史莱姆化" : " 史莱姆化");
 #endif
 	if(u.ustuck && !u.uswallow && !sticks(youmonst.data))
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
-		add_colored_text(bot2_abbrev >= 2 ? " Hld" : "Held", newbot2);
+		add_colored_text(bot2_abbrev >= 2 ? " 被拘束" : "被拘束", newbot2);
 #else
-		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " Hld" : "Held");
+		Strcat(nb = eos(nb), bot2_abbrev >= 2 ? " 被拘束" : "被拘束");
 #endif
 	if(cap > UNENCUMBERED)
 #if defined(STATUS_COLORS) && defined(TEXTCOLOR)
@@ -727,26 +727,26 @@ boolean reconfig;
     char dlevel[BUFSZ];
     char hp[21], hpmax[21], pw[21], pwmax[21], gold[21], ac[21], elevel[21];
     char expr[21], iweight[21], capacity[21], flgs[21], tim[21];
-    *rv++ = reconfig ? "player" : botl_player();
-    *rv++ = reconfig ? "strength" : botl_strength();
-    *rv++ = reconfig ? "dexterity" : (Sprintf(dex, "%d", ACURR(A_DEX)), dex);
-    *rv++ = reconfig ? "constitution" : (Sprintf(con, "%d", ACURR(A_CON)), con);
-    *rv++ = reconfig ? "intelligence" : (Sprintf(itl, "%d", ACURR(A_INT)), itl);
-    *rv++ = reconfig ? "wisdom" : (Sprintf(wis, "%d", ACURR(A_WIS)), wis);
-    *rv++ = reconfig ? "charisma" : (Sprintf(cha, "%d", ACURR(A_CHA)), cha);
-    *rv++ = reconfig ? "alignment" : u.ualign.type == A_CHAOTIC ? "Chaotic" :
-	    u.ualign.type == A_NEUTRAL ? "Neutral" : "Lawful";
+    *rv++ = reconfig ? "玩家" : botl_player();
+    *rv++ = reconfig ? "力量" : botl_strength();
+    *rv++ = reconfig ? "敏捷" : (Sprintf(dex, "%d", ACURR(A_DEX)), dex);
+    *rv++ = reconfig ? "体质" : (Sprintf(con, "%d", ACURR(A_CON)), con);
+    *rv++ = reconfig ? "感知" : (Sprintf(itl, "%d", ACURR(A_INT)), itl);
+    *rv++ = reconfig ? "智力" : (Sprintf(wis, "%d", ACURR(A_WIS)), wis);
+    *rv++ = reconfig ? "魅力" : (Sprintf(cha, "%d", ACURR(A_CHA)), cha);
+    *rv++ = reconfig ? "阵营" : u.ualign.type == A_CHAOTIC ? "混沌" :
+	    u.ualign.type == A_NEUTRAL ? "中立" : "秩序";
 #ifdef SCORE_ON_BOTL
     if (flags.showscore)
-	*rv++ = reconfig ? "score" :
+	*rv++ = reconfig ? "分数" :
 		(Sprintf(score, "%ld", botl_score()), score);
 #endif
     uhp = Upolyd ? u.mh : u.uhp;
     if (uhp < 0) uhp = 0;
     (void) describe_level(dlevel, TRUE);
     eos(dlevel)[-1] = 0;
-    *rv++ = reconfig ? "dlevel" : dlevel;
-    *rv++ = reconfig ? "gold" : (Sprintf(gold, "%ld",
+    *rv++ = reconfig ? "地牢层级" : dlevel;
+    *rv++ = reconfig ? "金币" : (Sprintf(gold, "%ld",
 #ifndef GOLDOBJ
     u.ugold
 #else
@@ -754,31 +754,31 @@ boolean reconfig;
 #endif
     ), gold);
     *rv++ = reconfig ? "hp" : (Sprintf(hp, "%d", uhp), hp);
-    *rv++ = reconfig ? "hpmax" :
+    *rv++ = reconfig ? "最大HP" :
 	    (Sprintf(hpmax, "%d", Upolyd ? u.mhmax : u.uhpmax), hpmax);
     *rv++ = reconfig ? "pw" : (Sprintf(pw, "%d", u.uen), pw);
-    *rv++ = reconfig ? "pwmax" : (Sprintf(pwmax, "%d", u.uenmax), pwmax);
+    *rv++ = reconfig ? "最大Pw" : (Sprintf(pwmax, "%d", u.uenmax), pwmax);
     *rv++ = reconfig ? "ac" : (Sprintf(ac, "%d", u.uac), ac);
     Sprintf(elevel, "%u",
 	    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);
-    *rv++ = reconfig ? (Upolyd ? "hitdice" : "elevel") : elevel;
+    *rv++ = reconfig ? (Upolyd ? "攻击计算骰" : "elevel") : elevel;
 #ifdef EXP_ON_BOTL
     if (flags.showexp)
-	*rv++ = reconfig ? "experience" : (Sprintf(expr, "%ld", u.uexp), expr);
+	*rv++ = reconfig ? "经验值" : (Sprintf(expr, "%ld", u.uexp), expr);
 #endif
 #ifdef SHOW_WEIGHT
     if (flags.showweight) {
-	*rv++ = reconfig ? "weight" : (Sprintf(iweight,
+	*rv++ = reconfig ? "负重" : (Sprintf(iweight,
 		"%ld", (long)(inv_weight() + weight_cap())), iweight);
-	*rv++ = reconfig ? "capacity" : (Sprintf(capacity,
+	*rv++ = reconfig ? "最大负载量" : (Sprintf(capacity,
 		"%ld", (long)weight_cap()), capacity);
     }
 #endif
     if (flags.time)
-	*rv++ = reconfig ? "time" : (Sprintf(tim, "%ld", moves), tim);
-    *rv++ = reconfig ? "hunger" : strcmp(hu_stat[u.uhs], "        ") ?
+	*rv++ = reconfig ? "时间" : (Sprintf(tim, "%ld", moves), tim);
+    *rv++ = reconfig ? "饥饿" : strcmp(hu_stat[u.uhs], "        ") ?
 	    hu_stat[u.uhs] : "";
-    *rv++ = reconfig ? "encumberance" : enc_stat[near_capacity()];
+    *rv++ = reconfig ? "负重" : enc_stat[near_capacity()];
     *rv++ = reconfig ? "flags" : (Sprintf(flgs, "%lX",
         (Levitation ? RAW_STAT_LEVITATION : 0) |
 	(Confusion ? RAW_STAT_CONFUSION : 0) |

@@ -96,7 +96,7 @@ register unsigned int lth;
 
 	ptr = malloc(lth);
 #ifndef MONITOR_HEAP
-	if (!ptr) panic("Memory allocation failure; cannot get %u bytes", lth);
+	if (!ptr) panic("警告！内存溢出！", lth);
 #endif
 	return((long *) ptr);
 #endif
@@ -438,7 +438,7 @@ void monitor_heap_push(const char *id, int subid)
     monitor_id_stack = triv_realloc(monitor_id_stack,
       monitor_id_stack_depth * sizeof (*monitor_id_stack));
     if (!monitor_id_stack)
-	panic("monitor_heap_push: not enough memory");
+	panic("警告！内存不足！");
     monitor_id_stack[monitor_id_stack_depth - 1].id = id;
     monitor_id_stack[monitor_id_stack_depth - 1].subid = subid;
 }
@@ -448,7 +448,7 @@ void monitor_heap_push(const char *id, int subid)
 unsigned long monitor_heap_pop(const char *id, int subid, unsigned long retval)
 {
     if (!monitor_id_stack_depth)
-	panic("monitor_heap_pop: empty stack");
+	panic("警告：空堆栈！");
     if (monitor_id_stack[monitor_id_stack_depth - 1].id != id ||
       monitor_id_stack[monitor_id_stack_depth - 1].subid != subid)
 	panic("monitor_heap_pop: mismatch: (%s, %d) != (%s, %d)",

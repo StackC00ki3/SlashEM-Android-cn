@@ -151,12 +151,12 @@ s_suffix(s)		/* return a name converted to possessive */
     Static char buf[BUFSZ];
 
     Strcpy(buf, s);
-    if(!strcmpi(buf, "it"))
-	Strcat(buf, "s");
+    if(!strcmpi(buf, "的"))
+	Strcat(buf, "的");
     else if(*(eos(buf)-1) == 's')
-	Strcat(buf, "'");
+	Strcat(buf, "的");
     else
-	Strcat(buf, "'s");
+	Strcat(buf, "'的");
     return buf;
 }
 

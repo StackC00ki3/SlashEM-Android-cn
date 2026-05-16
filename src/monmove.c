@@ -27,7 +27,7 @@ register struct monst *mtmp;
 {
 	if (flags.verbose) {
 	    if (cansee(mtmp->mx, mtmp->my))
-		pline("KABOOM!!  You see a door explode.");
+		pline("砰！轰隆隆！啪！你看见一扇门爆炸了。");
 	    else if (flags.soundok)
 		You_hear("a distant explosion.");
 	}
@@ -63,11 +63,11 @@ register struct monst *mtmp;
 
 		  pline("%s yells:", Amonnam(mtmp));
 		  if(levl[x][y].looted & D_WARNED) {
-			verbalize("Halt, thief!  You're under arrest!");
+			verbalize("给我站住！你这小偷！我要逮捕你！");
 			(void) angry_guards(!(flags.soundok));
 		  } else {
 			int i;
-			verbalize("Hey, stop picking that lock!");
+			verbalize("喂！立刻终止你的撬锁行为！");
 			/* [ALI] Since marking a door as warned will have
 			 * the side effect of trapping the door, it must be
 			 * included in the doors[] array in order that trap
@@ -108,8 +108,7 @@ register struct monst *mtmp;
 			(dd = distu(mtmp->mx,mtmp->my)) < distu(x,y) &&
 			dd < 100 && !canseemon(mtmp)) {
 	    /* Note: this assumes we only want to warn against the monster to
-	     * which the weapon does extra damage, as there is no "monster
-	     * which the weapon warns against" field.
+	     * which the weapon does extra damage, as there is no "monster\n	     * which the weapon warns against" field.
 	     */
 	    if (spec_ability(uwep, SPFX_WARN) && spec_dbon(uwep, mtmp, 1))
 		warnlevel = 100;
@@ -426,7 +425,7 @@ register struct monst *mtmp;
 	if(nearby && mdat->msound == MS_BRIBE &&
 	   mtmp->mpeaceful && !mtmp->mtame && !u.uswallow) {
 		if (mtmp->mux != u.ux || mtmp->muy != u.uy) {
-			pline("%s whispers at thin air.",
+			pline("%s对着空无一物的空气嘀嘀咕咕不知道说啥。",
 			    cansee(mtmp->mux, mtmp->muy) ? Monnam(mtmp) : "It");
 
 			if (is_demon(youmonst.data)) {
@@ -435,7 +434,7 @@ register struct monst *mtmp;
 			} else {
 			    mtmp->minvis = mtmp->perminvis = 0;
 			    /* Why?  For the same reason in real demon talk */
-			    pline("%s gets angry!", Amonnam(mtmp));
+			    pline("%s生气了！", Amonnam(mtmp));
 			    mtmp->mpeaceful = 0;
 			    /* since no way is an image going to pay it off */
 			}
@@ -454,10 +453,10 @@ register struct monst *mtmp;
 		if (canseemon(mtmp))
 			pline("%s concentrates.", Monnam(mtmp));
 		if (distu(mtmp->mx, mtmp->my) > BOLT_LIM * BOLT_LIM) {
-			You("sense a faint wave of psychic energy.");
+			You("感受到一股微弱的心灵能量波。");
 			goto toofar;
 		}
-		pline("A wave of psychic energy pours over you!");
+		pline("一股心灵能量冲击波将你盖住了！");
 		if (mtmp->mpeaceful &&
 		    (!Conflict || resist(mtmp, RING_CLASS, 0, 0)))
 			pline("It feels quite soothing.");
@@ -638,7 +637,7 @@ itsstuck(mtmp)
 register struct monst *mtmp;
 {
 	if (sticks(youmonst.data) && mtmp==u.ustuck && !u.uswallow) {
-		pline("%s cannot escape from you!", Monnam(mtmp));
+		pline("%s没法挣脱你！", Monnam(mtmp));
 		return(TRUE);
 	}
 	return(FALSE);
@@ -757,7 +756,7 @@ register int after;
 #ifdef MAIL
 	if(ptr == &mons[PM_MAIL_DAEMON]) {
 	    if(flags.soundok && canseemon(mtmp))
-		verbalize("I'm late!");
+		verbalize("我来晚了！");
 	    mongone(mtmp);
 	    return(2);
 	}
@@ -1144,7 +1143,7 @@ postmov:
 				if (canseeit)
 				   You("see a door unlock and open.");
 				else if (flags.soundok)
-				   You_hear("a door unlock and open.");
+				   You_hear("某扇门上的开锁声音，然后那扇门被打开了。");
 			    }
 			    here->doormask = D_ISOPEN;
 			    /* newsym(mtmp->mx, mtmp->my); */
@@ -1159,9 +1158,9 @@ postmov:
 			} else {
 			    if (flags.verbose) {
 				if (canseeit)
-				     You("see a door open.");
+				     You("看见一扇门被打开了。");
 				else if (flags.soundok)
-				     You_hear("a door open.");
+				     You_hear("一扇门被打开了。");
 			    }
 			    here->doormask = D_ISOPEN;
 			    /* newsym(mtmp->mx, mtmp->my); */  /* done below */
@@ -1185,7 +1184,7 @@ postmov:
 				if (canseeit)
 				    You("see a door crash open.");
 				else if (flags.soundok)
-				    You_hear("a door crash open.");
+				    You_hear("一扇门被直接撞开了。");
 			    }
 			    if (here->doormask & D_LOCKED && !rn2(2))
 				    here->doormask = D_NODOOR;

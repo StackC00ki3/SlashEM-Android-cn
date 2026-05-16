@@ -781,7 +781,7 @@ doengrave()
 			type  = ENGRAVE;
 			if(!objects[otmp->otyp].oc_name_known) {
 			    if (flags.verbose)
-				pline("This %s is a wand of digging!",
+				pline("这根%s是挖掘魔杖！",
 				xname(otmp));
 			    doknown = TRUE;
 			}
@@ -802,7 +802,7 @@ doengrave()
 			type  = BURN;
 			if(!objects[otmp->otyp].oc_name_known) {
 			if (flags.verbose)
-			    pline("This %s is a wand of fire!", xname(otmp));
+			    pline("这根%s是火焰魔杖！", xname(otmp));
 			    doknown = TRUE;
 			}
 			Strcpy(post_engr_text,
@@ -814,7 +814,7 @@ doengrave()
 			type  = BURN;
 			if(!objects[otmp->otyp].oc_name_known) {
 			if (flags.verbose)
-			    pline("This %s is a wand of fireballs!", xname(otmp));
+			    pline("这根%s是火球魔杖！", xname(otmp));
 			    doknown = TRUE;
 			}
 			Strcpy(post_engr_text,
@@ -826,7 +826,7 @@ doengrave()
 			type  = BURN;
 			if(!objects[otmp->otyp].oc_name_known) {
 			    if (flags.verbose)
-				pline("This %s is a wand of lightning!",
+				pline("这根%s是闪电魔杖！",
 					xname(otmp));
 			    doknown = TRUE;
 			}

@@ -467,7 +467,7 @@ display_monster(x, y, mon, sightflags, worm_tail)
     if (mon_mimic && (sightflags == PHYSICALLY_SEEN)) {
 	switch (mon->m_ap_type) {
 	    default:
-		impossible("display_monster:  bad m_ap_type value [ = %d ]",
+		impossible("显示物品错误！",
 							(int) mon->m_ap_type);
 	    case M_AP_NOTHING:
 		show_glyph(x, y, mon_to_glyph(mon));
@@ -563,7 +563,7 @@ display_warning(mon)
     } else if (MATCH_WARN_OF_MON(mon)) {
 	glyph = mon_to_glyph(mon);
     } else {
-    	impossible("display_warning did not match warning type?");
+    	impossible("显示错误?");
         return;
     }
     show_glyph(x, y, glyph);
@@ -1005,7 +1005,7 @@ tmp_at(x, y)
 	    break;
     }
 
-    if (!tglyph) panic("tmp_at: tglyph not initialized");
+    if (!tglyph) panic("错误：初始化失败");
 
     switch (x) {
 	case DISP_CHANGE:
@@ -1445,13 +1445,13 @@ show_glyph(x,y,glyph)
 	    text = "monster";		offset = glyph;
 	}
 
-	impossible("show_glyph:  bad pos %d %d with glyph %d [%s %d].",
+	impossible("展示错误[%s %d].",
 						x, y, glyph, text, offset);
 	return;
     }
 
     if (glyph >= MAX_GLYPH) {
-	impossible("show_glyph:  bad glyph %d [max %d] at (%d,%d).",
+	impossible("展示错误:  bad glyph %d [max %d] at (%d,%d).",
 					glyph, MAX_GLYPH, x, y);
 	return;
     }

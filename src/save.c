@@ -73,19 +73,19 @@ dosave()
 #endif
 
 	clear_nhwindow(WIN_MESSAGE);
-	if(yn("Really save?") == 'n') {
+	if(yn("确定真的要保存游戏吗？") == 'n') {
 		clear_nhwindow(WIN_MESSAGE);
 		if(multi > 0) nomul(0);
 	} else {
 		clear_nhwindow(WIN_MESSAGE);
-		pline("Saving...");
+		pline("保存游戏中……");
 #if defined(UNIX) || defined(VMS) || defined(__EMX__)
 		program_state.done_hup = 0;
 #endif
 #ifdef KEEP_SAVE
                 saverestore = FALSE;
                 if (flags.keep_savefile)
-                        if(yn("Really quit?") == 'n') saverestore = TRUE;
+                        if(yn("你再想想，真的要结束这把游戏吗？") == 'n') saverestore = TRUE;
                 if(dosave0() && !saverestore) {
 #else
 		if(dosave0()) {
@@ -94,7 +94,7 @@ dosave()
 			u.uhp = -1;		/* universal game's over indicator */
 			/* make sure they see the Saving message */
 			display_nhwindow(WIN_MESSAGE, TRUE);
-			exit_nhwindows("Be seeing you...");
+			exit_nhwindows("如果再也见不到你，那祝你早安，午安，晚安。");
 			terminate(EXIT_SUCCESS);
 	}
 /*WAC redraw later
@@ -105,7 +105,7 @@ dosave()
 /*WAC pulled this from pcmain.c - restore game from the file just saved*/
 		fd = create_levelfile(0);
 		if (fd < 0) {
-			raw_print("Cannot create lock file");
+			raw_print("无法创建lock文件");
 		} else {
 			hackpid = 1;
 			write(fd, (genericptr_t) &hackpid, sizeof(hackpid));
@@ -199,8 +199,8 @@ dosave0()
 	    if (fd > 0) {
 		(void) close(fd);
 		clear_nhwindow(WIN_MESSAGE);
-		There("seems to be an old save file.");
-		if (yn("Overwrite the old file?") == 'n') {
+		There("好像有个旧的存储文件啊。");
+		if (yn("想要覆盖旧文件吗？") == 'n') {
 		    compress_area(fq_save, SAVEF);
 #ifdef KEEP_SAVE
 /*WAC don't restore if you didn't save*/
@@ -216,7 +216,7 @@ dosave0()
 
 	fd = create_savefile();
 	if(fd < 0) {
-		HUP pline("Cannot open save file.");
+		HUP pline("无法打开存档。");
 		(void) delete_savefile();	/* ab@unido */
 		return(0);
 	}
@@ -233,11 +233,11 @@ dosave0()
 	    HUP clear_nhwindow(WIN_MESSAGE);
 
 #if defined(MICRO) && defined(TTY_GRAPHICS)
-	if (!strncmpi("tty", windowprocs.name, 3)) {
+	if (!strncmpi("", windowprocs.name, 3)) {
 	dotcnt = 0;
 	dotrow = 2;
 	curs(WIN_MAP, 1, 1);
-	  putstr(WIN_MAP, 0, "Saving:");
+	  putstr(WIN_MAP, 0, "保存：");
 	}
 #endif
 #ifdef MFLOPPY
@@ -255,8 +255,8 @@ dosave0()
 	    fds = freediskspace(fq_save);
 	    if (needed > fds) {
 		HUP {
-		    There("is insufficient space on SAVE disk.");
-		    pline("Require %ld bytes but only have %ld.", needed, fds);
+		    There("没有足够存储存档的空间了。");
+		    pline("需要%ld字节的空间，但你挫到连%ld都没有。", needed, fds);
 		}
 		flushout();
 		(void) close(fd);
@@ -311,12 +311,12 @@ dosave0()
 			dotrow++;
 			dotcnt = 0;
 		}
-		  putstr(WIN_MAP, 0, ".");
+		  putstr(WIN_MAP, 0, "");
 		mark_synch();
 #endif
 		ofd = open_levelfile(ltmp, whynot);
 		if (ofd < 0) {
-		    HUP pline("%s", whynot);
+		    HUP pline("", whynot);
 		    (void) close(fd);
 		    (void) delete_savefile();
 		    HUP killer = whynot;
@@ -413,7 +413,7 @@ savestateinlock()
 	 * it and avoid restoring from outdated information.
 	 *
 	 * Restricting havestate to this routine means that an additional
-	 * noop pid rewriting will take place on the first "checkpoint" after
+	 * noop pid rewriting will take place on the first "" after
 	 * the game is started or restored, if checkpointing is off.
 	 */
 	if (flags.ins_chkpt || havestate) {
@@ -425,8 +425,8 @@ savestateinlock()
 		 */
 		fd = open_levelfile(0, whynot);
 		if (fd < 0) {
-		    pline("%s", whynot);
-		    pline("Probably someone removed it.");
+		    pline("", whynot);
+		    pline("说不定有人把它删了呢。");
 		    killer = whynot;
 		    done(TRICKED);
 		    return;
@@ -435,9 +435,9 @@ savestateinlock()
 		(void) read(fd, (genericptr_t) &hpid, sizeof(hpid));
 		if (hackpid != hpid) {
 		    Sprintf(whynot,
-			    "Level #0 pid (%d) doesn't match ours (%d)!",
+			    "你的层级pid%d和我们记录的%d不一样！",
 			    hpid, hackpid);
-		    pline("%s", whynot);
+		    pline("", whynot);
 		    killer = whynot;
 		    done(TRICKED);
 		}
@@ -445,7 +445,7 @@ savestateinlock()
 
 		fd = create_levelfile(0, whynot);
 		if (fd < 0) {
-		    pline("%s", whynot);
+		    pline("", whynot);
 		    killer = whynot;
 		    done(TRICKED);
 		    return;
@@ -529,7 +529,7 @@ int mode;
 		dmonsfree();
 	}
 
-	if(fd < 0) panic("Save on bad file!");	/* impossible */
+	if(fd < 0) panic("存储文件错误！");	/* impossible */
 #ifdef MFLOPPY
 	count_only = (mode & COUNT_SAVE);
 #endif
@@ -659,7 +659,7 @@ static NEARDATA boolean compressing = FALSE;
 
 /*dbg()
 {
-    HUP printf("outbufp %d outrunlength %d\n", outbufp,outrunlength);
+    HUP printf("", outbufp,outrunlength);
 }*/
 
 STATIC_OVL void
@@ -694,7 +694,7 @@ int fd;
 {
     if (outbufp) {
 	outbufp = 0;
-	panic("closing file with buffered data still unwritten");
+	panic("关闭文件，但不写入储存的数据。");
     }
     outrunlength = -1;
     compressing = FALSE;
@@ -745,7 +745,7 @@ register unsigned num;
 		terminate(EXIT_FAILURE);
 	    else
 #endif
-		panic("cannot write %u bytes to file #%d", num, fd);
+		panic("无法向#%d内写入%u字节的数据。", num, fd);
 	}
     } else {
 	bwritefd = fd;
@@ -785,10 +785,10 @@ bufon(fd)
 {
 #ifdef UNIX
     if(bw_fd >= 0)
-	panic("double buffering unexpected");
+	panic("双倍错误！");
     bw_fd = fd;
-    if((bw_FILE = fdopen(fd, "w")) == 0)
-	panic("buffering of file %d failed", fd);
+    if((bw_FILE = fdopen(fd, "")) == 0)
+	panic("储存文件%d失败", fd);
 #endif
     buffering = TRUE;
 }
@@ -808,7 +808,7 @@ bflush(fd)
 #ifdef UNIX
     if(fd == bw_fd) {
 	if(fflush(bw_FILE) == EOF)
-	    panic("flush of savefile failed!");
+	    panic("清理存档失败！");
     }
 #endif
     return;
@@ -830,7 +830,7 @@ register unsigned num;
 #ifdef UNIX
 	if (buffering) {
 	    if(fd != bw_fd)
-		panic("unbuffered write to fd %d (!= %d)", fd, bw_fd);
+		panic("", fd, bw_fd);
 
 	    failed = (fwrite(loc, (int)num, 1, bw_FILE) != 1);
 	} else
@@ -850,7 +850,7 @@ register unsigned num;
 		terminate(EXIT_FAILURE);
 	    else
 #endif
-		panic("cannot write %u bytes to file #%d", num, fd);
+		panic("无法向#%d内写入%u字节的数据。", num, fd);
 	}
 }
 
@@ -1172,8 +1172,8 @@ int lev;
 {
 	char to[PATHLEN], from[PATHLEN];
 
-	Sprintf(from, "%s%s", permbones, alllevels);
-	Sprintf(to, "%s%s", levels, alllevels);
+	Sprintf(from, "", permbones, alllevels);
+	Sprintf(to, "", levels, alllevels);
 	set_levelfile_name(from, lev);
 	set_levelfile_name(to, lev);
 	if (iflags.checkspace) {
@@ -1183,7 +1183,7 @@ int lev;
 	}
 # ifdef WIZARD
 	if (wizard) {
-		pline("Swapping in `%s'.", from);
+		pline("正在交换%s。", from);
 		wait_synch();
 	}
 # endif
@@ -1209,13 +1209,13 @@ swapout_oldest() {
 		}
 	if (!oldest)
 		return FALSE;
-	Sprintf(from, "%s%s", levels, alllevels);
-	Sprintf(to, "%s%s", permbones, alllevels);
+	Sprintf(from, "", levels, alllevels);
+	Sprintf(to, "", permbones, alllevels);
 	set_levelfile_name(from, oldest);
 	set_levelfile_name(to, oldest);
 # ifdef WIZARD
 	if (wizard) {
-		pline("Swapping out `%s'.", from);
+		pline("已经清理%s。", from);
 		wait_synch();
 	}
 # endif
@@ -1232,21 +1232,21 @@ char *from, *to;
 # ifdef TOS
 
 	if (_copyfile(from, to))
-		panic("Can't copy %s to %s", from, to);
+		panic("无法把%s复制到%s中。", from, to);
 # else
 	char buf[BUFSIZ];	/* this is system interaction, therefore
 				 * BUFSIZ instead of NetHack's BUFSZ */
 	int nfrom, nto, fdfrom, fdto;
 
 	if ((fdfrom = open(from, O_RDONLY | O_BINARY, FCMASK)) < 0)
-		panic("Can't copy from %s !?", from);
+		panic("无法从%s复制文件？！", from);
 	if ((fdto = open(to, O_WRONLY | O_BINARY | O_CREAT | O_TRUNC, FCMASK)) < 0)
-		panic("Can't copy to %s", to);
+		panic("无法复制到%s！", to);
 	do {
 		nfrom = read(fdfrom, buf, BUFSIZ);
 		nto = write(fdto, buf, nfrom);
 		if (nto != nfrom)
-			panic("Copyfile failed!");
+			panic("复制失败！");
 	} while (nfrom == BUFSIZ);
 	(void) close(fdfrom);
 	(void) close(fdto);

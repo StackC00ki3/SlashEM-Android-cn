@@ -16,20 +16,20 @@ STATIC_DCL void FDECL(mk_mplayer_armor, (struct monst *, SHORT_P));
  */
 static const char *developers[] = {
 	/* devteam */
-	"Dave", "Dean", "Eric", "Izchak", "Janet", "Jessie",
-	"Ken", "Kevin", "Michael", "Mike", "Pat", "Paul", "Steve", "Timo",
+	"Dave", "Dean", "Eric", "伊扎克", "Janet", "杰西",
+	"Ken", "凯文", "Michael", "Mike", "Pat", "Paul", "史蒂夫", "Timo",
 	"Warwick",
 	/* PC team */
-	"Bill", "Eric", "Keizo", "Ken", "Kevin", "Michael", "Mike", "Paul",
-	"Stephen", "Steve", "Timo", "Yitzhak",
+	"Bill", "Eric", "Keizo", "Ken", "凯文", "Michael", "Mike", "Paul",
+	"Stephen", "史蒂夫", "Timo", "Yitzhak",
 	/* Amiga team */
-	"Andy", "Gregg", "Janne", "Keni", "Mike", "Olaf", "Richard",
+	"Andy", "Gregg", "Janne", "Keni", "Mike", "奥拉夫", "Richard",
 	/* Mac team */
-	"Andy", "Chris", "Dean", "Jon", "Jonathan", "Kevin", "Wang",
+	"Andy", "Chris", "Dean", "Jon", "Jonathan", "凯文", "Wang",
 	/* Atari team */
 	"Eric", "Marvin", "Warwick",
 	/* NT team */
-	"Alex", "Dion", "Michael",
+	"亚历克斯", "Dion", "Michael",
 	/* OS/2 team */
 	"Helge", "Ron", "Timo",
 	/* VMS team */
@@ -337,8 +337,8 @@ mplayer_talk(mtmp)
 register struct monst *mtmp;
 {
 	static const char *same_class_msg[3] = {
-		"I can't win, and neither will you!",
-		"You don't deserve to win!",
+		"我不能赢，那你也别想赢！",
+		"你不配当MVP！你不配赢！",
 		"Mine should be the honor, not yours!",
 	},		  *other_class_msg[3] = {
 		"The low-life wants to talk, eh?",

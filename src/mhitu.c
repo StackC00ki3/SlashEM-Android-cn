@@ -1151,7 +1151,7 @@ hitmu(mtmp, mattk)
 				if (!rn2(10)) {
 				    pline("%s plunges the stake into your heart.",
 					    Monnam(mtmp));
-				    killer = "a wooden stake in the heart.";
+				    killer = "木桩戳进心脏而死。";
 				    killer_format = KILLED_BY_AN;
 				    u.ugrave_arise = NON_PM; /* No corpse */
 				    done(DIED);
@@ -1346,7 +1346,7 @@ dopois:
 
 		if (uarmh && rn2(8)) {
 		    /* not body_part(HEAD) */
-		    Your("helmet blocks the attack to your head.");
+		    Your("头盔挡住了对你头部的攻击。");
 		    break;
 		}
 		
@@ -1818,7 +1818,7 @@ dopois:
 		dmg = 0;
 		break;
 	    case AD_DETH:
-		pline("%s reaches out with its deadly touch.", Monnam(mtmp));
+		pline("%s伸出了它那充满死亡气息的手。", Monnam(mtmp));
 		if (is_undead(youmonst.data)) {
 		    /* Still does normal damage */
 		    pline("Was that the touch of death?");
@@ -2338,7 +2338,7 @@ gazemu(mtmp, mattk)	/* monster gazes at you */
 		    int stun = d(2,6);
 
 		    mtmp->mspec_used = mtmp->mspec_used + (stun + rn2(6));
-		    pline("%s stares piercingly at you!", Monnam(mtmp));
+		    pline("%s的目光尖锐地扎进你的脑海！", Monnam(mtmp));
 		    make_stunned(HStun + stun, TRUE);
 		    stop_occupation();
 		}
@@ -2414,7 +2414,7 @@ gazemu(mtmp, mattk)	/* monster gazes at you */
 			if (!Blind) pline("%s gazes around, but misses you!",Monnam(mtmp));
 			break;
 		    }
-		    if (!Blind) pline("%s gazes directly at you!",Monnam(mtmp));
+		    if (!Blind) pline("%s直勾勾地盯着你！",Monnam(mtmp));
 		    if(Reflecting && m_canseeu(mtmp) && !mtmp->mcan) {
 			if(!Blind) {
 		    	    (void) ureflects("%s gaze is reflected by your %s.",
@@ -2427,7 +2427,7 @@ gazemu(mtmp, mattk)	/* monster gazes at you */
 			    pline("%s is put to sleep!", Monnam(mtmp));
 			break;
 		    } else if (Sleep_resistance) {
-			pline("You yawn.");
+			pline("你打了个哈欠。");
 		    } else {
 			nomul(-rnd(10));
 			u.usleep = 1;
@@ -2447,7 +2447,7 @@ gazemu(mtmp, mattk)	/* monster gazes at you */
 			if (!Blind) pline("%s gazes around, but misses you!",Monnam(mtmp));
 			break;
 		    }
-		    if (!Blind) pline("%s gazes directly at you!",Monnam(mtmp));
+		    if (!Blind) pline("%s直勾勾地盯着你！",Monnam(mtmp));
 		    if(Reflecting && m_canseeu(mtmp) && !mtmp->mcan) {
 			if(!Blind) {
 		    	    (void) ureflects("%s gaze is reflected by your %s.",
@@ -2485,7 +2485,7 @@ gazemu(mtmp, mattk)	/* monster gazes at you */
 	                        if (!Blind) pline("%s gazes around, but misses you!",Monnam(mtmp));
 	                        break;
 	                }
-	                if (!Blind) pline("%s gazes directly at you!",Monnam(mtmp));
+	                if (!Blind) pline("%s直勾勾地盯着你！",Monnam(mtmp));
 	                pline("You are wracked with pains!");
 	                mdamageu(mtmp, d(3,8));
 	        }
@@ -2679,7 +2679,7 @@ register struct monst *mon;
 	}
 
 	if (unconscious()) {
-		pline("%s seems dismayed at your lack of response.",
+		pline("%s对你那不动于衷的反应很失望。",
 		      Monnam(mon));
 		return 0;
 	}
@@ -2871,7 +2871,7 @@ register struct monst *mon;
 
 	if (mon->mtame) /* don't charge */ ;
 	else if (rn2(20) < ACURR(A_CHA)) {
-		pline("%s demands that you pay %s, but you refuse...",
+		pline("%s要求你付它%s的买路钱，但是你拒绝了……",
 			noit_Monnam(mon),
 			Blind ? (fem ? "her" : "him") : mhim(mon));
 	} else if (u.umonnum == PM_LEPRECHAUN)
@@ -2890,7 +2890,7 @@ register struct monst *mon;
 			if (!cost) cost = 1L;
 		}
 		if (cost > u.ugold) cost = u.ugold;
-		if (!cost) verbalize("It's on the house!");
+		if (!cost) verbalize("这次就免费啦！");
 		else {
 		    pline("%s takes %ld %s for services rendered!",
 			    noit_Monnam(mon), cost, currency(cost));
@@ -2911,7 +2911,7 @@ register struct monst *mon;
 			if (!cost) cost = 1L;
 		}
 		if (cost > umoney) cost = umoney;
-		if (!cost) verbalize("It's on the house!");
+		if (!cost) verbalize("这次就免费啦！");
 		else { 
 		    pline("%s takes %ld %s for services rendered!",
 			    noit_Monnam(mon), cost, currency(cost));

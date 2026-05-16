@@ -14,7 +14,7 @@
 #include "patchlevel.h"
 #endif
 
-/* #define BETA_INFO "" */	/* "[ beta n]" */
+/* #define BETA_INFO "" */	/* "" */
 
 /* fill buffer with short version (so caller can avoid including date.h) */
 char *
@@ -31,7 +31,7 @@ char *buf;
 {
 	Strcpy(buf, VERSION_ID);
 #if defined(BETA) && defined(BETA_INFO)
-	Sprintf(eos(buf), " %s", BETA_INFO);
+	Sprintf(eos(buf), "", BETA_INFO);
 #endif
 #if defined(RUNTIME_PORT_ID)
 	append_port_id(buf);
@@ -44,7 +44,7 @@ doversion()
 {
 	char buf[BUFSZ];
 
-	pline("%s", getversionstring(buf));
+	pline("", getversionstring(buf));
 	return 0;
 }
 
@@ -79,7 +79,7 @@ boolean complain;
 #endif
 	  ) {
 	    if (complain)
-		pline("Version mismatch for file \"%s\".", filename);
+		pline("", filename);
 	    return FALSE;
 	} else if (
 #ifndef IGNORED_FEATURES
@@ -91,7 +91,7 @@ boolean complain;
 		   version_data->entity_count != VERSION_SANITY1 ||
 		   version_data->struct_sizes != VERSION_SANITY2) {
 	    if (complain)
-		pline("Configuration incompatibility for file \"%s\".",
+		pline("",
 		      filename);
 	    return FALSE;
 	}
@@ -113,7 +113,7 @@ const char *name;
     minit();		/* ZEROCOMP */
     if (rlen == 0) {
 	if (verbose) {
-	    pline("File \"%s\" is empty?", name);
+	    pline("", name);
 	    wait_synch();
 	}
 	return FALSE;
@@ -163,7 +163,7 @@ char *str;
 			j++;
 			istr[j] = str;
 			if (j == 2) break;
-		} else if (index("0123456789", *str) != 0) {
+		} else if (index("", *str) != 0) {
 			str++;
 		} else 
 			return 0L;

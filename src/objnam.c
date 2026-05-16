@@ -155,7 +155,7 @@ register int otyp;
 	if(nn) {
 	    if (ocl->oc_unique)
 		Strcpy(buf, actualn); /* avoid spellbook of Book of the Dead */
-	    /* KMH -- "mood ring" instead of "ring of mood" */
+	    /* KMH -- "mood ring" instead of "" */
 	    else if (otyp == RIN_MOOD)
 		Sprintf(buf, "%s ring", actualn);
 	    else
@@ -216,7 +216,7 @@ char *FDECL((*func), (OBJ_P));
 }
 
 /* convert player specified fruit name into corresponding fruit juice name
-   ("slice of pizza" -> "pizza juice" rather than "slice of pizza juice") */
+   ("一片披萨" -> "pizza juice" rather than "slice of pizza juice") */
 char *
 fruitname(juice)
 boolean juice;	/* whether or not to append " juice" to the name */
@@ -458,7 +458,7 @@ register struct obj *obj;
 		if(!obj->dknown)
 			Strcpy(buf, "ring");
 		else if(nn) {
-			/* KMH -- "mood ring" instead of "ring of mood" */
+			/* KMH -- "mood ring" instead of "" */
 			if (typ == RIN_MOOD)
 				Sprintf(buf, "%s ring", actualn);
 			else
@@ -745,7 +745,7 @@ plus:
 			    Sprintf(tmpbuf, "%d", obj->spe);
 			Sprintf(eos(bp), " (%s candle%s%s)",
 				tmpbuf, plur(obj->spe),
-				!obj->lamplit ? " attached" : ", lit");
+				!obj->lamplit ? " attached" : "，已点燃");
 			break;
 		} else if (obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||
 			obj->otyp == BRASS_LANTERN || obj->otyp == TORCH ||
@@ -1257,7 +1257,7 @@ static const char * const special_subjs[] = {
 	"Hippocrates",
 	"Pelias",
 	"aklys",
-	"amnesia",
+	"失忆",
 	"paralysis",
 	0
 };
@@ -1932,7 +1932,7 @@ struct alt_spellings {
 	/* KMH, balance patch -- new items */
 	{ "amulet versus stoning", AMULET_VERSUS_STONE },
 	{ "amulet of stone resistance", AMULET_VERSUS_STONE },
-	{ "health stone", HEALTHSTONE },
+	{ "再生石", HEALTHSTONE },
 #ifdef FIREARMS
 	{ "handgun", PISTOL },
 	{ "hand gun", PISTOL },
@@ -2256,8 +2256,7 @@ boolean from_user;
 
 	We should only double count if the object in question is not
 	refered to as a "pair of".  E.g. We should double if the player
-	types "pair of spears", but not if the player types "pair of
-	lenses".  Luckily (?) all objects that are refered to as pairs
+	types "pair of spears", but not if the player types "pair of\n	lenses".  Luckily (?) all objects that are refered to as pairs
 	-- boots, gloves, and lenses -- are also not mergable, so cnt is
 	ignored anyway.
 	*/
@@ -2277,7 +2276,7 @@ boolean from_user;
 	 * Find corpse type using "of" (figurine of an orc, tin of orc meat)
 	 * Don't check if it's a wand or spellbook.
 	 * (avoid "wand/finger of death" confusion).
-	 * (WAC avoid "hand/eye of vecna", "wallet of perseus" 
+	 * (WAC avoid "", "wallet of perseus" 
 	 *  "medallion of shifters", "stake of van helsing" similarly
 	 *  ALI "potion of vampire blood" also).
 	 */
@@ -2296,7 +2295,7 @@ boolean from_user;
 	}
 
 	/* Find corpse type w/o "of" (red dragon scale mail, yeti corpse) */
-	if (strncmpi(bp, "samurai sword", 13)) /* not the "samurai" monster! */
+	if (strncmpi(bp, "日本剑", 13)) /* not the "samurai" monster! */
 	if (strncmpi(bp, "wizard lock", 11)) /* not the "wizard" monster! */
 	if (strncmpi(bp, "ninja-to", 8)) /* not the "ninja" rank */
 	if (strncmpi(bp, "master key", 10)) /* not the "master" rank */
@@ -2629,7 +2628,7 @@ srch:
 		}
 		if(!BSTRCMP(bp, p-6, "throne")) {
 			levl[u.ux][u.uy].typ = THRONE;
-			pline("A throne.");
+			pline("一个王座。");
 			newsym(u.ux, u.uy);
 			return(&zeroobj);
 		}

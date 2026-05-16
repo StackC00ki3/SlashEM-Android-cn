@@ -1301,9 +1301,7 @@ doremring()
 
 	if (otmp == uright || otmp == uleft) {
 		/* Sometimes we want to give the off_msg before removing and
-		 * sometimes after; for instance, "you were wearing a moonstone
-		 * ring (on right hand)" is desired but "you were wearing a
-		 * square amulet (being worn)" is not because of the redundant
+		 * sometimes after; for instance, "you were wearing a moonstone\n		 * ring (on right hand)" is desired but "you were wearing a\n		 * square amulet (being worn)" is not because of the redundant
 		 * "being worn".
 		 */
 		off_msg(otmp);

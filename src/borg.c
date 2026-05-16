@@ -34,7 +34,7 @@ char borg_input(void)
 {
    char c;
    adjust_hp_list();
-   if (predicted_hp <= 0 || (u.uhp < u.uhpmax / 8)) pline("Emergency!");
+   if (predicted_hp <= 0 || (u.uhp < u.uhpmax / 8)) pline("紧急事件！!");
 
    /* He's quite lame for now... */
    c = rand()%9 + '1';

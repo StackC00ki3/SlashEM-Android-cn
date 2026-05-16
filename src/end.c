@@ -71,15 +71,15 @@ extern void FDECL(nethack_exit,(int));
 static NEARDATA const char *deaths[] = {		/* the array of death */
 	"died", "betrayed", "choked", "poisoned", "starvation", "drowning",
 	"burning", "dissolving under the heat and pressure",
-	"crushed", "turned to stone", "turned into slime",
+	"crushed", "变成石头", "变成了史莱姆",
 	"genocided", "panic", "trickery",
 	"quit", "escaped", "ascended"
 };
 
 static NEARDATA const char *ends[] = {		/* "when you..." */
 	"died", "were betrayed", "choked", "were poisoned", "starved", 
-	"drowned", "burned", "dissolved in the lava",
-	"were crushed", "turned to stone", "turned into slime",
+	"drowned", "burned", "正在被岩浆融解",
+	"were crushed", "变成石头", "变成了史莱姆",
 	"were genocided", "panicked", "were tricked",
 	"quit", "escaped", "ascended"
 };
@@ -114,7 +114,7 @@ extern const char * const killed_by_prefix[];	/* from topten.c */
 int
 done2()
 {
-	if(yn("Really quit?") == 'n') {
+	if(yn("你再想想，真的要结束这把游戏吗？") == 'n') {
 #ifndef NO_SIGNAL
 		(void) signal(SIGINT, (SIG_RET_TYPE) done1);
 #endif
@@ -132,10 +132,10 @@ done2()
 	if(wizard) {
 	    int c;
 # ifdef VMS
-	    const char *tmp = "Enter debugger?";
+	    const char *tmp = "进入debug模式？";
 # else
 #  ifdef LATTICE
-	    const char *tmp = "Create SnapShot?";
+	    const char *tmp = "是否创建快照？";
 #  else
 	    const char *tmp = "Dump core?";
 #  endif
@@ -194,15 +194,11 @@ register struct monst *mtmp;
 	/* for those wand o'death, touch o'death, poisoned spike times... */        
 	if (Instant_Death)
 	    You("were hosed!");
-#ifdef ANDROID
-	and_you_die();
-#endif
 	mark_synch();	/* flush buffered screen output */
 	buf[0] = '\0';
 	killer_format = KILLED_BY_AN;
 	if (!Blind || Blind_telepat) {        
-	/* "killed by the high priest of Crom" is okay, "killed by the high
-	   priest" alone isn't */
+	/* "killed by the high priest of Crom" is okay, "killed by the high\n	   priest" alone isn't */
 	if ((mtmp->data->geno & G_UNIQ) != 0 && !(mtmp->data == &mons[PM_HIGH_PRIEST] && !mtmp->ispriest)) {
 	    if (!type_is_pname(mtmp->data))
 		Strcat(buf, "the ");
@@ -280,7 +276,7 @@ panic VA_DECL(const char *, str)
 	    NH_abort();	/* avoid loops - this should never happen*/
 
 	if (iflags.window_inited) {
-	    raw_print("\r\nOops...");
+	    raw_print("\r\n哎呦喂……");
 	    wait_synch();	/* make sure all pending output gets flushed */
 	    exit_nhwindows((char *)0);
 	    iflags.window_inited = 0; /* they're gone; force raw_print()ing */
@@ -289,7 +285,7 @@ panic VA_DECL(const char *, str)
 	raw_print(program_state.gameover ?
 		  "Postgame wrapup disrupted." :
 		  !program_state.something_worth_saving ?
-		  "Program initialization has failed." :
+		  "程序初始化失败。" :
 		  "Suddenly, the dungeon collapses.");
 #if defined(WIZARD) && !defined(MICRO)
 # if defined(NOTIFY_NETHACK_BUGS)
@@ -307,7 +303,7 @@ panic VA_DECL(const char *, str)
 			WIZARD,
 #  endif
 			!program_state.something_worth_saving ? "" :
-			" and it may be possible to rebuild.");
+			"有可能能够复现。");
 # endif
 	if (program_state.something_worth_saving) {
 	    set_error_savefile();
@@ -343,7 +339,7 @@ char *defquery;
 	idx = dop - disclosure_options;
 	if (idx < 0 || idx > (NUM_DISCLOSURE_OPTIONS - 1)) {
 	    impossible(
-		   "should_query_disclose_option: bad disclosure index %d %c",
+		   "",
 		       idx, category);
 	    *defquery = DISCLOSE_PROMPT_DEFAULT_YES;
 	    return TRUE;
@@ -381,7 +377,7 @@ boolean taken;
 
 	if (invent) {
 	    if(taken)
-		Sprintf(qbuf,"Do you want to see what you had when you %s?",
+		Sprintf(qbuf,"你想看看你%s时身上都有些什么东西吗？",
 			(how == QUIT) ? "quit" : "died");
 	    else
 		Strcpy(qbuf,"Do you want your possessions identified?");
@@ -410,7 +406,7 @@ boolean taken;
 
 	ask = should_query_disclose_option('a', &defquery);
 	if (!done_stopprint) {
-	    c = ask ? yn_function("Do you want to see your attributes?",
+	    c = ask ? yn_function("你想看看自己此时的状态吗？",
 				  ynqchars, defquery) : defquery;
 	    if (c == 'y')
 		enlightenment(how >= PANICKED ? 1 : 2); /* final */
@@ -427,7 +423,7 @@ boolean taken;
 
 	ask = should_query_disclose_option('c', &defquery);
 	if (!done_stopprint) {
-	    c = ask ? yn_function("Do you want to see your conduct?",
+	    c = ask ? yn_function("你想看看自己都完成了哪些自愿挑战吗？",
 				  ynqchars, defquery) : defquery;
 	    if (c == 'y')
 		show_conduct(how >= PANICKED ? 1 : 2);
@@ -578,11 +574,17 @@ int how;
 	    }
 #ifdef WIZARD
 	    if (wizard) {
-		You("are a very tricky wizard, it seems.");
+		You("这家伙玩向导模式都他妈不老实是吧。");
 		return;
 	    }
 #endif
 	}
+
+#ifdef ANDROID
+	if(how != TRICKED && how != QUIT && how != PANICKED && how != ESCAPED) {
+		and_you_die();
+	}
+#endif
 
 	/* kilbuf: used to copy killer in case it comes from something like
 	 *	xname(), which would otherwise get overwritten when we call
@@ -599,9 +601,9 @@ int how;
 
 	if (how < PANICKED) u.umortality++;
 	if (how == STONING && uamul && uamul->otyp == AMULET_VERSUS_STONE) {
-		pline("But wait...");
+		pline("但是等一下……");
 		makeknown(AMULET_VERSUS_STONE);
-		Your("medallion %s%s!",
+		Your("护身符%s%s！",
 		      !Blind ? "begins to glow" : "feels warm",
 		      uamul->cursed ? " and disintegrates" : "");
 		/* blessed -> uncursed -> cursed -> gone */
@@ -621,7 +623,7 @@ int how;
 		return;
 	}
 	if (Lifesaved && (how <= GENOCIDED)) {
-		pline("But wait...");
+		pline("但是等一下……");
 		makeknown(AMULET_OF_LIFE_SAVING);
 		Your("medallion %s!",
 		      !Blind ? "begins to glow" : "feels warm");
@@ -636,7 +638,7 @@ int how;
 		if(u.uhpmax <= 0) u.uhpmax = 10;	/* arbitrary */
 		savelife(how);
 		if (how == GENOCIDED)
-			pline("Unfortunately you are still genocided...");
+			pline("不幸的是你还是逃不过把自己灭绝了的猪鼻死法……");
 		else {
 			killer = 0;
 			killer_format = 0;
@@ -648,8 +650,8 @@ int how;
 			wizard ||
 #endif
 			discover) && (how <= GENOCIDED || how == TURNED_SLIME)) {
-		if(yn("Die?") == 'y') goto die;
-		pline("OK, so you don't %s.",
+		if(yn("你选择死亡么？") == 'y') goto die;
+		pline("行吧行吧行吧，你不会%s行吧，满足你。",
 			(how == CHOKING) ? "choke" : "die");
 		if(u.uhpmax <= 0) u.uhpmax = u.ulevel * 8;	/* arbitrary */
 		savelife(how);
@@ -677,7 +679,7 @@ die:
 	 * smiling... :-)  -3.
 	 */
 	if (moves <= 1 && how < PANICKED)	/* You die... --More-- */
-	    pline("Do not pass go.  Do not collect 200 %s.", currency(200L));
+	    pline("大哥你第一回合就死了真不是来搞笑的吗……", currency(200L));
 
 	if (have_windows) wait_synch();	/* flush screen output */
 #ifndef NO_SIGNAL
@@ -733,7 +735,7 @@ die:
 			how = DIED;
 			u.umortality++;	/* skipped above when how==QUIT */
 			/* note that killer is pointing at kilbuf */
-			Strcpy(kilbuf, "quit while already on Charon's boat");
+			Strcpy(kilbuf, "在已经半只脚踏入阎王殿的时候退出");
 		}
 	}
 	if (how == ESCAPED || how == PANICKED)
@@ -783,8 +785,8 @@ die:
 
 	if (bones_ok) {
 #ifdef WIZARD
-		/* KMH -- We need the "Save bones?" prompt for testing! */
-	    if (!wizard || yn("Save bones?") == 'y')
+		/* KMH -- We need the "是否要强制保存这把游戏的bone文件？" prompt for testing! */
+	    if (!wizard || yn("是否要强制保存这把游戏的bone文件？") == 'y')
 #endif
 		savebones(corpse);
 	    /* corpse may be invalid pointer now so
@@ -820,12 +822,12 @@ die:
 /* changing kilbuf really changes killer. we do it this way because
    killer is declared a (const char *)
 */
-	if (u.uhave.amulet) Strcat(kilbuf, " (with the Amulet)");
+	if (u.uhave.amulet) Strcat(kilbuf, "（带着真正的岩德护身符）");
 	else if (how == ESCAPED) {
 	    if (Is_astralevel(&u.uz))	/* offered Amulet to wrong deity */
-		Strcat(kilbuf, " (in celestial disgrace)");
+		Strcat(kilbuf, "（在犯下大不敬的过错时）");
 	    else if (carrying(FAKE_AMULET_OF_YENDOR))
-		Strcat(kilbuf, " (with a fake Amulet)");
+		Strcat(kilbuf, "（带着一个假的岩德护身符）");
 		/* don't bother counting to see whether it should be plural */
 	}
 
@@ -834,7 +836,7 @@ die:
 		   how != ASCENDED ?
 		      (const char *) ((flags.female && urole.name.f) ?
 		         urole.name.f : urole.name.m) :
-		      (const char *) (flags.female ? "Demigoddess" : "Demigod"));
+		      (const char *) (flags.female ? "Demigoddess" : "半神"));
 	    putstr(endwin, 0, pbuf);
 	    putstr(endwin, 0, "");
 	}
@@ -864,7 +866,7 @@ die:
 	    keepdogs(TRUE);
 	    viz_array[0][0] |= IN_SIGHT; /* need visibility for naming */
 	    mtmp = mydogs;
-	    if (!done_stopprint) Strcpy(pbuf, "You");
+	    if (!done_stopprint) Strcpy(pbuf, "你");
 	    if (mtmp) {
 		while (mtmp) {
 		    if (!done_stopprint)
@@ -879,10 +881,10 @@ die:
 		if (!done_stopprint) Strcat(pbuf, " ");
 	    }
 	    if (!done_stopprint) {
-		Sprintf(eos(pbuf), "%s with %ld point%s,",
-			how==ASCENDED ? "went to your reward" :
-					"escaped from the dungeon",
-			u.urexp, plur(u.urexp));
+		Sprintf(eos(pbuf), "%s，同时有%ld点经验，",
+			how==ASCENDED ? "得到了属于你的至高奖赏" :
+					"从地牢中逃脱",
+			u.urexp);
 		putstr(endwin, 0, pbuf);
 	    }
 
@@ -910,7 +912,7 @@ die:
 			obfree(otmp, (struct obj *)0);
 		    } else {
 			Sprintf(pbuf,
-				"%8ld worthless piece%s of colored glass,",
+				"%8ld个一文不值的染色玻璃，",
 				count, plur(count));
 		    }
 		    putstr(endwin, 0, pbuf);
@@ -921,34 +923,34 @@ die:
 	    /* did not escape or ascend */
 	    if (u.uz.dnum == 0 && u.uz.dlevel <= 0) {
 		/* level teleported out of the dungeon; `how' is DIED,
-		   due to falling or to "arriving at heaven prematurely" */
+		   due to falling or to "太早地上了天堂" */
 		Sprintf(pbuf, "You %s beyond the confines of the dungeon",
 			(u.uz.dlevel < 0) ? "passed away" : ends[how]);
 	    } else {
 		/* more conventional demise */
 		const char *where = dungeons[u.uz.dnum].dname;
 
-		if (Is_astralevel(&u.uz)) where = "The Astral Plane";
+		if (Is_astralevel(&u.uz)) where = "星界位面";
 		Sprintf(pbuf, "You %s in %s", ends[how], where);
 		if (!In_endgame(&u.uz) && !Is_knox(&u.uz))
 		    Sprintf(eos(pbuf), " on dungeon level %d",
 			    In_quest(&u.uz) ? dunlev(&u.uz) : depth(&u.uz));
 	    }
 
-	    Sprintf(eos(pbuf), " with %ld point%s,",
+	    Sprintf(eos(pbuf), "有%ld点经验，",
 		    u.urexp, plur(u.urexp));
 	    putstr(endwin, 0, pbuf);
 	}
 
 	if (!done_stopprint) {
-	    Sprintf(pbuf, "and %ld piece%s of gold, after %ld move%s.",
-		    umoney, plur(umoney), moves, plur(moves));
+	    Sprintf(pbuf, "哦哦还有，你身上有%ld块金币，以及你总计移动了%ld个回合。",
+		    umoney, moves);
 	    putstr(endwin, 0, pbuf);
 	}
 	if (!done_stopprint) {
 	    Sprintf(pbuf,
-	     "You were level %d with a maximum of %d hit point%s when you %s.",
-		    u.ulevel, u.uhpmax, plur(u.uhpmax), ends[how]);
+	     "你的经验等级是%d，有%d的最大HP……这个数据是你%s时的属性。",
+		    u.ulevel, u.uhpmax, ends[how]);
 	    putstr(endwin, 0, pbuf);
 	    putstr(endwin, 0, "");
 	}
@@ -957,8 +959,7 @@ die:
 	if (endwin != WIN_ERR)
 	    destroy_nhwindow(endwin);
 
-	/* "So when I die, the first thing I will see in Heaven is a
-	 * score list?" */
+	/* "" */
 	if (flags.toptenwin) {
 	    topten(how);
 	    if (have_windows)
@@ -1054,12 +1055,12 @@ boolean ask;
      * includes all dead monsters, not just those killed by the player
      */
     if (ntypes != 0) {
-	c = ask ? yn_function("Do you want an account of creatures vanquished?",
+	c = ask ? yn_function("你想好好数数自己究竟杀死了多少种多少只怪物吗？",
 			      ynqchars, defquery) : defquery;
 	if (c == 'q') done_stopprint++;
 	if (c == 'y') {
 	    klwin = create_nhwindow(NHW_MENU);
-	    putstr(klwin, 0, "Vanquished creatures:");
+	    putstr(klwin, 0, "杀死的生物统计：");
 	    putstr(klwin, 0, "");
 
 	    /* countdown by monster "toughness" */
@@ -1110,7 +1111,7 @@ int
 dolistvanq()
 {
     if (!list_vanquished('y', FALSE))
-        pline("No monsters have yet been killed.");
+        pline("如果你是和平主义者那你牛逼大了，你没有杀死过任何怪物。");
     return(0);
 }
     
@@ -1141,12 +1142,12 @@ boolean ask;
 
     /* genocided species list */
     if (ngenocided != 0) {
-	c = ask ? yn_function("Do you want a list of species genocided?",
+	c = ask ? yn_function("你想欣赏一下自己都灭绝了什么物种吗？",
 			      ynqchars, defquery) : defquery;
 	if (c == 'q') done_stopprint++;
 	if (c == 'y') {
 	    klwin = create_nhwindow(NHW_MENU);
-	    putstr(klwin, 0, "Genocided species:");
+	    putstr(klwin, 0, "灭绝的物种：");
 	    putstr(klwin, 0, "");
 
 	    for (i = LOW_PM; i < NUMMONS; i++)
@@ -1161,7 +1162,7 @@ boolean ask;
 		}
 
 	    putstr(klwin, 0, "");
-	    Sprintf(buf, "%d species genocided.", ngenocided);
+	    Sprintf(buf, "你灭绝了%d个物种。", ngenocided);
 	    putstr(klwin, 0, buf);
 
 	    display_nhwindow(klwin, TRUE);

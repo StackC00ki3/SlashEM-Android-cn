@@ -1307,7 +1307,7 @@ register struct obj	*sobj;
 		}
 		break;
 	case SCR_GENOCIDE:
-		You("have found a scroll of genocide!");
+		You("发现了一张灭绝卷轴！");
 		known = TRUE;
 		if (sobj->blessed) do_class_genocide();
 		else do_genocide(!sobj->cursed | (2 * !!Confusion));

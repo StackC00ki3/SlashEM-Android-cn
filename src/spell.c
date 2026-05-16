@@ -107,7 +107,7 @@ STATIC_DCL int FDECL(isqrt, (int));
 #define uarmfbon 2 /* All metal interferes to some degree */
 
 /* since the spellbook itself doesn't blow up, don't say just "explodes" */
-static const char explodes[] = "radiates explosive energy";
+static const char explodes[] = "释放出剧烈的爆炸性能量";
 
 /* convert an alnum into a number in the range 0..61, or -1 if not an alnum */
 STATIC_OVL int
@@ -149,14 +149,14 @@ cursed_book(bp)
 		take_gold();
 		break;
 	case 4:
-		pline("These runes were just too much to comprehend.");
+		pline("这些符文没别的，就是理解起来和背起来太难了。");
 		make_confused(HConfusion + rn1(7,16),FALSE);
 		break;
 	case 5:
-		pline_The("book was coated with contact poison!");
+		pline_The("这本书上被涂了剧毒！");
 		if (uarmg) {
 		    if (uarmg->oerodeproof || !is_corrodeable(uarmg)) {
-			Your("gloves seem unaffected.");
+			Your("手套没有受到影响。");
 		    } else if (uarmg->oeroded2 < MAX_ERODE) {
 			if (uarmg->greased) {
 			    grease_protect(uarmg, "gloves", &youmonst);
@@ -176,7 +176,7 @@ cursed_book(bp)
 		bp->in_use = FALSE;
 		losestr(Poison_resistance ? rn1(2,1) : rn1(4,3));
 		losehp(rnd(Poison_resistance ? 6 : 10),
-		       "contact-poisoned spellbook", KILLED_BY_AN);
+		       "直接上手摸被涂了毒的法术书", KILLED_BY_AN);
 		bp->in_use = TRUE;
 		break;
 	case 6:
@@ -206,9 +206,9 @@ struct obj *spellbook;
 	if (!rn2(3) && spellbook->otyp != SPE_BOOK_OF_THE_DEAD) {
 	    spellbook->in_use = TRUE;	/* in case called from learn */
 	    pline(
-	"Being confused you have difficulties in controlling your actions.");
+	"你在混乱时没法掌控自己的动作。");
 	    display_nhwindow(WIN_MESSAGE, FALSE);
-	    You("accidentally tear the spellbook to pieces.");
+	    You("一不小心把法术书直接撕成了碎片。");
 	    if (!objects[spellbook->otyp].oc_name_known &&
 		!objects[spellbook->otyp].oc_uname)
 		docall(spellbook);
@@ -216,7 +216,7 @@ struct obj *spellbook;
 	    else useupf(spellbook, 1L);
 	    gone = TRUE;
 	} else {
-	    You("find yourself reading the %s line over and over again.",
+	    You("发现你其实是在一次又一次地读第%s行。",
 		spellbook == book ? "next" : "first");
 	}
 	return gone;
@@ -230,7 +230,7 @@ struct obj *book2;
     struct monst *mtmp, *mtmp2;
     coord mm;
 
-    You("turn the pages of the Book of the Dead...");
+    You("翻开了死者之书……");
     makeknown(SPE_BOOK_OF_THE_DEAD);
     /* KMH -- Need ->known to avoid "_a_ Book of the Dead" */
     book2->known = 1;
@@ -240,12 +240,12 @@ struct obj *book2;
 			 arti_cursed = FALSE;
 
 	if(book2->cursed) {
-	    pline_The("runes appear scrambled.  You can't read them!");
+	    pline_The("法术书上的符文看上去扭成了一团，你根本没法读！");
 	    return;
 	}
 
 	if(!u.uhave.bell || !u.uhave.menorah) {
-	    pline("A chill runs down your %s.", body_part(SPINE));
+	    pline("一股凉意顺着你的%s一路往下走。", body_part(SPINE));
 	    if(!u.uhave.bell) You_hear("a faint chime...");
 	    if(!u.uhave.menorah) pline("Vlad's doppelganger is amused.");
 	    return;
@@ -265,8 +265,8 @@ struct obj *book2;
 	}
 
 	if(arti_cursed) {
-	    pline_The("invocation fails!");
-	    pline("At least one of your artifacts is cursed...");
+	    pline_The("开启仪式失败了！");
+	    pline("你的开启仪式所需的三神器中，至少有一个被诅咒了……");
 	} else if(arti1_primed && arti2_primed) {
 	    unsigned soon = (unsigned) d(2,6);	/* time til next intervene() */
 
@@ -288,7 +288,7 @@ struct obj *book2;
     if (book2->cursed) {
 raise_dead:
 
-	You("raised the dead!");
+	You("让亡灵们复活了！");
 	/* first maybe place a dangerous adversary */
 	if (!rn2(3) && ((mtmp = makemon(&mons[PM_MASTER_LICH],
 					u.ux, u.uy, NO_MINVENT)) != 0 ||
@@ -323,13 +323,13 @@ raise_dead:
     } else {
 	switch(rn2(3)) {
 	case 0:
-	    Your("ancestors are annoyed with you!");
+	    Your("十八代祖宗都对你很生气！");
 	    break;
 	case 1:
-	    pline_The("headstones in the cemetery begin to move!");
+	    pline_The("坟地里的墓碑突然动了起来！");
 	    break;
 	default:
-	    pline("Oh my!  Your name appears in the book!");
+	    pline("我草！你的名字居然在书里面！");
 	}
     }
     return;
@@ -377,7 +377,7 @@ learn()
 	for (i = 0; i < MAXSPELL; i++)  {
 		if (spellid(i) == booktype)  {
 			if (book->spestudied > MAX_SPELL_STUDY) {
-			    pline("This spellbook is too faint to be read anymore.");
+			    pline("这本法术书太模糊了，无法再读一次。");
 			    book->otyp = booktype = SPE_BLANK_PAPER;
 			} else if (spellknow(i) <= MAX_CAN_STUDY) {
 			    Your("knowledge of that spell is keener.");
@@ -403,14 +403,14 @@ learn()
 			spl_book[i].sp_lev = objects[booktype].oc_level;
 			incrnknow(i);
 			book->spestudied++;
-			You("have keen knowledge of the spell.");
+			You("对这个法术有了很深的理解。");
 			You(i > 0 ? "add %s to your repertoire." : "learn %s.",
 			    splname);
 			makeknown((int)booktype);
 			break;
 		}
 	}
-	if (i == MAXSPELL) impossible("Too many spells memorized!");
+	if (i == MAXSPELL) impossible("你背的法术是不是有点太多了？");
 
 	if (book->cursed) {	/* maybe a demon cursed it */
 	    if (cursed_book(book)) {
@@ -437,18 +437,18 @@ register struct obj *spellbook;
 		    /* handle the sequence: start reading, get interrupted,
 		       have book become erased somehow, resume reading it */
 		    booktype != SPE_BLANK_PAPER) {
-		You("continue your efforts to memorize the spell.");
+		You("继续试图背诵法术书上的法术。");
 	} else {
 		/* KMH -- Simplified this code */
 		if (booktype == SPE_BLANK_PAPER) {
-			pline("This spellbook is all blank.");
+			pline("这本法术书全是空的。");
 			makeknown(booktype);
 			return(1);
 		}
 		if (spellbook->spe && confused) {
 		    check_unpaid_usage(spellbook, TRUE);
 		    consume_obj_charge(spellbook, FALSE);
-		    pline_The("words on the page seem to glow faintly purple.");
+		    pline_The("书上的文字冒出了一股紫光。");
 		    You_cant("quite make them out.");
 		    return 1;
 		}
@@ -493,8 +493,8 @@ register struct obj *spellbook;
 			    !confused && !spellbook->spe) {
 			    char qbuf[QBUFSZ];
 			    Sprintf(qbuf,
-		      "This spellbook is %sdifficult to comprehend. Continue?",
-				    (read_ability < 12 ? "very " : ""));
+		      "这本法术书对你来说%s难以记忆，确定要继续读吗？",
+				    (read_ability < 12 ? "非常" : ""));
 			    if (yn(qbuf) != 'y') {
 				spellbook->in_use = FALSE;
 				return(1);
@@ -513,7 +513,7 @@ register struct obj *spellbook;
 		    nomul(delay);			/* study time */
 		    delay = 0;
 		    if(gone || !rn2(3)) {
-			if (!gone) pline_The("spellbook crumbles to dust!");
+			if (!gone) pline_The("法术书变成了一抹飞灰！");
 			if (!objects[spellbook->otyp].oc_name_known &&
 				!objects[spellbook->otyp].oc_uname)
 			    docall(spellbook);
@@ -538,7 +538,7 @@ register struct obj *spellbook;
 		    if (spellbook->spe) {
 			check_unpaid_usage(spellbook, TRUE);
 			consume_obj_charge(spellbook, FALSE);
-			pline_The("words on the page seem to glow faintly.");
+			pline_The("书上的文字冒出了一股微光。");
 			if (!too_hard)
 			    delay /= 3;
 		    }
@@ -629,7 +629,7 @@ getspell(spell_no)
 	char ilet, lets[BUFSZ], qbuf[QBUFSZ];
 
 	if (spellid(0) == NO_SPELL)  {
-	    You("don't know any spells right now.");
+	    You("现在没有掌握任何法术。");
 	    return FALSE;
 	}
 	if (flags.menu_style == MENU_TRADITIONAL) {
@@ -661,10 +661,10 @@ getspell(spell_no)
 		    *spell_no = idx;
 		    return TRUE;
 		} else
-		    You("don't know that spell.");
+		    You("并不知道那个法术。");
 	    }
 	}
-	return dospellmenu("Choose which spell to cast",
+	return dospellmenu("选择想要施放的法术",
 			   SPELLMENU_CAST, spell_no);
 }
 
@@ -767,7 +767,7 @@ cast_protection()
 		u.usptime = u.uspmtime;
 	    find_ac();
 	} else {
-	    Your("skin feels warm for a moment.");
+	    Your("皮肤忽然感觉有点温暖。");
 	}
 }
 
@@ -823,33 +823,33 @@ boolean atme;
 	 * decrement of spell knowledge is done every turn.
 	 */
 	if (spellknow(spell) <= 0) {
-	    Your("knowledge of this spell is twisted.");
-	    pline("It invokes nightmarish images in your mind...");
+	    Your("法术知识已经被时间和记忆所扭曲。");
+	    pline("它在你脑中释放出噩梦般的扭曲景象……");
 	    spell_backfire(spell);
 	    return(0);
 	} else if (spellknow(spell) <= 100) {
 	    You("strain to recall the spell.");
 	} else if (spellknow(spell) <= 1000) {
-	    Your("knowledge of this spell is growing faint.");
+	    Your("法术知识开始逐渐模糊。");
 	}
 	energy = (spellev(spell) * 5);    /* 5 <= energy <= 35 */
 
 	if (u.uhunger <= 10 && spellid(spell) != SPE_DETECT_FOOD) {
-		You("are too hungry to cast that spell.");
+		You("太饿了，无法施放这个法术。");
 		return(0);
 	} else if (ACURR(A_STR) < 4)  {
-		You("lack the strength to cast spells.");
+		You("没有施放法术所需的力量。");
 		return(0);
 	} else if(check_capacity(
 		"Your concentration falters while carrying so much stuff.")) {
 	    return (1);
 	} else if (!freehand()) {
-		Your("arms are not free to cast!");
+		Your("胳膊没法腾出来施法！");
 		return (0);
 	}
 
 	if (u.uhave.amulet) {
-		You_feel("the amulet draining your energy away.");
+		You_feel("岩德护身符正在吸取你的能量。");
 		energy += rnd(2*energy);
 	}
 		if (spellid(spell) != SPE_DETECT_FOOD) {
@@ -889,9 +889,9 @@ boolean atme;
 			if (hungr > u.uhunger-3)
 				hungr = u.uhunger-3;
 	if (energy > u.uen)  {
-		You("don't have enough energy to cast that spell.");
+		You("没有施放该法术所需的能量。");
 		/* WAC/ALI Experts can override with HP/hunger loss */
-		if ((role_skill >= P_SKILLED) && (yn("Continue?") == 'y')) {
+		if ((role_skill >= P_SKILLED) && (yn("还要继续么？") == 'y')) {
 			energy -= u.uen;
 			hungr += energy * 2;
 			if (hungr > u.uhunger - 1)
@@ -906,7 +906,7 @@ boolean atme;
 
 	chance = percent_success(spell);
 	if (confused || (rnd(100) > chance)) {
-		pline("You fail to cast the spell correctly.");
+		pline("你无法正确地念出咒文进行施法。");
 
 #ifdef ALLEG_FX
                 if (iflags.usealleg) alleg_aura(u.ux, u.uy, P_ATTACK_SPELL-1);
@@ -973,7 +973,7 @@ boolean atme;
 			if (atme) u.dx = u.dy = u.dz = 0;
 			else if (!getdir((char *)0)) {
 			    /* getdir cancelled, re-use previous direction */
-			    pline_The("magical energy is released!");
+			    pline_The("魔法能量被四处释放掉了！");
 			}
 			if(!u.dx && !u.dy && !u.dz) {
 			    if ((damage = zapyourself(pseudo, TRUE)) != 0) {
@@ -1014,7 +1014,7 @@ boolean atme;
 		    pseudo->blessed = 0;
 		    (void) seffects(pseudo);
 		} else
-		    Your("enchantment failed!");
+		    Your("附魔失败！");
 		break;
 
 	/* these are all duplicates of potion effects */
@@ -1035,7 +1035,7 @@ boolean atme;
 		healup(0, 0, FALSE, TRUE);
 		break;
 	case SPE_CURE_SICKNESS:
-		if (Sick) You("are no longer ill.");
+		if (Sick) You("的病痊愈了。");
 		if (Slimed) {
 		    pline_The("slime disappears!");
 		    Slimed = 0;
@@ -1071,9 +1071,9 @@ boolean atme;
 	case SPE_RESIST_SLEEP:
 		if(!(HSleep_resistance & INTRINSIC)) {
 			if (Hallucination)
-				pline("Too much coffee!");
+				pline("咖啡太多了！");
 			else
-				You("no longer feel tired.");
+				You("感觉不怎么疲倦了。");
 			incr_itimeout(&HSleep_resistance, rn1(1000, 500) +
 				spell_damage_bonus(spellid(spell))*100);
 		} else pline(nothing_happens);	/* Already have as intrinsic */
@@ -1088,7 +1088,7 @@ boolean atme;
 	case SPE_ENDURE_HEAT:
 		if(!(HFire_resistance & INTRINSIC)) {
 			if (Hallucination)
-				pline("Excellent! You feel, like, totally cool!");
+				pline("太爽啦！你感觉超级无敌酷炫凉爽！而且贼拉风！");
 			else
 				You("feel colder.");
 			incr_itimeout(&HFire_resistance, rn1(1000, 500) +
@@ -1106,10 +1106,10 @@ boolean atme;
 		} else pline(nothing_happens);	/* Already have as intrinsic */
 		break;
 	case SPE_ENLIGHTEN: 
-		You("feel self-knowledgeable...");
+		You("感觉对自己有了更多的了解……");
 		display_nhwindow(WIN_MESSAGE, FALSE);
 		enlightenment(FALSE);
-		pline("The feeling subsides.");
+		pline("这种感觉消失了。");
 		exercise(A_WIS, TRUE);
 		break;
 
@@ -1185,7 +1185,7 @@ dovspell()
 	struct spell spl_tmp;
 
 	if (spellid(0) == NO_SPELL)
-	    You("don't know any spells right now.");
+	    You("现在没有掌握任何法术。");
 	else {
 	    while (dospellmenu("Currently known spells",
 			       SPELLMENU_VIEW, &splnum)) {
@@ -1421,7 +1421,7 @@ struct obj *obj;
 	        return;
 	    }
 	}
-	impossible("Too many spells memorized!");
+	impossible("你背的法术是不是有点太多了？");
 	return;
 }
 
@@ -1433,7 +1433,7 @@ studyspell()
 
 	if (getspell(&spell_no)) {
 		if (spellknow(spell_no) <= 0) {
-			You("are unable to focus your memory of the spell.");
+			You("无法清晰地回忆这个法术的细节。");
 			return (FALSE);
 		} else if (spellknow(spell_no) <= 1000) {
 			Your("focus and reinforce your memory of the spell.");
@@ -1441,7 +1441,7 @@ studyspell()
 			exercise(A_WIS, TRUE);      /* extra study */
 			return (TRUE);
 		} else /* 1000 < spellknow(spell_no) <= 5000 */
-			You("know that spell quite well already.");
+			You("已经很了解该法术了，无需再阅读。");
 	}
 	return (FALSE);
 }

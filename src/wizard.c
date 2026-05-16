@@ -34,7 +34,7 @@ static NEARDATA const int nasties[] = {
 	PM_COUATL, PM_CAPTAIN, PM_WINGED_GARGOYLE, PM_MASTER_MIND_FLAYER,
 	PM_FIRE_ELEMENTAL, PM_JABBERWOCK, PM_MASTER_LICH, PM_OGRE_KING,
 	PM_OLOG_HAI, PM_IRON_GOLEM, PM_OCHRE_JELLY,
-        /* [Tom] added my "worst" monsters... heh heh */
+        /* [Tom] added my "" monsters... heh heh */
         PM_RHAUMBUSUN, PM_BASILISK, PM_PYROLISK, PM_GREEN_SLIME, PM_DEMON_ORC,
         PM_MASTODON, PM_ROT_WORM, PM_SNOW_ORC, PM_SILVER_DRAGON, 
 	PM_DISENCHANTER
@@ -72,11 +72,11 @@ amulet()
 		if(ttmp->ttyp == MAGIC_PORTAL) {
 		    int du = distu(ttmp->tx, ttmp->ty);
 		    if (du <= 9)
-			pline("%s hot!", Tobjnam(amu, "feel"));
+			pline("%s很烫！", Tobjnam(amu, "摸起来感觉"));
 		    else if (du <= 64)
-			pline("%s very warm.", Tobjnam(amu, "feel"));
+			pline("%s非常暖和。", Tobjnam(amu, "摸起来感觉"));
 		    else if (du <= 144)
-			pline("%s warm.", Tobjnam(amu, "feel"));
+			pline("%s比较暖和。", Tobjnam(amu, "摸起来感觉"));
 		    /* else, the amulet feels normal */
 		    break;
 		}
@@ -91,7 +91,7 @@ amulet()
 		mtmp->msleeping = 0;
 		if (distu(mtmp->mx,mtmp->my) > 2)
 		    You(
-    "get the creepy feeling that somebody noticed your taking the Amulet."
+    "有一种很恐怖的感觉，似乎某人注意到你拿到了护身符。"
 		    );
 		return;
 	    }
@@ -125,7 +125,7 @@ register struct monst *mtmp;
 
 /*
  *	New for 3.1  Strategy / Tactics for the wiz, as well as other
- *	monsters that are "after" something (defined via mflag3).
+ *	monsters that are "" something (defined via mflag3).
  *
  *	The strategy section decides *what* the monster is going
  *	to attempt, the tactics section implements the decision.
@@ -149,7 +149,7 @@ which_arti(mask)
 }
 
 /*
- *	If "otyp" is zero, it triggers a check for the quest_artifact,
+ *	If "" is zero, it triggers a check for the quest_artifact,
  *	since bell, book, candle, and amulet are all objects, not really
  *	artifacts right now.	[MRS]
  */
@@ -353,7 +353,7 @@ tactics(mtmp)
 
 			if ((otmp = on_ground(which_arti(targ))) != 0) {
 			    if (cansee(mtmp->mx, mtmp->my))
-				pline("%s picks up %s.",
+				pline("%s把%s捡了起来。",
 				    Monnam(mtmp),
 				    (distu(mtmp->mx, mtmp->my) <= 5) ?
 				     doname(otmp) : distant_name(otmp, doname));
@@ -480,11 +480,11 @@ resurrect()
 
 	if (!flags.no_of_wizards) {
 	    /* make a new Wizard */
-	    verb = "kill";
+	    verb = "杀死";
 	    mtmp = makemon(&mons[PM_WIZARD_OF_YENDOR], u.ux, u.uy, MM_NOWAIT);
 	} else {
 	    /* look for a migrating Wizard */
-	    verb = "elude";
+	    verb = "逃离";
 	    mmtmp = &migrating_mons;
 	    while ((mtmp = *mmtmp) != 0) {
 		if (mtmp->iswiz &&
@@ -513,8 +513,8 @@ resurrect()
 	if (mtmp) {
 		mtmp->msleeping = mtmp->mtame = mtmp->mpeaceful = 0;
 		set_malign(mtmp);
-		pline("A voice booms out...");
-		verbalize("So thou thought thou couldst %s me, fool.", verb);
+		pline("一道声音在你耳旁炸响……");
+		verbalize("故汝以为汝能%s吾，汝这可悲的白痴。", verb);
 	}
 
 }
@@ -528,10 +528,10 @@ intervene()
 	/* cases 0 and 5 don't apply on the Astral level */
 	switch (which) {
 	    case 0:
-	    case 1:	You_feel("vaguely nervous.");
+	    case 1:	You_feel("一阵毫无来由的紧张感。");
 			break;
 	    case 2:	if (!Blind)
-			    You("notice a %s glow surrounding you.",
+			    You("注意到你周边亮起了%s光辉。",
 				  hcolor(NH_BLACK));
 			rndcurse();
 			break;
@@ -555,48 +555,48 @@ wizdead()
 }
 
 const char * const random_insult[] = {
-	"antic",
-	"blackguard",
-	"caitiff",
-	"chucklehead",
-	"coistrel",
-	"craven",
-	"cretin",
-	"cur",
-	"dastard",
-	"demon fodder",
-	"dimwit",
-	"dolt",
-	"fool",
-	"footpad",
-	"imbecile",
-	"knave",
-	"maledict",
-	"miscreant",
-	"niddering",
-	"poltroon",
-	"rattlepate",
-	"reprobate",
-	"scapegrace",
-	"varlet",
-	"villein",	/* (sic.) */
-	"wittol",
-	"worm",
-	"wretch",
+	"活全家的东西",
+	"不是人的玩意",
+	"废人",
+	"废物",
+	"脑残",
+	"胆小如鼠的家伙",
+	"白痴",
+	"杂种",
+	"混账",
+	"贱骨头",
+	"傻逼",
+	"笨比",
+	"愚弄",
+	"智障",
+	"弱智",
+	"不要脸的东西",
+	"该被拔舌头的畜生",
+	"臭不要脸的家伙",
+	"卑鄙的懦夫",
+	"户口本只有一页的家伙",
+	"没脑子的东西",
+	"畜生",
+	"吃骨灰拌饭的玩意",
+	"无赖",
+	"狗奴才",	/* (sic.) */
+	"肥猪",
+	"臭蛆",
+	"无耻的家伙",
 };
 
 const char * const random_malediction[] = {
-	"Hell shall soon claim thy remains,",
-	"I chortle at thee, thou pathetic",
-	"Prepare to die, thou",
-	"Resistance is useless,",
-	"Surrender or die, thou",
-	"There shall be no mercy, thou",
-	"Thou shalt repent of thy cunning,",
-	"Thou art as a flea to me,",
-	"Thou art doomed,",
-	"Thy fate is sealed,",
-	"Verily, thou shalt be one dead"
+	"汝当下十八层炼狱，",
+	"腐草萤光，安敢比日月？汝这可悲可笑的",
+	"汝命休矣！",
+	"放弃抵抗吧，汝这可悲的",
+	"要么投降，要么去死！汝这",
+	"尔等当去阎王殿上讨饶，汝这",
+	"汝之狡黠，足可兑孟婆汤三碗，汝这",
+	"黄泉路遥，恐无来日！汝这",
+	"尔项上人头，值鬼差几钱酒资？汝这",
+	"汝之命运已成定论，",
+	"尔其翘首以待，黄泉路近矣！"
 };
 
 /* Insult or intimidate the player */
@@ -606,22 +606,22 @@ register struct monst	*mtmp;
 {
 	if (mtmp->iswiz) {
 	    if (!rn2(5))  /* typical bad guy action */
-		pline("%s laughs fiendishly.", Monnam(mtmp));
+		pline("%s笑得极其阴险极其混蛋。", Monnam(mtmp));
 	    else
 		if (u.uhave.amulet && !rn2(SIZE(random_insult)))
-		    verbalize("Relinquish the amulet, %s!",
+		    verbalize("交出吾的护身符！%s！",
 			  random_insult[rn2(SIZE(random_insult))]);
 		else if (u.uhp < 5 && !rn2(2))	/* Panic */
 		    verbalize(rn2(2) ?
-			  "Even now thy life force ebbs, %s!" :
-			  "Savor thy breath, %s, it be thy last!",
+			  "汝该下十八重油锅，%s！" :
+			  "且慢吸气，%s，此乃尔之绝息也！",
 			  random_insult[rn2(SIZE(random_insult))]);
 		else if (mtmp->mhp < 5 && !rn2(2))	/* Parthian shot */
 		    verbalize(rn2(2) ?
-			      "I shall return." :
-			      "I'll be back.");
+			      "我总有一天会回来的。" :
+			      "我一定会回来的！");
 		else
-		    verbalize("%s %s!",
+		    verbalize("%s%s！",
 			  random_malediction[rn2(SIZE(random_malediction))],
 			  random_insult[rn2(SIZE(random_insult))]);
 	} else if(is_lminion(mtmp)) {
@@ -629,7 +629,7 @@ register struct monst	*mtmp;
 			      QT_ANGELIC);
 	} else {
 	    if (!rn2(5))
-		pline("%s casts aspersions on your ancestry.", Monnam(mtmp));
+		pline("%s对你的祖先进行了热烈的辱骂。", Monnam(mtmp));
 	    else
 	        com_pager(rn2(QTN_DEMONIC) + QT_DEMONIC);
 	}

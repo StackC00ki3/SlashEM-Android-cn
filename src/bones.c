@@ -231,9 +231,9 @@ struct obj *corpse;
 		compress_bonesfile();
 #ifdef WIZARD
 		if (wizard) {
-		    if (yn("Bones file already exists.  Replace it?") == 'y') {
+		    if (yn("这边已经有bone了，确定要替代掉吗?") == '好吧') {
 			if (delete_bonesfile(&u.uz)) goto make_bones;
-			else pline("Cannot unlink old bones.");
+			else pline("无法删除旧bones");
 		    }
 		}
 #endif
@@ -325,7 +325,7 @@ struct obj *corpse;
 		}
 		mtmp = christen_monst(mtmp, plname);
 		newsym(u.ux, u.uy);
-		Your("body rises from the dead as %s...",
+		Your("的身体变为%s后重新爬了起来...",
 			an(mons[u.ugrave_arise].mname));
 		display_nhwindow(WIN_MESSAGE, FALSE);
 		drop_upon_death(mtmp, (struct obj *)0);
@@ -369,7 +369,7 @@ struct obj *corpse;
 		/* bones file creation problems are silent to the player.
 		 * Keep it that way, but place a clue into the paniclog.
 		 */
-		paniclog("savebones", whynot);
+		paniclog("保存错误", whynot);
 		return;
 	}
 	c = (char) (strlen(bonesid) + 1);
@@ -395,7 +395,7 @@ struct obj *corpse;
 	    if (bytes_counted > freediskspace(bones)) { /* not enough room */
 # ifdef WIZARD
 		if (wizard)
-			pline("Insufficient space to create bones file.");
+			pline("没有足够空间创建bone文件.");
 # endif
 		(void) close(fd);
 		cancel_bonesfile();
@@ -445,11 +445,11 @@ getbones()
 #ifdef WIZARD
 	    if (!wizard)
 #endif
-		pline("Discarding unuseable bones; no need to panic...");
+		pline("删除旧bone文件，我觉得没必要崩溃，等我一会...");
 	} else {
 #ifdef WIZARD
 		if(wizard)  {
-			if(yn("Get bones?") == 'n') {
+			if(yn("读取bone文件?") == '算了') {
 				(void) close(fd);
 				compress_bonesfile();
 				return(0);
@@ -461,7 +461,7 @@ getbones()
 		if (strcmp(bonesid, oldbonesid) != 0) {
 			char errbuf[BUFSZ];
 
-			Sprintf(errbuf, "This is bones level '%s', not '%s'!",
+			Sprintf(errbuf, "这是有bone文件的 '%s',不是那个 '%s'!",
 				oldbonesid, bonesid);
 #ifdef WIZARD
 			if (wizard) {
@@ -486,7 +486,7 @@ getbones()
 			    if (mtmp->mhpmax == DEFUNCT_MONSTER) {
 #if defined(DEBUG) && defined(WIZARD)
 				if (wizard)
-				    pline("Removing defunct monster %s from bones.",
+				    pline("正在把已经被灭绝的怪物%s移除.",
 					mtmp->data->mname);
 #endif
 				mongone(mtmp);
@@ -502,7 +502,7 @@ getbones()
 
 #ifdef WIZARD
 	if(wizard) {
-		if(yn("Unlink bones?") == 'n') {
+		if(yn("删除bone?") == '算了') {
 			compress_bonesfile();
 			return(ok);
 		}

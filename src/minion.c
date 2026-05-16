@@ -103,7 +103,7 @@ boolean talk;
 	    mnum = ndemon(alignment);
 	    break;
 	default:
-	    impossible("unaligned player?");
+	    impossible("啊？你没阵营的吗大哥？");
 	    mnum = ndemon(A_NONE);
 	    break;
     }
@@ -126,10 +126,10 @@ boolean talk;
 	mon = makemon(&mons[mnum], u.ux, u.uy, NO_MM_FLAGS);
     if (mon) {
 	if (talk) {
-	    pline_The("voice of %s booms:", align_gname(alignment));
-	    verbalize("Thou shalt pay for thy indiscretion!");
+	    pline_The("%s的声音如霹雳般响起：", align_gname(alignment));
+	    verbalize("汝将为汝之莽行付出代价！");
 	    if (!Blind)
-		pline("%s appears before you.", Amonnam(mon));
+		pline("%s出现在你面前。", Amonnam(mon));
 	}
 	mon->mpeaceful = FALSE;
 	/* don't call set_malign(); player was naughty */
@@ -144,7 +144,7 @@ register struct monst *mtmp;
 	long cash, demand, offer;
 
 	if (uwep && uwep->oartifact == ART_EXCALIBUR) {
-	    pline("%s looks very angry.", Amonnam(mtmp));
+	    pline("%s看起来非常生气。", Amonnam(mtmp));
 	    mtmp->mpeaceful = mtmp->mtame = 0;
 	    set_malign(mtmp);
 	    newsym(mtmp->mx, mtmp->my);
@@ -154,12 +154,12 @@ register struct monst *mtmp;
 	/* Slight advantage given. */
 	if (is_dprince(mtmp->data) && mtmp->minvis) {
 	    mtmp->minvis = mtmp->perminvis = 0;
-	    if (!Blind) pline("%s appears before you.", Amonnam(mtmp));
+	    if (!Blind) pline("%s出现在你面前。", Amonnam(mtmp));
 	    newsym(mtmp->mx,mtmp->my);
 	}
 	if (youmonst.data->mlet == S_DEMON) {	/* Won't blackmail their own. */
-	    pline("%s says, \"Good hunting, %s.\"",
-		  Amonnam(mtmp), flags.female ? "Sister" : "Brother");
+	    pline("%s向你打招呼：“祝你狩猎快乐啊，%s。”",
+		  Amonnam(mtmp), flags.female ? "老妹" : "老兄");
 	    if (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);
 	    return(1);
 	}
@@ -182,17 +182,17 @@ register struct monst *mtmp;
 	    if (mon_has_amulet(mtmp))
 		demand = cash + (long)rn1(1000,40);
 
-	    pline("%s demands %ld %s for safe passage.",
+	    pline("%s要求你支付%ld%s的买路钱！",
 		  Amonnam(mtmp), demand, currency(demand));
 
 	    if ((offer = bribe(mtmp)) >= demand) {
-		pline("%s vanishes, laughing about cowardly mortals.",
+		pline("%s狠狠地嘲笑了你的怂逼行为，然后消失不见了。",
 		      Amonnam(mtmp));
 	    } else if (offer > 0L && (long)rnd(40) > (demand - offer)) {
-		pline("%s scowls at you menacingly, then vanishes.",
+		pline("%s垮着个脸瞪了你几眼，然后消失了。",
 		      Amonnam(mtmp));
 	    } else {
-		pline("%s gets angry...", Amonnam(mtmp));
+		pline("%s生气了……", Amonnam(mtmp));
 		mtmp->mpeaceful = 0;
 		set_malign(mtmp);
 		return 0;
@@ -285,33 +285,33 @@ struct monst *mtmp;
 	long umoney = money_cnt(invent);
 #endif
 
-	getlin("How much will you offer?", buf);
+	getlin("你准备付多少钱？", buf);
 	if (sscanf(buf, "%ld", &offer) != 1) offer = 0L;
 
 	/*Michael Paddon -- fix for negative offer to monster*/
 	/*JAR880815 - */
 	if (offer < 0L) {
-		You("try to shortchange %s, but fumble.",
+		You("试图糊弄%s，然后让他反过来给你钱……不过没成功。",
 			mon_nam(mtmp));
 		return 0L;
 	} else if (offer == 0L) {
-		You("refuse.");
+		You("叫他滚蛋。");
 		return 0L;
 #ifndef GOLDOBJ
 	} else if (offer >= u.ugold) {
-		You("give %s all your gold.", mon_nam(mtmp));
+		You("把你所有的金币都塞给了%s。", mon_nam(mtmp));
 		offer = u.ugold;
 	} else {
-		You("give %s %ld %s.", mon_nam(mtmp), offer, currency(offer));
+		You("向%s付了%ld%s。", mon_nam(mtmp), offer, currency(offer));
 	}
 	u.ugold -= offer;
 	mtmp->mgold += offer;
 #else
 	} else if (offer >= umoney) {
-		You("give %s all your money.", mon_nam(mtmp));
+		You("把你所有的钱都塞给了%s。", mon_nam(mtmp));
 		offer = umoney;
 	} else {
-		You("give %s %ld %s.", mon_nam(mtmp), offer, currency(offer));
+		You("向%s付了%ld%s。", mon_nam(mtmp), offer, currency(offer));
 	}
 	(void) money2mon(mtmp, offer);
 #endif

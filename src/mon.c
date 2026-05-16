@@ -561,7 +561,7 @@ register struct monst *mtmp;
 	if (!is_clinger(mtmp->data)
 	    && !is_swimmer(mtmp->data) && !amphibious(mtmp->data)) {
 	    if (cansee(mtmp->mx,mtmp->my)) {
-		    pline("%s drowns.", Monnam(mtmp));
+		    pline("%s被淹死了。", Monnam(mtmp));
 	    }
 	    if (u.ustuck && u.uswallow && u.ustuck == mtmp) {
 	    /* This can happen after a purple worm plucks you off a
@@ -2153,7 +2153,7 @@ cleanup:
 	else if (mdat->msound == MS_GUARDIAN) {	/* Bad */
 	    adjalign(-(int)(ALIGNLIM/8));
 	    if (!Hallucination) pline("That was probably a bad idea...");
-	    else pline("Whoopsie-daisy!");
+	    else pline("哎呦呦小宝宝犯错错啦！");
 	} else if (mtmp->ispriest) {
 		adjalign((p_coaligned(mtmp)) ? -2 : 2);
 		/* cancel divine protection for killing your priest */
@@ -2168,7 +2168,7 @@ cleanup:
 	} else if (mtmp->mpeaceful) {
 		adjalign(-5);
 		if (!Hallucination) pline("The gods will probably not appreciate this...");
-		else pline("Whoopsie-daisy!");
+		else pline("哎呦呦小宝宝犯错错啦！");
 	}
 
 	/* malign was already adjusted for u.ualign.type and randomization */
@@ -2305,7 +2305,7 @@ int  typ, fatal;
 
 	if(Poison_resistance) {
 		if(!strcmp(string, "blast")) shieldeff(u.ux, u.uy);
-		pline_The("poison doesn't seem to affect you.");
+		pline_The("毒素好像对你无效。");
 		return;
 	}
 	/* suppress killer prefix if it already has one */

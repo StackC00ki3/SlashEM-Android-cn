@@ -231,29 +231,29 @@ NEARDATA struct monst *migrating_mons = (struct monst *)0;
 NEARDATA struct mvitals mvitals[NUMMONS];
 
 NEARDATA struct c_color_names c_color_names = {
-	"black", "amber", "golden",
-	"light blue", "red", "green",
-	"silver", "blue", "purple",
-	"white"
+	"漆黑", "琥珀色", "金色",
+	"亮蓝色", "红色", "绿色",
+	"银色", "蓝色", "紫色",
+	"白色"
 };
 
 const char *c_obj_colors[] = {
-	"black",		/* CLR_BLACK */
-	"red",			/* CLR_RED */
-	"green",		/* CLR_GREEN */
-	"brown",		/* CLR_BROWN */
-	"blue",			/* CLR_BLUE */
-	"magenta",		/* CLR_MAGENTA */
-	"cyan",			/* CLR_CYAN */
-	"gray",			/* CLR_GRAY */
-	"transparent",		/* no_color */
-	"orange",		/* CLR_ORANGE */
-	"bright green",		/* CLR_BRIGHT_GREEN */
-	"yellow",		/* CLR_YELLOW */
-	"bright blue",		/* CLR_BRIGHT_BLUE */
-	"bright magenta",	/* CLR_BRIGHT_MAGENTA */
-	"bright cyan",		/* CLR_BRIGHT_CYAN */
-	"white",		/* CLR_WHITE */
+	"黑色的",		/* CLR_BLACK */
+	"红色的",			/* CLR_RED */
+	"绿色的",		/* CLR_GREEN */
+	"棕色的",		/* CLR_BROWN */
+	"蓝色的",			/* CLR_BLUE */
+	"粉色的",		/* CLR_MAGENTA */
+	"靛蓝色的",			/* CLR_CYAN */
+	"灰色的",			/* CLR_GRAY */
+	"透明的",		/* no_color */
+	"橙色的",		/* CLR_ORANGE */
+	"亮绿色的",		/* CLR_BRIGHT_GREEN */
+	"黄色的",		/* CLR_YELLOW */
+	"亮蓝色的",		/* CLR_BRIGHT_BLUE */
+	"亮粉色的",	/* CLR_BRIGHT_MAGENTA */
+	"亮青蓝色的",		/* CLR_BRIGHT_CYAN */
+	"白色的",		/* CLR_WHITE */
 };
 
 #ifdef MENU_COLOR
@@ -261,19 +261,19 @@ struct menucoloring *menu_colorings = 0;
 #endif
 
 struct c_common_strings c_common_strings = {
-	"Nothing happens.",		"That's enough tries!",
-	"That is a silly thing to %s.",	"shudder for a moment.",
-	"something", "Something", "You can move again.", "Never mind.",
-	"vision quickly clears.", {"the", "your"}
+	"什么也没有发生.",		"你试的够多了!",
+	"试图做像%s这样的事非常的蠢.",	"颤抖了一会.",
+	"什么东西", "什么东西", "你重新得到了身体的控制权.", "算了.",
+	"视野迅速的变得清晰.", {"", "你的"}
 };
 
 /* NOTE: the order of these words exactly corresponds to the
    order of oc_material values #define'd in objclass.h. */
 const char *materialnm[] = {
-	"mysterious", "liquid", "wax", "organic", "flesh",
-	"paper", "cloth", "leather", "wooden", "bone", "dragonhide",
-	"iron", "metal", "copper", "silver", "gold", "platinum", "mithril",
-	"plastic", "glass", "gemstone", "stone"
+	"神秘物质", "液体", "蜡", "有机物", "肉",
+	"纸", "纤维", "皮革", "木", "骨头", "龙皮",
+	"铁", "金属", "铜", "银", "金", "铂金", "秘银",
+	"塑料", "玻璃", "宝石", "岩石"
 };
 
 /* Vision */

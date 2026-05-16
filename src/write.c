@@ -61,7 +61,7 @@ register struct obj *otmp;
 /*		break; */
 	case SCR_BLANK_PAPER:
 	default:
-		impossible("You can't write such a weird scroll!");
+		impossible("你不能写这种奇怪的玩意！");
 	}
 	return(1000);
 }
@@ -83,44 +83,44 @@ register struct obj *pen;
 	const char *typeword;
 
 	if (nohands(youmonst.data)) {
-	    You("need hands to be able to write!");
+	    You("需要手才能写东西！");
 	    return 0;
 	} else if (Glib) {
-	    pline("%s from your %s.",
-		  Tobjnam(pen, "slip"), makeplural(body_part(FINGER)));
+	    pline("%s了你的%s。",
+		  Tobjnam(pen, "滑出"), makeplural(body_part(FINGER)));
 	    dropx(pen);
 	    return 1;
 	}
 
 	/* get paper to write on */
-	paper = getobj(write_on,"write on");
+	paper = getobj(write_on,"可以用魔笔书写的");
 	if(!paper)
 		return(0);
-	typeword = (paper->oclass == SPBOOK_CLASS) ? "spellbook" : "scroll";
+	typeword = (paper->oclass == SPBOOK_CLASS) ? "法术书" : "scroll";
 	if(Blind && !paper->dknown) {
-		You("don't know if that %s is blank or not!", typeword);
+		You("并不知道%s上到底写没写东西！", typeword);
 		return(1);
 	}
 	paper->dknown = 1;
 	if(paper->otyp != SCR_BLANK_PAPER && paper->otyp != SPE_BLANK_PAPER) {
-		pline("That %s is not blank!", typeword);
+		pline("这个%s不是空的！", typeword);
 		exercise(A_WIS, FALSE);
 		return(1);
 	}
 
 	/* what to write */
-	Sprintf(qbuf, "What type of %s do you want to write?", typeword);
+	Sprintf(qbuf, "你想写什么%s？", typeword);
 	getlin(qbuf, namebuf);
 	(void)mungspaces(namebuf);	/* remove any excess whitespace */
 	if(namebuf[0] == '\033' || !namebuf[0])
 		return(1);
 	nm = namebuf;
-	if (!strncmpi(nm, "scroll ", 7)) nm += 7;
+	if (!strncmpi(nm, "卷轴", 7)) nm += 7;
 	else if (!strncmpi(nm, "spellbook ", 10)) nm += 10;
-	if (!strncmpi(nm, "of ", 3)) nm += 3;
+	if (!strncmpi(nm, "", 3)) nm += 3;
 
-	if ((bp = strstri(nm, " armour")) != 0) {
-		(void)strncpy(bp, " armor ", 7);	/* won't add '\0' */
+	if ((bp = strstri(nm, "防具抚摸")) != 0) {
+		(void)strncpy(bp, "防具附魔", 7);	/* won't add '\0' */
 		(void)mungspaces(bp + 1);	/* remove the extra space */
 	}
 
@@ -138,22 +138,22 @@ register struct obj *pen;
 		}
 	}
 
-	There("is no such %s!", typeword);
+	There("没有像这样的%s！", typeword);
 	return 1;
 found:
 
 	if (i == SCR_BLANK_PAPER || i == SPE_BLANK_PAPER) {
-		You_cant("write that!");
-		pline("It's obscene!");
+		You_cant("写那种卷轴！");
+		pline("你特么扯犊子呢你！");
 		return 1;
 	} else if (i == SPE_BOOK_OF_THE_DEAD) {
-		pline("No mere dungeon adventurer could write that.");
+		pline("任何地牢冒险家都写不出来那本书。");
 		return 1;
 	} else if (by_descr && paper->oclass == SPBOOK_CLASS &&
 		    !objects[i].oc_name_known) {
 		/* can't write unknown spellbooks by description */
 		pline(
-		  "Unfortunately you don't have enough information to go on.");
+		  "不幸的是你光知道描述是写不出来对应法术书的。");
 		return 1;
 	}
 
@@ -172,7 +172,7 @@ found:
 	/* see if there's enough ink */
 	basecost = cost(new_obj);
 	if(pen->spe < basecost/2)  {
-		Your("marker is too dry to write that!");
+		Your("魔笔剩下的墨不够写那个卷轴！");
 		obfree(new_obj, (struct obj *) 0);
 		return(1);
 	}
@@ -185,14 +185,14 @@ found:
 	/* dry out marker */
 	if (pen->spe < actualcost) {
 		pen->spe = 0;
-		Your("marker dries out!");
+		Your("魔笔彻底用完墨水了！");
 		/* scrolls disappear, spellbooks don't */
 		if (paper->oclass == SPBOOK_CLASS) {
 			pline_The(
-		       "spellbook is left unfinished and your writing fades.");
+		       "法术书没写完，随后上面的所有字迹直接消失了。");
 			update_inventory();	/* pen charges */
 		} else {
-			pline_The("scroll is now useless and disappears!");
+			pline_The("卷轴现在一点用也没有了，然后直接消失了！");
 			useup(paper);
 		}
 		obfree(new_obj, (struct obj *) 0);
@@ -204,19 +204,19 @@ found:
 	if(!(objects[new_obj->otyp].oc_name_known) &&
 	   !(objects[new_obj->otyp].oc_uname) &&
 	   (rnl(Role_if(PM_WIZARD) ? 3 : 15))) {
-		You("%s to write that!", by_descr ? "fail" : "don't know how");
+		You("%s那个卷轴！", by_descr ? "没写成" : "不知道怎么写出");
 		/* scrolls disappear, spellbooks don't */
 		if (paper->oclass == SPBOOK_CLASS) {
 			You(
-       "write in your best handwriting:  \"My Diary\", but it quickly fades.");
+       "用你最好的笔迹整了四个大字：“我的日记”。但是字迹马上就消失了。");
 			update_inventory();	/* pen charges */
 		} else {
 			if (by_descr) {
 			    Strcpy(namebuf, OBJ_DESCR(objects[new_obj->otyp]));
 			    wipeout_text(namebuf, (6+MAXULEV - u.ulevel)/6, 0);
 			} else
-			    Sprintf(namebuf, "%s was here!", plname);
-			You("write \"%s\" and the scroll disappears.", namebuf);
+			    Sprintf(namebuf, "%s到此一游！", plname);
+			You("写了“%s”，然后卷轴就凭空消失了。", namebuf);
 			useup(paper);
 		}
 		obfree(new_obj, (struct obj *) 0);
@@ -229,7 +229,7 @@ found:
 	/* success */
 	if (new_obj->oclass == SPBOOK_CLASS) {
 		/* acknowledge the change in the object's description... */
-		pline_The("spellbook warps strangely, then turns %s.",
+		pline_The("法术书奇怪地扭曲了起来，然后变成了%s样。",
 		      OBJ_DESCR(objects[new_obj->otyp]));
 	}
 	new_obj->blessed = (curseval > 0);
@@ -237,8 +237,8 @@ found:
 #ifdef MAIL
 	if (new_obj->otyp == SCR_MAIL) new_obj->spe = 1;
 #endif
-	new_obj = hold_another_object(new_obj, "Oops!  %s out of your grasp!",
-					       The(aobjnam(new_obj, "slip")),
+	new_obj = hold_another_object(new_obj, "哎呀！你不小心把%s丢掉了！",
+					       The(aobjnam(new_obj, "滑出")),
 					       (const char *)0);
 	return(1);
 }

@@ -36,20 +36,20 @@ moveloop()
 
     flags.moonphase = phase_of_the_moon();
     if(flags.moonphase == FULL_MOON) {
-	You("are lucky!  Full moon tonight.");
+	You("真幸运! 今天是满月.");
 	change_luck(1);
     } else if(flags.moonphase == NEW_MOON) {
-	pline("Be careful!  New moon tonight.");
+	pline("小心点!  今天是新月.");
     }
     flags.friday13 = friday_13th();
     if (flags.friday13) {
-	pline("Watch out!  Bad things can happen on Friday the 13th.");
+	pline("注意！13号星期五！你要走霉运了.");
 	change_luck(-1);
     }
     /* KMH -- February 2 */
     flags.groundhogday = groundhog_day();
     if (flags.groundhogday)
-	pline("Happy Groundhog Day!");
+	pline("祝你土拨鼠节快乐!");
 
     initrack();
 
@@ -250,7 +250,7 @@ moveloop()
 			    } else if (!Upolyd && u.uhp > 1) {
 				u.uhp--;
 			    } else {
-				You("pass out from exertion!");
+				You("你搬东西的时候昏倒了!");
 				exercise(A_CON, FALSE);
 				fall_asleep(-10, FALSE);
 			    }
@@ -419,11 +419,11 @@ moveloop()
 		u.utrap -= 1<<8;
 		if(u.utrap < 1<<8) {
 		    killer_format = KILLED_BY;
-		    killer = "molten lava";
-		    You("sink below the surface and die.");
+		    killer = "岩浆";
+		    You("慢慢的沉入岩浆里头，然后死了.");
 		    done(DISSOLVED);
 		} else if(didmove && !u.umoved) {
-		    Norep("You sink deeper into the lava.");
+		    Norep("你在岩浆里头沉的更深.");
 		    u.utrap += rnd(4);
 		}
 	    }
@@ -491,7 +491,7 @@ stop_occupation()
 {
 	if(occupation) {
 		if (!maybe_finished_meal(TRUE))
-		    You("stop %s.", occtxt);
+		    You("决定停下%s.", occtxt);
 		occupation = 0;
 		flags.botl = 1; /* in case u.uhs changed */
 /* fainting stops your occupation, there's no reason to sync.
@@ -630,15 +630,15 @@ boolean new_game;	/* false => restoring an old game */
 	Sprintf(eos(buf), " %s", genders[currentgend].adj);
 
 #if 0
-    pline(new_game ? "%s %s, welcome to NetHack!  You are a%s %s %s."
-		   : "%s %s, the%s %s %s, welcome back to NetHack!",
+    pline(new_game ? "%s %s,欢迎来到slash'em!你的身份是%s %s %s."
+		   : "%s %s,%s %s %s,欢迎来到slash'em!",
 	  Hello((struct monst *) 0), plname, buf, urace.adj,
 	  (currentgend && urole.name.f) ? urole.name.f : urole.name.m);
 #endif
-    if (new_game) pline("%s %s, welcome to %s!  You are a%s %s %s.",
+    if (new_game) pline("%s %s,欢迎来到%s!你的身份是%s %s %s.",
 	  Hello((struct monst *) 0), plname, DEF_GAME_NAME, buf, urace.adj,
 	  (currentgend && urole.name.f) ? urole.name.f : urole.name.m);
-    else pline("%s %s, the%s %s %s, welcome back to %s!",
+    else pline("%s %s,%s %s %s,欢迎回到%s!",
 	  Hello((struct monst *) 0), plname, buf, urace.adj,
 	  (currentgend && urole.name.f) ? urole.name.f : urole.name.m, 
 	  DEF_GAME_NAME);

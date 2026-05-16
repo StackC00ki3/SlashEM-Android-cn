@@ -1868,8 +1868,7 @@ goodfruit:
 		/*
 		 * Override the default object class symbols.  The first
 		 * object in the object class is the "random object".  I
-		 * don't want to use 0 as an object class, so the "random
-		 * object" is basically a place holder.
+		 * don't want to use 0 as an object class, so the "random\n		 * object" is basically a place holder.
 		 *
 		 * The object class symbols have already been initialized in
 		 * initoptions().

@@ -13,7 +13,7 @@
  * The mail daemon can move with less than usual restraint.  It can:
  *	- move diagonally from a door
  *	- use secret and closed doors
- *	- run through a monster ("Gangway!", etc.)
+ *	- run through a monster ("起开点！", etc.)
  *	- run over pools & traps
  *
  * Possible extensions:
@@ -259,7 +259,7 @@ md_stop(stopp, startp)
 
 /* Let the mail daemon have a larger vocabulary. */
 static NEARDATA const char *mail_text[] = {
-    "Gangway!",
+    "起开点！",
     "Look out!",
     "Pardon me!"
 };
