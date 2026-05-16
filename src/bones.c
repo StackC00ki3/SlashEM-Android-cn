@@ -231,7 +231,7 @@ struct obj *corpse;
 		compress_bonesfile();
 #ifdef WIZARD
 		if (wizard) {
-		    if (yn("这边已经有bone了，确定要替代掉吗?") == '好吧') {
+		    if (yn("这边已经有bone了，确定要替代掉吗?") == 'y') {
 			if (delete_bonesfile(&u.uz)) goto make_bones;
 			else pline("无法删除旧bones");
 		    }
@@ -449,7 +449,7 @@ getbones()
 	} else {
 #ifdef WIZARD
 		if(wizard)  {
-			if(yn("读取bone文件?") == '算了') {
+			if(yn("读取bone文件?") == 'n') {
 				(void) close(fd);
 				compress_bonesfile();
 				return(0);
@@ -502,7 +502,7 @@ getbones()
 
 #ifdef WIZARD
 	if(wizard) {
-		if(yn("删除bone?") == '算了') {
+		if(yn("删除bone?") == 'n') {
 			compress_bonesfile();
 			return(ok);
 		}

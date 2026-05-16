@@ -368,7 +368,7 @@ doborgtoggle()
 	char    qbuf[QBUFSZ];
 	char    c;
 	Strcpy(qbuf,"真的要开启赛博格模式?");
-	if ((c = yn_function(qbuf, ynqchars, '算了')) == '好') {
+	if ((c = yn_function(qbuf, ynqchars, 'n')) == 'y') {
 		borg_on = 1;
 		pline("半机械人模式已经开启，祝你好运!");
 	}
@@ -535,7 +535,7 @@ enter_explore_mode()
 {
 	if(!discover && !wizard) {
 		pline("警告！如果你一旦打开探索模式将不可能再返回正常游戏！");
-		if (yn("确定还要开启?") == '是的!') {
+		if (yn("确定还要开启?") == 'y') {
 			clear_nhwindow(WIN_MESSAGE);
 			You("现在进入了不计分探索模式.");
 			discover = TRUE;
@@ -707,7 +707,7 @@ specialpower()      /* Special class abilites [modified by Tom] */
 	    You("还得等%s之后才能再次使用你的能力.",
 		(u.unextuse > 500) ? "一小会" : "一段时间");
 #ifdef WIZARD
-            if (!wizard || (yn("无论如何都要使用能力?") == '算了'))
+            if (!wizard || (yn("无论如何都要使用能力?") == 'n'))
 #endif
                 return(0);
 	}
@@ -1069,7 +1069,7 @@ wiz_level_change()
 STATIC_PTR int
 wiz_panic()
 {
-	if (yn("警告！你想调用panic函数并强行结束本场游戏?") == '我确定！')
+	if (yn("警告！你想调用panic函数并强行结束本场游戏?") == 'y')
 		panic("自作自受.");
         return 0;
 }
@@ -3125,21 +3125,21 @@ click_to_cmd(x, y, mod)
 	    return cmd;
 #ifdef ANDROID
 	} else if(!u.uswallow && IS_FOUNTAIN(levl[u.ux][u.uy].typ)) {
-		cmd[0]=yn("从喷泉里头喝一口水?") == '是' ? 0x80 : '.';
+		cmd[0]=yn("从喷泉里头喝一口水?") == 'y' ? 0x80 : '.';
 		return cmd;
 #ifdef SINKS
 	} else if(!u.uswallow && IS_SINK(levl[u.ux][u.uy].typ)) {
-		cmd[0]=yn("从洗手池里头喝一口水?") == '是' ? 0x80 : '.';
+		cmd[0]=yn("从洗手池里头喝一口水?") == 'y' ? 0x80 : '.';
 		return cmd;
 	} else if(!u.uswallow && IS_TOILET(levl[u.ux][u.uy].typ)) {
  		if(u.umonnum == PM_LITTLE_DOG || u.umonnum == PM_DOG || u.umonnum == PM_LARGE_DOG)
-			cmd[0]=yn("从马桶里头捞一口水喝?") == '是' ? 0x80 : '.';
+			cmd[0]=yn("从马桶里头捞一口水喝?") == 'y' ? 0x80 : '.';
 		else
 		    cmd[0]=M('s');
 	    return cmd;
 #endif
 	} else if(!u.uswallow && (Underwater || IS_POOL(levl[u.ux][u.uy].typ))) {
-		cmd[0]=yn(Underwater ? "喝一口这里的水?" : "从池子里头喝一口水?") == '是' ? 0x80 : '.';
+		cmd[0]=yn(Underwater ? "喝一口这里的水?" : "从池子里头喝一口水?") == 'y' ? 0x80 : '.';
 		return cmd;
 	} else {
 		cmd[0] = '.';
@@ -3157,11 +3157,11 @@ click_to_cmd(x, y, mod)
 			c = 0;
 			if(cmd[0] != '.') {
 				/* On stairs with object(s) */
-				c = yn_function("地上还有东西！还要接着爬吗?", ynqchars, '是');
+				c = yn_function("地上还有东西！还要接着爬吗?", ynqchars, 'y');
 
-				if(c == '算了')
+				if(c == 'n')
 					cmd[0] = Is_container(level.objects[u.ux][u.uy]) ? M('l') : ',';
-				else if(c == '不管了接着爬')
+				else if(c == 'q')
 					cmd[0] = '.';
 			} else {
 				cmd[0] = Is_container(level.objects[u.ux][u.uy]) ? M('l') : ',';

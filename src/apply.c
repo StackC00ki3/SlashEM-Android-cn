@@ -1198,7 +1198,7 @@ struct obj *obj;
 #endif
 		} else {	/* candle(s) */
 		    Sprintf(qbuf, "把全部的%s都点燃?", the(xname(obj)));
-		    if (obj->quan > 1L && (yn(qbuf) == '否')) {
+		    if (obj->quan > 1L && (yn(qbuf) == 'n')) {
 			/* Check if player wants to light all the candles */
 			struct obj *rest;	     /* the remaining candles */
 			rest = splitobj(obj, obj->quan - 1L);
@@ -2429,7 +2429,7 @@ struct obj *otmp;
 		mon_nam(u.usteed));
 	    Sprintf(buf, "仍旧继续设置陷阱吗%s?",
 		the(defsyms[trap_to_defsym(what_trap(ttyp))].explanation));
-	    if(yn(buf) == '是') {
+	    if(yn(buf) == 'y') {
 		if (chance) {
 			switch(ttyp) {
 			    case LANDMINE:	/* set it off */
@@ -3090,7 +3090,7 @@ do_break_wand(obj)
     Sprintf(confirm, "你确定你真的要折断%s?",
 	safe_qbuf("", sizeof("你确定你真的要折断 ?"),
 				the_wand, ysimple_name(obj), "魔杖"));
-    if (yn(confirm) == '算了' ) return 0;
+    if (yn(confirm) == 'n' ) return 0;
 
     if (nohands(youmonst.data)) {
 	You_cant("没有手怎么折断%s？", the_wand);
