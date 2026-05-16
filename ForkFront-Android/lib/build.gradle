@@ -1,18 +1,16 @@
-plugins {
-  id 'com.android.library'
-}
+apply plugin: 'com.android.library'
 
 group = 'com.tbd.forkfront'
 version = '1.2'
 int versionId = 1200;
 
 android {
-  namespace 'com.tbd.forkfront'
-  compileSdk 34
+  compileSdkVersion 30
+  buildToolsVersion '30.0.3'
 
   defaultConfig {
-    minSdk 16
-    targetSdk 34
+    minSdkVersion 16
+    targetSdkVersion 30
     versionName version
     versionCode versionId
   }
@@ -30,7 +28,7 @@ android {
     }
   }
 
-  lint {
+  lintOptions {
     abortOnError false
   }
 }
