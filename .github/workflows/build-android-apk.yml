@@ -13,12 +13,6 @@ jobs:
       - name: Check out SlashEM
         uses: actions/checkout@v4
 
-      - name: Check out ForkFront
-        uses: actions/checkout@v4
-        with:
-          repository: gurrhack/ForkFront-Android
-          path: ForkFront-Android
-
       - name: Set up Java for Android SDK
         uses: actions/setup-java@v4
         with:

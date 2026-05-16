@@ -77,3 +77,7 @@ out
 /sys/android/libs
 /sys/android/assets/unnethackdir
 /sys/android/gen
+
+/ForkFront-Android/.gradle
+/ForkFront-Android/build
+/ForkFront-Android/lib/build

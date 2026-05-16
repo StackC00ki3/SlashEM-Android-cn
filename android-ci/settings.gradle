@@ -2,4 +2,8 @@ include ':app', ':forkfront'
 
 rootProject.name = 'SlashEM-Android-CI'
 
-project(':forkfront').projectDir = new File(settingsDir, '../ForkFront-Android/lib')
+def forkFrontDir = new File(settingsDir, '../ForkFront-Android/lib')
+if (!forkFrontDir.exists()) {
+  throw new GradleException("Missing ForkFront-Android/lib in repository root")
+}
+project(':forkfront').projectDir = forkFrontDir
