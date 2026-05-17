@@ -1,0 +1,146 @@
+[
+  {
+    "key": "L00064_01",
+    "original": "and curses in your general direction",
+    "translation": "",
+    "context": "src/mcastu.c:64:15\n    59: \t    else if ((Invis && !perceives(mtmp->data) &&\n    60: \t\t\t(mtmp->mux != u.ux || mtmp->muy != u.uy)) ||\n    61: \t\t    (youmonst.m_ap_type == M_AP_OBJECT &&\n    62: \t\t\tyoumonst.mappearance == STRANGE_OBJECT) ||\n    63: \t\t    u.uundetected)\n>   64: \t\tpoint_msg = \"and curses in your general direction\";\n    65: \t    else if (Displaced && (mtmp->mux != u.ux || mtmp->muy != u.uy))\n    66: \t\tpoint_msg = \"然后对着你的幻影大骂特骂\";\n    67: \t    else\n    68: \t\tpoint_msg = \"at you, then curses\";\n    69: "
+  },
+  {
+    "key": "L00068_01",
+    "original": "at you, then curses",
+    "translation": "",
+    "context": "src/mcastu.c:68:15\n    63: \t\t    u.uundetected)\n    64: \t\tpoint_msg = \"and curses in your general direction\";\n    65: \t    else if (Displaced && (mtmp->mux != u.ux || mtmp->muy != u.uy))\n    66: \t\tpoint_msg = \"然后对着你的幻影大骂特骂\";\n    67: \t    else\n>   68: \t\tpoint_msg = \"at you, then curses\";\n    69: \n    70: \t    pline(\"%s指着%s。\", Monnam(mtmp), point_msg);\n    71: \t} else if ((!(moves % 4) || !rn2(4))) {\n    72: \t    if (flags.soundok) Norep(\"你听见有人在不停骂人。\");\n    73: \t}"
+  },
+  {
+    "key": "L00210_01",
+    "original": "spellcasting monster found you and doesn't know it?",
+    "translation": "",
+    "context": "src/mcastu.c:210:19\n   205: \t\t/* not trying to attack?  don't allow directed spells */\n   206: \t\tif (!thinks_it_foundyou) {\n   207: \t\t    if (!is_undirected_spell(mattk->adtyp, spellnum) ||\n   208: \t\t\tspell_would_be_useless(mtmp, mattk->adtyp, spellnum)) {\n   209: \t\t\tif (foundyou)\n>  210: \t\t\t    impossible(\"spellcasting monster found you and doesn't know it?\");\n   211: \t\t\treturn 0;\n   212: \t\t    }\n   213: \t\t    break;\n   214: \t\t}\n   215: \t    } while(--cnt > 0 &&"
+  },
+  {
+    "key": "L00255_01",
+    "original": "Something",
+    "translation": "",
+    "context": "src/mcastu.c:255:36\n   250: \t   wrong place?  If so, give a message, and return.  Do this *after*\n   251: \t   penalizing mspec_used. */\n   252: \tif (!foundyou && thinks_it_foundyou &&\n   253: \t\t!is_undirected_spell(mattk->adtyp, spellnum)) {\n   254: \t    pline(\"%s朝着%s施放了一个法术！\",\n>  255: \t\tcanseemon(mtmp) ? Monnam(mtmp) : \"Something\",\n   256: \t\tlevl[mtmp->mux][mtmp->muy].typ == WATER\n   257: \t\t    ? \"空无一物的水面\" : \"空无一物的空气\");\n   258: \t    return(0);\n   259: \t}\n   260: "
+  },
+  {
+    "key": "L00309_01",
+    "original": "Something",
+    "translation": "",
+    "context": "src/mcastu.c:309:39\n   304: \t\tpline_The(\"空气在%s周围噼啪作响。\", mon_nam(mtmp));\n   305: \t    return(0);\n   306: \t}\n   307: \tif (canspotmon(mtmp) || !is_undirected_spell(mattk->adtyp, spellnum)) {\n   308: \t    pline(\"%s对着%s施放了一个法术！\",\n>  309: \t\t  canspotmon(mtmp) ? Monnam(mtmp) : \"Something\",\n   310: \t\t  is_undirected_spell(mattk->adtyp, spellnum) ? \"\" :\n   311: \t\t  (Invisible && !perceives(mtmp->data) && \n   312: \t\t   (mtmp->mux != u.ux || mtmp->muy != u.uy)) ?\n   313: \t\t  \" at a spot near you\" :\n   314: \t\t  (Displaced && (mtmp->mux != u.ux || mtmp->muy != u.uy)) ?"
+  },
+  {
+    "key": "L00313_01",
+    "original": " at a spot near you",
+    "translation": "",
+    "context": "src/mcastu.c:313:5\n   308: \t    pline(\"%s对着%s施放了一个法术！\",\n   309: \t\t  canspotmon(mtmp) ? Monnam(mtmp) : \"Something\",\n   310: \t\t  is_undirected_spell(mattk->adtyp, spellnum) ? \"\" :\n   311: \t\t  (Invisible && !perceives(mtmp->data) && \n   312: \t\t   (mtmp->mux != u.ux || mtmp->muy != u.uy)) ?\n>  313: \t\t  \" at a spot near you\" :\n   314: \t\t  (Displaced && (mtmp->mux != u.ux || mtmp->muy != u.uy)) ?\n   315: \t\t  \"你的幻影\" :\n   316: \t\t  \"朝着你\");\n   317: \t}\n   318: "
+  },
+  {
+    "key": "L00341_01",
+    "original": "You're enveloped in flames.",
+    "translation": "",
+    "context": "src/mcastu.c:341:9\n   336: \tret = 1;\n   337: \n   338: \tswitch (mattk->adtyp) {\n   339: \n   340: \t    case AD_FIRE:\n>  341: \t\tpline(\"You're enveloped in flames.\");\n   342: \t\tif(Fire_resistance) {\n   343: \t\t\tshieldeff(u.ux, u.uy);\n   344: \t\t\tpline(\"但你成功抵抗住了它的效果。\");\n   345: \t\t\tdmg = 0;\n   346: \t\t}"
+  },
+  {
+    "key": "L00407_01",
+    "original": "Oh no, %s's using the touch of death!",
+    "translation": "",
+    "context": "src/mcastu.c:407:8\n   402: \treturn;\n   403:     }\n   404: \n   405:     switch (spellnum) {\n   406:     case MGC_DEATH_TOUCH:\n>  407: \tpline(\"Oh no, %s's using the touch of death!\", mhe(mtmp));\n   408: \tif (nonliving(youmonst.data) || is_demon(youmonst.data)) {\n   409: \t    You(\"看起来比之前也没死多少。\");\n   410: \t} else if (!Antimagic && rn2(mtmp->m_lev) > 12) {\n   411: \t    if (Hallucination) {\n   412: \t\tYou(\"有一种灵魂出窍的感觉。\");"
+  },
+  {
+    "key": "L00415_01",
+    "original": "touch of death",
+    "translation": "",
+    "context": "src/mcastu.c:415:12\n   410: \t} else if (!Antimagic && rn2(mtmp->m_lev) > 12) {\n   411: \t    if (Hallucination) {\n   412: \t\tYou(\"有一种灵魂出窍的感觉。\");\n   413: \t    } else {\n   414: \t\tkiller_format = KILLED_BY_AN;\n>  415: \t\tkiller = \"touch of death\";\n   416: \t\tdone(DIED);\n   417: \t    }\n   418: \t} else {\n   419: \t    if (Antimagic) shieldeff(u.ux, u.uy);\n   420: \t    pline(\"Lucky for you, it didn't work!\");"
+  },
+  {
+    "key": "L00420_01",
+    "original": "Lucky for you, it didn't work!",
+    "translation": "",
+    "context": "src/mcastu.c:420:12\n   415: \t\tkiller = \"touch of death\";\n   416: \t\tdone(DIED);\n   417: \t    }\n   418: \t} else {\n   419: \t    if (Antimagic) shieldeff(u.ux, u.uy);\n>  420: \t    pline(\"Lucky for you, it didn't work!\");\n   421: \t}\n   422: \tdmg = 0;\n   423: \tbreak;\n   424:     case MGC_CREATE_POOL:\n   425: \tif (levl[u.ux][u.uy].typ == ROOM || levl[u.ux][u.uy].typ == CORR) {"
+  },
+  {
+    "key": "L00450_01",
+    "original": "Destroy the thief, my pet%s!",
+    "translation": "",
+    "context": "src/mcastu.c:450:16\n   445:     {\n   446: \tint count;\n   447: \n   448: \tcount = nasty(mtmp);\t/* summon something nasty */\n   449: \tif (mtmp->iswiz)\n>  450: \t    verbalize(\"Destroy the thief, my pet%s!\", plur(count));\n   451: \telse {\n   452: \t    const char *mappear =\n   453: \t\t(count == 1) ? \"一个怪物出现在\" : \"怪物们出现在\";\n   454: \n   455: \t    /* messages not quite right if plural monsters created but"
+  },
+  {
+    "key": "L00473_01",
+    "original": "Undead creatures are called forth from the grave!",
+    "translation": "",
+    "context": "src/mcastu.c:473:9\n   468: \tcase MGC_CALL_UNDEAD:\n   469: \t{\n   470: \t\tcoord mm;   \n   471: \t\tmm.x = u.ux;   \n   472: \t\tmm.y = u.uy;   \n>  473: \t\tpline(\"Undead creatures are called forth from the grave!\");   \n   474: \t\tmkundead(&mm, FALSE, NO_MINVENT);   \n   475: \t}\n   476: \tdmg = 0;   \n   477: \tbreak;   \n   478:     case MGC_AGGRAVATION:"
+  },
+  {
+    "key": "L00493_01",
+    "original": "skin itches.",
+    "translation": "",
+    "context": "src/mcastu.c:493:11\n   488:     case MGC_DESTRY_ARMR:\n   489: \tif (Antimagic) {\n   490: \t    shieldeff(u.ux, u.uy);\n   491: \t    pline(\"你周边突然出现了一个力场！\");\n   492: \t} else if (!destroy_arm(some_armor(&youmonst))) {\n>  493: \t    Your(\"skin itches.\");\n   494: \t}\n   495: \tdmg = 0;\n   496: \tbreak;\n   497:     case MGC_WEAKEN_YOU:\t\t/* drain strength */\n   498: \tif (Antimagic) {"
+  },
+  {
+    "key": "L00500_01",
+    "original": "momentarily weakened.",
+    "translation": "",
+    "context": "src/mcastu.c:500:15\n   495: \tdmg = 0;\n   496: \tbreak;\n   497:     case MGC_WEAKEN_YOU:\t\t/* drain strength */\n   498: \tif (Antimagic) {\n   499: \t    shieldeff(u.ux, u.uy);\n>  500: \t    You_feel(\"momentarily weakened.\");\n   501: \t} else {\n   502: \t    You(\"suddenly feel weaker!\");\n   503: \t    dmg = mtmp->m_lev - 6;\n   504: \t    if (Half_spell_damage) dmg = (dmg + 1) / 2;\n   505: \t    losestr(rnd(dmg));"
+  },
+  {
+    "key": "L00502_01",
+    "original": "suddenly feel weaker!",
+    "translation": "",
+    "context": "src/mcastu.c:502:10\n   497:     case MGC_WEAKEN_YOU:\t\t/* drain strength */\n   498: \tif (Antimagic) {\n   499: \t    shieldeff(u.ux, u.uy);\n   500: \t    You_feel(\"momentarily weakened.\");\n   501: \t} else {\n>  502: \t    You(\"suddenly feel weaker!\");\n   503: \t    dmg = mtmp->m_lev - 6;\n   504: \t    if (Half_spell_damage) dmg = (dmg + 1) / 2;\n   505: \t    losestr(rnd(dmg));\n   506: \t    if (u.uhp < 1)\n   507: \t\tdone_in_by(mtmp);"
+  },
+  {
+    "key": "L00542_01",
+    "original": "%s looks better.",
+    "translation": "",
+    "context": "src/mcastu.c:542:9\n   537: \tdmg = 0;\n   538: \tbreak;\n   539:     case MGC_CURE_SELF:\n   540: \tif (mtmp->mhp < mtmp->mhpmax) {\n   541: \t    if (canseemon(mtmp))\n>  542: \t\tpline(\"%s looks better.\", Monnam(mtmp));\n   543: \t    /* note: player healing does 6d4; this used to do 1d8 */\n   544: \t    if ((mtmp->mhp += d(3,6)) > mtmp->mhpmax)\n   545: \t\tmtmp->mhp = mtmp->mhpmax;\n   546: \t    dmg = 0;\n   547: \t}"
+  },
+  {
+    "key": "L00557_01",
+    "original": "get a slight %sache.",
+    "translation": "",
+    "context": "src/mcastu.c:557:10\n   552: \tif (Antimagic) {\n   553: \t    shieldeff(u.ux, u.uy);\n   554: \t    dmg = (dmg + 1) / 2;\n   555: \t}\n   556: \tif (dmg <= 5)\n>  557: \t    You(\"get a slight %sache.\", body_part(HEAD));\n   558: \telse if (dmg <= 10)\n   559: \t    Your(\"大脑着火了！\");\n   560: \telse if (dmg <= 20)\n   561: \t    Your(\"%s突然很痛苦！\", body_part(HEAD));\n   562: \telse"
+  },
+  {
+    "key": "L00615_01",
+    "original": "It bounces off your %s%s.",
+    "translation": "",
+    "context": "src/mcastu.c:615:23\n   610: \tboolean reflects;\n   611: \n   612: \t/* WAC add lightning strike effect */\n   613: \tzap_strike_fx(u.ux, u.uy, AD_ELEC - 1);\n   614: \tpline(\"一道闪电突然从你头顶直劈下来！\");\n>  615: \treflects = ureflects(\"It bounces off your %s%s.\", \"\");\n   616: \tif (!Blind) {\n   617: \t    pline(\"你被剧烈的闪光暂时闪瞎了！\");\n   618: \t    make_blinded(Half_spell_damage ? 10L : 20L, FALSE);\n   619: \t}\n   620: \tif (reflects || Shock_resistance) {"
+  },
+  {
+    "key": "L00680_01",
+    "original": "%s summons insects around your displaced image!",
+    "translation": "",
+    "context": "src/mcastu.c:680:12\n   675: \telse if (Invisible && !perceives(mtmp->data) &&\n   676: \t\t\t\t(mtmp->mux != u.ux || mtmp->muy != u.uy))\n   677: \t    pline(\"%s在你周围的空位上召唤虫子！\",\n   678: \t\tMonnam(mtmp));\n   679: \telse if (Displaced && (mtmp->mux != u.ux || mtmp->muy != u.uy))\n>  680: \t    pline(\"%s summons insects around your displaced image!\",\n   681: \t\tMonnam(mtmp));\n   682: \telse\n   683: \t    pline(\"%s开始召唤虫子！\", Monnam(mtmp));\n   684: \tdmg = 0;\n   685: \tbreak;"
+  },
+  {
+    "key": "L00691_01",
+    "original": "Scales cover your %s!",
+    "translation": "",
+    "context": "src/mcastu.c:691:12\n   686:       }\n   687:     case CLC_BLIND_YOU:\n   688: \t/* note: resists_blnd() doesn't apply here */\n   689: \tif (!Blinded) {\n   690: \t    int num_eyes = eyecount(youmonst.data);\n>  691: \t    pline(\"Scales cover your %s!\",\n   692: \t\t  (num_eyes == 1) ?\n   693: \t\t  body_part(EYE) : makeplural(body_part(EYE)));\n   694: \t    make_blinded(Half_spell_damage ? 100L : 200L, FALSE);\n   695: \t    if (!Blind) Your(vision_clears);\n   696: \t    dmg = 0;"
+  },
+  {
+    "key": "L00736_01",
+    "original": "%s looks better.",
+    "translation": "",
+    "context": "src/mcastu.c:736:9\n   731: \tdmg = 0;\n   732: \tbreak;\n   733:     case CLC_CURE_SELF:\n   734: \tif (mtmp->mhp < mtmp->mhpmax) {\n   735: \t    if (canseemon(mtmp))\n>  736: \t\tpline(\"%s looks better.\", Monnam(mtmp));\n   737: \t    /* note: player healing does 6d4; this used to do 1d8 */\n   738: \t    if ((mtmp->mhp += d(3,6)) > mtmp->mhpmax)\n   739: \t\tmtmp->mhp = mtmp->mhpmax;\n   740: \t    dmg = 0;\n   741: \t}"
+  },
+  {
+    "key": "L00751_01",
+    "original": "Wounds appear on your body!",
+    "translation": "",
+    "context": "src/mcastu.c:751:12\n   746: \t    dmg = (dmg + 1) / 2;\n   747: \t}\n   748: \tif (dmg <= 5)\n   749: \t    Your(\"的皮肤突然十分瘙痒。\");\n   750: \telse if (dmg <= 10)\n>  751: \t    pline(\"Wounds appear on your body!\");\n   752: \telse if (dmg <= 20)\n   753: \t    pline(\"你的身体上出现了很多严重的创口！\");\n   754: \telse\n   755: \t    Your(\"的身体突然出现了大量极度疼痛的伤口！\");\n   756: \tbreak;"
+  },
+  {
+    "key": "L00758_01",
+    "original": "mcastu: invalid clerical spell (%d)",
+    "translation": "",
+    "context": "src/mcastu.c:758:13\n   753: \t    pline(\"你的身体上出现了很多严重的创口！\");\n   754: \telse\n   755: \t    Your(\"的身体突然出现了大量极度疼痛的伤口！\");\n   756: \tbreak;\n   757:     default:\n>  758: \timpossible(\"mcastu: invalid clerical spell (%d)\", spellnum);\n   759: \tdmg = 0;\n   760: \tbreak;\n   761:     }\n   762: \n   763:     if (dmg) mdamageu(mtmp, dmg);"
+  },
+  {
+    "key": "L00896_01",
+    "original": "Monster spell %d cast",
+    "translation": "",
+    "context": "src/mcastu.c:896:24\n   891: \t\tif(canseemon(mtmp))\n   892: \t\t    pline(\"%s对你施放了%s！\", Monnam(mtmp),\n   893: \t\t\t  flash_types[ad_to_typ(mattk->adtyp)]);\n   894: \t\tbuzz(-ad_to_typ(mattk->adtyp), (int)mattk->damn,\n   895: \t\t     mtmp->mx, mtmp->my, sgn(tbx), sgn(tby));\n>  896: \t    } else impossible(\"Monster spell %d cast\", mattk->adtyp-1);\n   897: \t}\n   898: \treturn(1);\n   899: }\n   900: \n   901: #endif /* OVL0 */"
+  }
+]

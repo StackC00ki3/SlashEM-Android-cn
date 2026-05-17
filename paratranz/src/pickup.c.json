@@ -1,0 +1,1238 @@
+[
+  {
+    "key": "L00064_01",
+    "original": "You have a little trouble lifting",
+    "translation": "",
+    "context": "src/pickup.c:64:39\n    59: /* in_container() and out_container() from askchain() and use_container(). */\n    60: /* Also used by memu_loot() and container_gone().\t\t\t   */\n    61: static NEARDATA struct obj *current_container;\n    62: #define Icebox (current_container->otyp == ICE_BOX)\n    63: \n>   64: static const char moderateloadmsg[] = \"You have a little trouble lifting\";\n    65: static const char nearloadmsg[] = \"You have much trouble lifting\";\n    66: static const char overloadmsg[] = \"You have extreme difficulty lifting\";\n    67: \n    68: /* BUG: this lets you look at cockatrice corpses while blind without\n    69:    touching them */"
+  },
+  {
+    "key": "L00065_01",
+    "original": "You have much trouble lifting",
+    "translation": "",
+    "context": "src/pickup.c:65:35\n    60: /* Also used by memu_loot() and container_gone().\t\t\t   */\n    61: static NEARDATA struct obj *current_container;\n    62: #define Icebox (current_container->otyp == ICE_BOX)\n    63: \n    64: static const char moderateloadmsg[] = \"You have a little trouble lifting\";\n>   65: static const char nearloadmsg[] = \"You have much trouble lifting\";\n    66: static const char overloadmsg[] = \"You have extreme difficulty lifting\";\n    67: \n    68: /* BUG: this lets you look at cockatrice corpses while blind without\n    69:    touching them */\n    70: /* much simpler version of the look-here code; used by query_classes() */"
+  },
+  {
+    "key": "L00066_01",
+    "original": "You have extreme difficulty lifting",
+    "translation": "",
+    "context": "src/pickup.c:66:35\n    61: static NEARDATA struct obj *current_container;\n    62: #define Icebox (current_container->otyp == ICE_BOX)\n    63: \n    64: static const char moderateloadmsg[] = \"You have a little trouble lifting\";\n    65: static const char nearloadmsg[] = \"You have much trouble lifting\";\n>   66: static const char overloadmsg[] = \"You have extreme difficulty lifting\";\n    67: \n    68: /* BUG: this lets you look at cockatrice corpses while blind without\n    69:    touching them */\n    70: /* much simpler version of the look-here code; used by query_classes() */\n    71: STATIC_OVL void"
+  },
+  {
+    "key": "L00081_01",
+    "original": "simple_look(null)",
+    "translation": "",
+    "context": "src/pickup.c:81:17\n    76: \t/* Neither of the first two cases is expected to happen, since\n    77: \t * we're only called after multiple classes of objects have been\n    78: \t * detected, hence multiple objects must be present.\n    79: \t */\n    80: \tif (!otmp) {\n>   81: \t    impossible(\"simple_look(null)\");\n    82: \t} else if (!(here ? otmp->nexthere : otmp->nobj)) {\n    83: \t    pline(\"%s\", doname(otmp));\n    84: \t} else {\n    85: \t    winid tmpwin = create_nhwindow(NHW_MENU);\n    86: \t    putstr(tmpwin, 0, \"\");"
+  },
+  {
+    "key": "L00083_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/pickup.c:83:12\n    78: \t * detected, hence multiple objects must be present.\n    79: \t */\n    80: \tif (!otmp) {\n    81: \t    impossible(\"simple_look(null)\");\n    82: \t} else if (!(here ? otmp->nexthere : otmp->nobj)) {\n>   83: \t    pline(\"%s\", doname(otmp));\n    84: \t} else {\n    85: \t    winid tmpwin = create_nhwindow(NHW_MENU);\n    86: \t    putstr(tmpwin, 0, \"\");\n    87: \t    do {\n    88: \t\tputstr(tmpwin, 0, doname(otmp));"
+  },
+  {
+    "key": "L00209_01",
+    "original": "What kinds of thing do you want to %s? [%s]",
+    "translation": "",
+    "context": "src/pickup.c:209:16\n   204: \t\tilets[iletct] = '\\0';\n   205: ask_again:\n   206: \t\toclasses[oclassct = 0] = '\\0';\n   207: \t\t*one_at_a_time = *everything = FALSE;\n   208: \t\tnot_everything = FALSE;\n>  209: \t\tSprintf(qbuf,\"What kinds of thing do you want to %s? [%s]\",\n   210: \t\t\taction, ilets);\n   211: \t\tgetlin(qbuf,inbuf);\n   212: \t\tif (*inbuf == '\\033') return FALSE;\n   213: \n   214: \t\tfor (p = inbuf; (sym = *p++); ) {"
+  },
+  {
+    "key": "L00235_01",
+    "original": "pick up",
+    "translation": "",
+    "context": "src/pickup.c:235:28\n   230: \t\t\t    add_valid_menu_class(oc_of_sym);\n   231: \t\t\t    oclasses[oclassct++] = oc_of_sym;\n   232: \t\t\t    oclasses[oclassct] = '\\0';\n   233: \t\t\t} else {\n   234: \t\t\t    if (!where)\n>  235: \t\t\t\twhere = !strcmp(action,\"pick up\")  ? \"here\" :\n   236: \t\t\t\t\t!strcmp(action,\"take out\") ?\n   237: \t\t\t\t\t\t\t    \"inside\" : \"\";\n   238: \t\t\t    if (*where)\n   239: \t\t\t\tThere(\"are no %c's %s.\", sym, where);\n   240: \t\t\t    else"
+  },
+  {
+    "key": "L00235_02",
+    "original": "here",
+    "translation": "",
+    "context": "src/pickup.c:235:42\n   230: \t\t\t    add_valid_menu_class(oc_of_sym);\n   231: \t\t\t    oclasses[oclassct++] = oc_of_sym;\n   232: \t\t\t    oclasses[oclassct] = '\\0';\n   233: \t\t\t} else {\n   234: \t\t\t    if (!where)\n>  235: \t\t\t\twhere = !strcmp(action,\"pick up\")  ? \"here\" :\n   236: \t\t\t\t\t!strcmp(action,\"take out\") ?\n   237: \t\t\t\t\t\t\t    \"inside\" : \"\";\n   238: \t\t\t    if (*where)\n   239: \t\t\t\tThere(\"are no %c's %s.\", sym, where);\n   240: \t\t\t    else"
+  },
+  {
+    "key": "L00236_01",
+    "original": "take out",
+    "translation": "",
+    "context": "src/pickup.c:236:21\n   231: \t\t\t    oclasses[oclassct++] = oc_of_sym;\n   232: \t\t\t    oclasses[oclassct] = '\\0';\n   233: \t\t\t} else {\n   234: \t\t\t    if (!where)\n   235: \t\t\t\twhere = !strcmp(action,\"pick up\")  ? \"here\" :\n>  236: \t\t\t\t\t!strcmp(action,\"take out\") ?\n   237: \t\t\t\t\t\t\t    \"inside\" : \"\";\n   238: \t\t\t    if (*where)\n   239: \t\t\t\tThere(\"are no %c's %s.\", sym, where);\n   240: \t\t\t    else\n   241: \t\t\t\tYou(\"have no %c's.\", sym);"
+  },
+  {
+    "key": "L00237_01",
+    "original": "inside",
+    "translation": "",
+    "context": "src/pickup.c:237:12\n   232: \t\t\t    oclasses[oclassct] = '\\0';\n   233: \t\t\t} else {\n   234: \t\t\t    if (!where)\n   235: \t\t\t\twhere = !strcmp(action,\"pick up\")  ? \"here\" :\n   236: \t\t\t\t\t!strcmp(action,\"take out\") ?\n>  237: \t\t\t\t\t\t\t    \"inside\" : \"\";\n   238: \t\t\t    if (*where)\n   239: \t\t\t\tThere(\"are no %c's %s.\", sym, where);\n   240: \t\t\t    else\n   241: \t\t\t\tYou(\"have no %c's.\", sym);\n   242: \t\t\t    not_everything = TRUE;"
+  },
+  {
+    "key": "L00239_01",
+    "original": "are no %c's %s.",
+    "translation": "",
+    "context": "src/pickup.c:239:11\n   234: \t\t\t    if (!where)\n   235: \t\t\t\twhere = !strcmp(action,\"pick up\")  ? \"here\" :\n   236: \t\t\t\t\t!strcmp(action,\"take out\") ?\n   237: \t\t\t\t\t\t\t    \"inside\" : \"\";\n   238: \t\t\t    if (*where)\n>  239: \t\t\t\tThere(\"are no %c's %s.\", sym, where);\n   240: \t\t\t    else\n   241: \t\t\t\tYou(\"have no %c's.\", sym);\n   242: \t\t\t    not_everything = TRUE;\n   243: \t\t\t}\n   244: \t\t    }"
+  },
+  {
+    "key": "L00241_01",
+    "original": "have no %c's.",
+    "translation": "",
+    "context": "src/pickup.c:241:9\n   236: \t\t\t\t\t!strcmp(action,\"take out\") ?\n   237: \t\t\t\t\t\t\t    \"inside\" : \"\";\n   238: \t\t\t    if (*where)\n   239: \t\t\t\tThere(\"are no %c's %s.\", sym, where);\n   240: \t\t\t    else\n>  241: \t\t\t\tYou(\"have no %c's.\", sym);\n   242: \t\t\t    not_everything = TRUE;\n   243: \t\t\t}\n   244: \t\t    }\n   245: \t\t}\n   246: \t\tif (m_seen && menu_on_demand) {"
+  },
+  {
+    "key": "L00442_01",
+    "original": "are physically incapable of picking anything up.",
+    "translation": "",
+    "context": "src/pickup.c:442:8\n   437: \t\t    check_here(FALSE);\n   438: \t\t    return (0);\n   439: \t\t}\n   440: \t\tif (notake(youmonst.data)) {\n   441: \t\t    if (!autopickup)\n>  442: \t\t\tYou(\"are physically incapable of picking anything up.\");\n   443: \t\t    else\n   444: \t\t\tcheck_here(FALSE);\n   445: \t\t    return (0);\n   446: \t\t}\n   447: "
+  },
+  {
+    "key": "L00476_01",
+    "original": "Pick %d of what?",
+    "translation": "",
+    "context": "src/pickup.c:476:16\n   471: \tif (flags.menu_style != MENU_TRADITIONAL || iflags.menu_requested) {\n   472: \n   473: \t    /* use menus exclusively */\n   474: \t    if (count) {\t/* looking for N of something */\n   475: \t\tchar buf[QBUFSZ];\n>  476: \t\tSprintf(buf, \"Pick %d of what?\", count);\n   477: \t\tval_for_n_or_more = count;\t/* set up callback selector */\n   478: \t\tn = query_objlist(buf, objchain,\n   479: \t\t\t    traverse_how|AUTOSELECT_SINGLE|INVORDER_SORT,\n   480: \t\t\t    &pick_list, PICK_ONE, n_or_more);\n   481: \t\t/* correct counts, if any given */"
+  },
+  {
+    "key": "L00485_01",
+    "original": "Pick up what?",
+    "translation": "",
+    "context": "src/pickup.c:485:21\n   480: \t\t\t    &pick_list, PICK_ONE, n_or_more);\n   481: \t\t/* correct counts, if any given */\n   482: \t\tfor (i = 0; i < n; i++)\n   483: \t\t    pick_list[i].count = count;\n   484: \t    } else {\n>  485: \t\tn = query_objlist(\"Pick up what?\", objchain,\n   486: \t\t\ttraverse_how|AUTOSELECT_SINGLE|INVORDER_SORT|FEEL_COCKATRICE,\n   487: \t\t\t&pick_list, PICK_ANY, all_but_uchain);\n   488: \t    }\n   489: menu_pickup:\n   490: \t    n_tried = n;"
+  },
+  {
+    "key": "L00528_01",
+    "original": "are %s objects here.",
+    "translation": "",
+    "context": "src/pickup.c:528:9\n   523: \t\tgoto end_query;\n   524: \n   525: \t    } else if (ct >= 2) {\n   526: \t\tint via_menu = 0;\n   527: \n>  528: \t\tThere(\"are %s objects here.\",\n   529: \t\t      (ct <= 10) ? \"several\" : \"many\");\n   530: \t\tif (!query_classes(oclasses, &selective, &all_of_a_type,\n   531: \t\t\t\t   \"pick up\", objchain,\n   532: \t\t\t\t   traverse_how == BY_NEXTHERE,\n   533: #ifndef GOLDOBJ"
+  },
+  {
+    "key": "L00529_01",
+    "original": "several",
+    "translation": "",
+    "context": "src/pickup.c:529:22\n   524: \n   525: \t    } else if (ct >= 2) {\n   526: \t\tint via_menu = 0;\n   527: \n   528: \t\tThere(\"are %s objects here.\",\n>  529: \t\t      (ct <= 10) ? \"several\" : \"many\");\n   530: \t\tif (!query_classes(oclasses, &selective, &all_of_a_type,\n   531: \t\t\t\t   \"pick up\", objchain,\n   532: \t\t\t\t   traverse_how == BY_NEXTHERE,\n   533: #ifndef GOLDOBJ\n   534: \t\t\t\t   FALSE,"
+  },
+  {
+    "key": "L00529_02",
+    "original": "many",
+    "translation": "",
+    "context": "src/pickup.c:529:34\n   524: \n   525: \t    } else if (ct >= 2) {\n   526: \t\tint via_menu = 0;\n   527: \n   528: \t\tThere(\"are %s objects here.\",\n>  529: \t\t      (ct <= 10) ? \"several\" : \"many\");\n   530: \t\tif (!query_classes(oclasses, &selective, &all_of_a_type,\n   531: \t\t\t\t   \"pick up\", objchain,\n   532: \t\t\t\t   traverse_how == BY_NEXTHERE,\n   533: #ifndef GOLDOBJ\n   534: \t\t\t\t   FALSE,"
+  },
+  {
+    "key": "L00531_01",
+    "original": "pick up",
+    "translation": "",
+    "context": "src/pickup.c:531:8\n   526: \t\tint via_menu = 0;\n   527: \n   528: \t\tThere(\"are %s objects here.\",\n   529: \t\t      (ct <= 10) ? \"several\" : \"many\");\n   530: \t\tif (!query_classes(oclasses, &selective, &all_of_a_type,\n>  531: \t\t\t\t   \"pick up\", objchain,\n   532: \t\t\t\t   traverse_how == BY_NEXTHERE,\n   533: #ifndef GOLDOBJ\n   534: \t\t\t\t   FALSE,\n   535: #endif\n   536: \t\t\t\t   &via_menu)) {"
+  },
+  {
+    "key": "L00538_01",
+    "original": "Pick up what?",
+    "translation": "",
+    "context": "src/pickup.c:538:25\n   533: #ifndef GOLDOBJ\n   534: \t\t\t\t   FALSE,\n   535: #endif\n   536: \t\t\t\t   &via_menu)) {\n   537: \t\t    if (!via_menu) return (0);\n>  538: \t\t    n = query_objlist(\"Pick up what?\",\n   539: \t\t\t\t  objchain,\n   540: \t\t\t\t  traverse_how|(selective ? 0 : INVORDER_SORT),\n   541: \t\t\t\t  &pick_list, PICK_ANY,\n   542: \t\t\t\t  via_menu == -2 ? allow_all : allow_category);\n   543: \t\t    goto menu_pickup;"
+  },
+  {
+    "key": "L00559_01",
+    "original": "Pick up %s?",
+    "translation": "",
+    "context": "src/pickup.c:559:21\n   554: \t\tif (!selective && oclasses[0] && !index(oclasses,obj->oclass))\n   555: \t\t    continue;\n   556: \n   557: \t\tif (!all_of_a_type) {\n   558: \t\t    char qbuf[BUFSZ];\n>  559: \t\t    Sprintf(qbuf, \"Pick up %s?\",\n   560: \t\t\tsafe_qbuf(\"\", sizeof(\"Pick up ?\"), doname(obj),\n   561: \t\t\t\t\tan(simple_typename(obj->otyp)), \"something\"));\n   562: \t\t    switch ((obj->quan < 2L) ? ynaq(qbuf) : ynNaq(qbuf)) {\n   563: \t\t    case 'q': goto end_query;\t/* out 2 levels */\n   564: \t\t    case 'n': continue;"
+  },
+  {
+    "key": "L00560_01",
+    "original": "Pick up ?",
+    "translation": "",
+    "context": "src/pickup.c:560:25\n   555: \t\t    continue;\n   556: \n   557: \t\tif (!all_of_a_type) {\n   558: \t\t    char qbuf[BUFSZ];\n   559: \t\t    Sprintf(qbuf, \"Pick up %s?\",\n>  560: \t\t\tsafe_qbuf(\"\", sizeof(\"Pick up ?\"), doname(obj),\n   561: \t\t\t\t\tan(simple_typename(obj->otyp)), \"something\"));\n   562: \t\t    switch ((obj->quan < 2L) ? ynaq(qbuf) : ynNaq(qbuf)) {\n   563: \t\t    case 'q': goto end_query;\t/* out 2 levels */\n   564: \t\t    case 'n': continue;\n   565: \t\t    case 'a':"
+  },
+  {
+    "key": "L00561_01",
+    "original": "something",
+    "translation": "",
+    "context": "src/pickup.c:561:38\n   556: \n   557: \t\tif (!all_of_a_type) {\n   558: \t\t    char qbuf[BUFSZ];\n   559: \t\t    Sprintf(qbuf, \"Pick up %s?\",\n   560: \t\t\tsafe_qbuf(\"\", sizeof(\"Pick up ?\"), doname(obj),\n>  561: \t\t\t\t\tan(simple_typename(obj->otyp)), \"something\"));\n   562: \t\t    switch ((obj->quan < 2L) ? ynaq(qbuf) : ynNaq(qbuf)) {\n   563: \t\t    case 'q': goto end_query;\t/* out 2 levels */\n   564: \t\t    case 'n': continue;\n   565: \t\t    case 'a':\n   566: \t\t\tall_of_a_type = TRUE;"
+  },
+  {
+    "key": "L00851_01",
+    "original": "query_category: no single object match",
+    "translation": "",
+    "context": "src/pickup.c:851:14\n   846: \t\t*pick_list = (menu_item *) alloc(sizeof(menu_item));\n   847: \t\t(*pick_list)->item.a_int = curr->oclass;\n   848: \t\treturn 1;\n   849: \t    } else {\n   850: #ifdef DEBUG\n>  851: \t\timpossible(\"query_category: no single object match\");\n   852: #endif\n   853: \t    }\n   854: \t    return 0;\n   855: \t}\n   856: "
+  },
+  {
+    "key": "L00865_01",
+    "original": "All worn types",
+    "translation": "",
+    "context": "src/pickup.c:865:34\n   860: \tif ((qflags & ALL_TYPES) && (ccount > 1)) {\n   861: \t\tinvlet = 'a';\n   862: \t\tany.a_void = 0;\n   863: \t\tany.a_int = ALL_TYPES_SELECTED;\n   864: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  865: \t\t       (qflags & WORN_TYPES) ? \"All worn types\" : \"All types\",\n   866: \t\t\tMENU_UNSELECTED);\n   867: \t\tinvlet = 'b';\n   868: \t} else\n   869: \t\tinvlet = 'a';\n   870: \tdo {"
+  },
+  {
+    "key": "L00865_02",
+    "original": "All types",
+    "translation": "",
+    "context": "src/pickup.c:865:53\n   860: \tif ((qflags & ALL_TYPES) && (ccount > 1)) {\n   861: \t\tinvlet = 'a';\n   862: \t\tany.a_void = 0;\n   863: \t\tany.a_int = ALL_TYPES_SELECTED;\n   864: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  865: \t\t       (qflags & WORN_TYPES) ? \"All worn types\" : \"All types\",\n   866: \t\t\tMENU_UNSELECTED);\n   867: \t\tinvlet = 'b';\n   868: \t} else\n   869: \t\tinvlet = 'a';\n   870: \tdo {"
+  },
+  {
+    "key": "L00891_01",
+    "original": "query_category: too many categories",
+    "translation": "",
+    "context": "src/pickup.c:891:14\n   886: \t\t   }\n   887: \t\t}\n   888: \t    }\n   889: \t    pack++;\n   890: \t    if (invlet >= 'u') {\n>  891: \t\timpossible(\"query_category: too many categories\");\n   892: \t\treturn 0;\n   893: \t    }\n   894: \t} while (*pack);\n   895: \t/* unpaid items if there are any */\n   896: \tif (do_unpaid) {"
+  },
+  {
+    "key": "L00901_01",
+    "original": "Unpaid items",
+    "translation": "",
+    "context": "src/pickup.c:901:4\n   896: \tif (do_unpaid) {\n   897: \t\tinvlet = 'u';\n   898: \t\tany.a_void = 0;\n   899: \t\tany.a_int = 'u';\n   900: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  901: \t\t\t\"Unpaid items\", MENU_UNSELECTED);\n   902: \t}\n   903: \t/* billed items: checked by caller, so always include if BILLED_TYPES */\n   904: \tif (qflags & BILLED_TYPES) {\n   905: \t\tinvlet = 'x';\n   906: \t\tany.a_void = 0;"
+  },
+  {
+    "key": "L00909_01",
+    "original": "Unpaid items already used up",
+    "translation": "",
+    "context": "src/pickup.c:909:5\n   904: \tif (qflags & BILLED_TYPES) {\n   905: \t\tinvlet = 'x';\n   906: \t\tany.a_void = 0;\n   907: \t\tany.a_int = 'x';\n   908: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  909: \t\t\t \"Unpaid items already used up\", MENU_UNSELECTED);\n   910: \t}\n   911: \tif (qflags & CHOOSE_ALL) {\n   912: \t\tinvlet = 'A';\n   913: \t\tany.a_void = 0;\n   914: \t\tany.a_int = 'A';"
+  },
+  {
+    "key": "L00917_01",
+    "original": "Auto-select every item being worn",
+    "translation": "",
+    "context": "src/pickup.c:917:4\n   912: \t\tinvlet = 'A';\n   913: \t\tany.a_void = 0;\n   914: \t\tany.a_int = 'A';\n   915: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n   916: \t\t\t(qflags & WORN_TYPES) ?\n>  917: \t\t\t\"Auto-select every item being worn\" :\n   918: \t\t\t\"Auto-select every item\", MENU_UNSELECTED);\n   919: \t}\n   920: \t/* items with b/u/c/unknown if there are any */\n   921: \tif (do_blessed) {\n   922: \t\tinvlet = 'B';"
+  },
+  {
+    "key": "L00918_01",
+    "original": "Auto-select every item",
+    "translation": "",
+    "context": "src/pickup.c:918:4\n   913: \t\tany.a_void = 0;\n   914: \t\tany.a_int = 'A';\n   915: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n   916: \t\t\t(qflags & WORN_TYPES) ?\n   917: \t\t\t\"Auto-select every item being worn\" :\n>  918: \t\t\t\"Auto-select every item\", MENU_UNSELECTED);\n   919: \t}\n   920: \t/* items with b/u/c/unknown if there are any */\n   921: \tif (do_blessed) {\n   922: \t\tinvlet = 'B';\n   923: \t\tany.a_void = 0;"
+  },
+  {
+    "key": "L00926_01",
+    "original": "Items known to be Blessed",
+    "translation": "",
+    "context": "src/pickup.c:926:4\n   921: \tif (do_blessed) {\n   922: \t\tinvlet = 'B';\n   923: \t\tany.a_void = 0;\n   924: \t\tany.a_int = 'B';\n   925: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  926: \t\t\t\"Items known to be Blessed\", MENU_UNSELECTED);\n   927: \t}\n   928: \tif (do_cursed) {\n   929: \t\tinvlet = 'C';\n   930: \t\tany.a_void = 0;\n   931: \t\tany.a_int = 'C';"
+  },
+  {
+    "key": "L00933_01",
+    "original": "Items known to be Cursed",
+    "translation": "",
+    "context": "src/pickup.c:933:4\n   928: \tif (do_cursed) {\n   929: \t\tinvlet = 'C';\n   930: \t\tany.a_void = 0;\n   931: \t\tany.a_int = 'C';\n   932: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  933: \t\t\t\"Items known to be Cursed\", MENU_UNSELECTED);\n   934: \t}\n   935: \tif (do_uncursed) {\n   936: \t\tinvlet = 'U';\n   937: \t\tany.a_void = 0;\n   938: \t\tany.a_int = 'U';"
+  },
+  {
+    "key": "L00940_01",
+    "original": "Items known to be Uncursed",
+    "translation": "",
+    "context": "src/pickup.c:940:4\n   935: \tif (do_uncursed) {\n   936: \t\tinvlet = 'U';\n   937: \t\tany.a_void = 0;\n   938: \t\tany.a_int = 'U';\n   939: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  940: \t\t\t\"Items known to be Uncursed\", MENU_UNSELECTED);\n   941: \t}\n   942: \tif (do_buc_unknown) {\n   943: \t\tinvlet = 'X';\n   944: \t\tany.a_void = 0;\n   945: \t\tany.a_int = 'X';"
+  },
+  {
+    "key": "L00947_01",
+    "original": "Items of unknown B/C/U status",
+    "translation": "",
+    "context": "src/pickup.c:947:4\n   942: \tif (do_buc_unknown) {\n   943: \t\tinvlet = 'X';\n   944: \t\tany.a_void = 0;\n   945: \t\tany.a_int = 'X';\n   946: \t\tadd_menu(win, NO_GLYPH, &any, invlet, 0, ATR_NONE,\n>  947: \t\t\t\"Items of unknown B/C/U status\",\n   948: \t\t\tMENU_UNSELECTED);\n   949: \t}\n   950: \tend_menu(win, qstr);\n   951: \tn = select_menu(win, how, pick_list);\n   952: \tdestroy_nhwindow(win);"
+  },
+  {
+    "key": "L01109_01",
+    "original": "in %s",
+    "translation": "",
+    "context": "src/pickup.c:1109:21\n  1104: \n  1105:     if (qq < count) {\n  1106: \t/* some message will be given */\n  1107: \tStrcpy(obj_nambuf, doname(obj));\n  1108: \tif (container) {\n> 1109: \t    Sprintf(where, \"in %s\", the(xname(container)));\n  1110: \t    verb = \"carry\";\n  1111: \t} else {\n  1112: \t    Strcpy(where, \"lying here\");\n  1113: \t    verb = telekinesis ? \"acquire\" : \"lift\";\n  1114: \t}"
+  },
+  {
+    "key": "L01110_01",
+    "original": "carry",
+    "translation": "",
+    "context": "src/pickup.c:1110:13\n  1105:     if (qq < count) {\n  1106: \t/* some message will be given */\n  1107: \tStrcpy(obj_nambuf, doname(obj));\n  1108: \tif (container) {\n  1109: \t    Sprintf(where, \"in %s\", the(xname(container)));\n> 1110: \t    verb = \"carry\";\n  1111: \t} else {\n  1112: \t    Strcpy(where, \"lying here\");\n  1113: \t    verb = telekinesis ? \"acquire\" : \"lift\";\n  1114: \t}\n  1115:     } else {"
+  },
+  {
+    "key": "L01112_01",
+    "original": "lying here",
+    "translation": "",
+    "context": "src/pickup.c:1112:20\n  1107: \tStrcpy(obj_nambuf, doname(obj));\n  1108: \tif (container) {\n  1109: \t    Sprintf(where, \"in %s\", the(xname(container)));\n  1110: \t    verb = \"carry\";\n  1111: \t} else {\n> 1112: \t    Strcpy(where, \"lying here\");\n  1113: \t    verb = telekinesis ? \"acquire\" : \"lift\";\n  1114: \t}\n  1115:     } else {\n  1116: \t/* lint supppression */\n  1117: \t*obj_nambuf = *where = '\\0';"
+  },
+  {
+    "key": "L01113_01",
+    "original": "acquire",
+    "translation": "",
+    "context": "src/pickup.c:1113:27\n  1108: \tif (container) {\n  1109: \t    Sprintf(where, \"in %s\", the(xname(container)));\n  1110: \t    verb = \"carry\";\n  1111: \t} else {\n  1112: \t    Strcpy(where, \"lying here\");\n> 1113: \t    verb = telekinesis ? \"acquire\" : \"lift\";\n  1114: \t}\n  1115:     } else {\n  1116: \t/* lint supppression */\n  1117: \t*obj_nambuf = *where = '\\0';\n  1118: \tverb = \"\";"
+  },
+  {
+    "key": "L01113_02",
+    "original": "lift",
+    "translation": "",
+    "context": "src/pickup.c:1113:39\n  1108: \tif (container) {\n  1109: \t    Sprintf(where, \"in %s\", the(xname(container)));\n  1110: \t    verb = \"carry\";\n  1111: \t} else {\n  1112: \t    Strcpy(where, \"lying here\");\n> 1113: \t    verb = telekinesis ? \"acquire\" : \"lift\";\n  1114: \t}\n  1115:     } else {\n  1116: \t/* lint supppression */\n  1117: \t*obj_nambuf = *where = '\\0';\n  1118: \tverb = \"\";"
+  },
+  {
+    "key": "L01123_01",
+    "original": "can only %s %s of the %s %s.",
+    "translation": "",
+    "context": "src/pickup.c:1123:10\n  1118: \tverb = \"\";\n  1119:     }\n  1120:     /* we can carry qq of them */\n  1121:     if (qq > 0) {\n  1122: \tif (qq < count)\n> 1123: \t    You(\"can only %s %s of the %s %s.\",\n  1124: \t\tverb, (qq == 1L) ? \"one\" : \"some\", obj_nambuf, where);\n  1125: \t*wt_after = wt;\n  1126: \treturn qq;\n  1127:     }\n  1128: "
+  },
+  {
+    "key": "L01124_01",
+    "original": "one",
+    "translation": "",
+    "context": "src/pickup.c:1124:22\n  1119:     }\n  1120:     /* we can carry qq of them */\n  1121:     if (qq > 0) {\n  1122: \tif (qq < count)\n  1123: \t    You(\"can only %s %s of the %s %s.\",\n> 1124: \t\tverb, (qq == 1L) ? \"one\" : \"some\", obj_nambuf, where);\n  1125: \t*wt_after = wt;\n  1126: \treturn qq;\n  1127:     }\n  1128: \n  1129:     if (!container) Strcpy(where, \"here\");  /* slightly shorter form */"
+  },
+  {
+    "key": "L01124_02",
+    "original": "some",
+    "translation": "",
+    "context": "src/pickup.c:1124:30\n  1119:     }\n  1120:     /* we can carry qq of them */\n  1121:     if (qq > 0) {\n  1122: \tif (qq < count)\n  1123: \t    You(\"can only %s %s of the %s %s.\",\n> 1124: \t\tverb, (qq == 1L) ? \"one\" : \"some\", obj_nambuf, where);\n  1125: \t*wt_after = wt;\n  1126: \treturn qq;\n  1127:     }\n  1128: \n  1129:     if (!container) Strcpy(where, \"here\");  /* slightly shorter form */"
+  },
+  {
+    "key": "L01129_01",
+    "original": "here",
+    "translation": "",
+    "context": "src/pickup.c:1129:35\n  1124: \t\tverb, (qq == 1L) ? \"one\" : \"some\", obj_nambuf, where);\n  1125: \t*wt_after = wt;\n  1126: \treturn qq;\n  1127:     }\n  1128: \n> 1129:     if (!container) Strcpy(where, \"here\");  /* slightly shorter form */\n  1130: #ifndef GOLDOBJ\n  1131:     if (invent || u.ugold) {\n  1132: #else\n  1133:     if (invent || umoney) {\n  1134: #endif"
+  },
+  {
+    "key": "L01135_01",
+    "original": "you cannot ",
+    "translation": "",
+    "context": "src/pickup.c:1135:11\n  1130: #ifndef GOLDOBJ\n  1131:     if (invent || u.ugold) {\n  1132: #else\n  1133:     if (invent || umoney) {\n  1134: #endif\n> 1135: \tprefx1 = \"you cannot \";\n  1136: \tprefx2 = \"\";\n  1137: \tsuffx  = \" any more\";\n  1138:     } else {\n  1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n  1140: \tprefx2 = \"is too heavy for you to \";"
+  },
+  {
+    "key": "L01137_01",
+    "original": " any more",
+    "translation": "",
+    "context": "src/pickup.c:1137:11\n  1132: #else\n  1133:     if (invent || umoney) {\n  1134: #endif\n  1135: \tprefx1 = \"you cannot \";\n  1136: \tprefx2 = \"\";\n> 1137: \tsuffx  = \" any more\";\n  1138:     } else {\n  1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n  1140: \tprefx2 = \"is too heavy for you to \";\n  1141: \tsuffx  = \"\";\n  1142:     }"
+  },
+  {
+    "key": "L01139_01",
+    "original": "it ",
+    "translation": "",
+    "context": "src/pickup.c:1139:31\n  1134: #endif\n  1135: \tprefx1 = \"you cannot \";\n  1136: \tprefx2 = \"\";\n  1137: \tsuffx  = \" any more\";\n  1138:     } else {\n> 1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n  1140: \tprefx2 = \"is too heavy for you to \";\n  1141: \tsuffx  = \"\";\n  1142:     }\n  1143:     There(\"%s %s %s, but %s%s%s%s.\",\n  1144: \t  otense(obj, \"are\"), obj_nambuf, where,"
+  },
+  {
+    "key": "L01139_02",
+    "original": "even one ",
+    "translation": "",
+    "context": "src/pickup.c:1139:39\n  1134: #endif\n  1135: \tprefx1 = \"you cannot \";\n  1136: \tprefx2 = \"\";\n  1137: \tsuffx  = \" any more\";\n  1138:     } else {\n> 1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n  1140: \tprefx2 = \"is too heavy for you to \";\n  1141: \tsuffx  = \"\";\n  1142:     }\n  1143:     There(\"%s %s %s, but %s%s%s%s.\",\n  1144: \t  otense(obj, \"are\"), obj_nambuf, where,"
+  },
+  {
+    "key": "L01140_01",
+    "original": "is too heavy for you to ",
+    "translation": "",
+    "context": "src/pickup.c:1140:11\n  1135: \tprefx1 = \"you cannot \";\n  1136: \tprefx2 = \"\";\n  1137: \tsuffx  = \" any more\";\n  1138:     } else {\n  1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n> 1140: \tprefx2 = \"is too heavy for you to \";\n  1141: \tsuffx  = \"\";\n  1142:     }\n  1143:     There(\"%s %s %s, but %s%s%s%s.\",\n  1144: \t  otense(obj, \"are\"), obj_nambuf, where,\n  1145: \t  prefx1, prefx2, verb, suffx);"
+  },
+  {
+    "key": "L01143_01",
+    "original": "%s %s %s, but %s%s%s%s.",
+    "translation": "",
+    "context": "src/pickup.c:1143:11\n  1138:     } else {\n  1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n  1140: \tprefx2 = \"is too heavy for you to \";\n  1141: \tsuffx  = \"\";\n  1142:     }\n> 1143:     There(\"%s %s %s, but %s%s%s%s.\",\n  1144: \t  otense(obj, \"are\"), obj_nambuf, where,\n  1145: \t  prefx1, prefx2, verb, suffx);\n  1146: \n  1147:  /* *wt_after = iw; */\n  1148:     return 0L;"
+  },
+  {
+    "key": "L01144_01",
+    "original": "are",
+    "translation": "",
+    "context": "src/pickup.c:1144:16\n  1139: \tprefx1 = (obj->quan == 1L) ? \"it \" : \"even one \";\n  1140: \tprefx2 = \"is too heavy for you to \";\n  1141: \tsuffx  = \"\";\n  1142:     }\n  1143:     There(\"%s %s %s, but %s%s%s%s.\",\n> 1144: \t  otense(obj, \"are\"), obj_nambuf, where,\n  1145: \t  prefx1, prefx2, verb, suffx);\n  1146: \n  1147:  /* *wt_after = iw; */\n  1148:     return 0L;\n  1149: }"
+  },
+  {
+    "key": "L01162_01",
+    "original": "cannot get your %s around this %s.",
+    "translation": "",
+    "context": "src/pickup.c:1162:6\n  1157: boolean telekinesis;\n  1158: {\n  1159:     int result, old_wt, new_wt, prev_encumbr, next_encumbr;\n  1160: \n  1161:     if (obj->otyp == BOULDER && In_sokoban(&u.uz)) {\n> 1162: \tYou(\"cannot get your %s around this %s.\",\n  1163: \t\t\tbody_part(HAND), xname(obj));\n  1164: \treturn -1;\n  1165:     }\n  1166:     if (obj->otyp == LOADSTONE ||\n  1167: \t    (obj->otyp == BOULDER && throws_rocks(youmonst.data)))"
+  },
+  {
+    "key": "L01179_01",
+    "original": "knapsack cannot accommodate any more items.",
+    "translation": "",
+    "context": "src/pickup.c:1179:7\n  1174:     } else if (obj->oclass != COIN_CLASS && inv_cnt() >= 52 &&\n  1175: \t\t!merge_choice(invent, obj)) {\n  1176: #else\n  1177:     } else if (inv_cnt() >= 52 && !merge_choice(invent, obj)) {\n  1178: #endif\n> 1179: \tYour(\"knapsack cannot accommodate any more items.\");\n  1180: \tresult = -1;\t/* nothing lifted */\n  1181:     } else {\n  1182: \tresult = 1;\n  1183: \tprev_encumbr = near_capacity();\n  1184: \tif (prev_encumbr < flags.pickup_burden)"
+  },
+  {
+    "key": "L01199_01",
+    "original": " %s. Continue?",
+    "translation": "",
+    "context": "src/pickup.c:1199:22\n  1194: \t\tobj->quan = *cnt_p;\n  1195: \t\tStrcpy(qbuf,\n  1196: \t\t\t(next_encumbr > HVY_ENCUMBER) ? overloadmsg :\n  1197: \t\t\t(next_encumbr > MOD_ENCUMBER) ? nearloadmsg :\n  1198: \t\t\tmoderateloadmsg);\n> 1199: \t\tSprintf(eos(qbuf), \" %s. Continue?\",\n  1200: \t\t\tsafe_qbuf(qbuf, sizeof(\" . Continue?\"),\n  1201: \t\t\t\tdoname(obj), an(simple_typename(obj->otyp)), \"something\"));\n  1202: \t\tobj->quan = savequan;\n  1203: \t\tswitch (ynq(qbuf)) {\n  1204: \t\tcase 'q':  result = -1; break;"
+  },
+  {
+    "key": "L01200_01",
+    "original": " . Continue?",
+    "translation": "",
+    "context": "src/pickup.c:1200:27\n  1195: \t\tStrcpy(qbuf,\n  1196: \t\t\t(next_encumbr > HVY_ENCUMBER) ? overloadmsg :\n  1197: \t\t\t(next_encumbr > MOD_ENCUMBER) ? nearloadmsg :\n  1198: \t\t\tmoderateloadmsg);\n  1199: \t\tSprintf(eos(qbuf), \" %s. Continue?\",\n> 1200: \t\t\tsafe_qbuf(qbuf, sizeof(\" . Continue?\"),\n  1201: \t\t\t\tdoname(obj), an(simple_typename(obj->otyp)), \"something\"));\n  1202: \t\tobj->quan = savequan;\n  1203: \t\tswitch (ynq(qbuf)) {\n  1204: \t\tcase 'q':  result = -1; break;\n  1205: \t\tcase 'n':  result =  0; break;"
+  },
+  {
+    "key": "L01201_01",
+    "original": "something",
+    "translation": "",
+    "context": "src/pickup.c:1201:50\n  1196: \t\t\t(next_encumbr > HVY_ENCUMBER) ? overloadmsg :\n  1197: \t\t\t(next_encumbr > MOD_ENCUMBER) ? nearloadmsg :\n  1198: \t\t\tmoderateloadmsg);\n  1199: \t\tSprintf(eos(qbuf), \" %s. Continue?\",\n  1200: \t\t\tsafe_qbuf(qbuf, sizeof(\" . Continue?\"),\n> 1201: \t\t\t\tdoname(obj), an(simple_typename(obj->otyp)), \"something\"));\n  1202: \t\tobj->quan = savequan;\n  1203: \t\tswitch (ynq(qbuf)) {\n  1204: \t\tcase 'q':  result = -1; break;\n  1205: \t\tcase 'n':  result =  0; break;\n  1206: \t\tdefault:   break;\t/* 'y' => result == 1 */"
+  },
+  {
+    "key": "L01236_01",
+    "original": "safe_qbuf: last_resort too large at %u characters.",
+    "translation": "",
+    "context": "src/pickup.c:1236:17\n  1231: \t         len_planB = (unsigned)strlen(planB),\n  1232: \t         len_lastR = (unsigned)strlen(last_resort);\n  1233: \tunsigned textleft = QBUFSZ - (len_qbuf + padlength);\n  1234: \n  1235: \tif (len_lastR >= textleft) {\n> 1236: \t    impossible(\"safe_qbuf: last_resort too large at %u characters.\",\n  1237: \t\t       len_lastR);\n  1238: \t    return \"\";\n  1239: \t}\n  1240: \treturn (len_planA < textleft) ? planA :\n  1241: \t\t    (len_planB < textleft) ? planB : last_resort;"
+  },
+  {
+    "key": "L01258_01",
+    "original": "here",
+    "translation": "",
+    "context": "src/pickup.c:1258:8\n  1253: boolean telekinesis;\t/* not picking it up directly by hand */\n  1254: {\n  1255: \tint res, nearload;\n  1256: #ifndef GOLDOBJ\n  1257: \tconst char *where = (obj->ox == u.ux && obj->oy == u.uy) ?\n> 1258: \t\t\t    \"here\" : \"there\";\n  1259: #endif\n  1260: \n  1261: \tif (obj->quan < count) {\n  1262: \t    impossible(\"pickup_object: count %ld > quan %ld?\",\n  1263: \t\tcount, obj->quan);"
+  },
+  {
+    "key": "L01258_02",
+    "original": "there",
+    "translation": "",
+    "context": "src/pickup.c:1258:17\n  1253: boolean telekinesis;\t/* not picking it up directly by hand */\n  1254: {\n  1255: \tint res, nearload;\n  1256: #ifndef GOLDOBJ\n  1257: \tconst char *where = (obj->ox == u.ux && obj->oy == u.uy) ?\n> 1258: \t\t\t    \"here\" : \"there\";\n  1259: #endif\n  1260: \n  1261: \tif (obj->quan < count) {\n  1262: \t    impossible(\"pickup_object: count %ld > quan %ld?\",\n  1263: \t\tcount, obj->quan);"
+  },
+  {
+    "key": "L01262_01",
+    "original": "pickup_object: count %ld > quan %ld?",
+    "translation": "",
+    "context": "src/pickup.c:1262:17\n  1257: \tconst char *where = (obj->ox == u.ux && obj->oy == u.uy) ?\n  1258: \t\t\t    \"here\" : \"there\";\n  1259: #endif\n  1260: \n  1261: \tif (obj->quan < count) {\n> 1262: \t    impossible(\"pickup_object: count %ld > quan %ld?\",\n  1263: \t\tcount, obj->quan);\n  1264: \t    return 0;\n  1265: \t}\n  1266: \n  1267: \t/* In case of auto-pickup, where we haven't had a chance"
+  },
+  {
+    "key": "L01287_01",
+    "original": "There %s %ld gold piece%s %s, but you cannot carry any more.",
+    "translation": "",
+    "context": "src/pickup.c:1287:9\n  1282: \t    long iw = (long)max_capacity() - GOLD_WT(u.ugold);\n  1283: \t    long gold_capacity = GOLD_CAPACITY(iw, u.ugold);\n  1284: \n  1285: \t    if (gold_capacity <= 0L) {\n  1286: \t\tpline(\n> 1287: \t       \"There %s %ld gold piece%s %s, but you cannot carry any more.\",\n  1288: \t\t      otense(obj, \"are\"),\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\","
+  },
+  {
+    "key": "L01288_01",
+    "original": "are",
+    "translation": "",
+    "context": "src/pickup.c:1288:21\n  1283: \t    long gold_capacity = GOLD_CAPACITY(iw, u.ugold);\n  1284: \n  1285: \t    if (gold_capacity <= 0L) {\n  1286: \t\tpline(\n  1287: \t       \"There %s %ld gold piece%s %s, but you cannot carry any more.\",\n> 1288: \t\t      otense(obj, \"are\"),\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n  1293: \t\t    telekinesis ? \"acquire\" : \"carry\","
+  },
+  {
+    "key": "L01292_01",
+    "original": "can only %s %s of the %ld gold pieces lying %s.",
+    "translation": "",
+    "context": "src/pickup.c:1292:7\n  1287: \t       \"There %s %ld gold piece%s %s, but you cannot carry any more.\",\n  1288: \t\t      otense(obj, \"are\"),\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n> 1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n  1293: \t\t    telekinesis ? \"acquire\" : \"carry\",\n  1294: \t\t    gold_capacity == 1L ? \"one\" : \"some\", obj->quan, where);\n  1295: \t\tpline(\"%s %ld gold piece%s.\",\n  1296: \t\t    nearloadmsg, gold_capacity, plur(gold_capacity));\n  1297: \t\tu.ugold += gold_capacity;"
+  },
+  {
+    "key": "L01293_01",
+    "original": "acquire",
+    "translation": "",
+    "context": "src/pickup.c:1293:21\n  1288: \t\t      otense(obj, \"are\"),\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n> 1293: \t\t    telekinesis ? \"acquire\" : \"carry\",\n  1294: \t\t    gold_capacity == 1L ? \"one\" : \"some\", obj->quan, where);\n  1295: \t\tpline(\"%s %ld gold piece%s.\",\n  1296: \t\t    nearloadmsg, gold_capacity, plur(gold_capacity));\n  1297: \t\tu.ugold += gold_capacity;\n  1298: \t\tobj->quan -= gold_capacity;"
+  },
+  {
+    "key": "L01293_02",
+    "original": "carry",
+    "translation": "",
+    "context": "src/pickup.c:1293:33\n  1288: \t\t      otense(obj, \"are\"),\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n> 1293: \t\t    telekinesis ? \"acquire\" : \"carry\",\n  1294: \t\t    gold_capacity == 1L ? \"one\" : \"some\", obj->quan, where);\n  1295: \t\tpline(\"%s %ld gold piece%s.\",\n  1296: \t\t    nearloadmsg, gold_capacity, plur(gold_capacity));\n  1297: \t\tu.ugold += gold_capacity;\n  1298: \t\tobj->quan -= gold_capacity;"
+  },
+  {
+    "key": "L01294_01",
+    "original": "one",
+    "translation": "",
+    "context": "src/pickup.c:1294:29\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n  1293: \t\t    telekinesis ? \"acquire\" : \"carry\",\n> 1294: \t\t    gold_capacity == 1L ? \"one\" : \"some\", obj->quan, where);\n  1295: \t\tpline(\"%s %ld gold piece%s.\",\n  1296: \t\t    nearloadmsg, gold_capacity, plur(gold_capacity));\n  1297: \t\tu.ugold += gold_capacity;\n  1298: \t\tobj->quan -= gold_capacity;\n  1299: \t\tcostly_gold(obj->ox, obj->oy, gold_capacity);"
+  },
+  {
+    "key": "L01294_02",
+    "original": "some",
+    "translation": "",
+    "context": "src/pickup.c:1294:37\n  1289: \t\t      obj->quan, plur(obj->quan), where);\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n  1293: \t\t    telekinesis ? \"acquire\" : \"carry\",\n> 1294: \t\t    gold_capacity == 1L ? \"one\" : \"some\", obj->quan, where);\n  1295: \t\tpline(\"%s %ld gold piece%s.\",\n  1296: \t\t    nearloadmsg, gold_capacity, plur(gold_capacity));\n  1297: \t\tu.ugold += gold_capacity;\n  1298: \t\tobj->quan -= gold_capacity;\n  1299: \t\tcostly_gold(obj->ox, obj->oy, gold_capacity);"
+  },
+  {
+    "key": "L01295_01",
+    "original": "%s %ld gold piece%s.",
+    "translation": "",
+    "context": "src/pickup.c:1295:9\n  1290: \t\treturn 0;\n  1291: \t    } else if (gold_capacity < count) {\n  1292: \t\tYou(\"can only %s %s of the %ld gold pieces lying %s.\",\n  1293: \t\t    telekinesis ? \"acquire\" : \"carry\",\n  1294: \t\t    gold_capacity == 1L ? \"one\" : \"some\", obj->quan, where);\n> 1295: \t\tpline(\"%s %ld gold piece%s.\",\n  1296: \t\t    nearloadmsg, gold_capacity, plur(gold_capacity));\n  1297: \t\tu.ugold += gold_capacity;\n  1298: \t\tobj->quan -= gold_capacity;\n  1299: \t\tcostly_gold(obj->ox, obj->oy, gold_capacity);\n  1300: \t    } else {"
+  },
+  {
+    "key": "L01303_01",
+    "original": "%s %ld gold piece%s.",
+    "translation": "",
+    "context": "src/pickup.c:1303:13\n  1298: \t\tobj->quan -= gold_capacity;\n  1299: \t\tcostly_gold(obj->ox, obj->oy, gold_capacity);\n  1300: \t    } else {\n  1301: \t\tu.ugold += count;\n  1302: \t\tif ((nearload = near_capacity()) != 0)\n> 1303: \t\t    pline(\"%s %ld gold piece%s.\",\n  1304: \t\t\t  nearload < MOD_ENCUMBER ?\n  1305: \t\t\t  moderateloadmsg : nearloadmsg,\n  1306: \t\t\t  count, plur(count));\n  1307: \t\telse\n  1308: \t\t    prinv((char *) 0, obj, count);"
+  },
+  {
+    "key": "L01328_01",
+    "original": "Touching %s is a fatal mistake.",
+    "translation": "",
+    "context": "src/pickup.c:1328:10\n  1323: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  1324: \t\telse {\n  1325: \t\t\tchar kbuf[BUFSZ];\n  1326: \n  1327: \t\t\tStrcpy(kbuf, an(corpse_xname(obj, TRUE)));\n> 1328: \t\t\tpline(\"Touching %s is a fatal mistake.\", kbuf);\n  1329: \t\t\tStrcpy(kbuf, an(killer_cxname(obj, TRUE)));\n  1330: \t\t\tinstapetrify(kbuf);\n  1331: \t\t    return -1;\n  1332: \t\t}\n  1333: \t    } else if (is_rider(&mons[obj->corpsenm])) {"
+  },
+  {
+    "key": "L01334_01",
+    "original": "At your %s, the corpse suddenly moves...",
+    "translation": "",
+    "context": "src/pickup.c:1334:9\n  1329: \t\t\tStrcpy(kbuf, an(killer_cxname(obj, TRUE)));\n  1330: \t\t\tinstapetrify(kbuf);\n  1331: \t\t    return -1;\n  1332: \t\t}\n  1333: \t    } else if (is_rider(&mons[obj->corpsenm])) {\n> 1334: \t\tpline(\"At your %s, the corpse suddenly moves...\",\n  1335: \t\t\ttelekinesis ? \"attempted acquisition\" : \"touch\");\n  1336: \t\t(void) revive_corpse(obj, FALSE);\n  1337: \t\texercise(A_WIS, FALSE);\n  1338: \t\treturn -1;\n  1339: \t    }"
+  },
+  {
+    "key": "L01335_01",
+    "original": "attempted acquisition",
+    "translation": "",
+    "context": "src/pickup.c:1335:18\n  1330: \t\t\tinstapetrify(kbuf);\n  1331: \t\t    return -1;\n  1332: \t\t}\n  1333: \t    } else if (is_rider(&mons[obj->corpsenm])) {\n  1334: \t\tpline(\"At your %s, the corpse suddenly moves...\",\n> 1335: \t\t\ttelekinesis ? \"attempted acquisition\" : \"touch\");\n  1336: \t\t(void) revive_corpse(obj, FALSE);\n  1337: \t\texercise(A_WIS, FALSE);\n  1338: \t\treturn -1;\n  1339: \t    }\n  1340: \t} else  if (obj->otyp == SCR_SCARE_MONSTER) {"
+  },
+  {
+    "key": "L01335_02",
+    "original": "touch",
+    "translation": "",
+    "context": "src/pickup.c:1335:44\n  1330: \t\t\tinstapetrify(kbuf);\n  1331: \t\t    return -1;\n  1332: \t\t}\n  1333: \t    } else if (is_rider(&mons[obj->corpsenm])) {\n  1334: \t\tpline(\"At your %s, the corpse suddenly moves...\",\n> 1335: \t\t\ttelekinesis ? \"attempted acquisition\" : \"touch\");\n  1336: \t\t(void) revive_corpse(obj, FALSE);\n  1337: \t\texercise(A_WIS, FALSE);\n  1338: \t\treturn -1;\n  1339: \t    }\n  1340: \t} else  if (obj->otyp == SCR_SCARE_MONSTER) {"
+  },
+  {
+    "key": "L01344_01",
+    "original": "scroll%s %s to dust as you %s %s up.",
+    "translation": "",
+    "context": "src/pickup.c:1344:13\n  1339: \t    }\n  1340: \t} else  if (obj->otyp == SCR_SCARE_MONSTER) {\n  1341: \t    if (obj->blessed) obj->blessed = 0;\n  1342: \t    else if (!obj->spe && !obj->cursed) obj->spe = 1;\n  1343: \t    else {\n> 1344: \t\tpline_The(\"scroll%s %s to dust as you %s %s up.\",\n  1345: \t\t\tplur(obj->quan), otense(obj, \"turn\"),\n  1346: \t\t\ttelekinesis ? \"raise\" : \"pick\",\n  1347: \t\t\t(obj->quan == 1L) ? \"it\" : \"them\");\n  1348: \t\tif (!(objects[SCR_SCARE_MONSTER].oc_name_known) &&\n  1349: \t\t\t\t    !(objects[SCR_SCARE_MONSTER].oc_uname))"
+  },
+  {
+    "key": "L01345_01",
+    "original": "turn",
+    "translation": "",
+    "context": "src/pickup.c:1345:33\n  1340: \t} else  if (obj->otyp == SCR_SCARE_MONSTER) {\n  1341: \t    if (obj->blessed) obj->blessed = 0;\n  1342: \t    else if (!obj->spe && !obj->cursed) obj->spe = 1;\n  1343: \t    else {\n  1344: \t\tpline_The(\"scroll%s %s to dust as you %s %s up.\",\n> 1345: \t\t\tplur(obj->quan), otense(obj, \"turn\"),\n  1346: \t\t\ttelekinesis ? \"raise\" : \"pick\",\n  1347: \t\t\t(obj->quan == 1L) ? \"it\" : \"them\");\n  1348: \t\tif (!(objects[SCR_SCARE_MONSTER].oc_name_known) &&\n  1349: \t\t\t\t    !(objects[SCR_SCARE_MONSTER].oc_uname))\n  1350: \t\t    docall(obj);"
+  },
+  {
+    "key": "L01346_01",
+    "original": "raise",
+    "translation": "",
+    "context": "src/pickup.c:1346:18\n  1341: \t    if (obj->blessed) obj->blessed = 0;\n  1342: \t    else if (!obj->spe && !obj->cursed) obj->spe = 1;\n  1343: \t    else {\n  1344: \t\tpline_The(\"scroll%s %s to dust as you %s %s up.\",\n  1345: \t\t\tplur(obj->quan), otense(obj, \"turn\"),\n> 1346: \t\t\ttelekinesis ? \"raise\" : \"pick\",\n  1347: \t\t\t(obj->quan == 1L) ? \"it\" : \"them\");\n  1348: \t\tif (!(objects[SCR_SCARE_MONSTER].oc_name_known) &&\n  1349: \t\t\t\t    !(objects[SCR_SCARE_MONSTER].oc_uname))\n  1350: \t\t    docall(obj);\n  1351: \t\tuseupf(obj, obj->quan);"
+  },
+  {
+    "key": "L01346_02",
+    "original": "pick",
+    "translation": "",
+    "context": "src/pickup.c:1346:28\n  1341: \t    if (obj->blessed) obj->blessed = 0;\n  1342: \t    else if (!obj->spe && !obj->cursed) obj->spe = 1;\n  1343: \t    else {\n  1344: \t\tpline_The(\"scroll%s %s to dust as you %s %s up.\",\n  1345: \t\t\tplur(obj->quan), otense(obj, \"turn\"),\n> 1346: \t\t\ttelekinesis ? \"raise\" : \"pick\",\n  1347: \t\t\t(obj->quan == 1L) ? \"it\" : \"them\");\n  1348: \t\tif (!(objects[SCR_SCARE_MONSTER].oc_name_known) &&\n  1349: \t\t\t\t    !(objects[SCR_SCARE_MONSTER].oc_uname))\n  1350: \t\t    docall(obj);\n  1351: \t\tuseupf(obj, obj->quan);"
+  },
+  {
+    "key": "L01347_01",
+    "original": "it",
+    "translation": "",
+    "context": "src/pickup.c:1347:24\n  1342: \t    else if (!obj->spe && !obj->cursed) obj->spe = 1;\n  1343: \t    else {\n  1344: \t\tpline_The(\"scroll%s %s to dust as you %s %s up.\",\n  1345: \t\t\tplur(obj->quan), otense(obj, \"turn\"),\n  1346: \t\t\ttelekinesis ? \"raise\" : \"pick\",\n> 1347: \t\t\t(obj->quan == 1L) ? \"it\" : \"them\");\n  1348: \t\tif (!(objects[SCR_SCARE_MONSTER].oc_name_known) &&\n  1349: \t\t\t\t    !(objects[SCR_SCARE_MONSTER].oc_uname))\n  1350: \t\t    docall(obj);\n  1351: \t\tuseupf(obj, obj->quan);\n  1352: \t\treturn 1;\t/* tried to pick something up and failed, but"
+  },
+  {
+    "key": "L01347_02",
+    "original": "them",
+    "translation": "",
+    "context": "src/pickup.c:1347:31\n  1342: \t    else if (!obj->spe && !obj->cursed) obj->spe = 1;\n  1343: \t    else {\n  1344: \t\tpline_The(\"scroll%s %s to dust as you %s %s up.\",\n  1345: \t\t\tplur(obj->quan), otense(obj, \"turn\"),\n  1346: \t\t\ttelekinesis ? \"raise\" : \"pick\",\n> 1347: \t\t\t(obj->quan == 1L) ? \"it\" : \"them\");\n  1348: \t\tif (!(objects[SCR_SCARE_MONSTER].oc_name_known) &&\n  1349: \t\t\t\t    !(objects[SCR_SCARE_MONSTER].oc_uname))\n  1350: \t\t    docall(obj);\n  1351: \t\tuseupf(obj, obj->quan);\n  1352: \t\treturn 1;\t/* tried to pick something up and failed, but"
+  },
+  {
+    "key": "L01427_01",
+    "original": "movements are slowed slightly because of your load.",
+    "translation": "",
+    "context": "src/pickup.c:1427:15\n  1422:     static int oldcap = UNENCUMBERED;\n  1423:     int newcap = near_capacity();\n  1424: \n  1425:     if(oldcap < newcap) {\n  1426: \tswitch(newcap) {\n> 1427: \tcase 1: Your(\"movements are slowed slightly because of your load.\");\n  1428: \t\tbreak;\n  1429: \tcase 2: You(\"rebalance your load.  Movement is difficult.\");\n  1430: \t\tbreak;\n  1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n  1432: \t\t    stagger(youmonst.data, \"stagger\"));"
+  },
+  {
+    "key": "L01429_01",
+    "original": "rebalance your load.  Movement is difficult.",
+    "translation": "",
+    "context": "src/pickup.c:1429:14\n  1424: \n  1425:     if(oldcap < newcap) {\n  1426: \tswitch(newcap) {\n  1427: \tcase 1: Your(\"movements are slowed slightly because of your load.\");\n  1428: \t\tbreak;\n> 1429: \tcase 2: You(\"rebalance your load.  Movement is difficult.\");\n  1430: \t\tbreak;\n  1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n  1432: \t\t    stagger(youmonst.data, \"stagger\"));\n  1433: \t\tbreak;\n  1434: \tdefault: You(\"%s move a handspan with this load!\","
+  },
+  {
+    "key": "L01431_01",
+    "original": "%s under your heavy load.  Movement is very hard.",
+    "translation": "",
+    "context": "src/pickup.c:1431:14\n  1426: \tswitch(newcap) {\n  1427: \tcase 1: Your(\"movements are slowed slightly because of your load.\");\n  1428: \t\tbreak;\n  1429: \tcase 2: You(\"rebalance your load.  Movement is difficult.\");\n  1430: \t\tbreak;\n> 1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n  1432: \t\t    stagger(youmonst.data, \"stagger\"));\n  1433: \t\tbreak;\n  1434: \tdefault: You(\"%s move a handspan with this load!\",\n  1435: \t\t     newcap == 4 ? \"can barely\" : \"can't even\");\n  1436: \t\tbreak;"
+  },
+  {
+    "key": "L01432_01",
+    "original": "stagger",
+    "translation": "",
+    "context": "src/pickup.c:1432:30\n  1427: \tcase 1: Your(\"movements are slowed slightly because of your load.\");\n  1428: \t\tbreak;\n  1429: \tcase 2: You(\"rebalance your load.  Movement is difficult.\");\n  1430: \t\tbreak;\n  1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n> 1432: \t\t    stagger(youmonst.data, \"stagger\"));\n  1433: \t\tbreak;\n  1434: \tdefault: You(\"%s move a handspan with this load!\",\n  1435: \t\t     newcap == 4 ? \"can barely\" : \"can't even\");\n  1436: \t\tbreak;\n  1437: \t}"
+  },
+  {
+    "key": "L01434_01",
+    "original": "%s move a handspan with this load!",
+    "translation": "",
+    "context": "src/pickup.c:1434:15\n  1429: \tcase 2: You(\"rebalance your load.  Movement is difficult.\");\n  1430: \t\tbreak;\n  1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n  1432: \t\t    stagger(youmonst.data, \"stagger\"));\n  1433: \t\tbreak;\n> 1434: \tdefault: You(\"%s move a handspan with this load!\",\n  1435: \t\t     newcap == 4 ? \"can barely\" : \"can't even\");\n  1436: \t\tbreak;\n  1437: \t}\n  1438: \tflags.botl = 1;\n  1439:     } else if(oldcap > newcap) {"
+  },
+  {
+    "key": "L01435_01",
+    "original": "can barely",
+    "translation": "",
+    "context": "src/pickup.c:1435:22\n  1430: \t\tbreak;\n  1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n  1432: \t\t    stagger(youmonst.data, \"stagger\"));\n  1433: \t\tbreak;\n  1434: \tdefault: You(\"%s move a handspan with this load!\",\n> 1435: \t\t     newcap == 4 ? \"can barely\" : \"can't even\");\n  1436: \t\tbreak;\n  1437: \t}\n  1438: \tflags.botl = 1;\n  1439:     } else if(oldcap > newcap) {\n  1440: \tswitch(newcap) {"
+  },
+  {
+    "key": "L01435_02",
+    "original": "can't even",
+    "translation": "",
+    "context": "src/pickup.c:1435:37\n  1430: \t\tbreak;\n  1431: \tcase 3: You(\"%s under your heavy load.  Movement is very hard.\",\n  1432: \t\t    stagger(youmonst.data, \"stagger\"));\n  1433: \t\tbreak;\n  1434: \tdefault: You(\"%s move a handspan with this load!\",\n> 1435: \t\t     newcap == 4 ? \"can barely\" : \"can't even\");\n  1436: \t\tbreak;\n  1437: \t}\n  1438: \tflags.botl = 1;\n  1439:     } else if(oldcap > newcap) {\n  1440: \tswitch(newcap) {"
+  },
+  {
+    "key": "L01441_01",
+    "original": "movements are now unencumbered.",
+    "translation": "",
+    "context": "src/pickup.c:1441:15\n  1436: \t\tbreak;\n  1437: \t}\n  1438: \tflags.botl = 1;\n  1439:     } else if(oldcap > newcap) {\n  1440: \tswitch(newcap) {\n> 1441: \tcase 0: Your(\"movements are now unencumbered.\");\n  1442: \t\tbreak;\n  1443: \tcase 1: Your(\"movements are only slowed slightly by your load.\");\n  1444: \t\tbreak;\n  1445: \tcase 2: You(\"rebalance your load.  Movement is still difficult.\");\n  1446: \t\tbreak;"
+  },
+  {
+    "key": "L01443_01",
+    "original": "movements are only slowed slightly by your load.",
+    "translation": "",
+    "context": "src/pickup.c:1443:15\n  1438: \tflags.botl = 1;\n  1439:     } else if(oldcap > newcap) {\n  1440: \tswitch(newcap) {\n  1441: \tcase 0: Your(\"movements are now unencumbered.\");\n  1442: \t\tbreak;\n> 1443: \tcase 1: Your(\"movements are only slowed slightly by your load.\");\n  1444: \t\tbreak;\n  1445: \tcase 2: You(\"rebalance your load.  Movement is still difficult.\");\n  1446: \t\tbreak;\n  1447: \tcase 3: You(\"%s under your load.  Movement is still very hard.\",\n  1448: \t\t    stagger(youmonst.data, \"stagger\"));"
+  },
+  {
+    "key": "L01445_01",
+    "original": "rebalance your load.  Movement is still difficult.",
+    "translation": "",
+    "context": "src/pickup.c:1445:14\n  1440: \tswitch(newcap) {\n  1441: \tcase 0: Your(\"movements are now unencumbered.\");\n  1442: \t\tbreak;\n  1443: \tcase 1: Your(\"movements are only slowed slightly by your load.\");\n  1444: \t\tbreak;\n> 1445: \tcase 2: You(\"rebalance your load.  Movement is still difficult.\");\n  1446: \t\tbreak;\n  1447: \tcase 3: You(\"%s under your load.  Movement is still very hard.\",\n  1448: \t\t    stagger(youmonst.data, \"stagger\"));\n  1449: \t\tbreak;\n  1450: \t}"
+  },
+  {
+    "key": "L01447_01",
+    "original": "%s under your load.  Movement is still very hard.",
+    "translation": "",
+    "context": "src/pickup.c:1447:14\n  1442: \t\tbreak;\n  1443: \tcase 1: Your(\"movements are only slowed slightly by your load.\");\n  1444: \t\tbreak;\n  1445: \tcase 2: You(\"rebalance your load.  Movement is still difficult.\");\n  1446: \t\tbreak;\n> 1447: \tcase 3: You(\"%s under your load.  Movement is still very hard.\",\n  1448: \t\t    stagger(youmonst.data, \"stagger\"));\n  1449: \t\tbreak;\n  1450: \t}\n  1451: \tflags.botl = 1;\n  1452:     }"
+  },
+  {
+    "key": "L01448_01",
+    "original": "stagger",
+    "translation": "",
+    "context": "src/pickup.c:1448:30\n  1443: \tcase 1: Your(\"movements are only slowed slightly by your load.\");\n  1444: \t\tbreak;\n  1445: \tcase 2: You(\"rebalance your load.  Movement is still difficult.\");\n  1446: \t\tbreak;\n  1447: \tcase 3: You(\"%s under your load.  Movement is still very hard.\",\n> 1448: \t\t    stagger(youmonst.data, \"stagger\"));\n  1449: \t\tbreak;\n  1450: \t}\n  1451: \tflags.botl = 1;\n  1452:     }\n  1453: "
+  },
+  {
+    "key": "L01487_01",
+    "original": "cannot reach the %s.",
+    "translation": "",
+    "context": "src/pickup.c:1487:8\n  1482: #ifdef STEED\n  1483: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC)\n  1484: \t\t\trider_cant_reach(); /* not skilled enough to reach */\n  1485: \t\telse\n  1486: #endif\n> 1487: \t\t\tYou(\"cannot reach the %s.\", surface(x, y));\n  1488: \t\treturn FALSE;\n  1489: \t} else if (is_pool(x, y) || is_lava(x, y)) {\n  1490: \t\t/* at present, can't loot in water even when Underwater */\n  1491: \t\tYou(\"cannot loot things that are deep in the %s.\",\n  1492: \t\t    is_lava(x, y) ? \"lava\" : \"water\");"
+  },
+  {
+    "key": "L01491_01",
+    "original": "cannot loot things that are deep in the %s.",
+    "translation": "",
+    "context": "src/pickup.c:1491:7\n  1486: #endif\n  1487: \t\t\tYou(\"cannot reach the %s.\", surface(x, y));\n  1488: \t\treturn FALSE;\n  1489: \t} else if (is_pool(x, y) || is_lava(x, y)) {\n  1490: \t\t/* at present, can't loot in water even when Underwater */\n> 1491: \t\tYou(\"cannot loot things that are deep in the %s.\",\n  1492: \t\t    is_lava(x, y) ? \"lava\" : \"water\");\n  1493: \t\treturn FALSE;\n  1494: \t} else if (nolimbs(youmonst.data)) {\n  1495: \t\tpline(\"Without limbs, you cannot loot anything.\");\n  1496: \t\treturn FALSE;"
+  },
+  {
+    "key": "L01492_01",
+    "original": "lava",
+    "translation": "",
+    "context": "src/pickup.c:1492:23\n  1487: \t\t\tYou(\"cannot reach the %s.\", surface(x, y));\n  1488: \t\treturn FALSE;\n  1489: \t} else if (is_pool(x, y) || is_lava(x, y)) {\n  1490: \t\t/* at present, can't loot in water even when Underwater */\n  1491: \t\tYou(\"cannot loot things that are deep in the %s.\",\n> 1492: \t\t    is_lava(x, y) ? \"lava\" : \"water\");\n  1493: \t\treturn FALSE;\n  1494: \t} else if (nolimbs(youmonst.data)) {\n  1495: \t\tpline(\"Without limbs, you cannot loot anything.\");\n  1496: \t\treturn FALSE;\n  1497: \t} else if (!freehand()) {"
+  },
+  {
+    "key": "L01492_02",
+    "original": "water",
+    "translation": "",
+    "context": "src/pickup.c:1492:32\n  1487: \t\t\tYou(\"cannot reach the %s.\", surface(x, y));\n  1488: \t\treturn FALSE;\n  1489: \t} else if (is_pool(x, y) || is_lava(x, y)) {\n  1490: \t\t/* at present, can't loot in water even when Underwater */\n  1491: \t\tYou(\"cannot loot things that are deep in the %s.\",\n> 1492: \t\t    is_lava(x, y) ? \"lava\" : \"water\");\n  1493: \t\treturn FALSE;\n  1494: \t} else if (nolimbs(youmonst.data)) {\n  1495: \t\tpline(\"Without limbs, you cannot loot anything.\");\n  1496: \t\treturn FALSE;\n  1497: \t} else if (!freehand()) {"
+  },
+  {
+    "key": "L01495_01",
+    "original": "Without limbs, you cannot loot anything.",
+    "translation": "",
+    "context": "src/pickup.c:1495:9\n  1490: \t\t/* at present, can't loot in water even when Underwater */\n  1491: \t\tYou(\"cannot loot things that are deep in the %s.\",\n  1492: \t\t    is_lava(x, y) ? \"lava\" : \"water\");\n  1493: \t\treturn FALSE;\n  1494: \t} else if (nolimbs(youmonst.data)) {\n> 1495: \t\tpline(\"Without limbs, you cannot loot anything.\");\n  1496: \t\treturn FALSE;\n  1497: \t} else if (!freehand()) {\n  1498: \t\tpline(\"Without a free %s, you cannot loot anything.\",\n  1499: \t\t\tbody_part(HAND));\n  1500: \t\treturn FALSE;"
+  },
+  {
+    "key": "L01498_01",
+    "original": "Without a free %s, you cannot loot anything.",
+    "translation": "",
+    "context": "src/pickup.c:1498:9\n  1493: \t\treturn FALSE;\n  1494: \t} else if (nolimbs(youmonst.data)) {\n  1495: \t\tpline(\"Without limbs, you cannot loot anything.\");\n  1496: \t\treturn FALSE;\n  1497: \t} else if (!freehand()) {\n> 1498: \t\tpline(\"Without a free %s, you cannot loot anything.\",\n  1499: \t\t\tbody_part(HAND));\n  1500: \t\treturn FALSE;\n  1501: \t}\n  1502: \treturn TRUE;\n  1503: }"
+  },
+  {
+    "key": "L01528_01",
+    "original": "don't find anything",
+    "translation": "",
+    "context": "src/pickup.c:1528:38\n  1523:     struct obj *cobj, *nobj;\n  1524:     register int c = -1;\n  1525:     int timepassed = 0;\n  1526:     coord cc;\n  1527:     boolean underfoot = TRUE;\n> 1528:     const char *dont_find_anything = \"don't find anything\";\n  1529:     struct monst *mtmp;\n  1530:     char qbuf[BUFSZ];\n  1531:     int prev_inquiry = 0;\n  1532:     boolean prev_loot = FALSE;\n  1533: "
+  },
+  {
+    "key": "L01539_01",
+    "original": "have no hands!",
+    "translation": "",
+    "context": "src/pickup.c:1539:6\n  1534:     if (check_capacity((char *)0)) {\n  1535: \t/* \"Can't do that while carrying so much stuff.\" */\n  1536: \treturn 0;\n  1537:     }\n  1538:     if (nohands(youmonst.data)) {\n> 1539: \tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n  1540: \treturn 0;\n  1541:     }\n  1542:     cc.x = u.ux; cc.y = u.uy;\n  1543: \n  1544: lootcont:"
+  },
+  {
+    "key": "L01554_01",
+    "original": "There is %s here, loot it?",
+    "translation": "",
+    "context": "src/pickup.c:1554:17\n  1549: \tif (!able_to_loot(cc.x, cc.y)) return 0;\n  1550: \tfor (cobj = level.objects[cc.x][cc.y]; cobj; cobj = nobj) {\n  1551: \t    nobj = cobj->nexthere;\n  1552: \n  1553: \t    if (Is_container(cobj)) {\n> 1554: \t\tSprintf(qbuf, \"There is %s here, loot it?\",\n  1555: \t\t\tsafe_qbuf(\"\", sizeof(\"There is  here, loot it?\"),\n  1556: \t\t\t     doname(cobj), an(simple_typename(cobj->otyp)),\n  1557: \t\t\t     \"a container\"));\n  1558: \t\tc = ynq(qbuf);\n  1559: \t\tif (c == 'q') return (timepassed);"
+  },
+  {
+    "key": "L01555_01",
+    "original": "There is  here, loot it?",
+    "translation": "",
+    "context": "src/pickup.c:1555:25\n  1550: \tfor (cobj = level.objects[cc.x][cc.y]; cobj; cobj = nobj) {\n  1551: \t    nobj = cobj->nexthere;\n  1552: \n  1553: \t    if (Is_container(cobj)) {\n  1554: \t\tSprintf(qbuf, \"There is %s here, loot it?\",\n> 1555: \t\t\tsafe_qbuf(\"\", sizeof(\"There is  here, loot it?\"),\n  1556: \t\t\t     doname(cobj), an(simple_typename(cobj->otyp)),\n  1557: \t\t\t     \"a container\"));\n  1558: \t\tc = ynq(qbuf);\n  1559: \t\tif (c == 'q') return (timepassed);\n  1560: \t\tif (c == 'n') continue;"
+  },
+  {
+    "key": "L01557_01",
+    "original": "a container",
+    "translation": "",
+    "context": "src/pickup.c:1557:9\n  1552: \n  1553: \t    if (Is_container(cobj)) {\n  1554: \t\tSprintf(qbuf, \"There is %s here, loot it?\",\n  1555: \t\t\tsafe_qbuf(\"\", sizeof(\"There is  here, loot it?\"),\n  1556: \t\t\t     doname(cobj), an(simple_typename(cobj->otyp)),\n> 1557: \t\t\t     \"a container\"));\n  1558: \t\tc = ynq(qbuf);\n  1559: \t\tif (c == 'q') return (timepassed);\n  1560: \t\tif (c == 'n') continue;\n  1561: \t\tany = TRUE;\n  1562: "
+  },
+  {
+    "key": "L01571_01",
+    "original": "Hmmm, it seems to be locked.",
+    "translation": "",
+    "context": "src/pickup.c:1571:13\n  1566: \t\t\t\tu.dx = u.dy = u.dz = 0;\n  1567: \t\t\t\tif(doforce_specific(TRUE, cobj))\n  1568: \t\t\t\t\treturn 1;\n  1569: \t\t\t} else\n  1570: #endif\n> 1571: \t\t    pline(\"Hmmm, it seems to be locked.\");\n  1572: \t\t    continue;\n  1573: \t\t}\n  1574: \t\tif (cobj->otyp == BAG_OF_TRICKS) {\n  1575: \t\t    int tmp;\n  1576: \t\t    You(\"carefully open the bag...\");"
+  },
+  {
+    "key": "L01576_01",
+    "original": "carefully open the bag...",
+    "translation": "",
+    "context": "src/pickup.c:1576:11\n  1571: \t\t    pline(\"Hmmm, it seems to be locked.\");\n  1572: \t\t    continue;\n  1573: \t\t}\n  1574: \t\tif (cobj->otyp == BAG_OF_TRICKS) {\n  1575: \t\t    int tmp;\n> 1576: \t\t    You(\"carefully open the bag...\");\n  1577: \t\t    pline(\"It develops a huge set of teeth and bites you!\");\n  1578: \t\t    tmp = rnd(10);\n  1579: \t\t    if (Half_physical_damage) tmp = (tmp+1) / 2;\n  1580: \t\t    losehp(tmp, \"carnivorous bag\", KILLED_BY_AN);\n  1581: \t\t    makeknown(BAG_OF_TRICKS);"
+  },
+  {
+    "key": "L01577_01",
+    "original": "It develops a huge set of teeth and bites you!",
+    "translation": "",
+    "context": "src/pickup.c:1577:13\n  1572: \t\t    continue;\n  1573: \t\t}\n  1574: \t\tif (cobj->otyp == BAG_OF_TRICKS) {\n  1575: \t\t    int tmp;\n  1576: \t\t    You(\"carefully open the bag...\");\n> 1577: \t\t    pline(\"It develops a huge set of teeth and bites you!\");\n  1578: \t\t    tmp = rnd(10);\n  1579: \t\t    if (Half_physical_damage) tmp = (tmp+1) / 2;\n  1580: \t\t    losehp(tmp, \"carnivorous bag\", KILLED_BY_AN);\n  1581: \t\t    makeknown(BAG_OF_TRICKS);\n  1582: \t\t    timepassed = 1;"
+  },
+  {
+    "key": "L01580_01",
+    "original": "carnivorous bag",
+    "translation": "",
+    "context": "src/pickup.c:1580:19\n  1575: \t\t    int tmp;\n  1576: \t\t    You(\"carefully open the bag...\");\n  1577: \t\t    pline(\"It develops a huge set of teeth and bites you!\");\n  1578: \t\t    tmp = rnd(10);\n  1579: \t\t    if (Half_physical_damage) tmp = (tmp+1) / 2;\n> 1580: \t\t    losehp(tmp, \"carnivorous bag\", KILLED_BY_AN);\n  1581: \t\t    makeknown(BAG_OF_TRICKS);\n  1582: \t\t    timepassed = 1;\n  1583: \t\t    continue;\n  1584: \t\t}\n  1585: "
+  },
+  {
+    "key": "L01586_01",
+    "original": "carefully open %s...",
+    "translation": "",
+    "context": "src/pickup.c:1586:7\n  1581: \t\t    makeknown(BAG_OF_TRICKS);\n  1582: \t\t    timepassed = 1;\n  1583: \t\t    continue;\n  1584: \t\t}\n  1585: \n> 1586: \t\tYou(\"carefully open %s...\", the(xname(cobj)));\n  1587: \t\ttimepassed |= use_container(&cobj, 0);\n  1588: \t\t/* might have triggered chest trap or magic bag explosion */\n  1589: \t\tif (multi < 0 || !cobj) return 1;\n  1590: \t    }\n  1591: \t}"
+  },
+  {
+    "key": "L01620_01",
+    "original": "Thank you for your contribution to reduce the debt.",
+    "translation": "",
+    "context": "src/pickup.c:1620:16\n  1615: \t\t    for (coffers = fobj; coffers; coffers = coffers->nobj)\n  1616: \t\t\tif (coffers->otyp == CHEST && coffers->spe == pass)\n  1617: \t\t\t    goto gotit;\t/* two level break */\n  1618: gotit:\n  1619: \t\tif (coffers) {\n> 1620: \t    verbalize(\"Thank you for your contribution to reduce the debt.\");\n  1621: \t\t    (void) add_to_container(coffers, goldob);\n  1622: \t\t    coffers->owt = weight(coffers);\n  1623: \t\t} else {\n  1624: \t\t    struct monst *mon = makemon(courtmon(),\n  1625: \t\t\t\t\t    u.ux, u.uy, NO_MM_FLAGS);"
+  },
+  {
+    "key": "L01630_01",
+    "original": "The exchequer accepts your contribution.",
+    "translation": "",
+    "context": "src/pickup.c:1630:10\n  1625: \t\t\t\t\t    u.ux, u.uy, NO_MM_FLAGS);\n  1626: \t\t    if (mon) {\n  1627: #ifndef GOLDOBJ\n  1628: \t\t\tmon->mgold += goldob->quan;\n  1629: \t\t\tdelobj(goldob);\n> 1630: \t\t\tpline(\"The exchequer accepts your contribution.\");\n  1631: \t\t    } else {\n  1632: \t\t\tdropx(goldob);\n  1633: \t\t    }\n  1634: \t\t}\n  1635: \t    } else {"
+  },
+  {
+    "key": "L01639_01",
+    "original": "The exchequer accepts your contribution.",
+    "translation": "",
+    "context": "src/pickup.c:1639:10\n  1634: \t\t}\n  1635: \t    } else {\n  1636: \t\tdropx(goldob);\n  1637: #else\n  1638: \t\t\tadd_to_minv(mon, goldob);\n> 1639: \t\t\tpline(\"The exchequer accepts your contribution.\");\n  1640: \t\t    } else {\n  1641: \t\t\tdropy(goldob);\n  1642: \t\t    }\n  1643: \t\t}\n  1644: \t    } else {"
+  },
+  {
+    "key": "L01647_01",
+    "original": "Ok, now there is loot here.",
+    "translation": "",
+    "context": "src/pickup.c:1647:9\n  1642: \t\t    }\n  1643: \t\t}\n  1644: \t    } else {\n  1645: \t\tdropy(goldob);\n  1646: #endif\n> 1647: \t\tpline(\"Ok, now there is loot here.\");\n  1648: \t    }\n  1649: \t}\n  1650:     } else if (IS_GRAVE(levl[cc.x][cc.y].typ)) {\n  1651: \tYou(\"need to dig up the grave to effectively loot it...\");\n  1652:     }"
+  },
+  {
+    "key": "L01651_01",
+    "original": "need to dig up the grave to effectively loot it...",
+    "translation": "",
+    "context": "src/pickup.c:1651:6\n  1646: #endif\n  1647: \t\tpline(\"Ok, now there is loot here.\");\n  1648: \t    }\n  1649: \t}\n  1650:     } else if (IS_GRAVE(levl[cc.x][cc.y].typ)) {\n> 1651: \tYou(\"need to dig up the grave to effectively loot it...\");\n  1652:     }\n  1653:     /*\n  1654:      * 3.3.1 introduced directional looting for some things.\n  1655:      */\n  1656:     if (c != 'y' && mon_beside(u.ux, u.uy)) {"
+  },
+  {
+    "key": "L01657_01",
+    "original": "Loot in what direction?",
+    "translation": "",
+    "context": "src/pickup.c:1657:24\n  1652:     }\n  1653:     /*\n  1654:      * 3.3.1 introduced directional looting for some things.\n  1655:      */\n  1656:     if (c != 'y' && mon_beside(u.ux, u.uy)) {\n> 1657: \tif (!get_adjacent_loc(\"Loot in what direction?\", \"Invalid loot location\",\n  1658: \t\t\tu.ux, u.uy, &cc)) return 0;\n  1659: \tif (cc.x == u.ux && cc.y == u.uy) {\n  1660: \t    underfoot = TRUE;\n  1661: \t    if (container_at(cc.x, cc.y, FALSE))\n  1662: \t\tgoto lootcont;"
+  },
+  {
+    "key": "L01657_02",
+    "original": "Invalid loot location",
+    "translation": "",
+    "context": "src/pickup.c:1657:51\n  1652:     }\n  1653:     /*\n  1654:      * 3.3.1 introduced directional looting for some things.\n  1655:      */\n  1656:     if (c != 'y' && mon_beside(u.ux, u.uy)) {\n> 1657: \tif (!get_adjacent_loc(\"Loot in what direction?\", \"Invalid loot location\",\n  1658: \t\t\tu.ux, u.uy, &cc)) return 0;\n  1659: \tif (cc.x == u.ux && cc.y == u.uy) {\n  1660: \t    underfoot = TRUE;\n  1661: \t    if (container_at(cc.x, cc.y, FALSE))\n  1662: \t\tgoto lootcont;"
+  },
+  {
+    "key": "L01666_01",
+    "original": "%s to loot on the %s.",
+    "translation": "",
+    "context": "src/pickup.c:1666:10\n  1661: \t    if (container_at(cc.x, cc.y, FALSE))\n  1662: \t\tgoto lootcont;\n  1663: \t} else\n  1664: \t    underfoot = FALSE;\n  1665: \tif (u.dz < 0) {\n> 1666: \t    You(\"%s to loot on the %s.\", dont_find_anything,\n  1667: \t\tceiling(cc.x, cc.y));\n  1668: \t    timepassed = 1;\n  1669: \t    return timepassed;\n  1670: \t}\n  1671: \tmtmp = m_at(cc.x, cc.y);"
+  },
+  {
+    "key": "L01681_01",
+    "original": "loot anything %sthere with %s in the way.",
+    "translation": "",
+    "context": "src/pickup.c:1681:16\n  1676: \t * from one square away to change that in the future.\n  1677: \t */\n  1678: \tif (!underfoot) {\n  1679: \t    if (container_at(cc.x, cc.y, FALSE)) {\n  1680: \t\tif (mtmp) {\n> 1681: \t\t    You_cant(\"loot anything %sthere with %s in the way.\",\n  1682: \t\t\t    prev_inquiry ? \"else \" : \"\", mon_nam(mtmp));\n  1683: \t\t    return timepassed;\n  1684: \t\t} else {\n  1685: \t\t    You(\"have to be at a container to loot it.\");\n  1686: \t\t}"
+  },
+  {
+    "key": "L01682_01",
+    "original": "else ",
+    "translation": "",
+    "context": "src/pickup.c:1682:23\n  1677: \t */\n  1678: \tif (!underfoot) {\n  1679: \t    if (container_at(cc.x, cc.y, FALSE)) {\n  1680: \t\tif (mtmp) {\n  1681: \t\t    You_cant(\"loot anything %sthere with %s in the way.\",\n> 1682: \t\t\t    prev_inquiry ? \"else \" : \"\", mon_nam(mtmp));\n  1683: \t\t    return timepassed;\n  1684: \t\t} else {\n  1685: \t\t    You(\"have to be at a container to loot it.\");\n  1686: \t\t}\n  1687: \t    } else {"
+  },
+  {
+    "key": "L01685_01",
+    "original": "have to be at a container to loot it.",
+    "translation": "",
+    "context": "src/pickup.c:1685:11\n  1680: \t\tif (mtmp) {\n  1681: \t\t    You_cant(\"loot anything %sthere with %s in the way.\",\n  1682: \t\t\t    prev_inquiry ? \"else \" : \"\", mon_nam(mtmp));\n  1683: \t\t    return timepassed;\n  1684: \t\t} else {\n> 1685: \t\t    You(\"have to be at a container to loot it.\");\n  1686: \t\t}\n  1687: \t    } else {\n  1688: \t\tYou(\"%s %sthere to loot.\", dont_find_anything,\n  1689: \t\t\t(prev_inquiry || prev_loot) ? \"else \" : \"\");\n  1690: \t\treturn timepassed;"
+  },
+  {
+    "key": "L01688_01",
+    "original": "%s %sthere to loot.",
+    "translation": "",
+    "context": "src/pickup.c:1688:7\n  1683: \t\t    return timepassed;\n  1684: \t\t} else {\n  1685: \t\t    You(\"have to be at a container to loot it.\");\n  1686: \t\t}\n  1687: \t    } else {\n> 1688: \t\tYou(\"%s %sthere to loot.\", dont_find_anything,\n  1689: \t\t\t(prev_inquiry || prev_loot) ? \"else \" : \"\");\n  1690: \t\treturn timepassed;\n  1691: \t    }\n  1692: \t}\n  1693:     } else if (c != 'y' && c != 'n') {"
+  },
+  {
+    "key": "L01689_01",
+    "original": "else ",
+    "translation": "",
+    "context": "src/pickup.c:1689:34\n  1684: \t\t} else {\n  1685: \t\t    You(\"have to be at a container to loot it.\");\n  1686: \t\t}\n  1687: \t    } else {\n  1688: \t\tYou(\"%s %sthere to loot.\", dont_find_anything,\n> 1689: \t\t\t(prev_inquiry || prev_loot) ? \"else \" : \"\");\n  1690: \t\treturn timepassed;\n  1691: \t    }\n  1692: \t}\n  1693:     } else if (c != 'y' && c != 'n') {\n  1694: \tYou(\"%s %s to loot.\", dont_find_anything,"
+  },
+  {
+    "key": "L01694_01",
+    "original": "%s %s to loot.",
+    "translation": "",
+    "context": "src/pickup.c:1694:6\n  1689: \t\t\t(prev_inquiry || prev_loot) ? \"else \" : \"\");\n  1690: \t\treturn timepassed;\n  1691: \t    }\n  1692: \t}\n  1693:     } else if (c != 'y' && c != 'n') {\n> 1694: \tYou(\"%s %s to loot.\", dont_find_anything,\n  1695: \t\t    underfoot ? \"here\" : \"there\");\n  1696:     }\n  1697:     return (timepassed);\n  1698: }\n  1699: "
+  },
+  {
+    "key": "L01695_01",
+    "original": "here",
+    "translation": "",
+    "context": "src/pickup.c:1695:19\n  1690: \t\treturn timepassed;\n  1691: \t    }\n  1692: \t}\n  1693:     } else if (c != 'y' && c != 'n') {\n  1694: \tYou(\"%s %s to loot.\", dont_find_anything,\n> 1695: \t\t    underfoot ? \"here\" : \"there\");\n  1696:     }\n  1697:     return (timepassed);\n  1698: }\n  1699: \n  1700: /* loot_mon() returns amount of time passed."
+  },
+  {
+    "key": "L01695_02",
+    "original": "there",
+    "translation": "",
+    "context": "src/pickup.c:1695:28\n  1690: \t\treturn timepassed;\n  1691: \t    }\n  1692: \t}\n  1693:     } else if (c != 'y' && c != 'n') {\n  1694: \tYou(\"%s %s to loot.\", dont_find_anything,\n> 1695: \t\t    underfoot ? \"here\" : \"there\");\n  1696:     }\n  1697:     return (timepassed);\n  1698: }\n  1699: \n  1700: /* loot_mon() returns amount of time passed."
+  },
+  {
+    "key": "L01720_01",
+    "original": "Do you want to remove the saddle from %s?",
+    "translation": "",
+    "context": "src/pickup.c:1720:16\n  1715:     /* \t*passed_info is set to TRUE if a loot query was given.               */\n  1716:     /*\t*prev_loot is set to TRUE if something was actually acquired in here. */\n  1717:     if (mtmp && mtmp != u.usteed && (otmp = which_armor(mtmp, W_SADDLE))) {\n  1718: \tlong unwornmask;\n  1719: \tif (passed_info) *passed_info = 1;\n> 1720: \tSprintf(qbuf, \"Do you want to remove the saddle from %s?\",\n  1721: \t\tx_monnam(mtmp, ARTICLE_THE, (char *)0, SUPPRESS_SADDLE, FALSE));\n  1722: \tif ((c = yn_function(qbuf, ynqchars, 'n')) == 'y') {\n  1723: \t\tif (nolimbs(youmonst.data)) {\n  1724: \t\t    You_cant(\"do that without limbs.\"); /* not body_part(HAND) */\n  1725: \t\t    return (0);"
+  },
+  {
+    "key": "L01724_01",
+    "original": "do that without limbs.",
+    "translation": "",
+    "context": "src/pickup.c:1724:16\n  1719: \tif (passed_info) *passed_info = 1;\n  1720: \tSprintf(qbuf, \"Do you want to remove the saddle from %s?\",\n  1721: \t\tx_monnam(mtmp, ARTICLE_THE, (char *)0, SUPPRESS_SADDLE, FALSE));\n  1722: \tif ((c = yn_function(qbuf, ynqchars, 'n')) == 'y') {\n  1723: \t\tif (nolimbs(youmonst.data)) {\n> 1724: \t\t    You_cant(\"do that without limbs.\"); /* not body_part(HAND) */\n  1725: \t\t    return (0);\n  1726: \t\t}\n  1727: \t\tif (otmp->cursed) {\n  1728: \t\t    You(\"can't. The saddle seems to be stuck to %s.\",\n  1729: \t\t\tx_monnam(mtmp, ARTICLE_THE, (char *)0,"
+  },
+  {
+    "key": "L01728_01",
+    "original": "can't. The saddle seems to be stuck to %s.",
+    "translation": "",
+    "context": "src/pickup.c:1728:11\n  1723: \t\tif (nolimbs(youmonst.data)) {\n  1724: \t\t    You_cant(\"do that without limbs.\"); /* not body_part(HAND) */\n  1725: \t\t    return (0);\n  1726: \t\t}\n  1727: \t\tif (otmp->cursed) {\n> 1728: \t\t    You(\"can't. The saddle seems to be stuck to %s.\",\n  1729: \t\t\tx_monnam(mtmp, ARTICLE_THE, (char *)0,\n  1730: \t\t\t\tSUPPRESS_SADDLE, FALSE));\n  1731: \t\t\t    \n  1732: \t\t    /* the attempt costs you time */\n  1733: \t\t\treturn (1);"
+  },
+  {
+    "key": "L01741_01",
+    "original": "You drop %s!",
+    "translation": "",
+    "context": "src/pickup.c:1741:36\n  1736: \t\tif ((unwornmask = otmp->owornmask) != 0L) {\n  1737: \t\t    mtmp->misc_worn_check &= ~unwornmask;\n  1738: \t\t    otmp->owornmask = 0L;\n  1739: \t\t    update_mon_intrinsics(mtmp, otmp, FALSE, FALSE);\n  1740: \t\t}\n> 1741: \t\totmp = hold_another_object(otmp, \"You drop %s!\", doname(otmp),\n  1742: \t\t\t\t\t(const char *)0);\n  1743: \t\ttimepassed = rnd(3);\n  1744: \t\tif (prev_loot) *prev_loot = TRUE;\n  1745: \t} else if (c == 'q') {\n  1746: \t\treturn (0);"
+  },
+  {
+    "key": "L01803_01",
+    "original": "see %s engulfed in an explosion!",
+    "translation": "",
+    "context": "src/pickup.c:1803:11\n  1798: \t\tif (bomb == MON_WEP(mtmp)) {\n  1799: \t\t    bomb->owornmask &= ~W_WEP;\n  1800: \t\t    MON_NOWEP(mtmp);\n  1801: \t\t}\n  1802: \t\tif (!silent && canseemon(mtmp))\n> 1803: \t\t    You(\"see %s engulfed in an explosion!\", mon_nam(mtmp));\n  1804: \t\tmtmp->mhp -= d(6,6);\n  1805: \t\tif (mtmp->mhp < 1) {\n  1806: \t\t    if (!bomb->yours) \n  1807: \t\t\tmonkilled(mtmp, silent ? \"\" : \"explosion\", AD_PHYS);\n  1808: \t\t    else xkilled(mtmp, !silent);"
+  },
+  {
+    "key": "L01807_01",
+    "original": "explosion",
+    "translation": "",
+    "context": "src/pickup.c:1807:34\n  1802: \t\tif (!silent && canseemon(mtmp))\n  1803: \t\t    You(\"see %s engulfed in an explosion!\", mon_nam(mtmp));\n  1804: \t\tmtmp->mhp -= d(6,6);\n  1805: \t\tif (mtmp->mhp < 1) {\n  1806: \t\t    if (!bomb->yours) \n> 1807: \t\t\tmonkilled(mtmp, silent ? \"\" : \"explosion\", AD_PHYS);\n  1808: \t\t    else xkilled(mtmp, !silent);\n  1809: \t\t}\n  1810: \t\tbreak;\n  1811: \t    case OBJ_INVENT:\n  1812: \t\t/* This shouldn't be silent! */"
+  },
+  {
+    "key": "L01813_01",
+    "original": "Something explodes inside your knapsack!",
+    "translation": "",
+    "context": "src/pickup.c:1813:9\n  1808: \t\t    else xkilled(mtmp, !silent);\n  1809: \t\t}\n  1810: \t\tbreak;\n  1811: \t    case OBJ_INVENT:\n  1812: \t\t/* This shouldn't be silent! */\n> 1813: \t\tpline(\"Something explodes inside your knapsack!\");\n  1814: \t\tif (bomb == uwep) {\n  1815: \t\t    uwepgone();\n  1816: \t\t    stop_occupation();\n  1817: \t\t} else if (bomb == uswapwep) {\n  1818: \t\t    uswapwepgone();"
+  },
+  {
+    "key": "L01824_01",
+    "original": "carrying live explosives",
+    "translation": "",
+    "context": "src/pickup.c:1824:18\n  1819: \t\t    stop_occupation();\n  1820: \t\t} else if (bomb == uquiver) {\n  1821: \t\t    uqwepgone();\n  1822: \t\t    stop_occupation();\n  1823: \t\t}\n> 1824: \t\tlosehp(d(6,6), \"carrying live explosives\", KILLED_BY);\n  1825: \t\tbreak;\n  1826: \t    case OBJ_FLOOR:\n  1827: \t\tunderwater = is_pool(x, y);\n  1828: \t\tif (!silent) {\n  1829: \t\t    if (x == u.ux && y == u.uy) {"
+  },
+  {
+    "key": "L01831_01",
+    "original": "water boils beneath you.",
+    "translation": "",
+    "context": "src/pickup.c:1831:18\n  1826: \t    case OBJ_FLOOR:\n  1827: \t\tunderwater = is_pool(x, y);\n  1828: \t\tif (!silent) {\n  1829: \t\t    if (x == u.ux && y == u.uy) {\n  1830: \t\t\tif (underwater && (Flying || Levitation))\n> 1831: \t\t\t    pline_The(\"water boils beneath you.\");\n  1832: \t\t\telse if (underwater && Wwalking)\n  1833: \t\t\t    pline_The(\"water erupts around you.\");\n  1834: \t\t\telse pline(\"A bag explodes under your %s!\",\n  1835: \t\t\t  makeplural(body_part(FOOT)));\n  1836: \t\t    } else if (cansee(x, y))"
+  },
+  {
+    "key": "L01833_01",
+    "original": "water erupts around you.",
+    "translation": "",
+    "context": "src/pickup.c:1833:18\n  1828: \t\tif (!silent) {\n  1829: \t\t    if (x == u.ux && y == u.uy) {\n  1830: \t\t\tif (underwater && (Flying || Levitation))\n  1831: \t\t\t    pline_The(\"water boils beneath you.\");\n  1832: \t\t\telse if (underwater && Wwalking)\n> 1833: \t\t\t    pline_The(\"water erupts around you.\");\n  1834: \t\t\telse pline(\"A bag explodes under your %s!\",\n  1835: \t\t\t  makeplural(body_part(FOOT)));\n  1836: \t\t    } else if (cansee(x, y))\n  1837: \t\t\tYou(underwater ?\n  1838: \t\t\t    \"see a plume of water shoot up.\" :"
+  },
+  {
+    "key": "L01834_01",
+    "original": "A bag explodes under your %s!",
+    "translation": "",
+    "context": "src/pickup.c:1834:15\n  1829: \t\t    if (x == u.ux && y == u.uy) {\n  1830: \t\t\tif (underwater && (Flying || Levitation))\n  1831: \t\t\t    pline_The(\"water boils beneath you.\");\n  1832: \t\t\telse if (underwater && Wwalking)\n  1833: \t\t\t    pline_The(\"water erupts around you.\");\n> 1834: \t\t\telse pline(\"A bag explodes under your %s!\",\n  1835: \t\t\t  makeplural(body_part(FOOT)));\n  1836: \t\t    } else if (cansee(x, y))\n  1837: \t\t\tYou(underwater ?\n  1838: \t\t\t    \"see a plume of water shoot up.\" :\n  1839: \t\t\t    \"see a bag explode.\");"
+  },
+  {
+    "key": "L01838_01",
+    "original": "see a plume of water shoot up.",
+    "translation": "",
+    "context": "src/pickup.c:1838:8\n  1833: \t\t\t    pline_The(\"water erupts around you.\");\n  1834: \t\t\telse pline(\"A bag explodes under your %s!\",\n  1835: \t\t\t  makeplural(body_part(FOOT)));\n  1836: \t\t    } else if (cansee(x, y))\n  1837: \t\t\tYou(underwater ?\n> 1838: \t\t\t    \"see a plume of water shoot up.\" :\n  1839: \t\t\t    \"see a bag explode.\");\n  1840: \t\t}\n  1841: \t\tif (underwater && (Flying || Levitation || Wwalking)) {\n  1842: \t\t    if (Wwalking && x == u.ux && y == u.uy) {\n  1843: \t\t\tstruct trap trap;"
+  },
+  {
+    "key": "L01839_01",
+    "original": "see a bag explode.",
+    "translation": "",
+    "context": "src/pickup.c:1839:8\n  1834: \t\t\telse pline(\"A bag explodes under your %s!\",\n  1835: \t\t\t  makeplural(body_part(FOOT)));\n  1836: \t\t    } else if (cansee(x, y))\n  1837: \t\t\tYou(underwater ?\n  1838: \t\t\t    \"see a plume of water shoot up.\" :\n> 1839: \t\t\t    \"see a bag explode.\");\n  1840: \t\t}\n  1841: \t\tif (underwater && (Flying || Levitation || Wwalking)) {\n  1842: \t\t    if (Wwalking && x == u.ux && y == u.uy) {\n  1843: \t\t\tstruct trap trap;\n  1844: \t\t\ttrap.ntrap = NULL;"
+  },
+  {
+    "key": "L01862_01",
+    "original": "a muffled explosion.",
+    "translation": "",
+    "context": "src/pickup.c:1862:16\n  1857: \t\t    goto free_bomb;\n  1858: \t\t}\n  1859: \t\tbreak;\n  1860: \t    default:\t/* Buried, contained, etc. */\n  1861: \t\tif (!silent)\n> 1862: \t\t    You_hear(\"a muffled explosion.\");\n  1863: \t\tgoto free_bomb;\n  1864: \t\tbreak;\n  1865: \t}\n  1866:     }\n  1867: "
+  },
+  {
+    "key": "L01887_01",
+    "original": "<in> no current_container?",
+    "translation": "",
+    "context": "src/pickup.c:1887:14\n  1882: \tboolean floor_container = !carried(current_container);\n  1883: \tboolean was_unpaid = FALSE;\n  1884: \tchar buf[BUFSZ];\n  1885: \n  1886: \tif (!current_container) {\n> 1887: \t\timpossible(\"<in> no current_container?\");\n  1888: \t\treturn 0;\n  1889: \t} else if (obj == uball || obj == uchain) {\n  1890: \t\tYou(\"must be kidding.\");\n  1891: \t\treturn 0;\n  1892: \t} else if (obj == current_container) {"
+  },
+  {
+    "key": "L01890_01",
+    "original": "must be kidding.",
+    "translation": "",
+    "context": "src/pickup.c:1890:7\n  1885: \n  1886: \tif (!current_container) {\n  1887: \t\timpossible(\"<in> no current_container?\");\n  1888: \t\treturn 0;\n  1889: \t} else if (obj == uball || obj == uchain) {\n> 1890: \t\tYou(\"must be kidding.\");\n  1891: \t\treturn 0;\n  1892: \t} else if (obj == current_container) {\n  1893: \t\tpline(\"That would be an interesting topological exercise.\");\n  1894: \t\treturn 0;\n  1895: \t} else if (obj->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL)) {"
+  },
+  {
+    "key": "L01893_01",
+    "original": "That would be an interesting topological exercise.",
+    "translation": "",
+    "context": "src/pickup.c:1893:9\n  1888: \t\treturn 0;\n  1889: \t} else if (obj == uball || obj == uchain) {\n  1890: \t\tYou(\"must be kidding.\");\n  1891: \t\treturn 0;\n  1892: \t} else if (obj == current_container) {\n> 1893: \t\tpline(\"That would be an interesting topological exercise.\");\n  1894: \t\treturn 0;\n  1895: \t} else if (obj->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL)) {\n  1896: \t\tNorep(\"You cannot %s %s you are wearing.\",\n  1897: \t\t\tIcebox ? \"refrigerate\" : \"stash\", something);\n  1898: \t\treturn 0;"
+  },
+  {
+    "key": "L01896_01",
+    "original": "You cannot %s %s you are wearing.",
+    "translation": "",
+    "context": "src/pickup.c:1896:9\n  1891: \t\treturn 0;\n  1892: \t} else if (obj == current_container) {\n  1893: \t\tpline(\"That would be an interesting topological exercise.\");\n  1894: \t\treturn 0;\n  1895: \t} else if (obj->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL)) {\n> 1896: \t\tNorep(\"You cannot %s %s you are wearing.\",\n  1897: \t\t\tIcebox ? \"refrigerate\" : \"stash\", something);\n  1898: \t\treturn 0;\n  1899: \t} else if ((obj->otyp == LOADSTONE) && obj->cursed) {\n  1900: \t\tobj->bknown = 1;\n  1901: \t      pline_The(\"stone%s won't leave your person.\", plur(obj->quan));"
+  },
+  {
+    "key": "L01897_01",
+    "original": "refrigerate",
+    "translation": "",
+    "context": "src/pickup.c:1897:13\n  1892: \t} else if (obj == current_container) {\n  1893: \t\tpline(\"That would be an interesting topological exercise.\");\n  1894: \t\treturn 0;\n  1895: \t} else if (obj->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL)) {\n  1896: \t\tNorep(\"You cannot %s %s you are wearing.\",\n> 1897: \t\t\tIcebox ? \"refrigerate\" : \"stash\", something);\n  1898: \t\treturn 0;\n  1899: \t} else if ((obj->otyp == LOADSTONE) && obj->cursed) {\n  1900: \t\tobj->bknown = 1;\n  1901: \t      pline_The(\"stone%s won't leave your person.\", plur(obj->quan));\n  1902: \t\treturn 0;"
+  },
+  {
+    "key": "L01897_02",
+    "original": "stash",
+    "translation": "",
+    "context": "src/pickup.c:1897:29\n  1892: \t} else if (obj == current_container) {\n  1893: \t\tpline(\"That would be an interesting topological exercise.\");\n  1894: \t\treturn 0;\n  1895: \t} else if (obj->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL)) {\n  1896: \t\tNorep(\"You cannot %s %s you are wearing.\",\n> 1897: \t\t\tIcebox ? \"refrigerate\" : \"stash\", something);\n  1898: \t\treturn 0;\n  1899: \t} else if ((obj->otyp == LOADSTONE) && obj->cursed) {\n  1900: \t\tobj->bknown = 1;\n  1901: \t      pline_The(\"stone%s won't leave your person.\", plur(obj->quan));\n  1902: \t\treturn 0;"
+  },
+  {
+    "key": "L01901_01",
+    "original": "stone%s won't leave your person.",
+    "translation": "",
+    "context": "src/pickup.c:1901:18\n  1896: \t\tNorep(\"You cannot %s %s you are wearing.\",\n  1897: \t\t\tIcebox ? \"refrigerate\" : \"stash\", something);\n  1898: \t\treturn 0;\n  1899: \t} else if ((obj->otyp == LOADSTONE) && obj->cursed) {\n  1900: \t\tobj->bknown = 1;\n> 1901: \t      pline_The(\"stone%s won't leave your person.\", plur(obj->quan));\n  1902: \t\treturn 0;\n  1903: \t} else if (obj->otyp == AMULET_OF_YENDOR ||\n  1904: \t\t   obj->otyp == CANDELABRUM_OF_INVOCATION ||\n  1905: \t\t   obj->otyp == BELL_OF_OPENING ||\n  1906: \t\t   obj->otyp == SPE_BOOK_OF_THE_DEAD) {"
+  },
+  {
+    "key": "L01911_01",
+    "original": "%s cannot be confined in such trappings.",
+    "translation": "",
+    "context": "src/pickup.c:1911:12\n  1906: \t\t   obj->otyp == SPE_BOOK_OF_THE_DEAD) {\n  1907: \t/* Prohibit Amulets in containers; if you allow it, monsters can't\n  1908: \t * steal them.  It also becomes a pain to check to see if someone\n  1909: \t * has the Amulet.  Ditto for the Candelabrum, the Bell and the Book.\n  1910: \t */\n> 1911: \t    pline(\"%s cannot be confined in such trappings.\", The(xname(obj)));\n  1912: \t    return 0;\n  1913: \t} else if (obj->otyp == LEASH && obj->leashmon != 0) {\n  1914: \t\tpline(\"%s attached to your pet.\", Tobjnam(obj, \"are\"));\n  1915: \t\treturn 0;\n  1916: \t} else if (obj == uwep) {"
+  },
+  {
+    "key": "L01914_01",
+    "original": "%s attached to your pet.",
+    "translation": "",
+    "context": "src/pickup.c:1914:9\n  1909: \t * has the Amulet.  Ditto for the Candelabrum, the Bell and the Book.\n  1910: \t */\n  1911: \t    pline(\"%s cannot be confined in such trappings.\", The(xname(obj)));\n  1912: \t    return 0;\n  1913: \t} else if (obj->otyp == LEASH && obj->leashmon != 0) {\n> 1914: \t\tpline(\"%s attached to your pet.\", Tobjnam(obj, \"are\"));\n  1915: \t\treturn 0;\n  1916: \t} else if (obj == uwep) {\n  1917: \t\tif (welded(obj)) {\n  1918: \t\t\tweldmsg(obj);\n  1919: \t\t\treturn 0;"
+  },
+  {
+    "key": "L01914_02",
+    "original": "are",
+    "translation": "",
+    "context": "src/pickup.c:1914:50\n  1909: \t * has the Amulet.  Ditto for the Candelabrum, the Bell and the Book.\n  1910: \t */\n  1911: \t    pline(\"%s cannot be confined in such trappings.\", The(xname(obj)));\n  1912: \t    return 0;\n  1913: \t} else if (obj->otyp == LEASH && obj->leashmon != 0) {\n> 1914: \t\tpline(\"%s attached to your pet.\", Tobjnam(obj, \"are\"));\n  1915: \t\treturn 0;\n  1916: \t} else if (obj == uwep) {\n  1917: \t\tif (welded(obj)) {\n  1918: \t\t\tweldmsg(obj);\n  1919: \t\t\treturn 0;"
+  },
+  {
+    "key": "L01940_01",
+    "original": "Touching %s is a fatal mistake.",
+    "translation": "",
+    "context": "src/pickup.c:1940:13\n  1935: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  1936: \t\telse {\n  1937: \t\t    char kbuf[BUFSZ];\n  1938: \n  1939: \t\t    Strcpy(kbuf, an(corpse_xname(obj, TRUE)));\n> 1940: \t\t    pline(\"Touching %s is a fatal mistake.\", kbuf);\n  1941: \t\t    Strcpy(kbuf, an(killer_cxname(obj, TRUE)));\n  1942: \t\t    instapetrify(kbuf);\n  1943: \t\t    return -1;\n  1944: \t\t}\n  1945: \t    }"
+  },
+  {
+    "key": "L01958_01",
+    "original": "cannot fit %s into %s.",
+    "translation": "",
+    "context": "src/pickup.c:1958:7\n  1953: \t\t *  before current_container's name is computed.  Don't\n  1954: \t\t *  use the result of strcpy() within You() --- the order\n  1955: \t\t *  of evaluation of the parameters is undefined.\n  1956: \t\t */\n  1957: \t\tStrcpy(buf, the(xname(obj)));\n> 1958: \t\tYou(\"cannot fit %s into %s.\", buf,\n  1959: \t\t    the(xname(current_container)));\n  1960: \t\treturn 0;\n  1961: \t}\n  1962: \n  1963: \tfreeinv(obj);"
+  },
+  {
+    "key": "L01994_01",
+    "original": "As you put %s inside, you are blasted by a magical explosion!",
+    "translation": "",
+    "context": "src/pickup.c:1994:8\n  1989: \t\t\tif (rot_alarm) obj->norevive = 1;\n  1990: \t\t}\n  1991: \t} else if (Is_mbag(current_container) && mbag_explodes(obj, 0)) {\n  1992: \t\t/* explicitly mention what item is triggering the explosion */\n  1993: \t\tpline(\n> 1994: \t      \"As you put %s inside, you are blasted by a magical explosion!\",\n  1995: \t\t      doname(obj));\n  1996: \t\tif (Has_contents(obj)) {\n  1997: \t\t    struct obj *otmp;\n  1998: \t\t    while((otmp = container_extract_indestructable(obj)))\n  1999: \t\t\tif (!flooreffects(otmp, u.ux, u.uy, \"fall\"))"
+  },
+  {
+    "key": "L01999_01",
+    "original": "fall",
+    "translation": "",
+    "context": "src/pickup.c:1999:40\n  1994: \t      \"As you put %s inside, you are blasted by a magical explosion!\",\n  1995: \t\t      doname(obj));\n  1996: \t\tif (Has_contents(obj)) {\n  1997: \t\t    struct obj *otmp;\n  1998: \t\t    while((otmp = container_extract_indestructable(obj)))\n> 1999: \t\t\tif (!flooreffects(otmp, u.ux, u.uy, \"fall\"))\n  2000: \t\t\t    place_object(otmp, u.ux, u.uy);\n  2001: \t\t}\n  2002: \t\t/* did not actually insert obj yet */\n  2003: \t\tif (was_unpaid) addtobill(obj, FALSE, FALSE, TRUE);\n  2004: \t\tif (Has_contents(obj))"
+  },
+  {
+    "key": "L02013_01",
+    "original": "in_container:  bag not found.",
+    "translation": "",
+    "context": "src/pickup.c:2013:10\n  2008: \t\tif (!floor_container)\n  2009: \t\t\tuseup(current_container);\n  2010: \t\telse if (obj_here(current_container, u.ux, u.uy))\n  2011: \t\t\tuseupf(current_container, current_container->quan);\n  2012: \t\telse\n> 2013: \t\t\tpanic(\"in_container:  bag not found.\");\n  2014: \n  2015: \t\tlosehp(d(6,6),\"magical explosion\", KILLED_BY_AN);\n  2016: \t\tcurrent_container = 0;\t/* baggone = TRUE; */\n  2017: \t}\n  2018: "
+  },
+  {
+    "key": "L02015_01",
+    "original": "magical explosion",
+    "translation": "",
+    "context": "src/pickup.c:2015:17\n  2010: \t\telse if (obj_here(current_container, u.ux, u.uy))\n  2011: \t\t\tuseupf(current_container, current_container->quan);\n  2012: \t\telse\n  2013: \t\t\tpanic(\"in_container:  bag not found.\");\n  2014: \n> 2015: \t\tlosehp(d(6,6),\"magical explosion\", KILLED_BY_AN);\n  2016: \t\tcurrent_container = 0;\t/* baggone = TRUE; */\n  2017: \t}\n  2018: \n  2019: \tif (current_container) {\n  2020: \t    Strcpy(buf, the(xname(current_container)));"
+  },
+  {
+    "key": "L02021_01",
+    "original": "put %s into %s.",
+    "translation": "",
+    "context": "src/pickup.c:2021:10\n  2016: \t\tcurrent_container = 0;\t/* baggone = TRUE; */\n  2017: \t}\n  2018: \n  2019: \tif (current_container) {\n  2020: \t    Strcpy(buf, the(xname(current_container)));\n> 2021: \t    You(\"put %s into %s.\", doname(obj), buf);\n  2022: \n  2023: \t    /* gold in container always needs to be added to credit */\n  2024: \t    if (floor_container && obj->oclass == COIN_CLASS)\n  2025: \t\tsellobj(obj, current_container->ox, current_container->oy);\n  2026: \t    (void) add_to_container(current_container, obj);"
+  },
+  {
+    "key": "L02056_01",
+    "original": "<out> no current_container?",
+    "translation": "",
+    "context": "src/pickup.c:2056:14\n  2051: \tboolean is_gold = (obj->oclass == COIN_CLASS);\n  2052: \tint res, loadlev;\n  2053: \tlong count;\n  2054: \n  2055: \tif (!current_container) {\n> 2056: \t\timpossible(\"<out> no current_container?\");\n  2057: \t\treturn -1;\n  2058: \t} else if (is_gold) {\n  2059: \t\tobj->owt = weight(obj);\n  2060: \t}\n  2061: "
+  },
+  {
+    "key": "L02073_01",
+    "original": "Touching %s is a fatal mistake.",
+    "translation": "",
+    "context": "src/pickup.c:2073:13\n  2068: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  2069: \t\telse {\n  2070: \t\t    char kbuf[BUFSZ];\n  2071: \n  2072: \t\t    Strcpy(kbuf, an(corpse_xname(obj, TRUE)));\n> 2073: \t\t    pline(\"Touching %s is a fatal mistake.\", kbuf);\n  2074: \t\t    Strcpy(kbuf, an(killer_cxname(obj, TRUE)));\n  2075: \t\t    instapetrify(kbuf);\n  2076: \t\t    return -1;\n  2077: \t\t}\n  2078: \t    }"
+  },
+  {
+    "key": "L02106_01",
+    "original": "You sneaky cad! Get out of here with that pick!",
+    "translation": "",
+    "context": "src/pickup.c:2106:13\n  2101: \t\tobj->ox = current_container->ox;\n  2102: \t\tobj->oy = current_container->oy;\n  2103: \t\taddtobill(obj, FALSE, FALSE, FALSE);\n  2104: \t}\n  2105: \tif (is_pick(obj) && !obj->unpaid && *u.ushops && shop_keeper(*u.ushops))\n> 2106: \t\tverbalize(\"You sneaky cad! Get out of here with that pick!\");\n  2107: \n  2108: \totmp = addinv(obj);\n  2109: \tloadlev = near_capacity();\n  2110: \tprinv(loadlev ?\n  2111: \t      (loadlev < MOD_ENCUMBER ?"
+  },
+  {
+    "key": "L02112_01",
+    "original": "You have a little trouble removing",
+    "translation": "",
+    "context": "src/pickup.c:2112:9\n  2107: \n  2108: \totmp = addinv(obj);\n  2109: \tloadlev = near_capacity();\n  2110: \tprinv(loadlev ?\n  2111: \t      (loadlev < MOD_ENCUMBER ?\n> 2112: \t       \"You have a little trouble removing\" :\n  2113: \t       \"You have much trouble removing\") : (char *)0,\n  2114: \t      otmp, count);\n  2115: \n  2116: \tif (is_gold) {\n  2117: #ifndef GOLDOBJ"
+  },
+  {
+    "key": "L02113_01",
+    "original": "You have much trouble removing",
+    "translation": "",
+    "context": "src/pickup.c:2113:9\n  2108: \totmp = addinv(obj);\n  2109: \tloadlev = near_capacity();\n  2110: \tprinv(loadlev ?\n  2111: \t      (loadlev < MOD_ENCUMBER ?\n  2112: \t       \"You have a little trouble removing\" :\n> 2113: \t       \"You have much trouble removing\") : (char *)0,\n  2114: \t      otmp, count);\n  2115: \n  2116: \tif (is_gold) {\n  2117: #ifndef GOLDOBJ\n  2118: \t\tdealloc_obj(obj);"
+  },
+  {
+    "key": "L02135_01",
+    "original": "%s %s vanished!",
+    "translation": "",
+    "context": "src/pickup.c:2135:8\n  2130: {\n  2131:     struct monst *shkp;\n  2132:     long loss = 0L;\n  2133: \n  2134:     if (item->dknown)\n> 2135: \tpline(\"%s %s vanished!\", Doname2(item), otense(item, \"have\"));\n  2136:     else\n  2137: \tYou(\"%s %s disappear!\", Blind ? \"notice\" : \"see\", doname(item));\n  2138: \n  2139:     if (*u.ushops && (shkp = shop_keeper(*u.ushops)) != 0) {\n  2140: \tif (held ? (boolean) item->unpaid : costly_spot(u.ux, u.uy))"
+  },
+  {
+    "key": "L02135_02",
+    "original": "have",
+    "translation": "",
+    "context": "src/pickup.c:2135:55\n  2130: {\n  2131:     struct monst *shkp;\n  2132:     long loss = 0L;\n  2133: \n  2134:     if (item->dknown)\n> 2135: \tpline(\"%s %s vanished!\", Doname2(item), otense(item, \"have\"));\n  2136:     else\n  2137: \tYou(\"%s %s disappear!\", Blind ? \"notice\" : \"see\", doname(item));\n  2138: \n  2139:     if (*u.ushops && (shkp = shop_keeper(*u.ushops)) != 0) {\n  2140: \tif (held ? (boolean) item->unpaid : costly_spot(u.ux, u.uy))"
+  },
+  {
+    "key": "L02137_01",
+    "original": "%s %s disappear!",
+    "translation": "",
+    "context": "src/pickup.c:2137:6\n  2132:     long loss = 0L;\n  2133: \n  2134:     if (item->dknown)\n  2135: \tpline(\"%s %s vanished!\", Doname2(item), otense(item, \"have\"));\n  2136:     else\n> 2137: \tYou(\"%s %s disappear!\", Blind ? \"notice\" : \"see\", doname(item));\n  2138: \n  2139:     if (*u.ushops && (shkp = shop_keeper(*u.ushops)) != 0) {\n  2140: \tif (held ? (boolean) item->unpaid : costly_spot(u.ux, u.uy))\n  2141: \t    loss = stolen_value(item, u.ux, u.uy,\n  2142: \t\t\t\t(boolean)shkp->mpeaceful, TRUE, TRUE);"
+  },
+  {
+    "key": "L02137_02",
+    "original": "notice",
+    "translation": "",
+    "context": "src/pickup.c:2137:34\n  2132:     long loss = 0L;\n  2133: \n  2134:     if (item->dknown)\n  2135: \tpline(\"%s %s vanished!\", Doname2(item), otense(item, \"have\"));\n  2136:     else\n> 2137: \tYou(\"%s %s disappear!\", Blind ? \"notice\" : \"see\", doname(item));\n  2138: \n  2139:     if (*u.ushops && (shkp = shop_keeper(*u.ushops)) != 0) {\n  2140: \tif (held ? (boolean) item->unpaid : costly_spot(u.ux, u.uy))\n  2141: \t    loss = stolen_value(item, u.ux, u.uy,\n  2142: \t\t\t\t(boolean)shkp->mpeaceful, TRUE, TRUE);"
+  },
+  {
+    "key": "L02137_03",
+    "original": "see",
+    "translation": "",
+    "context": "src/pickup.c:2137:45\n  2132:     long loss = 0L;\n  2133: \n  2134:     if (item->dknown)\n  2135: \tpline(\"%s %s vanished!\", Doname2(item), otense(item, \"have\"));\n  2136:     else\n> 2137: \tYou(\"%s %s disappear!\", Blind ? \"notice\" : \"see\", doname(item));\n  2138: \n  2139:     if (*u.ushops && (shkp = shop_keeper(*u.ushops)) != 0) {\n  2140: \tif (held ? (boolean) item->unpaid : costly_spot(u.ux, u.uy))\n  2141: \t    loss = stolen_value(item, u.ux, u.uy,\n  2142: \t\t\t\t(boolean)shkp->mpeaceful, TRUE, TRUE);"
+  },
+  {
+    "key": "L02159_01",
+    "original": "Schroedinger's Cat",
+    "translation": "",
+    "context": "src/pickup.c:2159:39\n  2154: \n  2155: STATIC_OVL void\n  2156: observe_quantum_cat(box)\n  2157: struct obj *box;\n  2158: {\n> 2159:     static NEARDATA const char sc[] = \"Schroedinger's Cat\";\n  2160:     struct obj *deadcat;\n  2161:     struct monst *livecat;\n  2162:     xchar ox, oy;\n  2163: \n  2164:     box->spe = 0;\t\t/* box->owt will be updated below */"
+  },
+  {
+    "key": "L02178_01",
+    "original": "think %s brushed your %s.",
+    "translation": "",
+    "context": "src/pickup.c:2178:10\n  2173: \t\t\t       box->ox, box->oy, NO_MINVENT) : 0;\n  2174:     if (livecat) {\n  2175: \tlivecat->mpeaceful = 1;\n  2176: \tset_malign(livecat);\n  2177: \tif (!canspotmon(livecat))\n> 2178: \t    You(\"think %s brushed your %s.\", something, body_part(FOOT));\n  2179: \telse\n  2180: \t    pline(\"%s inside the box is still alive!\", Monnam(livecat));\n  2181: \t(void) christen_monst(livecat, sc);\n  2182:     } else {\n  2183: \tdeadcat = mk_named_object(CORPSE, &mons[PM_HOUSECAT],"
+  },
+  {
+    "key": "L02180_01",
+    "original": "%s inside the box is still alive!",
+    "translation": "",
+    "context": "src/pickup.c:2180:12\n  2175: \tlivecat->mpeaceful = 1;\n  2176: \tset_malign(livecat);\n  2177: \tif (!canspotmon(livecat))\n  2178: \t    You(\"think %s brushed your %s.\", something, body_part(FOOT));\n  2179: \telse\n> 2180: \t    pline(\"%s inside the box is still alive!\", Monnam(livecat));\n  2181: \t(void) christen_monst(livecat, sc);\n  2182:     } else {\n  2183: \tdeadcat = mk_named_object(CORPSE, &mons[PM_HOUSECAT],\n  2184: \t\t\t\t  box->ox, box->oy, sc);\n  2185: \tif (deadcat) {"
+  },
+  {
+    "key": "L02189_01",
+    "original": "%s inside the box is dead!",
+    "translation": "",
+    "context": "src/pickup.c:2189:12\n  2184: \t\t\t\t  box->ox, box->oy, sc);\n  2185: \tif (deadcat) {\n  2186: \t    obj_extract_self(deadcat);\n  2187: \t    (void) add_to_container(box, deadcat);\n  2188: \t}\n> 2189: \tpline_The(\"%s inside the box is dead!\",\n  2190: \t    Hallucination ? rndmonnam() : \"housecat\");\n  2191:     }\n  2192:     box->owt = weight(box);\n  2193:     return;\n  2194: }"
+  },
+  {
+    "key": "L02190_01",
+    "original": "housecat",
+    "translation": "",
+    "context": "src/pickup.c:2190:36\n  2185: \tif (deadcat) {\n  2186: \t    obj_extract_self(deadcat);\n  2187: \t    (void) add_to_container(box, deadcat);\n  2188: \t}\n  2189: \tpline_The(\"%s inside the box is dead!\",\n> 2190: \t    Hallucination ? rndmonnam() : \"housecat\");\n  2191:     }\n  2192:     box->owt = weight(box);\n  2193:     return;\n  2194: }\n  2195: "
+  },
+  {
+    "key": "L02227_01",
+    "original": "have no hands!",
+    "translation": "",
+    "context": "src/pickup.c:2227:7\n  2222: \tint cnt = 0, used = 0, lcnt = 0,\n  2223: \t    menu_on_request;\n  2224: \n  2225: \temptymsg[0] = '\\0';\n  2226: \tif (nohands(youmonst.data)) {\n> 2227: \t\tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n  2228: \t\treturn 0;\n  2229: \t} else if (!freehand()) {\n  2230: \t\tYou(\"have no free %s.\", body_part(HAND));\n  2231: \t\treturn 0;\n  2232: \t}"
+  },
+  {
+    "key": "L02230_01",
+    "original": "have no free %s.",
+    "translation": "",
+    "context": "src/pickup.c:2230:7\n  2225: \temptymsg[0] = '\\0';\n  2226: \tif (nohands(youmonst.data)) {\n  2227: \t\tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n  2228: \t\treturn 0;\n  2229: \t} else if (!freehand()) {\n> 2230: \t\tYou(\"have no free %s.\", body_part(HAND));\n  2231: \t\treturn 0;\n  2232: \t}\n  2233: \tif (obj->olocked) {\n  2234: \t    pline(\"%s to be locked.\", Tobjnam(obj, \"seem\"));\n  2235: \t    if (held) You(\"must put it down to unlock.\");"
+  },
+  {
+    "key": "L02234_01",
+    "original": "%s to be locked.",
+    "translation": "",
+    "context": "src/pickup.c:2234:12\n  2229: \t} else if (!freehand()) {\n  2230: \t\tYou(\"have no free %s.\", body_part(HAND));\n  2231: \t\treturn 0;\n  2232: \t}\n  2233: \tif (obj->olocked) {\n> 2234: \t    pline(\"%s to be locked.\", Tobjnam(obj, \"seem\"));\n  2235: \t    if (held) You(\"must put it down to unlock.\");\n  2236: \t    return 0;\n  2237: \t} else if (obj->otrapped) {\n  2238: \t    if (held) You(\"open %s...\", the(xname(obj)));\n  2239: \t    (void) chest_trap(obj, HAND, FALSE);"
+  },
+  {
+    "key": "L02234_02",
+    "original": "seem",
+    "translation": "",
+    "context": "src/pickup.c:2234:45\n  2229: \t} else if (!freehand()) {\n  2230: \t\tYou(\"have no free %s.\", body_part(HAND));\n  2231: \t\treturn 0;\n  2232: \t}\n  2233: \tif (obj->olocked) {\n> 2234: \t    pline(\"%s to be locked.\", Tobjnam(obj, \"seem\"));\n  2235: \t    if (held) You(\"must put it down to unlock.\");\n  2236: \t    return 0;\n  2237: \t} else if (obj->otrapped) {\n  2238: \t    if (held) You(\"open %s...\", the(xname(obj)));\n  2239: \t    (void) chest_trap(obj, HAND, FALSE);"
+  },
+  {
+    "key": "L02235_01",
+    "original": "must put it down to unlock.",
+    "translation": "",
+    "context": "src/pickup.c:2235:20\n  2230: \t\tYou(\"have no free %s.\", body_part(HAND));\n  2231: \t\treturn 0;\n  2232: \t}\n  2233: \tif (obj->olocked) {\n  2234: \t    pline(\"%s to be locked.\", Tobjnam(obj, \"seem\"));\n> 2235: \t    if (held) You(\"must put it down to unlock.\");\n  2236: \t    return 0;\n  2237: \t} else if (obj->otrapped) {\n  2238: \t    if (held) You(\"open %s...\", the(xname(obj)));\n  2239: \t    (void) chest_trap(obj, HAND, FALSE);\n  2240: \t    /* even if the trap fails, you've used up this turn */"
+  },
+  {
+    "key": "L02238_01",
+    "original": "open %s...",
+    "translation": "",
+    "context": "src/pickup.c:2238:20\n  2233: \tif (obj->olocked) {\n  2234: \t    pline(\"%s to be locked.\", Tobjnam(obj, \"seem\"));\n  2235: \t    if (held) You(\"must put it down to unlock.\");\n  2236: \t    return 0;\n  2237: \t} else if (obj->otrapped) {\n> 2238: \t    if (held) You(\"open %s...\", the(xname(obj)));\n  2239: \t    (void) chest_trap(obj, HAND, FALSE);\n  2240: \t    /* even if the trap fails, you've used up this turn */\n  2241: \t    if (multi >= 0) {\t/* in case we didn't become paralyzed */\n  2242: \t\tnomul(-1);\n  2243: \t\tnomovemsg = \"\";"
+  },
+  {
+    "key": "L02276_01",
+    "original": "owe %ld %s for lost merchandise.",
+    "translation": "",
+    "context": "src/pickup.c:2276:10\n  2271: \t/* Count the number of contained objects. */\n  2272: \tfor (curr = obj->cobj; curr; curr = curr->nobj)\n  2273: \t    cnt++;\n  2274: \n  2275: \tif (loss)\t/* magic bag lost some shop goods */\n> 2276: \t    You(\"owe %ld %s for lost merchandise.\", loss, currency(loss));\n  2277: \tobj->owt = weight(obj);\t/* in case any items were lost */\n  2278:   \n  2279: \tif (!cnt)\n  2280: \t    Sprintf(emptymsg, \"%s is %sempty.\", Yname2(obj),\n  2281: \t\t    quantum_cat ? \"now \" : \"\");"
+  },
+  {
+    "key": "L02280_01",
+    "original": "%s is %sempty.",
+    "translation": "",
+    "context": "src/pickup.c:2280:24\n  2275: \tif (loss)\t/* magic bag lost some shop goods */\n  2276: \t    You(\"owe %ld %s for lost merchandise.\", loss, currency(loss));\n  2277: \tobj->owt = weight(obj);\t/* in case any items were lost */\n  2278:   \n  2279: \tif (!cnt)\n> 2280: \t    Sprintf(emptymsg, \"%s is %sempty.\", Yname2(obj),\n  2281: \t\t    quantum_cat ? \"now \" : \"\");\n  2282: \tif (current_container->otyp == MEDICAL_KIT) {\n  2283: \t    if (!cnt)\n  2284: \t\tpline(\"%s\", emptymsg);\n  2285: \t    else"
+  },
+  {
+    "key": "L02281_01",
+    "original": "now ",
+    "translation": "",
+    "context": "src/pickup.c:2281:21\n  2276: \t    You(\"owe %ld %s for lost merchandise.\", loss, currency(loss));\n  2277: \tobj->owt = weight(obj);\t/* in case any items were lost */\n  2278:   \n  2279: \tif (!cnt)\n  2280: \t    Sprintf(emptymsg, \"%s is %sempty.\", Yname2(obj),\n> 2281: \t\t    quantum_cat ? \"now \" : \"\");\n  2282: \tif (current_container->otyp == MEDICAL_KIT) {\n  2283: \t    if (!cnt)\n  2284: \t\tpline(\"%s\", emptymsg);\n  2285: \t    else\n  2286: \t\t(void) display_cinventory(current_container);"
+  },
+  {
+    "key": "L02284_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/pickup.c:2284:9\n  2279: \tif (!cnt)\n  2280: \t    Sprintf(emptymsg, \"%s is %sempty.\", Yname2(obj),\n  2281: \t\t    quantum_cat ? \"now \" : \"\");\n  2282: \tif (current_container->otyp == MEDICAL_KIT) {\n  2283: \t    if (!cnt)\n> 2284: \t\tpline(\"%s\", emptymsg);\n  2285: \t    else\n  2286: \t\t(void) display_cinventory(current_container);\n  2287: \t    return 0;\n  2288: \t}\n  2289: \tif (cnt || flags.menu_style == MENU_FULL) {"
+  },
+  {
+    "key": "L02290_01",
+    "original": "Do you want to take something out of ",
+    "translation": "",
+    "context": "src/pickup.c:2290:19\n  2285: \t    else\n  2286: \t\t(void) display_cinventory(current_container);\n  2287: \t    return 0;\n  2288: \t}\n  2289: \tif (cnt || flags.menu_style == MENU_FULL) {\n> 2290: \t    Strcpy(qbuf, \"Do you want to take something out of \");\n  2291: \t    Sprintf(eos(qbuf), \"%s?\",\n  2292: \t\t    safe_qbuf(qbuf, 1, yname(obj), ysimple_name(obj), \"it\"));\n  2293: \t    if (flags.menu_style != MENU_TRADITIONAL) {\n  2294: \t\tif (flags.menu_style == MENU_FULL) {\n  2295: \t\t    int t;"
+  },
+  {
+    "key": "L02291_01",
+    "original": "%s?",
+    "translation": "",
+    "context": "src/pickup.c:2291:25\n  2286: \t\t(void) display_cinventory(current_container);\n  2287: \t    return 0;\n  2288: \t}\n  2289: \tif (cnt || flags.menu_style == MENU_FULL) {\n  2290: \t    Strcpy(qbuf, \"Do you want to take something out of \");\n> 2291: \t    Sprintf(eos(qbuf), \"%s?\",\n  2292: \t\t    safe_qbuf(qbuf, 1, yname(obj), ysimple_name(obj), \"it\"));\n  2293: \t    if (flags.menu_style != MENU_TRADITIONAL) {\n  2294: \t\tif (flags.menu_style == MENU_FULL) {\n  2295: \t\t    int t;\n  2296: \t\t    char menuprompt[BUFSZ];"
+  },
+  {
+    "key": "L02292_01",
+    "original": "it",
+    "translation": "",
+    "context": "src/pickup.c:2292:57\n  2287: \t    return 0;\n  2288: \t}\n  2289: \tif (cnt || flags.menu_style == MENU_FULL) {\n  2290: \t    Strcpy(qbuf, \"Do you want to take something out of \");\n  2291: \t    Sprintf(eos(qbuf), \"%s?\",\n> 2292: \t\t    safe_qbuf(qbuf, 1, yname(obj), ysimple_name(obj), \"it\"));\n  2293: \t    if (flags.menu_style != MENU_TRADITIONAL) {\n  2294: \t\tif (flags.menu_style == MENU_FULL) {\n  2295: \t\t    int t;\n  2296: \t\t    char menuprompt[BUFSZ];\n  2297: \t\t    boolean outokay = (cnt != 0),"
+  },
+  {
+    "key": "L02304_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/pickup.c:2304:10\n  2299: \n  2300: #ifndef GOLDOBJ\n  2301: \t\t    if (u.ugold) inokay = TRUE;\n  2302: #endif\n  2303: \t\t    if (!outokay && !inokay) {\n> 2304: \t\t\tpline(\"%s\", emptymsg);\n  2305: \t\t\tYou(\"don't have anything to put in.\");\n  2306: \t\t\tgoto containerdone;\n  2307: \t\t    }\n  2308: \t\t    menuprompt[0] = '\\0';\n  2309: \t\t    if (!cnt) Sprintf(menuprompt, \"%s \", emptymsg);"
+  },
+  {
+    "key": "L02305_01",
+    "original": "don't have anything to put in.",
+    "translation": "",
+    "context": "src/pickup.c:2305:8\n  2300: #ifndef GOLDOBJ\n  2301: \t\t    if (u.ugold) inokay = TRUE;\n  2302: #endif\n  2303: \t\t    if (!outokay && !inokay) {\n  2304: \t\t\tpline(\"%s\", emptymsg);\n> 2305: \t\t\tYou(\"don't have anything to put in.\");\n  2306: \t\t\tgoto containerdone;\n  2307: \t\t    }\n  2308: \t\t    menuprompt[0] = '\\0';\n  2309: \t\t    if (!cnt) Sprintf(menuprompt, \"%s \", emptymsg);\n  2310: \t\t    Strcat(menuprompt, \"Do what?\");"
+  },
+  {
+    "key": "L02309_01",
+    "original": "%s ",
+    "translation": "",
+    "context": "src/pickup.c:2309:37\n  2304: \t\t\tpline(\"%s\", emptymsg);\n  2305: \t\t\tYou(\"don't have anything to put in.\");\n  2306: \t\t\tgoto containerdone;\n  2307: \t\t    }\n  2308: \t\t    menuprompt[0] = '\\0';\n> 2309: \t\t    if (!cnt) Sprintf(menuprompt, \"%s \", emptymsg);\n  2310: \t\t    Strcat(menuprompt, \"Do what?\");\n  2311: \t\t    t = in_or_out_menu(menuprompt, current_container,\n  2312: \t\t\t\t       outokay, inokay);\n  2313: \t\t    if (t <= 0) {\n  2314: \t\t\tused = 0;"
+  },
+  {
+    "key": "L02310_01",
+    "original": "Do what?",
+    "translation": "",
+    "context": "src/pickup.c:2310:26\n  2305: \t\t\tYou(\"don't have anything to put in.\");\n  2306: \t\t\tgoto containerdone;\n  2307: \t\t    }\n  2308: \t\t    menuprompt[0] = '\\0';\n  2309: \t\t    if (!cnt) Sprintf(menuprompt, \"%s \", emptymsg);\n> 2310: \t\t    Strcat(menuprompt, \"Do what?\");\n  2311: \t\t    t = in_or_out_menu(menuprompt, current_container,\n  2312: \t\t\t\t       outokay, inokay);\n  2313: \t\t    if (t <= 0) {\n  2314: \t\t\tused = 0;\n  2315: \t\t\tgoto containerdone;"
+  },
+  {
+    "key": "L02320_01",
+    "original": "ynq",
+    "translation": "",
+    "context": "src/pickup.c:2320:37\n  2315: \t\t\tgoto containerdone;\n  2316: \t\t    }\n  2317: \t\t    loot_out = (t & 0x01) != 0;\n  2318: \t\t    loot_in  = (t & 0x02) != 0;\n  2319: \t\t} else {\t/* MENU_COMBINATION or MENU_PARTIAL */\n> 2320: \t\t    loot_out = (yn_function(qbuf, \"ynq\", 'n') == 'y');\n  2321: \t\t}\n  2322: \t\tif (loot_out) {\n  2323: \t\t    add_valid_menu_class(0);\t/* reset */\n  2324: \t\t    used |= menu_loot(0, current_container, FALSE) > 0;\n  2325: \t\t}"
+  },
+  {
+    "key": "L02331_01",
+    "original": ":ynq",
+    "translation": "",
+    "context": "src/pickup.c:2331:16\n  2326: \t    } else {\n  2327: \t\t/* traditional code */\n  2328: ask_again2:\n  2329: \t\tmenu_on_request = 0;\n  2330: \t\tadd_valid_menu_class(0);\t/* reset */\n> 2331: \t\tStrcpy(pbuf, \":ynq\");\n  2332: \t\tif (cnt) Strcat(pbuf, \"m\");\n  2333: \t\tswitch (yn_function(qbuf, pbuf, 'n')) {\n  2334: \t\tcase ':':\n  2335: \t\t    container_contents(current_container, FALSE, FALSE);\n  2336: \t\t    goto ask_again2;"
+  },
+  {
+    "key": "L02332_01",
+    "original": "m",
+    "translation": "",
+    "context": "src/pickup.c:2332:25\n  2327: \t\t/* traditional code */\n  2328: ask_again2:\n  2329: \t\tmenu_on_request = 0;\n  2330: \t\tadd_valid_menu_class(0);\t/* reset */\n  2331: \t\tStrcpy(pbuf, \":ynq\");\n> 2332: \t\tif (cnt) Strcat(pbuf, \"m\");\n  2333: \t\tswitch (yn_function(qbuf, pbuf, 'n')) {\n  2334: \t\tcase ':':\n  2335: \t\t    container_contents(current_container, FALSE, FALSE);\n  2336: \t\t    goto ask_again2;\n  2337: \t\tcase 'y':"
+  },
+  {
+    "key": "L02339_01",
+    "original": "take out",
+    "translation": "",
+    "context": "src/pickup.c:2339:11\n  2334: \t\tcase ':':\n  2335: \t\t    container_contents(current_container, FALSE, FALSE);\n  2336: \t\t    goto ask_again2;\n  2337: \t\tcase 'y':\n  2338: \t\t    if (query_classes(select, &one_by_one, &allflag,\n> 2339: \t\t\t\t      \"take out\", current_container->cobj,\n  2340: \t\t\t\t      FALSE,\n  2341: #ifndef GOLDOBJ\n  2342: \t\t\t\t      FALSE,\n  2343: #endif\n  2344: \t\t\t\t      &menu_on_request)) {"
+  },
+  {
+    "key": "L02349_01",
+    "original": "nodot",
+    "translation": "",
+    "context": "src/pickup.c:2349:13\n  2344: \t\t\t\t      &menu_on_request)) {\n  2345: \t\t\tif (askchain((struct obj **)&current_container->cobj,\n  2346: \t\t\t\t     (one_by_one ? (char *)0 : select),\n  2347: \t\t\t\t     allflag, out_container,\n  2348: \t\t\t\t     (int FDECL((*),(OBJ_P)))0,\n> 2349: \t\t\t\t     0, \"nodot\"))\n  2350: \t\t\t    used = 1;\n  2351: \t\t    } else if (menu_on_request < 0) {\n  2352: \t\t\tused |= menu_loot(menu_on_request,\n  2353: \t\t\t\t\t  current_container, FALSE) > 0;\n  2354: \t\t    }"
+  },
+  {
+    "key": "L02368_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/pickup.c:2368:12\n  2363: \t\tdefault:\n  2364: \t\t    goto containerdone;\n  2365: \t\t}\n  2366: \t    }\n  2367: \t} else {\n> 2368: \t    pline(\"%s\", emptymsg);\t\t/* <whatever> is empty. */\n  2369: \t}\n  2370: \n  2371: #ifndef GOLDOBJ\n  2372: \tif (!invent && u.ugold == 0) {\n  2373: #else"
+  },
+  {
+    "key": "L02377_01",
+    "original": "don't have anything to put in.",
+    "translation": "",
+    "context": "src/pickup.c:2377:10\n  2372: \tif (!invent && u.ugold == 0) {\n  2373: #else\n  2374: \tif (!invent) {\n  2375: #endif\n  2376: \t    /* nothing to put in, but some feedback is necessary */\n> 2377: \t    You(\"don't have anything to put in.\");\n  2378: \t    goto containerdone;\n  2379: \t}\n  2380: \tif (flags.menu_style != MENU_FULL) {\n  2381: \t    Sprintf(qbuf, \"Do you wish to put %s in?\", something);\n  2382: \t    Strcpy(pbuf, ynqchars);"
+  },
+  {
+    "key": "L02381_01",
+    "original": "Do you wish to put %s in?",
+    "translation": "",
+    "context": "src/pickup.c:2381:20\n  2376: \t    /* nothing to put in, but some feedback is necessary */\n  2377: \t    You(\"don't have anything to put in.\");\n  2378: \t    goto containerdone;\n  2379: \t}\n  2380: \tif (flags.menu_style != MENU_FULL) {\n> 2381: \t    Sprintf(qbuf, \"Do you wish to put %s in?\", something);\n  2382: \t    Strcpy(pbuf, ynqchars);\n  2383: \t    if (flags.menu_style == MENU_TRADITIONAL && invent && inv_cnt() > 0)\n  2384: \t\tStrcat(pbuf, \"m\");\n  2385: \t    switch (yn_function(qbuf, pbuf, 'n')) {\n  2386: \t\tcase 'y':"
+  },
+  {
+    "key": "L02384_01",
+    "original": "m",
+    "translation": "",
+    "context": "src/pickup.c:2384:16\n  2379: \t}\n  2380: \tif (flags.menu_style != MENU_FULL) {\n  2381: \t    Sprintf(qbuf, \"Do you wish to put %s in?\", something);\n  2382: \t    Strcpy(pbuf, ynqchars);\n  2383: \t    if (flags.menu_style == MENU_TRADITIONAL && invent && inv_cnt() > 0)\n> 2384: \t\tStrcat(pbuf, \"m\");\n  2385: \t    switch (yn_function(qbuf, pbuf, 'n')) {\n  2386: \t\tcase 'y':\n  2387: \t\t    loot_in = TRUE;\n  2388: \t\t    break;\n  2389: \t\tcase 'n':"
+  },
+  {
+    "key": "L02426_01",
+    "original": "put in",
+    "translation": "",
+    "context": "src/pickup.c:2426:52\n  2421: \t    if (flags.menu_style != MENU_TRADITIONAL) {\n  2422: \t\tused |= menu_loot(0, current_container, TRUE) > 0;\n  2423: \t    } else {\n  2424: \t\t/* traditional code */\n  2425: \t\tmenu_on_request = 0;\n> 2426: \t\tif (query_classes(select, &one_by_one, &allflag, \"put in\",\n  2427: \t\t\t\t   invent, FALSE,\n  2428: #ifndef GOLDOBJ\n  2429: \t\t\t\t   (u.ugold != 0L),\n  2430: #endif\n  2431: \t\t\t\t   &menu_on_request)) {"
+  },
+  {
+    "key": "L02434_01",
+    "original": "nodot",
+    "translation": "",
+    "context": "src/pickup.c:2434:34\n  2429: \t\t\t\t   (u.ugold != 0L),\n  2430: #endif\n  2431: \t\t\t\t   &menu_on_request)) {\n  2432: \t\t    (void) askchain((struct obj **)&invent,\n  2433: \t\t\t\t    (one_by_one ? (char *)0 : select), allflag,\n> 2434: \t\t\t\t    in_container, ck_bag, 0, \"nodot\");\n  2435: \t\t    used = 1;\n  2436: \t\t} else if (menu_on_request < 0) {\n  2437: \t\t    used |= menu_loot(menu_on_request,\n  2438: \t\t\t\t      current_container, TRUE) > 0;\n  2439: \t\t}"
+  },
+  {
+    "key": "L02469_01",
+    "original": "Take out",
+    "translation": "",
+    "context": "src/pickup.c:2469:27\n  2464: boolean put_in;\n  2465: {\n  2466:     int n, i, n_looted = 0;\n  2467:     boolean all_categories = TRUE, loot_everything = FALSE;\n  2468:     char buf[BUFSZ];\n> 2469:     const char *takeout = \"Take out\", *putin = \"Put in\";\n  2470:     struct obj *otmp, *otmp2;\n  2471:     menu_item *pick_list;\n  2472:     int mflags, res;\n  2473:     long count;\n  2474: "
+  },
+  {
+    "key": "L02469_02",
+    "original": "Put in",
+    "translation": "",
+    "context": "src/pickup.c:2469:48\n  2464: boolean put_in;\n  2465: {\n  2466:     int n, i, n_looted = 0;\n  2467:     boolean all_categories = TRUE, loot_everything = FALSE;\n  2468:     char buf[BUFSZ];\n> 2469:     const char *takeout = \"Take out\", *putin = \"Put in\";\n  2470:     struct obj *otmp, *otmp2;\n  2471:     menu_item *pick_list;\n  2472:     int mflags, res;\n  2473:     long count;\n  2474: "
+  },
+  {
+    "key": "L02479_01",
+    "original": "%s what type of objects?",
+    "translation": "",
+    "context": "src/pickup.c:2479:14\n  2474: \n  2475:     if (retry) {\n  2476: \tall_categories = (retry == -2);\n  2477:     } else if (flags.menu_style == MENU_FULL) {\n  2478: \tall_categories = FALSE;\n> 2479: \tSprintf(buf,\"%s what type of objects?\", put_in ? putin : takeout);\n  2480: \tmflags = put_in ? ALL_TYPES | BUC_ALLBKNOWN | BUC_UNKNOWN :\n  2481: \t\t          ALL_TYPES | CHOOSE_ALL | BUC_ALLBKNOWN | BUC_UNKNOWN;\n  2482: \tn = query_category(buf, put_in ? invent : container->cobj,\n  2483: \t\t\t   mflags, &pick_list, PICK_ANY);\n  2484: \tif (!n) return 0;"
+  },
+  {
+    "key": "L02505_01",
+    "original": "%s what?",
+    "translation": "",
+    "context": "src/pickup.c:2505:14\n  2500: \t    if (res < 0) break;\n  2501: \t}\n  2502:     } else {\n  2503: \tmflags = INVORDER_SORT;\n  2504: \tif (put_in && flags.invlet_constant) mflags |= USE_INVLET;\n> 2505: \tSprintf(buf,\"%s what?\", put_in ? putin : takeout);\n  2506: \tn = query_objlist(buf, put_in ? invent : container->cobj,\n  2507: \t\t\t  mflags, &pick_list, PICK_ANY,\n  2508: \t\t\t  all_categories ? allow_all : allow_category);\n  2509: \tif (n) {\n  2510: \t\tn_looted = n;"
+  },
+  {
+    "key": "L02548_01",
+    "original": "abc",
+    "translation": "",
+    "context": "src/pickup.c:2548:49\n  2543:     winid win;\n  2544:     anything any;\n  2545:     menu_item *pick_list;\n  2546:     char buf[BUFSZ];\n  2547:     int n;\n> 2548:     const char *menuselector = iflags.lootabc ? \"abc\" : \"oib\";\n  2549: \n  2550:     any.a_void = 0;\n  2551:     win = create_nhwindow(NHW_MENU);\n  2552:     start_menu(win);\n  2553:     if (outokay) {"
+  },
+  {
+    "key": "L02548_02",
+    "original": "oib",
+    "translation": "",
+    "context": "src/pickup.c:2548:57\n  2543:     winid win;\n  2544:     anything any;\n  2545:     menu_item *pick_list;\n  2546:     char buf[BUFSZ];\n  2547:     int n;\n> 2548:     const char *menuselector = iflags.lootabc ? \"abc\" : \"oib\";\n  2549: \n  2550:     any.a_void = 0;\n  2551:     win = create_nhwindow(NHW_MENU);\n  2552:     start_menu(win);\n  2553:     if (outokay) {"
+  },
+  {
+    "key": "L02555_01",
+    "original": "Take %s out of %s",
+    "translation": "",
+    "context": "src/pickup.c:2555:14\n  2550:     any.a_void = 0;\n  2551:     win = create_nhwindow(NHW_MENU);\n  2552:     start_menu(win);\n  2553:     if (outokay) {\n  2554: \tany.a_int = 1;\n> 2555: \tSprintf(buf,\"Take %s out of %s\", something, the(xname(obj)));\n  2556: \tadd_menu(win, NO_GLYPH, &any, *menuselector, 0, ATR_NONE,\n  2557: \t\t\tbuf, MENU_UNSELECTED);\n  2558:     }\n  2559:     menuselector++;\n  2560:     if (inokay) {"
+  },
+  {
+    "key": "L02562_01",
+    "original": "Put %s into %s",
+    "translation": "",
+    "context": "src/pickup.c:2562:14\n  2557: \t\t\tbuf, MENU_UNSELECTED);\n  2558:     }\n  2559:     menuselector++;\n  2560:     if (inokay) {\n  2561: \tany.a_int = 2;\n> 2562: \tSprintf(buf,\"Put %s into %s\", something, the(xname(obj)));\n  2563: \tadd_menu(win, NO_GLYPH, &any, *menuselector, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  2564:     }\n  2565:     menuselector++;\n  2566:     if (outokay && inokay) {\n  2567: \tany.a_int = 3;"
+  },
+  {
+    "key": "L02569_01",
+    "original": "Both of the above",
+    "translation": "",
+    "context": "src/pickup.c:2569:4\n  2564:     }\n  2565:     menuselector++;\n  2566:     if (outokay && inokay) {\n  2567: \tany.a_int = 3;\n  2568: \tadd_menu(win, NO_GLYPH, &any, *menuselector, 0, ATR_NONE,\n> 2569: \t\t\t\"Both of the above\", MENU_UNSELECTED);\n  2570:     }\n  2571:     end_menu(win, prompt);\n  2572:     n = select_menu(win, PICK_ONE, &pick_list);\n  2573:     destroy_nhwindow(win);\n  2574:     if (n > 0) {"
+  }
+]

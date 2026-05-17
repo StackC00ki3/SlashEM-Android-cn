@@ -1,0 +1,8 @@
+[
+  {
+    "key": "L00289_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/minion.c:289:18\n   284: #ifdef GOLDOBJ\n   285: \tlong umoney = money_cnt(invent);\n   286: #endif\n   287: \n   288: \tgetlin(\"你准备付多少钱？\", buf);\n>  289: \tif (sscanf(buf, \"%ld\", &offer) != 1) offer = 0L;\n   290: \n   291: \t/*Michael Paddon -- fix for negative offer to monster*/\n   292: \t/*JAR880815 - */\n   293: \tif (offer < 0L) {\n   294: \t\tYou(\"试图糊弄%s，然后让他反过来给你钱……不过没成功。\","
+  }
+]

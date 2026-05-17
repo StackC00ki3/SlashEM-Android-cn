@@ -1,0 +1,140 @@
+[
+  {
+    "key": "L00032_01",
+    "original": "a distant explosion.",
+    "translation": "",
+    "context": "src/monmove.c:32:12\n    27: {\n    28: \tif (flags.verbose) {\n    29: \t    if (cansee(mtmp->mx, mtmp->my))\n    30: \t\tpline(\"砰！轰隆隆！啪！你看见一扇门爆炸了。\");\n    31: \t    else if (flags.soundok)\n>   32: \t\tYou_hear(\"a distant explosion.\");\n    33: \t}\n    34: \twake_nearto(mtmp->mx, mtmp->my, 7*7);\n    35: \tmtmp->mstun = 1;\n    36: \tmtmp->mhp -= rnd(15);\n    37: \tif(mtmp->mhp <= 0) {"
+  },
+  {
+    "key": "L00064_01",
+    "original": "%s yells:",
+    "translation": "",
+    "context": "src/monmove.c:64:11\n    59: \t    if(picking_lock(&x, &y) && IS_DOOR(levl[x][y].typ) &&\n    60: \t       (levl[x][y].doormask & D_LOCKED)) {\n    61: \n    62: \t\tif(couldsee(mtmp->mx, mtmp->my)) {\n    63: \n>   64: \t\t  pline(\"%s yells:\", Amonnam(mtmp));\n    65: \t\t  if(levl[x][y].looted & D_WARNED) {\n    66: \t\t\tverbalize(\"给我站住！你这小偷！我要逮捕你！\");\n    67: \t\t\t(void) angry_guards(!(flags.soundok));\n    68: \t\t  } else {\n    69: \t\t\tint i;"
+  },
+  {
+    "key": "L00179_01",
+    "original": "Elbereth",
+    "translation": "",
+    "context": "src/monmove.c:179:17\n   174: \t    is_rider(mtmp->data) || mtmp->data == &mons[PM_MINOTAUR])\n   175: \t\treturn(FALSE);\n   176: \n   177: \treturn (boolean)(sobj_at(SCR_SCARE_MONSTER, x, y)\n   178: #ifdef ELBERETH\n>  179: \t\t\t || sengr_at(\"Elbereth\", x, y)\n   180: #endif\n   181: \t\t\t || (is_vampire(mtmp->data)\n   182: \t\t\t     && IS_ALTAR(levl[x][y].typ)));\n   183: }\n   184: "
+  },
+  {
+    "key": "L00263_01",
+    "original": "get released!",
+    "translation": "",
+    "context": "src/monmove.c:263:7\n   258: \tif (u.ustuck == mtmp) {\n   259: \t    if (u.uswallow)\n   260: \t\texpels(mtmp, mtmp->data, TRUE);\n   261: \t    else if (!sticks(youmonst.data)) {\n   262: \t\tunstuck(mtmp);\t/* monster lets go when fleeing */\n>  263: \t\tYou(\"get released!\");\n   264: \t    }\n   265: \t}\n   266: \n   267: \tif (!first || !mtmp->mflee) {\n   268: \t    /* don't lose untimed scare */"
+  },
+  {
+    "key": "L00278_01",
+    "original": "%s turns to flee!",
+    "translation": "",
+    "context": "src/monmove.c:278:9\n   273: \t\t/* ensure monster flees long enough to visibly stop fighting */\n   274: \t\tif (fleetime == 1) fleetime++;\n   275: \t\tmtmp->mfleetim = min(fleetime, 127);\n   276: \t    }\n   277: \t    if (!mtmp->mflee && fleemsg && canseemon(mtmp) && !mtmp->mfrozen)\n>  278: \t\tpline(\"%s turns to flee!\", (Monnam(mtmp)));\n   279: \t    mtmp->mflee = 1;\n   280: \t}\n   281: }\n   282: \n   283: STATIC_OVL void"
+  },
+  {
+    "key": "L00429_01",
+    "original": "It",
+    "translation": "",
+    "context": "src/monmove.c:429:54\n   424: \t/* Demonic Blackmail! */\n   425: \tif(nearby && mdat->msound == MS_BRIBE &&\n   426: \t   mtmp->mpeaceful && !mtmp->mtame && !u.uswallow) {\n   427: \t\tif (mtmp->mux != u.ux || mtmp->muy != u.uy) {\n   428: \t\t\tpline(\"%s对着空无一物的空气嘀嘀咕咕不知道说啥。\",\n>  429: \t\t\t    cansee(mtmp->mux, mtmp->muy) ? Monnam(mtmp) : \"It\");\n   430: \n   431: \t\t\tif (is_demon(youmonst.data)) {\n   432: \t\t\t  /* \"Good hunting, brother\" */\n   433: \t\t\t    if (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);\n   434: \t\t\t} else {"
+  },
+  {
+    "key": "L00454_01",
+    "original": "%s concentrates.",
+    "translation": "",
+    "context": "src/monmove.c:454:10\n   449: \telse if ((is_mind_flayer(mdat) || mdat == &mons[PM_CTHULHU]) \n   450: \t\t\t&& !rn2(20)) {\n   451: \t\tstruct monst *m2, *nmon = (struct monst *)0;\n   452: \n   453: \t\tif (canseemon(mtmp))\n>  454: \t\t\tpline(\"%s concentrates.\", Monnam(mtmp));\n   455: \t\tif (distu(mtmp->mx, mtmp->my) > BOLT_LIM * BOLT_LIM) {\n   456: \t\t\tYou(\"感受到一股微弱的心灵能量波。\");\n   457: \t\t\tgoto toofar;\n   458: \t\t}\n   459: \t\tpline(\"一股心灵能量冲击波将你盖住了！\");"
+  },
+  {
+    "key": "L00462_01",
+    "original": "It feels quite soothing.",
+    "translation": "",
+    "context": "src/monmove.c:462:10\n   457: \t\t\tgoto toofar;\n   458: \t\t}\n   459: \t\tpline(\"一股心灵能量冲击波将你盖住了！\");\n   460: \t\tif (mtmp->mpeaceful &&\n   461: \t\t    (!Conflict || resist(mtmp, RING_CLASS, 0, 0)))\n>  462: \t\t\tpline(\"It feels quite soothing.\");\n   463: \t\telse {\n   464: \t\t\tregister boolean m_sen = sensemon(mtmp);\n   465: \n   466: \t\t\tif (m_sen || (Blind_telepat && rn2(2)) || !rn2(10)) {\n   467: \t\t\t\tint dmg;"
+  },
+  {
+    "key": "L00468_01",
+    "original": "It locks on to your %s!",
+    "translation": "",
+    "context": "src/monmove.c:468:11\n   463: \t\telse {\n   464: \t\t\tregister boolean m_sen = sensemon(mtmp);\n   465: \n   466: \t\t\tif (m_sen || (Blind_telepat && rn2(2)) || !rn2(10)) {\n   467: \t\t\t\tint dmg;\n>  468: \t\t\t\tpline(\"It locks on to your %s!\",\n   469: \t\t\t\t\tm_sen ? \"telepathy\" :\n   470: \t\t\t\t\tBlind_telepat ? \"latent telepathy\" : \"mind\");\n   471: \t\t\t\tdmg = (mdat == &mons[PM_CTHULHU])?\n   472: \t\t\t\t\trn1(10, 10) :\n   473: \t\t\t\t\trn1(4, 4);"
+  },
+  {
+    "key": "L00469_01",
+    "original": "telepathy",
+    "translation": "",
+    "context": "src/monmove.c:469:14\n   464: \t\t\tregister boolean m_sen = sensemon(mtmp);\n   465: \n   466: \t\t\tif (m_sen || (Blind_telepat && rn2(2)) || !rn2(10)) {\n   467: \t\t\t\tint dmg;\n   468: \t\t\t\tpline(\"It locks on to your %s!\",\n>  469: \t\t\t\t\tm_sen ? \"telepathy\" :\n   470: \t\t\t\t\tBlind_telepat ? \"latent telepathy\" : \"mind\");\n   471: \t\t\t\tdmg = (mdat == &mons[PM_CTHULHU])?\n   472: \t\t\t\t\trn1(10, 10) :\n   473: \t\t\t\t\trn1(4, 4);\n   474: \t\t\t\tif (Half_spell_damage) dmg = (dmg+1) / 2;"
+  },
+  {
+    "key": "L00470_01",
+    "original": "latent telepathy",
+    "translation": "",
+    "context": "src/monmove.c:470:22\n   465: \n   466: \t\t\tif (m_sen || (Blind_telepat && rn2(2)) || !rn2(10)) {\n   467: \t\t\t\tint dmg;\n   468: \t\t\t\tpline(\"It locks on to your %s!\",\n   469: \t\t\t\t\tm_sen ? \"telepathy\" :\n>  470: \t\t\t\t\tBlind_telepat ? \"latent telepathy\" : \"mind\");\n   471: \t\t\t\tdmg = (mdat == &mons[PM_CTHULHU])?\n   472: \t\t\t\t\trn1(10, 10) :\n   473: \t\t\t\t\trn1(4, 4);\n   474: \t\t\t\tif (Half_spell_damage) dmg = (dmg+1) / 2;\n   475: \t\t\t\tlosehp(dmg, \"psychic blast\", KILLED_BY_AN);"
+  },
+  {
+    "key": "L00470_02",
+    "original": "mind",
+    "translation": "",
+    "context": "src/monmove.c:470:43\n   465: \n   466: \t\t\tif (m_sen || (Blind_telepat && rn2(2)) || !rn2(10)) {\n   467: \t\t\t\tint dmg;\n   468: \t\t\t\tpline(\"It locks on to your %s!\",\n   469: \t\t\t\t\tm_sen ? \"telepathy\" :\n>  470: \t\t\t\t\tBlind_telepat ? \"latent telepathy\" : \"mind\");\n   471: \t\t\t\tdmg = (mdat == &mons[PM_CTHULHU])?\n   472: \t\t\t\t\trn1(10, 10) :\n   473: \t\t\t\t\trn1(4, 4);\n   474: \t\t\t\tif (Half_spell_damage) dmg = (dmg+1) / 2;\n   475: \t\t\t\tlosehp(dmg, \"psychic blast\", KILLED_BY_AN);"
+  },
+  {
+    "key": "L00475_01",
+    "original": "psychic blast",
+    "translation": "",
+    "context": "src/monmove.c:475:17\n   470: \t\t\t\t\tBlind_telepat ? \"latent telepathy\" : \"mind\");\n   471: \t\t\t\tdmg = (mdat == &mons[PM_CTHULHU])?\n   472: \t\t\t\t\trn1(10, 10) :\n   473: \t\t\t\t\trn1(4, 4);\n   474: \t\t\t\tif (Half_spell_damage) dmg = (dmg+1) / 2;\n>  475: \t\t\t\tlosehp(dmg, \"psychic blast\", KILLED_BY_AN);\n   476: \t\t\t}\n   477: \t\t}\n   478: \t\tfor(m2=fmon; m2; m2 = nmon) {\n   479: \t\t\tnmon = m2->nmon;\n   480: \t\t\tif (DEADMONSTER(m2)) continue;"
+  },
+  {
+    "key": "L00487_01",
+    "original": "It locks on to %s.",
+    "translation": "",
+    "context": "src/monmove.c:487:15\n   482: \t\t\tif (mindless(m2->data)) continue;\n   483: \t\t\tif (m2 == mtmp) continue;\n   484: \t\t\tif ((telepathic(m2->data) &&\n   485: \t\t\t    (rn2(2) || m2->mblinded)) || !rn2(10)) {\n   486: \t\t\t\tif (cansee(m2->mx, m2->my))\n>  487: \t\t\t\t    pline(\"It locks on to %s.\", mon_nam(m2));\n   488: \t\t\t\tm2->mhp -= rnd(15);\n   489: \t\t\t\tif (m2->mhp <= 0)\n   490: \t\t\t\t    if (mtmp->uexp)\n   491: \t\t\t\t\tmon_xkilled(m2, \"\", AD_DRIN);\n   492: \t\t\t\t    else"
+  },
+  {
+    "key": "L01131_01",
+    "original": "%s %s under the door.",
+    "translation": "",
+    "context": "src/monmove.c:1131:14\n  1126: \t\t    struct rm *here = &levl[mtmp->mx][mtmp->my];\n  1127: \t\t    boolean btrapped = (here->doormask & D_TRAPPED);\n  1128: \n  1129: \t\t    if(here->doormask & (D_LOCKED|D_CLOSED) && amorphous(ptr)) {\n  1130: \t\t\tif (flags.verbose && canseemon(mtmp))\n> 1131: \t\t\t    pline(\"%s %s under the door.\", Monnam(mtmp),\n  1132: \t\t\t\t  (ptr == &mons[PM_FOG_CLOUD] ||\n  1133: \t\t\t\t   ptr == &mons[PM_YELLOW_LIGHT])\n  1134: \t\t\t\t  ? \"flows\" : \"oozes\");\n  1135: \t\t    } else if(here->doormask & D_LOCKED && can_unlock) {\n  1136: \t\t\tif(btrapped) {"
+  },
+  {
+    "key": "L01134_01",
+    "original": "flows",
+    "translation": "",
+    "context": "src/monmove.c:1134:9\n  1129: \t\t    if(here->doormask & (D_LOCKED|D_CLOSED) && amorphous(ptr)) {\n  1130: \t\t\tif (flags.verbose && canseemon(mtmp))\n  1131: \t\t\t    pline(\"%s %s under the door.\", Monnam(mtmp),\n  1132: \t\t\t\t  (ptr == &mons[PM_FOG_CLOUD] ||\n  1133: \t\t\t\t   ptr == &mons[PM_YELLOW_LIGHT])\n> 1134: \t\t\t\t  ? \"flows\" : \"oozes\");\n  1135: \t\t    } else if(here->doormask & D_LOCKED && can_unlock) {\n  1136: \t\t\tif(btrapped) {\n  1137: \t\t\t    here->doormask = D_NODOOR;\n  1138: \t\t\t    newsym(mtmp->mx, mtmp->my);\n  1139: \t\t\t    unblock_point(mtmp->mx,mtmp->my); /* vision */"
+  },
+  {
+    "key": "L01134_02",
+    "original": "oozes",
+    "translation": "",
+    "context": "src/monmove.c:1134:19\n  1129: \t\t    if(here->doormask & (D_LOCKED|D_CLOSED) && amorphous(ptr)) {\n  1130: \t\t\tif (flags.verbose && canseemon(mtmp))\n  1131: \t\t\t    pline(\"%s %s under the door.\", Monnam(mtmp),\n  1132: \t\t\t\t  (ptr == &mons[PM_FOG_CLOUD] ||\n  1133: \t\t\t\t   ptr == &mons[PM_YELLOW_LIGHT])\n> 1134: \t\t\t\t  ? \"flows\" : \"oozes\");\n  1135: \t\t    } else if(here->doormask & D_LOCKED && can_unlock) {\n  1136: \t\t\tif(btrapped) {\n  1137: \t\t\t    here->doormask = D_NODOOR;\n  1138: \t\t\t    newsym(mtmp->mx, mtmp->my);\n  1139: \t\t\t    unblock_point(mtmp->mx,mtmp->my); /* vision */"
+  },
+  {
+    "key": "L01144_01",
+    "original": "see a door unlock and open.",
+    "translation": "",
+    "context": "src/monmove.c:1144:12\n  1139: \t\t\t    unblock_point(mtmp->mx,mtmp->my); /* vision */\n  1140: \t\t\t    if(mb_trapped(mtmp)) return(2);\n  1141: \t\t\t} else {\n  1142: \t\t\t    if (flags.verbose) {\n  1143: \t\t\t\tif (canseeit)\n> 1144: \t\t\t\t   You(\"see a door unlock and open.\");\n  1145: \t\t\t\telse if (flags.soundok)\n  1146: \t\t\t\t   You_hear(\"某扇门上的开锁声音，然后那扇门被打开了。\");\n  1147: \t\t\t    }\n  1148: \t\t\t    here->doormask = D_ISOPEN;\n  1149: \t\t\t    /* newsym(mtmp->mx, mtmp->my); */"
+  },
+  {
+    "key": "L01185_01",
+    "original": "see a door crash open.",
+    "translation": "",
+    "context": "src/monmove.c:1185:13\n  1180: \t\t\t    unblock_point(mtmp->mx,mtmp->my); /* vision */\n  1181: \t\t\t    if(mb_trapped(mtmp)) return(2);\n  1182: \t\t\t} else {\n  1183: \t\t\t    if (flags.verbose) {\n  1184: \t\t\t\tif (canseeit)\n> 1185: \t\t\t\t    You(\"see a door crash open.\");\n  1186: \t\t\t\telse if (flags.soundok)\n  1187: \t\t\t\t    You_hear(\"一扇门被直接撞开了。\");\n  1188: \t\t\t    }\n  1189: \t\t\t    if (here->doormask & D_LOCKED && !rn2(2))\n  1190: \t\t\t\t    here->doormask = D_NODOOR;"
+  },
+  {
+    "key": "L01201_01",
+    "original": "%s %s %s the iron bars.",
+    "translation": "",
+    "context": "src/monmove.c:1201:14\n  1196: \t\t\tif (*in_rooms(mtmp->mx, mtmp->my, SHOPBASE))\n  1197: \t\t\t    add_damage(mtmp->mx, mtmp->my, 0L);\n  1198: \t\t    }\n  1199: \t\t} else if (levl[mtmp->mx][mtmp->my].typ == IRONBARS) {\n  1200: \t\t\tif (flags.verbose && canseemon(mtmp))\n> 1201: \t\t\t    Norep(\"%s %s %s the iron bars.\", Monnam(mtmp),\n  1202: \t\t\t\t  /* pluralization fakes verb conjugation */\n  1203: \t\t\t\t  makeplural(locomotion(ptr, \"pass\")),\n  1204: \t\t\t\t  passes_walls(ptr) ? \"through\" : \"between\");\n  1205: \t\t}\n  1206: "
+  },
+  {
+    "key": "L01203_01",
+    "original": "pass",
+    "translation": "",
+    "context": "src/monmove.c:1203:34\n  1198: \t\t    }\n  1199: \t\t} else if (levl[mtmp->mx][mtmp->my].typ == IRONBARS) {\n  1200: \t\t\tif (flags.verbose && canseemon(mtmp))\n  1201: \t\t\t    Norep(\"%s %s %s the iron bars.\", Monnam(mtmp),\n  1202: \t\t\t\t  /* pluralization fakes verb conjugation */\n> 1203: \t\t\t\t  makeplural(locomotion(ptr, \"pass\")),\n  1204: \t\t\t\t  passes_walls(ptr) ? \"through\" : \"between\");\n  1205: \t\t}\n  1206: \n  1207: \t\t/* possibly dig */\n  1208: \t\tif (can_tunnel && mdig_tunnel(mtmp))"
+  },
+  {
+    "key": "L01204_01",
+    "original": "through",
+    "translation": "",
+    "context": "src/monmove.c:1204:27\n  1199: \t\t} else if (levl[mtmp->mx][mtmp->my].typ == IRONBARS) {\n  1200: \t\t\tif (flags.verbose && canseemon(mtmp))\n  1201: \t\t\t    Norep(\"%s %s %s the iron bars.\", Monnam(mtmp),\n  1202: \t\t\t\t  /* pluralization fakes verb conjugation */\n  1203: \t\t\t\t  makeplural(locomotion(ptr, \"pass\")),\n> 1204: \t\t\t\t  passes_walls(ptr) ? \"through\" : \"between\");\n  1205: \t\t}\n  1206: \n  1207: \t\t/* possibly dig */\n  1208: \t\tif (can_tunnel && mdig_tunnel(mtmp))\n  1209: \t\t\treturn(2);  /* mon died (position already updated) */"
+  },
+  {
+    "key": "L01204_02",
+    "original": "between",
+    "translation": "",
+    "context": "src/monmove.c:1204:39\n  1199: \t\t} else if (levl[mtmp->mx][mtmp->my].typ == IRONBARS) {\n  1200: \t\t\tif (flags.verbose && canseemon(mtmp))\n  1201: \t\t\t    Norep(\"%s %s %s the iron bars.\", Monnam(mtmp),\n  1202: \t\t\t\t  /* pluralization fakes verb conjugation */\n  1203: \t\t\t\t  makeplural(locomotion(ptr, \"pass\")),\n> 1204: \t\t\t\t  passes_walls(ptr) ? \"through\" : \"between\");\n  1205: \t\t}\n  1206: \n  1207: \t\t/* possibly dig */\n  1208: \t\tif (can_tunnel && mdig_tunnel(mtmp))\n  1209: \t\t\treturn(2);  /* mon died (position already updated) */"
+  }
+]

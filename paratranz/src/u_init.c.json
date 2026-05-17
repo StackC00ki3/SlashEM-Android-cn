@@ -1,0 +1,8 @@
+[
+  {
+    "key": "L00870_01",
+    "original": "Warning: No entry for %s in Skill array.",
+    "translation": "",
+    "context": "src/u_init.c:870:8\n   865:     j = spell_skilltype(spellbook);\n   866:     for(i = 0; class_skill[i].skill != P_NONE; i++)\n   867: \tif (class_skill[i].skill == j)\n   868: \t    break;\n   869:     if (class_skill[i].skill == P_NONE)\n>  870: \tpline(\"Warning: No entry for %s in Skill array.\",\n   871: \t  obj_typename(spellbook));\n   872:     else if (class_skill[i].skmax < P_EXPERT)\n   873: \tclass_skill[i].skmax++;\n   874:     else\n   875:     {"
+  }
+]

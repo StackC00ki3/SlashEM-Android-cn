@@ -1,0 +1,38 @@
+[
+  {
+    "key": "L00346_01",
+    "original": "cutworm:  no segment at (%d,%d)",
+    "translation": "",
+    "context": "src/worm.c:346:17\n   341:     curr = wtails[wnum];\n   342: \n   343:     while ( (curr->wx != x) || (curr->wy != y) ) {\n   344: \tcurr = curr->nseg;\n   345: \tif (!curr) {\n>  346: \t    impossible(\"cutworm:  no segment at (%d,%d)\", (int) x, (int) y);\n   347: \t    return 0;\n   348: \t}\n   349:     }\n   350: \n   351:     /* If this is the tail segment, then the worm just loses it. */"
+  },
+  {
+    "key": "L00374_01",
+    "original": "Part of the tail of %s is cut off.",
+    "translation": "",
+    "context": "src/worm.c:374:12\n   369:      */\n   370: \n   371:     /* Sometimes the tail end dies. */\n   372:     if (rn2(3) || !(new_wnum = get_wormno())) {\n   373: \tif (flags.mon_moving)\n>  374: \t    pline(\"Part of the tail of %s is cut off.\", mon_nam(worm));\n   375: \telse\n   376: \t    You(\"cut part of the tail off of %s.\", mon_nam(worm));\n   377: \ttoss_wsegs(new_tail, TRUE);\n   378: \tif (worm->mhp > 1) worm->mhp /= 2;\n   379: \treturn 1;"
+  },
+  {
+    "key": "L00376_01",
+    "original": "cut part of the tail off of %s.",
+    "translation": "",
+    "context": "src/worm.c:376:10\n   371:     /* Sometimes the tail end dies. */\n   372:     if (rn2(3) || !(new_wnum = get_wormno())) {\n   373: \tif (flags.mon_moving)\n   374: \t    pline(\"Part of the tail of %s is cut off.\", mon_nam(worm));\n   375: \telse\n>  376: \t    You(\"cut part of the tail off of %s.\", mon_nam(worm));\n   377: \ttoss_wsegs(new_tail, TRUE);\n   378: \tif (worm->mhp > 1) worm->mhp /= 2;\n   379: \treturn 1;\n   380:     }\n   381: "
+  },
+  {
+    "key": "L00408_01",
+    "original": "%s is cut in half.",
+    "translation": "",
+    "context": "src/worm.c:408:8\n   403: \n   404:     /* Place the new monster at all the segment locations. */\n   405:     place_wsegs(new_worm);\n   406: \n   407:     if (flags.mon_moving)\n>  408: \tpline(\"%s is cut in half.\", Monnam(worm));\n   409:     else\n   410: \tYou(\"cut %s in half.\", mon_nam(worm));\n   411: \n   412:     return 1;\n   413: }"
+  },
+  {
+    "key": "L00410_01",
+    "original": "cut %s in half.",
+    "translation": "",
+    "context": "src/worm.c:410:6\n   405:     place_wsegs(new_worm);\n   406: \n   407:     if (flags.mon_moving)\n   408: \tpline(\"%s is cut in half.\", Monnam(worm));\n   409:     else\n>  410: \tYou(\"cut %s in half.\", mon_nam(worm));\n   411: \n   412:     return 1;\n   413: }\n   414: \n   415: "
+  },
+  {
+    "key": "L00606_01",
+    "original": "place_worm_tail_randomly: wormno is set without a tail!",
+    "translation": "",
+    "context": "src/worm.c:606:13\n   601:     register xchar ox = x, oy = y;\n   602: \n   603: /*  if (!wnum) return;  bullet proofing */\n   604: \n   605:     if (wnum && (!wtails[wnum] || !wheads[wnum]) ) {\n>  606: \timpossible(\"place_worm_tail_randomly: wormno is set without a tail!\");\n   607: \treturn;\n   608:     }\n   609: \n   610:     wheads[wnum] = new_tail = curr;\n   611:     curr = curr->nseg;"
+  }
+]

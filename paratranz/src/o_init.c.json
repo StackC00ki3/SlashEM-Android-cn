@@ -1,0 +1,62 @@
+[
+  {
+    "key": "L00084_01",
+    "original": "Not enough gems? - first=%d j=%d LAST_GEM=%d",
+    "translation": "",
+    "context": "src/o_init.c:84:14\n    79: \tfor(j = 0; j < 9-lev/3; j++)\n    80: \t\tobjects[first+j].oc_prob = 0;\n    81: \tfirst += j;\n    82: \tif (first > LAST_GEM || objects[first].oc_class != GEM_CLASS ||\n    83: \t    OBJ_NAME(objects[first]) == (char *)0) {\n>   84: \t\traw_printf(\"Not enough gems? - first=%d j=%d LAST_GEM=%d\",\n    85: \t\t\tfirst, j, LAST_GEM);\n    86: \t\twait_synch();\n    87: \t    }\n    88: \tfor (j = first; j <= LAST_GEM; j++)\n    89: \t\t/* KMH, balance patch -- valuable gems now sum to 171 */"
+  },
+  {
+    "key": "L00192_01",
+    "original": "init-prob error for class %d (%d%%)",
+    "translation": "",
+    "context": "src/o_init.c:192:10\n   187: \t\t\tfor(i = first; i < last; i++)\n   188: \t\t\t    objects[i].oc_prob = (1000+i-first)/(last-first);\n   189: \t\t\tgoto check;\n   190: \t\t}\n   191: \t\tif(sum != sum)\n>  192: \t\t\terror(\"init-prob error for class %d (%d%%)\", oclass, sum);\n   193: \t\tfirst = last;\n   194: \t}\n   195: \t/* shuffle descriptions */\n   196: \tshuffle_all();\n   197: #ifdef USE_TILES"
+  },
+  {
+    "key": "L00266_01",
+    "original": "snow boots",
+    "translation": "",
+    "context": "src/o_init.c:266:53\n   261: {\n   262:     register int i;\n   263:     register const char *s;\n   264: \n   265:     for (i = SPEED_BOOTS; i <= LEVITATION_BOOTS; i++)\n>  266: \tif ((s = OBJ_DESCR(objects[i])) != 0 && !strcmp(s, \"snow boots\"))\n   267: \t    return i;\n   268: \n   269:     impossible(\"snow boots not found?\");\n   270:     return -1;\t/* not 0, or caller would try again each move */\n   271: }"
+  },
+  {
+    "key": "L00269_01",
+    "original": "snow boots not found?",
+    "translation": "",
+    "context": "src/o_init.c:269:16\n   264: \n   265:     for (i = SPEED_BOOTS; i <= LEVITATION_BOOTS; i++)\n   266: \tif ((s = OBJ_DESCR(objects[i])) != 0 && !strcmp(s, \"snow boots\"))\n   267: \t    return i;\n   268: \n>  269:     impossible(\"snow boots not found?\");\n   270:     return -1;\t/* not 0, or caller would try again each move */\n   271: }\n   272: \n   273: void\n   274: oinit()\t\t\t/* level dependent initialization */"
+  },
+  {
+    "key": "L00381_01",
+    "original": "named object not in disco",
+    "translation": "",
+    "context": "src/o_init.c:381:18\n   376: \t    else if (disco[dindx] == oindx)\n   377: \t\tfound = TRUE;\n   378: \n   379: \t/* clear last slot */\n   380: \tif (found) disco[dindx-1] = 0;\n>  381: \telse impossible(\"named object not in disco\");\n   382: \tupdate_inventory();\n   383:     }\n   384: }\n   385: \n   386: STATIC_OVL boolean"
+  },
+  {
+    "key": "L00422_01",
+    "original": "Discoveries",
+    "translation": "",
+    "context": "src/o_init.c:422:54\n   417:      * can display the relevant glyphs --ALI\n   418:      */\n   419:     start_menu(tmpwin);\n   420: \n   421:     any.a_void = 0;\n>  422:     add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, \"Discoveries\",\n   423:       MENU_UNSELECTED);\n   424:     add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, \"\",\n   425:       MENU_UNSELECTED);\n   426: \n   427:     /* gather \"unique objects\" into a pseudo-class; note that they'll"
+  },
+  {
+    "key": "L00433_01",
+    "original": "Unique Items",
+    "translation": "",
+    "context": "src/o_init.c:433:5\n   428:        also be displayed individually within their regular class */\n   429:     for (i = dis = 0; i < SIZE(uniq_objs); i++)\n   430: \tif (objects[uniq_objs[i]].oc_name_known) {\n   431: \t    if (!dis++)\n   432: \t\tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings,\n>  433: \t\t  \"Unique Items\", MENU_UNSELECTED);\n   434: \t\tSprintf(buf, \"  %s\", OBJ_NAME(objects[uniq_objs[i]]));\n   435: \t    add_menu(tmpwin, objnum_to_glyph(uniq_objs[i]), &any,\n   436: \t      0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   437: \t    ++ct;\n   438: \t}"
+  },
+  {
+    "key": "L00434_01",
+    "original": "  %s",
+    "translation": "",
+    "context": "src/o_init.c:434:16\n   429:     for (i = dis = 0; i < SIZE(uniq_objs); i++)\n   430: \tif (objects[uniq_objs[i]].oc_name_known) {\n   431: \t    if (!dis++)\n   432: \t\tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings,\n   433: \t\t  \"Unique Items\", MENU_UNSELECTED);\n>  434: \t\tSprintf(buf, \"  %s\", OBJ_NAME(objects[uniq_objs[i]]));\n   435: \t    add_menu(tmpwin, objnum_to_glyph(uniq_objs[i]), &any,\n   436: \t      0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   437: \t    ++ct;\n   438: \t}\n   439:     /* display any known artifacts as another pseudo-class */"
+  },
+  {
+    "key": "L00462_01",
+    "original": "%s %s",
+    "translation": "",
+    "context": "src/o_init.c:462:16\n   457: \t\tif (oclass != prev_class) {\n   458: \t\t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings,\n   459: \t\t      let_to_name(oclass, FALSE), MENU_UNSELECTED);\n   460: \t\t    prev_class = oclass;\n   461: \t\t}\n>  462: \t\tSprintf(buf, \"%s %s\",(objects[dis].oc_pre_discovered ? \"*\" : \" \"),\n   463: \t\t\t\tobj_typename(dis));\n   464: \t\tadd_menu(tmpwin, objnum_to_glyph(dis), &any, 0, 0,\n   465: \t\t  ATR_NONE, buf, MENU_UNSELECTED);\n   466: \t    }\n   467: \t}"
+  },
+  {
+    "key": "L00471_01",
+    "original": "haven't discovered anything yet...",
+    "translation": "",
+    "context": "src/o_init.c:471:6\n   466: \t    }\n   467: \t}\n   468:     }\n   469:     end_menu(tmpwin, (char *) 0);\n   470:     if (ct == 0) {\n>  471: \tYou(\"haven't discovered anything yet...\");\n   472:     } else\n   473: \t(void) select_menu(tmpwin, PICK_NONE, &selected);\n   474:     destroy_nhwindow(tmpwin);\n   475: \n   476:     return 0;"
+  }
+]

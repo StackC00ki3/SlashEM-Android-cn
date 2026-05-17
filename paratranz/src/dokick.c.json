@@ -1,0 +1,1076 @@
+[
+  {
+    "key": "L00026_01",
+    "original": "kick passes harmlessly through",
+    "translation": "",
+    "context": "src/dokick.c:26:40\n    21: STATIC_DCL void FDECL(otransit_msg, (struct obj *, BOOLEAN_P, long));\n    22: STATIC_DCL void FDECL(drop_to, (coord *,SCHAR_P));\n    23: \n    24: static NEARDATA struct obj *kickobj;\n    25: \n>   26: static const char kick_passes_thru[] = \"kick passes harmlessly through\";\n    27: \n    28: STATIC_OVL void\n    29: kickdmg(mon, clumsy)\n    30: register struct monst *mon;\n    31: register boolean clumsy;"
+  },
+  {
+    "key": "L00057_01",
+    "original": "%s.",
+    "translation": "",
+    "context": "src/dokick.c:57:16\n    52: \tif ((is_undead(mon->data) || is_demon(mon->data)) && uarmf &&\n    53: \t\tuarmf->blessed)\n    54: \t    blessed_foot_damage = 1;\n    55: \n    56: \tif (mon->data == &mons[PM_SHADE] && !blessed_foot_damage) {\n>   57: \t    pline_The(\"%s.\", kick_passes_thru);\n    58: \t    /* doesn't exercise skill or abuse alignment or frighten pet,\n    59: \t       and shades have no passive counterattack */\n    60: \t    return;\n    61: \t}\n    62: "
+  },
+  {
+    "key": "L00102_01",
+    "original": "%s reels from the blow.",
+    "translation": "",
+    "context": "src/dokick.c:102:10\n    97: \t    mon->mcanmove && mon != u.ustuck && !mon->mtrapped) {\n    98: \t\t/* see if the monster has a place to move into */\n    99: \t\tmdx = mon->mx + u.dx;\n   100: \t\tmdy = mon->my + u.dy;\n   101: \t\tif(goodpos(mdx, mdy, mon, 0)) {\n>  102: \t\t\tpline(\"%s reels from the blow.\", Monnam(mon));\n   103: \t\t\tif (m_in_out_region(mon, mdx, mdy)) {\n   104: \t\t\t    remove_monster(mon->mx, mon->my);\n   105: \t\t\t    newsym(mon->mx, mon->my);\n   106: \t\t\t    place_monster(mon, mdx, mdy);\n   107: \t\t\t    newsym(mon->mx, mon->my);"
+  },
+  {
+    "key": "L00160_01",
+    "original": "%s %s.",
+    "translation": "",
+    "context": "src/dokick.c:160:12\n   155: \n   156: \t\tif (mon->data == &mons[PM_SHADE] &&\n   157: \t\t\t(!uarmf || !uarmf->blessed)) {\n   158: \t\t    /* doesn't matter whether it would have hit or missed,\n   159: \t\t       and shades have no passive counterattack */\n>  160: \t\t    Your(\"%s %s.\", kick_passes_thru, mon_nam(mon));\n   161: \t\t    break;\t/* skip any additional kicks */\n   162: \t\t} else if (tmp > (roll = rnd(20))) {\n   163: \t\t    You(\"kick %s.\", mon_nam(mon));\n   164: \t\t    sum = damageum(mon, uattk);\n   165: \t\t    (void)passive(mon, (boolean)(sum > 0), (sum != 2), AT_KICK);"
+  },
+  {
+    "key": "L00163_01",
+    "original": "kick %s.",
+    "translation": "",
+    "context": "src/dokick.c:163:11\n   158: \t\t    /* doesn't matter whether it would have hit or missed,\n   159: \t\t       and shades have no passive counterattack */\n   160: \t\t    Your(\"%s %s.\", kick_passes_thru, mon_nam(mon));\n   161: \t\t    break;\t/* skip any additional kicks */\n   162: \t\t} else if (tmp > (roll = rnd(20))) {\n>  163: \t\t    You(\"kick %s.\", mon_nam(mon));\n   164: \t\t    sum = damageum(mon, uattk);\n   165: \t\t    (void)passive(mon, (boolean)(sum > 0), (sum != 2), AT_KICK);\n   166: \t\t    if (sum == 2)\n   167: \t\t\tbreak;\t\t/* Defender died */\n   168: \t\t} else {"
+  },
+  {
+    "key": "L00178_01",
+    "original": "Floating in the air, you miss wildly!",
+    "translation": "",
+    "context": "src/dokick.c:178:9\n   173: \t    return;\n   174: \t}\n   175: \n   176: \tif(Levitation && !rn2(3) && verysmall(mon->data) &&\n   177: \t   !is_flyer(mon->data)) {\n>  178: \t\tpline(\"Floating in the air, you miss wildly!\");\n   179: \t\texercise(A_DEX, FALSE);\n   180: \t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   181: \t\treturn;\n   182: \t}\n   183: "
+  },
+  {
+    "key": "L00201_01",
+    "original": "attack doesn't seem to harm %s.",
+    "translation": "",
+    "context": "src/dokick.c:201:8\n   196: \t} else if (uarmf)\n   197: \t\tobjenchant = uarmf->spe;\n   198: \telse objenchant = 0;\n   199: \n   200: \tif (objenchant < canhitmon && !Upolyd) {\n>  201: \t\tYour(\"attack doesn't seem to harm %s.\",\n   202: \t\t\tmon_nam(mon));\n   203: \t\t(void) passive(mon, FALSE, 1, TRUE);\n   204: \t\treturn;\n   205: \t}\n   206: "
+  },
+  {
+    "key": "L00213_01",
+    "original": "clumsy kick does no damage.",
+    "translation": "",
+    "context": "src/dokick.c:213:9\n   208: \tj = weight_cap();\n   209: \n   210: \tif(i < (j*3)/10) {\n   211: \t\tif(!rn2((i < j/10) ? 2 : (i < j/5) ? 3 : 4)) {\n   212: \t\t\tif(martial() && !rn2(2)) goto doit;\n>  213: \t\t\tYour(\"clumsy kick does no damage.\");\n   214: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   215: \t\t\treturn;\n   216: \t\t}\n   217: \t\tif(i < j/10) clumsy = TRUE;\n   218: \t\telse if(!rn2((i < j/5) ? 2 : 3)) clumsy = TRUE;"
+  },
+  {
+    "key": "L00226_01",
+    "original": "kick %s.",
+    "translation": "",
+    "context": "src/dokick.c:226:6\n   221: \tif(Fumbling) clumsy = TRUE;\n   222: \n   223: \telse if (uarm && objects[uarm->otyp].oc_bulky && ACURR(A_DEX) < rnd(25))\n   224: \t\tclumsy = TRUE;\n   225: doit:\n>  226: \tYou(\"kick %s.\", mon_nam(mon));\n   227: \tif(!rn2(clumsy ? 3 : 4) && (clumsy || !bigmonst(mon->data)) &&\n   228: \t   mon->mcansee && !mon->mtrapped && !thick_skinned(mon->data) &&\n   229: \t   mon->data->mlet != S_EEL && haseyes(mon->data) && mon->mcanmove &&\n   230: \t   !mon->mstun && !mon->mconf && !mon->msleeping &&\n   231: \t   mon->data->mmove >= 12) {"
+  },
+  {
+    "key": "L00233_01",
+    "original": "%s blocks your %skick.",
+    "translation": "",
+    "context": "src/dokick.c:233:13\n   228: \t   mon->mcansee && !mon->mtrapped && !thick_skinned(mon->data) &&\n   229: \t   mon->data->mlet != S_EEL && haseyes(mon->data) && mon->mcanmove &&\n   230: \t   !mon->mstun && !mon->mconf && !mon->msleeping &&\n   231: \t   mon->data->mmove >= 12) {\n   232: \t\tif(!nohands(mon->data) && !rn2(martial() ? 5 : 3)) {\n>  233: \t\t    pline(\"%s blocks your %skick.\", Monnam(mon),\n   234: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   235: \t\t    (void) passive(mon, FALSE, 1, AT_KICK);\n   236: \t\t    return;\n   237: \t\t} else {\n   238: \t\t    mnexto(mon);"
+  },
+  {
+    "key": "L00234_01",
+    "original": "clumsy ",
+    "translation": "",
+    "context": "src/dokick.c:234:14\n   229: \t   mon->data->mlet != S_EEL && haseyes(mon->data) && mon->mcanmove &&\n   230: \t   !mon->mstun && !mon->mconf && !mon->msleeping &&\n   231: \t   mon->data->mmove >= 12) {\n   232: \t\tif(!nohands(mon->data) && !rn2(martial() ? 5 : 3)) {\n   233: \t\t    pline(\"%s blocks your %skick.\", Monnam(mon),\n>  234: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   235: \t\t    (void) passive(mon, FALSE, 1, AT_KICK);\n   236: \t\t    return;\n   237: \t\t} else {\n   238: \t\t    mnexto(mon);\n   239: \t\t    if(mon->mx != x || mon->my != y) {"
+  },
+  {
+    "key": "L00244_01",
+    "original": "%s %s, %s evading your %skick.",
+    "translation": "",
+    "context": "src/dokick.c:244:10\n   239: \t\t    if(mon->mx != x || mon->my != y) {\n   240: \t\t\tif(memory_is_invisible(x, y)) {\n   241: \t\t\t    unmap_object(x, y);\n   242: \t\t\t    newsym(x, y);\n   243: \t\t\t}\n>  244: \t\t\tpline(\"%s %s, %s evading your %skick.\", Monnam(mon),\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),"
+  },
+  {
+    "key": "L00245_01",
+    "original": "teleports",
+    "translation": "",
+    "context": "src/dokick.c:245:32\n   240: \t\t\tif(memory_is_invisible(x, y)) {\n   241: \t\t\t    unmap_object(x, y);\n   242: \t\t\t    newsym(x, y);\n   243: \t\t\t}\n   244: \t\t\tpline(\"%s %s, %s evading your %skick.\", Monnam(mon),\n>  245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),\n   250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\","
+  },
+  {
+    "key": "L00246_01",
+    "original": "floats",
+    "translation": "",
+    "context": "src/dokick.c:246:30\n   241: \t\t\t    unmap_object(x, y);\n   242: \t\t\t    newsym(x, y);\n   243: \t\t\t}\n   244: \t\t\tpline(\"%s %s, %s evading your %skick.\", Monnam(mon),\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n>  246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),\n   250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n   251: \t\t\t\tclumsy ? \"clumsy \" : \"\");"
+  },
+  {
+    "key": "L00247_01",
+    "original": "swoops",
+    "translation": "",
+    "context": "src/dokick.c:247:28\n   242: \t\t\t    newsym(x, y);\n   243: \t\t\t}\n   244: \t\t\tpline(\"%s %s, %s evading your %skick.\", Monnam(mon),\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n>  247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),\n   250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n   251: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   252: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);"
+  },
+  {
+    "key": "L00249_01",
+    "original": "slides",
+    "translation": "",
+    "context": "src/dokick.c:249:6\n   244: \t\t\tpline(\"%s %s, %s evading your %skick.\", Monnam(mon),\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n>  249: \t\t\t\t\t\"slides\" : \"jumps\"),\n   250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n   251: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   252: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   253: \t\t\treturn;\n   254: \t\t    }"
+  },
+  {
+    "key": "L00249_02",
+    "original": "jumps",
+    "translation": "",
+    "context": "src/dokick.c:249:17\n   244: \t\t\tpline(\"%s %s, %s evading your %skick.\", Monnam(mon),\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n>  249: \t\t\t\t\t\"slides\" : \"jumps\"),\n   250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n   251: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   252: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   253: \t\t\treturn;\n   254: \t\t    }"
+  },
+  {
+    "key": "L00250_01",
+    "original": "easily",
+    "translation": "",
+    "context": "src/dokick.c:250:14\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),\n>  250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n   251: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   252: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   253: \t\t\treturn;\n   254: \t\t    }\n   255: \t\t}"
+  },
+  {
+    "key": "L00250_02",
+    "original": "nimbly",
+    "translation": "",
+    "context": "src/dokick.c:250:25\n   245: \t\t\t\t(can_teleport(mon->data) ? \"teleports\" :\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),\n>  250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n   251: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   252: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   253: \t\t\treturn;\n   254: \t\t    }\n   255: \t\t}"
+  },
+  {
+    "key": "L00251_01",
+    "original": "clumsy ",
+    "translation": "",
+    "context": "src/dokick.c:251:14\n   246: \t\t\t\t is_floater(mon->data) ? \"floats\" :\n   247: \t\t\t\t is_flyer(mon->data) ? \"swoops\" :\n   248: \t\t\t\t (nolimbs(mon->data) || slithy(mon->data)) ?\n   249: \t\t\t\t\t\"slides\" : \"jumps\"),\n   250: \t\t\t\tclumsy ? \"easily\" : \"nimbly\",\n>  251: \t\t\t\tclumsy ? \"clumsy \" : \"\");\n   252: \t\t\t(void) passive(mon, FALSE, 1, AT_KICK);\n   253: \t\t\treturn;\n   254: \t\t    }\n   255: \t\t}\n   256: \t}"
+  },
+  {
+    "key": "L00278_01",
+    "original": "%s harmlessly %s %s.",
+    "translation": "",
+    "context": "src/dokick.c:278:17\n   273: \t\t\t&& !is_mercenary(mtmp->data)) {\n   274: \t\twakeup(mtmp);\n   275: \t} else if (!mtmp->mcanmove) {\n   276: \t\t/* too light to do real damage */\n   277: \t\tif (canseemon(mtmp)) {\n>  278: \t\t    pline_The(\"%s harmlessly %s %s.\", xname(gold),\n   279: \t\t\t      otense(gold, \"hit\"), mon_nam(mtmp));\n   280: \t\t    msg_given = TRUE;\n   281: \t\t}\n   282: \t} else {\n   283: #ifdef GOLDOBJ"
+  },
+  {
+    "key": "L00279_01",
+    "original": "hit",
+    "translation": "",
+    "context": "src/dokick.c:279:23\n   274: \t\twakeup(mtmp);\n   275: \t} else if (!mtmp->mcanmove) {\n   276: \t\t/* too light to do real damage */\n   277: \t\tif (canseemon(mtmp)) {\n   278: \t\t    pline_The(\"%s harmlessly %s %s.\", xname(gold),\n>  279: \t\t\t      otense(gold, \"hit\"), mon_nam(mtmp));\n   280: \t\t    msg_given = TRUE;\n   281: \t\t}\n   282: \t} else {\n   283: #ifdef GOLDOBJ\n   284:                 long value = gold->quan * objects[gold->otyp].oc_cost;"
+  },
+  {
+    "key": "L00292_01",
+    "original": "%s catches the gold.",
+    "translation": "",
+    "context": "src/dokick.c:292:13\n   287: \t\tmtmp->meating = 0;\n   288: \t\tif(!rn2(4)) setmangry(mtmp); /* not always pleasing */\n   289: \n   290: \t\t/* greedy monsters catch gold */\n   291: \t\tif (cansee(mtmp->mx, mtmp->my))\n>  292: \t\t    pline(\"%s catches the gold.\", Monnam(mtmp));\n   293: #ifndef GOLDOBJ\n   294: \t\tmtmp->mgold += gold->quan;\n   295: #endif\n   296: \t\tif (mtmp->isshk) {\n   297: \t\t\tlong robbed = ESHK(mtmp)->robbed;"
+  },
+  {
+    "key": "L00306_01",
+    "original": "amount %scovers %s recent losses.",
+    "translation": "",
+    "context": "src/dokick.c:306:15\n   301: \t\t\t\trobbed -= gold->quan;\n   302: #else\n   303: \t\t\t\trobbed -= value;\n   304: #endif\n   305: \t\t\t\tif (robbed < 0) robbed = 0;\n>  306: \t\t\t\tpline_The(\"amount %scovers %s recent losses.\",\n   307: \t\t\t\t      !robbed ? \"\" : \"partially \",\n   308: \t\t\t\t      mhis(mtmp));\n   309: \t\t\t\tESHK(mtmp)->robbed = robbed;\n   310: \t\t\t\tif(!robbed)\n   311: \t\t\t\t\tmake_happy_shk(mtmp, FALSE);"
+  },
+  {
+    "key": "L00307_01",
+    "original": "partially ",
+    "translation": "",
+    "context": "src/dokick.c:307:26\n   302: #else\n   303: \t\t\t\trobbed -= value;\n   304: #endif\n   305: \t\t\t\tif (robbed < 0) robbed = 0;\n   306: \t\t\t\tpline_The(\"amount %scovers %s recent losses.\",\n>  307: \t\t\t\t      !robbed ? \"\" : \"partially \",\n   308: \t\t\t\t      mhis(mtmp));\n   309: \t\t\t\tESHK(mtmp)->robbed = robbed;\n   310: \t\t\t\tif(!robbed)\n   311: \t\t\t\t\tmake_happy_shk(mtmp, FALSE);\n   312: \t\t\t} else {"
+  },
+  {
+    "key": "L00319_01",
+    "original": "have %ld %s in credit.",
+    "translation": "",
+    "context": "src/dokick.c:319:13\n   314: #ifndef GOLDOBJ\n   315: \t\t\t\t    ESHK(mtmp)->credit += gold->quan;\n   316: #else\n   317: \t\t\t\t    ESHK(mtmp)->credit += value;\n   318: #endif\n>  319: \t\t\t\t    You(\"have %ld %s in credit.\",\n   320: \t\t\t\t\tESHK(mtmp)->credit,\n   321: \t\t\t\t\tcurrency(ESHK(mtmp)->credit));\n   322: \t\t\t\t} else verbalize(\"Thanks, scum!\");\n   323: \t\t\t}\n   324: \t\t} else if (mtmp->ispriest) {"
+  },
+  {
+    "key": "L00322_01",
+    "original": "Thanks, scum!",
+    "translation": "",
+    "context": "src/dokick.c:322:22\n   317: \t\t\t\t    ESHK(mtmp)->credit += value;\n   318: #endif\n   319: \t\t\t\t    You(\"have %ld %s in credit.\",\n   320: \t\t\t\t\tESHK(mtmp)->credit,\n   321: \t\t\t\t\tcurrency(ESHK(mtmp)->credit));\n>  322: \t\t\t\t} else verbalize(\"Thanks, scum!\");\n   323: \t\t\t}\n   324: \t\t} else if (mtmp->ispriest) {\n   325: \t\t\tif (mtmp->mpeaceful)\n   326: \t\t\t    verbalize(\"Thank you for your contribution.\");\n   327: \t\t\telse verbalize(\"Thanks, scum!\");"
+  },
+  {
+    "key": "L00326_01",
+    "original": "Thank you for your contribution.",
+    "translation": "",
+    "context": "src/dokick.c:326:18\n   321: \t\t\t\t\tcurrency(ESHK(mtmp)->credit));\n   322: \t\t\t\t} else verbalize(\"Thanks, scum!\");\n   323: \t\t\t}\n   324: \t\t} else if (mtmp->ispriest) {\n   325: \t\t\tif (mtmp->mpeaceful)\n>  326: \t\t\t    verbalize(\"Thank you for your contribution.\");\n   327: \t\t\telse verbalize(\"Thanks, scum!\");\n   328: \t\t} else if (is_mercenary(mtmp->data)) {\n   329: \t\t    long goldreqd = 0L;\n   330: \n   331: \t\t    if (rn2(3)) {"
+  },
+  {
+    "key": "L00327_01",
+    "original": "Thanks, scum!",
+    "translation": "",
+    "context": "src/dokick.c:327:19\n   322: \t\t\t\t} else verbalize(\"Thanks, scum!\");\n   323: \t\t\t}\n   324: \t\t} else if (mtmp->ispriest) {\n   325: \t\t\tif (mtmp->mpeaceful)\n   326: \t\t\t    verbalize(\"Thank you for your contribution.\");\n>  327: \t\t\telse verbalize(\"Thanks, scum!\");\n   328: \t\t} else if (is_mercenary(mtmp->data)) {\n   329: \t\t    long goldreqd = 0L;\n   330: \n   331: \t\t    if (rn2(3)) {\n   332: \t\t\tif (mtmp->data == &mons[PM_SOLDIER])"
+  },
+  {
+    "key": "L00353_01",
+    "original": "That should do.  Now beat it!",
+    "translation": "",
+    "context": "src/dokick.c:353:18\n   348: #endif\n   349: \t\t\t    mtmp->mpeaceful = TRUE;\n   350: \t\t\t}\n   351: \t\t     }\n   352: \t\t     if (mtmp->mpeaceful)\n>  353: \t\t\t    verbalize(\"That should do.  Now beat it!\");\n   354: \t\t     else verbalize(\"That's not enough, coward!\");\n   355: \t\t}\n   356: \n   357: #ifndef GOLDOBJ\n   358: \t\tdealloc_obj(gold);"
+  },
+  {
+    "key": "L00354_01",
+    "original": "That's not enough, coward!",
+    "translation": "",
+    "context": "src/dokick.c:354:23\n   349: \t\t\t    mtmp->mpeaceful = TRUE;\n   350: \t\t\t}\n   351: \t\t     }\n   352: \t\t     if (mtmp->mpeaceful)\n   353: \t\t\t    verbalize(\"That should do.  Now beat it!\");\n>  354: \t\t     else verbalize(\"That's not enough, coward!\");\n   355: \t\t}\n   356: \n   357: #ifndef GOLDOBJ\n   358: \t\tdealloc_obj(gold);\n   359: #else"
+  },
+  {
+    "key": "L00395_01",
+    "original": "shatter",
+    "translation": "",
+    "context": "src/dokick.c:395:12\n   390: \t    const char *result = (char *)0;\n   391: \n   392: \t    otmp2 = otmp->nobj;\n   393: \t    if (objects[otmp->otyp].oc_material == GLASS &&\n   394: \t\totmp->oclass != GEM_CLASS && !obj_resists(otmp, 33, 100)) {\n>  395: \t\tresult = \"shatter\";\n   396: \t    } else if (otmp->otyp == EGG && !rn2(3)) {\n   397: \t\tresult = \"cracking\";\n   398: \t    }\n   399: \t    if (result) {\n   400: \t\tif (otmp->otyp == MIRROR) change_luck(-2);"
+  },
+  {
+    "key": "L00397_01",
+    "original": "cracking",
+    "translation": "",
+    "context": "src/dokick.c:397:12\n   392: \t    otmp2 = otmp->nobj;\n   393: \t    if (objects[otmp->otyp].oc_material == GLASS &&\n   394: \t\totmp->oclass != GEM_CLASS && !obj_resists(otmp, 33, 100)) {\n   395: \t\tresult = \"shatter\";\n   396: \t    } else if (otmp->otyp == EGG && !rn2(3)) {\n>  397: \t\tresult = \"cracking\";\n   398: \t    }\n   399: \t    if (result) {\n   400: \t\tif (otmp->otyp == MIRROR) change_luck(-2);\n   401: \n   402: \t\t/* eggs laid by you.  penalty is -1 per egg, max 5,"
+  },
+  {
+    "key": "L00406_01",
+    "original": "a muffled %s.",
+    "translation": "",
+    "context": "src/dokick.c:406:12\n   401: \n   402: \t\t/* eggs laid by you.  penalty is -1 per egg, max 5,\n   403: \t\t * but it's always exactly 1 that breaks */\n   404: \t\tif (otmp->otyp == EGG && otmp->spe && otmp->corpsenm >= LOW_PM)\n   405: \t\t    change_luck(-1);\n>  406: \t\tYou_hear(\"a muffled %s.\", result);\n   407: \t\tif (costly)\n   408: \t\t    loss += stolen_value(otmp, x, y,\n   409: \t\t\t\t\t (boolean)shkp->mpeaceful, TRUE, TRUE);\n   410: \t\tif (otmp->quan > 1L)\n   411: \t\t    useup(otmp);"
+  },
+  {
+    "key": "L00420_01",
+    "original": "caused %ld %s worth of damage!",
+    "translation": "",
+    "context": "src/dokick.c:420:7\n   415: \t\t}\n   416: \t    }\n   417: \t}\n   418: \tif (costly && loss) {\n   419: \t    if (!insider) {\n>  420: \t\tYou(\"caused %ld %s worth of damage!\", loss, currency(loss));\n   421: \t\tmake_angry_shk(shkp, x, y);\n   422: \t    } else {\n   423: \t\tYou(\"owe %s %ld %s for objects destroyed.\",\n   424: \t\t    mon_nam(shkp), loss, currency(loss));\n   425: \t    }"
+  },
+  {
+    "key": "L00423_01",
+    "original": "owe %s %ld %s for objects destroyed.",
+    "translation": "",
+    "context": "src/dokick.c:423:7\n   418: \tif (costly && loss) {\n   419: \t    if (!insider) {\n   420: \t\tYou(\"caused %ld %s worth of damage!\", loss, currency(loss));\n   421: \t\tmake_angry_shk(shkp, x, y);\n   422: \t    } else {\n>  423: \t\tYou(\"owe %s %ld %s for objects destroyed.\",\n   424: \t\t    mon_nam(shkp), loss, currency(loss));\n   425: \t    }\n   426: \t}\n   427: }\n   428: "
+  },
+  {
+    "key": "L00452_01",
+    "original": "kick %s that's in a %s!",
+    "translation": "",
+    "context": "src/dokick.c:452:12\n   447: \tif ((trap = t_at(x,y)) != 0 &&\n   448: \t\t\t(((trap->ttyp == PIT ||\n   449: \t\t\t   trap->ttyp == SPIKED_PIT) && !Passes_walls) ||\n   450: \t\t\t trap->ttyp == WEB)) {\n   451: \t\tif (!trap->tseen) find_trap(trap);\n>  452: \t\tYou_cant(\"kick %s that's in a %s!\", something,\n   453: \t\t\t Hallucination ? \"tizzy\" :\n   454: \t\t\t (trap->ttyp == WEB) ? \"web\" : \"pit\");\n   455: \t\treturn 1;\n   456: \t}\n   457: "
+  },
+  {
+    "key": "L00453_01",
+    "original": "tizzy",
+    "translation": "",
+    "context": "src/dokick.c:453:21\n   448: \t\t\t(((trap->ttyp == PIT ||\n   449: \t\t\t   trap->ttyp == SPIKED_PIT) && !Passes_walls) ||\n   450: \t\t\t trap->ttyp == WEB)) {\n   451: \t\tif (!trap->tseen) find_trap(trap);\n   452: \t\tYou_cant(\"kick %s that's in a %s!\", something,\n>  453: \t\t\t Hallucination ? \"tizzy\" :\n   454: \t\t\t (trap->ttyp == WEB) ? \"web\" : \"pit\");\n   455: \t\treturn 1;\n   456: \t}\n   457: \n   458: \tif(Fumbling && !rn2(3)) {"
+  },
+  {
+    "key": "L00454_01",
+    "original": "web",
+    "translation": "",
+    "context": "src/dokick.c:454:27\n   449: \t\t\t   trap->ttyp == SPIKED_PIT) && !Passes_walls) ||\n   450: \t\t\t trap->ttyp == WEB)) {\n   451: \t\tif (!trap->tseen) find_trap(trap);\n   452: \t\tYou_cant(\"kick %s that's in a %s!\", something,\n   453: \t\t\t Hallucination ? \"tizzy\" :\n>  454: \t\t\t (trap->ttyp == WEB) ? \"web\" : \"pit\");\n   455: \t\treturn 1;\n   456: \t}\n   457: \n   458: \tif(Fumbling && !rn2(3)) {\n   459: \t\tYour(\"clumsy kick missed.\");"
+  },
+  {
+    "key": "L00454_02",
+    "original": "pit",
+    "translation": "",
+    "context": "src/dokick.c:454:35\n   449: \t\t\t   trap->ttyp == SPIKED_PIT) && !Passes_walls) ||\n   450: \t\t\t trap->ttyp == WEB)) {\n   451: \t\tif (!trap->tseen) find_trap(trap);\n   452: \t\tYou_cant(\"kick %s that's in a %s!\", something,\n   453: \t\t\t Hallucination ? \"tizzy\" :\n>  454: \t\t\t (trap->ttyp == WEB) ? \"web\" : \"pit\");\n   455: \t\treturn 1;\n   456: \t}\n   457: \n   458: \tif(Fumbling && !rn2(3)) {\n   459: \t\tYour(\"clumsy kick missed.\");"
+  },
+  {
+    "key": "L00459_01",
+    "original": "clumsy kick missed.",
+    "translation": "",
+    "context": "src/dokick.c:459:8\n   454: \t\t\t (trap->ttyp == WEB) ? \"web\" : \"pit\");\n   455: \t\treturn 1;\n   456: \t}\n   457: \n   458: \tif(Fumbling && !rn2(3)) {\n>  459: \t\tYour(\"clumsy kick missed.\");\n   460: \t\treturn(1);\n   461: \t}\n   462: \n   463: \tif(kickobj->otyp == CORPSE && touch_petrifies(&mons[kickobj->corpsenm])\n   464: \t\t\t&& !Stone_resistance && !uarmf) {"
+  },
+  {
+    "key": "L00467_01",
+    "original": "kick the %s with your bare %s.",
+    "translation": "",
+    "context": "src/dokick.c:467:10\n   462: \n   463: \tif(kickobj->otyp == CORPSE && touch_petrifies(&mons[kickobj->corpsenm])\n   464: \t\t\t&& !Stone_resistance && !uarmf) {\n   465: \t    char kbuf[BUFSZ];\n   466: \n>  467: \t    You(\"kick the %s with your bare %s.\",\n   468: \t\tcorpse_xname(kickobj, TRUE), makeplural(body_part(FOOT)));\n   469: \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n   470: \t\tYou(\"turn to stone...\");\n   471: \t\tkiller_format = KILLED_BY;\n   472: \t\t/* KMH -- otmp should be kickobj */"
+  },
+  {
+    "key": "L00470_01",
+    "original": "turn to stone...",
+    "translation": "",
+    "context": "src/dokick.c:470:7\n   465: \t    char kbuf[BUFSZ];\n   466: \n   467: \t    You(\"kick the %s with your bare %s.\",\n   468: \t\tcorpse_xname(kickobj, TRUE), makeplural(body_part(FOOT)));\n   469: \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n>  470: \t\tYou(\"turn to stone...\");\n   471: \t\tkiller_format = KILLED_BY;\n   472: \t\t/* KMH -- otmp should be kickobj */\n   473: \t\tSprintf(kbuf, \"kicking %s without boots\",\n   474: \t\t\tan(killer_cxname(kickobj, TRUE)));\n   475: \t\tkiller = kbuf;"
+  },
+  {
+    "key": "L00473_01",
+    "original": "kicking %s without boots",
+    "translation": "",
+    "context": "src/dokick.c:473:17\n   468: \t\tcorpse_xname(kickobj, TRUE), makeplural(body_part(FOOT)));\n   469: \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n   470: \t\tYou(\"turn to stone...\");\n   471: \t\tkiller_format = KILLED_BY;\n   472: \t\t/* KMH -- otmp should be kickobj */\n>  473: \t\tSprintf(kbuf, \"kicking %s without boots\",\n   474: \t\t\tan(killer_cxname(kickobj, TRUE)));\n   475: \t\tkiller = kbuf;\n   476: \t\tdone(STONING);\n   477: \t    }\n   478: \t}"
+  },
+  {
+    "key": "L00514_01",
+    "original": "It doesn't come loose.",
+    "translation": "",
+    "context": "src/dokick.c:514:13\n   509: \n   510: \tif (IS_ROCK(levl[x][y].typ) || closed_door(x, y)) {\n   511: \t    if ((!martial() && rn2(20) > ACURR(A_DEX)) ||\n   512: \t\t    IS_ROCK(levl[u.ux][u.uy].typ) || closed_door(u.ux, u.uy)) {\n   513: \t\tif (Blind)\n>  514: \t\t    pline(\"It doesn't come loose.\");\n   515: \t\telse\n   516: \t\t    pline(\"%s %sn't come loose.\",\n   517: \t\t\t  The(distant_name(kickobj, xname)),\n   518: \t\t\t  otense(kickobj, \"do\"));\n   519: \t\treturn (!rn2(3) || martial());"
+  },
+  {
+    "key": "L00516_01",
+    "original": "%s %sn't come loose.",
+    "translation": "",
+    "context": "src/dokick.c:516:13\n   511: \t    if ((!martial() && rn2(20) > ACURR(A_DEX)) ||\n   512: \t\t    IS_ROCK(levl[u.ux][u.uy].typ) || closed_door(u.ux, u.uy)) {\n   513: \t\tif (Blind)\n   514: \t\t    pline(\"It doesn't come loose.\");\n   515: \t\telse\n>  516: \t\t    pline(\"%s %sn't come loose.\",\n   517: \t\t\t  The(distant_name(kickobj, xname)),\n   518: \t\t\t  otense(kickobj, \"do\"));\n   519: \t\treturn (!rn2(3) || martial());\n   520: \t    }\n   521: \t    if (Blind)"
+  },
+  {
+    "key": "L00518_01",
+    "original": "do",
+    "translation": "",
+    "context": "src/dokick.c:518:22\n   513: \t\tif (Blind)\n   514: \t\t    pline(\"It doesn't come loose.\");\n   515: \t\telse\n   516: \t\t    pline(\"%s %sn't come loose.\",\n   517: \t\t\t  The(distant_name(kickobj, xname)),\n>  518: \t\t\t  otense(kickobj, \"do\"));\n   519: \t\treturn (!rn2(3) || martial());\n   520: \t    }\n   521: \t    if (Blind)\n   522: \t\tpline(\"It comes loose.\");\n   523: \t    else"
+  },
+  {
+    "key": "L00522_01",
+    "original": "It comes loose.",
+    "translation": "",
+    "context": "src/dokick.c:522:9\n   517: \t\t\t  The(distant_name(kickobj, xname)),\n   518: \t\t\t  otense(kickobj, \"do\"));\n   519: \t\treturn (!rn2(3) || martial());\n   520: \t    }\n   521: \t    if (Blind)\n>  522: \t\tpline(\"It comes loose.\");\n   523: \t    else\n   524: \t\tpline(\"%s %s loose.\",\n   525: \t\t      The(distant_name(kickobj, xname)),\n   526: \t\t      otense(kickobj, \"come\"));\n   527: \t    obj_extract_self(kickobj);"
+  },
+  {
+    "key": "L00524_01",
+    "original": "%s %s loose.",
+    "translation": "",
+    "context": "src/dokick.c:524:9\n   519: \t\treturn (!rn2(3) || martial());\n   520: \t    }\n   521: \t    if (Blind)\n   522: \t\tpline(\"It comes loose.\");\n   523: \t    else\n>  524: \t\tpline(\"%s %s loose.\",\n   525: \t\t      The(distant_name(kickobj, xname)),\n   526: \t\t      otense(kickobj, \"come\"));\n   527: \t    obj_extract_self(kickobj);\n   528: \t    newsym(x, y);\n   529: \t    if (costly && (!costly_spot(u.ux, u.uy) ||"
+  },
+  {
+    "key": "L00526_01",
+    "original": "come",
+    "translation": "",
+    "context": "src/dokick.c:526:25\n   521: \t    if (Blind)\n   522: \t\tpline(\"It comes loose.\");\n   523: \t    else\n   524: \t\tpline(\"%s %s loose.\",\n   525: \t\t      The(distant_name(kickobj, xname)),\n>  526: \t\t      otense(kickobj, \"come\"));\n   527: \t    obj_extract_self(kickobj);\n   528: \t    newsym(x, y);\n   529: \t    if (costly && (!costly_spot(u.ux, u.uy) ||\n   530: \t\t    !index(u.urooms, *in_rooms(x, y, SHOPBASE))))\n   531: \t\taddtobill(kickobj, FALSE, FALSE, FALSE);"
+  },
+  {
+    "key": "L00532_01",
+    "original": "fall",
+    "translation": "",
+    "context": "src/dokick.c:532:45\n   527: \t    obj_extract_self(kickobj);\n   528: \t    newsym(x, y);\n   529: \t    if (costly && (!costly_spot(u.ux, u.uy) ||\n   530: \t\t    !index(u.urooms, *in_rooms(x, y, SHOPBASE))))\n   531: \t\taddtobill(kickobj, FALSE, FALSE, FALSE);\n>  532: \t    if (!flooreffects(kickobj, u.ux, u.uy, \"fall\")) {\n   533: \t\tplace_object(kickobj, u.ux, u.uy);\n   534: \t\tstackobj(kickobj);\n   535: \t\tnewsym(u.ux, u.uy);\n   536: \t    }\n   537: \t    return 1;"
+  },
+  {
+    "key": "L00544_01",
+    "original": "THUD!",
+    "translation": "",
+    "context": "src/dokick.c:544:23\n   539: \n   540: \t/* a box gets a chance of breaking open here */\n   541: \tif(Is_box(kickobj)) {\n   542: \t\tboolean otrp = kickobj->otrapped;\n   543: \n>  544: \t\tif(range < 2) pline(\"THUD!\");\n   545: \n   546: \t\tcontainer_impact_dmg(kickobj);\n   547: \n   548: \t\tif (kickobj->olocked) {\n   549: \t\t    if (!rn2(5) || (martial() && !rn2(2))) {"
+  },
+  {
+    "key": "L00550_01",
+    "original": "break open the lock!",
+    "translation": "",
+    "context": "src/dokick.c:550:8\n   545: \n   546: \t\tcontainer_impact_dmg(kickobj);\n   547: \n   548: \t\tif (kickobj->olocked) {\n   549: \t\t    if (!rn2(5) || (martial() && !rn2(2))) {\n>  550: \t\t\tYou(\"break open the lock!\");\n   551: \t\t\tkickobj->olocked = 0;\n   552: \t\t\tkickobj->obroken = 1;\n   553: \t\t\tif (otrp) (void) chest_trap(kickobj, LEG, FALSE);\n   554: \t\t\treturn(1);\n   555: \t\t    }"
+  },
+  {
+    "key": "L00558_01",
+    "original": "lid slams open, then falls shut.",
+    "translation": "",
+    "context": "src/dokick.c:558:14\n   553: \t\t\tif (otrp) (void) chest_trap(kickobj, LEG, FALSE);\n   554: \t\t\treturn(1);\n   555: \t\t    }\n   556: \t\t} else {\n   557: \t\t    if (!rn2(3) || (martial() && !rn2(2))) {\n>  558: \t\t\tpline_The(\"lid slams open, then falls shut.\");\n   559: \t\t\tif (otrp) (void) chest_trap(kickobj, LEG, FALSE);\n   560: \t\t\treturn(1);\n   561: \t\t    }\n   562: \t\t}\n   563: \t\tif(range < 2) return(1);"
+  },
+  {
+    "key": "L00575_01",
+    "original": "Thump!",
+    "translation": "",
+    "context": "src/dokick.c:575:33\n   570: \t/* too heavy to move.  range is calculated as potential distance from\n   571: \t * player, so range == 2 means the object may move up to one square\n   572: \t * from its current position\n   573: \t */\n   574: \tif(range < 2 || (isgold && kickobj->quan > 300L)) {\n>  575: \t    if(!Is_box(kickobj)) pline(\"Thump!\");\n   576: \t    return(!rn2(3) || martial());\n   577: \t}\n   578: \n   579: \tif (kickobj->quan > 1L && !isgold) kickobj = splitobj(kickobj, 1L);\n   580: "
+  },
+  {
+    "key": "L00582_01",
+    "original": "Whee!  %s %s across the %s.",
+    "translation": "",
+    "context": "src/dokick.c:582:12\n   577: \t}\n   578: \n   579: \tif (kickobj->quan > 1L && !isgold) kickobj = splitobj(kickobj, 1L);\n   580: \n   581: \tif (slide && !Blind)\n>  582: \t    pline(\"Whee!  %s %s across the %s.\", Doname2(kickobj),\n   583: \t\t  otense(kickobj, \"slide\"), surface(x,y));\n   584: \n   585: \tobj_extract_self(kickobj);\n   586: \t(void) snuff_candle(kickobj);\n   587: \tnewsym(x, y);"
+  },
+  {
+    "key": "L00583_01",
+    "original": "slide",
+    "translation": "",
+    "context": "src/dokick.c:583:21\n   578: \n   579: \tif (kickobj->quan > 1L && !isgold) kickobj = splitobj(kickobj, 1L);\n   580: \n   581: \tif (slide && !Blind)\n   582: \t    pline(\"Whee!  %s %s across the %s.\", Doname2(kickobj),\n>  583: \t\t  otense(kickobj, \"slide\"), surface(x,y));\n   584: \n   585: \tobj_extract_self(kickobj);\n   586: \t(void) snuff_candle(kickobj);\n   587: \tnewsym(x, y);\n   588: \tmon = bhit(u.dx, u.dy, range, KICKED_WEAPON,"
+  },
+  {
+    "key": "L00624_01",
+    "original": "fall",
+    "translation": "",
+    "context": "src/dokick.c:624:46\n   619: \t\tcostly_gold(x, y, kickobj->quan);\n   620: \t    else (void)stolen_value(kickobj, x, y,\n   621: \t\t\t\t    (boolean)shkp->mpeaceful, FALSE, FALSE);\n   622: \t}\n   623: \n>  624: \tif(flooreffects(kickobj,bhitpos.x,bhitpos.y,\"fall\")) return(1);\n   625: \tplace_object(kickobj, bhitpos.x, bhitpos.y);\n   626: \tstackobj(kickobj);\n   627: \tnewsym(kickobj->ox, kickobj->oy);\n   628: \treturn(1);\n   629: }"
+  },
+  {
+    "key": "L00638_01",
+    "original": "a door",
+    "translation": "",
+    "context": "src/dokick.c:638:40\n   633: char *buf;\n   634: {\n   635: \tconst char *what;\n   636: \n   637: \tif (kickobj) what = distant_name(kickobj,doname);\n>  638: \telse if (IS_DOOR(maploc->typ)) what = \"a door\";\n   639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n   640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";"
+  },
+  {
+    "key": "L00639_01",
+    "original": "a tree",
+    "translation": "",
+    "context": "src/dokick.c:639:40\n   634: {\n   635: \tconst char *what;\n   636: \n   637: \tif (kickobj) what = distant_name(kickobj,doname);\n   638: \telse if (IS_DOOR(maploc->typ)) what = \"a door\";\n>  639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n   640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";"
+  },
+  {
+    "key": "L00640_01",
+    "original": "a wall",
+    "translation": "",
+    "context": "src/dokick.c:640:42\n   635: \tconst char *what;\n   636: \n   637: \tif (kickobj) what = distant_name(kickobj,doname);\n   638: \telse if (IS_DOOR(maploc->typ)) what = \"a door\";\n   639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n>  640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS"
+  },
+  {
+    "key": "L00641_01",
+    "original": "a rock",
+    "translation": "",
+    "context": "src/dokick.c:641:40\n   636: \n   637: \tif (kickobj) what = distant_name(kickobj,doname);\n   638: \telse if (IS_DOOR(maploc->typ)) what = \"a door\";\n   639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n   640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n>  641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";"
+  },
+  {
+    "key": "L00642_01",
+    "original": "a throne",
+    "translation": "",
+    "context": "src/dokick.c:642:42\n   637: \tif (kickobj) what = distant_name(kickobj,doname);\n   638: \telse if (IS_DOOR(maploc->typ)) what = \"a door\";\n   639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n   640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n>  642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        "
+  },
+  {
+    "key": "L00643_01",
+    "original": "a fountain",
+    "translation": "",
+    "context": "src/dokick.c:643:44\n   638: \telse if (IS_DOOR(maploc->typ)) what = \"a door\";\n   639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n   640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n>  643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif"
+  },
+  {
+    "key": "L00644_01",
+    "original": "a headstone",
+    "translation": "",
+    "context": "src/dokick.c:644:41\n   639: \telse if (IS_TREE(maploc->typ)) what = \"a tree\";\n   640: \telse if (IS_STWALL(maploc->typ)) what = \"a wall\";\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n>  644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";"
+  },
+  {
+    "key": "L00646_01",
+    "original": "a sink",
+    "translation": "",
+    "context": "src/dokick.c:646:40\n   641: \telse if (IS_ROCK(maploc->typ)) what = \"a rock\";\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n>  646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";"
+  },
+  {
+    "key": "L00647_01",
+    "original": "a toilet",
+    "translation": "",
+    "context": "src/dokick.c:647:49\n   642: \telse if (IS_THRONE(maploc->typ)) what = \"a throne\";\n   643: \telse if (IS_FOUNTAIN(maploc->typ)) what = \"a fountain\";\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n>  647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";"
+  },
+  {
+    "key": "L00649_01",
+    "original": "an altar",
+    "translation": "",
+    "context": "src/dokick.c:649:41\n   644: \telse if (IS_GRAVE(maploc->typ)) what = \"a headstone\";\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n>  649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n   653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n   654: \telse what = \"something weird\";"
+  },
+  {
+    "key": "L00650_01",
+    "original": "a drawbridge",
+    "translation": "",
+    "context": "src/dokick.c:650:46\n   645: #ifdef SINKS\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n>  650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n   653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n   654: \telse what = \"something weird\";\n   655: \treturn strcat(strcpy(buf, \"kicking \"), what);"
+  },
+  {
+    "key": "L00651_01",
+    "original": "the stairs",
+    "translation": "",
+    "context": "src/dokick.c:651:41\n   646: \telse if (IS_SINK(maploc->typ)) what = \"a sink\";\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n>  651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n   653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n   654: \telse what = \"something weird\";\n   655: \treturn strcat(strcpy(buf, \"kicking \"), what);\n   656: }"
+  },
+  {
+    "key": "L00652_01",
+    "original": "a ladder",
+    "translation": "",
+    "context": "src/dokick.c:652:41\n   647:         else if (IS_TOILET(maploc->typ)) what = \"a toilet\";        \n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n>  652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n   653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n   654: \telse what = \"something weird\";\n   655: \treturn strcat(strcpy(buf, \"kicking \"), what);\n   656: }\n   657: "
+  },
+  {
+    "key": "L00653_01",
+    "original": "an iron bar",
+    "translation": "",
+    "context": "src/dokick.c:653:43\n   648: #endif\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n>  653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n   654: \telse what = \"something weird\";\n   655: \treturn strcat(strcpy(buf, \"kicking \"), what);\n   656: }\n   657: \n   658: #ifdef ANDROID"
+  },
+  {
+    "key": "L00654_01",
+    "original": "something weird",
+    "translation": "",
+    "context": "src/dokick.c:654:14\n   649: \telse if (IS_ALTAR(maploc->typ)) what = \"an altar\";\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n   653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n>  654: \telse what = \"something weird\";\n   655: \treturn strcat(strcpy(buf, \"kicking \"), what);\n   656: }\n   657: \n   658: #ifdef ANDROID\n   659: int"
+  },
+  {
+    "key": "L00655_01",
+    "original": "kicking ",
+    "translation": "",
+    "context": "src/dokick.c:655:28\n   650: \telse if (IS_DRAWBRIDGE(maploc->typ)) what = \"a drawbridge\";\n   651: \telse if (maploc->typ == STAIRS) what = \"the stairs\";\n   652: \telse if (maploc->typ == LADDER) what = \"a ladder\";\n   653: \telse if (maploc->typ == IRONBARS) what = \"an iron bar\";\n   654: \telse what = \"something weird\";\n>  655: \treturn strcat(strcpy(buf, \"kicking \"), what);\n   656: }\n   657: \n   658: #ifdef ANDROID\n   659: int\n   660: autokick()"
+  },
+  {
+    "key": "L00677_01",
+    "original": "Kick it open?",
+    "translation": "",
+    "context": "src/dokick.c:677:9\n   672: \tif (youmonst.data->mlet == S_LIZARD)\n   673: \t\treturn 0;\n   674: \tif (u.utrap)\n   675: \t\treturn 0;\n   676: \n>  677: \tif( yn(\"Kick it open?\") == 'y')\n   678: \t\treturn dokick_indir(TRUE);\n   679: \n   680: \treturn 0;\n   681: }\n   682: int"
+  },
+  {
+    "key": "L00702_01",
+    "original": "have no legs to kick with.",
+    "translation": "",
+    "context": "src/dokick.c:702:7\n   697: \tregister struct monst *mtmp;\n   698: \tboolean no_kick = FALSE;\n   699: \tchar buf[BUFSZ];\n   700: \n   701: \tif (nolimbs(youmonst.data) || slithy(youmonst.data)) {\n>  702: \t\tYou(\"have no legs to kick with.\");\n   703: \t\tno_kick = TRUE;\n   704: \t} else if (verysmall(youmonst.data)) {\n   705: \t\tYou(\"are too small to do any kicking.\");\n   706: \t\tno_kick = TRUE;\n   707: #ifdef STEED"
+  },
+  {
+    "key": "L00705_01",
+    "original": "are too small to do any kicking.",
+    "translation": "",
+    "context": "src/dokick.c:705:7\n   700: \n   701: \tif (nolimbs(youmonst.data) || slithy(youmonst.data)) {\n   702: \t\tYou(\"have no legs to kick with.\");\n   703: \t\tno_kick = TRUE;\n   704: \t} else if (verysmall(youmonst.data)) {\n>  705: \t\tYou(\"are too small to do any kicking.\");\n   706: \t\tno_kick = TRUE;\n   707: #ifdef STEED\n   708: \t} else if (u.usteed) {\n   709: \t\tif (yn_function(\"Kick your steed?\", ynchars, 'y') == 'y') {\n   710: \t\t    You(\"kick %s.\", mon_nam(u.usteed));"
+  },
+  {
+    "key": "L00709_01",
+    "original": "Kick your steed?",
+    "translation": "",
+    "context": "src/dokick.c:709:19\n   704: \t} else if (verysmall(youmonst.data)) {\n   705: \t\tYou(\"are too small to do any kicking.\");\n   706: \t\tno_kick = TRUE;\n   707: #ifdef STEED\n   708: \t} else if (u.usteed) {\n>  709: \t\tif (yn_function(\"Kick your steed?\", ynchars, 'y') == 'y') {\n   710: \t\t    You(\"kick %s.\", mon_nam(u.usteed));\n   711: \t\t    kick_steed();\n   712: \t\t    return 1;\n   713: \t\t} else {\n   714: \t\t    return 0;"
+  },
+  {
+    "key": "L00710_01",
+    "original": "kick %s.",
+    "translation": "",
+    "context": "src/dokick.c:710:11\n   705: \t\tYou(\"are too small to do any kicking.\");\n   706: \t\tno_kick = TRUE;\n   707: #ifdef STEED\n   708: \t} else if (u.usteed) {\n   709: \t\tif (yn_function(\"Kick your steed?\", ynchars, 'y') == 'y') {\n>  710: \t\t    You(\"kick %s.\", mon_nam(u.usteed));\n   711: \t\t    kick_steed();\n   712: \t\t    return 1;\n   713: \t\t} else {\n   714: \t\t    return 0;\n   715: \t\t}"
+  },
+  {
+    "key": "L00723_01",
+    "original": "%s%s %s in no shape for kicking.",
+    "translation": "",
+    "context": "src/dokick.c:723:8\n   718: \t\t/* note: jump() has similar code */\n   719: \t\tlong wl = (EWounded_legs & BOTH_SIDES);\n   720: \t\tconst char *bp = body_part(LEG);\n   721: \n   722: \t\tif (wl == BOTH_SIDES) bp = makeplural(bp);\n>  723: \t\tYour(\"%s%s %s in no shape for kicking.\",\n   724: \t\t     (wl == LEFT_SIDE) ? \"left \" :\n   725: \t\t\t(wl == RIGHT_SIDE) ? \"right \" : \"\",\n   726: \t\t     bp, (wl == BOTH_SIDES) ? \"are\" : \"is\");\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {"
+  },
+  {
+    "key": "L00724_01",
+    "original": "left ",
+    "translation": "",
+    "context": "src/dokick.c:724:28\n   719: \t\tlong wl = (EWounded_legs & BOTH_SIDES);\n   720: \t\tconst char *bp = body_part(LEG);\n   721: \n   722: \t\tif (wl == BOTH_SIDES) bp = makeplural(bp);\n   723: \t\tYour(\"%s%s %s in no shape for kicking.\",\n>  724: \t\t     (wl == LEFT_SIDE) ? \"left \" :\n   725: \t\t\t(wl == RIGHT_SIDE) ? \"right \" : \"\",\n   726: \t\t     bp, (wl == BOTH_SIDES) ? \"are\" : \"is\");\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {\n   729: \t\tYour(\"load is too heavy to balance yourself for a kick.\");"
+  },
+  {
+    "key": "L00725_01",
+    "original": "right ",
+    "translation": "",
+    "context": "src/dokick.c:725:25\n   720: \t\tconst char *bp = body_part(LEG);\n   721: \n   722: \t\tif (wl == BOTH_SIDES) bp = makeplural(bp);\n   723: \t\tYour(\"%s%s %s in no shape for kicking.\",\n   724: \t\t     (wl == LEFT_SIDE) ? \"left \" :\n>  725: \t\t\t(wl == RIGHT_SIDE) ? \"right \" : \"\",\n   726: \t\t     bp, (wl == BOTH_SIDES) ? \"are\" : \"is\");\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {\n   729: \t\tYour(\"load is too heavy to balance yourself for a kick.\");\n   730: \t\tno_kick = TRUE;"
+  },
+  {
+    "key": "L00726_01",
+    "original": "are",
+    "translation": "",
+    "context": "src/dokick.c:726:33\n   721: \n   722: \t\tif (wl == BOTH_SIDES) bp = makeplural(bp);\n   723: \t\tYour(\"%s%s %s in no shape for kicking.\",\n   724: \t\t     (wl == LEFT_SIDE) ? \"left \" :\n   725: \t\t\t(wl == RIGHT_SIDE) ? \"right \" : \"\",\n>  726: \t\t     bp, (wl == BOTH_SIDES) ? \"are\" : \"is\");\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {\n   729: \t\tYour(\"load is too heavy to balance yourself for a kick.\");\n   730: \t\tno_kick = TRUE;\n   731: \t} else if (youmonst.data->mlet == S_LIZARD) {"
+  },
+  {
+    "key": "L00726_02",
+    "original": "is",
+    "translation": "",
+    "context": "src/dokick.c:726:41\n   721: \n   722: \t\tif (wl == BOTH_SIDES) bp = makeplural(bp);\n   723: \t\tYour(\"%s%s %s in no shape for kicking.\",\n   724: \t\t     (wl == LEFT_SIDE) ? \"left \" :\n   725: \t\t\t(wl == RIGHT_SIDE) ? \"right \" : \"\",\n>  726: \t\t     bp, (wl == BOTH_SIDES) ? \"are\" : \"is\");\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {\n   729: \t\tYour(\"load is too heavy to balance yourself for a kick.\");\n   730: \t\tno_kick = TRUE;\n   731: \t} else if (youmonst.data->mlet == S_LIZARD) {"
+  },
+  {
+    "key": "L00729_01",
+    "original": "load is too heavy to balance yourself for a kick.",
+    "translation": "",
+    "context": "src/dokick.c:729:8\n   724: \t\t     (wl == LEFT_SIDE) ? \"left \" :\n   725: \t\t\t(wl == RIGHT_SIDE) ? \"right \" : \"\",\n   726: \t\t     bp, (wl == BOTH_SIDES) ? \"are\" : \"is\");\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {\n>  729: \t\tYour(\"load is too heavy to balance yourself for a kick.\");\n   730: \t\tno_kick = TRUE;\n   731: \t} else if (youmonst.data->mlet == S_LIZARD) {\n   732: \t\tYour(\"legs cannot kick effectively.\");\n   733: \t\tno_kick = TRUE;\n   734: \t} else if (u.uinwater && !rn2(2)) {"
+  },
+  {
+    "key": "L00732_01",
+    "original": "legs cannot kick effectively.",
+    "translation": "",
+    "context": "src/dokick.c:732:8\n   727: \t\tno_kick = TRUE;\n   728: \t} else if (near_capacity() > SLT_ENCUMBER) {\n   729: \t\tYour(\"load is too heavy to balance yourself for a kick.\");\n   730: \t\tno_kick = TRUE;\n   731: \t} else if (youmonst.data->mlet == S_LIZARD) {\n>  732: \t\tYour(\"legs cannot kick effectively.\");\n   733: \t\tno_kick = TRUE;\n   734: \t} else if (u.uinwater && !rn2(2)) {\n   735: \t\tYour(\"slow motion kick doesn't hit anything.\");\n   736: \t\tno_kick = TRUE;\n   737: \t} else if (u.utrap) {"
+  },
+  {
+    "key": "L00735_01",
+    "original": "slow motion kick doesn't hit anything.",
+    "translation": "",
+    "context": "src/dokick.c:735:8\n   730: \t\tno_kick = TRUE;\n   731: \t} else if (youmonst.data->mlet == S_LIZARD) {\n   732: \t\tYour(\"legs cannot kick effectively.\");\n   733: \t\tno_kick = TRUE;\n   734: \t} else if (u.uinwater && !rn2(2)) {\n>  735: \t\tYour(\"slow motion kick doesn't hit anything.\");\n   736: \t\tno_kick = TRUE;\n   737: \t} else if (u.utrap) {\n   738: \t\tswitch (u.utraptype) {\n   739: \t\t    case TT_PIT:\n   740: \t\t\tpline(\"There's not enough room to kick down here.\");"
+  },
+  {
+    "key": "L00740_01",
+    "original": "There's not enough room to kick down here.",
+    "translation": "",
+    "context": "src/dokick.c:740:10\n   735: \t\tYour(\"slow motion kick doesn't hit anything.\");\n   736: \t\tno_kick = TRUE;\n   737: \t} else if (u.utrap) {\n   738: \t\tswitch (u.utraptype) {\n   739: \t\t    case TT_PIT:\n>  740: \t\t\tpline(\"There's not enough room to kick down here.\");\n   741: \t\t\tbreak;\n   742: \t\t    case TT_WEB:\n   743: \t\t    case TT_BEARTRAP:\n   744: \t\t\tYou_cant(\"move your %s!\", body_part(LEG));\n   745: \t\t\tbreak;"
+  },
+  {
+    "key": "L00744_01",
+    "original": "move your %s!",
+    "translation": "",
+    "context": "src/dokick.c:744:13\n   739: \t\t    case TT_PIT:\n   740: \t\t\tpline(\"There's not enough room to kick down here.\");\n   741: \t\t\tbreak;\n   742: \t\t    case TT_WEB:\n   743: \t\t    case TT_BEARTRAP:\n>  744: \t\t\tYou_cant(\"move your %s!\", body_part(LEG));\n   745: \t\t\tbreak;\n   746: \t\t    default:\n   747: \t\t\tbreak;\n   748: \t\t}\n   749: \t\tno_kick = TRUE;"
+  },
+  {
+    "key": "L00780_01",
+    "original": "move your %s!",
+    "translation": "",
+    "context": "src/dokick.c:780:21\n   775: \telse\n   776: \t    avrg_attrib = (ACURRSTR+ACURR(A_DEX)+ACURR(A_CON))/3;\n   777: \n   778: \tif(u.uswallow) {\n   779: \t\tswitch(rn2(3)) {\n>  780: \t\tcase 0:  You_cant(\"move your %s!\", body_part(LEG));\n   781: \t\t\t break;\n   782: \t\tcase 1:  if (is_animal(u.ustuck->data)) {\n   783: \t\t\t\tpline(\"%s burps loudly.\", Monnam(u.ustuck));\n   784: \t\t\t\tbreak;\n   785: \t\t\t }"
+  },
+  {
+    "key": "L00783_01",
+    "original": "%s burps loudly.",
+    "translation": "",
+    "context": "src/dokick.c:783:11\n   778: \tif(u.uswallow) {\n   779: \t\tswitch(rn2(3)) {\n   780: \t\tcase 0:  You_cant(\"move your %s!\", body_part(LEG));\n   781: \t\t\t break;\n   782: \t\tcase 1:  if (is_animal(u.ustuck->data)) {\n>  783: \t\t\t\tpline(\"%s burps loudly.\", Monnam(u.ustuck));\n   784: \t\t\t\tbreak;\n   785: \t\t\t }\n   786: \t\tdefault: Your(\"feeble kick has no effect.\"); break;\n   787: \t\t}\n   788: \t\treturn(1);"
+  },
+  {
+    "key": "L00786_01",
+    "original": "feeble kick has no effect.",
+    "translation": "",
+    "context": "src/dokick.c:786:17\n   781: \t\t\t break;\n   782: \t\tcase 1:  if (is_animal(u.ustuck->data)) {\n   783: \t\t\t\tpline(\"%s burps loudly.\", Monnam(u.ustuck));\n   784: \t\t\t\tbreak;\n   785: \t\t\t }\n>  786: \t\tdefault: Your(\"feeble kick has no effect.\"); break;\n   787: \t\t}\n   788: \t\treturn(1);\n   789: \t}\n   790: \tif (Levitation) {\n   791: \t\tint xx, yy;"
+  },
+  {
+    "key": "L00802_01",
+    "original": "have nothing to brace yourself against.",
+    "translation": "",
+    "context": "src/dokick.c:802:11\n   797: \t\t * Possible extension: allow bracing against stuff on the side?\n   798: \t\t */\n   799: \t\tif (isok(xx,yy) && !IS_ROCK(levl[xx][yy].typ) &&\n   800: \t\t\t!IS_DOOR(levl[xx][yy].typ) &&\n   801: \t\t\t(!Is_airlevel(&u.uz) || !OBJ_AT(xx,yy))) {\n>  802: \t\t    You(\"have nothing to brace yourself against.\");\n   803: \t\t    return(0);\n   804: \t\t}\n   805: \t}\n   806: \n   807: \twake_nearby();"
+  },
+  {
+    "key": "L00852_01",
+    "original": "splash some water around.",
+    "translation": "",
+    "context": "src/dokick.c:852:7\n   847: \t\tunmap_object(x, y);\n   848: \t\tnewsym(x, y);\n   849: \t}\n   850: \tif (is_pool(x, y) ^ !!u.uinwater) {\n   851: \t\t/* objects normally can't be removed from water by kicking */\n>  852: \t\tYou(\"splash some water around.\");\n   853: \t\treturn 1;\n   854: \t}\n   855: \n   856: \tkickobj = (struct obj *)0;\n   857: \tif (OBJ_AT(x, y) &&"
+  },
+  {
+    "key": "L00872_01",
+    "original": "Crash!  %s a secret door!",
+    "translation": "",
+    "context": "src/dokick.c:872:10\n   867: \n   868: \tif(!IS_DOOR(maploc->typ)) {\n   869: \t\tif(maploc->typ == SDOOR) {\n   870: \t\t    if(!Levitation && rn2(30) < avrg_attrib) {\n   871: \t\t\tcvt_sdoor_to_door(maploc);\t/* ->typ = DOOR */\n>  872: \t\t\tpline(\"Crash!  %s a secret door!\",\n   873: \t\t\t      /* don't \"kick open\" when it's locked\n   874: \t\t\t\t unless it also happens to be trapped */\n   875: \t\t\t(maploc->doormask & (D_LOCKED|D_TRAPPED)) == D_LOCKED ?\n   876: \t\t\t      \"Your kick uncovers\" : \"You kick open\");\n   877: \t\t\texercise(A_DEX, TRUE);"
+  },
+  {
+    "key": "L00876_01",
+    "original": "Your kick uncovers",
+    "translation": "",
+    "context": "src/dokick.c:876:10\n   871: \t\t\tcvt_sdoor_to_door(maploc);\t/* ->typ = DOOR */\n   872: \t\t\tpline(\"Crash!  %s a secret door!\",\n   873: \t\t\t      /* don't \"kick open\" when it's locked\n   874: \t\t\t\t unless it also happens to be trapped */\n   875: \t\t\t(maploc->doormask & (D_LOCKED|D_TRAPPED)) == D_LOCKED ?\n>  876: \t\t\t      \"Your kick uncovers\" : \"You kick open\");\n   877: \t\t\texercise(A_DEX, TRUE);\n   878: \t\t\tif(maploc->doormask & D_TRAPPED) {\n   879: \t\t\t    maploc->doormask = D_NODOOR;\n   880: \t\t\t    b_trapped(\"door\", FOOT);\n   881: \t\t\t} else if (maploc->doormask != D_NODOOR &&"
+  },
+  {
+    "key": "L00876_02",
+    "original": "You kick open",
+    "translation": "",
+    "context": "src/dokick.c:876:33\n   871: \t\t\tcvt_sdoor_to_door(maploc);\t/* ->typ = DOOR */\n   872: \t\t\tpline(\"Crash!  %s a secret door!\",\n   873: \t\t\t      /* don't \"kick open\" when it's locked\n   874: \t\t\t\t unless it also happens to be trapped */\n   875: \t\t\t(maploc->doormask & (D_LOCKED|D_TRAPPED)) == D_LOCKED ?\n>  876: \t\t\t      \"Your kick uncovers\" : \"You kick open\");\n   877: \t\t\texercise(A_DEX, TRUE);\n   878: \t\t\tif(maploc->doormask & D_TRAPPED) {\n   879: \t\t\t    maploc->doormask = D_NODOOR;\n   880: \t\t\t    b_trapped(\"door\", FOOT);\n   881: \t\t\t} else if (maploc->doormask != D_NODOOR &&"
+  },
+  {
+    "key": "L00880_01",
+    "original": "door",
+    "translation": "",
+    "context": "src/dokick.c:880:18\n   875: \t\t\t(maploc->doormask & (D_LOCKED|D_TRAPPED)) == D_LOCKED ?\n   876: \t\t\t      \"Your kick uncovers\" : \"You kick open\");\n   877: \t\t\texercise(A_DEX, TRUE);\n   878: \t\t\tif(maploc->doormask & D_TRAPPED) {\n   879: \t\t\t    maploc->doormask = D_NODOOR;\n>  880: \t\t\t    b_trapped(\"door\", FOOT);\n   881: \t\t\t} else if (maploc->doormask != D_NODOOR &&\n   882: \t\t\t\t   !(maploc->doormask & D_LOCKED))\n   883: \t\t\t    maploc->doormask = D_ISOPEN;\n   884: \t\t\tif (Blind)\n   885: \t\t\t    feel_location(x,y);\t/* we know it's gone */"
+  },
+  {
+    "key": "L00896_01",
+    "original": "Crash!  You kick open a secret passage!",
+    "translation": "",
+    "context": "src/dokick.c:896:10\n   891: \t\t\treturn(1);\n   892: \t\t    } else goto ouch;\n   893: \t\t}\n   894: \t\tif(maploc->typ == SCORR) {\n   895: \t\t    if(!Levitation && rn2(30) < avrg_attrib) {\n>  896: \t\t\tpline(\"Crash!  You kick open a secret passage!\");\n   897: \t\t\texercise(A_DEX, TRUE);\n   898: \t\t\tmaploc->typ = CORR;\n   899: \t\t\tif (Blind)\n   900: \t\t\t    feel_location(x,y);\t/* we know it's gone */\n   901: \t\t\telse"
+  },
+  {
+    "key": "L00915_01",
+    "original": "CRASH!  You destroy it.",
+    "translation": "",
+    "context": "src/dokick.c:915:14\n   910: \t\t    if((Luck < 0 || maploc->doormask) && !rn2(3)) {\n   911: \t\t\tmaploc->typ = ROOM;\n   912: \t\t\tmaploc->doormask = 0; /* don't leave loose ends.. */\n   913: \t\t\t(void) mkgold((long)rnd(200), x, y);\n   914: \t\t\tif (Blind)\n>  915: \t\t\t    pline(\"CRASH!  You destroy it.\");\n   916: \t\t\telse {\n   917: \t\t\t    pline(\"CRASH!  You destroy the throne.\");\n   918: \t\t\t    newsym(x, y);\n   919: \t\t\t}\n   920: \t\t\texercise(A_DEX, TRUE);"
+  },
+  {
+    "key": "L00917_01",
+    "original": "CRASH!  You destroy the throne.",
+    "translation": "",
+    "context": "src/dokick.c:917:14\n   912: \t\t\tmaploc->doormask = 0; /* don't leave loose ends.. */\n   913: \t\t\t(void) mkgold((long)rnd(200), x, y);\n   914: \t\t\tif (Blind)\n   915: \t\t\t    pline(\"CRASH!  You destroy it.\");\n   916: \t\t\telse {\n>  917: \t\t\t    pline(\"CRASH!  You destroy the throne.\");\n   918: \t\t\t    newsym(x, y);\n   919: \t\t\t}\n   920: \t\t\texercise(A_DEX, TRUE);\n   921: \t\t\treturn(1);\n   922: \t\t    } else if(Luck > 0 && !rn2(3) && !maploc->looted) {"
+  },
+  {
+    "key": "L00930_01",
+    "original": "kick %s loose!",
+    "translation": "",
+    "context": "src/dokick.c:930:12\n   925: \t\t\tif(i > 6) i = 6;\n   926: \t\t\twhile(i--)\n   927: \t\t\t    (void) mksobj_at(rnd_class(DILITHIUM_CRYSTAL,\n   928: \t\t\t\t\tLUCKSTONE-1), x, y, FALSE, TRUE);\n   929: \t\t\tif (Blind)\n>  930: \t\t\t    You(\"kick %s loose!\", something);\n   931: \t\t\telse {\n   932: \t\t\t    You(\"kick loose some ornamental coins and gems!\");\n   933: \t\t\t    newsym(x, y);\n   934: \t\t\t}\n   935: \t\t\t/* prevent endless milking */"
+  },
+  {
+    "key": "L00932_01",
+    "original": "kick loose some ornamental coins and gems!",
+    "translation": "",
+    "context": "src/dokick.c:932:12\n   927: \t\t\t    (void) mksobj_at(rnd_class(DILITHIUM_CRYSTAL,\n   928: \t\t\t\t\tLUCKSTONE-1), x, y, FALSE, TRUE);\n   929: \t\t\tif (Blind)\n   930: \t\t\t    You(\"kick %s loose!\", something);\n   931: \t\t\telse {\n>  932: \t\t\t    You(\"kick loose some ornamental coins and gems!\");\n   933: \t\t\t    newsym(x, y);\n   934: \t\t\t}\n   935: \t\t\t/* prevent endless milking */\n   936: \t\t\tmaploc->looted = T_LOOTED;\n   937: \t\t\treturn(1);"
+  },
+  {
+    "key": "L00948_01",
+    "original": "kick %s.",
+    "translation": "",
+    "context": "src/dokick.c:948:11\n   943: \t\t    }\n   944: \t\t    goto ouch;\n   945: \t\t}\n   946: \t\tif(IS_ALTAR(maploc->typ)) {\n   947: \t\t    if(Levitation) goto dumb;\n>  948: \t\t    You(\"kick %s.\",(Blind ? something : \"the altar\"));\n   949: \t\t    if(!rn2(3)) goto ouch;\n   950: \t\t    altar_wrath(x, y);\n   951: \t\t    exercise(A_DEX, TRUE);\n   952: \t\t    return(1);\n   953: \t\t}"
+  },
+  {
+    "key": "L00948_02",
+    "original": "the altar",
+    "translation": "",
+    "context": "src/dokick.c:948:43\n   943: \t\t    }\n   944: \t\t    goto ouch;\n   945: \t\t}\n   946: \t\tif(IS_ALTAR(maploc->typ)) {\n   947: \t\t    if(Levitation) goto dumb;\n>  948: \t\t    You(\"kick %s.\",(Blind ? something : \"the altar\"));\n   949: \t\t    if(!rn2(3)) goto ouch;\n   950: \t\t    altar_wrath(x, y);\n   951: \t\t    exercise(A_DEX, TRUE);\n   952: \t\t    return(1);\n   953: \t\t}"
+  },
+  {
+    "key": "L00956_01",
+    "original": "kick %s.",
+    "translation": "",
+    "context": "src/dokick.c:956:11\n   951: \t\t    exercise(A_DEX, TRUE);\n   952: \t\t    return(1);\n   953: \t\t}\n   954: \t\tif(IS_FOUNTAIN(maploc->typ)) {\n   955: \t\t    if(Levitation) goto dumb;\n>  956: \t\t    You(\"kick %s.\",(Blind ? something : \"the fountain\"));\n   957: \t\t    if(!rn2(3)) goto ouch;\n   958: \t\t    /* make metal boots rust */\n   959: \t\t    if(uarmf && rn2(3))\n   960: \t\t\tif (!rust_dmg(uarmf, \"metal boots\", 1, FALSE, &youmonst)) {\n   961: \t\t\t\tYour(\"boots get wet.\");"
+  },
+  {
+    "key": "L00956_02",
+    "original": "the fountain",
+    "translation": "",
+    "context": "src/dokick.c:956:43\n   951: \t\t    exercise(A_DEX, TRUE);\n   952: \t\t    return(1);\n   953: \t\t}\n   954: \t\tif(IS_FOUNTAIN(maploc->typ)) {\n   955: \t\t    if(Levitation) goto dumb;\n>  956: \t\t    You(\"kick %s.\",(Blind ? something : \"the fountain\"));\n   957: \t\t    if(!rn2(3)) goto ouch;\n   958: \t\t    /* make metal boots rust */\n   959: \t\t    if(uarmf && rn2(3))\n   960: \t\t\tif (!rust_dmg(uarmf, \"metal boots\", 1, FALSE, &youmonst)) {\n   961: \t\t\t\tYour(\"boots get wet.\");"
+  },
+  {
+    "key": "L00960_01",
+    "original": "metal boots",
+    "translation": "",
+    "context": "src/dokick.c:960:25\n   955: \t\t    if(Levitation) goto dumb;\n   956: \t\t    You(\"kick %s.\",(Blind ? something : \"the fountain\"));\n   957: \t\t    if(!rn2(3)) goto ouch;\n   958: \t\t    /* make metal boots rust */\n   959: \t\t    if(uarmf && rn2(3))\n>  960: \t\t\tif (!rust_dmg(uarmf, \"metal boots\", 1, FALSE, &youmonst)) {\n   961: \t\t\t\tYour(\"boots get wet.\");\n   962: \t\t\t\t/* could cause short-lived fumbling here */\n   963: \t\t\t}\n   964: \t\t    exercise(A_DEX, TRUE);\n   965: \t\t    return(1);"
+  },
+  {
+    "key": "L00961_01",
+    "original": "boots get wet.",
+    "translation": "",
+    "context": "src/dokick.c:961:10\n   956: \t\t    You(\"kick %s.\",(Blind ? something : \"the fountain\"));\n   957: \t\t    if(!rn2(3)) goto ouch;\n   958: \t\t    /* make metal boots rust */\n   959: \t\t    if(uarmf && rn2(3))\n   960: \t\t\tif (!rust_dmg(uarmf, \"metal boots\", 1, FALSE, &youmonst)) {\n>  961: \t\t\t\tYour(\"boots get wet.\");\n   962: \t\t\t\t/* could cause short-lived fumbling here */\n   963: \t\t\t}\n   964: \t\t    exercise(A_DEX, TRUE);\n   965: \t\t    return(1);\n   966: \t\t}"
+  },
+  {
+    "key": "L00974_01",
+    "original": "a low buzzing.",
+    "translation": "",
+    "context": "src/dokick.c:974:17\n   969: \t\tif(IS_TREE(maploc->typ)) {\n   970: \t\t    struct obj *treefruit;\n   971: \t\t    /* nothing, fruit or trouble? 75:23.5:1.5% */\n   972: \t\t    if (rn2(3)) {\n   973: \t\t\tif ( !rn2(6) && !(mvitals[PM_KILLER_BEE].mvflags & G_GONE) )\n>  974: \t\t\t    You_hear(\"a low buzzing.\"); /* a warning */\n   975: \t\t\tgoto ouch;\n   976: \t\t    }\n   977: \t\t    if (rn2(15) && !(maploc->looted & TREE_LOOTED) &&\n   978: \t\t\t  (treefruit = rnd_treefruit_at(x, y))) {\n   979: \t\t\tlong nfruit = 8L-rnl(7), nfall;"
+  },
+  {
+    "key": "L00983_01",
+    "original": "Some %s fall from the tree!",
+    "translation": "",
+    "context": "src/dokick.c:983:14\n   978: \t\t\t  (treefruit = rnd_treefruit_at(x, y))) {\n   979: \t\t\tlong nfruit = 8L-rnl(7), nfall;\n   980: \t\t\tshort frtype = treefruit->otyp;\n   981: \t\t\ttreefruit->quan = nfruit;\n   982: \t\t\tif (is_plural(treefruit))\n>  983: \t\t\t    pline(\"Some %s fall from the tree!\", xname(treefruit));\n   984: \t\t\telse\n   985: \t\t\t    pline(\"%s falls from the tree!\", An(xname(treefruit)));\n   986: \t\t\tnfall = scatter(x,y,2,MAY_HIT,treefruit);\n   987: \t\t\tif (nfall != nfruit) {\n   988: \t\t\t    /* scatter left some in the tree, but treefruit"
+  },
+  {
+    "key": "L00985_01",
+    "original": "%s falls from the tree!",
+    "translation": "",
+    "context": "src/dokick.c:985:14\n   980: \t\t\tshort frtype = treefruit->otyp;\n   981: \t\t\ttreefruit->quan = nfruit;\n   982: \t\t\tif (is_plural(treefruit))\n   983: \t\t\t    pline(\"Some %s fall from the tree!\", xname(treefruit));\n   984: \t\t\telse\n>  985: \t\t\t    pline(\"%s falls from the tree!\", An(xname(treefruit)));\n   986: \t\t\tnfall = scatter(x,y,2,MAY_HIT,treefruit);\n   987: \t\t\tif (nfall != nfruit) {\n   988: \t\t\t    /* scatter left some in the tree, but treefruit\n   989: \t\t\t     * may not refer to the correct object */\n   990: \t\t\t    treefruit = mksobj(frtype, TRUE, FALSE);"
+  },
+  {
+    "key": "L00992_01",
+    "original": "%ld %s got caught in the branches.",
+    "translation": "",
+    "context": "src/dokick.c:992:14\n   987: \t\t\tif (nfall != nfruit) {\n   988: \t\t\t    /* scatter left some in the tree, but treefruit\n   989: \t\t\t     * may not refer to the correct object */\n   990: \t\t\t    treefruit = mksobj(frtype, TRUE, FALSE);\n   991: \t\t\t    treefruit->quan = nfruit-nfall;\n>  992: \t\t\t    pline(\"%ld %s got caught in the branches.\",\n   993: \t\t\t\tnfruit-nfall, xname(treefruit));\n   994: \t\t\t    dealloc_obj(treefruit);\n   995: \t\t\t}\n   996: \t\t\texercise(A_DEX, TRUE);\n   997: \t\t\texercise(A_WIS, TRUE);\t/* discovered a new food source! */"
+  },
+  {
+    "key": "L01013_01",
+    "original": "You've attracted the tree's former occupants!",
+    "translation": "",
+    "context": "src/dokick.c:1013:14\n  1008: \t\t\t\t&& makemon(&mons[PM_KILLER_BEE],\n  1009: \t\t\t\t\t       mm.x, mm.y, MM_ANGRY))\n  1010: \t\t\t\tmade++;\n  1011: \t\t\t}\n  1012: \t\t\tif ( made )\n> 1013: \t\t\t    pline(\"You've attracted the tree's former occupants!\");\n  1014: \t\t\telse\n  1015: \t\t\t    You(\"smell stale honey.\");\n  1016: \t\t\tmaploc->looted |= TREE_SWARM;\n  1017: \t\t\treturn(1);\n  1018: \t\t    }"
+  },
+  {
+    "key": "L01015_01",
+    "original": "smell stale honey.",
+    "translation": "",
+    "context": "src/dokick.c:1015:12\n  1010: \t\t\t\tmade++;\n  1011: \t\t\t}\n  1012: \t\t\tif ( made )\n  1013: \t\t\t    pline(\"You've attracted the tree's former occupants!\");\n  1014: \t\t\telse\n> 1015: \t\t\t    You(\"smell stale honey.\");\n  1016: \t\t\tmaploc->looted |= TREE_SWARM;\n  1017: \t\t\treturn(1);\n  1018: \t\t    }\n  1019: \t\t    goto ouch;\n  1020: \t\t}"
+  },
+  {
+    "key": "L01024_01",
+    "original": "Klunk!",
+    "translation": "",
+    "context": "src/dokick.c:1024:12\n  1019: \t\t    goto ouch;\n  1020: \t\t}\n  1021: #ifdef SINKS\n  1022: \t\tif(IS_TOILET(maploc->typ)) {\n  1023: \t\t   if(Levitation) goto dumb;\n> 1024: \t\t   pline(\"Klunk!\");\n  1025: \t\t   if (!rn2(4)) breaktoilet(x,y);\n  1026: \t\t   return(1);\n  1027: \t\t}\n  1028: \t\tif(IS_GRAVE(maploc->typ)) {\n  1029: \t\t   goto ouch;"
+  },
+  {
+    "key": "L01039_01",
+    "original": "Klunk!  The pipes vibrate noisily.",
+    "translation": "",
+    "context": "src/dokick.c:1039:14\n  1034: \t\t\t\t\tPM_INCUBUS : PM_SUCCUBUS;\n  1035: \n  1036: \t\t    if(Levitation) goto dumb;\n  1037: \t\t    if(rn2(5)) {\n  1038: \t\t\tif(flags.soundok)\n> 1039: \t\t\t    pline(\"Klunk!  The pipes vibrate noisily.\");\n  1040: \t\t\telse pline(\"Klunk!\");\n  1041: \t\t\texercise(A_DEX, TRUE);\n  1042: \t\t\treturn(1);\n  1043: \t\t    } else if(!(maploc->looted & S_LPUDDING) && !rn2(3) &&\n  1044: \t\t\t  !(mvitals[PM_BLACK_PUDDING].mvflags & G_GONE)) {"
+  },
+  {
+    "key": "L01040_01",
+    "original": "Klunk!",
+    "translation": "",
+    "context": "src/dokick.c:1040:15\n  1035: \n  1036: \t\t    if(Levitation) goto dumb;\n  1037: \t\t    if(rn2(5)) {\n  1038: \t\t\tif(flags.soundok)\n  1039: \t\t\t    pline(\"Klunk!  The pipes vibrate noisily.\");\n> 1040: \t\t\telse pline(\"Klunk!\");\n  1041: \t\t\texercise(A_DEX, TRUE);\n  1042: \t\t\treturn(1);\n  1043: \t\t    } else if(!(maploc->looted & S_LPUDDING) && !rn2(3) &&\n  1044: \t\t\t  !(mvitals[PM_BLACK_PUDDING].mvflags & G_GONE)) {\n  1045: \t\t\tif (Blind)"
+  },
+  {
+    "key": "L01046_01",
+    "original": "a gushing sound.",
+    "translation": "",
+    "context": "src/dokick.c:1046:17\n  1041: \t\t\texercise(A_DEX, TRUE);\n  1042: \t\t\treturn(1);\n  1043: \t\t    } else if(!(maploc->looted & S_LPUDDING) && !rn2(3) &&\n  1044: \t\t\t  !(mvitals[PM_BLACK_PUDDING].mvflags & G_GONE)) {\n  1045: \t\t\tif (Blind)\n> 1046: \t\t\t    You_hear(\"a gushing sound.\");\n  1047: \t\t\telse\n  1048: \t\t\t    pline(\"A %s ooze gushes up from the drain!\",\n  1049: \t\t\t\t\t hcolor(NH_BLACK));\n  1050: \t\t\t(void) makemon(&mons[PM_BLACK_PUDDING],\n  1051: \t\t\t\t\t x, y, NO_MM_FLAGS);"
+  },
+  {
+    "key": "L01048_01",
+    "original": "A %s ooze gushes up from the drain!",
+    "translation": "",
+    "context": "src/dokick.c:1048:14\n  1043: \t\t    } else if(!(maploc->looted & S_LPUDDING) && !rn2(3) &&\n  1044: \t\t\t  !(mvitals[PM_BLACK_PUDDING].mvflags & G_GONE)) {\n  1045: \t\t\tif (Blind)\n  1046: \t\t\t    You_hear(\"a gushing sound.\");\n  1047: \t\t\telse\n> 1048: \t\t\t    pline(\"A %s ooze gushes up from the drain!\",\n  1049: \t\t\t\t\t hcolor(NH_BLACK));\n  1050: \t\t\t(void) makemon(&mons[PM_BLACK_PUDDING],\n  1051: \t\t\t\t\t x, y, NO_MM_FLAGS);\n  1052: \t\t\texercise(A_DEX, TRUE);\n  1053: \t\t\tnewsym(x,y);"
+  },
+  {
+    "key": "L01059_01",
+    "original": "%s returns!",
+    "translation": "",
+    "context": "src/dokick.c:1059:10\n  1054: \t\t\tmaploc->looted |= S_LPUDDING;\n  1055: \t\t\treturn(1);\n  1056: \t\t    } else if(!(maploc->looted & S_LDWASHER) && !rn2(3) &&\n  1057: \t\t\t      !(mvitals[washerndx].mvflags & G_GONE)) {\n  1058: \t\t\t/* can't resist... */\n> 1059: \t\t\tpline(\"%s returns!\", (Blind ? Something :\n  1060: \t\t\t\t\t\t\t\"The dish washer\"));\n  1061: \t\t\tif (makemon(&mons[washerndx], x, y, NO_MM_FLAGS))\n  1062: \t\t\t    newsym(x,y);\n  1063: \t\t\tmaploc->looted |= S_LDWASHER;\n  1064: \t\t\texercise(A_DEX, TRUE);"
+  },
+  {
+    "key": "L01060_01",
+    "original": "The dish washer",
+    "translation": "",
+    "context": "src/dokick.c:1060:8\n  1055: \t\t\treturn(1);\n  1056: \t\t    } else if(!(maploc->looted & S_LDWASHER) && !rn2(3) &&\n  1057: \t\t\t      !(mvitals[washerndx].mvflags & G_GONE)) {\n  1058: \t\t\t/* can't resist... */\n  1059: \t\t\tpline(\"%s returns!\", (Blind ? Something :\n> 1060: \t\t\t\t\t\t\t\"The dish washer\"));\n  1061: \t\t\tif (makemon(&mons[washerndx], x, y, NO_MM_FLAGS))\n  1062: \t\t\t    newsym(x,y);\n  1063: \t\t\tmaploc->looted |= S_LDWASHER;\n  1064: \t\t\texercise(A_DEX, TRUE);\n  1065: \t\t\treturn(1);"
+  },
+  {
+    "key": "L01067_01",
+    "original": "Flupp!  %s.",
+    "translation": "",
+    "context": "src/dokick.c:1067:10\n  1062: \t\t\t    newsym(x,y);\n  1063: \t\t\tmaploc->looted |= S_LDWASHER;\n  1064: \t\t\texercise(A_DEX, TRUE);\n  1065: \t\t\treturn(1);\n  1066: \t\t    } else if(!rn2(3)) {\n> 1067: \t\t\tpline(\"Flupp!  %s.\", (Blind ?\n  1068: \t\t\t\t      \"You hear a sloshing sound\" :\n  1069: \t\t\t\t      \"Muddy waste pops up from the drain\"));\n  1070: \t\t\tif(!(maploc->looted & S_LRING)) { /* once per sink */\n  1071: \t\t\t    if (!Blind)\n  1072: \t\t\t\tYou(\"see a ring shining in its midst.\");"
+  },
+  {
+    "key": "L01068_01",
+    "original": "You hear a sloshing sound",
+    "translation": "",
+    "context": "src/dokick.c:1068:11\n  1063: \t\t\tmaploc->looted |= S_LDWASHER;\n  1064: \t\t\texercise(A_DEX, TRUE);\n  1065: \t\t\treturn(1);\n  1066: \t\t    } else if(!rn2(3)) {\n  1067: \t\t\tpline(\"Flupp!  %s.\", (Blind ?\n> 1068: \t\t\t\t      \"You hear a sloshing sound\" :\n  1069: \t\t\t\t      \"Muddy waste pops up from the drain\"));\n  1070: \t\t\tif(!(maploc->looted & S_LRING)) { /* once per sink */\n  1071: \t\t\t    if (!Blind)\n  1072: \t\t\t\tYou(\"see a ring shining in its midst.\");\n  1073: \t\t\t    (void) mkobj_at(RING_CLASS, x, y, TRUE);"
+  },
+  {
+    "key": "L01069_01",
+    "original": "Muddy waste pops up from the drain",
+    "translation": "",
+    "context": "src/dokick.c:1069:11\n  1064: \t\t\texercise(A_DEX, TRUE);\n  1065: \t\t\treturn(1);\n  1066: \t\t    } else if(!rn2(3)) {\n  1067: \t\t\tpline(\"Flupp!  %s.\", (Blind ?\n  1068: \t\t\t\t      \"You hear a sloshing sound\" :\n> 1069: \t\t\t\t      \"Muddy waste pops up from the drain\"));\n  1070: \t\t\tif(!(maploc->looted & S_LRING)) { /* once per sink */\n  1071: \t\t\t    if (!Blind)\n  1072: \t\t\t\tYou(\"see a ring shining in its midst.\");\n  1073: \t\t\t    (void) mkobj_at(RING_CLASS, x, y, TRUE);\n  1074: \t\t\t    newsym(x, y);"
+  },
+  {
+    "key": "L01072_01",
+    "original": "see a ring shining in its midst.",
+    "translation": "",
+    "context": "src/dokick.c:1072:9\n  1067: \t\t\tpline(\"Flupp!  %s.\", (Blind ?\n  1068: \t\t\t\t      \"You hear a sloshing sound\" :\n  1069: \t\t\t\t      \"Muddy waste pops up from the drain\"));\n  1070: \t\t\tif(!(maploc->looted & S_LRING)) { /* once per sink */\n  1071: \t\t\t    if (!Blind)\n> 1072: \t\t\t\tYou(\"see a ring shining in its midst.\");\n  1073: \t\t\t    (void) mkobj_at(RING_CLASS, x, y, TRUE);\n  1074: \t\t\t    newsym(x, y);\n  1075: \t\t\t    exercise(A_DEX, TRUE);\n  1076: \t\t\t    exercise(A_WIS, TRUE);\t/* a discovery! */\n  1077: \t\t\t    maploc->looted |= S_LRING;"
+  },
+  {
+    "key": "L01089_01",
+    "original": "Ouch!  That hurts!",
+    "translation": "",
+    "context": "src/dokick.c:1089:13\n  1084: \t\tif (maploc->typ == STAIRS || maploc->typ == LADDER ||\n  1085: \t\t\t\t\t\t    IS_STWALL(maploc->typ)) {\n  1086: \t\t    if(!IS_STWALL(maploc->typ) && maploc->ladder == LA_DOWN)\n  1087: \t\t\tgoto dumb;\n  1088: ouch:\n> 1089: \t\t    pline(\"Ouch!  That hurts!\");\n  1090: \t\t    exercise(A_DEX, FALSE);\n  1091: \t\t    exercise(A_STR, FALSE);\n  1092: \t\t    if (Blind) feel_location(x,y); /* we know we hit it */\n  1093: \t\t    if (is_drawbridge_wall(x,y) >= 0) {\n  1094: \t\t\tpline_The(\"drawbridge is unaffected.\");"
+  },
+  {
+    "key": "L01094_01",
+    "original": "drawbridge is unaffected.",
+    "translation": "",
+    "context": "src/dokick.c:1094:14\n  1089: \t\t    pline(\"Ouch!  That hurts!\");\n  1090: \t\t    exercise(A_DEX, FALSE);\n  1091: \t\t    exercise(A_STR, FALSE);\n  1092: \t\t    if (Blind) feel_location(x,y); /* we know we hit it */\n  1093: \t\t    if (is_drawbridge_wall(x,y) >= 0) {\n> 1094: \t\t\tpline_The(\"drawbridge is unaffected.\");\n  1095: \t\t\t/* update maploc to refer to the drawbridge */\n  1096: \t\t\t(void) find_drawbridge(&x,&y);\n  1097: \t\t\tmaploc = &levl[x][y];\n  1098: \t\t    }\n  1099: \t\t    if(!rn2(3)) set_wounded_legs(RIGHT_SIDE, 5 + rnd(5));"
+  },
+  {
+    "key": "L01115_01",
+    "original": "kick at empty space.",
+    "translation": "",
+    "context": "src/dokick.c:1115:8\n  1110: \t   maploc->doormask == D_BROKEN ||\n  1111: \t   maploc->doormask == D_NODOOR) {\n  1112: dumb:\n  1113: \t\texercise(A_DEX, FALSE);\n  1114: \t\tif (martial() || ACURR(A_DEX) >= 16 || rn2(3)) {\n> 1115: \t\t\tYou(\"kick at empty space.\");\n  1116: \t\t\tif (Blind) feel_location(x,y);\n  1117: \t\t} else {\n  1118: \t\t\tpline(\"Dumb move!  You strain a muscle.\");\n  1119: \t\t\texercise(A_STR, FALSE);\n  1120: \t\t\tset_wounded_legs(RIGHT_SIDE, 5 + rnd(5));"
+  },
+  {
+    "key": "L01118_01",
+    "original": "Dumb move!  You strain a muscle.",
+    "translation": "",
+    "context": "src/dokick.c:1118:10\n  1113: \t\texercise(A_DEX, FALSE);\n  1114: \t\tif (martial() || ACURR(A_DEX) >= 16 || rn2(3)) {\n  1115: \t\t\tYou(\"kick at empty space.\");\n  1116: \t\t\tif (Blind) feel_location(x,y);\n  1117: \t\t} else {\n> 1118: \t\t\tpline(\"Dumb move!  You strain a muscle.\");\n  1119: \t\t\texercise(A_STR, FALSE);\n  1120: \t\t\tset_wounded_legs(RIGHT_SIDE, 5 + rnd(5));\n  1121: \t\t}\n  1122: \t\tif ((Is_airlevel(&u.uz) || Levitation) && rn2(2)) {\n  1123: \t\t    hurtle(-u.dx, -u.dy, 1, TRUE);"
+  },
+  {
+    "key": "L01141_01",
+    "original": "kick the door.",
+    "translation": "",
+    "context": "src/dokick.c:1141:30\n  1136: \t/* door is known to be CLOSED or LOCKED */\n  1137: \tif(rnl(35) < avrg_attrib + (!martial() ? 0 : ACURR(A_DEX))) {\n  1138: \t\tboolean shopdoor = *in_rooms(x, y, SHOPBASE) ? TRUE : FALSE;\n  1139: \t\t/* break the door */\n  1140: \t\tif(maploc->doormask & D_TRAPPED) {\n> 1141: \t\t    if (flags.verbose) You(\"kick the door.\");\n  1142: \t\t    exercise(A_STR, FALSE);\n  1143: \t\t    maploc->doormask = D_NODOOR;\n  1144: \t\t    b_trapped(\"door\", FOOT);\n  1145: \t\t} else if(ACURR(A_STR) > 18 && !rn2(5) && !shopdoor) {\n  1146: \t\t    pline(\"As you kick the door, it shatters to pieces!\");"
+  },
+  {
+    "key": "L01144_01",
+    "original": "door",
+    "translation": "",
+    "context": "src/dokick.c:1144:17\n  1139: \t\t/* break the door */\n  1140: \t\tif(maploc->doormask & D_TRAPPED) {\n  1141: \t\t    if (flags.verbose) You(\"kick the door.\");\n  1142: \t\t    exercise(A_STR, FALSE);\n  1143: \t\t    maploc->doormask = D_NODOOR;\n> 1144: \t\t    b_trapped(\"door\", FOOT);\n  1145: \t\t} else if(ACURR(A_STR) > 18 && !rn2(5) && !shopdoor) {\n  1146: \t\t    pline(\"As you kick the door, it shatters to pieces!\");\n  1147: \t\t    exercise(A_STR, TRUE);\n  1148: \t\t    maploc->doormask = D_NODOOR;\n  1149: \t\t} else {"
+  },
+  {
+    "key": "L01146_01",
+    "original": "As you kick the door, it shatters to pieces!",
+    "translation": "",
+    "context": "src/dokick.c:1146:13\n  1141: \t\t    if (flags.verbose) You(\"kick the door.\");\n  1142: \t\t    exercise(A_STR, FALSE);\n  1143: \t\t    maploc->doormask = D_NODOOR;\n  1144: \t\t    b_trapped(\"door\", FOOT);\n  1145: \t\t} else if(ACURR(A_STR) > 18 && !rn2(5) && !shopdoor) {\n> 1146: \t\t    pline(\"As you kick the door, it shatters to pieces!\");\n  1147: \t\t    exercise(A_STR, TRUE);\n  1148: \t\t    maploc->doormask = D_NODOOR;\n  1149: \t\t} else {\n  1150: \t\t    pline(\"As you kick the door, it crashes open!\");\n  1151: \t\t    exercise(A_STR, TRUE);"
+  },
+  {
+    "key": "L01150_01",
+    "original": "As you kick the door, it crashes open!",
+    "translation": "",
+    "context": "src/dokick.c:1150:13\n  1145: \t\t} else if(ACURR(A_STR) > 18 && !rn2(5) && !shopdoor) {\n  1146: \t\t    pline(\"As you kick the door, it shatters to pieces!\");\n  1147: \t\t    exercise(A_STR, TRUE);\n  1148: \t\t    maploc->doormask = D_NODOOR;\n  1149: \t\t} else {\n> 1150: \t\t    pline(\"As you kick the door, it crashes open!\");\n  1151: \t\t    exercise(A_STR, TRUE);\n  1152: \t\t    maploc->doormask = D_BROKEN;\n  1153: \t\t}\n  1154: \t\tif (Blind)\n  1155: \t\t    feel_location(x,y);\t\t/* we know we broke it */"
+  },
+  {
+    "key": "L01161_01",
+    "original": "break",
+    "translation": "",
+    "context": "src/dokick.c:1161:22\n  1156: \t\telse\n  1157: \t\t    newsym(x,y);\n  1158: \t\tunblock_point(x,y);\t\t/* vision */\n  1159: \t\tif (shopdoor) {\n  1160: \t\t    add_damage(x, y, 400L);\n> 1161: \t\t    pay_for_damage(\"break\", FALSE);\n  1162: \t\t}\n  1163: \t\tif (in_town(x, y))\n  1164: \t\t  for(mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n  1165: \t\t    if (DEADMONSTER(mtmp)) continue;\n  1166: \t\t    if((mtmp->data == &mons[PM_WATCHMAN] ||"
+  },
+  {
+    "key": "L01171_01",
+    "original": "%s yells:",
+    "translation": "",
+    "context": "src/dokick.c:1171:14\n  1166: \t\t    if((mtmp->data == &mons[PM_WATCHMAN] ||\n  1167: \t\t\tmtmp->data == &mons[PM_WATCH_CAPTAIN]) &&\n  1168: \t\t\tcouldsee(mtmp->mx, mtmp->my) &&\n  1169: \t\t\tmtmp->mpeaceful) {\n  1170: \t\t\tif (canspotmon(mtmp))\n> 1171: \t\t\t    pline(\"%s yells:\", Amonnam(mtmp));\n  1172: \t\t\telse\n  1173: \t\t\t    You_hear(\"someone yell:\");\n  1174: \t\t\tverbalize(\"Halt, thief!  You're under arrest!\");\n  1175: \t\t\t(void) angry_guards(FALSE);\n  1176: \t\t\tbreak;"
+  },
+  {
+    "key": "L01173_01",
+    "original": "someone yell:",
+    "translation": "",
+    "context": "src/dokick.c:1173:17\n  1168: \t\t\tcouldsee(mtmp->mx, mtmp->my) &&\n  1169: \t\t\tmtmp->mpeaceful) {\n  1170: \t\t\tif (canspotmon(mtmp))\n  1171: \t\t\t    pline(\"%s yells:\", Amonnam(mtmp));\n  1172: \t\t\telse\n> 1173: \t\t\t    You_hear(\"someone yell:\");\n  1174: \t\t\tverbalize(\"Halt, thief!  You're under arrest!\");\n  1175: \t\t\t(void) angry_guards(FALSE);\n  1176: \t\t\tbreak;\n  1177: \t\t    }\n  1178: \t\t  }"
+  },
+  {
+    "key": "L01174_01",
+    "original": "Halt, thief!  You're under arrest!",
+    "translation": "",
+    "context": "src/dokick.c:1174:14\n  1169: \t\t\tmtmp->mpeaceful) {\n  1170: \t\t\tif (canspotmon(mtmp))\n  1171: \t\t\t    pline(\"%s yells:\", Amonnam(mtmp));\n  1172: \t\t\telse\n  1173: \t\t\t    You_hear(\"someone yell:\");\n> 1174: \t\t\tverbalize(\"Halt, thief!  You're under arrest!\");\n  1175: \t\t\t(void) angry_guards(FALSE);\n  1176: \t\t\tbreak;\n  1177: \t\t    }\n  1178: \t\t  }\n  1179: \t} else {"
+  },
+  {
+    "key": "L01182_01",
+    "original": "WHAMMM!!!",
+    "translation": "",
+    "context": "src/dokick.c:1182:12\n  1177: \t\t    }\n  1178: \t\t  }\n  1179: \t} else {\n  1180: \t    if (Blind) feel_location(x,y);\t/* we know we hit it */\n  1181: \t    exercise(A_STR, TRUE);\n> 1182: \t    pline(\"WHAMMM!!!\");\n  1183: \t    if (in_town(x, y))\n  1184: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n  1185: \t\t    if (DEADMONSTER(mtmp)) continue;\n  1186: \t\t    if ((mtmp->data == &mons[PM_WATCHMAN] ||\n  1187: \t\t\t\tmtmp->data == &mons[PM_WATCH_CAPTAIN]) &&"
+  },
+  {
+    "key": "L01190_01",
+    "original": "%s yells:",
+    "translation": "",
+    "context": "src/dokick.c:1190:14\n  1185: \t\t    if (DEADMONSTER(mtmp)) continue;\n  1186: \t\t    if ((mtmp->data == &mons[PM_WATCHMAN] ||\n  1187: \t\t\t\tmtmp->data == &mons[PM_WATCH_CAPTAIN]) &&\n  1188: \t\t\t    mtmp->mpeaceful && couldsee(mtmp->mx, mtmp->my)) {\n  1189: \t\t\tif (canspotmon(mtmp))\n> 1190: \t\t\t    pline(\"%s yells:\", Amonnam(mtmp));\n  1191: \t\t\telse\n  1192: \t\t\t    You_hear(\"someone yell:\");\n  1193: \t\t\tif(levl[x][y].looted & D_WARNED) {\n  1194: \t\t\t    verbalize(\"Halt, vandal!  You're under arrest!\");\n  1195: \t\t\t    (void) angry_guards(FALSE);"
+  },
+  {
+    "key": "L01192_01",
+    "original": "someone yell:",
+    "translation": "",
+    "context": "src/dokick.c:1192:17\n  1187: \t\t\t\tmtmp->data == &mons[PM_WATCH_CAPTAIN]) &&\n  1188: \t\t\t    mtmp->mpeaceful && couldsee(mtmp->mx, mtmp->my)) {\n  1189: \t\t\tif (canspotmon(mtmp))\n  1190: \t\t\t    pline(\"%s yells:\", Amonnam(mtmp));\n  1191: \t\t\telse\n> 1192: \t\t\t    You_hear(\"someone yell:\");\n  1193: \t\t\tif(levl[x][y].looted & D_WARNED) {\n  1194: \t\t\t    verbalize(\"Halt, vandal!  You're under arrest!\");\n  1195: \t\t\t    (void) angry_guards(FALSE);\n  1196: \t\t\t} else {\n  1197: \t\t\t    int i;"
+  },
+  {
+    "key": "L01194_01",
+    "original": "Halt, vandal!  You're under arrest!",
+    "translation": "",
+    "context": "src/dokick.c:1194:18\n  1189: \t\t\tif (canspotmon(mtmp))\n  1190: \t\t\t    pline(\"%s yells:\", Amonnam(mtmp));\n  1191: \t\t\telse\n  1192: \t\t\t    You_hear(\"someone yell:\");\n  1193: \t\t\tif(levl[x][y].looted & D_WARNED) {\n> 1194: \t\t\t    verbalize(\"Halt, vandal!  You're under arrest!\");\n  1195: \t\t\t    (void) angry_guards(FALSE);\n  1196: \t\t\t} else {\n  1197: \t\t\t    int i;\n  1198: \t\t\t    verbalize(\"Hey, stop damaging that door!\");\n  1199: \t\t\t    /* [ALI] Since marking a door as warned will have"
+  },
+  {
+    "key": "L01198_01",
+    "original": "Hey, stop damaging that door!",
+    "translation": "",
+    "context": "src/dokick.c:1198:18\n  1193: \t\t\tif(levl[x][y].looted & D_WARNED) {\n  1194: \t\t\t    verbalize(\"Halt, vandal!  You're under arrest!\");\n  1195: \t\t\t    (void) angry_guards(FALSE);\n  1196: \t\t\t} else {\n  1197: \t\t\t    int i;\n> 1198: \t\t\t    verbalize(\"Hey, stop damaging that door!\");\n  1199: \t\t\t    /* [ALI] Since marking a door as warned will have\n  1200: \t\t\t     * the side effect of trapping the door, it must be\n  1201: \t\t\t     * included in the doors[] array in order that trap\n  1202: \t\t\t     * detection will find it.\n  1203: \t\t\t     */"
+  },
+  {
+    "key": "L01331_01",
+    "original": "object falls",
+    "translation": "",
+    "context": "src/dokick.c:1331:38\n  1326: \t\t/* number of fallen objects */\n  1327: \t\tdct += obj->quan;\n  1328: \t}\n  1329: \n  1330: \tif (dct && cansee(x, y)) {      /* at least one object fell */\n> 1331: \t    const char *what = (dct == 1L ? \"object falls\" : \"objects fall\");\n  1332: \n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)"
+  },
+  {
+    "key": "L01331_02",
+    "original": "objects fall",
+    "translation": "",
+    "context": "src/dokick.c:1331:55\n  1326: \t\t/* number of fallen objects */\n  1327: \t\tdct += obj->quan;\n  1328: \t}\n  1329: \n  1330: \tif (dct && cansee(x, y)) {      /* at least one object fell */\n> 1331: \t    const char *what = (dct == 1L ? \"object falls\" : \"objects fall\");\n  1332: \n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)"
+  },
+  {
+    "key": "L01334_01",
+    "original": "From the impact, %sother %s.",
+    "translation": "",
+    "context": "src/dokick.c:1334:9\n  1329: \n  1330: \tif (dct && cansee(x, y)) {      /* at least one object fell */\n  1331: \t    const char *what = (dct == 1L ? \"object falls\" : \"objects fall\");\n  1332: \n  1333: \t    if (missile)\n> 1334: \t\tpline(\"From the impact, %sother %s.\",\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else"
+  },
+  {
+    "key": "L01335_01",
+    "original": "the ",
+    "translation": "",
+    "context": "src/dokick.c:1335:22\n  1330: \tif (dct && cansee(x, y)) {      /* at least one object fell */\n  1331: \t    const char *what = (dct == 1L ? \"object falls\" : \"objects fall\");\n  1332: \n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n> 1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\","
+  },
+  {
+    "key": "L01335_02",
+    "original": "an",
+    "translation": "",
+    "context": "src/dokick.c:1335:43\n  1330: \tif (dct && cansee(x, y)) {      /* at least one object fell */\n  1331: \t    const char *what = (dct == 1L ? \"object falls\" : \"objects fall\");\n  1332: \n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n> 1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\","
+  },
+  {
+    "key": "L01337_01",
+    "original": "%s adjacent %s %s.",
+    "translation": "",
+    "context": "src/dokick.c:1337:9\n  1332: \n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n> 1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\",\n  1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);"
+  },
+  {
+    "key": "L01338_01",
+    "original": "The",
+    "translation": "",
+    "context": "src/dokick.c:1338:21\n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n> 1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\",\n  1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}"
+  },
+  {
+    "key": "L01338_02",
+    "original": "All the",
+    "translation": "",
+    "context": "src/dokick.c:1338:29\n  1333: \t    if (missile)\n  1334: \t\tpline(\"From the impact, %sother %s.\",\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n> 1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\",\n  1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}"
+  },
+  {
+    "key": "L01340_01",
+    "original": "%s adjacent %s %s.",
+    "translation": "",
+    "context": "src/dokick.c:1340:9\n  1335: \t\t      dct == oct ? \"the \" : dct == 1L ? \"an\" : \"\", what);\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n> 1340: \t\tpline(\"%s adjacent %s %s.\",\n  1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}\n  1344: \n  1345: \tif(costly && shkp && price) {"
+  },
+  {
+    "key": "L01341_01",
+    "original": "One of the",
+    "translation": "",
+    "context": "src/dokick.c:1341:21\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\",\n> 1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}\n  1344: \n  1345: \tif(costly && shkp && price) {\n  1346: \t\tif(ESHK(shkp)->robbed > robbed) {"
+  },
+  {
+    "key": "L01341_02",
+    "original": "Some of the",
+    "translation": "",
+    "context": "src/dokick.c:1341:36\n  1336: \t    else if (oct == dct)\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\",\n> 1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}\n  1344: \n  1345: \tif(costly && shkp && price) {\n  1346: \t\tif(ESHK(shkp)->robbed > robbed) {"
+  },
+  {
+    "key": "L01342_01",
+    "original": "objects falls",
+    "translation": "",
+    "context": "src/dokick.c:1342:21\n  1337: \t\tpline(\"%s adjacent %s %s.\",\n  1338: \t\t      dct == 1L ? \"The\" : \"All the\", what, gate_str);\n  1339: \t    else\n  1340: \t\tpline(\"%s adjacent %s %s.\",\n  1341: \t\t      dct == 1L ? \"One of the\" : \"Some of the\",\n> 1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}\n  1344: \n  1345: \tif(costly && shkp && price) {\n  1346: \t\tif(ESHK(shkp)->robbed > robbed) {\n  1347: \t\t    You(\"removed %ld %s worth of goods!\", price, currency(price));"
+  },
+  {
+    "key": "L01347_01",
+    "original": "removed %ld %s worth of goods!",
+    "translation": "",
+    "context": "src/dokick.c:1347:11\n  1342: \t\t      dct == 1L ? \"objects falls\" : what, gate_str);\n  1343: \t}\n  1344: \n  1345: \tif(costly && shkp && price) {\n  1346: \t\tif(ESHK(shkp)->robbed > robbed) {\n> 1347: \t\t    You(\"removed %ld %s worth of goods!\", price, currency(price));\n  1348: \t\t    if(cansee(shkp->mx, shkp->my)) {\n  1349: \t\t\tif(ESHK(shkp)->customer[0] == 0)\n  1350: \t\t\t    (void) strncpy(ESHK(shkp)->customer,\n  1351: \t\t\t\t\t   plname, PL_NSIZ);\n  1352: \t\t\tif(angry)"
+  },
+  {
+    "key": "L01353_01",
+    "original": "%s is infuriated!",
+    "translation": "",
+    "context": "src/dokick.c:1353:14\n  1348: \t\t    if(cansee(shkp->mx, shkp->my)) {\n  1349: \t\t\tif(ESHK(shkp)->customer[0] == 0)\n  1350: \t\t\t    (void) strncpy(ESHK(shkp)->customer,\n  1351: \t\t\t\t\t   plname, PL_NSIZ);\n  1352: \t\t\tif(angry)\n> 1353: \t\t\t    pline(\"%s is infuriated!\", Monnam(shkp));\n  1354: \t\t\telse pline(\"\\\"%s, you are a thief!\\\"\", plname);\n  1355: \t\t    } else  You_hear(\"a scream, \\\"Thief!\\\"\");\n  1356: \t\t    hot_pursuit(shkp);\n  1357: \t\t    (void) angry_guards(FALSE);\n  1358: \t\t    return;"
+  },
+  {
+    "key": "L01354_01",
+    "original": "\\\"%s, you are a thief!\\\"",
+    "translation": "",
+    "context": "src/dokick.c:1354:15\n  1349: \t\t\tif(ESHK(shkp)->customer[0] == 0)\n  1350: \t\t\t    (void) strncpy(ESHK(shkp)->customer,\n  1351: \t\t\t\t\t   plname, PL_NSIZ);\n  1352: \t\t\tif(angry)\n  1353: \t\t\t    pline(\"%s is infuriated!\", Monnam(shkp));\n> 1354: \t\t\telse pline(\"\\\"%s, you are a thief!\\\"\", plname);\n  1355: \t\t    } else  You_hear(\"a scream, \\\"Thief!\\\"\");\n  1356: \t\t    hot_pursuit(shkp);\n  1357: \t\t    (void) angry_guards(FALSE);\n  1358: \t\t    return;\n  1359: \t\t}"
+  },
+  {
+    "key": "L01355_01",
+    "original": "a scream, \\\"Thief!\\\"",
+    "translation": "",
+    "context": "src/dokick.c:1355:24\n  1350: \t\t\t    (void) strncpy(ESHK(shkp)->customer,\n  1351: \t\t\t\t\t   plname, PL_NSIZ);\n  1352: \t\t\tif(angry)\n  1353: \t\t\t    pline(\"%s is infuriated!\", Monnam(shkp));\n  1354: \t\t\telse pline(\"\\\"%s, you are a thief!\\\"\", plname);\n> 1355: \t\t    } else  You_hear(\"a scream, \\\"Thief!\\\"\");\n  1356: \t\t    hot_pursuit(shkp);\n  1357: \t\t    (void) angry_guards(FALSE);\n  1358: \t\t    return;\n  1359: \t\t}\n  1360: \t\tif(ESHK(shkp)->debit > debit) {"
+  },
+  {
+    "key": "L01362_01",
+    "original": "owe %s %ld %s for goods lost.",
+    "translation": "",
+    "context": "src/dokick.c:1362:11\n  1357: \t\t    (void) angry_guards(FALSE);\n  1358: \t\t    return;\n  1359: \t\t}\n  1360: \t\tif(ESHK(shkp)->debit > debit) {\n  1361: \t\t    long amt = (ESHK(shkp)->debit - debit);\n> 1362: \t\t    You(\"owe %s %ld %s for goods lost.\",\n  1363: \t\t\tMonnam(shkp),\n  1364: \t\t\tamt, currency(amt));\n  1365: \t\t}\n  1366: \t}\n  1367: "
+  },
+  {
+    "key": "L01456_01",
+    "original": "crash",
+    "translation": "",
+    "context": "src/dokick.c:1456:12\n  1451: \t\t|| otmp->otyp == EXPENSIVE_CAMERA\n  1452: #endif\n  1453: \t\t) {\n  1454: \t\tif (otmp->otyp == MIRROR)\n  1455: \t\t    change_luck(-2);\n> 1456: \t\tresult = \"crash\";\n  1457: \t    } else {\n  1458: \t\t/* penalty for breaking eggs laid by you */\n  1459: \t\tif (otmp->otyp == EGG && otmp->spe && otmp->corpsenm >= LOW_PM)\n  1460: \t\t    change_luck((schar) -min(otmp->quan, 5L));\n  1461: \t\tresult = \"splat\";"
+  },
+  {
+    "key": "L01461_01",
+    "original": "splat",
+    "translation": "",
+    "context": "src/dokick.c:1461:12\n  1456: \t\tresult = \"crash\";\n  1457: \t    } else {\n  1458: \t\t/* penalty for breaking eggs laid by you */\n  1459: \t\tif (otmp->otyp == EGG && otmp->spe && otmp->corpsenm >= LOW_PM)\n  1460: \t\t    change_luck((schar) -min(otmp->quan, 5L));\n> 1461: \t\tresult = \"splat\";\n  1462: \t    }\n  1463: \t    You_hear(\"a muffled %s.\",result);\n  1464: \t    obj_extract_self(otmp);\n  1465: \t    obfree(otmp, (struct obj *) 0);\n  1466: \t    return TRUE;"
+  },
+  {
+    "key": "L01463_01",
+    "original": "a muffled %s.",
+    "translation": "",
+    "context": "src/dokick.c:1463:15\n  1458: \t\t/* penalty for breaking eggs laid by you */\n  1459: \t\tif (otmp->otyp == EGG && otmp->spe && otmp->corpsenm >= LOW_PM)\n  1460: \t\t    change_luck((schar) -min(otmp->quan, 5L));\n  1461: \t\tresult = \"splat\";\n  1462: \t    }\n> 1463: \t    You_hear(\"a muffled %s.\",result);\n  1464: \t    obj_extract_self(otmp);\n  1465: \t    obfree(otmp, (struct obj *) 0);\n  1466: \t    return TRUE;\n  1467: \t}\n  1468: "
+  },
+  {
+    "key": "L01541_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/dokick.c:1541:16\n  1536: register boolean nodrop;\n  1537: long num;\n  1538: {\n  1539: \tchar obuf[BUFSZ];\n  1540: \n> 1541: \tSprintf(obuf, \"%s%s\",\n  1542: \t\t (otmp->otyp == CORPSE &&\n  1543: \t\t\ttype_is_pname(&mons[otmp->corpsenm])) ? \"\" : \"The \",\n  1544: \t\t xname(otmp));\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */"
+  },
+  {
+    "key": "L01543_01",
+    "original": "The ",
+    "translation": "",
+    "context": "src/dokick.c:1543:49\n  1538: {\n  1539: \tchar obuf[BUFSZ];\n  1540: \n  1541: \tSprintf(obuf, \"%s%s\",\n  1542: \t\t (otmp->otyp == CORPSE &&\n> 1543: \t\t\ttype_is_pname(&mons[otmp->corpsenm])) ? \"\" : \"The \",\n  1544: \t\t xname(otmp));\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */\n  1547: \t    Sprintf(eos(obuf), \" %s %s object%s\",\n  1548: \t\t    otense(otmp, \"hit\"),"
+  },
+  {
+    "key": "L01547_01",
+    "original": " %s %s object%s",
+    "translation": "",
+    "context": "src/dokick.c:1547:25\n  1542: \t\t (otmp->otyp == CORPSE &&\n  1543: \t\t\ttype_is_pname(&mons[otmp->corpsenm])) ? \"\" : \"The \",\n  1544: \t\t xname(otmp));\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */\n> 1547: \t    Sprintf(eos(obuf), \" %s %s object%s\",\n  1548: \t\t    otense(otmp, \"hit\"),\n  1549: \t\t    num == 1L ? \"another\" : \"other\",\n  1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");"
+  },
+  {
+    "key": "L01548_01",
+    "original": "hit",
+    "translation": "",
+    "context": "src/dokick.c:1548:20\n  1543: \t\t\ttype_is_pname(&mons[otmp->corpsenm])) ? \"\" : \"The \",\n  1544: \t\t xname(otmp));\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */\n  1547: \t    Sprintf(eos(obuf), \" %s %s object%s\",\n> 1548: \t\t    otense(otmp, \"hit\"),\n  1549: \t\t    num == 1L ? \"another\" : \"other\",\n  1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else"
+  },
+  {
+    "key": "L01549_01",
+    "original": "another",
+    "translation": "",
+    "context": "src/dokick.c:1549:19\n  1544: \t\t xname(otmp));\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */\n  1547: \t    Sprintf(eos(obuf), \" %s %s object%s\",\n  1548: \t\t    otense(otmp, \"hit\"),\n> 1549: \t\t    num == 1L ? \"another\" : \"other\",\n  1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\","
+  },
+  {
+    "key": "L01549_02",
+    "original": "other",
+    "translation": "",
+    "context": "src/dokick.c:1549:31\n  1544: \t\t xname(otmp));\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */\n  1547: \t    Sprintf(eos(obuf), \" %s %s object%s\",\n  1548: \t\t    otense(otmp, \"hit\"),\n> 1549: \t\t    num == 1L ? \"another\" : \"other\",\n  1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\","
+  },
+  {
+    "key": "L01550_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/dokick.c:1550:18\n  1545: \n  1546: \tif(num) { /* means: other objects are impacted */\n  1547: \t    Sprintf(eos(obuf), \" %s %s object%s\",\n  1548: \t\t    otense(otmp, \"hit\"),\n  1549: \t\t    num == 1L ? \"another\" : \"other\",\n> 1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\",\n  1555: \t\t\totense(otmp, \"fall\"), gate_str);"
+  },
+  {
+    "key": "L01554_01",
+    "original": " and %s %s.",
+    "translation": "",
+    "context": "src/dokick.c:1554:22\n  1549: \t\t    num == 1L ? \"another\" : \"other\",\n  1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else\n> 1554: \t\tSprintf(eos(obuf), \" and %s %s.\",\n  1555: \t\t\totense(otmp, \"fall\"), gate_str);\n  1556: \t    pline(\"%s\", obuf);\n  1557: \t} else if(!nodrop)\n  1558: \t    pline(\"%s %s %s.\", obuf, otense(otmp, \"fall\"), gate_str);\n  1559: }"
+  },
+  {
+    "key": "L01555_01",
+    "original": "fall",
+    "translation": "",
+    "context": "src/dokick.c:1555:17\n  1550: \t\t    num > 1L ? \"s\" : \"\");\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\",\n> 1555: \t\t\totense(otmp, \"fall\"), gate_str);\n  1556: \t    pline(\"%s\", obuf);\n  1557: \t} else if(!nodrop)\n  1558: \t    pline(\"%s %s %s.\", obuf, otense(otmp, \"fall\"), gate_str);\n  1559: }\n  1560: "
+  },
+  {
+    "key": "L01556_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/dokick.c:1556:12\n  1551: \t    if(nodrop)\n  1552: \t\tSprintf(eos(obuf), \".\");\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\",\n  1555: \t\t\totense(otmp, \"fall\"), gate_str);\n> 1556: \t    pline(\"%s\", obuf);\n  1557: \t} else if(!nodrop)\n  1558: \t    pline(\"%s %s %s.\", obuf, otense(otmp, \"fall\"), gate_str);\n  1559: }\n  1560: \n  1561: /* migration destination for objects which fall down to next level */"
+  },
+  {
+    "key": "L01558_01",
+    "original": "%s %s %s.",
+    "translation": "",
+    "context": "src/dokick.c:1558:12\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\",\n  1555: \t\t\totense(otmp, \"fall\"), gate_str);\n  1556: \t    pline(\"%s\", obuf);\n  1557: \t} else if(!nodrop)\n> 1558: \t    pline(\"%s %s %s.\", obuf, otense(otmp, \"fall\"), gate_str);\n  1559: }\n  1560: \n  1561: /* migration destination for objects which fall down to next level */\n  1562: schar\n  1563: down_gate(x, y)"
+  },
+  {
+    "key": "L01558_02",
+    "original": "fall",
+    "translation": "",
+    "context": "src/dokick.c:1558:44\n  1553: \t    else\n  1554: \t\tSprintf(eos(obuf), \" and %s %s.\",\n  1555: \t\t\totense(otmp, \"fall\"), gate_str);\n  1556: \t    pline(\"%s\", obuf);\n  1557: \t} else if(!nodrop)\n> 1558: \t    pline(\"%s %s %s.\", obuf, otense(otmp, \"fall\"), gate_str);\n  1559: }\n  1560: \n  1561: /* migration destination for objects which fall down to next level */\n  1562: schar\n  1563: down_gate(x, y)"
+  },
+  {
+    "key": "L01575_01",
+    "original": "down the stairs",
+    "translation": "",
+    "context": "src/dokick.c:1575:17\n  1570: \tif (on_level(&u.uz, &qstart_level) && !ok_to_quest())\n  1571: \t    return MIGR_NOWHERE;\n  1572: \n  1573: \tif ((xdnstair == x && ydnstair == y) ||\n  1574: \t\t(sstairs.sx == x && sstairs.sy == y && !sstairs.up)) {\n> 1575: \t    gate_str = \"down the stairs\";\n  1576: \t    return (xdnstair == x && ydnstair == y) ?\n  1577: \t\t    MIGR_STAIRS_UP : MIGR_SSTAIRS;\n  1578: \t}\n  1579: \tif (xdnladder == x && ydnladder == y) {\n  1580: \t    gate_str = \"down the ladder\";"
+  },
+  {
+    "key": "L01580_01",
+    "original": "down the ladder",
+    "translation": "",
+    "context": "src/dokick.c:1580:17\n  1575: \t    gate_str = \"down the stairs\";\n  1576: \t    return (xdnstair == x && ydnstair == y) ?\n  1577: \t\t    MIGR_STAIRS_UP : MIGR_SSTAIRS;\n  1578: \t}\n  1579: \tif (xdnladder == x && ydnladder == y) {\n> 1580: \t    gate_str = \"down the ladder\";\n  1581: \t    return MIGR_LADDER_UP;\n  1582: \t}\n  1583: \n  1584: \tif (((ttmp = t_at(x, y)) != 0 && ttmp->tseen) &&\n  1585: \t\t(ttmp->ttyp == TRAPDOOR || ttmp->ttyp == HOLE)) {"
+  },
+  {
+    "key": "L01587_01",
+    "original": "through the trap door",
+    "translation": "",
+    "context": "src/dokick.c:1587:7\n  1582: \t}\n  1583: \n  1584: \tif (((ttmp = t_at(x, y)) != 0 && ttmp->tseen) &&\n  1585: \t\t(ttmp->ttyp == TRAPDOOR || ttmp->ttyp == HOLE)) {\n  1586: \t    gate_str = (ttmp->ttyp == TRAPDOOR) ?\n> 1587: \t\t    \"through the trap door\" : \"through the hole\";\n  1588: \t    return MIGR_RANDOM;\n  1589: \t}\n  1590: \treturn MIGR_NOWHERE;\n  1591: }\n  1592: "
+  },
+  {
+    "key": "L01587_02",
+    "original": "through the hole",
+    "translation": "",
+    "context": "src/dokick.c:1587:33\n  1582: \t}\n  1583: \n  1584: \tif (((ttmp = t_at(x, y)) != 0 && ttmp->tseen) &&\n  1585: \t\t(ttmp->ttyp == TRAPDOOR || ttmp->ttyp == HOLE)) {\n  1586: \t    gate_str = (ttmp->ttyp == TRAPDOOR) ?\n> 1587: \t\t    \"through the trap door\" : \"through the hole\";\n  1588: \t    return MIGR_RANDOM;\n  1589: \t}\n  1590: \treturn MIGR_NOWHERE;\n  1591: }\n  1592: "
+  }
+]

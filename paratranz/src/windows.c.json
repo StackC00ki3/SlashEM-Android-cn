@@ -1,0 +1,20 @@
+[
+  {
+    "key": "L00163_01",
+    "original": "Window type %s not recognized.  Choices are:",
+    "translation": "",
+    "context": "src/windows.c:163:16\n   158: \t}\n   159: \n   160:     if (!windowprocs.win_raw_print)\n   161: \twindowprocs.win_raw_print = def_raw_print;\n   162: \n>  163:     raw_printf(\"Window type %s not recognized.  Choices are:\", s);\n   164:     for(i=0; winchoices[i].procs; i++)\n   165: \traw_printf(\"        %s\", winchoices[i].procs->name);\n   166: \n   167:     if (windowprocs.win_raw_print == def_raw_print)\n   168: \tterminate(EXIT_SUCCESS);"
+  },
+  {
+    "key": "L00165_01",
+    "original": "        %s",
+    "translation": "",
+    "context": "src/windows.c:165:13\n   160:     if (!windowprocs.win_raw_print)\n   161: \twindowprocs.win_raw_print = def_raw_print;\n   162: \n   163:     raw_printf(\"Window type %s not recognized.  Choices are:\", s);\n   164:     for(i=0; winchoices[i].procs; i++)\n>  165: \traw_printf(\"        %s\", winchoices[i].procs->name);\n   166: \n   167:     if (windowprocs.win_raw_print == def_raw_print)\n   168: \tterminate(EXIT_SUCCESS);\n   169:     wait_synch();\n   170: }"
+  },
+  {
+    "key": "L00186_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/windows.c:186:11\n   181: const char *mesg;\n   182: {\n   183: #if defined(MAC_MPW)\n   184: # pragma unused ( how,let )\n   185: #endif\n>  186:     pline(\"%s\", mesg);\n   187:     return 0;\n   188: }\n   189: \n   190: /*ARGSUSED*/\n   191: void"
+  }
+]

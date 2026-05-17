@@ -1,0 +1,458 @@
+[
+  {
+    "key": "L00126_01",
+    "original": "notice %s, swaying with the music.",
+    "translation": "",
+    "context": "src/music.c:126:8\n   121: \t\tcould_see_mon = canseemon(mtmp);\n   122: \t\tmtmp->mundetected = 0;\n   123: \t\tnewsym(mtmp->mx, mtmp->my);\n   124: \t\tif (canseemon(mtmp)) {\n   125: \t\t    if (!could_see_mon)\n>  126: \t\t\tYou(\"notice %s, swaying with the music.\",\n   127: \t\t\t    a_monnam(mtmp));\n   128: \t\t    else\n   129: \t\t\tpline(\"%s freezes, then sways with the music%s.\",\n   130: \t\t\t      Monnam(mtmp),\n   131: \t\t\t      was_peaceful ? \"\" : \", and now seems quieter\");"
+  },
+  {
+    "key": "L00129_01",
+    "original": "%s freezes, then sways with the music%s.",
+    "translation": "",
+    "context": "src/music.c:129:10\n   124: \t\tif (canseemon(mtmp)) {\n   125: \t\t    if (!could_see_mon)\n   126: \t\t\tYou(\"notice %s, swaying with the music.\",\n   127: \t\t\t    a_monnam(mtmp));\n   128: \t\t    else\n>  129: \t\t\tpline(\"%s freezes, then sways with the music%s.\",\n   130: \t\t\t      Monnam(mtmp),\n   131: \t\t\t      was_peaceful ? \"\" : \", and now seems quieter\");\n   132: \t\t}\n   133: \t    }\n   134: \t    mtmp = mtmp->nmon;"
+  },
+  {
+    "key": "L00131_01",
+    "original": ", and now seems quieter",
+    "translation": "",
+    "context": "src/music.c:131:30\n   126: \t\t\tYou(\"notice %s, swaying with the music.\",\n   127: \t\t\t    a_monnam(mtmp));\n   128: \t\t    else\n   129: \t\t\tpline(\"%s freezes, then sways with the music%s.\",\n   130: \t\t\t      Monnam(mtmp),\n>  131: \t\t\t      was_peaceful ? \"\" : \", and now seems quieter\");\n   132: \t\t}\n   133: \t    }\n   134: \t    mtmp = mtmp->nmon;\n   135: \t}\n   136: }"
+  },
+  {
+    "key": "L00156_01",
+    "original": "%s listens cheerfully to the music, then seems quieter.",
+    "translation": "",
+    "context": "src/music.c:156:8\n   151: \t\tmtmp->msleeping = 0;\n   152: \t\tmtmp->mpeaceful = 1;\n   153: \t\tmtmp->mavenge = 0;\n   154: \t\tif (canseemon(mtmp))\n   155: \t\t    pline(\n>  156: \t\t     \"%s listens cheerfully to the music, then seems quieter.\",\n   157: \t\t\t  Monnam(mtmp));\n   158: \t    }\n   159: \t    mtmp = mtmp->nmon;\n   160: \t}\n   161: }"
+  },
+  {
+    "key": "L00176_01",
+    "original": "%s is now ready for battle!",
+    "translation": "",
+    "context": "src/music.c:176:13\n   171: \t    if (!DEADMONSTER(mtmp) &&\n   172: \t\t\tis_mercenary(mtmp->data) && mtmp->data != &mons[PM_GUARD]) {\n   173: \t\tmtmp->mpeaceful = mtmp->msleeping = mtmp->mfrozen = 0;\n   174: \t\tmtmp->mcanmove = 1;\n   175: \t\tif (canseemon(mtmp))\n>  176: \t\t    pline(\"%s is now ready for battle!\", Monnam(mtmp));\n   177: \t\telse\n   178: \t\t    Norep(\"You hear the rattle of battle gear being readied.\");\n   179: \t    }\n   180: \t    mtmp = mtmp->nmon;\n   181: \t}"
+  },
+  {
+    "key": "L00178_01",
+    "original": "You hear the rattle of battle gear being readied.",
+    "translation": "",
+    "context": "src/music.c:178:13\n   173: \t\tmtmp->mpeaceful = mtmp->msleeping = mtmp->mfrozen = 0;\n   174: \t\tmtmp->mcanmove = 1;\n   175: \t\tif (canseemon(mtmp))\n   176: \t\t    pline(\"%s is now ready for battle!\", Monnam(mtmp));\n   177: \t\telse\n>  178: \t\t    Norep(\"You hear the rattle of battle gear being readied.\");\n   179: \t    }\n   180: \t    mtmp = mtmp->nmon;\n   181: \t}\n   182: }\n   183: "
+  },
+  {
+    "key": "L00239_01",
+    "original": "%s is shaken loose from the ceiling!",
+    "translation": "",
+    "context": "src/music.c:239:10\n   234: \t    if ((mtmp = m_at(x,y)) != 0) {\n   235: \t\twakeup(mtmp);\t/* peaceful monster will become hostile */\n   236: \t\tif (mtmp->mundetected && is_hider(mtmp->data)) {\n   237: \t\t    mtmp->mundetected = 0;\n   238: \t\t    if (cansee(x,y))\n>  239: \t\t\tpline(\"%s is shaken loose from the ceiling!\",\n   240: \t\t\t\t\t\t\t    Amonnam(mtmp));\n   241: \t\t    else\n   242: \t\t\tYou_hear(\"a thumping sound.\");\n   243: \t\t    if (x==u.ux && y==u.uy)\n   244: \t\t\tYou(\"easily dodge the falling %s.\","
+  },
+  {
+    "key": "L00242_01",
+    "original": "a thumping sound.",
+    "translation": "",
+    "context": "src/music.c:242:13\n   237: \t\t    mtmp->mundetected = 0;\n   238: \t\t    if (cansee(x,y))\n   239: \t\t\tpline(\"%s is shaken loose from the ceiling!\",\n   240: \t\t\t\t\t\t\t    Amonnam(mtmp));\n   241: \t\t    else\n>  242: \t\t\tYou_hear(\"a thumping sound.\");\n   243: \t\t    if (x==u.ux && y==u.uy)\n   244: \t\t\tYou(\"easily dodge the falling %s.\",\n   245: \t\t\t\t\t\t\t    mon_nam(mtmp));\n   246: \t\t    newsym(x,y);\n   247: \t\t}"
+  },
+  {
+    "key": "L00244_01",
+    "original": "easily dodge the falling %s.",
+    "translation": "",
+    "context": "src/music.c:244:8\n   239: \t\t\tpline(\"%s is shaken loose from the ceiling!\",\n   240: \t\t\t\t\t\t\t    Amonnam(mtmp));\n   241: \t\t    else\n   242: \t\t\tYou_hear(\"a thumping sound.\");\n   243: \t\t    if (x==u.ux && y==u.uy)\n>  244: \t\t\tYou(\"easily dodge the falling %s.\",\n   245: \t\t\t\t\t\t\t    mon_nam(mtmp));\n   246: \t\t    newsym(x,y);\n   247: \t\t}\n   248: \t    }\n   249: \t    if (!rn2(14 - force)) switch (levl[x][y].typ) {"
+  },
+  {
+    "key": "L00252_01",
+    "original": "fountain falls into a chasm.",
+    "translation": "",
+    "context": "src/music.c:252:15\n   247: \t\t}\n   248: \t    }\n   249: \t    if (!rn2(14 - force)) switch (levl[x][y].typ) {\n   250: \t\t  case FOUNTAIN : /* Make the fountain disappear */\n   251: \t\t\tif (cansee(x,y))\n>  252: \t\t\t\tpline_The(\"fountain falls into a chasm.\");\n   253: \t\t\tgoto do_pit;\n   254: #ifdef SINKS\n   255: \t\t  case SINK :\n   256: \t\t\tif (cansee(x,y))\n   257: \t\t\t\tpline_The(\"kitchen sink falls into a chasm.\");"
+  },
+  {
+    "key": "L00257_01",
+    "original": "kitchen sink falls into a chasm.",
+    "translation": "",
+    "context": "src/music.c:257:15\n   252: \t\t\t\tpline_The(\"fountain falls into a chasm.\");\n   253: \t\t\tgoto do_pit;\n   254: #ifdef SINKS\n   255: \t\t  case SINK :\n   256: \t\t\tif (cansee(x,y))\n>  257: \t\t\t\tpline_The(\"kitchen sink falls into a chasm.\");\n   258: \t\t\tgoto do_pit;\n   259: \t\t  case TOILET :\n   260: \t\t\tif (cansee(x,y))\n   261: \t\t\t\tpline(\"The toilet falls into a chasm.\");\n   262: \t\t\tgoto do_pit;"
+  },
+  {
+    "key": "L00261_01",
+    "original": "The toilet falls into a chasm.",
+    "translation": "",
+    "context": "src/music.c:261:11\n   256: \t\t\tif (cansee(x,y))\n   257: \t\t\t\tpline_The(\"kitchen sink falls into a chasm.\");\n   258: \t\t\tgoto do_pit;\n   259: \t\t  case TOILET :\n   260: \t\t\tif (cansee(x,y))\n>  261: \t\t\t\tpline(\"The toilet falls into a chasm.\");\n   262: \t\t\tgoto do_pit;\n   263: #endif\n   264: \t\t  case ALTAR :\n   265: \t\t\tif (Is_astralevel(&u.uz) || Is_sanctum(&u.uz)) break;\n   266: "
+  },
+  {
+    "key": "L00268_01",
+    "original": "altar falls into a chasm.",
+    "translation": "",
+    "context": "src/music.c:268:15\n   263: #endif\n   264: \t\t  case ALTAR :\n   265: \t\t\tif (Is_astralevel(&u.uz) || Is_sanctum(&u.uz)) break;\n   266: \n   267: \t\t\tif (cansee(x,y))\n>  268: \t\t\t\tpline_The(\"altar falls into a chasm.\");\n   269: \t\t\tgoto do_pit;\n   270: \t\t  case GRAVE :\n   271: \t\t\tif (cansee(x,y))\n   272: \t\t\t\tpline_The(\"headstone topples into a chasm.\");\n   273: \t\t\tgoto do_pit;"
+  },
+  {
+    "key": "L00272_01",
+    "original": "headstone topples into a chasm.",
+    "translation": "",
+    "context": "src/music.c:272:15\n   267: \t\t\tif (cansee(x,y))\n   268: \t\t\t\tpline_The(\"altar falls into a chasm.\");\n   269: \t\t\tgoto do_pit;\n   270: \t\t  case GRAVE :\n   271: \t\t\tif (cansee(x,y))\n>  272: \t\t\t\tpline_The(\"headstone topples into a chasm.\");\n   273: \t\t\tgoto do_pit;\n   274: \t\t  case THRONE :\n   275: \t\t\tif (cansee(x,y))\n   276: \t\t\t\tpline_The(\"throne falls into a chasm.\");\n   277: \t\t\t/* Falls into next case */"
+  },
+  {
+    "key": "L00276_01",
+    "original": "throne falls into a chasm.",
+    "translation": "",
+    "context": "src/music.c:276:15\n   271: \t\t\tif (cansee(x,y))\n   272: \t\t\t\tpline_The(\"headstone topples into a chasm.\");\n   273: \t\t\tgoto do_pit;\n   274: \t\t  case THRONE :\n   275: \t\t\tif (cansee(x,y))\n>  276: \t\t\t\tpline_The(\"throne falls into a chasm.\");\n   277: \t\t\t/* Falls into next case */\n   278: \t\t  case ROOM :\n   279: \t\t  case CORR : /* Try to make a pit */\n   280: do_pit:\t\t    chasm = maketrap(x,y,PIT);\n   281: \t\t    if (!chasm) break;\t/* no pit if portal at that location */"
+  },
+  {
+    "key": "L00290_01",
+    "original": "KADOOM! The boulder falls into a chasm%s!",
+    "translation": "",
+    "context": "src/music.c:290:13\n   285: \n   286: \t\t    mtmp = m_at(x,y);\n   287: \n   288: \t\t    if ((otmp = sobj_at(BOULDER, x, y)) != 0) {\n   289: \t\t\tif (cansee(x, y))\n>  290: \t\t\t   pline(\"KADOOM! The boulder falls into a chasm%s!\",\n   291: \t\t\t      ((x == u.ux) && (y == u.uy)) ? \" below you\" : \"\");\n   292: \t\t\tif (mtmp)\n   293: \t\t\t\tmtmp->mtrapped = 0;\n   294: \t\t\tobj_extract_self(otmp);\n   295: \t\t\t(void) flooreffects(otmp, x, y, \"\");"
+  },
+  {
+    "key": "L00291_01",
+    "original": " below you",
+    "translation": "",
+    "context": "src/music.c:291:41\n   286: \t\t    mtmp = m_at(x,y);\n   287: \n   288: \t\t    if ((otmp = sobj_at(BOULDER, x, y)) != 0) {\n   289: \t\t\tif (cansee(x, y))\n   290: \t\t\t   pline(\"KADOOM! The boulder falls into a chasm%s!\",\n>  291: \t\t\t      ((x == u.ux) && (y == u.uy)) ? \" below you\" : \"\");\n   292: \t\t\tif (mtmp)\n   293: \t\t\t\tmtmp->mtrapped = 0;\n   294: \t\t\tobj_extract_self(otmp);\n   295: \t\t\t(void) flooreffects(otmp, x, y, \"\");\n   296: \t\t\tbreak;"
+  },
+  {
+    "key": "L00306_01",
+    "original": "%s falls into a chasm!",
+    "translation": "",
+    "context": "src/music.c:306:11\n   301: \n   302: \t\t    if (mtmp) {\n   303: \t\t\tif(!is_flyer(mtmp->data) && !is_clinger(mtmp->data)) {\n   304: \t\t\t    mtmp->mtrapped = 1;\n   305: \t\t\t    if(cansee(x,y))\n>  306: \t\t\t\tpline(\"%s falls into a chasm!\", Monnam(mtmp));\n   307: \t\t\t    else if (flags.soundok && humanoid(mtmp->data))\n   308: \t\t\t\tYou_hear(\"a scream!\");\n   309: \t\t\t    mselftouch(mtmp, \"Falling, \", TRUE);\n   310: \t\t\t    if (mtmp->mhp > 0)\n   311: \t\t\t\tif ((mtmp->mhp -= rnd(6)) <= 0) {"
+  },
+  {
+    "key": "L00308_01",
+    "original": "a scream!",
+    "translation": "",
+    "context": "src/music.c:308:14\n   303: \t\t\tif(!is_flyer(mtmp->data) && !is_clinger(mtmp->data)) {\n   304: \t\t\t    mtmp->mtrapped = 1;\n   305: \t\t\t    if(cansee(x,y))\n   306: \t\t\t\tpline(\"%s falls into a chasm!\", Monnam(mtmp));\n   307: \t\t\t    else if (flags.soundok && humanoid(mtmp->data))\n>  308: \t\t\t\tYou_hear(\"a scream!\");\n   309: \t\t\t    mselftouch(mtmp, \"Falling, \", TRUE);\n   310: \t\t\t    if (mtmp->mhp > 0)\n   311: \t\t\t\tif ((mtmp->mhp -= rnd(6)) <= 0) {\n   312: \t\t\t\t    if(!cansee(x,y))\n   313: \t\t\t\t\tpline(\"It is destroyed!\");"
+  },
+  {
+    "key": "L00309_01",
+    "original": "Falling, ",
+    "translation": "",
+    "context": "src/music.c:309:25\n   304: \t\t\t    mtmp->mtrapped = 1;\n   305: \t\t\t    if(cansee(x,y))\n   306: \t\t\t\tpline(\"%s falls into a chasm!\", Monnam(mtmp));\n   307: \t\t\t    else if (flags.soundok && humanoid(mtmp->data))\n   308: \t\t\t\tYou_hear(\"a scream!\");\n>  309: \t\t\t    mselftouch(mtmp, \"Falling, \", TRUE);\n   310: \t\t\t    if (mtmp->mhp > 0)\n   311: \t\t\t\tif ((mtmp->mhp -= rnd(6)) <= 0) {\n   312: \t\t\t\t    if(!cansee(x,y))\n   313: \t\t\t\t\tpline(\"It is destroyed!\");\n   314: \t\t\t\t    else {"
+  },
+  {
+    "key": "L00313_01",
+    "original": "It is destroyed!",
+    "translation": "",
+    "context": "src/music.c:313:12\n   308: \t\t\t\tYou_hear(\"a scream!\");\n   309: \t\t\t    mselftouch(mtmp, \"Falling, \", TRUE);\n   310: \t\t\t    if (mtmp->mhp > 0)\n   311: \t\t\t\tif ((mtmp->mhp -= rnd(6)) <= 0) {\n   312: \t\t\t\t    if(!cansee(x,y))\n>  313: \t\t\t\t\tpline(\"It is destroyed!\");\n   314: \t\t\t\t    else {\n   315: \t\t\t\t\tYou(\"destroy %s!\", mtmp->mtame ?\n   316: \t\t\t\t\t    x_monnam(mtmp, ARTICLE_THE, \"poor\",\n   317: \t\t\t\tmtmp->mnamelth ? SUPPRESS_SADDLE : 0, FALSE):\n   318: \t\t\t\t\t    mon_nam(mtmp));"
+  },
+  {
+    "key": "L00315_01",
+    "original": "destroy %s!",
+    "translation": "",
+    "context": "src/music.c:315:10\n   310: \t\t\t    if (mtmp->mhp > 0)\n   311: \t\t\t\tif ((mtmp->mhp -= rnd(6)) <= 0) {\n   312: \t\t\t\t    if(!cansee(x,y))\n   313: \t\t\t\t\tpline(\"It is destroyed!\");\n   314: \t\t\t\t    else {\n>  315: \t\t\t\t\tYou(\"destroy %s!\", mtmp->mtame ?\n   316: \t\t\t\t\t    x_monnam(mtmp, ARTICLE_THE, \"poor\",\n   317: \t\t\t\tmtmp->mnamelth ? SUPPRESS_SADDLE : 0, FALSE):\n   318: \t\t\t\t\t    mon_nam(mtmp));\n   319: \t\t\t\t    }\n   320: \t\t\t\t    xkilled(mtmp,0);"
+  },
+  {
+    "key": "L00316_01",
+    "original": "poor",
+    "translation": "",
+    "context": "src/music.c:316:38\n   311: \t\t\t\tif ((mtmp->mhp -= rnd(6)) <= 0) {\n   312: \t\t\t\t    if(!cansee(x,y))\n   313: \t\t\t\t\tpline(\"It is destroyed!\");\n   314: \t\t\t\t    else {\n   315: \t\t\t\t\tYou(\"destroy %s!\", mtmp->mtame ?\n>  316: \t\t\t\t\t    x_monnam(mtmp, ARTICLE_THE, \"poor\",\n   317: \t\t\t\tmtmp->mnamelth ? SUPPRESS_SADDLE : 0, FALSE):\n   318: \t\t\t\t\t    mon_nam(mtmp));\n   319: \t\t\t\t    }\n   320: \t\t\t\t    xkilled(mtmp,0);\n   321: \t\t\t\t}"
+  },
+  {
+    "key": "L00327_01",
+    "original": "A chasm opens up under you!",
+    "translation": "",
+    "context": "src/music.c:327:15\n   322: \t\t\t}\n   323: \t\t    } else if (x == u.ux && y == u.uy) {\n   324: \t\t\t\t/* KMH, balance patch -- new intrinsic */\n   325: \t\t\t    if (Levitation || Flying ||\n   326: \t\t\t\t\t\tis_clinger(youmonst.data)) {\n>  327: \t\t\t\t    pline(\"A chasm opens up under you!\");\n   328: \t\t\t\t    You(\"don't fall in!\");\n   329: \t\t\t    } else {\n   330: \t\t\t\t    You(\"fall into a chasm!\");\n   331: \t\t\t\t    u.utrap = rn1(6,2);\n   332: \t\t\t\t    u.utraptype = TT_PIT;"
+  },
+  {
+    "key": "L00328_01",
+    "original": "don't fall in!",
+    "translation": "",
+    "context": "src/music.c:328:13\n   323: \t\t    } else if (x == u.ux && y == u.uy) {\n   324: \t\t\t\t/* KMH, balance patch -- new intrinsic */\n   325: \t\t\t    if (Levitation || Flying ||\n   326: \t\t\t\t\t\tis_clinger(youmonst.data)) {\n   327: \t\t\t\t    pline(\"A chasm opens up under you!\");\n>  328: \t\t\t\t    You(\"don't fall in!\");\n   329: \t\t\t    } else {\n   330: \t\t\t\t    You(\"fall into a chasm!\");\n   331: \t\t\t\t    u.utrap = rn1(6,2);\n   332: \t\t\t\t    u.utraptype = TT_PIT;\n   333: \t\t\t\t    losehp(rnd(6),\"fell into a chasm\","
+  },
+  {
+    "key": "L00330_01",
+    "original": "fall into a chasm!",
+    "translation": "",
+    "context": "src/music.c:330:13\n   325: \t\t\t    if (Levitation || Flying ||\n   326: \t\t\t\t\t\tis_clinger(youmonst.data)) {\n   327: \t\t\t\t    pline(\"A chasm opens up under you!\");\n   328: \t\t\t\t    You(\"don't fall in!\");\n   329: \t\t\t    } else {\n>  330: \t\t\t\t    You(\"fall into a chasm!\");\n   331: \t\t\t\t    u.utrap = rn1(6,2);\n   332: \t\t\t\t    u.utraptype = TT_PIT;\n   333: \t\t\t\t    losehp(rnd(6),\"fell into a chasm\",\n   334: \t\t\t\t\tNO_KILLER_PREFIX);\n   335: \t\t\t\t    selftouch(\"Falling, you\");"
+  },
+  {
+    "key": "L00333_01",
+    "original": "fell into a chasm",
+    "translation": "",
+    "context": "src/music.c:333:23\n   328: \t\t\t\t    You(\"don't fall in!\");\n   329: \t\t\t    } else {\n   330: \t\t\t\t    You(\"fall into a chasm!\");\n   331: \t\t\t\t    u.utrap = rn1(6,2);\n   332: \t\t\t\t    u.utraptype = TT_PIT;\n>  333: \t\t\t\t    losehp(rnd(6),\"fell into a chasm\",\n   334: \t\t\t\t\tNO_KILLER_PREFIX);\n   335: \t\t\t\t    selftouch(\"Falling, you\");\n   336: \t\t\t    }\n   337: \t\t    } else newsym(x,y);\n   338: \t\t    break;"
+  },
+  {
+    "key": "L00335_01",
+    "original": "Falling, you",
+    "translation": "",
+    "context": "src/music.c:335:19\n   330: \t\t\t\t    You(\"fall into a chasm!\");\n   331: \t\t\t\t    u.utrap = rn1(6,2);\n   332: \t\t\t\t    u.utraptype = TT_PIT;\n   333: \t\t\t\t    losehp(rnd(6),\"fell into a chasm\",\n   334: \t\t\t\t\tNO_KILLER_PREFIX);\n>  335: \t\t\t\t    selftouch(\"Falling, you\");\n   336: \t\t\t    }\n   337: \t\t    } else newsym(x,y);\n   338: \t\t    break;\n   339: \t\t  case DOOR : /* Make the door collapse */\n   340: \t\t    /* ALI - artifact doors */"
+  },
+  {
+    "key": "L00344_01",
+    "original": "door collapses.",
+    "translation": "",
+    "context": "src/music.c:344:14\n   339: \t\t  case DOOR : /* Make the door collapse */\n   340: \t\t    /* ALI - artifact doors */\n   341: \t\t    if (artifact_door(x, y))  break;\n   342: \t\t    if (levl[x][y].doormask == D_NODOOR) goto do_pit;\n   343: \t\t    if (cansee(x,y))\n>  344: \t\t\tpline_The(\"door collapses.\");\n   345: \t\t    if (*in_rooms(x, y, SHOPBASE))\n   346: \t\t\tadd_damage(x, y, 0L);\n   347: \t\t    levl[x][y].doormask = D_NODOOR;\n   348: \t\t    unblock_point(x,y);\n   349: \t\t    newsym(x,y);"
+  },
+  {
+    "key": "L00372_01",
+    "original": "C",
+    "translation": "",
+    "context": "src/music.c:372:21\n   367: \titmp = *instr;\n   368: \t/* if won't yield special effect, make sound of mundane counterpart */\n   369: \tif (!do_spec || instr->spe <= 0)\n   370: \t    while (objects[itmp.otyp].oc_magic) itmp.otyp -= 1;\n   371: # ifdef MAC\n>  372: \tmac_speaker(&itmp, \"C\");\n   373: # endif\n   374: # ifdef AMIGA\n   375: \tamii_speaker(&itmp, \"Cw\", AMII_OKAY_VOLUME);\n   376: # endif\n   377: # ifdef VPIX_MUSIC"
+  },
+  {
+    "key": "L00375_01",
+    "original": "Cw",
+    "translation": "",
+    "context": "src/music.c:375:22\n   370: \t    while (objects[itmp.otyp].oc_magic) itmp.otyp -= 1;\n   371: # ifdef MAC\n   372: \tmac_speaker(&itmp, \"C\");\n   373: # endif\n   374: # ifdef AMIGA\n>  375: \tamii_speaker(&itmp, \"Cw\", AMII_OKAY_VOLUME);\n   376: # endif\n   377: # ifdef VPIX_MUSIC\n   378: \tif (sco_flag_console)\n   379: \t    speaker(&itmp, \"C\");\n   380: # endif"
+  },
+  {
+    "key": "L00379_01",
+    "original": "C",
+    "translation": "",
+    "context": "src/music.c:379:21\n   374: # ifdef AMIGA\n   375: \tamii_speaker(&itmp, \"Cw\", AMII_OKAY_VOLUME);\n   376: # endif\n   377: # ifdef VPIX_MUSIC\n   378: \tif (sco_flag_console)\n>  379: \t    speaker(&itmp, \"C\");\n   380: # endif\n   381: #ifdef PCMUSIC\n   382: \t  pc_speaker ( &itmp, \"C\");\n   383: #endif\n   384: #endif /* MAC || AMIGA || VPIX_MUSIC || PCMUSIC */"
+  },
+  {
+    "key": "L00382_01",
+    "original": "C",
+    "translation": "",
+    "context": "src/music.c:382:24\n   377: # ifdef VPIX_MUSIC\n   378: \tif (sco_flag_console)\n   379: \t    speaker(&itmp, \"C\");\n   380: # endif\n   381: #ifdef PCMUSIC\n>  382: \t  pc_speaker ( &itmp, \"C\");\n   383: #endif\n   384: #endif /* MAC || AMIGA || VPIX_MUSIC || PCMUSIC */\n   385: \n   386: \tif (!do_spec)\n   387: \t    pline(\"What you produce is quite far from music...\");"
+  },
+  {
+    "key": "L00387_01",
+    "original": "What you produce is quite far from music...",
+    "translation": "",
+    "context": "src/music.c:387:12\n   382: \t  pc_speaker ( &itmp, \"C\");\n   383: #endif\n   384: #endif /* MAC || AMIGA || VPIX_MUSIC || PCMUSIC */\n   385: \n   386: \tif (!do_spec)\n>  387: \t    pline(\"What you produce is quite far from music...\");\n   388: \telse\n   389: \t    You(\"start playing %s.\", the(xname(instr)));\n   390: \n   391: \tswitch (instr->otyp) {\n   392: \tcase MAGIC_FLUTE:\t\t/* Make monster fall asleep */"
+  },
+  {
+    "key": "L00389_01",
+    "original": "start playing %s.",
+    "translation": "",
+    "context": "src/music.c:389:10\n   384: #endif /* MAC || AMIGA || VPIX_MUSIC || PCMUSIC */\n   385: \n   386: \tif (!do_spec)\n   387: \t    pline(\"What you produce is quite far from music...\");\n   388: \telse\n>  389: \t    You(\"start playing %s.\", the(xname(instr)));\n   390: \n   391: \tswitch (instr->otyp) {\n   392: \tcase MAGIC_FLUTE:\t\t/* Make monster fall asleep */\n   393: \t    if (do_spec && instr->spe > 0) {\n   394: \t\tconsume_obj_charge(instr, TRUE);"
+  },
+  {
+    "key": "L00396_01",
+    "original": "produce soft music.",
+    "translation": "",
+    "context": "src/music.c:396:7\n   391: \tswitch (instr->otyp) {\n   392: \tcase MAGIC_FLUTE:\t\t/* Make monster fall asleep */\n   393: \t    if (do_spec && instr->spe > 0) {\n   394: \t\tconsume_obj_charge(instr, TRUE);\n   395: \n>  396: \t\tYou(\"produce soft music.\");\n   397: \t\tput_monsters_to_sleep(u.ulevel * 5);\n   398: \t\texercise(A_DEX, TRUE);\n   399: \t\tbreak;\n   400: \t    } /* else FALLTHRU */\n   401: \tcase WOODEN_FLUTE:\t\t/* May charm snakes */"
+  },
+  {
+    "key": "L00405_01",
+    "original": "%s.",
+    "translation": "",
+    "context": "src/music.c:405:12\n   400: \t    } /* else FALLTHRU */\n   401: \tcase WOODEN_FLUTE:\t\t/* May charm snakes */\n   402: \t/* KMH, balance patch -- removed\n   403: \tcase PAN_PIPE: */\n   404: \t    do_spec &= (rn2(ACURR(A_DEX)) + u.ulevel > 25);\n>  405: \t    pline(\"%s.\", Tobjnam(instr, do_spec ? \"trill\" : \"toot\"));\n   406: \t    if (do_spec) charm_snakes(u.ulevel * 3);\n   407: \t    exercise(A_DEX, TRUE);\n   408: \t    break;\n   409: \tcase FROST_HORN:\t\t/* Idem wand of cold */\n   410: \tcase FIRE_HORN:\t\t\t/* Idem wand of fire */"
+  },
+  {
+    "key": "L00405_02",
+    "original": "trill",
+    "translation": "",
+    "context": "src/music.c:405:44\n   400: \t    } /* else FALLTHRU */\n   401: \tcase WOODEN_FLUTE:\t\t/* May charm snakes */\n   402: \t/* KMH, balance patch -- removed\n   403: \tcase PAN_PIPE: */\n   404: \t    do_spec &= (rn2(ACURR(A_DEX)) + u.ulevel > 25);\n>  405: \t    pline(\"%s.\", Tobjnam(instr, do_spec ? \"trill\" : \"toot\"));\n   406: \t    if (do_spec) charm_snakes(u.ulevel * 3);\n   407: \t    exercise(A_DEX, TRUE);\n   408: \t    break;\n   409: \tcase FROST_HORN:\t\t/* Idem wand of cold */\n   410: \tcase FIRE_HORN:\t\t\t/* Idem wand of fire */"
+  },
+  {
+    "key": "L00405_03",
+    "original": "toot",
+    "translation": "",
+    "context": "src/music.c:405:54\n   400: \t    } /* else FALLTHRU */\n   401: \tcase WOODEN_FLUTE:\t\t/* May charm snakes */\n   402: \t/* KMH, balance patch -- removed\n   403: \tcase PAN_PIPE: */\n   404: \t    do_spec &= (rn2(ACURR(A_DEX)) + u.ulevel > 25);\n>  405: \t    pline(\"%s.\", Tobjnam(instr, do_spec ? \"trill\" : \"toot\"));\n   406: \t    if (do_spec) charm_snakes(u.ulevel * 3);\n   407: \t    exercise(A_DEX, TRUE);\n   408: \t    break;\n   409: \tcase FROST_HORN:\t\t/* Idem wand of cold */\n   410: \tcase FIRE_HORN:\t\t\t/* Idem wand of fire */"
+  },
+  {
+    "key": "L00415_01",
+    "original": "%s.",
+    "translation": "",
+    "context": "src/music.c:415:13\n   410: \tcase FIRE_HORN:\t\t\t/* Idem wand of fire */\n   411: \t    if (do_spec && instr->spe > 0) {\n   412: \t\tconsume_obj_charge(instr, TRUE);\n   413: \n   414: \t\tif (!getdir((char *)0)) {\n>  415: \t\t    pline(\"%s.\", Tobjnam(instr, \"vibrate\"));\n   416: \t\t    break;\n   417: \t\t} else if (!u.dx && !u.dy && !u.dz) {\n   418: \t\t    if ((damage = zapyourself(instr, TRUE)) != 0) {\n   419: \t\t\tchar buf[BUFSZ];\n   420: \t\t\tSprintf(buf, \"using a magical horn on %sself\", uhim());"
+  },
+  {
+    "key": "L00415_02",
+    "original": "vibrate",
+    "translation": "",
+    "context": "src/music.c:415:35\n   410: \tcase FIRE_HORN:\t\t\t/* Idem wand of fire */\n   411: \t    if (do_spec && instr->spe > 0) {\n   412: \t\tconsume_obj_charge(instr, TRUE);\n   413: \n   414: \t\tif (!getdir((char *)0)) {\n>  415: \t\t    pline(\"%s.\", Tobjnam(instr, \"vibrate\"));\n   416: \t\t    break;\n   417: \t\t} else if (!u.dx && !u.dy && !u.dz) {\n   418: \t\t    if ((damage = zapyourself(instr, TRUE)) != 0) {\n   419: \t\t\tchar buf[BUFSZ];\n   420: \t\t\tSprintf(buf, \"using a magical horn on %sself\", uhim());"
+  },
+  {
+    "key": "L00420_01",
+    "original": "using a magical horn on %sself",
+    "translation": "",
+    "context": "src/music.c:420:17\n   415: \t\t    pline(\"%s.\", Tobjnam(instr, \"vibrate\"));\n   416: \t\t    break;\n   417: \t\t} else if (!u.dx && !u.dy && !u.dz) {\n   418: \t\t    if ((damage = zapyourself(instr, TRUE)) != 0) {\n   419: \t\t\tchar buf[BUFSZ];\n>  420: \t\t\tSprintf(buf, \"using a magical horn on %sself\", uhim());\n   421: \t\t\tlosehp(damage, buf, KILLED_BY);\n   422: \t\t    }\n   423: \t\t} else {\n   424: \t\t    buzz((instr->otyp == FROST_HORN) ? AD_COLD-1 : AD_FIRE-1,\n   425: \t\t\t rn1(6,6), u.ux, u.uy, u.dx, u.dy);"
+  },
+  {
+    "key": "L00431_01",
+    "original": "produce a frightful, grave sound.",
+    "translation": "",
+    "context": "src/music.c:431:10\n   426: \t\t}\n   427: \t\tmakeknown(instr->otyp);\n   428: \t\tbreak;\n   429: \t    } /* else FALLTHRU */\n   430: \tcase TOOLED_HORN:\t\t/* Awaken or scare monsters */\n>  431: \t    You(\"produce a frightful, grave sound.\");\n   432: \t    awaken_monsters(u.ulevel * 30);\n   433: \t    exercise(A_WIS, FALSE);\n   434: \t    break;\n   435: \tcase BUGLE:\t\t\t/* Awaken & attract soldiers */\n   436: \t    You(\"extract a loud noise from %s.\", the(xname(instr)));"
+  },
+  {
+    "key": "L00436_01",
+    "original": "extract a loud noise from %s.",
+    "translation": "",
+    "context": "src/music.c:436:10\n   431: \t    You(\"produce a frightful, grave sound.\");\n   432: \t    awaken_monsters(u.ulevel * 30);\n   433: \t    exercise(A_WIS, FALSE);\n   434: \t    break;\n   435: \tcase BUGLE:\t\t\t/* Awaken & attract soldiers */\n>  436: \t    You(\"extract a loud noise from %s.\", the(xname(instr)));\n   437: \t    awaken_soldiers();\n   438: \t    exercise(A_WIS, FALSE);\n   439: \t    break;\n   440: \tcase MAGIC_HARP:\t\t/* Charm monsters */\n   441: \t    if (do_spec && instr->spe > 0) {"
+  },
+  {
+    "key": "L00444_01",
+    "original": "%s very attractive music.",
+    "translation": "",
+    "context": "src/music.c:444:9\n   439: \t    break;\n   440: \tcase MAGIC_HARP:\t\t/* Charm monsters */\n   441: \t    if (do_spec && instr->spe > 0) {\n   442: \t\tconsume_obj_charge(instr, TRUE);\n   443: \n>  444: \t\tpline(\"%s very attractive music.\", Tobjnam(instr, \"produce\"));\n   445: \t\tcharm_monsters((u.ulevel - 1) / 3 + 1);\n   446: \t\texercise(A_DEX, TRUE);\n   447: \t\tbreak;\n   448: \t    } /* else FALLTHRU */\n   449: \tcase WOODEN_HARP:\t\t/* May calm Nymph */"
+  },
+  {
+    "key": "L00444_02",
+    "original": "produce",
+    "translation": "",
+    "context": "src/music.c:444:53\n   439: \t    break;\n   440: \tcase MAGIC_HARP:\t\t/* Charm monsters */\n   441: \t    if (do_spec && instr->spe > 0) {\n   442: \t\tconsume_obj_charge(instr, TRUE);\n   443: \n>  444: \t\tpline(\"%s very attractive music.\", Tobjnam(instr, \"produce\"));\n   445: \t\tcharm_monsters((u.ulevel - 1) / 3 + 1);\n   446: \t\texercise(A_DEX, TRUE);\n   447: \t\tbreak;\n   448: \t    } /* else FALLTHRU */\n   449: \tcase WOODEN_HARP:\t\t/* May calm Nymph */"
+  },
+  {
+    "key": "L00451_01",
+    "original": "%s %s.",
+    "translation": "",
+    "context": "src/music.c:451:12\n   446: \t\texercise(A_DEX, TRUE);\n   447: \t\tbreak;\n   448: \t    } /* else FALLTHRU */\n   449: \tcase WOODEN_HARP:\t\t/* May calm Nymph */\n   450: \t    do_spec &= (rn2(ACURR(A_DEX)) + u.ulevel > 25);\n>  451: \t    pline(\"%s %s.\", The(xname(instr)),\n   452: \t\t  do_spec ? \"produces a lilting melody\" : \"twangs\");\n   453: \t    if (do_spec) calm_nymphs(u.ulevel * 3);\n   454: \t    exercise(A_DEX, TRUE);\n   455: \t    break;\n   456: \tcase DRUM_OF_EARTHQUAKE:\t/* create several pits */"
+  },
+  {
+    "key": "L00452_01",
+    "original": "produces a lilting melody",
+    "translation": "",
+    "context": "src/music.c:452:15\n   447: \t\tbreak;\n   448: \t    } /* else FALLTHRU */\n   449: \tcase WOODEN_HARP:\t\t/* May calm Nymph */\n   450: \t    do_spec &= (rn2(ACURR(A_DEX)) + u.ulevel > 25);\n   451: \t    pline(\"%s %s.\", The(xname(instr)),\n>  452: \t\t  do_spec ? \"produces a lilting melody\" : \"twangs\");\n   453: \t    if (do_spec) calm_nymphs(u.ulevel * 3);\n   454: \t    exercise(A_DEX, TRUE);\n   455: \t    break;\n   456: \tcase DRUM_OF_EARTHQUAKE:\t/* create several pits */\n   457: \t    if (do_spec && instr->spe > 0) {"
+  },
+  {
+    "key": "L00452_02",
+    "original": "twangs",
+    "translation": "",
+    "context": "src/music.c:452:45\n   447: \t\tbreak;\n   448: \t    } /* else FALLTHRU */\n   449: \tcase WOODEN_HARP:\t\t/* May calm Nymph */\n   450: \t    do_spec &= (rn2(ACURR(A_DEX)) + u.ulevel > 25);\n   451: \t    pline(\"%s %s.\", The(xname(instr)),\n>  452: \t\t  do_spec ? \"produces a lilting melody\" : \"twangs\");\n   453: \t    if (do_spec) calm_nymphs(u.ulevel * 3);\n   454: \t    exercise(A_DEX, TRUE);\n   455: \t    break;\n   456: \tcase DRUM_OF_EARTHQUAKE:\t/* create several pits */\n   457: \t    if (do_spec && instr->spe > 0) {"
+  },
+  {
+    "key": "L00460_01",
+    "original": "produce a heavy, thunderous rolling!",
+    "translation": "",
+    "context": "src/music.c:460:7\n   455: \t    break;\n   456: \tcase DRUM_OF_EARTHQUAKE:\t/* create several pits */\n   457: \t    if (do_spec && instr->spe > 0) {\n   458: \t\tconsume_obj_charge(instr, TRUE);\n   459: \n>  460: \t\tYou(\"produce a heavy, thunderous rolling!\");\n   461: \t\tpline_The(\"entire dungeon is shaking around you!\");\n   462: \t\tdo_earthquake((u.ulevel - 1) / 3 + 1);\n   463: \t\t/* shake up monsters in a much larger radius... */\n   464: \t\tawaken_monsters(ROWNO * COLNO);\n   465: \t\tmakeknown(DRUM_OF_EARTHQUAKE);"
+  },
+  {
+    "key": "L00461_01",
+    "original": "entire dungeon is shaking around you!",
+    "translation": "",
+    "context": "src/music.c:461:13\n   456: \tcase DRUM_OF_EARTHQUAKE:\t/* create several pits */\n   457: \t    if (do_spec && instr->spe > 0) {\n   458: \t\tconsume_obj_charge(instr, TRUE);\n   459: \n   460: \t\tYou(\"produce a heavy, thunderous rolling!\");\n>  461: \t\tpline_The(\"entire dungeon is shaking around you!\");\n   462: \t\tdo_earthquake((u.ulevel - 1) / 3 + 1);\n   463: \t\t/* shake up monsters in a much larger radius... */\n   464: \t\tawaken_monsters(ROWNO * COLNO);\n   465: \t\tmakeknown(DRUM_OF_EARTHQUAKE);\n   466: \t\tbreak;"
+  },
+  {
+    "key": "L00480_01",
+    "original": "call out the rats!",
+    "translation": "",
+    "context": "src/music.c:480:10\n   475: \t\twhile(cnt--)\n   476: \t\t(void) makemon((struct permonst *) 0, u.ux, u.uy, NO_MM_FLAGS);\n   477: \t    }\n   478: \t\tbreak;\n   479: \tcase PAN_PIPE_OF_THE_SEWERS:\n>  480: \t    You(\"call out the rats!\");\n   481: \t    if (instr->spe > 0) {\n   482: \t\tregister int cnt = 1;\n   483: \t\tregister struct monst *mtmp;\n   484: \t\tinstr->spe--;\n   485: \t\tcnt += rn2(4) + 3;"
+  },
+  {
+    "key": "L00494_01",
+    "original": "beat a deafening row!",
+    "translation": "",
+    "context": "src/music.c:494:10\n   489: \t\t}\n   490: \t     }\n   491: \t\tbreak;\n   492: #endif\n   493: \tcase LEATHER_DRUM:\t\t/* Awaken monsters */\n>  494: \t    You(\"beat a deafening row!\");\n   495: \t    awaken_monsters(u.ulevel * 40);\n   496: \t    exercise(A_WIS, FALSE);\n   497: \t    break;\n   498: \tdefault:\n   499: \t    impossible(\"What a weird instrument (%d)!\", instr->otyp);"
+  },
+  {
+    "key": "L00499_01",
+    "original": "What a weird instrument (%d)!",
+    "translation": "",
+    "context": "src/music.c:499:17\n   494: \t    You(\"beat a deafening row!\");\n   495: \t    awaken_monsters(u.ulevel * 40);\n   496: \t    exercise(A_WIS, FALSE);\n   497: \t    break;\n   498: \tdefault:\n>  499: \t    impossible(\"What a weird instrument (%d)!\", instr->otyp);\n   500: \t    break;\n   501: \t}\n   502: \treturn 2;\t\t/* That takes time */\n   503: }\n   504: "
+  },
+  {
+    "key": "L00519_01",
+    "original": "play music underwater!",
+    "translation": "",
+    "context": "src/music.c:519:11\n   514:     char *s;\n   515:     int x,y;\n   516:     boolean ok;\n   517: \n   518:     if (Underwater) {\n>  519: \tYou_cant(\"play music underwater!\");\n   520: \treturn(0);\n   521:     }\n   522:     if (instr->otyp != LEATHER_DRUM && instr->otyp != DRUM_OF_EARTHQUAKE) {\n   523: \tc = yn(\"Improvise?\");\n   524:     }"
+  },
+  {
+    "key": "L00523_01",
+    "original": "Improvise?",
+    "translation": "",
+    "context": "src/music.c:523:9\n   518:     if (Underwater) {\n   519: \tYou_cant(\"play music underwater!\");\n   520: \treturn(0);\n   521:     }\n   522:     if (instr->otyp != LEATHER_DRUM && instr->otyp != DRUM_OF_EARTHQUAKE) {\n>  523: \tc = yn(\"Improvise?\");\n   524:     }\n   525:     if (c == 'n') {\n   526: \tif (u.uevent.uheard_tune == 2 && yn(\"Play the passtune?\") == 'y') {\n   527: \t    Strcpy(buf, tune);\n   528: \t} else {"
+  },
+  {
+    "key": "L00526_01",
+    "original": "Play the passtune?",
+    "translation": "",
+    "context": "src/music.c:526:38\n   521:     }\n   522:     if (instr->otyp != LEATHER_DRUM && instr->otyp != DRUM_OF_EARTHQUAKE) {\n   523: \tc = yn(\"Improvise?\");\n   524:     }\n   525:     if (c == 'n') {\n>  526: \tif (u.uevent.uheard_tune == 2 && yn(\"Play the passtune?\") == 'y') {\n   527: \t    Strcpy(buf, tune);\n   528: \t} else {\n   529: \t    getlin(\"What tune are you playing? [5 notes, A-G]\", buf);\n   530: \t    (void)mungspaces(buf);\n   531: \t    /* convert to uppercase and change any \"H\" to the expected \"B\" */"
+  },
+  {
+    "key": "L00529_01",
+    "original": "What tune are you playing? [5 notes, A-G]",
+    "translation": "",
+    "context": "src/music.c:529:13\n   524:     }\n   525:     if (c == 'n') {\n   526: \tif (u.uevent.uheard_tune == 2 && yn(\"Play the passtune?\") == 'y') {\n   527: \t    Strcpy(buf, tune);\n   528: \t} else {\n>  529: \t    getlin(\"What tune are you playing? [5 notes, A-G]\", buf);\n   530: \t    (void)mungspaces(buf);\n   531: \t    /* convert to uppercase and change any \"H\" to the expected \"B\" */\n   532: \t    for (s = buf; *s; s++) {\n   533: #ifndef AMIGA\n   534: \t\t*s = highc(*s);"
+  },
+  {
+    "key": "L00542_01",
+    "original": "extract a strange sound from %s!",
+    "translation": "",
+    "context": "src/music.c:542:6\n   537: \t\tif (*s == 'h') *s = 'b';\n   538: #endif\n   539: \t\tif (*s == 'H') *s = 'B';\n   540: \t    }\n   541: \t}\n>  542: \tYou(\"extract a strange sound from %s!\", the(xname(instr)));\n   543: #ifdef UNIX386MUSIC\n   544: \t/* if user is at the console, play through the console speaker */\n   545: \tif (atconsole())\n   546: \t    speaker(instr, buf);\n   547: #endif"
+  },
+  {
+    "key": "L00626_01",
+    "original": "%d tumbler%s click and %d gear%s turn.",
+    "translation": "",
+    "context": "src/music.c:626:17\n   621: \t\t\t\t\tbreak;\n   622: \t\t\t\t    }\n   623: \t\t\t}\n   624: \t\t\t if(tumblers) {\n   625: \t\t\tif(gears)\n>  626: \t\t\t    You_hear(\"%d tumbler%s click and %d gear%s turn.\",\n   627: \t\t\t\ttumblers, plur(tumblers), gears, plur(gears));\n   628: \t\t\telse\n   629: \t\t\t    You_hear(\"%d tumbler%s click.\",\n   630: \t\t\t\ttumblers, plur(tumblers));\n   631: \t\t\t } else if(gears) {"
+  },
+  {
+    "key": "L00629_01",
+    "original": "%d tumbler%s click.",
+    "translation": "",
+    "context": "src/music.c:629:17\n   624: \t\t\t if(tumblers) {\n   625: \t\t\tif(gears)\n   626: \t\t\t    You_hear(\"%d tumbler%s click and %d gear%s turn.\",\n   627: \t\t\t\ttumblers, plur(tumblers), gears, plur(gears));\n   628: \t\t\telse\n>  629: \t\t\t    You_hear(\"%d tumbler%s click.\",\n   630: \t\t\t\ttumblers, plur(tumblers));\n   631: \t\t\t } else if(gears) {\n   632: \t\t\tYou_hear(\"%d gear%s turn.\", gears, plur(gears));\n   633: \t\t\t/* could only get `gears == 5' by playing five\n   634: \t\t\t   correct notes followed by excess; otherwise,"
+  },
+  {
+    "key": "L00632_01",
+    "original": "%d gear%s turn.",
+    "translation": "",
+    "context": "src/music.c:632:13\n   627: \t\t\t\ttumblers, plur(tumblers), gears, plur(gears));\n   628: \t\t\telse\n   629: \t\t\t    You_hear(\"%d tumbler%s click.\",\n   630: \t\t\t\ttumblers, plur(tumblers));\n   631: \t\t\t } else if(gears) {\n>  632: \t\t\tYou_hear(\"%d gear%s turn.\", gears, plur(gears));\n   633: \t\t\t/* could only get `gears == 5' by playing five\n   634: \t\t\t   correct notes followed by excess; otherwise,\n   635: \t\t\t   tune would have matched above */\n   636: \t\t\tif (gears == 5) u.uevent.uheard_tune = 2;\n   637: \t\t    }"
+  },
+  {
+    "key": "L00664_01",
+    "original": "TERM",
+    "translation": "",
+    "context": "src/music.c:664:32\n   659:      * `AT386' or `xterm'. We'd like to do better than this, but testing\n   660:      * to see if we're running on the console physical terminal is quite\n   661:      * difficult given the presence of virtual consoles and other modern\n   662:      * UNIX impedimenta...\n   663:      */\n>  664:     char\t*termtype = nh_getenv(\"TERM\");\n   665: \n   666:      return(!strcmp(termtype, \"AT386\") || !strcmp(termtype, \"xterm\"));\n   667: }\n   668: \n   669: STATIC_OVL void"
+  },
+  {
+    "key": "L00666_01",
+    "original": "AT386",
+    "translation": "",
+    "context": "src/music.c:666:31\n   661:      * difficult given the presence of virtual consoles and other modern\n   662:      * UNIX impedimenta...\n   663:      */\n   664:     char\t*termtype = nh_getenv(\"TERM\");\n   665: \n>  666:      return(!strcmp(termtype, \"AT386\") || !strcmp(termtype, \"xterm\"));\n   667: }\n   668: \n   669: STATIC_OVL void\n   670: speaker(instr, buf)\n   671: struct obj *instr;"
+  },
+  {
+    "key": "L00666_02",
+    "original": "xterm",
+    "translation": "",
+    "context": "src/music.c:666:61\n   661:      * difficult given the presence of virtual consoles and other modern\n   662:      * UNIX impedimenta...\n   663:      */\n   664:     char\t*termtype = nh_getenv(\"TERM\");\n   665: \n>  666:      return(!strcmp(termtype, \"AT386\") || !strcmp(termtype, \"xterm\"));\n   667: }\n   668: \n   669: STATIC_OVL void\n   670: speaker(instr, buf)\n   671: struct obj *instr;"
+  },
+  {
+    "key": "L00682_01",
+    "original": "/dev/speaker",
+    "translation": "",
+    "context": "src/music.c:682:20\n   677:      * posted to comp.sources.unix in Feb 1990.  A copy should be included\n   678:      * with your nethack distribution.\n   679:      */\n   680:     int\tfd;\n   681: \n>  682:     if ((fd = open(\"/dev/speaker\", 1)) != -1)\n   683:     {\n   684: \t/* send a prefix to modify instrumental `timbre' */\n   685: \tswitch (instr->otyp)\n   686: \t{\n   687: \tcase WOODEN_FLUTE:"
+  },
+  {
+    "key": "L00689_01",
+    "original": ">ol",
+    "translation": "",
+    "context": "src/music.c:689:23\n   684: \t/* send a prefix to modify instrumental `timbre' */\n   685: \tswitch (instr->otyp)\n   686: \t{\n   687: \tcase WOODEN_FLUTE:\n   688: \tcase MAGIC_FLUTE:\n>  689: \t    (void) write(fd, \">ol\", 1); /* up one octave & lock */\n   690: \t    break;\n   691: \tcase TOOLED_HORN:\n   692: \tcase FROST_HORN:\n   693: \tcase FIRE_HORN:\n   694: \t    (void) write(fd, \"<<ol\", 2); /* drop two octaves & lock */"
+  },
+  {
+    "key": "L00694_01",
+    "original": "<<ol",
+    "translation": "",
+    "context": "src/music.c:694:23\n   689: \t    (void) write(fd, \">ol\", 1); /* up one octave & lock */\n   690: \t    break;\n   691: \tcase TOOLED_HORN:\n   692: \tcase FROST_HORN:\n   693: \tcase FIRE_HORN:\n>  694: \t    (void) write(fd, \"<<ol\", 2); /* drop two octaves & lock */\n   695: \t    break;\n   696: \tcase BUGLE:\n   697: \t    (void) write(fd, \"ol\", 2); /* octave lock */\n   698: \t    break;\n   699: \tcase WOODEN_HARP:"
+  },
+  {
+    "key": "L00697_01",
+    "original": "ol",
+    "translation": "",
+    "context": "src/music.c:697:23\n   692: \tcase FROST_HORN:\n   693: \tcase FIRE_HORN:\n   694: \t    (void) write(fd, \"<<ol\", 2); /* drop two octaves & lock */\n   695: \t    break;\n   696: \tcase BUGLE:\n>  697: \t    (void) write(fd, \"ol\", 2); /* octave lock */\n   698: \t    break;\n   699: \tcase WOODEN_HARP:\n   700: \tcase MAGIC_HARP:\n   701: \t    (void) write(fd, \"l8mlol\", 4); /* fast, legato, octave lock */\n   702: \t    break;"
+  },
+  {
+    "key": "L00701_01",
+    "original": "l8mlol",
+    "translation": "",
+    "context": "src/music.c:701:23\n   696: \tcase BUGLE:\n   697: \t    (void) write(fd, \"ol\", 2); /* octave lock */\n   698: \t    break;\n   699: \tcase WOODEN_HARP:\n   700: \tcase MAGIC_HARP:\n>  701: \t    (void) write(fd, \"l8mlol\", 4); /* fast, legato, octave lock */\n   702: \t    break;\n   703: \t}\n   704: \t(void) write(fd, buf, strlen(buf));\n   705: \t(void) close(fd);\n   706:     }"
+  },
+  {
+    "key": "L00729_01",
+    "original": "TONE: %6d %6d\\n",
+    "translation": "",
+    "context": "src/music.c:729:12\n   724: /* emit tone of frequency hz for given number of ticks */\n   725: unsigned int hz, ticks;\n   726: {\n   727:     ioctl(0,KDMKTONE,hz|((ticks*10)<<16));\n   728: # ifdef DEBUG\n>  729:     printf(\"TONE: %6d %6d\\n\",hz,ticks * 10);\n   730: # endif\n   731:     nap(ticks * 10);\n   732: }\n   733: \n   734: STATIC_OVL void rest(ticks)"
+  },
+  {
+    "key": "L00740_01",
+    "original": "REST:        %6d\\n",
+    "translation": "",
+    "context": "src/music.c:740:12\n   735: /* rest for given number of ticks */\n   736: int\tticks;\n   737: {\n   738:     nap(ticks * 10);\n   739: # ifdef DEBUG\n>  740:     printf(\"REST:        %6d\\n\",ticks * 10);\n   741: # endif\n   742: }\n   743: \n   744: \n   745: #include \"interp.c\"\t/* from snd86unx.shr */"
+  },
+  {
+    "key": "L00759_01",
+    "original": ">ol",
+    "translation": "",
+    "context": "src/music.c:759:17\n   754:     playinit();\n   755:     switch (instr->otyp)\n   756:     {\n   757: \tcase WOODEN_FLUTE:\n   758: \tcase MAGIC_FLUTE:\n>  759: \t    playstring(\">ol\", 1); /* up one octave & lock */\n   760: \t    break;\n   761: \tcase TOOLED_HORN:\n   762: \tcase FROST_HORN:\n   763: \tcase FIRE_HORN:\n   764: \t    playstring(\"<<ol\", 2); /* drop two octaves & lock */"
+  },
+  {
+    "key": "L00764_01",
+    "original": "<<ol",
+    "translation": "",
+    "context": "src/music.c:764:17\n   759: \t    playstring(\">ol\", 1); /* up one octave & lock */\n   760: \t    break;\n   761: \tcase TOOLED_HORN:\n   762: \tcase FROST_HORN:\n   763: \tcase FIRE_HORN:\n>  764: \t    playstring(\"<<ol\", 2); /* drop two octaves & lock */\n   765: \t    break;\n   766: \tcase BUGLE:\n   767: \t    playstring(\"ol\", 2); /* octave lock */\n   768: \t    break;\n   769: \tcase WOODEN_HARP:"
+  },
+  {
+    "key": "L00767_01",
+    "original": "ol",
+    "translation": "",
+    "context": "src/music.c:767:17\n   762: \tcase FROST_HORN:\n   763: \tcase FIRE_HORN:\n   764: \t    playstring(\"<<ol\", 2); /* drop two octaves & lock */\n   765: \t    break;\n   766: \tcase BUGLE:\n>  767: \t    playstring(\"ol\", 2); /* octave lock */\n   768: \t    break;\n   769: \tcase WOODEN_HARP:\n   770: \tcase MAGIC_HARP:\n   771: \t    playstring(\"l8mlol\", 4); /* fast, legato, octave lock */\n   772: \t    break;"
+  },
+  {
+    "key": "L00771_01",
+    "original": "l8mlol",
+    "translation": "",
+    "context": "src/music.c:771:17\n   766: \tcase BUGLE:\n   767: \t    playstring(\"ol\", 2); /* octave lock */\n   768: \t    break;\n   769: \tcase WOODEN_HARP:\n   770: \tcase MAGIC_HARP:\n>  771: \t    playstring(\"l8mlol\", 4); /* fast, legato, octave lock */\n   772: \t    break;\n   773:     }\n   774:     playstring( buf, strlen(buf));\n   775: }\n   776: "
+  }
+]

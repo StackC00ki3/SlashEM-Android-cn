@@ -1,0 +1,446 @@
+[
+  {
+    "key": "L00023_01",
+    "original": "fragments",
+    "translation": "",
+    "context": "src/mthrowu.c:23:5\n    18: \n    19: /*\n    20:  * Keep consistent with breath weapons in zap.c, and AD_* in monattk.h.\n    21:  */\n    22: NEARDATA const char *breathwep[] = {\n>   23: \t\t\t\t\"fragments\",\n    24: \t\t\t\t\"fire\",\n    25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\","
+  },
+  {
+    "key": "L00024_01",
+    "original": "fire",
+    "translation": "",
+    "context": "src/mthrowu.c:24:5\n    19: /*\n    20:  * Keep consistent with breath weapons in zap.c, and AD_* in monattk.h.\n    21:  */\n    22: NEARDATA const char *breathwep[] = {\n    23: \t\t\t\t\"fragments\",\n>   24: \t\t\t\t\"fire\",\n    25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\","
+  },
+  {
+    "key": "L00025_01",
+    "original": "frost",
+    "translation": "",
+    "context": "src/mthrowu.c:25:5\n    20:  * Keep consistent with breath weapons in zap.c, and AD_* in monattk.h.\n    21:  */\n    22: NEARDATA const char *breathwep[] = {\n    23: \t\t\t\t\"fragments\",\n    24: \t\t\t\t\"fire\",\n>   25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\","
+  },
+  {
+    "key": "L00026_01",
+    "original": "sleep gas",
+    "translation": "",
+    "context": "src/mthrowu.c:26:5\n    21:  */\n    22: NEARDATA const char *breathwep[] = {\n    23: \t\t\t\t\"fragments\",\n    24: \t\t\t\t\"fire\",\n    25: \t\t\t\t\"frost\",\n>   26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\",\n    31: \t\t\t\t\"strange breath #8\","
+  },
+  {
+    "key": "L00027_01",
+    "original": "a disintegration blast",
+    "translation": "",
+    "context": "src/mthrowu.c:27:5\n    22: NEARDATA const char *breathwep[] = {\n    23: \t\t\t\t\"fragments\",\n    24: \t\t\t\t\"fire\",\n    25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n>   27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\",\n    31: \t\t\t\t\"strange breath #8\",\n    32: \t\t\t\t\"strange breath #9\""
+  },
+  {
+    "key": "L00028_01",
+    "original": "lightning",
+    "translation": "",
+    "context": "src/mthrowu.c:28:5\n    23: \t\t\t\t\"fragments\",\n    24: \t\t\t\t\"fire\",\n    25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n>   28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\",\n    31: \t\t\t\t\"strange breath #8\",\n    32: \t\t\t\t\"strange breath #9\"\n    33: };"
+  },
+  {
+    "key": "L00029_01",
+    "original": "poison gas",
+    "translation": "",
+    "context": "src/mthrowu.c:29:5\n    24: \t\t\t\t\"fire\",\n    25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n>   29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\",\n    31: \t\t\t\t\"strange breath #8\",\n    32: \t\t\t\t\"strange breath #9\"\n    33: };\n    34: "
+  },
+  {
+    "key": "L00030_01",
+    "original": "acid",
+    "translation": "",
+    "context": "src/mthrowu.c:30:5\n    25: \t\t\t\t\"frost\",\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n>   30: \t\t\t\t\"acid\",\n    31: \t\t\t\t\"strange breath #8\",\n    32: \t\t\t\t\"strange breath #9\"\n    33: };\n    34: \n    35: /* hero is hit by something other than a monster */"
+  },
+  {
+    "key": "L00031_01",
+    "original": "strange breath #8",
+    "translation": "",
+    "context": "src/mthrowu.c:31:5\n    26: \t\t\t\t\"sleep gas\",\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\",\n>   31: \t\t\t\t\"strange breath #8\",\n    32: \t\t\t\t\"strange breath #9\"\n    33: };\n    34: \n    35: /* hero is hit by something other than a monster */\n    36: int"
+  },
+  {
+    "key": "L00032_01",
+    "original": "strange breath #9",
+    "translation": "",
+    "context": "src/mthrowu.c:32:5\n    27: \t\t\t\t\"a disintegration blast\",\n    28: \t\t\t\t\"lightning\",\n    29: \t\t\t\t\"poison gas\",\n    30: \t\t\t\t\"acid\",\n    31: \t\t\t\t\"strange breath #8\",\n>   32: \t\t\t\t\"strange breath #9\"\n    33: };\n    34: \n    35: /* hero is hit by something other than a monster */\n    36: int\n    37: thitu(tlev, dam, obj, name)"
+  },
+  {
+    "key": "L00048_01",
+    "original": "thitu: name & obj both null?",
+    "translation": "",
+    "context": "src/mthrowu.c:48:22\n    43: \tboolean is_acid;\n    44: \tint kprefix = KILLED_BY_AN;\n    45: \tchar onmbuf[BUFSZ], knmbuf[BUFSZ];\n    46: \n    47: \tif (!name) {\n>   48: \t    if (!obj) panic(\"thitu: name & obj both null?\");\n    49: \t    name = strcpy(onmbuf,\n    50: \t\t\t (obj->quan > 1L) ? doname(obj) : mshot_xname(obj));\n    51: \t    knm = strcpy(knmbuf, killer_xname(obj));\n    52: \t    kprefix = KILLED_BY;  /* killer_name supplies \"an\" if warranted */\n    53: \t} else {"
+  },
+  {
+    "key": "L00056_01",
+    "original": "the ",
+    "translation": "",
+    "context": "src/mthrowu.c:56:26\n    51: \t    knm = strcpy(knmbuf, killer_xname(obj));\n    52: \t    kprefix = KILLED_BY;  /* killer_name supplies \"an\" if warranted */\n    53: \t} else {\n    54: \t    knm = name;\n    55: \t    /* [perhaps ought to check for plural here to] */\n>   56: \t    if (!strncmpi(name, \"the \", 4) ||\n    57: \t\t    !strncmpi(name, \"an \", 3) ||\n    58: \t\t    !strncmpi(name, \"a \", 2)) kprefix = KILLED_BY;\n    59: \t}\n    60: \tonm = (obj && obj_is_pname(obj)) ? the(name) :\n    61: \t\t\t    (obj && obj->quan > 1L) ? name : an(name);"
+  },
+  {
+    "key": "L00057_01",
+    "original": "an ",
+    "translation": "",
+    "context": "src/mthrowu.c:57:23\n    52: \t    kprefix = KILLED_BY;  /* killer_name supplies \"an\" if warranted */\n    53: \t} else {\n    54: \t    knm = name;\n    55: \t    /* [perhaps ought to check for plural here to] */\n    56: \t    if (!strncmpi(name, \"the \", 4) ||\n>   57: \t\t    !strncmpi(name, \"an \", 3) ||\n    58: \t\t    !strncmpi(name, \"a \", 2)) kprefix = KILLED_BY;\n    59: \t}\n    60: \tonm = (obj && obj_is_pname(obj)) ? the(name) :\n    61: \t\t\t    (obj && obj->quan > 1L) ? name : an(name);\n    62: \tis_acid = (obj && obj->otyp == ACID_VENOM);"
+  },
+  {
+    "key": "L00058_01",
+    "original": "a ",
+    "translation": "",
+    "context": "src/mthrowu.c:58:23\n    53: \t} else {\n    54: \t    knm = name;\n    55: \t    /* [perhaps ought to check for plural here to] */\n    56: \t    if (!strncmpi(name, \"the \", 4) ||\n    57: \t\t    !strncmpi(name, \"an \", 3) ||\n>   58: \t\t    !strncmpi(name, \"a \", 2)) kprefix = KILLED_BY;\n    59: \t}\n    60: \tonm = (obj && obj_is_pname(obj)) ? the(name) :\n    61: \t\t\t    (obj && obj->quan > 1L) ? name : an(name);\n    62: \tis_acid = (obj && obj->otyp == ACID_VENOM);\n    63: "
+  },
+  {
+    "key": "L00065_01",
+    "original": "It misses.",
+    "translation": "",
+    "context": "src/mthrowu.c:65:37\n    60: \tonm = (obj && obj_is_pname(obj)) ? the(name) :\n    61: \t\t\t    (obj && obj->quan > 1L) ? name : an(name);\n    62: \tis_acid = (obj && obj->otyp == ACID_VENOM);\n    63: \n    64: \tif(u.uac + tlev <= rnd(20)) {\n>   65: \t\tif(Blind || !flags.verbose) pline(\"It misses.\");\n    66: \t\telse You(\"are almost hit by %s.\", onm);\n    67: \t\treturn(0);\n    68: \t} else {\n    69: \t\tif(Blind || !flags.verbose) You(\"are hit!\");\n    70: \t\telse You(\"are hit by %s%s\", onm, exclam(dam));"
+  },
+  {
+    "key": "L00066_01",
+    "original": "are almost hit by %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:66:12\n    61: \t\t\t    (obj && obj->quan > 1L) ? name : an(name);\n    62: \tis_acid = (obj && obj->otyp == ACID_VENOM);\n    63: \n    64: \tif(u.uac + tlev <= rnd(20)) {\n    65: \t\tif(Blind || !flags.verbose) pline(\"It misses.\");\n>   66: \t\telse You(\"are almost hit by %s.\", onm);\n    67: \t\treturn(0);\n    68: \t} else {\n    69: \t\tif(Blind || !flags.verbose) You(\"are hit!\");\n    70: \t\telse You(\"are hit by %s%s\", onm, exclam(dam));\n    71: "
+  },
+  {
+    "key": "L00069_01",
+    "original": "are hit!",
+    "translation": "",
+    "context": "src/mthrowu.c:69:35\n    64: \tif(u.uac + tlev <= rnd(20)) {\n    65: \t\tif(Blind || !flags.verbose) pline(\"It misses.\");\n    66: \t\telse You(\"are almost hit by %s.\", onm);\n    67: \t\treturn(0);\n    68: \t} else {\n>   69: \t\tif(Blind || !flags.verbose) You(\"are hit!\");\n    70: \t\telse You(\"are hit by %s%s\", onm, exclam(dam));\n    71: \n    72: \t\tif (obj && objects[obj->otyp].oc_material == SILVER\n    73: \t\t\t\t&& hates_silver(youmonst.data)) {\n    74: \t\t\tdam += rnd(20);"
+  },
+  {
+    "key": "L00070_01",
+    "original": "are hit by %s%s",
+    "translation": "",
+    "context": "src/mthrowu.c:70:12\n    65: \t\tif(Blind || !flags.verbose) pline(\"It misses.\");\n    66: \t\telse You(\"are almost hit by %s.\", onm);\n    67: \t\treturn(0);\n    68: \t} else {\n    69: \t\tif(Blind || !flags.verbose) You(\"are hit!\");\n>   70: \t\telse You(\"are hit by %s%s\", onm, exclam(dam));\n    71: \n    72: \t\tif (obj && objects[obj->otyp].oc_material == SILVER\n    73: \t\t\t\t&& hates_silver(youmonst.data)) {\n    74: \t\t\tdam += rnd(20);\n    75: \t\t\tpline_The(\"silver sears your flesh!\");"
+  },
+  {
+    "key": "L00075_01",
+    "original": "silver sears your flesh!",
+    "translation": "",
+    "context": "src/mthrowu.c:75:14\n    70: \t\telse You(\"are hit by %s%s\", onm, exclam(dam));\n    71: \n    72: \t\tif (obj && objects[obj->otyp].oc_material == SILVER\n    73: \t\t\t\t&& hates_silver(youmonst.data)) {\n    74: \t\t\tdam += rnd(20);\n>   75: \t\t\tpline_The(\"silver sears your flesh!\");\n    76: \t\t\texercise(A_CON, FALSE);\n    77: \t\t}\n    78: \t\tif (is_acid && Acid_resistance)\n    79: \t\t\tpline(\"It doesn't seem to hurt you.\");\n    80: \t\telse {"
+  },
+  {
+    "key": "L00079_01",
+    "original": "It doesn't seem to hurt you.",
+    "translation": "",
+    "context": "src/mthrowu.c:79:10\n    74: \t\t\tdam += rnd(20);\n    75: \t\t\tpline_The(\"silver sears your flesh!\");\n    76: \t\t\texercise(A_CON, FALSE);\n    77: \t\t}\n    78: \t\tif (is_acid && Acid_resistance)\n>   79: \t\t\tpline(\"It doesn't seem to hurt you.\");\n    80: \t\telse {\n    81: \t\t\tif (is_acid) pline(\"It burns!\");\n    82: \t\t\tif (Half_physical_damage) dam = (dam+1) / 2;\n    83: \t\t\tlosehp(dam, knm, kprefix);\n    84: \t\t\texercise(A_STR, FALSE);"
+  },
+  {
+    "key": "L00081_01",
+    "original": "It burns!",
+    "translation": "",
+    "context": "src/mthrowu.c:81:23\n    76: \t\t\texercise(A_CON, FALSE);\n    77: \t\t}\n    78: \t\tif (is_acid && Acid_resistance)\n    79: \t\t\tpline(\"It doesn't seem to hurt you.\");\n    80: \t\telse {\n>   81: \t\t\tif (is_acid) pline(\"It burns!\");\n    82: \t\t\tif (Half_physical_damage) dam = (dam+1) / 2;\n    83: \t\t\tlosehp(dam, knm, kprefix);\n    84: \t\t\texercise(A_STR, FALSE);\n    85: \t\t}\n    86: \t\treturn(1);"
+  },
+  {
+    "key": "L00139_01",
+    "original": "%s explodes in a ball of fire!",
+    "translation": "",
+    "context": "src/mthrowu.c:139:14\n   134: \t\t\tgrenade_explode(obj, bhitpos.x, bhitpos.y, FALSE, 0);\n   135: \t\t\tobj = (struct obj *)0;\n   136: \t\t}\n   137: \t} else if (objects[obj->otyp].oc_dir & EXPLOSION) {\n   138: \t    \tif (cansee(bhitpos.x,bhitpos.y)) \n>  139: \t    \t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n   140: \t    \telse You_hear(\"an explosion\");\n   141: \t\texplode(bhitpos.x, bhitpos.y, -ZT_SPELL(ZT_FIRE), d(3,8),\n   142: \t\t    WEAPON_CLASS, EXPL_FIERY);\n   143: \t}\n   144: #endif"
+  },
+  {
+    "key": "L00140_01",
+    "original": "an explosion",
+    "translation": "",
+    "context": "src/mthrowu.c:140:21\n   135: \t\t\tobj = (struct obj *)0;\n   136: \t\t}\n   137: \t} else if (objects[obj->otyp].oc_dir & EXPLOSION) {\n   138: \t    \tif (cansee(bhitpos.x,bhitpos.y)) \n   139: \t    \t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n>  140: \t    \telse You_hear(\"an explosion\");\n   141: \t\texplode(bhitpos.x, bhitpos.y, -ZT_SPELL(ZT_FIRE), d(3,8),\n   142: \t\t    WEAPON_CLASS, EXPL_FIERY);\n   143: \t}\n   144: #endif\n   145: "
+  },
+  {
+    "key": "L00151_01",
+    "original": "%s explodes in a ball of fire!",
+    "translation": "",
+    "context": "src/mthrowu.c:151:10\n   146: \t/* D: Detonate crossbow bolts from Hellfire if they hit */\n   147: \tif (ohit && mwep && mwep->oartifact == ART_HELLFIRE\n   148: \t\t  && is_ammo(obj) && ammo_and_launcher(obj, mwep)) {\n   149: \t  \n   150: \t\tif (cansee(bhitpos.x,bhitpos.y)) \n>  151: \t\t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n   152: \t\telse \n   153: \t\t\tYou_hear(\"an explosion\");\n   154: \n   155: \t\texplode(bhitpos.x, bhitpos.y, -ZT_SPELL(ZT_FIRE),\n   156: \t\t    d(2,6), WEAPON_CLASS, EXPL_FIERY);"
+  },
+  {
+    "key": "L00153_01",
+    "original": "an explosion",
+    "translation": "",
+    "context": "src/mthrowu.c:153:13\n   148: \t\t  && is_ammo(obj) && ammo_and_launcher(obj, mwep)) {\n   149: \t  \n   150: \t\tif (cansee(bhitpos.x,bhitpos.y)) \n   151: \t\t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n   152: \t\telse \n>  153: \t\t\tYou_hear(\"an explosion\");\n   154: \n   155: \t\texplode(bhitpos.x, bhitpos.y, -ZT_SPELL(ZT_FIRE),\n   156: \t\t    d(2,6), WEAPON_CLASS, EXPL_FIERY);\n   157: \n   158: \t\t/* D: Exploding bolts will be destroyed */"
+  },
+  {
+    "key": "L00170_01",
+    "original": "fall",
+    "translation": "",
+    "context": "src/mthrowu.c:170:30\n   165: \t\tint objgone = 0;\n   166: \n   167: \t\tif (down_gate(x, y) != -1)\n   168: \t\t\tobjgone = ship_object(obj, x, y, FALSE);\n   169: \t\tif (!objgone) {\n>  170: \t\t\tif (!flooreffects(obj,x,y,\"fall\")) { /* don't double-dip on damage */\n   171: \t\t\t    place_object(obj, x, y);\n   172: \t\t\t    if (!mtmp && x == u.ux && y == u.uy)\n   173: \t\t\t\tmtmp = &youmonst;\n   174: \t\t\t    if (mtmp && ohit)\n   175: \t\t\t\tpassive_obj(mtmp, obj, (struct attack *)0);"
+  },
+  {
+    "key": "L00211_01",
+    "original": "It is missed.",
+    "translation": "",
+    "context": "src/mthrowu.c:211:27\n   206: \n   207: \ttmp = 5 + find_mac(mtmp) + omon_adj(mtmp, otmp, FALSE);\n   208: \tif (tmp < rnd(20)) {\n   209: \t    if (!ismimic) {\n   210: \t\tif (vis) miss(distant_name(otmp, mshot_xname), mtmp);\n>  211: \t\telse if (verbose) pline(\"It is missed.\");\n   212: \t    }\n   213: \t    if (!range) { /* Last position; object drops */\n   214: \t\t(void) drop_throw(mon, otmp, 0, mtmp->mx, mtmp->my);\n   215: \t\treturn 1;\n   216: \t    }"
+  },
+  {
+    "key": "L00233_01",
+    "original": "The spoon flashes brightly as it hits %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:233:19\n   228: \t    return 1;\n   229: \t} else {\n   230: \t    damage = dmgval(otmp, mtmp);\n   231: # ifdef P_SPOON\n   232:             if (otmp->otyp == SPOON) {\n>  233:             pline(\"The spoon flashes brightly as it hits %s.\",\n   234:                    the(mon_nam(mtmp)));\n   235:             }\n   236: # endif /* P_SPOON */\n   237: \n   238: \t    if (otmp->otyp == ACID_VENOM && resists_acid(mtmp))"
+  },
+  {
+    "key": "L00243_01",
+    "original": "%s is hit%s",
+    "translation": "",
+    "context": "src/mthrowu.c:243:30\n   238: \t    if (otmp->otyp == ACID_VENOM && resists_acid(mtmp))\n   239: \t\tdamage = 0;\n   240: \t    if (ismimic) seemimic(mtmp);\n   241: \t    mtmp->msleeping = 0;\n   242: \t    if (vis) hit(distant_name(otmp,mshot_xname), mtmp, exclam(damage));\n>  243: \t    else if (verbose) pline(\"%s is hit%s\", Monnam(mtmp), exclam(damage));\n   244: \n   245: \t    if (otmp->opoisoned && is_poisonable(otmp)) {\n   246: \t\tif (resists_poison(mtmp)) {\n   247: \t\t    if (vis) pline_The(\"poison doesn't seem to affect %s.\",\n   248: \t\t\t\t   mon_nam(mtmp));"
+  },
+  {
+    "key": "L00247_01",
+    "original": "poison doesn't seem to affect %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:247:26\n   242: \t    if (vis) hit(distant_name(otmp,mshot_xname), mtmp, exclam(damage));\n   243: \t    else if (verbose) pline(\"%s is hit%s\", Monnam(mtmp), exclam(damage));\n   244: \n   245: \t    if (otmp->opoisoned && is_poisonable(otmp)) {\n   246: \t\tif (resists_poison(mtmp)) {\n>  247: \t\t    if (vis) pline_The(\"poison doesn't seem to affect %s.\",\n   248: \t\t\t\t   mon_nam(mtmp));\n   249: \t\t} else {\n   250: \t\t    if (rn2(30)) {\n   251: \t\t\tdamage += rnd(6);\n   252: \t\t    } else {"
+  },
+  {
+    "key": "L00253_01",
+    "original": "poison was deadly...",
+    "translation": "",
+    "context": "src/mthrowu.c:253:23\n   248: \t\t\t\t   mon_nam(mtmp));\n   249: \t\t} else {\n   250: \t\t    if (rn2(30)) {\n   251: \t\t\tdamage += rnd(6);\n   252: \t\t    } else {\n>  253: \t\t\tif (vis) pline_The(\"poison was deadly...\");\n   254: \t\t\tdamage = mtmp->mhp;\n   255: \t\t    }\n   256: \t\t}\n   257: \t    }\n   258: \t    if (objects[otmp->otyp].oc_material == SILVER &&"
+  },
+  {
+    "key": "L00260_01",
+    "original": "silver sears %s flesh!",
+    "translation": "",
+    "context": "src/mthrowu.c:260:22\n   255: \t\t    }\n   256: \t\t}\n   257: \t    }\n   258: \t    if (objects[otmp->otyp].oc_material == SILVER &&\n   259: \t\t    hates_silver(mtmp->data)) {\n>  260: \t\tif (vis) pline_The(\"silver sears %s flesh!\",\n   261: \t\t\t\ts_suffix(mon_nam(mtmp)));\n   262: \t\telse if (verbose) pline(\"Its flesh is seared!\");\n   263: \t    }\n   264: \t    if (otmp->otyp == ACID_VENOM && cansee(mtmp->mx,mtmp->my)) {\n   265: \t\tif (resists_acid(mtmp)) {"
+  },
+  {
+    "key": "L00262_01",
+    "original": "Its flesh is seared!",
+    "translation": "",
+    "context": "src/mthrowu.c:262:27\n   257: \t    }\n   258: \t    if (objects[otmp->otyp].oc_material == SILVER &&\n   259: \t\t    hates_silver(mtmp->data)) {\n   260: \t\tif (vis) pline_The(\"silver sears %s flesh!\",\n   261: \t\t\t\ts_suffix(mon_nam(mtmp)));\n>  262: \t\telse if (verbose) pline(\"Its flesh is seared!\");\n   263: \t    }\n   264: \t    if (otmp->otyp == ACID_VENOM && cansee(mtmp->mx,mtmp->my)) {\n   265: \t\tif (resists_acid(mtmp)) {\n   266: \t\t    if (vis || verbose)\n   267: \t\t\tpline(\"%s is unaffected.\", Monnam(mtmp));"
+  },
+  {
+    "key": "L00267_01",
+    "original": "%s is unaffected.",
+    "translation": "",
+    "context": "src/mthrowu.c:267:10\n   262: \t\telse if (verbose) pline(\"Its flesh is seared!\");\n   263: \t    }\n   264: \t    if (otmp->otyp == ACID_VENOM && cansee(mtmp->mx,mtmp->my)) {\n   265: \t\tif (resists_acid(mtmp)) {\n   266: \t\t    if (vis || verbose)\n>  267: \t\t\tpline(\"%s is unaffected.\", Monnam(mtmp));\n   268: \t\t    damage = 0;\n   269: \t\t} else {\n   270: \t\t    if (vis) pline_The(\"acid burns %s!\", mon_nam(mtmp));\n   271: \t\t    else if (verbose) pline(\"It is burned!\");\n   272: \t\t}"
+  },
+  {
+    "key": "L00270_01",
+    "original": "acid burns %s!",
+    "translation": "",
+    "context": "src/mthrowu.c:270:26\n   265: \t\tif (resists_acid(mtmp)) {\n   266: \t\t    if (vis || verbose)\n   267: \t\t\tpline(\"%s is unaffected.\", Monnam(mtmp));\n   268: \t\t    damage = 0;\n   269: \t\t} else {\n>  270: \t\t    if (vis) pline_The(\"acid burns %s!\", mon_nam(mtmp));\n   271: \t\t    else if (verbose) pline(\"It is burned!\");\n   272: \t\t}\n   273: \t    }\n   274: \t    mtmp->mhp -= damage;\n   275: \t    if (mtmp->mhp < 1) {"
+  },
+  {
+    "key": "L00271_01",
+    "original": "It is burned!",
+    "translation": "",
+    "context": "src/mthrowu.c:271:31\n   266: \t\t    if (vis || verbose)\n   267: \t\t\tpline(\"%s is unaffected.\", Monnam(mtmp));\n   268: \t\t    damage = 0;\n   269: \t\t} else {\n   270: \t\t    if (vis) pline_The(\"acid burns %s!\", mon_nam(mtmp));\n>  271: \t\t    else if (verbose) pline(\"It is burned!\");\n   272: \t\t}\n   273: \t    }\n   274: \t    mtmp->mhp -= damage;\n   275: \t    if (mtmp->mhp < 1) {\n   276: \t\tif (vis || verbose)"
+  },
+  {
+    "key": "L00277_01",
+    "original": "%s is %s!",
+    "translation": "",
+    "context": "src/mthrowu.c:277:13\n   272: \t\t}\n   273: \t    }\n   274: \t    mtmp->mhp -= damage;\n   275: \t    if (mtmp->mhp < 1) {\n   276: \t\tif (vis || verbose)\n>  277: \t\t    pline(\"%s is %s!\", Monnam(mtmp),\n   278: \t\t\t(nonliving(mtmp->data) || !canspotmon(mtmp))\n   279: \t\t\t? \"destroyed\" : \"killed\");\n   280: \t\t/* don't blame hero for unknown rolling boulder trap */\n   281: \t\tif (!flags.mon_moving &&\n   282: \t\t    (otmp->otyp != BOULDER || range >= 0 || !otmp->otrapped))"
+  },
+  {
+    "key": "L00279_01",
+    "original": "destroyed",
+    "translation": "",
+    "context": "src/mthrowu.c:279:6\n   274: \t    mtmp->mhp -= damage;\n   275: \t    if (mtmp->mhp < 1) {\n   276: \t\tif (vis || verbose)\n   277: \t\t    pline(\"%s is %s!\", Monnam(mtmp),\n   278: \t\t\t(nonliving(mtmp->data) || !canspotmon(mtmp))\n>  279: \t\t\t? \"destroyed\" : \"killed\");\n   280: \t\t/* don't blame hero for unknown rolling boulder trap */\n   281: \t\tif (!flags.mon_moving &&\n   282: \t\t    (otmp->otyp != BOULDER || range >= 0 || !otmp->otrapped))\n   283: \t\t    xkilled(mtmp,0);\n   284: \t\telse mondied(mtmp);"
+  },
+  {
+    "key": "L00279_02",
+    "original": "killed",
+    "translation": "",
+    "context": "src/mthrowu.c:279:20\n   274: \t    mtmp->mhp -= damage;\n   275: \t    if (mtmp->mhp < 1) {\n   276: \t\tif (vis || verbose)\n   277: \t\t    pline(\"%s is %s!\", Monnam(mtmp),\n   278: \t\t\t(nonliving(mtmp->data) || !canspotmon(mtmp))\n>  279: \t\t\t? \"destroyed\" : \"killed\");\n   280: \t\t/* don't blame hero for unknown rolling boulder trap */\n   281: \t\tif (!flags.mon_moving &&\n   282: \t\t    (otmp->otyp != BOULDER || range >= 0 || !otmp->otrapped))\n   283: \t\t    xkilled(mtmp,0);\n   284: \t\telse mondied(mtmp);"
+  },
+  {
+    "key": "L00291_01",
+    "original": "%s is blinded by %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:291:13\n   286: \n   287: \t    if (can_blnd((struct monst*)0, mtmp,\n   288: \t\t    (uchar)(otmp->otyp == BLINDING_VENOM ? AT_SPIT : AT_WEAP),\n   289: \t\t    otmp)) {\n   290: \t\tif (vis && mtmp->mcansee)\n>  291: \t\t    pline(\"%s is blinded by %s.\", Monnam(mtmp), the(xname(otmp)));\n   292: \t\tmtmp->mcansee = 0;\n   293: \t\ttmp = (int)mtmp->mblinded + rnd(25) + 20;\n   294: \t\tif (tmp > 127) tmp = 127;\n   295: \t\tmtmp->mblinded = tmp;\n   296: \t    }"
+  },
+  {
+    "key": "L00370_01",
+    "original": "%s misfires!",
+    "translation": "",
+    "context": "src/mthrowu.c:370:13\n   365: \t}\n   366: \n   367: \tif (singleobj->cursed && (dx || dy) && !rn2(7)) {\n   368: \t    if(canseemon(mon) && flags.verbose) {\n   369: \t\tif(is_ammo(singleobj))\n>  370: \t\t    pline(\"%s misfires!\", Monnam(mon));\n   371: \t\telse\n   372: \t\t    pline(\"%s as %s throws it!\",\n   373: \t\t\t  Tobjnam(singleobj, \"slip\"), mon_nam(mon));\n   374: \t    }\n   375: \t    dx = rn2(3)-1;"
+  },
+  {
+    "key": "L00372_01",
+    "original": "%s as %s throws it!",
+    "translation": "",
+    "context": "src/mthrowu.c:372:13\n   367: \tif (singleobj->cursed && (dx || dy) && !rn2(7)) {\n   368: \t    if(canseemon(mon) && flags.verbose) {\n   369: \t\tif(is_ammo(singleobj))\n   370: \t\t    pline(\"%s misfires!\", Monnam(mon));\n   371: \t\telse\n>  372: \t\t    pline(\"%s as %s throws it!\",\n   373: \t\t\t  Tobjnam(singleobj, \"slip\"), mon_nam(mon));\n   374: \t    }\n   375: \t    dx = rn2(3)-1;\n   376: \t    dy = rn2(3)-1;\n   377: \t    /* check validity of new direction */"
+  },
+  {
+    "key": "L00373_01",
+    "original": "slip",
+    "translation": "",
+    "context": "src/mthrowu.c:373:25\n   368: \t    if(canseemon(mon) && flags.verbose) {\n   369: \t\tif(is_ammo(singleobj))\n   370: \t\t    pline(\"%s misfires!\", Monnam(mon));\n   371: \t\telse\n   372: \t\t    pline(\"%s as %s throws it!\",\n>  373: \t\t\t  Tobjnam(singleobj, \"slip\"), mon_nam(mon));\n   374: \t    }\n   375: \t    dx = rn2(3)-1;\n   376: \t    dy = rn2(3)-1;\n   377: \t    /* check validity of new direction */\n   378: \t    if (!dx && !dy) {"
+  },
+  {
+    "key": "L00415_01",
+    "original": "catch the %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:415:12\n   410: \n   411: \t\t    if (singleobj->oclass == GEM_CLASS &&\n   412: \t\t\t    singleobj->otyp <= LAST_GEM+9 /* 9 glass colors */\n   413: \t\t\t    && is_unicorn(youmonst.data)) {\n   414: \t\t\tif (singleobj->otyp > LAST_GEM) {\n>  415: \t\t\t    You(\"catch the %s.\", xname(singleobj));\n   416: \t\t\t    You(\"are not interested in %s junk.\",\n   417: \t\t\t\ts_suffix(mon_nam(mon)));\n   418: \t\t\t    makeknown(singleobj->otyp);\n   419: \t\t\t    dropy(singleobj);\n   420: \t\t\t} else {"
+  },
+  {
+    "key": "L00416_01",
+    "original": "are not interested in %s junk.",
+    "translation": "",
+    "context": "src/mthrowu.c:416:12\n   411: \t\t    if (singleobj->oclass == GEM_CLASS &&\n   412: \t\t\t    singleobj->otyp <= LAST_GEM+9 /* 9 glass colors */\n   413: \t\t\t    && is_unicorn(youmonst.data)) {\n   414: \t\t\tif (singleobj->otyp > LAST_GEM) {\n   415: \t\t\t    You(\"catch the %s.\", xname(singleobj));\n>  416: \t\t\t    You(\"are not interested in %s junk.\",\n   417: \t\t\t\ts_suffix(mon_nam(mon)));\n   418: \t\t\t    makeknown(singleobj->otyp);\n   419: \t\t\t    dropy(singleobj);\n   420: \t\t\t} else {\n   421: \t\t\t    You(\"accept %s gift in the spirit in which it was intended.\","
+  },
+  {
+    "key": "L00421_01",
+    "original": "accept %s gift in the spirit in which it was intended.",
+    "translation": "",
+    "context": "src/mthrowu.c:421:12\n   416: \t\t\t    You(\"are not interested in %s junk.\",\n   417: \t\t\t\ts_suffix(mon_nam(mon)));\n   418: \t\t\t    makeknown(singleobj->otyp);\n   419: \t\t\t    dropy(singleobj);\n   420: \t\t\t} else {\n>  421: \t\t\t    You(\"accept %s gift in the spirit in which it was intended.\",\n   422: \t\t\t\ts_suffix(mon_nam(mon)));\n   423: \t\t\t    (void)hold_another_object(singleobj,\n   424: \t\t\t\t\"You catch, but drop, %s.\", xname(singleobj),\n   425: \t\t\t\t\"You catch:\");\n   426: \t\t\t}"
+  },
+  {
+    "key": "L00424_01",
+    "original": "You catch, but drop, %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:424:5\n   419: \t\t\t    dropy(singleobj);\n   420: \t\t\t} else {\n   421: \t\t\t    You(\"accept %s gift in the spirit in which it was intended.\",\n   422: \t\t\t\ts_suffix(mon_nam(mon)));\n   423: \t\t\t    (void)hold_another_object(singleobj,\n>  424: \t\t\t\t\"You catch, but drop, %s.\", xname(singleobj),\n   425: \t\t\t\t\"You catch:\");\n   426: \t\t\t}\n   427: \t\t\tbreak;\n   428: \t\t    }\n   429: \t\t    if (singleobj->oclass == POTION_CLASS) {"
+  },
+  {
+    "key": "L00425_01",
+    "original": "You catch:",
+    "translation": "",
+    "context": "src/mthrowu.c:425:5\n   420: \t\t\t} else {\n   421: \t\t\t    You(\"accept %s gift in the spirit in which it was intended.\",\n   422: \t\t\t\ts_suffix(mon_nam(mon)));\n   423: \t\t\t    (void)hold_another_object(singleobj,\n   424: \t\t\t\t\"You catch, but drop, %s.\", xname(singleobj),\n>  425: \t\t\t\t\"You catch:\");\n   426: \t\t\t}\n   427: \t\t\tbreak;\n   428: \t\t    }\n   429: \t\t    if (singleobj->oclass == POTION_CLASS) {\n   430: \t\t\tif (!Blind) singleobj->dknown = 1;"
+  },
+  {
+    "key": "L00438_01",
+    "original": "monster throwing egg type %d",
+    "translation": "",
+    "context": "src/mthrowu.c:438:16\n   433: \t\t    }\n   434: \t\t    switch(singleobj->otyp) {\n   435: \t\t\tint dam, hitv;\n   436: \t\t\tcase EGG:\n   437: \t\t\t    if (!touch_petrifies(&mons[singleobj->corpsenm])) {\n>  438: \t\t\t\timpossible(\"monster throwing egg type %d\",\n   439: \t\t\t\t\tsingleobj->corpsenm);\n   440: \t\t\t\thitu = 0;\n   441: \t\t\t\tbreak;\n   442: \t\t\t    }\n   443: \t\t\t    /* fall through */"
+  },
+  {
+    "key": "L00479_01",
+    "original": "Yecch!  You've been creamed.",
+    "translation": "",
+    "context": "src/mthrowu.c:479:25\n   474: \t\t       can_blnd((struct monst*)0, &youmonst,\n   475: \t\t\t\t(uchar)(singleobj->otyp == BLINDING_VENOM ?\n   476: \t\t\t\t\tAT_SPIT : AT_WEAP), singleobj)) {\n   477: \t\t\tblindinc = rnd(25);\n   478: \t\t\tif(singleobj->otyp == CREAM_PIE) {\n>  479: \t\t\t    if(!Blind) pline(\"Yecch!  You've been creamed.\");\n   480: \t\t\t    else pline(\"There's %s sticky all over your %s.\",\n   481: \t\t\t\t       something,\n   482: \t\t\t\t       body_part(FACE));\n   483: \t\t\t} else if(singleobj->otyp == BLINDING_VENOM) {\n   484: \t\t\t    int num_eyes = eyecount(youmonst.data);"
+  },
+  {
+    "key": "L00480_01",
+    "original": "There's %s sticky all over your %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:480:19\n   475: \t\t\t\t(uchar)(singleobj->otyp == BLINDING_VENOM ?\n   476: \t\t\t\t\tAT_SPIT : AT_WEAP), singleobj)) {\n   477: \t\t\tblindinc = rnd(25);\n   478: \t\t\tif(singleobj->otyp == CREAM_PIE) {\n   479: \t\t\t    if(!Blind) pline(\"Yecch!  You've been creamed.\");\n>  480: \t\t\t    else pline(\"There's %s sticky all over your %s.\",\n   481: \t\t\t\t       something,\n   482: \t\t\t\t       body_part(FACE));\n   483: \t\t\t} else if(singleobj->otyp == BLINDING_VENOM) {\n   484: \t\t\t    int num_eyes = eyecount(youmonst.data);\n   485: \t\t\t    /* venom in the eyes */"
+  },
+  {
+    "key": "L00486_01",
+    "original": "venom blinds you.",
+    "translation": "",
+    "context": "src/mthrowu.c:486:29\n   481: \t\t\t\t       something,\n   482: \t\t\t\t       body_part(FACE));\n   483: \t\t\t} else if(singleobj->otyp == BLINDING_VENOM) {\n   484: \t\t\t    int num_eyes = eyecount(youmonst.data);\n   485: \t\t\t    /* venom in the eyes */\n>  486: \t\t\t    if(!Blind) pline_The(\"venom blinds you.\");\n   487: \t\t\t    else Your(\"%s sting%s.\",\n   488: \t\t\t\t      (num_eyes == 1) ? body_part(EYE) :\n   489: \t\t\t\t\t\tmakeplural(body_part(EYE)),\n   490: \t\t\t\t      (num_eyes == 1) ? \"s\" : \"\");\n   491: \t\t\t}"
+  },
+  {
+    "key": "L00487_01",
+    "original": "%s sting%s.",
+    "translation": "",
+    "context": "src/mthrowu.c:487:18\n   482: \t\t\t\t       body_part(FACE));\n   483: \t\t\t} else if(singleobj->otyp == BLINDING_VENOM) {\n   484: \t\t\t    int num_eyes = eyecount(youmonst.data);\n   485: \t\t\t    /* venom in the eyes */\n   486: \t\t\t    if(!Blind) pline_The(\"venom blinds you.\");\n>  487: \t\t\t    else Your(\"%s sting%s.\",\n   488: \t\t\t\t      (num_eyes == 1) ? body_part(EYE) :\n   489: \t\t\t\t\t\tmakeplural(body_part(EYE)),\n   490: \t\t\t\t      (num_eyes == 1) ? \"s\" : \"\");\n   491: \t\t\t}\n   492: \t\t    }"
+  },
+  {
+    "key": "L00490_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/mthrowu.c:490:29\n   485: \t\t\t    /* venom in the eyes */\n   486: \t\t\t    if(!Blind) pline_The(\"venom blinds you.\");\n   487: \t\t\t    else Your(\"%s sting%s.\",\n   488: \t\t\t\t      (num_eyes == 1) ? body_part(EYE) :\n   489: \t\t\t\t\t\tmakeplural(body_part(EYE)),\n>  490: \t\t\t\t      (num_eyes == 1) ? \"s\" : \"\");\n   491: \t\t\t}\n   492: \t\t    }\n   493: \t\t    if (hitu && singleobj->otyp == EGG) {\n   494: \t\t\tif (!Stone_resistance\n   495: \t\t\t    && !(poly_when_stoned(youmonst.data) &&"
+  },
+  {
+    "key": "L00598_01",
+    "original": "%s thrusts %s.",
+    "translation": "",
+    "context": "src/mthrowu.c:598:9\n   593: \t\t    !couldsee(mtmp->mx, mtmp->my))\n   594: \t\treturn;\t/* Out of range, or intervening wall */\n   595: \n   596: \t    if (canseemon(mtmp)) {\n   597: \t\tonm = xname(otmp);\n>  598: \t\tpline(\"%s thrusts %s.\", Monnam(mtmp),\n   599: \t\t      obj_is_pname(otmp) ? the(onm) : an(onm));\n   600: \t    }\n   601: \n   602: \t    dam = dmgval(otmp, &youmonst);\n   603: \t    hitv = 3 - distmin(u.ux,u.uy, mtmp->mx,mtmp->my);"
+  },
+  {
+    "key": "L00693_01",
+    "original": "%d %s",
+    "translation": "",
+    "context": "src/mthrowu.c:693:19\n   688: \t    char onmbuf[BUFSZ];\n   689: \n   690: \t    if (multishot > 1) {\n   691: \t\t/* \"N arrows\"; multishot > 1 implies otmp->quan > 1, so\n   692: \t\t   xname()'s result will already be pluralized */\n>  693: \t\tSprintf(onmbuf, \"%d %s\", multishot, xname(otmp));\n   694: \t\tonm = onmbuf;\n   695: \t    } else {\n   696: \t\t/* \"an arrow\" */\n   697: \t\tonm = singular(otmp, xname);\n   698: \t\tonm = obj_is_pname(otmp) ? the(onm) : an(onm);"
+  },
+  {
+    "key": "L00701_01",
+    "original": "%s %s %s!",
+    "translation": "",
+    "context": "src/mthrowu.c:701:12\n   696: \t\t/* \"an arrow\" */\n   697: \t\tonm = singular(otmp, xname);\n   698: \t\tonm = obj_is_pname(otmp) ? the(onm) : an(onm);\n   699: \t    }\n   700: \t    m_shot.s = ammo_and_launcher(otmp,mwep) ? TRUE : FALSE;\n>  701: \t    pline(\"%s %s %s!\", Monnam(mtmp),\n   702: #ifdef FIREARMS\n   703: \t\t  m_shot.s ? is_bullet(otmp) ? \"fires\" : \"shoots\" : \"throws\",\n   704: \t\t  onm);\n   705: #else\n   706: \t\t  m_shot.s ? \"shoots\" : \"throws\", onm);"
+  },
+  {
+    "key": "L00703_01",
+    "original": "fires",
+    "translation": "",
+    "context": "src/mthrowu.c:703:34\n   698: \t\tonm = obj_is_pname(otmp) ? the(onm) : an(onm);\n   699: \t    }\n   700: \t    m_shot.s = ammo_and_launcher(otmp,mwep) ? TRUE : FALSE;\n   701: \t    pline(\"%s %s %s!\", Monnam(mtmp),\n   702: #ifdef FIREARMS\n>  703: \t\t  m_shot.s ? is_bullet(otmp) ? \"fires\" : \"shoots\" : \"throws\",\n   704: \t\t  onm);\n   705: #else\n   706: \t\t  m_shot.s ? \"shoots\" : \"throws\", onm);\n   707: #endif\n   708: \t    m_shot.o = otmp->otyp;"
+  },
+  {
+    "key": "L00703_02",
+    "original": "shoots",
+    "translation": "",
+    "context": "src/mthrowu.c:703:44\n   698: \t\tonm = obj_is_pname(otmp) ? the(onm) : an(onm);\n   699: \t    }\n   700: \t    m_shot.s = ammo_and_launcher(otmp,mwep) ? TRUE : FALSE;\n   701: \t    pline(\"%s %s %s!\", Monnam(mtmp),\n   702: #ifdef FIREARMS\n>  703: \t\t  m_shot.s ? is_bullet(otmp) ? \"fires\" : \"shoots\" : \"throws\",\n   704: \t\t  onm);\n   705: #else\n   706: \t\t  m_shot.s ? \"shoots\" : \"throws\", onm);\n   707: #endif\n   708: \t    m_shot.o = otmp->otyp;"
+  },
+  {
+    "key": "L00703_03",
+    "original": "throws",
+    "translation": "",
+    "context": "src/mthrowu.c:703:55\n   698: \t\tonm = obj_is_pname(otmp) ? the(onm) : an(onm);\n   699: \t    }\n   700: \t    m_shot.s = ammo_and_launcher(otmp,mwep) ? TRUE : FALSE;\n   701: \t    pline(\"%s %s %s!\", Monnam(mtmp),\n   702: #ifdef FIREARMS\n>  703: \t\t  m_shot.s ? is_bullet(otmp) ? \"fires\" : \"shoots\" : \"throws\",\n   704: \t\t  onm);\n   705: #else\n   706: \t\t  m_shot.s ? \"shoots\" : \"throws\", onm);\n   707: #endif\n   708: \t    m_shot.o = otmp->otyp;"
+  },
+  {
+    "key": "L00706_01",
+    "original": "shoots",
+    "translation": "",
+    "context": "src/mthrowu.c:706:16\n   701: \t    pline(\"%s %s %s!\", Monnam(mtmp),\n   702: #ifdef FIREARMS\n   703: \t\t  m_shot.s ? is_bullet(otmp) ? \"fires\" : \"shoots\" : \"throws\",\n   704: \t\t  onm);\n   705: #else\n>  706: \t\t  m_shot.s ? \"shoots\" : \"throws\", onm);\n   707: #endif\n   708: \t    m_shot.o = otmp->otyp;\n   709: \t} else {\n   710: \t    m_shot.o = STRANGE_OBJECT;\t/* don't give multishot feedback */\n   711: \t}"
+  },
+  {
+    "key": "L00706_02",
+    "original": "throws",
+    "translation": "",
+    "context": "src/mthrowu.c:706:27\n   701: \t    pline(\"%s %s %s!\", Monnam(mtmp),\n   702: #ifdef FIREARMS\n   703: \t\t  m_shot.s ? is_bullet(otmp) ? \"fires\" : \"shoots\" : \"throws\",\n   704: \t\t  onm);\n   705: #else\n>  706: \t\t  m_shot.s ? \"shoots\" : \"throws\", onm);\n   707: #endif\n   708: \t    m_shot.o = otmp->otyp;\n   709: \t} else {\n   710: \t    m_shot.o = STRANGE_OBJECT;\t/* don't give multishot feedback */\n   711: \t}"
+  },
+  {
+    "key": "L00737_01",
+    "original": "A dry rattle comes from %s throat.",
+    "translation": "",
+    "context": "src/mthrowu.c:737:9\n   732: \tregister struct obj *otmp;\n   733: \n   734: \tif(mtmp->mcan) {\n   735: \n   736: \t    if(flags.soundok)\n>  737: \t\tpline(\"A dry rattle comes from %s throat.\",\n   738: \t\t                      s_suffix(mon_nam(mtmp)));\n   739: \t    return 0;\n   740: \t}\n   741: \tif(lined_up(mtmp)) {\n   742: \t\tswitch (mattk->adtyp) {"
+  },
+  {
+    "key": "L00748_01",
+    "original": "bad attack type in spitmu",
+    "translation": "",
+    "context": "src/mthrowu.c:748:15\n   743: \t\t    case AD_BLND:\n   744: \t\t    case AD_DRST:\n   745: \t\t\totmp = mksobj(BLINDING_VENOM, TRUE, FALSE);\n   746: \t\t\tbreak;\n   747: \t\t    default:\n>  748: \t\t\timpossible(\"bad attack type in spitmu\");\n   749: \t\t\t\t/* fall through */\n   750: \t\t    case AD_ACID:\n   751: \t\t\totmp = mksobj(ACID_VENOM, TRUE, FALSE);\n   752: \t\t\tbreak;\n   753: \t\t}"
+  },
+  {
+    "key": "L00756_01",
+    "original": "%s spits venom!",
+    "translation": "",
+    "context": "src/mthrowu.c:756:10\n   751: \t\t\totmp = mksobj(ACID_VENOM, TRUE, FALSE);\n   752: \t\t\tbreak;\n   753: \t\t}\n   754: \t\tif(!rn2(BOLT_LIM-distmin(mtmp->mx,mtmp->my,mtmp->mux,mtmp->muy))) {\n   755: \t\t    if (canseemon(mtmp))\n>  756: \t\t\tpline(\"%s spits venom!\", Monnam(mtmp));\n   757: \t\t    m_throw(mtmp, mtmp->mx, mtmp->my, sgn(tbx), sgn(tby),\n   758: \t\t\tdistmin(mtmp->mx,mtmp->my,mtmp->mux,mtmp->muy), otmp);\n   759: \t\t    nomul(0);\n   760: \t\t    return 0;\n   761: \t\t}"
+  },
+  {
+    "key": "L00782_01",
+    "original": "%s coughs.",
+    "translation": "",
+    "context": "src/mthrowu.c:782:10\n   777: \tif(lined_up(mtmp)) {\n   778: \n   779: \t    if(mtmp->mcan) {\n   780: \t\tif(flags.soundok) {\n   781: \t\t    if(canseemon(mtmp))\n>  782: \t\t\tpline(\"%s coughs.\", Monnam(mtmp));\n   783: \t\t    else\n   784: \t\t\tYou_hear(\"a cough.\");\n   785: \t\t}\n   786: \t\treturn(0);\n   787: \t    }"
+  },
+  {
+    "key": "L00784_01",
+    "original": "a cough.",
+    "translation": "",
+    "context": "src/mthrowu.c:784:13\n   779: \t    if(mtmp->mcan) {\n   780: \t\tif(flags.soundok) {\n   781: \t\t    if(canseemon(mtmp))\n   782: \t\t\tpline(\"%s coughs.\", Monnam(mtmp));\n   783: \t\t    else\n>  784: \t\t\tYou_hear(\"a cough.\");\n   785: \t\t}\n   786: \t\treturn(0);\n   787: \t    }\n   788: \t    if(!mtmp->mspec_used && rn2(3)) {\n   789: "
+  },
+  {
+    "key": "L00793_01",
+    "original": "%s breathes %s!",
+    "translation": "",
+    "context": "src/mthrowu.c:793:10\n   788: \t    if(!mtmp->mspec_used && rn2(3)) {\n   789: \n   790: \t\tif((typ >= AD_MAGM) && (typ <= AD_ACID)) {\n   791: \n   792: \t\t    if(canseemon(mtmp))\n>  793: \t\t\tpline(\"%s breathes %s!\", Monnam(mtmp),\n   794: \t\t\t      breathwep[typ-1]);\n   795: \t\t    buzz((int) (-20 - (typ-1)), (int)mattk->damn,\n   796: \t\t\t mtmp->mx, mtmp->my, sgn(tbx), sgn(tby));\n   797: \t\t    nomul(0);\n   798: \t\t    /* breath runs out sometimes. Also, give monster some"
+  },
+  {
+    "key": "L00805_01",
+    "original": "Breath weapon %d used",
+    "translation": "",
+    "context": "src/mthrowu.c:805:21\n   800: \t\t     */\n   801: \t\t    if(!rn2(3))\n   802: \t\t\tmtmp->mspec_used = 10+rn2(20);\n   803: \t\t    if(typ == AD_SLEE && !Sleep_resistance)\n   804: \t\t\tmtmp->mspec_used += rnd(20);\n>  805: \t\t} else impossible(\"Breath weapon %d used\", typ-1);\n   806: \t    }\n   807: \t}\n   808: \treturn(1);\n   809: }\n   810: "
+  },
+  {
+    "key": "L00825_01",
+    "original": "%s breathes %s!",
+    "translation": "",
+    "context": "src/mthrowu.c:825:10\n   820: \tint typ = (mattk->adtyp == AD_RBRE) ? rnd(AD_ACID) : mattk->adtyp ;\n   821: \n   822: \n   823: \tif((typ >= AD_MAGM) && (typ <= AD_ACID)) {\n   824: \t\tif(canseemon(mtmp))\n>  825: \t\t\tpline(\"%s breathes %s!\", Monnam(mtmp),\n   826: \t\t\t\tbreathwep[typ-1]);\n   827: \t\t/* Do the door first - monster is ON TOP so call direct */\n   828: \t\tzap_over_floor(mtmp->mx, mtmp->my, (int) (-20 - (typ-1)), NULL);\n   829: \t\tbuzz((int) (-20 - (typ-1)), (int)mattk->damn, \n   830: \t\t\t\tmtmp->mx, mtmp->my, ax, ay);"
+  },
+  {
+    "key": "L00835_01",
+    "original": "Breath weapon %d used",
+    "translation": "",
+    "context": "src/mthrowu.c:835:20\n   830: \t\t\t\tmtmp->mx, mtmp->my, ax, ay);\n   831: \t\tnomul(0);\n   832: \t\t/* breath runs out sometimes. */\n   833: \t\tif(!rn2(3))\n   834: \t\t\tmtmp->mspec_used = 10+rn2(20);\n>  835: \t} else impossible(\"Breath weapon %d used\", typ-1);\n   836: \treturn(TRUE);\n   837: }\n   838: \n   839: \n   840: boolean"
+  },
+  {
+    "key": "L00952_01",
+    "original": "Whang!",
+    "translation": "",
+    "context": "src/mthrowu.c:952:12\n   947:     if (hits && whodidit != -1) {\n   948: \tif (whodidit ? hero_breaks(otmp, x, y, FALSE) : breaks(otmp, x, y))\n   949: \t    *obj_p = otmp = 0;\t\t/* object is now gone */\n   950: \t    /* breakage makes its own noises */\n   951: \telse if (obj_type == BOULDER || obj_type == HEAVY_IRON_BALL)\n>  952: \t    pline(\"Whang!\");\n   953: \telse if (otmp->oclass == COIN_CLASS ||\n   954: \t\tobjects[obj_type].oc_material == GOLD ||\n   955: \t\tobjects[obj_type].oc_material == SILVER)\n   956: \t    pline(\"Clink!\");\n   957: \telse"
+  },
+  {
+    "key": "L00956_01",
+    "original": "Clink!",
+    "translation": "",
+    "context": "src/mthrowu.c:956:12\n   951: \telse if (obj_type == BOULDER || obj_type == HEAVY_IRON_BALL)\n   952: \t    pline(\"Whang!\");\n   953: \telse if (otmp->oclass == COIN_CLASS ||\n   954: \t\tobjects[obj_type].oc_material == GOLD ||\n   955: \t\tobjects[obj_type].oc_material == SILVER)\n>  956: \t    pline(\"Clink!\");\n   957: \telse\n   958: \t    pline(\"Clonk!\");\n   959:     }\n   960: \n   961:     return hits;"
+  },
+  {
+    "key": "L00958_01",
+    "original": "Clonk!",
+    "translation": "",
+    "context": "src/mthrowu.c:958:12\n   953: \telse if (otmp->oclass == COIN_CLASS ||\n   954: \t\tobjects[obj_type].oc_material == GOLD ||\n   955: \t\tobjects[obj_type].oc_material == SILVER)\n   956: \t    pline(\"Clink!\");\n   957: \telse\n>  958: \t    pline(\"Clonk!\");\n   959:     }\n   960: \n   961:     return hits;\n   962: }\n   963: "
+  }
+]

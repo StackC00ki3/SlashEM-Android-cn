@@ -1,0 +1,134 @@
+[
+  {
+    "key": "L00147_01",
+    "original": "NH_HEAPLOG",
+    "translation": "",
+    "context": "src/alloc.c:147:25\n   142: /* If ${NH_HEAPLOG} is defined and we can create a file by that name,\n   143:    then we'll log the allocation and release information to that file. */\n   144: static void\n   145: heapmon_init()\n   146: {\n>  147: \tchar *logname = getenv(\"NH_HEAPLOG\");\n   148: \n   149: \tif (logname && *logname)\n   150: \t\theaplog = fopen(logname, \"w\");\n   151: \ttried_heaplog = TRUE;\n   152: }"
+  },
+  {
+    "key": "L00150_01",
+    "original": "w",
+    "translation": "",
+    "context": "src/alloc.c:150:28\n   145: heapmon_init()\n   146: {\n   147: \tchar *logname = getenv(\"NH_HEAPLOG\");\n   148: \n   149: \tif (logname && *logname)\n>  150: \t\theaplog = fopen(logname, \"w\");\n   151: \ttried_heaplog = TRUE;\n   152: }\n   153: \n   154: long *\n   155: nhalloc(lth, file, line)"
+  },
+  {
+    "key": "L00172_01",
+    "original": "+%5u %s %4d %s\\n",
+    "translation": "",
+    "context": "src/alloc.c:172:27\n   167: #ifdef INTERNAL_MALLOC\n   168: \t(void)monitor_heap_pop(file, line, 0);\n   169: #endif\n   170: \tif (!tried_heaplog) heapmon_init();\n   171: \tif (heaplog)\n>  172: \t\t(void) fprintf(heaplog, \"+%5u %s %4d %s\\n\", lth,\n   173: \t\t\t\tfmt_ptr((genericptr_t)ptr, ptr_address),\n   174: \t\t\t\tline, file);\n   175: \t/* potential panic in alloc() was deferred til here */\n   176: \tif (!ptr) panic(\"Cannot get %u bytes, line %d of %s\",\n   177: \t\t\tlth, line, file);"
+  },
+  {
+    "key": "L00176_01",
+    "original": "Cannot get %u bytes, line %d of %s",
+    "translation": "",
+    "context": "src/alloc.c:176:18\n   171: \tif (heaplog)\n   172: \t\t(void) fprintf(heaplog, \"+%5u %s %4d %s\\n\", lth,\n   173: \t\t\t\tfmt_ptr((genericptr_t)ptr, ptr_address),\n   174: \t\t\t\tline, file);\n   175: \t/* potential panic in alloc() was deferred til here */\n>  176: \tif (!ptr) panic(\"Cannot get %u bytes, line %d of %s\",\n   177: \t\t\tlth, line, file);\n   178: \n   179: \treturn ptr;\n   180: }\n   181: "
+  },
+  {
+    "key": "L00192_01",
+    "original": "-      %s %4d %s\\n",
+    "translation": "",
+    "context": "src/alloc.c:192:27\n   187: {\n   188: \tchar ptr_address[20];\n   189: \n   190: \tif (!tried_heaplog) heapmon_init();\n   191: \tif (heaplog)\n>  192: \t\t(void) fprintf(heaplog, \"-      %s %4d %s\\n\",\n   193: \t\t\t\tfmt_ptr((genericptr_t)ptr, ptr_address),\n   194: \t\t\t\tline, file);\n   195: \n   196: \tfree(ptr);\n   197: }"
+  },
+  {
+    "key": "L00416_01",
+    "original": "<none>",
+    "translation": "",
+    "context": "src/alloc.c:416:44\n   411: struct monitor_id {\n   412:     const char *id;\t\t\t/* Typically file name */\n   413:     int subid;\t\t\t\t/* Typically line number */\n   414: };\n   415:     \n>  416: static char *monitor_id_stack_default_id = \"<none>\";\n   417: static int monitor_id_stack_depth = 0;\n   418: static struct monitor_id *monitor_id_stack = NULL;\n   419: static size_t monitor_mem_in_use = 0;\n   420: static boolean monitor_trace = 0;\n   421: static FILE *monitor_fp = NULL;"
+  },
+  {
+    "key": "L00454_01",
+    "original": "monitor_heap_pop: mismatch: (%s, %d) != (%s, %d)",
+    "translation": "",
+    "context": "src/alloc.c:454:8\n   449: {\n   450:     if (!monitor_id_stack_depth)\n   451: \tpanic(\"警告：空堆栈！\");\n   452:     if (monitor_id_stack[monitor_id_stack_depth - 1].id != id ||\n   453:       monitor_id_stack[monitor_id_stack_depth - 1].subid != subid)\n>  454: \tpanic(\"monitor_heap_pop: mismatch: (%s, %d) != (%s, %d)\",\n   455: \t  monitor_id_stack[monitor_id_stack_depth - 1].id,\n   456: \t  monitor_id_stack[monitor_id_stack_depth - 1].subid,\n   457: \t  id, subid);\n   458:     --monitor_id_stack_depth;\n   459:     monitor_id_stack = triv_realloc(monitor_id_stack,"
+  },
+  {
+    "key": "L00467_01",
+    "original": "monitor_heap_set_subid: empty stack",
+    "translation": "",
+    "context": "src/alloc.c:467:8\n   462: }\n   463: \n   464: void monitor_heap_set_subid(const char *id, int subid)\n   465: {\n   466:     if (!monitor_id_stack_depth)\n>  467: \tpanic(\"monitor_heap_set_subid: empty stack\");\n   468:     if (monitor_id_stack[monitor_id_stack_depth - 1].id != id)\n   469: \tpanic(\"monitor_heap_set_subid: mismatch: %s != %s\",\n   470: \t  monitor_id_stack[monitor_id_stack_depth - 1].id, id);\n   471:     monitor_id_stack[monitor_id_stack_depth - 1].subid = subid;\n   472: }"
+  },
+  {
+    "key": "L00469_01",
+    "original": "monitor_heap_set_subid: mismatch: %s != %s",
+    "translation": "",
+    "context": "src/alloc.c:469:8\n   464: void monitor_heap_set_subid(const char *id, int subid)\n   465: {\n   466:     if (!monitor_id_stack_depth)\n   467: \tpanic(\"monitor_heap_set_subid: empty stack\");\n   468:     if (monitor_id_stack[monitor_id_stack_depth - 1].id != id)\n>  469: \tpanic(\"monitor_heap_set_subid: mismatch: %s != %s\",\n   470: \t  monitor_id_stack[monitor_id_stack_depth - 1].id, id);\n   471:     monitor_id_stack[monitor_id_stack_depth - 1].subid = subid;\n   472: }\n   473: \n   474: size_t monitor_heap_getmem(void)"
+  },
+  {
+    "key": "L00508_01",
+    "original": "Blocks allocated but not freed during mark/release:\\n",
+    "translation": "",
+    "context": "src/alloc.c:508:5\n   503: \tm->flags ^= MHF_MARKED;\n   504:     for(m = monitor_heap; m; m = m->next)\n   505: \tif (m->flags & MHF_MARKED) {\n   506: \t    if (first) {\n   507: \t\tfprintf(monitor_fp,\n>  508: \t\t  \"Blocks allocated but not freed during mark/release:\\n\");\n   509: \t\tfprintf(monitor_fp, \"Address         Size    Sub-ID  ID\\n\");\n   510: \t\tfirst = 0;\n   511: \t    }\n   512: \t    fprintf(monitor_fp,\n   513: \t      \"%-16p%-8lu%-8d%s\\n\", m->p, m->size, m->id.subid, m->id.id);"
+  },
+  {
+    "key": "L00509_01",
+    "original": "Address         Size    Sub-ID  ID\\n",
+    "translation": "",
+    "context": "src/alloc.c:509:23\n   504:     for(m = monitor_heap; m; m = m->next)\n   505: \tif (m->flags & MHF_MARKED) {\n   506: \t    if (first) {\n   507: \t\tfprintf(monitor_fp,\n   508: \t\t  \"Blocks allocated but not freed during mark/release:\\n\");\n>  509: \t\tfprintf(monitor_fp, \"Address         Size    Sub-ID  ID\\n\");\n   510: \t\tfirst = 0;\n   511: \t    }\n   512: \t    fprintf(monitor_fp,\n   513: \t      \"%-16p%-8lu%-8d%s\\n\", m->p, m->size, m->id.subid, m->id.id);\n   514: \t}"
+  },
+  {
+    "key": "L00513_01",
+    "original": "%-16p%-8lu%-8d%s\\n",
+    "translation": "",
+    "context": "src/alloc.c:513:8\n   508: \t\t  \"Blocks allocated but not freed during mark/release:\\n\");\n   509: \t\tfprintf(monitor_fp, \"Address         Size    Sub-ID  ID\\n\");\n   510: \t\tfirst = 0;\n   511: \t    }\n   512: \t    fprintf(monitor_fp,\n>  513: \t      \"%-16p%-8lu%-8d%s\\n\", m->p, m->size, m->id.subid, m->id.id);\n   514: \t}\n   515: }\n   516: \n   517: static void monitor_dump(void)\n   518: {"
+  },
+  {
+    "key": "L00526_01",
+    "original": "Dump of all monitored blocks in heap:\\n",
+    "translation": "",
+    "context": "src/alloc.c:526:25\n   521:     FILE *fp;\n   522:     size_t used = 0;\n   523:     if (!monitor_fp)\n   524: \treturn;\n   525:     monitor_heap_mark();\n>  526:     fprintf(monitor_fp, \"Dump of all monitored blocks in heap:\\n\");\n   527:     for(m = monitor_heap; m; m = m->next) {\n   528: \tif (m->flags & MHF_MARKED) {\n   529: \t    used += m->size;\n   530: \t    if (m->id.id == monitor_id_stack_default_id)\n   531: \t\tcontinue;"
+  },
+  {
+    "key": "L00533_01",
+    "original": "Address         Size    Sub-ID  ID\\n",
+    "translation": "",
+    "context": "src/alloc.c:533:23\n   528: \tif (m->flags & MHF_MARKED) {\n   529: \t    used += m->size;\n   530: \t    if (m->id.id == monitor_id_stack_default_id)\n   531: \t\tcontinue;\n   532: \t    if (first) {\n>  533: \t\tfprintf(monitor_fp, \"Address         Size    Sub-ID  ID\\n\");\n   534: \t\tfirst = 0;\n   535: \t    }\n   536: \t    fprintf(monitor_fp,\n   537: \t      \"%-16p%-8lu%-8d%s\\n\", m->p, m->size, m->id.subid, m->id.id);\n   538: \t}"
+  },
+  {
+    "key": "L00537_01",
+    "original": "%-16p%-8lu%-8d%s\\n",
+    "translation": "",
+    "context": "src/alloc.c:537:8\n   532: \t    if (first) {\n   533: \t\tfprintf(monitor_fp, \"Address         Size    Sub-ID  ID\\n\");\n   534: \t\tfirst = 0;\n   535: \t    }\n   536: \t    fprintf(monitor_fp,\n>  537: \t      \"%-16p%-8lu%-8d%s\\n\", m->p, m->size, m->id.subid, m->id.id);\n   538: \t}\n   539:     }\n   540:     if (first)\n   541: \tfprintf(monitor_fp,\n   542: \t  \"No monitored blocks in heap with non-default ID.\\n\");"
+  },
+  {
+    "key": "L00542_01",
+    "original": "No monitored blocks in heap with non-default ID.\\n",
+    "translation": "",
+    "context": "src/alloc.c:542:4\n   537: \t      \"%-16p%-8lu%-8d%s\\n\", m->p, m->size, m->id.subid, m->id.id);\n   538: \t}\n   539:     }\n   540:     if (first)\n   541: \tfprintf(monitor_fp,\n>  542: \t  \"No monitored blocks in heap with non-default ID.\\n\");\n   543:     fprintf(monitor_fp, \"Total used space: %lu bytes\\n\", used);\n   544: }\n   545: \n   546: void *malloc(size_t nb)\n   547: {"
+  },
+  {
+    "key": "L00543_01",
+    "original": "Total used space: %lu bytes\\n",
+    "translation": "",
+    "context": "src/alloc.c:543:25\n   538: \t}\n   539:     }\n   540:     if (first)\n   541: \tfprintf(monitor_fp,\n   542: \t  \"No monitored blocks in heap with non-default ID.\\n\");\n>  543:     fprintf(monitor_fp, \"Total used space: %lu bytes\\n\", used);\n   544: }\n   545: \n   546: void *malloc(size_t nb)\n   547: {\n   548:     static int busy = 0;"
+  },
+  {
+    "key": "L00559_01",
+    "original": "NH_HEAPDUMP",
+    "translation": "",
+    "context": "src/alloc.c:559:13\n   554:     }\n   555:     if (!busy && !(inited&2)) {\n   556: \tchar *s;\n   557: \tinited|=2;\n   558: \tatexit(monitor_dump);\n>  559: \ts = getenv(\"NH_HEAPDUMP\");\n   560: \tmonitor_fp = s ? fopen(s, \"w\"): NULL;\n   561:     }\n   562:     if (!nb)\n   563: \treturn NULL;\n   564:     busy++;"
+  },
+  {
+    "key": "L00560_01",
+    "original": "w",
+    "translation": "",
+    "context": "src/alloc.c:560:28\n   555:     if (!busy && !(inited&2)) {\n   556: \tchar *s;\n   557: \tinited|=2;\n   558: \tatexit(monitor_dump);\n   559: \ts = getenv(\"NH_HEAPDUMP\");\n>  560: \tmonitor_fp = s ? fopen(s, \"w\"): NULL;\n   561:     }\n   562:     if (!nb)\n   563: \treturn NULL;\n   564:     busy++;\n   565:     m = triv_malloc(sizeof(*m));"
+  },
+  {
+    "key": "L00574_01",
+    "original": "malloc(%d) = %p\\n",
+    "translation": "",
+    "context": "src/alloc.c:574:18\n   569:     }\n   570:     m->size = nb;\n   571:     m->flags = 0;\n   572:     m->p = triv_malloc(nb);\n   573:     if (monitor_trace)\n>  574: \tfprintf(stderr, \"malloc(%d) = %p\\n\", nb, m->p);\n   575:     if (!m->p) {\n   576: \ttriv_free(m);\n   577: \tbusy--;\n   578: \treturn NULL;\n   579:     }"
+  },
+  {
+    "key": "L00619_01",
+    "original": "realloc(%p, %d) = %p\\n",
+    "translation": "",
+    "context": "src/alloc.c:619:18\n   614:     if (!p)\n   615: \treturn malloc(size);\n   616:     m = triv_get_userdata(p);\n   617:     np = triv_realloc(p, size);\n   618:     if (monitor_trace)\n>  619: \tfprintf(stderr, \"realloc(%p, %d) = %p\\n\", p, size, np);\n   620:     if (np) {\n   621: \tmonitor_mem_in_use += size - m->size;\n   622: \tm->size = size;\n   623: \tm->p = np;\n   624:     }"
+  },
+  {
+    "key": "L00634_01",
+    "original": "free(%p)\\n",
+    "translation": "",
+    "context": "src/alloc.c:634:22\n   629: {\n   630:     struct monitor_head *m;\n   631:     if (p)\n   632:     {\n   633: \tif (monitor_trace)\n>  634: \t    fprintf(stderr, \"free(%p)\\n\", p);\n   635: \tm = triv_get_userdata(p);\n   636: \tmonitor_mem_in_use -= m->size;\n   637: \ttriv_free(p);\n   638: \tif (m->prev)\n   639: \t    m->prev->next = m->next;"
+  }
+]

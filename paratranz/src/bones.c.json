@@ -1,0 +1,14 @@
+[
+  {
+    "key": "L00367_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/bones.c:367:10\n   362: \n   363: \tfd = create_bonesfile(&u.uz, &bonesid, whynot);\n   364: \tif(fd < 0) {\n   365: #ifdef WIZARD\n   366: \t\tif(wizard)\n>  367: \t\t\tpline(\"%s\", whynot);\n   368: #endif\n   369: \t\t/* bones file creation problems are silent to the player.\n   370: \t\t * Keep it that way, but place a clue into the paniclog.\n   371: \t\t */\n   372: \t\tpaniclog(\"保存错误\", whynot);"
+  },
+  {
+    "key": "L00468_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/bones.c:468:11\n   463: \n   464: \t\t\tSprintf(errbuf, \"这是有bone文件的 '%s',不是那个 '%s'!\",\n   465: \t\t\t\toldbonesid, bonesid);\n   466: #ifdef WIZARD\n   467: \t\t\tif (wizard) {\n>  468: \t\t\t\tpline(\"%s\", errbuf);\n   469: \t\t\t\tok = FALSE;\t/* won't die of trickery */\n   470: \t\t\t}\n   471: #endif\n   472: \t\t\ttrickery(errbuf);\n   473: \t\t} else {"
+  }
+]

@@ -1,0 +1,476 @@
+[
+  {
+    "key": "L00137_01",
+    "original": "a wrenching sensation.",
+    "translation": "",
+    "context": "src/spell.c:137:12\n   132: {\n   133: \tint lev = objects[bp->otyp].oc_level;\n   134: \n   135: \tswitch(rn2(lev)) {\n   136: \tcase 0:\n>  137: \t\tYou_feel(\"a wrenching sensation.\");\n   138: \t\ttele();\t\t/* teleport him */\n   139: \t\tbreak;\n   140: \tcase 1:\n   141: \t\tYou_feel(\"threatened.\");\n   142: \t\taggravate();"
+  },
+  {
+    "key": "L00141_01",
+    "original": "threatened.",
+    "translation": "",
+    "context": "src/spell.c:141:12\n   136: \tcase 0:\n   137: \t\tYou_feel(\"a wrenching sensation.\");\n   138: \t\ttele();\t\t/* teleport him */\n   139: \t\tbreak;\n   140: \tcase 1:\n>  141: \t\tYou_feel(\"threatened.\");\n   142: \t\taggravate();\n   143: \t\tbreak;\n   144: \tcase 2:\n   145: \t\t/* [Tom] lowered this (used to be 100,250) */\n   146: \t\tmake_blinded(Blinded + rn1(50,25),TRUE);"
+  },
+  {
+    "key": "L00162_01",
+    "original": "gloves",
+    "translation": "",
+    "context": "src/spell.c:162:30\n   157: \t\tif (uarmg) {\n   158: \t\t    if (uarmg->oerodeproof || !is_corrodeable(uarmg)) {\n   159: \t\t\tYour(\"手套没有受到影响。\");\n   160: \t\t    } else if (uarmg->oeroded2 < MAX_ERODE) {\n   161: \t\t\tif (uarmg->greased) {\n>  162: \t\t\t    grease_protect(uarmg, \"gloves\", &youmonst);\n   163: \t\t\t} else {\n   164: \t\t\t    Your(\"gloves corrode%s!\",\n   165: \t\t\t\t uarmg->oeroded2+1 == MAX_ERODE ?\n   166: \t\t\t\t \" completely\" : uarmg->oeroded2 ?\n   167: \t\t\t\t \" further\" : \"\");"
+  },
+  {
+    "key": "L00164_01",
+    "original": "gloves corrode%s!",
+    "translation": "",
+    "context": "src/spell.c:164:13\n   159: \t\t\tYour(\"手套没有受到影响。\");\n   160: \t\t    } else if (uarmg->oeroded2 < MAX_ERODE) {\n   161: \t\t\tif (uarmg->greased) {\n   162: \t\t\t    grease_protect(uarmg, \"gloves\", &youmonst);\n   163: \t\t\t} else {\n>  164: \t\t\t    Your(\"gloves corrode%s!\",\n   165: \t\t\t\t uarmg->oeroded2+1 == MAX_ERODE ?\n   166: \t\t\t\t \" completely\" : uarmg->oeroded2 ?\n   167: \t\t\t\t \" further\" : \"\");\n   168: \t\t\t    uarmg->oeroded2++;\n   169: \t\t\t}"
+  },
+  {
+    "key": "L00166_01",
+    "original": " completely",
+    "translation": "",
+    "context": "src/spell.c:166:6\n   161: \t\t\tif (uarmg->greased) {\n   162: \t\t\t    grease_protect(uarmg, \"gloves\", &youmonst);\n   163: \t\t\t} else {\n   164: \t\t\t    Your(\"gloves corrode%s!\",\n   165: \t\t\t\t uarmg->oeroded2+1 == MAX_ERODE ?\n>  166: \t\t\t\t \" completely\" : uarmg->oeroded2 ?\n   167: \t\t\t\t \" further\" : \"\");\n   168: \t\t\t    uarmg->oeroded2++;\n   169: \t\t\t}\n   170: \t\t    } else\n   171: \t\t\tYour(\"gloves %s completely corroded.\","
+  },
+  {
+    "key": "L00167_01",
+    "original": " further",
+    "translation": "",
+    "context": "src/spell.c:167:6\n   162: \t\t\t    grease_protect(uarmg, \"gloves\", &youmonst);\n   163: \t\t\t} else {\n   164: \t\t\t    Your(\"gloves corrode%s!\",\n   165: \t\t\t\t uarmg->oeroded2+1 == MAX_ERODE ?\n   166: \t\t\t\t \" completely\" : uarmg->oeroded2 ?\n>  167: \t\t\t\t \" further\" : \"\");\n   168: \t\t\t    uarmg->oeroded2++;\n   169: \t\t\t}\n   170: \t\t    } else\n   171: \t\t\tYour(\"gloves %s completely corroded.\",\n   172: \t\t\t     Blind ? \"feel\" : \"look\");"
+  },
+  {
+    "key": "L00171_01",
+    "original": "gloves %s completely corroded.",
+    "translation": "",
+    "context": "src/spell.c:171:9\n   166: \t\t\t\t \" completely\" : uarmg->oeroded2 ?\n   167: \t\t\t\t \" further\" : \"\");\n   168: \t\t\t    uarmg->oeroded2++;\n   169: \t\t\t}\n   170: \t\t    } else\n>  171: \t\t\tYour(\"gloves %s completely corroded.\",\n   172: \t\t\t     Blind ? \"feel\" : \"look\");\n   173: \t\t    break;\n   174: \t\t}\n   175: \t\t/* temp disable in_use; death should not destroy the book */\n   176: \t\tbp->in_use = FALSE;"
+  },
+  {
+    "key": "L00172_01",
+    "original": "feel",
+    "translation": "",
+    "context": "src/spell.c:172:17\n   167: \t\t\t\t \" further\" : \"\");\n   168: \t\t\t    uarmg->oeroded2++;\n   169: \t\t\t}\n   170: \t\t    } else\n   171: \t\t\tYour(\"gloves %s completely corroded.\",\n>  172: \t\t\t     Blind ? \"feel\" : \"look\");\n   173: \t\t    break;\n   174: \t\t}\n   175: \t\t/* temp disable in_use; death should not destroy the book */\n   176: \t\tbp->in_use = FALSE;\n   177: \t\tlosestr(Poison_resistance ? rn1(2,1) : rn1(4,3));"
+  },
+  {
+    "key": "L00172_02",
+    "original": "look",
+    "translation": "",
+    "context": "src/spell.c:172:26\n   167: \t\t\t\t \" further\" : \"\");\n   168: \t\t\t    uarmg->oeroded2++;\n   169: \t\t\t}\n   170: \t\t    } else\n   171: \t\t\tYour(\"gloves %s completely corroded.\",\n>  172: \t\t\t     Blind ? \"feel\" : \"look\");\n   173: \t\t    break;\n   174: \t\t}\n   175: \t\t/* temp disable in_use; death should not destroy the book */\n   176: \t\tbp->in_use = FALSE;\n   177: \t\tlosestr(Poison_resistance ? rn1(2,1) : rn1(4,3));"
+  },
+  {
+    "key": "L00185_01",
+    "original": "book %s, but you are unharmed!",
+    "translation": "",
+    "context": "src/spell.c:185:17\n   180: \t\tbp->in_use = TRUE;\n   181: \t\tbreak;\n   182: \tcase 6:\n   183: \t\tif(Antimagic) {\n   184: \t\t    shieldeff(u.ux, u.uy);\n>  185: \t\t    pline_The(\"book %s, but you are unharmed!\", explodes);\n   186: \t\t} else {\n   187: \t\t    pline(\"As you read the book, it %s in your %s!\",\n   188: \t\t\t  explodes, body_part(FACE));\n   189: \t\t    losehp(2*rnd(10)+5, \"exploding rune\", KILLED_BY_AN);\n   190: \t\t}"
+  },
+  {
+    "key": "L00187_01",
+    "original": "As you read the book, it %s in your %s!",
+    "translation": "",
+    "context": "src/spell.c:187:13\n   182: \tcase 6:\n   183: \t\tif(Antimagic) {\n   184: \t\t    shieldeff(u.ux, u.uy);\n   185: \t\t    pline_The(\"book %s, but you are unharmed!\", explodes);\n   186: \t\t} else {\n>  187: \t\t    pline(\"As you read the book, it %s in your %s!\",\n   188: \t\t\t  explodes, body_part(FACE));\n   189: \t\t    losehp(2*rnd(10)+5, \"exploding rune\", KILLED_BY_AN);\n   190: \t\t}\n   191: \t\treturn TRUE;\n   192: \tdefault:"
+  },
+  {
+    "key": "L00189_01",
+    "original": "exploding rune",
+    "translation": "",
+    "context": "src/spell.c:189:27\n   184: \t\t    shieldeff(u.ux, u.uy);\n   185: \t\t    pline_The(\"book %s, but you are unharmed!\", explodes);\n   186: \t\t} else {\n   187: \t\t    pline(\"As you read the book, it %s in your %s!\",\n   188: \t\t\t  explodes, body_part(FACE));\n>  189: \t\t    losehp(2*rnd(10)+5, \"exploding rune\", KILLED_BY_AN);\n   190: \t\t}\n   191: \t\treturn TRUE;\n   192: \tdefault:\n   193: \t\trndcurse();\n   194: \t\tbreak;"
+  },
+  {
+    "key": "L00220_01",
+    "original": "next",
+    "translation": "",
+    "context": "src/spell.c:220:23\n   215: \t    if (carried(spellbook)) useup(spellbook);\n   216: \t    else useupf(spellbook, 1L);\n   217: \t    gone = TRUE;\n   218: \t} else {\n   219: \t    You(\"发现你其实是在一次又一次地读第%s行。\",\n>  220: \t\tspellbook == book ? \"next\" : \"first\");\n   221: \t}\n   222: \treturn gone;\n   223: }\n   224: \n   225: /* special effects for The Book of the Dead */"
+  },
+  {
+    "key": "L00220_02",
+    "original": "first",
+    "translation": "",
+    "context": "src/spell.c:220:32\n   215: \t    if (carried(spellbook)) useup(spellbook);\n   216: \t    else useupf(spellbook, 1L);\n   217: \t    gone = TRUE;\n   218: \t} else {\n   219: \t    You(\"发现你其实是在一次又一次地读第%s行。\",\n>  220: \t\tspellbook == book ? \"next\" : \"first\");\n   221: \t}\n   222: \treturn gone;\n   223: }\n   224: \n   225: /* special effects for The Book of the Dead */"
+  },
+  {
+    "key": "L00249_01",
+    "original": "a faint chime...",
+    "translation": "",
+    "context": "src/spell.c:249:33\n   244: \t    return;\n   245: \t}\n   246: \n   247: \tif(!u.uhave.bell || !u.uhave.menorah) {\n   248: \t    pline(\"一股凉意顺着你的%s一路往下走。\", body_part(SPINE));\n>  249: \t    if(!u.uhave.bell) You_hear(\"a faint chime...\");\n   250: \t    if(!u.uhave.menorah) pline(\"Vlad's doppelganger is amused.\");\n   251: \t    return;\n   252: \t}\n   253: \n   254: \tfor(otmp = invent; otmp; otmp = otmp->nobj) {"
+  },
+  {
+    "key": "L00250_01",
+    "original": "Vlad's doppelganger is amused.",
+    "translation": "",
+    "context": "src/spell.c:250:33\n   245: \t}\n   246: \n   247: \tif(!u.uhave.bell || !u.uhave.menorah) {\n   248: \t    pline(\"一股凉意顺着你的%s一路往下走。\", body_part(SPINE));\n   249: \t    if(!u.uhave.bell) You_hear(\"a faint chime...\");\n>  250: \t    if(!u.uhave.menorah) pline(\"Vlad's doppelganger is amused.\");\n   251: \t    return;\n   252: \t}\n   253: \n   254: \tfor(otmp = invent; otmp; otmp = otmp->nobj) {\n   255: \t    if(otmp->otyp == CANDELABRUM_OF_INVOCATION &&"
+  },
+  {
+    "key": "L00281_01",
+    "original": "have a feeling that %s is amiss...",
+    "translation": "",
+    "context": "src/spell.c:281:10\n   276: \t    /* in case you haven't killed the Wizard yet, behave as if\n   277: \t       you just did */\n   278: \t    u.uevent.udemigod = 1;\t/* wizdead() */\n   279: \t    if (!u.udg_cnt || u.udg_cnt > soon) u.udg_cnt = soon;\n   280: \t} else {\t/* at least one artifact not prepared properly */\n>  281: \t    You(\"have a feeling that %s is amiss...\", something);\n   282: \t    goto raise_dead;\n   283: \t}\n   284: \treturn;\n   285:     }\n   286: "
+  },
+  {
+    "key": "L00375_01",
+    "original": "\\\"%s\\\"",
+    "translation": "",
+    "context": "src/spell.c:375:4\n   370: \t    deadbook(book);\n   371: \t    return(0);\n   372: \t}\n   373: \n   374: \tSprintf(splname, objects[booktype].oc_name_known ?\n>  375: \t\t\t\"\\\"%s\\\"\" : \"the \\\"%s\\\" spell\",\n   376: \t\tOBJ_NAME(objects[booktype]));\n   377: \tfor (i = 0; i < MAXSPELL; i++)  {\n   378: \t\tif (spellid(i) == booktype)  {\n   379: \t\t\tif (book->spestudied > MAX_SPELL_STUDY) {\n   380: \t\t\t    pline(\"这本法术书太模糊了，无法再读一次。\");"
+  },
+  {
+    "key": "L00375_02",
+    "original": "the \\\"%s\\\" spell",
+    "translation": "",
+    "context": "src/spell.c:375:15\n   370: \t    deadbook(book);\n   371: \t    return(0);\n   372: \t}\n   373: \n   374: \tSprintf(splname, objects[booktype].oc_name_known ?\n>  375: \t\t\t\"\\\"%s\\\"\" : \"the \\\"%s\\\" spell\",\n   376: \t\tOBJ_NAME(objects[booktype]));\n   377: \tfor (i = 0; i < MAXSPELL; i++)  {\n   378: \t\tif (spellid(i) == booktype)  {\n   379: \t\t\tif (book->spestudied > MAX_SPELL_STUDY) {\n   380: \t\t\t    pline(\"这本法术书太模糊了，无法再读一次。\");"
+  },
+  {
+    "key": "L00383_01",
+    "original": "knowledge of that spell is keener.",
+    "translation": "",
+    "context": "src/spell.c:383:13\n   378: \t\tif (spellid(i) == booktype)  {\n   379: \t\t\tif (book->spestudied > MAX_SPELL_STUDY) {\n   380: \t\t\t    pline(\"这本法术书太模糊了，无法再读一次。\");\n   381: \t\t\t    book->otyp = booktype = SPE_BLANK_PAPER;\n   382: \t\t\t} else if (spellknow(i) <= MAX_CAN_STUDY) {\n>  383: \t\t\t    Your(\"knowledge of that spell is keener.\");\n   384: \t\t\t    incrnknow(i);\n   385: \t\t\t    book->spestudied++;\n   386: \t\t\t    if (end_delay) {\n   387: \t\t\t    \tboostknow(i,\n   388: \t\t\t\t  end_delay * (book->spe > 0 ? 20 : 10));"
+  },
+  {
+    "key": "L00394_01",
+    "original": "know %s quite well already.",
+    "translation": "",
+    "context": "src/spell.c:394:12\n   389: \t\t\t\tuse_skill(spell_skilltype(book->otyp),\n   390: \t\t\t\t  end_delay / (book->spe > 0 ? 10 : 20));\n   391: \t\t\t    }\n   392: \t\t\t    exercise(A_WIS, TRUE);      /* extra study */\n   393: \t\t\t} else { /* MAX_CAN_STUDY < spellknow(i) <= MAX_SPELL_STUDY */\n>  394: \t\t\t    You(\"know %s quite well already.\", splname);\n   395: \t\t\t    costly = FALSE;\n   396: \t\t\t}\n   397: \t\t\t/* make book become known even when spell is already\n   398: \t\t\t   known, in case amnesia made you forget the book */\n   399: \t\t\tmakeknown((int)booktype);"
+  },
+  {
+    "key": "L00407_01",
+    "original": "add %s to your repertoire.",
+    "translation": "",
+    "context": "src/spell.c:407:16\n   402: \t\t\tspl_book[i].sp_id = booktype;\n   403: \t\t\tspl_book[i].sp_lev = objects[booktype].oc_level;\n   404: \t\t\tincrnknow(i);\n   405: \t\t\tbook->spestudied++;\n   406: \t\t\tYou(\"对这个法术有了很深的理解。\");\n>  407: \t\t\tYou(i > 0 ? \"add %s to your repertoire.\" : \"learn %s.\",\n   408: \t\t\t    splname);\n   409: \t\t\tmakeknown((int)booktype);\n   410: \t\t\tbreak;\n   411: \t\t}\n   412: \t}"
+  },
+  {
+    "key": "L00407_02",
+    "original": "learn %s.",
+    "translation": "",
+    "context": "src/spell.c:407:47\n   402: \t\t\tspl_book[i].sp_id = booktype;\n   403: \t\t\tspl_book[i].sp_lev = objects[booktype].oc_level;\n   404: \t\t\tincrnknow(i);\n   405: \t\t\tbook->spestudied++;\n   406: \t\t\tYou(\"对这个法术有了很深的理解。\");\n>  407: \t\t\tYou(i > 0 ? \"add %s to your repertoire.\" : \"learn %s.\",\n   408: \t\t\t    splname);\n   409: \t\t\tmakeknown((int)booktype);\n   410: \t\t\tbreak;\n   411: \t\t}\n   412: \t}"
+  },
+  {
+    "key": "L00452_01",
+    "original": "quite make them out.",
+    "translation": "",
+    "context": "src/spell.c:452:16\n   447: \t\t}\n   448: \t\tif (spellbook->spe && confused) {\n   449: \t\t    check_unpaid_usage(spellbook, TRUE);\n   450: \t\t    consume_obj_charge(spellbook, FALSE);\n   451: \t\t    pline_The(\"书上的文字冒出了一股紫光。\");\n>  452: \t\t    You_cant(\"quite make them out.\");\n   453: \t\t    return 1;\n   454: \t\t}\n   455: \n   456: \t\tswitch (objects[booktype].oc_level) {\n   457: \t\t case 1:"
+  },
+  {
+    "key": "L00475_01",
+    "original": "Unknown spellbook level %d, book %d;",
+    "translation": "",
+    "context": "src/spell.c:475:15\n   470: \t\t\tbreak;\n   471: \t\t case 7:\n   472: \t\t\tdelay = -8 * objects[booktype].oc_delay;\n   473: \t\t\tbreak;\n   474: \t\t default:\n>  475: \t\t\timpossible(\"Unknown spellbook level %d, book %d;\",\n   476: \t\t\t\tobjects[booktype].oc_level, booktype);\n   477: \t\t\treturn 0;\n   478: \t\t}\n   479: \n   480: \t\t/* Books are often wiser than their readers (Rus.) */"
+  },
+  {
+    "key": "L00549_01",
+    "original": "Delay: %i",
+    "translation": "",
+    "context": "src/spell.c:549:9\n   544: \t\t    }\n   545: \t\t}\n   546: \t\tend_delay = 0;  /* Changed if multi != 0 */\n   547: \n   548: #ifdef DEBUG\n>  549: \t\tpline(\"Delay: %i\", delay);\n   550: #endif\n   551: \t\tif (multi) {\n   552: \t\t\t/* Count == practice reading :) */\n   553: \t        \tchar qbuf[QBUFSZ];\n   554: \t        \t"
+  },
+  {
+    "key": "L00556_01",
+    "original": "Study for at least %i turns?",
+    "translation": "",
+    "context": "src/spell.c:556:25\n   551: \t\tif (multi) {\n   552: \t\t\t/* Count == practice reading :) */\n   553: \t        \tchar qbuf[QBUFSZ];\n   554: \t        \t\n   555: \t        \tif (multi + 1 > MAX_STUDY_TIME) multi = MAX_STUDY_TIME - 1;\n>  556: \t        \tSprintf(qbuf, \"Study for at least %i turns?\", (multi+1));\n   557: \t\t\tif (ynq(qbuf) != 'y') {\n   558: \t\t\t\tmulti = 0;\n   559: \t\t\t\treturn(1);\n   560: \t\t\t}\n   561: \t\t\tif ((--multi) > (-delay)) end_delay = multi + delay;"
+  },
+  {
+    "key": "L00564_01",
+    "original": "end_delay: %i",
+    "translation": "",
+    "context": "src/spell.c:564:10\n   559: \t\t\t\treturn(1);\n   560: \t\t\t}\n   561: \t\t\tif ((--multi) > (-delay)) end_delay = multi + delay;\n   562: \t\t\tmulti = 0;\n   563: #ifdef DEBUG\n>  564: \t\t\tpline(\"end_delay: %i\", end_delay);\n   565: #endif\n   566: \t\t}\n   567: \n   568: \t\tYou(\"begin to %s the runes.\",\n   569: \t\t    spellbook->otyp == SPE_BOOK_OF_THE_DEAD ? \"recite\" :"
+  },
+  {
+    "key": "L00568_01",
+    "original": "begin to %s the runes.",
+    "translation": "",
+    "context": "src/spell.c:568:7\n   563: #ifdef DEBUG\n   564: \t\t\tpline(\"end_delay: %i\", end_delay);\n   565: #endif\n   566: \t\t}\n   567: \n>  568: \t\tYou(\"begin to %s the runes.\",\n   569: \t\t    spellbook->otyp == SPE_BOOK_OF_THE_DEAD ? \"recite\" :\n   570: \t\t    \"memorize\");\n   571: \t}\n   572: \n   573: \tbook = spellbook;"
+  },
+  {
+    "key": "L00569_01",
+    "original": "recite",
+    "translation": "",
+    "context": "src/spell.c:569:49\n   564: \t\t\tpline(\"end_delay: %i\", end_delay);\n   565: #endif\n   566: \t\t}\n   567: \n   568: \t\tYou(\"begin to %s the runes.\",\n>  569: \t\t    spellbook->otyp == SPE_BOOK_OF_THE_DEAD ? \"recite\" :\n   570: \t\t    \"memorize\");\n   571: \t}\n   572: \n   573: \tbook = spellbook;\n   574: \tset_occupation(learn, \"studying\", 0);"
+  },
+  {
+    "key": "L00570_01",
+    "original": "memorize",
+    "translation": "",
+    "context": "src/spell.c:570:7\n   565: #endif\n   566: \t\t}\n   567: \n   568: \t\tYou(\"begin to %s the runes.\",\n   569: \t\t    spellbook->otyp == SPE_BOOK_OF_THE_DEAD ? \"recite\" :\n>  570: \t\t    \"memorize\");\n   571: \t}\n   572: \n   573: \tbook = spellbook;\n   574: \tset_occupation(learn, \"studying\", 0);\n   575: \treturn(1);"
+  },
+  {
+    "key": "L00574_01",
+    "original": "studying",
+    "translation": "",
+    "context": "src/spell.c:574:24\n   569: \t\t    spellbook->otyp == SPE_BOOK_OF_THE_DEAD ? \"recite\" :\n   570: \t\t    \"memorize\");\n   571: \t}\n   572: \n   573: \tbook = spellbook;\n>  574: \tset_occupation(learn, \"studying\", 0);\n   575: \treturn(1);\n   576: }\n   577: \n   578: /* a spellbook has been destroyed or the character has changed levels;\n   579:    the stored address for the current book is no longer valid */"
+  },
+  {
+    "key": "L00641_01",
+    "original": "a",
+    "translation": "",
+    "context": "src/spell.c:641:38\n   636: \t    /* we know there is at least 1 known spell */\n   637: \t    for (nspells = 1; nspells < MAXSPELL\n   638: \t\t\t    && spellid(nspells) != NO_SPELL; nspells++)\n   639: \t\tcontinue;\n   640: \n>  641: \t    if (nspells == 1)  Strcpy(lets, \"a\");\n   642: \t    else if (nspells < 27)  Sprintf(lets, \"a-%c\", 'a' + nspells - 1);\n   643: \t    else if (nspells == 27)  Sprintf(lets, \"a-z A\");\n   644: \t    else if (nspells < 53)\n   645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n   646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");"
+  },
+  {
+    "key": "L00642_01",
+    "original": "a-%c",
+    "translation": "",
+    "context": "src/spell.c:642:44\n   637: \t    for (nspells = 1; nspells < MAXSPELL\n   638: \t\t\t    && spellid(nspells) != NO_SPELL; nspells++)\n   639: \t\tcontinue;\n   640: \n   641: \t    if (nspells == 1)  Strcpy(lets, \"a\");\n>  642: \t    else if (nspells < 27)  Sprintf(lets, \"a-%c\", 'a' + nspells - 1);\n   643: \t    else if (nspells == 27)  Sprintf(lets, \"a-z A\");\n   644: \t    else if (nspells < 53)\n   645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n   646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");\n   647: \t    else if (nspells < 62)"
+  },
+  {
+    "key": "L00643_01",
+    "original": "a-z A",
+    "translation": "",
+    "context": "src/spell.c:643:45\n   638: \t\t\t    && spellid(nspells) != NO_SPELL; nspells++)\n   639: \t\tcontinue;\n   640: \n   641: \t    if (nspells == 1)  Strcpy(lets, \"a\");\n   642: \t    else if (nspells < 27)  Sprintf(lets, \"a-%c\", 'a' + nspells - 1);\n>  643: \t    else if (nspells == 27)  Sprintf(lets, \"a-z A\");\n   644: \t    else if (nspells < 53)\n   645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n   646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");\n   647: \t    else if (nspells < 62)\n   648: \t\tSprintf(lets, \"a-z A-Z 0-%c\", '0' + nspells - 53);"
+  },
+  {
+    "key": "L00645_01",
+    "original": "a-z A-%c",
+    "translation": "",
+    "context": "src/spell.c:645:17\n   640: \n   641: \t    if (nspells == 1)  Strcpy(lets, \"a\");\n   642: \t    else if (nspells < 27)  Sprintf(lets, \"a-%c\", 'a' + nspells - 1);\n   643: \t    else if (nspells == 27)  Sprintf(lets, \"a-z A\");\n   644: \t    else if (nspells < 53)\n>  645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n   646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");\n   647: \t    else if (nspells < 62)\n   648: \t\tSprintf(lets, \"a-z A-Z 0-%c\", '0' + nspells - 53);\n   649: \t    else  Sprintf(lets, \"a-z A-Z 0-9\");\n   650: "
+  },
+  {
+    "key": "L00646_01",
+    "original": "a-z A-Z 0",
+    "translation": "",
+    "context": "src/spell.c:646:45\n   641: \t    if (nspells == 1)  Strcpy(lets, \"a\");\n   642: \t    else if (nspells < 27)  Sprintf(lets, \"a-%c\", 'a' + nspells - 1);\n   643: \t    else if (nspells == 27)  Sprintf(lets, \"a-z A\");\n   644: \t    else if (nspells < 53)\n   645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n>  646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");\n   647: \t    else if (nspells < 62)\n   648: \t\tSprintf(lets, \"a-z A-Z 0-%c\", '0' + nspells - 53);\n   649: \t    else  Sprintf(lets, \"a-z A-Z 0-9\");\n   650: \n   651: \t    for(;;)  {"
+  },
+  {
+    "key": "L00648_01",
+    "original": "a-z A-Z 0-%c",
+    "translation": "",
+    "context": "src/spell.c:648:17\n   643: \t    else if (nspells == 27)  Sprintf(lets, \"a-z A\");\n   644: \t    else if (nspells < 53)\n   645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n   646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");\n   647: \t    else if (nspells < 62)\n>  648: \t\tSprintf(lets, \"a-z A-Z 0-%c\", '0' + nspells - 53);\n   649: \t    else  Sprintf(lets, \"a-z A-Z 0-9\");\n   650: \n   651: \t    for(;;)  {\n   652: \t\tSprintf(qbuf, \"Cast which spell? [%s ?]\", lets);\n   653: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')"
+  },
+  {
+    "key": "L00649_01",
+    "original": "a-z A-Z 0-9",
+    "translation": "",
+    "context": "src/spell.c:649:26\n   644: \t    else if (nspells < 53)\n   645: \t\tSprintf(lets, \"a-z A-%c\", 'A' + nspells - 27);\n   646: \t    else if (nspells == 53)  Sprintf(lets, \"a-z A-Z 0\");\n   647: \t    else if (nspells < 62)\n   648: \t\tSprintf(lets, \"a-z A-Z 0-%c\", '0' + nspells - 53);\n>  649: \t    else  Sprintf(lets, \"a-z A-Z 0-9\");\n   650: \n   651: \t    for(;;)  {\n   652: \t\tSprintf(qbuf, \"Cast which spell? [%s ?]\", lets);\n   653: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')\n   654: \t\t    break;"
+  },
+  {
+    "key": "L00652_01",
+    "original": "Cast which spell? [%s ?]",
+    "translation": "",
+    "context": "src/spell.c:652:17\n   647: \t    else if (nspells < 62)\n   648: \t\tSprintf(lets, \"a-z A-Z 0-%c\", '0' + nspells - 53);\n   649: \t    else  Sprintf(lets, \"a-z A-Z 0-9\");\n   650: \n   651: \t    for(;;)  {\n>  652: \t\tSprintf(qbuf, \"Cast which spell? [%s ?]\", lets);\n   653: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')\n   654: \t\t    break;\n   655: \n   656: \t\tif (index(quitchars, ilet))\n   657: \t\t    return FALSE;"
+  },
+  {
+    "key": "L00687_01",
+    "original": " attack",
+    "translation": "",
+    "context": "src/spell.c:687:17\n   682: STATIC_OVL const char*\n   683: spelltypemnemonic(int skill)\n   684: {\n   685: \tswitch (skill) {\n   686: \t    case P_ATTACK_SPELL:\n>  687: \t        return \" attack\";\n   688: \t    case P_HEALING_SPELL:\n   689: \t\treturn \"healing\";\n   690: \t    case P_DIVINATION_SPELL:\n   691: \t        return \" divine\";\n   692: \t    case P_ENCHANTMENT_SPELL:"
+  },
+  {
+    "key": "L00689_01",
+    "original": "healing",
+    "translation": "",
+    "context": "src/spell.c:689:10\n   684: {\n   685: \tswitch (skill) {\n   686: \t    case P_ATTACK_SPELL:\n   687: \t        return \" attack\";\n   688: \t    case P_HEALING_SPELL:\n>  689: \t\treturn \"healing\";\n   690: \t    case P_DIVINATION_SPELL:\n   691: \t        return \" divine\";\n   692: \t    case P_ENCHANTMENT_SPELL:\n   693: \t        return \"enchant\";\n   694: \t\tcase P_PROTECTION_SPELL:"
+  },
+  {
+    "key": "L00691_01",
+    "original": " divine",
+    "translation": "",
+    "context": "src/spell.c:691:17\n   686: \t    case P_ATTACK_SPELL:\n   687: \t        return \" attack\";\n   688: \t    case P_HEALING_SPELL:\n   689: \t\treturn \"healing\";\n   690: \t    case P_DIVINATION_SPELL:\n>  691: \t        return \" divine\";\n   692: \t    case P_ENCHANTMENT_SPELL:\n   693: \t        return \"enchant\";\n   694: \t\tcase P_PROTECTION_SPELL:\n   695: \t        return \"protect\";\n   696: \t    case P_BODY_SPELL:"
+  },
+  {
+    "key": "L00693_01",
+    "original": "enchant",
+    "translation": "",
+    "context": "src/spell.c:693:17\n   688: \t    case P_HEALING_SPELL:\n   689: \t\treturn \"healing\";\n   690: \t    case P_DIVINATION_SPELL:\n   691: \t        return \" divine\";\n   692: \t    case P_ENCHANTMENT_SPELL:\n>  693: \t        return \"enchant\";\n   694: \t\tcase P_PROTECTION_SPELL:\n   695: \t        return \"protect\";\n   696: \t    case P_BODY_SPELL:\n   697: \t        return \"   body\";\n   698: \t    case P_MATTER_SPELL:"
+  },
+  {
+    "key": "L00695_01",
+    "original": "protect",
+    "translation": "",
+    "context": "src/spell.c:695:17\n   690: \t    case P_DIVINATION_SPELL:\n   691: \t        return \" divine\";\n   692: \t    case P_ENCHANTMENT_SPELL:\n   693: \t        return \"enchant\";\n   694: \t\tcase P_PROTECTION_SPELL:\n>  695: \t        return \"protect\";\n   696: \t    case P_BODY_SPELL:\n   697: \t        return \"   body\";\n   698: \t    case P_MATTER_SPELL:\n   699: \t        return \" matter\";\n   700: \t    default:"
+  },
+  {
+    "key": "L00697_01",
+    "original": "   body",
+    "translation": "",
+    "context": "src/spell.c:697:17\n   692: \t    case P_ENCHANTMENT_SPELL:\n   693: \t        return \"enchant\";\n   694: \t\tcase P_PROTECTION_SPELL:\n   695: \t        return \"protect\";\n   696: \t    case P_BODY_SPELL:\n>  697: \t        return \"   body\";\n   698: \t    case P_MATTER_SPELL:\n   699: \t        return \" matter\";\n   700: \t    default:\n   701: \t\timpossible(\"Unknown spell skill, %d;\", skill);\n   702: \t\treturn \"\";"
+  },
+  {
+    "key": "L00699_01",
+    "original": " matter",
+    "translation": "",
+    "context": "src/spell.c:699:17\n   694: \t\tcase P_PROTECTION_SPELL:\n   695: \t        return \"protect\";\n   696: \t    case P_BODY_SPELL:\n   697: \t        return \"   body\";\n   698: \t    case P_MATTER_SPELL:\n>  699: \t        return \" matter\";\n   700: \t    default:\n   701: \t\timpossible(\"Unknown spell skill, %d;\", skill);\n   702: \t\treturn \"\";\n   703: \t}\n   704: }"
+  },
+  {
+    "key": "L00701_01",
+    "original": "Unknown spell skill, %d;",
+    "translation": "",
+    "context": "src/spell.c:701:14\n   696: \t    case P_BODY_SPELL:\n   697: \t        return \"   body\";\n   698: \t    case P_MATTER_SPELL:\n   699: \t        return \" matter\";\n   700: \t    default:\n>  701: \t\timpossible(\"Unknown spell skill, %d;\", skill);\n   702: \t\treturn \"\";\n   703: \t}\n   704: }\n   705: \n   706: int"
+  },
+  {
+    "key": "L00755_01",
+    "original": "%s haze around you becomes more dense.",
+    "translation": "",
+    "context": "src/spell.c:755:17\n   750: \tif (gain > 0) {\n   751: \t    if (!Blind) {\n   752: \t\tconst char *hgolden = hcolor(NH_GOLDEN);\n   753: \n   754: \t\tif (u.uspellprot)\n>  755: \t\t    pline_The(\"%s haze around you becomes more dense.\",\n   756: \t\t\t      hgolden);\n   757: \t\telse\n   758: \t\t    pline_The(\"%s around you begins to shimmer with %s haze.\",\n   759: \t\t\t/*[ what about being inside solid rock while polyd? ]*/\n   760: \t\t\t(Underwater || Is_waterlevel(&u.uz)) ? \"water\" : \"air\","
+  },
+  {
+    "key": "L00758_01",
+    "original": "%s around you begins to shimmer with %s haze.",
+    "translation": "",
+    "context": "src/spell.c:758:17\n   753: \n   754: \t\tif (u.uspellprot)\n   755: \t\t    pline_The(\"%s haze around you becomes more dense.\",\n   756: \t\t\t      hgolden);\n   757: \t\telse\n>  758: \t\t    pline_The(\"%s around you begins to shimmer with %s haze.\",\n   759: \t\t\t/*[ what about being inside solid rock while polyd? ]*/\n   760: \t\t\t(Underwater || Is_waterlevel(&u.uz)) ? \"water\" : \"air\",\n   761: \t\t\t      an(hgolden));\n   762: \t    }\n   763: \t    u.uspellprot += gain;"
+  },
+  {
+    "key": "L00760_01",
+    "original": "water",
+    "translation": "",
+    "context": "src/spell.c:760:43\n   755: \t\t    pline_The(\"%s haze around you becomes more dense.\",\n   756: \t\t\t      hgolden);\n   757: \t\telse\n   758: \t\t    pline_The(\"%s around you begins to shimmer with %s haze.\",\n   759: \t\t\t/*[ what about being inside solid rock while polyd? ]*/\n>  760: \t\t\t(Underwater || Is_waterlevel(&u.uz)) ? \"water\" : \"air\",\n   761: \t\t\t      an(hgolden));\n   762: \t    }\n   763: \t    u.uspellprot += gain;\n   764: \t    u.uspmtime =\n   765: \t\tP_SKILL(spell_skilltype(SPE_PROTECTION)) == P_EXPERT ? 20 : 10;"
+  },
+  {
+    "key": "L00760_02",
+    "original": "air",
+    "translation": "",
+    "context": "src/spell.c:760:53\n   755: \t\t    pline_The(\"%s haze around you becomes more dense.\",\n   756: \t\t\t      hgolden);\n   757: \t\telse\n   758: \t\t    pline_The(\"%s around you begins to shimmer with %s haze.\",\n   759: \t\t\t/*[ what about being inside solid rock while polyd? ]*/\n>  760: \t\t\t(Underwater || Is_waterlevel(&u.uz)) ? \"water\" : \"air\",\n   761: \t\t\t      an(hgolden));\n   762: \t    }\n   763: \t    u.uspellprot += gain;\n   764: \t    u.uspmtime =\n   765: \t\tP_SKILL(spell_skilltype(SPE_PROTECTION)) == P_EXPERT ? 20 : 10;"
+  },
+  {
+    "key": "L00831_01",
+    "original": "strain to recall the spell.",
+    "translation": "",
+    "context": "src/spell.c:831:10\n   826: \t    Your(\"法术知识已经被时间和记忆所扭曲。\");\n   827: \t    pline(\"它在你脑中释放出噩梦般的扭曲景象……\");\n   828: \t    spell_backfire(spell);\n   829: \t    return(0);\n   830: \t} else if (spellknow(spell) <= 100) {\n>  831: \t    You(\"strain to recall the spell.\");\n   832: \t} else if (spellknow(spell) <= 1000) {\n   833: \t    Your(\"法术知识开始逐渐模糊。\");\n   834: \t}\n   835: \tenergy = (spellev(spell) * 5);    /* 5 <= energy <= 35 */\n   836: "
+  },
+  {
+    "key": "L00844_01",
+    "original": "Your concentration falters while carrying so much stuff.",
+    "translation": "",
+    "context": "src/spell.c:844:3\n   839: \t\treturn(0);\n   840: \t} else if (ACURR(A_STR) < 4)  {\n   841: \t\tYou(\"没有施放法术所需的力量。\");\n   842: \t\treturn(0);\n   843: \t} else if(check_capacity(\n>  844: \t\t\"Your concentration falters while carrying so much stuff.\")) {\n   845: \t    return (1);\n   846: \t} else if (!freehand()) {\n   847: \t\tYour(\"胳膊没法腾出来施法！\");\n   848: \t\treturn (0);\n   849: \t}"
+  },
+  {
+    "key": "L00899_01",
+    "original": "spellcasting exhaustion",
+    "translation": "",
+    "context": "src/spell.c:899:18\n   894: \t\tif ((role_skill >= P_SKILLED) && (yn(\"还要继续么？\") == 'y')) {\n   895: \t\t\tenergy -= u.uen;\n   896: \t\t\thungr += energy * 2;\n   897: \t\t\tif (hungr > u.uhunger - 1)\n   898: \t\t\t\thungr = u.uhunger - 1;\n>  899: \t\t\tlosehp(energy,\"spellcasting exhaustion\", KILLED_BY);\n   900: \t\t\tif (role_skill < P_EXPERT) exercise(A_WIS, FALSE);\n   901: \t\t\tenergy = u.uen;\n   902: \t\t} else\n   903: \t\t\treturn 0;\n   904: \t}"
+  },
+  {
+    "key": "L00981_01",
+    "original": "zapped %sself with a spell",
+    "translation": "",
+    "context": "src/spell.c:981:18\n   976: \t\t\t    pline_The(\"魔法能量被四处释放掉了！\");\n   977: \t\t\t}\n   978: \t\t\tif(!u.dx && !u.dy && !u.dz) {\n   979: \t\t\t    if ((damage = zapyourself(pseudo, TRUE)) != 0) {\n   980: \t\t\t\tchar buf[BUFSZ];\n>  981: \t\t\t\tSprintf(buf, \"zapped %sself with a spell\", uhim());\n   982: \t\t\t\tlosehp(damage, buf, NO_KILLER_PREFIX);\n   983: \t\t\t    }\n   984: \t\t\t} else weffects(pseudo);\n   985: \t\t} else weffects(pseudo);\n   986: \t\tupdate_inventory();\t/* spell may modify inventory */"
+  },
+  {
+    "key": "L01040_01",
+    "original": "slime disappears!",
+    "translation": "",
+    "context": "src/spell.c:1040:17\n  1035: \t\thealup(0, 0, FALSE, TRUE);\n  1036: \t\tbreak;\n  1037: \tcase SPE_CURE_SICKNESS:\n  1038: \t\tif (Sick) You(\"的病痊愈了。\");\n  1039: \t\tif (Slimed) {\n> 1040: \t\t    pline_The(\"slime disappears!\");\n  1041: \t\t    Slimed = 0;\n  1042: \t\t /* flags.botl = 1; -- healup() handles this */\n  1043: \t\t}\n  1044: \t\thealup(0, 0, TRUE, FALSE);\n  1045: \t\tbreak;"
+  },
+  {
+    "key": "L01054_01",
+    "original": "sense a pointy hat on top of your %s.",
+    "translation": "",
+    "context": "src/spell.c:1054:11\n  1049: \tcase SPE_CLAIRVOYANCE:\n  1050: \t\tif (!BClairvoyant)\n  1051: \t\t    do_vicinity_map();\n  1052: \t\t/* at present, only one thing blocks clairvoyance */\n  1053: \t\telse if (uarmh && uarmh->otyp == CORNUTHAUM)\n> 1054: \t\t    You(\"sense a pointy hat on top of your %s.\",\n  1055: \t\t\tbody_part(HEAD));\n  1056: \t\tbreak;\n  1057: \tcase SPE_PROTECTION:\n  1058: \t\tcast_protection();\n  1059: \t\tbreak;"
+  },
+  {
+    "key": "L01066_01",
+    "original": "feel healthy ..... for the moment at least.",
+    "translation": "",
+    "context": "src/spell.c:1066:8\n  1061: \t\tif (!jump(max(role_skill,1)))\n  1062: \t\t\tpline(nothing_happens);\n  1063: \t\tbreak;\n  1064: \tcase SPE_RESIST_POISON:\n  1065: \t\tif(!(HPoison_resistance & INTRINSIC)) {\n> 1066: \t\t\tYou(\"feel healthy ..... for the moment at least.\");\n  1067: \t\t\tincr_itimeout(&HPoison_resistance, rn1(1000, 500) +\n  1068: \t\t\t\tspell_damage_bonus(spellid(spell))*100);\n  1069: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */\n  1070: \t\tbreak;\n  1071: \tcase SPE_RESIST_SLEEP:"
+  },
+  {
+    "key": "L01083_01",
+    "original": "feel warmer.",
+    "translation": "",
+    "context": "src/spell.c:1083:8\n  1078: \t\t\t\tspell_damage_bonus(spellid(spell))*100);\n  1079: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */\n  1080: \t\tbreak;\n  1081: \tcase SPE_ENDURE_COLD:\n  1082: \t\tif(!(HCold_resistance & INTRINSIC)) {\n> 1083: \t\t\tYou(\"feel warmer.\");\n  1084: \t\t\tincr_itimeout(&HCold_resistance, rn1(1000, 500) +\n  1085: \t\t\t\tspell_damage_bonus(spellid(spell))*100);\n  1086: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */\n  1087: \t\tbreak;\n  1088: \tcase SPE_ENDURE_HEAT:"
+  },
+  {
+    "key": "L01093_01",
+    "original": "feel colder.",
+    "translation": "",
+    "context": "src/spell.c:1093:9\n  1088: \tcase SPE_ENDURE_HEAT:\n  1089: \t\tif(!(HFire_resistance & INTRINSIC)) {\n  1090: \t\t\tif (Hallucination)\n  1091: \t\t\t\tpline(\"太爽啦！你感觉超级无敌酷炫凉爽！而且贼拉风！\");\n  1092: \t\t\telse\n> 1093: \t\t\t\tYou(\"feel colder.\");\n  1094: \t\t\tincr_itimeout(&HFire_resistance, rn1(1000, 500) +\n  1095: \t\t\t\tspell_damage_bonus(spellid(spell))*100);\n  1096: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */\n  1097: \t\tbreak;\n  1098: \tcase SPE_INSULATE:"
+  },
+  {
+    "key": "L01101_01",
+    "original": "Bummer! You've been grounded!",
+    "translation": "",
+    "context": "src/spell.c:1101:11\n  1096: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */\n  1097: \t\tbreak;\n  1098: \tcase SPE_INSULATE:\n  1099: \t\tif(!(HShock_resistance & INTRINSIC)) {\n  1100: \t\t\tif (Hallucination)\n> 1101: \t\t\t\tpline(\"Bummer! You've been grounded!\");\n  1102: \t\t\telse\n  1103: \t\t\t\tYou(\"are not at all shocked by this feeling.\");\n  1104: \t\t\tincr_itimeout(&HShock_resistance, rn1(1000, 500) +\n  1105: \t\t\t\tspell_damage_bonus(spellid(spell))*100);\n  1106: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */"
+  },
+  {
+    "key": "L01103_01",
+    "original": "are not at all shocked by this feeling.",
+    "translation": "",
+    "context": "src/spell.c:1103:9\n  1098: \tcase SPE_INSULATE:\n  1099: \t\tif(!(HShock_resistance & INTRINSIC)) {\n  1100: \t\t\tif (Hallucination)\n  1101: \t\t\t\tpline(\"Bummer! You've been grounded!\");\n  1102: \t\t\telse\n> 1103: \t\t\t\tYou(\"are not at all shocked by this feeling.\");\n  1104: \t\t\tincr_itimeout(&HShock_resistance, rn1(1000, 500) +\n  1105: \t\t\t\tspell_damage_bonus(spellid(spell))*100);\n  1106: \t\t} else pline(nothing_happens);\t/* Already have as intrinsic */\n  1107: \t\tbreak;\n  1108: \tcase SPE_ENLIGHTEN: "
+  },
+  {
+    "key": "L01138_01",
+    "original": "ethereal.",
+    "translation": "",
+    "context": "src/spell.c:1138:13\n  1133: \t}\n  1134: \n  1135: \t/* KMH -- new spells */\n  1136: \tcase SPE_PASSWALL:\n  1137: \t\tif (!Passes_walls)\n> 1138: \t\t\tYou_feel(\"ethereal.\");\n  1139: \t\tincr_itimeout(&HPasses_walls, rn1(100, 50));\n  1140: \t\tbreak;\n  1141: \n  1142: \tdefault:\n  1143: \t\timpossible(\"Unknown spell %d attempted.\", spell);"
+  },
+  {
+    "key": "L01143_01",
+    "original": "Unknown spell %d attempted.",
+    "translation": "",
+    "context": "src/spell.c:1143:14\n  1138: \t\t\tYou_feel(\"ethereal.\");\n  1139: \t\tincr_itimeout(&HPasses_walls, rn1(100, 50));\n  1140: \t\tbreak;\n  1141: \n  1142: \tdefault:\n> 1143: \t\timpossible(\"Unknown spell %d attempted.\", spell);\n  1144: \t\tobfree(pseudo, (struct obj *)0);\n  1145: \t\treturn(0);\n  1146: \t}\n  1147: \n  1148: \t/* gain skill for successful cast */"
+  },
+  {
+    "key": "L01190_01",
+    "original": "Currently known spells",
+    "translation": "",
+    "context": "src/spell.c:1190:25\n  1185: \tstruct spell spl_tmp;\n  1186: \n  1187: \tif (spellid(0) == NO_SPELL)\n  1188: \t    You(\"现在没有掌握任何法术。\");\n  1189: \telse {\n> 1190: \t    while (dospellmenu(\"Currently known spells\",\n  1191: \t\t\t       SPELLMENU_VIEW, &splnum)) {\n  1192: \t\tSprintf(qbuf, \"Reordering spells; swap '%s' with\",\n  1193: \t\t\tspellname(splnum));\n  1194: \t\tif (!dospellmenu(qbuf, splnum, &othnum)) break;\n  1195: "
+  },
+  {
+    "key": "L01192_01",
+    "original": "Reordering spells; swap '%s' with",
+    "translation": "",
+    "context": "src/spell.c:1192:17\n  1187: \tif (spellid(0) == NO_SPELL)\n  1188: \t    You(\"现在没有掌握任何法术。\");\n  1189: \telse {\n  1190: \t    while (dospellmenu(\"Currently known spells\",\n  1191: \t\t\t       SPELLMENU_VIEW, &splnum)) {\n> 1192: \t\tSprintf(qbuf, \"Reordering spells; swap '%s' with\",\n  1193: \t\t\tspellname(splnum));\n  1194: \t\tif (!dospellmenu(qbuf, splnum, &othnum)) break;\n  1195: \n  1196: \t\tspl_tmp = spl_book[splnum];\n  1197: \t\tspl_book[splnum] = spl_book[othnum];"
+  },
+  {
+    "key": "L01230_01",
+    "original": "%-20s     Level  %-12s Fail",
+    "translation": "",
+    "context": "src/spell.c:1230:16\n  1225: \t *\n  1226: \t * To do it right would require that we implement columns\n  1227: \t * in the window-ports (say via a tab character).\n  1228: \t */\n  1229: \tif (!iflags.menu_tab_sep)\n> 1230: \t\tSprintf(buf, \"%-20s     Level  %-12s Fail\", \"    Name\", \"Category\");\n  1231: \telse\n  1232: \t\tSprintf(buf, \"Name\\tLevel\\tCategory\\tFail\");\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n  1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);"
+  },
+  {
+    "key": "L01230_02",
+    "original": "    Name",
+    "translation": "",
+    "context": "src/spell.c:1230:47\n  1225: \t *\n  1226: \t * To do it right would require that we implement columns\n  1227: \t * in the window-ports (say via a tab character).\n  1228: \t */\n  1229: \tif (!iflags.menu_tab_sep)\n> 1230: \t\tSprintf(buf, \"%-20s     Level  %-12s Fail\", \"    Name\", \"Category\");\n  1231: \telse\n  1232: \t\tSprintf(buf, \"Name\\tLevel\\tCategory\\tFail\");\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n  1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);"
+  },
+  {
+    "key": "L01230_03",
+    "original": "Category",
+    "translation": "",
+    "context": "src/spell.c:1230:59\n  1225: \t *\n  1226: \t * To do it right would require that we implement columns\n  1227: \t * in the window-ports (say via a tab character).\n  1228: \t */\n  1229: \tif (!iflags.menu_tab_sep)\n> 1230: \t\tSprintf(buf, \"%-20s     Level  %-12s Fail\", \"    Name\", \"Category\");\n  1231: \telse\n  1232: \t\tSprintf(buf, \"Name\\tLevel\\tCategory\\tFail\");\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n  1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);"
+  },
+  {
+    "key": "L01232_01",
+    "original": "Name\\tLevel\\tCategory\\tFail",
+    "translation": "",
+    "context": "src/spell.c:1232:16\n  1227: \t * in the window-ports (say via a tab character).\n  1228: \t */\n  1229: \tif (!iflags.menu_tab_sep)\n  1230: \t\tSprintf(buf, \"%-20s     Level  %-12s Fail\", \"    Name\", \"Category\");\n  1231: \telse\n> 1232: \t\tSprintf(buf, \"Name\\tLevel\\tCategory\\tFail\");\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n  1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);\n  1236: \tfor (i = 0; i < MAXSPELL && spellid(i) != NO_SPELL; i++) {\n  1237: \t\tSprintf(buf, iflags.menu_tab_sep ?"
+  },
+  {
+    "key": "L01234_01",
+    "original": "\\tKey",
+    "translation": "",
+    "context": "src/spell.c:1234:37\n  1229: \tif (!iflags.menu_tab_sep)\n  1230: \t\tSprintf(buf, \"%-20s     Level  %-12s Fail\", \"    Name\", \"Category\");\n  1231: \telse\n  1232: \t\tSprintf(buf, \"Name\\tLevel\\tCategory\\tFail\");\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n> 1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);\n  1236: \tfor (i = 0; i < MAXSPELL && spellid(i) != NO_SPELL; i++) {\n  1237: \t\tSprintf(buf, iflags.menu_tab_sep ?\n  1238: \t\t\t\"%s\\t%-d%s\\t%s\\t%-d%%\" : \"%-20s  %2d%s   %-12s %3d%%\",\n  1239: \t\t\tspellname(i), spellev(i),"
+  },
+  {
+    "key": "L01234_02",
+    "original": "  Key",
+    "translation": "",
+    "context": "src/spell.c:1234:47\n  1229: \tif (!iflags.menu_tab_sep)\n  1230: \t\tSprintf(buf, \"%-20s     Level  %-12s Fail\", \"    Name\", \"Category\");\n  1231: \telse\n  1232: \t\tSprintf(buf, \"Name\\tLevel\\tCategory\\tFail\");\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n> 1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);\n  1236: \tfor (i = 0; i < MAXSPELL && spellid(i) != NO_SPELL; i++) {\n  1237: \t\tSprintf(buf, iflags.menu_tab_sep ?\n  1238: \t\t\t\"%s\\t%-d%s\\t%s\\t%-d%%\" : \"%-20s  %2d%s   %-12s %3d%%\",\n  1239: \t\t\tspellname(i), spellev(i),"
+  },
+  {
+    "key": "L01238_01",
+    "original": "%s\\t%-d%s\\t%s\\t%-d%%",
+    "translation": "",
+    "context": "src/spell.c:1238:4\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n  1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);\n  1236: \tfor (i = 0; i < MAXSPELL && spellid(i) != NO_SPELL; i++) {\n  1237: \t\tSprintf(buf, iflags.menu_tab_sep ?\n> 1238: \t\t\t\"%s\\t%-d%s\\t%s\\t%-d%%\" : \"%-20s  %2d%s   %-12s %3d%%\",\n  1239: \t\t\tspellname(i), spellev(i),\n  1240: \t\t\tspellknow(i) ? \" \" : \"*\",\n  1241: \t\t\tspelltypemnemonic(spell_skilltype(spellid(i))),\n  1242: \t\t\t100 - percent_success(i));\n  1243: \t\tif (flags.menu_style == MENU_TRADITIONAL)"
+  },
+  {
+    "key": "L01238_02",
+    "original": "%-20s  %2d%s   %-12s %3d%%",
+    "translation": "",
+    "context": "src/spell.c:1238:29\n  1233: \tif (flags.menu_style == MENU_TRADITIONAL)\n  1234: \t\tStrcat(buf, iflags.menu_tab_sep ? \"\\tKey\" : \"  Key\");\n  1235: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_BOLD, buf, MENU_UNSELECTED);\n  1236: \tfor (i = 0; i < MAXSPELL && spellid(i) != NO_SPELL; i++) {\n  1237: \t\tSprintf(buf, iflags.menu_tab_sep ?\n> 1238: \t\t\t\"%s\\t%-d%s\\t%s\\t%-d%%\" : \"%-20s  %2d%s   %-12s %3d%%\",\n  1239: \t\t\tspellname(i), spellev(i),\n  1240: \t\t\tspellknow(i) ? \" \" : \"*\",\n  1241: \t\t\tspelltypemnemonic(spell_skilltype(spellid(i))),\n  1242: \t\t\t100 - percent_success(i));\n  1243: \t\tif (flags.menu_style == MENU_TRADITIONAL)"
+  },
+  {
+    "key": "L01245_01",
+    "original": "\\t%c",
+    "translation": "",
+    "context": "src/spell.c:1245:5\n  1240: \t\t\tspellknow(i) ? \" \" : \"*\",\n  1241: \t\t\tspelltypemnemonic(spell_skilltype(spellid(i))),\n  1242: \t\t\t100 - percent_success(i));\n  1243: \t\tif (flags.menu_style == MENU_TRADITIONAL)\n  1244: \t\t\tSprintf(eos(buf), iflags.menu_tab_sep ?\n> 1245: \t\t\t\t\"\\t%c\" : \"%4c \", spellet(i) ? spellet(i) : ' ');\n  1246: \n  1247: \t\tany.a_int = i+1;\t/* must be non-zero */\n  1248: \t\tadd_menu(tmpwin, NO_GLYPH, &any,\n  1249: \t\t\t 0, 0, ATR_NONE, buf,\n  1250: \t\t\t (i == splaction) ? MENU_SELECTED : MENU_UNSELECTED);"
+  },
+  {
+    "key": "L01245_02",
+    "original": "%4c ",
+    "translation": "",
+    "context": "src/spell.c:1245:14\n  1240: \t\t\tspellknow(i) ? \" \" : \"*\",\n  1241: \t\t\tspelltypemnemonic(spell_skilltype(spellid(i))),\n  1242: \t\t\t100 - percent_success(i));\n  1243: \t\tif (flags.menu_style == MENU_TRADITIONAL)\n  1244: \t\t\tSprintf(eos(buf), iflags.menu_tab_sep ?\n> 1245: \t\t\t\t\"\\t%c\" : \"%4c \", spellet(i) ? spellet(i) : ' ');\n  1246: \n  1247: \t\tany.a_int = i+1;\t/* must be non-zero */\n  1248: \t\tadd_menu(tmpwin, NO_GLYPH, &any,\n  1249: \t\t\t 0, 0, ATR_NONE, buf,\n  1250: \t\t\t (i == splaction) ? MENU_SELECTED : MENU_UNSELECTED);"
+  },
+  {
+    "key": "L01413_01",
+    "original": "Error: Spell %s already known.",
+    "translation": "",
+    "context": "src/spell.c:1413:17\n  1408: {\n  1409: \tint i;\n  1410: \n  1411: \tfor (i = 0; i < MAXSPELL; i++) {\n  1412: \t    if (spellid(i) == obj->otyp) {\n> 1413: \t         pline(\"Error: Spell %s already known.\",\n  1414: \t         \t\tOBJ_NAME(objects[obj->otyp]));\n  1415: \t         return;\n  1416: \t    }\n  1417: \t    if (spellid(i) == NO_SPELL)  {\n  1418: \t        spl_book[i].sp_id = obj->otyp;"
+  },
+  {
+    "key": "L01439_01",
+    "original": "focus and reinforce your memory of the spell.",
+    "translation": "",
+    "context": "src/spell.c:1439:9\n  1434: \tif (getspell(&spell_no)) {\n  1435: \t\tif (spellknow(spell_no) <= 0) {\n  1436: \t\t\tYou(\"无法清晰地回忆这个法术的细节。\");\n  1437: \t\t\treturn (FALSE);\n  1438: \t\t} else if (spellknow(spell_no) <= 1000) {\n> 1439: \t\t\tYour(\"focus and reinforce your memory of the spell.\");\n  1440: \t\t\tincrnknow(spell_no);\n  1441: \t\t\texercise(A_WIS, TRUE);      /* extra study */\n  1442: \t\t\treturn (TRUE);\n  1443: \t\t} else /* 1000 < spellknow(spell_no) <= 5000 */\n  1444: \t\t\tYou(\"已经很了解该法术了，无需再阅读。\");"
+  }
+]

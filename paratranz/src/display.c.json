@@ -1,0 +1,416 @@
+[
+  {
+    "key": "L01423_01",
+    "original": "warning",
+    "translation": "",
+    "context": "src/display.c:1423:13\n  1418: \t *  This assumes an ordering of the offsets.  See display.h for\n  1419: \t *  the definition.\n  1420: \t */\n  1421: \n  1422: \tif (glyph >= GLYPH_WARNING_OFF) {\t/* a warning */\n> 1423: \t    text = \"warning\";\t\toffset = glyph - GLYPH_WARNING_OFF;\n  1424: \t} else if (glyph >= GLYPH_SWALLOW_OFF) {\t/* swallow border */\n  1425: \t    text = \"swallow border\";\toffset = glyph - GLYPH_SWALLOW_OFF;\n  1426: \t} else if (glyph >= GLYPH_ZAP_OFF) {\t\t/* zap beam */\n  1427: \t    text = \"zap beam\";\t\toffset = glyph - GLYPH_ZAP_OFF;\n  1428: \t} else if (glyph >= GLYPH_EXPLODE_OFF) {\t/* explosion */"
+  },
+  {
+    "key": "L01425_01",
+    "original": "swallow border",
+    "translation": "",
+    "context": "src/display.c:1425:13\n  1420: \t */\n  1421: \n  1422: \tif (glyph >= GLYPH_WARNING_OFF) {\t/* a warning */\n  1423: \t    text = \"warning\";\t\toffset = glyph - GLYPH_WARNING_OFF;\n  1424: \t} else if (glyph >= GLYPH_SWALLOW_OFF) {\t/* swallow border */\n> 1425: \t    text = \"swallow border\";\toffset = glyph - GLYPH_SWALLOW_OFF;\n  1426: \t} else if (glyph >= GLYPH_ZAP_OFF) {\t\t/* zap beam */\n  1427: \t    text = \"zap beam\";\t\toffset = glyph - GLYPH_ZAP_OFF;\n  1428: \t} else if (glyph >= GLYPH_EXPLODE_OFF) {\t/* explosion */\n  1429: \t    text = \"explosion\";\t\toffset = glyph - GLYPH_EXPLODE_OFF;\n  1430: \t} else if (glyph >= GLYPH_CMAP_OFF) {\t\t/* cmap */"
+  },
+  {
+    "key": "L01427_01",
+    "original": "zap beam",
+    "translation": "",
+    "context": "src/display.c:1427:13\n  1422: \tif (glyph >= GLYPH_WARNING_OFF) {\t/* a warning */\n  1423: \t    text = \"warning\";\t\toffset = glyph - GLYPH_WARNING_OFF;\n  1424: \t} else if (glyph >= GLYPH_SWALLOW_OFF) {\t/* swallow border */\n  1425: \t    text = \"swallow border\";\toffset = glyph - GLYPH_SWALLOW_OFF;\n  1426: \t} else if (glyph >= GLYPH_ZAP_OFF) {\t\t/* zap beam */\n> 1427: \t    text = \"zap beam\";\t\toffset = glyph - GLYPH_ZAP_OFF;\n  1428: \t} else if (glyph >= GLYPH_EXPLODE_OFF) {\t/* explosion */\n  1429: \t    text = \"explosion\";\t\toffset = glyph - GLYPH_EXPLODE_OFF;\n  1430: \t} else if (glyph >= GLYPH_CMAP_OFF) {\t\t/* cmap */\n  1431: \t    text = \"cmap_index\";\toffset = glyph - GLYPH_CMAP_OFF;\n  1432: \t} else if (glyph >= GLYPH_OBJ_OFF) {\t\t/* object */"
+  },
+  {
+    "key": "L01429_01",
+    "original": "explosion",
+    "translation": "",
+    "context": "src/display.c:1429:13\n  1424: \t} else if (glyph >= GLYPH_SWALLOW_OFF) {\t/* swallow border */\n  1425: \t    text = \"swallow border\";\toffset = glyph - GLYPH_SWALLOW_OFF;\n  1426: \t} else if (glyph >= GLYPH_ZAP_OFF) {\t\t/* zap beam */\n  1427: \t    text = \"zap beam\";\t\toffset = glyph - GLYPH_ZAP_OFF;\n  1428: \t} else if (glyph >= GLYPH_EXPLODE_OFF) {\t/* explosion */\n> 1429: \t    text = \"explosion\";\t\toffset = glyph - GLYPH_EXPLODE_OFF;\n  1430: \t} else if (glyph >= GLYPH_CMAP_OFF) {\t\t/* cmap */\n  1431: \t    text = \"cmap_index\";\toffset = glyph - GLYPH_CMAP_OFF;\n  1432: \t} else if (glyph >= GLYPH_OBJ_OFF) {\t\t/* object */\n  1433: \t    text = \"object\";\t\toffset = glyph - GLYPH_OBJ_OFF;\n  1434: \t} else if (glyph >= GLYPH_RIDDEN_OFF) {\t\t/* ridden mon */"
+  },
+  {
+    "key": "L01431_01",
+    "original": "cmap_index",
+    "translation": "",
+    "context": "src/display.c:1431:13\n  1426: \t} else if (glyph >= GLYPH_ZAP_OFF) {\t\t/* zap beam */\n  1427: \t    text = \"zap beam\";\t\toffset = glyph - GLYPH_ZAP_OFF;\n  1428: \t} else if (glyph >= GLYPH_EXPLODE_OFF) {\t/* explosion */\n  1429: \t    text = \"explosion\";\t\toffset = glyph - GLYPH_EXPLODE_OFF;\n  1430: \t} else if (glyph >= GLYPH_CMAP_OFF) {\t\t/* cmap */\n> 1431: \t    text = \"cmap_index\";\toffset = glyph - GLYPH_CMAP_OFF;\n  1432: \t} else if (glyph >= GLYPH_OBJ_OFF) {\t\t/* object */\n  1433: \t    text = \"object\";\t\toffset = glyph - GLYPH_OBJ_OFF;\n  1434: \t} else if (glyph >= GLYPH_RIDDEN_OFF) {\t\t/* ridden mon */\n  1435: \t    text = \"ridden mon\";\toffset = glyph - GLYPH_RIDDEN_OFF;\n  1436: \t} else if (glyph >= GLYPH_BODY_OFF) {\t\t/* a corpse */"
+  },
+  {
+    "key": "L01433_01",
+    "original": "object",
+    "translation": "",
+    "context": "src/display.c:1433:13\n  1428: \t} else if (glyph >= GLYPH_EXPLODE_OFF) {\t/* explosion */\n  1429: \t    text = \"explosion\";\t\toffset = glyph - GLYPH_EXPLODE_OFF;\n  1430: \t} else if (glyph >= GLYPH_CMAP_OFF) {\t\t/* cmap */\n  1431: \t    text = \"cmap_index\";\toffset = glyph - GLYPH_CMAP_OFF;\n  1432: \t} else if (glyph >= GLYPH_OBJ_OFF) {\t\t/* object */\n> 1433: \t    text = \"object\";\t\toffset = glyph - GLYPH_OBJ_OFF;\n  1434: \t} else if (glyph >= GLYPH_RIDDEN_OFF) {\t\t/* ridden mon */\n  1435: \t    text = \"ridden mon\";\toffset = glyph - GLYPH_RIDDEN_OFF;\n  1436: \t} else if (glyph >= GLYPH_BODY_OFF) {\t\t/* a corpse */\n  1437: \t    text = \"corpse\";\t\toffset = glyph - GLYPH_BODY_OFF;\n  1438: \t} else if (glyph >= GLYPH_DETECT_OFF) {\t\t/* detected mon */"
+  },
+  {
+    "key": "L01435_01",
+    "original": "ridden mon",
+    "translation": "",
+    "context": "src/display.c:1435:13\n  1430: \t} else if (glyph >= GLYPH_CMAP_OFF) {\t\t/* cmap */\n  1431: \t    text = \"cmap_index\";\toffset = glyph - GLYPH_CMAP_OFF;\n  1432: \t} else if (glyph >= GLYPH_OBJ_OFF) {\t\t/* object */\n  1433: \t    text = \"object\";\t\toffset = glyph - GLYPH_OBJ_OFF;\n  1434: \t} else if (glyph >= GLYPH_RIDDEN_OFF) {\t\t/* ridden mon */\n> 1435: \t    text = \"ridden mon\";\toffset = glyph - GLYPH_RIDDEN_OFF;\n  1436: \t} else if (glyph >= GLYPH_BODY_OFF) {\t\t/* a corpse */\n  1437: \t    text = \"corpse\";\t\toffset = glyph - GLYPH_BODY_OFF;\n  1438: \t} else if (glyph >= GLYPH_DETECT_OFF) {\t\t/* detected mon */\n  1439: \t    text = \"detected mon\";\toffset = glyph - GLYPH_DETECT_OFF;\n  1440: \t} else if (glyph >= GLYPH_INVIS_OFF) {\t\t/* invisible mon */"
+  },
+  {
+    "key": "L01437_01",
+    "original": "corpse",
+    "translation": "",
+    "context": "src/display.c:1437:13\n  1432: \t} else if (glyph >= GLYPH_OBJ_OFF) {\t\t/* object */\n  1433: \t    text = \"object\";\t\toffset = glyph - GLYPH_OBJ_OFF;\n  1434: \t} else if (glyph >= GLYPH_RIDDEN_OFF) {\t\t/* ridden mon */\n  1435: \t    text = \"ridden mon\";\toffset = glyph - GLYPH_RIDDEN_OFF;\n  1436: \t} else if (glyph >= GLYPH_BODY_OFF) {\t\t/* a corpse */\n> 1437: \t    text = \"corpse\";\t\toffset = glyph - GLYPH_BODY_OFF;\n  1438: \t} else if (glyph >= GLYPH_DETECT_OFF) {\t\t/* detected mon */\n  1439: \t    text = \"detected mon\";\toffset = glyph - GLYPH_DETECT_OFF;\n  1440: \t} else if (glyph >= GLYPH_INVIS_OFF) {\t\t/* invisible mon */\n  1441: \t    text = \"invisible mon\";\toffset = glyph - GLYPH_INVIS_OFF;\n  1442: \t} else if (glyph >= GLYPH_PET_OFF) {\t\t/* a pet */"
+  },
+  {
+    "key": "L01439_01",
+    "original": "detected mon",
+    "translation": "",
+    "context": "src/display.c:1439:13\n  1434: \t} else if (glyph >= GLYPH_RIDDEN_OFF) {\t\t/* ridden mon */\n  1435: \t    text = \"ridden mon\";\toffset = glyph - GLYPH_RIDDEN_OFF;\n  1436: \t} else if (glyph >= GLYPH_BODY_OFF) {\t\t/* a corpse */\n  1437: \t    text = \"corpse\";\t\toffset = glyph - GLYPH_BODY_OFF;\n  1438: \t} else if (glyph >= GLYPH_DETECT_OFF) {\t\t/* detected mon */\n> 1439: \t    text = \"detected mon\";\toffset = glyph - GLYPH_DETECT_OFF;\n  1440: \t} else if (glyph >= GLYPH_INVIS_OFF) {\t\t/* invisible mon */\n  1441: \t    text = \"invisible mon\";\toffset = glyph - GLYPH_INVIS_OFF;\n  1442: \t} else if (glyph >= GLYPH_PET_OFF) {\t\t/* a pet */\n  1443: \t    text = \"pet\";\t\toffset = glyph - GLYPH_PET_OFF;\n  1444: \t} else {\t\t\t\t\t/* a monster */"
+  },
+  {
+    "key": "L01441_01",
+    "original": "invisible mon",
+    "translation": "",
+    "context": "src/display.c:1441:13\n  1436: \t} else if (glyph >= GLYPH_BODY_OFF) {\t\t/* a corpse */\n  1437: \t    text = \"corpse\";\t\toffset = glyph - GLYPH_BODY_OFF;\n  1438: \t} else if (glyph >= GLYPH_DETECT_OFF) {\t\t/* detected mon */\n  1439: \t    text = \"detected mon\";\toffset = glyph - GLYPH_DETECT_OFF;\n  1440: \t} else if (glyph >= GLYPH_INVIS_OFF) {\t\t/* invisible mon */\n> 1441: \t    text = \"invisible mon\";\toffset = glyph - GLYPH_INVIS_OFF;\n  1442: \t} else if (glyph >= GLYPH_PET_OFF) {\t\t/* a pet */\n  1443: \t    text = \"pet\";\t\toffset = glyph - GLYPH_PET_OFF;\n  1444: \t} else {\t\t\t\t\t/* a monster */\n  1445: \t    text = \"monster\";\t\toffset = glyph;\n  1446: \t}"
+  },
+  {
+    "key": "L01443_01",
+    "original": "pet",
+    "translation": "",
+    "context": "src/display.c:1443:13\n  1438: \t} else if (glyph >= GLYPH_DETECT_OFF) {\t\t/* detected mon */\n  1439: \t    text = \"detected mon\";\toffset = glyph - GLYPH_DETECT_OFF;\n  1440: \t} else if (glyph >= GLYPH_INVIS_OFF) {\t\t/* invisible mon */\n  1441: \t    text = \"invisible mon\";\toffset = glyph - GLYPH_INVIS_OFF;\n  1442: \t} else if (glyph >= GLYPH_PET_OFF) {\t\t/* a pet */\n> 1443: \t    text = \"pet\";\t\toffset = glyph - GLYPH_PET_OFF;\n  1444: \t} else {\t\t\t\t\t/* a monster */\n  1445: \t    text = \"monster\";\t\toffset = glyph;\n  1446: \t}\n  1447: \n  1448: \timpossible(\"展示错误[%s %d].\","
+  },
+  {
+    "key": "L01445_01",
+    "original": "monster",
+    "translation": "",
+    "context": "src/display.c:1445:13\n  1440: \t} else if (glyph >= GLYPH_INVIS_OFF) {\t\t/* invisible mon */\n  1441: \t    text = \"invisible mon\";\toffset = glyph - GLYPH_INVIS_OFF;\n  1442: \t} else if (glyph >= GLYPH_PET_OFF) {\t\t/* a pet */\n  1443: \t    text = \"pet\";\t\toffset = glyph - GLYPH_PET_OFF;\n  1444: \t} else {\t\t\t\t\t/* a monster */\n> 1445: \t    text = \"monster\";\t\toffset = glyph;\n  1446: \t}\n  1447: \n  1448: \timpossible(\"展示错误[%s %d].\",\n  1449: \t\t\t\t\t\tx, y, glyph, text, offset);\n  1450: \treturn;"
+  },
+  {
+    "key": "L01659_01",
+    "original": "Strange db-under: %d",
+    "translation": "",
+    "context": "src/display.c:1659:14\n  1654: \t    case DB_MOAT:  idx = S_pool; break;\n  1655: \t    case DB_LAVA:  idx = S_lava; break;\n  1656: \t    case DB_ICE:   idx = S_ice;  break;\n  1657: \t    case DB_FLOOR: idx = S_room; break;\n  1658: \t    default:\n> 1659: \t\timpossible(\"Strange db-under: %d\",\n  1660: \t\t\t   ptr->drawbridgemask & DB_UNDER);\n  1661: \t\tidx = S_room; /* something is better than nothing */\n  1662: \t\tbreak;\n  1663: \t    }\n  1664: \t    break;"
+  },
+  {
+    "key": "L01669_01",
+    "original": "back_to_glyph:  unknown level type [ = %d ]",
+    "translation": "",
+    "context": "src/display.c:1669:17\n  1664: \t    break;\n  1665: \tcase DRAWBRIDGE_DOWN:\n  1666: \t    idx = (ptr->horizontal) ? S_hodbridge : S_vodbridge;\n  1667: \t    break;\n  1668: \tdefault:\n> 1669: \t    impossible(\"back_to_glyph:  unknown level type [ = %d ]\",ptr->typ);\n  1670: \t    idx = S_room;\n  1671: \t    break;\n  1672:     }\n  1673:     return idx;\n  1674: }"
+  },
+  {
+    "key": "L01697_01",
+    "original": "swallow_to_glyph: bad swallow location",
+    "translation": "",
+    "context": "src/display.c:1697:13\n  1692: swallow_to_glyph(mnum, loc)\n  1693:     int mnum;\n  1694:     int loc;\n  1695: {\n  1696:     if (loc < S_sw_tl || S_sw_br < loc) {\n> 1697: \timpossible(\"swallow_to_glyph: bad swallow location\");\n  1698: \tloc = S_sw_br;\n  1699:     }\n  1700:     return ((int) (what_mon(mnum)<<3) | (loc - S_sw_tl)) + GLYPH_SWALLOW_OFF;\n  1701: }\n  1702: "
+  },
+  {
+    "key": "L01723_01",
+    "original": "zapdir_to_glyph:  illegal beam type",
+    "translation": "",
+    "context": "src/display.c:1723:13\n  1718: zapdir_to_glyph(dx, dy, beam_type)\n  1719:     register int dx, dy;\n  1720:     int beam_type;\n  1721: {\n  1722:     if (beam_type >= NUM_ZAP) {\n> 1723: \timpossible(\"zapdir_to_glyph:  illegal beam type\");\n  1724: \tbeam_type = 0;\n  1725:     }\n  1726:     dx = (dx == dy) ? 2 : (dx && dy) ? 3 : dx ? 1 : 0;\n  1727: \n  1728:     return ((int) ((beam_type << 2) | dx)) + GLYPH_ZAP_OFF;"
+  },
+  {
+    "key": "L01759_01",
+    "original": "STONE",
+    "translation": "",
+    "context": "src/display.c:1759:2\n  1754: static const char *FDECL(type_to_name, (int));\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n> 1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\","
+  },
+  {
+    "key": "L01759_02",
+    "original": "VWALL",
+    "translation": "",
+    "context": "src/display.c:1759:11\n  1754: static const char *FDECL(type_to_name, (int));\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n> 1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\","
+  },
+  {
+    "key": "L01759_03",
+    "original": "HWALL",
+    "translation": "",
+    "context": "src/display.c:1759:20\n  1754: static const char *FDECL(type_to_name, (int));\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n> 1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\","
+  },
+  {
+    "key": "L01759_04",
+    "original": "TLCORNER",
+    "translation": "",
+    "context": "src/display.c:1759:29\n  1754: static const char *FDECL(type_to_name, (int));\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n> 1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\","
+  },
+  {
+    "key": "L01760_01",
+    "original": "TRCORNER",
+    "translation": "",
+    "context": "src/display.c:1760:2\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n> 1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\","
+  },
+  {
+    "key": "L01760_02",
+    "original": "BLCORNER",
+    "translation": "",
+    "context": "src/display.c:1760:14\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n> 1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\","
+  },
+  {
+    "key": "L01760_03",
+    "original": "BRCORNER",
+    "translation": "",
+    "context": "src/display.c:1760:26\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n> 1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\","
+  },
+  {
+    "key": "L01760_04",
+    "original": "CROSSWALL",
+    "translation": "",
+    "context": "src/display.c:1760:38\n  1755: static void FDECL(error4, (int,int,int,int,int,int));\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n> 1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\","
+  },
+  {
+    "key": "L01761_01",
+    "original": "TUWALL",
+    "translation": "",
+    "context": "src/display.c:1761:2\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n> 1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\","
+  },
+  {
+    "key": "L01761_02",
+    "original": "TDWALL",
+    "translation": "",
+    "context": "src/display.c:1761:12\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n> 1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\","
+  },
+  {
+    "key": "L01761_03",
+    "original": "TLWALL",
+    "translation": "",
+    "context": "src/display.c:1761:22\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n> 1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\","
+  },
+  {
+    "key": "L01761_04",
+    "original": "TRWALL",
+    "translation": "",
+    "context": "src/display.c:1761:32\n  1756: \n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n> 1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\","
+  },
+  {
+    "key": "L01762_01",
+    "original": "DBWALL",
+    "translation": "",
+    "context": "src/display.c:1762:2\n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n> 1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\""
+  },
+  {
+    "key": "L01762_02",
+    "original": "SDOOR",
+    "translation": "",
+    "context": "src/display.c:1762:12\n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n> 1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\""
+  },
+  {
+    "key": "L01762_03",
+    "original": "SCORR",
+    "translation": "",
+    "context": "src/display.c:1762:21\n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n> 1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\""
+  },
+  {
+    "key": "L01762_04",
+    "original": "POOL",
+    "translation": "",
+    "context": "src/display.c:1762:30\n  1757: static int bad_count[MAX_TYPE]; /* count of positions flagged as bad */\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n> 1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\""
+  },
+  {
+    "key": "L01763_01",
+    "original": "MOAT",
+    "translation": "",
+    "context": "src/display.c:1763:2\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n> 1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };"
+  },
+  {
+    "key": "L01763_02",
+    "original": "WATER",
+    "translation": "",
+    "context": "src/display.c:1763:11\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n> 1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };"
+  },
+  {
+    "key": "L01763_03",
+    "original": "DRAWBRIDGE_UP",
+    "translation": "",
+    "context": "src/display.c:1763:20\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n> 1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };"
+  },
+  {
+    "key": "L01763_04",
+    "original": "LAVAPOOL",
+    "translation": "",
+    "context": "src/display.c:1763:36\n  1758: static const char *type_names[MAX_TYPE] = {\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n> 1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };"
+  },
+  {
+    "key": "L01764_01",
+    "original": "DOOR",
+    "translation": "",
+    "context": "src/display.c:1764:2\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n> 1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: "
+  },
+  {
+    "key": "L01764_02",
+    "original": "CORR",
+    "translation": "",
+    "context": "src/display.c:1764:11\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n> 1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: "
+  },
+  {
+    "key": "L01764_03",
+    "original": "ROOM",
+    "translation": "",
+    "context": "src/display.c:1764:20\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n> 1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: "
+  },
+  {
+    "key": "L01764_04",
+    "original": "STAIRS",
+    "translation": "",
+    "context": "src/display.c:1764:29\n  1759: \t\"STONE\",\t\"VWALL\",\t\"HWALL\",\t\"TLCORNER\",\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n> 1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: "
+  },
+  {
+    "key": "L01765_01",
+    "original": "LADDER",
+    "translation": "",
+    "context": "src/display.c:1765:2\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n> 1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: "
+  },
+  {
+    "key": "L01765_02",
+    "original": "FOUNTAIN",
+    "translation": "",
+    "context": "src/display.c:1765:12\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n> 1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: "
+  },
+  {
+    "key": "L01765_03",
+    "original": "THRONE",
+    "translation": "",
+    "context": "src/display.c:1765:24\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n> 1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: "
+  },
+  {
+    "key": "L01765_04",
+    "original": "SINK",
+    "translation": "",
+    "context": "src/display.c:1765:34\n  1760: \t\"TRCORNER\",\t\"BLCORNER\",\t\"BRCORNER\",\t\"CROSSWALL\",\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n> 1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: "
+  },
+  {
+    "key": "L01766_01",
+    "original": "ALTAR",
+    "translation": "",
+    "context": "src/display.c:1766:2\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n> 1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: \n  1771: static const char *"
+  },
+  {
+    "key": "L01766_02",
+    "original": "ICE",
+    "translation": "",
+    "context": "src/display.c:1766:11\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n> 1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: \n  1771: static const char *"
+  },
+  {
+    "key": "L01766_03",
+    "original": "DRAWBRIDGE_DOWN",
+    "translation": "",
+    "context": "src/display.c:1766:19\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n> 1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: \n  1771: static const char *"
+  },
+  {
+    "key": "L01766_04",
+    "original": "AIR",
+    "translation": "",
+    "context": "src/display.c:1766:37\n  1761: \t\"TUWALL\",\t\"TDWALL\",\t\"TLWALL\",\t\"TRWALL\",\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n> 1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n  1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: \n  1771: static const char *"
+  },
+  {
+    "key": "L01767_01",
+    "original": "CLOUD",
+    "translation": "",
+    "context": "src/display.c:1767:2\n  1762: \t\"DBWALL\",\t\"SDOOR\",\t\"SCORR\",\t\"POOL\",\n  1763: \t\"MOAT\",\t\t\"WATER\",\t\"DRAWBRIDGE_UP\",\"LAVAPOOL\",\n  1764: \t\"DOOR\",\t\t\"CORR\",\t\t\"ROOM\",\t\t\"STAIRS\",\n  1765: \t\"LADDER\",\t\"FOUNTAIN\",\t\"THRONE\",\t\"SINK\",\n  1766: \t\"ALTAR\",\t\"ICE\",\t\t\"DRAWBRIDGE_DOWN\",\"AIR\",\n> 1767: \t\"CLOUD\"\n  1768: };\n  1769: \n  1770: \n  1771: static const char *\n  1772: type_to_name(type)"
+  },
+  {
+    "key": "L01775_01",
+    "original": "unknown",
+    "translation": "",
+    "context": "src/display.c:1775:44\n  1770: \n  1771: static const char *\n  1772: type_to_name(type)\n  1773:     int type;\n  1774: {\n> 1775:     return (type < 0 || type > MAX_TYPE) ? \"unknown\" : type_names[type];\n  1776: }\n  1777: \n  1778: STATIC_OVL void\n  1779: error4(x, y, a, b, c, dd)\n  1780:     int x, y, a, b, c, dd;"
+  },
+  {
+    "key": "L01782_01",
+    "original": "set_wall_state: %s @ (%d,%d) %s%s%s%s",
+    "translation": "",
+    "context": "src/display.c:1782:11\n  1777: \n  1778: STATIC_OVL void\n  1779: error4(x, y, a, b, c, dd)\n  1780:     int x, y, a, b, c, dd;\n  1781: {\n> 1782:     pline(\"set_wall_state: %s @ (%d,%d) %s%s%s%s\",\n  1783: \ttype_to_name(levl[x][y].typ), x, y,\n  1784: \ta ? \"1\":\"\", b ? \"2\":\"\", c ? \"3\":\"\", dd ? \"4\":\"\");\n  1785:     bad_count[levl[x][y].typ]++;\n  1786: }\n  1787: #endif /* WA_VERBOSE */"
+  },
+  {
+    "key": "L02004_01",
+    "original": "set_wall_type: wall mode problems with: ",
+    "translation": "",
+    "context": "src/display.c:2004:9\n  1999:     /* check if any bad positions found */\n  2000:     for (x = y = 0; x < MAX_TYPE; x++)\n  2001: \tif (bad_count[x]) {\n  2002: \t    if (y == 0) {\n  2003: \t\ty = 1;\t/* only print once */\n> 2004: \t\tpline(\"set_wall_type: wall mode problems with: \");\n  2005: \t    }\n  2006: \t    pline(\"%s %d;\", type_names[x], bad_count[x]);\n  2007: \t}\n  2008: #endif /* WA_VERBOSE */\n  2009: }"
+  },
+  {
+    "key": "L02006_01",
+    "original": "%s %d;",
+    "translation": "",
+    "context": "src/display.c:2006:12\n  2001: \tif (bad_count[x]) {\n  2002: \t    if (y == 0) {\n  2003: \t\ty = 1;\t/* only print once */\n  2004: \t\tpline(\"set_wall_type: wall mode problems with: \");\n  2005: \t    }\n> 2006: \t    pline(\"%s %d;\", type_names[x], bad_count[x]);\n  2007: \t}\n  2008: #endif /* WA_VERBOSE */\n  2009: }\n  2010: \n  2011: /* ------------------------------------------------------------------------- */"
+  },
+  {
+    "key": "L02091_01",
+    "original": "wall_angle: %s: case %d: seenv = 0x%x",
+    "translation": "",
+    "context": "src/display.c:2091:36\n  2086: /* Print out a T wall warning and all interesting info. */\n  2087: STATIC_OVL void\n  2088: t_warn(lev)\n  2089:     struct rm *lev;\n  2090: {\n> 2091:     static const char warn_str[] = \"wall_angle: %s: case %d: seenv = 0x%x\";\n  2092:     const char *wname;\n  2093: \n  2094:     if (lev->typ == TUWALL) wname = \"tuwall\";\n  2095:     else if (lev->typ == TLWALL) wname = \"tlwall\";\n  2096:     else if (lev->typ == TRWALL) wname = \"trwall\";"
+  },
+  {
+    "key": "L02094_01",
+    "original": "tuwall",
+    "translation": "",
+    "context": "src/display.c:2094:37\n  2089:     struct rm *lev;\n  2090: {\n  2091:     static const char warn_str[] = \"wall_angle: %s: case %d: seenv = 0x%x\";\n  2092:     const char *wname;\n  2093: \n> 2094:     if (lev->typ == TUWALL) wname = \"tuwall\";\n  2095:     else if (lev->typ == TLWALL) wname = \"tlwall\";\n  2096:     else if (lev->typ == TRWALL) wname = \"trwall\";\n  2097:     else if (lev->typ == TDWALL) wname = \"tdwall\";\n  2098:     else wname = \"unknown\";\n  2099:     impossible(warn_str, wname, lev->wall_info & WM_MASK,"
+  },
+  {
+    "key": "L02095_01",
+    "original": "tlwall",
+    "translation": "",
+    "context": "src/display.c:2095:42\n  2090: {\n  2091:     static const char warn_str[] = \"wall_angle: %s: case %d: seenv = 0x%x\";\n  2092:     const char *wname;\n  2093: \n  2094:     if (lev->typ == TUWALL) wname = \"tuwall\";\n> 2095:     else if (lev->typ == TLWALL) wname = \"tlwall\";\n  2096:     else if (lev->typ == TRWALL) wname = \"trwall\";\n  2097:     else if (lev->typ == TDWALL) wname = \"tdwall\";\n  2098:     else wname = \"unknown\";\n  2099:     impossible(warn_str, wname, lev->wall_info & WM_MASK,\n  2100: \t(unsigned int) lev->seenv);"
+  },
+  {
+    "key": "L02096_01",
+    "original": "trwall",
+    "translation": "",
+    "context": "src/display.c:2096:42\n  2091:     static const char warn_str[] = \"wall_angle: %s: case %d: seenv = 0x%x\";\n  2092:     const char *wname;\n  2093: \n  2094:     if (lev->typ == TUWALL) wname = \"tuwall\";\n  2095:     else if (lev->typ == TLWALL) wname = \"tlwall\";\n> 2096:     else if (lev->typ == TRWALL) wname = \"trwall\";\n  2097:     else if (lev->typ == TDWALL) wname = \"tdwall\";\n  2098:     else wname = \"unknown\";\n  2099:     impossible(warn_str, wname, lev->wall_info & WM_MASK,\n  2100: \t(unsigned int) lev->seenv);\n  2101: }"
+  },
+  {
+    "key": "L02097_01",
+    "original": "tdwall",
+    "translation": "",
+    "context": "src/display.c:2097:42\n  2092:     const char *wname;\n  2093: \n  2094:     if (lev->typ == TUWALL) wname = \"tuwall\";\n  2095:     else if (lev->typ == TLWALL) wname = \"tlwall\";\n  2096:     else if (lev->typ == TRWALL) wname = \"trwall\";\n> 2097:     else if (lev->typ == TDWALL) wname = \"tdwall\";\n  2098:     else wname = \"unknown\";\n  2099:     impossible(warn_str, wname, lev->wall_info & WM_MASK,\n  2100: \t(unsigned int) lev->seenv);\n  2101: }\n  2102: "
+  },
+  {
+    "key": "L02098_01",
+    "original": "unknown",
+    "translation": "",
+    "context": "src/display.c:2098:18\n  2093: \n  2094:     if (lev->typ == TUWALL) wname = \"tuwall\";\n  2095:     else if (lev->typ == TLWALL) wname = \"tlwall\";\n  2096:     else if (lev->typ == TRWALL) wname = \"trwall\";\n  2097:     else if (lev->typ == TDWALL) wname = \"tdwall\";\n> 2098:     else wname = \"unknown\";\n  2099:     impossible(warn_str, wname, lev->wall_info & WM_MASK,\n  2100: \t(unsigned int) lev->seenv);\n  2101: }\n  2102: \n  2103: "
+  },
+  {
+    "key": "L02226_01",
+    "original": "wall_angle: unknown T wall mode %d",
+    "translation": "",
+    "context": "src/display.c:2226:15\n  2221: \t\t\telse\n  2222: \t\t\t    col = T_tdwall;\n  2223: \n  2224: \t\t\tbreak;\n  2225: \t\t    default:\n> 2226: \t\t\timpossible(\"wall_angle: unknown T wall mode %d\",\n  2227: \t\t\t\tlev->wall_info & WM_MASK);\n  2228: \t\t\tcol = T_stone;\n  2229: \t\t\tbreak;\n  2230: \t\t}\n  2231: \t\tidx = row[col];"
+  },
+  {
+    "key": "L02247_01",
+    "original": "wall_angle: unknown vwall mode %d",
+    "translation": "",
+    "context": "src/display.c:2247:15\n  2242: \t\t\t    break;\n  2243: \t\t    case 2: idx = seenv & (SV0|SV1|SV5|SV6|SV7) ? S_vwall :\n  2244: \t\t\t\t\t\t\t\t  S_stone;\n  2245: \t\t\t    break;\n  2246: \t\t    default:\n> 2247: \t\t\timpossible(\"wall_angle: unknown vwall mode %d\",\n  2248: \t\t\t\tlev->wall_info & WM_MASK);\n  2249: \t\t\tidx = S_stone;\n  2250: \t\t\tbreak;\n  2251: \t\t}\n  2252: \t\tbreak;"
+  },
+  {
+    "key": "L02265_01",
+    "original": "wall_angle: unknown hwall mode %d",
+    "translation": "",
+    "context": "src/display.c:2265:15\n  2260: \t\t\t    break;\n  2261: \t\t    case 2: idx = seenv & (SV0|SV1|SV2|SV3|SV7) ? S_hwall :\n  2262: \t\t\t\t\t\t\t\t  S_stone;\n  2263: \t\t\t    break;\n  2264: \t\t    default:\n> 2265: \t\t\timpossible(\"wall_angle: unknown hwall mode %d\",\n  2266: \t\t\t\tlev->wall_info & WM_MASK);\n  2267: \t\t\tidx = S_stone;\n  2268: \t\t\tbreak;\n  2269: \t\t}\n  2270: \t\tbreak;"
+  },
+  {
+    "key": "L02285_01",
+    "original": "tlcorn",
+    "translation": "",
+    "context": "src/display.c:2285:57\n  2280: \t    idx = S_stone;\t\t\t\t\t\t    \\\n  2281: \t    break;\t\t\t\t\t\t\t    \\\n  2282:     }\n  2283: \n  2284: \tcase TLCORNER:\n> 2285: \t    set_corner(idx, lev, S_tlcorn, (SV3|SV4|SV5), SV4, \"tlcorn\");\n  2286: \t    break;\n  2287: \tcase TRCORNER:\n  2288: \t    set_corner(idx, lev, S_trcorn, (SV5|SV6|SV7), SV6, \"trcorn\");\n  2289: \t    break;\n  2290: \tcase BLCORNER:"
+  },
+  {
+    "key": "L02288_01",
+    "original": "trcorn",
+    "translation": "",
+    "context": "src/display.c:2288:57\n  2283: \n  2284: \tcase TLCORNER:\n  2285: \t    set_corner(idx, lev, S_tlcorn, (SV3|SV4|SV5), SV4, \"tlcorn\");\n  2286: \t    break;\n  2287: \tcase TRCORNER:\n> 2288: \t    set_corner(idx, lev, S_trcorn, (SV5|SV6|SV7), SV6, \"trcorn\");\n  2289: \t    break;\n  2290: \tcase BLCORNER:\n  2291: \t    set_corner(idx, lev, S_blcorn, (SV1|SV2|SV3), SV2, \"blcorn\");\n  2292: \t    break;\n  2293: \tcase BRCORNER:"
+  },
+  {
+    "key": "L02291_01",
+    "original": "blcorn",
+    "translation": "",
+    "context": "src/display.c:2291:57\n  2286: \t    break;\n  2287: \tcase TRCORNER:\n  2288: \t    set_corner(idx, lev, S_trcorn, (SV5|SV6|SV7), SV6, \"trcorn\");\n  2289: \t    break;\n  2290: \tcase BLCORNER:\n> 2291: \t    set_corner(idx, lev, S_blcorn, (SV1|SV2|SV3), SV2, \"blcorn\");\n  2292: \t    break;\n  2293: \tcase BRCORNER:\n  2294: \t    set_corner(idx, lev, S_brcorn, (SV7|SV0|SV1), SV0, \"brcorn\");\n  2295: \t    break;\n  2296: "
+  },
+  {
+    "key": "L02294_01",
+    "original": "brcorn",
+    "translation": "",
+    "context": "src/display.c:2294:57\n  2289: \t    break;\n  2290: \tcase BLCORNER:\n  2291: \t    set_corner(idx, lev, S_blcorn, (SV1|SV2|SV3), SV2, \"blcorn\");\n  2292: \t    break;\n  2293: \tcase BRCORNER:\n> 2294: \t    set_corner(idx, lev, S_brcorn, (SV7|SV0|SV1), SV0, \"brcorn\");\n  2295: \t    break;\n  2296: \n  2297: \n  2298: \tcase CROSSWALL:\n  2299: \t\tswitch (lev->wall_info & WM_MASK) {"
+  },
+  {
+    "key": "L02366_01",
+    "original": "wall_angle: bottom of crwall check",
+    "translation": "",
+    "context": "src/display.c:2366:9\n  2361: \t\t\t\tcol = seenv & SV7 ? C_crwall : C_tuwall;\n  2362: \t\t\t    } else if (seenv & SV7) {\n  2363: \t\t\t\tcol = seenv & SV1 ? C_crwall : C_tlwall;\n  2364: \t\t\t    } else {\n  2365: \t\t\t\timpossible(\n> 2366: \t\t\t\t    \"wall_angle: bottom of crwall check\");\n  2367: \t\t\t\tcol = C_crwall;\n  2368: \t\t\t    }\n  2369: \n  2370: \t\t\t    idx = row[col];\n  2371: \t\t\t}"
+  },
+  {
+    "key": "L02397_01",
+    "original": "wall_angle: unknown crosswall mode",
+    "translation": "",
+    "context": "src/display.c:2397:15\n  2392: \t\t\telse\n  2393: \t\t\t    idx = S_crwall;\n  2394: \t\t\tbreak;\n  2395: \n  2396: \t\t    default:\n> 2397: \t\t\timpossible(\"wall_angle: unknown crosswall mode\");\n  2398: \t\t\tidx = S_stone;\n  2399: \t\t\tbreak;\n  2400: \t\t}\n  2401: \t\tbreak;\n  2402: "
+  },
+  {
+    "key": "L02404_01",
+    "original": "wall_angle: unexpected wall type %d",
+    "translation": "",
+    "context": "src/display.c:2404:17\n  2399: \t\t\tbreak;\n  2400: \t\t}\n  2401: \t\tbreak;\n  2402: \n  2403: \tdefault:\n> 2404: \t    impossible(\"wall_angle: unexpected wall type %d\", lev->typ);\n  2405: \t    idx = S_stone;\n  2406:     }\n  2407:     return idx;\n  2408: }\n  2409: "
+  }
+]

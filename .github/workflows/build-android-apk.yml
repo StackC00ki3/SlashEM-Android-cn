@@ -16,6 +16,9 @@ jobs:
       - name: Check out SlashEM
         uses: actions/checkout@v4
 
+      - name: Apply Paratranz translations
+        run: python3 tools/paratranz_sync.py apply
+
       - name: Set up Java for Android SDK
         uses: actions/setup-java@v4
         with:

@@ -1,0 +1,212 @@
+[
+  {
+    "key": "L00071_01",
+    "original": "Setworn: mask = %ld.",
+    "translation": "",
+    "context": "src/worn.c:71:15\n    66: \t /* assert( !uarm ); */\n    67: \t} else {\n    68: \t    for(wp = worn; wp->w_mask; wp++) if(wp->w_mask & mask) {\n    69: \t\toobj = *(wp->w_obj);\n    70: \t\tif(oobj && !(oobj->owornmask & wp->w_mask))\n>   71: \t\t\timpossible(\"Setworn: mask = %ld.\", wp->w_mask);\n    72: \t\tif(oobj) {\n    73: \t\t    if (u.twoweap && (oobj->owornmask & (W_WEP|W_SWAPWEP))) {\n    74: \t\t\tif (uswapwep)\n    75: \t\t\t    unwield(uswapwep, FALSE);\n    76: \t\t\tu.twoweap = 0;"
+  },
+  {
+    "key": "L00207_01",
+    "original": "much ",
+    "translation": "",
+    "context": "src/worn.c:207:5\n   202: \tmon->mspeed = mon->permspeed;\n   203: \n   204:     if (give_msg && (mon->mspeed != oldspeed || petrify) && canseemon(mon)) {\n   205: \t/* fast to slow (skipping intermediate state) or vice versa */\n   206: \tconst char *howmuch = (mon->mspeed + oldspeed == MFAST + MSLOW) ?\n>  207: \t\t\t\t\"much \" : \"\";\n   208: \n   209: \tif (petrify) {\n   210: \t    /* mimic the player's petrification countdown; \"slowing down\"\n   211: \t       even if fast movement rate retained via worn speed boots */\n   212: \t    if (flags.verbose) pline(\"%s is slowing down.\", Monnam(mon));"
+  },
+  {
+    "key": "L00212_01",
+    "original": "%s is slowing down.",
+    "translation": "",
+    "context": "src/worn.c:212:31\n   207: \t\t\t\t\"much \" : \"\";\n   208: \n   209: \tif (petrify) {\n   210: \t    /* mimic the player's petrification countdown; \"slowing down\"\n   211: \t       even if fast movement rate retained via worn speed boots */\n>  212: \t    if (flags.verbose) pline(\"%s is slowing down.\", Monnam(mon));\n   213: \t} else if (adjust > 0 || mon->mspeed == MFAST)\n   214: \t    pline(\"%s is suddenly moving %sfaster.\", Monnam(mon), howmuch);\n   215: \telse\n   216: \t    pline(\"%s seems to be moving %sslower.\", Monnam(mon), howmuch);\n   217: "
+  },
+  {
+    "key": "L00214_01",
+    "original": "%s is suddenly moving %sfaster.",
+    "translation": "",
+    "context": "src/worn.c:214:12\n   209: \tif (petrify) {\n   210: \t    /* mimic the player's petrification countdown; \"slowing down\"\n   211: \t       even if fast movement rate retained via worn speed boots */\n   212: \t    if (flags.verbose) pline(\"%s is slowing down.\", Monnam(mon));\n   213: \t} else if (adjust > 0 || mon->mspeed == MFAST)\n>  214: \t    pline(\"%s is suddenly moving %sfaster.\", Monnam(mon), howmuch);\n   215: \telse\n   216: \t    pline(\"%s seems to be moving %sslower.\", Monnam(mon), howmuch);\n   217: \n   218: \t/* might discover an object if we see the speed change happen, but\n   219: \t   avoid making possibly forgotten book known when casting its spell */"
+  },
+  {
+    "key": "L00216_01",
+    "original": "%s seems to be moving %sslower.",
+    "translation": "",
+    "context": "src/worn.c:216:12\n   211: \t       even if fast movement rate retained via worn speed boots */\n   212: \t    if (flags.verbose) pline(\"%s is slowing down.\", Monnam(mon));\n   213: \t} else if (adjust > 0 || mon->mspeed == MFAST)\n   214: \t    pline(\"%s is suddenly moving %sfaster.\", Monnam(mon), howmuch);\n   215: \telse\n>  216: \t    pline(\"%s seems to be moving %sslower.\", Monnam(mon), howmuch);\n   217: \n   218: \t/* might discover an object if we see the speed change happen, but\n   219: \t   avoid making possibly forgotten book known when casting its spell */\n   220: \tif (obj != 0 && obj->dknown &&\n   221: \t\tobjects[obj->otyp].oc_class != SPBOOK_CLASS)"
+  },
+  {
+    "key": "L00514_01",
+    "original": " removes %s and",
+    "translation": "",
+    "context": "src/worn.c:514:20\n   509: \tif (!creation) {\n   510: \t    if (canseemon(mon)) {\n   511: \t\tchar buf[BUFSZ];\n   512: \n   513: \t\tif (old)\n>  514: \t\t    Sprintf(buf, \" removes %s and\", distant_name(old, doname));\n   515: \t\telse\n   516: \t\t    buf[0] = '\\0';\n   517: \t\tpline(\"%s%s puts on %s.\", Monnam(mon),\n   518: \t\t      buf, distant_name(best,doname));\n   519: \t    } /* can see it */"
+  },
+  {
+    "key": "L00517_01",
+    "original": "%s%s puts on %s.",
+    "translation": "",
+    "context": "src/worn.c:517:9\n   512: \n   513: \t\tif (old)\n   514: \t\t    Sprintf(buf, \" removes %s and\", distant_name(old, doname));\n   515: \t\telse\n   516: \t\t    buf[0] = '\\0';\n>  517: \t\tpline(\"%s%s puts on %s.\", Monnam(mon),\n   518: \t\t      buf, distant_name(best,doname));\n   519: \t    } /* can see it */\n   520: \t    m_delay += objects[best->otyp].oc_delay;\n   521: \t    mon->mfrozen = m_delay;\n   522: \t    if (mon->mfrozen) mon->mcanmove = 0;"
+  },
+  {
+    "key": "L00532_01",
+    "original": "Suddenly you cannot see %s.",
+    "translation": "",
+    "context": "src/worn.c:532:10\n   527: \tbest->owornmask |= flag;\n   528: \tupdate_mon_intrinsics(mon, best, TRUE, creation);\n   529: \t/* if couldn't see it but now can, or vice versa, */\n   530: \tif (!creation && (unseen ^ !canseemon(mon))) {\n   531: \t\tif (mon->minvis && !See_invisible) {\n>  532: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n   533: \t\t\tmakeknown(best->otyp);\n   534: \t\t} /* else if (!mon->minvis) pline(\"%s suddenly appears!\", Amonnam(mon)); */\n   535: \t}\n   536: }\n   537: #undef RACE_EXCEPTION"
+  },
+  {
+    "key": "L00638_01",
+    "original": "%s breaks out of %s armor!",
+    "translation": "",
+    "context": "src/worn.c:638:13\n   633: \t\t    (Is_dragon_mail(otmp) && mdat == Dragon_mail_to_pm(otmp)))\n   634: \t\t    ;\t/* no message here;\n   635: \t\t\t   \"the dragon merges with his scaly armor\" is odd\n   636: \t\t\t   and the monster's previous form is already gone */\n   637: \t\telse if (vis)\n>  638: \t\t    pline(\"%s breaks out of %s armor!\", Monnam(mon), ppronoun);\n   639: \t\telse\n   640: \t\t    You_hear(\"a cracking sound.\");\n   641: \t\tm_useup(mon, otmp);\n   642: \t    }\n   643: \t    if ((otmp = which_armor(mon, W_ARMC)) != 0) {"
+  },
+  {
+    "key": "L00640_01",
+    "original": "a cracking sound.",
+    "translation": "",
+    "context": "src/worn.c:640:16\n   635: \t\t\t   \"the dragon merges with his scaly armor\" is odd\n   636: \t\t\t   and the monster's previous form is already gone */\n   637: \t\telse if (vis)\n   638: \t\t    pline(\"%s breaks out of %s armor!\", Monnam(mon), ppronoun);\n   639: \t\telse\n>  640: \t\t    You_hear(\"a cracking sound.\");\n   641: \t\tm_useup(mon, otmp);\n   642: \t    }\n   643: \t    if ((otmp = which_armor(mon, W_ARMC)) != 0) {\n   644: \t\tif (otmp->oartifact) {\n   645: \t\t    if (vis)"
+  },
+  {
+    "key": "L00646_01",
+    "original": "%s %s falls off!",
+    "translation": "",
+    "context": "src/worn.c:646:10\n   641: \t\tm_useup(mon, otmp);\n   642: \t    }\n   643: \t    if ((otmp = which_armor(mon, W_ARMC)) != 0) {\n   644: \t\tif (otmp->oartifact) {\n   645: \t\t    if (vis)\n>  646: \t\t\tpline(\"%s %s falls off!\", s_suffix(Monnam(mon)),\n   647: \t\t\t\tcloak_simple_name(otmp));\n   648: \t\t    if (polyspot) bypass_obj(otmp);\n   649: \t\t    m_lose_armor(mon, otmp);\n   650: \t\t} else {\n   651: \t\t    if (vis)"
+  },
+  {
+    "key": "L00652_01",
+    "original": "%s %s tears apart!",
+    "translation": "",
+    "context": "src/worn.c:652:10\n   647: \t\t\t\tcloak_simple_name(otmp));\n   648: \t\t    if (polyspot) bypass_obj(otmp);\n   649: \t\t    m_lose_armor(mon, otmp);\n   650: \t\t} else {\n   651: \t\t    if (vis)\n>  652: \t\t\tpline(\"%s %s tears apart!\", s_suffix(Monnam(mon)),\n   653: \t\t\t\tcloak_simple_name(otmp));\n   654: \t\t    else\n   655: \t\t\tYou_hear(\"a ripping sound.\");\n   656: \t\t    m_useup(mon, otmp);\n   657: \t\t}"
+  },
+  {
+    "key": "L00655_01",
+    "original": "a ripping sound.",
+    "translation": "",
+    "context": "src/worn.c:655:13\n   650: \t\t} else {\n   651: \t\t    if (vis)\n   652: \t\t\tpline(\"%s %s tears apart!\", s_suffix(Monnam(mon)),\n   653: \t\t\t\tcloak_simple_name(otmp));\n   654: \t\t    else\n>  655: \t\t\tYou_hear(\"a ripping sound.\");\n   656: \t\t    m_useup(mon, otmp);\n   657: \t\t}\n   658: \t    }\n   659: #ifdef TOURIST\n   660: \t    if ((otmp = which_armor(mon, W_ARMU)) != 0) {"
+  },
+  {
+    "key": "L00662_01",
+    "original": "%s shirt rips to shreds!",
+    "translation": "",
+    "context": "src/worn.c:662:13\n   657: \t\t}\n   658: \t    }\n   659: #ifdef TOURIST\n   660: \t    if ((otmp = which_armor(mon, W_ARMU)) != 0) {\n   661: \t\tif (vis)\n>  662: \t\t    pline(\"%s shirt rips to shreds!\", s_suffix(Monnam(mon)));\n   663: \t\telse\n   664: \t\t    You_hear(\"a ripping sound.\");\n   665: \t\tm_useup(mon, otmp);\n   666: \t    }\n   667: #endif"
+  },
+  {
+    "key": "L00664_01",
+    "original": "a ripping sound.",
+    "translation": "",
+    "context": "src/worn.c:664:16\n   659: #ifdef TOURIST\n   660: \t    if ((otmp = which_armor(mon, W_ARMU)) != 0) {\n   661: \t\tif (vis)\n   662: \t\t    pline(\"%s shirt rips to shreds!\", s_suffix(Monnam(mon)));\n   663: \t\telse\n>  664: \t\t    You_hear(\"a ripping sound.\");\n   665: \t\tm_useup(mon, otmp);\n   666: \t    }\n   667: #endif\n   668: \t} else if (sliparm(mdat)) {\n   669: \t    if ((otmp = which_armor(mon, W_ARM)) != 0) {"
+  },
+  {
+    "key": "L00671_01",
+    "original": "%s armor falls around %s!",
+    "translation": "",
+    "context": "src/worn.c:671:13\n   666: \t    }\n   667: #endif\n   668: \t} else if (sliparm(mdat)) {\n   669: \t    if ((otmp = which_armor(mon, W_ARM)) != 0) {\n   670: \t\tif (vis)\n>  671: \t\t    pline(\"%s armor falls around %s!\",\n   672: \t\t\t\t s_suffix(Monnam(mon)), pronoun);\n   673: \t\telse\n   674: \t\t    You_hear(\"a thud.\");\n   675: \t\tif (polyspot) bypass_obj(otmp);\n   676: \t\tm_lose_armor(mon, otmp);"
+  },
+  {
+    "key": "L00674_01",
+    "original": "a thud.",
+    "translation": "",
+    "context": "src/worn.c:674:16\n   669: \t    if ((otmp = which_armor(mon, W_ARM)) != 0) {\n   670: \t\tif (vis)\n   671: \t\t    pline(\"%s armor falls around %s!\",\n   672: \t\t\t\t s_suffix(Monnam(mon)), pronoun);\n   673: \t\telse\n>  674: \t\t    You_hear(\"a thud.\");\n   675: \t\tif (polyspot) bypass_obj(otmp);\n   676: \t\tm_lose_armor(mon, otmp);\n   677: \t    }\n   678: \t    if ((otmp = which_armor(mon, W_ARMC)) != 0) {\n   679: \t\tif (vis) {"
+  },
+  {
+    "key": "L00681_01",
+    "original": "%s %s falls, unsupported!",
+    "translation": "",
+    "context": "src/worn.c:681:10\n   676: \t\tm_lose_armor(mon, otmp);\n   677: \t    }\n   678: \t    if ((otmp = which_armor(mon, W_ARMC)) != 0) {\n   679: \t\tif (vis) {\n   680: \t\t    if (is_whirly(mon->data))\n>  681: \t\t\tpline(\"%s %s falls, unsupported!\",\n   682: \t\t\t\t     s_suffix(Monnam(mon)), cloak_simple_name(otmp));\n   683: \t\t    else\n   684: \t\t\tpline(\"%s shrinks out of %s %s!\", Monnam(mon),\n   685: \t\t\t\t\t\tppronoun, cloak_simple_name(otmp));\n   686: \t\t}"
+  },
+  {
+    "key": "L00684_01",
+    "original": "%s shrinks out of %s %s!",
+    "translation": "",
+    "context": "src/worn.c:684:10\n   679: \t\tif (vis) {\n   680: \t\t    if (is_whirly(mon->data))\n   681: \t\t\tpline(\"%s %s falls, unsupported!\",\n   682: \t\t\t\t     s_suffix(Monnam(mon)), cloak_simple_name(otmp));\n   683: \t\t    else\n>  684: \t\t\tpline(\"%s shrinks out of %s %s!\", Monnam(mon),\n   685: \t\t\t\t\t\tppronoun, cloak_simple_name(otmp));\n   686: \t\t}\n   687: \t\tif (polyspot) bypass_obj(otmp);\n   688: \t\tm_lose_armor(mon, otmp);\n   689: \t    }"
+  },
+  {
+    "key": "L00694_01",
+    "original": "%s seeps right through %s shirt!",
+    "translation": "",
+    "context": "src/worn.c:694:10\n   689: \t    }\n   690: #ifdef TOURIST\n   691: \t    if ((otmp = which_armor(mon, W_ARMU)) != 0) {\n   692: \t\tif (vis) {\n   693: \t\t    if (sliparm(mon->data))\n>  694: \t\t\tpline(\"%s seeps right through %s shirt!\",\n   695: \t\t\t\t\tMonnam(mon), ppronoun);\n   696: \t\t    else\n   697: \t\t\tpline(\"%s becomes much too small for %s shirt!\",\n   698: \t\t\t\t\tMonnam(mon), ppronoun);\n   699: \t\t}"
+  },
+  {
+    "key": "L00697_01",
+    "original": "%s becomes much too small for %s shirt!",
+    "translation": "",
+    "context": "src/worn.c:697:10\n   692: \t\tif (vis) {\n   693: \t\t    if (sliparm(mon->data))\n   694: \t\t\tpline(\"%s seeps right through %s shirt!\",\n   695: \t\t\t\t\tMonnam(mon), ppronoun);\n   696: \t\t    else\n>  697: \t\t\tpline(\"%s becomes much too small for %s shirt!\",\n   698: \t\t\t\t\tMonnam(mon), ppronoun);\n   699: \t\t}\n   700: \t\tif (polyspot) bypass_obj(otmp);\n   701: \t\tm_lose_armor(mon, otmp);\n   702: \t    }"
+  },
+  {
+    "key": "L00709_01",
+    "original": "%s drops %s gloves%s!",
+    "translation": "",
+    "context": "src/worn.c:709:13\n   704: \t}\n   705: \tif (handless_or_tiny) {\n   706: \t    /* [caller needs to handle weapon checks] */\n   707: \t    if ((otmp = which_armor(mon, W_ARMG)) != 0) {\n   708: \t\tif (vis)\n>  709: \t\t    pline(\"%s drops %s gloves%s!\", Monnam(mon), ppronoun,\n   710: \t\t\t\t\tMON_WEP(mon) ? \" and weapon\" : \"\");\n   711: \t\tif (polyspot) bypass_obj(otmp);\n   712: \t\tm_lose_armor(mon, otmp);\n   713: \t    }\n   714: \t    if ((otmp = which_armor(mon, W_ARMS)) != 0) {"
+  },
+  {
+    "key": "L00710_01",
+    "original": " and weapon",
+    "translation": "",
+    "context": "src/worn.c:710:21\n   705: \tif (handless_or_tiny) {\n   706: \t    /* [caller needs to handle weapon checks] */\n   707: \t    if ((otmp = which_armor(mon, W_ARMG)) != 0) {\n   708: \t\tif (vis)\n   709: \t\t    pline(\"%s drops %s gloves%s!\", Monnam(mon), ppronoun,\n>  710: \t\t\t\t\tMON_WEP(mon) ? \" and weapon\" : \"\");\n   711: \t\tif (polyspot) bypass_obj(otmp);\n   712: \t\tm_lose_armor(mon, otmp);\n   713: \t    }\n   714: \t    if ((otmp = which_armor(mon, W_ARMS)) != 0) {\n   715: \t\tif (vis)"
+  },
+  {
+    "key": "L00716_01",
+    "original": "%s can no longer hold %s shield!",
+    "translation": "",
+    "context": "src/worn.c:716:13\n   711: \t\tif (polyspot) bypass_obj(otmp);\n   712: \t\tm_lose_armor(mon, otmp);\n   713: \t    }\n   714: \t    if ((otmp = which_armor(mon, W_ARMS)) != 0) {\n   715: \t\tif (vis)\n>  716: \t\t    pline(\"%s can no longer hold %s shield!\", Monnam(mon),\n   717: \t\t\t\t\t\t\t\tppronoun);\n   718: \t\telse\n   719: \t\t    You_hear(\"a clank.\");\n   720: \t\tif (polyspot) bypass_obj(otmp);\n   721: \t\tm_lose_armor(mon, otmp);"
+  },
+  {
+    "key": "L00719_01",
+    "original": "a clank.",
+    "translation": "",
+    "context": "src/worn.c:719:16\n   714: \t    if ((otmp = which_armor(mon, W_ARMS)) != 0) {\n   715: \t\tif (vis)\n   716: \t\t    pline(\"%s can no longer hold %s shield!\", Monnam(mon),\n   717: \t\t\t\t\t\t\t\tppronoun);\n   718: \t\telse\n>  719: \t\t    You_hear(\"a clank.\");\n   720: \t\tif (polyspot) bypass_obj(otmp);\n   721: \t\tm_lose_armor(mon, otmp);\n   722: \t    }\n   723: \t}\n   724: \tif (handless_or_tiny || has_horns(mdat)) {"
+  },
+  {
+    "key": "L00729_01",
+    "original": "%s helmet falls to the %s!",
+    "translation": "",
+    "context": "src/worn.c:729:13\n   724: \tif (handless_or_tiny || has_horns(mdat)) {\n   725: \t    if ((otmp = which_armor(mon, W_ARMH)) != 0 &&\n   726: \t\t    /* flimsy test for horns matches polyself handling */\n   727: \t\t    (handless_or_tiny || !is_flimsy(otmp))) {\n   728: \t\tif (vis)\n>  729: \t\t    pline(\"%s helmet falls to the %s!\",\n   730: \t\t\t  s_suffix(Monnam(mon)), surface(mon->mx, mon->my));\n   731: \t\telse\n   732: \t\t    You_hear(\"a clank.\");\n   733: \t\tif (polyspot) bypass_obj(otmp);\n   734: \t\tm_lose_armor(mon, otmp);"
+  },
+  {
+    "key": "L00732_01",
+    "original": "a clank.",
+    "translation": "",
+    "context": "src/worn.c:732:16\n   727: \t\t    (handless_or_tiny || !is_flimsy(otmp))) {\n   728: \t\tif (vis)\n   729: \t\t    pline(\"%s helmet falls to the %s!\",\n   730: \t\t\t  s_suffix(Monnam(mon)), surface(mon->mx, mon->my));\n   731: \t\telse\n>  732: \t\t    You_hear(\"a clank.\");\n   733: \t\tif (polyspot) bypass_obj(otmp);\n   734: \t\tm_lose_armor(mon, otmp);\n   735: \t    }\n   736: \t}\n   737: \tif (handless_or_tiny || slithy(mdat) || mdat->mlet == S_CENTAUR) {"
+  },
+  {
+    "key": "L00741_01",
+    "original": "%s boots fall away!",
+    "translation": "",
+    "context": "src/worn.c:741:10\n   736: \t}\n   737: \tif (handless_or_tiny || slithy(mdat) || mdat->mlet == S_CENTAUR) {\n   738: \t    if ((otmp = which_armor(mon, W_ARMF)) != 0) {\n   739: \t\tif (vis) {\n   740: \t\t    if (is_whirly(mon->data))\n>  741: \t\t\tpline(\"%s boots fall away!\",\n   742: \t\t\t\t       s_suffix(Monnam(mon)));\n   743: \t\t    else pline(\"%s boots %s off %s feet!\",\n   744: \t\t\ts_suffix(Monnam(mon)),\n   745: \t\t\tverysmall(mdat) ? \"slide\" : \"are pushed\", ppronoun);\n   746: \t\t}"
+  },
+  {
+    "key": "L00743_01",
+    "original": "%s boots %s off %s feet!",
+    "translation": "",
+    "context": "src/worn.c:743:18\n   738: \t    if ((otmp = which_armor(mon, W_ARMF)) != 0) {\n   739: \t\tif (vis) {\n   740: \t\t    if (is_whirly(mon->data))\n   741: \t\t\tpline(\"%s boots fall away!\",\n   742: \t\t\t\t       s_suffix(Monnam(mon)));\n>  743: \t\t    else pline(\"%s boots %s off %s feet!\",\n   744: \t\t\ts_suffix(Monnam(mon)),\n   745: \t\t\tverysmall(mdat) ? \"slide\" : \"are pushed\", ppronoun);\n   746: \t\t}\n   747: \t\tif (polyspot) bypass_obj(otmp);\n   748: \t\tm_lose_armor(mon, otmp);"
+  },
+  {
+    "key": "L00745_01",
+    "original": "slide",
+    "translation": "",
+    "context": "src/worn.c:745:22\n   740: \t\t    if (is_whirly(mon->data))\n   741: \t\t\tpline(\"%s boots fall away!\",\n   742: \t\t\t\t       s_suffix(Monnam(mon)));\n   743: \t\t    else pline(\"%s boots %s off %s feet!\",\n   744: \t\t\ts_suffix(Monnam(mon)),\n>  745: \t\t\tverysmall(mdat) ? \"slide\" : \"are pushed\", ppronoun);\n   746: \t\t}\n   747: \t\tif (polyspot) bypass_obj(otmp);\n   748: \t\tm_lose_armor(mon, otmp);\n   749: \t    }\n   750: \t}"
+  },
+  {
+    "key": "L00745_02",
+    "original": "are pushed",
+    "translation": "",
+    "context": "src/worn.c:745:32\n   740: \t\t    if (is_whirly(mon->data))\n   741: \t\t\tpline(\"%s boots fall away!\",\n   742: \t\t\t\t       s_suffix(Monnam(mon)));\n   743: \t\t    else pline(\"%s boots %s off %s feet!\",\n   744: \t\t\ts_suffix(Monnam(mon)),\n>  745: \t\t\tverysmall(mdat) ? \"slide\" : \"are pushed\", ppronoun);\n   746: \t\t}\n   747: \t\tif (polyspot) bypass_obj(otmp);\n   748: \t\tm_lose_armor(mon, otmp);\n   749: \t    }\n   750: \t}"
+  },
+  {
+    "key": "L00757_01",
+    "original": "%s saddle falls off.",
+    "translation": "",
+    "context": "src/worn.c:757:13\n   752: \tif (!can_saddle(mon)) {\n   753: \t    if ((otmp = which_armor(mon, W_SADDLE)) != 0) {\n   754: \t\tif (polyspot) bypass_obj(otmp);\n   755: \t\tm_lose_armor(mon, otmp);\n   756: \t\tif (vis)\n>  757: \t\t    pline(\"%s saddle falls off.\", s_suffix(Monnam(mon)));\n   758: \t    }\n   759: \t    if (mon == u.usteed)\n   760: \t\tgoto noride;\n   761: \t} else if (mon == u.usteed && !can_ride(mon)) {\n   762: \tnoride:"
+  },
+  {
+    "key": "L00763_01",
+    "original": "can no longer ride %s.",
+    "translation": "",
+    "context": "src/worn.c:763:10\n   758: \t    }\n   759: \t    if (mon == u.usteed)\n   760: \t\tgoto noride;\n   761: \t} else if (mon == u.usteed && !can_ride(mon)) {\n   762: \tnoride:\n>  763: \t    You(\"can no longer ride %s.\", mon_nam(mon));\n   764: \t    if (touch_petrifies(u.usteed->data) &&\n   765: \t\t\t!Stone_resistance && rnl(3)) {\n   766: \t\tchar buf[BUFSZ];\n   767: \n   768: \t\tYou(\"touch %s.\", mon_nam(u.usteed));"
+  },
+  {
+    "key": "L00768_01",
+    "original": "touch %s.",
+    "translation": "",
+    "context": "src/worn.c:768:7\n   763: \t    You(\"can no longer ride %s.\", mon_nam(mon));\n   764: \t    if (touch_petrifies(u.usteed->data) &&\n   765: \t\t\t!Stone_resistance && rnl(3)) {\n   766: \t\tchar buf[BUFSZ];\n   767: \n>  768: \t\tYou(\"touch %s.\", mon_nam(u.usteed));\n   769: \t\tSprintf(buf, \"falling off %s\",\n   770: \t\t\t\tan(u.usteed->data->mname));\n   771: \t\tinstapetrify(buf);\n   772: \t    }\n   773: \t    dismount_steed(DISMOUNT_FELL);"
+  },
+  {
+    "key": "L00769_01",
+    "original": "falling off %s",
+    "translation": "",
+    "context": "src/worn.c:769:16\n   764: \t    if (touch_petrifies(u.usteed->data) &&\n   765: \t\t\t!Stone_resistance && rnl(3)) {\n   766: \t\tchar buf[BUFSZ];\n   767: \n   768: \t\tYou(\"touch %s.\", mon_nam(u.usteed));\n>  769: \t\tSprintf(buf, \"falling off %s\",\n   770: \t\t\t\tan(u.usteed->data->mname));\n   771: \t\tinstapetrify(buf);\n   772: \t    }\n   773: \t    dismount_steed(DISMOUNT_FELL);\n   774: \t}"
+  }
+]

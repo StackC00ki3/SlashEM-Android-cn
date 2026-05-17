@@ -1,0 +1,1370 @@
+[
+  {
+    "key": "L00086_01",
+    "original": "bonesnn.xxx",
+    "translation": "",
+    "context": "src/files.c:86:16\n    81: #define FQN_NUMBUF 4\n    82: static char fqn_filename_buffer[FQN_NUMBUF][FQN_MAX_FILENAME];\n    83: #endif\n    84: \n    85: #if !defined(MFLOPPY) && !defined(VMS) && !defined(WIN32)\n>   86: char bones[] = \"bonesnn.xxx\";\n    87: char lock[PL_NSIZ+14] = \"1lock\"; /* long enough for uid+name+.99 */\n    88: #else\n    89: # if defined(MFLOPPY)\n    90: char bones[FILENAMELEN];           /* pathname of bones files */\n    91: char lock[FILENAMELEN];            /* pathname of level files */"
+  },
+  {
+    "key": "L00087_01",
+    "original": "1lock",
+    "translation": "",
+    "context": "src/files.c:87:25\n    82: static char fqn_filename_buffer[FQN_NUMBUF][FQN_MAX_FILENAME];\n    83: #endif\n    84: \n    85: #if !defined(MFLOPPY) && !defined(VMS) && !defined(WIN32)\n    86: char bones[] = \"bonesnn.xxx\";\n>   87: char lock[PL_NSIZ+14] = \"1lock\"; /* long enough for uid+name+.99 */\n    88: #else\n    89: # if defined(MFLOPPY)\n    90: char bones[FILENAMELEN];           /* pathname of bones files */\n    91: char lock[FILENAMELEN];            /* pathname of level files */\n    92: # endif"
+  },
+  {
+    "key": "L00094_01",
+    "original": "bonesnn.xxx;1",
+    "translation": "",
+    "context": "src/files.c:94:16\n    89: # if defined(MFLOPPY)\n    90: char bones[FILENAMELEN];           /* pathname of bones files */\n    91: char lock[FILENAMELEN];            /* pathname of level files */\n    92: # endif\n    93: # if defined(VMS)\n>   94: char bones[] = \"bonesnn.xxx;1\";\n    95: char lock[PL_NSIZ+17] = \"1lock\"; /* long enough for _uid+name+.99;1 */\n    96: # endif\n    97: # if defined(WIN32)\n    98: char bones[] = \"bonesnn.xxx\";\n    99: char lock[PL_NSIZ+25];\t\t/* long enough for username+-+name+.99 */"
+  },
+  {
+    "key": "L00095_01",
+    "original": "1lock",
+    "translation": "",
+    "context": "src/files.c:95:25\n    90: char bones[FILENAMELEN];           /* pathname of bones files */\n    91: char lock[FILENAMELEN];            /* pathname of level files */\n    92: # endif\n    93: # if defined(VMS)\n    94: char bones[] = \"bonesnn.xxx;1\";\n>   95: char lock[PL_NSIZ+17] = \"1lock\"; /* long enough for _uid+name+.99;1 */\n    96: # endif\n    97: # if defined(WIN32)\n    98: char bones[] = \"bonesnn.xxx\";\n    99: char lock[PL_NSIZ+25];\t\t/* long enough for username+-+name+.99 */\n   100: # endif"
+  },
+  {
+    "key": "L00098_01",
+    "original": "bonesnn.xxx",
+    "translation": "",
+    "context": "src/files.c:98:16\n    93: # if defined(VMS)\n    94: char bones[] = \"bonesnn.xxx;1\";\n    95: char lock[PL_NSIZ+17] = \"1lock\"; /* long enough for _uid+name+.99;1 */\n    96: # endif\n    97: # if defined(WIN32)\n>   98: char bones[] = \"bonesnn.xxx\";\n    99: char lock[PL_NSIZ+25];\t\t/* long enough for username+-+name+.99 */\n   100: # endif\n   101: #endif\n   102: \n   103: #if defined(UNIX) || defined(__BEOS__)"
+  },
+  {
+    "key": "L00226_01",
+    "original": "0123456789ABCDEF",
+    "translation": "",
+    "context": "src/files.c:226:28\n   221: char *s, *callerbuf;\n   222: int bufsz;\n   223: {\n   224: \tchar *sp, *op;\n   225: \tint cnt = 0;\n>  226: \tstatic char hexdigits[] = \"0123456789ABCDEF\";\n   227: \n   228: \tsp = s;\n   229: \top = callerbuf;\n   230: \t*op = '\\0';\n   231: \t"
+  },
+  {
+    "key": "L00237_01",
+    "original": "%c%02X",
+    "translation": "",
+    "context": "src/files.c:237:22\n   232: \twhile (*sp) {\n   233: \t\t/* Do we have room for one more character or encoding? */\n   234: \t\tif ((bufsz - cnt) <= 4) return callerbuf;\n   235: \n   236: \t\tif (*sp == quotechar) {\n>  237: \t\t\t(void)sprintf(op, \"%c%02X\", quotechar, *sp);\n   238: \t\t\t op += 3;\n   239: \t\t\t cnt += 3;\n   240: \t\t} else if ((index(legal, *sp) != 0) || (index(hexdigits, *sp) != 0)) {\n   241: \t\t\t*op++ = *sp;\n   242: \t\t\t*op = '\\0';"
+  },
+  {
+    "key": "L00245_01",
+    "original": "%c%02X",
+    "translation": "",
+    "context": "src/files.c:245:21\n   240: \t\t} else if ((index(legal, *sp) != 0) || (index(hexdigits, *sp) != 0)) {\n   241: \t\t\t*op++ = *sp;\n   242: \t\t\t*op = '\\0';\n   243: \t\t\tcnt++;\n   244: \t\t} else {\n>  245: \t\t\t(void)sprintf(op,\"%c%02X\", quotechar, *sp);\n   246: \t\t\top += 3;\n   247: \t\t\tcnt += 3;\n   248: \t\t}\n   249: \t\tsp++;\n   250: \t}"
+  },
+  {
+    "key": "L00271_01",
+    "original": "0123456789ABCDEF",
+    "translation": "",
+    "context": "src/files.c:271:28\n   266: char *s, *callerbuf;\n   267: int bufsz;\n   268: {\n   269: \tchar *sp, *op;\n   270: \tint k,calc,cnt = 0;\n>  271: \tstatic char hexdigits[] = \"0123456789ABCDEF\";\n   272: \n   273: \tsp = s;\n   274: \top = callerbuf;\n   275: \t*op = '\\0';\n   276: \tcalc = 0;"
+  },
+  {
+    "key": "L00318_01",
+    "original": "Invalid fqn_filename_buffer specified: %d",
+    "translation": "",
+    "context": "src/files.c:318:14\n   313: \tif (!basename || whichprefix < 0 || whichprefix >= PREFIX_COUNT)\n   314: \t\treturn basename;\n   315: \tif (!fqn_prefix[whichprefix])\n   316: \t\treturn basename;\n   317: \tif (buffnum < 0 || buffnum >= FQN_NUMBUF) {\n>  318: \t\timpossible(\"Invalid fqn_filename_buffer specified: %d\",\n   319: \t\t\t\t\t\t\t\tbuffnum);\n   320: \t\tbuffnum = 0;\n   321: \t}\n   322: \tif (strlen(fqn_prefix[whichprefix]) + strlen(basename) >=\n   323: \t\t\t\t\t\t    FQN_MAX_FILENAME) {"
+  },
+  {
+    "key": "L00324_01",
+    "original": "fqname too long: %s + %s",
+    "translation": "",
+    "context": "src/files.c:324:14\n   319: \t\t\t\t\t\t\t\tbuffnum);\n   320: \t\tbuffnum = 0;\n   321: \t}\n   322: \tif (strlen(fqn_prefix[whichprefix]) + strlen(basename) >=\n   323: \t\t\t\t\t\t    FQN_MAX_FILENAME) {\n>  324: \t\timpossible(\"fqname too long: %s + %s\", fqn_prefix[whichprefix],\n   325: \t\t\t\t\t\tbasename);\n   326: \t\treturn basename;\t/* XXX */\n   327: \t}\n   328: \tStrcpy(fqn_filename_buffer[buffnum], fqn_prefix[whichprefix]);\n   329: \treturn strcat(fqn_filename_buffer[buffnum], basename);"
+  },
+  {
+    "key": "L00349_01",
+    "original": "validate",
+    "translation": "",
+    "context": "src/files.c:349:21\n   344: \n   345: \tif (reasonbuf) reasonbuf[0] = '\\0';\n   346: \tfor (prefcnt = 1; prefcnt < PREFIX_COUNT; prefcnt++) {\n   347: \t\t/* don't test writing to configdir or datadir; they're readonly */\n   348: \t\tif (prefcnt == CONFIGPREFIX || prefcnt == DATAPREFIX) continue;\n>  349: \t\tfilename = fqname(\"validate\", prefcnt, 3);\n   350: \t\tif ((fp = fopen(filename, \"w\"))) {\n   351: \t\t\tfclose(fp);\n   352: \t\t\t(void) unlink(filename);\n   353: \t\t} else {\n   354: \t\t\tif (reasonbuf) {"
+  },
+  {
+    "key": "L00350_01",
+    "original": "w",
+    "translation": "",
+    "context": "src/files.c:350:29\n   345: \tif (reasonbuf) reasonbuf[0] = '\\0';\n   346: \tfor (prefcnt = 1; prefcnt < PREFIX_COUNT; prefcnt++) {\n   347: \t\t/* don't test writing to configdir or datadir; they're readonly */\n   348: \t\tif (prefcnt == CONFIGPREFIX || prefcnt == DATAPREFIX) continue;\n   349: \t\tfilename = fqname(\"validate\", prefcnt, 3);\n>  350: \t\tif ((fp = fopen(filename, \"w\"))) {\n   351: \t\t\tfclose(fp);\n   352: \t\t\t(void) unlink(filename);\n   353: \t\t} else {\n   354: \t\t\tif (reasonbuf) {\n   355: \t\t\t\tif (failcount) Strcat(reasonbuf,\", \");"
+  },
+  {
+    "key": "L00359_01",
+    "original": "Invalid %s",
+    "translation": "",
+    "context": "src/files.c:359:22\n   354: \t\t\tif (reasonbuf) {\n   355: \t\t\t\tif (failcount) Strcat(reasonbuf,\", \");\n   356: \t\t\t\tStrcat(reasonbuf, fqn_prefix_names[prefcnt]);\n   357: \t\t\t}\n   358: \t\t\t/* the paniclog entry gets the value of errno as well */\n>  359: \t\t\tSprintf(panicbuf1,\"Invalid %s\", fqn_prefix_names[prefcnt]);\n   360: #if defined (NHSTDC) && !defined(NOTSTDC)\n   361: \t\t\tif (!(details = strerror(errno)))\n   362: #endif\n   363: \t\t\tdetails = \"\";\n   364: \t\t\tSprintf(panicbuf2,\"\\\"%s\\\", (%d) %s\","
+  },
+  {
+    "key": "L00364_01",
+    "original": "\\\"%s\\\", (%d) %s",
+    "translation": "",
+    "context": "src/files.c:364:22\n   359: \t\t\tSprintf(panicbuf1,\"Invalid %s\", fqn_prefix_names[prefcnt]);\n   360: #if defined (NHSTDC) && !defined(NOTSTDC)\n   361: \t\t\tif (!(details = strerror(errno)))\n   362: #endif\n   363: \t\t\tdetails = \"\";\n>  364: \t\t\tSprintf(panicbuf2,\"\\\"%s\\\", (%d) %s\",\n   365: \t\t\t\tfqn_prefix[prefcnt], errno, details);\n   366: \t\t\tpaniclog(panicbuf1, panicbuf2);\n   367: \t\t\tfailcount++;\n   368: \t\t}\t\n   369: \t}"
+  },
+  {
+    "key": "L00398_01",
+    "original": "mbc=16",
+    "translation": "",
+    "context": "src/files.c:398:29\n   393:     {\n   394: \tchar tmp[BUFSIZ];\n   395: \n   396: \tif (!index(filename, '.') && !index(filename, ';'))\n   397: \t\tfilename = strcat(strcpy(tmp, filename), \";0\");\n>  398: \tfp = fopen(filename, mode, \"mbc=16\");\n   399:     }\n   400: #else\n   401: \tfp = fopen(filename, mode);\n   402: #endif\n   403: \treturn fp;"
+  },
+  {
+    "key": "L00424_01",
+    "original": "bonesnn.*",
+    "translation": "",
+    "context": "src/files.c:424:16\n   419: \tappend_slash(levels);\n   420: #ifdef AMIGA\n   421: \tstrncat(levels, bbs_id, PATHLEN);\n   422: #endif\n   423: \tappend_slash(bones);\n>  424: \tStrcat(bones, \"bonesnn.*\");\n   425: \tStrcpy(lock, levels);\n   426: #ifndef AMIGA\n   427: \tStrcat(lock, alllevels);\n   428: #endif\n   429: \treturn;"
+  },
+  {
+    "key": "L00449_01",
+    "original": ".%d",
+    "translation": "",
+    "context": "src/files.c:449:14\n   444: {\n   445: \tchar *tf;\n   446: \n   447: \ttf = rindex(file, '.');\n   448: \tif (!tf) tf = eos(file);\n>  449: \tSprintf(tf, \".%d\", lev);\n   450: #ifdef VMS\n   451: \tStrcat(tf, \";1\");\n   452: #endif\n   453: \treturn;\n   454: }"
+  },
+  {
+    "key": "L00504_01",
+    "original": "Cannot create file \\\"%s\\\" for level %d (errno %d).",
+    "translation": "",
+    "context": "src/files.c:504:7\n   499: \n   500: \tif (fd >= 0)\n   501: \t    level_info[lev].flags |= LFILE_EXISTS;\n   502: \telse if (errbuf)        /* failure explanation */\n   503: \t    Sprintf(errbuf,\n>  504: \t\t    \"Cannot create file \\\"%s\\\" for level %d (errno %d).\",\n   505: \t\t    lock, lev, errno);\n   506: \n   507: \treturn fd;\n   508: }\n   509: "
+  },
+  {
+    "key": "L00551_01",
+    "original": "Cannot open file \\\"%s\\\" for level %d (errno %d).",
+    "translation": "",
+    "context": "src/files.c:551:7\n   546: \t/* for failure, return an explanation that our caller can use;\n   547: \t   settle for `lock' instead of `fq_lock' because the latter\n   548: \t   might end up being too big for nethack's BUFSZ */\n   549: \tif (fd < 0 && errbuf)\n   550: \t    Sprintf(errbuf,\n>  551: \t\t    \"Cannot open file \\\"%s\\\" for level %d (errno %d).\",\n   552: \t\t    lock, lev, errno);\n   553: \n   554: \treturn fd;\n   555: }\n   556: "
+  },
+  {
+    "key": "L00619_01",
+    "original": "open_levelfile_exclusively: lseek failed %d",
+    "translation": "",
+    "context": "src/files.c:619:14\n   614: \t\t/* check for compatible access */\n   615: \t\tif (lftrack.oflag == oflag) {\n   616: \t\t\tfd = lftrack.fd;\n   617: \t\t\treslt = lseek(fd, 0L, SEEK_SET);\n   618: \t\t\tif (reslt == -1L)\n>  619: \t\t\t    panic(\"open_levelfile_exclusively: lseek failed %d\", errno);\n   620: \t\t\tlftrack.nethack_thinks_it_is_open = TRUE;\n   621: \t\t} else {\n   622: \t\t\treally_close();\n   623: \t\t\tfd = sopen(name, oflag,SH_DENYRW, FCMASK);\n   624: \t\t\tlftrack.fd = fd;"
+  },
+  {
+    "key": "L00679_01",
+    "original": "bon%c%s",
+    "translation": "",
+    "context": "src/files.c:679:16\n   674: d_level *lev;\n   675: {\n   676: \ts_level *sptr;\n   677: \tchar *dptr;\n   678: \n>  679: \tSprintf(file, \"bon%c%s\", dungeons[lev->dnum].boneid,\n   680: \t\t\tIn_quest(lev) ? urole.filecode : \"0\");\n   681: \tdptr = eos(file);\n   682: \tif ((sptr = Is_special(lev)) != 0)\n   683: \t    Sprintf(dptr, \".%c\", sptr->boneid);\n   684: \telse"
+  },
+  {
+    "key": "L00683_01",
+    "original": ".%c",
+    "translation": "",
+    "context": "src/files.c:683:20\n   678: \n   679: \tSprintf(file, \"bon%c%s\", dungeons[lev->dnum].boneid,\n   680: \t\t\tIn_quest(lev) ? urole.filecode : \"0\");\n   681: \tdptr = eos(file);\n   682: \tif ((sptr = Is_special(lev)) != 0)\n>  683: \t    Sprintf(dptr, \".%c\", sptr->boneid);\n   684: \telse\n   685: \t    Sprintf(dptr, \".%d\", lev->dlevel);\n   686: #ifdef VMS\n   687: \tStrcat(dptr, \";1\");\n   688: #endif"
+  },
+  {
+    "key": "L00685_01",
+    "original": ".%d",
+    "translation": "",
+    "context": "src/files.c:685:20\n   680: \t\t\tIn_quest(lev) ? urole.filecode : \"0\");\n   681: \tdptr = eos(file);\n   682: \tif ((sptr = Is_special(lev)) != 0)\n   683: \t    Sprintf(dptr, \".%c\", sptr->boneid);\n   684: \telse\n>  685: \t    Sprintf(dptr, \".%d\", lev->dlevel);\n   686: #ifdef VMS\n   687: \tStrcat(dptr, \";1\");\n   688: #endif\n   689: \treturn(dptr-2);\n   690: }"
+  },
+  {
+    "key": "L00705_01",
+    "original": ".bn",
+    "translation": "",
+    "context": "src/files.c:705:14\n   700: {\n   701: \tchar *tf;\n   702: \n   703: \ttf = rindex(lock, '.');\n   704: \tif (!tf) tf = eos(lock);\n>  705: \tSprintf(tf, \".bn\");\n   706: #ifdef VMS\n   707: \tStrcat(tf, \";1\");\n   708: #endif\n   709: \treturn lock;\n   710: }"
+  },
+  {
+    "key": "L00751_01",
+    "original": "Cannot create bones \\\"%s\\\", id %s (errno %d).",
+    "translation": "",
+    "context": "src/files.c:751:7\n   746: # endif\n   747: # endif\t/* FILE_AREAS */\n   748: #endif\n   749: \tif (fd < 0 && errbuf) /* failure explanation */\n   750: \t    Sprintf(errbuf,\n>  751: \t\t    \"Cannot create bones \\\"%s\\\", id %s (errno %d).\",\n   752: \t\t    lock, *bonesid, errno);\n   753: \n   754: # if defined(VMS) && !defined(SECURE)\n   755: \t/*\n   756: \t   Re-protect bones file with world:read+write+execute+delete access."
+  },
+  {
+    "key": "L00824_01",
+    "original": "couldn't rename %s to %s.",
+    "translation": "",
+    "context": "src/files.c:824:9\n   819: # endif\n   820: #endif\t/* FILE_AREAS */\n   821: #ifdef WIZARD\n   822: \tif (wizard && ret != 0)\n   823: #ifdef FILE_AREAS\n>  824: \t\tpline(\"couldn't rename %s to %s.\", tempname, bones);\n   825: #else\n   826: \t\tpline(\"couldn't rename %s to %s.\", tempname, fq_bones);\n   827: #endif\n   828: #endif\n   829: }"
+  },
+  {
+    "key": "L00826_01",
+    "original": "couldn't rename %s to %s.",
+    "translation": "",
+    "context": "src/files.c:826:9\n   821: #ifdef WIZARD\n   822: \tif (wizard && ret != 0)\n   823: #ifdef FILE_AREAS\n   824: \t\tpline(\"couldn't rename %s to %s.\", tempname, bones);\n   825: #else\n>  826: \t\tpline(\"couldn't rename %s to %s.\", tempname, fq_bones);\n   827: #endif\n   828: #endif\n   829: }\n   830: \n   831: "
+  },
+  {
+    "key": "L00897_01",
+    "original": "[.save]%d%s",
+    "translation": "",
+    "context": "src/files.c:897:17\n   892: #if defined(WIN32)\n   893: \tchar fnamebuf[BUFSZ], encodedfnamebuf[BUFSZ];\n   894: #endif\n   895: #ifdef VMS\n   896: #ifndef FILE_AREAS\n>  897: \tSprintf(SAVEF, \"[.save]%d%s\", getuid(), plname);\n   898: \tregularize(SAVEF+7);\n   899: #else\n   900: \tSprintf(SAVEF, \"%d%s\", getuid(), plname);\n   901: \tregularize(SAVEF);\n   902: #endif"
+  },
+  {
+    "key": "L00900_01",
+    "original": "%d%s",
+    "translation": "",
+    "context": "src/files.c:900:17\n   895: #ifdef VMS\n   896: #ifndef FILE_AREAS\n   897: \tSprintf(SAVEF, \"[.save]%d%s\", getuid(), plname);\n   898: \tregularize(SAVEF+7);\n   899: #else\n>  900: \tSprintf(SAVEF, \"%d%s\", getuid(), plname);\n   901: \tregularize(SAVEF);\n   902: #endif\n   903: \tStrcat(SAVEF, \";1\");\n   904: #else\n   905: # if defined(MICRO)"
+  },
+  {
+    "key": "L00920_01",
+    "original": ".sav",
+    "translation": "",
+    "context": "src/files.c:920:16\n   915: #  else\n   916: \t\t(void)strncat(SAVEF, plname, 8);\n   917: #  endif\n   918: \t\tregularize(SAVEF+i);\n   919: \t}\n>  920: \tStrcat(SAVEF, \".sav\");\n   921: # else\n   922: #  ifndef FILE_AREAS\n   923: #  if defined(WIN32)\n   924: \t/* Obtain the name of the logged on user and incorporate\n   925: \t * it into the name. */"
+  },
+  {
+    "key": "L00926_01",
+    "original": "%s-%s",
+    "translation": "",
+    "context": "src/files.c:926:20\n   921: # else\n   922: #  ifndef FILE_AREAS\n   923: #  if defined(WIN32)\n   924: \t/* Obtain the name of the logged on user and incorporate\n   925: \t * it into the name. */\n>  926: \tSprintf(fnamebuf, \"%s-%s\", get_username(0), plname);\n   927: \t(void)fname_encode(\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-.\",\n   928: \t\t\t\t'%', fnamebuf, encodedfnamebuf, BUFSZ);\n   929: \tSprintf(SAVEF, \"%s.NetHack-saved-game\", encodedfnamebuf);\n   930: #  else\n   931: \tSprintf(SAVEF, \"save/%d%s\", (int)getuid(), plname);"
+  },
+  {
+    "key": "L00927_01",
+    "original": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-.",
+    "translation": "",
+    "context": "src/files.c:927:21\n   922: #  ifndef FILE_AREAS\n   923: #  if defined(WIN32)\n   924: \t/* Obtain the name of the logged on user and incorporate\n   925: \t * it into the name. */\n   926: \tSprintf(fnamebuf, \"%s-%s\", get_username(0), plname);\n>  927: \t(void)fname_encode(\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-.\",\n   928: \t\t\t\t'%', fnamebuf, encodedfnamebuf, BUFSZ);\n   929: \tSprintf(SAVEF, \"%s.NetHack-saved-game\", encodedfnamebuf);\n   930: #  else\n   931: \tSprintf(SAVEF, \"save/%d%s\", (int)getuid(), plname);\n   932: \tregularize(SAVEF+5);\t/* avoid . or / in name */"
+  },
+  {
+    "key": "L00929_01",
+    "original": "%s.NetHack-saved-game",
+    "translation": "",
+    "context": "src/files.c:929:17\n   924: \t/* Obtain the name of the logged on user and incorporate\n   925: \t * it into the name. */\n   926: \tSprintf(fnamebuf, \"%s-%s\", get_username(0), plname);\n   927: \t(void)fname_encode(\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-.\",\n   928: \t\t\t\t'%', fnamebuf, encodedfnamebuf, BUFSZ);\n>  929: \tSprintf(SAVEF, \"%s.NetHack-saved-game\", encodedfnamebuf);\n   930: #  else\n   931: \tSprintf(SAVEF, \"save/%d%s\", (int)getuid(), plname);\n   932: \tregularize(SAVEF+5);\t/* avoid . or / in name */\n   933: #  endif /* WIN32 */\n   934: #  else"
+  },
+  {
+    "key": "L00931_01",
+    "original": "save/%d%s",
+    "translation": "",
+    "context": "src/files.c:931:17\n   926: \tSprintf(fnamebuf, \"%s-%s\", get_username(0), plname);\n   927: \t(void)fname_encode(\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-.\",\n   928: \t\t\t\t'%', fnamebuf, encodedfnamebuf, BUFSZ);\n   929: \tSprintf(SAVEF, \"%s.NetHack-saved-game\", encodedfnamebuf);\n   930: #  else\n>  931: \tSprintf(SAVEF, \"save/%d%s\", (int)getuid(), plname);\n   932: \tregularize(SAVEF+5);\t/* avoid . or / in name */\n   933: #  endif /* WIN32 */\n   934: #  else\n   935: \tSprintf(SAVEF, \"%d%s\", (int)getuid(), plname);\n   936: \tregularize(SAVEF);      /* avoid . or / in name */"
+  },
+  {
+    "key": "L00935_01",
+    "original": "%d%s",
+    "translation": "",
+    "context": "src/files.c:935:17\n   930: #  else\n   931: \tSprintf(SAVEF, \"save/%d%s\", (int)getuid(), plname);\n   932: \tregularize(SAVEF+5);\t/* avoid . or / in name */\n   933: #  endif /* WIN32 */\n   934: #  else\n>  935: \tSprintf(SAVEF, \"%d%s\", (int)getuid(), plname);\n   936: \tregularize(SAVEF);      /* avoid . or / in name */\n   937: #  endif\n   938: # endif\t/* MICRO */\n   939: #endif /* VMS   */\n   940: }"
+  },
+  {
+    "key": "L00962_01",
+    "original": ".e;1",
+    "translation": "",
+    "context": "src/files.c:962:16\n   957: # ifdef VMS\n   958:       {\n   959: \tchar *semi_colon = rindex(SAVEF, ';');\n   960: \tif (semi_colon) *semi_colon = '\\0';\n   961:       }\n>  962: \tStrcat(SAVEF, \".e;1\");\n   963: # else\n   964: #  ifdef MAC\n   965: \tStrcat(SAVEF, \"-e\");\n   966: #  else\n   967: \tStrcat(SAVEF, \".e\");"
+  },
+  {
+    "key": "L00965_01",
+    "original": "-e",
+    "translation": "",
+    "context": "src/files.c:965:16\n   960: \tif (semi_colon) *semi_colon = '\\0';\n   961:       }\n   962: \tStrcat(SAVEF, \".e;1\");\n   963: # else\n   964: #  ifdef MAC\n>  965: \tStrcat(SAVEF, \"-e\");\n   966: #  else\n   967: \tStrcat(SAVEF, \".e\");\n   968: #  endif\n   969: # endif\n   970: }"
+  },
+  {
+    "key": "L00967_01",
+    "original": ".e",
+    "translation": "",
+    "context": "src/files.c:967:16\n   962: \tStrcat(SAVEF, \".e;1\");\n   963: # else\n   964: #  ifdef MAC\n   965: \tStrcat(SAVEF, \"-e\");\n   966: #  else\n>  967: \tStrcat(SAVEF, \".e\");\n   968: #  endif\n   969: # endif\n   970: }\n   971: #endif\n   972: "
+  },
+  {
+    "key": "L01141_01",
+    "original": "%*[^/]/%d%63[^.]",
+    "translation": "",
+    "context": "src/files.c:1141:28\n  1136: #ifdef COMPRESS_EXTENSION\n  1137: #define EXTSTR COMPRESS_EXTENSION\n  1138: #else\n  1139: #define EXTSTR \"\"\n  1140: #endif\n> 1141:     if ( sscanf( filename, \"%*[^/]/%d%63[^.]\" EXTSTR, &uid, name ) == 2 ) {\n  1142: #undef EXTSTR\n  1143:     /* \"_\" most likely means \" \", which certainly looks nicer */\n  1144: \tfor (k=0; name[k]; k++)\n  1145: \t    if ( name[k]=='_' )\n  1146: \t\tname[k]=' ';"
+  },
+  {
+    "key": "L01163_01",
+    "original": "save",
+    "translation": "",
+    "context": "src/files.c:1163:21\n  1158: get_saved_games()\n  1159: {\n  1160: #if defined(UNIX) && defined(QT_GRAPHICS)\n  1161:     int myuid=getuid();\n  1162:     struct dirent **namelist;\n> 1163:     int n = scandir(\"save\", &namelist, 0, alphasort);;\n  1164:     if ( n > 0 ) {\n  1165: \tint i,j=0;\n  1166: \tchar** result = (char**)alloc((n+1)*sizeof(char*)); /* at most */\n  1167: \tfor (i=0; i<n; i++) {\n  1168: \t    int uid;"
+  },
+  {
+    "key": "L01170_01",
+    "original": "%d%63s",
+    "translation": "",
+    "context": "src/files.c:1170:40\n  1165: \tint i,j=0;\n  1166: \tchar** result = (char**)alloc((n+1)*sizeof(char*)); /* at most */\n  1167: \tfor (i=0; i<n; i++) {\n  1168: \t    int uid;\n  1169: \t    char name[64]; /* more than PL_NSIZ */\n> 1170: \t    if ( sscanf( namelist[i]->d_name, \"%d%63s\", &uid, name ) == 2 ) {\n  1171: \t\tif ( uid == myuid ) {\n  1172: \t\t    char filename[BUFSZ];\n  1173: \t\t    char* r;\n  1174: \t\t    Sprintf(filename,\"save/%d%s\",uid,name);\n  1175: \t\t    r = plname_from_file(filename);"
+  },
+  {
+    "key": "L01174_01",
+    "original": "save/%d%s",
+    "translation": "",
+    "context": "src/files.c:1174:24\n  1169: \t    char name[64]; /* more than PL_NSIZ */\n  1170: \t    if ( sscanf( namelist[i]->d_name, \"%d%63s\", &uid, name ) == 2 ) {\n  1171: \t\tif ( uid == myuid ) {\n  1172: \t\t    char filename[BUFSZ];\n  1173: \t\t    char* r;\n> 1174: \t\t    Sprintf(filename,\"save/%d%s\",uid,name);\n  1175: \t\t    r = plname_from_file(filename);\n  1176: \t\t    if ( r )\n  1177: \t\t\tresult[j++] = r;\n  1178: \t\t}\n  1179: \t    }"
+  },
+  {
+    "key": "L01188_01",
+    "original": "save",
+    "translation": "",
+    "context": "src/files.c:1188:22\n  1183:     } else\n  1184: #elif defined(ANDROID)\n  1185:     int myuid=getuid();\n  1186:     struct dirent **namelist;\n  1187:     struct dirent **namelist2;\n> 1188:     int n1 = scandir(\"save\", &namelist, 0, alphasort);\n  1189:     int n2 = scandir(\".\", &namelist2, 0, alphasort);\n  1190:     if(n1 < 0) n1 = 0;\n  1191:     if(n2 < 0) n2 = 0;\n  1192: \tint i,j=0;\n  1193:     char name[64]; /* more than PL_NSIZ */"
+  },
+  {
+    "key": "L01197_01",
+    "original": "%d%63s",
+    "translation": "",
+    "context": "src/files.c:1197:40\n  1192: \tint i,j=0;\n  1193:     char name[64]; /* more than PL_NSIZ */\n  1194: \tchar** result = (char**)alloc((n1+n2+1)*sizeof(char*)); /* at most */\n  1195: \tfor (i=0; i<n1; i++) {\n  1196: \t    int uid;\n> 1197: \t    if ( sscanf( namelist[i]->d_name, \"%d%63s\", &uid, name ) == 2 ) {\n  1198: \t\tif ( uid == myuid ) {\n  1199: \t\t    char filename[BUFSZ];\n  1200: \t\t    char* r;\n  1201: \t\t    Sprintf(filename,\"save/%d%s\",uid,name);\n  1202: \t\t    r = plname_from_file(filename);"
+  },
+  {
+    "key": "L01201_01",
+    "original": "save/%d%s",
+    "translation": "",
+    "context": "src/files.c:1201:24\n  1196: \t    int uid;\n  1197: \t    if ( sscanf( namelist[i]->d_name, \"%d%63s\", &uid, name ) == 2 ) {\n  1198: \t\tif ( uid == myuid ) {\n  1199: \t\t    char filename[BUFSZ];\n  1200: \t\t    char* r;\n> 1201: \t\t    Sprintf(filename,\"save/%d%s\",uid,name);\n  1202: \t\t    r = plname_from_file(filename);\n  1203: \t\t    if ( r )\n  1204: \t\t\tresult[j++] = r;\n  1205: \t\t}\n  1206: \t    }"
+  },
+  {
+    "key": "L01210_01",
+    "original": "%d%63s",
+    "translation": "",
+    "context": "src/files.c:1210:41\n  1205: \t\t}\n  1206: \t    }\n  1207: \t}\n  1208: \tfor (i=0; i<n2; i++) {\n  1209: \t    int uid;\n> 1210: \t    if ( sscanf( namelist2[i]->d_name, \"%d%63s\", &uid, name ) == 2 ) {\n  1211: \t\tif ( uid == myuid ) {\n  1212: \t\t    char filename[BUFSZ];\n  1213: \t\t    char* r;\n  1214: \t\t    Sprintf(filename,\"./%d%s\",uid,name);\n  1215: \t\t    r = plname_from_file(filename);"
+  },
+  {
+    "key": "L01214_01",
+    "original": "./%d%s",
+    "translation": "",
+    "context": "src/files.c:1214:24\n  1209: \t    int uid;\n  1210: \t    if ( sscanf( namelist2[i]->d_name, \"%d%63s\", &uid, name ) == 2 ) {\n  1211: \t\tif ( uid == myuid ) {\n  1212: \t\t    char filename[BUFSZ];\n  1213: \t\t    char* r;\n> 1214: \t\t    Sprintf(filename,\"./%d%s\",uid,name);\n  1215: \t\t    r = plname_from_file(filename);\n  1216: \t\t    debuglog(\"%s\", r?r:\"noname\");\n  1217: \t\t    if ( r )\n  1218: \t\t\t\tif(j==0 || strcmp(result[j-1], r))\n  1219: \t\t\t\t\tresult[j++] = r;"
+  },
+  {
+    "key": "L01216_01",
+    "original": "%s",
+    "translation": "",
+    "context": "src/files.c:1216:16\n  1211: \t\tif ( uid == myuid ) {\n  1212: \t\t    char filename[BUFSZ];\n  1213: \t\t    char* r;\n  1214: \t\t    Sprintf(filename,\"./%d%s\",uid,name);\n  1215: \t\t    r = plname_from_file(filename);\n> 1216: \t\t    debuglog(\"%s\", r?r:\"noname\");\n  1217: \t\t    if ( r )\n  1218: \t\t\t\tif(j==0 || strcmp(result[j-1], r))\n  1219: \t\t\t\t\tresult[j++] = r;\n  1220: \t\t}\n  1221: \t\t}"
+  },
+  {
+    "key": "L01216_02",
+    "original": "noname",
+    "translation": "",
+    "context": "src/files.c:1216:26\n  1211: \t\tif ( uid == myuid ) {\n  1212: \t\t    char filename[BUFSZ];\n  1213: \t\t    char* r;\n  1214: \t\t    Sprintf(filename,\"./%d%s\",uid,name);\n  1215: \t\t    r = plname_from_file(filename);\n> 1216: \t\t    debuglog(\"%s\", r?r:\"noname\");\n  1217: \t\t    if ( r )\n  1218: \t\t\t\tif(j==0 || strcmp(result[j-1], r))\n  1219: \t\t\t\t\tresult[j++] = r;\n  1220: \t\t}\n  1221: \t\t}"
+  },
+  {
+    "key": "L01261_01",
+    "original": "redirect of %s for %scompress failed\\n",
+    "translation": "",
+    "context": "src/files.c:1261:26\n  1256: #ifndef FILE_AREAS\n  1257: \tif (freopen(filename, mode, stream) == (FILE *)0) {\n  1258: #else\n  1259: \tif (freopen_area(filearea, filename, mode, stream) == (FILE *)0) {\n  1260: #endif\n> 1261: \t\t(void) fprintf(stderr, \"redirect of %s for %scompress failed\\n\",\n  1262: \t\t\tfilename, uncomp ? \"un\" : \"\");\n  1263: \t\tterminate(EXIT_FAILURE);\n  1264: \t}\n  1265: }\n  1266: "
+  },
+  {
+    "key": "L01262_01",
+    "original": "un",
+    "translation": "",
+    "context": "src/files.c:1262:23\n  1257: \tif (freopen(filename, mode, stream) == (FILE *)0) {\n  1258: #else\n  1259: \tif (freopen_area(filearea, filename, mode, stream) == (FILE *)0) {\n  1260: #endif\n  1261: \t\t(void) fprintf(stderr, \"redirect of %s for %scompress failed\\n\",\n> 1262: \t\t\tfilename, uncomp ? \"un\" : \"\");\n  1263: \t\tterminate(EXIT_FAILURE);\n  1264: \t}\n  1265: }\n  1266: \n  1267: /*"
+  },
+  {
+    "key": "L01288_01",
+    "original": "tty",
+    "translation": "",
+    "context": "src/files.c:1288:46\n  1283: \tchar opts[80];\n  1284: # endif\n  1285: \tint i = 0;\n  1286: \tint f;\n  1287: # ifdef TTY_GRAPHICS\n> 1288: \tboolean istty = !strncmpi(windowprocs.name, \"tty\", 3);\n  1289: # endif\n  1290: \n  1291: \tStrcpy(cfn, filename);\n  1292: # ifdef COMPRESS_EXTENSION\n  1293: \tStrcat(cfn, COMPRESS_EXTENSION);"
+  },
+  {
+    "key": "L01304_01",
+    "original": "-d",
+    "translation": "",
+    "context": "src/files.c:1304:26\n  1299: \t\t    return;\n  1300: \t    (void) fclose(cf);\n  1301: \t}\n  1302: \n  1303: \targs[0] = COMPRESS;\n> 1304: \tif (uncomp) args[++i] = \"-d\";\t/* uncompress */\n  1305: # ifdef COMPRESS_OPTIONS\n  1306: \t{\n  1307: \t    /* we can't guarantee there's only one additional option, sigh */\n  1308: \t    char *opt;\n  1309: \t    boolean inword = FALSE;"
+  },
+  {
+    "key": "L01367_01",
+    "original": "Exec to %scompress %s failed.\\n",
+    "translation": "",
+    "context": "src/files.c:1367:26\n  1362: \t\t}\n  1363: \t\t(void) setgid(getgid());\n  1364: \t\t(void) setuid(getuid());\n  1365: \t\t(void) execv(args[0], (char *const *) args);\n  1366: \t\tperror((char *)0);\n> 1367: \t\t(void) fprintf(stderr, \"Exec to %scompress %s failed.\\n\",\n  1368: \t\t\tuncomp ? \"un\" : \"\", filename);\n  1369: \t\tterminate(EXIT_FAILURE);\n  1370: \t} else if (f == -1) {\n  1371: \t\tperror((char *)0);\n  1372: \t\tpline(\"Fork to %scompress %s failed.\","
+  },
+  {
+    "key": "L01368_01",
+    "original": "un",
+    "translation": "",
+    "context": "src/files.c:1368:13\n  1363: \t\t(void) setgid(getgid());\n  1364: \t\t(void) setuid(getuid());\n  1365: \t\t(void) execv(args[0], (char *const *) args);\n  1366: \t\tperror((char *)0);\n  1367: \t\t(void) fprintf(stderr, \"Exec to %scompress %s failed.\\n\",\n> 1368: \t\t\tuncomp ? \"un\" : \"\", filename);\n  1369: \t\tterminate(EXIT_FAILURE);\n  1370: \t} else if (f == -1) {\n  1371: \t\tperror((char *)0);\n  1372: \t\tpline(\"Fork to %scompress %s failed.\",\n  1373: \t\t\tuncomp ? \"un\" : \"\", filename);"
+  },
+  {
+    "key": "L01372_01",
+    "original": "Fork to %scompress %s failed.",
+    "translation": "",
+    "context": "src/files.c:1372:9\n  1367: \t\t(void) fprintf(stderr, \"Exec to %scompress %s failed.\\n\",\n  1368: \t\t\tuncomp ? \"un\" : \"\", filename);\n  1369: \t\tterminate(EXIT_FAILURE);\n  1370: \t} else if (f == -1) {\n  1371: \t\tperror((char *)0);\n> 1372: \t\tpline(\"Fork to %scompress %s failed.\",\n  1373: \t\t\tuncomp ? \"un\" : \"\", filename);\n  1374: \t\treturn;\n  1375: \t}\n  1376: # ifndef NO_SIGNAL\n  1377: \t(void) signal(SIGINT, SIG_IGN);"
+  },
+  {
+    "key": "L01373_01",
+    "original": "un",
+    "translation": "",
+    "context": "src/files.c:1373:13\n  1368: \t\t\tuncomp ? \"un\" : \"\", filename);\n  1369: \t\tterminate(EXIT_FAILURE);\n  1370: \t} else if (f == -1) {\n  1371: \t\tperror((char *)0);\n  1372: \t\tpline(\"Fork to %scompress %s failed.\",\n> 1373: \t\t\tuncomp ? \"un\" : \"\", filename);\n  1374: \t\treturn;\n  1375: \t}\n  1376: # ifndef NO_SIGNAL\n  1377: \t(void) signal(SIGINT, SIG_IGN);\n  1378: \t(void) signal(SIGQUIT, SIG_IGN);"
+  },
+  {
+    "key": "L01404_01",
+    "original": "Unable to uncompress %s",
+    "translation": "",
+    "context": "src/files.c:1404:14\n  1399: \t\t(void) remove_area(filearea, filename);\n  1400: #endif\n  1401: \t} else {\n  1402: \t    /* (un)compress failed; remove the new, bad file */\n  1403: \t    if (uncomp) {\n> 1404: \t\traw_printf(\"Unable to uncompress %s\", filename);\n  1405: \t\t(void) unlink(filename);\n  1406: \t    } else {\n  1407: \t\t/* no message needed for compress case; life will go on */\n  1408: \t\t(void) unlink(cfn);\n  1409: \t    }"
+  },
+  {
+    "key": "L01499_01",
+    "original": ".lock;1",
+    "translation": "",
+    "context": "src/files.c:1499:19\n  1494: #  ifdef VMS\n  1495:       {\n  1496: \tchar *semi_colon = rindex(lockname, ';');\n  1497: \tif (semi_colon) *semi_colon = '\\0';\n  1498:       }\n> 1499: \tStrcat(lockname, \".lock;1\");\n  1500: #  else\n  1501: \tStrcat(lockname, \"_lock\");\n  1502: #  endif\n  1503: \treturn lockname;\n  1504: # else"
+  },
+  {
+    "key": "L01501_01",
+    "original": "_lock",
+    "translation": "",
+    "context": "src/files.c:1501:19\n  1496: \tchar *semi_colon = rindex(lockname, ';');\n  1497: \tif (semi_colon) *semi_colon = '\\0';\n  1498:       }\n  1499: \tStrcat(lockname, \".lock;1\");\n  1500: #  else\n> 1501: \tStrcat(lockname, \"_lock\");\n  1502: #  endif\n  1503: \treturn lockname;\n  1504: # else\n  1505: \tlockname[0] = '\\0';\n  1506: \treturn (char*)0;"
+  },
+  {
+    "key": "L01527_01",
+    "original": "TRIED TO NEST LOCKS",
+    "translation": "",
+    "context": "src/files.c:1527:17\n  1522: \tchar locknambuf[BUFSZ];\n  1523: \tconst char *lockname;\n  1524: \n  1525: \tnesting++;\n  1526: \tif (nesting > 1) {\n> 1527: \t    impossible(\"TRIED TO NEST LOCKS\");\n  1528: \t    return TRUE;\n  1529: \t}\n  1530: \n  1531: \tlockname = make_lockname(filename, locknambuf);\n  1532: \tfilename = fqname(filename, whichprefix, 0);"
+  },
+  {
+    "key": "L01549_01",
+    "original": "Waiting for access to %s.  (%d retries left).",
+    "translation": "",
+    "context": "src/files.c:1549:8\n  1544: \n  1545: \t    switch (errnosv) {\t/* George Barbanis */\n  1546: \t    case EEXIST:\n  1547: \t\tif (retryct--) {\n  1548: \t\t    HUP raw_printf(\n> 1549: \t\t\t    \"Waiting for access to %s.  (%d retries left).\",\n  1550: \t\t\t    filename, retryct);\n  1551: # if defined(SYSV) || defined(ULTRIX) || defined(VMS)\n  1552: \t\t    (void)\n  1553: # endif\n  1554: \t\t\tsleep(1);"
+  },
+  {
+    "key": "L01556_01",
+    "original": "I give up.  Sorry.",
+    "translation": "",
+    "context": "src/files.c:1556:28\n  1551: # if defined(SYSV) || defined(ULTRIX) || defined(VMS)\n  1552: \t\t    (void)\n  1553: # endif\n  1554: \t\t\tsleep(1);\n  1555: \t\t} else {\n> 1556: \t\t    HUP (void) raw_print(\"I give up.  Sorry.\");\n  1557: \t\t    HUP raw_printf(\"Perhaps there is an old %s around?\",\n  1558: \t\t\t\t\tlockname);\n  1559: \t\t    nesting--;\n  1560: \t\t    return FALSE;\n  1561: \t\t}"
+  },
+  {
+    "key": "L01557_01",
+    "original": "Perhaps there is an old %s around?",
+    "translation": "",
+    "context": "src/files.c:1557:22\n  1552: \t\t    (void)\n  1553: # endif\n  1554: \t\t\tsleep(1);\n  1555: \t\t} else {\n  1556: \t\t    HUP (void) raw_print(\"I give up.  Sorry.\");\n> 1557: \t\t    HUP raw_printf(\"Perhaps there is an old %s around?\",\n  1558: \t\t\t\t\tlockname);\n  1559: \t\t    nesting--;\n  1560: \t\t    return FALSE;\n  1561: \t\t}\n  1562: "
+  },
+  {
+    "key": "L01565_01",
+    "original": "Can't find file %s to lock!",
+    "translation": "",
+    "context": "src/files.c:1565:18\n  1560: \t\t    return FALSE;\n  1561: \t\t}\n  1562: \n  1563: \t\tbreak;\n  1564: \t    case ENOENT:\n> 1565: \t\tHUP raw_printf(\"Can't find file %s to lock!\", filename);\n  1566: \t\tnesting--;\n  1567: \t\treturn FALSE;\n  1568: \t    case EACCES:\n  1569: \t\tHUP raw_printf(\"No write permission to lock %s!\", filename);\n  1570: \t\tnesting--;"
+  },
+  {
+    "key": "L01569_01",
+    "original": "No write permission to lock %s!",
+    "translation": "",
+    "context": "src/files.c:1569:18\n  1564: \t    case ENOENT:\n  1565: \t\tHUP raw_printf(\"Can't find file %s to lock!\", filename);\n  1566: \t\tnesting--;\n  1567: \t\treturn FALSE;\n  1568: \t    case EACCES:\n> 1569: \t\tHUP raw_printf(\"No write permission to lock %s!\", filename);\n  1570: \t\tnesting--;\n  1571: \t\treturn FALSE;\n  1572: # ifdef VMS\t\t\t/* c__translate(vmsfiles.c) */\n  1573: \t    case EPERM:\n  1574: \t\t/* could be misleading, but usually right */"
+  },
+  {
+    "key": "L01575_01",
+    "original": "Can't lock %s due to directory protection.",
+    "translation": "",
+    "context": "src/files.c:1575:18\n  1570: \t\tnesting--;\n  1571: \t\treturn FALSE;\n  1572: # ifdef VMS\t\t\t/* c__translate(vmsfiles.c) */\n  1573: \t    case EPERM:\n  1574: \t\t/* could be misleading, but usually right */\n> 1575: \t\tHUP raw_printf(\"Can't lock %s due to directory protection.\",\n  1576: \t\t\t       filename);\n  1577: \t\tnesting--;\n  1578: \t\treturn FALSE;\n  1579: # endif\n  1580: \t    default:"
+  },
+  {
+    "key": "L01583_01",
+    "original": "Cannot lock %s for unknown reason (%d).",
+    "translation": "",
+    "context": "src/files.c:1583:9\n  1578: \t\treturn FALSE;\n  1579: # endif\n  1580: \t    default:\n  1581: \t\tHUP perror(lockname);\n  1582: \t\tHUP raw_printf(\n> 1583: \t\t\t     \"Cannot lock %s for unknown reason (%d).\",\n  1584: \t\t\t       filename, errnosv);\n  1585: \t\tnesting--;\n  1586: \t\treturn FALSE;\n  1587: \t    }\n  1588: "
+  },
+  {
+    "key": "L01612_01",
+    "original": "Waiting for access to %s.  (%d retries left).",
+    "translation": "",
+    "context": "src/files.c:1612:17\n  1607: #  else\n  1608: \tlockptr = open(lockname, O_RDWR|O_CREAT|O_EXCL, S_IWRITE);\n  1609: #  endif\n  1610: # endif\n  1611: \tif (OPENFAILURE(lockptr)) {\n> 1612: \t    raw_printf(\"Waiting for access to %s.  (%d retries left).\",\n  1613: \t\t\tfilename, retryct);\n  1614: \t    Delay(50);\n  1615: \t}\n  1616:     }\n  1617:     if (!retryct) {"
+  },
+  {
+    "key": "L01618_01",
+    "original": "I give up.  Sorry.",
+    "translation": "",
+    "context": "src/files.c:1618:13\n  1613: \t\t\tfilename, retryct);\n  1614: \t    Delay(50);\n  1615: \t}\n  1616:     }\n  1617:     if (!retryct) {\n> 1618: \traw_printf(\"I give up.  Sorry.\");\n  1619: \tnesting--;\n  1620: \treturn FALSE;\n  1621:     }\n  1622: #endif /* AMIGA || WIN32 || MSDOS */\n  1623: \treturn TRUE;"
+  },
+  {
+    "key": "L01650_01",
+    "original": "Can't unlink %s.",
+    "translation": "",
+    "context": "src/files.c:1650:19\n  1645: \t\tlockname = fqname(lockname, LOCKPREFIX, 2);\n  1646: #endif\n  1647: \n  1648: #if defined(UNIX) || defined(VMS)\n  1649: \t\tif (unlink(lockname) < 0)\n> 1650: \t\t\tHUP raw_printf(\"Can't unlink %s.\", lockname);\n  1651: # ifdef NO_FILE_LINKS\n  1652: \t\t(void) close(lockfd);\n  1653: # endif\n  1654: \n  1655: #endif  /* UNIX || VMS */"
+  },
+  {
+    "key": "L01699_01",
+    "original": "nethack.cnf",
+    "translation": "",
+    "context": "src/files.c:1699:42\n  1694:  * is for backward compatibility only.\n  1695:  * Preferred name (and first tried) is now defaults.nh but\n  1696:  * the game will try the old name if there\n  1697:  * is no defaults.nh.\n  1698:  */\n> 1699: const char *backward_compat_configfile = \"nethack.cnf\"; \n  1700: #endif\n  1701: \n  1702: #ifndef MFLOPPY\n  1703: #define fopenp fopen\n  1704: #endif"
+  },
+  {
+    "key": "L01727_01",
+    "original": "Access to %s denied (%d).",
+    "translation": "",
+    "context": "src/files.c:1727:15\n  1722: \t\t\t/* nasty sneaky attempt to read file through\n  1723: \t\t\t * NetHack's setuid permissions -- this is the only\n  1724: \t\t\t * place a file name may be wholly under the player's\n  1725: \t\t\t * control\n  1726: \t\t\t */\n> 1727: \t\t\traw_printf(\"Access to %s denied (%d).\",\n  1728: \t\t\t\t\tfilename, errno);\n  1729: \t\t\twait_synch();\n  1730: \t\t\t/* fall through to standard names */\n  1731: \t\t} else\n  1732: #endif"
+  },
+  {
+    "key": "L01733_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1733:30\n  1728: \t\t\t\t\tfilename, errno);\n  1729: \t\t\twait_synch();\n  1730: \t\t\t/* fall through to standard names */\n  1731: \t\t} else\n  1732: #endif\n> 1733: \t\tif ((fp = fopenp(filename, \"r\")) != (FILE *)0) {\n  1734: \t\t    configfile = filename;\n  1735: \t\t    return(fp);\n  1736: #if defined(UNIX) || defined(VMS)\n  1737: \t\t} else {\n  1738: \t\t    /* access() above probably caught most problems for UNIX */"
+  },
+  {
+    "key": "L01739_01",
+    "original": "Couldn't open requested config file %s (%d).",
+    "translation": "",
+    "context": "src/files.c:1739:18\n  1734: \t\t    configfile = filename;\n  1735: \t\t    return(fp);\n  1736: #if defined(UNIX) || defined(VMS)\n  1737: \t\t} else {\n  1738: \t\t    /* access() above probably caught most problems for UNIX */\n> 1739: \t\t    raw_printf(\"Couldn't open requested config file %s (%d).\",\n  1740: \t\t\t\t\tfilename, errno);\n  1741: \t\t    wait_synch();\n  1742: \t\t    /* fall through to standard names */\n  1743: #endif\n  1744: \t\t}"
+  },
+  {
+    "key": "L01748_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1748:56\n  1743: #endif\n  1744: \t\t}\n  1745: \t}\n  1746: \n  1747: #if defined(MICRO) || defined(MAC) || defined(__BEOS__) || defined(WIN32) || defined(ANDROID)\n> 1748: \tif ((fp = fopenp(fqname(configfile, CONFIGPREFIX, 0), \"r\"))\n  1749: \t\t\t\t\t\t\t\t!= (FILE *)0)\n  1750: \t\treturn(fp);\n  1751: # ifdef MSDOS\n  1752: \telse if ((fp = fopenp(fqname(backward_compat_configfile,\n  1753: \t\t\t\t\tCONFIGPREFIX, 0), \"r\")) != (FILE *)0)"
+  },
+  {
+    "key": "L01753_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1753:24\n  1748: \tif ((fp = fopenp(fqname(configfile, CONFIGPREFIX, 0), \"r\"))\n  1749: \t\t\t\t\t\t\t\t!= (FILE *)0)\n  1750: \t\treturn(fp);\n  1751: # ifdef MSDOS\n  1752: \telse if ((fp = fopenp(fqname(backward_compat_configfile,\n> 1753: \t\t\t\t\tCONFIGPREFIX, 0), \"r\")) != (FILE *)0)\n  1754: \t\treturn(fp);\n  1755: # endif\n  1756: #else\n  1757: \t/* constructed full path names don't need fqname() */\n  1758: # ifdef VMS"
+  },
+  {
+    "key": "L01759_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1759:60\n  1754: \t\treturn(fp);\n  1755: # endif\n  1756: #else\n  1757: \t/* constructed full path names don't need fqname() */\n  1758: # ifdef VMS\n> 1759: \tif ((fp = fopenp(fqname(NH_CONFIG_FILE, CONFIGPREFIX, 0), \"r\"))\n  1760: \t\t\t\t\t\t\t\t!= (FILE *)0) {\n  1761: \t\tconfigfile = NH_CONFIG_FILE;\n  1762: \t\treturn(fp);\n  1763: \t}\n  1764: \tif ((fp = fopenp(NH_CONFIG_FILE2, \"r\")) != (FILE *)0) {"
+  },
+  {
+    "key": "L01764_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1764:36\n  1759: \tif ((fp = fopenp(fqname(NH_CONFIG_FILE, CONFIGPREFIX, 0), \"r\"))\n  1760: \t\t\t\t\t\t\t\t!= (FILE *)0) {\n  1761: \t\tconfigfile = NH_CONFIG_FILE;\n  1762: \t\treturn(fp);\n  1763: \t}\n> 1764: \tif ((fp = fopenp(NH_CONFIG_FILE2, \"r\")) != (FILE *)0) {\n  1765: \t\tconfigfile = index(NH_CONFIG_FILE2, ':');\n  1766: \t\tif (configfile)\n  1767: \t\t\tconfigfile++;\n  1768: \t\telse\n  1769: \t\t\tconfigfile = NH_CONFIG_FILE2;"
+  },
+  {
+    "key": "L01773_01",
+    "original": "HOME",
+    "translation": "",
+    "context": "src/files.c:1773:19\n  1768: \t\telse\n  1769: \t\t\tconfigfile = NH_CONFIG_FILE2;\n  1770: \t\treturn(fp);\n  1771: \t}\n  1772: \n> 1773: \tenvp = nh_getenv(\"HOME\");\n  1774: \tif (!envp)\n  1775: \t\tStrcpy(tmp_config, NH_CONFIG_FILE3);\n  1776: \telse\n  1777: \t\tSprintf(tmp_config, \"%s%s\", envp, NH_CONFIG_FILE3);\n  1778: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)"
+  },
+  {
+    "key": "L01777_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/files.c:1777:23\n  1772: \n  1773: \tenvp = nh_getenv(\"HOME\");\n  1774: \tif (!envp)\n  1775: \t\tStrcpy(tmp_config, NH_CONFIG_FILE3);\n  1776: \telse\n> 1777: \t\tSprintf(tmp_config, \"%s%s\", envp, NH_CONFIG_FILE3);\n  1778: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1779: \t\treturn(fp);\n  1780: # else\t/* should be only UNIX left */\n  1781: \tenvp = nh_getenv(\"HOME\");\n  1782: \tif (!envp)"
+  },
+  {
+    "key": "L01778_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1778:31\n  1773: \tenvp = nh_getenv(\"HOME\");\n  1774: \tif (!envp)\n  1775: \t\tStrcpy(tmp_config, NH_CONFIG_FILE3);\n  1776: \telse\n  1777: \t\tSprintf(tmp_config, \"%s%s\", envp, NH_CONFIG_FILE3);\n> 1778: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1779: \t\treturn(fp);\n  1780: # else\t/* should be only UNIX left */\n  1781: \tenvp = nh_getenv(\"HOME\");\n  1782: \tif (!envp)\n  1783: \t\tStrcpy(tmp_config, configfile);"
+  },
+  {
+    "key": "L01781_01",
+    "original": "HOME",
+    "translation": "",
+    "context": "src/files.c:1781:19\n  1776: \telse\n  1777: \t\tSprintf(tmp_config, \"%s%s\", envp, NH_CONFIG_FILE3);\n  1778: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1779: \t\treturn(fp);\n  1780: # else\t/* should be only UNIX left */\n> 1781: \tenvp = nh_getenv(\"HOME\");\n  1782: \tif (!envp)\n  1783: \t\tStrcpy(tmp_config, configfile);\n  1784: \telse\n  1785: \t\tSprintf(tmp_config, \"%s/%s\", envp, configfile);\n  1786: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)"
+  },
+  {
+    "key": "L01785_01",
+    "original": "%s/%s",
+    "translation": "",
+    "context": "src/files.c:1785:23\n  1780: # else\t/* should be only UNIX left */\n  1781: \tenvp = nh_getenv(\"HOME\");\n  1782: \tif (!envp)\n  1783: \t\tStrcpy(tmp_config, configfile);\n  1784: \telse\n> 1785: \t\tSprintf(tmp_config, \"%s/%s\", envp, configfile);\n  1786: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1787: \t\treturn(fp);\n  1788: # if defined(__APPLE__)\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {"
+  },
+  {
+    "key": "L01786_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1786:31\n  1781: \tenvp = nh_getenv(\"HOME\");\n  1782: \tif (!envp)\n  1783: \t\tStrcpy(tmp_config, configfile);\n  1784: \telse\n  1785: \t\tSprintf(tmp_config, \"%s/%s\", envp, configfile);\n> 1786: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1787: \t\treturn(fp);\n  1788: # if defined(__APPLE__)\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {\n  1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");"
+  },
+  {
+    "key": "L01791_01",
+    "original": "%s/%s",
+    "translation": "",
+    "context": "src/files.c:1791:23\n  1786: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1787: \t\treturn(fp);\n  1788: # if defined(__APPLE__)\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {\n> 1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");\n  1792: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1793: \t\t\treturn(fp);\n  1794: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults.txt\");\n  1795: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1796: \t\t\treturn(fp);"
+  },
+  {
+    "key": "L01791_02",
+    "original": "Library/Preferences/NetHack Defaults",
+    "translation": "",
+    "context": "src/files.c:1791:38\n  1786: \tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1787: \t\treturn(fp);\n  1788: # if defined(__APPLE__)\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {\n> 1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");\n  1792: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1793: \t\t\treturn(fp);\n  1794: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults.txt\");\n  1795: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1796: \t\t\treturn(fp);"
+  },
+  {
+    "key": "L01792_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1792:32\n  1787: \t\treturn(fp);\n  1788: # if defined(__APPLE__)\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {\n  1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");\n> 1792: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1793: \t\t\treturn(fp);\n  1794: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults.txt\");\n  1795: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1796: \t\t\treturn(fp);\n  1797: \t}"
+  },
+  {
+    "key": "L01794_01",
+    "original": "%s/%s",
+    "translation": "",
+    "context": "src/files.c:1794:23\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {\n  1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");\n  1792: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1793: \t\t\treturn(fp);\n> 1794: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults.txt\");\n  1795: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1796: \t\t\treturn(fp);\n  1797: \t}\n  1798: # endif\n  1799: \tif (errno != ENOENT) {"
+  },
+  {
+    "key": "L01794_02",
+    "original": "Library/Preferences/NetHack Defaults.txt",
+    "translation": "",
+    "context": "src/files.c:1794:38\n  1789: \t/* try an alternative */\n  1790: \tif (envp) {\n  1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");\n  1792: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1793: \t\t\treturn(fp);\n> 1794: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults.txt\");\n  1795: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1796: \t\t\treturn(fp);\n  1797: \t}\n  1798: # endif\n  1799: \tif (errno != ENOENT) {"
+  },
+  {
+    "key": "L01795_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1795:32\n  1790: \tif (envp) {\n  1791: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults\");\n  1792: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1793: \t\t\treturn(fp);\n  1794: \t\tSprintf(tmp_config, \"%s/%s\", envp, \"Library/Preferences/NetHack Defaults.txt\");\n> 1795: \t\tif ((fp = fopenp(tmp_config, \"r\")) != (FILE *)0)\n  1796: \t\t\treturn(fp);\n  1797: \t}\n  1798: # endif\n  1799: \tif (errno != ENOENT) {\n  1800: \t    char *details;"
+  },
+  {
+    "key": "L01809_01",
+    "original": "Couldn't open default config file %s %s(%d).",
+    "translation": "",
+    "context": "src/files.c:1809:17\n  1804: \n  1805: #if defined (NHSTDC) && !defined(NOTSTDC)\n  1806: \t    if ((details = strerror(errno)) == 0)\n  1807: #endif\n  1808: \t\tdetails = \"\";\n> 1809: \t    raw_printf(\"Couldn't open default config file %s %s(%d).\",\n  1810: \t\t\ttmp_config, details, errno);\n  1811: \t    wait_synch();\n  1812: \t}\n  1813: \telse if (!strncmp(windowprocs.name, \"proxy/\", 6)) {\n  1814: \t    fp = fopenp(\"/etc/slashem/proxy.slashemrc\", \"r\");"
+  },
+  {
+    "key": "L01813_01",
+    "original": "proxy/",
+    "translation": "",
+    "context": "src/files.c:1813:38\n  1808: \t\tdetails = \"\";\n  1809: \t    raw_printf(\"Couldn't open default config file %s %s(%d).\",\n  1810: \t\t\ttmp_config, details, errno);\n  1811: \t    wait_synch();\n  1812: \t}\n> 1813: \telse if (!strncmp(windowprocs.name, \"proxy/\", 6)) {\n  1814: \t    fp = fopenp(\"/etc/slashem/proxy.slashemrc\", \"r\");\n  1815: \t    if (fp != (FILE *)0)\n  1816: \t\treturn(fp);\n  1817: \t    else if (errno != ENOENT) {\n  1818: \t\traw_printf(\"Couldn't open /etc/slashem/proxy.slashemrc (%d).\","
+  },
+  {
+    "key": "L01814_01",
+    "original": "/etc/slashem/proxy.slashemrc",
+    "translation": "",
+    "context": "src/files.c:1814:18\n  1809: \t    raw_printf(\"Couldn't open default config file %s %s(%d).\",\n  1810: \t\t\ttmp_config, details, errno);\n  1811: \t    wait_synch();\n  1812: \t}\n  1813: \telse if (!strncmp(windowprocs.name, \"proxy/\", 6)) {\n> 1814: \t    fp = fopenp(\"/etc/slashem/proxy.slashemrc\", \"r\");\n  1815: \t    if (fp != (FILE *)0)\n  1816: \t\treturn(fp);\n  1817: \t    else if (errno != ENOENT) {\n  1818: \t\traw_printf(\"Couldn't open /etc/slashem/proxy.slashemrc (%d).\",\n  1819: \t\t\t\terrno);"
+  },
+  {
+    "key": "L01814_02",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:1814:50\n  1809: \t    raw_printf(\"Couldn't open default config file %s %s(%d).\",\n  1810: \t\t\ttmp_config, details, errno);\n  1811: \t    wait_synch();\n  1812: \t}\n  1813: \telse if (!strncmp(windowprocs.name, \"proxy/\", 6)) {\n> 1814: \t    fp = fopenp(\"/etc/slashem/proxy.slashemrc\", \"r\");\n  1815: \t    if (fp != (FILE *)0)\n  1816: \t\treturn(fp);\n  1817: \t    else if (errno != ENOENT) {\n  1818: \t\traw_printf(\"Couldn't open /etc/slashem/proxy.slashemrc (%d).\",\n  1819: \t\t\t\terrno);"
+  },
+  {
+    "key": "L01818_01",
+    "original": "Couldn't open /etc/slashem/proxy.slashemrc (%d).",
+    "translation": "",
+    "context": "src/files.c:1818:14\n  1813: \telse if (!strncmp(windowprocs.name, \"proxy/\", 6)) {\n  1814: \t    fp = fopenp(\"/etc/slashem/proxy.slashemrc\", \"r\");\n  1815: \t    if (fp != (FILE *)0)\n  1816: \t\treturn(fp);\n  1817: \t    else if (errno != ENOENT) {\n> 1818: \t\traw_printf(\"Couldn't open /etc/slashem/proxy.slashemrc (%d).\",\n  1819: \t\t\t\terrno);\n  1820: \t\twait_synch();\n  1821: \t    }\n  1822: \t}\n  1823: # endif"
+  },
+  {
+    "key": "L01884_01",
+    "original": "Syntax error in %s",
+    "translation": "",
+    "context": "src/files.c:1884:14\n  1879: \t\tbufp = buf;\n  1880: \t\tbreak;\n  1881: \n  1882: \t    default:\n  1883: gi_error:\n> 1884: \t\traw_printf(\"Syntax error in %s\", name);\n  1885: \t\twait_synch();\n  1886: \t\treturn count;\n  1887: \t}\n  1888:     }\n  1889:     /*NOTREACHED*/"
+  },
+  {
+    "key": "L01954_01",
+    "original": "OPTIONS",
+    "translation": "",
+    "context": "src/files.c:1954:25\n  1949: \n  1950: \t/* Go through possible variables */\n  1951: \t/* some of these (at least LEVELS and SAVE) should now set the\n  1952: \t * appropriate fqn_prefix[] rather than specialized variables\n  1953: \t */\n> 1954: \tif (match_varname(buf, \"OPTIONS\", 4)) {\n  1955: \t\tparseoptions(bufp, TRUE, TRUE);\n  1956: \t\tif (plname[0])\t\t/* If a name was given */\n  1957: \t\t\tplnamesuffix();\t/* set the character class */\n  1958: \t} else if (match_varname(buf, \"TILESETS\", 7)) {\n  1959: \t\tparsetileset(bufp);"
+  },
+  {
+    "key": "L01958_01",
+    "original": "TILESETS",
+    "translation": "",
+    "context": "src/files.c:1958:32\n  1953: \t */\n  1954: \tif (match_varname(buf, \"OPTIONS\", 4)) {\n  1955: \t\tparseoptions(bufp, TRUE, TRUE);\n  1956: \t\tif (plname[0])\t\t/* If a name was given */\n  1957: \t\t\tplnamesuffix();\t/* set the character class */\n> 1958: \t} else if (match_varname(buf, \"TILESETS\", 7)) {\n  1959: \t\tparsetileset(bufp);\n  1960: #ifdef AUTOPICKUP_EXCEPTIONS\n  1961: \t} else if (match_varname(buf, \"AUTOPICKUP_EXCEPTION\", 5)) {\n  1962: \t\tadd_autopickup_exception(bufp);\n  1963: #endif"
+  },
+  {
+    "key": "L01961_01",
+    "original": "AUTOPICKUP_EXCEPTION",
+    "translation": "",
+    "context": "src/files.c:1961:32\n  1956: \t\tif (plname[0])\t\t/* If a name was given */\n  1957: \t\t\tplnamesuffix();\t/* set the character class */\n  1958: \t} else if (match_varname(buf, \"TILESETS\", 7)) {\n  1959: \t\tparsetileset(bufp);\n  1960: #ifdef AUTOPICKUP_EXCEPTIONS\n> 1961: \t} else if (match_varname(buf, \"AUTOPICKUP_EXCEPTION\", 5)) {\n  1962: \t\tadd_autopickup_exception(bufp);\n  1963: #endif\n  1964: #ifdef NOCWD_ASSUMPTIONS\n  1965: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1966: \t\tadjust_prefix(bufp, HACKPREFIX);"
+  },
+  {
+    "key": "L01965_01",
+    "original": "HACKDIR",
+    "translation": "",
+    "context": "src/files.c:1965:32\n  1960: #ifdef AUTOPICKUP_EXCEPTIONS\n  1961: \t} else if (match_varname(buf, \"AUTOPICKUP_EXCEPTION\", 5)) {\n  1962: \t\tadd_autopickup_exception(bufp);\n  1963: #endif\n  1964: #ifdef NOCWD_ASSUMPTIONS\n> 1965: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1966: \t\tadjust_prefix(bufp, HACKPREFIX);\n  1967: \t} else if (match_varname(buf, \"LEVELDIR\", 4) ||\n  1968: \t\t   match_varname(buf, \"LEVELS\", 4)) {\n  1969: \t\tadjust_prefix(bufp, LEVELPREFIX);\n  1970: \t} else if (match_varname(buf, \"SAVEDIR\", 4)) {"
+  },
+  {
+    "key": "L01967_01",
+    "original": "LEVELDIR",
+    "translation": "",
+    "context": "src/files.c:1967:32\n  1962: \t\tadd_autopickup_exception(bufp);\n  1963: #endif\n  1964: #ifdef NOCWD_ASSUMPTIONS\n  1965: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1966: \t\tadjust_prefix(bufp, HACKPREFIX);\n> 1967: \t} else if (match_varname(buf, \"LEVELDIR\", 4) ||\n  1968: \t\t   match_varname(buf, \"LEVELS\", 4)) {\n  1969: \t\tadjust_prefix(bufp, LEVELPREFIX);\n  1970: \t} else if (match_varname(buf, \"SAVEDIR\", 4)) {\n  1971: \t\tadjust_prefix(bufp, SAVEPREFIX);\n  1972: \t} else if (match_varname(buf, \"BONESDIR\", 5)) {"
+  },
+  {
+    "key": "L01968_01",
+    "original": "LEVELS",
+    "translation": "",
+    "context": "src/files.c:1968:25\n  1963: #endif\n  1964: #ifdef NOCWD_ASSUMPTIONS\n  1965: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1966: \t\tadjust_prefix(bufp, HACKPREFIX);\n  1967: \t} else if (match_varname(buf, \"LEVELDIR\", 4) ||\n> 1968: \t\t   match_varname(buf, \"LEVELS\", 4)) {\n  1969: \t\tadjust_prefix(bufp, LEVELPREFIX);\n  1970: \t} else if (match_varname(buf, \"SAVEDIR\", 4)) {\n  1971: \t\tadjust_prefix(bufp, SAVEPREFIX);\n  1972: \t} else if (match_varname(buf, \"BONESDIR\", 5)) {\n  1973: \t\tadjust_prefix(bufp, BONESPREFIX);"
+  },
+  {
+    "key": "L01970_01",
+    "original": "SAVEDIR",
+    "translation": "",
+    "context": "src/files.c:1970:32\n  1965: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1966: \t\tadjust_prefix(bufp, HACKPREFIX);\n  1967: \t} else if (match_varname(buf, \"LEVELDIR\", 4) ||\n  1968: \t\t   match_varname(buf, \"LEVELS\", 4)) {\n  1969: \t\tadjust_prefix(bufp, LEVELPREFIX);\n> 1970: \t} else if (match_varname(buf, \"SAVEDIR\", 4)) {\n  1971: \t\tadjust_prefix(bufp, SAVEPREFIX);\n  1972: \t} else if (match_varname(buf, \"BONESDIR\", 5)) {\n  1973: \t\tadjust_prefix(bufp, BONESPREFIX);\n  1974: \t} else if (match_varname(buf, \"DATADIR\", 4)) {\n  1975: \t\tadjust_prefix(bufp, DATAPREFIX);"
+  },
+  {
+    "key": "L01972_01",
+    "original": "BONESDIR",
+    "translation": "",
+    "context": "src/files.c:1972:32\n  1967: \t} else if (match_varname(buf, \"LEVELDIR\", 4) ||\n  1968: \t\t   match_varname(buf, \"LEVELS\", 4)) {\n  1969: \t\tadjust_prefix(bufp, LEVELPREFIX);\n  1970: \t} else if (match_varname(buf, \"SAVEDIR\", 4)) {\n  1971: \t\tadjust_prefix(bufp, SAVEPREFIX);\n> 1972: \t} else if (match_varname(buf, \"BONESDIR\", 5)) {\n  1973: \t\tadjust_prefix(bufp, BONESPREFIX);\n  1974: \t} else if (match_varname(buf, \"DATADIR\", 4)) {\n  1975: \t\tadjust_prefix(bufp, DATAPREFIX);\n  1976: \t} else if (match_varname(buf, \"SCOREDIR\", 4)) {\n  1977: \t\tadjust_prefix(bufp, SCOREPREFIX);"
+  },
+  {
+    "key": "L01974_01",
+    "original": "DATADIR",
+    "translation": "",
+    "context": "src/files.c:1974:32\n  1969: \t\tadjust_prefix(bufp, LEVELPREFIX);\n  1970: \t} else if (match_varname(buf, \"SAVEDIR\", 4)) {\n  1971: \t\tadjust_prefix(bufp, SAVEPREFIX);\n  1972: \t} else if (match_varname(buf, \"BONESDIR\", 5)) {\n  1973: \t\tadjust_prefix(bufp, BONESPREFIX);\n> 1974: \t} else if (match_varname(buf, \"DATADIR\", 4)) {\n  1975: \t\tadjust_prefix(bufp, DATAPREFIX);\n  1976: \t} else if (match_varname(buf, \"SCOREDIR\", 4)) {\n  1977: \t\tadjust_prefix(bufp, SCOREPREFIX);\n  1978: \t} else if (match_varname(buf, \"LOCKDIR\", 4)) {\n  1979: \t\tadjust_prefix(bufp, LOCKPREFIX);"
+  },
+  {
+    "key": "L01976_01",
+    "original": "SCOREDIR",
+    "translation": "",
+    "context": "src/files.c:1976:32\n  1971: \t\tadjust_prefix(bufp, SAVEPREFIX);\n  1972: \t} else if (match_varname(buf, \"BONESDIR\", 5)) {\n  1973: \t\tadjust_prefix(bufp, BONESPREFIX);\n  1974: \t} else if (match_varname(buf, \"DATADIR\", 4)) {\n  1975: \t\tadjust_prefix(bufp, DATAPREFIX);\n> 1976: \t} else if (match_varname(buf, \"SCOREDIR\", 4)) {\n  1977: \t\tadjust_prefix(bufp, SCOREPREFIX);\n  1978: \t} else if (match_varname(buf, \"LOCKDIR\", 4)) {\n  1979: \t\tadjust_prefix(bufp, LOCKPREFIX);\n  1980: \t} else if (match_varname(buf, \"CONFIGDIR\", 4)) {\n  1981: \t\tadjust_prefix(bufp, CONFIGPREFIX);"
+  },
+  {
+    "key": "L01978_01",
+    "original": "LOCKDIR",
+    "translation": "",
+    "context": "src/files.c:1978:32\n  1973: \t\tadjust_prefix(bufp, BONESPREFIX);\n  1974: \t} else if (match_varname(buf, \"DATADIR\", 4)) {\n  1975: \t\tadjust_prefix(bufp, DATAPREFIX);\n  1976: \t} else if (match_varname(buf, \"SCOREDIR\", 4)) {\n  1977: \t\tadjust_prefix(bufp, SCOREPREFIX);\n> 1978: \t} else if (match_varname(buf, \"LOCKDIR\", 4)) {\n  1979: \t\tadjust_prefix(bufp, LOCKPREFIX);\n  1980: \t} else if (match_varname(buf, \"CONFIGDIR\", 4)) {\n  1981: \t\tadjust_prefix(bufp, CONFIGPREFIX);\n  1982: \t} else if (match_varname(buf, \"TROUBLEDIR\", 4)) {\n  1983: \t\tadjust_prefix(bufp, TROUBLEPREFIX);"
+  },
+  {
+    "key": "L01980_01",
+    "original": "CONFIGDIR",
+    "translation": "",
+    "context": "src/files.c:1980:32\n  1975: \t\tadjust_prefix(bufp, DATAPREFIX);\n  1976: \t} else if (match_varname(buf, \"SCOREDIR\", 4)) {\n  1977: \t\tadjust_prefix(bufp, SCOREPREFIX);\n  1978: \t} else if (match_varname(buf, \"LOCKDIR\", 4)) {\n  1979: \t\tadjust_prefix(bufp, LOCKPREFIX);\n> 1980: \t} else if (match_varname(buf, \"CONFIGDIR\", 4)) {\n  1981: \t\tadjust_prefix(bufp, CONFIGPREFIX);\n  1982: \t} else if (match_varname(buf, \"TROUBLEDIR\", 4)) {\n  1983: \t\tadjust_prefix(bufp, TROUBLEPREFIX);\n  1984: #else /*NOCWD_ASSUMPTIONS*/\n  1985: # ifdef MICRO"
+  },
+  {
+    "key": "L01982_01",
+    "original": "TROUBLEDIR",
+    "translation": "",
+    "context": "src/files.c:1982:32\n  1977: \t\tadjust_prefix(bufp, SCOREPREFIX);\n  1978: \t} else if (match_varname(buf, \"LOCKDIR\", 4)) {\n  1979: \t\tadjust_prefix(bufp, LOCKPREFIX);\n  1980: \t} else if (match_varname(buf, \"CONFIGDIR\", 4)) {\n  1981: \t\tadjust_prefix(bufp, CONFIGPREFIX);\n> 1982: \t} else if (match_varname(buf, \"TROUBLEDIR\", 4)) {\n  1983: \t\tadjust_prefix(bufp, TROUBLEPREFIX);\n  1984: #else /*NOCWD_ASSUMPTIONS*/\n  1985: # ifdef MICRO\n  1986: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1987: \t\t(void) strncpy(hackdir, bufp, PATHLEN-1);"
+  },
+  {
+    "key": "L01986_01",
+    "original": "HACKDIR",
+    "translation": "",
+    "context": "src/files.c:1986:32\n  1981: \t\tadjust_prefix(bufp, CONFIGPREFIX);\n  1982: \t} else if (match_varname(buf, \"TROUBLEDIR\", 4)) {\n  1983: \t\tadjust_prefix(bufp, TROUBLEPREFIX);\n  1984: #else /*NOCWD_ASSUMPTIONS*/\n  1985: # ifdef MICRO\n> 1986: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1987: \t\t(void) strncpy(hackdir, bufp, PATHLEN-1);\n  1988: #  ifdef MFLOPPY\n  1989: \t} else if (match_varname(buf, \"RAMDISK\", 3)) {\n  1990: \t\t\t\t/* The following ifdef is NOT in the wrong\n  1991: \t\t\t\t * place.  For now, we accept and silently"
+  },
+  {
+    "key": "L01989_01",
+    "original": "RAMDISK",
+    "translation": "",
+    "context": "src/files.c:1989:32\n  1984: #else /*NOCWD_ASSUMPTIONS*/\n  1985: # ifdef MICRO\n  1986: \t} else if (match_varname(buf, \"HACKDIR\", 4)) {\n  1987: \t\t(void) strncpy(hackdir, bufp, PATHLEN-1);\n  1988: #  ifdef MFLOPPY\n> 1989: \t} else if (match_varname(buf, \"RAMDISK\", 3)) {\n  1990: \t\t\t\t/* The following ifdef is NOT in the wrong\n  1991: \t\t\t\t * place.  For now, we accept and silently\n  1992: \t\t\t\t * ignore RAMDISK */\n  1993: #   ifndef AMIGA\n  1994: \t\t(void) strncpy(tmp_ramdisk, bufp, PATHLEN-1);"
+  },
+  {
+    "key": "L01997_01",
+    "original": "LEVELS",
+    "translation": "",
+    "context": "src/files.c:1997:32\n  1992: \t\t\t\t * ignore RAMDISK */\n  1993: #   ifndef AMIGA\n  1994: \t\t(void) strncpy(tmp_ramdisk, bufp, PATHLEN-1);\n  1995: #   endif\n  1996: #  endif\n> 1997: \t} else if (match_varname(buf, \"LEVELS\", 4)) {\n  1998: \t\t(void) strncpy(tmp_levels, bufp, PATHLEN-1);\n  1999: \n  2000: \t} else if (match_varname(buf, \"SAVE\", 4)) {\n  2001: #  ifdef MFLOPPY\n  2002: \t\textern\tint saveprompt;"
+  },
+  {
+    "key": "L02000_01",
+    "original": "SAVE",
+    "translation": "",
+    "context": "src/files.c:2000:32\n  1995: #   endif\n  1996: #  endif\n  1997: \t} else if (match_varname(buf, \"LEVELS\", 4)) {\n  1998: \t\t(void) strncpy(tmp_levels, bufp, PATHLEN-1);\n  1999: \n> 2000: \t} else if (match_varname(buf, \"SAVE\", 4)) {\n  2001: #  ifdef MFLOPPY\n  2002: \t\textern\tint saveprompt;\n  2003: #  endif\n  2004: \t\tchar *ptr;\n  2005: \t\tif ((ptr = index(bufp, ';')) != 0) {"
+  },
+  {
+    "key": "L02023_01",
+    "original": "NAME",
+    "translation": "",
+    "context": "src/files.c:2023:32\n  2018: \t\t(void) strncpy(SAVEP, bufp, SAVESIZE-1);\n  2019: \t\tappend_slash(SAVEP);\n  2020: # endif /* MICRO */\n  2021: #endif /*NOCWD_ASSUMPTIONS*/\n  2022: \n> 2023: \t} else if (match_varname(buf, \"NAME\", 4)) {\n  2024: \t    (void) strncpy(plname, bufp, PL_NSIZ-1);\n  2025: \t    plnamesuffix();\n  2026: \t} else if (match_varname(buf, \"ROLE\", 4) ||\n  2027: \t\t   match_varname(buf, \"CHARACTER\", 4)) {\n  2028: \t    if ((len = str2role(bufp)) >= 0)"
+  },
+  {
+    "key": "L02026_01",
+    "original": "ROLE",
+    "translation": "",
+    "context": "src/files.c:2026:32\n  2021: #endif /*NOCWD_ASSUMPTIONS*/\n  2022: \n  2023: \t} else if (match_varname(buf, \"NAME\", 4)) {\n  2024: \t    (void) strncpy(plname, bufp, PL_NSIZ-1);\n  2025: \t    plnamesuffix();\n> 2026: \t} else if (match_varname(buf, \"ROLE\", 4) ||\n  2027: \t\t   match_varname(buf, \"CHARACTER\", 4)) {\n  2028: \t    if ((len = str2role(bufp)) >= 0)\n  2029: \t    \tflags.initrole = len;\n  2030: \t} else if (match_varname(buf, \"DOGNAME\", 3)) {\n  2031: \t    (void) strncpy(dogname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02027_01",
+    "original": "CHARACTER",
+    "translation": "",
+    "context": "src/files.c:2027:25\n  2022: \n  2023: \t} else if (match_varname(buf, \"NAME\", 4)) {\n  2024: \t    (void) strncpy(plname, bufp, PL_NSIZ-1);\n  2025: \t    plnamesuffix();\n  2026: \t} else if (match_varname(buf, \"ROLE\", 4) ||\n> 2027: \t\t   match_varname(buf, \"CHARACTER\", 4)) {\n  2028: \t    if ((len = str2role(bufp)) >= 0)\n  2029: \t    \tflags.initrole = len;\n  2030: \t} else if (match_varname(buf, \"DOGNAME\", 3)) {\n  2031: \t    (void) strncpy(dogname, bufp, PL_PSIZ-1);\n  2032: \t} else if (match_varname(buf, \"CATNAME\", 3)) {"
+  },
+  {
+    "key": "L02030_01",
+    "original": "DOGNAME",
+    "translation": "",
+    "context": "src/files.c:2030:32\n  2025: \t    plnamesuffix();\n  2026: \t} else if (match_varname(buf, \"ROLE\", 4) ||\n  2027: \t\t   match_varname(buf, \"CHARACTER\", 4)) {\n  2028: \t    if ((len = str2role(bufp)) >= 0)\n  2029: \t    \tflags.initrole = len;\n> 2030: \t} else if (match_varname(buf, \"DOGNAME\", 3)) {\n  2031: \t    (void) strncpy(dogname, bufp, PL_PSIZ-1);\n  2032: \t} else if (match_varname(buf, \"CATNAME\", 3)) {\n  2033: \t    (void) strncpy(catname, bufp, PL_PSIZ-1);\n  2034: \t} else if (match_varname(buf, \"WOLFNAME\", 3)) {\n  2035:             (void) strncpy(wolfname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02032_01",
+    "original": "CATNAME",
+    "translation": "",
+    "context": "src/files.c:2032:32\n  2027: \t\t   match_varname(buf, \"CHARACTER\", 4)) {\n  2028: \t    if ((len = str2role(bufp)) >= 0)\n  2029: \t    \tflags.initrole = len;\n  2030: \t} else if (match_varname(buf, \"DOGNAME\", 3)) {\n  2031: \t    (void) strncpy(dogname, bufp, PL_PSIZ-1);\n> 2032: \t} else if (match_varname(buf, \"CATNAME\", 3)) {\n  2033: \t    (void) strncpy(catname, bufp, PL_PSIZ-1);\n  2034: \t} else if (match_varname(buf, \"WOLFNAME\", 3)) {\n  2035:             (void) strncpy(wolfname, bufp, PL_PSIZ-1);\n  2036: \t} else if (match_varname(buf, \"GHOULNAME\", 3)) {\n  2037:             (void) strncpy(ghoulname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02034_01",
+    "original": "WOLFNAME",
+    "translation": "",
+    "context": "src/files.c:2034:32\n  2029: \t    \tflags.initrole = len;\n  2030: \t} else if (match_varname(buf, \"DOGNAME\", 3)) {\n  2031: \t    (void) strncpy(dogname, bufp, PL_PSIZ-1);\n  2032: \t} else if (match_varname(buf, \"CATNAME\", 3)) {\n  2033: \t    (void) strncpy(catname, bufp, PL_PSIZ-1);\n> 2034: \t} else if (match_varname(buf, \"WOLFNAME\", 3)) {\n  2035:             (void) strncpy(wolfname, bufp, PL_PSIZ-1);\n  2036: \t} else if (match_varname(buf, \"GHOULNAME\", 3)) {\n  2037:             (void) strncpy(ghoulname, bufp, PL_PSIZ-1);\n  2038: #if 0\n  2039: \t} else if (match_varname(buf, \"BATNAME\", 3)) {"
+  },
+  {
+    "key": "L02036_01",
+    "original": "GHOULNAME",
+    "translation": "",
+    "context": "src/files.c:2036:32\n  2031: \t    (void) strncpy(dogname, bufp, PL_PSIZ-1);\n  2032: \t} else if (match_varname(buf, \"CATNAME\", 3)) {\n  2033: \t    (void) strncpy(catname, bufp, PL_PSIZ-1);\n  2034: \t} else if (match_varname(buf, \"WOLFNAME\", 3)) {\n  2035:             (void) strncpy(wolfname, bufp, PL_PSIZ-1);\n> 2036: \t} else if (match_varname(buf, \"GHOULNAME\", 3)) {\n  2037:             (void) strncpy(ghoulname, bufp, PL_PSIZ-1);\n  2038: #if 0\n  2039: \t} else if (match_varname(buf, \"BATNAME\", 3)) {\n  2040:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2041: \t} else if (match_varname(buf, \"SNAKENAME\", 3)) {"
+  },
+  {
+    "key": "L02039_01",
+    "original": "BATNAME",
+    "translation": "",
+    "context": "src/files.c:2039:32\n  2034: \t} else if (match_varname(buf, \"WOLFNAME\", 3)) {\n  2035:             (void) strncpy(wolfname, bufp, PL_PSIZ-1);\n  2036: \t} else if (match_varname(buf, \"GHOULNAME\", 3)) {\n  2037:             (void) strncpy(ghoulname, bufp, PL_PSIZ-1);\n  2038: #if 0\n> 2039: \t} else if (match_varname(buf, \"BATNAME\", 3)) {\n  2040:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2041: \t} else if (match_varname(buf, \"SNAKENAME\", 3)) {\n  2042:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2043: \t} else if (match_varname(buf, \"RATNAME\", 3)) {\n  2044:             (void) strncpy(batname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02041_01",
+    "original": "SNAKENAME",
+    "translation": "",
+    "context": "src/files.c:2041:32\n  2036: \t} else if (match_varname(buf, \"GHOULNAME\", 3)) {\n  2037:             (void) strncpy(ghoulname, bufp, PL_PSIZ-1);\n  2038: #if 0\n  2039: \t} else if (match_varname(buf, \"BATNAME\", 3)) {\n  2040:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n> 2041: \t} else if (match_varname(buf, \"SNAKENAME\", 3)) {\n  2042:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2043: \t} else if (match_varname(buf, \"RATNAME\", 3)) {\n  2044:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2045: \t} else if (match_varname(buf, \"BADGERNAME\", 3)) {\n  2046:             (void) strncpy(batname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02043_01",
+    "original": "RATNAME",
+    "translation": "",
+    "context": "src/files.c:2043:32\n  2038: #if 0\n  2039: \t} else if (match_varname(buf, \"BATNAME\", 3)) {\n  2040:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2041: \t} else if (match_varname(buf, \"SNAKENAME\", 3)) {\n  2042:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n> 2043: \t} else if (match_varname(buf, \"RATNAME\", 3)) {\n  2044:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2045: \t} else if (match_varname(buf, \"BADGERNAME\", 3)) {\n  2046:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2047: \t} else if (match_varname(buf, \"REDDRAGONNAME\", 3)) {\n  2048:             (void) strncpy(batname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02045_01",
+    "original": "BADGERNAME",
+    "translation": "",
+    "context": "src/files.c:2045:32\n  2040:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2041: \t} else if (match_varname(buf, \"SNAKENAME\", 3)) {\n  2042:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2043: \t} else if (match_varname(buf, \"RATNAME\", 3)) {\n  2044:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n> 2045: \t} else if (match_varname(buf, \"BADGERNAME\", 3)) {\n  2046:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2047: \t} else if (match_varname(buf, \"REDDRAGONNAME\", 3)) {\n  2048:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2049: \t} else if (match_varname(buf, \"WHITEDRAGONNAME\", 3)) {\n  2050:             (void) strncpy(batname, bufp, PL_PSIZ-1);"
+  },
+  {
+    "key": "L02047_01",
+    "original": "REDDRAGONNAME",
+    "translation": "",
+    "context": "src/files.c:2047:32\n  2042:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2043: \t} else if (match_varname(buf, \"RATNAME\", 3)) {\n  2044:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2045: \t} else if (match_varname(buf, \"BADGERNAME\", 3)) {\n  2046:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n> 2047: \t} else if (match_varname(buf, \"REDDRAGONNAME\", 3)) {\n  2048:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2049: \t} else if (match_varname(buf, \"WHITEDRAGONNAME\", 3)) {\n  2050:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2051: #endif\n  2052: "
+  },
+  {
+    "key": "L02049_01",
+    "original": "WHITEDRAGONNAME",
+    "translation": "",
+    "context": "src/files.c:2049:32\n  2044:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2045: \t} else if (match_varname(buf, \"BADGERNAME\", 3)) {\n  2046:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2047: \t} else if (match_varname(buf, \"REDDRAGONNAME\", 3)) {\n  2048:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n> 2049: \t} else if (match_varname(buf, \"WHITEDRAGONNAME\", 3)) {\n  2050:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2051: #endif\n  2052: \n  2053: \t} else if (match_varname(buf, \"BOULDER\", 3)) {\n  2054: \t    (void) get_uchars(fp, buf, bufp, &iflags.bouldersym, TRUE,"
+  },
+  {
+    "key": "L02053_01",
+    "original": "BOULDER",
+    "translation": "",
+    "context": "src/files.c:2053:32\n  2048:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2049: \t} else if (match_varname(buf, \"WHITEDRAGONNAME\", 3)) {\n  2050:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2051: #endif\n  2052: \n> 2053: \t} else if (match_varname(buf, \"BOULDER\", 3)) {\n  2054: \t    (void) get_uchars(fp, buf, bufp, &iflags.bouldersym, TRUE,\n  2055: \t\t\t      1, \"BOULDER\");\n  2056: \t} else if (match_varname(buf, \"MENUCOLOR\", 9)) {\n  2057: #ifdef MENU_COLOR\n  2058: \t   add_menu_coloring(bufp);"
+  },
+  {
+    "key": "L02055_01",
+    "original": "BOULDER",
+    "translation": "",
+    "context": "src/files.c:2055:13\n  2050:             (void) strncpy(batname, bufp, PL_PSIZ-1);\n  2051: #endif\n  2052: \n  2053: \t} else if (match_varname(buf, \"BOULDER\", 3)) {\n  2054: \t    (void) get_uchars(fp, buf, bufp, &iflags.bouldersym, TRUE,\n> 2055: \t\t\t      1, \"BOULDER\");\n  2056: \t} else if (match_varname(buf, \"MENUCOLOR\", 9)) {\n  2057: #ifdef MENU_COLOR\n  2058: \t   add_menu_coloring(bufp);\n  2059: #endif\n  2060: \t} else if (match_varname(buf, \"GRAPHICS\", 4)) {"
+  },
+  {
+    "key": "L02056_01",
+    "original": "MENUCOLOR",
+    "translation": "",
+    "context": "src/files.c:2056:32\n  2051: #endif\n  2052: \n  2053: \t} else if (match_varname(buf, \"BOULDER\", 3)) {\n  2054: \t    (void) get_uchars(fp, buf, bufp, &iflags.bouldersym, TRUE,\n  2055: \t\t\t      1, \"BOULDER\");\n> 2056: \t} else if (match_varname(buf, \"MENUCOLOR\", 9)) {\n  2057: #ifdef MENU_COLOR\n  2058: \t   add_menu_coloring(bufp);\n  2059: #endif\n  2060: \t} else if (match_varname(buf, \"GRAPHICS\", 4)) {\n  2061: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,"
+  },
+  {
+    "key": "L02060_01",
+    "original": "GRAPHICS",
+    "translation": "",
+    "context": "src/files.c:2060:32\n  2055: \t\t\t      1, \"BOULDER\");\n  2056: \t} else if (match_varname(buf, \"MENUCOLOR\", 9)) {\n  2057: #ifdef MENU_COLOR\n  2058: \t   add_menu_coloring(bufp);\n  2059: #endif\n> 2060: \t} else if (match_varname(buf, \"GRAPHICS\", 4)) {\n  2061: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2062: \t\t\t     MAXPCHARS, \"GRAPHICS\");\n  2063: \t    assign_graphics(translate, len, MAXPCHARS, 0);\n  2064: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n  2065: \t} else if (match_varname(buf, \"STATUSCOLOR\", 11)) {"
+  },
+  {
+    "key": "L02062_01",
+    "original": "GRAPHICS",
+    "translation": "",
+    "context": "src/files.c:2062:20\n  2057: #ifdef MENU_COLOR\n  2058: \t   add_menu_coloring(bufp);\n  2059: #endif\n  2060: \t} else if (match_varname(buf, \"GRAPHICS\", 4)) {\n  2061: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n> 2062: \t\t\t     MAXPCHARS, \"GRAPHICS\");\n  2063: \t    assign_graphics(translate, len, MAXPCHARS, 0);\n  2064: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n  2065: \t} else if (match_varname(buf, \"STATUSCOLOR\", 11)) {\n  2066: \t    (void) parse_status_color_options(bufp);\n  2067: #endif"
+  },
+  {
+    "key": "L02065_01",
+    "original": "STATUSCOLOR",
+    "translation": "",
+    "context": "src/files.c:2065:32\n  2060: \t} else if (match_varname(buf, \"GRAPHICS\", 4)) {\n  2061: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2062: \t\t\t     MAXPCHARS, \"GRAPHICS\");\n  2063: \t    assign_graphics(translate, len, MAXPCHARS, 0);\n  2064: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n> 2065: \t} else if (match_varname(buf, \"STATUSCOLOR\", 11)) {\n  2066: \t    (void) parse_status_color_options(bufp);\n  2067: #endif\n  2068: \t} else if (match_varname(buf, \"DUNGEON\", 4)) {\n  2069: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2070: \t\t\t     MAXDCHARS, \"DUNGEON\");"
+  },
+  {
+    "key": "L02068_01",
+    "original": "DUNGEON",
+    "translation": "",
+    "context": "src/files.c:2068:32\n  2063: \t    assign_graphics(translate, len, MAXPCHARS, 0);\n  2064: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n  2065: \t} else if (match_varname(buf, \"STATUSCOLOR\", 11)) {\n  2066: \t    (void) parse_status_color_options(bufp);\n  2067: #endif\n> 2068: \t} else if (match_varname(buf, \"DUNGEON\", 4)) {\n  2069: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2070: \t\t\t     MAXDCHARS, \"DUNGEON\");\n  2071: \t    assign_graphics(translate, len, MAXDCHARS, 0);\n  2072: \t} else if (match_varname(buf, \"TRAPS\", 4)) {\n  2073: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,"
+  },
+  {
+    "key": "L02070_01",
+    "original": "DUNGEON",
+    "translation": "",
+    "context": "src/files.c:2070:20\n  2065: \t} else if (match_varname(buf, \"STATUSCOLOR\", 11)) {\n  2066: \t    (void) parse_status_color_options(bufp);\n  2067: #endif\n  2068: \t} else if (match_varname(buf, \"DUNGEON\", 4)) {\n  2069: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n> 2070: \t\t\t     MAXDCHARS, \"DUNGEON\");\n  2071: \t    assign_graphics(translate, len, MAXDCHARS, 0);\n  2072: \t} else if (match_varname(buf, \"TRAPS\", 4)) {\n  2073: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2074: \t\t\t     MAXTCHARS, \"TRAPS\");\n  2075: \t    assign_graphics(translate, len, MAXTCHARS, MAXDCHARS);"
+  },
+  {
+    "key": "L02072_01",
+    "original": "TRAPS",
+    "translation": "",
+    "context": "src/files.c:2072:32\n  2067: #endif\n  2068: \t} else if (match_varname(buf, \"DUNGEON\", 4)) {\n  2069: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2070: \t\t\t     MAXDCHARS, \"DUNGEON\");\n  2071: \t    assign_graphics(translate, len, MAXDCHARS, 0);\n> 2072: \t} else if (match_varname(buf, \"TRAPS\", 4)) {\n  2073: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2074: \t\t\t     MAXTCHARS, \"TRAPS\");\n  2075: \t    assign_graphics(translate, len, MAXTCHARS, MAXDCHARS);\n  2076: \t} else if (match_varname(buf, \"EFFECTS\", 4)) {\n  2077: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,"
+  },
+  {
+    "key": "L02074_01",
+    "original": "TRAPS",
+    "translation": "",
+    "context": "src/files.c:2074:20\n  2069: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2070: \t\t\t     MAXDCHARS, \"DUNGEON\");\n  2071: \t    assign_graphics(translate, len, MAXDCHARS, 0);\n  2072: \t} else if (match_varname(buf, \"TRAPS\", 4)) {\n  2073: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n> 2074: \t\t\t     MAXTCHARS, \"TRAPS\");\n  2075: \t    assign_graphics(translate, len, MAXTCHARS, MAXDCHARS);\n  2076: \t} else if (match_varname(buf, \"EFFECTS\", 4)) {\n  2077: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2078: \t\t\t     MAXECHARS, \"EFFECTS\");\n  2079: \t    assign_graphics(translate, len, MAXECHARS, MAXDCHARS+MAXTCHARS);"
+  },
+  {
+    "key": "L02076_01",
+    "original": "EFFECTS",
+    "translation": "",
+    "context": "src/files.c:2076:32\n  2071: \t    assign_graphics(translate, len, MAXDCHARS, 0);\n  2072: \t} else if (match_varname(buf, \"TRAPS\", 4)) {\n  2073: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2074: \t\t\t     MAXTCHARS, \"TRAPS\");\n  2075: \t    assign_graphics(translate, len, MAXTCHARS, MAXDCHARS);\n> 2076: \t} else if (match_varname(buf, \"EFFECTS\", 4)) {\n  2077: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2078: \t\t\t     MAXECHARS, \"EFFECTS\");\n  2079: \t    assign_graphics(translate, len, MAXECHARS, MAXDCHARS+MAXTCHARS);\n  2080: \n  2081: \t} else if (match_varname(buf, \"OBJECTS\", 3)) {"
+  },
+  {
+    "key": "L02078_01",
+    "original": "EFFECTS",
+    "translation": "",
+    "context": "src/files.c:2078:20\n  2073: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2074: \t\t\t     MAXTCHARS, \"TRAPS\");\n  2075: \t    assign_graphics(translate, len, MAXTCHARS, MAXDCHARS);\n  2076: \t} else if (match_varname(buf, \"EFFECTS\", 4)) {\n  2077: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n> 2078: \t\t\t     MAXECHARS, \"EFFECTS\");\n  2079: \t    assign_graphics(translate, len, MAXECHARS, MAXDCHARS+MAXTCHARS);\n  2080: \n  2081: \t} else if (match_varname(buf, \"OBJECTS\", 3)) {\n  2082: \t    /* oc_syms[0] is the RANDOM object, unused */\n  2083: \t    (void) get_uchars(fp, buf, bufp, &(oc_syms[1]), TRUE,"
+  },
+  {
+    "key": "L02081_01",
+    "original": "OBJECTS",
+    "translation": "",
+    "context": "src/files.c:2081:32\n  2076: \t} else if (match_varname(buf, \"EFFECTS\", 4)) {\n  2077: \t    len = get_uchars(fp, buf, bufp, translate, FALSE,\n  2078: \t\t\t     MAXECHARS, \"EFFECTS\");\n  2079: \t    assign_graphics(translate, len, MAXECHARS, MAXDCHARS+MAXTCHARS);\n  2080: \n> 2081: \t} else if (match_varname(buf, \"OBJECTS\", 3)) {\n  2082: \t    /* oc_syms[0] is the RANDOM object, unused */\n  2083: \t    (void) get_uchars(fp, buf, bufp, &(oc_syms[1]), TRUE,\n  2084: \t\t\t\t\tMAXOCLASSES-1, \"OBJECTS\");\n  2085: \t} else if (match_varname(buf, \"MONSTERS\", 3)) {\n  2086: \t    /* monsyms[0] is unused */"
+  },
+  {
+    "key": "L02084_01",
+    "original": "OBJECTS",
+    "translation": "",
+    "context": "src/files.c:2084:21\n  2079: \t    assign_graphics(translate, len, MAXECHARS, MAXDCHARS+MAXTCHARS);\n  2080: \n  2081: \t} else if (match_varname(buf, \"OBJECTS\", 3)) {\n  2082: \t    /* oc_syms[0] is the RANDOM object, unused */\n  2083: \t    (void) get_uchars(fp, buf, bufp, &(oc_syms[1]), TRUE,\n> 2084: \t\t\t\t\tMAXOCLASSES-1, \"OBJECTS\");\n  2085: \t} else if (match_varname(buf, \"MONSTERS\", 3)) {\n  2086: \t    /* monsyms[0] is unused */\n  2087: \t    (void) get_uchars(fp, buf, bufp, &(monsyms[1]), TRUE,\n  2088: \t\t\t\t\tMAXMCLASSES-1, \"MONSTERS\");\n  2089: \t} else if (match_varname(buf, \"WARNINGS\", 5)) {"
+  },
+  {
+    "key": "L02085_01",
+    "original": "MONSTERS",
+    "translation": "",
+    "context": "src/files.c:2085:32\n  2080: \n  2081: \t} else if (match_varname(buf, \"OBJECTS\", 3)) {\n  2082: \t    /* oc_syms[0] is the RANDOM object, unused */\n  2083: \t    (void) get_uchars(fp, buf, bufp, &(oc_syms[1]), TRUE,\n  2084: \t\t\t\t\tMAXOCLASSES-1, \"OBJECTS\");\n> 2085: \t} else if (match_varname(buf, \"MONSTERS\", 3)) {\n  2086: \t    /* monsyms[0] is unused */\n  2087: \t    (void) get_uchars(fp, buf, bufp, &(monsyms[1]), TRUE,\n  2088: \t\t\t\t\tMAXMCLASSES-1, \"MONSTERS\");\n  2089: \t} else if (match_varname(buf, \"WARNINGS\", 5)) {\n  2090: \t    (void) get_uchars(fp, buf, bufp, translate, TRUE,"
+  },
+  {
+    "key": "L02088_01",
+    "original": "MONSTERS",
+    "translation": "",
+    "context": "src/files.c:2088:21\n  2083: \t    (void) get_uchars(fp, buf, bufp, &(oc_syms[1]), TRUE,\n  2084: \t\t\t\t\tMAXOCLASSES-1, \"OBJECTS\");\n  2085: \t} else if (match_varname(buf, \"MONSTERS\", 3)) {\n  2086: \t    /* monsyms[0] is unused */\n  2087: \t    (void) get_uchars(fp, buf, bufp, &(monsyms[1]), TRUE,\n> 2088: \t\t\t\t\tMAXMCLASSES-1, \"MONSTERS\");\n  2089: \t} else if (match_varname(buf, \"WARNINGS\", 5)) {\n  2090: \t    (void) get_uchars(fp, buf, bufp, translate, TRUE,\n  2091: \t\t\t\t\tWARNCOUNT, \"WARNINGS\");\n  2092: \t    assign_warnings(translate);\n  2093: #ifdef WIZARD"
+  },
+  {
+    "key": "L02089_01",
+    "original": "WARNINGS",
+    "translation": "",
+    "context": "src/files.c:2089:32\n  2084: \t\t\t\t\tMAXOCLASSES-1, \"OBJECTS\");\n  2085: \t} else if (match_varname(buf, \"MONSTERS\", 3)) {\n  2086: \t    /* monsyms[0] is unused */\n  2087: \t    (void) get_uchars(fp, buf, bufp, &(monsyms[1]), TRUE,\n  2088: \t\t\t\t\tMAXMCLASSES-1, \"MONSTERS\");\n> 2089: \t} else if (match_varname(buf, \"WARNINGS\", 5)) {\n  2090: \t    (void) get_uchars(fp, buf, bufp, translate, TRUE,\n  2091: \t\t\t\t\tWARNCOUNT, \"WARNINGS\");\n  2092: \t    assign_warnings(translate);\n  2093: #ifdef WIZARD\n  2094: \t} else if (match_varname(buf, \"WIZKIT\", 6)) {"
+  },
+  {
+    "key": "L02091_01",
+    "original": "WARNINGS",
+    "translation": "",
+    "context": "src/files.c:2091:17\n  2086: \t    /* monsyms[0] is unused */\n  2087: \t    (void) get_uchars(fp, buf, bufp, &(monsyms[1]), TRUE,\n  2088: \t\t\t\t\tMAXMCLASSES-1, \"MONSTERS\");\n  2089: \t} else if (match_varname(buf, \"WARNINGS\", 5)) {\n  2090: \t    (void) get_uchars(fp, buf, bufp, translate, TRUE,\n> 2091: \t\t\t\t\tWARNCOUNT, \"WARNINGS\");\n  2092: \t    assign_warnings(translate);\n  2093: #ifdef WIZARD\n  2094: \t} else if (match_varname(buf, \"WIZKIT\", 6)) {\n  2095: \t    (void) strncpy(wizkit, bufp, WIZKIT_MAX-1);\n  2096: #endif"
+  },
+  {
+    "key": "L02094_01",
+    "original": "WIZKIT",
+    "translation": "",
+    "context": "src/files.c:2094:32\n  2089: \t} else if (match_varname(buf, \"WARNINGS\", 5)) {\n  2090: \t    (void) get_uchars(fp, buf, bufp, translate, TRUE,\n  2091: \t\t\t\t\tWARNCOUNT, \"WARNINGS\");\n  2092: \t    assign_warnings(translate);\n  2093: #ifdef WIZARD\n> 2094: \t} else if (match_varname(buf, \"WIZKIT\", 6)) {\n  2095: \t    (void) strncpy(wizkit, bufp, WIZKIT_MAX-1);\n  2096: #endif\n  2097: #ifdef AMIGA\n  2098: \t} else if (match_varname(buf, \"FONT\", 4)) {\n  2099: \t\tchar *t;"
+  },
+  {
+    "key": "L02098_01",
+    "original": "FONT",
+    "translation": "",
+    "context": "src/files.c:2098:32\n  2093: #ifdef WIZARD\n  2094: \t} else if (match_varname(buf, \"WIZKIT\", 6)) {\n  2095: \t    (void) strncpy(wizkit, bufp, WIZKIT_MAX-1);\n  2096: #endif\n  2097: #ifdef AMIGA\n> 2098: \t} else if (match_varname(buf, \"FONT\", 4)) {\n  2099: \t\tchar *t;\n  2100: \n  2101: \t\tif( t = strchr( buf+5, ':' ) )\n  2102: \t\t{\n  2103: \t\t    *t = 0;"
+  },
+  {
+    "key": "L02107_01",
+    "original": "PATH",
+    "translation": "",
+    "context": "src/files.c:2107:32\n  2102: \t\t{\n  2103: \t\t    *t = 0;\n  2104: \t\t    amii_set_text_font( buf+5, atoi( t + 1 ) );\n  2105: \t\t    *t = ':';\n  2106: \t\t}\n> 2107: \t} else if (match_varname(buf, \"PATH\", 4)) {\n  2108: \t\t(void) strncpy(PATH, bufp, PATHLEN-1);\n  2109: \t} else if (match_varname(buf, \"DEPTH\", 5)) {\n  2110: \t\textern int amii_numcolors;\n  2111: \t\tint val = atoi( bufp );\n  2112: \t\tamii_numcolors = 1L << min( DEPTH, val );"
+  },
+  {
+    "key": "L02109_01",
+    "original": "DEPTH",
+    "translation": "",
+    "context": "src/files.c:2109:32\n  2104: \t\t    amii_set_text_font( buf+5, atoi( t + 1 ) );\n  2105: \t\t    *t = ':';\n  2106: \t\t}\n  2107: \t} else if (match_varname(buf, \"PATH\", 4)) {\n  2108: \t\t(void) strncpy(PATH, bufp, PATHLEN-1);\n> 2109: \t} else if (match_varname(buf, \"DEPTH\", 5)) {\n  2110: \t\textern int amii_numcolors;\n  2111: \t\tint val = atoi( bufp );\n  2112: \t\tamii_numcolors = 1L << min( DEPTH, val );\n  2113: \t} else if (match_varname(buf, \"DRIPENS\", 7)) {\n  2114: \t\tint i, val;"
+  },
+  {
+    "key": "L02113_01",
+    "original": "DRIPENS",
+    "translation": "",
+    "context": "src/files.c:2113:32\n  2108: \t\t(void) strncpy(PATH, bufp, PATHLEN-1);\n  2109: \t} else if (match_varname(buf, \"DEPTH\", 5)) {\n  2110: \t\textern int amii_numcolors;\n  2111: \t\tint val = atoi( bufp );\n  2112: \t\tamii_numcolors = 1L << min( DEPTH, val );\n> 2113: \t} else if (match_varname(buf, \"DRIPENS\", 7)) {\n  2114: \t\tint i, val;\n  2115: \t\tchar *t;\n  2116: \t\tfor (i = 0, t = strtok(bufp, \",/\"); t != (char *)0;\n  2117: \t\t\t\ti < 20 && (t = strtok((char*)0, \",/\")), ++i) {\n  2118: \t\t\tsscanf(t, \"%d\", &val );"
+  },
+  {
+    "key": "L02118_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2118:14\n  2113: \t} else if (match_varname(buf, \"DRIPENS\", 7)) {\n  2114: \t\tint i, val;\n  2115: \t\tchar *t;\n  2116: \t\tfor (i = 0, t = strtok(bufp, \",/\"); t != (char *)0;\n  2117: \t\t\t\ti < 20 && (t = strtok((char*)0, \",/\")), ++i) {\n> 2118: \t\t\tsscanf(t, \"%d\", &val );\n  2119: \t\t\tflags.amii_dripens[i] = val;\n  2120: \t\t}\n  2121: \t} else if (match_varname(buf, \"SCREENMODE\", 10 )) {\n  2122: \t\textern long amii_scrnmode;\n  2123: \t\tif (!stricmp(bufp,\"req\"))"
+  },
+  {
+    "key": "L02121_01",
+    "original": "SCREENMODE",
+    "translation": "",
+    "context": "src/files.c:2121:32\n  2116: \t\tfor (i = 0, t = strtok(bufp, \",/\"); t != (char *)0;\n  2117: \t\t\t\ti < 20 && (t = strtok((char*)0, \",/\")), ++i) {\n  2118: \t\t\tsscanf(t, \"%d\", &val );\n  2119: \t\t\tflags.amii_dripens[i] = val;\n  2120: \t\t}\n> 2121: \t} else if (match_varname(buf, \"SCREENMODE\", 10 )) {\n  2122: \t\textern long amii_scrnmode;\n  2123: \t\tif (!stricmp(bufp,\"req\"))\n  2124: \t\t    amii_scrnmode = 0xffffffff; /* Requester */\n  2125: \t\telse if( sscanf(bufp, \"%x\", &amii_scrnmode) != 1 )\n  2126: \t\t    amii_scrnmode = 0;"
+  },
+  {
+    "key": "L02123_01",
+    "original": "req",
+    "translation": "",
+    "context": "src/files.c:2123:21\n  2118: \t\t\tsscanf(t, \"%d\", &val );\n  2119: \t\t\tflags.amii_dripens[i] = val;\n  2120: \t\t}\n  2121: \t} else if (match_varname(buf, \"SCREENMODE\", 10 )) {\n  2122: \t\textern long amii_scrnmode;\n> 2123: \t\tif (!stricmp(bufp,\"req\"))\n  2124: \t\t    amii_scrnmode = 0xffffffff; /* Requester */\n  2125: \t\telse if( sscanf(bufp, \"%x\", &amii_scrnmode) != 1 )\n  2126: \t\t    amii_scrnmode = 0;\n  2127: \t} else if (match_varname(buf, \"MSGPENS\", 7)) {\n  2128: \t\textern int amii_msgAPen, amii_msgBPen;"
+  },
+  {
+    "key": "L02125_01",
+    "original": "%x",
+    "translation": "",
+    "context": "src/files.c:2125:25\n  2120: \t\t}\n  2121: \t} else if (match_varname(buf, \"SCREENMODE\", 10 )) {\n  2122: \t\textern long amii_scrnmode;\n  2123: \t\tif (!stricmp(bufp,\"req\"))\n  2124: \t\t    amii_scrnmode = 0xffffffff; /* Requester */\n> 2125: \t\telse if( sscanf(bufp, \"%x\", &amii_scrnmode) != 1 )\n  2126: \t\t    amii_scrnmode = 0;\n  2127: \t} else if (match_varname(buf, \"MSGPENS\", 7)) {\n  2128: \t\textern int amii_msgAPen, amii_msgBPen;\n  2129: \t\tchar *t = strtok(bufp, \",/\");\n  2130: \t\tif( t )"
+  },
+  {
+    "key": "L02127_01",
+    "original": "MSGPENS",
+    "translation": "",
+    "context": "src/files.c:2127:32\n  2122: \t\textern long amii_scrnmode;\n  2123: \t\tif (!stricmp(bufp,\"req\"))\n  2124: \t\t    amii_scrnmode = 0xffffffff; /* Requester */\n  2125: \t\telse if( sscanf(bufp, \"%x\", &amii_scrnmode) != 1 )\n  2126: \t\t    amii_scrnmode = 0;\n> 2127: \t} else if (match_varname(buf, \"MSGPENS\", 7)) {\n  2128: \t\textern int amii_msgAPen, amii_msgBPen;\n  2129: \t\tchar *t = strtok(bufp, \",/\");\n  2130: \t\tif( t )\n  2131: \t\t{\n  2132: \t\t    sscanf(t, \"%d\", &amii_msgAPen);"
+  },
+  {
+    "key": "L02132_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2132:17\n  2127: \t} else if (match_varname(buf, \"MSGPENS\", 7)) {\n  2128: \t\textern int amii_msgAPen, amii_msgBPen;\n  2129: \t\tchar *t = strtok(bufp, \",/\");\n  2130: \t\tif( t )\n  2131: \t\t{\n> 2132: \t\t    sscanf(t, \"%d\", &amii_msgAPen);\n  2133: \t\t    if( t = strtok((char*)0, \",/\") )\n  2134: \t\t\t\tsscanf(t, \"%d\", &amii_msgBPen);\n  2135: \t\t}\n  2136: \t} else if (match_varname(buf, \"TEXTPENS\", 8)) {\n  2137: \t\textern int amii_textAPen, amii_textBPen;"
+  },
+  {
+    "key": "L02134_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2134:15\n  2129: \t\tchar *t = strtok(bufp, \",/\");\n  2130: \t\tif( t )\n  2131: \t\t{\n  2132: \t\t    sscanf(t, \"%d\", &amii_msgAPen);\n  2133: \t\t    if( t = strtok((char*)0, \",/\") )\n> 2134: \t\t\t\tsscanf(t, \"%d\", &amii_msgBPen);\n  2135: \t\t}\n  2136: \t} else if (match_varname(buf, \"TEXTPENS\", 8)) {\n  2137: \t\textern int amii_textAPen, amii_textBPen;\n  2138: \t\tchar *t = strtok(bufp, \",/\");\n  2139: \t\tif( t )"
+  },
+  {
+    "key": "L02136_01",
+    "original": "TEXTPENS",
+    "translation": "",
+    "context": "src/files.c:2136:32\n  2131: \t\t{\n  2132: \t\t    sscanf(t, \"%d\", &amii_msgAPen);\n  2133: \t\t    if( t = strtok((char*)0, \",/\") )\n  2134: \t\t\t\tsscanf(t, \"%d\", &amii_msgBPen);\n  2135: \t\t}\n> 2136: \t} else if (match_varname(buf, \"TEXTPENS\", 8)) {\n  2137: \t\textern int amii_textAPen, amii_textBPen;\n  2138: \t\tchar *t = strtok(bufp, \",/\");\n  2139: \t\tif( t )\n  2140: \t\t{\n  2141: \t\t    sscanf(t, \"%d\", &amii_textAPen);"
+  },
+  {
+    "key": "L02141_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2141:17\n  2136: \t} else if (match_varname(buf, \"TEXTPENS\", 8)) {\n  2137: \t\textern int amii_textAPen, amii_textBPen;\n  2138: \t\tchar *t = strtok(bufp, \",/\");\n  2139: \t\tif( t )\n  2140: \t\t{\n> 2141: \t\t    sscanf(t, \"%d\", &amii_textAPen);\n  2142: \t\t    if( t = strtok((char*)0, \",/\") )\n  2143: \t\t\t\tsscanf(t, \"%d\", &amii_textBPen);\n  2144: \t\t}\n  2145: \t} else if (match_varname(buf, \"MENUPENS\", 8)) {\n  2146: \t\textern int amii_menuAPen, amii_menuBPen;"
+  },
+  {
+    "key": "L02143_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2143:15\n  2138: \t\tchar *t = strtok(bufp, \",/\");\n  2139: \t\tif( t )\n  2140: \t\t{\n  2141: \t\t    sscanf(t, \"%d\", &amii_textAPen);\n  2142: \t\t    if( t = strtok((char*)0, \",/\") )\n> 2143: \t\t\t\tsscanf(t, \"%d\", &amii_textBPen);\n  2144: \t\t}\n  2145: \t} else if (match_varname(buf, \"MENUPENS\", 8)) {\n  2146: \t\textern int amii_menuAPen, amii_menuBPen;\n  2147: \t\tchar *t = strtok(bufp, \",/\");\n  2148: \t\tif( t )"
+  },
+  {
+    "key": "L02145_01",
+    "original": "MENUPENS",
+    "translation": "",
+    "context": "src/files.c:2145:32\n  2140: \t\t{\n  2141: \t\t    sscanf(t, \"%d\", &amii_textAPen);\n  2142: \t\t    if( t = strtok((char*)0, \",/\") )\n  2143: \t\t\t\tsscanf(t, \"%d\", &amii_textBPen);\n  2144: \t\t}\n> 2145: \t} else if (match_varname(buf, \"MENUPENS\", 8)) {\n  2146: \t\textern int amii_menuAPen, amii_menuBPen;\n  2147: \t\tchar *t = strtok(bufp, \",/\");\n  2148: \t\tif( t )\n  2149: \t\t{\n  2150: \t\t    sscanf(t, \"%d\", &amii_menuAPen);"
+  },
+  {
+    "key": "L02150_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2150:17\n  2145: \t} else if (match_varname(buf, \"MENUPENS\", 8)) {\n  2146: \t\textern int amii_menuAPen, amii_menuBPen;\n  2147: \t\tchar *t = strtok(bufp, \",/\");\n  2148: \t\tif( t )\n  2149: \t\t{\n> 2150: \t\t    sscanf(t, \"%d\", &amii_menuAPen);\n  2151: \t\t    if( t = strtok((char*)0, \",/\") )\n  2152: \t\t\t\tsscanf(t, \"%d\", &amii_menuBPen);\n  2153: \t\t}\n  2154: \t} else if (match_varname(buf, \"STATUSPENS\", 10)) {\n  2155: \t\textern int amii_statAPen, amii_statBPen;"
+  },
+  {
+    "key": "L02152_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2152:15\n  2147: \t\tchar *t = strtok(bufp, \",/\");\n  2148: \t\tif( t )\n  2149: \t\t{\n  2150: \t\t    sscanf(t, \"%d\", &amii_menuAPen);\n  2151: \t\t    if( t = strtok((char*)0, \",/\") )\n> 2152: \t\t\t\tsscanf(t, \"%d\", &amii_menuBPen);\n  2153: \t\t}\n  2154: \t} else if (match_varname(buf, \"STATUSPENS\", 10)) {\n  2155: \t\textern int amii_statAPen, amii_statBPen;\n  2156: \t\tchar *t = strtok(bufp, \",/\");\n  2157: \t\tif( t )"
+  },
+  {
+    "key": "L02154_01",
+    "original": "STATUSPENS",
+    "translation": "",
+    "context": "src/files.c:2154:32\n  2149: \t\t{\n  2150: \t\t    sscanf(t, \"%d\", &amii_menuAPen);\n  2151: \t\t    if( t = strtok((char*)0, \",/\") )\n  2152: \t\t\t\tsscanf(t, \"%d\", &amii_menuBPen);\n  2153: \t\t}\n> 2154: \t} else if (match_varname(buf, \"STATUSPENS\", 10)) {\n  2155: \t\textern int amii_statAPen, amii_statBPen;\n  2156: \t\tchar *t = strtok(bufp, \",/\");\n  2157: \t\tif( t )\n  2158: \t\t{\n  2159: \t\t    sscanf(t, \"%d\", &amii_statAPen);"
+  },
+  {
+    "key": "L02159_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2159:17\n  2154: \t} else if (match_varname(buf, \"STATUSPENS\", 10)) {\n  2155: \t\textern int amii_statAPen, amii_statBPen;\n  2156: \t\tchar *t = strtok(bufp, \",/\");\n  2157: \t\tif( t )\n  2158: \t\t{\n> 2159: \t\t    sscanf(t, \"%d\", &amii_statAPen);\n  2160: \t\t    if( t = strtok((char*)0, \",/\") )\n  2161: \t\t\t\tsscanf(t, \"%d\", &amii_statBPen);\n  2162: \t\t}\n  2163: \t} else if (match_varname(buf, \"OTHERPENS\", 9)) {\n  2164: \t\textern int amii_otherAPen, amii_otherBPen;"
+  },
+  {
+    "key": "L02161_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2161:15\n  2156: \t\tchar *t = strtok(bufp, \",/\");\n  2157: \t\tif( t )\n  2158: \t\t{\n  2159: \t\t    sscanf(t, \"%d\", &amii_statAPen);\n  2160: \t\t    if( t = strtok((char*)0, \",/\") )\n> 2161: \t\t\t\tsscanf(t, \"%d\", &amii_statBPen);\n  2162: \t\t}\n  2163: \t} else if (match_varname(buf, \"OTHERPENS\", 9)) {\n  2164: \t\textern int amii_otherAPen, amii_otherBPen;\n  2165: \t\tchar *t = strtok(bufp, \",/\");\n  2166: \t\tif( t )"
+  },
+  {
+    "key": "L02163_01",
+    "original": "OTHERPENS",
+    "translation": "",
+    "context": "src/files.c:2163:32\n  2158: \t\t{\n  2159: \t\t    sscanf(t, \"%d\", &amii_statAPen);\n  2160: \t\t    if( t = strtok((char*)0, \",/\") )\n  2161: \t\t\t\tsscanf(t, \"%d\", &amii_statBPen);\n  2162: \t\t}\n> 2163: \t} else if (match_varname(buf, \"OTHERPENS\", 9)) {\n  2164: \t\textern int amii_otherAPen, amii_otherBPen;\n  2165: \t\tchar *t = strtok(bufp, \",/\");\n  2166: \t\tif( t )\n  2167: \t\t{\n  2168: \t\t    sscanf(t, \"%d\", &amii_otherAPen);"
+  },
+  {
+    "key": "L02168_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2168:17\n  2163: \t} else if (match_varname(buf, \"OTHERPENS\", 9)) {\n  2164: \t\textern int amii_otherAPen, amii_otherBPen;\n  2165: \t\tchar *t = strtok(bufp, \",/\");\n  2166: \t\tif( t )\n  2167: \t\t{\n> 2168: \t\t    sscanf(t, \"%d\", &amii_otherAPen);\n  2169: \t\t    if( t = strtok((char*)0, \",/\") )\n  2170: \t\t\t\tsscanf(t, \"%d\", &amii_otherBPen);\n  2171: \t\t}\n  2172: \t} else if (match_varname(buf, \"PENS\", 4)) {\n  2173: \t\textern unsigned short amii_init_map[ AMII_MAXCOLORS ];"
+  },
+  {
+    "key": "L02170_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2170:15\n  2165: \t\tchar *t = strtok(bufp, \",/\");\n  2166: \t\tif( t )\n  2167: \t\t{\n  2168: \t\t    sscanf(t, \"%d\", &amii_otherAPen);\n  2169: \t\t    if( t = strtok((char*)0, \",/\") )\n> 2170: \t\t\t\tsscanf(t, \"%d\", &amii_otherBPen);\n  2171: \t\t}\n  2172: \t} else if (match_varname(buf, \"PENS\", 4)) {\n  2173: \t\textern unsigned short amii_init_map[ AMII_MAXCOLORS ];\n  2174: \t\tint i;\n  2175: \t\tchar *t;"
+  },
+  {
+    "key": "L02172_01",
+    "original": "PENS",
+    "translation": "",
+    "context": "src/files.c:2172:32\n  2167: \t\t{\n  2168: \t\t    sscanf(t, \"%d\", &amii_otherAPen);\n  2169: \t\t    if( t = strtok((char*)0, \",/\") )\n  2170: \t\t\t\tsscanf(t, \"%d\", &amii_otherBPen);\n  2171: \t\t}\n> 2172: \t} else if (match_varname(buf, \"PENS\", 4)) {\n  2173: \t\textern unsigned short amii_init_map[ AMII_MAXCOLORS ];\n  2174: \t\tint i;\n  2175: \t\tchar *t;\n  2176: \n  2177: \t\tfor (i = 0, t = strtok(bufp, \",/\");"
+  },
+  {
+    "key": "L02181_01",
+    "original": "%hx",
+    "translation": "",
+    "context": "src/files.c:2181:14\n  2176: \n  2177: \t\tfor (i = 0, t = strtok(bufp, \",/\");\n  2178: \t\t\ti < AMII_MAXCOLORS && t != (char *)0;\n  2179: \t\t\tt = strtok((char *)0, \",/\"), ++i)\n  2180: \t\t{\n> 2181: \t\t\tsscanf(t, \"%hx\", &amii_init_map[i]);\n  2182: \t\t}\n  2183: \t\tamii_setpens( amii_numcolors = i );\n  2184: \t} else if (match_varname(buf, \"FGPENS\", 6)) {\n  2185: \t\textern int foreg[ AMII_MAXCOLORS ];\n  2186: \t\tint i;"
+  },
+  {
+    "key": "L02184_01",
+    "original": "FGPENS",
+    "translation": "",
+    "context": "src/files.c:2184:32\n  2179: \t\t\tt = strtok((char *)0, \",/\"), ++i)\n  2180: \t\t{\n  2181: \t\t\tsscanf(t, \"%hx\", &amii_init_map[i]);\n  2182: \t\t}\n  2183: \t\tamii_setpens( amii_numcolors = i );\n> 2184: \t} else if (match_varname(buf, \"FGPENS\", 6)) {\n  2185: \t\textern int foreg[ AMII_MAXCOLORS ];\n  2186: \t\tint i;\n  2187: \t\tchar *t;\n  2188: \n  2189: \t\tfor (i = 0, t = strtok(bufp, \",/\");"
+  },
+  {
+    "key": "L02193_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2193:14\n  2188: \n  2189: \t\tfor (i = 0, t = strtok(bufp, \",/\");\n  2190: \t\t\ti < AMII_MAXCOLORS && t != (char *)0;\n  2191: \t\t\tt = strtok((char *)0, \",/\"), ++i)\n  2192: \t\t{\n> 2193: \t\t\tsscanf(t, \"%d\", &foreg[i]);\n  2194: \t\t}\n  2195: \t} else if (match_varname(buf, \"BGPENS\", 6)) {\n  2196: \t\textern int backg[ AMII_MAXCOLORS ];\n  2197: \t\tint i;\n  2198: \t\tchar *t;"
+  },
+  {
+    "key": "L02195_01",
+    "original": "BGPENS",
+    "translation": "",
+    "context": "src/files.c:2195:32\n  2190: \t\t\ti < AMII_MAXCOLORS && t != (char *)0;\n  2191: \t\t\tt = strtok((char *)0, \",/\"), ++i)\n  2192: \t\t{\n  2193: \t\t\tsscanf(t, \"%d\", &foreg[i]);\n  2194: \t\t}\n> 2195: \t} else if (match_varname(buf, \"BGPENS\", 6)) {\n  2196: \t\textern int backg[ AMII_MAXCOLORS ];\n  2197: \t\tint i;\n  2198: \t\tchar *t;\n  2199: \n  2200: \t\tfor (i = 0, t = strtok(bufp, \",/\");"
+  },
+  {
+    "key": "L02204_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/files.c:2204:14\n  2199: \n  2200: \t\tfor (i = 0, t = strtok(bufp, \",/\");\n  2201: \t\t\ti < AMII_MAXCOLORS && t != (char *)0;\n  2202: \t\t\tt = strtok((char *)0, \",/\"), ++i)\n  2203: \t\t{\n> 2204: \t\t\tsscanf(t, \"%d\", &backg[i]);\n  2205: \t\t}\n  2206: #endif\n  2207: #ifdef USER_SOUNDS\n  2208: \t} else if (match_varname(buf, \"SOUNDDIR\", 8)) {\n  2209: \t\tsounddir = (char *)strdup(bufp);"
+  },
+  {
+    "key": "L02208_01",
+    "original": "SOUNDDIR",
+    "translation": "",
+    "context": "src/files.c:2208:32\n  2203: \t\t{\n  2204: \t\t\tsscanf(t, \"%d\", &backg[i]);\n  2205: \t\t}\n  2206: #endif\n  2207: #ifdef USER_SOUNDS\n> 2208: \t} else if (match_varname(buf, \"SOUNDDIR\", 8)) {\n  2209: \t\tsounddir = (char *)strdup(bufp);\n  2210: \t} else if (match_varname(buf, \"SOUND\", 5)) {\n  2211: \t\tadd_sound_mapping(bufp);\n  2212: #endif\n  2213: #ifdef QT_GRAPHICS"
+  },
+  {
+    "key": "L02210_01",
+    "original": "SOUND",
+    "translation": "",
+    "context": "src/files.c:2210:32\n  2205: \t\t}\n  2206: #endif\n  2207: #ifdef USER_SOUNDS\n  2208: \t} else if (match_varname(buf, \"SOUNDDIR\", 8)) {\n  2209: \t\tsounddir = (char *)strdup(bufp);\n> 2210: \t} else if (match_varname(buf, \"SOUND\", 5)) {\n  2211: \t\tadd_sound_mapping(bufp);\n  2212: #endif\n  2213: #ifdef QT_GRAPHICS\n  2214: \t/* These should move to wc_ options */\n  2215: \t} else if (match_varname(buf, \"QT_TILEWIDTH\", 12)) {"
+  },
+  {
+    "key": "L02215_01",
+    "original": "QT_TILEWIDTH",
+    "translation": "",
+    "context": "src/files.c:2215:32\n  2210: \t} else if (match_varname(buf, \"SOUND\", 5)) {\n  2211: \t\tadd_sound_mapping(bufp);\n  2212: #endif\n  2213: #ifdef QT_GRAPHICS\n  2214: \t/* These should move to wc_ options */\n> 2215: \t} else if (match_varname(buf, \"QT_TILEWIDTH\", 12)) {\n  2216: \t\textern char *qt_tilewidth;\n  2217: \t\tif (qt_tilewidth == NULL)\t\n  2218: \t\t\tqt_tilewidth=(char *)strdup(bufp);\n  2219: \t} else if (match_varname(buf, \"QT_TILEHEIGHT\", 13)) {\n  2220: \t\textern char *qt_tileheight;"
+  },
+  {
+    "key": "L02219_01",
+    "original": "QT_TILEHEIGHT",
+    "translation": "",
+    "context": "src/files.c:2219:32\n  2214: \t/* These should move to wc_ options */\n  2215: \t} else if (match_varname(buf, \"QT_TILEWIDTH\", 12)) {\n  2216: \t\textern char *qt_tilewidth;\n  2217: \t\tif (qt_tilewidth == NULL)\t\n  2218: \t\t\tqt_tilewidth=(char *)strdup(bufp);\n> 2219: \t} else if (match_varname(buf, \"QT_TILEHEIGHT\", 13)) {\n  2220: \t\textern char *qt_tileheight;\n  2221: \t\tif (qt_tileheight == NULL)\t\n  2222: \t\t\tqt_tileheight=(char *)strdup(bufp);\n  2223: \t} else if (match_varname(buf, \"QT_FONTSIZE\", 11)) {\n  2224: \t\textern char *qt_fontsize;"
+  },
+  {
+    "key": "L02223_01",
+    "original": "QT_FONTSIZE",
+    "translation": "",
+    "context": "src/files.c:2223:32\n  2218: \t\t\tqt_tilewidth=(char *)strdup(bufp);\n  2219: \t} else if (match_varname(buf, \"QT_TILEHEIGHT\", 13)) {\n  2220: \t\textern char *qt_tileheight;\n  2221: \t\tif (qt_tileheight == NULL)\t\n  2222: \t\t\tqt_tileheight=(char *)strdup(bufp);\n> 2223: \t} else if (match_varname(buf, \"QT_FONTSIZE\", 11)) {\n  2224: \t\textern char *qt_fontsize;\n  2225: \t\tif (qt_fontsize == NULL)\n  2226: \t\t\tqt_fontsize=(char *)strdup(bufp);\n  2227: \t} else if (match_varname(buf, \"QT_COMPACT\", 10)) {\n  2228: \t\textern int qt_compact_mode;"
+  },
+  {
+    "key": "L02227_01",
+    "original": "QT_COMPACT",
+    "translation": "",
+    "context": "src/files.c:2227:32\n  2222: \t\t\tqt_tileheight=(char *)strdup(bufp);\n  2223: \t} else if (match_varname(buf, \"QT_FONTSIZE\", 11)) {\n  2224: \t\textern char *qt_fontsize;\n  2225: \t\tif (qt_fontsize == NULL)\n  2226: \t\t\tqt_fontsize=(char *)strdup(bufp);\n> 2227: \t} else if (match_varname(buf, \"QT_COMPACT\", 10)) {\n  2228: \t\textern int qt_compact_mode;\n  2229: \t\tqt_compact_mode = atoi(bufp);\n  2230: #endif\n  2231: #if defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n  2232: \t} else if (match_varname(buf, \"GL_OPTIONS\", 10)) {"
+  },
+  {
+    "key": "L02232_01",
+    "original": "GL_OPTIONS",
+    "translation": "",
+    "context": "src/files.c:2232:32\n  2227: \t} else if (match_varname(buf, \"QT_COMPACT\", 10)) {\n  2228: \t\textern int qt_compact_mode;\n  2229: \t\tqt_compact_mode = atoi(bufp);\n  2230: #endif\n  2231: #if defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n> 2232: \t} else if (match_varname(buf, \"GL_OPTIONS\", 10)) {\n  2233: \t\tSdlgl_parse_options(bufp, TRUE, TRUE);\n  2234: #endif\n  2235: \t} else\n  2236: \t\treturn 0;\n  2237: \treturn 1;"
+  },
+  {
+    "key": "L02293_01",
+    "original": "Bad option line:  \\\"%.50s\\\"",
+    "translation": "",
+    "context": "src/files.c:2293:15\n  2288: \t/* begin detection of duplicate configfile options */\n  2289: \tset_duplicate_opt_detection(1);\n  2290: \n  2291: \twhile (fgets(buf, 4*BUFSZ, fp)) {\n  2292: \t\tif (!parse_config_line(fp, buf, tmp_ramdisk, tmp_levels)) {\n> 2293: \t\t\traw_printf(\"Bad option line:  \\\"%.50s\\\"\", buf);\n  2294: \t\t\twait_synch();\n  2295: \t\t}\n  2296: \t}\n  2297: \t(void) fclose(fp);\n  2298: \t"
+  },
+  {
+    "key": "L02310_01",
+    "original": "proxy/",
+    "translation": "",
+    "context": "src/files.c:2310:33\n  2305: \t * When acting as a proxy server, allow the client to provide\n  2306: \t * its own config file which overrides values in our config file.\n  2307: \t * Note: We don't want to warn of values being present in both\n  2308: \t * files, but we do want to warn of duplicates within each file.\n  2309: \t */\n> 2310: \tif (!strncmp(windowprocs.name, \"proxy/\", 6) &&\n  2311: \t\t(fp = proxy_config_file_open())) {\n  2312: \t    found = TRUE;\n  2313: \t    set_duplicate_opt_detection(1);\n  2314: \t    while (fgets(buf, 4*BUFSZ, fp)) {\n  2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||"
+  },
+  {
+    "key": "L02315_01",
+    "original": "TILESETS",
+    "translation": "",
+    "context": "src/files.c:2315:26\n  2310: \tif (!strncmp(windowprocs.name, \"proxy/\", 6) &&\n  2311: \t\t(fp = proxy_config_file_open())) {\n  2312: \t    found = TRUE;\n  2313: \t    set_duplicate_opt_detection(1);\n  2314: \t    while (fgets(buf, 4*BUFSZ, fp)) {\n> 2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||\n  2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||"
+  },
+  {
+    "key": "L02316_01",
+    "original": "HACKDIR",
+    "translation": "",
+    "context": "src/files.c:2316:25\n  2311: \t\t(fp = proxy_config_file_open())) {\n  2312: \t    found = TRUE;\n  2313: \t    set_duplicate_opt_detection(1);\n  2314: \t    while (fgets(buf, 4*BUFSZ, fp)) {\n  2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||\n> 2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||"
+  },
+  {
+    "key": "L02317_01",
+    "original": "LEVELDIR",
+    "translation": "",
+    "context": "src/files.c:2317:25\n  2312: \t    found = TRUE;\n  2313: \t    set_duplicate_opt_detection(1);\n  2314: \t    while (fgets(buf, 4*BUFSZ, fp)) {\n  2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||\n  2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n> 2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||"
+  },
+  {
+    "key": "L02318_01",
+    "original": "LEVELS",
+    "translation": "",
+    "context": "src/files.c:2318:25\n  2313: \t    set_duplicate_opt_detection(1);\n  2314: \t    while (fgets(buf, 4*BUFSZ, fp)) {\n  2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||\n  2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n> 2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||"
+  },
+  {
+    "key": "L02319_01",
+    "original": "SAVEDIR",
+    "translation": "",
+    "context": "src/files.c:2319:25\n  2314: \t    while (fgets(buf, 4*BUFSZ, fp)) {\n  2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||\n  2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n> 2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||"
+  },
+  {
+    "key": "L02320_01",
+    "original": "BONESDIR",
+    "translation": "",
+    "context": "src/files.c:2320:25\n  2315: \t\tif (match_varname(buf, \"TILESETS\", 7) ||\n  2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n> 2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||"
+  },
+  {
+    "key": "L02321_01",
+    "original": "DATADIR",
+    "translation": "",
+    "context": "src/files.c:2321:25\n  2316: \t\t   match_varname(buf, \"HACKDIR\", 4) ||\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n> 2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n  2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||"
+  },
+  {
+    "key": "L02322_01",
+    "original": "SCOREDIR",
+    "translation": "",
+    "context": "src/files.c:2322:25\n  2317: \t\t   match_varname(buf, \"LEVELDIR\", 4) ||\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n> 2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n  2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||\n  2327: \t\t   match_varname(buf, \"SOUND\", 5)) {"
+  },
+  {
+    "key": "L02323_01",
+    "original": "LOCKDIR",
+    "translation": "",
+    "context": "src/files.c:2323:25\n  2318: \t\t   match_varname(buf, \"LEVELS\", 4) ||\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n> 2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n  2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||\n  2327: \t\t   match_varname(buf, \"SOUND\", 5)) {\n  2328: \t\t    /* Quietly ignore many commands. There's no sense in"
+  },
+  {
+    "key": "L02324_01",
+    "original": "CONFIGDIR",
+    "translation": "",
+    "context": "src/files.c:2324:25\n  2319: \t\t   match_varname(buf, \"SAVEDIR\", 4) ||\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n> 2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n  2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||\n  2327: \t\t   match_varname(buf, \"SOUND\", 5)) {\n  2328: \t\t    /* Quietly ignore many commands. There's no sense in\n  2329: \t\t     * the client configuring these and some introduce"
+  },
+  {
+    "key": "L02325_01",
+    "original": "TROUBLEDIR",
+    "translation": "",
+    "context": "src/files.c:2325:25\n  2320: \t\t   match_varname(buf, \"BONESDIR\", 5) ||\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n> 2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n  2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||\n  2327: \t\t   match_varname(buf, \"SOUND\", 5)) {\n  2328: \t\t    /* Quietly ignore many commands. There's no sense in\n  2329: \t\t     * the client configuring these and some introduce\n  2330: \t\t     * potential security breachs."
+  },
+  {
+    "key": "L02326_01",
+    "original": "SOUNDDIR",
+    "translation": "",
+    "context": "src/files.c:2326:25\n  2321: \t\t   match_varname(buf, \"DATADIR\", 4) ||\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n> 2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||\n  2327: \t\t   match_varname(buf, \"SOUND\", 5)) {\n  2328: \t\t    /* Quietly ignore many commands. There's no sense in\n  2329: \t\t     * the client configuring these and some introduce\n  2330: \t\t     * potential security breachs.\n  2331: \t\t     */"
+  },
+  {
+    "key": "L02327_01",
+    "original": "SOUND",
+    "translation": "",
+    "context": "src/files.c:2327:25\n  2322: \t\t   match_varname(buf, \"SCOREDIR\", 4) ||\n  2323: \t\t   match_varname(buf, \"LOCKDIR\", 4) ||\n  2324: \t\t   match_varname(buf, \"CONFIGDIR\", 4) ||\n  2325: \t\t   match_varname(buf, \"TROUBLEDIR\", 4) ||\n  2326: \t\t   match_varname(buf, \"SOUNDDIR\", 8) ||\n> 2327: \t\t   match_varname(buf, \"SOUND\", 5)) {\n  2328: \t\t    /* Quietly ignore many commands. There's no sense in\n  2329: \t\t     * the client configuring these and some introduce\n  2330: \t\t     * potential security breachs.\n  2331: \t\t     */\n  2332: \t\t    continue;"
+  },
+  {
+    "key": "L02335_01",
+    "original": "Bad option line:  \\\"%.50s\\\"",
+    "translation": "",
+    "context": "src/files.c:2335:13\n  2330: \t\t     * potential security breachs.\n  2331: \t\t     */\n  2332: \t\t    continue;\n  2333: \t\t}\n  2334: \t\tif (!parse_config_line(fp, buf, tmp_ramdisk, tmp_levels)) {\n> 2335: \t\t    pline(\"Bad option line:  \\\"%.50s\\\"\", buf);\n  2336: \t\t    wait_synch();\n  2337: \t\t}\n  2338: \t    }\n  2339: \t    proxy_config_file_close(fp);\n  2340: \t    set_duplicate_opt_detection(0);"
+  },
+  {
+    "key": "L02378_01",
+    "original": "Tileset %s not defined.",
+    "translation": "",
+    "context": "src/files.c:2378:10\n  2373: \t\tfor(i = 0; i < no_tilesets; i++)\n  2374: \t\t\tif (len == strlen(tilesets[i].name) &&\n  2375: \t\t\t    !strncmpi(tilesets[i].name, tileset, len))\n  2376: \t\t\t\tbreak;\n  2377: \t\tif (i == no_tilesets) {\n> 2378: \t\t\tpline(\"Tileset %s not defined.\", tileset);\n  2379: \t\t\ttileset[0] = '\\0';\n  2380: \t\t}\n  2381: \t\telse\n  2382: \t\t\tstrcpy(tileset, tilesets[i].name);\n  2383: \t}"
+  },
+  {
+    "key": "L02397_01",
+    "original": "WIZKIT",
+    "translation": "",
+    "context": "src/files.c:2397:19\n  2392: #if defined(VMS) || defined(UNIX)\n  2393: \tchar\ttmp_wizkit[BUFSZ];\n  2394: #endif\n  2395: \tchar *envp;\n  2396: \n> 2397: \tenvp = nh_getenv(\"WIZKIT\");\n  2398: \tif (envp && *envp) (void) strncpy(wizkit, envp, WIZKIT_MAX - 1);\n  2399: \tif (!wizkit[0]) return (FILE *)0;\n  2400: \n  2401: #ifdef UNIX\n  2402: \tif (access(wizkit, 4) == -1) {"
+  },
+  {
+    "key": "L02409_01",
+    "original": "Access to %s denied (%d).",
+    "translation": "",
+    "context": "src/files.c:2409:14\n  2404: \t\t/* nasty sneaky attempt to read file through\n  2405: \t\t * NetHack's setuid permissions -- this is a\n  2406: \t\t * place a file name may be wholly under the player's\n  2407: \t\t * control\n  2408: \t\t */\n> 2409: \t\traw_printf(\"Access to %s denied (%d).\",\n  2410: \t\t\t\twizkit, errno);\n  2411: \t\twait_synch();\n  2412: \t\t/* fall through to standard names */\n  2413: \t} else\n  2414: #endif"
+  },
+  {
+    "key": "L02415_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:2415:27\n  2410: \t\t\t\twizkit, errno);\n  2411: \t\twait_synch();\n  2412: \t\t/* fall through to standard names */\n  2413: \t} else\n  2414: #endif\n> 2415: \tif ((fp = fopenp(wizkit, \"r\")) != (FILE *)0) {\n  2416: \t    return(fp);\n  2417: #if defined(UNIX) || defined(VMS)\n  2418: \t} else {\n  2419: \t    /* access() above probably caught most problems for UNIX */\n  2420: \t    raw_printf(\"Couldn't open requested config file %s (%d).\","
+  },
+  {
+    "key": "L02420_01",
+    "original": "Couldn't open requested config file %s (%d).",
+    "translation": "",
+    "context": "src/files.c:2420:17\n  2415: \tif ((fp = fopenp(wizkit, \"r\")) != (FILE *)0) {\n  2416: \t    return(fp);\n  2417: #if defined(UNIX) || defined(VMS)\n  2418: \t} else {\n  2419: \t    /* access() above probably caught most problems for UNIX */\n> 2420: \t    raw_printf(\"Couldn't open requested config file %s (%d).\",\n  2421: \t\t\t\twizkit, errno);\n  2422: \t    wait_synch();\n  2423: #endif\n  2424: \t}\n  2425: "
+  },
+  {
+    "key": "L02427_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:2427:52\n  2422: \t    wait_synch();\n  2423: #endif\n  2424: \t}\n  2425: \n  2426: #if defined(MICRO) || defined(MAC) || defined(__BEOS__) || defined(WIN32) || defined(ANDROID)\n> 2427: \tif ((fp = fopenp(fqname(wizkit, CONFIGPREFIX, 0), \"r\"))\n  2428: \t\t\t\t\t\t\t\t!= (FILE *)0)\n  2429: \t\treturn(fp);\n  2430: #else\n  2431: # ifdef VMS\n  2432: \tenvp = nh_getenv(\"HOME\");"
+  },
+  {
+    "key": "L02432_01",
+    "original": "HOME",
+    "translation": "",
+    "context": "src/files.c:2432:19\n  2427: \tif ((fp = fopenp(fqname(wizkit, CONFIGPREFIX, 0), \"r\"))\n  2428: \t\t\t\t\t\t\t\t!= (FILE *)0)\n  2429: \t\treturn(fp);\n  2430: #else\n  2431: # ifdef VMS\n> 2432: \tenvp = nh_getenv(\"HOME\");\n  2433: \tif (envp)\n  2434: \t\tSprintf(tmp_wizkit, \"%s%s\", envp, wizkit);\n  2435: \telse\n  2436: \t\tSprintf(tmp_wizkit, \"%s%s\", \"sys$login:\", wizkit);\n  2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)"
+  },
+  {
+    "key": "L02434_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/files.c:2434:23\n  2429: \t\treturn(fp);\n  2430: #else\n  2431: # ifdef VMS\n  2432: \tenvp = nh_getenv(\"HOME\");\n  2433: \tif (envp)\n> 2434: \t\tSprintf(tmp_wizkit, \"%s%s\", envp, wizkit);\n  2435: \telse\n  2436: \t\tSprintf(tmp_wizkit, \"%s%s\", \"sys$login:\", wizkit);\n  2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2438: \t\treturn(fp);\n  2439: # else\t/* should be only UNIX left */"
+  },
+  {
+    "key": "L02436_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/files.c:2436:23\n  2431: # ifdef VMS\n  2432: \tenvp = nh_getenv(\"HOME\");\n  2433: \tif (envp)\n  2434: \t\tSprintf(tmp_wizkit, \"%s%s\", envp, wizkit);\n  2435: \telse\n> 2436: \t\tSprintf(tmp_wizkit, \"%s%s\", \"sys$login:\", wizkit);\n  2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2438: \t\treturn(fp);\n  2439: # else\t/* should be only UNIX left */\n  2440: \tenvp = nh_getenv(\"HOME\");\n  2441: \tif (envp)"
+  },
+  {
+    "key": "L02436_02",
+    "original": "sys$login:",
+    "translation": "",
+    "context": "src/files.c:2436:31\n  2431: # ifdef VMS\n  2432: \tenvp = nh_getenv(\"HOME\");\n  2433: \tif (envp)\n  2434: \t\tSprintf(tmp_wizkit, \"%s%s\", envp, wizkit);\n  2435: \telse\n> 2436: \t\tSprintf(tmp_wizkit, \"%s%s\", \"sys$login:\", wizkit);\n  2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2438: \t\treturn(fp);\n  2439: # else\t/* should be only UNIX left */\n  2440: \tenvp = nh_getenv(\"HOME\");\n  2441: \tif (envp)"
+  },
+  {
+    "key": "L02437_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:2437:31\n  2432: \tenvp = nh_getenv(\"HOME\");\n  2433: \tif (envp)\n  2434: \t\tSprintf(tmp_wizkit, \"%s%s\", envp, wizkit);\n  2435: \telse\n  2436: \t\tSprintf(tmp_wizkit, \"%s%s\", \"sys$login:\", wizkit);\n> 2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2438: \t\treturn(fp);\n  2439: # else\t/* should be only UNIX left */\n  2440: \tenvp = nh_getenv(\"HOME\");\n  2441: \tif (envp)\n  2442: \t\tSprintf(tmp_wizkit, \"%s/%s\", envp, wizkit);"
+  },
+  {
+    "key": "L02440_01",
+    "original": "HOME",
+    "translation": "",
+    "context": "src/files.c:2440:19\n  2435: \telse\n  2436: \t\tSprintf(tmp_wizkit, \"%s%s\", \"sys$login:\", wizkit);\n  2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2438: \t\treturn(fp);\n  2439: # else\t/* should be only UNIX left */\n> 2440: \tenvp = nh_getenv(\"HOME\");\n  2441: \tif (envp)\n  2442: \t\tSprintf(tmp_wizkit, \"%s/%s\", envp, wizkit);\n  2443: \telse \tStrcpy(tmp_wizkit, wizkit);\n  2444: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2445: \t\treturn(fp);"
+  },
+  {
+    "key": "L02442_01",
+    "original": "%s/%s",
+    "translation": "",
+    "context": "src/files.c:2442:23\n  2437: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2438: \t\treturn(fp);\n  2439: # else\t/* should be only UNIX left */\n  2440: \tenvp = nh_getenv(\"HOME\");\n  2441: \tif (envp)\n> 2442: \t\tSprintf(tmp_wizkit, \"%s/%s\", envp, wizkit);\n  2443: \telse \tStrcpy(tmp_wizkit, wizkit);\n  2444: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2445: \t\treturn(fp);\n  2446: \telse if (errno != ENOENT) {\n  2447: \t\t/* e.g., problems when setuid NetHack can't search home"
+  },
+  {
+    "key": "L02444_01",
+    "original": "r",
+    "translation": "",
+    "context": "src/files.c:2444:31\n  2439: # else\t/* should be only UNIX left */\n  2440: \tenvp = nh_getenv(\"HOME\");\n  2441: \tif (envp)\n  2442: \t\tSprintf(tmp_wizkit, \"%s/%s\", envp, wizkit);\n  2443: \telse \tStrcpy(tmp_wizkit, wizkit);\n> 2444: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2445: \t\treturn(fp);\n  2446: \telse if (errno != ENOENT) {\n  2447: \t\t/* e.g., problems when setuid NetHack can't search home\n  2448: \t\t * directory restricted to user */\n  2449: \t\traw_printf(\"Couldn't open default wizkit file %s (%d).\","
+  },
+  {
+    "key": "L02449_01",
+    "original": "Couldn't open default wizkit file %s (%d).",
+    "translation": "",
+    "context": "src/files.c:2449:14\n  2444: \tif ((fp = fopenp(tmp_wizkit, \"r\")) != (FILE *)0)\n  2445: \t\treturn(fp);\n  2446: \telse if (errno != ENOENT) {\n  2447: \t\t/* e.g., problems when setuid NetHack can't search home\n  2448: \t\t * directory restricted to user */\n> 2449: \t\traw_printf(\"Couldn't open default wizkit file %s (%d).\",\n  2450: \t\t\t\t\ttmp_wizkit, errno);\n  2451: \t\twait_synch();\n  2452: \t}\n  2453: # endif\n  2454: #endif"
+  },
+  {
+    "key": "L02483_01",
+    "original": "Bad wizkit item: \\\"%.60s\\\"",
+    "translation": "",
+    "context": "src/files.c:2483:19\n  2478: \t\t\tif (otmp) {\n  2479: \t\t\t    if (otmp != &zeroobj)\n  2480: \t\t\t\totmp = addinv(otmp);\n  2481: \t\t\t} else {\n  2482: \t\t\t    /* .60 limits output line width to 79 chars */\n> 2483: \t\t\t    raw_printf(\"Bad wizkit item: \\\"%.60s\\\"\", buf);\n  2484: \t\t\t    bad_items = TRUE;\n  2485: \t\t\t}\n  2486: \t\t}\n  2487: \t    }\n  2488: \t}"
+  },
+  {
+    "key": "L02526_01",
+    "original": "Warning: scoreboard file %s is not in stream_lf format",
+    "translation": "",
+    "context": "src/files.c:2526:5\n  2521: \n  2522: \tif (fd >= 0) {\n  2523: # ifdef VMS\t/* must be stream-lf to use UPDATE_RECORD_IN_PLACE */\n  2524: \t\tif (!file_is_stmlf(fd)) {\n  2525: \t\t    raw_printf(\n> 2526: \t\t  \"Warning: scoreboard file %s is not in stream_lf format\",\n  2527: \t\t\t\tfq_record);\n  2528: \t\t    wait_synch();\n  2529: \t\t}\n  2530: # endif\n  2531: \t    (void) close(fd);   /* NH_RECORD is accessible */"
+  },
+  {
+    "key": "L02548_01",
+    "original": "Warning: cannot write scoreboard file %s",
+    "translation": "",
+    "context": "src/files.c:2548:17\n  2543: \t    (void) chmod(fq_record, FCMASK | 007);\n  2544: #  endif\n  2545: # endif /* VMS && !SECURE */\n  2546: \t} else {\n  2547: # ifdef FILE_AREAS\n> 2548: \t    raw_printf(\"Warning: cannot write scoreboard file %s\", NH_RECORD);\n  2549: # else\n  2550: \t    raw_printf(\"Warning: cannot write scoreboard file %s\", fq_record);\n  2551: # endif\n  2552: \t    wait_synch();\n  2553: \t}"
+  },
+  {
+    "key": "L02550_01",
+    "original": "Warning: cannot write scoreboard file %s",
+    "translation": "",
+    "context": "src/files.c:2550:17\n  2545: # endif /* VMS && !SECURE */\n  2546: \t} else {\n  2547: # ifdef FILE_AREAS\n  2548: \t    raw_printf(\"Warning: cannot write scoreboard file %s\", NH_RECORD);\n  2549: # else\n> 2550: \t    raw_printf(\"Warning: cannot write scoreboard file %s\", fq_record);\n  2551: # endif\n  2552: \t    wait_synch();\n  2553: \t}\n  2554: #endif  /* !UNIX && !VMS */\n  2555: #if defined(MICRO) || defined(WIN32)"
+  },
+  {
+    "key": "L02593_01",
+    "original": "Warning: cannot write record %s",
+    "translation": "",
+    "context": "src/files.c:2593:13\n  2588: \t    /* DICE doesn't like it */\n  2589: \t    if ((fd = open(fq_record, O_CREAT|O_RDWR)) < 0) {\n  2590: # else\n  2591: \t    if ((fd = open(fq_record, O_CREAT|O_RDWR, S_IREAD|S_IWRITE)) < 0) {\n  2592: # endif\n> 2593: \traw_printf(\"Warning: cannot write record %s\", tmp);\n  2594: \t\twait_synch();\n  2595: \t\t} else          /* create succeeded */\n  2596: \t\t(void) close(fd);\n  2597: \t} else\t\t/* open succeeded */\n  2598: \t    (void) close(fd);"
+  },
+  {
+    "key": "L02632_01",
+    "original": "a",
+    "translation": "",
+    "context": "src/files.c:2632:36\n  2627: \tFILE *lfile;\n  2628: \tchar buf[BUFSZ];\n  2629: \n  2630: \tif (!program_state.in_paniclog) {\n  2631: \t\tprogram_state.in_paniclog = 1;\n> 2632: \t\tlfile = fopen_datafile(PANICLOG, \"a\", TROUBLEPREFIX);\n  2633: \t\tif (lfile) {\n  2634: \t\t    (void) fprintf(lfile, \"%s %08ld: %s %s\\n\",\n  2635: \t\t\t\t   version_string(buf), yyyymmdd((time_t)0L),\n  2636: \t\t\t\t   type, reason);\n  2637: \t\t    (void) fclose(lfile);"
+  },
+  {
+    "key": "L02634_01",
+    "original": "%s %08ld: %s %s\\n",
+    "translation": "",
+    "context": "src/files.c:2634:29\n  2629: \n  2630: \tif (!program_state.in_paniclog) {\n  2631: \t\tprogram_state.in_paniclog = 1;\n  2632: \t\tlfile = fopen_datafile(PANICLOG, \"a\", TROUBLEPREFIX);\n  2633: \t\tif (lfile) {\n> 2634: \t\t    (void) fprintf(lfile, \"%s %08ld: %s %s\\n\",\n  2635: \t\t\t\t   version_string(buf), yyyymmdd((time_t)0L),\n  2636: \t\t\t\t   type, reason);\n  2637: \t\t    (void) fclose(lfile);\n  2638: \t\t}\n  2639: \t\tprogram_state.in_paniclog = 0;"
+  },
+  {
+    "key": "L02671_01",
+    "original": "%s\\n",
+    "translation": "",
+    "context": "src/files.c:2671:17\n  2666: \t *\tname of save file nethack would have created\n  2667: \t *\tand game state\n  2668: \t */\n  2669: \tgfd = open_levelfile(0, errbuf);\n  2670: \tif (gfd < 0) {\n> 2671: \t    raw_printf(\"%s\\n\", errbuf);\n  2672: \t    return FALSE;\n  2673: \t}\n  2674: \tif (read(gfd, (genericptr_t) &hpid, sizeof hpid) != sizeof hpid) {\n  2675: \t    raw_printf(\n  2676: \"\\nCheckpoint data incompletely written or subsequently clobbered. Recovery impossible.\");"
+  },
+  {
+    "key": "L02676_01",
+    "original": "\\nCheckpoint data incompletely written or subsequently clobbered. Recovery impossible.",
+    "translation": "",
+    "context": "src/files.c:2676:1\n  2671: \t    raw_printf(\"%s\\n\", errbuf);\n  2672: \t    return FALSE;\n  2673: \t}\n  2674: \tif (read(gfd, (genericptr_t) &hpid, sizeof hpid) != sizeof hpid) {\n  2675: \t    raw_printf(\n> 2676: \"\\nCheckpoint data incompletely written or subsequently clobbered. Recovery impossible.\");\n  2677: \t    (void)close(gfd);\n  2678: \t    return FALSE;\n  2679: \t}\n  2680: \tif (read(gfd, (genericptr_t) &savelev, sizeof(savelev))\n  2681: \t\t\t\t\t\t\t!= sizeof(savelev)) {"
+  },
+  {
+    "key": "L02682_01",
+    "original": "\\nCheckpointing was not in effect for %s -- recovery impossible.\\n",
+    "translation": "",
+    "context": "src/files.c:2682:17\n  2677: \t    (void)close(gfd);\n  2678: \t    return FALSE;\n  2679: \t}\n  2680: \tif (read(gfd, (genericptr_t) &savelev, sizeof(savelev))\n  2681: \t\t\t\t\t\t\t!= sizeof(savelev)) {\n> 2682: \t    raw_printf(\"\\nCheckpointing was not in effect for %s -- recovery impossible.\\n\",\n  2683: \t\t\tlock);\n  2684: \t    (void)close(gfd);\n  2685: \t    return FALSE;\n  2686: \t}\n  2687: \tif ((read(gfd, (genericptr_t) savename, sizeof savename)"
+  },
+  {
+    "key": "L02691_01",
+    "original": "\\nError reading %s -- can't recover.\\n",
+    "translation": "",
+    "context": "src/files.c:2691:17\n  2686: \t}\n  2687: \tif ((read(gfd, (genericptr_t) savename, sizeof savename)\n  2688: \t\t!= sizeof savename) ||\n  2689: \t    (read(gfd, (genericptr_t) &version_data, sizeof version_data)\n  2690: \t\t!= sizeof version_data)) {\n> 2691: \t    raw_printf(\"\\nError reading %s -- can't recover.\\n\", lock);\n  2692: \t    (void)close(gfd);\n  2693: \t    return FALSE;\n  2694: \t}\n  2695: \n  2696: \t/* save file should contain:"
+  },
+  {
+    "key": "L02705_01",
+    "original": "\\nCannot recover savefile %s.\\n",
+    "translation": "",
+    "context": "src/files.c:2705:17\n  2700: \t *\tother levels\n  2701: \t */\n  2702: \tset_savefile_name();\n  2703: \tsfd = create_savefile();\n  2704: \tif (sfd < 0) {\n> 2705: \t    raw_printf(\"\\nCannot recover savefile %s.\\n\", SAVEF);\n  2706: \t    (void)close(gfd);\n  2707: \t    return FALSE;\n  2708: \t}\n  2709: \n  2710: \tlfd = open_levelfile(savelev, errbuf);"
+  },
+  {
+    "key": "L02712_01",
+    "original": "\\n%s\\n",
+    "translation": "",
+    "context": "src/files.c:2712:17\n  2707: \t    return FALSE;\n  2708: \t}\n  2709: \n  2710: \tlfd = open_levelfile(savelev, errbuf);\n  2711: \tif (lfd < 0) {\n> 2712: \t    raw_printf(\"\\n%s\\n\", errbuf);\n  2713: \t    (void)close(gfd);\n  2714: \t    (void)close(sfd);\n  2715: \t    delete_savefile();\n  2716: \t    return FALSE;\n  2717: \t}"
+  },
+  {
+    "key": "L02721_01",
+    "original": "\\nError writing %s; recovery failed.",
+    "translation": "",
+    "context": "src/files.c:2721:17\n  2716: \t    return FALSE;\n  2717: \t}\n  2718: \n  2719: \tif (write(sfd, (genericptr_t) &version_data, sizeof version_data)\n  2720: \t\t!= sizeof version_data) {\n> 2721: \t    raw_printf(\"\\nError writing %s; recovery failed.\", SAVEF);\n  2722: \t    (void)close(gfd);\n  2723: \t    (void)close(sfd);\n  2724: \t    delete_savefile();\n  2725: \t    return FALSE;\n  2726: \t}"
+  }
+]

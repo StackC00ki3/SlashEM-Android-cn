@@ -1,0 +1,536 @@
+[
+  {
+    "key": "L00142_01",
+    "original": "enexto() called with mdat==0",
+    "translation": "",
+    "context": "src/teleport.c:142:8\n   137:     int xmin, xmax, ymin, ymax;\n   138:     struct monst fakemon;\t/* dummy monster */\n   139: \n   140:     if (!mdat) {\n   141: #ifdef DEBUG\n>  142: \tpline(\"enexto() called with mdat==0\");\n   143: #endif\n   144: \t/* default to player's original monster type */\n   145: \tmdat = &mons[u.umonster];\n   146:     }\n   147:     fakemon.data = mdat;\t/* set up for goodpos */"
+  },
+  {
+    "key": "L00408_01",
+    "original": "What monster do you want to test? [type the name]",
+    "translation": "",
+    "context": "src/teleport.c:408:9\n   403:     for(i = 0; ; i++) {\n   404: \tif(i >= 5) {\n   405: \t    pline(thats_enough_tries);\n   406: \t    return;\n   407: \t}\n>  408: \tgetlin(\"What monster do you want to test? [type the name]\", buf);\n   409: \n   410: \tmndx = name_to_mon(buf);\n   411: \tif (mndx == NON_PM) {\n   412: \t    pline(\"Such creatures do not exist in this world.\");\n   413: \t    continue;"
+  },
+  {
+    "key": "L00412_01",
+    "original": "Such creatures do not exist in this world.",
+    "translation": "",
+    "context": "src/teleport.c:412:12\n   407: \t}\n   408: \tgetlin(\"What monster do you want to test? [type the name]\", buf);\n   409: \n   410: \tmndx = name_to_mon(buf);\n   411: \tif (mndx == NON_PM) {\n>  412: \t    pline(\"Such creatures do not exist in this world.\");\n   413: \t    continue;\n   414: \t}\n   415: \tptr = &mons[mndx];\n   416: \tpline(\"Which position do you want to aim for?\");\n   417: \tcc.x = u.ux;"
+  },
+  {
+    "key": "L00416_01",
+    "original": "Which position do you want to aim for?",
+    "translation": "",
+    "context": "src/teleport.c:416:8\n   411: \tif (mndx == NON_PM) {\n   412: \t    pline(\"Such creatures do not exist in this world.\");\n   413: \t    continue;\n   414: \t}\n   415: \tptr = &mons[mndx];\n>  416: \tpline(\"Which position do you want to aim for?\");\n   417: \tcc.x = u.ux;\n   418: \tcc.y = u.uy;\n   419: \tif (getpos(&cc, TRUE, \"the goal position\") < 0)\n   420: \t    return;\t/* abort */\n   421: \tepathto(epathto_debug_cc, SIZE(epathto_debug_cc), cc.x, cc.y, ptr);"
+  },
+  {
+    "key": "L00419_01",
+    "original": "the goal position",
+    "translation": "",
+    "context": "src/teleport.c:419:24\n   414: \t}\n   415: \tptr = &mons[mndx];\n   416: \tpline(\"Which position do you want to aim for?\");\n   417: \tcc.x = u.ux;\n   418: \tcc.y = u.uy;\n>  419: \tif (getpos(&cc, TRUE, \"the goal position\") < 0)\n   420: \t    return;\t/* abort */\n   421: \tepathto(epathto_debug_cc, SIZE(epathto_debug_cc), cc.x, cc.y, ptr);\n   422: \tbreak;\n   423:     }\n   424: }"
+  },
+  {
+    "key": "L00642_01",
+    "original": "%s is leashed, without a leash.",
+    "translation": "",
+    "context": "src/teleport.c:642:14\n   637: #endif\n   638: \n   639: \tif (mtmp->mleashed) {\n   640: \t    otmp = get_mleash(mtmp);\n   641: \t    if (!otmp) {\n>  642: \t\timpossible(\"%s is leashed, without a leash.\", Monnam(mtmp));\n   643: \t\tgoto release_it;\n   644: \t    }\n   645: \t    if (otmp->cursed && !force_it) {\n   646: \t\tyelp(mtmp);\n   647: \t\treturn FALSE;"
+  },
+  {
+    "key": "L00649_01",
+    "original": "leash goes slack.",
+    "translation": "",
+    "context": "src/teleport.c:649:8\n   644: \t    }\n   645: \t    if (otmp->cursed && !force_it) {\n   646: \t\tyelp(mtmp);\n   647: \t\treturn FALSE;\n   648: \t    } else {\n>  649: \t\tYour(\"leash goes slack.\");\n   650:  release_it:\n   651: \t\tm_unleash(mtmp, FALSE);\n   652: \t\treturn TRUE;\n   653: \t    }\n   654: \t}"
+  },
+  {
+    "key": "L00668_01",
+    "original": "A mysterious force prevents you from teleporting!",
+    "translation": "",
+    "context": "src/teleport.c:668:13\n   663: \t/* Disable teleportation in stronghold && Vlad's Tower */\n   664: \tif (level.flags.noteleport) {\n   665: #ifdef WIZARD\n   666: \t\tif (!wizard) {\n   667: #endif\n>  668: \t\t    pline(\"A mysterious force prevents you from teleporting!\");\n   669: \t\t    return;\n   670: #ifdef WIZARD\n   671: \t\t}\n   672: #endif\n   673: \t}"
+  },
+  {
+    "key": "L00691_01",
+    "original": "disoriented for a moment.",
+    "translation": "",
+    "context": "src/teleport.c:691:15\n   686: \t)\n   687: #ifdef WIZARD\n   688:         && (!wizard) )\n   689: #endif\n   690: \t{\n>  691: \t    You_feel(\"disoriented for a moment.\");\n   692: \t    return;\n   693: \t}\n   694: \tif ((Teleport_control && !Stunned)\n   695: #ifdef WIZARD\n   696: \t\t\t    || wizard"
+  },
+  {
+    "key": "L00700_01",
+    "original": "Being unconscious, you cannot control your teleport.",
+    "translation": "",
+    "context": "src/teleport.c:700:9\n   695: #ifdef WIZARD\n   696: \t\t\t    || wizard\n   697: #endif\n   698: \t\t\t\t\t) {\n   699: \t    if (unconscious()) {\n>  700: \t\tpline(\"Being unconscious, you cannot control your teleport.\");\n   701: \t    } else {\n   702: #ifdef STEED\n   703: \t\t    char buf[BUFSZ];\n   704: \t\t    if (u.usteed) Sprintf(buf,\" and %s\", mon_nam(u.usteed));\n   705: #endif"
+  },
+  {
+    "key": "L00704_01",
+    "original": " and %s",
+    "translation": "",
+    "context": "src/teleport.c:704:33\n   699: \t    if (unconscious()) {\n   700: \t\tpline(\"Being unconscious, you cannot control your teleport.\");\n   701: \t    } else {\n   702: #ifdef STEED\n   703: \t\t    char buf[BUFSZ];\n>  704: \t\t    if (u.usteed) Sprintf(buf,\" and %s\", mon_nam(u.usteed));\n   705: #endif\n   706: \t\t    pline(\"To what position do you%s want to be teleported?\",\n   707: #ifdef STEED\n   708: \t\t\t\tu.usteed ? buf :\n   709: #endif"
+  },
+  {
+    "key": "L00706_01",
+    "original": "To what position do you%s want to be teleported?",
+    "translation": "",
+    "context": "src/teleport.c:706:13\n   701: \t    } else {\n   702: #ifdef STEED\n   703: \t\t    char buf[BUFSZ];\n   704: \t\t    if (u.usteed) Sprintf(buf,\" and %s\", mon_nam(u.usteed));\n   705: #endif\n>  706: \t\t    pline(\"To what position do you%s want to be teleported?\",\n   707: #ifdef STEED\n   708: \t\t\t\tu.usteed ? buf :\n   709: #endif\n   710: \t\t\t   \"\");\n   711: \t\t    cc.x = u.ux;"
+  },
+  {
+    "key": "L00713_01",
+    "original": "the desired position",
+    "translation": "",
+    "context": "src/teleport.c:713:29\n   708: \t\t\t\tu.usteed ? buf :\n   709: #endif\n   710: \t\t\t   \"\");\n   711: \t\t    cc.x = u.ux;\n   712: \t\t    cc.y = u.uy;\n>  713: \t\t    if (getpos(&cc, TRUE, \"the desired position\") < 0)\n   714: \t\t\treturn;\t/* abort */\n   715: \t\t    /* possible extensions: introduce a small error if\n   716: \t\t       magic power is low; allow transfer to solid rock */\n   717: \t\t    if (teleok(cc.x, cc.y, FALSE)) {\n   718: \t\t\tteleds(cc.x, cc.y, FALSE);"
+  },
+  {
+    "key": "L00721_01",
+    "original": "Sorry...",
+    "translation": "",
+    "context": "src/teleport.c:721:13\n   716: \t\t       magic power is low; allow transfer to solid rock */\n   717: \t\t    if (teleok(cc.x, cc.y, FALSE)) {\n   718: \t\t\tteleds(cc.x, cc.y, FALSE);\n   719: \t\t\treturn;\n   720: \t\t    }\n>  721: \t\t    pline(\"Sorry...\");\n   722: \t\t}\n   723: \t}\n   724: \n   725: \t(void) safe_teleds(FALSE);\n   726: }"
+  },
+  {
+    "key": "L00739_01",
+    "original": "This is a vault teleport, usable once only.",
+    "translation": "",
+    "context": "src/teleport.c:739:10\n   734: \tif (trap && (!trap->tseen || trap->ttyp != TELEP_TRAP))\n   735: \t\ttrap = 0;\n   736: \n   737: \tif (trap) {\n   738: \t\tif (trap->once) {\n>  739: \t\t\tpline(\"This is a vault teleport, usable once only.\");\n   740: \t\t\tif (yn(\"Jump in?\") == 'n')\n   741: \t\t\t\ttrap = 0;\n   742: \t\t\telse {\n   743: \t\t\t\tdeltrap(trap);\n   744: \t\t\t\tnewsym(u.ux, u.uy);"
+  },
+  {
+    "key": "L00740_01",
+    "original": "Jump in?",
+    "translation": "",
+    "context": "src/teleport.c:740:11\n   735: \t\ttrap = 0;\n   736: \n   737: \tif (trap) {\n   738: \t\tif (trap->once) {\n   739: \t\t\tpline(\"This is a vault teleport, usable once only.\");\n>  740: \t\t\tif (yn(\"Jump in?\") == 'n')\n   741: \t\t\t\ttrap = 0;\n   742: \t\t\telse {\n   743: \t\t\t\tdeltrap(trap);\n   744: \t\t\t\tnewsym(u.ux, u.uy);\n   745: \t\t\t}"
+  },
+  {
+    "key": "L00748_01",
+    "original": "%s onto the teleportation trap.",
+    "translation": "",
+    "context": "src/teleport.c:748:8\n   743: \t\t\t\tdeltrap(trap);\n   744: \t\t\t\tnewsym(u.ux, u.uy);\n   745: \t\t\t}\n   746: \t\t}\n   747: \t\tif (trap)\n>  748: \t\t\tYou(\"%s onto the teleportation trap.\",\n   749: \t\t\t    locomotion(youmonst.data, \"jump\"));\n   750: \t}\n   751: \tif (!trap) {\n   752: \t    boolean castit = FALSE;\n   753: \t    register int sp_no = 0, energy = 0;"
+  },
+  {
+    "key": "L00749_01",
+    "original": "jump",
+    "translation": "",
+    "context": "src/teleport.c:749:34\n   744: \t\t\t\tnewsym(u.ux, u.uy);\n   745: \t\t\t}\n   746: \t\t}\n   747: \t\tif (trap)\n   748: \t\t\tYou(\"%s onto the teleportation trap.\",\n>  749: \t\t\t    locomotion(youmonst.data, \"jump\"));\n   750: \t}\n   751: \tif (!trap) {\n   752: \t    boolean castit = FALSE;\n   753: \t    register int sp_no = 0, energy = 0;\n   754: "
+  },
+  {
+    "key": "L00769_01",
+    "original": "don't know that spell.",
+    "translation": "",
+    "context": "src/teleport.c:769:12\n   764: #ifdef WIZARD\n   765: \t\tif (!wizard) {\n   766: #endif\n   767: \t\t    if (!castit) {\n   768: \t\t\tif (!Teleportation)\n>  769: \t\t\t    You(\"don't know that spell.\");\n   770: \t\t\telse You(\"are not able to teleport at will.\");\n   771: \t\t\treturn(0);\n   772: \t\t    }\n   773: #ifdef WIZARD\n   774: \t\t}"
+  },
+  {
+    "key": "L00770_01",
+    "original": "are not able to teleport at will.",
+    "translation": "",
+    "context": "src/teleport.c:770:13\n   765: \t\tif (!wizard) {\n   766: #endif\n   767: \t\t    if (!castit) {\n   768: \t\t\tif (!Teleportation)\n   769: \t\t\t    You(\"don't know that spell.\");\n>  770: \t\t\telse You(\"are not able to teleport at will.\");\n   771: \t\t\treturn(0);\n   772: \t\t    }\n   773: #ifdef WIZARD\n   774: \t\t}\n   775: #endif"
+  },
+  {
+    "key": "L00782_01",
+    "original": "lack the strength %s.",
+    "translation": "",
+    "context": "src/teleport.c:782:8\n   777: \n   778: \t    if (u.uhunger <= 10 || ACURR(A_STR) < 6) {\n   779: #ifdef WIZARD\n   780: \t\tif (!wizard) {\n   781: #endif\n>  782: \t\t\tYou(\"lack the strength %s.\",\n   783: \t\t\t    castit ? \"for a teleport spell\" : \"to teleport\");\n   784: \t\t\treturn 1;\n   785: #ifdef WIZARD\n   786: \t\t}\n   787: #endif"
+  },
+  {
+    "key": "L00783_01",
+    "original": "for a teleport spell",
+    "translation": "",
+    "context": "src/teleport.c:783:17\n   778: \t    if (u.uhunger <= 10 || ACURR(A_STR) < 6) {\n   779: #ifdef WIZARD\n   780: \t\tif (!wizard) {\n   781: #endif\n   782: \t\t\tYou(\"lack the strength %s.\",\n>  783: \t\t\t    castit ? \"for a teleport spell\" : \"to teleport\");\n   784: \t\t\treturn 1;\n   785: #ifdef WIZARD\n   786: \t\t}\n   787: #endif\n   788: \t    }"
+  },
+  {
+    "key": "L00783_02",
+    "original": "to teleport",
+    "translation": "",
+    "context": "src/teleport.c:783:42\n   778: \t    if (u.uhunger <= 10 || ACURR(A_STR) < 6) {\n   779: #ifdef WIZARD\n   780: \t\tif (!wizard) {\n   781: #endif\n   782: \t\t\tYou(\"lack the strength %s.\",\n>  783: \t\t\t    castit ? \"for a teleport spell\" : \"to teleport\");\n   784: \t\t\treturn 1;\n   785: #ifdef WIZARD\n   786: \t\t}\n   787: #endif\n   788: \t    }"
+  },
+  {
+    "key": "L00798_01",
+    "original": "lack the energy %s.",
+    "translation": "",
+    "context": "src/teleport.c:798:8\n   793: \t\tif (wizard)\n   794: \t\t\tenergy = u.uen;\n   795: \t\telse\n   796: #endif\n   797: \t\t{\n>  798: \t\t\tYou(\"lack the energy %s.\",\n   799: \t\t\t    castit ? \"for a teleport spell\" : \"to teleport\");\n   800: \t\t\treturn 1;\n   801: \t\t}\n   802: \t    }\n   803: "
+  },
+  {
+    "key": "L00799_01",
+    "original": "for a teleport spell",
+    "translation": "",
+    "context": "src/teleport.c:799:17\n   794: \t\t\tenergy = u.uen;\n   795: \t\telse\n   796: #endif\n   797: \t\t{\n   798: \t\t\tYou(\"lack the energy %s.\",\n>  799: \t\t\t    castit ? \"for a teleport spell\" : \"to teleport\");\n   800: \t\t\treturn 1;\n   801: \t\t}\n   802: \t    }\n   803: \n   804: \t    if (check_capacity("
+  },
+  {
+    "key": "L00799_02",
+    "original": "to teleport",
+    "translation": "",
+    "context": "src/teleport.c:799:42\n   794: \t\t\tenergy = u.uen;\n   795: \t\telse\n   796: #endif\n   797: \t\t{\n   798: \t\t\tYou(\"lack the energy %s.\",\n>  799: \t\t\t    castit ? \"for a teleport spell\" : \"to teleport\");\n   800: \t\t\treturn 1;\n   801: \t\t}\n   802: \t    }\n   803: \n   804: \t    if (check_capacity("
+  },
+  {
+    "key": "L00805_01",
+    "original": "Your concentration falters from carrying so much.",
+    "translation": "",
+    "context": "src/teleport.c:805:4\n   800: \t\t\treturn 1;\n   801: \t\t}\n   802: \t    }\n   803: \n   804: \t    if (check_capacity(\n>  805: \t\t\t\"Your concentration falters from carrying so much.\"))\n   806: \t\treturn 1;\n   807: \n   808: \t    if (castit) {\n   809: \t\texercise(A_WIS, TRUE);\n   810: \t\tif (spelleffects(sp_no, TRUE))"
+  },
+  {
+    "key": "L00853_01",
+    "original": "very disoriented for a moment.",
+    "translation": "",
+    "context": "src/teleport.c:853:15\n   848: \t   )\n   849: #ifdef WIZARD\n   850: \t\t\t\t\t\t&& !wizard\n   851: #endif\n   852: \t\t\t\t\t\t\t) {\n>  853: \t    You_feel(\"very disoriented for a moment.\");\n   854: \t    return;\n   855: \t}\n   856: \tif ((Teleport_control && !Stunned)\n   857: #ifdef WIZARD\n   858: \t   || wizard"
+  },
+  {
+    "key": "L00864_01",
+    "original": "To what level do you want to teleport?",
+    "translation": "",
+    "context": "src/teleport.c:864:19\n   859: #endif\n   860: \t\t) {\n   861: \t    char qbuf[BUFSZ];\n   862: \t    int trycnt = 0;\n   863: \n>  864: \t    Strcpy(qbuf, \"To what level do you want to teleport?\");\n   865: \t    do {\n   866: \t\tif (++trycnt == 2) {\n   867: #ifdef WIZARD\n   868: \t\t\tif (wizard) Strcat(qbuf, \" [type a number or ? for a menu]\");\n   869: \t\t\telse"
+  },
+  {
+    "key": "L00868_01",
+    "original": " [type a number or ? for a menu]",
+    "translation": "",
+    "context": "src/teleport.c:868:29\n   863: \n   864: \t    Strcpy(qbuf, \"To what level do you want to teleport?\");\n   865: \t    do {\n   866: \t\tif (++trycnt == 2) {\n   867: #ifdef WIZARD\n>  868: \t\t\tif (wizard) Strcat(qbuf, \" [type a number or ? for a menu]\");\n   869: \t\t\telse\n   870: #endif\n   871: \t\t\tStrcat(qbuf, \" [type a number]\");\n   872: \t\t}\n   873: \t\tgetlin(qbuf, buf);"
+  },
+  {
+    "key": "L00871_01",
+    "original": " [type a number]",
+    "translation": "",
+    "context": "src/teleport.c:871:17\n   866: \t\tif (++trycnt == 2) {\n   867: #ifdef WIZARD\n   868: \t\t\tif (wizard) Strcat(qbuf, \" [type a number or ? for a menu]\");\n   869: \t\t\telse\n   870: #endif\n>  871: \t\t\tStrcat(qbuf, \" [type a number]\");\n   872: \t\t}\n   873: \t\tgetlin(qbuf, buf);\n   874: \t\tif (!strcmp(buf,\"\\033\")) {\t/* cancelled */\n   875: \t\t    if (Confusion && rnl(5)) {\n   876: \t\t\tpline(\"Oops...\");"
+  },
+  {
+    "key": "L00876_01",
+    "original": "Oops...",
+    "translation": "",
+    "context": "src/teleport.c:876:10\n   871: \t\t\tStrcat(qbuf, \" [type a number]\");\n   872: \t\t}\n   873: \t\tgetlin(qbuf, buf);\n   874: \t\tif (!strcmp(buf,\"\\033\")) {\t/* cancelled */\n   875: \t\t    if (Confusion && rnl(5)) {\n>  876: \t\t\tpline(\"Oops...\");\n   877: \t\t\tgoto random_levtport;\n   878: \t\t    }\n   879: \t\t    return;\n   880: \t\t} else if (!strcmp(buf,\"*\")) {\n   881: \t\t    goto random_levtport;"
+  },
+  {
+    "key": "L00883_01",
+    "original": "Oops...",
+    "translation": "",
+    "context": "src/teleport.c:883:13\n   878: \t\t    }\n   879: \t\t    return;\n   880: \t\t} else if (!strcmp(buf,\"*\")) {\n   881: \t\t    goto random_levtport;\n   882: \t\t} else if (Confusion && rnl(5)) {\n>  883: \t\t    pline(\"Oops...\");\n   884: \t\t    goto random_levtport;\n   885: \t\t}\n   886: #ifdef WIZARD\n   887: \t\tif (wizard && !strcmp(buf,\"?\")) {\n   888: \t\t    schar destlev = 0;"
+  },
+  {
+    "key": "L00896_01",
+    "original": "Destination is earth level",
+    "translation": "",
+    "context": "src/teleport.c:896:9\n   891: \t\t    if ((newlev = (int)print_dungeon(TRUE, &destlev, &destdnum))) {\n   892: \t\t\tnewlevel.dnum = destdnum;\n   893: \t\t\tnewlevel.dlevel = destlev;\n   894: \t\t\tif (In_endgame(&newlevel) && !In_endgame(&u.uz)) {\n   895: \t\t\t\tSprintf(buf,\n>  896: \t\t\t\t    \"Destination is earth level\");\n   897: \t\t\t\tif (!u.uhave.amulet) {\n   898: \t\t\t\t\tstruct obj *obj;\n   899: \t\t\t\t\tobj = mksobj(AMULET_OF_YENDOR,\n   900: \t\t\t\t\t\t\tTRUE, FALSE);\n   901: \t\t\t\t\tif (obj) {"
+  },
+  {
+    "key": "L00903_01",
+    "original": " with the amulet",
+    "translation": "",
+    "context": "src/teleport.c:903:19\n   898: \t\t\t\t\tstruct obj *obj;\n   899: \t\t\t\t\tobj = mksobj(AMULET_OF_YENDOR,\n   900: \t\t\t\t\t\t\tTRUE, FALSE);\n   901: \t\t\t\t\tif (obj) {\n   902: \t\t\t\t\t\tobj = addinv(obj);\n>  903: \t\t\t\t\t\tStrcat(buf, \" with the amulet\");\n   904: \t\t\t\t\t}\n   905: \t\t\t\t}\n   906: \t\t\t\tassign_level(&newlevel, &earth_level);\n   907: \t\t\t\tpline(\"%s.\", buf);\n   908: \t\t\t}"
+  },
+  {
+    "key": "L00907_01",
+    "original": "%s.",
+    "translation": "",
+    "context": "src/teleport.c:907:11\n   902: \t\t\t\t\t\tobj = addinv(obj);\n   903: \t\t\t\t\t\tStrcat(buf, \" with the amulet\");\n   904: \t\t\t\t\t}\n   905: \t\t\t\t}\n   906: \t\t\t\tassign_level(&newlevel, &earth_level);\n>  907: \t\t\t\tpline(\"%s.\", buf);\n   908: \t\t\t}\n   909: \t\t\tforce_dest = TRUE;\n   910: \t\t    } else return;\n   911: \t\t} else\n   912: #endif"
+  },
+  {
+    "key": "L00935_01",
+    "original": "Go to Nowhere.  Are you sure?",
+    "translation": "",
+    "context": "src/teleport.c:935:11\n   930: \n   931: \t    /* no dungeon escape via this route */\n   932: \t    if (newlev == 0) {\n   933: \t\tif (trycnt >= 10)\n   934: \t\t    goto random_levtport;\n>  935: \t\tif (ynq(\"Go to Nowhere.  Are you sure?\") != 'y') return;\n   936: \t\tYou(\"%s in agony as your body begins to warp...\",\n   937: \t\t    is_silent(youmonst.data) ? \"writhe\" : \"scream\");\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   939: \t\tYou(\"cease to exist.\");\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\","
+  },
+  {
+    "key": "L00936_01",
+    "original": "%s in agony as your body begins to warp...",
+    "translation": "",
+    "context": "src/teleport.c:936:7\n   931: \t    /* no dungeon escape via this route */\n   932: \t    if (newlev == 0) {\n   933: \t\tif (trycnt >= 10)\n   934: \t\t    goto random_levtport;\n   935: \t\tif (ynq(\"Go to Nowhere.  Are you sure?\") != 'y') return;\n>  936: \t\tYou(\"%s in agony as your body begins to warp...\",\n   937: \t\t    is_silent(youmonst.data) ? \"writhe\" : \"scream\");\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   939: \t\tYou(\"cease to exist.\");\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));"
+  },
+  {
+    "key": "L00937_01",
+    "original": "writhe",
+    "translation": "",
+    "context": "src/teleport.c:937:34\n   932: \t    if (newlev == 0) {\n   933: \t\tif (trycnt >= 10)\n   934: \t\t    goto random_levtport;\n   935: \t\tif (ynq(\"Go to Nowhere.  Are you sure?\") != 'y') return;\n   936: \t\tYou(\"%s in agony as your body begins to warp...\",\n>  937: \t\t    is_silent(youmonst.data) ? \"writhe\" : \"scream\");\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   939: \t\tYou(\"cease to exist.\");\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;"
+  },
+  {
+    "key": "L00937_02",
+    "original": "scream",
+    "translation": "",
+    "context": "src/teleport.c:937:45\n   932: \t    if (newlev == 0) {\n   933: \t\tif (trycnt >= 10)\n   934: \t\t    goto random_levtport;\n   935: \t\tif (ynq(\"Go to Nowhere.  Are you sure?\") != 'y') return;\n   936: \t\tYou(\"%s in agony as your body begins to warp...\",\n>  937: \t\t    is_silent(youmonst.data) ? \"writhe\" : \"scream\");\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   939: \t\tYou(\"cease to exist.\");\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;"
+  },
+  {
+    "key": "L00939_01",
+    "original": "cease to exist.",
+    "translation": "",
+    "context": "src/teleport.c:939:7\n   934: \t\t    goto random_levtport;\n   935: \t\tif (ynq(\"Go to Nowhere.  Are you sure?\") != 'y') return;\n   936: \t\tYou(\"%s in agony as your body begins to warp...\",\n   937: \t\t    is_silent(youmonst.data) ? \"writhe\" : \"scream\");\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n>  939: \t\tYou(\"cease to exist.\");\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;\n   943: \t\tkiller = \"committed suicide\";\n   944: \t\tdone(DIED);"
+  },
+  {
+    "key": "L00940_01",
+    "original": "possessions land on the %s with a thud.",
+    "translation": "",
+    "context": "src/teleport.c:940:20\n   935: \t\tif (ynq(\"Go to Nowhere.  Are you sure?\") != 'y') return;\n   936: \t\tYou(\"%s in agony as your body begins to warp...\",\n   937: \t\t    is_silent(youmonst.data) ? \"writhe\" : \"scream\");\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   939: \t\tYou(\"cease to exist.\");\n>  940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;\n   943: \t\tkiller = \"committed suicide\";\n   944: \t\tdone(DIED);\n   945: \t\tpline(\"An energized cloud of dust begins to coalesce.\");"
+  },
+  {
+    "key": "L00943_01",
+    "original": "committed suicide",
+    "translation": "",
+    "context": "src/teleport.c:943:12\n   938: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   939: \t\tYou(\"cease to exist.\");\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;\n>  943: \t\tkiller = \"committed suicide\";\n   944: \t\tdone(DIED);\n   945: \t\tpline(\"An energized cloud of dust begins to coalesce.\");\n   946: \t\tYour(\"body rematerializes%s.\", invent ?\n   947: \t\t\t\", and you gather up all your possessions\" : \"\");\n   948: \t\treturn;"
+  },
+  {
+    "key": "L00945_01",
+    "original": "An energized cloud of dust begins to coalesce.",
+    "translation": "",
+    "context": "src/teleport.c:945:9\n   940: \t\tif (invent) Your(\"possessions land on the %s with a thud.\",\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;\n   943: \t\tkiller = \"committed suicide\";\n   944: \t\tdone(DIED);\n>  945: \t\tpline(\"An energized cloud of dust begins to coalesce.\");\n   946: \t\tYour(\"body rematerializes%s.\", invent ?\n   947: \t\t\t\", and you gather up all your possessions\" : \"\");\n   948: \t\treturn;\n   949: \t    }\n   950: "
+  },
+  {
+    "key": "L00946_01",
+    "original": "body rematerializes%s.",
+    "translation": "",
+    "context": "src/teleport.c:946:8\n   941: \t\t\t\tsurface(u.ux, u.uy));\n   942: \t\tkiller_format = NO_KILLER_PREFIX;\n   943: \t\tkiller = \"committed suicide\";\n   944: \t\tdone(DIED);\n   945: \t\tpline(\"An energized cloud of dust begins to coalesce.\");\n>  946: \t\tYour(\"body rematerializes%s.\", invent ?\n   947: \t\t\t\", and you gather up all your possessions\" : \"\");\n   948: \t\treturn;\n   949: \t    }\n   950: \n   951: \t    /* if in Knox and the requested level > 0, stay put."
+  },
+  {
+    "key": "L00947_01",
+    "original": ", and you gather up all your possessions",
+    "translation": "",
+    "context": "src/teleport.c:947:4\n   942: \t\tkiller_format = NO_KILLER_PREFIX;\n   943: \t\tkiller = \"committed suicide\";\n   944: \t\tdone(DIED);\n   945: \t\tpline(\"An energized cloud of dust begins to coalesce.\");\n   946: \t\tYour(\"body rematerializes%s.\", invent ?\n>  947: \t\t\t\", and you gather up all your possessions\" : \"\");\n   948: \t\treturn;\n   949: \t    }\n   950: \n   951: \t    /* if in Knox and the requested level > 0, stay put.\n   952: \t     * we let negative values requests fall into the \"heaven\" loop."
+  },
+  {
+    "key": "L00991_01",
+    "original": "get there from here.",
+    "translation": "",
+    "context": "src/teleport.c:991:12\n   986: #ifdef WIZARD\n   987: \tif (In_endgame(&u.uz)) {\t/* must already be wizard */\n   988: \t    int llimit = dunlevs_in_dungeon(&u.uz);\n   989: \n   990: \t    if (newlev >= 0 || newlev <= -llimit) {\n>  991: \t\tYou_cant(\"get there from here.\");\n   992: \t\treturn;\n   993: \t    }\n   994: \t    newlevel.dnum = u.uz.dnum;\n   995: \t    newlevel.dlevel = llimit + newlev;\n   996: \t    schedule_goto(&newlevel, FALSE, FALSE, 0, (char *)0, (char *)0);"
+  },
+  {
+    "key": "L01012_01",
+    "original": "arrive in heaven.",
+    "translation": "",
+    "context": "src/teleport.c:1012:8\n  1007: \t\t    /* you're now effectively out of the shop */\n  1008: \t\t    *u.ushops0 = *u.ushops = '\\0';\n  1009: \t\t    in_mklev = FALSE;\n  1010: \t\t}\n  1011: \t\tif (newlev <= -10) {\n> 1012: \t\t\tYou(\"arrive in heaven.\");\n  1013: \t\t\tverbalize(\"Thou art early, but we'll admit thee.\");\n  1014: \t\t\tkiller_format = NO_KILLER_PREFIX;\n  1015: \t\t\tkiller = \"went to heaven prematurely\";\n  1016: \t\t} else if (newlev == -9) {\n  1017: \t\t\tYou_feel(\"deliriously happy. \");"
+  },
+  {
+    "key": "L01013_01",
+    "original": "Thou art early, but we'll admit thee.",
+    "translation": "",
+    "context": "src/teleport.c:1013:14\n  1008: \t\t    *u.ushops0 = *u.ushops = '\\0';\n  1009: \t\t    in_mklev = FALSE;\n  1010: \t\t}\n  1011: \t\tif (newlev <= -10) {\n  1012: \t\t\tYou(\"arrive in heaven.\");\n> 1013: \t\t\tverbalize(\"Thou art early, but we'll admit thee.\");\n  1014: \t\t\tkiller_format = NO_KILLER_PREFIX;\n  1015: \t\t\tkiller = \"went to heaven prematurely\";\n  1016: \t\t} else if (newlev == -9) {\n  1017: \t\t\tYou_feel(\"deliriously happy. \");\n  1018: \t\t\tpline(\"(In fact, you're on Cloud 9!) \");"
+  },
+  {
+    "key": "L01015_01",
+    "original": "went to heaven prematurely",
+    "translation": "",
+    "context": "src/teleport.c:1015:13\n  1010: \t\t}\n  1011: \t\tif (newlev <= -10) {\n  1012: \t\t\tYou(\"arrive in heaven.\");\n  1013: \t\t\tverbalize(\"Thou art early, but we'll admit thee.\");\n  1014: \t\t\tkiller_format = NO_KILLER_PREFIX;\n> 1015: \t\t\tkiller = \"went to heaven prematurely\";\n  1016: \t\t} else if (newlev == -9) {\n  1017: \t\t\tYou_feel(\"deliriously happy. \");\n  1018: \t\t\tpline(\"(In fact, you're on Cloud 9!) \");\n  1019: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1020: \t\t} else"
+  },
+  {
+    "key": "L01017_01",
+    "original": "deliriously happy. ",
+    "translation": "",
+    "context": "src/teleport.c:1017:13\n  1012: \t\t\tYou(\"arrive in heaven.\");\n  1013: \t\t\tverbalize(\"Thou art early, but we'll admit thee.\");\n  1014: \t\t\tkiller_format = NO_KILLER_PREFIX;\n  1015: \t\t\tkiller = \"went to heaven prematurely\";\n  1016: \t\t} else if (newlev == -9) {\n> 1017: \t\t\tYou_feel(\"deliriously happy. \");\n  1018: \t\t\tpline(\"(In fact, you're on Cloud 9!) \");\n  1019: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1020: \t\t} else\n  1021: \t\t\tYou(\"are now high above the clouds...\");\n  1022: "
+  },
+  {
+    "key": "L01018_01",
+    "original": "(In fact, you're on Cloud 9!) ",
+    "translation": "",
+    "context": "src/teleport.c:1018:10\n  1013: \t\t\tverbalize(\"Thou art early, but we'll admit thee.\");\n  1014: \t\t\tkiller_format = NO_KILLER_PREFIX;\n  1015: \t\t\tkiller = \"went to heaven prematurely\";\n  1016: \t\t} else if (newlev == -9) {\n  1017: \t\t\tYou_feel(\"deliriously happy. \");\n> 1018: \t\t\tpline(\"(In fact, you're on Cloud 9!) \");\n  1019: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1020: \t\t} else\n  1021: \t\t\tYou(\"are now high above the clouds...\");\n  1022: \n  1023: \t\tif (killer) {"
+  },
+  {
+    "key": "L01021_01",
+    "original": "are now high above the clouds...",
+    "translation": "",
+    "context": "src/teleport.c:1021:8\n  1016: \t\t} else if (newlev == -9) {\n  1017: \t\t\tYou_feel(\"deliriously happy. \");\n  1018: \t\t\tpline(\"(In fact, you're on Cloud 9!) \");\n  1019: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1020: \t\t} else\n> 1021: \t\t\tYou(\"are now high above the clouds...\");\n  1022: \n  1023: \t\tif (killer) {\n  1024: \t\t    ;\t\t/* arrival in heaven is pending */\n  1025: \t\t} else if (Levitation) {\n  1026: \t\t    escape_by_flying = \"float gently down to earth\";"
+  },
+  {
+    "key": "L01026_01",
+    "original": "float gently down to earth",
+    "translation": "",
+    "context": "src/teleport.c:1026:26\n  1021: \t\t\tYou(\"are now high above the clouds...\");\n  1022: \n  1023: \t\tif (killer) {\n  1024: \t\t    ;\t\t/* arrival in heaven is pending */\n  1025: \t\t} else if (Levitation) {\n> 1026: \t\t    escape_by_flying = \"float gently down to earth\";\n  1027: \t\t} else if (Flying) {\n  1028: \t\t    escape_by_flying = \"fly down to the ground\";\n  1029: \t\t} else {\n  1030: \t\t    pline(\"Unfortunately, you don't know how to fly.\");\n  1031: \t\t    You(\"plummet a few thousand feet to your death.\");"
+  },
+  {
+    "key": "L01028_01",
+    "original": "fly down to the ground",
+    "translation": "",
+    "context": "src/teleport.c:1028:26\n  1023: \t\tif (killer) {\n  1024: \t\t    ;\t\t/* arrival in heaven is pending */\n  1025: \t\t} else if (Levitation) {\n  1026: \t\t    escape_by_flying = \"float gently down to earth\";\n  1027: \t\t} else if (Flying) {\n> 1028: \t\t    escape_by_flying = \"fly down to the ground\";\n  1029: \t\t} else {\n  1030: \t\t    pline(\"Unfortunately, you don't know how to fly.\");\n  1031: \t\t    You(\"plummet a few thousand feet to your death.\");\n  1032: \t\t    Sprintf(buf,\n  1033: \t\t\t  \"teleported out of the dungeon and fell to %s death\","
+  },
+  {
+    "key": "L01030_01",
+    "original": "Unfortunately, you don't know how to fly.",
+    "translation": "",
+    "context": "src/teleport.c:1030:13\n  1025: \t\t} else if (Levitation) {\n  1026: \t\t    escape_by_flying = \"float gently down to earth\";\n  1027: \t\t} else if (Flying) {\n  1028: \t\t    escape_by_flying = \"fly down to the ground\";\n  1029: \t\t} else {\n> 1030: \t\t    pline(\"Unfortunately, you don't know how to fly.\");\n  1031: \t\t    You(\"plummet a few thousand feet to your death.\");\n  1032: \t\t    Sprintf(buf,\n  1033: \t\t\t  \"teleported out of the dungeon and fell to %s death\",\n  1034: \t\t\t    uhis());\n  1035: \t\t    killer = buf;"
+  },
+  {
+    "key": "L01031_01",
+    "original": "plummet a few thousand feet to your death.",
+    "translation": "",
+    "context": "src/teleport.c:1031:11\n  1026: \t\t    escape_by_flying = \"float gently down to earth\";\n  1027: \t\t} else if (Flying) {\n  1028: \t\t    escape_by_flying = \"fly down to the ground\";\n  1029: \t\t} else {\n  1030: \t\t    pline(\"Unfortunately, you don't know how to fly.\");\n> 1031: \t\t    You(\"plummet a few thousand feet to your death.\");\n  1032: \t\t    Sprintf(buf,\n  1033: \t\t\t  \"teleported out of the dungeon and fell to %s death\",\n  1034: \t\t\t    uhis());\n  1035: \t\t    killer = buf;\n  1036: \t\t    killer_format = NO_KILLER_PREFIX;"
+  },
+  {
+    "key": "L01033_01",
+    "original": "teleported out of the dungeon and fell to %s death",
+    "translation": "",
+    "context": "src/teleport.c:1033:6\n  1028: \t\t    escape_by_flying = \"fly down to the ground\";\n  1029: \t\t} else {\n  1030: \t\t    pline(\"Unfortunately, you don't know how to fly.\");\n  1031: \t\t    You(\"plummet a few thousand feet to your death.\");\n  1032: \t\t    Sprintf(buf,\n> 1033: \t\t\t  \"teleported out of the dungeon and fell to %s death\",\n  1034: \t\t\t    uhis());\n  1035: \t\t    killer = buf;\n  1036: \t\t    killer_format = NO_KILLER_PREFIX;\n  1037: \t\t}\n  1038: \t}"
+  },
+  {
+    "key": "L01050_01",
+    "original": "find yourself back on the surface",
+    "translation": "",
+    "context": "src/teleport.c:1050:25\n  1045: \t    u.uz.dnum = 0;\t/* main dungeon */\n  1046: \t    u.uz.dlevel = (newlev <= -10) ? -10 : 0;\t/* heaven or surface */\n  1047: \t    done(DIED);\n  1048: \t    /* can only get here via life-saving (or declining to die in\n  1049: \t       explore|debug mode); the hero has now left the dungeon... */\n> 1050: \t    escape_by_flying = \"find yourself back on the surface\";\n  1051: \t    u.uz = lsav;\t/* restore u.uz so escape code works */\n  1052: \t}\n  1053: \n  1054: \t/* calls done(ESCAPED) if newlevel==0 */\n  1055: \tif (escape_by_flying) {"
+  },
+  {
+    "key": "L01056_01",
+    "original": "%s.",
+    "translation": "",
+    "context": "src/teleport.c:1056:10\n  1051: \t    u.uz = lsav;\t/* restore u.uz so escape code works */\n  1052: \t}\n  1053: \n  1054: \t/* calls done(ESCAPED) if newlevel==0 */\n  1055: \tif (escape_by_flying) {\n> 1056: \t    You(\"%s.\", escape_by_flying);\n  1057: \t    newlevel.dnum = 0;\t\t/* specify main dungeon */\n  1058: \t    newlevel.dlevel = 0;\t/* escape the dungeon */\n  1059: \t    /* [dlevel used to be set to 1, but it doesn't make sense to\n  1060: \t\tteleport out of the dungeon and float or fly down to the\n  1061: \t\tsurface but then actually arrive back inside the dungeon] */"
+  },
+  {
+    "key": "L01085_01",
+    "original": "Sorry...",
+    "translation": "",
+    "context": "src/teleport.c:1085:9\n  1080:                 if (!wizard)\n  1081:                 {\n  1082: # endif /* WIZARD */\n  1083: \t\tnewlev = dungeons[u.uz.dnum].depth_start +\n  1084: \t\t\t\t\tdunlevs_in_dungeon(&u.uz) - 2;\n> 1085: \t\tpline(\"Sorry...\");\n  1086: # ifdef WIZARD\n  1087:                 }\n  1088: # endif /* WIZARD */\n  1089: \n  1090: \t    }"
+  },
+  {
+    "key": "L01131_01",
+    "original": "activated a magic portal!",
+    "translation": "",
+    "context": "src/teleport.c:1131:6\n  1126: \n  1127: \t/* if landed from another portal, do nothing */\n  1128: \t/* problem: level teleport landing escapes the check */\n  1129: \tif (!on_level(&u.uz, &u.uz0)) return;\n  1130: \n> 1131: \tYou(\"activated a magic portal!\");\n  1132: \n  1133: \t/* prevent the poor shnook, whose amulet was stolen while in\n  1134: \t * the endgame, from accidently triggering the portal to the\n  1135: \t * next level, and thus losing the game\n  1136: \t */"
+  },
+  {
+    "key": "L01138_01",
+    "original": "dizzy for a moment, but nothing happens...",
+    "translation": "",
+    "context": "src/teleport.c:1138:15\n  1133: \t/* prevent the poor shnook, whose amulet was stolen while in\n  1134: \t * the endgame, from accidently triggering the portal to the\n  1135: \t * next level, and thus losing the game\n  1136: \t */\n  1137: \tif (In_endgame(&u.uz) && !u.uhave.amulet) {\n> 1138: \t    You_feel(\"dizzy for a moment, but nothing happens...\");\n  1139: \t    return;\n  1140: \t}\n  1141: \n  1142: \ttarget_level = ttmp->dst;\n  1143: \tschedule_goto(&target_level, FALSE, FALSE, 1,"
+  },
+  {
+    "key": "L01144_01",
+    "original": "You feel dizzy for a moment, but the sensation passes.",
+    "translation": "",
+    "context": "src/teleport.c:1144:9\n  1139: \t    return;\n  1140: \t}\n  1141: \n  1142: \ttarget_level = ttmp->dst;\n  1143: \tschedule_goto(&target_level, FALSE, FALSE, 1,\n> 1144: \t\t      \"You feel dizzy for a moment, but the sensation passes.\",\n  1145: \t\t      (char *)0);\n  1146: }\n  1147: \n  1148: void\n  1149: tele_trap(trap)"
+  },
+  {
+    "key": "L01155_01",
+    "original": "a wrenching sensation.",
+    "translation": "",
+    "context": "src/teleport.c:1155:12\n  1150: struct trap *trap;\n  1151: {\n  1152: \tif (In_endgame(&u.uz) || Antimagic) {\n  1153: \t\tif (Antimagic)\n  1154: \t\t\tshieldeff(u.ux, u.uy);\n> 1155: \t\tYou_feel(\"a wrenching sensation.\");\n  1156: \t} else if (!next_to_u()) {\n  1157: \t\tYou(shudder_for_moment);\n  1158: \t} else if (trap->once) {\n  1159: \t\tdeltrap(trap);\n  1160: \t\tnewsym(u.ux,u.uy);\t/* get rid of trap symbol */"
+  },
+  {
+    "key": "L01170_01",
+    "original": "%s onto a level teleport trap!",
+    "translation": "",
+    "context": "src/teleport.c:1170:6\n  1165: \n  1166: void\n  1167: level_tele_trap(trap)\n  1168: struct trap *trap;\n  1169: {\n> 1170: \tYou(\"%s onto a level teleport trap!\",\n  1171: \t\t      Levitation ? (const char *)\"float\" :\n  1172: \t\t\t\t  locomotion(youmonst.data, \"step\"));\n  1173: \tif (Antimagic) {\n  1174: \t    shieldeff(u.ux, u.uy);\n  1175: \t}"
+  },
+  {
+    "key": "L01171_01",
+    "original": "float",
+    "translation": "",
+    "context": "src/teleport.c:1171:36\n  1166: void\n  1167: level_tele_trap(trap)\n  1168: struct trap *trap;\n  1169: {\n  1170: \tYou(\"%s onto a level teleport trap!\",\n> 1171: \t\t      Levitation ? (const char *)\"float\" :\n  1172: \t\t\t\t  locomotion(youmonst.data, \"step\"));\n  1173: \tif (Antimagic) {\n  1174: \t    shieldeff(u.ux, u.uy);\n  1175: \t}\n  1176: \tif (Antimagic || In_endgame(&u.uz)) {"
+  },
+  {
+    "key": "L01172_01",
+    "original": "step",
+    "translation": "",
+    "context": "src/teleport.c:1172:33\n  1167: level_tele_trap(trap)\n  1168: struct trap *trap;\n  1169: {\n  1170: \tYou(\"%s onto a level teleport trap!\",\n  1171: \t\t      Levitation ? (const char *)\"float\" :\n> 1172: \t\t\t\t  locomotion(youmonst.data, \"step\"));\n  1173: \tif (Antimagic) {\n  1174: \t    shieldeff(u.ux, u.uy);\n  1175: \t}\n  1176: \tif (Antimagic || In_endgame(&u.uz)) {\n  1177: \t    You_feel(\"a wrenching sensation.\");"
+  },
+  {
+    "key": "L01177_01",
+    "original": "a wrenching sensation.",
+    "translation": "",
+    "context": "src/teleport.c:1177:15\n  1172: \t\t\t\t  locomotion(youmonst.data, \"step\"));\n  1173: \tif (Antimagic) {\n  1174: \t    shieldeff(u.ux, u.uy);\n  1175: \t}\n  1176: \tif (Antimagic || In_endgame(&u.uz)) {\n> 1177: \t    You_feel(\"a wrenching sensation.\");\n  1178: \t    return;\n  1179: \t}\n  1180: \tif (!Blind)\n  1181: \t    You(\"are momentarily blinded by a flash of light.\");\n  1182: \telse"
+  },
+  {
+    "key": "L01181_01",
+    "original": "are momentarily blinded by a flash of light.",
+    "translation": "",
+    "context": "src/teleport.c:1181:10\n  1176: \tif (Antimagic || In_endgame(&u.uz)) {\n  1177: \t    You_feel(\"a wrenching sensation.\");\n  1178: \t    return;\n  1179: \t}\n  1180: \tif (!Blind)\n> 1181: \t    You(\"are momentarily blinded by a flash of light.\");\n  1182: \telse\n  1183: \t    You(\"are momentarily disoriented.\");\n  1184: \tdeltrap(trap);\n  1185: \tnewsym(u.ux,u.uy);\t/* get rid of trap symbol */\n  1186: \tlevel_tele();"
+  },
+  {
+    "key": "L01183_01",
+    "original": "are momentarily disoriented.",
+    "translation": "",
+    "context": "src/teleport.c:1183:10\n  1178: \t    return;\n  1179: \t}\n  1180: \tif (!Blind)\n  1181: \t    You(\"are momentarily blinded by a flash of light.\");\n  1182: \telse\n> 1183: \t    You(\"are momentarily disoriented.\");\n  1184: \tdeltrap(trap);\n  1185: \tnewsym(u.ux,u.uy);\t/* get rid of trap symbol */\n  1186: \tlevel_tele();\n  1187: }\n  1188: "
+  },
+  {
+    "key": "L01332_01",
+    "original": "rloc(): couldn't relocate monster",
+    "translation": "",
+    "context": "src/teleport.c:1332:14\n  1327: \t\tif (goodpos(x, y, mtmp, 0))\n  1328: \t\t    goto found_xy;\n  1329: \n  1330: \t/* level either full of monsters or somehow faulty */\n  1331: \tif (!suppress_impossible)\n> 1332: \t\timpossible(\"rloc(): couldn't relocate monster\");\n  1333: \treturn FALSE;\n  1334: \n  1335:  found_xy:\n  1336: \trloc_to(mtmp, x, y);\n  1337: \treturn TRUE;"
+  },
+  {
+    "key": "L01361_01",
+    "original": "A mysterious force prevents %s from teleporting!",
+    "translation": "",
+    "context": "src/teleport.c:1361:13\n  1356: tele_restrict(mon)\n  1357: struct monst *mon;\n  1358: {\n  1359: \tif (level.flags.noteleport) {\n  1360: \t\tif (canseemon(mon))\n> 1361: \t\t    pline(\"A mysterious force prevents %s from teleporting!\",\n  1362: \t\t\tmon_nam(mon));\n  1363: \t\treturn TRUE;\n  1364: \t}\n  1365: \treturn FALSE;\n  1366: }"
+  },
+  {
+    "key": "L01390_01",
+    "original": "%s seems disoriented.",
+    "translation": "",
+    "context": "src/teleport.c:1390:13\n  1385: \t    if (trap->once) mvault_tele(mtmp);\n  1386: \t    else (void) rloc(mtmp, FALSE);\n  1387: \n  1388: \t    if (in_sight) {\n  1389: \t\tif (canseemon(mtmp))\n> 1390: \t\t    pline(\"%s seems disoriented.\", monname);\n  1391: \t\telse\n  1392: \t\t    pline(\"%s suddenly disappears!\", monname);\n  1393: \t\tseetrap(trap);\n  1394: \t    }\n  1395: \t}"
+  },
+  {
+    "key": "L01392_01",
+    "original": "%s suddenly disappears!",
+    "translation": "",
+    "context": "src/teleport.c:1392:13\n  1387: \n  1388: \t    if (in_sight) {\n  1389: \t\tif (canseemon(mtmp))\n  1390: \t\t    pline(\"%s seems disoriented.\", monname);\n  1391: \t\telse\n> 1392: \t\t    pline(\"%s suddenly disappears!\", monname);\n  1393: \t\tseetrap(trap);\n  1394: \t    }\n  1395: \t}\n  1396: }\n  1397: "
+  },
+  {
+    "key": "L01420_01",
+    "original": "%s avoids the %s.",
+    "translation": "",
+    "context": "src/teleport.c:1420:10\n  1415: \t    if ((tt == HOLE || tt == TRAPDOOR)) {\n  1416: \t\tif (Is_stronghold(&u.uz)) {\n  1417: \t\t    assign_level(&tolevel, &valley_level);\n  1418: \t\t} else if (Is_botlevel(&u.uz)) {\n  1419: \t\t    if (in_sight && trap->tseen)\n> 1420: \t\t\tpline(\"%s avoids the %s.\", Monnam(mtmp),\n  1421: \t\t\t(tt == HOLE) ? \"hole\" : \"trap\");\n  1422: \t\t    return 0;\n  1423: \t\t} else {\n  1424: \t\t    get_level(&tolevel, depth(&u.uz) + 1);\n  1425: \t\t}"
+  },
+  {
+    "key": "L01421_01",
+    "original": "hole",
+    "translation": "",
+    "context": "src/teleport.c:1421:19\n  1416: \t\tif (Is_stronghold(&u.uz)) {\n  1417: \t\t    assign_level(&tolevel, &valley_level);\n  1418: \t\t} else if (Is_botlevel(&u.uz)) {\n  1419: \t\t    if (in_sight && trap->tseen)\n  1420: \t\t\tpline(\"%s avoids the %s.\", Monnam(mtmp),\n> 1421: \t\t\t(tt == HOLE) ? \"hole\" : \"trap\");\n  1422: \t\t    return 0;\n  1423: \t\t} else {\n  1424: \t\t    get_level(&tolevel, depth(&u.uz) + 1);\n  1425: \t\t}\n  1426: \t    } else if (tt == MAGIC_PORTAL) {"
+  },
+  {
+    "key": "L01421_02",
+    "original": "trap",
+    "translation": "",
+    "context": "src/teleport.c:1421:28\n  1416: \t\tif (Is_stronghold(&u.uz)) {\n  1417: \t\t    assign_level(&tolevel, &valley_level);\n  1418: \t\t} else if (Is_botlevel(&u.uz)) {\n  1419: \t\t    if (in_sight && trap->tseen)\n  1420: \t\t\tpline(\"%s avoids the %s.\", Monnam(mtmp),\n> 1421: \t\t\t(tt == HOLE) ? \"hole\" : \"trap\");\n  1422: \t\t    return 0;\n  1423: \t\t} else {\n  1424: \t\t    get_level(&tolevel, depth(&u.uz) + 1);\n  1425: \t\t}\n  1426: \t    } else if (tt == MAGIC_PORTAL) {"
+  },
+  {
+    "key": "L01430_01",
+    "original": "%s seems to shimmer for a moment.",
+    "translation": "",
+    "context": "src/teleport.c:1430:10\n  1425: \t\t}\n  1426: \t    } else if (tt == MAGIC_PORTAL) {\n  1427: \t\tif (In_endgame(&u.uz) &&\n  1428: \t\t    (mon_has_amulet(mtmp) || is_home_elemental(mptr))) {\n  1429: \t\t    if (in_sight && mptr->mlet != S_ELEMENTAL) {\n> 1430: \t\t\tpline(\"%s seems to shimmer for a moment.\",\n  1431: \t\t\t\t\t\t\tMonnam(mtmp));\n  1432: \t\t\tseetrap(trap);\n  1433: \t\t    }\n  1434: \t\t    return 0;\n  1435: \t\t}"
+  },
+  {
+    "key": "L01440_01",
+    "original": "%s seems to shimmer for a moment.",
+    "translation": "",
+    "context": "src/teleport.c:1440:14\n  1435: \t\t}\n  1436: #ifdef BLACKMARKET\n  1437: \t      \telse if (mtmp->mtame &&\n  1438: \t\t\t(Is_blackmarket(&trap->dst) || Is_blackmarket(&u.uz))) {\n  1439: \t          if (in_sight) {\n> 1440: \t\t     pline(\"%s seems to shimmer for a moment.\",\n  1441: \t\t     Monnam(mtmp));\n  1442: \t\t     seetrap(trap);\n  1443: \t          }\n  1444: \t          return 0;\n  1445: \t        }"
+  },
+  {
+    "key": "L01456_01",
+    "original": "%s seems very disoriented for a moment.",
+    "translation": "",
+    "context": "src/teleport.c:1456:10\n  1451: \t    } else { /* (tt == LEVEL_TELEP) */\n  1452: \t\tint nlev;\n  1453: \n  1454: \t\tif (mon_has_amulet(mtmp) || In_endgame(&u.uz)) {\n  1455: \t\t    if (in_sight)\n> 1456: \t\t\tpline(\"%s seems very disoriented for a moment.\",\n  1457: \t\t\t\tMonnam(mtmp));\n  1458: \t\t    return 0;\n  1459: \t\t}\n  1460: \t\tnlev = random_teleport_level();\n  1461: \t\tif (nlev == depth(&u.uz)) {"
+  },
+  {
+    "key": "L01463_01",
+    "original": "%s shudders for a moment.",
+    "translation": "",
+    "context": "src/teleport.c:1463:10\n  1458: \t\t    return 0;\n  1459: \t\t}\n  1460: \t\tnlev = random_teleport_level();\n  1461: \t\tif (nlev == depth(&u.uz)) {\n  1462: \t\t    if (in_sight)\n> 1463: \t\t\tpline(\"%s shudders for a moment.\", Monnam(mtmp));\n  1464: \t\t    return 0;\n  1465: \t\t}\n  1466: \t\tget_level(&tolevel, nlev);\n  1467: \t    }\n  1468: "
+  },
+  {
+    "key": "L01470_01",
+    "original": "Suddenly, %s disappears out of sight.",
+    "translation": "",
+    "context": "src/teleport.c:1470:9\n  1465: \t\t}\n  1466: \t\tget_level(&tolevel, nlev);\n  1467: \t    }\n  1468: \n  1469: \t    if (in_sight) {\n> 1470: \t\tpline(\"Suddenly, %s disappears out of sight.\", mon_nam(mtmp));\n  1471: \t\tseetrap(trap);\n  1472: \t    }\n  1473: \t    migrate_to_level(mtmp, ledger_no(&tolevel),\n  1474: \t\t\t     migrate_typ, (coord *)0);\n  1475: \t    return 3;\t/* no longer on this level */"
+  },
+  {
+    "key": "L01510_01",
+    "original": "fall",
+    "translation": "",
+    "context": "src/teleport.c:1510:32\n  1505: \t\t\t\t\t\tdndest.hx, dndest.hy) ||\n  1506: \t\t   (dndest.nlx &&\n  1507: \t\t    within_bounded_area(tx, ty, dndest.nlx, dndest.nly,\n  1508: \t\t\t\t\t\tdndest.nhx, dndest.nhy)))));\n  1509: \n> 1510: \tif (flooreffects(obj, tx, ty, \"fall\")) {\n  1511: \t    return;\n  1512: \t} else if (otx == 0 && oty == 0) {\n  1513: \t    ;\t/* fell through a trap door; no update of old loc needed */\n  1514: \t} else {\n  1515: \t    if (costly_spot(otx, oty)"
+  },
+  {
+    "key": "L01602_01",
+    "original": "%s resists your magic!",
+    "translation": "",
+    "context": "src/teleport.c:1602:9\n  1597: {\n  1598: \tcoord cc;\n  1599: \n  1600: \tif (mtmp->ispriest && *in_rooms(mtmp->mx, mtmp->my, TEMPLE)) {\n  1601: \t    if (give_feedback)\n> 1602: \t\tpline(\"%s resists your magic!\", Monnam(mtmp));\n  1603: \t    return FALSE;\n  1604: \t} else if (level.flags.noteleport && u.uswallow && mtmp == u.ustuck) {\n  1605: \t    if (give_feedback)\n  1606: \t\tYou(\"are no longer inside %s!\", mon_nam(mtmp));\n  1607: \t    unstuck(mtmp);"
+  },
+  {
+    "key": "L01606_01",
+    "original": "are no longer inside %s!",
+    "translation": "",
+    "context": "src/teleport.c:1606:7\n  1601: \t    if (give_feedback)\n  1602: \t\tpline(\"%s resists your magic!\", Monnam(mtmp));\n  1603: \t    return FALSE;\n  1604: \t} else if (level.flags.noteleport && u.uswallow && mtmp == u.ustuck) {\n  1605: \t    if (give_feedback)\n> 1606: \t\tYou(\"are no longer inside %s!\", mon_nam(mtmp));\n  1607: \t    unstuck(mtmp);\n  1608: \t    rloc(mtmp, FALSE);\n  1609: \t} else if (is_rider(mtmp->data) && rn2(13) &&\n  1610: \t\t   enexto(&cc, u.ux, u.uy, mtmp->data))\n  1611: \t    rloc_to(mtmp, cc.x, cc.y);"
+  },
+  {
+    "key": "L01623_01",
+    "original": "To what position do you want %s to be teleported?",
+    "translation": "",
+    "context": "src/teleport.c:1623:9\n  1618: \t\t * teleported to positions acceptable to rloc_pos_ok().\n  1619: \t\t * We could use goodpos() which would allow more\n  1620: \t\t * locations but, in my view, is less informative.\n  1621: \t\t */\n  1622: \t\txchar omx, omy;\n> 1623: \t\tpline(\"To what position do you want %s to be teleported?\",\n  1624: \t\t       mon_nam(mtmp));\n  1625: \t\tcc.x = omx = mtmp->mx;\n  1626: \t\tcc.y = omy = mtmp->my;\n  1627: \t\tif (getpos(&cc, TRUE, \"the desired position\") < 0)\n  1628: \t\t    rloc(mtmp, FALSE);\t/* abort */"
+  },
+  {
+    "key": "L01627_01",
+    "original": "the desired position",
+    "translation": "",
+    "context": "src/teleport.c:1627:25\n  1622: \t\txchar omx, omy;\n  1623: \t\tpline(\"To what position do you want %s to be teleported?\",\n  1624: \t\t       mon_nam(mtmp));\n  1625: \t\tcc.x = omx = mtmp->mx;\n  1626: \t\tcc.y = omy = mtmp->my;\n> 1627: \t\tif (getpos(&cc, TRUE, \"the desired position\") < 0)\n  1628: \t\t    rloc(mtmp, FALSE);\t/* abort */\n  1629: \t\telse if (rloc_pos_ok(cc.x, cc.y, mtmp)) {\n  1630: \t\t    rloc_to(mtmp, cc.x, cc.y);\n  1631: \t\t    /* As rloc() ... */\n  1632: \t\t    if (mtmp->isshk && !inhishop(mtmp))"
+  },
+  {
+    "key": "L01635_01",
+    "original": "Sorry...",
+    "translation": "",
+    "context": "src/teleport.c:1635:13\n  1630: \t\t    rloc_to(mtmp, cc.x, cc.y);\n  1631: \t\t    /* As rloc() ... */\n  1632: \t\t    if (mtmp->isshk && !inhishop(mtmp))\n  1633: \t\t\tmake_angry_shk(mtmp, omx, omy);\n  1634: \t\t} else {\n> 1635: \t\t    pline(\"Sorry...\");\n  1636: \t\t    rloc(mtmp, FALSE);\n  1637: \t\t}\n  1638: \t    } else\n  1639: #endif /* WIZARD */\n  1640: \t    rloc(mtmp, FALSE);"
+  }
+]

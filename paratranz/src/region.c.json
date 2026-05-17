@@ -1,0 +1,74 @@
+[
+  {
+    "key": "L00821_01",
+    "original": "bump into %s. Ouch!",
+    "translation": "",
+    "context": "src/region.c:821:7\n   816: {\n   817:     struct monst *mtmp;\n   818: \n   819:     if (p2 == NULL) {\t\t/* That means the player */\n   820: \tif (!Blind)\n>  821: \t\tYou(\"bump into %s. Ouch!\",\n   822: \t\t    Hallucination ? \"an invisible tree\" :\n   823: \t\t\t\"some kind of invisible wall\");\n   824: \telse\n   825: \t    pline(\"Ouch!\");\n   826:     } else {"
+  },
+  {
+    "key": "L00822_01",
+    "original": "an invisible tree",
+    "translation": "",
+    "context": "src/region.c:822:23\n   817:     struct monst *mtmp;\n   818: \n   819:     if (p2 == NULL) {\t\t/* That means the player */\n   820: \tif (!Blind)\n   821: \t\tYou(\"bump into %s. Ouch!\",\n>  822: \t\t    Hallucination ? \"an invisible tree\" :\n   823: \t\t\t\"some kind of invisible wall\");\n   824: \telse\n   825: \t    pline(\"Ouch!\");\n   826:     } else {\n   827: \tmtmp = (struct monst *) p2;"
+  },
+  {
+    "key": "L00823_01",
+    "original": "some kind of invisible wall",
+    "translation": "",
+    "context": "src/region.c:823:4\n   818: \n   819:     if (p2 == NULL) {\t\t/* That means the player */\n   820: \tif (!Blind)\n   821: \t\tYou(\"bump into %s. Ouch!\",\n   822: \t\t    Hallucination ? \"an invisible tree\" :\n>  823: \t\t\t\"some kind of invisible wall\");\n   824: \telse\n   825: \t    pline(\"Ouch!\");\n   826:     } else {\n   827: \tmtmp = (struct monst *) p2;\n   828: \tif (canseemon(mtmp))"
+  },
+  {
+    "key": "L00825_01",
+    "original": "Ouch!",
+    "translation": "",
+    "context": "src/region.c:825:12\n   820: \tif (!Blind)\n   821: \t\tYou(\"bump into %s. Ouch!\",\n   822: \t\t    Hallucination ? \"an invisible tree\" :\n   823: \t\t\t\"some kind of invisible wall\");\n   824: \telse\n>  825: \t    pline(\"Ouch!\");\n   826:     } else {\n   827: \tmtmp = (struct monst *) p2;\n   828: \tif (canseemon(mtmp))\n   829: \t    pline(\"%s bumps into %s!\", Monnam(mtmp), something);\n   830:     }"
+  },
+  {
+    "key": "L00829_01",
+    "original": "%s bumps into %s!",
+    "translation": "",
+    "context": "src/region.c:829:12\n   824: \telse\n   825: \t    pline(\"Ouch!\");\n   826:     } else {\n   827: \tmtmp = (struct monst *) p2;\n   828: \tif (canseemon(mtmp))\n>  829: \t    pline(\"%s bumps into %s!\", Monnam(mtmp), something);\n   830:     }\n   831:     return FALSE;\n   832: }\n   833: \n   834: NhRegion *"
+  },
+  {
+    "key": "L00926_01",
+    "original": "%s reforms!",
+    "translation": "",
+    "context": "src/region.c:926:12\n   921: \n   922: \t/* Make sure Cthulhu doesn't get the Amulet again! :-) */\n   923: \tcthulhu = makemon(&mons[PM_CTHULHU], cx, cy, \n   924: \t\t\t\tMM_NOCOUNTBIRTH | NO_MINVENT);\n   925: \tif (cthulhu && canseemon(cthulhu))\n>  926: \t    pline(\"%s reforms!\", Monnam(cthulhu));\n   927:     }\n   928:     return ret;\n   929: }\n   930: \n   931: boolean"
+  },
+  {
+    "key": "L00948_01",
+    "original": "%s is burning your %s!",
+    "translation": "",
+    "context": "src/region.c:948:12\n   943: \tif (nonliving(youmonst.data) || Breathless)\n   944: \t    return FALSE;\n   945: \tif (!Blind)\n   946: \t    make_blinded(1L, FALSE);\n   947: \tif (!Poison_resistance) {\n>  948: \t    pline(\"%s is burning your %s!\", Something, makeplural(body_part(LUNG)));\n   949: \t    You(\"cough and spit blood!\");\n   950: \t    losehp(rnd(dam) + 5, \"gas cloud\", KILLED_BY_AN);\n   951: \t    return FALSE;\n   952: \t} else {\n   953: \t    You(\"cough!\");"
+  },
+  {
+    "key": "L00949_01",
+    "original": "cough and spit blood!",
+    "translation": "",
+    "context": "src/region.c:949:10\n   944: \t    return FALSE;\n   945: \tif (!Blind)\n   946: \t    make_blinded(1L, FALSE);\n   947: \tif (!Poison_resistance) {\n   948: \t    pline(\"%s is burning your %s!\", Something, makeplural(body_part(LUNG)));\n>  949: \t    You(\"cough and spit blood!\");\n   950: \t    losehp(rnd(dam) + 5, \"gas cloud\", KILLED_BY_AN);\n   951: \t    return FALSE;\n   952: \t} else {\n   953: \t    You(\"cough!\");\n   954: \t    return FALSE;"
+  },
+  {
+    "key": "L00950_01",
+    "original": "gas cloud",
+    "translation": "",
+    "context": "src/region.c:950:27\n   945: \tif (!Blind)\n   946: \t    make_blinded(1L, FALSE);\n   947: \tif (!Poison_resistance) {\n   948: \t    pline(\"%s is burning your %s!\", Something, makeplural(body_part(LUNG)));\n   949: \t    You(\"cough and spit blood!\");\n>  950: \t    losehp(rnd(dam) + 5, \"gas cloud\", KILLED_BY_AN);\n   951: \t    return FALSE;\n   952: \t} else {\n   953: \t    You(\"cough!\");\n   954: \t    return FALSE;\n   955: \t}"
+  },
+  {
+    "key": "L00953_01",
+    "original": "cough!",
+    "translation": "",
+    "context": "src/region.c:953:10\n   948: \t    pline(\"%s is burning your %s!\", Something, makeplural(body_part(LUNG)));\n   949: \t    You(\"cough and spit blood!\");\n   950: \t    losehp(rnd(dam) + 5, \"gas cloud\", KILLED_BY_AN);\n   951: \t    return FALSE;\n   952: \t} else {\n>  953: \t    You(\"cough!\");\n   954: \t    return FALSE;\n   955: \t}\n   956:     } else {\t\t\t/* A monster is inside the cloud */\n   957: \tmtmp = (struct monst *) p2;\n   958: "
+  },
+  {
+    "key": "L00962_01",
+    "original": "%s coughs!",
+    "translation": "",
+    "context": "src/region.c:962:9\n   957: \tmtmp = (struct monst *) p2;\n   958: \n   959: \t/* Non living and non breathing monsters are not concerned */\n   960: \tif (!nonliving(mtmp->data) && !breathless(mtmp->data)) {\n   961: \t    if (cansee(mtmp->mx, mtmp->my))\n>  962: \t\tpline(\"%s coughs!\", Monnam(mtmp));\n   963: \t    if (heros_fault(reg))\n   964: \t    \tsetmangry(mtmp);\n   965: \t    if (haseyes(mtmp->data) && mtmp->mcansee) {\n   966: \t\tmtmp->mblinded = 1;\n   967: \t\tmtmp->mcansee = 0;"
+  },
+  {
+    "key": "L00976_01",
+    "original": "gas cloud",
+    "translation": "",
+    "context": "src/region.c:976:23\n   971: \t    mtmp->mhp -= rnd(dam) + 5;\n   972: \t    if (mtmp->mhp <= 0) {\n   973: \t\tif (heros_fault(reg))\n   974: \t\t    killed(mtmp);\n   975: \t\telse\n>  976: \t\t    monkilled(mtmp, \"gas cloud\", AD_DRST);\n   977: \t\tif (mtmp->mhp <= 0) {\t/* not lifesaved */\n   978: \t\t    return TRUE;\n   979: \t\t}\n   980: \t    }\n   981: \t}"
+  }
+]

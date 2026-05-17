@@ -1,0 +1,45 @@
+name: para2github
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    paths:
+      - ".github/workflows/para2github.yml"
+      - "tools/paratranz_download.py"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-paratranz:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Download latest Paratranz artifact
+        env:
+          PARATRANZ_PROJECT_ID: ${{ secrets.PARATRANZ_PROJECT_ID }}
+          PARATRANZ_API_TOKEN: ${{ secrets.PARATRANZ_API_TOKEN }}
+        run: python3 tools/paratranz_download.py
+
+      - name: Commit synced Paratranz files
+        run: |
+          if git diff --quiet -- paratranz; then
+            echo "paratranz is already in sync"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add paratranz
+          git commit -m "chore: sync paratranz from api"
+          git push

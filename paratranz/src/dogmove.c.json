@@ -1,0 +1,314 @@
+[
+  {
+    "key": "L00087_01",
+    "original": "%s thinks %s at (%d,%d) is `cursed'",
+    "translation": "",
+    "context": "src/dogmove.c:87:14\n    82: \t\t/* [ALI] demons & undead avoid blessed items instead */\n    83: \t\tif ((is_demon(mtmp->data) || is_undead(mtmp->data)) ?\n    84: \t\t    otmp->blessed : otmp->cursed)\n    85: \t{\n    86: #ifdef DEBUG\n>   87: \t\tdebugpline(\"%s thinks %s at (%d,%d) is `cursed'\",\n    88: \t\t  noit_Monnam(mtmp), doname(otmp), x, y);\n    89: #endif\n    90: \t\treturn TRUE;\n    91: \t}\n    92: \treturn FALSE;"
+  },
+  {
+    "key": "L00196_01",
+    "original": "%s %s %s.",
+    "translation": "",
+    "context": "src/dogmove.c:196:12\n   191: \t} else\n   192: \t/* hack: observe the action if either new or old location is in view */\n   193: \t/* However, invisible monsters should still be \"it\" even though out of\n   194: \t   sight locations should not. */\n   195: \tif (vis)\n>  196: \t    pline(\"%s %s %s.\", mon_visible(mtmp) ? noit_Monnam(mtmp) : \"It\",\n   197: \t\t  vampiric ? \"drains\" : devour ? \"devours\" : \"eats\",\n   198: \t\t  (obj->oclass == FOOD_CLASS) ?\n   199: \t\t\tsingular(obj, doname) : doname(obj));\n   200: \t/* It's a reward if it's DOGFOOD and the player dropped/threw it. */\n   201: \t/* We know the player had it if invlet is set -dlc */"
+  },
+  {
+    "key": "L00196_02",
+    "original": "It",
+    "translation": "",
+    "context": "src/dogmove.c:196:65\n   191: \t} else\n   192: \t/* hack: observe the action if either new or old location is in view */\n   193: \t/* However, invisible monsters should still be \"it\" even though out of\n   194: \t   sight locations should not. */\n   195: \tif (vis)\n>  196: \t    pline(\"%s %s %s.\", mon_visible(mtmp) ? noit_Monnam(mtmp) : \"It\",\n   197: \t\t  vampiric ? \"drains\" : devour ? \"devours\" : \"eats\",\n   198: \t\t  (obj->oclass == FOOD_CLASS) ?\n   199: \t\t\tsingular(obj, doname) : doname(obj));\n   200: \t/* It's a reward if it's DOGFOOD and the player dropped/threw it. */\n   201: \t/* We know the player had it if invlet is set -dlc */"
+  },
+  {
+    "key": "L00197_01",
+    "original": "drains",
+    "translation": "",
+    "context": "src/dogmove.c:197:16\n   192: \t/* hack: observe the action if either new or old location is in view */\n   193: \t/* However, invisible monsters should still be \"it\" even though out of\n   194: \t   sight locations should not. */\n   195: \tif (vis)\n   196: \t    pline(\"%s %s %s.\", mon_visible(mtmp) ? noit_Monnam(mtmp) : \"It\",\n>  197: \t\t  vampiric ? \"drains\" : devour ? \"devours\" : \"eats\",\n   198: \t\t  (obj->oclass == FOOD_CLASS) ?\n   199: \t\t\tsingular(obj, doname) : doname(obj));\n   200: \t/* It's a reward if it's DOGFOOD and the player dropped/threw it. */\n   201: \t/* We know the player had it if invlet is set -dlc */\n   202: \tif(dogfood(mtmp,obj) == DOGFOOD && obj->invlet)"
+  },
+  {
+    "key": "L00197_02",
+    "original": "devours",
+    "translation": "",
+    "context": "src/dogmove.c:197:36\n   192: \t/* hack: observe the action if either new or old location is in view */\n   193: \t/* However, invisible monsters should still be \"it\" even though out of\n   194: \t   sight locations should not. */\n   195: \tif (vis)\n   196: \t    pline(\"%s %s %s.\", mon_visible(mtmp) ? noit_Monnam(mtmp) : \"It\",\n>  197: \t\t  vampiric ? \"drains\" : devour ? \"devours\" : \"eats\",\n   198: \t\t  (obj->oclass == FOOD_CLASS) ?\n   199: \t\t\tsingular(obj, doname) : doname(obj));\n   200: \t/* It's a reward if it's DOGFOOD and the player dropped/threw it. */\n   201: \t/* We know the player had it if invlet is set -dlc */\n   202: \tif(dogfood(mtmp,obj) == DOGFOOD && obj->invlet)"
+  },
+  {
+    "key": "L00197_03",
+    "original": "eats",
+    "translation": "",
+    "context": "src/dogmove.c:197:48\n   192: \t/* hack: observe the action if either new or old location is in view */\n   193: \t/* However, invisible monsters should still be \"it\" even though out of\n   194: \t   sight locations should not. */\n   195: \tif (vis)\n   196: \t    pline(\"%s %s %s.\", mon_visible(mtmp) ? noit_Monnam(mtmp) : \"It\",\n>  197: \t\t  vampiric ? \"drains\" : devour ? \"devours\" : \"eats\",\n   198: \t\t  (obj->oclass == FOOD_CLASS) ?\n   199: \t\t\tsingular(obj, doname) : doname(obj));\n   200: \t/* It's a reward if it's DOGFOOD and the player dropped/threw it. */\n   201: \t/* We know the player had it if invlet is set -dlc */\n   202: \tif(dogfood(mtmp,obj) == DOGFOOD && obj->invlet)"
+  },
+  {
+    "key": "L00214_01",
+    "original": "%s spits %s out in disgust!",
+    "translation": "",
+    "context": "src/dogmove.c:214:9\n   209: \tif (mtmp->data == &mons[PM_RUST_MONSTER] && obj->oerodeproof) {\n   210: \t    /* The object's rustproofing is gone now */\n   211: \t    obj->oerodeproof = 0;\n   212: \t    mtmp->mstun = 1;\n   213: \t    if (canseemon(mtmp) && flags.verbose) {\n>  214: \t\tpline(\"%s spits %s out in disgust!\",\n   215: \t\t      Monnam(mtmp), distant_name(obj,doname));\n   216: \t    }\n   217: \t} else if (vampiric) {\n   218: \t\t/* Split Object */\n   219: \t\tif (obj->quan > 1L) {"
+  },
+  {
+    "key": "L00233_01",
+    "original": "split object,",
+    "translation": "",
+    "context": "src/dogmove.c:233:18\n   228: \t\t\t    dropy(obj);\n   229: \t\t\telse\n   230: \t\t\t    obj = addinv(obj); /* unlikely but a merge is possible */\t\t\t\n   231: \t\t    }\n   232: #ifdef DEBUG\n>  233: \t\t    debugpline(\"split object,\");\n   234: #endif\n   235: \t\t}\n   236: \t\t\n   237: \t\t/* Take away blood nutrition */\n   238: \t    \tobj->oeaten = drainlevel(obj);"
+  },
+  {
+    "key": "L00290_01",
+    "original": "%s is confused from hunger.",
+    "translation": "",
+    "context": "src/dogmove.c:290:13\n   285: \t\tmtmp->mhpmax = newmhpmax;\n   286: \t\tif (mtmp->mhp > mtmp->mhpmax)\n   287: \t\t    mtmp->mhp = mtmp->mhpmax;\n   288: \t\tif (mtmp->mhp < 1) goto dog_died;\n   289: \t\tif (cansee(mtmp->mx, mtmp->my))\n>  290: \t\t    pline(\"%s is confused from hunger.\", Monnam(mtmp));\n   291: \t\telse if (couldsee(mtmp->mx, mtmp->my))\n   292: \t\t    beg(mtmp);\n   293: \t\telse\n   294: \t\t    You_feel(\"worried about %s.\", y_monnam(mtmp));\n   295: \t\tstop_occupation();"
+  },
+  {
+    "key": "L00294_01",
+    "original": "worried about %s.",
+    "translation": "",
+    "context": "src/dogmove.c:294:16\n   289: \t\tif (cansee(mtmp->mx, mtmp->my))\n   290: \t\t    pline(\"%s is confused from hunger.\", Monnam(mtmp));\n   291: \t\telse if (couldsee(mtmp->mx, mtmp->my))\n   292: \t\t    beg(mtmp);\n   293: \t\telse\n>  294: \t\t    You_feel(\"worried about %s.\", y_monnam(mtmp));\n   295: \t\tstop_occupation();\n   296: \t    } else if (monstermoves > edog->hungrytime + 750 || mtmp->mhp < 1) {\n   297:  dog_died:\n   298: \t\tif (mtmp->mleashed\n   299: #ifdef STEED"
+  },
+  {
+    "key": "L00303_01",
+    "original": "leash goes slack.",
+    "translation": "",
+    "context": "src/dogmove.c:303:12\n   298: \t\tif (mtmp->mleashed\n   299: #ifdef STEED\n   300: \t\t    && mtmp != u.usteed\n   301: #endif\n   302: \t\t    )\n>  303: \t\t    Your(\"leash goes slack.\");\n   304: \t\telse if (cansee(mtmp->mx, mtmp->my))\n   305: \t\t    pline(\"%s starves.\", Monnam(mtmp));\n   306: \t\telse\n   307: \t\t    You_feel(\"%s for a moment.\",\n   308: \t\t\tHallucination ? \"bummed\" : \"sad\");"
+  },
+  {
+    "key": "L00305_01",
+    "original": "%s starves.",
+    "translation": "",
+    "context": "src/dogmove.c:305:13\n   300: \t\t    && mtmp != u.usteed\n   301: #endif\n   302: \t\t    )\n   303: \t\t    Your(\"leash goes slack.\");\n   304: \t\telse if (cansee(mtmp->mx, mtmp->my))\n>  305: \t\t    pline(\"%s starves.\", Monnam(mtmp));\n   306: \t\telse\n   307: \t\t    You_feel(\"%s for a moment.\",\n   308: \t\t\tHallucination ? \"bummed\" : \"sad\");\n   309: \t\tmondied(mtmp);\n   310: \t\treturn(TRUE);"
+  },
+  {
+    "key": "L00307_01",
+    "original": "%s for a moment.",
+    "translation": "",
+    "context": "src/dogmove.c:307:16\n   302: \t\t    )\n   303: \t\t    Your(\"leash goes slack.\");\n   304: \t\telse if (cansee(mtmp->mx, mtmp->my))\n   305: \t\t    pline(\"%s starves.\", Monnam(mtmp));\n   306: \t\telse\n>  307: \t\t    You_feel(\"%s for a moment.\",\n   308: \t\t\tHallucination ? \"bummed\" : \"sad\");\n   309: \t\tmondied(mtmp);\n   310: \t\treturn(TRUE);\n   311: \t    }\n   312: \t}"
+  },
+  {
+    "key": "L00308_01",
+    "original": "bummed",
+    "translation": "",
+    "context": "src/dogmove.c:308:20\n   303: \t\t    Your(\"leash goes slack.\");\n   304: \t\telse if (cansee(mtmp->mx, mtmp->my))\n   305: \t\t    pline(\"%s starves.\", Monnam(mtmp));\n   306: \t\telse\n   307: \t\t    You_feel(\"%s for a moment.\",\n>  308: \t\t\tHallucination ? \"bummed\" : \"sad\");\n   309: \t\tmondied(mtmp);\n   310: \t\treturn(TRUE);\n   311: \t    }\n   312: \t}\n   313: \treturn(FALSE);"
+  },
+  {
+    "key": "L00308_02",
+    "original": "sad",
+    "translation": "",
+    "context": "src/dogmove.c:308:31\n   303: \t\t    Your(\"leash goes slack.\");\n   304: \t\telse if (cansee(mtmp->mx, mtmp->my))\n   305: \t\t    pline(\"%s starves.\", Monnam(mtmp));\n   306: \t\telse\n   307: \t\t    You_feel(\"%s for a moment.\",\n>  308: \t\t\tHallucination ? \"bummed\" : \"sad\");\n   309: \t\tmondied(mtmp);\n   310: \t\treturn(TRUE);\n   311: \t    }\n   312: \t}\n   313: \treturn(FALSE);"
+  },
+  {
+    "key": "L00379_01",
+    "original": "%s picks up %s.",
+    "translation": "",
+    "context": "src/dogmove.c:379:11\n   374: \t\t\t    if ((!nohands(mtmp->data)) ||\n   375: \t\t\t\t\t\t/* KMH, balance patch -- 10*level */\n   376: \t\t\t\t\t\t(obj->quan <= dogquan))\n   377: \t\t\t    {\n   378: \t\t\t    if (cansee(omx, omy) && flags.verbose)\n>  379: \t\t\t\tpline(\"%s picks up %s.\", Monnam(mtmp),\n   380: \t\t\t\t    distant_name(obj, doname));\n   381: \t\t\t    obj_extract_self(obj);\n   382: \t\t\t    newsym(omx,omy);\n   383: \t\t\t    (void) mpickobj(mtmp,obj);\n   384: \t\t\t    }                            "
+  },
+  {
+    "key": "L00393_01",
+    "original": "%s picks up %d gold pieces.",
+    "translation": "",
+    "context": "src/dogmove.c:393:12\n   388: \t\t\t\tif (obj->oclass == COIN_CLASS) {\n   389: \t\t\t\t    /* KMH, balance patch -- 10*level */\n   390: #ifndef GOLDOBJ\n   391: \t\t\t\t    obj->quan -= dogquan;\n   392: \t\t\t\t    if (cansee(omx, omy) && flags.verbose)\n>  393: \t\t\t\t\tpline(\"%s picks up %d gold pieces.\", \n   394: \t\t\t\t\t\t\tMonnam(mtmp),\n   395: \t\t\t\t\t\t\tdogquan);\n   396: \t\t\t\t    mtmp->mgold += dogquan;\n   397: #else\n   398: \t\t\t\t\t\tif (obj->quan != dogquan)"
+  },
+  {
+    "key": "L00401_01",
+    "original": "%s picks up %s.",
+    "translation": "",
+    "context": "src/dogmove.c:401:14\n   396: \t\t\t\t    mtmp->mgold += dogquan;\n   397: #else\n   398: \t\t\t\t\t\tif (obj->quan != dogquan)\n   399: \t\t\t\t\t\t\tobj = splitobj(obj, dogquan);\n   400: \t\t\t\t    if (cansee(omx, omy) && flags.verbose)\n>  401: \t\t\t\t\t\t\tpline(\"%s picks up %s.\", \n   402: \t\t\t\t\t\t\tMonnam(mtmp),\n   403: \t\t\t\t\t\t\tdoname(obj));\n   404: \t\t\t\t\t\t\tobj_extract_self(obj);\n   405: \t\t\t\t    \tnewsym(omx,omy);\n   406: \t\t\t\t\t\t\t(void) mpickobj(mtmp,obj);"
+  },
+  {
+    "key": "L00603_01",
+    "original": "(none)",
+    "translation": "",
+    "context": "src/dogmove.c:603:9\n   598: long allowflags;\n   599: {\n   600:     static char buf[500];\n   601:     char *bp = buf;\n   602:     if (allowflags == 0)\n>  603: \treturn \"(none)\";\n   604:     *bp = '\\0';\n   605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");"
+  },
+  {
+    "key": "L00605_01",
+    "original": "can enter traps",
+    "translation": "",
+    "context": "src/dogmove.c:605:30\n   600:     static char buf[500];\n   601:     char *bp = buf;\n   602:     if (allowflags == 0)\n   603: \treturn \"(none)\";\n   604:     *bp = '\\0';\n>  605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");"
+  },
+  {
+    "key": "L00606_01",
+    "original": "can attack you",
+    "translation": "",
+    "context": "src/dogmove.c:606:26\n   601:     char *bp = buf;\n   602:     if (allowflags == 0)\n   603: \treturn \"(none)\";\n   604:     *bp = '\\0';\n   605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n>  606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");"
+  },
+  {
+    "key": "L00607_01",
+    "original": "can attack other monsters",
+    "translation": "",
+    "context": "src/dogmove.c:607:26\n   602:     if (allowflags == 0)\n   603: \treturn \"(none)\";\n   604:     *bp = '\\0';\n   605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n>  607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");"
+  },
+  {
+    "key": "L00608_01",
+    "original": "can attack tame monsters",
+    "translation": "",
+    "context": "src/dogmove.c:608:27\n   603: \treturn \"(none)\";\n   604:     *bp = '\\0';\n   605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n>  608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");"
+  },
+  {
+    "key": "L00609_01",
+    "original": "avoids direct line to player",
+    "translation": "",
+    "context": "src/dogmove.c:609:25\n   604:     *bp = '\\0';\n   605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n>  609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");"
+  },
+  {
+    "key": "L00610_01",
+    "original": "opens closed doors",
+    "translation": "",
+    "context": "src/dogmove.c:610:27\n   605:     CHECK_ALLOW(ALLOW_TRAPS, \"can enter traps\");\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n>  610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");"
+  },
+  {
+    "key": "L00611_01",
+    "original": "unlocks locked doors",
+    "translation": "",
+    "context": "src/dogmove.c:611:29\n   606:     CHECK_ALLOW(ALLOW_U, \"can attack you\");\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n>  611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");"
+  },
+  {
+    "key": "L00612_01",
+    "original": "breaks any doors",
+    "translation": "",
+    "context": "src/dogmove.c:612:27\n   607:     CHECK_ALLOW(ALLOW_M, \"can attack other monsters\");\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n>  612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");"
+  },
+  {
+    "key": "L00613_01",
+    "original": "pushes rocks",
+    "translation": "",
+    "context": "src/dogmove.c:613:29\n   608:     CHECK_ALLOW(ALLOW_TM, \"can attack tame monsters\");\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n>  613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n   618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");"
+  },
+  {
+    "key": "L00614_01",
+    "original": "walks thru walls",
+    "translation": "",
+    "context": "src/dogmove.c:614:29\n   609:     CHECK_ALLOW(NOTONL, \"avoids direct line to player\");\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n>  614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n   618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");\n   619:     if (allowflags) {"
+  },
+  {
+    "key": "L00615_01",
+    "original": "digs",
+    "translation": "",
+    "context": "src/dogmove.c:615:28\n   610:     CHECK_ALLOW(OPENDOOR, \"opens closed doors\");\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n>  615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n   618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");\n   619:     if (allowflags) {\n   620: \tif (bp != buf) { *bp++=','; *bp++=' '; }"
+  },
+  {
+    "key": "L00616_01",
+    "original": "enters temples",
+    "translation": "",
+    "context": "src/dogmove.c:616:30\n   611:     CHECK_ALLOW(UNLOCKDOOR, \"unlocks locked doors\");\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n>  616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n   618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");\n   619:     if (allowflags) {\n   620: \tif (bp != buf) { *bp++=','; *bp++=' '; }\n   621: \tsprintf(bp, \"0x%lX\", allowflags);"
+  },
+  {
+    "key": "L00617_01",
+    "original": "ignores scare monster",
+    "translation": "",
+    "context": "src/dogmove.c:617:28\n   612:     CHECK_ALLOW(BUSTDOOR, \"breaks any doors\");\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n>  617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n   618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");\n   619:     if (allowflags) {\n   620: \tif (bp != buf) { *bp++=','; *bp++=' '; }\n   621: \tsprintf(bp, \"0x%lX\", allowflags);\n   622:     }"
+  },
+  {
+    "key": "L00618_01",
+    "original": "hates garlic",
+    "translation": "",
+    "context": "src/dogmove.c:618:27\n   613:     CHECK_ALLOW(ALLOW_ROCK, \"pushes rocks\");\n   614:     CHECK_ALLOW(ALLOW_WALL, \"walks thru walls\");\n   615:     CHECK_ALLOW(ALLOW_DIG, \"digs\");\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n>  618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");\n   619:     if (allowflags) {\n   620: \tif (bp != buf) { *bp++=','; *bp++=' '; }\n   621: \tsprintf(bp, \"0x%lX\", allowflags);\n   622:     }\n   623:     return buf;"
+  },
+  {
+    "key": "L00621_01",
+    "original": "0x%lX",
+    "translation": "",
+    "context": "src/dogmove.c:621:14\n   616:     CHECK_ALLOW(ALLOW_SANCT, \"enters temples\");\n   617:     CHECK_ALLOW(ALLOW_SSM, \"ignores scare monster\");\n   618:     CHECK_ALLOW(NOGARLIC, \"hates garlic\");\n   619:     if (allowflags) {\n   620: \tif (bp != buf) { *bp++=','; *bp++=' '; }\n>  621: \tsprintf(bp, \"0x%lX\", allowflags);\n   622:     }\n   623:     return buf;\n   624: }\n   625: \n   626: #undef CHECK_ALLOW"
+  },
+  {
+    "key": "L00645_01",
+    "original": "%s turns on you!",
+    "translation": "",
+    "context": "src/dogmove.c:645:12\n   640: \t\t    && mtmp->mhp >= u.uhp\t/* Pet is buff enough */\n   641: \t\t    && rn2(22) > mtmp->mtame\t/* Roll against tameness */\n   642: \t\t    && rn2(edog->abuse + 2)) {\n   643: \t/* Treason */\n   644: \tif (canseemon(mtmp))\n>  645: \t    pline(\"%s turns on you!\", Monnam(mtmp));\n   646: \telse\n   647: \t    pline(\"You feel uneasy about %s.\", y_monnam(mtmp));\n   648: \tmtmp->mpeaceful = 0;\n   649: \tmtmp->mtame = 0;\n   650: \tmtmp->mtraitor = TRUE;"
+  },
+  {
+    "key": "L00647_01",
+    "original": "You feel uneasy about %s.",
+    "translation": "",
+    "context": "src/dogmove.c:647:12\n   642: \t\t    && rn2(edog->abuse + 2)) {\n   643: \t/* Treason */\n   644: \tif (canseemon(mtmp))\n   645: \t    pline(\"%s turns on you!\", Monnam(mtmp));\n   646: \telse\n>  647: \t    pline(\"You feel uneasy about %s.\", y_monnam(mtmp));\n   648: \tmtmp->mpeaceful = 0;\n   649: \tmtmp->mtame = 0;\n   650: \tmtmp->mtraitor = TRUE;\n   651: \n   652: \t/* Do we need to call newsym() here? */"
+  },
+  {
+    "key": "L00739_01",
+    "original": "dogfood",
+    "translation": "",
+    "context": "src/dogmove.c:739:24\n   734: #ifdef DEBUG\n   735: \t{\n   736: \t    char *goal;\n   737: \t    switch(gtyp)\n   738: \t    {\n>  739: \t\tcase DOGFOOD:\tgoal = \"dogfood\"; break;\n   740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;"
+  },
+  {
+    "key": "L00740_01",
+    "original": "cadaver",
+    "translation": "",
+    "context": "src/dogmove.c:740:24\n   735: \t{\n   736: \t    char *goal;\n   737: \t    switch(gtyp)\n   738: \t    {\n   739: \t\tcase DOGFOOD:\tgoal = \"dogfood\"; break;\n>  740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;"
+  },
+  {
+    "key": "L00741_01",
+    "original": "accfood",
+    "translation": "",
+    "context": "src/dogmove.c:741:24\n   736: \t    char *goal;\n   737: \t    switch(gtyp)\n   738: \t    {\n   739: \t\tcase DOGFOOD:\tgoal = \"dogfood\"; break;\n   740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n>  741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n   746: \t\tcase TABU:\tgoal = \"tabu\"; break;"
+  },
+  {
+    "key": "L00742_01",
+    "original": "manfood",
+    "translation": "",
+    "context": "src/dogmove.c:742:24\n   737: \t    switch(gtyp)\n   738: \t    {\n   739: \t\tcase DOGFOOD:\tgoal = \"dogfood\"; break;\n   740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n>  742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n   746: \t\tcase TABU:\tgoal = \"tabu\"; break;\n   747: \t\tdefault:\tgoal = \"???\"; break;"
+  },
+  {
+    "key": "L00743_01",
+    "original": "apport",
+    "translation": "",
+    "context": "src/dogmove.c:743:23\n   738: \t    {\n   739: \t\tcase DOGFOOD:\tgoal = \"dogfood\"; break;\n   740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n>  743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n   746: \t\tcase TABU:\tgoal = \"tabu\"; break;\n   747: \t\tdefault:\tgoal = \"???\"; break;\n   748: \t    }"
+  },
+  {
+    "key": "L00744_01",
+    "original": "poison",
+    "translation": "",
+    "context": "src/dogmove.c:744:23\n   739: \t\tcase DOGFOOD:\tgoal = \"dogfood\"; break;\n   740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n>  744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n   746: \t\tcase TABU:\tgoal = \"tabu\"; break;\n   747: \t\tdefault:\tgoal = \"???\"; break;\n   748: \t    }\n   749: \t    debugpline(\"G(%s): %s @ (%d,%d), appr = %d\","
+  },
+  {
+    "key": "L00745_01",
+    "original": "undef",
+    "translation": "",
+    "context": "src/dogmove.c:745:22\n   740: \t\tcase CADAVER:\tgoal = \"cadaver\"; break;\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n>  745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n   746: \t\tcase TABU:\tgoal = \"tabu\"; break;\n   747: \t\tdefault:\tgoal = \"???\"; break;\n   748: \t    }\n   749: \t    debugpline(\"G(%s): %s @ (%d,%d), appr = %d\",\n   750: \t      mon_nam(mtmp), goal, gx, gy, appr);"
+  },
+  {
+    "key": "L00746_01",
+    "original": "tabu",
+    "translation": "",
+    "context": "src/dogmove.c:746:21\n   741: \t\tcase ACCFOOD:\tgoal = \"accfood\"; break;\n   742: \t\tcase MANFOOD:\tgoal = \"manfood\"; break;\n   743: \t\tcase APPORT:\tgoal = \"apport\"; break;\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n>  746: \t\tcase TABU:\tgoal = \"tabu\"; break;\n   747: \t\tdefault:\tgoal = \"???\"; break;\n   748: \t    }\n   749: \t    debugpline(\"G(%s): %s @ (%d,%d), appr = %d\",\n   750: \t      mon_nam(mtmp), goal, gx, gy, appr);\n   751: \t}"
+  },
+  {
+    "key": "L00749_01",
+    "original": "G(%s): %s @ (%d,%d), appr = %d",
+    "translation": "",
+    "context": "src/dogmove.c:749:17\n   744: \t\tcase POISON:\tgoal = \"poison\"; break;\n   745: \t\tcase UNDEF:\tgoal = \"undef\"; break;\n   746: \t\tcase TABU:\tgoal = \"tabu\"; break;\n   747: \t\tdefault:\tgoal = \"???\"; break;\n   748: \t    }\n>  749: \t    debugpline(\"G(%s): %s @ (%d,%d), appr = %d\",\n   750: \t      mon_nam(mtmp), goal, gx, gy, appr);\n   751: \t}\n   752: #endif\n   753: \tif (appr == -2) return(0);\n   754: "
+  },
+  {
+    "key": "L00768_01",
+    "original": "%s rebukes you, saying:",
+    "translation": "",
+    "context": "src/dogmove.c:768:13\n   763: \t\tcoord mm;\n   764: \t\t/* Guardian angel refuses to be conflicted; rather,\n   765: \t\t * it disappears, angrily, and sends in some nasties\n   766: \t\t */\n   767: \t\tif (canspotmon(mtmp)) {\n>  768: \t\t    pline(\"%s rebukes you, saying:\", Monnam(mtmp));\n   769: \t\t    verbalize(\"Since you desire conflict, have some more!\");\n   770: \t\t}\n   771: \t\tmongone(mtmp);\n   772: \t\ti = rnd(4);\n   773: \t\twhile(i--) {"
+  },
+  {
+    "key": "L00769_01",
+    "original": "Since you desire conflict, have some more!",
+    "translation": "",
+    "context": "src/dogmove.c:769:17\n   764: \t\t/* Guardian angel refuses to be conflicted; rather,\n   765: \t\t * it disappears, angrily, and sends in some nasties\n   766: \t\t */\n   767: \t\tif (canspotmon(mtmp)) {\n   768: \t\t    pline(\"%s rebukes you, saying:\", Monnam(mtmp));\n>  769: \t\t    verbalize(\"Since you desire conflict, have some more!\");\n   770: \t\t}\n   771: \t\tmongone(mtmp);\n   772: \t\ti = rnd(4);\n   773: \t\twhile(i--) {\n   774: \t\t    mm.x = u.ux;"
+  },
+  {
+    "key": "L00796_01",
+    "original": "get released!",
+    "translation": "",
+    "context": "src/dogmove.c:796:10\n   791: \t    allowflags &= ~ALLOW_M;\n   792: \n   793: \tif (!Conflict && !mtmp->mconf &&\n   794: \t    mtmp == u.ustuck && !sticks(youmonst.data)) {\n   795: \t    unstuck(mtmp);\t/* swallowed case handled above */\n>  796: \t    You(\"get released!\");\n   797: \t}\n   798: \tif (!nohands(mtmp->data) && !verysmall(mtmp->data)) {\n   799: \t\tallowflags |= OPENDOOR;\n   800: \t\tif (m_carrying(mtmp, SKELETON_KEY)) allowflags |= BUSTDOOR;\n   801: \t}"
+  },
+  {
+    "key": "L00806_01",
+    "original": "%d positions found with allow: %s",
+    "translation": "",
+    "context": "src/dogmove.c:806:13\n   801: \t}\n   802: \tif (is_giant(mtmp->data)) allowflags |= BUSTDOOR;\n   803: \tif (tunnels(mtmp->data)) allowflags |= ALLOW_DIG;\n   804: \tcnt = mfndpos(mtmp, poss, info, allowflags);\n   805: #ifdef DEBUG\n>  806: \tdebugpline(\"%d positions found with allow: %s\", cnt,\n   807: \t  allow_set(allowflags));\n   808: \tfor (i = 0; i < cnt; i++) {\n   809: \t    debugpline(\"[%d] %s @ (%d, %d)\", i,\n   810: \t      allow_set(info[i]), poss[i].x, poss[i].y);\n   811: \t}"
+  },
+  {
+    "key": "L00809_01",
+    "original": "[%d] %s @ (%d, %d)",
+    "translation": "",
+    "context": "src/dogmove.c:809:17\n   804: \tcnt = mfndpos(mtmp, poss, info, allowflags);\n   805: #ifdef DEBUG\n   806: \tdebugpline(\"%d positions found with allow: %s\", cnt,\n   807: \t  allow_set(allowflags));\n   808: \tfor (i = 0; i < cnt; i++) {\n>  809: \t    debugpline(\"[%d] %s @ (%d, %d)\", i,\n   810: \t      allow_set(info[i]), poss[i].x, poss[i].y);\n   811: \t}\n   812: #endif\n   813: \n   814: \t/* Normally dogs don't step on cursed items, but if they have no"
+  },
+  {
+    "key": "L00976_01",
+    "original": "%s breaks loose of %s leash!",
+    "translation": "",
+    "context": "src/dogmove.c:976:11\n   971: \tif (nix != omx || niy != omy) {\n   972: \t\tstruct obj *mw_tmp;\n   973: \n   974: \t\tif (info[chi] & ALLOW_U) {\n   975: \t\t\tif (mtmp->mleashed) { /* play it safe */\n>  976: \t\t\t\tpline(\"%s breaks loose of %s leash!\",\n   977: \t\t\t\t      Monnam(mtmp), mhis(mtmp));\n   978: \t\t\t\tm_unleash(mtmp, FALSE);\n   979: \t\t\t}\n   980: \t\t\t(void) mattacku(mtmp);\n   981: \t\t\treturn(0);"
+  },
+  {
+    "key": "L01007_01",
+    "original": "%s moves only reluctantly.",
+    "translation": "",
+    "context": "src/dogmove.c:1007:10\n  1002: \t\t}\n  1003: \t\t/* insert a worm_move() if worms ever begin to eat things */\n  1004: \t\tremove_monster(omx, omy);\n  1005: \t\tplace_monster(mtmp, nix, niy);\n  1006: \t\tif (has_edog && !is_spell && cursemsg[chi] && (cansee(omx,omy) || cansee(nix,niy)))\n> 1007: \t\t\tpline(\"%s moves only reluctantly.\", Monnam(mtmp));\n  1008: \t\tfor (j=MTSZ-1; j>0; j--) mtmp->mtrack[j] = mtmp->mtrack[j-1];\n  1009: \t\tmtmp->mtrack[0].x = omx;\n  1010: \t\tmtmp->mtrack[0].y = omy;\n  1011: \t\t/* We have to know if the pet's gonna do a combined eat and\n  1012: \t\t * move before moving it, but it can't eat until after being"
+  }
+]

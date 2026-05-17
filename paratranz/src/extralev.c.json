@@ -1,0 +1,56 @@
+[
+  {
+    "key": "L00079_01",
+    "original": "down: no wall at %d,%d?",
+    "translation": "",
+    "context": "src/extralev.c:79:16\n    74: \t\t} else {\n    75: \t\t\tfromx = r[x][y].rlx + rn2(r[x][y].dx);\n    76: \t\t\tfromy = r[x][y].rly + r[x][y].dy;\n    77: \t\t\tfromx += 1 + 26*x; fromy += 7*y;\n    78: \t\t\tif (!IS_WALL(levl[fromx][fromy].typ))\n>   79: \t\t\t\timpossible(\"down: no wall at %d,%d?\",fromx,\n    80: \t\t\t\t\t\t\t\t\tfromy);\n    81: \t\t\tdodoor(fromx, fromy, &rooms[r[x][y].nroom]);\n    82: \t\t\tlevl[fromx][fromy].doormask = D_NODOOR;\n    83: \t\t\tfromy++;\n    84: \t\t}"
+  },
+  {
+    "key": "L00086_01",
+    "original": "down door from %d,%d going nowhere?",
+    "translation": "",
+    "context": "src/extralev.c:86:15\n    81: \t\t\tdodoor(fromx, fromy, &rooms[r[x][y].nroom]);\n    82: \t\t\tlevl[fromx][fromy].doormask = D_NODOOR;\n    83: \t\t\tfromy++;\n    84: \t\t}\n    85: \t\tif(y >= 2) {\n>   86: \t\t\timpossible(\"down door from %d,%d going nowhere?\",x,y);\n    87: \t\t\treturn;\n    88: \t\t}\n    89: \t\ty++;\n    90: \t\tr[x][y].doortable &= ~UP;\n    91: \t\tif (!r[x][y].real) {"
+  },
+  {
+    "key": "L00099_01",
+    "original": "up: no wall at %d,%d?",
+    "translation": "",
+    "context": "src/extralev.c:99:16\n    94: \t\t} else {\n    95: \t\t\ttox = r[x][y].rlx + rn2(r[x][y].dx);\n    96: \t\t\ttoy = r[x][y].rly - 1;\n    97: \t\t\ttox += 1 + 26*x; toy += 7*y;\n    98: \t\t\tif (!IS_WALL(levl[tox][toy].typ))\n>   99: \t\t\t\timpossible(\"up: no wall at %d,%d?\",tox,toy);\n   100: \t\t\tdodoor(tox, toy, &rooms[r[x][y].nroom]);\n   101: \t\t\tlevl[tox][toy].doormask = D_NODOOR;\n   102: \t\t\ttoy--;\n   103: \t\t}\n   104: \t\troguejoin(fromx, fromy, tox, toy, FALSE);"
+  },
+  {
+    "key": "L00116_01",
+    "original": "down: no wall at %d,%d?",
+    "translation": "",
+    "context": "src/extralev.c:116:16\n   111: \t\t} else {\n   112: \t\t\tfromx = r[x][y].rlx + r[x][y].dx;\n   113: \t\t\tfromy = r[x][y].rly + rn2(r[x][y].dy);\n   114: \t\t\tfromx += 1 + 26*x; fromy += 7*y;\n   115: \t\t\tif (!IS_WALL(levl[fromx][fromy].typ))\n>  116: \t\t\t\timpossible(\"down: no wall at %d,%d?\",fromx,\n   117: \t\t\t\t\t\t\t\t\tfromy);\n   118: \t\t\tdodoor(fromx, fromy, &rooms[r[x][y].nroom]);\n   119: \t\t\tlevl[fromx][fromy].doormask = D_NODOOR;\n   120: \t\t\tfromx++;\n   121: \t\t}"
+  },
+  {
+    "key": "L00123_01",
+    "original": "right door from %d,%d going nowhere?",
+    "translation": "",
+    "context": "src/extralev.c:123:15\n   118: \t\t\tdodoor(fromx, fromy, &rooms[r[x][y].nroom]);\n   119: \t\t\tlevl[fromx][fromy].doormask = D_NODOOR;\n   120: \t\t\tfromx++;\n   121: \t\t}\n   122: \t\tif(x >= 2) {\n>  123: \t\t\timpossible(\"right door from %d,%d going nowhere?\",x,y);\n   124: \t\t\treturn;\n   125: \t\t}\n   126: \t\tx++;\n   127: \t\tr[x][y].doortable &= ~LEFT;\n   128: \t\tif (!r[x][y].real) {"
+  },
+  {
+    "key": "L00136_01",
+    "original": "left: no wall at %d,%d?",
+    "translation": "",
+    "context": "src/extralev.c:136:16\n   131: \t\t} else {\n   132: \t\t\ttox = r[x][y].rlx - 1;\n   133: \t\t\ttoy = r[x][y].rly + rn2(r[x][y].dy);\n   134: \t\t\ttox += 1 + 26*x; toy += 7*y;\n   135: \t\t\tif (!IS_WALL(levl[tox][toy].typ))\n>  136: \t\t\t\timpossible(\"left: no wall at %d,%d?\",tox,toy);\n   137: \t\t\tdodoor(tox, toy, &rooms[r[x][y].nroom]);\n   138: \t\t\tlevl[tox][toy].doormask = D_NODOOR;\n   139: \t\t\ttox--;\n   140: \t\t}\n   141: \t\troguejoin(fromx, fromy, tox, toy, TRUE);"
+  },
+  {
+    "key": "L00143_01",
+    "original": "corridor in direction %d?",
+    "translation": "",
+    "context": "src/extralev.c:143:20\n   138: \t\t\tlevl[tox][toy].doormask = D_NODOOR;\n   139: \t\t\ttox--;\n   140: \t\t}\n   141: \t\troguejoin(fromx, fromy, tox, toy, TRUE);\n   142: \t\treturn;\n>  143: \t} else impossible(\"corridor in direction %d?\",dir);\n   144: }\n   145: \n   146: /* Modified walkfrom() from mkmaze.c */\n   147: STATIC_OVL\n   148: void"
+  },
+  {
+    "key": "L00271_01",
+    "original": "left end of %d, %d never connected?",
+    "translation": "",
+    "context": "src/extralev.c:271:16\n   266: \t\tif (here.doortable & DOWN)\n   267: \t\t\troguecorr(x, y, DOWN);\n   268: \t\tif (here.doortable & RIGHT)\n   269: \t\t\troguecorr(x, y, RIGHT);\n   270: \t\tif (here.doortable & LEFT)\n>  271: \t\t\timpossible (\"left end of %d, %d never connected?\",x,y);\n   272: \t\tif (here.doortable & UP)\n   273: \t\t\timpossible (\"up end of %d, %d never connected?\",x,y);\n   274: \t}\n   275: }\n   276: "
+  },
+  {
+    "key": "L00273_01",
+    "original": "up end of %d, %d never connected?",
+    "translation": "",
+    "context": "src/extralev.c:273:16\n   268: \t\tif (here.doortable & RIGHT)\n   269: \t\t\troguecorr(x, y, RIGHT);\n   270: \t\tif (here.doortable & LEFT)\n   271: \t\t\timpossible (\"left end of %d, %d never connected?\",x,y);\n   272: \t\tif (here.doortable & UP)\n>  273: \t\t\timpossible (\"up end of %d, %d never connected?\",x,y);\n   274: \t}\n   275: }\n   276: \n   277: void\n   278: corr(x,y)"
+  }
+]

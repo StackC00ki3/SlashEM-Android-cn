@@ -1,0 +1,1100 @@
+[
+  {
+    "key": "L00019_01",
+    "original": "see yourself",
+    "translation": "",
+    "context": "src/do_wear.c:19:45\n    14: static NEARDATA long taking_off = 0L;\n    15: \n    16: static NEARDATA int todelay;\n    17: static boolean cancelled_don = FALSE;\n    18: \n>   19: static NEARDATA const char see_yourself[] = \"see yourself\";\n    20: static NEARDATA const char unknown_type[] = \"Unknown type of %s (%d)\";\n    21: static NEARDATA const char c_armor[]  = \"armor\",\n    22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\","
+  },
+  {
+    "key": "L00020_01",
+    "original": "Unknown type of %s (%d)",
+    "translation": "",
+    "context": "src/do_wear.c:20:45\n    15: \n    16: static NEARDATA int todelay;\n    17: static boolean cancelled_don = FALSE;\n    18: \n    19: static NEARDATA const char see_yourself[] = \"see yourself\";\n>   20: static NEARDATA const char unknown_type[] = \"Unknown type of %s (%d)\";\n    21: static NEARDATA const char c_armor[]  = \"armor\",\n    22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif"
+  },
+  {
+    "key": "L00021_01",
+    "original": "armor",
+    "translation": "",
+    "context": "src/do_wear.c:21:41\n    16: static NEARDATA int todelay;\n    17: static boolean cancelled_don = FALSE;\n    18: \n    19: static NEARDATA const char see_yourself[] = \"see yourself\";\n    20: static NEARDATA const char unknown_type[] = \"Unknown type of %s (%d)\";\n>   21: static NEARDATA const char c_armor[]  = \"armor\",\n    22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\","
+  },
+  {
+    "key": "L00022_01",
+    "original": "suit",
+    "translation": "",
+    "context": "src/do_wear.c:22:20\n    17: static boolean cancelled_don = FALSE;\n    18: \n    19: static NEARDATA const char see_yourself[] = \"see yourself\";\n    20: static NEARDATA const char unknown_type[] = \"Unknown type of %s (%d)\";\n    21: static NEARDATA const char c_armor[]  = \"armor\",\n>   22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\","
+  },
+  {
+    "key": "L00024_01",
+    "original": "shirt",
+    "translation": "",
+    "context": "src/do_wear.c:24:20\n    19: static NEARDATA const char see_yourself[] = \"see yourself\";\n    20: static NEARDATA const char unknown_type[] = \"Unknown type of %s (%d)\";\n    21: static NEARDATA const char c_armor[]  = \"armor\",\n    22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n>   24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\","
+  },
+  {
+    "key": "L00026_01",
+    "original": "cloak",
+    "translation": "",
+    "context": "src/do_wear.c:26:20\n    21: static NEARDATA const char c_armor[]  = \"armor\",\n    22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n>   26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\","
+  },
+  {
+    "key": "L00027_01",
+    "original": "gloves",
+    "translation": "",
+    "context": "src/do_wear.c:27:20\n    22: \t\t\t   c_suit[]   = \"suit\",\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n>   27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\","
+  },
+  {
+    "key": "L00028_01",
+    "original": "boots",
+    "translation": "",
+    "context": "src/do_wear.c:28:20\n    23: #ifdef TOURIST\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\",\n>   28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\",\n    33: \t\t\t   c_axe[]    = \"axe\","
+  },
+  {
+    "key": "L00029_01",
+    "original": "helmet",
+    "translation": "",
+    "context": "src/do_wear.c:29:20\n    24: \t\t\t   c_shirt[]  = \"shirt\",\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n>   29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\",\n    33: \t\t\t   c_axe[]    = \"axe\",\n    34: \t\t\t   c_that_[]  = \"that\";"
+  },
+  {
+    "key": "L00030_01",
+    "original": "shield",
+    "translation": "",
+    "context": "src/do_wear.c:30:20\n    25: #endif\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n>   30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\",\n    33: \t\t\t   c_axe[]    = \"axe\",\n    34: \t\t\t   c_that_[]  = \"that\";\n    35: "
+  },
+  {
+    "key": "L00031_01",
+    "original": "weapon",
+    "translation": "",
+    "context": "src/do_wear.c:31:20\n    26: \t\t\t   c_cloak[]  = \"cloak\",\n    27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n>   31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\",\n    33: \t\t\t   c_axe[]    = \"axe\",\n    34: \t\t\t   c_that_[]  = \"that\";\n    35: \n    36: static NEARDATA const long takeoff_order[] = { WORN_BLINDF, W_WEP,"
+  },
+  {
+    "key": "L00032_01",
+    "original": "sword",
+    "translation": "",
+    "context": "src/do_wear.c:32:20\n    27: \t\t\t   c_gloves[] = \"gloves\",\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n>   32: \t\t\t   c_sword[]  = \"sword\",\n    33: \t\t\t   c_axe[]    = \"axe\",\n    34: \t\t\t   c_that_[]  = \"that\";\n    35: \n    36: static NEARDATA const long takeoff_order[] = { WORN_BLINDF, W_WEP,\n    37: \tWORN_SHIELD, WORN_GLOVES, LEFT_RING, RIGHT_RING, WORN_CLOAK,"
+  },
+  {
+    "key": "L00033_01",
+    "original": "axe",
+    "translation": "",
+    "context": "src/do_wear.c:33:20\n    28: \t\t\t   c_boots[]  = \"boots\",\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\",\n>   33: \t\t\t   c_axe[]    = \"axe\",\n    34: \t\t\t   c_that_[]  = \"that\";\n    35: \n    36: static NEARDATA const long takeoff_order[] = { WORN_BLINDF, W_WEP,\n    37: \tWORN_SHIELD, WORN_GLOVES, LEFT_RING, RIGHT_RING, WORN_CLOAK,\n    38: \tWORN_HELMET, WORN_AMUL, WORN_ARMOR,"
+  },
+  {
+    "key": "L00034_01",
+    "original": "that",
+    "translation": "",
+    "context": "src/do_wear.c:34:20\n    29: \t\t\t   c_helmet[] = \"helmet\",\n    30: \t\t\t   c_shield[] = \"shield\",\n    31: \t\t\t   c_weapon[] = \"weapon\",\n    32: \t\t\t   c_sword[]  = \"sword\",\n    33: \t\t\t   c_axe[]    = \"axe\",\n>   34: \t\t\t   c_that_[]  = \"that\";\n    35: \n    36: static NEARDATA const long takeoff_order[] = { WORN_BLINDF, W_WEP,\n    37: \tWORN_SHIELD, WORN_GLOVES, LEFT_RING, RIGHT_RING, WORN_CLOAK,\n    38: \tWORN_HELMET, WORN_AMUL, WORN_ARMOR,\n    39: #ifdef TOURIST"
+  },
+  {
+    "key": "L00058_01",
+    "original": "were wearing %s.",
+    "translation": "",
+    "context": "src/do_wear.c:58:10\n    53: void\n    54: off_msg(otmp)\n    55: register struct obj *otmp;\n    56: {\n    57: \tif(flags.verbose)\n>   58: \t    You(\"were wearing %s.\", doname(otmp));\n    59: }\n    60: \n    61: /* for items that involve no delay */\n    62: STATIC_OVL void\n    63: on_msg(otmp)"
+  },
+  {
+    "key": "L00071_01",
+    "original": " around your %s",
+    "translation": "",
+    "context": "src/do_wear.c:71:16\n    66: \tif (flags.verbose) {\n    67: \t    char how[BUFSZ];\n    68: \n    69: \t    how[0] = '\\0';\n    70: \t    if (otmp->otyp == TOWEL)\n>   71: \t\tSprintf(how, \" around your %s\", body_part(HEAD));\n    72: \t    You(\"are now wearing %s%s.\",\n    73: \t\tobj_is_pname(otmp) ? the(xname(otmp)) : an(xname(otmp)),\n    74: \t\thow);\n    75: \t}\n    76: }"
+  },
+  {
+    "key": "L00072_01",
+    "original": "are now wearing %s%s.",
+    "translation": "",
+    "context": "src/do_wear.c:72:10\n    67: \t    char how[BUFSZ];\n    68: \n    69: \t    how[0] = '\\0';\n    70: \t    if (otmp->otyp == TOWEL)\n    71: \t\tSprintf(how, \" around your %s\", body_part(HEAD));\n>   72: \t    You(\"are now wearing %s%s.\",\n    73: \t\tobj_is_pname(otmp) ? the(xname(otmp)) : an(xname(otmp)),\n    74: \t\thow);\n    75: \t}\n    76: }\n    77: "
+  },
+  {
+    "key": "L00104_01",
+    "original": "yourself speed up%s.",
+    "translation": "",
+    "context": "src/do_wear.c:104:13\n    99: \tcase SPEED_BOOTS:\n   100: \t\t/* Speed boots are still better than intrinsic speed, */\n   101: \t\t/* though not better than potion speed */\n   102: \t\tif (!oldprop && !(HFast & TIMEOUT)) {\n   103: \t\t\tmakeknown(uarmf->otyp);\n>  104: \t\t\tYou_feel(\"yourself speed up%s.\",\n   105: \t\t\t\t(oldprop || HFast) ? \" a bit more\" : \"\");\n   106: \t\t}\n   107: \t\tbreak;\n   108: \tcase ELVEN_BOOTS:\n   109: \t\tif (!oldprop && !HStealth && !BStealth) {"
+  },
+  {
+    "key": "L00105_01",
+    "original": " a bit more",
+    "translation": "",
+    "context": "src/do_wear.c:105:26\n   100: \t\t/* Speed boots are still better than intrinsic speed, */\n   101: \t\t/* though not better than potion speed */\n   102: \t\tif (!oldprop && !(HFast & TIMEOUT)) {\n   103: \t\t\tmakeknown(uarmf->otyp);\n   104: \t\t\tYou_feel(\"yourself speed up%s.\",\n>  105: \t\t\t\t(oldprop || HFast) ? \" a bit more\" : \"\");\n   106: \t\t}\n   107: \t\tbreak;\n   108: \tcase ELVEN_BOOTS:\n   109: \t\tif (!oldprop && !HStealth && !BStealth) {\n   110: \t\t\tmakeknown(uarmf->otyp);"
+  },
+  {
+    "key": "L00111_01",
+    "original": "walk very quietly.",
+    "translation": "",
+    "context": "src/do_wear.c:111:8\n   106: \t\t}\n   107: \t\tbreak;\n   108: \tcase ELVEN_BOOTS:\n   109: \t\tif (!oldprop && !HStealth && !BStealth) {\n   110: \t\t\tmakeknown(uarmf->otyp);\n>  111: \t\t\tYou(\"walk very quietly.\");\n   112: \t\t}\n   113: \t\tbreak;\n   114: \tcase FUMBLE_BOOTS:\n   115: \t\tif (!oldprop && !(HFumbling & ~TIMEOUT))\n   116: \t\t\tincr_itimeout(&HFumbling, rnd(20));"
+  },
+  {
+    "key": "L00145_01",
+    "original": "yourself slow down%s.",
+    "translation": "",
+    "context": "src/do_wear.c:145:13\n   140:     setworn((struct obj *)0, W_ARMF);\n   141:     switch (otyp) {\n   142: \tcase SPEED_BOOTS:\n   143: \t\tif (!Very_fast && !cancelled_don) {\n   144: \t\t\tmakeknown(otyp);\n>  145: \t\t\tYou_feel(\"yourself slow down%s.\",\n   146: \t\t\t\tFast ? \" a bit\" : \"\");\n   147: \t\t}\n   148: \t\tbreak;\n   149: \tcase WATER_WALKING_BOOTS:\n   150: \t\tif (is_pool(u.ux,u.uy) && !Levitation && !Flying &&"
+  },
+  {
+    "key": "L00146_01",
+    "original": " a bit",
+    "translation": "",
+    "context": "src/do_wear.c:146:12\n   141:     switch (otyp) {\n   142: \tcase SPEED_BOOTS:\n   143: \t\tif (!Very_fast && !cancelled_don) {\n   144: \t\t\tmakeknown(otyp);\n   145: \t\t\tYou_feel(\"yourself slow down%s.\",\n>  146: \t\t\t\tFast ? \" a bit\" : \"\");\n   147: \t\t}\n   148: \t\tbreak;\n   149: \tcase WATER_WALKING_BOOTS:\n   150: \t\tif (is_pool(u.ux,u.uy) && !Levitation && !Flying &&\n   151: \t\t    !is_clinger(youmonst.data) && !cancelled_don) {"
+  },
+  {
+    "key": "L00160_01",
+    "original": "sure are noisy.",
+    "translation": "",
+    "context": "src/do_wear.c:160:8\n   155: \t\t}\n   156: \t\tbreak;\n   157: \tcase ELVEN_BOOTS:\n   158: \t\tif (!oldprop && !HStealth && !BStealth && !cancelled_don) {\n   159: \t\t\tmakeknown(otyp);\n>  160: \t\t\tYou(\"sure are noisy.\");\n   161: \t\t}\n   162: \t\tbreak;\n   163: \tcase FUMBLE_BOOTS:\n   164: \t\tif (!oldprop && !(HFumbling & ~TIMEOUT))\n   165: \t\t\tHFumbling = EFumbling = 0;"
+  },
+  {
+    "key": "L00213_01",
+    "original": "can %s!",
+    "translation": "",
+    "context": "src/do_wear.c:213:11\n   208: \t\tbreak;\n   209: \tcase MUMMY_WRAPPING:\n   210: \t\t/* Note: it's already being worn, so we have to cheat here. */\n   211: \t\tif ((HInvis || EInvis || pm_invisible(youmonst.data)) && !Blind) {\n   212: \t\t    newsym(u.ux,u.uy);\n>  213: \t\t    You(\"can %s!\",\n   214: \t\t\tSee_invisible ? \"no longer see through yourself\"\n   215: \t\t\t: see_yourself);\n   216: \t\t}\n   217: \t\tbreak;\n   218: \tcase CLOAK_OF_INVISIBILITY:"
+  },
+  {
+    "key": "L00214_01",
+    "original": "no longer see through yourself",
+    "translation": "",
+    "context": "src/do_wear.c:214:20\n   209: \tcase MUMMY_WRAPPING:\n   210: \t\t/* Note: it's already being worn, so we have to cheat here. */\n   211: \t\tif ((HInvis || EInvis || pm_invisible(youmonst.data)) && !Blind) {\n   212: \t\t    newsym(u.ux,u.uy);\n   213: \t\t    You(\"can %s!\",\n>  214: \t\t\tSee_invisible ? \"no longer see through yourself\"\n   215: \t\t\t: see_yourself);\n   216: \t\t}\n   217: \t\tbreak;\n   218: \tcase CLOAK_OF_INVISIBILITY:\n   219: \t\t/* since cloak of invisibility was worn, we know mummy wrapping"
+  },
+  {
+    "key": "L00224_01",
+    "original": "Suddenly you can%s yourself.",
+    "translation": "",
+    "context": "src/do_wear.c:224:13\n   219: \t\t/* since cloak of invisibility was worn, we know mummy wrapping\n   220: \t\t   wasn't, so no need to check `oldprop' against blocked */\n   221: \t\tif (!oldprop && !HInvis && !Blind) {\n   222: \t\t    makeknown(uarmc->otyp);\n   223: \t\t    newsym(u.ux,u.uy);\n>  224: \t\t    pline(\"Suddenly you can%s yourself.\",\n   225: \t\t\tSee_invisible ? \" see through\" : \"not see\");\n   226: \t\t}\n   227: \t\tbreak;\n   228: \tcase POISONOUS_CLOAK:\n   229: \t\tif (Poison_resistance)"
+  },
+  {
+    "key": "L00225_01",
+    "original": " see through",
+    "translation": "",
+    "context": "src/do_wear.c:225:20\n   220: \t\t   wasn't, so no need to check `oldprop' against blocked */\n   221: \t\tif (!oldprop && !HInvis && !Blind) {\n   222: \t\t    makeknown(uarmc->otyp);\n   223: \t\t    newsym(u.ux,u.uy);\n   224: \t\t    pline(\"Suddenly you can%s yourself.\",\n>  225: \t\t\tSee_invisible ? \" see through\" : \"not see\");\n   226: \t\t}\n   227: \t\tbreak;\n   228: \tcase POISONOUS_CLOAK:\n   229: \t\tif (Poison_resistance)\n   230: \t\t\tpline(\"This cloak feels a little itchy.\");"
+  },
+  {
+    "key": "L00225_02",
+    "original": "not see",
+    "translation": "",
+    "context": "src/do_wear.c:225:37\n   220: \t\t   wasn't, so no need to check `oldprop' against blocked */\n   221: \t\tif (!oldprop && !HInvis && !Blind) {\n   222: \t\t    makeknown(uarmc->otyp);\n   223: \t\t    newsym(u.ux,u.uy);\n   224: \t\t    pline(\"Suddenly you can%s yourself.\",\n>  225: \t\t\tSee_invisible ? \" see through\" : \"not see\");\n   226: \t\t}\n   227: \t\tbreak;\n   228: \tcase POISONOUS_CLOAK:\n   229: \t\tif (Poison_resistance)\n   230: \t\t\tpline(\"This cloak feels a little itchy.\");"
+  },
+  {
+    "key": "L00230_01",
+    "original": "This cloak feels a little itchy.",
+    "translation": "",
+    "context": "src/do_wear.c:230:10\n   225: \t\t\tSee_invisible ? \" see through\" : \"not see\");\n   226: \t\t}\n   227: \t\tbreak;\n   228: \tcase POISONOUS_CLOAK:\n   229: \t\tif (Poison_resistance)\n>  230: \t\t\tpline(\"This cloak feels a little itchy.\");\n   231: \t\telse {\n   232: \t\t    makeknown(uarmc->otyp);\n   233: \t\t    poisoned(\"cloak\",A_STR,\"poisonous cloak\",3);\n   234: \t\t}\n   235: \t\tbreak;"
+  },
+  {
+    "key": "L00233_01",
+    "original": "cloak",
+    "translation": "",
+    "context": "src/do_wear.c:233:16\n   228: \tcase POISONOUS_CLOAK:\n   229: \t\tif (Poison_resistance)\n   230: \t\t\tpline(\"This cloak feels a little itchy.\");\n   231: \t\telse {\n   232: \t\t    makeknown(uarmc->otyp);\n>  233: \t\t    poisoned(\"cloak\",A_STR,\"poisonous cloak\",3);\n   234: \t\t}\n   235: \t\tbreak;\n   236: \tcase OILSKIN_CLOAK:\n   237: \t\tpline(\"%s very tightly.\", Tobjnam(uarmc, \"fit\"));\n   238: \t\tbreak;"
+  },
+  {
+    "key": "L00233_02",
+    "original": "poisonous cloak",
+    "translation": "",
+    "context": "src/do_wear.c:233:30\n   228: \tcase POISONOUS_CLOAK:\n   229: \t\tif (Poison_resistance)\n   230: \t\t\tpline(\"This cloak feels a little itchy.\");\n   231: \t\telse {\n   232: \t\t    makeknown(uarmc->otyp);\n>  233: \t\t    poisoned(\"cloak\",A_STR,\"poisonous cloak\",3);\n   234: \t\t}\n   235: \t\tbreak;\n   236: \tcase OILSKIN_CLOAK:\n   237: \t\tpline(\"%s very tightly.\", Tobjnam(uarmc, \"fit\"));\n   238: \t\tbreak;"
+  },
+  {
+    "key": "L00237_01",
+    "original": "%s very tightly.",
+    "translation": "",
+    "context": "src/do_wear.c:237:9\n   232: \t\t    makeknown(uarmc->otyp);\n   233: \t\t    poisoned(\"cloak\",A_STR,\"poisonous cloak\",3);\n   234: \t\t}\n   235: \t\tbreak;\n   236: \tcase OILSKIN_CLOAK:\n>  237: \t\tpline(\"%s very tightly.\", Tobjnam(uarmc, \"fit\"));\n   238: \t\tbreak;\n   239: \t/* Alchemy smock gives poison _and_ acid resistance */\n   240: #if 0\n   241: \tcase ALCHEMY_SMOCK:\n   242: \t\tEAcid_resistance |= WORN_CLOAK;"
+  },
+  {
+    "key": "L00237_02",
+    "original": "fit",
+    "translation": "",
+    "context": "src/do_wear.c:237:44\n   232: \t\t    makeknown(uarmc->otyp);\n   233: \t\t    poisoned(\"cloak\",A_STR,\"poisonous cloak\",3);\n   234: \t\t}\n   235: \t\tbreak;\n   236: \tcase OILSKIN_CLOAK:\n>  237: \t\tpline(\"%s very tightly.\", Tobjnam(uarmc, \"fit\"));\n   238: \t\tbreak;\n   239: \t/* Alchemy smock gives poison _and_ acid resistance */\n   240: #if 0\n   241: \tcase ALCHEMY_SMOCK:\n   242: \t\tEAcid_resistance |= WORN_CLOAK;"
+  },
+  {
+    "key": "L00280_01",
+    "original": "can %s.",
+    "translation": "",
+    "context": "src/do_wear.c:280:11\n   275: \t\tEAcid_resistance &= ~WORN_CLOAK;\n   276: \t\tbreak;\n   277: \tcase MUMMY_WRAPPING:\n   278: \t\tif (Invis && !Blind) {\n   279: \t\t    newsym(u.ux,u.uy);\n>  280: \t\t    You(\"can %s.\",\n   281: \t\t\tSee_invisible ? \"see through yourself\"\n   282: \t\t\t: \"no longer see yourself\");\n   283: \t\t}\n   284: \t\tbreak;\n   285: \tcase CLOAK_OF_INVISIBILITY:"
+  },
+  {
+    "key": "L00281_01",
+    "original": "see through yourself",
+    "translation": "",
+    "context": "src/do_wear.c:281:20\n   276: \t\tbreak;\n   277: \tcase MUMMY_WRAPPING:\n   278: \t\tif (Invis && !Blind) {\n   279: \t\t    newsym(u.ux,u.uy);\n   280: \t\t    You(\"can %s.\",\n>  281: \t\t\tSee_invisible ? \"see through yourself\"\n   282: \t\t\t: \"no longer see yourself\");\n   283: \t\t}\n   284: \t\tbreak;\n   285: \tcase CLOAK_OF_INVISIBILITY:\n   286: \t\tif (!oldprop && !HInvis && !Blind) {"
+  },
+  {
+    "key": "L00282_01",
+    "original": "no longer see yourself",
+    "translation": "",
+    "context": "src/do_wear.c:282:6\n   277: \tcase MUMMY_WRAPPING:\n   278: \t\tif (Invis && !Blind) {\n   279: \t\t    newsym(u.ux,u.uy);\n   280: \t\t    You(\"can %s.\",\n   281: \t\t\tSee_invisible ? \"see through yourself\"\n>  282: \t\t\t: \"no longer see yourself\");\n   283: \t\t}\n   284: \t\tbreak;\n   285: \tcase CLOAK_OF_INVISIBILITY:\n   286: \t\tif (!oldprop && !HInvis && !Blind) {\n   287: \t\t    makeknown(CLOAK_OF_INVISIBILITY);"
+  },
+  {
+    "key": "L00289_01",
+    "original": "Suddenly you can %s.",
+    "translation": "",
+    "context": "src/do_wear.c:289:13\n   284: \t\tbreak;\n   285: \tcase CLOAK_OF_INVISIBILITY:\n   286: \t\tif (!oldprop && !HInvis && !Blind) {\n   287: \t\t    makeknown(CLOAK_OF_INVISIBILITY);\n   288: \t\t    newsym(u.ux,u.uy);\n>  289: \t\t    pline(\"Suddenly you can %s.\",\n   290: \t\t\tSee_invisible ? \"no longer see through yourself\"\n   291: \t\t\t: see_yourself);\n   292: \t\t}\n   293: \t\tbreak;\n   294: #if 0"
+  },
+  {
+    "key": "L00290_01",
+    "original": "no longer see through yourself",
+    "translation": "",
+    "context": "src/do_wear.c:290:20\n   285: \tcase CLOAK_OF_INVISIBILITY:\n   286: \t\tif (!oldprop && !HInvis && !Blind) {\n   287: \t\t    makeknown(CLOAK_OF_INVISIBILITY);\n   288: \t\t    newsym(u.ux,u.uy);\n   289: \t\t    pline(\"Suddenly you can %s.\",\n>  290: \t\t\tSee_invisible ? \"no longer see through yourself\"\n   291: \t\t\t: see_yourself);\n   292: \t\t}\n   293: \t\tbreak;\n   294: #if 0\n   295: \t/* Alchemy smock gives poison _and_ acid resistance */"
+  },
+  {
+    "key": "L00344_01",
+    "original": "%s for a moment.",
+    "translation": "",
+    "context": "src/do_wear.c:344:10\n   339: \t     /* makeknown(uarmh->otyp);   -- moved below, after xname() */\n   340: \t\t/*FALLTHRU*/\n   341: \tcase DUNCE_CAP:\n   342: \t\tif (!uarmh->cursed) {\n   343: \t\t    if (Blind)\n>  344: \t\t\tpline(\"%s for a moment.\", Tobjnam(uarmh, \"vibrate\"));\n   345: \t\t    else\n   346: \t\t\tpline(\"%s %s for a moment.\",\n   347: \t\t\t      Tobjnam(uarmh, \"glow\"), hcolor(NH_BLACK));\n   348: \t\t    curse(uarmh);\n   349: \t\t}"
+  },
+  {
+    "key": "L00344_02",
+    "original": "vibrate",
+    "translation": "",
+    "context": "src/do_wear.c:344:45\n   339: \t     /* makeknown(uarmh->otyp);   -- moved below, after xname() */\n   340: \t\t/*FALLTHRU*/\n   341: \tcase DUNCE_CAP:\n   342: \t\tif (!uarmh->cursed) {\n   343: \t\t    if (Blind)\n>  344: \t\t\tpline(\"%s for a moment.\", Tobjnam(uarmh, \"vibrate\"));\n   345: \t\t    else\n   346: \t\t\tpline(\"%s %s for a moment.\",\n   347: \t\t\t      Tobjnam(uarmh, \"glow\"), hcolor(NH_BLACK));\n   348: \t\t    curse(uarmh);\n   349: \t\t}"
+  },
+  {
+    "key": "L00346_01",
+    "original": "%s %s for a moment.",
+    "translation": "",
+    "context": "src/do_wear.c:346:10\n   341: \tcase DUNCE_CAP:\n   342: \t\tif (!uarmh->cursed) {\n   343: \t\t    if (Blind)\n   344: \t\t\tpline(\"%s for a moment.\", Tobjnam(uarmh, \"vibrate\"));\n   345: \t\t    else\n>  346: \t\t\tpline(\"%s %s for a moment.\",\n   347: \t\t\t      Tobjnam(uarmh, \"glow\"), hcolor(NH_BLACK));\n   348: \t\t    curse(uarmh);\n   349: \t\t}\n   350: \t\tflags.botl = 1;\t\t/* reveal new alignment or INT & WIS */\n   351: \t\tif (Hallucination) {"
+  },
+  {
+    "key": "L00347_01",
+    "original": "glow",
+    "translation": "",
+    "context": "src/do_wear.c:347:25\n   342: \t\tif (!uarmh->cursed) {\n   343: \t\t    if (Blind)\n   344: \t\t\tpline(\"%s for a moment.\", Tobjnam(uarmh, \"vibrate\"));\n   345: \t\t    else\n   346: \t\t\tpline(\"%s %s for a moment.\",\n>  347: \t\t\t      Tobjnam(uarmh, \"glow\"), hcolor(NH_BLACK));\n   348: \t\t    curse(uarmh);\n   349: \t\t}\n   350: \t\tflags.botl = 1;\t\t/* reveal new alignment or INT & WIS */\n   351: \t\tif (Hallucination) {\n   352: \t\t    pline(\"My brain hurts!\"); /* Monty Python's Flying Circus */"
+  },
+  {
+    "key": "L00352_01",
+    "original": "My brain hurts!",
+    "translation": "",
+    "context": "src/do_wear.c:352:13\n   347: \t\t\t      Tobjnam(uarmh, \"glow\"), hcolor(NH_BLACK));\n   348: \t\t    curse(uarmh);\n   349: \t\t}\n   350: \t\tflags.botl = 1;\t\t/* reveal new alignment or INT & WIS */\n   351: \t\tif (Hallucination) {\n>  352: \t\t    pline(\"My brain hurts!\"); /* Monty Python's Flying Circus */\n   353: \t\t} else if (uarmh->otyp == DUNCE_CAP) {\n   354: \t\t    You_feel(\"%s.\",\t/* track INT change; ignore WIS */\n   355: \t\t  ACURR(A_INT) <= (ABASE(A_INT) + ABON(A_INT) + ATEMP(A_INT)) ?\n   356: \t\t\t     \"like sitting in a corner\" : \"giddy\");\n   357: \t\t} else {"
+  },
+  {
+    "key": "L00354_01",
+    "original": "%s.",
+    "translation": "",
+    "context": "src/do_wear.c:354:16\n   349: \t\t}\n   350: \t\tflags.botl = 1;\t\t/* reveal new alignment or INT & WIS */\n   351: \t\tif (Hallucination) {\n   352: \t\t    pline(\"My brain hurts!\"); /* Monty Python's Flying Circus */\n   353: \t\t} else if (uarmh->otyp == DUNCE_CAP) {\n>  354: \t\t    You_feel(\"%s.\",\t/* track INT change; ignore WIS */\n   355: \t\t  ACURR(A_INT) <= (ABASE(A_INT) + ABON(A_INT) + ATEMP(A_INT)) ?\n   356: \t\t\t     \"like sitting in a corner\" : \"giddy\");\n   357: \t\t} else {\n   358: \t\t    Your(\"mind oscillates briefly.\");\n   359: \t\t    makeknown(HELM_OF_OPPOSITE_ALIGNMENT);"
+  },
+  {
+    "key": "L00356_01",
+    "original": "like sitting in a corner",
+    "translation": "",
+    "context": "src/do_wear.c:356:9\n   351: \t\tif (Hallucination) {\n   352: \t\t    pline(\"My brain hurts!\"); /* Monty Python's Flying Circus */\n   353: \t\t} else if (uarmh->otyp == DUNCE_CAP) {\n   354: \t\t    You_feel(\"%s.\",\t/* track INT change; ignore WIS */\n   355: \t\t  ACURR(A_INT) <= (ABASE(A_INT) + ABON(A_INT) + ATEMP(A_INT)) ?\n>  356: \t\t\t     \"like sitting in a corner\" : \"giddy\");\n   357: \t\t} else {\n   358: \t\t    Your(\"mind oscillates briefly.\");\n   359: \t\t    makeknown(HELM_OF_OPPOSITE_ALIGNMENT);\n   360: \t\t}\n   361: \t\tbreak;"
+  },
+  {
+    "key": "L00356_02",
+    "original": "giddy",
+    "translation": "",
+    "context": "src/do_wear.c:356:38\n   351: \t\tif (Hallucination) {\n   352: \t\t    pline(\"My brain hurts!\"); /* Monty Python's Flying Circus */\n   353: \t\t} else if (uarmh->otyp == DUNCE_CAP) {\n   354: \t\t    You_feel(\"%s.\",\t/* track INT change; ignore WIS */\n   355: \t\t  ACURR(A_INT) <= (ABASE(A_INT) + ABON(A_INT) + ATEMP(A_INT)) ?\n>  356: \t\t\t     \"like sitting in a corner\" : \"giddy\");\n   357: \t\t} else {\n   358: \t\t    Your(\"mind oscillates briefly.\");\n   359: \t\t    makeknown(HELM_OF_OPPOSITE_ALIGNMENT);\n   360: \t\t}\n   361: \t\tbreak;"
+  },
+  {
+    "key": "L00358_01",
+    "original": "mind oscillates briefly.",
+    "translation": "",
+    "context": "src/do_wear.c:358:12\n   353: \t\t} else if (uarmh->otyp == DUNCE_CAP) {\n   354: \t\t    You_feel(\"%s.\",\t/* track INT change; ignore WIS */\n   355: \t\t  ACURR(A_INT) <= (ABASE(A_INT) + ABON(A_INT) + ATEMP(A_INT)) ?\n   356: \t\t\t     \"like sitting in a corner\" : \"giddy\");\n   357: \t\t} else {\n>  358: \t\t    Your(\"mind oscillates briefly.\");\n   359: \t\t    makeknown(HELM_OF_OPPOSITE_ALIGNMENT);\n   360: \t\t}\n   361: \t\tbreak;\n   362: \tdefault: impossible(unknown_type, c_helmet, uarmh->otyp);\n   363:     }"
+  },
+  {
+    "key": "L00426_01",
+    "original": "Hey! You can swim!",
+    "translation": "",
+    "context": "src/do_wear.c:426:12\n   421:     switch(uarmg->otyp) {\n   422: \tcase LEATHER_GLOVES:\n   423: \t\tbreak;\n   424: \tcase GAUNTLETS_OF_SWIMMING:\n   425: \t\tif (u.uinwater) {\n>  426: \t\t   pline(\"Hey! You can swim!\");\n   427: \t\t   spoteffects(TRUE);\n   428: \t\t}\n   429: \t\tbreak;\n   430: \tcase GAUNTLETS_OF_FUMBLING:\n   431: \t\tif (!oldprop && !(HFumbling & ~TIMEOUT))"
+  },
+  {
+    "key": "L00459_01",
+    "original": "begin to thrash about!",
+    "translation": "",
+    "context": "src/do_wear.c:459:13\n   454:     switch(uarmg->otyp) {\n   455: \tcase LEATHER_GLOVES:\n   456: \t    break;\n   457: \tcase GAUNTLETS_OF_SWIMMING:\n   458: \t    if (u.uinwater) {\n>  459: \t       You(\"begin to thrash about!\");\n   460: \t       spoteffects(TRUE);\n   461: \t    }\n   462: \t    break;\n   463: \tcase GAUNTLETS_OF_FUMBLING:\n   464: \t    if (!oldprop && !(HFumbling & ~TIMEOUT))"
+  },
+  {
+    "key": "L00485_01",
+    "original": "wield the %s in your bare %s.",
+    "translation": "",
+    "context": "src/do_wear.c:485:6\n   480:     /* Prevent wielding cockatrice when not wearing gloves */\n   481:     if (uwep && uwep->otyp == CORPSE &&\n   482: \t\ttouch_petrifies(&mons[uwep->corpsenm])) {\n   483: \tchar kbuf[BUFSZ];\n   484: \n>  485: \tYou(\"wield the %s in your bare %s.\",\n   486: \t    corpse_xname(uwep, TRUE), makeplural(body_part(HAND)));\n   487: \tStrcpy(kbuf, an(killer_cxname(uwep, TRUE)));\n   488: \tinstapetrify(kbuf);\n   489: \tuwepgone();  /* life-saved still doesn't allow touching cockatrice */\n   490:     }"
+  },
+  {
+    "key": "L00497_01",
+    "original": "wield the %s in your bare %s.",
+    "translation": "",
+    "context": "src/do_wear.c:497:6\n   492:     /* KMH -- ...or your secondary weapon when you're wielding it */\n   493:     if (u.twoweap && uswapwep && uswapwep->otyp == CORPSE &&\n   494: \ttouch_petrifies(&mons[uswapwep->corpsenm])) {\n   495: \tchar kbuf[BUFSZ];\n   496: \n>  497: \tYou(\"wield the %s in your bare %s.\",\n   498: \t    corpse_xname(uswapwep, TRUE), body_part(HAND));\n   499: \n   500: \tStrcpy(kbuf, an(killer_cxname(uswapwep, TRUE)));\n   501: \tinstapetrify(kbuf);\n   502: \tuswapwepgone();\t/* lifesaved still doesn't allow touching cockatrice */"
+  },
+  {
+    "key": "L00651_01",
+    "original": "are suddenly very %s!",
+    "translation": "",
+    "context": "src/do_wear.c:651:11\n   646: \t\tif (Unchanging) break;\n   647: \t\tchange_sex();\n   648: \t\t/* Don't use same message as polymorph */\n   649: \t\tif (orig_sex != poly_gender()) {\n   650: \t\t    makeknown(AMULET_OF_CHANGE);\n>  651: \t\t    You(\"are suddenly very %s!\", flags.female ? \"feminine\"\n   652: \t\t\t: \"masculine\");\n   653: \t\t    flags.botl = 1;\n   654: \t\t} else\n   655: \t\t    /* already polymorphed into single-gender monster; only\n   656: \t\t       changed the character's base sex */"
+  },
+  {
+    "key": "L00651_02",
+    "original": "feminine",
+    "translation": "",
+    "context": "src/do_wear.c:651:51\n   646: \t\tif (Unchanging) break;\n   647: \t\tchange_sex();\n   648: \t\t/* Don't use same message as polymorph */\n   649: \t\tif (orig_sex != poly_gender()) {\n   650: \t\t    makeknown(AMULET_OF_CHANGE);\n>  651: \t\t    You(\"are suddenly very %s!\", flags.female ? \"feminine\"\n   652: \t\t\t: \"masculine\");\n   653: \t\t    flags.botl = 1;\n   654: \t\t} else\n   655: \t\t    /* already polymorphed into single-gender monster; only\n   656: \t\t       changed the character's base sex */"
+  },
+  {
+    "key": "L00652_01",
+    "original": "masculine",
+    "translation": "",
+    "context": "src/do_wear.c:652:6\n   647: \t\tchange_sex();\n   648: \t\t/* Don't use same message as polymorph */\n   649: \t\tif (orig_sex != poly_gender()) {\n   650: \t\t    makeknown(AMULET_OF_CHANGE);\n   651: \t\t    You(\"are suddenly very %s!\", flags.female ? \"feminine\"\n>  652: \t\t\t: \"masculine\");\n   653: \t\t    flags.botl = 1;\n   654: \t\t} else\n   655: \t\t    /* already polymorphed into single-gender monster; only\n   656: \t\t       changed the character's base sex */\n   657: \t\t    You(\"don't feel like yourself.\");"
+  },
+  {
+    "key": "L00657_01",
+    "original": "don't feel like yourself.",
+    "translation": "",
+    "context": "src/do_wear.c:657:11\n   652: \t\t\t: \"masculine\");\n   653: \t\t    flags.botl = 1;\n   654: \t\t} else\n   655: \t\t    /* already polymorphed into single-gender monster; only\n   656: \t\t       changed the character's base sex */\n>  657: \t\t    You(\"don't feel like yourself.\");\n   658: \t\tpline_The(\"amulet disintegrates!\");\n   659: \t\tif (orig_sex == poly_gender() && uamul->dknown &&\n   660: \t\t\t!objects[AMULET_OF_CHANGE].oc_name_known &&\n   661: \t\t\t!objects[AMULET_OF_CHANGE].oc_uname)\n   662: \t\t    docall(uamul);"
+  },
+  {
+    "key": "L00658_01",
+    "original": "amulet disintegrates!",
+    "translation": "",
+    "context": "src/do_wear.c:658:13\n   653: \t\t    flags.botl = 1;\n   654: \t\t} else\n   655: \t\t    /* already polymorphed into single-gender monster; only\n   656: \t\t       changed the character's base sex */\n   657: \t\t    You(\"don't feel like yourself.\");\n>  658: \t\tpline_The(\"amulet disintegrates!\");\n   659: \t\tif (orig_sex == poly_gender() && uamul->dknown &&\n   660: \t\t\t!objects[AMULET_OF_CHANGE].oc_name_known &&\n   661: \t\t\t!objects[AMULET_OF_CHANGE].oc_uname)\n   662: \t\t    docall(uamul);\n   663: \t\tuseup(uamul);"
+  },
+  {
+    "key": "L00677_01",
+    "original": "It constricts your throat!",
+    "translation": "",
+    "context": "src/do_wear.c:677:9\n   672: \t\tpline(\"The amulet disintegrates!\");\n   673: \t\tuseup(uamul);\n   674: \t\tbreak;*/\n   675: \tcase AMULET_OF_STRANGULATION:\n   676: \t\tmakeknown(AMULET_OF_STRANGULATION);\n>  677: \t\tpline(\"It constricts your throat!\");\n   678: \t\tStrangled = 6;\n   679: \t\tbreak;\n   680: \tcase AMULET_OF_RESTFUL_SLEEP:\n   681: \t\tif(uamul->blessed) {\n   682: \t\t\tchar buf[BUFSZ];"
+  },
+  {
+    "key": "L00687_01",
+    "original": "How many moves do you wish to sleep for? [1-500]",
+    "translation": "",
+    "context": "src/do_wear.c:687:11\n   682: \t\t\tchar buf[BUFSZ];\n   683: \t\t\tint sleeptime;\n   684:   \n   685: \t\t\tmakeknown(AMULET_OF_RESTFUL_SLEEP);\n   686: \t\t\tdo {\n>  687: \t\t\tgetlin(\"How many moves do you wish to sleep for? [1-500]\", buf);\n   688: \t\t\t\t    sleeptime = (!*buf || *buf=='\\033') ? 0 : atoi(buf);\n   689: \t\t\t\t} while (sleeptime < 1 || sleeptime > 500);\n   690: \t\t\tif (sleeptime > 0) {\n   691: \t\t\t\tYou(\"sit down and fall asleep.\");\n   692: \t\t\t\tnomul(-sleeptime);"
+  },
+  {
+    "key": "L00691_01",
+    "original": "sit down and fall asleep.",
+    "translation": "",
+    "context": "src/do_wear.c:691:9\n   686: \t\t\tdo {\n   687: \t\t\tgetlin(\"How many moves do you wish to sleep for? [1-500]\", buf);\n   688: \t\t\t\t    sleeptime = (!*buf || *buf=='\\033') ? 0 : atoi(buf);\n   689: \t\t\t\t} while (sleeptime < 1 || sleeptime > 500);\n   690: \t\t\tif (sleeptime > 0) {\n>  691: \t\t\t\tYou(\"sit down and fall asleep.\");\n   692: \t\t\t\tnomul(-sleeptime);\n   693: \t\t\t\tu.usleep = 1;\n   694: \t\t\t\tnomovemsg = \"You wake up from your refreshing nap.\";\n   695: \t\tHSleeping = rnd(100);\n   696: \t\t\t}                "
+  },
+  {
+    "key": "L00694_01",
+    "original": "You wake up from your refreshing nap.",
+    "translation": "",
+    "context": "src/do_wear.c:694:17\n   689: \t\t\t\t} while (sleeptime < 1 || sleeptime > 500);\n   690: \t\t\tif (sleeptime > 0) {\n   691: \t\t\t\tYou(\"sit down and fall asleep.\");\n   692: \t\t\t\tnomul(-sleeptime);\n   693: \t\t\t\tu.usleep = 1;\n>  694: \t\t\t\tnomovemsg = \"You wake up from your refreshing nap.\";\n   695: \t\tHSleeping = rnd(100);\n   696: \t\t\t}                \n   697: \t\t} else HSleeping = rnd(100);\n   698: \t\tbreak;\n   699: \tcase AMULET_OF_YENDOR:"
+  },
+  {
+    "key": "L00707_01",
+    "original": "like flying!",
+    "translation": "",
+    "context": "src/do_wear.c:707:13\n   702: \tcase AMULET_VERSUS_STONE:\n   703: \t\tuunstone();\n   704: \t\tbreak;\n   705: \tcase AMULET_OF_FLYING:\n   706: \t\tif (!(EFlying & ~W_AMUL) && !is_flyer(youmonst.data)) {\n>  707: \t\t\tYou_feel(\"like flying!\");\n   708: \t\t\tif (!Levitation)\n   709: \t\t\t\tfloat_up();\n   710: \t\t\tmakeknown(AMULET_OF_FLYING);\n   711: \t\t}\n   712: \t\tbreak;"
+  },
+  {
+    "key": "L00750_01",
+    "original": "suddenly inhale an unhealthy amount of water!",
+    "translation": "",
+    "context": "src/do_wear.c:750:8\n   745: \t\t    /* HMagical_breathing must be set off\n   746: \t\t\tbefore calling drown() */\n   747: \t\t    setworn((struct obj *)0, W_AMUL);\n   748: \t\t    if (!breathless(youmonst.data) && !amphibious(youmonst.data)\n   749: \t\t\t\t\t\t&& !Swimming) {\n>  750: \t\t\tYou(\"suddenly inhale an unhealthy amount of water!\");\n   751: \t\t    \t(void) drown();\n   752: \t\t    }\n   753: \t\t    return;\n   754: \t\t}\n   755: \t\tbreak;"
+  },
+  {
+    "key": "L00758_01",
+    "original": "can breathe more easily!",
+    "translation": "",
+    "context": "src/do_wear.c:758:8\n   753: \t\t    return;\n   754: \t\t}\n   755: \t\tbreak;\n   756: \tcase AMULET_OF_STRANGULATION:\n   757: \t\tif (Strangled) {\n>  758: \t\t\tYou(\"can breathe more easily!\");\n   759: \t\t\tStrangled = 0;\n   760: \t\t}\n   761: \t\tbreak;\n   762: \tcase AMULET_OF_RESTFUL_SLEEP:\n   763: \t\tsetworn((struct obj *)0, W_AMUL);"
+  },
+  {
+    "key": "L00840_01",
+    "original": "Suddenly you are transparent, but there!",
+    "translation": "",
+    "context": "src/do_wear.c:840:13\n   835: #endif\n   836: \n   837: \t\tif (Invis && !oldprop && !HSee_invisible &&\n   838: \t\t\t\t!perceives(youmonst.data) && !Blind) {\n   839: \t\t    newsym(u.ux,u.uy);\n>  840: \t\t    pline(\"Suddenly you are transparent, but there!\");\n   841: \t\t    makeknown(RIN_SEE_INVISIBLE);\n   842: \t\t}\n   843: \t\tbreak;\n   844: \tcase RIN_INVISIBILITY:\n   845: \t\tif (!oldprop && !HInvis && !BInvis && !Blind) {"
+  },
+  {
+    "key": "L00932_01",
+    "original": "Strange... I didn't know you had that ring.",
+    "translation": "",
+    "context": "src/do_wear.c:932:13\n   927:     long mask = (obj->owornmask & W_RING);\n   928:     int old_attrib, which;\n   929: \n   930:     takeoff_mask &= ~mask;\n   931:     if(!(u.uprops[objects[obj->otyp].oc_oprop].extrinsic & mask))\n>  932: \timpossible(\"Strange... I didn't know you had that ring.\");\n   933:     if(gone) setnotworn(obj);\n   934:     else setworn((struct obj *)0, obj->owornmask);\n   935: \n   936:     switch(obj->otyp) {\n   937: \tcase RIN_TELEPORTATION:"
+  },
+  {
+    "key": "L00985_01",
+    "original": "Suddenly you cannot see yourself.",
+    "translation": "",
+    "context": "src/do_wear.c:985:13\n   980: #endif\n   981: \t\t}\n   982: \n   983: \t\tif (Invisible && !Blind) {\n   984: \t\t    newsym(u.ux,u.uy);\n>  985: \t\t    pline(\"Suddenly you cannot see yourself.\");\n   986: \t\t    makeknown(RIN_SEE_INVISIBLE);\n   987: \t\t}\n   988: \t\tbreak;\n   989: \tcase RIN_INVISIBILITY:\n   990: \t\tif (!Invis && !BInvis && !Blind) {"
+  },
+  {
+    "key": "L00992_01",
+    "original": "body seems to unfade%s.",
+    "translation": "",
+    "context": "src/do_wear.c:992:12\n   987: \t\t}\n   988: \t\tbreak;\n   989: \tcase RIN_INVISIBILITY:\n   990: \t\tif (!Invis && !BInvis && !Blind) {\n   991: \t\t    newsym(u.ux,u.uy);\n>  992: \t\t    Your(\"body seems to unfade%s.\",\n   993: \t\t\t See_invisible ? \" completely\" : \"..\");\n   994: \t\t    makeknown(RIN_INVISIBILITY);\n   995: \t\t}\n   996: \t\tbreak;\n   997: \tcase RIN_LEVITATION:"
+  },
+  {
+    "key": "L00993_01",
+    "original": " completely",
+    "translation": "",
+    "context": "src/do_wear.c:993:21\n   988: \t\tbreak;\n   989: \tcase RIN_INVISIBILITY:\n   990: \t\tif (!Invis && !BInvis && !Blind) {\n   991: \t\t    newsym(u.ux,u.uy);\n   992: \t\t    Your(\"body seems to unfade%s.\",\n>  993: \t\t\t See_invisible ? \" completely\" : \"..\");\n   994: \t\t    makeknown(RIN_INVISIBILITY);\n   995: \t\t}\n   996: \t\tbreak;\n   997: \tcase RIN_LEVITATION:\n   998: \t\t(void) float_down(0L, 0L);"
+  },
+  {
+    "key": "L01082_01",
+    "original": "see any more.",
+    "translation": "",
+    "context": "src/do_wear.c:1082:34\n  1077: \tsetworn(otmp, W_TOOL);\n  1078: \ton_msg(otmp);\n  1079: \n  1080: \tif (Blind && !already_blind) {\n  1081: \t    changed = TRUE;\n> 1082: \t    if (flags.verbose) You_cant(\"see any more.\");\n  1083: \t    /* set ball&chain variables before the hero goes blind */\n  1084: \t    if (Punished) set_bc(0);\n  1085: \t} else if (already_blind && !Blind) {\n  1086: \t    changed = TRUE;\n  1087: \t    /* \"You are now wearing the Eyes of the Overworld.\" */"
+  },
+  {
+    "key": "L01088_01",
+    "original": "can see!",
+    "translation": "",
+    "context": "src/do_wear.c:1088:10\n  1083: \t    /* set ball&chain variables before the hero goes blind */\n  1084: \t    if (Punished) set_bc(0);\n  1085: \t} else if (already_blind && !Blind) {\n  1086: \t    changed = TRUE;\n  1087: \t    /* \"You are now wearing the Eyes of the Overworld.\" */\n> 1088: \t    You(\"can see!\");\n  1089: \t}\n  1090: \tif (changed) {\n  1091: \t    /* blindness has just been toggled */\n  1092: \t    if (Blind_telepat || Infravision) see_monsters();\n  1093: \t    vision_full_recalc = 1;\t/* recalc vision limits */"
+  },
+  {
+    "key": "L01113_01",
+    "original": "still cannot see.",
+    "translation": "",
+    "context": "src/do_wear.c:1113:11\n  1108: \tif (Blind) {\n  1109: \t    if (was_blind) {\n  1110: \t\t/* \"still cannot see\" makes no sense when removing lenses\n  1111: \t\t   since they can't have been the cause of your blindness */\n  1112: \t\tif (otmp->otyp != LENSES)\n> 1113: \t\t    You(\"still cannot see.\");\n  1114: \t    } else {\n  1115: \t\tchanged = TRUE;\t/* !was_blind */\n  1116: \t\t/* \"You were wearing the Eyes of the Overworld.\" */\n  1117: \t\tYou_cant(\"see anything now!\");\n  1118: \t\t/* set ball&chain variables before the hero goes blind */"
+  },
+  {
+    "key": "L01117_01",
+    "original": "see anything now!",
+    "translation": "",
+    "context": "src/do_wear.c:1117:12\n  1112: \t\tif (otmp->otyp != LENSES)\n  1113: \t\t    You(\"still cannot see.\");\n  1114: \t    } else {\n  1115: \t\tchanged = TRUE;\t/* !was_blind */\n  1116: \t\t/* \"You were wearing the Eyes of the Overworld.\" */\n> 1117: \t\tYou_cant(\"see anything now!\");\n  1118: \t\t/* set ball&chain variables before the hero goes blind */\n  1119: \t\tif (Punished) set_bc(0);\n  1120: \t    }\n  1121: \t} else if (was_blind) {\n  1122: \t    changed = TRUE;\t/* !Blind */"
+  },
+  {
+    "key": "L01123_01",
+    "original": "can see again.",
+    "translation": "",
+    "context": "src/do_wear.c:1123:10\n  1118: \t\t/* set ball&chain variables before the hero goes blind */\n  1119: \t\tif (Punished) set_bc(0);\n  1120: \t    }\n  1121: \t} else if (was_blind) {\n  1122: \t    changed = TRUE;\t/* !Blind */\n> 1123: \t    You(\"can see again.\");\n  1124: \t}\n  1125: \tif (changed) {\n  1126: \t    /* blindness has just been toggled */\n  1127: \t    if (Blind_telepat || Infravision) see_monsters();\n  1128: \t    vision_full_recalc = 1;\t/* recalc vision limits */"
+  },
+  {
+    "key": "L01231_01",
+    "original": "%s merged with your skin!",
+    "translation": "",
+    "context": "src/do_wear.c:1231:17\n  1226: #endif\n  1227: \t}\n  1228: \tif (!armorpieces) {\n  1229: \t     /* assert( GRAY_DRAGON_SCALES > YELLOW_DRAGON_SCALE_MAIL ); */\n  1230: \t\tif (uskin)\n> 1231: \t\t    pline_The(\"%s merged with your skin!\",\n  1232: \t\t\t      uskin->otyp >= GRAY_DRAGON_SCALES ?\n  1233: \t\t\t\t\"dragon scales are\" : \"dragon scale mail is\");\n  1234: \t\telse\n  1235: \t\t    pline(\"Not wearing any armor.%s\", (iflags.cmdassist && \n  1236: \t\t\t\t(uleft || uright || uamul || ublindf)) ?"
+  },
+  {
+    "key": "L01233_01",
+    "original": "dragon scales are",
+    "translation": "",
+    "context": "src/do_wear.c:1233:5\n  1228: \tif (!armorpieces) {\n  1229: \t     /* assert( GRAY_DRAGON_SCALES > YELLOW_DRAGON_SCALE_MAIL ); */\n  1230: \t\tif (uskin)\n  1231: \t\t    pline_The(\"%s merged with your skin!\",\n  1232: \t\t\t      uskin->otyp >= GRAY_DRAGON_SCALES ?\n> 1233: \t\t\t\t\"dragon scales are\" : \"dragon scale mail is\");\n  1234: \t\telse\n  1235: \t\t    pline(\"Not wearing any armor.%s\", (iflags.cmdassist && \n  1236: \t\t\t\t(uleft || uright || uamul || ublindf)) ?\n  1237: \t\t\t  \"  Use 'R' command to remove accessories.\" : \"\");\n  1238: \t\treturn 0;"
+  },
+  {
+    "key": "L01233_02",
+    "original": "dragon scale mail is",
+    "translation": "",
+    "context": "src/do_wear.c:1233:27\n  1228: \tif (!armorpieces) {\n  1229: \t     /* assert( GRAY_DRAGON_SCALES > YELLOW_DRAGON_SCALE_MAIL ); */\n  1230: \t\tif (uskin)\n  1231: \t\t    pline_The(\"%s merged with your skin!\",\n  1232: \t\t\t      uskin->otyp >= GRAY_DRAGON_SCALES ?\n> 1233: \t\t\t\t\"dragon scales are\" : \"dragon scale mail is\");\n  1234: \t\telse\n  1235: \t\t    pline(\"Not wearing any armor.%s\", (iflags.cmdassist && \n  1236: \t\t\t\t(uleft || uright || uamul || ublindf)) ?\n  1237: \t\t\t  \"  Use 'R' command to remove accessories.\" : \"\");\n  1238: \t\treturn 0;"
+  },
+  {
+    "key": "L01235_01",
+    "original": "Not wearing any armor.%s",
+    "translation": "",
+    "context": "src/do_wear.c:1235:13\n  1230: \t\tif (uskin)\n  1231: \t\t    pline_The(\"%s merged with your skin!\",\n  1232: \t\t\t      uskin->otyp >= GRAY_DRAGON_SCALES ?\n  1233: \t\t\t\t\"dragon scales are\" : \"dragon scale mail is\");\n  1234: \t\telse\n> 1235: \t\t    pline(\"Not wearing any armor.%s\", (iflags.cmdassist && \n  1236: \t\t\t\t(uleft || uright || uamul || ublindf)) ?\n  1237: \t\t\t  \"  Use 'R' command to remove accessories.\" : \"\");\n  1238: \t\treturn 0;\n  1239: \t}\n  1240: \tif (armorpieces > 1)"
+  },
+  {
+    "key": "L01237_01",
+    "original": "  Use 'R' command to remove accessories.",
+    "translation": "",
+    "context": "src/do_wear.c:1237:6\n  1232: \t\t\t      uskin->otyp >= GRAY_DRAGON_SCALES ?\n  1233: \t\t\t\t\"dragon scales are\" : \"dragon scale mail is\");\n  1234: \t\telse\n  1235: \t\t    pline(\"Not wearing any armor.%s\", (iflags.cmdassist && \n  1236: \t\t\t\t(uleft || uright || uamul || ublindf)) ?\n> 1237: \t\t\t  \"  Use 'R' command to remove accessories.\" : \"\");\n  1238: \t\treturn 0;\n  1239: \t}\n  1240: \tif (armorpieces > 1)\n  1241: \t\totmp = getobj(clothes, \"take off\");\n  1242: \tif (otmp == 0) return(0);"
+  },
+  {
+    "key": "L01241_01",
+    "original": "take off",
+    "translation": "",
+    "context": "src/do_wear.c:1241:26\n  1236: \t\t\t\t(uleft || uright || uamul || ublindf)) ?\n  1237: \t\t\t  \"  Use 'R' command to remove accessories.\" : \"\");\n  1238: \t\treturn 0;\n  1239: \t}\n  1240: \tif (armorpieces > 1)\n> 1241: \t\totmp = getobj(clothes, \"take off\");\n  1242: \tif (otmp == 0) return(0);\n  1243: \tif (!(otmp->owornmask & W_ARMOR)) {\n  1244: \t\tYou(\"are not wearing that.\");\n  1245: \t\treturn(0);\n  1246: \t}"
+  },
+  {
+    "key": "L01244_01",
+    "original": "are not wearing that.",
+    "translation": "",
+    "context": "src/do_wear.c:1244:7\n  1239: \t}\n  1240: \tif (armorpieces > 1)\n  1241: \t\totmp = getobj(clothes, \"take off\");\n  1242: \tif (otmp == 0) return(0);\n  1243: \tif (!(otmp->owornmask & W_ARMOR)) {\n> 1244: \t\tYou(\"are not wearing that.\");\n  1245: \t\treturn(0);\n  1246: \t}\n  1247: \t/* note: the `uskin' case shouldn't be able to happen here; dragons\n  1248: \t   can't wear any armor so will end up with `armorpieces == 0' above */\n  1249: \tif (otmp == uskin || ((otmp == uarm) && uarmc)"
+  },
+  {
+    "key": "L01254_01",
+    "original": "take that off.",
+    "translation": "",
+    "context": "src/do_wear.c:1254:15\n  1249: \tif (otmp == uskin || ((otmp == uarm) && uarmc)\n  1250: #ifdef TOURIST\n  1251: \t\t\t  || ((otmp == uarmu) && (uarmc || uarm))\n  1252: #endif\n  1253: \t\t) {\n> 1254: \t    You_cant(\"take that off.\");\n  1255: \t    return 0;\n  1256: \t}\n  1257: \n  1258: \treset_remarm();\t\t/* clear takeoff_mask and taking_off */\n  1259: \t(void) select_off(otmp);"
+  },
+  {
+    "key": "L01281_01",
+    "original": "Not wearing any accessories.%s",
+    "translation": "",
+    "context": "src/do_wear.c:1281:9\n  1276: \tMOREACC(uright);\n  1277: \tMOREACC(uamul);\n  1278: \tMOREACC(ublindf);\n  1279: \n  1280: \tif(!Accessories) {\n> 1281: \t\tpline(\"Not wearing any accessories.%s\", (iflags.cmdassist &&\n  1282: \t\t\t    (uarm || uarmc ||\n  1283: #ifdef TOURIST\n  1284: \t\t\t     uarmu ||\n  1285: #endif\n  1286: \t\t\t     uarms || uarmh || uarmg || uarmf)) ?"
+  },
+  {
+    "key": "L01287_01",
+    "original": "  Use 'T' command to take off armor.",
+    "translation": "",
+    "context": "src/do_wear.c:1287:9\n  1282: \t\t\t    (uarm || uarmc ||\n  1283: #ifdef TOURIST\n  1284: \t\t\t     uarmu ||\n  1285: #endif\n  1286: \t\t\t     uarms || uarmh || uarmg || uarmf)) ?\n> 1287: \t\t      \"  Use 'T' command to take off armor.\" : \"\");\n  1288: \t\treturn(0);\n  1289: \t}\n  1290: \tif (Accessories != 1) otmp = getobj(accessories, \"remove\");\n  1291: \tif(!otmp) return(0);\n  1292: \tif(!(otmp->owornmask & (W_RING | W_AMUL | W_TOOL))) {"
+  },
+  {
+    "key": "L01290_01",
+    "original": "remove",
+    "translation": "",
+    "context": "src/do_wear.c:1290:51\n  1285: #endif\n  1286: \t\t\t     uarms || uarmh || uarmg || uarmf)) ?\n  1287: \t\t      \"  Use 'T' command to take off armor.\" : \"\");\n  1288: \t\treturn(0);\n  1289: \t}\n> 1290: \tif (Accessories != 1) otmp = getobj(accessories, \"remove\");\n  1291: \tif(!otmp) return(0);\n  1292: \tif(!(otmp->owornmask & (W_RING | W_AMUL | W_TOOL))) {\n  1293: \t\tYou(\"are not wearing that.\");\n  1294: \t\treturn(0);\n  1295: \t}"
+  },
+  {
+    "key": "L01293_01",
+    "original": "are not wearing that.",
+    "translation": "",
+    "context": "src/do_wear.c:1293:7\n  1288: \t\treturn(0);\n  1289: \t}\n  1290: \tif (Accessories != 1) otmp = getobj(accessories, \"remove\");\n  1291: \tif(!otmp) return(0);\n  1292: \tif(!(otmp->owornmask & (W_RING | W_AMUL | W_TOOL))) {\n> 1293: \t\tYou(\"are not wearing that.\");\n  1294: \t\treturn(0);\n  1295: \t}\n  1296: \n  1297: \treset_remarm();\t\t/* clear takeoff_mask and taking_off */\n  1298: \t(void) select_off(otmp);"
+  },
+  {
+    "key": "L01315_01",
+    "original": "removing strange accessory?",
+    "translation": "",
+    "context": "src/do_wear.c:1315:14\n  1310: \t\tAmulet_off();\n  1311: \t\toff_msg(otmp);\n  1312: \t} else if (otmp == ublindf) {\n  1313: \t\tBlindf_off(otmp);\t/* does its own off_msg */\n  1314: \t} else {\n> 1315: \t\timpossible(\"removing strange accessory?\");\n  1316: \t}\n  1317: \treturn(1);\n  1318: }\n  1319: \n  1320: /* Check if something worn is cursed _and_ unremovable. */"
+  },
+  {
+    "key": "L01327_01",
+    "original": "can't.  %s cursed.",
+    "translation": "",
+    "context": "src/do_wear.c:1327:7\n  1322: cursed(otmp)\n  1323: register struct obj *otmp;\n  1324: {\n  1325: \t/* Curses, like chickens, come home to roost. */\n  1326: \tif((otmp == uwep) ? welded(otmp) : (int)otmp->cursed) {\n> 1327: \t\tYou(\"can't.  %s cursed.\",\n  1328: \t\t\t(is_boots(otmp) || is_gloves(otmp) || otmp->quan > 1L)\n  1329: \t\t\t? \"They are\" : \"It is\");\n  1330: \t\totmp->bknown = TRUE;\n  1331: \t\treturn(1);\n  1332: \t}"
+  },
+  {
+    "key": "L01329_01",
+    "original": "They are",
+    "translation": "",
+    "context": "src/do_wear.c:1329:6\n  1324: {\n  1325: \t/* Curses, like chickens, come home to roost. */\n  1326: \tif((otmp == uwep) ? welded(otmp) : (int)otmp->cursed) {\n  1327: \t\tYou(\"can't.  %s cursed.\",\n  1328: \t\t\t(is_boots(otmp) || is_gloves(otmp) || otmp->quan > 1L)\n> 1329: \t\t\t? \"They are\" : \"It is\");\n  1330: \t\totmp->bknown = TRUE;\n  1331: \t\treturn(1);\n  1332: \t}\n  1333: \treturn(0);\n  1334: }"
+  },
+  {
+    "key": "L01329_02",
+    "original": "It is",
+    "translation": "",
+    "context": "src/do_wear.c:1329:19\n  1324: {\n  1325: \t/* Curses, like chickens, come home to roost. */\n  1326: \tif((otmp == uwep) ? welded(otmp) : (int)otmp->cursed) {\n  1327: \t\tYou(\"can't.  %s cursed.\",\n  1328: \t\t\t(is_boots(otmp) || is_gloves(otmp) || otmp->quan > 1L)\n> 1329: \t\t\t? \"They are\" : \"It is\");\n  1330: \t\totmp->bknown = TRUE;\n  1331: \t\treturn(1);\n  1332: \t}\n  1333: \treturn(0);\n  1334: }"
+  },
+  {
+    "key": "L01346_01",
+    "original": "You finish taking off your helmet.",
+    "translation": "",
+    "context": "src/do_wear.c:1346:16\n  1341: \n  1342: \tif(cursed(otmp)) return(0);\n  1343: \tif(delay) {\n  1344: \t\tnomul(delay);\n  1345: \t\tif (is_helmet(otmp)) {\n> 1346: \t\t\tnomovemsg = \"You finish taking off your helmet.\";\n  1347: \t\t\tafternmv = Helmet_off;\n  1348: \t\t     }\n  1349: \t\telse if (is_gloves(otmp)) {\n  1350: \t\t\tnomovemsg = \"You finish taking off your gloves.\";\n  1351: \t\t\tafternmv = Gloves_off;"
+  },
+  {
+    "key": "L01350_01",
+    "original": "You finish taking off your gloves.",
+    "translation": "",
+    "context": "src/do_wear.c:1350:16\n  1345: \t\tif (is_helmet(otmp)) {\n  1346: \t\t\tnomovemsg = \"You finish taking off your helmet.\";\n  1347: \t\t\tafternmv = Helmet_off;\n  1348: \t\t     }\n  1349: \t\telse if (is_gloves(otmp)) {\n> 1350: \t\t\tnomovemsg = \"You finish taking off your gloves.\";\n  1351: \t\t\tafternmv = Gloves_off;\n  1352: \t\t     }\n  1353: \t\telse if (is_boots(otmp)) {\n  1354: \t\t\tnomovemsg = \"You finish taking off your boots.\";\n  1355: \t\t\tafternmv = Boots_off;"
+  },
+  {
+    "key": "L01354_01",
+    "original": "You finish taking off your boots.",
+    "translation": "",
+    "context": "src/do_wear.c:1354:16\n  1349: \t\telse if (is_gloves(otmp)) {\n  1350: \t\t\tnomovemsg = \"You finish taking off your gloves.\";\n  1351: \t\t\tafternmv = Gloves_off;\n  1352: \t\t     }\n  1353: \t\telse if (is_boots(otmp)) {\n> 1354: \t\t\tnomovemsg = \"You finish taking off your boots.\";\n  1355: \t\t\tafternmv = Boots_off;\n  1356: \t\t     }\n  1357: \t\telse {\n  1358: \t\t\tnomovemsg = \"You finish taking off your suit.\";\n  1359: \t\t\tafternmv = Armor_off;"
+  },
+  {
+    "key": "L01358_01",
+    "original": "You finish taking off your suit.",
+    "translation": "",
+    "context": "src/do_wear.c:1358:16\n  1353: \t\telse if (is_boots(otmp)) {\n  1354: \t\t\tnomovemsg = \"You finish taking off your boots.\";\n  1355: \t\t\tafternmv = Boots_off;\n  1356: \t\t     }\n  1357: \t\telse {\n> 1358: \t\t\tnomovemsg = \"You finish taking off your suit.\";\n  1359: \t\t\tafternmv = Armor_off;\n  1360: \t\t}\n  1361: \t} else {\n  1362: \t\t/* Be warned!  We want off_msg after removing the item to\n  1363: \t\t * avoid \"You were wearing ____ (being worn).\"  However, an"
+  },
+  {
+    "key": "L01395_01",
+    "original": "are already wearing %s%c",
+    "translation": "",
+    "context": "src/do_wear.c:1395:6\n  1390: \n  1391: STATIC_OVL void\n  1392: already_wearing(cc)\n  1393: const char *cc;\n  1394: {\n> 1395: \tYou(\"are already wearing %s%c\", cc, (cc == c_that_) ? '!' : '.');\n  1396: }\n  1397: \n  1398: STATIC_OVL void\n  1399: already_wearing2(cc1, cc2)\n  1400: const char *cc1, *cc2;"
+  },
+  {
+    "key": "L01402_01",
+    "original": "wear %s because you're wearing %s there already.",
+    "translation": "",
+    "context": "src/do_wear.c:1402:11\n  1397: \n  1398: STATIC_OVL void\n  1399: already_wearing2(cc1, cc2)\n  1400: const char *cc1, *cc2;\n  1401: {\n> 1402: \tYou_cant(\"wear %s because you're wearing %s there already.\", cc1, cc2);\n  1403: }\n  1404: \n  1405: /*\n  1406:  * canwearobj checks to see whether the player can wear a piece of armor\n  1407:  *"
+  },
+  {
+    "key": "L01430_01",
+    "original": "%s will not fit on your body.",
+    "translation": "",
+    "context": "src/do_wear.c:1430:23\n  1425: \t    is_suit(otmp) ? c_suit : 0;\n  1426:     if (which && cantweararm(youmonst.data) &&\n  1427: \t    /* same exception for cloaks as used in m_dowear() */\n  1428: \t    (which != c_cloak || youmonst.data->msize != MZ_SMALL) &&\n  1429: \t    (racial_exception(&youmonst, otmp) < 1)) {\n> 1430: \tif (noisy) pline_The(\"%s will not fit on your body.\", which);\n  1431: \treturn 0;\n  1432:     } else if (otmp->owornmask & W_ARMOR) {\n  1433: \tif (noisy) already_wearing(c_that_);\n  1434: \treturn 0;\n  1435:     }"
+  },
+  {
+    "key": "L01444_01",
+    "original": "cannot do that while holding your %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1444:10\n  1439: #ifdef TOURIST\n  1440: \t\t\t|| is_shirt(otmp)\n  1441: #endif\n  1442: \t    )) {\n  1443: \tif (noisy)\n> 1444: \t    You(\"cannot do that while holding your %s.\",\n  1445: \t\tis_sword(uwep) ? c_sword : c_weapon);\n  1446: \treturn 0;\n  1447:     }\n  1448: \n  1449:     if (is_helmet(otmp)) {"
+  },
+  {
+    "key": "L01456_01",
+    "original": "%s won't fit over your horn%s.",
+    "translation": "",
+    "context": "src/do_wear.c:1456:13\n  1451: \t    if (noisy) already_wearing(an(c_helmet));\n  1452: \t    err++;\n  1453: \t} else if (Upolyd && has_horns(youmonst.data) && !is_flimsy(otmp)) {\n  1454: \t    /* (flimsy exception matches polyself handling) */\n  1455: \t    if (noisy)\n> 1456: \t\tpline_The(\"%s won't fit over your horn%s.\",\n  1457: \t\t\t  c_helmet, plur(num_horns(youmonst.data)));\n  1458: \t    err++;\n  1459: \t} else\n  1460: \t    *mask = W_ARMH;\n  1461:     } else if (is_shield(otmp)) {"
+  },
+  {
+    "key": "L01467_01",
+    "original": "cannot wear a shield while wielding a two-handed %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1467:7\n  1462: \tif (uarms) {\n  1463: \t    if (noisy) already_wearing(an(c_shield));\n  1464: \t    err++;\n  1465: \t} else if (uwep && bimanual(uwep)) {\n  1466: \t    if (noisy) \n> 1467: \t\tYou(\"cannot wear a shield while wielding a two-handed %s.\",\n  1468: \t\t    is_sword(uwep) ? c_sword :\n  1469: \t\t    (uwep->otyp == BATTLE_AXE) ? c_axe : c_weapon);\n  1470: \t    err++;\n  1471: \t} else if (u.twoweap) {\n  1472: \t    if (noisy) {"
+  },
+  {
+    "key": "L01474_01",
+    "original": "cannot wear a shield while wielding two weapons.",
+    "translation": "",
+    "context": "src/do_wear.c:1474:11\n  1469: \t\t    (uwep->otyp == BATTLE_AXE) ? c_axe : c_weapon);\n  1470: \t    err++;\n  1471: \t} else if (u.twoweap) {\n  1472: \t    if (noisy) {\n  1473: \t\tif (uwep && uswapwep)\n> 1474: \t\t    You(\"cannot wear a shield while wielding two weapons.\");\n  1475: \t\telse\n  1476: \t\t    You(\"cannot wear a shield while fighting with two %s.\",\n  1477: \t\t\t    makeplural(body_part(HAND)));\n  1478: \t    }\n  1479: \t    err++;"
+  },
+  {
+    "key": "L01476_01",
+    "original": "cannot wear a shield while fighting with two %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1476:11\n  1471: \t} else if (u.twoweap) {\n  1472: \t    if (noisy) {\n  1473: \t\tif (uwep && uswapwep)\n  1474: \t\t    You(\"cannot wear a shield while wielding two weapons.\");\n  1475: \t\telse\n> 1476: \t\t    You(\"cannot wear a shield while fighting with two %s.\",\n  1477: \t\t\t    makeplural(body_part(HAND)));\n  1478: \t    }\n  1479: \t    err++;\n  1480: \t} else\n  1481: \t    *mask = W_ARMS;"
+  },
+  {
+    "key": "L01487_01",
+    "original": "have no feet...",
+    "translation": "",
+    "context": "src/do_wear.c:1487:21\n  1482:     } else if (is_boots(otmp)) {\n  1483: \tif (uarmf) {\n  1484: \t    if (noisy) already_wearing(c_boots);\n  1485: \t    err++;\n  1486: \t} else if (Upolyd && slithy(youmonst.data)) {\n> 1487: \t    if (noisy) You(\"have no feet...\");\t/* not body_part(FOOT) */\n  1488: \t    err++;\n  1489: \t} else if (Upolyd && youmonst.data->mlet == S_CENTAUR) {\n  1490: \t    /* break_armor() pushes boots off for centaurs,\n  1491: \t       so don't let dowear() put them back on... */\n  1492: \t    if (noisy) pline(\"You have too many hooves to wear %s.\","
+  },
+  {
+    "key": "L01492_01",
+    "original": "You have too many hooves to wear %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1492:23\n  1487: \t    if (noisy) You(\"have no feet...\");\t/* not body_part(FOOT) */\n  1488: \t    err++;\n  1489: \t} else if (Upolyd && youmonst.data->mlet == S_CENTAUR) {\n  1490: \t    /* break_armor() pushes boots off for centaurs,\n  1491: \t       so don't let dowear() put them back on... */\n> 1492: \t    if (noisy) pline(\"You have too many hooves to wear %s.\",\n  1493: \t\t\t     c_boots);\t/* makeplural(body_part(FOOT)) yields\n  1494: \t\t\t\t\t   \"rear hooves\" which sounds odd */\n  1495: \t    err++;\n  1496: \t} else if (u.utrap && (u.utraptype == TT_BEARTRAP ||\n  1497: \t\t\t\tu.utraptype == TT_INFLOOR)) {"
+  },
+  {
+    "key": "L01499_01",
+    "original": "%s is trapped!",
+    "translation": "",
+    "context": "src/do_wear.c:1499:19\n  1494: \t\t\t\t\t   \"rear hooves\" which sounds odd */\n  1495: \t    err++;\n  1496: \t} else if (u.utrap && (u.utraptype == TT_BEARTRAP ||\n  1497: \t\t\t\tu.utraptype == TT_INFLOOR)) {\n  1498: \t    if (u.utraptype == TT_BEARTRAP) {\n> 1499: \t\tif (noisy) Your(\"%s is trapped!\", body_part(FOOT));\n  1500: \t    } else {\n  1501: \t\tif (noisy) Your(\"%s are stuck in the %s!\",\n  1502: \t\t\t\tmakeplural(body_part(FOOT)),\n  1503: \t\t\t\tsurface(u.ux, u.uy));\n  1504: \t    }"
+  },
+  {
+    "key": "L01501_01",
+    "original": "%s are stuck in the %s!",
+    "translation": "",
+    "context": "src/do_wear.c:1501:19\n  1496: \t} else if (u.utrap && (u.utraptype == TT_BEARTRAP ||\n  1497: \t\t\t\tu.utraptype == TT_INFLOOR)) {\n  1498: \t    if (u.utraptype == TT_BEARTRAP) {\n  1499: \t\tif (noisy) Your(\"%s is trapped!\", body_part(FOOT));\n  1500: \t    } else {\n> 1501: \t\tif (noisy) Your(\"%s are stuck in the %s!\",\n  1502: \t\t\t\tmakeplural(body_part(FOOT)),\n  1503: \t\t\t\tsurface(u.ux, u.uy));\n  1504: \t    }\n  1505: \t    err++;\n  1506: \t} else"
+  },
+  {
+    "key": "L01513_01",
+    "original": "cannot wear gloves over your %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1513:21\n  1508:     } else if (is_gloves(otmp)) {\n  1509: \tif (uarmg) {\n  1510: \t    if (noisy) already_wearing(c_gloves);\n  1511: \t    err++;\n  1512: \t} else if (welded(uwep)) {\n> 1513: \t    if (noisy) You(\"cannot wear gloves over your %s.\",\n  1514: \t\t\t   is_sword(uwep) ? c_sword : c_weapon);\n  1515: \t    err++;\n  1516: \t} else\n  1517: \t    *mask = W_ARMG;\n  1518: #ifdef TOURIST"
+  },
+  {
+    "key": "L01524_01",
+    "original": "wear that over your %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1524:23\n  1519:     } else if (is_shirt(otmp)) {\n  1520: \tif (uarm || uarmc || uarmu) {\n  1521: \t    if (uarmu) {\n  1522: \t\tif (noisy) already_wearing(an(c_shirt));\n  1523: \t    } else {\n> 1524: \t\tif (noisy) You_cant(\"wear that over your %s.\",\n  1525: \t\t\t           (uarm && !uarmc) ? c_armor : cloak_simple_name(uarmc));\n  1526: \t    }\n  1527: \t    err++;\n  1528: \t} else\n  1529: \t    *mask = W_ARMU;"
+  },
+  {
+    "key": "L01539_01",
+    "original": "cannot wear armor over a %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1539:21\n  1534: \t    err++;\n  1535: \t} else\n  1536: \t    *mask = W_ARMC;\n  1537:     } else if (is_suit(otmp)) {\n  1538: \tif (uarmc) {\n> 1539: \t    if (noisy) You(\"cannot wear armor over a %s.\", cloak_simple_name(uarmc));\n  1540: \t    err++;\n  1541: \t} else if (uarm) {\n  1542: \t    if (noisy) already_wearing(\"some armor\");\n  1543: \t    err++;\n  1544: \t} else"
+  },
+  {
+    "key": "L01542_01",
+    "original": "some armor",
+    "translation": "",
+    "context": "src/do_wear.c:1542:33\n  1537:     } else if (is_suit(otmp)) {\n  1538: \tif (uarmc) {\n  1539: \t    if (noisy) You(\"cannot wear armor over a %s.\", cloak_simple_name(uarmc));\n  1540: \t    err++;\n  1541: \t} else if (uarm) {\n> 1542: \t    if (noisy) already_wearing(\"some armor\");\n  1543: \t    err++;\n  1544: \t} else\n  1545: \t    *mask = W_ARM;\n  1546:     } else {\n  1547: \t/* getobj can't do this after setting its allow_all flag; that"
+  },
+  {
+    "key": "L01550_01",
+    "original": "wear",
+    "translation": "",
+    "context": "src/do_wear.c:1550:25\n  1545: \t    *mask = W_ARM;\n  1546:     } else {\n  1547: \t/* getobj can't do this after setting its allow_all flag; that\n  1548: \t   happens if you have armor for slots that are covered up or\n  1549: \t   extra armor for slots that are filled */\n> 1550: \tif (noisy) silly_thing(\"wear\", otmp);\n  1551: \terr++;\n  1552:     }\n  1553: /* Unnecessary since now only weapons and special items like pick-axes get\n  1554:  * welded to your hand, not armor\n  1555:     if (welded(otmp)) {"
+  },
+  {
+    "key": "L01575_01",
+    "original": "Don't even bother.",
+    "translation": "",
+    "context": "src/do_wear.c:1575:9\n  1570: \tlong mask = 0;\n  1571: \n  1572: \t/* cantweararm checks for suits of armor */\n  1573: \t/* verysmall or nohands checks for shields, gloves, etc... */\n  1574: \tif ((verysmall(youmonst.data) || nohands(youmonst.data))) {\n> 1575: \t\tpline(\"Don't even bother.\");\n  1576: \t\treturn(0);\n  1577: \t}\n  1578: \n  1579: \totmp = getobj(clothes, \"wear\");\n  1580: \tif(!otmp) return(0);"
+  },
+  {
+    "key": "L01579_01",
+    "original": "wear",
+    "translation": "",
+    "context": "src/do_wear.c:1579:25\n  1574: \tif ((verysmall(youmonst.data) || nohands(youmonst.data))) {\n  1575: \t\tpline(\"Don't even bother.\");\n  1576: \t\treturn(0);\n  1577: \t}\n  1578: \n> 1579: \totmp = getobj(clothes, \"wear\");\n  1580: \tif(!otmp) return(0);\n  1581: \n  1582: \tif (!canwearobj(otmp,&mask,TRUE)) return(0);\n  1583: \n  1584: \tif (otmp->oartifact && !touch_artifact(otmp, &youmonst))"
+  },
+  {
+    "key": "L01590_01",
+    "original": "narrowly avoid losing all chance at your goal.",
+    "translation": "",
+    "context": "src/do_wear.c:1590:8\n  1585: \t    return 1;\t/* costs a turn even though it didn't get worn */\n  1586: \n  1587: \tif (otmp->otyp == HELM_OF_OPPOSITE_ALIGNMENT &&\n  1588: \t\t\tqstart_level.dnum == u.uz.dnum) {\t/* in quest */\n  1589: \t\tif (u.ualignbase[A_CURRENT] == u.ualignbase[A_ORIGINAL])\n> 1590: \t\t\tYou(\"narrowly avoid losing all chance at your goal.\");\n  1591: \t\telse\t/* converted */\n  1592: \t\t\tYou(\"are suddenly overcome with shame and change your mind.\");\n  1593: \t\tu.ublessed = 0; /* lose your god's protection */\n  1594: \t\tmakeknown(otmp->otyp);\n  1595: \t\tflags.botl = 1;"
+  },
+  {
+    "key": "L01592_01",
+    "original": "are suddenly overcome with shame and change your mind.",
+    "translation": "",
+    "context": "src/do_wear.c:1592:8\n  1587: \tif (otmp->otyp == HELM_OF_OPPOSITE_ALIGNMENT &&\n  1588: \t\t\tqstart_level.dnum == u.uz.dnum) {\t/* in quest */\n  1589: \t\tif (u.ualignbase[A_CURRENT] == u.ualignbase[A_ORIGINAL])\n  1590: \t\t\tYou(\"narrowly avoid losing all chance at your goal.\");\n  1591: \t\telse\t/* converted */\n> 1592: \t\t\tYou(\"are suddenly overcome with shame and change your mind.\");\n  1593: \t\tu.ublessed = 0; /* lose your god's protection */\n  1594: \t\tmakeknown(otmp->otyp);\n  1595: \t\tflags.botl = 1;\n  1596: \t\treturn 1;\n  1597: \t}"
+  },
+  {
+    "key": "L01614_01",
+    "original": "You finish your dressing maneuver.",
+    "translation": "",
+    "context": "src/do_wear.c:1614:15\n  1609: \t\tnomul(delay);\n  1610: \t\tif(is_boots(otmp)) afternmv = Boots_on;\n  1611: \t\tif(is_helmet(otmp)) afternmv = Helmet_on;\n  1612: \t\tif(is_gloves(otmp)) afternmv = Gloves_on;\n  1613: \t\tif(otmp == uarm) afternmv = Armor_on;\n> 1614: \t\tnomovemsg = \"You finish your dressing maneuver.\";\n  1615: \t} else {\n  1616: \t\tif(is_cloak(otmp)) (void) Cloak_on();\n  1617: \t\tif (is_shield(otmp)) (void) Shield_on();\n  1618: #ifdef TOURIST\n  1619: \t\tif (is_shirt(otmp)) (void) Shirt_on();"
+  },
+  {
+    "key": "L01635_01",
+    "original": "%s%s are full, and you're already wearing an amulet and %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1635:8\n  1630: {\n  1631: \tregister struct obj *otmp;\n  1632: \tlong mask = 0L;\n  1633: \n  1634: \tif(uleft && uright && uamul && ublindf) {\n> 1635: \t\tYour(\"%s%s are full, and you're already wearing an amulet and %s.\",\n  1636: \t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1637: \t\t\tmakeplural(body_part(FINGER)),\n  1638: \t\t\tublindf->otyp==LENSES ? \"some lenses\" : \"a blindfold\");\n  1639: \t\treturn(0);\n  1640: \t}"
+  },
+  {
+    "key": "L01636_01",
+    "original": "ring-",
+    "translation": "",
+    "context": "src/do_wear.c:1636:30\n  1631: \tregister struct obj *otmp;\n  1632: \tlong mask = 0L;\n  1633: \n  1634: \tif(uleft && uright && uamul && ublindf) {\n  1635: \t\tYour(\"%s%s are full, and you're already wearing an amulet and %s.\",\n> 1636: \t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1637: \t\t\tmakeplural(body_part(FINGER)),\n  1638: \t\t\tublindf->otyp==LENSES ? \"some lenses\" : \"a blindfold\");\n  1639: \t\treturn(0);\n  1640: \t}\n  1641: \totmp = getobj(accessories, \"put on\");"
+  },
+  {
+    "key": "L01638_01",
+    "original": "some lenses",
+    "translation": "",
+    "context": "src/do_wear.c:1638:28\n  1633: \n  1634: \tif(uleft && uright && uamul && ublindf) {\n  1635: \t\tYour(\"%s%s are full, and you're already wearing an amulet and %s.\",\n  1636: \t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1637: \t\t\tmakeplural(body_part(FINGER)),\n> 1638: \t\t\tublindf->otyp==LENSES ? \"some lenses\" : \"a blindfold\");\n  1639: \t\treturn(0);\n  1640: \t}\n  1641: \totmp = getobj(accessories, \"put on\");\n  1642: \tif(!otmp) return(0);\n  1643: \tif(otmp->owornmask & (W_RING | W_AMUL | W_TOOL)) {"
+  },
+  {
+    "key": "L01638_02",
+    "original": "a blindfold",
+    "translation": "",
+    "context": "src/do_wear.c:1638:44\n  1633: \n  1634: \tif(uleft && uright && uamul && ublindf) {\n  1635: \t\tYour(\"%s%s are full, and you're already wearing an amulet and %s.\",\n  1636: \t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1637: \t\t\tmakeplural(body_part(FINGER)),\n> 1638: \t\t\tublindf->otyp==LENSES ? \"some lenses\" : \"a blindfold\");\n  1639: \t\treturn(0);\n  1640: \t}\n  1641: \totmp = getobj(accessories, \"put on\");\n  1642: \tif(!otmp) return(0);\n  1643: \tif(otmp->owornmask & (W_RING | W_AMUL | W_TOOL)) {"
+  },
+  {
+    "key": "L01641_01",
+    "original": "put on",
+    "translation": "",
+    "context": "src/do_wear.c:1641:29\n  1636: \t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1637: \t\t\tmakeplural(body_part(FINGER)),\n  1638: \t\t\tublindf->otyp==LENSES ? \"some lenses\" : \"a blindfold\");\n  1639: \t\treturn(0);\n  1640: \t}\n> 1641: \totmp = getobj(accessories, \"put on\");\n  1642: \tif(!otmp) return(0);\n  1643: \tif(otmp->owornmask & (W_RING | W_AMUL | W_TOOL)) {\n  1644: \t\talready_wearing(c_that_);\n  1645: \t\treturn(0);\n  1646: \t}"
+  },
+  {
+    "key": "L01659_01",
+    "original": "cannot make the ring stick to your body.",
+    "translation": "",
+    "context": "src/do_wear.c:1659:8\n  1654: \t\tsetuswapwep((struct obj *) 0, TRUE);\n  1655: \tif(otmp == uquiver)\n  1656: \t\tsetuqwep((struct obj *) 0);\n  1657: \tif(otmp->oclass == RING_CLASS || otmp->otyp == MEAT_RING) {\n  1658: \t\tif(nolimbs(youmonst.data)) {\n> 1659: \t\t\tYou(\"cannot make the ring stick to your body.\");\n  1660: \t\t\treturn(0);\n  1661: \t\t}\n  1662: \t\tif(uleft && uright){\n  1663: \t\t\tThere(\"are no more %s%s to fill.\",\n  1664: \t\t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\","
+  },
+  {
+    "key": "L01663_01",
+    "original": "are no more %s%s to fill.",
+    "translation": "",
+    "context": "src/do_wear.c:1663:10\n  1658: \t\tif(nolimbs(youmonst.data)) {\n  1659: \t\t\tYou(\"cannot make the ring stick to your body.\");\n  1660: \t\t\treturn(0);\n  1661: \t\t}\n  1662: \t\tif(uleft && uright){\n> 1663: \t\t\tThere(\"are no more %s%s to fill.\",\n  1664: \t\t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1665: \t\t\t\tmakeplural(body_part(FINGER)));\n  1666: \t\t\treturn(0);\n  1667: \t\t}\n  1668: \t\tif(uleft) mask = RIGHT_RING;"
+  },
+  {
+    "key": "L01664_01",
+    "original": "ring-",
+    "translation": "",
+    "context": "src/do_wear.c:1664:31\n  1659: \t\t\tYou(\"cannot make the ring stick to your body.\");\n  1660: \t\t\treturn(0);\n  1661: \t\t}\n  1662: \t\tif(uleft && uright){\n  1663: \t\t\tThere(\"are no more %s%s to fill.\",\n> 1664: \t\t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1665: \t\t\t\tmakeplural(body_part(FINGER)));\n  1666: \t\t\treturn(0);\n  1667: \t\t}\n  1668: \t\tif(uleft) mask = RIGHT_RING;\n  1669: \t\telse if(uright) mask = LEFT_RING;"
+  },
+  {
+    "key": "L01674_01",
+    "original": "Which %s%s, Right or Left?",
+    "translation": "",
+    "context": "src/do_wear.c:1674:18\n  1669: \t\telse if(uright) mask = LEFT_RING;\n  1670: \t\telse do {\n  1671: \t\t\tchar qbuf[QBUFSZ];\n  1672: \t\t\tchar answer;\n  1673: \n> 1674: \t\t\tSprintf(qbuf, \"Which %s%s, Right or Left?\",\n  1675: \t\t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1676: \t\t\t\tbody_part(FINGER));\n  1677: \t\t\tif(!(answer = yn_function(qbuf, \"rl\", '\\0')))\n  1678: \t\t\t\treturn(0);\n  1679: \t\t\tswitch(answer){"
+  },
+  {
+    "key": "L01675_01",
+    "original": "ring-",
+    "translation": "",
+    "context": "src/do_wear.c:1675:31\n  1670: \t\telse do {\n  1671: \t\t\tchar qbuf[QBUFSZ];\n  1672: \t\t\tchar answer;\n  1673: \n  1674: \t\t\tSprintf(qbuf, \"Which %s%s, Right or Left?\",\n> 1675: \t\t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1676: \t\t\t\tbody_part(FINGER));\n  1677: \t\t\tif(!(answer = yn_function(qbuf, \"rl\", '\\0')))\n  1678: \t\t\t\treturn(0);\n  1679: \t\t\tswitch(answer){\n  1680: \t\t\tcase 'l':"
+  },
+  {
+    "key": "L01677_01",
+    "original": "rl",
+    "translation": "",
+    "context": "src/do_wear.c:1677:36\n  1672: \t\t\tchar answer;\n  1673: \n  1674: \t\t\tSprintf(qbuf, \"Which %s%s, Right or Left?\",\n  1675: \t\t\t\thumanoid(youmonst.data) ? \"ring-\" : \"\",\n  1676: \t\t\t\tbody_part(FINGER));\n> 1677: \t\t\tif(!(answer = yn_function(qbuf, \"rl\", '\\0')))\n  1678: \t\t\t\treturn(0);\n  1679: \t\t\tswitch(answer){\n  1680: \t\t\tcase 'l':\n  1681: \t\t\tcase 'L':\n  1682: \t\t\t\tmask = LEFT_RING;"
+  },
+  {
+    "key": "L01692_01",
+    "original": "cannot remove your gloves to put on the ring.",
+    "translation": "",
+    "context": "src/do_wear.c:1692:11\n  1687: \t\t\t\tbreak;\n  1688: \t\t\t}\n  1689: \t\t} while(!mask);\n  1690: \t\tif (uarmg && uarmg->cursed) {\n  1691: \t\t\tuarmg->bknown = TRUE;\n> 1692: \t\t    You(\"cannot remove your gloves to put on the ring.\");\n  1693: \t\t\treturn(0);\n  1694: \t\t}\n  1695: \t\tif (welded(uwep) && bimanual(uwep)) {\n  1696: \t\t\t/* welded will set bknown */\n  1697: \t    You(\"cannot free your weapon hands to put on the ring.\");"
+  },
+  {
+    "key": "L01697_01",
+    "original": "cannot free your weapon hands to put on the ring.",
+    "translation": "",
+    "context": "src/do_wear.c:1697:10\n  1692: \t\t    You(\"cannot remove your gloves to put on the ring.\");\n  1693: \t\t\treturn(0);\n  1694: \t\t}\n  1695: \t\tif (welded(uwep) && bimanual(uwep)) {\n  1696: \t\t\t/* welded will set bknown */\n> 1697: \t    You(\"cannot free your weapon hands to put on the ring.\");\n  1698: \t\t\treturn(0);\n  1699: \t\t}\n  1700: \t\tif (welded(uwep) && mask==RIGHT_RING) {\n  1701: \t\t\t/* welded will set bknown */\n  1702: \t    You(\"cannot free your weapon hand to put on the ring.\");"
+  },
+  {
+    "key": "L01702_01",
+    "original": "cannot free your weapon hand to put on the ring.",
+    "translation": "",
+    "context": "src/do_wear.c:1702:10\n  1697: \t    You(\"cannot free your weapon hands to put on the ring.\");\n  1698: \t\t\treturn(0);\n  1699: \t\t}\n  1700: \t\tif (welded(uwep) && mask==RIGHT_RING) {\n  1701: \t\t\t/* welded will set bknown */\n> 1702: \t    You(\"cannot free your weapon hand to put on the ring.\");\n  1703: \t\t\treturn(0);\n  1704: \t\t}\n  1705: \t\tif (otmp->oartifact && !touch_artifact(otmp, &youmonst))\n  1706: \t\t    return 1; /* costs a turn even though it didn't get worn */\n  1707: \t\tsetworn(otmp, mask);"
+  },
+  {
+    "key": "L01711_01",
+    "original": "an amulet",
+    "translation": "",
+    "context": "src/do_wear.c:1711:20\n  1706: \t\t    return 1; /* costs a turn even though it didn't get worn */\n  1707: \t\tsetworn(otmp, mask);\n  1708: \t\tRing_on(otmp);\n  1709: \t} else if (otmp->oclass == AMULET_CLASS) {\n  1710: \t\tif(uamul) {\n> 1711: \t\t\talready_wearing(\"an amulet\");\n  1712: \t\t\treturn(0);\n  1713: \t\t}\n  1714: \t\tif (otmp->oartifact && !touch_artifact(otmp, &youmonst))\n  1715: \t\t    return 1;\n  1716: \t\tsetworn(otmp, W_AMUL);"
+  },
+  {
+    "key": "L01726_01",
+    "original": "%s is already covered by a towel.",
+    "translation": "",
+    "context": "src/do_wear.c:1726:10\n  1721: \t\t}\n  1722: \t\tAmulet_on();\n  1723: \t} else {\t/* it's a blindfold, towel, or lenses */\n  1724: \t\tif (ublindf) {\n  1725: \t\t\tif (ublindf->otyp == TOWEL)\n> 1726: \t\t\t\tYour(\"%s is already covered by a towel.\",\n  1727: \t\t\t\t\tbody_part(FACE));\n  1728: \t\t\telse if (ublindf->otyp == BLINDFOLD) {\n  1729: \t\t\t\tif (otmp->otyp == LENSES)\n  1730: \t\t\t\t\talready_wearing2(\"lenses\", \"a blindfold\");\n  1731: \t\t\t\telse"
+  },
+  {
+    "key": "L01730_01",
+    "original": "lenses",
+    "translation": "",
+    "context": "src/do_wear.c:1730:23\n  1725: \t\t\tif (ublindf->otyp == TOWEL)\n  1726: \t\t\t\tYour(\"%s is already covered by a towel.\",\n  1727: \t\t\t\t\tbody_part(FACE));\n  1728: \t\t\telse if (ublindf->otyp == BLINDFOLD) {\n  1729: \t\t\t\tif (otmp->otyp == LENSES)\n> 1730: \t\t\t\t\talready_wearing2(\"lenses\", \"a blindfold\");\n  1731: \t\t\t\telse\n  1732: \t\t\t\t\talready_wearing(\"a blindfold\");\n  1733: \t\t\t} else if (ublindf->otyp == LENSES) {\n  1734: \t\t\t\tif (otmp->otyp == BLINDFOLD)\n  1735: \t\t\t\t\talready_wearing2(\"a blindfold\", \"some lenses\");"
+  },
+  {
+    "key": "L01730_02",
+    "original": "a blindfold",
+    "translation": "",
+    "context": "src/do_wear.c:1730:33\n  1725: \t\t\tif (ublindf->otyp == TOWEL)\n  1726: \t\t\t\tYour(\"%s is already covered by a towel.\",\n  1727: \t\t\t\t\tbody_part(FACE));\n  1728: \t\t\telse if (ublindf->otyp == BLINDFOLD) {\n  1729: \t\t\t\tif (otmp->otyp == LENSES)\n> 1730: \t\t\t\t\talready_wearing2(\"lenses\", \"a blindfold\");\n  1731: \t\t\t\telse\n  1732: \t\t\t\t\talready_wearing(\"a blindfold\");\n  1733: \t\t\t} else if (ublindf->otyp == LENSES) {\n  1734: \t\t\t\tif (otmp->otyp == BLINDFOLD)\n  1735: \t\t\t\t\talready_wearing2(\"a blindfold\", \"some lenses\");"
+  },
+  {
+    "key": "L01732_01",
+    "original": "a blindfold",
+    "translation": "",
+    "context": "src/do_wear.c:1732:22\n  1727: \t\t\t\t\tbody_part(FACE));\n  1728: \t\t\telse if (ublindf->otyp == BLINDFOLD) {\n  1729: \t\t\t\tif (otmp->otyp == LENSES)\n  1730: \t\t\t\t\talready_wearing2(\"lenses\", \"a blindfold\");\n  1731: \t\t\t\telse\n> 1732: \t\t\t\t\talready_wearing(\"a blindfold\");\n  1733: \t\t\t} else if (ublindf->otyp == LENSES) {\n  1734: \t\t\t\tif (otmp->otyp == BLINDFOLD)\n  1735: \t\t\t\t\talready_wearing2(\"a blindfold\", \"some lenses\");\n  1736: \t\t\t\telse\n  1737: \t\t\t\t\talready_wearing(\"some lenses\");"
+  },
+  {
+    "key": "L01735_01",
+    "original": "a blindfold",
+    "translation": "",
+    "context": "src/do_wear.c:1735:23\n  1730: \t\t\t\t\talready_wearing2(\"lenses\", \"a blindfold\");\n  1731: \t\t\t\telse\n  1732: \t\t\t\t\talready_wearing(\"a blindfold\");\n  1733: \t\t\t} else if (ublindf->otyp == LENSES) {\n  1734: \t\t\t\tif (otmp->otyp == BLINDFOLD)\n> 1735: \t\t\t\t\talready_wearing2(\"a blindfold\", \"some lenses\");\n  1736: \t\t\t\telse\n  1737: \t\t\t\t\talready_wearing(\"some lenses\");\n  1738: \t\t\t} else\n  1739: \t\t\t\talready_wearing(something); /* ??? */\n  1740: \t\t\treturn(0);"
+  },
+  {
+    "key": "L01735_02",
+    "original": "some lenses",
+    "translation": "",
+    "context": "src/do_wear.c:1735:38\n  1730: \t\t\t\t\talready_wearing2(\"lenses\", \"a blindfold\");\n  1731: \t\t\t\telse\n  1732: \t\t\t\t\talready_wearing(\"a blindfold\");\n  1733: \t\t\t} else if (ublindf->otyp == LENSES) {\n  1734: \t\t\t\tif (otmp->otyp == BLINDFOLD)\n> 1735: \t\t\t\t\talready_wearing2(\"a blindfold\", \"some lenses\");\n  1736: \t\t\t\telse\n  1737: \t\t\t\t\talready_wearing(\"some lenses\");\n  1738: \t\t\t} else\n  1739: \t\t\t\talready_wearing(something); /* ??? */\n  1740: \t\t\treturn(0);"
+  },
+  {
+    "key": "L01737_01",
+    "original": "some lenses",
+    "translation": "",
+    "context": "src/do_wear.c:1737:22\n  1732: \t\t\t\t\talready_wearing(\"a blindfold\");\n  1733: \t\t\t} else if (ublindf->otyp == LENSES) {\n  1734: \t\t\t\tif (otmp->otyp == BLINDFOLD)\n  1735: \t\t\t\t\talready_wearing2(\"a blindfold\", \"some lenses\");\n  1736: \t\t\t\telse\n> 1737: \t\t\t\t\talready_wearing(\"some lenses\");\n  1738: \t\t\t} else\n  1739: \t\t\t\talready_wearing(something); /* ??? */\n  1740: \t\t\treturn(0);\n  1741: \t\t}\n  1742: \t\tif (otmp->otyp != BLINDFOLD && otmp->otyp != TOWEL && otmp->otyp != LENSES) {"
+  },
+  {
+    "key": "L01743_01",
+    "original": "wear that!",
+    "translation": "",
+    "context": "src/do_wear.c:1743:13\n  1738: \t\t\t} else\n  1739: \t\t\t\talready_wearing(something); /* ??? */\n  1740: \t\t\treturn(0);\n  1741: \t\t}\n  1742: \t\tif (otmp->otyp != BLINDFOLD && otmp->otyp != TOWEL && otmp->otyp != LENSES) {\n> 1743: \t\t\tYou_cant(\"wear that!\");\n  1744: \t\t\treturn(0);\n  1745: \t\t}\n  1746: \t\tif (otmp->oartifact && !touch_artifact(otmp, &youmonst))\n  1747: \t\t    return 1;\n  1748: \t\tBlindf_on(otmp);"
+  },
+  {
+    "key": "L01831_01",
+    "original": "%s off your %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1831:8\n  1826: \tleftfall = (uleft && !uleft->cursed &&\n  1827: \t\t    (!uwep || !welded(uwep) || !bimanual(uwep)));\n  1828: \trightfall = (uright && !uright->cursed && (!welded(uwep)));\n  1829: \tif (!uarmg && (leftfall || rightfall) && !nolimbs(youmonst.data)) {\n  1830: \t\t/* changed so cursed rings don't fall off, GAN 10/30/86 */\n> 1831: \t\tYour(\"%s off your %s.\",\n  1832: \t\t\t(leftfall && rightfall) ? \"rings slip\" : \"ring slips\",\n  1833: \t\t\t(leftfall && rightfall) ? makeplural(body_part(FINGER)) :\n  1834: \t\t\tbody_part(FINGER));\n  1835: \t\txfl++;\n  1836: \t\tif (leftfall) {"
+  },
+  {
+    "key": "L01832_01",
+    "original": "rings slip",
+    "translation": "",
+    "context": "src/do_wear.c:1832:30\n  1827: \t\t    (!uwep || !welded(uwep) || !bimanual(uwep)));\n  1828: \trightfall = (uright && !uright->cursed && (!welded(uwep)));\n  1829: \tif (!uarmg && (leftfall || rightfall) && !nolimbs(youmonst.data)) {\n  1830: \t\t/* changed so cursed rings don't fall off, GAN 10/30/86 */\n  1831: \t\tYour(\"%s off your %s.\",\n> 1832: \t\t\t(leftfall && rightfall) ? \"rings slip\" : \"ring slips\",\n  1833: \t\t\t(leftfall && rightfall) ? makeplural(body_part(FINGER)) :\n  1834: \t\t\tbody_part(FINGER));\n  1835: \t\txfl++;\n  1836: \t\tif (leftfall) {\n  1837: \t\t\totmp = uleft;"
+  },
+  {
+    "key": "L01832_02",
+    "original": "ring slips",
+    "translation": "",
+    "context": "src/do_wear.c:1832:45\n  1827: \t\t    (!uwep || !welded(uwep) || !bimanual(uwep)));\n  1828: \trightfall = (uright && !uright->cursed && (!welded(uwep)));\n  1829: \tif (!uarmg && (leftfall || rightfall) && !nolimbs(youmonst.data)) {\n  1830: \t\t/* changed so cursed rings don't fall off, GAN 10/30/86 */\n  1831: \t\tYour(\"%s off your %s.\",\n> 1832: \t\t\t(leftfall && rightfall) ? \"rings slip\" : \"ring slips\",\n  1833: \t\t\t(leftfall && rightfall) ? makeplural(body_part(FINGER)) :\n  1834: \t\t\tbody_part(FINGER));\n  1835: \t\txfl++;\n  1836: \t\tif (leftfall) {\n  1837: \t\t\totmp = uleft;"
+  },
+  {
+    "key": "L01852_01",
+    "original": "%s %sslips from your %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1852:8\n  1847: \n  1848: \totmp = uswapwep;\n  1849: \tif (u.twoweap && otmp) {\n  1850: \t\totherwep = is_sword(otmp) ? c_sword :\n  1851: \t\t    makesingular(oclass_names[(int)otmp->oclass]);\n> 1852: \t\tYour(\"%s %sslips from your %s.\",\n  1853: \t\t\totherwep,\n  1854: \t\t\txfl ? \"also \" : \"\",\n  1855: \t\t\tmakeplural(body_part(HAND)));\n  1856: \t\tsetuswapwep((struct obj *)0, FALSE);\n  1857: \t\txfl++;"
+  },
+  {
+    "key": "L01854_01",
+    "original": "also ",
+    "translation": "",
+    "context": "src/do_wear.c:1854:10\n  1849: \tif (u.twoweap && otmp) {\n  1850: \t\totherwep = is_sword(otmp) ? c_sword :\n  1851: \t\t    makesingular(oclass_names[(int)otmp->oclass]);\n  1852: \t\tYour(\"%s %sslips from your %s.\",\n  1853: \t\t\totherwep,\n> 1854: \t\t\txfl ? \"also \" : \"\",\n  1855: \t\t\tmakeplural(body_part(HAND)));\n  1856: \t\tsetuswapwep((struct obj *)0, FALSE);\n  1857: \t\txfl++;\n  1858: \t\tif (otmp->otyp != LOADSTONE || !otmp->cursed)\n  1859: \t\t\tdropx(otmp);"
+  },
+  {
+    "key": "L01871_01",
+    "original": "%s%s %sslips from your %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1871:8\n  1866: \t\tthiswep = is_sword(otmp) ? c_sword :\n  1867: \t\t    makesingular(oclass_names[(int)otmp->oclass]);\n  1868: \t\tif (otherwep && strcmp(thiswep, otherwep)) otherwep = 0;\n  1869: \n  1870: \t\t/* changed so cursed weapons don't fall, GAN 10/30/86 */\n> 1871: \t\tYour(\"%s%s %sslips from your %s.\",\n  1872: \t\t\totherwep ? \"other \" : \"\", thiswep,\n  1873: \t\t\txfl ? \"also \" : \"\",\n  1874: \t\t\tmakeplural(body_part(HAND)));\n  1875: \t\tsetuwep((struct obj *)0, FALSE);\n  1876: \t\tif (otmp->otyp != LOADSTONE || !otmp->cursed)"
+  },
+  {
+    "key": "L01872_01",
+    "original": "other ",
+    "translation": "",
+    "context": "src/do_wear.c:1872:15\n  1867: \t\t    makesingular(oclass_names[(int)otmp->oclass]);\n  1868: \t\tif (otherwep && strcmp(thiswep, otherwep)) otherwep = 0;\n  1869: \n  1870: \t\t/* changed so cursed weapons don't fall, GAN 10/30/86 */\n  1871: \t\tYour(\"%s%s %sslips from your %s.\",\n> 1872: \t\t\totherwep ? \"other \" : \"\", thiswep,\n  1873: \t\t\txfl ? \"also \" : \"\",\n  1874: \t\t\tmakeplural(body_part(HAND)));\n  1875: \t\tsetuwep((struct obj *)0, FALSE);\n  1876: \t\tif (otmp->otyp != LOADSTONE || !otmp->cursed)\n  1877: \t\t\tdropx(otmp);"
+  },
+  {
+    "key": "L01873_01",
+    "original": "also ",
+    "translation": "",
+    "context": "src/do_wear.c:1873:10\n  1868: \t\tif (otherwep && strcmp(thiswep, otherwep)) otherwep = 0;\n  1869: \n  1870: \t\t/* changed so cursed weapons don't fall, GAN 10/30/86 */\n  1871: \t\tYour(\"%s%s %sslips from your %s.\",\n  1872: \t\t\totherwep ? \"other \" : \"\", thiswep,\n> 1873: \t\t\txfl ? \"also \" : \"\",\n  1874: \t\t\tmakeplural(body_part(HAND)));\n  1875: \t\tsetuwep((struct obj *)0, FALSE);\n  1876: \t\tif (otmp->otyp != LOADSTONE || !otmp->cursed)\n  1877: \t\t\tdropx(otmp);\n  1878: \t}"
+  },
+  {
+    "key": "L01927_01",
+    "original": "stuck_ring: neither left nor right?",
+    "translation": "",
+    "context": "src/do_wear.c:1927:13\n  1922: stuck_ring(ring, otyp)\n  1923: struct obj *ring;\n  1924: int otyp;\n  1925: {\n  1926:     if (ring != uleft && ring != uright) {\n> 1927: \timpossible(\"stuck_ring: neither left nor right?\");\n  1928: \treturn (struct obj *)0;\n  1929:     }\n  1930: \n  1931:     if (ring && ring->otyp == otyp) {\n  1932: \t/* reasons ring can't be removed match those checked by select_off();"
+  },
+  {
+    "key": "L01968_01",
+    "original": "ring is stuck.",
+    "translation": "",
+    "context": "src/do_wear.c:1968:13\n  1963: \t*buf = '\\0';\t\t\t/* lint suppresion */\n  1964: \n  1965: \t/* special ring checks */\n  1966: \tif (otmp == uright || otmp == uleft) {\n  1967: \t    if (nolimbs(youmonst.data)) {\n> 1968: \t\tpline_The(\"ring is stuck.\");\n  1969: \t\treturn 0;\n  1970: \t    }\n  1971: \t    why = 0;\t/* the item which prevents ring removal */\n  1972: \t    if (welded(uwep) && (otmp == uright || bimanual(uwep))) {\n  1973: \t\tSprintf(buf, \"free a weapon %s\", body_part(HAND));"
+  },
+  {
+    "key": "L01973_01",
+    "original": "free a weapon %s",
+    "translation": "",
+    "context": "src/do_wear.c:1973:16\n  1968: \t\tpline_The(\"ring is stuck.\");\n  1969: \t\treturn 0;\n  1970: \t    }\n  1971: \t    why = 0;\t/* the item which prevents ring removal */\n  1972: \t    if (welded(uwep) && (otmp == uright || bimanual(uwep))) {\n> 1973: \t\tSprintf(buf, \"free a weapon %s\", body_part(HAND));\n  1974: \t\twhy = uwep;\n  1975: \t    } else if (uarmg && uarmg->cursed) {\n  1976: \t\tSprintf(buf, \"take off your %s\", c_gloves);\n  1977: \t\twhy = uarmg;\n  1978: \t    }"
+  },
+  {
+    "key": "L01976_01",
+    "original": "take off your %s",
+    "translation": "",
+    "context": "src/do_wear.c:1976:16\n  1971: \t    why = 0;\t/* the item which prevents ring removal */\n  1972: \t    if (welded(uwep) && (otmp == uright || bimanual(uwep))) {\n  1973: \t\tSprintf(buf, \"free a weapon %s\", body_part(HAND));\n  1974: \t\twhy = uwep;\n  1975: \t    } else if (uarmg && uarmg->cursed) {\n> 1976: \t\tSprintf(buf, \"take off your %s\", c_gloves);\n  1977: \t\twhy = uarmg;\n  1978: \t    }\n  1979: \t    if (why) {\n  1980: \t\tYou(\"cannot %s to remove the ring.\", buf);\n  1981: \t\twhy->bknown = TRUE;"
+  },
+  {
+    "key": "L01980_01",
+    "original": "cannot %s to remove the ring.",
+    "translation": "",
+    "context": "src/do_wear.c:1980:7\n  1975: \t    } else if (uarmg && uarmg->cursed) {\n  1976: \t\tSprintf(buf, \"take off your %s\", c_gloves);\n  1977: \t\twhy = uarmg;\n  1978: \t    }\n  1979: \t    if (why) {\n> 1980: \t\tYou(\"cannot %s to remove the ring.\", buf);\n  1981: \t\twhy->bknown = TRUE;\n  1982: \t\treturn 0;\n  1983: \t    }\n  1984: \t}\n  1985: \t/* special glove checks */"
+  },
+  {
+    "key": "L01988_01",
+    "original": "are unable to take off your %s while wielding that %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1988:7\n  1983: \t    }\n  1984: \t}\n  1985: \t/* special glove checks */\n  1986: \tif (otmp == uarmg) {\n  1987: \t    if (welded(uwep)) {\n> 1988: \t\tYou(\"are unable to take off your %s while wielding that %s.\",\n  1989: \t\t    c_gloves, is_sword(uwep) ? c_sword : c_weapon);\n  1990: \t\tuwep->bknown = TRUE;\n  1991: \t\treturn 0;\n  1992: \t    } else if (Glib) {\n  1993: \t\tYou_cant(\"take off the slippery %s with your slippery %s.\","
+  },
+  {
+    "key": "L01993_01",
+    "original": "take off the slippery %s with your slippery %s.",
+    "translation": "",
+    "context": "src/do_wear.c:1993:12\n  1988: \t\tYou(\"are unable to take off your %s while wielding that %s.\",\n  1989: \t\t    c_gloves, is_sword(uwep) ? c_sword : c_weapon);\n  1990: \t\tuwep->bknown = TRUE;\n  1991: \t\treturn 0;\n  1992: \t    } else if (Glib) {\n> 1993: \t\tYou_cant(\"take off the slippery %s with your slippery %s.\",\n  1994: \t\t\t c_gloves, makeplural(body_part(FINGER)));\n  1995: \t\treturn 0;\n  1996: \t    }\n  1997: \t}\n  1998: \t/* special boot checks */"
+  },
+  {
+    "key": "L02001_01",
+    "original": "bear trap prevents you from pulling your %s out.",
+    "translation": "",
+    "context": "src/do_wear.c:2001:13\n  1996: \t    }\n  1997: \t}\n  1998: \t/* special boot checks */\n  1999: \tif (otmp == uarmf) {\n  2000: \t    if (u.utrap && u.utraptype == TT_BEARTRAP) {\n> 2001: \t\tpline_The(\"bear trap prevents you from pulling your %s out.\",\n  2002: \t\t\t  body_part(FOOT));\n  2003: \t\treturn 0;\n  2004: \t    } else if (u.utrap && u.utraptype == TT_INFLOOR) {\n  2005: \t\tYou(\"are stuck in the %s, and cannot pull your %s out.\",\n  2006: \t\t    surface(u.ux, u.uy), makeplural(body_part(FOOT)));"
+  },
+  {
+    "key": "L02005_01",
+    "original": "are stuck in the %s, and cannot pull your %s out.",
+    "translation": "",
+    "context": "src/do_wear.c:2005:7\n  2000: \t    if (u.utrap && u.utraptype == TT_BEARTRAP) {\n  2001: \t\tpline_The(\"bear trap prevents you from pulling your %s out.\",\n  2002: \t\t\t  body_part(FOOT));\n  2003: \t\treturn 0;\n  2004: \t    } else if (u.utrap && u.utraptype == TT_INFLOOR) {\n> 2005: \t\tYou(\"are stuck in the %s, and cannot pull your %s out.\",\n  2006: \t\t    surface(u.ux, u.uy), makeplural(body_part(FOOT)));\n  2007: \t\treturn 0;\n  2008: \t    }\n  2009: \t}\n  2010: \t/* special suit and shirt checks */"
+  },
+  {
+    "key": "L02018_01",
+    "original": "remove your %s",
+    "translation": "",
+    "context": "src/do_wear.c:2018:16\n  2013: \t\t\t|| otmp == uarmu\n  2014: #endif\n  2015: \t\t) {\n  2016: \t    why = 0;\t/* the item which prevents disrobing */\n  2017: \t    if (uarmc && uarmc->cursed) {\n> 2018: \t\tSprintf(buf, \"remove your %s\", cloak_simple_name(uarmc));\n  2019: \t\twhy = uarmc;\n  2020: #ifdef TOURIST\n  2021: \t    } else if (otmp == uarmu && uarm && uarm->cursed) {\n  2022: \t\tSprintf(buf, \"remove your %s\", c_suit);\n  2023: \t\twhy = uarm;"
+  },
+  {
+    "key": "L02022_01",
+    "original": "remove your %s",
+    "translation": "",
+    "context": "src/do_wear.c:2022:16\n  2017: \t    if (uarmc && uarmc->cursed) {\n  2018: \t\tSprintf(buf, \"remove your %s\", cloak_simple_name(uarmc));\n  2019: \t\twhy = uarmc;\n  2020: #ifdef TOURIST\n  2021: \t    } else if (otmp == uarmu && uarm && uarm->cursed) {\n> 2022: \t\tSprintf(buf, \"remove your %s\", c_suit);\n  2023: \t\twhy = uarm;\n  2024: #endif\n  2025: \t    } else if (welded(uwep) && bimanual(uwep)) {\n  2026: \t\tSprintf(buf, \"release your %s\",\n  2027: \t\t\tis_sword(uwep) ? c_sword :"
+  },
+  {
+    "key": "L02026_01",
+    "original": "release your %s",
+    "translation": "",
+    "context": "src/do_wear.c:2026:16\n  2021: \t    } else if (otmp == uarmu && uarm && uarm->cursed) {\n  2022: \t\tSprintf(buf, \"remove your %s\", c_suit);\n  2023: \t\twhy = uarm;\n  2024: #endif\n  2025: \t    } else if (welded(uwep) && bimanual(uwep)) {\n> 2026: \t\tSprintf(buf, \"release your %s\",\n  2027: \t\t\tis_sword(uwep) ? c_sword :\n  2028: \t\t\t(uwep->otyp == BATTLE_AXE) ? c_axe : c_weapon);\n  2029: \t\twhy = uwep;\n  2030: \t    }\n  2031: \t    if (why) {"
+  },
+  {
+    "key": "L02032_01",
+    "original": "cannot %s to take off %s.",
+    "translation": "",
+    "context": "src/do_wear.c:2032:7\n  2027: \t\t\tis_sword(uwep) ? c_sword :\n  2028: \t\t\t(uwep->otyp == BATTLE_AXE) ? c_axe : c_weapon);\n  2029: \t\twhy = uwep;\n  2030: \t    }\n  2031: \t    if (why) {\n> 2032: \t\tYou(\"cannot %s to take off %s.\", buf, the(xname(otmp)));\n  2033: \t\twhy->bknown = TRUE;\n  2034: \t\treturn 0;\n  2035: \t    }\n  2036: \t}\n  2037: \t/* basic curse check */"
+  },
+  {
+    "key": "L02062_01",
+    "original": "select_off: %s???",
+    "translation": "",
+    "context": "src/do_wear.c:2062:18\n  2057: \telse if(otmp == ublindf) takeoff_mask |= WORN_BLINDF;\n  2058: \telse if(otmp == uwep) takeoff_mask |= W_WEP;\n  2059: \telse if(otmp == uswapwep) takeoff_mask |= W_SWAPWEP;\n  2060: \telse if(otmp == uquiver) takeoff_mask |= W_QUIVER;\n  2061: \n> 2062: \telse impossible(\"select_off: %s???\", doname(otmp));\n  2063: \n  2064: \treturn(0);\n  2065: }\n  2066: \n  2067: STATIC_OVL struct obj *"
+  },
+  {
+    "key": "L02075_01",
+    "original": "are empty %s.",
+    "translation": "",
+    "context": "src/do_wear.c:2075:10\n  2070: \tregister struct obj *otmp = (struct obj *)0;\n  2071: \n  2072: \tif (taking_off == W_WEP) {\n  2073: \t  if(!cursed(uwep)) {\n  2074: \t    setuwep((struct obj *) 0, TRUE);\n> 2075: \t    You(\"are empty %s.\", body_part(HANDED));\n  2076: \t    u.twoweap = FALSE;\n  2077: \t  }\n  2078: \t} else if (taking_off == W_SWAPWEP) {\n  2079: \t  setuswapwep((struct obj *) 0, TRUE);\n  2080: \t  You(\"no longer have a second weapon readied.\");"
+  },
+  {
+    "key": "L02080_01",
+    "original": "no longer have a second weapon readied.",
+    "translation": "",
+    "context": "src/do_wear.c:2080:8\n  2075: \t    You(\"are empty %s.\", body_part(HANDED));\n  2076: \t    u.twoweap = FALSE;\n  2077: \t  }\n  2078: \t} else if (taking_off == W_SWAPWEP) {\n  2079: \t  setuswapwep((struct obj *) 0, TRUE);\n> 2080: \t  You(\"no longer have a second weapon readied.\");\n  2081: \t  u.twoweap = FALSE;\n  2082: \t} else if (taking_off == W_QUIVER) {\n  2083: \t  setuqwep((struct obj *) 0);\n  2084: \t  You(\"no longer have ammunition readied.\");\n  2085: \t} else if (taking_off == WORN_ARMOR) {"
+  },
+  {
+    "key": "L02084_01",
+    "original": "no longer have ammunition readied.",
+    "translation": "",
+    "context": "src/do_wear.c:2084:8\n  2079: \t  setuswapwep((struct obj *) 0, TRUE);\n  2080: \t  You(\"no longer have a second weapon readied.\");\n  2081: \t  u.twoweap = FALSE;\n  2082: \t} else if (taking_off == W_QUIVER) {\n  2083: \t  setuqwep((struct obj *) 0);\n> 2084: \t  You(\"no longer have ammunition readied.\");\n  2085: \t} else if (taking_off == WORN_ARMOR) {\n  2086: \t  otmp = uarm;\n  2087: \t  if(!cursed(otmp)) (void) Armor_off();\n  2088: \t} else if (taking_off == WORN_CLOAK) {\n  2089: \t  otmp = uarmc;"
+  },
+  {
+    "key": "L02119_01",
+    "original": "do_takeoff: taking off %lx",
+    "translation": "",
+    "context": "src/do_wear.c:2119:20\n  2114: \t} else if (taking_off == RIGHT_RING) {\n  2115: \t  otmp = uright;\n  2116: \t  if(!cursed(otmp)) Ring_off(uright);\n  2117: \t} else if (taking_off == WORN_BLINDF) {\n  2118: \t  if (!cursed(ublindf)) Blindf_off(ublindf);\n> 2119: \t} else impossible(\"do_takeoff: taking off %lx\", taking_off);\n  2120: \n  2121: \treturn(otmp);\n  2122: }\n  2123: \n  2124: static const char *disrobing = \"\";"
+  },
+  {
+    "key": "L02154_01",
+    "original": "finish %s.",
+    "translation": "",
+    "context": "src/do_wear.c:2154:8\n  2149: \n  2150: \totmp = (struct obj *) 0;\n  2151: \ttodelay = 0;\n  2152: \n  2153: \tif (taking_off == 0L) {\n> 2154: \t  You(\"finish %s.\", disrobing);\n  2155: \t  return 0;\n  2156: \t} else if (taking_off == W_WEP) {\n  2157: \t  todelay = 1;\n  2158: \t} else if (taking_off == W_SWAPWEP) {\n  2159: \t  todelay = 1;"
+  },
+  {
+    "key": "L02195_01",
+    "original": "take_off: taking off %lx",
+    "translation": "",
+    "context": "src/do_wear.c:2195:15\n  2190: \t} else if (taking_off == RIGHT_RING) {\n  2191: \t  todelay = 1;\n  2192: \t} else if (taking_off == WORN_BLINDF) {\n  2193: \t  todelay = 2;\n  2194: \t} else {\n> 2195: \t  impossible(\"take_off: taking off %lx\", taking_off);\n  2196: \t  return 0;\t/* force done */\n  2197: \t}\n  2198: \n  2199: \tif (otmp) todelay += objects[otmp->otyp].oc_delay;\n  2200: "
+  },
+  {
+    "key": "L02226_01",
+    "original": "continue %s.",
+    "translation": "",
+    "context": "src/do_wear.c:2226:6\n  2221: doddoremarm()\n  2222: {\n  2223:     int result = 0;\n  2224: \n  2225:     if (taking_off || takeoff_mask) {\n> 2226: \tYou(\"continue %s.\", disrobing);\n  2227: \tset_occupation(take_off, disrobing, 0);\n  2228: \treturn 0;\n  2229:     } else if (!uwep && !uswapwep && !uquiver && !uamul && !ublindf &&\n  2230: \t\t!uleft && !uright && !wearing_armor()) {\n  2231: \tYou(\"are not wearing anything.\");"
+  },
+  {
+    "key": "L02231_01",
+    "original": "are not wearing anything.",
+    "translation": "",
+    "context": "src/do_wear.c:2231:6\n  2226: \tYou(\"continue %s.\", disrobing);\n  2227: \tset_occupation(take_off, disrobing, 0);\n  2228: \treturn 0;\n  2229:     } else if (!uwep && !uswapwep && !uquiver && !uamul && !ublindf &&\n  2230: \t\t!uleft && !uright && !wearing_armor()) {\n> 2231: \tYou(\"are not wearing anything.\");\n  2232: \treturn 0;\n  2233:     }\n  2234: \n  2235:     add_valid_menu_class(0); /* reset */\n  2236:     if (flags.menu_style != MENU_TRADITIONAL ||"
+  },
+  {
+    "key": "L02237_01",
+    "original": "take off",
+    "translation": "",
+    "context": "src/do_wear.c:2237:24\n  2232: \treturn 0;\n  2233:     }\n  2234: \n  2235:     add_valid_menu_class(0); /* reset */\n  2236:     if (flags.menu_style != MENU_TRADITIONAL ||\n> 2237: \t    (result = ggetobj(\"take off\", select_off, 0, FALSE, (unsigned *)0)) < -1)\n  2238: \tresult = menu_remarm(result);\n  2239: \n  2240:     if (takeoff_mask) {\n  2241: \t/* default activity for armor and/or accessories,\n  2242: \t   possibly combined with weapons */"
+  },
+  {
+    "key": "L02243_01",
+    "original": "disrobing",
+    "translation": "",
+    "context": "src/do_wear.c:2243:14\n  2238: \tresult = menu_remarm(result);\n  2239: \n  2240:     if (takeoff_mask) {\n  2241: \t/* default activity for armor and/or accessories,\n  2242: \t   possibly combined with weapons */\n> 2243: \tdisrobing = \"disrobing\";\n  2244: \t/* specific activity when handling weapons only */\n  2245: \tif (!(takeoff_mask & ~(W_WEP|W_SWAPWEP|W_QUIVER)))\n  2246: \t    disrobing = \"disarming\";\n  2247: \t(void) take_off();\n  2248:     }"
+  },
+  {
+    "key": "L02246_01",
+    "original": "disarming",
+    "translation": "",
+    "context": "src/do_wear.c:2246:18\n  2241: \t/* default activity for armor and/or accessories,\n  2242: \t   possibly combined with weapons */\n  2243: \tdisrobing = \"disrobing\";\n  2244: \t/* specific activity when handling weapons only */\n  2245: \tif (!(takeoff_mask & ~(W_WEP|W_SWAPWEP|W_QUIVER)))\n> 2246: \t    disrobing = \"disarming\";\n  2247: \t(void) take_off();\n  2248:     }\n  2249:     /* The time to perform the command is already completely accounted for\n  2250:      * in take_off(); if we return 1, that would add an extra turn to each\n  2251:      * disrobe."
+  },
+  {
+    "key": "L02268_01",
+    "original": "What type of things do you want to take off?",
+    "translation": "",
+    "context": "src/do_wear.c:2268:21\n  2263: \n  2264:     if (retry) {\n  2265: \tall_worn_categories = (retry == -2);\n  2266:     } else if (flags.menu_style == MENU_FULL) {\n  2267: \tall_worn_categories = FALSE;\n> 2268: \tn = query_category(\"What type of things do you want to take off?\",\n  2269: \t\t\t   invent, WORN_TYPES|ALL_TYPES, &pick_list, PICK_ANY);\n  2270: \tif (!n) return 0;\n  2271: \tfor (i = 0; i < n; i++) {\n  2272: \t    if (pick_list[i].item.a_int == ALL_TYPES_SELECTED)\n  2273: \t\tall_worn_categories = TRUE;"
+  },
+  {
+    "key": "L02280_01",
+    "original": "take off",
+    "translation": "",
+    "context": "src/do_wear.c:2280:14\n  2275: \t\tadd_valid_menu_class(pick_list[i].item.a_int);\n  2276: \t}\n  2277: \tfree((genericptr_t) pick_list);\n  2278:     } else if (flags.menu_style == MENU_COMBINATION) {\n  2279: \tall_worn_categories = FALSE;\n> 2280: \tif (ggetobj(\"take off\", select_off, 0, TRUE, (unsigned *)0) == -2)\n  2281: \t    all_worn_categories = TRUE;\n  2282:     }\n  2283: \n  2284:     n = query_objlist(\"What do you want to take off?\", invent,\n  2285: \t\t\tSIGNAL_NOMENU|USE_INVLET|INVORDER_SORT,"
+  },
+  {
+    "key": "L02284_01",
+    "original": "What do you want to take off?",
+    "translation": "",
+    "context": "src/do_wear.c:2284:23\n  2279: \tall_worn_categories = FALSE;\n  2280: \tif (ggetobj(\"take off\", select_off, 0, TRUE, (unsigned *)0) == -2)\n  2281: \t    all_worn_categories = TRUE;\n  2282:     }\n  2283: \n> 2284:     n = query_objlist(\"What do you want to take off?\", invent,\n  2285: \t\t\tSIGNAL_NOMENU|USE_INVLET|INVORDER_SORT,\n  2286: \t\t\t&pick_list, PICK_ANY,\n  2287: \t\t\tall_worn_categories ? is_worn : is_worn_by_type);\n  2288:     if (n > 0) {\n  2289: \tfor (i = 0; i < n; i++)"
+  },
+  {
+    "key": "L02293_01",
+    "original": "is nothing else you can remove or unwield.",
+    "translation": "",
+    "context": "src/do_wear.c:2293:8\n  2288:     if (n > 0) {\n  2289: \tfor (i = 0; i < n; i++)\n  2290: \t    (void) select_off(pick_list[i].item.a_obj);\n  2291: \tfree((genericptr_t) pick_list);\n  2292:     } else if (n < 0 && flags.menu_style != MENU_COMBINATION) {\n> 2293: \tThere(\"is nothing else you can remove or unwield.\");\n  2294:     }\n  2295:     return 0;\n  2296: }\n  2297: \n  2298: /* hit by destroy armor scroll/black dragon breath/monster spell */"
+  },
+  {
+    "key": "L02310_01",
+    "original": "%s crumbles and turns to dust!",
+    "translation": "",
+    "context": "src/do_wear.c:2310:8\n  2305: \t\t\t(!atmp || atmp == otmp) && \\\n  2306: \t\t\t(!obj_resists(otmp, 0, 90)))\n  2307: \n  2308: \tif (DESTROY_ARM(uarmc)) {\n  2309: \t\tif (donning(otmp)) cancel_don();\n> 2310: \t\tYour(\"%s crumbles and turns to dust!\",\n  2311: \t\t     cloak_simple_name(uarmc));\n  2312: \t\t(void) Cloak_off();\n  2313: \t\tuseup(otmp);\n  2314: \t} else if (DESTROY_ARM(uarm)) {\n  2315: \t\tif (donning(otmp)) cancel_don();"
+  },
+  {
+    "key": "L02316_01",
+    "original": "armor turns to dust and falls to the %s!",
+    "translation": "",
+    "context": "src/do_wear.c:2316:8\n  2311: \t\t     cloak_simple_name(uarmc));\n  2312: \t\t(void) Cloak_off();\n  2313: \t\tuseup(otmp);\n  2314: \t} else if (DESTROY_ARM(uarm)) {\n  2315: \t\tif (donning(otmp)) cancel_don();\n> 2316: \t\tYour(\"armor turns to dust and falls to the %s!\",\n  2317: \t\t\tsurface(u.ux,u.uy));\n  2318: \t\t(void) Armor_gone();\n  2319: \t\tuseup(otmp);\n  2320: #ifdef TOURIST\n  2321: \t} else if (DESTROY_ARM(uarmu)) {"
+  },
+  {
+    "key": "L02323_01",
+    "original": "shirt crumbles into tiny threads and falls apart!",
+    "translation": "",
+    "context": "src/do_wear.c:2323:8\n  2318: \t\t(void) Armor_gone();\n  2319: \t\tuseup(otmp);\n  2320: #ifdef TOURIST\n  2321: \t} else if (DESTROY_ARM(uarmu)) {\n  2322: \t\tif (donning(otmp)) cancel_don();\n> 2323: \t\tYour(\"shirt crumbles into tiny threads and falls apart!\");\n  2324: \t\t(void) Shirt_off();\n  2325: \t\tuseup(otmp);\n  2326: #endif\n  2327: \t} else if (DESTROY_ARM(uarmh)) {\n  2328: \t\tif (donning(otmp)) cancel_don();"
+  },
+  {
+    "key": "L02329_01",
+    "original": "helmet turns to dust and is blown away!",
+    "translation": "",
+    "context": "src/do_wear.c:2329:8\n  2324: \t\t(void) Shirt_off();\n  2325: \t\tuseup(otmp);\n  2326: #endif\n  2327: \t} else if (DESTROY_ARM(uarmh)) {\n  2328: \t\tif (donning(otmp)) cancel_don();\n> 2329: \t\tYour(\"helmet turns to dust and is blown away!\");\n  2330: \t\t(void) Helmet_off();\n  2331: \t\tuseup(otmp);\n  2332: \t} else if (DESTROY_ARM(uarmg)) {\n  2333: \t\tif (donning(otmp)) cancel_don();\n  2334: \t\tYour(\"gloves vanish!\");"
+  },
+  {
+    "key": "L02334_01",
+    "original": "gloves vanish!",
+    "translation": "",
+    "context": "src/do_wear.c:2334:8\n  2329: \t\tYour(\"helmet turns to dust and is blown away!\");\n  2330: \t\t(void) Helmet_off();\n  2331: \t\tuseup(otmp);\n  2332: \t} else if (DESTROY_ARM(uarmg)) {\n  2333: \t\tif (donning(otmp)) cancel_don();\n> 2334: \t\tYour(\"gloves vanish!\");\n  2335: \t\t(void) Gloves_off();\n  2336: \t\tuseup(otmp);\n  2337: \t\tselftouch(\"You\");\n  2338: \t} else if (DESTROY_ARM(uarmf)) {\n  2339: \t\tif (donning(otmp)) cancel_don();"
+  },
+  {
+    "key": "L02337_01",
+    "original": "You",
+    "translation": "",
+    "context": "src/do_wear.c:2337:13\n  2332: \t} else if (DESTROY_ARM(uarmg)) {\n  2333: \t\tif (donning(otmp)) cancel_don();\n  2334: \t\tYour(\"gloves vanish!\");\n  2335: \t\t(void) Gloves_off();\n  2336: \t\tuseup(otmp);\n> 2337: \t\tselftouch(\"You\");\n  2338: \t} else if (DESTROY_ARM(uarmf)) {\n  2339: \t\tif (donning(otmp)) cancel_don();\n  2340: \t\tYour(\"boots disintegrate!\");\n  2341: \t\t(void) Boots_off();\n  2342: \t\tuseup(otmp);"
+  },
+  {
+    "key": "L02340_01",
+    "original": "boots disintegrate!",
+    "translation": "",
+    "context": "src/do_wear.c:2340:8\n  2335: \t\t(void) Gloves_off();\n  2336: \t\tuseup(otmp);\n  2337: \t\tselftouch(\"You\");\n  2338: \t} else if (DESTROY_ARM(uarmf)) {\n  2339: \t\tif (donning(otmp)) cancel_don();\n> 2340: \t\tYour(\"boots disintegrate!\");\n  2341: \t\t(void) Boots_off();\n  2342: \t\tuseup(otmp);\n  2343: \t} else if (DESTROY_ARM(uarms)) {\n  2344: \t\tif (donning(otmp)) cancel_don();\n  2345: \t\tYour(\"shield crumbles away!\");"
+  },
+  {
+    "key": "L02345_01",
+    "original": "shield crumbles away!",
+    "translation": "",
+    "context": "src/do_wear.c:2345:8\n  2340: \t\tYour(\"boots disintegrate!\");\n  2341: \t\t(void) Boots_off();\n  2342: \t\tuseup(otmp);\n  2343: \t} else if (DESTROY_ARM(uarms)) {\n  2344: \t\tif (donning(otmp)) cancel_don();\n> 2345: \t\tYour(\"shield crumbles away!\");\n  2346: \t\t(void) Shield_off();\n  2347: \t\tuseup(otmp);\n  2348: \t} else {\n  2349: \t\treturn 0;\t\t/* could not destroy anything */\n  2350: \t}"
+  }
+]

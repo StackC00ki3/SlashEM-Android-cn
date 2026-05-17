@@ -1,0 +1,1304 @@
+[
+  {
+    "key": "L00023_01",
+    "original": "You are slowing down.",
+    "translation": "",
+    "context": "src/timeout.c:23:2\n    18: \n    19: #ifdef OVLB\n    20: \n    21: /* He is being petrified - dialogue by inmet!tower */\n    22: static NEARDATA const char * const stoned_texts[] = {\n>   23: \t\"You are slowing down.\",\t\t/* 5 */\n    24: \t\"Your limbs are stiffening.\",\t\t/* 4 */\n    25: \t\"Your limbs have turned to stone.\",\t/* 3 */\n    26: \t\"You have turned to stone.\",\t\t/* 2 */\n    27: \t\"You are a statue.\"\t\t\t/* 1 */\n    28: };"
+  },
+  {
+    "key": "L00024_01",
+    "original": "Your limbs are stiffening.",
+    "translation": "",
+    "context": "src/timeout.c:24:2\n    19: #ifdef OVLB\n    20: \n    21: /* He is being petrified - dialogue by inmet!tower */\n    22: static NEARDATA const char * const stoned_texts[] = {\n    23: \t\"You are slowing down.\",\t\t/* 5 */\n>   24: \t\"Your limbs are stiffening.\",\t\t/* 4 */\n    25: \t\"Your limbs have turned to stone.\",\t/* 3 */\n    26: \t\"You have turned to stone.\",\t\t/* 2 */\n    27: \t\"You are a statue.\"\t\t\t/* 1 */\n    28: };\n    29: "
+  },
+  {
+    "key": "L00025_01",
+    "original": "Your limbs have turned to stone.",
+    "translation": "",
+    "context": "src/timeout.c:25:2\n    20: \n    21: /* He is being petrified - dialogue by inmet!tower */\n    22: static NEARDATA const char * const stoned_texts[] = {\n    23: \t\"You are slowing down.\",\t\t/* 5 */\n    24: \t\"Your limbs are stiffening.\",\t\t/* 4 */\n>   25: \t\"Your limbs have turned to stone.\",\t/* 3 */\n    26: \t\"You have turned to stone.\",\t\t/* 2 */\n    27: \t\"You are a statue.\"\t\t\t/* 1 */\n    28: };\n    29: \n    30: STATIC_OVL void"
+  },
+  {
+    "key": "L00026_01",
+    "original": "You have turned to stone.",
+    "translation": "",
+    "context": "src/timeout.c:26:2\n    21: /* He is being petrified - dialogue by inmet!tower */\n    22: static NEARDATA const char * const stoned_texts[] = {\n    23: \t\"You are slowing down.\",\t\t/* 5 */\n    24: \t\"Your limbs are stiffening.\",\t\t/* 4 */\n    25: \t\"Your limbs have turned to stone.\",\t/* 3 */\n>   26: \t\"You have turned to stone.\",\t\t/* 2 */\n    27: \t\"You are a statue.\"\t\t\t/* 1 */\n    28: };\n    29: \n    30: STATIC_OVL void\n    31: stoned_dialogue()"
+  },
+  {
+    "key": "L00027_01",
+    "original": "You are a statue.",
+    "translation": "",
+    "context": "src/timeout.c:27:2\n    22: static NEARDATA const char * const stoned_texts[] = {\n    23: \t\"You are slowing down.\",\t\t/* 5 */\n    24: \t\"Your limbs are stiffening.\",\t\t/* 4 */\n    25: \t\"Your limbs have turned to stone.\",\t/* 3 */\n    26: \t\"You have turned to stone.\",\t\t/* 2 */\n>   27: \t\"You are a statue.\"\t\t\t/* 1 */\n    28: };\n    29: \n    30: STATIC_OVL void\n    31: stoned_dialogue()\n    32: {"
+  },
+  {
+    "key": "L00049_01",
+    "original": "are feeling mildly nauseated.",
+    "translation": "",
+    "context": "src/timeout.c:49:2\n    44: }\n    45: \n    46: \n    47: /* He is getting sicker and sicker prior to vomiting */\n    48: static NEARDATA const char * const vomiting_texts[] = {\n>   49: \t\"are feeling mildly nauseated.\",\t/* 14 */\n    50: \t\"feel slightly confused.\",\t\t/* 11 */\n    51: \t\"can't seem to think straight.\",\t/* 8 */\n    52: \t\"feel incredibly sick.\",\t\t/* 5 */\n    53: \t\"suddenly vomit!\"\t\t\t/* 2 */\n    54: };"
+  },
+  {
+    "key": "L00050_01",
+    "original": "feel slightly confused.",
+    "translation": "",
+    "context": "src/timeout.c:50:2\n    45: \n    46: \n    47: /* He is getting sicker and sicker prior to vomiting */\n    48: static NEARDATA const char * const vomiting_texts[] = {\n    49: \t\"are feeling mildly nauseated.\",\t/* 14 */\n>   50: \t\"feel slightly confused.\",\t\t/* 11 */\n    51: \t\"can't seem to think straight.\",\t/* 8 */\n    52: \t\"feel incredibly sick.\",\t\t/* 5 */\n    53: \t\"suddenly vomit!\"\t\t\t/* 2 */\n    54: };\n    55: "
+  },
+  {
+    "key": "L00051_01",
+    "original": "can't seem to think straight.",
+    "translation": "",
+    "context": "src/timeout.c:51:2\n    46: \n    47: /* He is getting sicker and sicker prior to vomiting */\n    48: static NEARDATA const char * const vomiting_texts[] = {\n    49: \t\"are feeling mildly nauseated.\",\t/* 14 */\n    50: \t\"feel slightly confused.\",\t\t/* 11 */\n>   51: \t\"can't seem to think straight.\",\t/* 8 */\n    52: \t\"feel incredibly sick.\",\t\t/* 5 */\n    53: \t\"suddenly vomit!\"\t\t\t/* 2 */\n    54: };\n    55: \n    56: STATIC_OVL void"
+  },
+  {
+    "key": "L00052_01",
+    "original": "feel incredibly sick.",
+    "translation": "",
+    "context": "src/timeout.c:52:2\n    47: /* He is getting sicker and sicker prior to vomiting */\n    48: static NEARDATA const char * const vomiting_texts[] = {\n    49: \t\"are feeling mildly nauseated.\",\t/* 14 */\n    50: \t\"feel slightly confused.\",\t\t/* 11 */\n    51: \t\"can't seem to think straight.\",\t/* 8 */\n>   52: \t\"feel incredibly sick.\",\t\t/* 5 */\n    53: \t\"suddenly vomit!\"\t\t\t/* 2 */\n    54: };\n    55: \n    56: STATIC_OVL void\n    57: vomiting_dialogue()"
+  },
+  {
+    "key": "L00053_01",
+    "original": "suddenly vomit!",
+    "translation": "",
+    "context": "src/timeout.c:53:2\n    48: static NEARDATA const char * const vomiting_texts[] = {\n    49: \t\"are feeling mildly nauseated.\",\t/* 14 */\n    50: \t\"feel slightly confused.\",\t\t/* 11 */\n    51: \t\"can't seem to think straight.\",\t/* 8 */\n    52: \t\"feel incredibly sick.\",\t\t/* 5 */\n>   53: \t\"suddenly vomit!\"\t\t\t/* 2 */\n    54: };\n    55: \n    56: STATIC_OVL void\n    57: vomiting_dialogue()\n    58: {"
+  },
+  {
+    "key": "L00081_01",
+    "original": "You find it hard to breathe.",
+    "translation": "",
+    "context": "src/timeout.c:81:2\n    76: \t}\n    77: \texercise(A_CON, FALSE);\n    78: }\n    79: \n    80: static NEARDATA const char * const choke_texts[] = {\n>   81: \t\"You find it hard to breathe.\",\n    82: \t\"You're gasping for air.\",\n    83: \t\"You can no longer breathe.\",\n    84: \t\"You're turning %s.\",\n    85: \t\"You suffocate.\"\n    86: };"
+  },
+  {
+    "key": "L00082_01",
+    "original": "You're gasping for air.",
+    "translation": "",
+    "context": "src/timeout.c:82:2\n    77: \texercise(A_CON, FALSE);\n    78: }\n    79: \n    80: static NEARDATA const char * const choke_texts[] = {\n    81: \t\"You find it hard to breathe.\",\n>   82: \t\"You're gasping for air.\",\n    83: \t\"You can no longer breathe.\",\n    84: \t\"You're turning %s.\",\n    85: \t\"You suffocate.\"\n    86: };\n    87: "
+  },
+  {
+    "key": "L00083_01",
+    "original": "You can no longer breathe.",
+    "translation": "",
+    "context": "src/timeout.c:83:2\n    78: }\n    79: \n    80: static NEARDATA const char * const choke_texts[] = {\n    81: \t\"You find it hard to breathe.\",\n    82: \t\"You're gasping for air.\",\n>   83: \t\"You can no longer breathe.\",\n    84: \t\"You're turning %s.\",\n    85: \t\"You suffocate.\"\n    86: };\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {"
+  },
+  {
+    "key": "L00084_01",
+    "original": "You're turning %s.",
+    "translation": "",
+    "context": "src/timeout.c:84:2\n    79: \n    80: static NEARDATA const char * const choke_texts[] = {\n    81: \t\"You find it hard to breathe.\",\n    82: \t\"You're gasping for air.\",\n    83: \t\"You can no longer breathe.\",\n>   84: \t\"You're turning %s.\",\n    85: \t\"You suffocate.\"\n    86: };\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {\n    89: \t\"Your %s is becoming constricted.\","
+  },
+  {
+    "key": "L00085_01",
+    "original": "You suffocate.",
+    "translation": "",
+    "context": "src/timeout.c:85:2\n    80: static NEARDATA const char * const choke_texts[] = {\n    81: \t\"You find it hard to breathe.\",\n    82: \t\"You're gasping for air.\",\n    83: \t\"You can no longer breathe.\",\n    84: \t\"You're turning %s.\",\n>   85: \t\"You suffocate.\"\n    86: };\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {\n    89: \t\"Your %s is becoming constricted.\",\n    90: \t\"Your blood is having trouble reaching your brain.\","
+  },
+  {
+    "key": "L00089_01",
+    "original": "Your %s is becoming constricted.",
+    "translation": "",
+    "context": "src/timeout.c:89:2\n    84: \t\"You're turning %s.\",\n    85: \t\"You suffocate.\"\n    86: };\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {\n>   89: \t\"Your %s is becoming constricted.\",\n    90: \t\"Your blood is having trouble reaching your brain.\",\n    91: \t\"The pressure on your %s increases.\",\n    92: \t\"Your consciousness is fading.\",\n    93: \t\"You suffocate.\"\n    94: };"
+  },
+  {
+    "key": "L00090_01",
+    "original": "Your blood is having trouble reaching your brain.",
+    "translation": "",
+    "context": "src/timeout.c:90:2\n    85: \t\"You suffocate.\"\n    86: };\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {\n    89: \t\"Your %s is becoming constricted.\",\n>   90: \t\"Your blood is having trouble reaching your brain.\",\n    91: \t\"The pressure on your %s increases.\",\n    92: \t\"Your consciousness is fading.\",\n    93: \t\"You suffocate.\"\n    94: };\n    95: "
+  },
+  {
+    "key": "L00091_01",
+    "original": "The pressure on your %s increases.",
+    "translation": "",
+    "context": "src/timeout.c:91:2\n    86: };\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {\n    89: \t\"Your %s is becoming constricted.\",\n    90: \t\"Your blood is having trouble reaching your brain.\",\n>   91: \t\"The pressure on your %s increases.\",\n    92: \t\"Your consciousness is fading.\",\n    93: \t\"You suffocate.\"\n    94: };\n    95: \n    96: STATIC_OVL void"
+  },
+  {
+    "key": "L00092_01",
+    "original": "Your consciousness is fading.",
+    "translation": "",
+    "context": "src/timeout.c:92:2\n    87: \n    88: static NEARDATA const char * const choke_texts2[] = {\n    89: \t\"Your %s is becoming constricted.\",\n    90: \t\"Your blood is having trouble reaching your brain.\",\n    91: \t\"The pressure on your %s increases.\",\n>   92: \t\"Your consciousness is fading.\",\n    93: \t\"You suffocate.\"\n    94: };\n    95: \n    96: STATIC_OVL void\n    97: choke_dialogue()"
+  },
+  {
+    "key": "L00093_01",
+    "original": "You suffocate.",
+    "translation": "",
+    "context": "src/timeout.c:93:2\n    88: static NEARDATA const char * const choke_texts2[] = {\n    89: \t\"Your %s is becoming constricted.\",\n    90: \t\"Your blood is having trouble reaching your brain.\",\n    91: \t\"The pressure on your %s increases.\",\n    92: \t\"Your consciousness is fading.\",\n>   93: \t\"You suffocate.\"\n    94: };\n    95: \n    96: STATIC_OVL void\n    97: choke_dialogue()\n    98: {"
+  },
+  {
+    "key": "L00117_01",
+    "original": "You are turning a little %s.",
+    "translation": "",
+    "context": "src/timeout.c:117:2\n   112: \t}\n   113: \texercise(A_STR, FALSE);\n   114: }\n   115: \n   116: static NEARDATA const char * const slime_texts[] = {\n>  117: \t\"You are turning a little %s.\",           /* 5 */\n   118: \t\"Your limbs are getting oozy.\",              /* 4 */\n   119: \t\"Your skin begins to peel away.\",            /* 3 */\n   120: \t\"You are turning into %s.\",       /* 2 */\n   121: \t\"You have become %s.\"             /* 1 */\n   122: };"
+  },
+  {
+    "key": "L00118_01",
+    "original": "Your limbs are getting oozy.",
+    "translation": "",
+    "context": "src/timeout.c:118:2\n   113: \texercise(A_STR, FALSE);\n   114: }\n   115: \n   116: static NEARDATA const char * const slime_texts[] = {\n   117: \t\"You are turning a little %s.\",           /* 5 */\n>  118: \t\"Your limbs are getting oozy.\",              /* 4 */\n   119: \t\"Your skin begins to peel away.\",            /* 3 */\n   120: \t\"You are turning into %s.\",       /* 2 */\n   121: \t\"You have become %s.\"             /* 1 */\n   122: };\n   123: "
+  },
+  {
+    "key": "L00119_01",
+    "original": "Your skin begins to peel away.",
+    "translation": "",
+    "context": "src/timeout.c:119:2\n   114: }\n   115: \n   116: static NEARDATA const char * const slime_texts[] = {\n   117: \t\"You are turning a little %s.\",           /* 5 */\n   118: \t\"Your limbs are getting oozy.\",              /* 4 */\n>  119: \t\"Your skin begins to peel away.\",            /* 3 */\n   120: \t\"You are turning into %s.\",       /* 2 */\n   121: \t\"You have become %s.\"             /* 1 */\n   122: };\n   123: \n   124: STATIC_OVL void"
+  },
+  {
+    "key": "L00120_01",
+    "original": "You are turning into %s.",
+    "translation": "",
+    "context": "src/timeout.c:120:2\n   115: \n   116: static NEARDATA const char * const slime_texts[] = {\n   117: \t\"You are turning a little %s.\",           /* 5 */\n   118: \t\"Your limbs are getting oozy.\",              /* 4 */\n   119: \t\"Your skin begins to peel away.\",            /* 3 */\n>  120: \t\"You are turning into %s.\",       /* 2 */\n   121: \t\"You have become %s.\"             /* 1 */\n   122: };\n   123: \n   124: STATIC_OVL void\n   125: slime_dialogue()"
+  },
+  {
+    "key": "L00121_01",
+    "original": "You have become %s.",
+    "translation": "",
+    "context": "src/timeout.c:121:2\n   116: static NEARDATA const char * const slime_texts[] = {\n   117: \t\"You are turning a little %s.\",           /* 5 */\n   118: \t\"Your limbs are getting oozy.\",              /* 4 */\n   119: \t\"Your skin begins to peel away.\",            /* 3 */\n   120: \t\"You are turning into %s.\",       /* 2 */\n>  121: \t\"You have become %s.\"             /* 1 */\n   122: };\n   123: \n   124: STATIC_OVL void\n   125: slime_dialogue()\n   126: {"
+  },
+  {
+    "key": "L00138_01",
+    "original": "green slime",
+    "translation": "",
+    "context": "src/timeout.c:138:51\n   133: \t    if (index(str, '%')) {\n   134: \t\tif (i == 4L) {\t/* \"you are turning green\" */\n   135: \t\t    if (!Blind)\t/* [what if you're already green?] */\n   136: \t\t\tpline(str, hcolor(NH_GREEN));\n   137: \t\t} else\n>  138: \t\t    pline(str, an(Hallucination ? rndmonnam() : \"green slime\"));\n   139: \t    } else\n   140: \t\tpline(str);\n   141: \t}\n   142: \tif (i == 3L) {\t/* limbs becoming oozy */\n   143: \t    HFast = 0L;\t/* lose intrinsic speed */"
+  },
+  {
+    "key": "L00154_01",
+    "original": "slime that covers you is burned away!",
+    "translation": "",
+    "context": "src/timeout.c:154:16\n   149: \n   150: void\n   151: burn_away_slime()\n   152: {\n   153: \tif (Slimed) {\n>  154: \t    pline_The(\"slime that covers you is burned away!\");\n   155: \t    Slimed = 0L;\n   156: \t    flags.botl = 1;\n   157: \t}\n   158: \treturn;\n   159: }"
+  },
+  {
+    "key": "L00217_01",
+    "original": "The %s haze around you %s.",
+    "translation": "",
+    "context": "src/timeout.c:217:13\n   212: \t    if (--u.usptime == 0 && u.uspellprot) {\n   213: \t\tu.usptime = u.uspmtime;\n   214: \t\tu.uspellprot--;\n   215: \t\tfind_ac();\n   216: \t\tif (!Blind)\n>  217: \t\t    Norep(\"The %s haze around you %s.\", hcolor(NH_GOLDEN),\n   218: \t\t\t  u.uspellprot ? \"becomes less dense\" : \"disappears\");\n   219: \t    }\n   220: \t}\n   221: \n   222: #ifdef STEED"
+  },
+  {
+    "key": "L00218_01",
+    "original": "becomes less dense",
+    "translation": "",
+    "context": "src/timeout.c:218:21\n   213: \t\tu.usptime = u.uspmtime;\n   214: \t\tu.uspellprot--;\n   215: \t\tfind_ac();\n   216: \t\tif (!Blind)\n   217: \t\t    Norep(\"The %s haze around you %s.\", hcolor(NH_GOLDEN),\n>  218: \t\t\t  u.uspellprot ? \"becomes less dense\" : \"disappears\");\n   219: \t    }\n   220: \t}\n   221: \n   222: #ifdef STEED\n   223: \tif (u.ugallop) {"
+  },
+  {
+    "key": "L00218_02",
+    "original": "disappears",
+    "translation": "",
+    "context": "src/timeout.c:218:44\n   213: \t\tu.usptime = u.uspmtime;\n   214: \t\tu.uspellprot--;\n   215: \t\tfind_ac();\n   216: \t\tif (!Blind)\n   217: \t\t    Norep(\"The %s haze around you %s.\", hcolor(NH_GOLDEN),\n>  218: \t\t\t  u.uspellprot ? \"becomes less dense\" : \"disappears\");\n   219: \t    }\n   220: \t}\n   221: \n   222: #ifdef STEED\n   223: \tif (u.ugallop) {"
+  },
+  {
+    "key": "L00225_01",
+    "original": "%s stops galloping.",
+    "translation": "",
+    "context": "src/timeout.c:225:13\n   220: \t}\n   221: \n   222: #ifdef STEED\n   223: \tif (u.ugallop) {\n   224: \t    if (--u.ugallop == 0L && u.usteed)\n>  225: \t    \tpline(\"%s stops galloping.\", Monnam(u.usteed));\n   226: \t}\n   227: #endif\n   228: \n   229: \tfor(upp = u.uprops; upp < u.uprops+SIZE(u.uprops); upp++)\n   230: \t    if((upp->intrinsic & TIMEOUT) && !(--upp->intrinsic & TIMEOUT)) {"
+  },
+  {
+    "key": "L00241_01",
+    "original": "killed by petrification",
+    "translation": "",
+    "context": "src/timeout.c:241:14\n   236: \t\t\t}\n   237: \t\t\tif (!killer) {\n   238: \t\t\t\t/* leaving killer_format would make it\n   239: \t\t\t\t   \"petrified by petrification\" */\n   240: \t\t\t\tkiller_format = NO_KILLER_PREFIX;\n>  241: \t\t\t\tkiller = \"killed by petrification\";\n   242: \t\t\t}\n   243: \t\t\tdone(STONING);\n   244: \t\t\tbreak;\n   245: \t\tcase SLIMED:\n   246: \t\t\tif (delayed_killer && !killer) {"
+  },
+  {
+    "key": "L00252_01",
+    "original": "turned into green slime",
+    "translation": "",
+    "context": "src/timeout.c:252:14\n   247: \t\t\t\tkiller = delayed_killer;\n   248: \t\t\t\tdelayed_killer = 0;\n   249: \t\t\t}\n   250: \t\t\tif (!killer) {\n   251: \t\t\t\tkiller_format = NO_KILLER_PREFIX;\n>  252: \t\t\t\tkiller = \"turned into green slime\";\n   253: \t\t\t}\n   254: \t\t\tdone(TURNED_SLIME);\n   255: \t\t\tbreak;\n   256: \t\tcase VOMITING:\n   257: \t\t\tmake_vomiting(0L, TRUE);"
+  },
+  {
+    "key": "L00260_01",
+    "original": "die from your illness.",
+    "translation": "",
+    "context": "src/timeout.c:260:8\n   255: \t\t\tbreak;\n   256: \t\tcase VOMITING:\n   257: \t\t\tmake_vomiting(0L, TRUE);\n   258: \t\t\tbreak;\n   259: \t\tcase SICK:\n>  260: \t\t\tYou(\"die from your illness.\");\n   261: \t\t\tkiller_format = KILLED_BY_AN;\n   262: \t\t\tkiller = u.usick_cause;\n   263: \t\t\tif ((m_idx = name_to_mon(killer)) >= LOW_PM) {\n   264: \t\t\t    if (type_is_pname(&mons[m_idx])) {\n   265: \t\t\t\tkiller_format = KILLED_BY;"
+  },
+  {
+    "key": "L00277_01",
+    "original": "yourself slowing down%s.",
+    "translation": "",
+    "context": "src/timeout.c:277:14\n   272: \t\t\tu.usick_type = 0;\n   273: \t\t\tdone(POISONING);\n   274: \t\t\tbreak;\n   275: \t\tcase FAST:\n   276: \t\t\tif (!Very_fast)\n>  277: \t\t\t\tYou_feel(\"yourself slowing down%s.\",\n   278: \t\t\t\t\t\t\tFast ? \" a bit\" : \"\");\n   279: \t\t\tbreak;\n   280: \t\tcase FIRE_RES:\n   281: \t\t\tif (!Fire_resistance)\n   282: \t\t\t\tYou(\"feel a little warmer.\");"
+  },
+  {
+    "key": "L00278_01",
+    "original": " a bit",
+    "translation": "",
+    "context": "src/timeout.c:278:15\n   273: \t\t\tdone(POISONING);\n   274: \t\t\tbreak;\n   275: \t\tcase FAST:\n   276: \t\t\tif (!Very_fast)\n   277: \t\t\t\tYou_feel(\"yourself slowing down%s.\",\n>  278: \t\t\t\t\t\t\tFast ? \" a bit\" : \"\");\n   279: \t\t\tbreak;\n   280: \t\tcase FIRE_RES:\n   281: \t\t\tif (!Fire_resistance)\n   282: \t\t\t\tYou(\"feel a little warmer.\");\n   283: \t\t\tbreak;"
+  },
+  {
+    "key": "L00282_01",
+    "original": "feel a little warmer.",
+    "translation": "",
+    "context": "src/timeout.c:282:9\n   277: \t\t\t\tYou_feel(\"yourself slowing down%s.\",\n   278: \t\t\t\t\t\t\tFast ? \" a bit\" : \"\");\n   279: \t\t\tbreak;\n   280: \t\tcase FIRE_RES:\n   281: \t\t\tif (!Fire_resistance)\n>  282: \t\t\t\tYou(\"feel a little warmer.\");\n   283: \t\t\tbreak;\n   284: \t\tcase COLD_RES:\n   285: \t\t\tif (!Cold_resistance)\n   286: \t\t\t\tYou(\"feel a little cooler.\");\n   287: \t\t\tbreak;"
+  },
+  {
+    "key": "L00286_01",
+    "original": "feel a little cooler.",
+    "translation": "",
+    "context": "src/timeout.c:286:9\n   281: \t\t\tif (!Fire_resistance)\n   282: \t\t\t\tYou(\"feel a little warmer.\");\n   283: \t\t\tbreak;\n   284: \t\tcase COLD_RES:\n   285: \t\t\tif (!Cold_resistance)\n>  286: \t\t\t\tYou(\"feel a little cooler.\");\n   287: \t\t\tbreak;\n   288: \t\tcase SLEEP_RES:\n   289: \t\t\tif (!Sleep_resistance)\n   290: \t\t\t\tYou(\"feel a little sleepy.\");\n   291: \t\t\tbreak;"
+  },
+  {
+    "key": "L00290_01",
+    "original": "feel a little sleepy.",
+    "translation": "",
+    "context": "src/timeout.c:290:9\n   285: \t\t\tif (!Cold_resistance)\n   286: \t\t\t\tYou(\"feel a little cooler.\");\n   287: \t\t\tbreak;\n   288: \t\tcase SLEEP_RES:\n   289: \t\t\tif (!Sleep_resistance)\n>  290: \t\t\t\tYou(\"feel a little sleepy.\");\n   291: \t\t\tbreak;\n   292: \t\tcase SHOCK_RES:\n   293: \t\t\tif (!Shock_resistance)\n   294: \t\t\t\tYou(\"feel a little static cling.\");\n   295: \t\t\tbreak;"
+  },
+  {
+    "key": "L00294_01",
+    "original": "feel a little static cling.",
+    "translation": "",
+    "context": "src/timeout.c:294:9\n   289: \t\t\tif (!Sleep_resistance)\n   290: \t\t\t\tYou(\"feel a little sleepy.\");\n   291: \t\t\tbreak;\n   292: \t\tcase SHOCK_RES:\n   293: \t\t\tif (!Shock_resistance)\n>  294: \t\t\t\tYou(\"feel a little static cling.\");\n   295: \t\t\tbreak;\n   296: \t\tcase POISON_RES:\n   297: \t\t\tif (!Poison_resistance)\n   298: \t\t\t\tYou(\"feel a little less healthy.\");\n   299: \t\t\tbreak;"
+  },
+  {
+    "key": "L00298_01",
+    "original": "feel a little less healthy.",
+    "translation": "",
+    "context": "src/timeout.c:298:9\n   293: \t\t\tif (!Shock_resistance)\n   294: \t\t\t\tYou(\"feel a little static cling.\");\n   295: \t\t\tbreak;\n   296: \t\tcase POISON_RES:\n   297: \t\t\tif (!Poison_resistance)\n>  298: \t\t\t\tYou(\"feel a little less healthy.\");\n   299: \t\t\tbreak;\n   300: \t\tcase DISINT_RES:\n   301: \t\t\tif (!Disint_resistance)\n   302: \t\t\t\tYou(\"feel a little less firm.\");\n   303: \t\t\tbreak;"
+  },
+  {
+    "key": "L00302_01",
+    "original": "feel a little less firm.",
+    "translation": "",
+    "context": "src/timeout.c:302:9\n   297: \t\t\tif (!Poison_resistance)\n   298: \t\t\t\tYou(\"feel a little less healthy.\");\n   299: \t\t\tbreak;\n   300: \t\tcase DISINT_RES:\n   301: \t\t\tif (!Disint_resistance)\n>  302: \t\t\t\tYou(\"feel a little less firm.\");\n   303: \t\t\tbreak;\n   304: \t\tcase TELEPORT:\n   305: \t\t\tif (!Teleportation)\n   306: \t\t\t\tYou(\"feel a little less jumpy.\");\n   307: \t\t\tbreak;"
+  },
+  {
+    "key": "L00306_01",
+    "original": "feel a little less jumpy.",
+    "translation": "",
+    "context": "src/timeout.c:306:9\n   301: \t\t\tif (!Disint_resistance)\n   302: \t\t\t\tYou(\"feel a little less firm.\");\n   303: \t\t\tbreak;\n   304: \t\tcase TELEPORT:\n   305: \t\t\tif (!Teleportation)\n>  306: \t\t\t\tYou(\"feel a little less jumpy.\");\n   307: \t\t\tbreak;\n   308: \t\tcase TELEPORT_CONTROL:\n   309: \t\t\tif (!Teleport_control)\n   310: \t\t\t\tYou(\"feel a little less in control of yourself.\");\n   311: \t\t\tbreak;"
+  },
+  {
+    "key": "L00310_01",
+    "original": "feel a little less in control of yourself.",
+    "translation": "",
+    "context": "src/timeout.c:310:9\n   305: \t\t\tif (!Teleportation)\n   306: \t\t\t\tYou(\"feel a little less jumpy.\");\n   307: \t\t\tbreak;\n   308: \t\tcase TELEPORT_CONTROL:\n   309: \t\t\tif (!Teleport_control)\n>  310: \t\t\t\tYou(\"feel a little less in control of yourself.\");\n   311: \t\t\tbreak;\n   312: \t\tcase TELEPAT:\n   313: \t\t\tif (!HTelepat)\n   314: \t\t\t\tYou(\"feel a little less mentally acute.\");\n   315: \t\t\tbreak;"
+  },
+  {
+    "key": "L00314_01",
+    "original": "feel a little less mentally acute.",
+    "translation": "",
+    "context": "src/timeout.c:314:9\n   309: \t\t\tif (!Teleport_control)\n   310: \t\t\t\tYou(\"feel a little less in control of yourself.\");\n   311: \t\t\tbreak;\n   312: \t\tcase TELEPAT:\n   313: \t\t\tif (!HTelepat)\n>  314: \t\t\t\tYou(\"feel a little less mentally acute.\");\n   315: \t\t\tbreak;\n   316: \t\tcase FREE_ACTION:\n   317: \t\t\tif (!Free_action)\n   318: \t\t\t\tYou(\"feel a little stiffer.\");\n   319: \t\t\tbreak;"
+  },
+  {
+    "key": "L00318_01",
+    "original": "feel a little stiffer.",
+    "translation": "",
+    "context": "src/timeout.c:318:9\n   313: \t\t\tif (!HTelepat)\n   314: \t\t\t\tYou(\"feel a little less mentally acute.\");\n   315: \t\t\tbreak;\n   316: \t\tcase FREE_ACTION:\n   317: \t\t\tif (!Free_action)\n>  318: \t\t\t\tYou(\"feel a little stiffer.\");\n   319: \t\t\tbreak;\n   320: \t\tcase PASSES_WALLS:\n   321: \t\t\tif (!Passes_walls)\n   322: \t\t\t\tYou(\"feel a little more solid.\");\n   323: \t\t\tbreak;"
+  },
+  {
+    "key": "L00322_01",
+    "original": "feel a little more solid.",
+    "translation": "",
+    "context": "src/timeout.c:322:9\n   317: \t\t\tif (!Free_action)\n   318: \t\t\t\tYou(\"feel a little stiffer.\");\n   319: \t\t\tbreak;\n   320: \t\tcase PASSES_WALLS:\n   321: \t\t\tif (!Passes_walls)\n>  322: \t\t\t\tYou(\"feel a little more solid.\");\n   323: \t\t\tbreak;\n   324: \t\tcase INVULNERABLE:\n   325: \t\t\tif (!Invulnerable)\n   326: \t\t\t\tYou(\"are no longer invulnerable.\");\n   327: \t\t\tbreak;"
+  },
+  {
+    "key": "L00326_01",
+    "original": "are no longer invulnerable.",
+    "translation": "",
+    "context": "src/timeout.c:326:9\n   321: \t\t\tif (!Passes_walls)\n   322: \t\t\t\tYou(\"feel a little more solid.\");\n   323: \t\t\tbreak;\n   324: \t\tcase INVULNERABLE:\n   325: \t\t\tif (!Invulnerable)\n>  326: \t\t\t\tYou(\"are no longer invulnerable.\");\n   327: \t\t\tbreak;\n   328: \t\tcase CONFUSION:\n   329: \t\t\tHConfusion = 1; /* So make_confused works properly */\n   330: \t\t\tmake_confused(0L, TRUE);\n   331: \t\t\tstop_occupation();"
+  },
+  {
+    "key": "L00347_01",
+    "original": "are no longer invisible.",
+    "translation": "",
+    "context": "src/timeout.c:347:9\n   342: \t\t\tbreak;\n   343: \t\tcase INVIS:\n   344: \t\t\tnewsym(u.ux,u.uy);\n   345: \t\t\tif (!Invis && !BInvis && !Blind) {\n   346: \t\t\t    You(!See_invisible ?\n>  347: \t\t\t\t    \"are no longer invisible.\" :\n   348: \t\t\t\t    \"can no longer see through yourself.\");\n   349: \t\t\t    stop_occupation();\n   350: \t\t\t}\n   351: \t\t\tbreak;\n   352: \t\tcase SEE_INVIS:"
+  },
+  {
+    "key": "L00348_01",
+    "original": "can no longer see through yourself.",
+    "translation": "",
+    "context": "src/timeout.c:348:9\n   343: \t\tcase INVIS:\n   344: \t\t\tnewsym(u.ux,u.uy);\n   345: \t\t\tif (!Invis && !BInvis && !Blind) {\n   346: \t\t\t    You(!See_invisible ?\n   347: \t\t\t\t    \"are no longer invisible.\" :\n>  348: \t\t\t\t    \"can no longer see through yourself.\");\n   349: \t\t\t    stop_occupation();\n   350: \t\t\t}\n   351: \t\t\tbreak;\n   352: \t\tcase SEE_INVIS:\n   353: \t\t\tset_mimic_blocking(); /* do special mimic handling */"
+  },
+  {
+    "key": "L00371_01",
+    "original": "fall asleep.",
+    "translation": "",
+    "context": "src/timeout.c:371:9\n   366: \t\t\tbreak;\n   367: \t\tcase SLEEPING:\n   368: \t\t\tif (unconscious() || Sleep_resistance)\n   369: \t\t\t\tHSleeping += rnd(100);\n   370: \t\t\telse if (Sleeping) {\n>  371: \t\t\t\tYou(\"fall asleep.\");\n   372: \t\t\t\tsleeptime = rnd(20);\n   373: \t\t\t\tfall_asleep(-sleeptime, TRUE);\n   374: \t\t\t\tHSleeping += sleeptime + rnd(100);\n   375: \t\t\t}\n   376: \t\t\tbreak;"
+  },
+  {
+    "key": "L00382_01",
+    "original": "suffocation",
+    "translation": "",
+    "context": "src/timeout.c:382:27\n   377: \t\tcase LEVITATION:\n   378: \t\t\t(void) float_down(I_SPECIAL|TIMEOUT, 0L);\n   379: \t\t\tbreak;\n   380: \t\tcase STRANGLED:\n   381: \t\t\tkiller_format = KILLED_BY;\n>  382: \t\t\tkiller = (u.uburied) ? \"suffocation\" : \"strangulation\";\n   383: \t\t\tdone(DIED);\n   384: \t\t\tbreak;\n   385: \t\tcase FUMBLING:\n   386: \t\t\t/* call this only when a move took place.  */\n   387: \t\t\t/* otherwise handle fumbling msgs locally. */"
+  },
+  {
+    "key": "L00382_02",
+    "original": "strangulation",
+    "translation": "",
+    "context": "src/timeout.c:382:43\n   377: \t\tcase LEVITATION:\n   378: \t\t\t(void) float_down(I_SPECIAL|TIMEOUT, 0L);\n   379: \t\t\tbreak;\n   380: \t\tcase STRANGLED:\n   381: \t\t\tkiller_format = KILLED_BY;\n>  382: \t\t\tkiller = (u.uburied) ? \"suffocation\" : \"strangulation\";\n   383: \t\t\tdone(DIED);\n   384: \t\t\tbreak;\n   385: \t\tcase FUMBLING:\n   386: \t\t\t/* call this only when a move took place.  */\n   387: \t\t\t/* otherwise handle fumbling msgs locally. */"
+  },
+  {
+    "key": "L00397_01",
+    "original": "make a lot of noise!",
+    "translation": "",
+    "context": "src/timeout.c:397:9\n   392: \t\t\t    /* The more you are carrying the more likely you\n   393: \t\t\t     * are to make noise when you fumble.  Adjustments\n   394: \t\t\t     * to this number must be thoroughly play tested.\n   395: \t\t\t     */\n   396: \t\t\t    if ((inv_weight() > -500)) {\n>  397: \t\t\t\tYou(\"make a lot of noise!\");\n   398: \t\t\t\twake_nearby();\n   399: \t\t\t    }\n   400: \t\t\t}\n   401: \t\t\t/* from outside means slippery ice; don't reset\n   402: \t\t\t   counter if that's the only fumble reason */"
+  },
+  {
+    "key": "L00435_01",
+    "original": "You wake up.",
+    "translation": "",
+    "context": "src/timeout.c:435:27\n   430: \t    flags.soundok = 0;\n   431: \t    afternmv = Hear_again;\t/* this won't give any messages */\n   432: \t}\n   433: \t/* early wakeup from combat won't be possible until next monster turn */\n   434: \tu.usleep = monstermoves;\n>  435: \tnomovemsg = wakeup_msg ? \"You wake up.\" : You_can_move_again;\n   436: }\n   437: \n   438: \n   439: #ifdef UNPOLYPILE\n   440: /* WAC polymorph an object"
+  },
+  {
+    "key": "L00476_01",
+    "original": "Suddenly, your %s!",
+    "translation": "",
+    "context": "src/timeout.c:476:9\n   471: \tobj = (struct obj *) arg;\n   472: \tif (!is_hazy(obj)) return;\n   473: \toldobj = obj->oldtyp;\n   474: \n   475: \tif (carried(obj) && !silent) /* silent == TRUE is a strange case... */\n>  476: \t\tpline(\"Suddenly, your %s!\", aobjnam(obj, \"transmute\"));\n   477: \n   478: \t(void) stop_timer(UNPOLY_OBJ, (genericptr_t) obj);\n   479: \n   480: \tobj = poly_obj(obj, oldobj);\n   481: "
+  },
+  {
+    "key": "L00476_02",
+    "original": "transmute",
+    "translation": "",
+    "context": "src/timeout.c:476:44\n   471: \tobj = (struct obj *) arg;\n   472: \tif (!is_hazy(obj)) return;\n   473: \toldobj = obj->oldtyp;\n   474: \n   475: \tif (carried(obj) && !silent) /* silent == TRUE is a strange case... */\n>  476: \t\tpline(\"Suddenly, your %s!\", aobjnam(obj, \"transmute\"));\n   477: \n   478: \t(void) stop_timer(UNPOLY_OBJ, (genericptr_t) obj);\n   479: \n   480: \tobj = poly_obj(obj, oldobj);\n   481: "
+  },
+  {
+    "key": "L00578_01",
+    "original": "%s shudders.",
+    "translation": "",
+    "context": "src/timeout.c:578:31\n   573: \tint i;\n   574: \n   575: \ti = newcham(mtmp, type, polyspot, transform_msg);\n   576: \tif (system_shock && (!i || !rn2(25))) {\n   577: \t    /* Uhoh.  !i == newcham wasn't able to make the polymorph...*/\n>  578: \t    if (transform_msg) pline(\"%s shudders.\", Monnam(mtmp));\n   579: \t    if (i) mtmp->mhp -= rnd(30);\n   580: \t    if (!i || (mtmp->mhp <= 0)) {\n   581: \t\tif (your_fault) xkilled(mtmp, 3);\n   582: \t\telse mondead(mtmp);\n   583: \t\ti = -1;"
+  },
+  {
+    "key": "L00617_01",
+    "original": "%s shudders.",
+    "translation": "",
+    "context": "src/timeout.c:617:44\n   612: \n   613: \t(void) stop_timer(UNPOLY_MON, (genericptr_t) mtmp);\n   614: \n   615: \tif (!newcham(mtmp, &mons[oldmon], FALSE, (canseemon(mtmp) && !silent))) {\n   616: \t    /* Wasn't able to unpolymorph */\n>  617: \t    if (canseemon(mtmp) && !silent) pline(\"%s shudders.\", oldname);\n   618: \t    mondead(mtmp);\n   619: \t    return;\n   620: \t}\n   621: \n   622: \t/* Check if current form is genocided */"
+  },
+  {
+    "key": "L00625_01",
+    "original": "%s shudders.",
+    "translation": "",
+    "context": "src/timeout.c:625:44\n   620: \t}\n   621: \n   622: \t/* Check if current form is genocided */\n   623: \tif (mvitals[oldmon].mvflags & G_GENOD) {\n   624: \t    mtmp->mhp = 0;\n>  625: \t    if (canseemon(mtmp) && !silent) pline(\"%s shudders.\", oldname);\n   626: \t    /*  Since only player can read scrolls of genocide... */\n   627: \t    xkilled(mtmp, 3);\n   628: \t    return;\n   629: \t}\n   630: "
+  },
+  {
+    "key": "L00632_01",
+    "original": "%s changes into %s!",
+    "translation": "",
+    "context": "src/timeout.c:632:30\n   627: \t    xkilled(mtmp, 3);\n   628: \t    return;\n   629: \t}\n   630: \n   631: #if 0\n>  632: \tif (canseemon(mtmp)) pline (\"%s changes into %s!\", \n   633: \t\toldname, an(mtmp->data->mname));\n   634: #endif\n   635: \treturn;\n   636: }\n   637: "
+  },
+  {
+    "key": "L00653_01",
+    "original": "You play with it, you pay for it!",
+    "translation": "",
+    "context": "src/timeout.c:653:16\n   648: \tif (bomb->cursed && !rn2(2)) return; /* doesn't arm if not armed */\n   649: \n   650: \t/* Now if you play with other people's property... */\n   651: \tif (yours && (!carried(bomb) && costly_spot(bomb->ox, bomb->oy) &&\n   652: \t\t!bomb->no_charge || bomb->unpaid)) {\n>  653: \t    verbalize(\"You play with it, you pay for it!\");\n   654: \t    bill_dummy_object(bomb);\n   655: \t}\n   656: \n   657: \texpiretime = stop_timer(BOMB_BLOW, (genericptr_t) bomb);\n   658: \tif (expiretime > 0L) fuse = fuse - (expiretime - monstermoves);"
+  },
+  {
+    "key": "L00690_01",
+    "original": "see %s engulfed in an explosion!",
+    "translation": "",
+    "context": "src/timeout.c:690:9\n   685: \t\t\t    bomb->owornmask &= ~W_WEP;\n   686: \t\t\t    MON_NOWEP(mtmp);\n   687: \t\t\t}\n   688: \t\t\tif (!silent) {\n   689: \t\t\t    if (canseemon(mtmp))\n>  690: \t\t\t\tYou(\"see %s engulfed in an explosion!\", mon_nam(mtmp));\n   691: \t\t\t}\n   692: \t\t    \tmtmp->mhp -= d(2,5);\n   693: \t\t\tif(mtmp->mhp < 1) {\n   694: \t\t\t\tif(!bomb->yours) \n   695: \t\t\t\t\tmonkilled(mtmp, "
+  },
+  {
+    "key": "L00696_01",
+    "original": "explosion",
+    "translation": "",
+    "context": "src/timeout.c:696:24\n   691: \t\t\t}\n   692: \t\t    \tmtmp->mhp -= d(2,5);\n   693: \t\t\tif(mtmp->mhp < 1) {\n   694: \t\t\t\tif(!bomb->yours) \n   695: \t\t\t\t\tmonkilled(mtmp, \n>  696: \t\t\t\t\t\t  (silent ? \"\" : \"explosion\"),\n   697: \t\t\t\t\t\t  AD_PHYS);\n   698: \t\t\t\telse xkilled(mtmp, !silent);\n   699: \t\t\t}\n   700: \t\t\tbreak;\n   701: \t\t    case OBJ_INVENT:"
+  },
+  {
+    "key": "L00703_01",
+    "original": "Something explodes inside your knapsack!",
+    "translation": "",
+    "context": "src/timeout.c:703:10\n   698: \t\t\t\telse xkilled(mtmp, !silent);\n   699: \t\t\t}\n   700: \t\t\tbreak;\n   701: \t\t    case OBJ_INVENT:\n   702: \t\t    \t/* This shouldn't be silent! */\n>  703: \t\t\tpline(\"Something explodes inside your knapsack!\");\n   704: \t\t\tif (bomb == uwep) {\n   705: \t\t\t    uwepgone();\n   706: \t\t\t    stop_occupation();\n   707: \t\t\t} else if (bomb == uswapwep) {\n   708: \t\t\t    uswapwepgone();"
+  },
+  {
+    "key": "L00714_01",
+    "original": "carrying live explosives",
+    "translation": "",
+    "context": "src/timeout.c:714:23\n   709: \t\t\t    stop_occupation();\n   710: \t\t\t} else if (bomb == uquiver) {\n   711: \t\t\t    uqwepgone();\n   712: \t\t\t    stop_occupation();\n   713: \t\t\t}\n>  714: \t\t    \tlosehp(d(2,5), \"carrying live explosives\", KILLED_BY);\n   715: \t\t    \tbreak;\n   716: \t\t    case OBJ_FLOOR:\n   717: \t\t\tunderwater = is_pool(x, y);\n   718: \t\t\tif (!silent) {\n   719: \t\t\t    if (x == u.ux && y == u.uy) {"
+  },
+  {
+    "key": "L00721_01",
+    "original": "water boils beneath you.",
+    "translation": "",
+    "context": "src/timeout.c:721:19\n   716: \t\t    case OBJ_FLOOR:\n   717: \t\t\tunderwater = is_pool(x, y);\n   718: \t\t\tif (!silent) {\n   719: \t\t\t    if (x == u.ux && y == u.uy) {\n   720: \t\t\t\tif (underwater && (Flying || Levitation))\n>  721: \t\t\t\t    pline_The(\"water boils beneath you.\");\n   722: \t\t\t\telse if (underwater && Wwalking)\n   723: \t\t\t\t    pline_The(\"water erupts around you.\");\n   724: \t\t\t\telse pline(\"A bomb explodes under your %s!\",\n   725: \t\t\t\t  makeplural(body_part(FOOT)));\n   726: \t\t\t    } else if (cansee(x, y))"
+  },
+  {
+    "key": "L00723_01",
+    "original": "water erupts around you.",
+    "translation": "",
+    "context": "src/timeout.c:723:19\n   718: \t\t\tif (!silent) {\n   719: \t\t\t    if (x == u.ux && y == u.uy) {\n   720: \t\t\t\tif (underwater && (Flying || Levitation))\n   721: \t\t\t\t    pline_The(\"water boils beneath you.\");\n   722: \t\t\t\telse if (underwater && Wwalking)\n>  723: \t\t\t\t    pline_The(\"water erupts around you.\");\n   724: \t\t\t\telse pline(\"A bomb explodes under your %s!\",\n   725: \t\t\t\t  makeplural(body_part(FOOT)));\n   726: \t\t\t    } else if (cansee(x, y))\n   727: \t\t\t\tYou(underwater ?\n   728: \t\t\t\t    \"see a plume of water shoot up.\" :"
+  },
+  {
+    "key": "L00724_01",
+    "original": "A bomb explodes under your %s!",
+    "translation": "",
+    "context": "src/timeout.c:724:16\n   719: \t\t\t    if (x == u.ux && y == u.uy) {\n   720: \t\t\t\tif (underwater && (Flying || Levitation))\n   721: \t\t\t\t    pline_The(\"water boils beneath you.\");\n   722: \t\t\t\telse if (underwater && Wwalking)\n   723: \t\t\t\t    pline_The(\"water erupts around you.\");\n>  724: \t\t\t\telse pline(\"A bomb explodes under your %s!\",\n   725: \t\t\t\t  makeplural(body_part(FOOT)));\n   726: \t\t\t    } else if (cansee(x, y))\n   727: \t\t\t\tYou(underwater ?\n   728: \t\t\t\t    \"see a plume of water shoot up.\" :\n   729: \t\t\t\t    \"see a bomb explode.\");"
+  },
+  {
+    "key": "L00728_01",
+    "original": "see a plume of water shoot up.",
+    "translation": "",
+    "context": "src/timeout.c:728:9\n   723: \t\t\t\t    pline_The(\"water erupts around you.\");\n   724: \t\t\t\telse pline(\"A bomb explodes under your %s!\",\n   725: \t\t\t\t  makeplural(body_part(FOOT)));\n   726: \t\t\t    } else if (cansee(x, y))\n   727: \t\t\t\tYou(underwater ?\n>  728: \t\t\t\t    \"see a plume of water shoot up.\" :\n   729: \t\t\t\t    \"see a bomb explode.\");\n   730: \t\t\t}\n   731: \t\t\tif (underwater && (Flying || Levitation || Wwalking)) {\n   732: \t\t\t    if (Wwalking && x == u.ux && y == u.uy) {\n   733: \t\t\t\tstruct trap trap;"
+  },
+  {
+    "key": "L00729_01",
+    "original": "see a bomb explode.",
+    "translation": "",
+    "context": "src/timeout.c:729:9\n   724: \t\t\t\telse pline(\"A bomb explodes under your %s!\",\n   725: \t\t\t\t  makeplural(body_part(FOOT)));\n   726: \t\t\t    } else if (cansee(x, y))\n   727: \t\t\t\tYou(underwater ?\n   728: \t\t\t\t    \"see a plume of water shoot up.\" :\n>  729: \t\t\t\t    \"see a bomb explode.\");\n   730: \t\t\t}\n   731: \t\t\tif (underwater && (Flying || Levitation || Wwalking)) {\n   732: \t\t\t    if (Wwalking && x == u.ux && y == u.uy) {\n   733: \t\t\t\tstruct trap trap;\n   734: \t\t\t\ttrap.ntrap = NULL;"
+  },
+  {
+    "key": "L00752_01",
+    "original": "a muffled explosion.",
+    "translation": "",
+    "context": "src/timeout.c:752:17\n   747: \t\t\t    goto free_bomb;\n   748: \t\t\t}\n   749: \t\t    \tbreak;\n   750: \t\t    default:\t/* Buried, contained, etc. */\n   751: \t\t\tif (!silent)\n>  752: \t\t\t    You_hear(\"a muffled explosion.\");\n   753: \t\t\tgoto free_bomb;\n   754: \t\t\tbreak;\n   755: \t\t}\n   756: \t\tgrenade_explode(bomb, x, y, bomb->yours, silent ? 2 : 0);\n   757: \t\treturn;"
+  },
+  {
+    "key": "L00886_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/timeout.c:886:22\n   881: \tif (mon) {\n   882: \t    char monnambuf[BUFSZ], carriedby[BUFSZ];\n   883: \t    boolean siblings = (hatchcount > 1), redraw = FALSE;\n   884: \n   885: \t    if (cansee_hatchspot) {\n>  886: \t\tSprintf(monnambuf, \"%s%s\",\n   887: \t\t\tsiblings ? \"some \" : \"\",\n   888: \t\t\tsiblings ?\n   889: \t\t\tmakeplural(m_monnam(mon)) : an(m_monnam(mon)));\n   890: \t\t/* we don't learn the egg type here because learning\n   891: \t\t   an egg type requires either seeing the egg hatch"
+  },
+  {
+    "key": "L00887_01",
+    "original": "some ",
+    "translation": "",
+    "context": "src/timeout.c:887:15\n   882: \t    char monnambuf[BUFSZ], carriedby[BUFSZ];\n   883: \t    boolean siblings = (hatchcount > 1), redraw = FALSE;\n   884: \n   885: \t    if (cansee_hatchspot) {\n   886: \t\tSprintf(monnambuf, \"%s%s\",\n>  887: \t\t\tsiblings ? \"some \" : \"\",\n   888: \t\t\tsiblings ?\n   889: \t\t\tmakeplural(m_monnam(mon)) : an(m_monnam(mon)));\n   890: \t\t/* we don't learn the egg type here because learning\n   891: \t\t   an egg type requires either seeing the egg hatch\n   892: \t\t   or being familiar with the egg already,"
+  },
+  {
+    "key": "L00901_01",
+    "original": "%s %s from your pack!",
+    "translation": "",
+    "context": "src/timeout.c:901:13\n   896: \t    }\n   897: \t    switch (egg->where) {\n   898: \t\tcase OBJ_INVENT:\n   899: \t\t    knows_egg = TRUE; /* true even if you are blind */\n   900: \t\t    if (!cansee_hatchspot)\n>  901: \t\t\tYou_feel(\"%s %s from your pack!\", something,\n   902: \t\t\t    locomotion(mon->data, \"drop\"));\n   903: \t\t    else\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {"
+  },
+  {
+    "key": "L00902_01",
+    "original": "drop",
+    "translation": "",
+    "context": "src/timeout.c:902:30\n   897: \t    switch (egg->where) {\n   898: \t\tcase OBJ_INVENT:\n   899: \t\t    knows_egg = TRUE; /* true even if you are blind */\n   900: \t\t    if (!cansee_hatchspot)\n   901: \t\t\tYou_feel(\"%s %s from your pack!\", something,\n>  902: \t\t\t    locomotion(mon->data, \"drop\"));\n   903: \t\t    else\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\","
+  },
+  {
+    "key": "L00904_01",
+    "original": "see %s %s out of your pack!",
+    "translation": "",
+    "context": "src/timeout.c:904:8\n   899: \t\t    knows_egg = TRUE; /* true even if you are blind */\n   900: \t\t    if (!cansee_hatchspot)\n   901: \t\t\tYou_feel(\"%s %s from your pack!\", something,\n   902: \t\t\t    locomotion(mon->data, \"drop\"));\n   903: \t\t    else\n>  904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n   908: \t\t\t    siblings ? \"Their\" : \"Its\",\n   909: \t\t\t    flags.female ? \"mommy\" : \"daddy\","
+  },
+  {
+    "key": "L00905_01",
+    "original": "drop",
+    "translation": "",
+    "context": "src/timeout.c:905:41\n   900: \t\t    if (!cansee_hatchspot)\n   901: \t\t\tYou_feel(\"%s %s from your pack!\", something,\n   902: \t\t\t    locomotion(mon->data, \"drop\"));\n   903: \t\t    else\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n>  905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n   908: \t\t\t    siblings ? \"Their\" : \"Its\",\n   909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");"
+  },
+  {
+    "key": "L00907_01",
+    "original": "%s cries sound like \\\"%s%s\\\"",
+    "translation": "",
+    "context": "src/timeout.c:907:10\n   902: \t\t\t    locomotion(mon->data, \"drop\"));\n   903: \t\t    else\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n>  907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n   908: \t\t\t    siblings ? \"Their\" : \"Its\",\n   909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");\n   911: \t\t    } else if (mon->data->mlet == S_DRAGON) {\n   912: \t\t\tverbalize(\"Gleep!\");\t\t/* Mything eggs :-) */"
+  },
+  {
+    "key": "L00908_01",
+    "original": "Their",
+    "translation": "",
+    "context": "src/timeout.c:908:19\n   903: \t\t    else\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n>  908: \t\t\t    siblings ? \"Their\" : \"Its\",\n   909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");\n   911: \t\t    } else if (mon->data->mlet == S_DRAGON) {\n   912: \t\t\tverbalize(\"Gleep!\");\t\t/* Mything eggs :-) */\n   913: \t\t    }"
+  },
+  {
+    "key": "L00908_02",
+    "original": "Its",
+    "translation": "",
+    "context": "src/timeout.c:908:29\n   903: \t\t    else\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n>  908: \t\t\t    siblings ? \"Their\" : \"Its\",\n   909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");\n   911: \t\t    } else if (mon->data->mlet == S_DRAGON) {\n   912: \t\t\tverbalize(\"Gleep!\");\t\t/* Mything eggs :-) */\n   913: \t\t    }"
+  },
+  {
+    "key": "L00909_01",
+    "original": "mommy",
+    "translation": "",
+    "context": "src/timeout.c:909:23\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n   908: \t\t\t    siblings ? \"Their\" : \"Its\",\n>  909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");\n   911: \t\t    } else if (mon->data->mlet == S_DRAGON) {\n   912: \t\t\tverbalize(\"Gleep!\");\t\t/* Mything eggs :-) */\n   913: \t\t    }\n   914: \t\t    break;"
+  },
+  {
+    "key": "L00909_02",
+    "original": "daddy",
+    "translation": "",
+    "context": "src/timeout.c:909:33\n   904: \t\t\tYou(\"see %s %s out of your pack!\",\n   905: \t\t\t    monnambuf, locomotion(mon->data, \"drop\"));\n   906: \t\t    if (yours) {\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n   908: \t\t\t    siblings ? \"Their\" : \"Its\",\n>  909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");\n   911: \t\t    } else if (mon->data->mlet == S_DRAGON) {\n   912: \t\t\tverbalize(\"Gleep!\");\t\t/* Mything eggs :-) */\n   913: \t\t    }\n   914: \t\t    break;"
+  },
+  {
+    "key": "L00912_01",
+    "original": "Gleep!",
+    "translation": "",
+    "context": "src/timeout.c:912:14\n   907: \t\t\tpline(\"%s cries sound like \\\"%s%s\\\"\",\n   908: \t\t\t    siblings ? \"Their\" : \"Its\",\n   909: \t\t\t    flags.female ? \"mommy\" : \"daddy\",\n   910: \t\t\t    egg->spe ? \".\" : \"?\");\n   911: \t\t    } else if (mon->data->mlet == S_DRAGON) {\n>  912: \t\t\tverbalize(\"Gleep!\");\t\t/* Mything eggs :-) */\n   913: \t\t    }\n   914: \t\t    break;\n   915: \n   916: \t\tcase OBJ_FLOOR:\n   917: \t\t    if (cansee_hatchspot) {"
+  },
+  {
+    "key": "L00919_01",
+    "original": "see %s hatch.",
+    "translation": "",
+    "context": "src/timeout.c:919:8\n   914: \t\t    break;\n   915: \n   916: \t\tcase OBJ_FLOOR:\n   917: \t\t    if (cansee_hatchspot) {\n   918: \t\t\tknows_egg = TRUE;\n>  919: \t\t\tYou(\"see %s hatch.\", monnambuf);\n   920: \t\t\tredraw = TRUE;\t/* update egg's map location */\n   921: \t\t    }\n   922: \t\t    break;\n   923: \n   924: \t\tcase OBJ_MINVENT:"
+  },
+  {
+    "key": "L00928_01",
+    "original": "%s pack",
+    "translation": "",
+    "context": "src/timeout.c:928:27\n   923: \n   924: \t\tcase OBJ_MINVENT:\n   925: \t\t    if (cansee_hatchspot) {\n   926: \t\t\t/* egg carring monster might be invisible */\n   927: \t\t\tif (canseemon(egg->ocarry)) {\n>  928: \t\t\t    Sprintf(carriedby, \"%s pack\",\n   929: \t\t\t\t     s_suffix(a_monnam(egg->ocarry)));\n   930: \t\t\t    knows_egg = TRUE;\n   931: \t\t\t}\n   932: \t\t\telse if (is_pool(mon->mx, mon->my))\n   933: \t\t\t    Strcpy(carriedby, \"empty water\");"
+  },
+  {
+    "key": "L00933_01",
+    "original": "empty water",
+    "translation": "",
+    "context": "src/timeout.c:933:26\n   928: \t\t\t    Sprintf(carriedby, \"%s pack\",\n   929: \t\t\t\t     s_suffix(a_monnam(egg->ocarry)));\n   930: \t\t\t    knows_egg = TRUE;\n   931: \t\t\t}\n   932: \t\t\telse if (is_pool(mon->mx, mon->my))\n>  933: \t\t\t    Strcpy(carriedby, \"empty water\");\n   934: \t\t\telse\n   935: \t\t\t    Strcpy(carriedby, \"thin air\");\n   936: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n   937: \t\t\t    locomotion(mon->data, \"drop\"), carriedby);\n   938: \t\t    }"
+  },
+  {
+    "key": "L00935_01",
+    "original": "thin air",
+    "translation": "",
+    "context": "src/timeout.c:935:26\n   930: \t\t\t    knows_egg = TRUE;\n   931: \t\t\t}\n   932: \t\t\telse if (is_pool(mon->mx, mon->my))\n   933: \t\t\t    Strcpy(carriedby, \"empty water\");\n   934: \t\t\telse\n>  935: \t\t\t    Strcpy(carriedby, \"thin air\");\n   936: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n   937: \t\t\t    locomotion(mon->data, \"drop\"), carriedby);\n   938: \t\t    }\n   939: \t\t    break;\n   940: #if 0"
+  },
+  {
+    "key": "L00936_01",
+    "original": "see %s %s out of %s!",
+    "translation": "",
+    "context": "src/timeout.c:936:8\n   931: \t\t\t}\n   932: \t\t\telse if (is_pool(mon->mx, mon->my))\n   933: \t\t\t    Strcpy(carriedby, \"empty water\");\n   934: \t\t\telse\n   935: \t\t\t    Strcpy(carriedby, \"thin air\");\n>  936: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n   937: \t\t\t    locomotion(mon->data, \"drop\"), carriedby);\n   938: \t\t    }\n   939: \t\t    break;\n   940: #if 0\n   941: \t\tcase OBJ_MIGRATING:"
+  },
+  {
+    "key": "L00937_01",
+    "original": "drop",
+    "translation": "",
+    "context": "src/timeout.c:937:30\n   932: \t\t\telse if (is_pool(mon->mx, mon->my))\n   933: \t\t\t    Strcpy(carriedby, \"empty water\");\n   934: \t\t\telse\n   935: \t\t\t    Strcpy(carriedby, \"thin air\");\n   936: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n>  937: \t\t\t    locomotion(mon->data, \"drop\"), carriedby);\n   938: \t\t    }\n   939: \t\t    break;\n   940: #if 0\n   941: \t\tcase OBJ_MIGRATING:\n   942: \t\t    break;"
+  },
+  {
+    "key": "L00945_01",
+    "original": "egg hatched where? (%d)",
+    "translation": "",
+    "context": "src/timeout.c:945:18\n   940: #if 0\n   941: \t\tcase OBJ_MIGRATING:\n   942: \t\t    break;\n   943: #endif\n   944: \t\tdefault:\n>  945: \t\t    impossible(\"egg hatched where? (%d)\", (int)egg->where);\n   946: \t\t    break;\n   947: \t    }\n   948: \n   949: \t    if (cansee_hatchspot && knows_egg)\n   950: \t\tlearn_egg_type(mnum);"
+  },
+  {
+    "key": "L01025_01",
+    "original": "it",
+    "translation": "",
+    "context": "src/timeout.c:1025:35\n  1020: \t\tduring the move, so refer to by via pronoun; otherwise,\n  1021: \t\tif the top item has been or can be seen, refer to it by\n  1022: \t\tname; if not, look for rocks to trip over; trip over\n  1023: \t\tanonymous \"something\" if there aren't any rocks.\n  1024: \t     */\n> 1025: \t    pronoun = otmp->quan == 1L ? \"it\" : Hallucination ? \"they\" : \"them\";\n  1026: \t    what = !otmp->nexthere ? pronoun :\n  1027: \t\t  (otmp->dknown || !Blind) ? doname(otmp) :\n  1028: \t\t  ((otmp = sobj_at(ROCK, u.ux, u.uy)) == 0 ? something :\n  1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {"
+  },
+  {
+    "key": "L01025_02",
+    "original": "they",
+    "translation": "",
+    "context": "src/timeout.c:1025:58\n  1020: \t\tduring the move, so refer to by via pronoun; otherwise,\n  1021: \t\tif the top item has been or can be seen, refer to it by\n  1022: \t\tname; if not, look for rocks to trip over; trip over\n  1023: \t\tanonymous \"something\" if there aren't any rocks.\n  1024: \t     */\n> 1025: \t    pronoun = otmp->quan == 1L ? \"it\" : Hallucination ? \"they\" : \"them\";\n  1026: \t    what = !otmp->nexthere ? pronoun :\n  1027: \t\t  (otmp->dknown || !Blind) ? doname(otmp) :\n  1028: \t\t  ((otmp = sobj_at(ROCK, u.ux, u.uy)) == 0 ? something :\n  1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {"
+  },
+  {
+    "key": "L01025_03",
+    "original": "them",
+    "translation": "",
+    "context": "src/timeout.c:1025:67\n  1020: \t\tduring the move, so refer to by via pronoun; otherwise,\n  1021: \t\tif the top item has been or can be seen, refer to it by\n  1022: \t\tname; if not, look for rocks to trip over; trip over\n  1023: \t\tanonymous \"something\" if there aren't any rocks.\n  1024: \t     */\n> 1025: \t    pronoun = otmp->quan == 1L ? \"it\" : Hallucination ? \"they\" : \"them\";\n  1026: \t    what = !otmp->nexthere ? pronoun :\n  1027: \t\t  (otmp->dknown || !Blind) ? doname(otmp) :\n  1028: \t\t  ((otmp = sobj_at(ROCK, u.ux, u.uy)) == 0 ? something :\n  1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {"
+  },
+  {
+    "key": "L01029_01",
+    "original": "a rock",
+    "translation": "",
+    "context": "src/timeout.c:1029:25\n  1024: \t     */\n  1025: \t    pronoun = otmp->quan == 1L ? \"it\" : Hallucination ? \"they\" : \"them\";\n  1026: \t    what = !otmp->nexthere ? pronoun :\n  1027: \t\t  (otmp->dknown || !Blind) ? doname(otmp) :\n  1028: \t\t  ((otmp = sobj_at(ROCK, u.ux, u.uy)) == 0 ? something :\n> 1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {\n  1031: \t\twhat = strcpy(buf, what);\n  1032: \t\tbuf[0] = highc(buf[0]);\n  1033: \t\tpline(\"Egads!  %s bite%s your %s!\",\n  1034: \t\t\twhat, (!otmp || otmp->quan == 1L) ? \"s\" : \"\","
+  },
+  {
+    "key": "L01029_02",
+    "original": "some rocks",
+    "translation": "",
+    "context": "src/timeout.c:1029:36\n  1024: \t     */\n  1025: \t    pronoun = otmp->quan == 1L ? \"it\" : Hallucination ? \"they\" : \"them\";\n  1026: \t    what = !otmp->nexthere ? pronoun :\n  1027: \t\t  (otmp->dknown || !Blind) ? doname(otmp) :\n  1028: \t\t  ((otmp = sobj_at(ROCK, u.ux, u.uy)) == 0 ? something :\n> 1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {\n  1031: \t\twhat = strcpy(buf, what);\n  1032: \t\tbuf[0] = highc(buf[0]);\n  1033: \t\tpline(\"Egads!  %s bite%s your %s!\",\n  1034: \t\t\twhat, (!otmp || otmp->quan == 1L) ? \"s\" : \"\","
+  },
+  {
+    "key": "L01033_01",
+    "original": "Egads!  %s bite%s your %s!",
+    "translation": "",
+    "context": "src/timeout.c:1033:9\n  1028: \t\t  ((otmp = sobj_at(ROCK, u.ux, u.uy)) == 0 ? something :\n  1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {\n  1031: \t\twhat = strcpy(buf, what);\n  1032: \t\tbuf[0] = highc(buf[0]);\n> 1033: \t\tpline(\"Egads!  %s bite%s your %s!\",\n  1034: \t\t\twhat, (!otmp || otmp->quan == 1L) ? \"s\" : \"\",\n  1035: \t\t\tbody_part(FOOT));\n  1036: \t    } else {\n  1037: \t\tYou(\"trip over %s.\", what);\n  1038: \t    }"
+  },
+  {
+    "key": "L01034_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1034:40\n  1029: \t\t  (otmp->quan == 1L ? \"a rock\" : \"some rocks\"));\n  1030: \t    if (Hallucination) {\n  1031: \t\twhat = strcpy(buf, what);\n  1032: \t\tbuf[0] = highc(buf[0]);\n  1033: \t\tpline(\"Egads!  %s bite%s your %s!\",\n> 1034: \t\t\twhat, (!otmp || otmp->quan == 1L) ? \"s\" : \"\",\n  1035: \t\t\tbody_part(FOOT));\n  1036: \t    } else {\n  1037: \t\tYou(\"trip over %s.\", what);\n  1038: \t    }\n  1039: \t} else if (rn2(3) && is_ice(u.ux, u.uy)) {"
+  },
+  {
+    "key": "L01037_01",
+    "original": "trip over %s.",
+    "translation": "",
+    "context": "src/timeout.c:1037:7\n  1032: \t\tbuf[0] = highc(buf[0]);\n  1033: \t\tpline(\"Egads!  %s bite%s your %s!\",\n  1034: \t\t\twhat, (!otmp || otmp->quan == 1L) ? \"s\" : \"\",\n  1035: \t\t\tbody_part(FOOT));\n  1036: \t    } else {\n> 1037: \t\tYou(\"trip over %s.\", what);\n  1038: \t    }\n  1039: \t} else if (rn2(3) && is_ice(u.ux, u.uy)) {\n  1040: \t    pline(\"%s %s%s on the ice.\",\n  1041: #ifdef STEED\n  1042: \t\tu.usteed ? upstart(x_monnam(u.usteed,"
+  },
+  {
+    "key": "L01040_01",
+    "original": "%s %s%s on the ice.",
+    "translation": "",
+    "context": "src/timeout.c:1040:12\n  1035: \t\t\tbody_part(FOOT));\n  1036: \t    } else {\n  1037: \t\tYou(\"trip over %s.\", what);\n  1038: \t    }\n  1039: \t} else if (rn2(3) && is_ice(u.ux, u.uy)) {\n> 1040: \t    pline(\"%s %s%s on the ice.\",\n  1041: #ifdef STEED\n  1042: \t\tu.usteed ? upstart(x_monnam(u.usteed,\n  1043: \t\t\t\tu.usteed->mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n  1044: \t\t\t\t(char *)0, SUPPRESS_SADDLE, FALSE)) :\n  1045: #endif"
+  },
+  {
+    "key": "L01046_01",
+    "original": "You",
+    "translation": "",
+    "context": "src/timeout.c:1046:3\n  1041: #ifdef STEED\n  1042: \t\tu.usteed ? upstart(x_monnam(u.usteed,\n  1043: \t\t\t\tu.usteed->mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n  1044: \t\t\t\t(char *)0, SUPPRESS_SADDLE, FALSE)) :\n  1045: #endif\n> 1046: \t\t\"You\", rn2(2) ? \"slip\" : \"slide\", on_foot ? \"\" : \"s\");\n  1047: \t} else {\n  1048: \t    if (on_foot) {\n  1049: \t\tswitch (rn2(4)) {\n  1050: \t\t  case 1:\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?"
+  },
+  {
+    "key": "L01046_02",
+    "original": "slip",
+    "translation": "",
+    "context": "src/timeout.c:1046:19\n  1041: #ifdef STEED\n  1042: \t\tu.usteed ? upstart(x_monnam(u.usteed,\n  1043: \t\t\t\tu.usteed->mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n  1044: \t\t\t\t(char *)0, SUPPRESS_SADDLE, FALSE)) :\n  1045: #endif\n> 1046: \t\t\"You\", rn2(2) ? \"slip\" : \"slide\", on_foot ? \"\" : \"s\");\n  1047: \t} else {\n  1048: \t    if (on_foot) {\n  1049: \t\tswitch (rn2(4)) {\n  1050: \t\t  case 1:\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?"
+  },
+  {
+    "key": "L01046_03",
+    "original": "slide",
+    "translation": "",
+    "context": "src/timeout.c:1046:28\n  1041: #ifdef STEED\n  1042: \t\tu.usteed ? upstart(x_monnam(u.usteed,\n  1043: \t\t\t\tu.usteed->mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n  1044: \t\t\t\t(char *)0, SUPPRESS_SADDLE, FALSE)) :\n  1045: #endif\n> 1046: \t\t\"You\", rn2(2) ? \"slip\" : \"slide\", on_foot ? \"\" : \"s\");\n  1047: \t} else {\n  1048: \t    if (on_foot) {\n  1049: \t\tswitch (rn2(4)) {\n  1050: \t\t  case 1:\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?"
+  },
+  {
+    "key": "L01046_04",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1046:52\n  1041: #ifdef STEED\n  1042: \t\tu.usteed ? upstart(x_monnam(u.usteed,\n  1043: \t\t\t\tu.usteed->mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n  1044: \t\t\t\t(char *)0, SUPPRESS_SADDLE, FALSE)) :\n  1045: #endif\n> 1046: \t\t\"You\", rn2(2) ? \"slip\" : \"slide\", on_foot ? \"\" : \"s\");\n  1047: \t} else {\n  1048: \t    if (on_foot) {\n  1049: \t\tswitch (rn2(4)) {\n  1050: \t\t  case 1:\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?"
+  },
+  {
+    "key": "L01051_01",
+    "original": "trip over your own %s.",
+    "translation": "",
+    "context": "src/timeout.c:1051:8\n  1046: \t\t\"You\", rn2(2) ? \"slip\" : \"slide\", on_foot ? \"\" : \"s\");\n  1047: \t} else {\n  1048: \t    if (on_foot) {\n  1049: \t\tswitch (rn2(4)) {\n  1050: \t\t  case 1:\n> 1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?\n  1052: \t\t\t\t\"elbow\" : makeplural(body_part(FOOT)));\n  1053: \t\t\tbreak;\n  1054: \t\t  case 2:\n  1055: \t\t\tYou(\"slip %s.\", Hallucination ?\n  1056: \t\t\t\t\"on a banana peel\" : \"and nearly fall\");"
+  },
+  {
+    "key": "L01052_01",
+    "original": "elbow",
+    "translation": "",
+    "context": "src/timeout.c:1052:5\n  1047: \t} else {\n  1048: \t    if (on_foot) {\n  1049: \t\tswitch (rn2(4)) {\n  1050: \t\t  case 1:\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?\n> 1052: \t\t\t\t\"elbow\" : makeplural(body_part(FOOT)));\n  1053: \t\t\tbreak;\n  1054: \t\t  case 2:\n  1055: \t\t\tYou(\"slip %s.\", Hallucination ?\n  1056: \t\t\t\t\"on a banana peel\" : \"and nearly fall\");\n  1057: \t\t\tbreak;"
+  },
+  {
+    "key": "L01055_01",
+    "original": "slip %s.",
+    "translation": "",
+    "context": "src/timeout.c:1055:8\n  1050: \t\t  case 1:\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?\n  1052: \t\t\t\t\"elbow\" : makeplural(body_part(FOOT)));\n  1053: \t\t\tbreak;\n  1054: \t\t  case 2:\n> 1055: \t\t\tYou(\"slip %s.\", Hallucination ?\n  1056: \t\t\t\t\"on a banana peel\" : \"and nearly fall\");\n  1057: \t\t\tbreak;\n  1058: \t\t  case 3:\n  1059: \t\t\tYou(\"flounder.\");\n  1060: \t\t\tbreak;"
+  },
+  {
+    "key": "L01056_01",
+    "original": "on a banana peel",
+    "translation": "",
+    "context": "src/timeout.c:1056:5\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?\n  1052: \t\t\t\t\"elbow\" : makeplural(body_part(FOOT)));\n  1053: \t\t\tbreak;\n  1054: \t\t  case 2:\n  1055: \t\t\tYou(\"slip %s.\", Hallucination ?\n> 1056: \t\t\t\t\"on a banana peel\" : \"and nearly fall\");\n  1057: \t\t\tbreak;\n  1058: \t\t  case 3:\n  1059: \t\t\tYou(\"flounder.\");\n  1060: \t\t\tbreak;\n  1061: \t\t  default:"
+  },
+  {
+    "key": "L01056_02",
+    "original": "and nearly fall",
+    "translation": "",
+    "context": "src/timeout.c:1056:26\n  1051: \t\t\tYou(\"trip over your own %s.\", Hallucination ?\n  1052: \t\t\t\t\"elbow\" : makeplural(body_part(FOOT)));\n  1053: \t\t\tbreak;\n  1054: \t\t  case 2:\n  1055: \t\t\tYou(\"slip %s.\", Hallucination ?\n> 1056: \t\t\t\t\"on a banana peel\" : \"and nearly fall\");\n  1057: \t\t\tbreak;\n  1058: \t\t  case 3:\n  1059: \t\t\tYou(\"flounder.\");\n  1060: \t\t\tbreak;\n  1061: \t\t  default:"
+  },
+  {
+    "key": "L01059_01",
+    "original": "flounder.",
+    "translation": "",
+    "context": "src/timeout.c:1059:8\n  1054: \t\t  case 2:\n  1055: \t\t\tYou(\"slip %s.\", Hallucination ?\n  1056: \t\t\t\t\"on a banana peel\" : \"and nearly fall\");\n  1057: \t\t\tbreak;\n  1058: \t\t  case 3:\n> 1059: \t\t\tYou(\"flounder.\");\n  1060: \t\t\tbreak;\n  1061: \t\t  default:\n  1062: \t\t\tYou(\"stumble.\");\n  1063: \t\t\tbreak;\n  1064: \t\t}"
+  },
+  {
+    "key": "L01062_01",
+    "original": "stumble.",
+    "translation": "",
+    "context": "src/timeout.c:1062:8\n  1057: \t\t\tbreak;\n  1058: \t\t  case 3:\n  1059: \t\t\tYou(\"flounder.\");\n  1060: \t\t\tbreak;\n  1061: \t\t  default:\n> 1062: \t\t\tYou(\"stumble.\");\n  1063: \t\t\tbreak;\n  1064: \t\t}\n  1065: \t    }\n  1066: #ifdef STEED\n  1067: \t    else {"
+  },
+  {
+    "key": "L01070_01",
+    "original": "%s slip out of the stirrups.",
+    "translation": "",
+    "context": "src/timeout.c:1070:9\n  1065: \t    }\n  1066: #ifdef STEED\n  1067: \t    else {\n  1068: \t\tswitch (rn2(4)) {\n  1069: \t\t  case 1:\n> 1070: \t\t\tYour(\"%s slip out of the stirrups.\", makeplural(body_part(FOOT)));\n  1071: \t\t\tbreak;\n  1072: \t\t  case 2:\n  1073: \t\t\tYou(\"let go of the reins.\");\n  1074: \t\t\tbreak;\n  1075: \t\t  case 3:"
+  },
+  {
+    "key": "L01073_01",
+    "original": "let go of the reins.",
+    "translation": "",
+    "context": "src/timeout.c:1073:8\n  1068: \t\tswitch (rn2(4)) {\n  1069: \t\t  case 1:\n  1070: \t\t\tYour(\"%s slip out of the stirrups.\", makeplural(body_part(FOOT)));\n  1071: \t\t\tbreak;\n  1072: \t\t  case 2:\n> 1073: \t\t\tYou(\"let go of the reins.\");\n  1074: \t\t\tbreak;\n  1075: \t\t  case 3:\n  1076: \t\t\tYou(\"bang into the saddle-horn.\");\n  1077: \t\t\tbreak;\n  1078: \t\t  default:"
+  },
+  {
+    "key": "L01076_01",
+    "original": "bang into the saddle-horn.",
+    "translation": "",
+    "context": "src/timeout.c:1076:8\n  1071: \t\t\tbreak;\n  1072: \t\t  case 2:\n  1073: \t\t\tYou(\"let go of the reins.\");\n  1074: \t\t\tbreak;\n  1075: \t\t  case 3:\n> 1076: \t\t\tYou(\"bang into the saddle-horn.\");\n  1077: \t\t\tbreak;\n  1078: \t\t  default:\n  1079: \t\t\tYou(\"slide to one side of the saddle.\");\n  1080: \t\t\tbreak;\n  1081: \t\t}"
+  },
+  {
+    "key": "L01079_01",
+    "original": "slide to one side of the saddle.",
+    "translation": "",
+    "context": "src/timeout.c:1079:8\n  1074: \t\t\tbreak;\n  1075: \t\t  case 3:\n  1076: \t\t\tYou(\"bang into the saddle-horn.\");\n  1077: \t\t\tbreak;\n  1078: \t\t  default:\n> 1079: \t\t\tYou(\"slide to one side of the saddle.\");\n  1080: \t\t\tbreak;\n  1081: \t\t}\n  1082: \t\tdismount_steed(DISMOUNT_FELL);\n  1083: \t    }\n  1084: #endif"
+  },
+  {
+    "key": "L01097_01",
+    "original": "%s flickers%s.",
+    "translation": "",
+    "context": "src/timeout.c:1097:9\n  1092: const char *tailer;\n  1093: {\n  1094: \tswitch (obj->where) {\n  1095: \t    case OBJ_INVENT:\n  1096: \t    case OBJ_MINVENT:\n> 1097: \t\tpline(\"%s flickers%s.\", Yname2(obj), tailer);\n  1098: \t\tbreak;\n  1099: \t    case OBJ_FLOOR:\n  1100: \t\tYou(\"see %s flicker%s.\", an(xname(obj)), tailer);\n  1101: \t\tbreak;\n  1102: \t}"
+  },
+  {
+    "key": "L01100_01",
+    "original": "see %s flicker%s.",
+    "translation": "",
+    "context": "src/timeout.c:1100:7\n  1095: \t    case OBJ_INVENT:\n  1096: \t    case OBJ_MINVENT:\n  1097: \t\tpline(\"%s flickers%s.\", Yname2(obj), tailer);\n  1098: \t\tbreak;\n  1099: \t    case OBJ_FLOOR:\n> 1100: \t\tYou(\"see %s flicker%s.\", an(xname(obj)), tailer);\n  1101: \t\tbreak;\n  1102: \t}\n  1103: }\n  1104: \n  1105: /* Print a dimming message for brass lanterns. */"
+  },
+  {
+    "key": "L01113_01",
+    "original": "lantern is getting dim.",
+    "translation": "",
+    "context": "src/timeout.c:1113:8\n  1108: struct obj *obj;\n  1109: {\n  1110: \t/* from adventure */\n  1111: \tswitch (obj->where) {\n  1112: \t    case OBJ_INVENT:\n> 1113: \t\tYour(\"lantern is getting dim.\");\n  1114: \t\tif (Hallucination)\n  1115: \t\t    pline(\"Batteries have not been invented yet.\");\n  1116: \t\tbreak;\n  1117: \t    case OBJ_FLOOR:\n  1118: \t\tYou(\"see a lantern getting dim.\");"
+  },
+  {
+    "key": "L01115_01",
+    "original": "Batteries have not been invented yet.",
+    "translation": "",
+    "context": "src/timeout.c:1115:13\n  1110: \t/* from adventure */\n  1111: \tswitch (obj->where) {\n  1112: \t    case OBJ_INVENT:\n  1113: \t\tYour(\"lantern is getting dim.\");\n  1114: \t\tif (Hallucination)\n> 1115: \t\t    pline(\"Batteries have not been invented yet.\");\n  1116: \t\tbreak;\n  1117: \t    case OBJ_FLOOR:\n  1118: \t\tYou(\"see a lantern getting dim.\");\n  1119: \t\tbreak;\n  1120: \t    case OBJ_MINVENT:"
+  },
+  {
+    "key": "L01118_01",
+    "original": "see a lantern getting dim.",
+    "translation": "",
+    "context": "src/timeout.c:1118:7\n  1113: \t\tYour(\"lantern is getting dim.\");\n  1114: \t\tif (Hallucination)\n  1115: \t\t    pline(\"Batteries have not been invented yet.\");\n  1116: \t\tbreak;\n  1117: \t    case OBJ_FLOOR:\n> 1118: \t\tYou(\"see a lantern getting dim.\");\n  1119: \t\tbreak;\n  1120: \t    case OBJ_MINVENT:\n  1121: \t\tpline(\"%s lantern is getting dim.\",\n  1122: \t\t    s_suffix(Monnam(obj->ocarry)));\n  1123: \t\tbreak;"
+  },
+  {
+    "key": "L01121_01",
+    "original": "%s lantern is getting dim.",
+    "translation": "",
+    "context": "src/timeout.c:1121:9\n  1116: \t\tbreak;\n  1117: \t    case OBJ_FLOOR:\n  1118: \t\tYou(\"see a lantern getting dim.\");\n  1119: \t\tbreak;\n  1120: \t    case OBJ_MINVENT:\n> 1121: \t\tpline(\"%s lantern is getting dim.\",\n  1122: \t\t    s_suffix(Monnam(obj->ocarry)));\n  1123: \t\tbreak;\n  1124: \t}\n  1125: }\n  1126: "
+  },
+  {
+    "key": "L01191_01",
+    "original": "%s potion of oil has burnt away.",
+    "translation": "",
+    "context": "src/timeout.c:1191:11\n  1186: \t\t    /* this should only be called when we run out */\n  1187: \t\t    if (canseeit) {\n  1188: \t\t\tswitch (obj->where) {\n  1189: \t\t\t    case OBJ_INVENT:\n  1190: \t\t\t    case OBJ_MINVENT:\n> 1191: \t\t\t\tpline(\"%s potion of oil has burnt away.\",\n  1192: \t\t\t\t    whose);\n  1193: \t\t\t\tbreak;\n  1194: \t\t\t    case OBJ_FLOOR:\n  1195: \t\t\t\tYou(\"see a burning potion of oil go out.\");\n  1196: \t\t\t\tneed_newsym = TRUE;"
+  },
+  {
+    "key": "L01195_01",
+    "original": "see a burning potion of oil go out.",
+    "translation": "",
+    "context": "src/timeout.c:1195:9\n  1190: \t\t\t    case OBJ_MINVENT:\n  1191: \t\t\t\tpline(\"%s potion of oil has burnt away.\",\n  1192: \t\t\t\t    whose);\n  1193: \t\t\t\tbreak;\n  1194: \t\t\t    case OBJ_FLOOR:\n> 1195: \t\t\t\tYou(\"see a burning potion of oil go out.\");\n  1196: \t\t\t\tneed_newsym = TRUE;\n  1197: \t\t\t\tbreak;\n  1198: \t\t\t}\n  1199: \t\t    }\n  1200: \t\t    end_burn(obj, FALSE);\t/* turn off light source */"
+  },
+  {
+    "key": "L01218_01",
+    "original": " considerably",
+    "translation": "",
+    "context": "src/timeout.c:1218:27\n  1213: \t\t\tif (canseeit) {\n  1214: \t\t\t    if (obj->otyp == BRASS_LANTERN)\n  1215: \t\t\t\tlantern_message(obj);\n  1216: \t\t\t    else\n  1217: \t\t\t\tsee_lamp_flicker(obj,\n> 1218: \t\t\t\t    obj->age == 50L ? \" considerably\" : \"\");\n  1219: \t\t\t}\n  1220: \t\t\tbreak;\n  1221: \n  1222: \t\t    case 25:\n  1223: \t\t\tif (canseeit) {"
+  },
+  {
+    "key": "L01230_01",
+    "original": "%s %s seems about to go out.",
+    "translation": "",
+    "context": "src/timeout.c:1230:12\n  1225: \t\t\t\tlantern_message(obj);\n  1226: \t\t\t    else {\n  1227: \t\t\t\tswitch (obj->where) {\n  1228: \t\t\t\t    case OBJ_INVENT:\n  1229: \t\t\t\t    case OBJ_MINVENT:\n> 1230: \t\t\t\t\tpline(\"%s %s seems about to go out.\",\n  1231: \t\t\t\t\t    whose, xname(obj));\n  1232: \t\t\t\t\tbreak;\n  1233: \t\t\t\t    case OBJ_FLOOR:\n  1234: \t\t\t\t\tYou(\"see %s about to go out.\",\n  1235: \t\t\t\t\t    an(xname(obj)));"
+  },
+  {
+    "key": "L01234_01",
+    "original": "see %s about to go out.",
+    "translation": "",
+    "context": "src/timeout.c:1234:10\n  1229: \t\t\t\t    case OBJ_MINVENT:\n  1230: \t\t\t\t\tpline(\"%s %s seems about to go out.\",\n  1231: \t\t\t\t\t    whose, xname(obj));\n  1232: \t\t\t\t\tbreak;\n  1233: \t\t\t\t    case OBJ_FLOOR:\n> 1234: \t\t\t\t\tYou(\"see %s about to go out.\",\n  1235: \t\t\t\t\t    an(xname(obj)));\n  1236: \t\t\t\t\tbreak;\n  1237: \t\t\t\t}\n  1238: \t\t\t    }\n  1239: \t\t\t}"
+  },
+  {
+    "key": "L01249_01",
+    "original": "%s lantern has run out of power.",
+    "translation": "",
+    "context": "src/timeout.c:1249:12\n  1244: \t\t\tif (canseeit || obj->where == OBJ_INVENT) {\n  1245: \t\t\t    switch (obj->where) {\n  1246: \t\t\t\tcase OBJ_INVENT:\n  1247: \t\t\t\tcase OBJ_MINVENT:\n  1248: \t\t\t\t    if (obj->otyp == BRASS_LANTERN)\n> 1249: \t\t\t\t\tpline(\"%s lantern has run out of power.\",\n  1250: \t\t\t\t\t    whose);\n  1251: \t\t\t\t    else\n  1252: \t\t\t\t\tpline(\"%s %s has gone out.\",\n  1253: \t\t\t\t\t    whose, xname(obj));\n  1254: \t\t\t\t    break;"
+  },
+  {
+    "key": "L01252_01",
+    "original": "%s %s has gone out.",
+    "translation": "",
+    "context": "src/timeout.c:1252:12\n  1247: \t\t\t\tcase OBJ_MINVENT:\n  1248: \t\t\t\t    if (obj->otyp == BRASS_LANTERN)\n  1249: \t\t\t\t\tpline(\"%s lantern has run out of power.\",\n  1250: \t\t\t\t\t    whose);\n  1251: \t\t\t\t    else\n> 1252: \t\t\t\t\tpline(\"%s %s has gone out.\",\n  1253: \t\t\t\t\t    whose, xname(obj));\n  1254: \t\t\t\t    break;\n  1255: \t\t\t\tcase OBJ_FLOOR:\n  1256: \t\t\t\t    if (obj->otyp == BRASS_LANTERN)\n  1257: \t\t\t\t\tYou(\"see a lantern run out of power.\");"
+  },
+  {
+    "key": "L01257_01",
+    "original": "see a lantern run out of power.",
+    "translation": "",
+    "context": "src/timeout.c:1257:10\n  1252: \t\t\t\t\tpline(\"%s %s has gone out.\",\n  1253: \t\t\t\t\t    whose, xname(obj));\n  1254: \t\t\t\t    break;\n  1255: \t\t\t\tcase OBJ_FLOOR:\n  1256: \t\t\t\t    if (obj->otyp == BRASS_LANTERN)\n> 1257: \t\t\t\t\tYou(\"see a lantern run out of power.\");\n  1258: \t\t\t\t    else\n  1259: \t\t\t\t\tYou(\"see %s go out.\",\n  1260: \t\t\t\t\t    an(xname(obj)));\n  1261: \t\t\t\t    break;\n  1262: \t\t\t    }"
+  },
+  {
+    "key": "L01259_01",
+    "original": "see %s go out.",
+    "translation": "",
+    "context": "src/timeout.c:1259:10\n  1254: \t\t\t\t    break;\n  1255: \t\t\t\tcase OBJ_FLOOR:\n  1256: \t\t\t\t    if (obj->otyp == BRASS_LANTERN)\n  1257: \t\t\t\t\tYou(\"see a lantern run out of power.\");\n  1258: \t\t\t\t    else\n> 1259: \t\t\t\t\tYou(\"see %s go out.\",\n  1260: \t\t\t\t\t    an(xname(obj)));\n  1261: \t\t\t\t    break;\n  1262: \t\t\t    }\n  1263: \t\t\t}\n  1264: \t\t\t"
+  },
+  {
+    "key": "L01269_01",
+    "original": "them",
+    "translation": "",
+    "context": "src/timeout.c:1269:45\n  1264: \t\t\t\n  1265: \t\t\t/* MRKR: Burnt out torches are considered worthless */\n  1266: \t\t\t\n  1267: \t\t\tif (obj->otyp == TORCH) {\n  1268: \t\t\t  if (obj->unpaid && costly_spot(u.ux, u.uy)) {\n> 1269: \t\t\t    const char *ithem = obj->quan > 1L ? \"them\" : \"it\";\n  1270: \t\t\t    verbalize(\"You burn %s, you bought %s!\", ithem, ithem);\n  1271: \t\t\t    bill_dummy_object(obj);\n  1272: \t\t\t  }\n  1273: \t\t\t}\n  1274: \t\t\tend_burn(obj, FALSE);"
+  },
+  {
+    "key": "L01269_02",
+    "original": "it",
+    "translation": "",
+    "context": "src/timeout.c:1269:54\n  1264: \t\t\t\n  1265: \t\t\t/* MRKR: Burnt out torches are considered worthless */\n  1266: \t\t\t\n  1267: \t\t\tif (obj->otyp == TORCH) {\n  1268: \t\t\t  if (obj->unpaid && costly_spot(u.ux, u.uy)) {\n> 1269: \t\t\t    const char *ithem = obj->quan > 1L ? \"them\" : \"it\";\n  1270: \t\t\t    verbalize(\"You burn %s, you bought %s!\", ithem, ithem);\n  1271: \t\t\t    bill_dummy_object(obj);\n  1272: \t\t\t  }\n  1273: \t\t\t}\n  1274: \t\t\tend_burn(obj, FALSE);"
+  },
+  {
+    "key": "L01270_01",
+    "original": "You burn %s, you bought %s!",
+    "translation": "",
+    "context": "src/timeout.c:1270:18\n  1265: \t\t\t/* MRKR: Burnt out torches are considered worthless */\n  1266: \t\t\t\n  1267: \t\t\tif (obj->otyp == TORCH) {\n  1268: \t\t\t  if (obj->unpaid && costly_spot(u.ux, u.uy)) {\n  1269: \t\t\t    const char *ithem = obj->quan > 1L ? \"them\" : \"it\";\n> 1270: \t\t\t    verbalize(\"You burn %s, you bought %s!\", ithem, ithem);\n  1271: \t\t\t    bill_dummy_object(obj);\n  1272: \t\t\t  }\n  1273: \t\t\t}\n  1274: \t\t\tend_burn(obj, FALSE);\n  1275: \t\t\tbreak;"
+  },
+  {
+    "key": "L01300_01",
+    "original": "%s %scandle%s getting short.",
+    "translation": "",
+    "context": "src/timeout.c:1300:15\n  1295: \t\t    case 75:\n  1296: \t\t\tif (canseeit)\n  1297: \t\t\t    switch (obj->where) {\n  1298: \t\t\t\tcase OBJ_INVENT:\n  1299: \t\t\t\tcase OBJ_MINVENT:\n> 1300: \t\t\t\t    pline(\"%s %scandle%s getting short.\",\n  1301: \t\t\t\t\twhose,\n  1302: \t\t\t\t\tmenorah ? \"candelabrum's \" : \"\",\n  1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:"
+  },
+  {
+    "key": "L01302_01",
+    "original": "candelabrum's ",
+    "translation": "",
+    "context": "src/timeout.c:1302:16\n  1297: \t\t\t    switch (obj->where) {\n  1298: \t\t\t\tcase OBJ_INVENT:\n  1299: \t\t\t\tcase OBJ_MINVENT:\n  1300: \t\t\t\t    pline(\"%s %scandle%s getting short.\",\n  1301: \t\t\t\t\twhose,\n> 1302: \t\t\t\t\tmenorah ? \"candelabrum's \" : \"\",\n  1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :"
+  },
+  {
+    "key": "L01303_01",
+    "original": "s are",
+    "translation": "",
+    "context": "src/timeout.c:1303:13\n  1298: \t\t\t\tcase OBJ_INVENT:\n  1299: \t\t\t\tcase OBJ_MINVENT:\n  1300: \t\t\t\t    pline(\"%s %scandle%s getting short.\",\n  1301: \t\t\t\t\twhose,\n  1302: \t\t\t\t\tmenorah ? \"candelabrum's \" : \"\",\n> 1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1308: \t\t\t\t\t\tmany ? \"some \" : \"a \","
+  },
+  {
+    "key": "L01303_02",
+    "original": " is",
+    "translation": "",
+    "context": "src/timeout.c:1303:23\n  1298: \t\t\t\tcase OBJ_INVENT:\n  1299: \t\t\t\tcase OBJ_MINVENT:\n  1300: \t\t\t\t    pline(\"%s %scandle%s getting short.\",\n  1301: \t\t\t\t\twhose,\n  1302: \t\t\t\t\tmenorah ? \"candelabrum's \" : \"\",\n> 1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1308: \t\t\t\t\t\tmany ? \"some \" : \"a \","
+  },
+  {
+    "key": "L01306_01",
+    "original": "see %scandle%s getting short.",
+    "translation": "",
+    "context": "src/timeout.c:1306:13\n  1301: \t\t\t\t\twhose,\n  1302: \t\t\t\t\tmenorah ? \"candelabrum's \" : \"\",\n  1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n> 1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1308: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1309: \t\t\t\t\t    many ? \"s\" : \"\");\n  1310: \t\t\t\t    break;\n  1311: \t\t\t    }"
+  },
+  {
+    "key": "L01307_01",
+    "original": "a candelabrum's ",
+    "translation": "",
+    "context": "src/timeout.c:1307:20\n  1302: \t\t\t\t\tmenorah ? \"candelabrum's \" : \"\",\n  1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n> 1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1308: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1309: \t\t\t\t\t    many ? \"s\" : \"\");\n  1310: \t\t\t\t    break;\n  1311: \t\t\t    }\n  1312: \t\t\tbreak;"
+  },
+  {
+    "key": "L01308_01",
+    "original": "some ",
+    "translation": "",
+    "context": "src/timeout.c:1308:14\n  1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n> 1308: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1309: \t\t\t\t\t    many ? \"s\" : \"\");\n  1310: \t\t\t\t    break;\n  1311: \t\t\t    }\n  1312: \t\t\tbreak;\n  1313: "
+  },
+  {
+    "key": "L01308_02",
+    "original": "a ",
+    "translation": "",
+    "context": "src/timeout.c:1308:24\n  1303: \t\t\t\t\tmany ? \"s are\" : \" is\");\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n> 1308: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1309: \t\t\t\t\t    many ? \"s\" : \"\");\n  1310: \t\t\t\t    break;\n  1311: \t\t\t    }\n  1312: \t\t\tbreak;\n  1313: "
+  },
+  {
+    "key": "L01309_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1309:17\n  1304: \t\t\t\t    break;\n  1305: \t\t\t\tcase OBJ_FLOOR:\n  1306: \t\t\t\t    You(\"see %scandle%s getting short.\",\n  1307: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1308: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n> 1309: \t\t\t\t\t    many ? \"s\" : \"\");\n  1310: \t\t\t\t    break;\n  1311: \t\t\t    }\n  1312: \t\t\tbreak;\n  1313: \n  1314: \t\t    case 15:"
+  },
+  {
+    "key": "L01320_01",
+    "original": "%s %scandle%s flame%s flicker%s low!",
+    "translation": "",
+    "context": "src/timeout.c:1320:6\n  1315: \t\t\tif (canseeit)\n  1316: \t\t\t    switch (obj->where) {\n  1317: \t\t\t\tcase OBJ_INVENT:\n  1318: \t\t\t\tcase OBJ_MINVENT:\n  1319: \t\t\t\t    pline(\n> 1320: \t\t\t\t\t\"%s %scandle%s flame%s flicker%s low!\",\n  1321: \t\t\t\t\t    whose,\n  1322: \t\t\t\t\t    menorah ? \"candelabrum's \" : \"\",\n  1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");"
+  },
+  {
+    "key": "L01322_01",
+    "original": "candelabrum's ",
+    "translation": "",
+    "context": "src/timeout.c:1322:20\n  1317: \t\t\t\tcase OBJ_INVENT:\n  1318: \t\t\t\tcase OBJ_MINVENT:\n  1319: \t\t\t\t    pline(\n  1320: \t\t\t\t\t\"%s %scandle%s flame%s flicker%s low!\",\n  1321: \t\t\t\t\t    whose,\n> 1322: \t\t\t\t\t    menorah ? \"candelabrum's \" : \"\",\n  1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:"
+  },
+  {
+    "key": "L01323_01",
+    "original": "s'",
+    "translation": "",
+    "context": "src/timeout.c:1323:17\n  1318: \t\t\t\tcase OBJ_MINVENT:\n  1319: \t\t\t\t    pline(\n  1320: \t\t\t\t\t\"%s %scandle%s flame%s flicker%s low!\",\n  1321: \t\t\t\t\t    whose,\n  1322: \t\t\t\t\t    menorah ? \"candelabrum's \" : \"\",\n> 1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\","
+  },
+  {
+    "key": "L01323_02",
+    "original": "'s",
+    "translation": "",
+    "context": "src/timeout.c:1323:24\n  1318: \t\t\t\tcase OBJ_MINVENT:\n  1319: \t\t\t\t    pline(\n  1320: \t\t\t\t\t\"%s %scandle%s flame%s flicker%s low!\",\n  1321: \t\t\t\t\t    whose,\n  1322: \t\t\t\t\t    menorah ? \"candelabrum's \" : \"\",\n> 1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\","
+  },
+  {
+    "key": "L01324_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1324:17\n  1319: \t\t\t\t    pline(\n  1320: \t\t\t\t\t\"%s %scandle%s flame%s flicker%s low!\",\n  1321: \t\t\t\t\t    whose,\n  1322: \t\t\t\t\t    menorah ? \"candelabrum's \" : \"\",\n  1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n> 1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :"
+  },
+  {
+    "key": "L01325_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1325:22\n  1320: \t\t\t\t\t\"%s %scandle%s flame%s flicker%s low!\",\n  1321: \t\t\t\t\t    whose,\n  1322: \t\t\t\t\t    menorah ? \"candelabrum's \" : \"\",\n  1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n> 1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1330: \t\t\t\t\t\tmany ? \"some \" : \"a \","
+  },
+  {
+    "key": "L01328_01",
+    "original": "see %scandle%s flame%s flicker low!",
+    "translation": "",
+    "context": "src/timeout.c:1328:13\n  1323: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n> 1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;"
+  },
+  {
+    "key": "L01329_01",
+    "original": "a candelabrum's ",
+    "translation": "",
+    "context": "src/timeout.c:1329:20\n  1324: \t\t\t\t\t    many ? \"s\" : \"\",\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n> 1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;\n  1334: \t\t\t    }"
+  },
+  {
+    "key": "L01330_01",
+    "original": "some ",
+    "translation": "",
+    "context": "src/timeout.c:1330:14\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n> 1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;\n  1334: \t\t\t    }\n  1335: \t\t\tbreak;"
+  },
+  {
+    "key": "L01330_02",
+    "original": "a ",
+    "translation": "",
+    "context": "src/timeout.c:1330:24\n  1325: \t\t\t\t\t    many ? \"\" : \"s\");\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n> 1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;\n  1334: \t\t\t    }\n  1335: \t\t\tbreak;"
+  },
+  {
+    "key": "L01331_01",
+    "original": "s'",
+    "translation": "",
+    "context": "src/timeout.c:1331:17\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n> 1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;\n  1334: \t\t\t    }\n  1335: \t\t\tbreak;\n  1336: "
+  },
+  {
+    "key": "L01331_02",
+    "original": "'s",
+    "translation": "",
+    "context": "src/timeout.c:1331:24\n  1326: \t\t\t\t    break;\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n> 1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n  1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;\n  1334: \t\t\t    }\n  1335: \t\t\tbreak;\n  1336: "
+  },
+  {
+    "key": "L01332_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1332:17\n  1327: \t\t\t\tcase OBJ_FLOOR:\n  1328: \t\t\t\t    You(\"see %scandle%s flame%s flicker low!\",\n  1329: \t\t\t\t\t    menorah ? \"a candelabrum's \" :\n  1330: \t\t\t\t\t\tmany ? \"some \" : \"a \",\n  1331: \t\t\t\t\t    many ? \"s'\" : \"'s\",\n> 1332: \t\t\t\t\t    many ? \"s\" : \"\");\n  1333: \t\t\t\t    break;\n  1334: \t\t\t    }\n  1335: \t\t\tbreak;\n  1336: \n  1337: \t\t    case 0:"
+  },
+  {
+    "key": "L01344_01",
+    "original": "%s candelabrum's flame%s.",
+    "translation": "",
+    "context": "src/timeout.c:1344:12\n  1339: \t\t\tif (canseeit || obj->where == OBJ_INVENT) {\n  1340: \t\t\t    if (menorah) {\n  1341: \t\t\t\tswitch (obj->where) {\n  1342: \t\t\t\t    case OBJ_INVENT:\n  1343: \t\t\t\t    case OBJ_MINVENT:\n> 1344: \t\t\t\t\tpline(\"%s candelabrum's flame%s.\",\n  1345: \t\t\t\t\t    whose,\n  1346: \t\t\t\t\t    many ? \"s die\" : \" dies\");\n  1347: \t\t\t\t\tbreak;\n  1348: \t\t\t\t    case OBJ_FLOOR:\n  1349: \t\t\t\t\tYou(\"see a candelabrum's flame%s die.\","
+  },
+  {
+    "key": "L01346_01",
+    "original": "s die",
+    "translation": "",
+    "context": "src/timeout.c:1346:17\n  1341: \t\t\t\tswitch (obj->where) {\n  1342: \t\t\t\t    case OBJ_INVENT:\n  1343: \t\t\t\t    case OBJ_MINVENT:\n  1344: \t\t\t\t\tpline(\"%s candelabrum's flame%s.\",\n  1345: \t\t\t\t\t    whose,\n> 1346: \t\t\t\t\t    many ? \"s die\" : \" dies\");\n  1347: \t\t\t\t\tbreak;\n  1348: \t\t\t\t    case OBJ_FLOOR:\n  1349: \t\t\t\t\tYou(\"see a candelabrum's flame%s die.\",\n  1350: \t\t\t\t\t\tmany ? \"s\" : \"\");\n  1351: \t\t\t\t\tbreak;"
+  },
+  {
+    "key": "L01346_02",
+    "original": " dies",
+    "translation": "",
+    "context": "src/timeout.c:1346:27\n  1341: \t\t\t\tswitch (obj->where) {\n  1342: \t\t\t\t    case OBJ_INVENT:\n  1343: \t\t\t\t    case OBJ_MINVENT:\n  1344: \t\t\t\t\tpline(\"%s candelabrum's flame%s.\",\n  1345: \t\t\t\t\t    whose,\n> 1346: \t\t\t\t\t    many ? \"s die\" : \" dies\");\n  1347: \t\t\t\t\tbreak;\n  1348: \t\t\t\t    case OBJ_FLOOR:\n  1349: \t\t\t\t\tYou(\"see a candelabrum's flame%s die.\",\n  1350: \t\t\t\t\t\tmany ? \"s\" : \"\");\n  1351: \t\t\t\t\tbreak;"
+  },
+  {
+    "key": "L01349_01",
+    "original": "see a candelabrum's flame%s die.",
+    "translation": "",
+    "context": "src/timeout.c:1349:10\n  1344: \t\t\t\t\tpline(\"%s candelabrum's flame%s.\",\n  1345: \t\t\t\t\t    whose,\n  1346: \t\t\t\t\t    many ? \"s die\" : \" dies\");\n  1347: \t\t\t\t\tbreak;\n  1348: \t\t\t\t    case OBJ_FLOOR:\n> 1349: \t\t\t\t\tYou(\"see a candelabrum's flame%s die.\",\n  1350: \t\t\t\t\t\tmany ? \"s\" : \"\");\n  1351: \t\t\t\t\tbreak;\n  1352: \t\t\t\t}\n  1353: \t\t\t    } else {\n  1354: \t\t\t\tswitch (obj->where) {"
+  },
+  {
+    "key": "L01350_01",
+    "original": "s",
+    "translation": "",
+    "context": "src/timeout.c:1350:14\n  1345: \t\t\t\t\t    whose,\n  1346: \t\t\t\t\t    many ? \"s die\" : \" dies\");\n  1347: \t\t\t\t\tbreak;\n  1348: \t\t\t\t    case OBJ_FLOOR:\n  1349: \t\t\t\t\tYou(\"see a candelabrum's flame%s die.\",\n> 1350: \t\t\t\t\t\tmany ? \"s\" : \"\");\n  1351: \t\t\t\t\tbreak;\n  1352: \t\t\t\t}\n  1353: \t\t\t    } else {\n  1354: \t\t\t\tswitch (obj->where) {\n  1355: \t\t\t\t    case OBJ_INVENT:"
+  },
+  {
+    "key": "L01357_01",
+    "original": "%s %s %s consumed!",
+    "translation": "",
+    "context": "src/timeout.c:1357:12\n  1352: \t\t\t\t}\n  1353: \t\t\t    } else {\n  1354: \t\t\t\tswitch (obj->where) {\n  1355: \t\t\t\t    case OBJ_INVENT:\n  1356: \t\t\t\t    case OBJ_MINVENT:\n> 1357: \t\t\t\t\tpline(\"%s %s %s consumed!\",\n  1358: \t\t\t\t\t    whose,\n  1359: \t\t\t\t\t    xname(obj),\n  1360: \t\t\t\t\t    many ? \"are\" : \"is\");\n  1361: \t\t\t\t\tbreak;\n  1362: \t\t\t\t    case OBJ_FLOOR:"
+  },
+  {
+    "key": "L01360_01",
+    "original": "are",
+    "translation": "",
+    "context": "src/timeout.c:1360:17\n  1355: \t\t\t\t    case OBJ_INVENT:\n  1356: \t\t\t\t    case OBJ_MINVENT:\n  1357: \t\t\t\t\tpline(\"%s %s %s consumed!\",\n  1358: \t\t\t\t\t    whose,\n  1359: \t\t\t\t\t    xname(obj),\n> 1360: \t\t\t\t\t    many ? \"are\" : \"is\");\n  1361: \t\t\t\t\tbreak;\n  1362: \t\t\t\t    case OBJ_FLOOR:\n  1363: \t\t\t\t\t/*\n  1364: \t\t\t\t\tYou see some wax candles consumed!\n  1365: \t\t\t\t\tYou see a wax candle consumed!"
+  },
+  {
+    "key": "L01360_02",
+    "original": "is",
+    "translation": "",
+    "context": "src/timeout.c:1360:25\n  1355: \t\t\t\t    case OBJ_INVENT:\n  1356: \t\t\t\t    case OBJ_MINVENT:\n  1357: \t\t\t\t\tpline(\"%s %s %s consumed!\",\n  1358: \t\t\t\t\t    whose,\n  1359: \t\t\t\t\t    xname(obj),\n> 1360: \t\t\t\t\t    many ? \"are\" : \"is\");\n  1361: \t\t\t\t\tbreak;\n  1362: \t\t\t\t    case OBJ_FLOOR:\n  1363: \t\t\t\t\t/*\n  1364: \t\t\t\t\tYou see some wax candles consumed!\n  1365: \t\t\t\t\tYou see a wax candle consumed!"
+  },
+  {
+    "key": "L01367_01",
+    "original": "see %s%s consumed!",
+    "translation": "",
+    "context": "src/timeout.c:1367:10\n  1362: \t\t\t\t    case OBJ_FLOOR:\n  1363: \t\t\t\t\t/*\n  1364: \t\t\t\t\tYou see some wax candles consumed!\n  1365: \t\t\t\t\tYou see a wax candle consumed!\n  1366: \t\t\t\t\t*/\n> 1367: \t\t\t\t\tYou(\"see %s%s consumed!\",\n  1368: \t\t\t\t\t    many ? \"some \" : \"\",\n  1369: \t\t\t\t\t    many ? xname(obj):an(xname(obj)));\n  1370: \t\t\t\t\tneed_newsym = TRUE;\n  1371: \t\t\t\t\tbreak;\n  1372: \t\t\t\t}"
+  },
+  {
+    "key": "L01368_01",
+    "original": "some ",
+    "translation": "",
+    "context": "src/timeout.c:1368:17\n  1363: \t\t\t\t\t/*\n  1364: \t\t\t\t\tYou see some wax candles consumed!\n  1365: \t\t\t\t\tYou see a wax candle consumed!\n  1366: \t\t\t\t\t*/\n  1367: \t\t\t\t\tYou(\"see %s%s consumed!\",\n> 1368: \t\t\t\t\t    many ? \"some \" : \"\",\n  1369: \t\t\t\t\t    many ? xname(obj):an(xname(obj)));\n  1370: \t\t\t\t\tneed_newsym = TRUE;\n  1371: \t\t\t\t\tbreak;\n  1372: \t\t\t\t}\n  1373: "
+  },
+  {
+    "key": "L01376_01",
+    "original": "They shriek!",
+    "translation": "",
+    "context": "src/timeout.c:1376:14\n  1371: \t\t\t\t\tbreak;\n  1372: \t\t\t\t}\n  1373: \n  1374: \t\t\t\t/* post message */\n  1375: \t\t\t\tpline(Hallucination ?\n> 1376: \t\t\t\t\t(many ? \"They shriek!\" :\n  1377: \t\t\t\t\t\t\"It shrieks!\") :\n  1378: \t\t\t\t\tBlind ? \"\" :\n  1379: \t\t\t\t\t    (many ? \"Their flames die.\" :\n  1380: \t\t\t\t\t\t    \"Its flame dies.\"));\n  1381: \t\t\t    }"
+  },
+  {
+    "key": "L01377_01",
+    "original": "It shrieks!",
+    "translation": "",
+    "context": "src/timeout.c:1377:7\n  1372: \t\t\t\t}\n  1373: \n  1374: \t\t\t\t/* post message */\n  1375: \t\t\t\tpline(Hallucination ?\n  1376: \t\t\t\t\t(many ? \"They shriek!\" :\n> 1377: \t\t\t\t\t\t\"It shrieks!\") :\n  1378: \t\t\t\t\tBlind ? \"\" :\n  1379: \t\t\t\t\t    (many ? \"Their flames die.\" :\n  1380: \t\t\t\t\t\t    \"Its flame dies.\"));\n  1381: \t\t\t    }\n  1382: \t\t\t}"
+  },
+  {
+    "key": "L01379_01",
+    "original": "Their flames die.",
+    "translation": "",
+    "context": "src/timeout.c:1379:18\n  1374: \t\t\t\t/* post message */\n  1375: \t\t\t\tpline(Hallucination ?\n  1376: \t\t\t\t\t(many ? \"They shriek!\" :\n  1377: \t\t\t\t\t\t\"It shrieks!\") :\n  1378: \t\t\t\t\tBlind ? \"\" :\n> 1379: \t\t\t\t\t    (many ? \"Their flames die.\" :\n  1380: \t\t\t\t\t\t    \"Its flame dies.\"));\n  1381: \t\t\t    }\n  1382: \t\t\t}\n  1383: \t\t\tend_burn(obj, FALSE);\n  1384: "
+  },
+  {
+    "key": "L01380_01",
+    "original": "Its flame dies.",
+    "translation": "",
+    "context": "src/timeout.c:1380:11\n  1375: \t\t\t\tpline(Hallucination ?\n  1376: \t\t\t\t\t(many ? \"They shriek!\" :\n  1377: \t\t\t\t\t\t\"It shrieks!\") :\n  1378: \t\t\t\t\tBlind ? \"\" :\n  1379: \t\t\t\t\t    (many ? \"Their flames die.\" :\n> 1380: \t\t\t\t\t\t    \"Its flame dies.\"));\n  1381: \t\t\t    }\n  1382: \t\t\t}\n  1383: \t\t\tend_burn(obj, FALSE);\n  1384: \n  1385: \t\t\tif (menorah) {"
+  },
+  {
+    "key": "L01412_01",
+    "original": "%s %s reverts to single blade mode!",
+    "translation": "",
+    "context": "src/timeout.c:1412:13\n  1407: \n  1408: #ifdef LIGHTSABERS\n  1409: \t    case RED_DOUBLE_LIGHTSABER:\n  1410: \t    \tif (obj->altmode && obj->cursed && !rn2(25)) {\n  1411: \t\t    obj->altmode = FALSE;\n> 1412: \t\t    pline(\"%s %s reverts to single blade mode!\",\n  1413: \t\t\t    whose, xname(obj));\n  1414: \t    \t}\n  1415: \t    case GREEN_LIGHTSABER: \n  1416: #ifdef D_SABER\n  1417: \t    case BLUE_LIGHTSABER:"
+  },
+  {
+    "key": "L01437_01",
+    "original": "%s %s dims!",
+    "translation": "",
+    "context": "src/timeout.c:1437:15\n  1432: \t\t\t/* Single warning time */\n  1433: \t\t\tif (canseeit) {\n  1434: \t\t\t    switch (obj->where) {\n  1435: \t\t\t\tcase OBJ_INVENT:\n  1436: \t\t\t\tcase OBJ_MINVENT:\n> 1437: \t\t\t\t    pline(\"%s %s dims!\",whose, xname(obj));\n  1438: \t\t\t\t    break;\n  1439: \t\t\t\tcase OBJ_FLOOR:\n  1440: \t\t\t\t    You(\"see %s dim!\", an(xname(obj)));\n  1441: \t\t\t\t    break;\n  1442: \t\t\t    }"
+  },
+  {
+    "key": "L01440_01",
+    "original": "see %s dim!",
+    "translation": "",
+    "context": "src/timeout.c:1440:13\n  1435: \t\t\t\tcase OBJ_INVENT:\n  1436: \t\t\t\tcase OBJ_MINVENT:\n  1437: \t\t\t\t    pline(\"%s %s dims!\",whose, xname(obj));\n  1438: \t\t\t\t    break;\n  1439: \t\t\t\tcase OBJ_FLOOR:\n> 1440: \t\t\t\t    You(\"see %s dim!\", an(xname(obj)));\n  1441: \t\t\t\t    break;\n  1442: \t\t\t    }\n  1443: \t\t\t} else {\n  1444: \t\t\t    You(\"hear the hum of %s change!\", an(xname(obj)));\n  1445: \t\t\t}"
+  },
+  {
+    "key": "L01444_01",
+    "original": "hear the hum of %s change!",
+    "translation": "",
+    "context": "src/timeout.c:1444:12\n  1439: \t\t\t\tcase OBJ_FLOOR:\n  1440: \t\t\t\t    You(\"see %s dim!\", an(xname(obj)));\n  1441: \t\t\t\t    break;\n  1442: \t\t\t    }\n  1443: \t\t\t} else {\n> 1444: \t\t\t    You(\"hear the hum of %s change!\", an(xname(obj)));\n  1445: \t\t\t}\n  1446: \t\t\tbreak;\n  1447: \t\t    case 0:\n  1448: \t\t\tlightsaber_deactivate(obj, FALSE);\n  1449: \t\t\tbreak;"
+  },
+  {
+    "key": "L01471_01",
+    "original": "burn_object: unexpeced obj %s",
+    "translation": "",
+    "context": "src/timeout.c:1471:14\n  1466: \t\tend_burn(obj, FALSE);\n  1467: \t\tbomb_blow((genericptr_t) obj, timeout);\n  1468: \t\treturn;\n  1469: #endif\n  1470: \t    default:\n> 1471: \t\timpossible(\"burn_object: unexpeced obj %s\", xname(obj));\n  1472: \t\tbreak;\n  1473: \t}\n  1474: \tif (need_newsym) newsym(x, y);\n  1475: }\n  1476: "
+  },
+  {
+    "key": "L01495_01",
+    "original": "%s %s deactivates.",
+    "translation": "",
+    "context": "src/timeout.c:1495:14\n  1490: \tif (get_obj_location(obj, &x, &y, 0)) {\n  1491: \t    if (cansee(x, y)) {\n  1492: \t\tswitch (obj->where) {\n  1493: \t\t\tcase OBJ_INVENT:\n  1494: \t\t\tcase OBJ_MINVENT:\n> 1495: \t\t\t    pline(\"%s %s deactivates.\",whose, xname(obj));\n  1496: \t\t\t    break;\n  1497: \t\t\tcase OBJ_FLOOR:\n  1498: \t\t\t    You(\"see %s deactivate.\", an(xname(obj)));\n  1499: \t\t\t    break;\n  1500: \t\t}"
+  },
+  {
+    "key": "L01498_01",
+    "original": "see %s deactivate.",
+    "translation": "",
+    "context": "src/timeout.c:1498:12\n  1493: \t\t\tcase OBJ_INVENT:\n  1494: \t\t\tcase OBJ_MINVENT:\n  1495: \t\t\t    pline(\"%s %s deactivates.\",whose, xname(obj));\n  1496: \t\t\t    break;\n  1497: \t\t\tcase OBJ_FLOOR:\n> 1498: \t\t\t    You(\"see %s deactivate.\", an(xname(obj)));\n  1499: \t\t\t    break;\n  1500: \t\t}\n  1501: \t    } else {\n  1502: \t\tYou(\"hear a lightsaber deactivate.\");\n  1503: \t    }"
+  },
+  {
+    "key": "L01502_01",
+    "original": "hear a lightsaber deactivate.",
+    "translation": "",
+    "context": "src/timeout.c:1502:7\n  1497: \t\t\tcase OBJ_FLOOR:\n  1498: \t\t\t    You(\"see %s deactivate.\", an(xname(obj)));\n  1499: \t\t\t    break;\n  1500: \t\t}\n  1501: \t    } else {\n> 1502: \t\tYou(\"hear a lightsaber deactivate.\");\n  1503: \t    }\n  1504: \t}\n  1505: \tif (obj->otyp == RED_DOUBLE_LIGHTSABER) obj->altmode = FALSE;\n  1506: \tif ((obj == uwep) || (u.twoweap && obj != uswapwep)) unweapon = TRUE;\n  1507: \tend_burn(obj, timer_attached);"
+  },
+  {
+    "key": "L01627_01",
+    "original": "begin burn: unexpected %s",
+    "translation": "",
+    "context": "src/timeout.c:1627:18\n  1622: \t\t    obj->lamplit = 1;\n  1623: \t\t    do_timer = FALSE;\n  1624: \t\t    radius = 2;\n  1625: \t\t}\n  1626: \t\telse {\n> 1627: \t\t    impossible(\"begin burn: unexpected %s\", xname(obj));\n  1628: \t\t    turns = obj->age;\n  1629: \t\t}\n  1630: \t\tbreak;\n  1631: \t}\n  1632: "
+  },
+  {
+    "key": "L01654_01",
+    "original": "begin_burn: can't get obj position",
+    "translation": "",
+    "context": "src/timeout.c:1654:14\n  1649: \t    xchar x, y;\n  1650: \n  1651: \t    if (get_obj_location(obj, &x, &y, CONTAINED_TOO|BURIED_TOO))\n  1652: \t\tnew_light_source(x, y, radius, LS_OBJECT, (genericptr_t) obj);\n  1653: \t    else\n> 1654: \t\timpossible(\"begin_burn: can't get obj position\");\n  1655: \t}\n  1656: }\n  1657: \n  1658: /*\n  1659:  * Stop a burn timeout on the given object if timer attached.  Darken"
+  },
+  {
+    "key": "L01668_01",
+    "original": "end_burn: obj %s not lit",
+    "translation": "",
+    "context": "src/timeout.c:1668:17\n  1663: end_burn(obj, timer_attached)\n  1664: \tstruct obj *obj;\n  1665: \tboolean timer_attached;\n  1666: {\n  1667: \tif (!obj->lamplit) {\n> 1668: \t    impossible(\"end_burn: obj %s not lit\", xname(obj));\n  1669: \t    return;\n  1670: \t}\n  1671: \n  1672: \tif (obj->otyp == MAGIC_LAMP || obj->otyp == MAGIC_CANDLE ||\n  1673: \t\tartifact_light(obj))"
+  },
+  {
+    "key": "L01683_01",
+    "original": "end_burn: obj %s not timed!",
+    "translation": "",
+    "context": "src/timeout.c:1683:17\n  1678: \t    del_light_source(LS_OBJECT, (genericptr_t)obj);\n  1679: \t    obj->lamplit = 0;\n  1680: \t    if (obj->where == OBJ_INVENT)\n  1681: \t\tupdate_inventory();\n  1682: \t} else if (!stop_timer(BURN_OBJECT, (genericptr_t) obj))\n> 1683: \t    impossible(\"end_burn: obj %s not timed!\", xname(obj));\n  1684: }\n  1685: \n  1686: #endif /* OVL1 */\n  1687: #ifdef OVL0\n  1688: "
+  },
+  {
+    "key": "L01699_01",
+    "original": "cleanup_burn: obj %s not lit",
+    "translation": "",
+    "context": "src/timeout.c:1699:13\n  1694:     genericptr_t arg;\n  1695:     long expire_time;\n  1696: {\n  1697:     struct obj *obj = (struct obj *)arg;\n  1698:     if (!obj->lamplit) {\n> 1699: \timpossible(\"cleanup_burn: obj %s not lit\", xname(obj));\n  1700: \treturn;\n  1701:     }\n  1702: \n  1703:     del_light_source(LS_OBJECT, arg);\n  1704: "
+  },
+  {
+    "key": "L01729_01",
+    "original": "burn_faster: obj %s not lit",
+    "translation": "",
+    "context": "src/timeout.c:1729:16\n  1724: struct obj *obj;\n  1725: long adj;\n  1726: {\n  1727: \n  1728:   if (!obj->lamplit) {\n> 1729:     impossible(\"burn_faster: obj %s not lit\", xname(obj));\n  1730:     return;\n  1731:   }\n  1732: \n  1733:   accelerate_timer(BURN_OBJECT, obj, adj);\n  1734: }"
+  },
+  {
+    "key": "L01767_01",
+    "original": "Kaboom!!!  Boom!!  Boom!!",
+    "translation": "",
+    "context": "src/timeout.c:1767:8\n  1762: \t}\n  1763:     }\n  1764: \n  1765:     if(levl[u.ux][u.uy].typ == CLOUD) {\n  1766: \t/* inside a cloud during a thunder storm is deafening */\n> 1767: \tpline(\"Kaboom!!!  Boom!!  Boom!!\");\n  1768: \tif(!u.uinvulnerable) {\n  1769: \t    stop_occupation();\n  1770: \t    nomul(-3);\n  1771: \t    nomovemsg = 0;\n  1772: \t}"
+  },
+  {
+    "key": "L01774_01",
+    "original": "a rumbling noise.",
+    "translation": "",
+    "context": "src/timeout.c:1774:11\n  1769: \t    stop_occupation();\n  1770: \t    nomul(-3);\n  1771: \t    nomovemsg = 0;\n  1772: \t}\n  1773:     } else\n> 1774: \tYou_hear(\"a rumbling noise.\");\n  1775: }\n  1776: #endif /* OVL1 */\n  1777: \n  1778: \n  1779: #ifdef OVL0"
+  },
+  {
+    "key": "L01869_01",
+    "original": "rot_organic",
+    "translation": "",
+    "context": "src/timeout.c:1869:40\n  1864: #endif\n  1865: } ttable;\n  1866: \n  1867: /* table of timeout functions */\n  1868: static const ttable timeout_funcs[NUM_TIME_FUNCS] = {\n> 1869:     TTAB(rot_organic,\t(timeout_proc)0,\t\"rot_organic\"),\n  1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),"
+  },
+  {
+    "key": "L01870_01",
+    "original": "rot_corpse",
+    "translation": "",
+    "context": "src/timeout.c:1870:39\n  1865: } ttable;\n  1866: \n  1867: /* table of timeout functions */\n  1868: static const ttable timeout_funcs[NUM_TIME_FUNCS] = {\n  1869:     TTAB(rot_organic,\t(timeout_proc)0,\t\"rot_organic\"),\n> 1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),"
+  },
+  {
+    "key": "L01871_01",
+    "original": "moldy_corpse",
+    "translation": "",
+    "context": "src/timeout.c:1871:42\n  1866: \n  1867: /* table of timeout functions */\n  1868: static const ttable timeout_funcs[NUM_TIME_FUNCS] = {\n  1869:     TTAB(rot_organic,\t(timeout_proc)0,\t\"rot_organic\"),\n  1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n> 1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),"
+  },
+  {
+    "key": "L01872_01",
+    "original": "revive_mon",
+    "translation": "",
+    "context": "src/timeout.c:1872:39\n  1867: /* table of timeout functions */\n  1868: static const ttable timeout_funcs[NUM_TIME_FUNCS] = {\n  1869:     TTAB(rot_organic,\t(timeout_proc)0,\t\"rot_organic\"),\n  1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n> 1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS"
+  },
+  {
+    "key": "L01873_01",
+    "original": "burn_object",
+    "translation": "",
+    "context": "src/timeout.c:1873:38\n  1868: static const ttable timeout_funcs[NUM_TIME_FUNCS] = {\n  1869:     TTAB(rot_organic,\t(timeout_proc)0,\t\"rot_organic\"),\n  1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n> 1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS\n  1878:     TTAB(bomb_blow,     (timeout_proc)0,\t\"bomb_blow\"),"
+  },
+  {
+    "key": "L01874_01",
+    "original": "hatch_egg",
+    "translation": "",
+    "context": "src/timeout.c:1874:38\n  1869:     TTAB(rot_organic,\t(timeout_proc)0,\t\"rot_organic\"),\n  1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n> 1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS\n  1878:     TTAB(bomb_blow,     (timeout_proc)0,\t\"bomb_blow\"),\n  1879: #endif"
+  },
+  {
+    "key": "L01875_01",
+    "original": "fig_transform",
+    "translation": "",
+    "context": "src/timeout.c:1875:42\n  1870:     TTAB(rot_corpse,\t(timeout_proc)0,\t\"rot_corpse\"),\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n> 1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS\n  1878:     TTAB(bomb_blow,     (timeout_proc)0,\t\"bomb_blow\"),\n  1879: #endif\n  1880: #ifdef UNPOLYPILE"
+  },
+  {
+    "key": "L01876_01",
+    "original": "unpoly_mon",
+    "translation": "",
+    "context": "src/timeout.c:1876:42\n  1871:     TTAB(moldy_corpse,  (timeout_proc)0,\t\"moldy_corpse\"),\n  1872:     TTAB(revive_mon,\t(timeout_proc)0,\t\"revive_mon\"),\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n> 1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS\n  1878:     TTAB(bomb_blow,     (timeout_proc)0,\t\"bomb_blow\"),\n  1879: #endif\n  1880: #ifdef UNPOLYPILE\n  1881:     TTAB(unpoly_obj,    cleanup_unpoly,\t\t\"unpoly_obj\"),"
+  },
+  {
+    "key": "L01878_01",
+    "original": "bomb_blow",
+    "translation": "",
+    "context": "src/timeout.c:1878:42\n  1873:     TTAB(burn_object,\tcleanup_burn,\t\t\"burn_object\"),\n  1874:     TTAB(hatch_egg,\t(timeout_proc)0,\t\"hatch_egg\"),\n  1875:     TTAB(fig_transform, (timeout_proc)0,\t\"fig_transform\"),\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS\n> 1878:     TTAB(bomb_blow,     (timeout_proc)0,\t\"bomb_blow\"),\n  1879: #endif\n  1880: #ifdef UNPOLYPILE\n  1881:     TTAB(unpoly_obj,    cleanup_unpoly,\t\t\"unpoly_obj\"),\n  1882: #endif\n  1883: };"
+  },
+  {
+    "key": "L01881_01",
+    "original": "unpoly_obj",
+    "translation": "",
+    "context": "src/timeout.c:1881:42\n  1876:     TTAB(unpoly_mon,    (timeout_proc)0,\t\"unpoly_mon\"),\n  1877: #ifdef FIREARMS\n  1878:     TTAB(bomb_blow,     (timeout_proc)0,\t\"bomb_blow\"),\n  1879: #endif\n  1880: #ifdef UNPOLYPILE\n> 1881:     TTAB(unpoly_obj,    cleanup_unpoly,\t\t\"unpoly_obj\"),\n  1882: #endif\n  1883: };\n  1884: #undef TTAB\n  1885: \n  1886: "
+  },
+  {
+    "key": "L01894_01",
+    "original": "level",
+    "translation": "",
+    "context": "src/timeout.c:1894:27\n  1889: STATIC_OVL const char *\n  1890: kind_name(kind)\n  1891:     short kind;\n  1892: {\n  1893:     switch (kind) {\n> 1894: \tcase TIMER_LEVEL: return \"level\";\n  1895: \tcase TIMER_GLOBAL: return \"global\";\n  1896: \tcase TIMER_OBJECT: return \"object\";\n  1897: \tcase TIMER_MONSTER: return \"monster\";\n  1898:     }\n  1899:     return \"unknown\";"
+  },
+  {
+    "key": "L01895_01",
+    "original": "global",
+    "translation": "",
+    "context": "src/timeout.c:1895:28\n  1890: kind_name(kind)\n  1891:     short kind;\n  1892: {\n  1893:     switch (kind) {\n  1894: \tcase TIMER_LEVEL: return \"level\";\n> 1895: \tcase TIMER_GLOBAL: return \"global\";\n  1896: \tcase TIMER_OBJECT: return \"object\";\n  1897: \tcase TIMER_MONSTER: return \"monster\";\n  1898:     }\n  1899:     return \"unknown\";\n  1900: }"
+  },
+  {
+    "key": "L01896_01",
+    "original": "object",
+    "translation": "",
+    "context": "src/timeout.c:1896:28\n  1891:     short kind;\n  1892: {\n  1893:     switch (kind) {\n  1894: \tcase TIMER_LEVEL: return \"level\";\n  1895: \tcase TIMER_GLOBAL: return \"global\";\n> 1896: \tcase TIMER_OBJECT: return \"object\";\n  1897: \tcase TIMER_MONSTER: return \"monster\";\n  1898:     }\n  1899:     return \"unknown\";\n  1900: }\n  1901: "
+  },
+  {
+    "key": "L01897_01",
+    "original": "monster",
+    "translation": "",
+    "context": "src/timeout.c:1897:29\n  1892: {\n  1893:     switch (kind) {\n  1894: \tcase TIMER_LEVEL: return \"level\";\n  1895: \tcase TIMER_GLOBAL: return \"global\";\n  1896: \tcase TIMER_OBJECT: return \"object\";\n> 1897: \tcase TIMER_MONSTER: return \"monster\";\n  1898:     }\n  1899:     return \"unknown\";\n  1900: }\n  1901: \n  1902: STATIC_OVL void"
+  },
+  {
+    "key": "L01899_01",
+    "original": "unknown",
+    "translation": "",
+    "context": "src/timeout.c:1899:12\n  1894: \tcase TIMER_LEVEL: return \"level\";\n  1895: \tcase TIMER_GLOBAL: return \"global\";\n  1896: \tcase TIMER_OBJECT: return \"object\";\n  1897: \tcase TIMER_MONSTER: return \"monster\";\n  1898:     }\n> 1899:     return \"unknown\";\n  1900: }\n  1901: \n  1902: STATIC_OVL void\n  1903: print_queue(win, base)\n  1904:     winid win;"
+  },
+  {
+    "key": "L01911_01",
+    "original": "<empty>",
+    "translation": "",
+    "context": "src/timeout.c:1911:17\n  1906: {\n  1907:     timer_element *curr;\n  1908:     char buf[BUFSZ], arg_address[20];\n  1909: \n  1910:     if (!base) {\n> 1911: \tputstr(win, 0, \"<empty>\");\n  1912:     } else {\n  1913: \tputstr(win, 0, \"timeout  id   kind   call\");\n  1914: \tfor (curr = base; curr; curr = curr->next) {\n  1915: #ifdef VERBOSE_TIMER\n  1916: \t    Sprintf(buf, \" %4ld   %4ld  %-6s %s(%s)\","
+  },
+  {
+    "key": "L01913_01",
+    "original": "timeout  id   kind   call",
+    "translation": "",
+    "context": "src/timeout.c:1913:17\n  1908:     char buf[BUFSZ], arg_address[20];\n  1909: \n  1910:     if (!base) {\n  1911: \tputstr(win, 0, \"<empty>\");\n  1912:     } else {\n> 1913: \tputstr(win, 0, \"timeout  id   kind   call\");\n  1914: \tfor (curr = base; curr; curr = curr->next) {\n  1915: #ifdef VERBOSE_TIMER\n  1916: \t    Sprintf(buf, \" %4ld   %4ld  %-6s %s(%s)\",\n  1917: \t\tcurr->timeout, curr->tid, kind_name(curr->kind),\n  1918: \t\ttimeout_funcs[curr->func_index].name,"
+  },
+  {
+    "key": "L01916_01",
+    "original": " %4ld   %4ld  %-6s %s(%s)",
+    "translation": "",
+    "context": "src/timeout.c:1916:19\n  1911: \tputstr(win, 0, \"<empty>\");\n  1912:     } else {\n  1913: \tputstr(win, 0, \"timeout  id   kind   call\");\n  1914: \tfor (curr = base; curr; curr = curr->next) {\n  1915: #ifdef VERBOSE_TIMER\n> 1916: \t    Sprintf(buf, \" %4ld   %4ld  %-6s %s(%s)\",\n  1917: \t\tcurr->timeout, curr->tid, kind_name(curr->kind),\n  1918: \t\ttimeout_funcs[curr->func_index].name,\n  1919: \t\tfmt_ptr((genericptr_t)curr->arg, arg_address));\n  1920: #else\n  1921: \t    Sprintf(buf, \" %4ld   %4ld  %-6s #%d(%s)\","
+  },
+  {
+    "key": "L01921_01",
+    "original": " %4ld   %4ld  %-6s #%d(%s)",
+    "translation": "",
+    "context": "src/timeout.c:1921:19\n  1916: \t    Sprintf(buf, \" %4ld   %4ld  %-6s %s(%s)\",\n  1917: \t\tcurr->timeout, curr->tid, kind_name(curr->kind),\n  1918: \t\ttimeout_funcs[curr->func_index].name,\n  1919: \t\tfmt_ptr((genericptr_t)curr->arg, arg_address));\n  1920: #else\n> 1921: \t    Sprintf(buf, \" %4ld   %4ld  %-6s #%d(%s)\",\n  1922: \t\tcurr->timeout, curr->tid, kind_name(curr->kind),\n  1923: \t\tcurr->func_index,\n  1924: \t\tfmt_ptr((genericptr_t)curr->arg, arg_address));\n  1925: #endif\n  1926: \t    putstr(win, 0, buf);"
+  },
+  {
+    "key": "L01940_01",
+    "original": "Current time = %ld.",
+    "translation": "",
+    "context": "src/timeout.c:1940:18\n  1935:     char buf[BUFSZ];\n  1936: \n  1937:     win = create_nhwindow(NHW_MENU);\t/* corner text window */\n  1938:     if (win == WIN_ERR) return 0;\n  1939: \n> 1940:     Sprintf(buf, \"Current time = %ld.\", monstermoves);\n  1941:     putstr(win, 0, buf);\n  1942:     putstr(win, 0, \"\");\n  1943:     putstr(win, 0, \"Active timeout queue:\");\n  1944:     putstr(win, 0, \"\");\n  1945:     print_queue(win, timer_base);"
+  },
+  {
+    "key": "L01943_01",
+    "original": "Active timeout queue:",
+    "translation": "",
+    "context": "src/timeout.c:1943:20\n  1938:     if (win == WIN_ERR) return 0;\n  1939: \n  1940:     Sprintf(buf, \"Current time = %ld.\", monstermoves);\n  1941:     putstr(win, 0, buf);\n  1942:     putstr(win, 0, \"\");\n> 1943:     putstr(win, 0, \"Active timeout queue:\");\n  1944:     putstr(win, 0, \"\");\n  1945:     print_queue(win, timer_base);\n  1946: \n  1947:     display_nhwindow(win, FALSE);\n  1948:     destroy_nhwindow(win);"
+  },
+  {
+    "key": "L01964_01",
+    "original": "timer sanity: untimed obj %s, timer %ld",
+    "translation": "",
+    "context": "src/timeout.c:1964:9\n  1959:     /* this should be much more complete */\n  1960:     for (curr = timer_base; curr; curr = curr->next)\n  1961: \tif (curr->kind == TIMER_OBJECT) {\n  1962: \t    struct obj *obj = (struct obj *) curr->arg;\n  1963: \t    if (obj->timed == 0) {\n> 1964: \t\tpline(\"timer sanity: untimed obj %s, timer %ld\",\n  1965: \t\t      fmt_ptr((genericptr_t)obj, obj_address), curr->tid);\n  1966: \t    }\n  1967: \t}\n  1968: }\n  1969: "
+  },
+  {
+    "key": "L02011_01",
+    "original": "start_timer",
+    "translation": "",
+    "context": "src/timeout.c:2011:8\n  2006: genericptr_t arg;\n  2007: {\n  2008:     timer_element *gnu;\n  2009: \n  2010:     if (func_index < 0 || func_index >= NUM_TIME_FUNCS)\n> 2011: \tpanic(\"start_timer\");\n  2012: \n  2013:     gnu = (timer_element *) alloc(sizeof(timer_element));\n  2014:     gnu->next = 0;\n  2015:     gnu->tid = timer_id++;\n  2016:     gnu->timeout = monstermoves + when;"
+  },
+  {
+    "key": "L02075_01",
+    "original": "obj_move_timers",
+    "translation": "",
+    "context": "src/timeout.c:2075:8\n  2070: \t    curr->arg = (genericptr_t) dest;\n  2071: \t    dest->timed++;\n  2072: \t    count++;\n  2073: \t}\n  2074:     if (count != src->timed)\n> 2075: \tpanic(\"obj_move_timers\");\n  2076:     src->timed = 0;\n  2077: }\n  2078: \n  2079: \n  2080: /*"
+  },
+  {
+    "key": "L02238_01",
+    "original": "write_timer",
+    "translation": "",
+    "context": "src/timeout.c:2238:12\n  2233: \t\ttimer->needs_fixup = 0;\n  2234: \t    }\n  2235: \t    break;\n  2236: \n  2237: \tdefault:\n> 2238: \t    panic(\"write_timer\");\n  2239: \t    break;\n  2240:     }\n  2241: }\n  2242: \n  2243: /*"
+  },
+  {
+    "key": "L02292_01",
+    "original": "obj_is_local",
+    "translation": "",
+    "context": "src/timeout.c:2292:11\n  2287: \tcase OBJ_FLOOR:\n  2288: \tcase OBJ_BURIED:\treturn TRUE;\n  2289: \tcase OBJ_CONTAINED:\treturn obj_is_local(obj->ocontainer);\n  2290: \tcase OBJ_MINVENT:\treturn mon_is_local(obj->ocarry);\n  2291:     }\n> 2292:     panic(\"obj_is_local\");\n  2293:     return FALSE;\n  2294: }\n  2295: \n  2296: \n  2297: /*"
+  },
+  {
+    "key": "L02330_01",
+    "original": "timer_is_local",
+    "translation": "",
+    "context": "src/timeout.c:2330:11\n  2325: \tcase TIMER_LEVEL:\treturn TRUE;\n  2326: \tcase TIMER_GLOBAL:\treturn FALSE;\n  2327: \tcase TIMER_OBJECT:\treturn obj_is_local((struct obj *)timer->arg);\n  2328: \tcase TIMER_MONSTER:\treturn mon_is_local((struct monst *)timer->arg);\n  2329:     }\n> 2330:     panic(\"timer_is_local\");\n  2331:     return FALSE;\n  2332: }\n  2333: \n  2334: \n  2335: /*"
+  },
+  {
+    "key": "L02460_01",
+    "original": "relink_timers 1",
+    "translation": "",
+    "context": "src/timeout.c:2460:10\n  2455:     for (curr = timer_base; curr; curr = curr->next) {\n  2456: \tif (curr->needs_fixup) {\n  2457: \t    if (curr->kind == TIMER_OBJECT) {\n  2458: \t\tif (ghostly) {\n  2459: \t\t    if (!lookup_id_mapping((unsigned)curr->arg, &nid))\n> 2460: \t\t\tpanic(\"relink_timers 1\");\n  2461: \t\t} else\n  2462: \t\t    nid = (unsigned) curr->arg;\n  2463: \t\tcurr->arg = (genericptr_t) find_oid(nid);\n  2464: \t\tif (!curr->arg) panic(\"cant find o_id %d\", nid);\n  2465: \t\tcurr->needs_fixup = 0;"
+  },
+  {
+    "key": "L02464_01",
+    "original": "cant find o_id %d",
+    "translation": "",
+    "context": "src/timeout.c:2464:25\n  2459: \t\t    if (!lookup_id_mapping((unsigned)curr->arg, &nid))\n  2460: \t\t\tpanic(\"relink_timers 1\");\n  2461: \t\t} else\n  2462: \t\t    nid = (unsigned) curr->arg;\n  2463: \t\tcurr->arg = (genericptr_t) find_oid(nid);\n> 2464: \t\tif (!curr->arg) panic(\"cant find o_id %d\", nid);\n  2465: \t\tcurr->needs_fixup = 0;\n  2466: \t    } else if (curr->kind == TIMER_MONSTER) {\n  2467: /*                panic(\"relink_timers: no monster timer implemented\");*/\n  2468:                 /* WAC attempt to relink monster timers based on above\n  2469:                  * and light source code"
+  },
+  {
+    "key": "L02473_01",
+    "original": "relink_timers 1b",
+    "translation": "",
+    "context": "src/timeout.c:2473:31\n  2468:                 /* WAC attempt to relink monster timers based on above\n  2469:                  * and light source code\n  2470:                  */\n  2471: \t\tif (ghostly) {\n  2472: \t\t    if (!lookup_id_mapping((unsigned)curr->arg, &nid))\n> 2473:                         panic(\"relink_timers 1b\");\n  2474: \t\t} else\n  2475: \t\t    nid = (unsigned) curr->arg;\n  2476:                 curr->arg = (genericptr_t) find_mid(nid, FM_EVERYWHERE);\n  2477: \t\tif (!curr->arg) panic(\"cant find m_id %d\", nid);\n  2478: \t\tcurr->needs_fixup = 0;"
+  },
+  {
+    "key": "L02477_01",
+    "original": "cant find m_id %d",
+    "translation": "",
+    "context": "src/timeout.c:2477:25\n  2472: \t\t    if (!lookup_id_mapping((unsigned)curr->arg, &nid))\n  2473:                         panic(\"relink_timers 1b\");\n  2474: \t\t} else\n  2475: \t\t    nid = (unsigned) curr->arg;\n  2476:                 curr->arg = (genericptr_t) find_mid(nid, FM_EVERYWHERE);\n> 2477: \t\tif (!curr->arg) panic(\"cant find m_id %d\", nid);\n  2478: \t\tcurr->needs_fixup = 0;\n  2479: \t    } else\n  2480: \t\tpanic(\"relink_timers 2\");\n  2481: \t}\n  2482:     }"
+  },
+  {
+    "key": "L02480_01",
+    "original": "relink_timers 2",
+    "translation": "",
+    "context": "src/timeout.c:2480:9\n  2475: \t\t    nid = (unsigned) curr->arg;\n  2476:                 curr->arg = (genericptr_t) find_mid(nid, FM_EVERYWHERE);\n  2477: \t\tif (!curr->arg) panic(\"cant find m_id %d\", nid);\n  2478: \t\tcurr->needs_fixup = 0;\n  2479: \t    } else\n> 2480: \t\tpanic(\"relink_timers 2\");\n  2481: \t}\n  2482:     }\n  2483: }\n  2484: \n  2485: #endif /* OVL0 */"
+  }
+]

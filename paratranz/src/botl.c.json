@@ -1,0 +1,266 @@
+[
+  {
+    "key": "L00149_01",
+    "original": " %s",
+    "translation": "",
+    "context": "src/botl.c:149:30\n   144: \tstruct color_option color_option;\n   145: \n   146: \tif (*text == '\\0') return;\n   147: \n   148: \tif (!iflags.use_status_colors) {\n>  149: \t\tSprintf(nb = eos(newbot2), \" %s\", text);\n   150:                 return;\n   151:         }\n   152: \n   153: \tStrcat(nb = eos(newbot2), \" \");\n   154: \tcurs(WIN_STATUS, 1, 1);"
+  },
+  {
+    "key": "L00335_01",
+    "original": " the ",
+    "translation": "",
+    "context": "src/botl.c:335:30\n   330:     }\n   331: #endif\n   332:     Strcat(player, plname);\n   333:     if('a' <= player[i] && player[i] <= 'z') player[i] += 'A'-'a';\n   334:     player[10] = 0;\n>  335:     Sprintf(nb = eos(player),\" the \");\n   336: \n   337: \tif (Upolyd) {\n   338: \t(void) strncpy(mbot, mons[u.umonnum].mname, SIZE(mbot) - 1);\n   339: \tmbot[SIZE(mbot) - 1] = 0;\n   340: \t\twhile(mbot[k] != 0) {"
+  },
+  {
+    "key": "L00358_01",
+    "original": "%2d",
+    "translation": "",
+    "context": "src/botl.c:358:24\n   353: botl_strength()\n   354: {\n   355:     static char strength[6];\n   356: \tif (ACURR(A_STR) > 18) {\n   357: \t\tif (ACURR(A_STR) > STR18(100))\n>  358: \t    Sprintf(strength, \"%2d\", ACURR(A_STR)-100);\n   359: \t\telse if (ACURR(A_STR) < STR18(100))\n   360: \t    Sprintf(strength, \"18/%02d\", ACURR(A_STR)-18);\n   361: \t\telse\n   362: \t    Sprintf(strength, \"18/**\");\n   363: \t} else"
+  },
+  {
+    "key": "L00360_01",
+    "original": "18/%02d",
+    "translation": "",
+    "context": "src/botl.c:360:24\n   355:     static char strength[6];\n   356: \tif (ACURR(A_STR) > 18) {\n   357: \t\tif (ACURR(A_STR) > STR18(100))\n   358: \t    Sprintf(strength, \"%2d\", ACURR(A_STR)-100);\n   359: \t\telse if (ACURR(A_STR) < STR18(100))\n>  360: \t    Sprintf(strength, \"18/%02d\", ACURR(A_STR)-18);\n   361: \t\telse\n   362: \t    Sprintf(strength, \"18/**\");\n   363: \t} else\n   364: \tSprintf(strength, \"%-1d\", ACURR(A_STR));\n   365:     return strength;"
+  },
+  {
+    "key": "L00364_01",
+    "original": "%-1d",
+    "translation": "",
+    "context": "src/botl.c:364:20\n   359: \t\telse if (ACURR(A_STR) < STR18(100))\n   360: \t    Sprintf(strength, \"18/%02d\", ACURR(A_STR)-18);\n   361: \t\telse\n   362: \t    Sprintf(strength, \"18/**\");\n   363: \t} else\n>  364: \tSprintf(strength, \"%-1d\", ACURR(A_STR));\n   365:     return strength;\n   366: }\n   367: \n   368: STATIC_OVL void\n   369: bot1()"
+  },
+  {
+    "key": "L00403_01",
+    "original": "%*s",
+    "translation": "",
+    "context": "src/botl.c:403:24\n   398: \n   399: \tSprintf(nb = eos(newbot1),\"  \");\n   400: \ti = mrank_sz + 15;\n   401: \tj = (nb + 2) - newbot1; /* aka strlen(newbot1) but less computation */\n   402: \tif((i - j) > 0)\n>  403: \t\tSprintf(nb = eos(nb),\"%*s\", i-j, \" \");  /* pad with spaces */\n   404:         \n   405: \tSprintf(nb = eos(nb), \"力:%s \", botl_strength());\n   406: \tSprintf(nb = eos(nb),\n   407: \t\t\"敏:%-1d 体:%-1d 感:%-1d 智:%-1d 魅:%-1d\",\n   408: \t\tACURR(A_DEX), ACURR(A_CON), ACURR(A_INT), ACURR(A_WIS), ACURR(A_CHA));"
+  },
+  {
+    "key": "L00429_01",
+    "original": "%s ",
+    "translation": "",
+    "context": "src/botl.c:429:16\n   424: {\n   425: \tint ret = 1;\n   426: \n   427: \t/* TODO:\tAdd in dungeon name */\n   428: \tif (Is_knox(&u.uz))\n>  429: \t\tSprintf(buf, \"%s \", dungeons[u.uz.dnum].dname);\n   430: \telse if (In_quest(&u.uz))\n   431: \t\tSprintf(buf, \"家乡:%d \", dunlev(&u.uz));\n   432: \telse if (In_endgame(&u.uz))\n   433: \t\tSprintf(buf,\n   434: \t\t\tIs_astralevel(&u.uz) ? \"星界 \" : \"终局 \");"
+  },
+  {
+    "key": "L00485_01",
+    "original": "%c:%-2ld ",
+    "translation": "",
+    "context": "src/botl.c:485:30\n   480: \tif (bot2_abbrev < 4)\n   481: \t\t(void) describe_level(newbot2, FALSE);\n   482: \telse\n   483: \t\tnewbot2[0] = '\\0';\n   484: \tif (bot2_abbrev < 1)\n>  485: \t\tSprintf(nb = eos(newbot2), \"%c:%-2ld \",\n   486: \t\t  oc_syms[COIN_CLASS],\n   487: #ifndef GOLDOBJ\n   488: \t\tu.ugold\n   489: #else\n   490: \t\tmoney_cnt(invent)"
+  },
+  {
+    "key": "L00496_01",
+    "original": "HP",
+    "translation": "",
+    "context": "src/botl.c:496:28\n   491: #endif\n   492: \t\t  );\n   493: \telse\n   494: \t\tnb = newbot2;\n   495: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n>  496: \tStrcat(nb = eos(newbot2), \"HP\");\n   497: \tcurs(WIN_STATUS, 1, 1);\n   498: \tputstr(WIN_STATUS, 0, newbot2);\n   499: \tflags.botlx = 0;\n   500: \n   501: \tSprintf(nb = eos(nb), \"%d(%d)\", hp, hpmax);"
+  },
+  {
+    "key": "L00501_01",
+    "original": "%d(%d)",
+    "translation": "",
+    "context": "src/botl.c:501:24\n   496: \tStrcat(nb = eos(newbot2), \"HP\");\n   497: \tcurs(WIN_STATUS, 1, 1);\n   498: \tputstr(WIN_STATUS, 0, newbot2);\n   499: \tflags.botlx = 0;\n   500: \n>  501: \tSprintf(nb = eos(nb), \"%d(%d)\", hp, hpmax);\n   502: \tcolop = percentage_color_of(hp, hpmax, hp_colors);\n   503: #ifdef ANDROID\n   504: \tand_set_health_color(colop);\n   505: #endif\n   506: \tapply_color_option(colop, newbot2, 2);"
+  },
+  {
+    "key": "L00508_01",
+    "original": "HP%d(%d)",
+    "translation": "",
+    "context": "src/botl.c:508:24\n   503: #ifdef ANDROID\n   504: \tand_set_health_color(colop);\n   505: #endif\n   506: \tapply_color_option(colop, newbot2, 2);\n   507: #else\n>  508: \tSprintf(nb = eos(nb), \"HP%d(%d)\", hp, hpmax);\n   509: #endif\n   510: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n   511: \tStrcat(nb = eos(nb), \" Pw\");\n   512: \tcurs(WIN_STATUS, 1, 1);\n   513: \tputstr(WIN_STATUS, 0, newbot2);"
+  },
+  {
+    "key": "L00511_01",
+    "original": " Pw",
+    "translation": "",
+    "context": "src/botl.c:511:23\n   506: \tapply_color_option(colop, newbot2, 2);\n   507: #else\n   508: \tSprintf(nb = eos(nb), \"HP%d(%d)\", hp, hpmax);\n   509: #endif\n   510: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n>  511: \tStrcat(nb = eos(nb), \" Pw\");\n   512: \tcurs(WIN_STATUS, 1, 1);\n   513: \tputstr(WIN_STATUS, 0, newbot2);\n   514: \n   515: \tSprintf(nb = eos(nb), \"%d(%d)\", u.uen, u.uenmax);\n   516: \tapply_color_option(percentage_color_of(u.uen, u.uenmax, pw_colors), newbot2, 2);"
+  },
+  {
+    "key": "L00515_01",
+    "original": "%d(%d)",
+    "translation": "",
+    "context": "src/botl.c:515:24\n   510: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n   511: \tStrcat(nb = eos(nb), \" Pw\");\n   512: \tcurs(WIN_STATUS, 1, 1);\n   513: \tputstr(WIN_STATUS, 0, newbot2);\n   514: \n>  515: \tSprintf(nb = eos(nb), \"%d(%d)\", u.uen, u.uenmax);\n   516: \tapply_color_option(percentage_color_of(u.uen, u.uenmax, pw_colors), newbot2, 2);\n   517: #else\n   518: \tSprintf(nb = eos(nb), \" Pw%d(%d)\", u.uen, u.uenmax);\n   519: #endif\n   520: \tSprintf(nb = eos(nb), \" AC%d\", u.uac);"
+  },
+  {
+    "key": "L00518_01",
+    "original": " Pw%d(%d)",
+    "translation": "",
+    "context": "src/botl.c:518:24\n   513: \tputstr(WIN_STATUS, 0, newbot2);\n   514: \n   515: \tSprintf(nb = eos(nb), \"%d(%d)\", u.uen, u.uenmax);\n   516: \tapply_color_option(percentage_color_of(u.uen, u.uenmax, pw_colors), newbot2, 2);\n   517: #else\n>  518: \tSprintf(nb = eos(nb), \" Pw%d(%d)\", u.uen, u.uenmax);\n   519: #endif\n   520: \tSprintf(nb = eos(nb), \" AC%d\", u.uac);\n   521: \n   522: \tif (Upolyd)\n   523: \t\tSprintf(nb = eos(nb), \" HD:%d\", ((u.ulycn == u.umonnum) ? "
+  },
+  {
+    "key": "L00520_01",
+    "original": " AC%d",
+    "translation": "",
+    "context": "src/botl.c:520:24\n   515: \tSprintf(nb = eos(nb), \"%d(%d)\", u.uen, u.uenmax);\n   516: \tapply_color_option(percentage_color_of(u.uen, u.uenmax, pw_colors), newbot2, 2);\n   517: #else\n   518: \tSprintf(nb = eos(nb), \" Pw%d(%d)\", u.uen, u.uenmax);\n   519: #endif\n>  520: \tSprintf(nb = eos(nb), \" AC%d\", u.uac);\n   521: \n   522: \tif (Upolyd)\n   523: \t\tSprintf(nb = eos(nb), \" HD:%d\", ((u.ulycn == u.umonnum) ? \n   524: \t\t\t\t\t\tu.ulevel : mons[u.umonnum].mlevel));\n   525: #ifdef EXP_ON_BOTL"
+  },
+  {
+    "key": "L00523_01",
+    "original": " HD:%d",
+    "translation": "",
+    "context": "src/botl.c:523:25\n   518: \tSprintf(nb = eos(nb), \" Pw%d(%d)\", u.uen, u.uenmax);\n   519: #endif\n   520: \tSprintf(nb = eos(nb), \" AC%d\", u.uac);\n   521: \n   522: \tif (Upolyd)\n>  523: \t\tSprintf(nb = eos(nb), \" HD:%d\", ((u.ulycn == u.umonnum) ? \n   524: \t\t\t\t\t\tu.ulevel : mons[u.umonnum].mlevel));\n   525: #ifdef EXP_ON_BOTL\n   526: \telse if(flags.showexp && bot2_abbrev < 3)\n   527: \t\tSprintf(nb = eos(nb), \" Xp:%u/%-1ld\", u.ulevel,u.uexp);\n   528: #endif"
+  },
+  {
+    "key": "L00527_01",
+    "original": " Xp:%u/%-1ld",
+    "translation": "",
+    "context": "src/botl.c:527:25\n   522: \tif (Upolyd)\n   523: \t\tSprintf(nb = eos(nb), \" HD:%d\", ((u.ulycn == u.umonnum) ? \n   524: \t\t\t\t\t\tu.ulevel : mons[u.umonnum].mlevel));\n   525: #ifdef EXP_ON_BOTL\n   526: \telse if(flags.showexp && bot2_abbrev < 3)\n>  527: \t\tSprintf(nb = eos(nb), \" Xp:%u/%-1ld\", u.ulevel,u.uexp);\n   528: #endif\n   529: \telse\n   530: \t\tSprintf(nb = eos(nb), \" Exp:%u\", u.ulevel);\n   531: \n   532: #ifdef SHOW_WEIGHT"
+  },
+  {
+    "key": "L00530_01",
+    "original": " Exp:%u",
+    "translation": "",
+    "context": "src/botl.c:530:25\n   525: #ifdef EXP_ON_BOTL\n   526: \telse if(flags.showexp && bot2_abbrev < 3)\n   527: \t\tSprintf(nb = eos(nb), \" Xp:%u/%-1ld\", u.ulevel,u.uexp);\n   528: #endif\n   529: \telse\n>  530: \t\tSprintf(nb = eos(nb), \" Exp:%u\", u.ulevel);\n   531: \n   532: #ifdef SHOW_WEIGHT\n   533: \tif (flags.showweight && bot2_abbrev < 3)\n   534: \t\tSprintf(nb = eos(nb), \"  负重:%ld/%ld\", (long)(inv_weight()+weight_cap()),\n   535: \t\t\t\t(long)weight_cap());"
+  },
+  {
+    "key": "L00597_01",
+    "original": "Ill",
+    "translation": "",
+    "context": "src/botl.c:597:21\n   592: #else\n   593: \t\t\tStrcat(nb = eos(nb), bot2_abbrev >= 2 ? \" 食物中毒\" : \" 食物中毒\");\n   594: #endif\n   595: \t\tif (u.usick_type & SICK_NONVOMITABLE)\n   596: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n>  597: \t\t\tadd_colored_text(\"Ill\", newbot2);\n   598: #else\n   599: \t\t\tStrcat(nb = eos(nb), \" Ill\");\n   600: #endif\n   601: \t}\n   602: "
+  },
+  {
+    "key": "L00599_01",
+    "original": " Ill",
+    "translation": "",
+    "context": "src/botl.c:599:25\n   594: #endif\n   595: \t\tif (u.usick_type & SICK_NONVOMITABLE)\n   596: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n   597: \t\t\tadd_colored_text(\"Ill\", newbot2);\n   598: #else\n>  599: \t\t\tStrcat(nb = eos(nb), \" Ill\");\n   600: #endif\n   601: \t}\n   602: \n   603: \tif(Blind)\n   604: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)"
+  },
+  {
+    "key": "L00637_01",
+    "original": " %s",
+    "translation": "",
+    "context": "src/botl.c:637:25\n   632: #endif\n   633: \tif(cap > UNENCUMBERED)\n   634: #if defined(STATUS_COLORS) && defined(TEXTCOLOR)\n   635: \t\tadd_colored_text(bot2_abbrev >= 2 ? enc_abbrev_stat[cap] : enc_stat[cap], newbot2);\n   636: #else\n>  637: \t\tSprintf(nb = eos(nb), \" %s\",\n   638: \t\t  bot2_abbrev >= 2 ? enc_abbrev_stat[cap] : enc_stat[cap]);\n   639: #endif\n   640: }\n   641: \n   642: STATIC_OVL void"
+  },
+  {
+    "key": "L00732_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:732:45\n   727:     char dlevel[BUFSZ];\n   728:     char hp[21], hpmax[21], pw[21], pwmax[21], gold[21], ac[21], elevel[21];\n   729:     char expr[21], iweight[21], capacity[21], flgs[21], tim[21];\n   730:     *rv++ = reconfig ? \"玩家\" : botl_player();\n   731:     *rv++ = reconfig ? \"力量\" : botl_strength();\n>  732:     *rv++ = reconfig ? \"敏捷\" : (Sprintf(dex, \"%d\", ACURR(A_DEX)), dex);\n   733:     *rv++ = reconfig ? \"体质\" : (Sprintf(con, \"%d\", ACURR(A_CON)), con);\n   734:     *rv++ = reconfig ? \"感知\" : (Sprintf(itl, \"%d\", ACURR(A_INT)), itl);\n   735:     *rv++ = reconfig ? \"智力\" : (Sprintf(wis, \"%d\", ACURR(A_WIS)), wis);\n   736:     *rv++ = reconfig ? \"魅力\" : (Sprintf(cha, \"%d\", ACURR(A_CHA)), cha);\n   737:     *rv++ = reconfig ? \"阵营\" : u.ualign.type == A_CHAOTIC ? \"混沌\" :"
+  },
+  {
+    "key": "L00733_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:733:45\n   728:     char hp[21], hpmax[21], pw[21], pwmax[21], gold[21], ac[21], elevel[21];\n   729:     char expr[21], iweight[21], capacity[21], flgs[21], tim[21];\n   730:     *rv++ = reconfig ? \"玩家\" : botl_player();\n   731:     *rv++ = reconfig ? \"力量\" : botl_strength();\n   732:     *rv++ = reconfig ? \"敏捷\" : (Sprintf(dex, \"%d\", ACURR(A_DEX)), dex);\n>  733:     *rv++ = reconfig ? \"体质\" : (Sprintf(con, \"%d\", ACURR(A_CON)), con);\n   734:     *rv++ = reconfig ? \"感知\" : (Sprintf(itl, \"%d\", ACURR(A_INT)), itl);\n   735:     *rv++ = reconfig ? \"智力\" : (Sprintf(wis, \"%d\", ACURR(A_WIS)), wis);\n   736:     *rv++ = reconfig ? \"魅力\" : (Sprintf(cha, \"%d\", ACURR(A_CHA)), cha);\n   737:     *rv++ = reconfig ? \"阵营\" : u.ualign.type == A_CHAOTIC ? \"混沌\" :\n   738: \t    u.ualign.type == A_NEUTRAL ? \"中立\" : \"秩序\";"
+  },
+  {
+    "key": "L00734_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:734:45\n   729:     char expr[21], iweight[21], capacity[21], flgs[21], tim[21];\n   730:     *rv++ = reconfig ? \"玩家\" : botl_player();\n   731:     *rv++ = reconfig ? \"力量\" : botl_strength();\n   732:     *rv++ = reconfig ? \"敏捷\" : (Sprintf(dex, \"%d\", ACURR(A_DEX)), dex);\n   733:     *rv++ = reconfig ? \"体质\" : (Sprintf(con, \"%d\", ACURR(A_CON)), con);\n>  734:     *rv++ = reconfig ? \"感知\" : (Sprintf(itl, \"%d\", ACURR(A_INT)), itl);\n   735:     *rv++ = reconfig ? \"智力\" : (Sprintf(wis, \"%d\", ACURR(A_WIS)), wis);\n   736:     *rv++ = reconfig ? \"魅力\" : (Sprintf(cha, \"%d\", ACURR(A_CHA)), cha);\n   737:     *rv++ = reconfig ? \"阵营\" : u.ualign.type == A_CHAOTIC ? \"混沌\" :\n   738: \t    u.ualign.type == A_NEUTRAL ? \"中立\" : \"秩序\";\n   739: #ifdef SCORE_ON_BOTL"
+  },
+  {
+    "key": "L00735_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:735:45\n   730:     *rv++ = reconfig ? \"玩家\" : botl_player();\n   731:     *rv++ = reconfig ? \"力量\" : botl_strength();\n   732:     *rv++ = reconfig ? \"敏捷\" : (Sprintf(dex, \"%d\", ACURR(A_DEX)), dex);\n   733:     *rv++ = reconfig ? \"体质\" : (Sprintf(con, \"%d\", ACURR(A_CON)), con);\n   734:     *rv++ = reconfig ? \"感知\" : (Sprintf(itl, \"%d\", ACURR(A_INT)), itl);\n>  735:     *rv++ = reconfig ? \"智力\" : (Sprintf(wis, \"%d\", ACURR(A_WIS)), wis);\n   736:     *rv++ = reconfig ? \"魅力\" : (Sprintf(cha, \"%d\", ACURR(A_CHA)), cha);\n   737:     *rv++ = reconfig ? \"阵营\" : u.ualign.type == A_CHAOTIC ? \"混沌\" :\n   738: \t    u.ualign.type == A_NEUTRAL ? \"中立\" : \"秩序\";\n   739: #ifdef SCORE_ON_BOTL\n   740:     if (flags.showscore)"
+  },
+  {
+    "key": "L00736_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:736:45\n   731:     *rv++ = reconfig ? \"力量\" : botl_strength();\n   732:     *rv++ = reconfig ? \"敏捷\" : (Sprintf(dex, \"%d\", ACURR(A_DEX)), dex);\n   733:     *rv++ = reconfig ? \"体质\" : (Sprintf(con, \"%d\", ACURR(A_CON)), con);\n   734:     *rv++ = reconfig ? \"感知\" : (Sprintf(itl, \"%d\", ACURR(A_INT)), itl);\n   735:     *rv++ = reconfig ? \"智力\" : (Sprintf(wis, \"%d\", ACURR(A_WIS)), wis);\n>  736:     *rv++ = reconfig ? \"魅力\" : (Sprintf(cha, \"%d\", ACURR(A_CHA)), cha);\n   737:     *rv++ = reconfig ? \"阵营\" : u.ualign.type == A_CHAOTIC ? \"混沌\" :\n   738: \t    u.ualign.type == A_NEUTRAL ? \"中立\" : \"秩序\";\n   739: #ifdef SCORE_ON_BOTL\n   740:     if (flags.showscore)\n   741: \t*rv++ = reconfig ? \"分数\" :"
+  },
+  {
+    "key": "L00742_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/botl.c:742:19\n   737:     *rv++ = reconfig ? \"阵营\" : u.ualign.type == A_CHAOTIC ? \"混沌\" :\n   738: \t    u.ualign.type == A_NEUTRAL ? \"中立\" : \"秩序\";\n   739: #ifdef SCORE_ON_BOTL\n   740:     if (flags.showscore)\n   741: \t*rv++ = reconfig ? \"分数\" :\n>  742: \t\t(Sprintf(score, \"%ld\", botl_score()), score);\n   743: #endif\n   744:     uhp = Upolyd ? u.mh : u.uhp;\n   745:     if (uhp < 0) uhp = 0;\n   746:     (void) describe_level(dlevel, TRUE);\n   747:     eos(dlevel)[-1] = 0;"
+  },
+  {
+    "key": "L00749_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/botl.c:749:46\n   744:     uhp = Upolyd ? u.mh : u.uhp;\n   745:     if (uhp < 0) uhp = 0;\n   746:     (void) describe_level(dlevel, TRUE);\n   747:     eos(dlevel)[-1] = 0;\n   748:     *rv++ = reconfig ? \"地牢层级\" : dlevel;\n>  749:     *rv++ = reconfig ? \"金币\" : (Sprintf(gold, \"%ld\",\n   750: #ifndef GOLDOBJ\n   751:     u.ugold\n   752: #else\n   753: \tmoney_cnt(invent)\n   754: #endif"
+  },
+  {
+    "key": "L00756_01",
+    "original": "hp",
+    "translation": "",
+    "context": "src/botl.c:756:24\n   751:     u.ugold\n   752: #else\n   753: \tmoney_cnt(invent)\n   754: #endif\n   755:     ), gold);\n>  756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);"
+  },
+  {
+    "key": "L00756_02",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:756:44\n   751:     u.ugold\n   752: #else\n   753: \tmoney_cnt(invent)\n   754: #endif\n   755:     ), gold);\n>  756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);"
+  },
+  {
+    "key": "L00758_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:758:22\n   753: \tmoney_cnt(invent)\n   754: #endif\n   755:     ), gold);\n   756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n>  758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);"
+  },
+  {
+    "key": "L00759_01",
+    "original": "pw",
+    "translation": "",
+    "context": "src/botl.c:759:24\n   754: #endif\n   755:     ), gold);\n   756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n>  759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;"
+  },
+  {
+    "key": "L00759_02",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:759:44\n   754: #endif\n   755:     ), gold);\n   756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n>  759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;"
+  },
+  {
+    "key": "L00760_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:760:49\n   755:     ), gold);\n   756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n>  760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;\n   765: #ifdef EXP_ON_BOTL"
+  },
+  {
+    "key": "L00761_01",
+    "original": "ac",
+    "translation": "",
+    "context": "src/botl.c:761:24\n   756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n>  761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;\n   765: #ifdef EXP_ON_BOTL\n   766:     if (flags.showexp)"
+  },
+  {
+    "key": "L00761_02",
+    "original": "%d",
+    "translation": "",
+    "context": "src/botl.c:761:44\n   756:     *rv++ = reconfig ? \"hp\" : (Sprintf(hp, \"%d\", uhp), hp);\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n>  761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;\n   765: #ifdef EXP_ON_BOTL\n   766:     if (flags.showexp)"
+  },
+  {
+    "key": "L00762_01",
+    "original": "%u",
+    "translation": "",
+    "context": "src/botl.c:762:21\n   757:     *rv++ = reconfig ? \"最大HP\" :\n   758: \t    (Sprintf(hpmax, \"%d\", Upolyd ? u.mhmax : u.uhpmax), hpmax);\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n>  762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;\n   765: #ifdef EXP_ON_BOTL\n   766:     if (flags.showexp)\n   767: \t*rv++ = reconfig ? \"经验值\" : (Sprintf(expr, \"%ld\", u.uexp), expr);"
+  },
+  {
+    "key": "L00764_01",
+    "original": "elevel",
+    "translation": "",
+    "context": "src/botl.c:764:44\n   759:     *rv++ = reconfig ? \"pw\" : (Sprintf(pw, \"%d\", u.uen), pw);\n   760:     *rv++ = reconfig ? \"最大Pw\" : (Sprintf(pwmax, \"%d\", u.uenmax), pwmax);\n   761:     *rv++ = reconfig ? \"ac\" : (Sprintf(ac, \"%d\", u.uac), ac);\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n>  764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;\n   765: #ifdef EXP_ON_BOTL\n   766:     if (flags.showexp)\n   767: \t*rv++ = reconfig ? \"经验值\" : (Sprintf(expr, \"%ld\", u.uexp), expr);\n   768: #endif\n   769: #ifdef SHOW_WEIGHT"
+  },
+  {
+    "key": "L00767_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/botl.c:767:44\n   762:     Sprintf(elevel, \"%u\",\n   763: \t    Upolyd && u.ulycn != u.umonnum ? mons[u.umonnum].mlevel : u.ulevel);\n   764:     *rv++ = reconfig ? (Upolyd ? \"攻击计算骰\" : \"elevel\") : elevel;\n   765: #ifdef EXP_ON_BOTL\n   766:     if (flags.showexp)\n>  767: \t*rv++ = reconfig ? \"经验值\" : (Sprintf(expr, \"%ld\", u.uexp), expr);\n   768: #endif\n   769: #ifdef SHOW_WEIGHT\n   770:     if (flags.showweight) {\n   771: \t*rv++ = reconfig ? \"负重\" : (Sprintf(iweight,\n   772: \t\t\"%ld\", (long)(inv_weight() + weight_cap())), iweight);"
+  },
+  {
+    "key": "L00772_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/botl.c:772:3\n   767: \t*rv++ = reconfig ? \"经验值\" : (Sprintf(expr, \"%ld\", u.uexp), expr);\n   768: #endif\n   769: #ifdef SHOW_WEIGHT\n   770:     if (flags.showweight) {\n   771: \t*rv++ = reconfig ? \"负重\" : (Sprintf(iweight,\n>  772: \t\t\"%ld\", (long)(inv_weight() + weight_cap())), iweight);\n   773: \t*rv++ = reconfig ? \"最大负载量\" : (Sprintf(capacity,\n   774: \t\t\"%ld\", (long)weight_cap()), capacity);\n   775:     }\n   776: #endif\n   777:     if (flags.time)"
+  },
+  {
+    "key": "L00774_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/botl.c:774:3\n   769: #ifdef SHOW_WEIGHT\n   770:     if (flags.showweight) {\n   771: \t*rv++ = reconfig ? \"负重\" : (Sprintf(iweight,\n   772: \t\t\"%ld\", (long)(inv_weight() + weight_cap())), iweight);\n   773: \t*rv++ = reconfig ? \"最大负载量\" : (Sprintf(capacity,\n>  774: \t\t\"%ld\", (long)weight_cap()), capacity);\n   775:     }\n   776: #endif\n   777:     if (flags.time)\n   778: \t*rv++ = reconfig ? \"时间\" : (Sprintf(tim, \"%ld\", moves), tim);\n   779:     *rv++ = reconfig ? \"饥饿\" : strcmp(hu_stat[u.uhs], \"        \") ?"
+  },
+  {
+    "key": "L00778_01",
+    "original": "%ld",
+    "translation": "",
+    "context": "src/botl.c:778:42\n   773: \t*rv++ = reconfig ? \"最大负载量\" : (Sprintf(capacity,\n   774: \t\t\"%ld\", (long)weight_cap()), capacity);\n   775:     }\n   776: #endif\n   777:     if (flags.time)\n>  778: \t*rv++ = reconfig ? \"时间\" : (Sprintf(tim, \"%ld\", moves), tim);\n   779:     *rv++ = reconfig ? \"饥饿\" : strcmp(hu_stat[u.uhs], \"        \") ?\n   780: \t    hu_stat[u.uhs] : \"\";\n   781:     *rv++ = reconfig ? \"负重\" : enc_stat[near_capacity()];\n   782:     *rv++ = reconfig ? \"flags\" : (Sprintf(flgs, \"%lX\",\n   783:         (Levitation ? RAW_STAT_LEVITATION : 0) |"
+  },
+  {
+    "key": "L00782_01",
+    "original": "flags",
+    "translation": "",
+    "context": "src/botl.c:782:24\n   777:     if (flags.time)\n   778: \t*rv++ = reconfig ? \"时间\" : (Sprintf(tim, \"%ld\", moves), tim);\n   779:     *rv++ = reconfig ? \"饥饿\" : strcmp(hu_stat[u.uhs], \"        \") ?\n   780: \t    hu_stat[u.uhs] : \"\";\n   781:     *rv++ = reconfig ? \"负重\" : enc_stat[near_capacity()];\n>  782:     *rv++ = reconfig ? \"flags\" : (Sprintf(flgs, \"%lX\",\n   783:         (Levitation ? RAW_STAT_LEVITATION : 0) |\n   784: \t(Confusion ? RAW_STAT_CONFUSION : 0) |\n   785: \t(Sick && (u.usick_type & SICK_VOMITABLE) ? RAW_STAT_FOODPOIS : 0) |\n   786: \t(Sick && (u.usick_type & SICK_NONVOMITABLE) ? RAW_STAT_ILL : 0) |\n   787: \t(Blind ? RAW_STAT_BLIND : 0) |"
+  },
+  {
+    "key": "L00782_02",
+    "original": "%lX",
+    "translation": "",
+    "context": "src/botl.c:782:49\n   777:     if (flags.time)\n   778: \t*rv++ = reconfig ? \"时间\" : (Sprintf(tim, \"%ld\", moves), tim);\n   779:     *rv++ = reconfig ? \"饥饿\" : strcmp(hu_stat[u.uhs], \"        \") ?\n   780: \t    hu_stat[u.uhs] : \"\";\n   781:     *rv++ = reconfig ? \"负重\" : enc_stat[near_capacity()];\n>  782:     *rv++ = reconfig ? \"flags\" : (Sprintf(flgs, \"%lX\",\n   783:         (Levitation ? RAW_STAT_LEVITATION : 0) |\n   784: \t(Confusion ? RAW_STAT_CONFUSION : 0) |\n   785: \t(Sick && (u.usick_type & SICK_VOMITABLE) ? RAW_STAT_FOODPOIS : 0) |\n   786: \t(Sick && (u.usick_type & SICK_NONVOMITABLE) ? RAW_STAT_ILL : 0) |\n   787: \t(Blind ? RAW_STAT_BLIND : 0) |"
+  }
+]

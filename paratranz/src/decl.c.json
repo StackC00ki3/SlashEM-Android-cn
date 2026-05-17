@@ -1,0 +1,224 @@
+[
+  {
+    "key": "L00071_01",
+    "original": " \\r\\n\\033",
+    "translation": "",
+    "context": "src/decl.c:71:26\n    66: NEARDATA struct fruit *ffruit = (struct fruit *)0;\n    67: \n    68: NEARDATA char tune[6] = DUMMY;\n    69: \n    70: const char *occtxt = DUMMY;\n>   71: const char quitchars[] = \" \\r\\n\\033\";\n    72: const char vowels[] = \"aeiouAEIOU\";\n    73: const char ynchars[] = \"yn\";\n    74: const char ynqchars[] = \"ynq\";\n    75: const char ynaqchars[] = \"ynaq\";\n    76: const char ynNaqchars[] = \"yn#aq\";"
+  },
+  {
+    "key": "L00072_01",
+    "original": "aeiouAEIOU",
+    "translation": "",
+    "context": "src/decl.c:72:23\n    67: \n    68: NEARDATA char tune[6] = DUMMY;\n    69: \n    70: const char *occtxt = DUMMY;\n    71: const char quitchars[] = \" \\r\\n\\033\";\n>   72: const char vowels[] = \"aeiouAEIOU\";\n    73: const char ynchars[] = \"yn\";\n    74: const char ynqchars[] = \"ynq\";\n    75: const char ynaqchars[] = \"ynaq\";\n    76: const char ynNaqchars[] = \"yn#aq\";\n    77: NEARDATA long yn_number = 0L;"
+  },
+  {
+    "key": "L00073_01",
+    "original": "yn",
+    "translation": "",
+    "context": "src/decl.c:73:24\n    68: NEARDATA char tune[6] = DUMMY;\n    69: \n    70: const char *occtxt = DUMMY;\n    71: const char quitchars[] = \" \\r\\n\\033\";\n    72: const char vowels[] = \"aeiouAEIOU\";\n>   73: const char ynchars[] = \"yn\";\n    74: const char ynqchars[] = \"ynq\";\n    75: const char ynaqchars[] = \"ynaq\";\n    76: const char ynNaqchars[] = \"yn#aq\";\n    77: NEARDATA long yn_number = 0L;\n    78: "
+  },
+  {
+    "key": "L00074_01",
+    "original": "ynq",
+    "translation": "",
+    "context": "src/decl.c:74:25\n    69: \n    70: const char *occtxt = DUMMY;\n    71: const char quitchars[] = \" \\r\\n\\033\";\n    72: const char vowels[] = \"aeiouAEIOU\";\n    73: const char ynchars[] = \"yn\";\n>   74: const char ynqchars[] = \"ynq\";\n    75: const char ynaqchars[] = \"ynaq\";\n    76: const char ynNaqchars[] = \"yn#aq\";\n    77: NEARDATA long yn_number = 0L;\n    78: \n    79: const char disclosure_options[] = \"iavgc\";"
+  },
+  {
+    "key": "L00075_01",
+    "original": "ynaq",
+    "translation": "",
+    "context": "src/decl.c:75:26\n    70: const char *occtxt = DUMMY;\n    71: const char quitchars[] = \" \\r\\n\\033\";\n    72: const char vowels[] = \"aeiouAEIOU\";\n    73: const char ynchars[] = \"yn\";\n    74: const char ynqchars[] = \"ynq\";\n>   75: const char ynaqchars[] = \"ynaq\";\n    76: const char ynNaqchars[] = \"yn#aq\";\n    77: NEARDATA long yn_number = 0L;\n    78: \n    79: const char disclosure_options[] = \"iavgc\";\n    80: "
+  },
+  {
+    "key": "L00076_01",
+    "original": "yn#aq",
+    "translation": "",
+    "context": "src/decl.c:76:27\n    71: const char quitchars[] = \" \\r\\n\\033\";\n    72: const char vowels[] = \"aeiouAEIOU\";\n    73: const char ynchars[] = \"yn\";\n    74: const char ynqchars[] = \"ynq\";\n    75: const char ynaqchars[] = \"ynaq\";\n>   76: const char ynNaqchars[] = \"yn#aq\";\n    77: NEARDATA long yn_number = 0L;\n    78: \n    79: const char disclosure_options[] = \"iavgc\";\n    80: \n    81: #if defined(MICRO) || defined(WIN32)"
+  },
+  {
+    "key": "L00079_01",
+    "original": "iavgc",
+    "translation": "",
+    "context": "src/decl.c:79:35\n    74: const char ynqchars[] = \"ynq\";\n    75: const char ynaqchars[] = \"ynaq\";\n    76: const char ynNaqchars[] = \"yn#aq\";\n    77: NEARDATA long yn_number = 0L;\n    78: \n>   79: const char disclosure_options[] = \"iavgc\";\n    80: \n    81: #if defined(MICRO) || defined(WIN32)\n    82: char hackdir[PATHLEN];\t\t/* where rumors, help, record are */\n    83: # ifdef MICRO\n    84: char levels[PATHLEN];\t\t/* where levels are */"
+  },
+  {
+    "key": "L00093_01",
+    "original": "levels.*",
+    "translation": "",
+    "context": "src/decl.c:93:25\n    88: \n    89: #ifdef MFLOPPY\n    90: char permbones[PATHLEN];\t/* where permanent copy of bones go */\n    91: int ramdisk = FALSE;\t\t/* whether to copy bones to levels or not */\n    92: int saveprompt = TRUE;\n>   93: const char *alllevels = \"levels.*\";\n    94: const char *allbones = \"bones*.*\";\n    95: #endif\n    96: \n    97: struct linfo level_info[MAXLINFO];\n    98: "
+  },
+  {
+    "key": "L00094_01",
+    "original": "bones*.*",
+    "translation": "",
+    "context": "src/decl.c:94:24\n    89: #ifdef MFLOPPY\n    90: char permbones[PATHLEN];\t/* where permanent copy of bones go */\n    91: int ramdisk = FALSE;\t\t/* whether to copy bones to levels or not */\n    92: int saveprompt = TRUE;\n    93: const char *alllevels = \"levels.*\";\n>   94: const char *allbones = \"bones*.*\";\n    95: #endif\n    96: \n    97: struct linfo level_info[MAXLINFO];\n    98: \n    99: NEARDATA struct sinfo program_state;"
+  },
+  {
+    "key": "L00102_01",
+    "original": "hykulnjb><",
+    "translation": "",
+    "context": "src/decl.c:102:21\n    97: struct linfo level_info[MAXLINFO];\n    98: \n    99: NEARDATA struct sinfo program_state;\n   100: \n   101: /* 'rogue'-like direction commands (cmd.c) */\n>  102: const char sdir[] = \"hykulnjb><\";\n   103: const char ndir[] = \"47896321><\";\t/* number pad mode */\n   104: const schar xdir[10] = { -1,-1, 0, 1, 1, 1, 0,-1, 0, 0 };\n   105: const schar ydir[10] = {  0,-1,-1,-1, 0, 1, 1, 1, 0, 0 };\n   106: const schar zdir[10] = {  0, 0, 0, 0, 0, 0, 0, 0, 1,-1 };\n   107: "
+  },
+  {
+    "key": "L00297_01",
+    "original": "Small tiles",
+    "translation": "",
+    "context": "src/decl.c:297:7\n   292: struct tileset tilesets[MAXNOTILESETS];\n   293: int no_tilesets = 0;\n   294: struct tileset def_tilesets[] = {\n   295: #if defined(X11_GRAPHICS) || defined(QT_GRAPHICS) || defined(GTK_GRAPHICS) || \\\n   296:     defined(GNOME_GRAPHICS) || defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n>  297:     { \"Small tiles\", \"x11tiles\", 0 },\n   298:     { \"Big tiles\", \"x11bigtiles\", TILESET_TRANSPARENT },\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif"
+  },
+  {
+    "key": "L00297_02",
+    "original": "x11tiles",
+    "translation": "",
+    "context": "src/decl.c:297:22\n   292: struct tileset tilesets[MAXNOTILESETS];\n   293: int no_tilesets = 0;\n   294: struct tileset def_tilesets[] = {\n   295: #if defined(X11_GRAPHICS) || defined(QT_GRAPHICS) || defined(GTK_GRAPHICS) || \\\n   296:     defined(GNOME_GRAPHICS) || defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n>  297:     { \"Small tiles\", \"x11tiles\", 0 },\n   298:     { \"Big tiles\", \"x11bigtiles\", TILESET_TRANSPARENT },\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif"
+  },
+  {
+    "key": "L00298_01",
+    "original": "Big tiles",
+    "translation": "",
+    "context": "src/decl.c:298:7\n   293: int no_tilesets = 0;\n   294: struct tileset def_tilesets[] = {\n   295: #if defined(X11_GRAPHICS) || defined(QT_GRAPHICS) || defined(GTK_GRAPHICS) || \\\n   296:     defined(GNOME_GRAPHICS) || defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n   297:     { \"Small tiles\", \"x11tiles\", 0 },\n>  298:     { \"Big tiles\", \"x11bigtiles\", TILESET_TRANSPARENT },\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)"
+  },
+  {
+    "key": "L00298_02",
+    "original": "x11bigtiles",
+    "translation": "",
+    "context": "src/decl.c:298:20\n   293: int no_tilesets = 0;\n   294: struct tileset def_tilesets[] = {\n   295: #if defined(X11_GRAPHICS) || defined(QT_GRAPHICS) || defined(GTK_GRAPHICS) || \\\n   296:     defined(GNOME_GRAPHICS) || defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n   297:     { \"Small tiles\", \"x11tiles\", 0 },\n>  298:     { \"Big tiles\", \"x11bigtiles\", TILESET_TRANSPARENT },\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)"
+  },
+  {
+    "key": "L00301_01",
+    "original": "Big 3D tiles",
+    "translation": "",
+    "context": "src/decl.c:301:7\n   296:     defined(GNOME_GRAPHICS) || defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n   297:     { \"Small tiles\", \"x11tiles\", 0 },\n   298:     { \"Big tiles\", \"x11bigtiles\", TILESET_TRANSPARENT },\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n>  301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)\n   304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n   305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif"
+  },
+  {
+    "key": "L00301_02",
+    "original": "x11big3dtiles",
+    "translation": "",
+    "context": "src/decl.c:301:23\n   296:     defined(GNOME_GRAPHICS) || defined(GL_GRAPHICS) || defined(SDL_GRAPHICS)\n   297:     { \"Small tiles\", \"x11tiles\", 0 },\n   298:     { \"Big tiles\", \"x11bigtiles\", TILESET_TRANSPARENT },\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n>  301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)\n   304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n   305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif"
+  },
+  {
+    "key": "L00304_01",
+    "original": "Monochrome tiles",
+    "translation": "",
+    "context": "src/decl.c:304:7\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)\n>  304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n   305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif"
+  },
+  {
+    "key": "L00304_02",
+    "original": "nh2.img",
+    "translation": "",
+    "context": "src/decl.c:304:27\n   299: #endif\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)\n>  304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n   305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif"
+  },
+  {
+    "key": "L00305_01",
+    "original": "Colour tiles",
+    "translation": "",
+    "context": "src/decl.c:305:7\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)\n   304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n>  305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)"
+  },
+  {
+    "key": "L00305_02",
+    "original": "nh16.img",
+    "translation": "",
+    "context": "src/decl.c:305:23\n   300: #if defined(GTK_GRAPHICS)\n   301:     { \"Big 3D tiles\", \"x11big3dtiles\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   302: #endif\n   303: #if defined(GEM_GRAPHICS)\n   304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n>  305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)"
+  },
+  {
+    "key": "L00308_01",
+    "original": "Planer style tiles",
+    "translation": "",
+    "context": "src/decl.c:308:7\n   303: #if defined(GEM_GRAPHICS)\n   304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n   305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif\n   307: #if defined(MSDOS)\n>  308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n   311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n   312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n   313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },"
+  },
+  {
+    "key": "L00308_02",
+    "original": "slashem1.tib",
+    "translation": "",
+    "context": "src/decl.c:308:29\n   303: #if defined(GEM_GRAPHICS)\n   304:     { \"Monochrome tiles\", \"nh2.img\", 0 },\n   305:     { \"Colour tiles\", \"nh16.img\", 0 },\n   306: #endif\n   307: #if defined(MSDOS)\n>  308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n   311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n   312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n   313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },"
+  },
+  {
+    "key": "L00311_01",
+    "original": "Small tiles",
+    "translation": "",
+    "context": "src/decl.c:311:7\n   306: #endif\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n>  311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n   312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n   313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   314: #endif\n   315:     { \"\", \"\", 0, }\n   316: };"
+  },
+  {
+    "key": "L00311_02",
+    "original": "slam16.bmp",
+    "translation": "",
+    "context": "src/decl.c:311:22\n   306: #endif\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n>  311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n   312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n   313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   314: #endif\n   315:     { \"\", \"\", 0, }\n   316: };"
+  },
+  {
+    "key": "L00312_01",
+    "original": "Big tiles",
+    "translation": "",
+    "context": "src/decl.c:312:7\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n   311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n>  312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n   313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   314: #endif\n   315:     { \"\", \"\", 0, }\n   316: };\n   317: "
+  },
+  {
+    "key": "L00312_02",
+    "original": "slam32.bmp",
+    "translation": "",
+    "context": "src/decl.c:312:20\n   307: #if defined(MSDOS)\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n   311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n>  312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n   313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   314: #endif\n   315:     { \"\", \"\", 0, }\n   316: };\n   317: "
+  },
+  {
+    "key": "L00313_01",
+    "original": "Big 3D tiles",
+    "translation": "",
+    "context": "src/decl.c:313:7\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n   311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n   312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n>  313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   314: #endif\n   315:     { \"\", \"\", 0, }\n   316: };\n   317: \n   318: char tileset[PL_PSIZ] = DUMMY;"
+  },
+  {
+    "key": "L00313_02",
+    "original": "slam3D.bmp",
+    "translation": "",
+    "context": "src/decl.c:313:23\n   308:     { \"Planer style tiles\", \"slashem1.tib\", 0 },\n   309: #endif\n   310: #if defined(ALLEG_FX)\n   311:     { \"Small tiles\", \"slam16.bmp\", 0 },\n   312:     { \"Big tiles\", \"slam32.bmp\", TILESET_TRANSPARENT },\n>  313:     { \"Big 3D tiles\", \"slam3D.bmp\", TILESET_TRANSPARENT | TILESET_PSEUDO3D },\n   314: #endif\n   315:     { \"\", \"\", 0, }\n   316: };\n   317: \n   318: char tileset[PL_PSIZ] = DUMMY;"
+  },
+  {
+    "key": "L00324_01",
+    "original": "hackdir",
+    "translation": "",
+    "context": "src/decl.c:324:42\n   319: \n   320: char *fqn_prefix[PREFIX_COUNT] = { (char *)0, (char *)0, (char *)0, (char *)0,\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n>  324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n   325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n   326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */"
+  },
+  {
+    "key": "L00324_02",
+    "original": "leveldir",
+    "translation": "",
+    "context": "src/decl.c:324:53\n   319: \n   320: char *fqn_prefix[PREFIX_COUNT] = { (char *)0, (char *)0, (char *)0, (char *)0,\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n>  324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n   325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n   326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */"
+  },
+  {
+    "key": "L00324_03",
+    "original": "savedir",
+    "translation": "",
+    "context": "src/decl.c:324:65\n   319: \n   320: char *fqn_prefix[PREFIX_COUNT] = { (char *)0, (char *)0, (char *)0, (char *)0,\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n>  324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n   325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n   326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */"
+  },
+  {
+    "key": "L00325_01",
+    "original": "bonesdir",
+    "translation": "",
+    "context": "src/decl.c:325:6\n   320: char *fqn_prefix[PREFIX_COUNT] = { (char *)0, (char *)0, (char *)0, (char *)0,\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n   324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n>  325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n   326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */\n   330: void"
+  },
+  {
+    "key": "L00325_02",
+    "original": "datadir",
+    "translation": "",
+    "context": "src/decl.c:325:18\n   320: char *fqn_prefix[PREFIX_COUNT] = { (char *)0, (char *)0, (char *)0, (char *)0,\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n   324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n>  325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n   326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */\n   330: void"
+  },
+  {
+    "key": "L00325_03",
+    "original": "scoredir",
+    "translation": "",
+    "context": "src/decl.c:325:29\n   320: char *fqn_prefix[PREFIX_COUNT] = { (char *)0, (char *)0, (char *)0, (char *)0,\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n   324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n>  325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n   326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */\n   330: void"
+  },
+  {
+    "key": "L00326_01",
+    "original": "lockdir",
+    "translation": "",
+    "context": "src/decl.c:326:6\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n   324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n   325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n>  326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */\n   330: void\n   331: decl_init()"
+  },
+  {
+    "key": "L00326_02",
+    "original": "configdir",
+    "translation": "",
+    "context": "src/decl.c:326:17\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n   324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n   325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n>  326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */\n   330: void\n   331: decl_init()"
+  },
+  {
+    "key": "L00326_03",
+    "original": "troubledir",
+    "translation": "",
+    "context": "src/decl.c:326:30\n   321: \t\t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0 };\n   322: \n   323: #ifdef PREFIXES_IN_USE\n   324: char *fqn_prefix_names[PREFIX_COUNT] = { \"hackdir\", \"leveldir\", \"savedir\",\n   325: \t\t\t\t\t\"bonesdir\", \"datadir\", \"scoredir\",\n>  326: \t\t\t\t\t\"lockdir\", \"configdir\", \"troubledir\" };\n   327: #endif\n   328: \n   329: /* dummy routine used to force linkage */\n   330: void\n   331: decl_init()"
+  }
+]

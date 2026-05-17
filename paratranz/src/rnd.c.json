@@ -1,0 +1,26 @@
+[
+  {
+    "key": "L00027_01",
+    "original": "rn2(%d) attempted",
+    "translation": "",
+    "context": "src/rnd.c:27:14\n    22: rn2(x)\t\t/* 0 <= rn2(x) < x */\n    23: register int x;\n    24: {\n    25: #ifdef DEBUG\n    26: \tif (x <= 0) {\n>   27: \t\timpossible(\"rn2(%d) attempted\", x);\n    28: \t\treturn(0);\n    29: \t}\n    30: \tx = RND(x);\n    31: \treturn(x);\n    32: #else"
+  },
+  {
+    "key": "L00048_01",
+    "original": "rnl(%d) attempted",
+    "translation": "",
+    "context": "src/rnd.c:48:14\n    43: {\n    44: \tregister int i;\n    45: \n    46: #ifdef DEBUG\n    47: \tif (x <= 0) {\n>   48: \t\timpossible(\"rnl(%d) attempted\", x);\n    49: \t\treturn(0);\n    50: \t}\n    51: #endif\n    52: \ti = RND(x);\n    53: "
+  },
+  {
+    "key": "L00072_01",
+    "original": "rnd(%d) attempted",
+    "translation": "",
+    "context": "src/rnd.c:72:14\n    67: rnd(x)\t\t/* 1 <= rnd(x) <= x */\n    68: register int x;\n    69: {\n    70: #ifdef DEBUG\n    71: \tif (x <= 0) {\n>   72: \t\timpossible(\"rnd(%d) attempted\", x);\n    73: \t\treturn(1);\n    74: \t}\n    75: \tx = RND(x)+1;\n    76: \treturn(x);\n    77: #else"
+  },
+  {
+    "key": "L00093_01",
+    "original": "d(%d,%d) attempted",
+    "translation": "",
+    "context": "src/rnd.c:93:14\n    88: {\n    89: \tregister int tmp = n;\n    90: \n    91: #ifdef DEBUG\n    92: \tif (x < 0 || n < 0 || (x == 0 && n != 0)) {\n>   93: \t\timpossible(\"d(%d,%d) attempted\", n, x);\n    94: \t\treturn(1);\n    95: \t}\n    96: #endif\n    97: \twhile(n--) tmp += RND(x);\n    98: \treturn(tmp); /* Alea iacta est. -- J.C. */"
+  }
+]

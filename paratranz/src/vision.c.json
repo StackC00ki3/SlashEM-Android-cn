@@ -1,0 +1,32 @@
+[
+  {
+    "key": "L01602_01",
+    "original": "close_shadow:  bad value",
+    "translation": "",
+    "context": "src/vision.c:1602:13\n  1597:     if ((sdx = (start_col-block_col)) < 0) sdx = -sdx;\t\t/* src   dx */\n  1598:     if ((pdy = (block_row-this_row))  < 0) pdy = -pdy;\t\t/* point dy */\n  1599: \n  1600:     if (sdy < 0 || sdy >= CLOSE_MAX_SB_DY || sdx >= CLOSE_MAX_SB_DX ||\n  1601: \t\t\t\t\t\t    pdy >= CLOSE_MAX_BC_DY) {\n> 1602: \timpossible(\"close_shadow:  bad value\");\n  1603: \treturn block_col;\n  1604:     }\n  1605:     offset = close_dy[sdy]->close[sdx][pdy];\n  1606:     if (side == FROM_RIGHT)\n  1607: \treturn block_col + offset;"
+  },
+  {
+    "key": "L01637_01",
+    "original": "far_shadow:  bad value",
+    "translation": "",
+    "context": "src/vision.c:1637:13\n  1632:     if ((sdx = (start_col-block_col)) < 0) sdx = -sdx; --sdx;\t/* src   dx */\n  1633:     if ((pdy = (block_row-this_row))  < 0) pdy = -pdy; --pdy;\t/* point dy */\n  1634: \n  1635:     if (sdy >= FAR_MAX_SB_DY || sdx < 0 || sdx >= FAR_MAX_SB_DX ||\n  1636: \t\t\t\t\t    pdy < 0 || pdy >= FAR_MAX_BC_DY) {\n> 1637: \timpossible(\"far_shadow:  bad value\");\n  1638: \treturn block_col;\n  1639:     }\n  1640:     if ((offset = far_dy[sdy]->far_q[sdx][pdy]) == OFF_TABLE) offset = -1;\n  1641:     if (side == FROM_RIGHT)\n  1642: \treturn block_col + offset;"
+  },
+  {
+    "key": "L02130_01",
+    "original": "view_from called with range %d",
+    "translation": "",
+    "context": "src/vision.c:2130:12\n  2125: \t    (viz_clear_rows[srow][scol+1] ? right_ptrs[srow][scol+1] : scol+1);\n  2126:     }\n  2127: \n  2128:     if(range) {\n  2129: \tif(range > MAX_RADIUS || range < 1)\n> 2130: \t    panic(\"view_from called with range %d\", range);\n  2131: \tlimits = circle_ptr(range) + 1; /* start at next row */\n  2132: \tif(left < scol - range) left = scol - range;\n  2133: \tif(right > scol + range) right = scol + range;\n  2134:     } else\n  2135: \tlimits = (char*) 0;"
+  },
+  {
+    "key": "L02547_01",
+    "original": "view_from called with range %d",
+    "translation": "",
+    "context": "src/vision.c:2547:12\n  2542: \t\t(is_clear(srow,scol+1) ? right_ptrs[srow][scol+1] : scol+1);\n  2543:     }\n  2544: \n  2545:     if(range) {\n  2546: \tif(range > MAX_RADIUS || range < 1)\n> 2547: \t    panic(\"view_from called with range %d\", range);\n  2548: \tlimits = circle_ptr(range) + 1; /* start at next row */\n  2549: \tif(left < scol - range) left = scol - range;\n  2550: \tif(right > scol + range) right = scol + range;\n  2551:     } else\n  2552: \tlimits = (char*) 0;"
+  },
+  {
+    "key": "L02613_01",
+    "original": "do_clear_area:  illegal range %d",
+    "translation": "",
+    "context": "src/vision.c:2613:9\n  2608: \t    register int x;\n  2609: \t    int y, min_x, max_x, max_y, offset;\n  2610: \t    char *limits;\n  2611: \n  2612: \t    if (range > MAX_RADIUS || range < 1)\n> 2613: \t\tpanic(\"do_clear_area:  illegal range %d\", range);\n  2614: \t    if(vision_full_recalc)\n  2615: \t\tvision_recalc(0);\t/* recalc vision if dirty */\n  2616: \t    limits = circle_ptr(range);\n  2617: \t    if ((max_y = (srow + range)) >= ROWNO) max_y = ROWNO-1;\n  2618: \t    if ((y = (srow - range)) < 0) y = 0;"
+  }
+]

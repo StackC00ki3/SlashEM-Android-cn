@@ -1,0 +1,8 @@
+[
+  {
+    "key": "L00624_01",
+    "original": "%s%s！",
+    "translation": "",
+    "context": "src/wizard.c:624:17\n   619: \t\telse if (mtmp->mhp < 5 && !rn2(2))\t/* Parthian shot */\n   620: \t\t    verbalize(rn2(2) ?\n   621: \t\t\t      \"我总有一天会回来的。\" :\n   622: \t\t\t      \"我一定会回来的！\");\n   623: \t\telse\n>  624: \t\t    verbalize(\"%s%s！\",\n   625: \t\t\t  random_malediction[rn2(SIZE(random_malediction))],\n   626: \t\t\t  random_insult[rn2(SIZE(random_insult))]);\n   627: \t} else if(is_lminion(mtmp)) {\n   628: \t\tcom_pager(rn2(QTN_ANGELIC - 1 + (Hallucination ? 1 : 0)) +\n   629: \t\t\t      QT_ANGELIC);"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "key": "L00118_01",
+    "original": "are currently %s instead of %s.",
+    "translation": "",
+    "context": "src/quest.c:118:10\n   113:     aligntyp original_alignment = u.ualignbase[A_ORIGINAL];\n   114: \n   115: #ifdef WIZARD\n   116:     if (wizard && talk) {\n   117: \tif (u.ualign.type != original_alignment) {\n>  118: \t    You(\"are currently %s instead of %s.\",\n   119: \t\talign_str(u.ualign.type), align_str(original_alignment));\n   120: \t} else if (u.ualignbase[A_CURRENT] != original_alignment) {\n   121: \t    You(\"have converted.\");\n   122: \t} else if (u.ualign.record < MIN_QUEST_ALIGN) {\n   123: \t    You(\"are currently %d and require %d.\","
+  },
+  {
+    "key": "L00121_01",
+    "original": "have converted.",
+    "translation": "",
+    "context": "src/quest.c:121:10\n   116:     if (wizard && talk) {\n   117: \tif (u.ualign.type != original_alignment) {\n   118: \t    You(\"are currently %s instead of %s.\",\n   119: \t\talign_str(u.ualign.type), align_str(original_alignment));\n   120: \t} else if (u.ualignbase[A_CURRENT] != original_alignment) {\n>  121: \t    You(\"have converted.\");\n   122: \t} else if (u.ualign.record < MIN_QUEST_ALIGN) {\n   123: \t    You(\"are currently %d and require %d.\",\n   124: \t\tu.ualign.record, MIN_QUEST_ALIGN);\n   125: \t    if (yn_function(\"adjust?\", (char *)0, 'y') == 'y')\n   126: \t\tu.ualign.record = MIN_QUEST_ALIGN;"
+  },
+  {
+    "key": "L00123_01",
+    "original": "are currently %d and require %d.",
+    "translation": "",
+    "context": "src/quest.c:123:10\n   118: \t    You(\"are currently %s instead of %s.\",\n   119: \t\talign_str(u.ualign.type), align_str(original_alignment));\n   120: \t} else if (u.ualignbase[A_CURRENT] != original_alignment) {\n   121: \t    You(\"have converted.\");\n   122: \t} else if (u.ualign.record < MIN_QUEST_ALIGN) {\n>  123: \t    You(\"are currently %d and require %d.\",\n   124: \t\tu.ualign.record, MIN_QUEST_ALIGN);\n   125: \t    if (yn_function(\"adjust?\", (char *)0, 'y') == 'y')\n   126: \t\tu.ualign.record = MIN_QUEST_ALIGN;\n   127: \t}\n   128:     }"
+  },
+  {
+    "key": "L00125_01",
+    "original": "adjust?",
+    "translation": "",
+    "context": "src/quest.c:125:22\n   120: \t} else if (u.ualignbase[A_CURRENT] != original_alignment) {\n   121: \t    You(\"have converted.\");\n   122: \t} else if (u.ualign.record < MIN_QUEST_ALIGN) {\n   123: \t    You(\"are currently %d and require %d.\",\n   124: \t\tu.ualign.record, MIN_QUEST_ALIGN);\n>  125: \t    if (yn_function(\"adjust?\", (char *)0, 'y') == 'y')\n   126: \t\tu.ualign.record = MIN_QUEST_ALIGN;\n   127: \t}\n   128:     }\n   129: #endif\n   130:     purity = (u.ualign.record >= MIN_QUEST_ALIGN &&"
+  },
+  {
+    "key": "L00152_01",
+    "original": "The Quest",
+    "translation": "",
+    "context": "src/quest.c:152:25\n   147:     branch *br;\n   148:     d_level *dest;\n   149:     struct trap *t;\n   150:     int portal_flag;\n   151: \n>  152:     br = dungeon_branch(\"The Quest\");\n   153:     dest = (br->end1.dnum == u.uz.dnum) ? &br->end2 : &br->end1;\n   154:     portal_flag = u.uevent.qexpelled ? 0 :\t/* returned via artifact? */\n   155: \t\t  !seal ? 1 : -1;\n   156:     schedule_goto(dest, FALSE, FALSE, portal_flag, (char *)0, (char *)0);\n   157:     if (seal) {\t/* remove the portal to the quest - sealing it off */"
+  },
+  {
+    "key": "L00167_01",
+    "original": "quest portal already gone?",
+    "translation": "",
+    "context": "src/quest.c:167:35\n   162: \t   If monster movement is in progress, any who haven't moved\n   163: \t   yet will now miss out on a chance to wander through it... */\n   164: \tfor (t = ftrap; t; t = t->ntrap)\n   165: \t    if (t->ttyp == MAGIC_PORTAL) break;\n   166: \tif (t) deltrap(t);\t/* (display might be briefly out of sync) */\n>  167: \telse if (!reexpelled) impossible(\"quest portal already gone?\");\n   168:     }\n   169: }\n   170: \n   171: /* Either you've returned to quest leader while carrying the quest\n   172:    artifact or you've just thrown it to/at him or her.  If quest"
+  },
+  {
+    "key": "L00333_01",
+    "original": "%s speaks:",
+    "translation": "",
+    "context": "src/quest.c:333:13\n   328: {\n   329: \tif (mtmp->data == &mons[PM_PRISONER] &&\n   330: \t\t\t(mtmp->mstrategy & STRAT_WAITMASK)) {\n   331: \t    /* Awaken the prisoner */\n   332: \t    if (canseemon(mtmp))\n>  333: \t    \tpline(\"%s speaks:\", Monnam(mtmp));\n   334: \t    verbalize(\"I'm finally free!\");\n   335: \t    mtmp->mstrategy &= ~STRAT_WAITMASK;\n   336: \t    mtmp->mpeaceful = 1;\n   337: \n   338: \t    /* Your god is happy... */"
+  },
+  {
+    "key": "L00334_01",
+    "original": "I'm finally free!",
+    "translation": "",
+    "context": "src/quest.c:334:16\n   329: \tif (mtmp->data == &mons[PM_PRISONER] &&\n   330: \t\t\t(mtmp->mstrategy & STRAT_WAITMASK)) {\n   331: \t    /* Awaken the prisoner */\n   332: \t    if (canseemon(mtmp))\n   333: \t    \tpline(\"%s speaks:\", Monnam(mtmp));\n>  334: \t    verbalize(\"I'm finally free!\");\n   335: \t    mtmp->mstrategy &= ~STRAT_WAITMASK;\n   336: \t    mtmp->mpeaceful = 1;\n   337: \n   338: \t    /* Your god is happy... */\n   339: \t    adjalign(3);"
+  },
+  {
+    "key": "L00358_01",
+    "original": "quest_chat: Unknown quest character %s.",
+    "translation": "",
+    "context": "src/quest.c:358:26\n   353: \treturn;\n   354:     }\n   355:     switch(mtmp->data->msound) {\n   356: \t    case MS_NEMESIS:\tchat_with_nemesis(); break;\n   357: \t    case MS_GUARDIAN:\tchat_with_guardian(); break;\n>  358: \t    default:\timpossible(\"quest_chat: Unknown quest character %s.\",\n   359: \t\t\t\t   mon_nam(mtmp));\n   360: \t}\n   361: }\n   362: \n   363: void"
+  }
+]

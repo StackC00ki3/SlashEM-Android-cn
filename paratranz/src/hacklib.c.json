@@ -1,0 +1,50 @@
+[
+  {
+    "key": "L00246_01",
+    "original": "th",
+    "translation": "",
+    "context": "src/hacklib.c:246:57\n   241: ordin(n)\t\t/* return the ordinal suffix of a number */\n   242:     int n;\t\t\t/* note: should be non-negative */\n   243: {\n   244:     register int dd = n % 10;\n   245: \n>  246:     return (dd == 0 || dd > 3 || (n % 100) / 10 == 1) ? \"th\" :\n   247: \t    (dd == 1) ? \"st\" : (dd == 2) ? \"nd\" : \"rd\";\n   248: }\n   249: #endif /* OVL2 */\n   250: \n   251: #ifdef OVL1"
+  },
+  {
+    "key": "L00247_01",
+    "original": "st",
+    "translation": "",
+    "context": "src/hacklib.c:247:18\n   242:     int n;\t\t\t/* note: should be non-negative */\n   243: {\n   244:     register int dd = n % 10;\n   245: \n   246:     return (dd == 0 || dd > 3 || (n % 100) / 10 == 1) ? \"th\" :\n>  247: \t    (dd == 1) ? \"st\" : (dd == 2) ? \"nd\" : \"rd\";\n   248: }\n   249: #endif /* OVL2 */\n   250: \n   251: #ifdef OVL1\n   252: char *"
+  },
+  {
+    "key": "L00247_02",
+    "original": "nd",
+    "translation": "",
+    "context": "src/hacklib.c:247:37\n   242:     int n;\t\t\t/* note: should be non-negative */\n   243: {\n   244:     register int dd = n % 10;\n   245: \n   246:     return (dd == 0 || dd > 3 || (n % 100) / 10 == 1) ? \"th\" :\n>  247: \t    (dd == 1) ? \"st\" : (dd == 2) ? \"nd\" : \"rd\";\n   248: }\n   249: #endif /* OVL2 */\n   250: \n   251: #ifdef OVL1\n   252: char *"
+  },
+  {
+    "key": "L00247_03",
+    "original": "rd",
+    "translation": "",
+    "context": "src/hacklib.c:247:44\n   242:     int n;\t\t\t/* note: should be non-negative */\n   243: {\n   244:     register int dd = n % 10;\n   245: \n   246:     return (dd == 0 || dd > 3 || (n % 100) / 10 == 1) ? \"th\" :\n>  247: \t    (dd == 1) ? \"st\" : (dd == 2) ? \"nd\" : \"rd\";\n   248: }\n   249: #endif /* OVL2 */\n   250: \n   251: #ifdef OVL1\n   252: char *"
+  },
+  {
+    "key": "L00258_01",
+    "original": "%d",
+    "translation": "",
+    "context": "src/hacklib.c:258:28\n   253: sitoa(n)\t\t/* make a signed digit string from a number */\n   254:     int n;\n   255: {\n   256:     Static char buf[13];\n   257: \n>  258:     Sprintf(buf, (n < 0) ? \"%d\" : \"+%d\", n);\n   259:     return buf;\n   260: }\n   261: \n   262: int\n   263: sgn(n)\t\t\t/* return the sign of a number: -1, 0, or 1 */"
+  },
+  {
+    "key": "L00258_02",
+    "original": "+%d",
+    "translation": "",
+    "context": "src/hacklib.c:258:35\n   253: sitoa(n)\t\t/* make a signed digit string from a number */\n   254:     int n;\n   255: {\n   256:     Static char buf[13];\n   257: \n>  258:     Sprintf(buf, (n < 0) ? \"%d\" : \"+%d\", n);\n   259:     return buf;\n   260: }\n   261: \n   262: int\n   263: sgn(n)\t\t\t/* return the sign of a number: -1, 0, or 1 */"
+  },
+  {
+    "key": "L00280_01",
+    "original": "division by zero in rounddiv",
+    "translation": "",
+    "context": "src/hacklib.c:280:8\n   275: {\n   276:     int r, m;\n   277:     int divsgn = 1;\n   278: \n   279:     if (y == 0)\n>  280: \tpanic(\"division by zero in rounddiv\");\n   281:     else if (y < 0) {\n   282: \tdivsgn = -divsgn;  y = -y;\n   283:     }\n   284:     if (x < 0) {\n   285: \tdivsgn = -divsgn;  x = -x;"
+  },
+  {
+    "key": "L00536_01",
+    "original": "%02d%02d%02d",
+    "translation": "",
+    "context": "src/hacklib.c:536:19\n   531: \t\tlt = localtime((long *)(&date));\n   532: #else\n   533: \t\tlt = localtime(&date);\n   534: #endif\n   535: \n>  536: \tSprintf(datestr, \"%02d%02d%02d\",\n   537: \t\tlt->tm_year, lt->tm_mon + 1, lt->tm_mday);\n   538: \treturn(datestr);\n   539: }\n   540: #endif\n   541: "
+  }
+]

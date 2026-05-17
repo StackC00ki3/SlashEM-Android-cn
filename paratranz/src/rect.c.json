@@ -1,0 +1,8 @@
+[
+  {
+    "key": "L00139_01",
+    "original": "MAXRECT may be too small.",
+    "translation": "",
+    "context": "src/rect.c:139:21\n   134: add_rect(r)\n   135: NhRect *r;\n   136: {\n   137: \tif (rect_cnt >= MAXRECT) {\n   138: #ifdef WIZARD\n>  139: \t\tif (wizard) pline(\"MAXRECT may be too small.\");\n   140: #endif\n   141: \t\treturn;\n   142: \t}\n   143: \t/* Check that this NhRect is not included in another one */\n   144: \tif (get_rect(r))"
+  }
+]

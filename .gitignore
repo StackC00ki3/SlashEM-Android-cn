@@ -1,5 +1,7 @@
 *.swp
 *.swo
+__pycache__/
+*.pyc
 compile
 .idea
 out

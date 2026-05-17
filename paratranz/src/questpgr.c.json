@@ -1,0 +1,140 @@
+[
+  {
+    "key": "L00045_01",
+    "original": "msgnum %d: delivery %c",
+    "translation": "",
+    "context": "src/questpgr.c:45:9\n    40: {\n    41: \tstruct\tqtmsg\t*msg;\n    42: \tlong\tsize;\n    43: \n    44: \tfor (msg = qt_list.chrole; msg->msgnum > 0; msg++) {\n>   45: \t\tpline(\"msgnum %d: delivery %c\",\n    46: \t\t\tmsg->msgnum, msg->delivery);\n    47: \t\tmore();\n    48: \t\t(void) dlb_fseek(msg_file, msg->offset, SEEK_SET);\n    49: \t\tdeliver_by_window(msg, NHW_TEXT);\n    50: \t}"
+  },
+  {
+    "key": "L00064_01",
+    "original": "PREMATURE EOF ON QUEST TEXT FILE! Expected %d bytes, got %d",
+    "translation": "",
+    "context": "src/questpgr.c:64:12\n    59: {\n    60: \tint cnt;\n    61: \n    62: \tif ((cnt = dlb_fread(ptr, size, nitems, stream)) != nitems) {\n    63: \n>   64: \t    panic(\"PREMATURE EOF ON QUEST TEXT FILE! Expected %d bytes, got %d\",\n    65: \t\t    (size * nitems), (size * cnt));\n    66: \t}\n    67: }\n    68: \n    69: STATIC_OVL struct qtmsg *"
+  },
+  {
+    "key": "L00100_01",
+    "original": "CANNOT OPEN QUEST TEXT FILE %s.",
+    "translation": "",
+    "context": "src/questpgr.c:100:12\n    95: \tchar\tqt_classes[N_HDR][LEN_HDR];\n    96: \tlong\tqt_offsets[N_HDR];\n    97: \n    98: \tmsg_file = dlb_fopen_area(QTEXT_AREA, QTEXT_FILE, RDBMODE);\n    99: \tif (!msg_file)\n>  100: \t    panic(\"CANNOT OPEN QUEST TEXT FILE %s.\", QTEXT_FILE);\n   101: \n   102: \t/*\n   103: \t * Read in the number of classes, then the ID's & offsets for\n   104: \t * each header.\n   105: \t */"
+  },
+  {
+    "key": "L00130_01",
+    "original": "load_qtlist: cannot load quest text.",
+    "translation": "",
+    "context": "src/questpgr.c:130:17\n   125: \t    \tqt_list.chrace = construct_qtlist(qt_offsets[i]);\n   126: #endif\n   127: \t}\n   128: \n   129: \tif (!qt_list.common || !qt_list.chrole)\n>  130: \t    impossible(\"load_qtlist: cannot load quest text.\");\n   131: #ifdef DEBUG\n   132: \tdump_qtlist();\n   133: #endif\n   134: \treturn;\t/* no ***DON'T*** close the msg_file */\n   135: }"
+  },
+  {
+    "key": "L00159_01",
+    "original": "quest_info(%d)",
+    "translation": "",
+    "context": "src/questpgr.c:159:27\n   154: \tswitch (typ) {\n   155: \t    case 0:\t\treturn (urole.questarti);\n   156: \t    case MS_LEADER:\treturn (urole.ldrnum);\n   157: \t    case MS_NEMESIS:\treturn (urole.neminum);\n   158: \t    case MS_GUARDIAN:\treturn (urole.guardnum);\n>  159: \t    default:\t\timpossible(\"quest_info(%d)\", typ);\n   160: \t}\n   161: \treturn 0;\n   162: }\n   163: \n   164: const char *"
+  },
+  {
+    "key": "L00169_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/questpgr.c:169:18\n   164: const char *\n   165: ldrname()\t/* return your role leader's name */\n   166: {\n   167: \tint i = urole.ldrnum;\n   168: \n>  169: \tSprintf(nambuf, \"%s%s\",\n   170: \t\ttype_is_pname(&mons[i]) ? \"\" : \"the \",\n   171: \t\tmons[i].mname);\n   172: \treturn nambuf;\n   173: }\n   174: "
+  },
+  {
+    "key": "L00170_01",
+    "original": "the ",
+    "translation": "",
+    "context": "src/questpgr.c:170:34\n   165: ldrname()\t/* return your role leader's name */\n   166: {\n   167: \tint i = urole.ldrnum;\n   168: \n   169: \tSprintf(nambuf, \"%s%s\",\n>  170: \t\ttype_is_pname(&mons[i]) ? \"\" : \"the \",\n   171: \t\tmons[i].mname);\n   172: \treturn nambuf;\n   173: }\n   174: \n   175: STATIC_OVL const char *"
+  },
+  {
+    "key": "L00193_01",
+    "original": "%s%s",
+    "translation": "",
+    "context": "src/questpgr.c:193:18\n   188: STATIC_OVL const char *\n   189: neminame()\t/* return your role nemesis' name */\n   190: {\n   191: \tint i = urole.neminum;\n   192: \n>  193: \tSprintf(nambuf, \"%s%s\",\n   194: \t\ttype_is_pname(&mons[i]) ? \"\" : \"the \",\n   195: \t\tmons[i].mname);\n   196: \treturn nambuf;\n   197: }\n   198: "
+  },
+  {
+    "key": "L00194_01",
+    "original": "the ",
+    "translation": "",
+    "context": "src/questpgr.c:194:34\n   189: neminame()\t/* return your role nemesis' name */\n   190: {\n   191: \tint i = urole.neminum;\n   192: \n   193: \tSprintf(nambuf, \"%s%s\",\n>  194: \t\ttype_is_pname(&mons[i]) ? \"\" : \"the \",\n   195: \t\tmons[i].mname);\n   196: \treturn nambuf;\n   197: }\n   198: \n   199: STATIC_OVL const char *"
+  },
+  {
+    "key": "L00244_01",
+    "original": "sister",
+    "translation": "",
+    "context": "src/questpgr.c:244:39\n   239: \t    case 'r':\tstr = rank_of(u.ulevel, Role_switch, flags.female);\n   240: \t\t\tbreak;\n   241: \t    case 'R':\tstr = rank_of(MIN_QUEST_LEVEL, Role_switch,\n   242: \t    \t\t\tflags.female);\n   243: \t\t\tbreak;\n>  244: \t    case 's':\tstr = (flags.female) ? \"sister\" : \"brother\";\n   245: \t\t\tbreak;\n   246: \t    case 'S':\tstr = (flags.female) ? \"daughter\" : \"son\";\n   247: \t\t\tbreak;\n   248: \t    case 'l':\tstr = ldrname();\n   249: \t\t\tbreak;"
+  },
+  {
+    "key": "L00244_02",
+    "original": "brother",
+    "translation": "",
+    "context": "src/questpgr.c:244:50\n   239: \t    case 'r':\tstr = rank_of(u.ulevel, Role_switch, flags.female);\n   240: \t\t\tbreak;\n   241: \t    case 'R':\tstr = rank_of(MIN_QUEST_LEVEL, Role_switch,\n   242: \t    \t\t\tflags.female);\n   243: \t\t\tbreak;\n>  244: \t    case 's':\tstr = (flags.female) ? \"sister\" : \"brother\";\n   245: \t\t\tbreak;\n   246: \t    case 'S':\tstr = (flags.female) ? \"daughter\" : \"son\";\n   247: \t\t\tbreak;\n   248: \t    case 'l':\tstr = ldrname();\n   249: \t\t\tbreak;"
+  },
+  {
+    "key": "L00246_01",
+    "original": "daughter",
+    "translation": "",
+    "context": "src/questpgr.c:246:39\n   241: \t    case 'R':\tstr = rank_of(MIN_QUEST_LEVEL, Role_switch,\n   242: \t    \t\t\tflags.female);\n   243: \t\t\tbreak;\n   244: \t    case 's':\tstr = (flags.female) ? \"sister\" : \"brother\";\n   245: \t\t\tbreak;\n>  246: \t    case 'S':\tstr = (flags.female) ? \"daughter\" : \"son\";\n   247: \t\t\tbreak;\n   248: \t    case 'l':\tstr = ldrname();\n   249: \t\t\tbreak;\n   250: \t    case 'i':\tstr = intermed();\n   251: \t\t\tbreak;"
+  },
+  {
+    "key": "L00246_02",
+    "original": "son",
+    "translation": "",
+    "context": "src/questpgr.c:246:52\n   241: \t    case 'R':\tstr = rank_of(MIN_QUEST_LEVEL, Role_switch,\n   242: \t    \t\t\tflags.female);\n   243: \t\t\tbreak;\n   244: \t    case 's':\tstr = (flags.female) ? \"sister\" : \"brother\";\n   245: \t\t\tbreak;\n>  246: \t    case 'S':\tstr = (flags.female) ? \"daughter\" : \"son\";\n   247: \t\t\tbreak;\n   248: \t    case 'l':\tstr = ldrname();\n   249: \t\t\tbreak;\n   250: \t    case 'i':\tstr = intermed();\n   251: \t\t\tbreak;"
+  },
+  {
+    "key": "L00270_01",
+    "original": "chaotic",
+    "translation": "",
+    "context": "src/questpgr.c:270:22\n   265: \t\t\tbreak;\n   266: \t    case 'd':\tstr = align_gname(u.ualignbase[A_ORIGINAL]);\n   267: \t\t\tbreak;\n   268: \t    case 'D':\tstr = align_gname(A_LAWFUL);\n   269: \t\t\tbreak;\n>  270: \t    case 'C':\tstr = \"chaotic\";\n   271: \t\t\tbreak;\n   272: \t    case 'N':\tstr = \"neutral\";\n   273: \t\t\tbreak;\n   274: \t    case 'L':\tstr = \"lawful\";\n   275: \t\t\tbreak;"
+  },
+  {
+    "key": "L00272_01",
+    "original": "neutral",
+    "translation": "",
+    "context": "src/questpgr.c:272:22\n   267: \t\t\tbreak;\n   268: \t    case 'D':\tstr = align_gname(A_LAWFUL);\n   269: \t\t\tbreak;\n   270: \t    case 'C':\tstr = \"chaotic\";\n   271: \t\t\tbreak;\n>  272: \t    case 'N':\tstr = \"neutral\";\n   273: \t\t\tbreak;\n   274: \t    case 'L':\tstr = \"lawful\";\n   275: \t\t\tbreak;\n   276: \t    case 'x':\tstr = Blind ? \"sense\" : \"see\";\n   277: \t\t\tbreak;"
+  },
+  {
+    "key": "L00274_01",
+    "original": "lawful",
+    "translation": "",
+    "context": "src/questpgr.c:274:22\n   269: \t\t\tbreak;\n   270: \t    case 'C':\tstr = \"chaotic\";\n   271: \t\t\tbreak;\n   272: \t    case 'N':\tstr = \"neutral\";\n   273: \t\t\tbreak;\n>  274: \t    case 'L':\tstr = \"lawful\";\n   275: \t\t\tbreak;\n   276: \t    case 'x':\tstr = Blind ? \"sense\" : \"see\";\n   277: \t\t\tbreak;\n   278: \t    case 'Z':\tstr = dungeons[0].dname;\n   279: \t\t\tbreak;"
+  },
+  {
+    "key": "L00276_01",
+    "original": "sense",
+    "translation": "",
+    "context": "src/questpgr.c:276:30\n   271: \t\t\tbreak;\n   272: \t    case 'N':\tstr = \"neutral\";\n   273: \t\t\tbreak;\n   274: \t    case 'L':\tstr = \"lawful\";\n   275: \t\t\tbreak;\n>  276: \t    case 'x':\tstr = Blind ? \"sense\" : \"see\";\n   277: \t\t\tbreak;\n   278: \t    case 'Z':\tstr = dungeons[0].dname;\n   279: \t\t\tbreak;\n   280: \t    case '%':\tstr = \"%\";\n   281: \t\t\tbreak;"
+  },
+  {
+    "key": "L00276_02",
+    "original": "see",
+    "translation": "",
+    "context": "src/questpgr.c:276:40\n   271: \t\t\tbreak;\n   272: \t    case 'N':\tstr = \"neutral\";\n   273: \t\t\tbreak;\n   274: \t    case 'L':\tstr = \"lawful\";\n   275: \t\t\tbreak;\n>  276: \t    case 'x':\tstr = Blind ? \"sense\" : \"see\";\n   277: \t\t\tbreak;\n   278: \t    case 'Z':\tstr = dungeons[0].dname;\n   279: \t\t\tbreak;\n   280: \t    case '%':\tstr = \"%\";\n   281: \t\t\tbreak;"
+  },
+  {
+    "key": "L00333_01",
+    "original": "the ",
+    "translation": "",
+    "context": "src/questpgr.c:333:38\n   328: \t\t\t\tcase 'S': cvt_buf[0] = highc(cvt_buf[0]);\n   329: \t\t\t\tcase 's': Strcpy(cvt_buf, s_suffix(cvt_buf));\n   330: \t\t\t\t    break;\n   331: \n   332: \t\t\t\t\t/* strip any \"the\" prefix */\n>  333: \t\t\t\tcase 't': if (!strncmpi(cvt_buf, \"the \", 4)) {\n   334: \t\t\t\t\tStrcat(cc, &cvt_buf[4]);\n   335: \t\t\t\t\tcc += strlen(cc);\n   336: \t\t\t\t\tcontinue; /* for */\n   337: \t\t\t\t    }\n   338: \t\t\t\t    break;"
+  },
+  {
+    "key": "L00354_01",
+    "original": "convert_line: overflow",
+    "translation": "",
+    "context": "src/questpgr.c:354:12\n   349: \t\t\t*cc++ = *c;\n   350: \t\t\tbreak;\n   351: \t    }\n   352: \t}\n   353: \tif (cc >= out_line + sizeof out_line)\n>  354: \t    panic(\"convert_line: overflow\");\n   355: \t*cc = 0;\n   356: \treturn;\n   357: }\n   358: \n   359: STATIC_OVL void"
+  },
+  {
+    "key": "L00397_01",
+    "original": "com_pager: message %d not found.",
+    "translation": "",
+    "context": "src/questpgr.c:397:14\n   392: int\tmsgnum;\n   393: {\n   394: \tstruct qtmsg *qt_msg;\n   395: \n   396: \tif (!(qt_msg = msg_in(qt_list.common, msgnum))) {\n>  397: \t\timpossible(\"com_pager: message %d not found.\", msgnum);\n   398: \t\treturn;\n   399: \t}\n   400: \n   401: \t(void) dlb_fseek(msg_file, qt_msg->offset, SEEK_SET);\n   402: \tif (qt_msg->delivery == 'p') deliver_by_pline(qt_msg);"
+  },
+  {
+    "key": "L00415_01",
+    "original": "qt_pager: message %d not found.",
+    "translation": "",
+    "context": "src/questpgr.c:415:14\n   410: int\tmsgnum;\n   411: {\n   412: \tstruct qtmsg *qt_msg;\n   413: \n   414: \tif (!(qt_msg = msg_in(qt_list.chrole, msgnum))) {\n>  415: \t\timpossible(\"qt_pager: message %d not found.\", msgnum);\n   416: \t\treturn;\n   417: \t}\n   418: \n   419: \t(void) dlb_fseek(msg_file, qt_msg->offset, SEEK_SET);\n   420: \tif (qt_msg->delivery == 'p' && strcmp(windowprocs.name, \"X11\"))"
+  },
+  {
+    "key": "L00420_01",
+    "original": "X11",
+    "translation": "",
+    "context": "src/questpgr.c:420:58\n   415: \t\timpossible(\"qt_pager: message %d not found.\", msgnum);\n   416: \t\treturn;\n   417: \t}\n   418: \n   419: \t(void) dlb_fseek(msg_file, qt_msg->offset, SEEK_SET);\n>  420: \tif (qt_msg->delivery == 'p' && strcmp(windowprocs.name, \"X11\"))\n   421: \t\tdeliver_by_pline(qt_msg);\n   422: \telse\tdeliver_by_window(qt_msg, NHW_TEXT);\n   423: \treturn;\n   424: }\n   425: "
+  }
+]

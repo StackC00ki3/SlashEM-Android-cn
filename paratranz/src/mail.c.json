@@ -1,0 +1,146 @@
+[
+  {
+    "key": "L00089_01",
+    "original": "MAIL",
+    "translation": "",
+    "context": "src/mail.c:89:39\n    84: # endif\n    85: \n    86: void\n    87: getmailstatus()\n    88: {\n>   89: \tif(!mailbox && !(mailbox = nh_getenv(\"MAIL\"))) {\n    90: #  ifdef MAILPATH\n    91: #   ifdef AMS\n    92: \t        struct passwd ppasswd;\n    93: \n    94: \t\t(void) memcpy(&ppasswd, getpwuid(getuid()), sizeof(struct passwd));"
+  },
+  {
+    "key": "L00113_01",
+    "original": "Cannot get status of MAIL=\\\"%s\\\".",
+    "translation": "",
+    "context": "src/mail.c:113:9\n   108: \t\treturn;\n   109: #  endif\n   110: \t}\n   111: \tif(stat(mailbox, &omstat)){\n   112: #  ifdef PERMANENT_MAILBOX\n>  113: \t\tpline(\"Cannot get status of MAIL=\\\"%s\\\".\", mailbox);\n   114: \t\tmailbox = 0;\n   115: #  else\n   116: \t\tomstat.st_mtime = 0;\n   117: #  endif\n   118: \t}"
+  },
+  {
+    "key": "L00263_01",
+    "original": "Look out!",
+    "translation": "",
+    "context": "src/mail.c:263:5\n   258: }\n   259: \n   260: /* Let the mail daemon have a larger vocabulary. */\n   261: static NEARDATA const char *mail_text[] = {\n   262:     \"起开点！\",\n>  263:     \"Look out!\",\n   264:     \"Pardon me!\"\n   265: };\n   266: #define md_exclamations()\t(mail_text[rn2(3)])\n   267: \n   268: /*"
+  },
+  {
+    "key": "L00264_01",
+    "original": "Pardon me!",
+    "translation": "",
+    "context": "src/mail.c:264:5\n   259: \n   260: /* Let the mail daemon have a larger vocabulary. */\n   261: static NEARDATA const char *mail_text[] = {\n   262:     \"起开点！\",\n   263:     \"Look out!\",\n>  264:     \"Pardon me!\"\n   265: };\n   266: #define md_exclamations()\t(mail_text[rn2(3)])\n   267: \n   268: /*\n   269:  * Make the mail daemon run through the dungeon.  The daemon will run over"
+  },
+  {
+    "key": "L00324_01",
+    "original": "Excuse me.",
+    "translation": "",
+    "context": "src/mail.c:324:16\n   319: \tif (fx == tx && fy == ty) break;\n   320: \n   321: \tif ((mon = m_at(fx,fy)) != 0)\t/* save monster at this position */\n   322: \t    verbalize(md_exclamations());\n   323: \telse if (fx == u.ux && fy == u.uy)\n>  324: \t    verbalize(\"Excuse me.\");\n   325: \n   326: \tplace_monster(md,fx,fy);\t/* put md down */\n   327: \tnewsym(fx,fy);\t\t\t/* see it */\n   328: \tflush_screen(0);\t\t/* make sure md shows up */\n   329: \tdelay_output();\t\t\t/* wait a little bit */"
+  },
+  {
+    "key": "L00349_01",
+    "original": "This place's too crowded.  I'm outta here.",
+    "translation": "",
+    "context": "src/mail.c:349:12\n   344:      * very unlikely).  If one exists, then have the md leave in disgust.\n   345:      */\n   346:     if ((mon = m_at(fx, fy)) != 0) {\n   347: \tplace_monster(md, fx, fy);\t/* display md with text below */\n   348: \tnewsym(fx, fy);\n>  349: \tverbalize(\"This place's too crowded.  I'm outta here.\");\n   350: \n   351: \tif ((mon->mx != fx) || (mon->my != fy))\t/* put mon back */\n   352: \t    place_worm_seg(mon, fx, fy);\n   353: \telse\n   354: \t    place_monster(mon, fx, fy);"
+  },
+  {
+    "key": "L00387_01",
+    "original": "%s, %s!  %s.",
+    "translation": "",
+    "context": "src/mail.c:387:15\n   382:     if (!(md = makemon(&mons[PM_MAIL_DAEMON], start.x, start.y, NO_MM_FLAGS)))\n   383: \t goto give_up;\n   384:     if (!md_rush(md, stop.x, stop.y)) goto go_back;\n   385: \n   386:     message_seen = TRUE;\n>  387:     verbalize(\"%s, %s!  %s.\", Hello(md), plname, info->display_txt);\n   388: \n   389:     if (info->message_typ) {\n   390: \tstruct obj *obj = mksobj(SCR_MAIL, FALSE, FALSE);\n   391: \tif (distu(md->mx,md->my) > 2)\n   392: \t    verbalize(\"Catch!\");"
+  },
+  {
+    "key": "L00392_01",
+    "original": "Catch!",
+    "translation": "",
+    "context": "src/mail.c:392:16\n   387:     verbalize(\"%s, %s!  %s.\", Hello(md), plname, info->display_txt);\n   388: \n   389:     if (info->message_typ) {\n   390: \tstruct obj *obj = mksobj(SCR_MAIL, FALSE, FALSE);\n   391: \tif (distu(md->mx,md->my) > 2)\n>  392: \t    verbalize(\"Catch!\");\n   393: \tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n   394: \tif (info->object_nam) {\n   395: \t    obj = oname(obj, info->object_nam);\n   396: \t    if (info->response_cmd) {\t/*(hide extension of the obj name)*/\n   397: \t\tint namelth = info->response_cmd - info->object_nam - 1;"
+  },
+  {
+    "key": "L00399_01",
+    "original": "mail delivery screwed up",
+    "translation": "",
+    "context": "src/mail.c:399:18\n   394: \tif (info->object_nam) {\n   395: \t    obj = oname(obj, info->object_nam);\n   396: \t    if (info->response_cmd) {\t/*(hide extension of the obj name)*/\n   397: \t\tint namelth = info->response_cmd - info->object_nam - 1;\n   398: \t\tif ( namelth <= 0 || namelth >= (int) obj->onamelth )\n>  399: \t\t    impossible(\"mail delivery screwed up\");\n   400: \t\telse\n   401: \t\t    *(ONAME(obj) + namelth) = '\\0';\n   402: \t\t/* Note: renaming object will discard the hidden command. */\n   403: \t    }\n   404: \t}"
+  },
+  {
+    "key": "L00405_01",
+    "original": "Oops!",
+    "translation": "",
+    "context": "src/mail.c:405:33\n   400: \t\telse\n   401: \t\t    *(ONAME(obj) + namelth) = '\\0';\n   402: \t\t/* Note: renaming object will discard the hidden command. */\n   403: \t    }\n   404: \t}\n>  405: \tobj = hold_another_object(obj, \"Oops!\",\n   406: \t\t\t\t  (const char *)0, (const char *)0);\n   407:     }\n   408: \n   409:     /* zip back to starting location */\n   410: go_back:"
+  },
+  {
+    "key": "L00416_01",
+    "original": "Hark!  \\\"%s.\\\"",
+    "translation": "",
+    "context": "src/mail.c:416:8\n   411:     (void) md_rush(md, start.x, start.y);\n   412:     mongone(md);\n   413:     /* deliver some classes of messages even if no daemon ever shows up */\n   414: give_up:\n   415:     if (!message_seen && info->message_typ == MSG_OTHER)\n>  416: \tpline(\"Hark!  \\\"%s.\\\"\", info->display_txt);\n   417: }\n   418: \n   419: # if !defined(UNIX) && !defined(VMS) && !defined(LAN_MAIL)\n   420: \n   421: void"
+  },
+  {
+    "key": "L00433_01",
+    "original": "I have some mail for you",
+    "translation": "",
+    "context": "src/mail.c:433:24\n   428: #endif\n   429: \t    return;\n   430: \t}\n   431: \tif (--mustgetmail <= 0) {\n   432: \t\tstatic struct mail_info\n>  433: \t\t\tdeliver = {MSG_MAIL,\"I have some mail for you\",0,0};\n   434: \t\tnewmail(&deliver);\n   435: \t\tmustgetmail = -1;\n   436: \t}\n   437: }\n   438: "
+  },
+  {
+    "key": "L00448_01",
+    "original": "NetHack rumors file closed for renovation.",
+    "translation": "",
+    "context": "src/mail.c:448:12\n   443: {\n   444:     const char *line;\n   445:     char buf[BUFSZ];\n   446:     line = getrumor(bcsign(otmp), buf, TRUE);\n   447:     if (!*line)\n>  448: \t   line = \"NetHack rumors file closed for renovation.\";\n   449:     if (Blind) {\n   450: \tpline(\"Unfortunately you cannot see what it says.\");\n   451:     } else\n   452: \tpline(\"It reads:  \\\"%s\\\"\", line);\n   453: "
+  },
+  {
+    "key": "L00450_01",
+    "original": "Unfortunately you cannot see what it says.",
+    "translation": "",
+    "context": "src/mail.c:450:8\n   445:     char buf[BUFSZ];\n   446:     line = getrumor(bcsign(otmp), buf, TRUE);\n   447:     if (!*line)\n   448: \t   line = \"NetHack rumors file closed for renovation.\";\n   449:     if (Blind) {\n>  450: \tpline(\"Unfortunately you cannot see what it says.\");\n   451:     } else\n   452: \tpline(\"It reads:  \\\"%s\\\"\", line);\n   453: \n   454: }\n   455: "
+  },
+  {
+    "key": "L00452_01",
+    "original": "It reads:  \\\"%s\\\"",
+    "translation": "",
+    "context": "src/mail.c:452:8\n   447:     if (!*line)\n   448: \t   line = \"NetHack rumors file closed for renovation.\";\n   449:     if (Blind) {\n   450: \tpline(\"Unfortunately you cannot see what it says.\");\n   451:     } else\n>  452: \tpline(\"It reads:  \\\"%s\\\"\", line);\n   453: \n   454: }\n   455: \n   456: # endif /* !UNIX && !VMS */\n   457: "
+  },
+  {
+    "key": "L00473_01",
+    "original": "Cannot get status of MAIL=\\\"%s\\\" anymore.",
+    "translation": "",
+    "context": "src/mail.c:473:9\n   468: \t\treturn;\n   469: \n   470: \tlaststattime = moves;\n   471: \tif(stat(mailbox, &nmstat)){\n   472: #  ifdef PERMANENT_MAILBOX\n>  473: \t\tpline(\"Cannot get status of MAIL=\\\"%s\\\" anymore.\", mailbox);\n   474: \t\tmailbox = 0;\n   475: #  else\n   476: \t\tnmstat.st_mtime = 0;\n   477: #  endif\n   478: \t} else if(nmstat.st_mtime > omstat.st_mtime) {"
+  },
+  {
+    "key": "L00482_01",
+    "original": "I have some mail for you",
+    "translation": "",
+    "context": "src/mail.c:482:14\n   477: #  endif\n   478: \t} else if(nmstat.st_mtime > omstat.st_mtime) {\n   479: \t\tif (nmstat.st_size) {\n   480: \t\t    static struct mail_info deliver = {\n   481: #  ifndef NO_MAILREADER\n>  482: \t\t\tMSG_MAIL, \"I have some mail for you\",\n   483: #  else\n   484: \t\t\t/* suppress creation and delivery of scroll of mail */\n   485: \t\t\tMSG_OTHER, \"You have some mail in the outside world\",\n   486: #  endif\n   487: \t\t\t0, 0"
+  },
+  {
+    "key": "L00485_01",
+    "original": "You have some mail in the outside world",
+    "translation": "",
+    "context": "src/mail.c:485:15\n   480: \t\t    static struct mail_info deliver = {\n   481: #  ifndef NO_MAILREADER\n   482: \t\t\tMSG_MAIL, \"I have some mail for you\",\n   483: #  else\n   484: \t\t\t/* suppress creation and delivery of scroll of mail */\n>  485: \t\t\tMSG_OTHER, \"You have some mail in the outside world\",\n   486: #  endif\n   487: \t\t\t0, 0\n   488: \t\t    };\n   489: \t\t    newmail(&deliver);\n   490: \t\t}"
+  },
+  {
+    "key": "L00504_01",
+    "original": "MAILREADER",
+    "translation": "",
+    "context": "src/mail.c:504:22\n   499: {\n   500: #  ifdef DEF_MAILREADER\t\t\t/* This implies that UNIX is defined */\n   501: \tregister const char *mr = 0;\n   502: \n   503: \tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n>  504: \tif(!(mr = nh_getenv(\"MAILREADER\")))\n   505: \t\tmr = DEF_MAILREADER;\n   506: \n   507: \tif(child(1)){\n   508: \t\t(void) execl(mr, mr, (char *)0);\n   509: \t\tterminate(EXIT_FAILURE);"
+  },
+  {
+    "key": "L00559_01",
+    "original": "SPAWN",
+    "translation": "",
+    "context": "src/mail.c:559:30\n   554: \n   555:     /* there should be a command hidden beyond the object name */\n   556:     txt = otmp->onamelth ? ONAME(otmp) : \"\";\n   557:     len = strlen(txt);\n   558:     cmd = (len + 1 < otmp->onamelth) ? txt + len + 1 : (char *) 0;\n>  559:     if (!cmd || !*cmd) cmd = \"SPAWN\";\n   560: \n   561:     Sprintf(qbuf, \"System command (%s)\", cmd);\n   562:     getlin(qbuf, buf);\n   563:     if (*buf != '\\033') {\n   564: \tfor (p = eos(buf); p > buf; *p = '\\0')"
+  },
+  {
+    "key": "L00561_01",
+    "original": "System command (%s)",
+    "translation": "",
+    "context": "src/mail.c:561:19\n   556:     txt = otmp->onamelth ? ONAME(otmp) : \"\";\n   557:     len = strlen(txt);\n   558:     cmd = (len + 1 < otmp->onamelth) ? txt + len + 1 : (char *) 0;\n   559:     if (!cmd || !*cmd) cmd = \"SPAWN\";\n   560: \n>  561:     Sprintf(qbuf, \"System command (%s)\", cmd);\n   562:     getlin(qbuf, buf);\n   563:     if (*buf != '\\033') {\n   564: \tfor (p = eos(buf); p > buf; *p = '\\0')\n   565: \t    if (*--p != ' ') break;\t/* strip trailing spaces */\n   566: \tif (*buf) cmd = buf;\t\t/* use user entered command */"
+  },
+  {
+    "key": "L00567_01",
+    "original": "SPAWN",
+    "translation": "",
+    "context": "src/mail.c:567:20\n   562:     getlin(qbuf, buf);\n   563:     if (*buf != '\\033') {\n   564: \tfor (p = eos(buf); p > buf; *p = '\\0')\n   565: \t    if (*--p != ' ') break;\t/* strip trailing spaces */\n   566: \tif (*buf) cmd = buf;\t\t/* use user entered command */\n>  567: \tif (!strcmpi(cmd, \"SPAWN\") || !strcmp(cmd, \"!\"))\n   568: \t    cmd = (char *) 0;\t\t/* interactive escape */\n   569: \n   570: \tvms_doshell(cmd, TRUE);\n   571: \t(void) sleep(1);\n   572:     }"
+  },
+  {
+    "key": "L00596_01",
+    "original": "I have some mail for you",
+    "translation": "",
+    "context": "src/mail.c:596:14\n   591: \n   592: \tlaststattime = moves;\n   593: \tif (lan_mail_check()) {\n   594: \t\t    static struct mail_info deliver = {\n   595: #  ifndef NO_MAILREADER\n>  596: \t\t\tMSG_MAIL, \"I have some mail for you\",\n   597: #  else\n   598: \t\t\t/* suppress creation and delivery of scroll of mail */\n   599: \t\t\tMSG_OTHER, \"You have some mail in the outside world\",\n   600: #  endif\n   601: \t\t\t0, 0"
+  },
+  {
+    "key": "L00599_01",
+    "original": "You have some mail in the outside world",
+    "translation": "",
+    "context": "src/mail.c:599:15\n   594: \t\t    static struct mail_info deliver = {\n   595: #  ifndef NO_MAILREADER\n   596: \t\t\tMSG_MAIL, \"I have some mail for you\",\n   597: #  else\n   598: \t\t\t/* suppress creation and delivery of scroll of mail */\n>  599: \t\t\tMSG_OTHER, \"You have some mail in the outside world\",\n   600: #  endif\n   601: \t\t\t0, 0\n   602: \t\t    };\n   603: \t\t    newmail(&deliver);\n   604: \t}"
+  }
+]
