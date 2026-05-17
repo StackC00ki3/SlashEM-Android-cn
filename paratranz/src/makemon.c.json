@@ -3,96 +3,112 @@
     "key": "L00105_01",
     "original": "init group call x=%d,y=%d,n=%d,cnt=%d.",
     "translation": "",
-    "context": "src/makemon.c:105:8\n   100: \t */\n   101: \tint cnttmp,cntdiv;\n   102: \n   103: \tcnttmp = cnt;\n   104: # ifdef DEBUG\n>  105: \tpline(\"init group call x=%d,y=%d,n=%d,cnt=%d.\", x, y, n, cnt);\n   106: # endif\n   107: \tcntdiv = ((u.ulevel < 3) ? 4 : (u.ulevel < 5) ? 2 : 1);\n   108: #endif\n   109: \t/* Tuning: cut down on swarming at low character levels [mrs] */\n   110: \tif (u.ulevel < 5) cnt /= 2;"
+    "stage": 0,
+    "context": "src/makemon.c:105:8\n   100: \t */\n   101: \tint cnttmp,cntdiv;\n   102: \n   103: \tcnttmp = cnt;\n   104: # ifdef DEBUG\n&gt;  105: \tpline(\"init group call x=%d,y=%d,n=%d,cnt=%d.\", x, y, n, cnt);\n   106: # endif\n   107: \tcntdiv = ((u.ulevel &lt; 3) ? 4 : (u.ulevel &lt; 5) ? 2 : 1);\n   108: #endif\n   109: \t/* Tuning: cut down on swarming at low character levels [mrs] */\n   110: \tif (u.ulevel &lt; 5) cnt /= 2;"
   },
   {
     "key": "L00113_01",
     "original": "cnt=%d using %d, cnttmp=%d, cntdiv=%d",
     "translation": "",
-    "context": "src/makemon.c:113:9\n   108: #endif\n   109: \t/* Tuning: cut down on swarming at low character levels [mrs] */\n   110: \tif (u.ulevel < 5) cnt /= 2;\n   111: #if defined(__GNUC__) && (defined(HPUX) || defined(DGUX))\n   112: \tif (cnt != (cnttmp/cntdiv)) {\n>  113: \t\tpline(\"cnt=%d using %d, cnttmp=%d, cntdiv=%d\", cnt,\n   114: \t\t\t(u.ulevel < 3) ? 4 : (u.ulevel < 5) ? 2 : 1,\n   115: \t\t\tcnttmp, cntdiv);\n   116: \t}\n   117: #endif\n   118: \tif(!cnt) cnt++;"
+    "stage": 0,
+    "context": "src/makemon.c:113:9\n   108: #endif\n   109: \t/* Tuning: cut down on swarming at low character levels [mrs] */\n   110: \tif (u.ulevel &lt; 5) cnt /= 2;\n   111: #if defined(__GNUC__) && (defined(HPUX) || defined(DGUX))\n   112: \tif (cnt != (cnttmp/cntdiv)) {\n&gt;  113: \t\tpline(\"cnt=%d using %d, cnttmp=%d, cntdiv=%d\", cnt,\n   114: \t\t\t(u.ulevel &lt; 3) ? 4 : (u.ulevel &lt; 5) ? 2 : 1,\n   115: \t\t\tcnttmp, cntdiv);\n   116: \t}\n   117: #endif\n   118: \tif(!cnt) cnt++;"
   },
   {
     "key": "L00993_01",
     "original": "odd mercenary %d?",
     "translation": "",
-    "context": "src/makemon.c:993:24\n   988: #ifdef YEOMAN\n   989: \t\t\tcase PM_CHIEF_YEOMAN_WARDER:\n   990: \t\t\t\tmongets(mtmp, TALLOW_CANDLE);\n   991: #endif\n   992: \t\t\tcase PM_WATCH_CAPTAIN: mac = -2; break;\n>  993: \t\t\tdefault: impossible(\"odd mercenary %d?\", monsndx(ptr));\n   994: \t\t\t\tmac = 0;\n   995: \t\t\t\tbreak;\n   996: \t\t    }\n   997: \n   998: \t\t    if (mac < -1 && rn2(5))"
+    "stage": 0,
+    "context": "src/makemon.c:993:24\n   988: #ifdef YEOMAN\n   989: \t\t\tcase PM_CHIEF_YEOMAN_WARDER:\n   990: \t\t\t\tmongets(mtmp, TALLOW_CANDLE);\n   991: #endif\n   992: \t\t\tcase PM_WATCH_CAPTAIN: mac = -2; break;\n&gt;  993: \t\t\tdefault: impossible(\"odd mercenary %d?\", monsndx(ptr));\n   994: \t\t\t\tmac = 0;\n   995: \t\t\t\tbreak;\n   996: \t\t    }\n   997: \n   998: \t\t    if (mac &lt; -1 && rn2(5))"
   },
   {
     "key": "L01157_01",
     "original": "opera cloak",
     "translation": "",
-    "context": "src/makemon.c:1157:53\n  1152: \t    \t/* Get opera cloak */\n  1153: /*\t    \totmp = readobjnam(opera_cloak);\n  1154: \t\tif (otmp && otmp != &zeroobj) mpickobj(mtmp, otmp);*/\n  1155: \t\tfor (i = STRANGE_OBJECT; i < NUM_OBJECTS; i++) {\n  1156: \t\t\tregister const char *zn;\n> 1157: \t\t\tif ((zn = OBJ_DESCR(objects[i])) && !strcmpi(zn, \"opera cloak\")) {\n  1158: \t\t\t\tif (!OBJ_NAME(objects[i])) i = STRANGE_OBJECT;\n  1159: \t\t\t\tbreak;\n  1160: \t\t\t}\n  1161: \t\t}\n  1162: \t\tif (i != NUM_OBJECTS) (void)mongets(mtmp, i);"
+    "stage": 0,
+    "context": "src/makemon.c:1157:53\n  1152: \t    \t/* Get opera cloak */\n  1153: /*\t    \totmp = readobjnam(opera_cloak);\n  1154: \t\tif (otmp && otmp != &zeroobj) mpickobj(mtmp, otmp);*/\n  1155: \t\tfor (i = STRANGE_OBJECT; i &lt; NUM_OBJECTS; i++) {\n  1156: \t\t\tregister const char *zn;\n&gt; 1157: \t\t\tif ((zn = OBJ_DESCR(objects[i])) && !strcmpi(zn, \"opera cloak\")) {\n  1158: \t\t\t\tif (!OBJ_NAME(objects[i])) i = STRANGE_OBJECT;\n  1159: \t\t\t\tbreak;\n  1160: \t\t\t}\n  1161: \t\t}\n  1162: \t\tif (i != NUM_OBJECTS) (void)mongets(mtmp, i);"
   },
   {
     "key": "L01350_01",
     "original": "Automatically extinguished %s.",
     "translation": "",
-    "context": "src/makemon.c:1350:21\n  1345: \tif (mvitals[mndx].born < 255 && tally && (!ghostly || (ghostly && result)))\n  1346: \t\t mvitals[mndx].born++;\n  1347: \tif ((int) mvitals[mndx].born >= lim && !(mons[mndx].geno & G_NOGEN) &&\n  1348: \t\t!(mvitals[mndx].mvflags & G_EXTINCT)) {\n  1349: #if defined(DEBUG) && defined(WIZARD)\n> 1350: \t\tif (wizard) pline(\"Automatically extinguished %s.\",\n  1351: \t\t\t\t\tmakeplural(mons[mndx].mname));\n  1352: #endif\n  1353: \t\tmvitals[mndx].mvflags |= G_EXTINCT;\n  1354: \t\treset_rndmonst(mndx);\n  1355: \t}"
+    "stage": 0,
+    "context": "src/makemon.c:1350:21\n  1345: \tif (mvitals[mndx].born &lt; 255 && tally && (!ghostly || (ghostly && result)))\n  1346: \t\t mvitals[mndx].born++;\n  1347: \tif ((int) mvitals[mndx].born &gt;= lim && !(mons[mndx].geno & G_NOGEN) &&\n  1348: \t\t!(mvitals[mndx].mvflags & G_EXTINCT)) {\n  1349: #if defined(DEBUG) && defined(WIZARD)\n&gt; 1350: \t\tif (wizard) pline(\"Automatically extinguished %s.\",\n  1351: \t\t\t\t\tmakeplural(mons[mndx].mname));\n  1352: #endif\n  1353: \t\tmvitals[mndx].mvflags |= G_EXTINCT;\n  1354: \t\treset_rndmonst(mndx);\n  1355: \t}"
   },
   {
     "key": "L01421_01",
     "original": "Explicitly creating extinct monster %s.",
     "translation": "",
-    "context": "src/makemon.c:1421:13\n  1416: \t\t/* if you are to make a specific monster and it has\n  1417: \t\t   already been genocided, return */\n  1418: \t\tif (mvitals[mndx].mvflags & G_GENOD) return((struct monst *) 0);\n  1419: #if defined(WIZARD) && defined(DEBUG)\n  1420: \t\tif (wizard && (mvitals[mndx].mvflags & G_EXTINCT))\n> 1421: \t\t    pline(\"Explicitly creating extinct monster %s.\",\n  1422: \t\t\tmons[mndx].mname);\n  1423: #endif\n  1424: \t} else {\n  1425: \t\t/* make a random (common) monster that can survive here.\n  1426: \t\t * (the special levels ask for random monsters at specific"
+    "stage": 0,
+    "context": "src/makemon.c:1421:13\n  1416: \t\t/* if you are to make a specific monster and it has\n  1417: \t\t   already been genocided, return */\n  1418: \t\tif (mvitals[mndx].mvflags & G_GENOD) return((struct monst *) 0);\n  1419: #if defined(WIZARD) && defined(DEBUG)\n  1420: \t\tif (wizard && (mvitals[mndx].mvflags & G_EXTINCT))\n&gt; 1421: \t\t    pline(\"Explicitly creating extinct monster %s.\",\n  1422: \t\t\tmons[mndx].mname);\n  1423: #endif\n  1424: \t} else {\n  1425: \t\t/* make a random (common) monster that can survive here.\n  1426: \t\t * (the special levels ask for random monsters at specific"
   },
   {
     "key": "L01435_01",
     "original": "Warning: no monster.",
     "translation": "",
-    "context": "src/makemon.c:1435:14\n  1430: \t\tint tryct = 0;\t/* maybe there are no good choices */\n  1431: \t\tstruct monst fakemon;\n  1432: \t\tdo {\n  1433: \t\t\tif(!(ptr = rndmonst())) {\n  1434: #ifdef DEBUG\n> 1435: \t\t\t    pline(\"Warning: no monster.\");\n  1436: #endif\n  1437: \t\t\t    return((struct monst *) 0);\t/* no more monsters! */\n  1438: \t\t\t}\n  1439: \t\t\tfakemon.data = ptr;\t/* set up for goodpos */\n  1440: \t\t} while(!goodpos(x, y, &fakemon, gpflags) && tryct++ < 50);"
+    "stage": 0,
+    "context": "src/makemon.c:1435:14\n  1430: \t\tint tryct = 0;\t/* maybe there are no good choices */\n  1431: \t\tstruct monst fakemon;\n  1432: \t\tdo {\n  1433: \t\t\tif(!(ptr = rndmonst())) {\n  1434: #ifdef DEBUG\n&gt; 1435: \t\t\t    pline(\"Warning: no monster.\");\n  1436: #endif\n  1437: \t\t\t    return((struct monst *) 0);\t/* no more monsters! */\n  1438: \t\t\t}\n  1439: \t\t\tfakemon.data = ptr;\t/* set up for goodpos */\n  1440: \t\t} while(!goodpos(x, y, &fakemon, gpflags) && tryct++ &lt; 50);"
   },
   {
     "key": "L01853_01",
     "original": "rndmonst: no common mons!",
     "translation": "",
-    "context": "src/makemon.c:1853:9\n  1848: \t\trndmonst_state.mchoices[mndx] = 0;\n  1849: \t    }\t\t\n  1850: \t    if (mndx == SPECIAL_PM) {\n  1851: \t\t/* evidently they've all been exterminated */\n  1852: #ifdef DEBUG\n> 1853: \t\tpline(\"rndmonst: no common mons!\");\n  1854: #endif\n  1855: \t\treturn (struct permonst *)0;\n  1856: \t    } /* else `mndx' now ready for use below */\n  1857: \t    zlevel = level_difficulty();\n  1858: \t    /* determine the level of the weakest monster to make. */"
+    "stage": 0,
+    "context": "src/makemon.c:1853:9\n  1848: \t\trndmonst_state.mchoices[mndx] = 0;\n  1849: \t    }\t\t\n  1850: \t    if (mndx == SPECIAL_PM) {\n  1851: \t\t/* evidently they've all been exterminated */\n  1852: #ifdef DEBUG\n&gt; 1853: \t\tpline(\"rndmonst: no common mons!\");\n  1854: #endif\n  1855: \t\treturn (struct permonst *)0;\n  1856: \t    } /* else `mndx' now ready for use below */\n  1857: \t    zlevel = level_difficulty();\n  1858: \t    /* determine the level of the weakest monster to make. */"
   },
   {
     "key": "L01886_01",
     "original": "rndmonst: bad count [#%d: %d]",
     "translation": "",
-    "context": "src/makemon.c:1886:13\n  1881: \t\tif (elemlevel && wrong_elem_type(ptr)) continue;\n  1882: \t\tif (uncommon(mndx)) continue;\n  1883: \t\tif (Inhell && (ptr->geno & G_NOHELL)) continue;\n  1884: \t\tct = (int)(ptr->geno & G_FREQ) + align_shift(ptr);\n  1885: \t\tif (ct < 0 || ct > 127)\n> 1886: \t\t    panic(\"rndmonst: bad count [#%d: %d]\", mndx, ct);\n  1887: \t\trndmonst_state.choice_count += ct;\n  1888: \t\trndmonst_state.mchoices[mndx] = (char)ct;\n  1889: \t    }\n  1890: /*\n  1891:  *\t    Possible modification:  if choice_count is \"too low\","
+    "stage": 0,
+    "context": "src/makemon.c:1886:13\n  1881: \t\tif (elemlevel && wrong_elem_type(ptr)) continue;\n  1882: \t\tif (uncommon(mndx)) continue;\n  1883: \t\tif (Inhell && (ptr-&gt;geno & G_NOHELL)) continue;\n  1884: \t\tct = (int)(ptr-&gt;geno & G_FREQ) + align_shift(ptr);\n  1885: \t\tif (ct &lt; 0 || ct &gt; 127)\n&gt; 1886: \t\t    panic(\"rndmonst: bad count [#%d: %d]\", mndx, ct);\n  1887: \t\trndmonst_state.choice_count += ct;\n  1888: \t\trndmonst_state.mchoices[mndx] = (char)ct;\n  1889: \t    }\n  1890: /*\n  1891:  *\t    Possible modification:  if choice_count is \"too low\","
   },
   {
     "key": "L01899_01",
     "original": "rndmonst: choice_count=%d",
     "translation": "",
-    "context": "src/makemon.c:1899:12\n  1894: \t} /* choice_count+mchoices[] recalc */\n  1895: \n  1896: \tif (rndmonst_state.choice_count <= 0) {\n  1897: \t    /* maybe no common mons left, or all are too weak or too strong */\n  1898: #ifdef DEBUG\n> 1899: \t    Norep(\"rndmonst: choice_count=%d\", rndmonst_state.choice_count);\n  1900: #endif\n  1901: \t    return (struct permonst *)0;\n  1902: \t}\n  1903: \n  1904: /*"
+    "stage": 0,
+    "context": "src/makemon.c:1899:12\n  1894: \t} /* choice_count+mchoices[] recalc */\n  1895: \n  1896: \tif (rndmonst_state.choice_count &lt;= 0) {\n  1897: \t    /* maybe no common mons left, or all are too weak or too strong */\n  1898: #ifdef DEBUG\n&gt; 1899: \t    Norep(\"rndmonst: choice_count=%d\", rndmonst_state.choice_count);\n  1900: #endif\n  1901: \t    return (struct permonst *)0;\n  1902: \t}\n  1903: \n  1904: /*"
   },
   {
     "key": "L01912_01",
     "original": "rndmonst: bad `mndx' [#%d]",
     "translation": "",
-    "context": "src/makemon.c:1912:17\n  1907: \tct = rnd(rndmonst_state.choice_count);\n  1908: \tfor (mndx = LOW_PM; mndx < SPECIAL_PM; mndx++)\n  1909: \t    if ((ct -= (int)rndmonst_state.mchoices[mndx]) <= 0) break;\n  1910: \n  1911: \tif (mndx == SPECIAL_PM || uncommon(mndx)) {\t/* shouldn't happen */\n> 1912: \t    impossible(\"rndmonst: bad `mndx' [#%d]\", mndx);\n  1913: \t    return (struct permonst *)0;\n  1914: \t}\n  1915: \treturn &mons[mndx];\n  1916: \n  1917: /*"
+    "stage": 0,
+    "context": "src/makemon.c:1912:17\n  1907: \tct = rnd(rndmonst_state.choice_count);\n  1908: \tfor (mndx = LOW_PM; mndx &lt; SPECIAL_PM; mndx++)\n  1909: \t    if ((ct -= (int)rndmonst_state.mchoices[mndx]) &lt;= 0) break;\n  1910: \n  1911: \tif (mndx == SPECIAL_PM || uncommon(mndx)) {\t/* shouldn't happen */\n&gt; 1912: \t    impossible(\"rndmonst: bad `mndx' [#%d]\", mndx);\n  1913: \t    return (struct permonst *)0;\n  1914: \t}\n  1915: \treturn &mons[mndx];\n  1916: \n  1917: /*"
   },
   {
     "key": "L01985_01",
     "original": "mkclass called with bad class!",
     "translation": "",
-    "context": "src/makemon.c:1985:17\n  1980: \tregister int\tfirst, last, num = 0;\n  1981: \tint maxmlev, mask = (G_NOGEN | G_UNIQ) & ~spc;\n  1982: \n  1983: \tmaxmlev = level_difficulty() >> 1;\n  1984: \tif(class < 1 || class >= MAXMCLASSES) {\n> 1985: \t    impossible(\"mkclass called with bad class!\");\n  1986: \t    return(-1);\n  1987: \t}\n  1988: /*\tAssumption #1:\tmonsters of a given class are contiguous in the\n  1989:  *\t\t\tmons[] array.\n  1990:  */"
+    "stage": 0,
+    "context": "src/makemon.c:1985:17\n  1980: \tregister int\tfirst, last, num = 0;\n  1981: \tint maxmlev, mask = (G_NOGEN | G_UNIQ) & ~spc;\n  1982: \n  1983: \tmaxmlev = level_difficulty() &gt;&gt; 1;\n  1984: \tif(class &lt; 1 || class &gt;= MAXMCLASSES) {\n&gt; 1985: \t    impossible(\"mkclass called with bad class!\");\n  1986: \t    return(-1);\n  1987: \t}\n  1988: /*\tAssumption #1:\tmonsters of a given class are contiguous in the\n  1989:  *\t\t\tmons[] array.\n  1990:  */"
   },
   {
     "key": "L02136_01",
     "original": "As %s grows up into %s, %s %s!",
     "translation": "",
-    "context": "src/makemon.c:2136:13\n  2131: \n  2132: \tif ((int)++mtmp->m_lev >= mons[newtype].mlevel && newtype != oldtype) {\n  2133: \t    ptr = &mons[newtype];\n  2134: \t    if (mvitals[newtype].mvflags & G_GENOD) {\t/* allow G_EXTINCT */\n  2135: \t\tif (sensemon(mtmp))\n> 2136: \t\t    pline(\"As %s grows up into %s, %s %s!\", mon_nam(mtmp),\n  2137: \t\t\tan(ptr->mname), mhe(mtmp),\n  2138: \t\t\tnonliving(ptr) ? \"expires\" : \"dies\");\n  2139: \t\tset_mon_data(mtmp, ptr, -1);\t/* keep mvitals[] accurate */\n  2140: \t\tmondied(mtmp);\n  2141: \t\treturn (struct permonst *)0;"
+    "stage": 0,
+    "context": "src/makemon.c:2136:13\n  2131: \n  2132: \tif ((int)++mtmp-&gt;m_lev &gt;= mons[newtype].mlevel && newtype != oldtype) {\n  2133: \t    ptr = &mons[newtype];\n  2134: \t    if (mvitals[newtype].mvflags & G_GENOD) {\t/* allow G_EXTINCT */\n  2135: \t\tif (sensemon(mtmp))\n&gt; 2136: \t\t    pline(\"As %s grows up into %s, %s %s!\", mon_nam(mtmp),\n  2137: \t\t\tan(ptr-&gt;mname), mhe(mtmp),\n  2138: \t\t\tnonliving(ptr) ? \"expires\" : \"dies\");\n  2139: \t\tset_mon_data(mtmp, ptr, -1);\t/* keep mvitals[] accurate */\n  2140: \t\tmondied(mtmp);\n  2141: \t\treturn (struct permonst *)0;"
   },
   {
     "key": "L02138_01",
     "original": "expires",
     "translation": "",
-    "context": "src/makemon.c:2138:21\n  2133: \t    ptr = &mons[newtype];\n  2134: \t    if (mvitals[newtype].mvflags & G_GENOD) {\t/* allow G_EXTINCT */\n  2135: \t\tif (sensemon(mtmp))\n  2136: \t\t    pline(\"As %s grows up into %s, %s %s!\", mon_nam(mtmp),\n  2137: \t\t\tan(ptr->mname), mhe(mtmp),\n> 2138: \t\t\tnonliving(ptr) ? \"expires\" : \"dies\");\n  2139: \t\tset_mon_data(mtmp, ptr, -1);\t/* keep mvitals[] accurate */\n  2140: \t\tmondied(mtmp);\n  2141: \t\treturn (struct permonst *)0;\n  2142: \t    }\n  2143: \t    set_mon_data(mtmp, ptr, 1);\t\t/* preserve intrinsics */"
+    "stage": 0,
+    "context": "src/makemon.c:2138:21\n  2133: \t    ptr = &mons[newtype];\n  2134: \t    if (mvitals[newtype].mvflags & G_GENOD) {\t/* allow G_EXTINCT */\n  2135: \t\tif (sensemon(mtmp))\n  2136: \t\t    pline(\"As %s grows up into %s, %s %s!\", mon_nam(mtmp),\n  2137: \t\t\tan(ptr-&gt;mname), mhe(mtmp),\n&gt; 2138: \t\t\tnonliving(ptr) ? \"expires\" : \"dies\");\n  2139: \t\tset_mon_data(mtmp, ptr, -1);\t/* keep mvitals[] accurate */\n  2140: \t\tmondied(mtmp);\n  2141: \t\treturn (struct permonst *)0;\n  2142: \t    }\n  2143: \t    set_mon_data(mtmp, ptr, 1);\t\t/* preserve intrinsics */"
   },
   {
     "key": "L02138_02",
     "original": "dies",
     "translation": "",
-    "context": "src/makemon.c:2138:33\n  2133: \t    ptr = &mons[newtype];\n  2134: \t    if (mvitals[newtype].mvflags & G_GENOD) {\t/* allow G_EXTINCT */\n  2135: \t\tif (sensemon(mtmp))\n  2136: \t\t    pline(\"As %s grows up into %s, %s %s!\", mon_nam(mtmp),\n  2137: \t\t\tan(ptr->mname), mhe(mtmp),\n> 2138: \t\t\tnonliving(ptr) ? \"expires\" : \"dies\");\n  2139: \t\tset_mon_data(mtmp, ptr, -1);\t/* keep mvitals[] accurate */\n  2140: \t\tmondied(mtmp);\n  2141: \t\treturn (struct permonst *)0;\n  2142: \t    }\n  2143: \t    set_mon_data(mtmp, ptr, 1);\t\t/* preserve intrinsics */"
+    "stage": 0,
+    "context": "src/makemon.c:2138:33\n  2133: \t    ptr = &mons[newtype];\n  2134: \t    if (mvitals[newtype].mvflags & G_GENOD) {\t/* allow G_EXTINCT */\n  2135: \t\tif (sensemon(mtmp))\n  2136: \t\t    pline(\"As %s grows up into %s, %s %s!\", mon_nam(mtmp),\n  2137: \t\t\tan(ptr-&gt;mname), mhe(mtmp),\n&gt; 2138: \t\t\tnonliving(ptr) ? \"expires\" : \"dies\");\n  2139: \t\tset_mon_data(mtmp, ptr, -1);\t/* keep mvitals[] accurate */\n  2140: \t\tmondied(mtmp);\n  2141: \t\treturn (struct permonst *)0;\n  2142: \t    }\n  2143: \t    set_mon_data(mtmp, ptr, 1);\t\t/* preserve intrinsics */"
   },
   {
     "key": "L02507_01",
     "original": "bad bag o' tricks",
     "translation": "",
-    "context": "src/makemon.c:2507:13\n  2502: void\n  2503: bagotricks(bag)\n  2504: struct obj *bag;\n  2505: {\n  2506:     if (!bag || bag->otyp != BAG_OF_TRICKS) {\n> 2507: \timpossible(\"bad bag o' tricks\");\n  2508:     } else if (bag->spe < 1) {\n  2509: \tpline(nothing_happens);\n  2510:     } else {\n  2511: \tboolean gotone = FALSE;\n  2512: \tint cnt = 1;"
+    "stage": 0,
+    "context": "src/makemon.c:2507:13\n  2502: void\n  2503: bagotricks(bag)\n  2504: struct obj *bag;\n  2505: {\n  2506:     if (!bag || bag-&gt;otyp != BAG_OF_TRICKS) {\n&gt; 2507: \timpossible(\"bad bag o' tricks\");\n  2508:     } else if (bag-&gt;spe &lt; 1) {\n  2509: \tpline(nothing_happens);\n  2510:     } else {\n  2511: \tboolean gotone = FALSE;\n  2512: \tint cnt = 1;"
   }
 ]

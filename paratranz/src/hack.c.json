@@ -3,1008 +3,1176 @@
     "key": "L00160_01",
     "original": "some garlic",
     "translation": "",
-    "context": "src/hack.c:160:13\n   155: \t\t  if (update) newsym(pos.x,pos.y);\n   156: \t\t  if (cansee(pos.x,pos.y)) {\n   157: \t\t     if (showmsg && flags.verbose) {\n   158: \t\t\tconst char *what;\n   159: \t\t\tif (herb == CLOVE_OF_GARLIC)\n>  160: \t\t\t  what = \"some garlic\";\n   161: \t\t\telse \n   162: \t\t\t  what = an(xname(otmp));\n   163: \t\t\tNorep(\"Suddenly you notice %s growing on the %s.\",\n   164: \t\t\t      what, surface(pos.x,pos.y));\n   165: \t\t     }"
+    "stage": 0,
+    "context": "src/hack.c:160:13\n   155: \t\t  if (update) newsym(pos.x,pos.y);\n   156: \t\t  if (cansee(pos.x,pos.y)) {\n   157: \t\t     if (showmsg && flags.verbose) {\n   158: \t\t\tconst char *what;\n   159: \t\t\tif (herb == CLOVE_OF_GARLIC)\n&gt;  160: \t\t\t  what = \"some garlic\";\n   161: \t\t\telse \n   162: \t\t\t  what = an(xname(otmp));\n   163: \t\t\tNorep(\"Suddenly you notice %s growing on the %s.\",\n   164: \t\t\t      what, surface(pos.x,pos.y));\n   165: \t\t     }"
   },
   {
     "key": "L00163_01",
     "original": "Suddenly you notice %s growing on the %s.",
     "translation": "",
-    "context": "src/hack.c:163:10\n   158: \t\t\tconst char *what;\n   159: \t\t\tif (herb == CLOVE_OF_GARLIC)\n   160: \t\t\t  what = \"some garlic\";\n   161: \t\t\telse \n   162: \t\t\t  what = an(xname(otmp));\n>  163: \t\t\tNorep(\"Suddenly you notice %s growing on the %s.\",\n   164: \t\t\t      what, surface(pos.x,pos.y));\n   165: \t\t     }\n   166: \t\t  }\n   167: \t\t  return TRUE;\n   168: \t       } "
+    "stage": 0,
+    "context": "src/hack.c:163:10\n   158: \t\t\tconst char *what;\n   159: \t\t\tif (herb == CLOVE_OF_GARLIC)\n   160: \t\t\t  what = \"some garlic\";\n   161: \t\t\telse \n   162: \t\t\t  what = an(xname(otmp));\n&gt;  163: \t\t\tNorep(\"Suddenly you notice %s growing on the %s.\",\n   164: \t\t\t      what, surface(pos.x,pos.y));\n   165: \t\t     }\n   166: \t\t  }\n   167: \t\t  return TRUE;\n   168: \t       } "
   },
   {
     "key": "L00201_01",
     "original": "%s floats%s in%s the murky water.",
     "translation": "",
-    "context": "src/hack.c:201:15\n   196: \t if (otmp->quan > 1) \n   197: \t   otmp = splitobj(otmp, otmp->quan - 1);\n   198: \t if (otmp->owt <= waterforce) {\n   199: \t    if (showmsg && Underwater && \n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n>  201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n   204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n   205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }"
+    "stage": 0,
+    "context": "src/hack.c:201:15\n   196: \t if (otmp-&gt;quan &gt; 1) \n   197: \t   otmp = splitobj(otmp, otmp-&gt;quan - 1);\n   198: \t if (otmp-&gt;owt &lt;= waterforce) {\n   199: \t    if (showmsg && Underwater && \n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n&gt;  201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n   204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n   205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }"
   },
   {
     "key": "L00204_01",
     "original": " away from you",
     "translation": "",
-    "context": "src/hack.c:204:23\n   199: \t    if (showmsg && Underwater && \n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n   201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n>  204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n   205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }\n   207: \t    obj_extract_self(otmp);\n   208: \t    place_object(otmp, pos.x,pos.y);\n   209: \t    stackobj(otmp);"
+    "stage": 0,
+    "context": "src/hack.c:204:23\n   199: \t    if (showmsg && Underwater && \n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n   201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n&gt;  204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n   205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }\n   207: \t    obj_extract_self(otmp);\n   208: \t    place_object(otmp, pos.x,pos.y);\n   209: \t    stackobj(otmp);"
   },
   {
     "key": "L00204_02",
     "original": " towards you",
     "translation": "",
-    "context": "src/hack.c:204:42\n   199: \t    if (showmsg && Underwater && \n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n   201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n>  204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n   205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }\n   207: \t    obj_extract_self(otmp);\n   208: \t    place_object(otmp, pos.x,pos.y);\n   209: \t    stackobj(otmp);"
+    "stage": 0,
+    "context": "src/hack.c:204:42\n   199: \t    if (showmsg && Underwater && \n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n   201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n&gt;  204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n   205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }\n   207: \t    obj_extract_self(otmp);\n   208: \t    place_object(otmp, pos.x,pos.y);\n   209: \t    stackobj(otmp);"
   },
   {
     "key": "L00205_01",
     "original": " the currents of",
     "translation": "",
-    "context": "src/hack.c:205:24\n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n   201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n   204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n>  205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }\n   207: \t    obj_extract_self(otmp);\n   208: \t    place_object(otmp, pos.x,pos.y);\n   209: \t    stackobj(otmp);\n   210: \t    if (update) {"
+    "stage": 0,
+    "context": "src/hack.c:205:24\n   200: \t\t(cansee(pos.x,pos.y) || cansee(x,y))) {\n   201: \t       Norep(\"%s floats%s in%s the murky water.\",\n   202: \t\t     An(xname(otmp)),\n   203: \t\t     (cansee(x,y) && cansee(pos.x,pos.y)) ? \"\" :\n   204: \t\t     (cansee(x,y) ? \" away from you\" : \" towards you\"),\n&gt;  205: \t\t     flags.verbose ? \" the currents of\" : \"\");\n   206: \t    }\n   207: \t    obj_extract_self(otmp);\n   208: \t    place_object(otmp, pos.x,pos.y);\n   209: \t    stackobj(otmp);\n   210: \t    if (update) {"
   },
   {
     "key": "L00250_01",
     "original": "%s falls from %s%s.",
     "translation": "",
-    "context": "src/hack.c:250:14\n   245: \t       otmp->quan = 1;\n   246: \t       otmp->owt = weight(otmp);\n   247: \t       obj_extract_self(otmp);\n   248: \t       if (showmsg) {\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n>  250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n   252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev->typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && "
+    "stage": 0,
+    "context": "src/hack.c:250:14\n   245: \t       otmp-&gt;quan = 1;\n   246: \t       otmp-&gt;owt = weight(otmp);\n   247: \t       obj_extract_self(otmp);\n   248: \t       if (showmsg) {\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n&gt;  250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n   252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev-&gt;typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && "
   },
   {
     "key": "L00252_01",
     "original": "the tree",
     "translation": "",
-    "context": "src/hack.c:252:21\n   247: \t       obj_extract_self(otmp);\n   248: \t       if (showmsg) {\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n   250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n>  252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev->typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && \n   256: \t\t\t     otmp->otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */"
+    "stage": 0,
+    "context": "src/hack.c:252:21\n   247: \t       obj_extract_self(otmp);\n   248: \t       if (showmsg) {\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n   250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n&gt;  252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev-&gt;typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && \n   256: \t\t\t     otmp-&gt;otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */"
   },
   {
     "key": "L00252_02",
     "original": "somewhere",
     "translation": "",
-    "context": "src/hack.c:252:34\n   247: \t       obj_extract_self(otmp);\n   248: \t       if (showmsg) {\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n   250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n>  252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev->typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && \n   256: \t\t\t     otmp->otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */"
+    "stage": 0,
+    "context": "src/hack.c:252:34\n   247: \t       obj_extract_self(otmp);\n   248: \t       if (showmsg) {\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n   250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n&gt;  252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev-&gt;typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && \n   256: \t\t\t     otmp-&gt;otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */"
   },
   {
     "key": "L00254_01",
     "original": " into the water",
     "translation": "",
-    "context": "src/hack.c:254:7\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n   250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n   252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev->typ)) ? \n>  254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && \n   256: \t\t\t     otmp->otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n   258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev->typ) || IS_FOUNTAIN(lev->typ)) ? "
+    "stage": 0,
+    "context": "src/hack.c:254:7\n   249: \t\t  if ((cansee(pos.x,pos.y) || cansee(x,y))) {\n   250: \t\t     Norep(\"%s falls from %s%s.\",\n   251: \t\t\t   cansee(pos.x,pos.y) ? An(xname(otmp)) : Something,\n   252: \t\t\t   cansee(x,y) ? \"the tree\" : \"somewhere\",\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev-&gt;typ)) ? \n&gt;  254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && \n   256: \t\t\t     otmp-&gt;otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n   258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev-&gt;typ) || IS_FOUNTAIN(lev-&gt;typ)) ? "
   },
   {
     "key": "L00258_01",
     "original": "a %s!",
     "translation": "",
-    "context": "src/hack.c:258:17\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev->typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && \n   256: \t\t\t     otmp->otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n>  258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev->typ) || IS_FOUNTAIN(lev->typ)) ? \n   260: \t\t\t      \"plop\" : \"splut\"); /* rainforesty sounds */\n   261: \t\t  }\n   262: \t       }\n   263: \t       place_object(otmp, pos.x,pos.y);"
+    "stage": 0,
+    "context": "src/hack.c:258:17\n   253: \t\t\t   (cansee(x,y) && IS_POOL(lev-&gt;typ)) ? \n   254: \t\t\t   \" into the water\" : \"\");\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && \n   256: \t\t\t     otmp-&gt;otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n&gt;  258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev-&gt;typ) || IS_FOUNTAIN(lev-&gt;typ)) ? \n   260: \t\t\t      \"plop\" : \"splut\"); /* rainforesty sounds */\n   261: \t\t  }\n   262: \t       }\n   263: \t       place_object(otmp, pos.x,pos.y);"
   },
   {
     "key": "L00260_01",
     "original": "plop",
     "translation": "",
-    "context": "src/hack.c:260:10\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && \n   256: \t\t\t     otmp->otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n   258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev->typ) || IS_FOUNTAIN(lev->typ)) ? \n>  260: \t\t\t      \"plop\" : \"splut\"); /* rainforesty sounds */\n   261: \t\t  }\n   262: \t       }\n   263: \t       place_object(otmp, pos.x,pos.y);\n   264: \t       stackobj(otmp);\n   265: \t       if (rn2(6)) levl[x][y].looted |= TREE_LOOTED;"
+    "stage": 0,
+    "context": "src/hack.c:260:10\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && \n   256: \t\t\t     otmp-&gt;otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n   258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev-&gt;typ) || IS_FOUNTAIN(lev-&gt;typ)) ? \n&gt;  260: \t\t\t      \"plop\" : \"splut\"); /* rainforesty sounds */\n   261: \t\t  }\n   262: \t       }\n   263: \t       place_object(otmp, pos.x,pos.y);\n   264: \t       stackobj(otmp);\n   265: \t       if (rn2(6)) levl[x][y].looted |= TREE_LOOTED;"
   },
   {
     "key": "L00260_02",
     "original": "splut",
     "translation": "",
-    "context": "src/hack.c:260:19\n   255: \t\t  } else if (distu(pos.x,pos.y) < 9 && \n   256: \t\t\t     otmp->otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n   258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev->typ) || IS_FOUNTAIN(lev->typ)) ? \n>  260: \t\t\t      \"plop\" : \"splut\"); /* rainforesty sounds */\n   261: \t\t  }\n   262: \t       }\n   263: \t       place_object(otmp, pos.x,pos.y);\n   264: \t       stackobj(otmp);\n   265: \t       if (rn2(6)) levl[x][y].looted |= TREE_LOOTED;"
+    "stage": 0,
+    "context": "src/hack.c:260:19\n   255: \t\t  } else if (distu(pos.x,pos.y) &lt; 9 && \n   256: \t\t\t     otmp-&gt;otyp != EUCALYPTUS_LEAF) {\n   257: \t\t     /* a leaf is too light to cause any sound */\n   258: \t\t     You_hear(\"a %s!\",\n   259: \t\t\t      (IS_POOL(lev-&gt;typ) || IS_FOUNTAIN(lev-&gt;typ)) ? \n&gt;  260: \t\t\t      \"plop\" : \"splut\"); /* rainforesty sounds */\n   261: \t\t  }\n   262: \t       }\n   263: \t       place_object(otmp, pos.x,pos.y);\n   264: \t       stackobj(otmp);\n   265: \t       if (rn2(6)) levl[x][y].looted |= TREE_LOOTED;"
   },
   {
     "key": "L00369_01",
     "original": "%s",
     "translation": "",
-    "context": "src/hack.c:369:20\n   364: \t    (is_rider(&mons[otmp->corpsenm]) ||\n   365: \t     otmp->corpsenm == PM_WIZARD_OF_YENDOR)) {\n   366: \t    /* move any living monster already at that location */\n   367: \t    if((mtmp = m_at(x,y)) && enexto(&cc, x, y, mtmp->data))\n   368: \t\trloc_to(mtmp, cc.x, cc.y);\n>  369: \t    if(msg) Norep(\"%s\", msg);\n   370: \t    revived = revive_corpse(otmp, FALSE);\n   371: \t}\n   372:     }\n   373: \n   374:     /* this location might not be safe, if not, move revived monster */"
+    "stage": 0,
+    "context": "src/hack.c:369:20\n   364: \t    (is_rider(&mons[otmp-&gt;corpsenm]) ||\n   365: \t     otmp-&gt;corpsenm == PM_WIZARD_OF_YENDOR)) {\n   366: \t    /* move any living monster already at that location */\n   367: \t    if((mtmp = m_at(x,y)) && enexto(&cc, x, y, mtmp-&gt;data))\n   368: \t\trloc_to(mtmp, cc.x, cc.y);\n&gt;  369: \t    if(msg) Norep(\"%s\", msg);\n   370: \t    revived = revive_corpse(otmp, FALSE);\n   371: \t}\n   372:     }\n   373: \n   374:     /* this location might not be safe, if not, move revived monster */"
   },
   {
     "key": "L00405_01",
     "original": "don't have enough leverage to push %s.",
     "translation": "",
-    "context": "src/hack.c:405:10\n   400: \trx = u.ux + 2 * u.dx;\t/* boulder destination position */\n   401: \try = u.uy + 2 * u.dy;\n   402: \tnomul(0);\n   403: \tif (Levitation || Is_airlevel(&u.uz)) {\n   404: \t\tif (Blind) feel_location(sx,sy);\n>  405: \t    You(\"don't have enough leverage to push %s.\", the(xname(otmp)));\n   406: \t    /* Give them a chance to climb over it? */\n   407: \t    return -1;\n   408: \t}\n   409: \tif (verysmall(youmonst.data)\n   410: #ifdef STEED"
+    "stage": 0,
+    "context": "src/hack.c:405:10\n   400: \trx = u.ux + 2 * u.dx;\t/* boulder destination position */\n   401: \try = u.uy + 2 * u.dy;\n   402: \tnomul(0);\n   403: \tif (Levitation || Is_airlevel(&u.uz)) {\n   404: \t\tif (Blind) feel_location(sx,sy);\n&gt;  405: \t    You(\"don't have enough leverage to push %s.\", the(xname(otmp)));\n   406: \t    /* Give them a chance to climb over it? */\n   407: \t    return -1;\n   408: \t}\n   409: \tif (verysmall(youmonst.data)\n   410: #ifdef STEED"
   },
   {
     "key": "L00452_01",
     "original": "There's %s on the other side.",
     "translation": "",
-    "context": "src/hack.c:452:10\n   447: \t\t    boolean by_name = (mtmp->data->geno & G_UNIQ ||\n   448: \t\t\t\t       mtmp->isshk || mtmp->mnamelth);\n   449: \t\t    if (by_name && !Hallucination)\n   450: \t\t\tpline(\"%s在另一边呢。\", Monnam(mtmp));\n   451: \t\t    else\n>  452: \t\t\tpline(\"There's %s on the other side.\", a_monnam(mtmp));\n   453: \t\t} else {\n   454: \t\t    You_hear(\"a monster behind %s.\", the(xname(otmp)));\n   455: \t\t    map_invisible(rx, ry);\n   456: \t\t}\n   457: \t\tif (flags.verbose)"
+    "stage": 0,
+    "context": "src/hack.c:452:10\n   447: \t\t    boolean by_name = (mtmp-&gt;data-&gt;geno & G_UNIQ ||\n   448: \t\t\t\t       mtmp-&gt;isshk || mtmp-&gt;mnamelth);\n   449: \t\t    if (by_name && !Hallucination)\n   450: \t\t\tpline(\"%s在另一边呢。\", Monnam(mtmp));\n   451: \t\t    else\n&gt;  452: \t\t\tpline(\"There's %s on the other side.\", a_monnam(mtmp));\n   453: \t\t} else {\n   454: \t\t    You_hear(\"a monster behind %s.\", the(xname(otmp)));\n   455: \t\t    map_invisible(rx, ry);\n   456: \t\t}\n   457: \t\tif (flags.verbose)"
   },
   {
     "key": "L00454_01",
     "original": "a monster behind %s.",
     "translation": "",
-    "context": "src/hack.c:454:16\n   449: \t\t    if (by_name && !Hallucination)\n   450: \t\t\tpline(\"%s在另一边呢。\", Monnam(mtmp));\n   451: \t\t    else\n   452: \t\t\tpline(\"There's %s on the other side.\", a_monnam(mtmp));\n   453: \t\t} else {\n>  454: \t\t    You_hear(\"a monster behind %s.\", the(xname(otmp)));\n   455: \t\t    map_invisible(rx, ry);\n   456: \t\t}\n   457: \t\tif (flags.verbose)\n   458: \t\t    pline(\"说不定这就是为什么%s推不动它。\",\n   459: #ifdef STEED"
+    "stage": 0,
+    "context": "src/hack.c:454:16\n   449: \t\t    if (by_name && !Hallucination)\n   450: \t\t\tpline(\"%s在另一边呢。\", Monnam(mtmp));\n   451: \t\t    else\n   452: \t\t\tpline(\"There's %s on the other side.\", a_monnam(mtmp));\n   453: \t\t} else {\n&gt;  454: \t\t    You_hear(\"a monster behind %s.\", the(xname(otmp)));\n   455: \t\t    map_invisible(rx, ry);\n   456: \t\t}\n   457: \t\tif (flags.verbose)\n   458: \t\t    pline(\"说不定这就是为什么%s推不动它。\",\n   459: #ifdef STEED"
   },
   {
     "key": "L00462_01",
     "original": "you",
     "translation": "",
-    "context": "src/hack.c:462:5\n   457: \t\tif (flags.verbose)\n   458: \t\t    pline(\"说不定这就是为什么%s推不动它。\",\n   459: #ifdef STEED\n   460: \t\t\t\tu.usteed ? y_monnam(u.usteed) :\n   461: #endif\n>  462: \t\t\t\t\"you\");\n   463: \t\tgoto cannot_push;\n   464: \t    }\n   465: \n   466: \t    if (ttmp)\n   467: \t\tswitch(ttmp->ttyp) {"
+    "stage": 0,
+    "context": "src/hack.c:462:5\n   457: \t\tif (flags.verbose)\n   458: \t\t    pline(\"说不定这就是为什么%s推不动它。\",\n   459: #ifdef STEED\n   460: \t\t\t\tu.usteed ? y_monnam(u.usteed) :\n   461: #endif\n&gt;  462: \t\t\t\t\"you\");\n   463: \t\tgoto cannot_push;\n   464: \t    }\n   465: \n   466: \t    if (ttmp)\n   467: \t\tswitch(ttmp-&gt;ttyp) {"
   },
   {
     "key": "L00474_01",
     "original": "KAABLAMM!!!  %s %s land mine.",
     "translation": "",
-    "context": "src/hack.c:474:10\n   469: \t\t    if (rn2(10)) {\n   470: \t\t\tobj_extract_self(otmp);\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n>  474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n   475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n   476: \t\t\t      ttmp->madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);"
+    "stage": 0,
+    "context": "src/hack.c:474:10\n   469: \t\t    if (rn2(10)) {\n   470: \t\t\tobj_extract_self(otmp);\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n&gt;  474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n   475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n   476: \t\t\t      ttmp-&gt;madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);"
   },
   {
     "key": "L00475_01",
     "original": "trigger",
     "translation": "",
-    "context": "src/hack.c:475:24\n   470: \t\t\tobj_extract_self(otmp);\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n   474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n>  475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n   476: \t\t\t      ttmp->madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);\n   480: \t\t\tif (cansee(rx,ry)) newsym(rx,ry);"
+    "stage": 0,
+    "context": "src/hack.c:475:24\n   470: \t\t\tobj_extract_self(otmp);\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n   474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n&gt;  475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n   476: \t\t\t      ttmp-&gt;madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);\n   480: \t\t\tif (cansee(rx,ry)) newsym(rx,ry);"
   },
   {
     "key": "L00476_01",
     "original": "your",
     "translation": "",
-    "context": "src/hack.c:476:27\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n   474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n   475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n>  476: \t\t\t      ttmp->madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);\n   480: \t\t\tif (cansee(rx,ry)) newsym(rx,ry);\n   481: \t\t\tcontinue;"
+    "stage": 0,
+    "context": "src/hack.c:476:27\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n   474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n   475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n&gt;  476: \t\t\t      ttmp-&gt;madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);\n   480: \t\t\tif (cansee(rx,ry)) newsym(rx,ry);\n   481: \t\t\tcontinue;"
   },
   {
     "key": "L00476_02",
     "original": "a",
     "translation": "",
-    "context": "src/hack.c:476:36\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n   474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n   475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n>  476: \t\t\t      ttmp->madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);\n   480: \t\t\tif (cansee(rx,ry)) newsym(rx,ry);\n   481: \t\t\tcontinue;"
+    "stage": 0,
+    "context": "src/hack.c:476:36\n   471: \t\t\tplace_object(otmp, rx, ry);\n   472: \t\t\tunblock_point(sx, sy);\n   473: \t\t\tnewsym(sx, sy);\n   474: \t\t\tpline(\"KAABLAMM!!!  %s %s land mine.\",\n   475: \t\t\t      Tobjnam(otmp, \"trigger\"),\n&gt;  476: \t\t\t      ttmp-&gt;madeby_u ? \"your\" : \"a\");\n   477: \t\t\tblow_up_landmine(ttmp);\n   478: \t\t\t/* if the boulder remains, it should fill the pit */\n   479: \t\t\tfill_pit(u.ux, u.uy);\n   480: \t\t\tif (cansee(rx,ry)) newsym(rx,ry);\n   481: \t\t\tcontinue;"
   },
   {
     "key": "L00491_01",
     "original": "fall",
     "translation": "",
-    "context": "src/hack.c:491:39\n   486: \t\t    obj_extract_self(otmp);\n   487: \t\t    /* vision kludge to get messages right;\n   488: \t\t       the pit will temporarily be seen even\n   489: \t\t       if this is one among multiple boulders */\n   490: \t\t    if (!Blind) viz_array[ry][rx] |= IN_SIGHT;\n>  491: \t\t    if (!flooreffects(otmp, rx, ry, \"fall\")) {\n   492: \t\t\tplace_object(otmp, rx, ry);\n   493: \t\t    }\n   494: \t\t    if (mtmp && !Blind) newsym(rx, ry);\n   495: \t\t    continue;\n   496: \t\tcase HOLE:"
+    "stage": 0,
+    "context": "src/hack.c:491:39\n   486: \t\t    obj_extract_self(otmp);\n   487: \t\t    /* vision kludge to get messages right;\n   488: \t\t       the pit will temporarily be seen even\n   489: \t\t       if this is one among multiple boulders */\n   490: \t\t    if (!Blind) viz_array[ry][rx] |= IN_SIGHT;\n&gt;  491: \t\t    if (!flooreffects(otmp, rx, ry, \"fall\")) {\n   492: \t\t\tplace_object(otmp, rx, ry);\n   493: \t\t    }\n   494: \t\t    if (mtmp && !Blind) newsym(rx, ry);\n   495: \t\t    continue;\n   496: \t\tcase HOLE:"
   },
   {
     "key": "L00499_01",
     "original": "Kerplunk!  You no longer feel %s.",
     "translation": "",
-    "context": "src/hack.c:499:10\n   494: \t\t    if (mtmp && !Blind) newsym(rx, ry);\n   495: \t\t    continue;\n   496: \t\tcase HOLE:\n   497: \t\tcase TRAPDOOR:\n   498: \t\t    if (Blind)\n>  499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),"
+    "stage": 0,
+    "context": "src/hack.c:499:10\n   494: \t\t    if (mtmp && !Blind) newsym(rx, ry);\n   495: \t\t    continue;\n   496: \t\tcase HOLE:\n   497: \t\tcase TRAPDOOR:\n   498: \t\t    if (Blind)\n&gt;  499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),"
   },
   {
     "key": "L00502_01",
     "original": "%s%s and %s a %s in the %s!",
     "translation": "",
-    "context": "src/hack.c:502:10\n   497: \t\tcase TRAPDOOR:\n   498: \t\t    if (Blind)\n   499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n>  502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\","
+    "stage": 0,
+    "context": "src/hack.c:502:10\n   497: \t\tcase TRAPDOOR:\n   498: \t\t    if (Blind)\n   499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n&gt;  502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\","
   },
   {
     "key": "L00504_01",
     "original": "trigger",
     "translation": "",
-    "context": "src/hack.c:504:34\n   499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n>  504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);"
+    "stage": 0,
+    "context": "src/hack.c:504:34\n   499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n&gt;  504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);"
   },
   {
     "key": "L00504_02",
     "original": "fall",
     "translation": "",
-    "context": "src/hack.c:504:46\n   499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n>  504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);"
+    "stage": 0,
+    "context": "src/hack.c:504:46\n   499: \t\t\tpline(\"Kerplunk!  You no longer feel %s.\",\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n&gt;  504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);"
   },
   {
     "key": "L00505_01",
     "original": " into",
     "translation": "",
-    "context": "src/hack.c:505:39\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n>  505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);"
+    "stage": 0,
+    "context": "src/hack.c:505:39\n   500: \t\t\t\tthe(xname(otmp)));\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n&gt;  505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);"
   },
   {
     "key": "L00506_01",
     "original": "plug",
     "translation": "",
-    "context": "src/hack.c:506:19\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n>  506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);\n   511: \t\t    bury_objs(rx, ry);"
+    "stage": 0,
+    "context": "src/hack.c:506:19\n   501: \t\t    else\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n&gt;  506: \t\t\t  otense(otmp, \"plug\"),\n   507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);\n   511: \t\t    bury_objs(rx, ry);"
   },
   {
     "key": "L00507_01",
     "original": "trap door",
     "translation": "",
-    "context": "src/hack.c:507:33\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n>  507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);\n   511: \t\t    bury_objs(rx, ry);\n   512: \t\t    if (cansee(rx,ry)) newsym(rx,ry);"
+    "stage": 0,
+    "context": "src/hack.c:507:33\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n&gt;  507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);\n   511: \t\t    bury_objs(rx, ry);\n   512: \t\t    if (cansee(rx,ry)) newsym(rx,ry);"
   },
   {
     "key": "L00507_02",
     "original": "hole",
     "translation": "",
-    "context": "src/hack.c:507:47\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp->ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n>  507: \t\t\t  (ttmp->ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);\n   511: \t\t    bury_objs(rx, ry);\n   512: \t\t    if (cansee(rx,ry)) newsym(rx,ry);"
+    "stage": 0,
+    "context": "src/hack.c:507:47\n   502: \t\t\tpline(\"%s%s and %s a %s in the %s!\",\n   503: \t\t\t  Tobjnam(otmp,\n   504: \t\t\t   (ttmp-&gt;ttyp == TRAPDOOR) ? \"trigger\" : \"fall\"),\n   505: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? nul : \" into\",\n   506: \t\t\t  otense(otmp, \"plug\"),\n&gt;  507: \t\t\t  (ttmp-&gt;ttyp == TRAPDOOR) ? \"trap door\" : \"hole\",\n   508: \t\t\t  surface(rx, ry));\n   509: \t\t    deltrap(ttmp);\n   510: \t\t    delobj(otmp);\n   511: \t\t    bury_objs(rx, ry);\n   512: \t\t    if (cansee(rx,ry)) newsym(rx,ry);"
   },
   {
     "key": "L00518_01",
     "original": "%s pushes %s and suddenly it disappears!",
     "translation": "",
-    "context": "src/hack.c:518:10\n   513: \t\t    continue;\n   514: \t\tcase LEVEL_TELEP:\n   515: \t\tcase TELEP_TRAP:\n   516: #ifdef STEED\n   517: \t\t    if (u.usteed)\n>  518: \t\t\tpline(\"%s pushes %s and suddenly it disappears!\",\n   519: \t\t\t      upstart(y_monnam(u.usteed)), the(xname(otmp)));\n   520: \t\t    else\n   521: #endif\n   522: \t\t    You(\"push %s and suddenly it disappears!\",\n   523: \t\t\tthe(xname(otmp)));"
+    "stage": 0,
+    "context": "src/hack.c:518:10\n   513: \t\t    continue;\n   514: \t\tcase LEVEL_TELEP:\n   515: \t\tcase TELEP_TRAP:\n   516: #ifdef STEED\n   517: \t\t    if (u.usteed)\n&gt;  518: \t\t\tpline(\"%s pushes %s and suddenly it disappears!\",\n   519: \t\t\t      upstart(y_monnam(u.usteed)), the(xname(otmp)));\n   520: \t\t    else\n   521: #endif\n   522: \t\t    You(\"push %s and suddenly it disappears!\",\n   523: \t\t\tthe(xname(otmp)));"
   },
   {
     "key": "L00522_01",
     "original": "push %s and suddenly it disappears!",
     "translation": "",
-    "context": "src/hack.c:522:11\n   517: \t\t    if (u.usteed)\n   518: \t\t\tpline(\"%s pushes %s and suddenly it disappears!\",\n   519: \t\t\t      upstart(y_monnam(u.usteed)), the(xname(otmp)));\n   520: \t\t    else\n   521: #endif\n>  522: \t\t    You(\"push %s and suddenly it disappears!\",\n   523: \t\t\tthe(xname(otmp)));\n   524: \t\t    if (ttmp->ttyp == TELEP_TRAP)\n   525: \t\t\trloco(otmp);\n   526: \t\t    else {\n   527: \t\t\tint newlev = random_teleport_level();"
+    "stage": 0,
+    "context": "src/hack.c:522:11\n   517: \t\t    if (u.usteed)\n   518: \t\t\tpline(\"%s pushes %s and suddenly it disappears!\",\n   519: \t\t\t      upstart(y_monnam(u.usteed)), the(xname(otmp)));\n   520: \t\t    else\n   521: #endif\n&gt;  522: \t\t    You(\"push %s and suddenly it disappears!\",\n   523: \t\t\tthe(xname(otmp)));\n   524: \t\t    if (ttmp-&gt;ttyp == TELEP_TRAP)\n   525: \t\t\trloco(otmp);\n   526: \t\t    else {\n   527: \t\t\tint newlev = random_teleport_level();"
   },
   {
     "key": "L00573_01",
     "original": "%s moves %s.",
     "translation": "",
-    "context": "src/hack.c:573:13\n   568: \t\t\t  throws_rocks(youmonst.data) ? \"不费吹灰之力就\" : \"使出吃奶的劲才\",\n   569: \t\t\t  the(xname(otmp)));\n   570: \t\t  exercise(A_STR, TRUE);\n   571: #ifdef STEED\n   572: \t\t} else \n>  573: \t\t    pline(\"%s moves %s.\",\n   574: \t\t\t  upstart(y_monnam(u.usteed)), the(xname(otmp)));\n   575: #endif\n   576: \t\tlastmovetime = moves;\n   577: \t    }\n   578: "
+    "stage": 0,
+    "context": "src/hack.c:573:13\n   568: \t\t\t  throws_rocks(youmonst.data) ? \"不费吹灰之力就\" : \"使出吃奶的劲才\",\n   569: \t\t\t  the(xname(otmp)));\n   570: \t\t  exercise(A_STR, TRUE);\n   571: #ifdef STEED\n   572: \t\t} else \n&gt;  573: \t\t    pline(\"%s moves %s.\",\n   574: \t\t\t  upstart(y_monnam(u.usteed)), the(xname(otmp)));\n   575: #endif\n   576: \t\tlastmovetime = moves;\n   577: \t    }\n   578: "
   },
   {
     "key": "L00603_01",
     "original": "aren't skilled enough to %s %s from %s.",
     "translation": "",
-    "context": "src/hack.c:603:11\n   598: \t\t if (Blind) feel_location(sx,sy);\n   599: \tcannot_push:\n   600: \t    if (throws_rocks(youmonst.data)) {\n   601: #ifdef STEED\n   602: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC) {\n>  603: \t\t    You(\"aren't skilled enough to %s %s from %s.\",\n   604: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n   605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif"
+    "stage": 0,
+    "context": "src/hack.c:603:11\n   598: \t\t if (Blind) feel_location(sx,sy);\n   599: \tcannot_push:\n   600: \t    if (throws_rocks(youmonst.data)) {\n   601: #ifdef STEED\n   602: \t\tif (u.usteed && P_SKILL(P_RIDING) &lt; P_BASIC) {\n&gt;  603: \t\t    You(\"aren't skilled enough to %s %s from %s.\",\n   604: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n   605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif"
   },
   {
     "key": "L00605_01",
     "original": "pick up",
     "translation": "",
-    "context": "src/hack.c:605:10\n   600: \t    if (throws_rocks(youmonst.data)) {\n   601: #ifdef STEED\n   602: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC) {\n   603: \t\t    You(\"aren't skilled enough to %s %s from %s.\",\n   604: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n>  605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\","
+    "stage": 0,
+    "context": "src/hack.c:605:10\n   600: \t    if (throws_rocks(youmonst.data)) {\n   601: #ifdef STEED\n   602: \t\tif (u.usteed && P_SKILL(P_RIDING) &lt; P_BASIC) {\n   603: \t\t    You(\"aren't skilled enough to %s %s from %s.\",\n   604: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n&gt;  605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\","
   },
   {
     "key": "L00605_02",
     "original": "push aside",
     "translation": "",
-    "context": "src/hack.c:605:22\n   600: \t    if (throws_rocks(youmonst.data)) {\n   601: #ifdef STEED\n   602: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC) {\n   603: \t\t    You(\"aren't skilled enough to %s %s from %s.\",\n   604: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n>  605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\","
+    "stage": 0,
+    "context": "src/hack.c:605:22\n   600: \t    if (throws_rocks(youmonst.data)) {\n   601: #ifdef STEED\n   602: \t\tif (u.usteed && P_SKILL(P_RIDING) &lt; P_BASIC) {\n   603: \t\t    You(\"aren't skilled enough to %s %s from %s.\",\n   604: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n&gt;  605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\","
   },
   {
     "key": "L00610_01",
     "original": "However, you can easily %s.",
     "translation": "",
-    "context": "src/hack.c:610:13\n   605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n>  610: \t\t    pline(\"However, you can easily %s.\",\n   611: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n   612: \t\t\t    ? \"pick it up\" : \"push it aside\");\n   613: \t\t    if (In_sokoban(&u.uz))\n   614: \t\t\tchange_luck(-1);\t/* Sokoban guilt */\n   615: \t\t    break;"
+    "stage": 0,
+    "context": "src/hack.c:610:13\n   605: \t\t\t    ? \"pick up\" : \"push aside\",\n   606: \t\t\tthe(xname(otmp)), y_monnam(u.usteed));\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n&gt;  610: \t\t    pline(\"However, you can easily %s.\",\n   611: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n   612: \t\t\t    ? \"pick it up\" : \"push it aside\");\n   613: \t\t    if (In_sokoban(&u.uz))\n   614: \t\t\tchange_luck(-1);\t/* Sokoban guilt */\n   615: \t\t    break;"
   },
   {
     "key": "L00612_01",
     "original": "pick it up",
     "translation": "",
-    "context": "src/hack.c:612:10\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\",\n   611: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n>  612: \t\t\t    ? \"pick it up\" : \"push it aside\");\n   613: \t\t    if (In_sokoban(&u.uz))\n   614: \t\t\tchange_luck(-1);\t/* Sokoban guilt */\n   615: \t\t    break;\n   616: \t\t}\n   617: \t\tbreak;"
+    "stage": 0,
+    "context": "src/hack.c:612:10\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\",\n   611: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n&gt;  612: \t\t\t    ? \"pick it up\" : \"push it aside\");\n   613: \t\t    if (In_sokoban(&u.uz))\n   614: \t\t\tchange_luck(-1);\t/* Sokoban guilt */\n   615: \t\t    break;\n   616: \t\t}\n   617: \t\tbreak;"
   },
   {
     "key": "L00612_02",
     "original": "push it aside",
     "translation": "",
-    "context": "src/hack.c:612:25\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\",\n   611: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n>  612: \t\t\t    ? \"pick it up\" : \"push it aside\");\n   613: \t\t    if (In_sokoban(&u.uz))\n   614: \t\t\tchange_luck(-1);\t/* Sokoban guilt */\n   615: \t\t    break;\n   616: \t\t}\n   617: \t\tbreak;"
+    "stage": 0,
+    "context": "src/hack.c:612:25\n   607: \t\t} else\n   608: #endif\n   609: \t\t{\n   610: \t\t    pline(\"However, you can easily %s.\",\n   611: \t\t\t(flags.pickup && !In_sokoban(&u.uz))\n&gt;  612: \t\t\t    ? \"pick it up\" : \"push it aside\");\n   613: \t\t    if (In_sokoban(&u.uz))\n   614: \t\t\tchange_luck(-1);\t/* Sokoban guilt */\n   615: \t\t    break;\n   616: \t\t}\n   617: \t\tbreak;"
   },
   {
     "key": "L00657_01",
     "original": "hurt your teeth on the %s.",
     "translation": "",
-    "context": "src/hack.c:657:6\n   652: \n   653:     if (digging.down)\t\t/* not continuing previous dig (w/ pick-axe) */\n   654: \t(void) memset((genericptr_t)&digging, 0, sizeof digging);\n   655: \n   656:     if (!boulder && IS_ROCK(lev->typ) && !may_dig(x,y)) {\n>  657: \tYou(\"hurt your teeth on the %s.\",\n   658: \t    IS_TREE(lev->typ) ? \"tree\" : \"hard stone\");\n   659: \tnomul(0);\n   660: \treturn 1;\n   661:     } else if (digging.pos.x != x || digging.pos.y != y ||\n   662: \t\t!on_level(&digging.level, &u.uz)) {"
+    "stage": 0,
+    "context": "src/hack.c:657:6\n   652: \n   653:     if (digging.down)\t\t/* not continuing previous dig (w/ pick-axe) */\n   654: \t(void) memset((genericptr_t)&digging, 0, sizeof digging);\n   655: \n   656:     if (!boulder && IS_ROCK(lev-&gt;typ) && !may_dig(x,y)) {\n&gt;  657: \tYou(\"hurt your teeth on the %s.\",\n   658: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : \"hard stone\");\n   659: \tnomul(0);\n   660: \treturn 1;\n   661:     } else if (digging.pos.x != x || digging.pos.y != y ||\n   662: \t\t!on_level(&digging.level, &u.uz)) {"
   },
   {
     "key": "L00658_01",
     "original": "tree",
     "translation": "",
-    "context": "src/hack.c:658:26\n   653:     if (digging.down)\t\t/* not continuing previous dig (w/ pick-axe) */\n   654: \t(void) memset((genericptr_t)&digging, 0, sizeof digging);\n   655: \n   656:     if (!boulder && IS_ROCK(lev->typ) && !may_dig(x,y)) {\n   657: \tYou(\"hurt your teeth on the %s.\",\n>  658: \t    IS_TREE(lev->typ) ? \"tree\" : \"hard stone\");\n   659: \tnomul(0);\n   660: \treturn 1;\n   661:     } else if (digging.pos.x != x || digging.pos.y != y ||\n   662: \t\t!on_level(&digging.level, &u.uz)) {\n   663: \tdigging.down = FALSE;"
+    "stage": 0,
+    "context": "src/hack.c:658:26\n   653:     if (digging.down)\t\t/* not continuing previous dig (w/ pick-axe) */\n   654: \t(void) memset((genericptr_t)&digging, 0, sizeof digging);\n   655: \n   656:     if (!boulder && IS_ROCK(lev-&gt;typ) && !may_dig(x,y)) {\n   657: \tYou(\"hurt your teeth on the %s.\",\n&gt;  658: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : \"hard stone\");\n   659: \tnomul(0);\n   660: \treturn 1;\n   661:     } else if (digging.pos.x != x || digging.pos.y != y ||\n   662: \t\t!on_level(&digging.level, &u.uz)) {\n   663: \tdigging.down = FALSE;"
   },
   {
     "key": "L00658_02",
     "original": "hard stone",
     "translation": "",
-    "context": "src/hack.c:658:35\n   653:     if (digging.down)\t\t/* not continuing previous dig (w/ pick-axe) */\n   654: \t(void) memset((genericptr_t)&digging, 0, sizeof digging);\n   655: \n   656:     if (!boulder && IS_ROCK(lev->typ) && !may_dig(x,y)) {\n   657: \tYou(\"hurt your teeth on the %s.\",\n>  658: \t    IS_TREE(lev->typ) ? \"tree\" : \"hard stone\");\n   659: \tnomul(0);\n   660: \treturn 1;\n   661:     } else if (digging.pos.x != x || digging.pos.y != y ||\n   662: \t\t!on_level(&digging.level, &u.uz)) {\n   663: \tdigging.down = FALSE;"
+    "stage": 0,
+    "context": "src/hack.c:658:35\n   653:     if (digging.down)\t\t/* not continuing previous dig (w/ pick-axe) */\n   654: \t(void) memset((genericptr_t)&digging, 0, sizeof digging);\n   655: \n   656:     if (!boulder && IS_ROCK(lev-&gt;typ) && !may_dig(x,y)) {\n   657: \tYou(\"hurt your teeth on the %s.\",\n&gt;  658: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : \"hard stone\");\n   659: \tnomul(0);\n   660: \treturn 1;\n   661:     } else if (digging.pos.x != x || digging.pos.y != y ||\n   662: \t\t!on_level(&digging.level, &u.uz)) {\n   663: \tdigging.down = FALSE;"
   },
   {
     "key": "L00672_01",
     "original": "start chewing %s %s.",
     "translation": "",
-    "context": "src/hack.c:672:6\n   667: \tdigging.pos.y = y;\n   668: \tassign_level(&digging.level, &u.uz);\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n>  672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;"
+    "stage": 0,
+    "context": "src/hack.c:672:6\n   667: \tdigging.pos.y = y;\n   668: \tassign_level(&digging.level, &u.uz);\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n&gt;  672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;"
   },
   {
     "key": "L00673_01",
     "original": "on a",
     "translation": "",
-    "context": "src/hack.c:673:39\n   668: \tassign_level(&digging.level, &u.uz);\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n>  673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {"
+    "stage": 0,
+    "context": "src/hack.c:673:39\n   668: \tassign_level(&digging.level, &u.uz);\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n&gt;  673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {"
   },
   {
     "key": "L00673_02",
     "original": "a hole in the",
     "translation": "",
-    "context": "src/hack.c:673:48\n   668: \tassign_level(&digging.level, &u.uz);\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n>  673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {"
+    "stage": 0,
+    "context": "src/hack.c:673:48\n   668: \tassign_level(&digging.level, &u.uz);\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n&gt;  673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {"
   },
   {
     "key": "L00674_01",
     "original": "boulder",
     "translation": "",
-    "context": "src/hack.c:674:16\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n>  674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)"
+    "stage": 0,
+    "context": "src/hack.c:674:16\n   669: \t/* solid rock takes more work & time to dig through */\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n&gt;  674: \t    boulder ? \"boulder\" :\n   675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)"
   },
   {
     "key": "L00675_01",
     "original": "tree",
     "translation": "",
-    "context": "src/hack.c:675:26\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n>  675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\","
+    "stage": 0,
+    "context": "src/hack.c:675:26\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n&gt;  675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\","
   },
   {
     "key": "L00675_02",
     "original": "rock",
     "translation": "",
-    "context": "src/hack.c:675:55\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n>  675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\","
+    "stage": 0,
+    "context": "src/hack.c:675:55\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n&gt;  675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\","
   },
   {
     "key": "L00675_03",
     "original": "door",
     "translation": "",
-    "context": "src/hack.c:675:64\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev->typ) && !IS_TREE(lev->typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev->typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n>  675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\","
+    "stage": 0,
+    "context": "src/hack.c:675:64\n   670: \tdigging.effort =\n   671: \t    (IS_ROCK(lev-&gt;typ) && !IS_TREE(lev-&gt;typ) ? 30 : 60) + u.udaminc;\n   672: \tYou(\"start chewing %s %s.\",\n   673: \t    (boulder || IS_TREE(lev-&gt;typ)) ? \"on a\" : \"a hole in the\",\n   674: \t    boulder ? \"boulder\" :\n&gt;  675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\","
   },
   {
     "key": "L00680_01",
     "original": "%s chewing on the %s.",
     "translation": "",
-    "context": "src/hack.c:680:10\n   675: \t    IS_TREE(lev->typ) ? \"tree\" : IS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n>  680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;"
+    "stage": 0,
+    "context": "src/hack.c:680:10\n   675: \t    IS_TREE(lev-&gt;typ) ? \"tree\" : IS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n&gt;  680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;"
   },
   {
     "key": "L00681_01",
     "original": "continue",
     "translation": "",
-    "context": "src/hack.c:681:18\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n>  681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);"
+    "stage": 0,
+    "context": "src/hack.c:681:18\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n&gt;  681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);"
   },
   {
     "key": "L00681_02",
     "original": "begin",
     "translation": "",
-    "context": "src/hack.c:681:31\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n>  681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);"
+    "stage": 0,
+    "context": "src/hack.c:681:31\n   676: \twatch_dig((struct monst *)0, x, y, FALSE);\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n&gt;  681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);"
   },
   {
     "key": "L00682_01",
     "original": "boulder",
     "translation": "",
-    "context": "src/hack.c:682:13\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n>  682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;"
+    "stage": 0,
+    "context": "src/hack.c:682:13\n   677: \treturn 1;\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n&gt;  682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;"
   },
   {
     "key": "L00683_01",
     "original": "tree",
     "translation": "",
-    "context": "src/hack.c:683:23\n   678:     } else if ((digging.effort += (30 + u.udaminc)) <= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n>  683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;\n   688:     }"
+    "stage": 0,
+    "context": "src/hack.c:683:23\n   678:     } else if ((digging.effort += (30 + u.udaminc)) &lt;= 100)  {\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n&gt;  683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n   684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;\n   688:     }"
   },
   {
     "key": "L00684_01",
     "original": "rock",
     "translation": "",
-    "context": "src/hack.c:684:23\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n>  684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;\n   688:     }\n   689: "
+    "stage": 0,
+    "context": "src/hack.c:684:23\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n&gt;  684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;\n   688:     }\n   689: "
   },
   {
     "key": "L00684_02",
     "original": "door",
     "translation": "",
-    "context": "src/hack.c:684:32\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev->typ) ? \"tree\" :\n>  684: \t\tIS_ROCK(lev->typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;\n   688:     }\n   689: "
+    "stage": 0,
+    "context": "src/hack.c:684:32\n   679: \tif (flags.verbose)\n   680: \t    You(\"%s chewing on the %s.\",\n   681: \t\tdigging.chew ? \"continue\" : \"begin\",\n   682: \t\tboulder ? \"boulder\" :\n   683: \t\tIS_TREE(lev-&gt;typ) ? \"tree\" :\n&gt;  684: \t\tIS_ROCK(lev-&gt;typ) ? \"rock\" : \"door\");\n   685: \tdigging.chew = TRUE;\n   686: \twatch_dig((struct monst *)0, x, y, FALSE);\n   687: \treturn 1;\n   688:     }\n   689: "
   },
   {
     "key": "L00715_01",
     "original": "damage",
     "translation": "",
-    "context": "src/hack.c:715:15\n   710: \t}\n   711: \n   712:     } else if (IS_WALL(lev->typ)) {\n   713: \tif (*in_rooms(x, y, SHOPBASE)) {\n   714: \t    add_damage(x, y, 10L * ACURRSTR);\n>  715: \t    dmgtxt = \"damage\";\n   716: \t}\n   717: \tdigtxt = \"在墙上啃出来个洞。\";\n   718: \tif (level.flags.is_maze_lev) {\n   719: \t    lev->typ = ROOM;\n   720: \t} else if (level.flags.is_cavernous_lev && !in_town(x, y)) {"
+    "stage": 0,
+    "context": "src/hack.c:715:15\n   710: \t}\n   711: \n   712:     } else if (IS_WALL(lev-&gt;typ)) {\n   713: \tif (*in_rooms(x, y, SHOPBASE)) {\n   714: \t    add_damage(x, y, 10L * ACURRSTR);\n&gt;  715: \t    dmgtxt = \"damage\";\n   716: \t}\n   717: \tdigtxt = \"在墙上啃出来个洞。\";\n   718: \tif (level.flags.is_maze_lev) {\n   719: \t    lev-&gt;typ = ROOM;\n   720: \t} else if (level.flags.is_cavernous_lev && !in_town(x, y)) {"
   },
   {
     "key": "L00732_01",
     "original": "secret door",
     "translation": "",
-    "context": "src/hack.c:732:16\n   727: \tdigtxt = \"直接把树啃掉了。\";\n   728: \tlev->typ = ROOM;\n   729:     } else if (lev->typ == SDOOR) {\n   730: \tif (lev->doormask & D_TRAPPED) {\n   731: \t    lev->doormask = D_NODOOR;\n>  732: \t    b_trapped(\"secret door\", 0);\n   733: \t} else {\n   734: \t    digtxt = \"直接把暗门吃掉了。\";\n   735: \t    lev->doormask = D_BROKEN;\n   736: \t}\n   737: \tlev->typ = DOOR;"
+    "stage": 0,
+    "context": "src/hack.c:732:16\n   727: \tdigtxt = \"直接把树啃掉了。\";\n   728: \tlev-&gt;typ = ROOM;\n   729:     } else if (lev-&gt;typ == SDOOR) {\n   730: \tif (lev-&gt;doormask & D_TRAPPED) {\n   731: \t    lev-&gt;doormask = D_NODOOR;\n&gt;  732: \t    b_trapped(\"secret door\", 0);\n   733: \t} else {\n   734: \t    digtxt = \"直接把暗门吃掉了。\";\n   735: \t    lev-&gt;doormask = D_BROKEN;\n   736: \t}\n   737: \tlev-&gt;typ = DOOR;"
   },
   {
     "key": "L00742_01",
     "original": "break",
     "translation": "",
-    "context": "src/hack.c:742:15\n   737: \tlev->typ = DOOR;\n   738: \n   739:     } else if (IS_DOOR(lev->typ)) {\n   740: \tif (*in_rooms(x, y, SHOPBASE)) {\n   741: \t    add_damage(x, y, 400L);\n>  742: \t    dmgtxt = \"break\";\n   743: \t}\n   744: \tif (lev->doormask & D_TRAPPED) {\n   745: \t    lev->doormask = D_NODOOR;\n   746: \t    b_trapped(\"door\", 0);\n   747: \t} else {"
+    "stage": 0,
+    "context": "src/hack.c:742:15\n   737: \tlev-&gt;typ = DOOR;\n   738: \n   739:     } else if (IS_DOOR(lev-&gt;typ)) {\n   740: \tif (*in_rooms(x, y, SHOPBASE)) {\n   741: \t    add_damage(x, y, 400L);\n&gt;  742: \t    dmgtxt = \"break\";\n   743: \t}\n   744: \tif (lev-&gt;doormask & D_TRAPPED) {\n   745: \t    lev-&gt;doormask = D_NODOOR;\n   746: \t    b_trapped(\"door\", 0);\n   747: \t} else {"
   },
   {
     "key": "L00746_01",
     "original": "door",
     "translation": "",
-    "context": "src/hack.c:746:16\n   741: \t    add_damage(x, y, 400L);\n   742: \t    dmgtxt = \"break\";\n   743: \t}\n   744: \tif (lev->doormask & D_TRAPPED) {\n   745: \t    lev->doormask = D_NODOOR;\n>  746: \t    b_trapped(\"door\", 0);\n   747: \t} else {\n   748: \t    digtxt = \"直接从地板上啃了个隧道下去。\";\n   749: \t    lev->doormask = D_BROKEN;\n   750: \t}\n   751: "
+    "stage": 0,
+    "context": "src/hack.c:746:16\n   741: \t    add_damage(x, y, 400L);\n   742: \t    dmgtxt = \"break\";\n   743: \t}\n   744: \tif (lev-&gt;doormask & D_TRAPPED) {\n   745: \t    lev-&gt;doormask = D_NODOOR;\n&gt;  746: \t    b_trapped(\"door\", 0);\n   747: \t} else {\n   748: \t    digtxt = \"直接从地板上啃了个隧道下去。\";\n   749: \t    lev-&gt;doormask = D_BROKEN;\n   750: \t}\n   751: "
   },
   {
     "key": "L00781_01",
     "original": "fell onto a sink",
     "translation": "",
-    "context": "src/hack.c:781:45\n   776: \tplace_object(obj, ox, oy);\n   777: \tnewsym(ox, oy);\n   778: }\n   779: \n   780: #ifdef SINKS\n>  781: static NEARDATA const char fell_on_sink[] = \"fell onto a sink\";\n   782: \n   783: STATIC_OVL void\n   784: dosinkfall()\n   785: {\n   786: \tregister struct obj *obj;"
+    "stage": 0,
+    "context": "src/hack.c:781:45\n   776: \tplace_object(obj, ox, oy);\n   777: \tnewsym(ox, oy);\n   778: }\n   779: \n   780: #ifdef SINKS\n&gt;  781: static NEARDATA const char fell_on_sink[] = \"fell onto a sink\";\n   782: \n   783: STATIC_OVL void\n   784: dosinkfall()\n   785: {\n   786: \tregister struct obj *obj;"
   },
   {
     "key": "L00798_01",
     "original": "crash to the floor!",
     "translation": "",
-    "context": "src/hack.c:798:10\n   793: \t    /* fake removal of levitation in advance so that final\n   794: \t       disclosure will be right in case this turns out to\n   795: \t       be fatal; fortunately the fact that rings and boots\n   796: \t       are really still worn has no effect on bones data */\n   797: \t    ELevitation = HLevitation = 0L;\n>  798: \t    You(\"crash to the floor!\");\n   799: \t    losehp(rn1(8, 25 - (int)ACURR(A_CON)),\n   800: \t\t   fell_on_sink, NO_KILLER_PREFIX);\n   801: \t    exercise(A_DEX, FALSE);\n   802: \t    selftouch(\"在掉落的时候，你\");\n   803: \t    for (obj = level.objects[u.ux][u.uy]; obj; obj = obj->nexthere)"
+    "stage": 0,
+    "context": "src/hack.c:798:10\n   793: \t    /* fake removal of levitation in advance so that final\n   794: \t       disclosure will be right in case this turns out to\n   795: \t       be fatal; fortunately the fact that rings and boots\n   796: \t       are really still worn has no effect on bones data */\n   797: \t    ELevitation = HLevitation = 0L;\n&gt;  798: \t    You(\"crash to the floor!\");\n   799: \t    losehp(rn1(8, 25 - (int)ACURR(A_CON)),\n   800: \t\t   fell_on_sink, NO_KILLER_PREFIX);\n   801: \t    exercise(A_DEX, FALSE);\n   802: \t    selftouch(\"在掉落的时候，你\");\n   803: \t    for (obj = level.objects[u.ux][u.uy]; obj; obj = obj-&gt;nexthere)"
   },
   {
     "key": "L00805_01",
     "original": "fell on %s.",
     "translation": "",
-    "context": "src/hack.c:805:11\n   800: \t\t   fell_on_sink, NO_KILLER_PREFIX);\n   801: \t    exercise(A_DEX, FALSE);\n   802: \t    selftouch(\"在掉落的时候，你\");\n   803: \t    for (obj = level.objects[u.ux][u.uy]; obj; obj = obj->nexthere)\n   804: \t\tif (obj->oclass == WEAPON_CLASS || is_weptool(obj)) {\n>  805: \t\t    You(\"fell on %s.\", doname(obj));\n   806: \t\t    losehp(rnd(3), fell_on_sink, NO_KILLER_PREFIX);\n   807: \t\t    exercise(A_CON, FALSE);\n   808: \t\t}\n   809: \t    ELevitation = save_ELev;\n   810: \t    HLevitation = save_HLev;"
+    "stage": 0,
+    "context": "src/hack.c:805:11\n   800: \t\t   fell_on_sink, NO_KILLER_PREFIX);\n   801: \t    exercise(A_DEX, FALSE);\n   802: \t    selftouch(\"在掉落的时候，你\");\n   803: \t    for (obj = level.objects[u.ux][u.uy]; obj; obj = obj-&gt;nexthere)\n   804: \t\tif (obj-&gt;oclass == WEAPON_CLASS || is_weptool(obj)) {\n&gt;  805: \t\t    You(\"fell on %s.\", doname(obj));\n   806: \t\t    losehp(rnd(3), fell_on_sink, NO_KILLER_PREFIX);\n   807: \t\t    exercise(A_CON, FALSE);\n   808: \t\t}\n   809: \t    ELevitation = save_ELev;\n   810: \t    HLevitation = save_HLev;"
   },
   {
     "key": "L00929_01",
     "original": "drawbridge is up!",
     "translation": "",
-    "context": "src/hack.c:929:17\n   924: \t\t(void) use_pick_axe2(uwep);\n   925: \t    return FALSE;\n   926: \t} else {\n   927: \t    if (mode == DO_MOVE) {\n   928: \t\tif (Is_stronghold(&u.uz) && is_db_wall(x,y))\n>  929: \t\t    pline_The(\"drawbridge is up!\");\n   930: \t\tif (Passes_walls && !may_passwall(x,y) && In_sokoban(&u.uz))\n   931: \t\t    pline_The(\"仓库番的墙抵抗了你的特殊能力。\");\n   932: \t    }\n   933: \t    return FALSE;\n   934: \t}"
+    "stage": 0,
+    "context": "src/hack.c:929:17\n   924: \t\t(void) use_pick_axe2(uwep);\n   925: \t    return FALSE;\n   926: \t} else {\n   927: \t    if (mode == DO_MOVE) {\n   928: \t\tif (Is_stronghold(&u.uz) && is_db_wall(x,y))\n&gt;  929: \t\t    pline_The(\"drawbridge is up!\");\n   930: \t\tif (Passes_walls && !may_passwall(x,y) && In_sokoban(&u.uz))\n   931: \t\t    pline_The(\"仓库番的墙抵抗了你的特殊能力。\");\n   932: \t    }\n   933: \t    return FALSE;\n   934: \t}"
   },
   {
     "key": "L00944_01",
     "original": "hurt your teeth on the re-enforced door.",
     "translation": "",
-    "context": "src/hack.c:944:9\n   939: \t    if (artifact_door(x, y)) {\n   940: \t\tif (mode == DO_MOVE) {\n   941: \t\t    if (amorphous(youmonst.data))\n   942: \t\t\t\tYou(\"试图将身体挤过门，但是门缝有点实在太小了。\");\n   943: \t\t    else if (tunnels(youmonst.data) && !needspick(youmonst.data))\n>  944: \t\t\t\tYou(\"hurt your teeth on the re-enforced door.\");\n   945: #ifdef AUTO_OPEN\n   946: \t\t\telse if (flags.autoopen && !flags.run && !Confusion && !Stunned && !Fumbling)\n   947: \t\t\t\tdoor_opened = flags.move = doopen_indir(x, y);\n   948: #endif\n   949: \t\t    else if (x == u.ux || y == u.uy) {"
+    "stage": 0,
+    "context": "src/hack.c:944:9\n   939: \t    if (artifact_door(x, y)) {\n   940: \t\tif (mode == DO_MOVE) {\n   941: \t\t    if (amorphous(youmonst.data))\n   942: \t\t\t\tYou(\"试图将身体挤过门，但是门缝有点实在太小了。\");\n   943: \t\t    else if (tunnels(youmonst.data) && !needspick(youmonst.data))\n&gt;  944: \t\t\t\tYou(\"hurt your teeth on the re-enforced door.\");\n   945: #ifdef AUTO_OPEN\n   946: \t\t\telse if (flags.autoopen && !flags.run && !Confusion && !Stunned && !Fumbling)\n   947: \t\t\t\tdoor_opened = flags.move = doopen_indir(x, y);\n   948: #endif\n   949: \t\t    else if (x == u.ux || y == u.uy) {"
   },
   {
     "key": "L00960_01",
     "original": "ooze under the door.",
     "translation": "",
-    "context": "src/hack.c:960:28\n   955: \t\treturn FALSE;\n   956: \t    } else\n   957: \t    if (Passes_walls)\n   958: \t\t;\t/* do nothing */\n   959: \t    else if (can_ooze(&youmonst)) {\n>  960: \t\tif (mode == DO_MOVE) You(\"ooze under the door.\");\n   961: \t    } else if (tunnels(youmonst.data) && !needspick(youmonst.data)) {\n   962: \t\t/* Eat the door. */\n   963: \t\tif (mode == DO_MOVE && still_chewing(x,y)) return FALSE;\n   964: \t    } else {\n   965: \t\tif (mode == DO_MOVE) {"
+    "stage": 0,
+    "context": "src/hack.c:960:28\n   955: \t\treturn FALSE;\n   956: \t    } else\n   957: \t    if (Passes_walls)\n   958: \t\t;\t/* do nothing */\n   959: \t    else if (can_ooze(&youmonst)) {\n&gt;  960: \t\tif (mode == DO_MOVE) You(\"ooze under the door.\");\n   961: \t    } else if (tunnels(youmonst.data) && !needspick(youmonst.data)) {\n   962: \t\t/* Eat the door. */\n   963: \t\tif (mode == DO_MOVE && still_chewing(x,y)) return FALSE;\n   964: \t    } else {\n   965: \t\tif (mode == DO_MOVE) {"
   },
   {
     "key": "L00976_01",
     "original": "lead %s through that closed door.",
     "translation": "",
-    "context": "src/hack.c:976:14\n   971: #endif\n   972: \t\t    else if (x == ux || y == uy) {\n   973: \t\t\tif (Blind || Stunned || ACURR(A_DEX) < 10 || Fumbling) {\n   974: #ifdef STEED\n   975: \t\t\t    if (u.usteed) {\n>  976: \t\t\t\tYou_cant(\"lead %s through that closed door.\",\n   977: \t\t\t\t      y_monnam(u.usteed));\n   978: \t\t \t    } else\n   979: #endif\n   980: \t\t\t    {\n   981: \t\t\t        pline(\"啊呀！你撞到了一扇门上。\");"
+    "stage": 0,
+    "context": "src/hack.c:976:14\n   971: #endif\n   972: \t\t    else if (x == ux || y == uy) {\n   973: \t\t\tif (Blind || Stunned || ACURR(A_DEX) &lt; 10 || Fumbling) {\n   974: #ifdef STEED\n   975: \t\t\t    if (u.usteed) {\n&gt;  976: \t\t\t\tYou_cant(\"lead %s through that closed door.\",\n   977: \t\t\t\t      y_monnam(u.usteed));\n   978: \t\t \t    } else\n   979: #endif\n   980: \t\t\t    {\n   981: \t\t\t        pline(\"啊呀！你撞到了一扇门上。\");"
   },
   {
     "key": "L01282_01",
     "original": "tumble in place.",
     "translation": "",
-    "context": "src/hack.c:1282:8\n  1277: \t} else {\n  1278: \t\tif (Is_airlevel(&u.uz) && rn2(4) &&\n  1279: \t\t\t!Levitation && !Flying) {\n  1280: \t\t    switch(rn2(3)) {\n  1281: \t\t    case 0:\n> 1282: \t\t\tYou(\"tumble in place.\");\n  1283: \t\t\texercise(A_DEX, FALSE);\n  1284: \t\t\tbreak;\n  1285: \t\t    case 1:\n  1286: \t\t\tYou_cant(\"control your movements very well.\"); break;\n  1287: \t\t    case 2:"
+    "stage": 0,
+    "context": "src/hack.c:1282:8\n  1277: \t} else {\n  1278: \t\tif (Is_airlevel(&u.uz) && rn2(4) &&\n  1279: \t\t\t!Levitation && !Flying) {\n  1280: \t\t    switch(rn2(3)) {\n  1281: \t\t    case 0:\n&gt; 1282: \t\t\tYou(\"tumble in place.\");\n  1283: \t\t\texercise(A_DEX, FALSE);\n  1284: \t\t\tbreak;\n  1285: \t\t    case 1:\n  1286: \t\t\tYou_cant(\"control your movements very well.\"); break;\n  1287: \t\t    case 2:"
   },
   {
     "key": "L01286_01",
     "original": "control your movements very well.",
     "translation": "",
-    "context": "src/hack.c:1286:13\n  1281: \t\t    case 0:\n  1282: \t\t\tYou(\"tumble in place.\");\n  1283: \t\t\texercise(A_DEX, FALSE);\n  1284: \t\t\tbreak;\n  1285: \t\t    case 1:\n> 1286: \t\t\tYou_cant(\"control your movements very well.\"); break;\n  1287: \t\t    case 2:\n  1288: \t\t\tpline(\"你在空气中很难行走。\");\n  1289: \t\t\texercise(A_DEX, TRUE);\n  1290: \t\t\tbreak;\n  1291: \t\t    }"
+    "stage": 0,
+    "context": "src/hack.c:1286:13\n  1281: \t\t    case 0:\n  1282: \t\t\tYou(\"tumble in place.\");\n  1283: \t\t\texercise(A_DEX, FALSE);\n  1284: \t\t\tbreak;\n  1285: \t\t    case 1:\n&gt; 1286: \t\t\tYou_cant(\"control your movements very well.\"); break;\n  1287: \t\t    case 2:\n  1288: \t\t\tpline(\"你在空气中很难行走。\");\n  1289: \t\t\texercise(A_DEX, TRUE);\n  1290: \t\t\tbreak;\n  1291: \t\t    }"
   },
   {
     "key": "L01375_01",
     "original": "release %s.",
     "translation": "",
-    "context": "src/hack.c:1375:8\n  1370: \t\t\tsetustuck(0);\n  1371: \t\t    } else if (sticks(youmonst.data)) {\n  1372: \t\t\t/* When polymorphed into a sticking monster,\n  1373: \t\t\t * u.ustuck means it's stuck to you, not you to it.\n  1374: \t\t\t */\n> 1375: \t\t\tYou(\"release %s.\", mon_nam(u.ustuck));\n  1376: \t\t\tsetustuck(0);\n  1377: \t\t    } else {\n  1378: \t\t\t/* If holder is asleep or paralyzed:\n  1379: \t\t\t *\t37.5% chance of getting away,\n  1380: \t\t\t *\t12.5% chance of waking/releasing it;"
+    "stage": 0,
+    "context": "src/hack.c:1375:8\n  1370: \t\t\tsetustuck(0);\n  1371: \t\t    } else if (sticks(youmonst.data)) {\n  1372: \t\t\t/* When polymorphed into a sticking monster,\n  1373: \t\t\t * u.ustuck means it's stuck to you, not you to it.\n  1374: \t\t\t */\n&gt; 1375: \t\t\tYou(\"release %s.\", mon_nam(u.ustuck));\n  1376: \t\t\tsetustuck(0);\n  1377: \t\t    } else {\n  1378: \t\t\t/* If holder is asleep or paralyzed:\n  1379: \t\t\t *\t37.5% chance of getting away,\n  1380: \t\t\t *\t12.5% chance of waking/releasing it;"
   },
   {
     "key": "L01390_01",
     "original": "pull free from %s.",
     "translation": "",
-    "context": "src/hack.c:1390:12\n  1385: \t\t\t * guaranteed escape.\n  1386: \t\t\t */\n  1387: \t\t\tswitch (rn2(!u.ustuck->mcanmove ? 8 : 40)) {\n  1388: \t\t\tcase 0: case 1: case 2:\n  1389: \t\t\tpull_free:\n> 1390: \t\t\t    You(\"pull free from %s.\", mon_nam(u.ustuck));\n  1391: \t\t\t    setustuck(0);\n  1392: \t\t\t    break;\n  1393: \t\t\tcase 3:\n  1394: \t\t\t    if (!u.ustuck->mcanmove) {\n  1395: \t\t\t\t/* it's free to move on next turn */"
+    "stage": 0,
+    "context": "src/hack.c:1390:12\n  1385: \t\t\t * guaranteed escape.\n  1386: \t\t\t */\n  1387: \t\t\tswitch (rn2(!u.ustuck-&gt;mcanmove ? 8 : 40)) {\n  1388: \t\t\tcase 0: case 1: case 2:\n  1389: \t\t\tpull_free:\n&gt; 1390: \t\t\t    You(\"pull free from %s.\", mon_nam(u.ustuck));\n  1391: \t\t\t    setustuck(0);\n  1392: \t\t\t    break;\n  1393: \t\t\tcase 3:\n  1394: \t\t\t    if (!u.ustuck-&gt;mcanmove) {\n  1395: \t\t\t\t/* it's free to move on next turn */"
   },
   {
     "key": "L01457_01",
     "original": "move right into %s.",
     "translation": "",
-    "context": "src/hack.c:1457:11\n  1452: \t\t\t\t\t\t    && !sensemon(mtmp))\n  1453: \t\t    stumble_onto_mimic(mtmp);\n  1454: \t\telse if (mtmp->mpeaceful && !Hallucination)\n  1455: \t\t    pline(\"让一下，%s。\", m_monnam(mtmp));\n  1456: \t\telse\n> 1457: \t\t    You(\"move right into %s.\", mon_nam(mtmp));\n  1458: \t\treturn;\n  1459: \t    }\n  1460: \t    if(flags.forcefight || !mtmp->mundetected || sensemon(mtmp) ||\n  1461: \t\t    ((hides_under(mtmp->data) || mtmp->data->mlet == S_EEL) &&\n  1462: \t\t\t!is_safepet(mtmp))){"
+    "stage": 0,
+    "context": "src/hack.c:1457:11\n  1452: \t\t\t\t\t\t    && !sensemon(mtmp))\n  1453: \t\t    stumble_onto_mimic(mtmp);\n  1454: \t\telse if (mtmp-&gt;mpeaceful && !Hallucination)\n  1455: \t\t    pline(\"让一下，%s。\", m_monnam(mtmp));\n  1456: \t\telse\n&gt; 1457: \t\t    You(\"move right into %s.\", mon_nam(mtmp));\n  1458: \t\treturn;\n  1459: \t    }\n  1460: \t    if(flags.forcefight || !mtmp-&gt;mundetected || sensemon(mtmp) ||\n  1461: \t\t    ((hides_under(mtmp-&gt;data) || mtmp-&gt;data-&gt;mlet == S_EEL) &&\n  1462: \t\t\t!is_safepet(mtmp))){"
   },
   {
     "key": "L01470_01",
     "original": "pass out from exertion!",
     "translation": "",
-    "context": "src/hack.c:1470:8\n  1465: \t\t    if (Upolyd && u.mh > 1) {\n  1466: \t\t\tu.mh--;\n  1467: \t\t    } else if (!Upolyd && u.uhp > 1) {\n  1468: \t\t\tu.uhp--;\n  1469: \t\t    } else {\n> 1470: \t\t\tYou(\"pass out from exertion!\");\n  1471: \t\t\texercise(A_CON, FALSE);\n  1472: \t\t\tfall_asleep(-10, FALSE);\n  1473: \t\t    }\n  1474: \t\t}\n  1475: \t\tif(multi < 0) return;\t/* we just fainted */"
+    "stage": 0,
+    "context": "src/hack.c:1470:8\n  1465: \t\t    if (Upolyd && u.mh &gt; 1) {\n  1466: \t\t\tu.mh--;\n  1467: \t\t    } else if (!Upolyd && u.uhp &gt; 1) {\n  1468: \t\t\tu.uhp--;\n  1469: \t\t    } else {\n&gt; 1470: \t\t\tYou(\"pass out from exertion!\");\n  1471: \t\t\texercise(A_CON, FALSE);\n  1472: \t\t\tfall_asleep(-10, FALSE);\n  1473: \t\t    }\n  1474: \t\t}\n  1475: \t\tif(multi &lt; 0) return;\t/* we just fainted */"
   },
   {
     "key": "L01493_01",
     "original": "a vacant spot on the %s",
     "translation": "",
-    "context": "src/hack.c:1493:15\n  1488: \tif (flags.forcefight ||\n  1489: \t    /* remembered an 'I' && didn't use a move command */\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n> 1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */"
+    "stage": 0,
+    "context": "src/hack.c:1493:15\n  1488: \tif (flags.forcefight ||\n  1489: \t    /* remembered an 'I' && didn't use a move command */\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n&gt; 1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */"
   },
   {
     "key": "L01494_01",
     "original": "%s %s.",
     "translation": "",
-    "context": "src/hack.c:1494:7\n  1489: \t    /* remembered an 'I' && didn't use a move command */\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n> 1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);"
+    "stage": 0,
+    "context": "src/hack.c:1494:7\n  1489: \t    /* remembered an 'I' && didn't use a move command */\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n&gt; 1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);"
   },
   {
     "key": "L01495_01",
     "original": "explode at",
     "translation": "",
-    "context": "src/hack.c:1495:14\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n> 1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);"
+    "stage": 0,
+    "context": "src/hack.c:1495:14\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n&gt; 1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);"
   },
   {
     "key": "L01495_02",
     "original": "attack",
     "translation": "",
-    "context": "src/hack.c:1495:29\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n> 1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);"
+    "stage": 0,
+    "context": "src/hack.c:1495:29\n  1490: \t    (memory_is_invisible(x, y) && !flags.nopick)) {\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n&gt; 1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);"
   },
   {
     "key": "L01496_01",
     "original": "thin air",
     "translation": "",
-    "context": "src/hack.c:1496:21\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n> 1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);\n  1501: \t\tif (expl) {"
+    "stage": 0,
+    "context": "src/hack.c:1496:21\n  1491: \t\tboolean expl = (Upolyd && attacktype(youmonst.data, AT_EXPL));\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n&gt; 1496: \t\t    !Underwater ? \"thin air\" :\n  1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);\n  1501: \t\tif (expl) {"
   },
   {
     "key": "L01497_01",
     "original": "empty water",
     "translation": "",
-    "context": "src/hack.c:1497:22\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n> 1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);\n  1501: \t\tif (expl) {\n  1502: \t\t    u.mh = -1;\t\t/* dead in the current form */"
+    "stage": 0,
+    "context": "src/hack.c:1497:22\n  1492: \t    \tchar buf[BUFSZ];\n  1493: \t\tSprintf(buf,\"a vacant spot on the %s\", surface(x,y));\n  1494: \t\tYou(\"%s %s.\",\n  1495: \t\t    expl ? \"explode at\" : \"attack\",\n  1496: \t\t    !Underwater ? \"thin air\" :\n&gt; 1497: \t\t    is_pool(x,y) ? \"empty water\" : buf);\n  1498: \t\tunmap_object(x, y); /* known empty -- remove 'I' if present */\n  1499: \t\tnewsym(x, y);\n  1500: \t\tnomul(0);\n  1501: \t\tif (expl) {\n  1502: \t\t    u.mh = -1;\t\t/* dead in the current form */"
   },
   {
     "key": "L01516_01",
     "original": "%s won't move!",
     "translation": "",
-    "context": "src/hack.c:1516:9\n  1511: \t/* not attacking an animal, so we try to move */\n  1512: \tif (!displacer) {\n  1513: \n  1514: #ifdef STEED\n  1515: \tif (u.usteed && !u.usteed->mcanmove && (u.dx || u.dy)) {\n> 1516: \t\tpline(\"%s won't move!\", upstart(y_monnam(u.usteed)));\n  1517: \t\tnomul(0);\n  1518: \t\treturn;\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data->mmove) {"
+    "stage": 0,
+    "context": "src/hack.c:1516:9\n  1511: \t/* not attacking an animal, so we try to move */\n  1512: \tif (!displacer) {\n  1513: \n  1514: #ifdef STEED\n  1515: \tif (u.usteed && !u.usteed-&gt;mcanmove && (u.dx || u.dy)) {\n&gt; 1516: \t\tpline(\"%s won't move!\", upstart(y_monnam(u.usteed)));\n  1517: \t\tnomul(0);\n  1518: \t\treturn;\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data-&gt;mmove) {"
   },
   {
     "key": "L01522_01",
     "original": "are rooted %s.",
     "translation": "",
-    "context": "src/hack.c:1522:7\n  1517: \t\tnomul(0);\n  1518: \t\treturn;\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data->mmove) {\n> 1522: \t\tYou(\"are rooted %s.\",\n  1523: \t\t    Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz) ?\n  1524: \t\t    \"in place\" : \"to the ground\");\n  1525: \t\tnomul(0);\n  1526: \t\treturn;\n  1527: \t}"
+    "stage": 0,
+    "context": "src/hack.c:1522:7\n  1517: \t\tnomul(0);\n  1518: \t\treturn;\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data-&gt;mmove) {\n&gt; 1522: \t\tYou(\"are rooted %s.\",\n  1523: \t\t    Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz) ?\n  1524: \t\t    \"in place\" : \"to the ground\");\n  1525: \t\tnomul(0);\n  1526: \t\treturn;\n  1527: \t}"
   },
   {
     "key": "L01524_01",
     "original": "in place",
     "translation": "",
-    "context": "src/hack.c:1524:7\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data->mmove) {\n  1522: \t\tYou(\"are rooted %s.\",\n  1523: \t\t    Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz) ?\n> 1524: \t\t    \"in place\" : \"to the ground\");\n  1525: \t\tnomul(0);\n  1526: \t\treturn;\n  1527: \t}\n  1528: \tif(u.utrap) {\n  1529: \t\tif(u.utraptype == TT_PIT) {"
+    "stage": 0,
+    "context": "src/hack.c:1524:7\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data-&gt;mmove) {\n  1522: \t\tYou(\"are rooted %s.\",\n  1523: \t\t    Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz) ?\n&gt; 1524: \t\t    \"in place\" : \"to the ground\");\n  1525: \t\tnomul(0);\n  1526: \t\treturn;\n  1527: \t}\n  1528: \tif(u.utrap) {\n  1529: \t\tif(u.utraptype == TT_PIT) {"
   },
   {
     "key": "L01524_02",
     "original": "to the ground",
     "translation": "",
-    "context": "src/hack.c:1524:20\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data->mmove) {\n  1522: \t\tYou(\"are rooted %s.\",\n  1523: \t\t    Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz) ?\n> 1524: \t\t    \"in place\" : \"to the ground\");\n  1525: \t\tnomul(0);\n  1526: \t\treturn;\n  1527: \t}\n  1528: \tif(u.utrap) {\n  1529: \t\tif(u.utraptype == TT_PIT) {"
+    "stage": 0,
+    "context": "src/hack.c:1524:20\n  1519: \t} else\n  1520: #endif\n  1521: \tif(!youmonst.data-&gt;mmove) {\n  1522: \t\tYou(\"are rooted %s.\",\n  1523: \t\t    Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz) ?\n&gt; 1524: \t\t    \"in place\" : \"to the ground\");\n  1525: \t\tnomul(0);\n  1526: \t\treturn;\n  1527: \t}\n  1528: \tif(u.utrap) {\n  1529: \t\tif(u.utraptype == TT_PIT) {"
   },
   {
     "key": "L01531_01",
     "original": "%s gets stuck in a crevice.",
     "translation": "",
-    "context": "src/hack.c:1531:9\n  1526: \t\treturn;\n  1527: \t}\n  1528: \tif(u.utrap) {\n  1529: \t\tif(u.utraptype == TT_PIT) {\n  1530: \t\t    if (!rn2(2) && sobj_at(BOULDER, u.ux, u.uy)) {\n> 1531: \t\t\tYour(\"%s gets stuck in a crevice.\", body_part(LEG));\n  1532: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1533: \t\t\tclear_nhwindow(WIN_MESSAGE);\n  1534: \t\t\tYou(\"free your %s.\", body_part(LEG));\n  1535: \t\t    } else if (Flying && !In_sokoban(&u.uz)) {\n  1536: \t\t\t/* eg fell in pit, poly'd to a flying monster */"
+    "stage": 0,
+    "context": "src/hack.c:1531:9\n  1526: \t\treturn;\n  1527: \t}\n  1528: \tif(u.utrap) {\n  1529: \t\tif(u.utraptype == TT_PIT) {\n  1530: \t\t    if (!rn2(2) && sobj_at(BOULDER, u.ux, u.uy)) {\n&gt; 1531: \t\t\tYour(\"%s gets stuck in a crevice.\", body_part(LEG));\n  1532: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1533: \t\t\tclear_nhwindow(WIN_MESSAGE);\n  1534: \t\t\tYou(\"free your %s.\", body_part(LEG));\n  1535: \t\t    } else if (Flying && !In_sokoban(&u.uz)) {\n  1536: \t\t\t/* eg fell in pit, poly'd to a flying monster */"
   },
   {
     "key": "L01534_01",
     "original": "free your %s.",
     "translation": "",
-    "context": "src/hack.c:1534:8\n  1529: \t\tif(u.utraptype == TT_PIT) {\n  1530: \t\t    if (!rn2(2) && sobj_at(BOULDER, u.ux, u.uy)) {\n  1531: \t\t\tYour(\"%s gets stuck in a crevice.\", body_part(LEG));\n  1532: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1533: \t\t\tclear_nhwindow(WIN_MESSAGE);\n> 1534: \t\t\tYou(\"free your %s.\", body_part(LEG));\n  1535: \t\t    } else if (Flying && !In_sokoban(&u.uz)) {\n  1536: \t\t\t/* eg fell in pit, poly'd to a flying monster */\n  1537: \t\t\tYou(\"从坑里直接飞了出来。\");\n  1538: \t\t\tu.utrap = 0;\n  1539: \t\t\tfill_pit(u.ux, u.uy);"
+    "stage": 0,
+    "context": "src/hack.c:1534:8\n  1529: \t\tif(u.utraptype == TT_PIT) {\n  1530: \t\t    if (!rn2(2) && sobj_at(BOULDER, u.ux, u.uy)) {\n  1531: \t\t\tYour(\"%s gets stuck in a crevice.\", body_part(LEG));\n  1532: \t\t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1533: \t\t\tclear_nhwindow(WIN_MESSAGE);\n&gt; 1534: \t\t\tYou(\"free your %s.\", body_part(LEG));\n  1535: \t\t    } else if (Flying && !In_sokoban(&u.uz)) {\n  1536: \t\t\t/* eg fell in pit, poly'd to a flying monster */\n  1537: \t\t\tYou(\"从坑里直接飞了出来。\");\n  1538: \t\t\tu.utrap = 0;\n  1539: \t\t\tfill_pit(u.ux, u.uy);"
   },
   {
     "key": "L01542_01",
     "original": "%s to the edge of the pit.",
     "translation": "",
-    "context": "src/hack.c:1542:8\n  1537: \t\t\tYou(\"从坑里直接飞了出来。\");\n  1538: \t\t\tu.utrap = 0;\n  1539: \t\t\tfill_pit(u.ux, u.uy);\n  1540: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1541: \t\t    } else if (!(--u.utrap)) {\n> 1542: \t\t\tYou(\"%s to the edge of the pit.\",\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n  1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n  1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif"
+    "stage": 0,
+    "context": "src/hack.c:1542:8\n  1537: \t\t\tYou(\"从坑里直接飞了出来。\");\n  1538: \t\t\tu.utrap = 0;\n  1539: \t\t\tfill_pit(u.ux, u.uy);\n  1540: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1541: \t\t    } else if (!(--u.utrap)) {\n&gt; 1542: \t\t\tYou(\"%s to the edge of the pit.\",\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n  1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n  1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif"
   },
   {
     "key": "L01544_01",
     "original": "struggle against the air currents and float",
     "translation": "",
-    "context": "src/hack.c:1544:5\n  1539: \t\t\tfill_pit(u.ux, u.uy);\n  1540: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1541: \t\t    } else if (!(--u.utrap)) {\n  1542: \t\t\tYou(\"%s to the edge of the pit.\",\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n> 1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n  1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif\n  1548: \t\t\t\t\"crawl\");\n  1549: \t\t\tfill_pit(u.ux, u.uy);"
+    "stage": 0,
+    "context": "src/hack.c:1544:5\n  1539: \t\t\tfill_pit(u.ux, u.uy);\n  1540: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1541: \t\t    } else if (!(--u.utrap)) {\n  1542: \t\t\tYou(\"%s to the edge of the pit.\",\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n&gt; 1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n  1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif\n  1548: \t\t\t\t\"crawl\");\n  1549: \t\t\tfill_pit(u.ux, u.uy);"
   },
   {
     "key": "L01546_01",
     "original": "ride",
     "translation": "",
-    "context": "src/hack.c:1546:16\n  1541: \t\t    } else if (!(--u.utrap)) {\n  1542: \t\t\tYou(\"%s to the edge of the pit.\",\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n  1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n> 1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif\n  1548: \t\t\t\t\"crawl\");\n  1549: \t\t\tfill_pit(u.ux, u.uy);\n  1550: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1551: \t\t    } else if (flags.verbose) {"
+    "stage": 0,
+    "context": "src/hack.c:1546:16\n  1541: \t\t    } else if (!(--u.utrap)) {\n  1542: \t\t\tYou(\"%s to the edge of the pit.\",\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n  1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n&gt; 1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif\n  1548: \t\t\t\t\"crawl\");\n  1549: \t\t\tfill_pit(u.ux, u.uy);\n  1550: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1551: \t\t    } else if (flags.verbose) {"
   },
   {
     "key": "L01548_01",
     "original": "crawl",
     "translation": "",
-    "context": "src/hack.c:1548:5\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n  1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n  1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif\n> 1548: \t\t\t\t\"crawl\");\n  1549: \t\t\tfill_pit(u.ux, u.uy);\n  1550: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1551: \t\t    } else if (flags.verbose) {\n  1552: #ifdef STEED\n  1553: \t\t\tif (u.usteed)"
+    "stage": 0,
+    "context": "src/hack.c:1548:5\n  1543: \t\t\t\t(In_sokoban(&u.uz) && Levitation) ?\n  1544: \t\t\t\t\"struggle against the air currents and float\" :\n  1545: #ifdef STEED\n  1546: \t\t\t\tu.usteed ? \"ride\" :\n  1547: #endif\n&gt; 1548: \t\t\t\t\"crawl\");\n  1549: \t\t\tfill_pit(u.ux, u.uy);\n  1550: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1551: \t\t    } else if (flags.verbose) {\n  1552: #ifdef STEED\n  1553: \t\t\tif (u.usteed)"
   },
   {
     "key": "L01554_01",
     "original": "%s is still in a pit.",
     "translation": "",
-    "context": "src/hack.c:1554:14\n  1549: \t\t\tfill_pit(u.ux, u.uy);\n  1550: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1551: \t\t    } else if (flags.verbose) {\n  1552: #ifdef STEED\n  1553: \t\t\tif (u.usteed)\n> 1554: \t\t\t    Norep(\"%s is still in a pit.\",\n  1555: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1556: \t\t\telse\n  1557: #endif\n  1558: \t\t\tNorep( (Hallucination && !rn2(5)) ?\n  1559: \t\t\t\t\"You've fallen, and you can't get up.\" :"
+    "stage": 0,
+    "context": "src/hack.c:1554:14\n  1549: \t\t\tfill_pit(u.ux, u.uy);\n  1550: \t\t\tvision_full_recalc = 1;\t/* vision limits change */\n  1551: \t\t    } else if (flags.verbose) {\n  1552: #ifdef STEED\n  1553: \t\t\tif (u.usteed)\n&gt; 1554: \t\t\t    Norep(\"%s is still in a pit.\",\n  1555: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1556: \t\t\telse\n  1557: #endif\n  1558: \t\t\tNorep( (Hallucination && !rn2(5)) ?\n  1559: \t\t\t\t\"You've fallen, and you can't get up.\" :"
   },
   {
     "key": "L01559_01",
     "original": "You've fallen, and you can't get up.",
     "translation": "",
-    "context": "src/hack.c:1559:5\n  1554: \t\t\t    Norep(\"%s is still in a pit.\",\n  1555: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1556: \t\t\telse\n  1557: #endif\n  1558: \t\t\tNorep( (Hallucination && !rn2(5)) ?\n> 1559: \t\t\t\t\"You've fallen, and you can't get up.\" :\n  1560: \t\t\t\t\"你人还在坑里头。\" );\n  1561: \t\t    }\n  1562: \t\t} else if (u.utraptype == TT_LAVA) {\n  1563: \t\t    if(flags.verbose) {\n  1564: \t\t\tpredicament = \"stuck in the lava\";"
+    "stage": 0,
+    "context": "src/hack.c:1559:5\n  1554: \t\t\t    Norep(\"%s is still in a pit.\",\n  1555: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1556: \t\t\telse\n  1557: #endif\n  1558: \t\t\tNorep( (Hallucination && !rn2(5)) ?\n&gt; 1559: \t\t\t\t\"You've fallen, and you can't get up.\" :\n  1560: \t\t\t\t\"你人还在坑里头。\" );\n  1561: \t\t    }\n  1562: \t\t} else if (u.utraptype == TT_LAVA) {\n  1563: \t\t    if(flags.verbose) {\n  1564: \t\t\tpredicament = \"stuck in the lava\";"
   },
   {
     "key": "L01564_01",
     "original": "stuck in the lava",
     "translation": "",
-    "context": "src/hack.c:1564:18\n  1559: \t\t\t\t\"You've fallen, and you can't get up.\" :\n  1560: \t\t\t\t\"你人还在坑里头。\" );\n  1561: \t\t    }\n  1562: \t\t} else if (u.utraptype == TT_LAVA) {\n  1563: \t\t    if(flags.verbose) {\n> 1564: \t\t\tpredicament = \"stuck in the lava\";\n  1565: #ifdef STEED\n  1566: \t\t\tif (u.usteed)\n  1567: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1568: \t\t\t\t  predicament);\n  1569: \t\t\telse"
+    "stage": 0,
+    "context": "src/hack.c:1564:18\n  1559: \t\t\t\t\"You've fallen, and you can't get up.\" :\n  1560: \t\t\t\t\"你人还在坑里头。\" );\n  1561: \t\t    }\n  1562: \t\t} else if (u.utraptype == TT_LAVA) {\n  1563: \t\t    if(flags.verbose) {\n&gt; 1564: \t\t\tpredicament = \"stuck in the lava\";\n  1565: #ifdef STEED\n  1566: \t\t\tif (u.usteed)\n  1567: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1568: \t\t\t\t  predicament);\n  1569: \t\t\telse"
   },
   {
     "key": "L01567_01",
     "original": "%s is %s.",
     "translation": "",
-    "context": "src/hack.c:1567:14\n  1562: \t\t} else if (u.utraptype == TT_LAVA) {\n  1563: \t\t    if(flags.verbose) {\n  1564: \t\t\tpredicament = \"stuck in the lava\";\n  1565: #ifdef STEED\n  1566: \t\t\tif (u.usteed)\n> 1567: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1568: \t\t\t\t  predicament);\n  1569: \t\t\telse\n  1570: #endif\n  1571: \t\t\tNorep(\"You are %s.\", predicament);\n  1572: \t\t    }"
+    "stage": 0,
+    "context": "src/hack.c:1567:14\n  1562: \t\t} else if (u.utraptype == TT_LAVA) {\n  1563: \t\t    if(flags.verbose) {\n  1564: \t\t\tpredicament = \"stuck in the lava\";\n  1565: #ifdef STEED\n  1566: \t\t\tif (u.usteed)\n&gt; 1567: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1568: \t\t\t\t  predicament);\n  1569: \t\t\telse\n  1570: #endif\n  1571: \t\t\tNorep(\"You are %s.\", predicament);\n  1572: \t\t    }"
   },
   {
     "key": "L01571_01",
     "original": "You are %s.",
     "translation": "",
-    "context": "src/hack.c:1571:10\n  1566: \t\t\tif (u.usteed)\n  1567: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1568: \t\t\t\t  predicament);\n  1569: \t\t\telse\n  1570: #endif\n> 1571: \t\t\tNorep(\"You are %s.\", predicament);\n  1572: \t\t    }\n  1573: \t\t    if(!is_lava(x,y)) {\n  1574: \t\t\tu.utrap--;\n  1575: \t\t\tif((u.utrap & 0xff) == 0) {\n  1576: #ifdef STEED"
+    "stage": 0,
+    "context": "src/hack.c:1571:10\n  1566: \t\t\tif (u.usteed)\n  1567: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1568: \t\t\t\t  predicament);\n  1569: \t\t\telse\n  1570: #endif\n&gt; 1571: \t\t\tNorep(\"You are %s.\", predicament);\n  1572: \t\t    }\n  1573: \t\t    if(!is_lava(x,y)) {\n  1574: \t\t\tu.utrap--;\n  1575: \t\t\tif((u.utrap & 0xff) == 0) {\n  1576: #ifdef STEED"
   },
   {
     "key": "L01578_01",
     "original": "lead %s to the edge of the lava.",
     "translation": "",
-    "context": "src/hack.c:1578:9\n  1573: \t\t    if(!is_lava(x,y)) {\n  1574: \t\t\tu.utrap--;\n  1575: \t\t\tif((u.utrap & 0xff) == 0) {\n  1576: #ifdef STEED\n  1577: \t\t\t    if (u.usteed)\n> 1578: \t\t\t\tYou(\"lead %s to the edge of the lava.\",\n  1579: \t\t\t\t    y_monnam(u.usteed));\n  1580: \t\t\t    else\n  1581: #endif\n  1582: \t\t\t     You(\"把自己拉到岩浆池的边缘。\");\n  1583: \t\t\t    u.utrap = 0;"
+    "stage": 0,
+    "context": "src/hack.c:1578:9\n  1573: \t\t    if(!is_lava(x,y)) {\n  1574: \t\t\tu.utrap--;\n  1575: \t\t\tif((u.utrap & 0xff) == 0) {\n  1576: #ifdef STEED\n  1577: \t\t\t    if (u.usteed)\n&gt; 1578: \t\t\t\tYou(\"lead %s to the edge of the lava.\",\n  1579: \t\t\t\t    y_monnam(u.usteed));\n  1580: \t\t\t    else\n  1581: #endif\n  1582: \t\t\t     You(\"把自己拉到岩浆池的边缘。\");\n  1583: \t\t\t    u.utrap = 0;"
   },
   {
     "key": "L01595_01",
     "original": "stuck to the web",
     "translation": "",
-    "context": "src/hack.c:1595:22\n  1590: \t\t\tpline(\"杀兽针直接把蜘蛛网切开了！\");\n  1591: \t\t\treturn;\n  1592: \t\t    }\n  1593: \t\t    if(--u.utrap) {\n  1594: \t\t\tif(flags.verbose) {\n> 1595: \t\t\t    predicament = \"stuck to the web\";\n  1596: #ifdef STEED\n  1597: \t\t\t    if (u.usteed)\n  1598: \t\t\t\tNorep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1599: \t\t\t\t      predicament);\n  1600: \t\t\t    else"
+    "stage": 0,
+    "context": "src/hack.c:1595:22\n  1590: \t\t\tpline(\"杀兽针直接把蜘蛛网切开了！\");\n  1591: \t\t\treturn;\n  1592: \t\t    }\n  1593: \t\t    if(--u.utrap) {\n  1594: \t\t\tif(flags.verbose) {\n&gt; 1595: \t\t\t    predicament = \"stuck to the web\";\n  1596: #ifdef STEED\n  1597: \t\t\t    if (u.usteed)\n  1598: \t\t\t\tNorep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1599: \t\t\t\t      predicament);\n  1600: \t\t\t    else"
   },
   {
     "key": "L01598_01",
     "original": "%s is %s.",
     "translation": "",
-    "context": "src/hack.c:1598:11\n  1593: \t\t    if(--u.utrap) {\n  1594: \t\t\tif(flags.verbose) {\n  1595: \t\t\t    predicament = \"stuck to the web\";\n  1596: #ifdef STEED\n  1597: \t\t\t    if (u.usteed)\n> 1598: \t\t\t\tNorep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1599: \t\t\t\t      predicament);\n  1600: \t\t\t    else\n  1601: #endif\n  1602: \t\t\t    Norep(\"You are %s.\", predicament);\n  1603: \t\t\t}"
+    "stage": 0,
+    "context": "src/hack.c:1598:11\n  1593: \t\t    if(--u.utrap) {\n  1594: \t\t\tif(flags.verbose) {\n  1595: \t\t\t    predicament = \"stuck to the web\";\n  1596: #ifdef STEED\n  1597: \t\t\t    if (u.usteed)\n&gt; 1598: \t\t\t\tNorep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1599: \t\t\t\t      predicament);\n  1600: \t\t\t    else\n  1601: #endif\n  1602: \t\t\t    Norep(\"You are %s.\", predicament);\n  1603: \t\t\t}"
   },
   {
     "key": "L01602_01",
     "original": "You are %s.",
     "translation": "",
-    "context": "src/hack.c:1602:14\n  1597: \t\t\t    if (u.usteed)\n  1598: \t\t\t\tNorep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1599: \t\t\t\t      predicament);\n  1600: \t\t\t    else\n  1601: #endif\n> 1602: \t\t\t    Norep(\"You are %s.\", predicament);\n  1603: \t\t\t}\n  1604: \t\t    } else {\n  1605: #ifdef STEED\n  1606: \t\t\tif (u.usteed)\n  1607: \t\t\t    pline(\"%s把蜘蛛网撕破后钻出来了。\","
+    "stage": 0,
+    "context": "src/hack.c:1602:14\n  1597: \t\t\t    if (u.usteed)\n  1598: \t\t\t\tNorep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1599: \t\t\t\t      predicament);\n  1600: \t\t\t    else\n  1601: #endif\n&gt; 1602: \t\t\t    Norep(\"You are %s.\", predicament);\n  1603: \t\t\t}\n  1604: \t\t    } else {\n  1605: #ifdef STEED\n  1606: \t\t\tif (u.usteed)\n  1607: \t\t\t    pline(\"%s把蜘蛛网撕破后钻出来了。\","
   },
   {
     "key": "L01616_01",
     "original": "stuck in the",
     "translation": "",
-    "context": "src/hack.c:1616:22\n  1611: \t\t\tYou(\"把自己从蜘蛛网上解开。\");\n  1612: \t\t    }\n  1613: \t\t} else if (u.utraptype == TT_INFLOOR) {\n  1614: \t\t    if(--u.utrap) {\n  1615: \t\t\tif(flags.verbose) {\n> 1616: \t\t\t    predicament = \"stuck in the\";\n  1617: #ifdef STEED\n  1618: \t\t\t    if (u.usteed)\n  1619: \t\t\t\tNorep(\"%s is %s %s.\",\n  1620: \t\t\t\t      upstart(y_monnam(u.usteed)),\n  1621: \t\t\t\t      predicament, surface(u.ux, u.uy));"
+    "stage": 0,
+    "context": "src/hack.c:1616:22\n  1611: \t\t\tYou(\"把自己从蜘蛛网上解开。\");\n  1612: \t\t    }\n  1613: \t\t} else if (u.utraptype == TT_INFLOOR) {\n  1614: \t\t    if(--u.utrap) {\n  1615: \t\t\tif(flags.verbose) {\n&gt; 1616: \t\t\t    predicament = \"stuck in the\";\n  1617: #ifdef STEED\n  1618: \t\t\t    if (u.usteed)\n  1619: \t\t\t\tNorep(\"%s is %s %s.\",\n  1620: \t\t\t\t      upstart(y_monnam(u.usteed)),\n  1621: \t\t\t\t      predicament, surface(u.ux, u.uy));"
   },
   {
     "key": "L01619_01",
     "original": "%s is %s %s.",
     "translation": "",
-    "context": "src/hack.c:1619:11\n  1614: \t\t    if(--u.utrap) {\n  1615: \t\t\tif(flags.verbose) {\n  1616: \t\t\t    predicament = \"stuck in the\";\n  1617: #ifdef STEED\n  1618: \t\t\t    if (u.usteed)\n> 1619: \t\t\t\tNorep(\"%s is %s %s.\",\n  1620: \t\t\t\t      upstart(y_monnam(u.usteed)),\n  1621: \t\t\t\t      predicament, surface(u.ux, u.uy));\n  1622: \t\t\t    else\n  1623: #endif\n  1624: \t\t\t    Norep(\"You are %s %s.\", predicament,"
+    "stage": 0,
+    "context": "src/hack.c:1619:11\n  1614: \t\t    if(--u.utrap) {\n  1615: \t\t\tif(flags.verbose) {\n  1616: \t\t\t    predicament = \"stuck in the\";\n  1617: #ifdef STEED\n  1618: \t\t\t    if (u.usteed)\n&gt; 1619: \t\t\t\tNorep(\"%s is %s %s.\",\n  1620: \t\t\t\t      upstart(y_monnam(u.usteed)),\n  1621: \t\t\t\t      predicament, surface(u.ux, u.uy));\n  1622: \t\t\t    else\n  1623: #endif\n  1624: \t\t\t    Norep(\"You are %s %s.\", predicament,"
   },
   {
     "key": "L01624_01",
     "original": "You are %s %s.",
     "translation": "",
-    "context": "src/hack.c:1624:14\n  1619: \t\t\t\tNorep(\"%s is %s %s.\",\n  1620: \t\t\t\t      upstart(y_monnam(u.usteed)),\n  1621: \t\t\t\t      predicament, surface(u.ux, u.uy));\n  1622: \t\t\t    else\n  1623: #endif\n> 1624: \t\t\t    Norep(\"You are %s %s.\", predicament,\n  1625: \t\t\t\t  surface(u.ux, u.uy));\n  1626: \t\t\t}\n  1627: \t\t    } else {\n  1628: #ifdef STEED\n  1629: \t\t\tif (u.usteed)"
+    "stage": 0,
+    "context": "src/hack.c:1624:14\n  1619: \t\t\t\tNorep(\"%s is %s %s.\",\n  1620: \t\t\t\t      upstart(y_monnam(u.usteed)),\n  1621: \t\t\t\t      predicament, surface(u.ux, u.uy));\n  1622: \t\t\t    else\n  1623: #endif\n&gt; 1624: \t\t\t    Norep(\"You are %s %s.\", predicament,\n  1625: \t\t\t\t  surface(u.ux, u.uy));\n  1626: \t\t\t}\n  1627: \t\t    } else {\n  1628: #ifdef STEED\n  1629: \t\t\tif (u.usteed)"
   },
   {
     "key": "L01630_01",
     "original": "%s finally wiggles free.",
     "translation": "",
-    "context": "src/hack.c:1630:14\n  1625: \t\t\t\t  surface(u.ux, u.uy));\n  1626: \t\t\t}\n  1627: \t\t    } else {\n  1628: #ifdef STEED\n  1629: \t\t\tif (u.usteed)\n> 1630: \t\t\t    pline(\"%s finally wiggles free.\",\n  1631: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1632: \t\t\telse\n  1633: #endif\n  1634: \t\t\tYou(\"finally wiggle free.\");\n  1635: \t\t    }"
+    "stage": 0,
+    "context": "src/hack.c:1630:14\n  1625: \t\t\t\t  surface(u.ux, u.uy));\n  1626: \t\t\t}\n  1627: \t\t    } else {\n  1628: #ifdef STEED\n  1629: \t\t\tif (u.usteed)\n&gt; 1630: \t\t\t    pline(\"%s finally wiggles free.\",\n  1631: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1632: \t\t\telse\n  1633: #endif\n  1634: \t\t\tYou(\"finally wiggle free.\");\n  1635: \t\t    }"
   },
   {
     "key": "L01634_01",
     "original": "finally wiggle free.",
     "translation": "",
-    "context": "src/hack.c:1634:8\n  1629: \t\t\tif (u.usteed)\n  1630: \t\t\t    pline(\"%s finally wiggles free.\",\n  1631: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1632: \t\t\telse\n  1633: #endif\n> 1634: \t\t\tYou(\"finally wiggle free.\");\n  1635: \t\t    }\n  1636: \t\t} else {\n  1637: \t\t    if(flags.verbose) {\n  1638: \t\t\tpredicament = \"caught in a bear trap\";\n  1639: #ifdef STEED"
+    "stage": 0,
+    "context": "src/hack.c:1634:8\n  1629: \t\t\tif (u.usteed)\n  1630: \t\t\t    pline(\"%s finally wiggles free.\",\n  1631: \t\t\t\t  upstart(y_monnam(u.usteed)));\n  1632: \t\t\telse\n  1633: #endif\n&gt; 1634: \t\t\tYou(\"finally wiggle free.\");\n  1635: \t\t    }\n  1636: \t\t} else {\n  1637: \t\t    if(flags.verbose) {\n  1638: \t\t\tpredicament = \"caught in a bear trap\";\n  1639: #ifdef STEED"
   },
   {
     "key": "L01638_01",
     "original": "caught in a bear trap",
     "translation": "",
-    "context": "src/hack.c:1638:18\n  1633: #endif\n  1634: \t\t\tYou(\"finally wiggle free.\");\n  1635: \t\t    }\n  1636: \t\t} else {\n  1637: \t\t    if(flags.verbose) {\n> 1638: \t\t\tpredicament = \"caught in a bear trap\";\n  1639: #ifdef STEED\n  1640: \t\t\tif (u.usteed)\n  1641: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1642: \t\t\t\t  predicament);\n  1643: \t\t\telse"
+    "stage": 0,
+    "context": "src/hack.c:1638:18\n  1633: #endif\n  1634: \t\t\tYou(\"finally wiggle free.\");\n  1635: \t\t    }\n  1636: \t\t} else {\n  1637: \t\t    if(flags.verbose) {\n&gt; 1638: \t\t\tpredicament = \"caught in a bear trap\";\n  1639: #ifdef STEED\n  1640: \t\t\tif (u.usteed)\n  1641: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1642: \t\t\t\t  predicament);\n  1643: \t\t\telse"
   },
   {
     "key": "L01641_01",
     "original": "%s is %s.",
     "translation": "",
-    "context": "src/hack.c:1641:14\n  1636: \t\t} else {\n  1637: \t\t    if(flags.verbose) {\n  1638: \t\t\tpredicament = \"caught in a bear trap\";\n  1639: #ifdef STEED\n  1640: \t\t\tif (u.usteed)\n> 1641: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1642: \t\t\t\t  predicament);\n  1643: \t\t\telse\n  1644: #endif\n  1645: \t\t\tNorep(\"You are %s.\", predicament);\n  1646: \t\t    }"
+    "stage": 0,
+    "context": "src/hack.c:1641:14\n  1636: \t\t} else {\n  1637: \t\t    if(flags.verbose) {\n  1638: \t\t\tpredicament = \"caught in a bear trap\";\n  1639: #ifdef STEED\n  1640: \t\t\tif (u.usteed)\n&gt; 1641: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1642: \t\t\t\t  predicament);\n  1643: \t\t\telse\n  1644: #endif\n  1645: \t\t\tNorep(\"You are %s.\", predicament);\n  1646: \t\t    }"
   },
   {
     "key": "L01645_01",
     "original": "You are %s.",
     "translation": "",
-    "context": "src/hack.c:1645:10\n  1640: \t\t\tif (u.usteed)\n  1641: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1642: \t\t\t\t  predicament);\n  1643: \t\t\telse\n  1644: #endif\n> 1645: \t\t\tNorep(\"You are %s.\", predicament);\n  1646: \t\t    }\n  1647: \t\t    if((u.dx && u.dy) || !rn2(5)) u.utrap--;\n  1648: \t\t}\n  1649: \t\treturn;\n  1650: \t}"
+    "stage": 0,
+    "context": "src/hack.c:1645:10\n  1640: \t\t\tif (u.usteed)\n  1641: \t\t\t    Norep(\"%s is %s.\", upstart(y_monnam(u.usteed)),\n  1642: \t\t\t\t  predicament);\n  1643: \t\t\telse\n  1644: #endif\n&gt; 1645: \t\t\tNorep(\"You are %s.\", predicament);\n  1646: \t\t    }\n  1647: \t\t    if((u.dx && u.dy) || !rn2(5)) u.utrap--;\n  1648: \t\t}\n  1649: \t\treturn;\n  1650: \t}"
   },
   {
     "key": "L01715_01",
     "original": "displaced %s.",
     "translation": "",
-    "context": "src/hack.c:1715:11\n  1710: \t    remove_monster(x, y);\n  1711: \t    place_monster(mtmp, u.ux0, u.uy0);\n  1712: \t    /* check for displacing it into pools and traps */\n  1713: \t    switch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1714: \t\tcase 0:\n> 1715: \t\t    You(\"displaced %s.\", pnambuf);\n  1716: \t\t    break;\n  1717: \t\tcase 1:\n  1718: \t\tcase 3:\n  1719: \t\t    break;\n  1720: \t\tcase 2:"
+    "stage": 0,
+    "context": "src/hack.c:1715:11\n  1710: \t    remove_monster(x, y);\n  1711: \t    place_monster(mtmp, u.ux0, u.uy0);\n  1712: \t    /* check for displacing it into pools and traps */\n  1713: \t    switch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1714: \t\tcase 0:\n&gt; 1715: \t\t    You(\"displaced %s.\", pnambuf);\n  1716: \t\t    break;\n  1717: \t\tcase 1:\n  1718: \t\tcase 3:\n  1719: \t\t    break;\n  1720: \t\tcase 2:"
   },
   {
     "key": "L01766_01",
     "original": "stop.  %s won't fit through.",
     "translation": "",
-    "context": "src/hack.c:1766:7\n  1761: \t\t       bad_rock(mtmp, x, u.uy0) &&\n  1762: \t\t       bad_rock(mtmp, u.ux0, y) &&\n  1763: \t\t       (bigmonst(mtmp->data) || (curr_mon_load(mtmp) > 600))) {\n  1764: \t\t/* can't swap places when pet won't fit thru the opening */\n  1765: \t\tu.ux = u.ux0,  u.uy = u.uy0;\t/* didn't move after all */\n> 1766: \t\tYou(\"stop.  %s won't fit through.\", upstart(y_monnam(mtmp)));\n  1767: \t    } else {\n  1768: \t\tchar pnambuf[BUFSZ];\n  1769: \n  1770: \t\t/* save its current description in case of polymorph */\n  1771: \t\tStrcpy(pnambuf, y_monnam(mtmp));"
+    "stage": 0,
+    "context": "src/hack.c:1766:7\n  1761: \t\t       bad_rock(mtmp, x, u.uy0) &&\n  1762: \t\t       bad_rock(mtmp, u.ux0, y) &&\n  1763: \t\t       (bigmonst(mtmp-&gt;data) || (curr_mon_load(mtmp) &gt; 600))) {\n  1764: \t\t/* can't swap places when pet won't fit thru the opening */\n  1765: \t\tu.ux = u.ux0,  u.uy = u.uy0;\t/* didn't move after all */\n&gt; 1766: \t\tYou(\"stop.  %s won't fit through.\", upstart(y_monnam(mtmp)));\n  1767: \t    } else {\n  1768: \t\tchar pnambuf[BUFSZ];\n  1769: \n  1770: \t\t/* save its current description in case of polymorph */\n  1771: \t\tStrcpy(pnambuf, y_monnam(mtmp));"
   },
   {
     "key": "L01779_01",
     "original": "%s %s.",
     "translation": "",
-    "context": "src/hack.c:1779:11\n  1774: \t\tplace_monster(mtmp, u.ux0, u.uy0);\n  1775: \n  1776: \t\t/* check for displacing it into pools and traps */\n  1777: \t\tswitch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1778: \t\tcase 0:\n> 1779: \t\t    You(\"%s %s.\", mtmp->mtame ? \"displaced\" : \"frightened\",\n  1780: \t\t\tpnambuf);\n  1781: \t\t    break;\n  1782: \t\tcase 1:\t\t/* trapped */\n  1783: \t\tcase 3:\t\t/* changed levels */\n  1784: \t\t    /* there's already been a trap message, reinforce it */"
+    "stage": 0,
+    "context": "src/hack.c:1779:11\n  1774: \t\tplace_monster(mtmp, u.ux0, u.uy0);\n  1775: \n  1776: \t\t/* check for displacing it into pools and traps */\n  1777: \t\tswitch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1778: \t\tcase 0:\n&gt; 1779: \t\t    You(\"%s %s.\", mtmp-&gt;mtame ? \"displaced\" : \"frightened\",\n  1780: \t\t\tpnambuf);\n  1781: \t\t    break;\n  1782: \t\tcase 1:\t\t/* trapped */\n  1783: \t\tcase 3:\t\t/* changed levels */\n  1784: \t\t    /* there's already been a trap message, reinforce it */"
   },
   {
     "key": "L01779_02",
     "original": "displaced",
     "translation": "",
-    "context": "src/hack.c:1779:35\n  1774: \t\tplace_monster(mtmp, u.ux0, u.uy0);\n  1775: \n  1776: \t\t/* check for displacing it into pools and traps */\n  1777: \t\tswitch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1778: \t\tcase 0:\n> 1779: \t\t    You(\"%s %s.\", mtmp->mtame ? \"displaced\" : \"frightened\",\n  1780: \t\t\tpnambuf);\n  1781: \t\t    break;\n  1782: \t\tcase 1:\t\t/* trapped */\n  1783: \t\tcase 3:\t\t/* changed levels */\n  1784: \t\t    /* there's already been a trap message, reinforce it */"
+    "stage": 0,
+    "context": "src/hack.c:1779:35\n  1774: \t\tplace_monster(mtmp, u.ux0, u.uy0);\n  1775: \n  1776: \t\t/* check for displacing it into pools and traps */\n  1777: \t\tswitch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1778: \t\tcase 0:\n&gt; 1779: \t\t    You(\"%s %s.\", mtmp-&gt;mtame ? \"displaced\" : \"frightened\",\n  1780: \t\t\tpnambuf);\n  1781: \t\t    break;\n  1782: \t\tcase 1:\t\t/* trapped */\n  1783: \t\tcase 3:\t\t/* changed levels */\n  1784: \t\t    /* there's already been a trap message, reinforce it */"
   },
   {
     "key": "L01779_03",
     "original": "frightened",
     "translation": "",
-    "context": "src/hack.c:1779:49\n  1774: \t\tplace_monster(mtmp, u.ux0, u.uy0);\n  1775: \n  1776: \t\t/* check for displacing it into pools and traps */\n  1777: \t\tswitch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1778: \t\tcase 0:\n> 1779: \t\t    You(\"%s %s.\", mtmp->mtame ? \"displaced\" : \"frightened\",\n  1780: \t\t\tpnambuf);\n  1781: \t\t    break;\n  1782: \t\tcase 1:\t\t/* trapped */\n  1783: \t\tcase 3:\t\t/* changed levels */\n  1784: \t\t    /* there's already been a trap message, reinforce it */"
+    "stage": 0,
+    "context": "src/hack.c:1779:49\n  1774: \t\tplace_monster(mtmp, u.ux0, u.uy0);\n  1775: \n  1776: \t\t/* check for displacing it into pools and traps */\n  1777: \t\tswitch (minliquid(mtmp) ? 2 : mintrap(mtmp)) {\n  1778: \t\tcase 0:\n&gt; 1779: \t\t    You(\"%s %s.\", mtmp-&gt;mtame ? \"displaced\" : \"frightened\",\n  1780: \t\t\tpnambuf);\n  1781: \t\t    break;\n  1782: \t\tcase 1:\t\t/* trapped */\n  1783: \t\tcase 3:\t\t/* changed levels */\n  1784: \t\t    /* there's already been a trap message, reinforce it */"
   },
   {
     "key": "L01793_01",
     "original": "guilty about losing your pet like this.",
     "translation": "",
-    "context": "src/hack.c:1793:13\n  1788: \t\tcase 2:\n  1789: \t\t    /* it may have drowned or died.  that's no way to\n  1790: \t\t     * treat a pet!  your god gets angry.\n  1791: \t\t     */\n  1792: \t\t    if (rn2(4)) {\n> 1793: \t\t\tYou_feel(\"guilty about losing your pet like this.\");\n  1794: \t\t\tu.ugangr++;\n  1795: \t\t\tadjalign(-15);\n  1796: \t\t    }\n  1797: \n  1798: \t\t    /* you killed your pet by direct action."
+    "stage": 0,
+    "context": "src/hack.c:1793:13\n  1788: \t\tcase 2:\n  1789: \t\t    /* it may have drowned or died.  that's no way to\n  1790: \t\t     * treat a pet!  your god gets angry.\n  1791: \t\t     */\n  1792: \t\t    if (rn2(4)) {\n&gt; 1793: \t\t\tYou_feel(\"guilty about losing your pet like this.\");\n  1794: \t\t\tu.ugangr++;\n  1795: \t\t\tadjalign(-15);\n  1796: \t\t    }\n  1797: \n  1798: \t\t    /* you killed your pet by direct action."
   },
   {
     "key": "L01804_01",
     "original": "that's strange, unknown mintrap result!",
     "translation": "",
-    "context": "src/hack.c:1804:13\n  1799: \t\t     * minliquid and mintrap don't know to do this\n  1800: \t\t     */\n  1801: \t\t    u.uconduct.killer++;\n  1802: \t\t    break;\n  1803: \t\tdefault:\n> 1804: \t\t    pline(\"that's strange, unknown mintrap result!\");\n  1805: \t\t    break;\n  1806: \t\t}\n  1807: \t    }\n  1808: \t}\n  1809: "
+    "stage": 0,
+    "context": "src/hack.c:1804:13\n  1799: \t\t     * minliquid and mintrap don't know to do this\n  1800: \t\t     */\n  1801: \t\t    u.uconduct.killer++;\n  1802: \t\t    break;\n  1803: \t\tdefault:\n&gt; 1804: \t\t    pline(\"that's strange, unknown mintrap result!\");\n  1805: \t\t    break;\n  1806: \t\t}\n  1807: \t    }\n  1808: \t}\n  1809: "
   },
   {
     "key": "L01886_01",
     "original": "beneath %s",
     "translation": "",
-    "context": "src/hack.c:1886:33\n  1881: \t    nomul(0);\t\t/* stop running or travelling */\n  1882: \t    if (Hallucination)\n  1883: \t\tpline(\"你感觉自己随着节奏摇摆！\");\n  1884: \t    else {\n  1885: #ifdef STEED\n> 1886: \t    if (u.usteed) Sprintf(buf, \"beneath %s\", y_monnam(u.usteed));\n  1887: \t    else\n  1888: #endif\n  1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: "
+    "stage": 0,
+    "context": "src/hack.c:1886:33\n  1881: \t    nomul(0);\t\t/* stop running or travelling */\n  1882: \t    if (Hallucination)\n  1883: \t\tpline(\"你感觉自己随着节奏摇摆！\");\n  1884: \t    else {\n  1885: #ifdef STEED\n&gt; 1886: \t    if (u.usteed) Sprintf(buf, \"beneath %s\", y_monnam(u.usteed));\n  1887: \t    else\n  1888: #endif\n  1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: "
   },
   {
     "key": "L01889_01",
     "original": "beneath you",
     "translation": "",
-    "context": "src/hack.c:1889:44\n  1884: \t    else {\n  1885: #ifdef STEED\n  1886: \t    if (u.usteed) Sprintf(buf, \"beneath %s\", y_monnam(u.usteed));\n  1887: \t    else\n  1888: #endif\n> 1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp->spe == 7 && otmp->lamplit)"
+    "stage": 0,
+    "context": "src/hack.c:1889:44\n  1884: \t    else {\n  1885: #ifdef STEED\n  1886: \t    if (u.usteed) Sprintf(buf, \"beneath %s\", y_monnam(u.usteed));\n  1887: \t    else\n  1888: #endif\n&gt; 1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp-&gt;spe == 7 && otmp-&gt;lamplit)"
   },
   {
     "key": "L01890_01",
     "original": "under your %s",
     "translation": "",
-    "context": "src/hack.c:1890:24\n  1885: #ifdef STEED\n  1886: \t    if (u.usteed) Sprintf(buf, \"beneath %s\", y_monnam(u.usteed));\n  1887: \t    else\n  1888: #endif\n  1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n> 1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp->spe == 7 && otmp->lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),"
+    "stage": 0,
+    "context": "src/hack.c:1890:24\n  1885: #ifdef STEED\n  1886: \t    if (u.usteed) Sprintf(buf, \"beneath %s\", y_monnam(u.usteed));\n  1887: \t    else\n  1888: #endif\n  1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n&gt; 1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp-&gt;spe == 7 && otmp-&gt;lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),"
   },
   {
     "key": "L01892_01",
     "original": "a strange vibration %s.",
     "translation": "",
-    "context": "src/hack.c:1892:15\n  1887: \t    else\n  1888: #endif\n  1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n> 1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp->spe == 7 && otmp->lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n  1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}"
+    "stage": 0,
+    "context": "src/hack.c:1892:15\n  1887: \t    else\n  1888: #endif\n  1889: \t    if (Levitation || Flying) Strcpy(buf, \"beneath you\");\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n&gt; 1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp-&gt;spe == 7 && otmp-&gt;lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n  1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}"
   },
   {
     "key": "L01895_01",
     "original": "%s %s!",
     "translation": "",
-    "context": "src/hack.c:1895:9\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp->spe == 7 && otmp->lamplit)\n> 1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n  1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}\n  1898: }\n  1899: \n  1900: #endif /* OVL3 */"
+    "stage": 0,
+    "context": "src/hack.c:1895:9\n  1890: \t    else Sprintf(buf, \"under your %s\", makeplural(body_part(FOOT)));\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp-&gt;spe == 7 && otmp-&gt;lamplit)\n&gt; 1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n  1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}\n  1898: }\n  1899: \n  1900: #endif /* OVL3 */"
   },
   {
     "key": "L01896_01",
     "original": "throbs palpably",
     "translation": "",
-    "context": "src/hack.c:1896:15\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp->spe == 7 && otmp->lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n> 1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}\n  1898: }\n  1899: \n  1900: #endif /* OVL3 */\n  1901: #ifdef OVL2"
+    "stage": 0,
+    "context": "src/hack.c:1896:15\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp-&gt;spe == 7 && otmp-&gt;lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n&gt; 1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}\n  1898: }\n  1899: \n  1900: #endif /* OVL3 */\n  1901: #ifdef OVL2"
   },
   {
     "key": "L01896_02",
     "original": "glows with a strange light",
     "translation": "",
-    "context": "src/hack.c:1896:35\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp->spe == 7 && otmp->lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n> 1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}\n  1898: }\n  1899: \n  1900: #endif /* OVL3 */\n  1901: #ifdef OVL2"
+    "stage": 0,
+    "context": "src/hack.c:1896:35\n  1891: \n  1892: \t    You_feel(\"a strange vibration %s.\", buf);\n  1893: \t    }\n  1894: \t    if (otmp && otmp-&gt;spe == 7 && otmp-&gt;lamplit)\n  1895: \t\tpline(\"%s %s!\", The(xname(otmp)),\n&gt; 1896: \t\t    Blind ? \"throbs palpably\" : \"glows with a strange light\");\n  1897: \t}\n  1898: }\n  1899: \n  1900: #endif /* OVL3 */\n  1901: #ifdef OVL2"
   },
   {
     "key": "L01914_01",
     "original": "pop into an air bubble.",
     "translation": "",
-    "context": "src/hack.c:1914:9\n  1909: \tif(u.uinwater) {\n  1910: \t\tint was_underwater;\n  1911: \n  1912: \t\tif (!is_pool(u.ux,u.uy)) {\n  1913: \t\t\tif (Is_waterlevel(&u.uz))\n> 1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");"
+    "stage": 0,
+    "context": "src/hack.c:1914:9\n  1909: \tif(u.uinwater) {\n  1910: \t\tint was_underwater;\n  1911: \n  1912: \t\tif (!is_pool(u.ux,u.uy)) {\n  1913: \t\t\tif (Is_waterlevel(&u.uz))\n&gt; 1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");"
   },
   {
     "key": "L01916_01",
     "original": "leave the water...",
     "translation": "",
-    "context": "src/hack.c:1916:9\n  1911: \n  1912: \t\tif (!is_pool(u.ux,u.uy)) {\n  1913: \t\t\tif (Is_waterlevel(&u.uz))\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n> 1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))"
+    "stage": 0,
+    "context": "src/hack.c:1916:9\n  1911: \n  1912: \t\tif (!is_pool(u.ux,u.uy)) {\n  1913: \t\t\tif (Is_waterlevel(&u.uz))\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n&gt; 1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))"
   },
   {
     "key": "L01918_01",
     "original": "are on solid %s again.",
     "translation": "",
-    "context": "src/hack.c:1918:9\n  1913: \t\t\tif (Is_waterlevel(&u.uz))\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n> 1918: \t\t\t\tYou(\"are on solid %s again.\",\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)"
+    "stage": 0,
+    "context": "src/hack.c:1918:9\n  1913: \t\t\tif (Is_waterlevel(&u.uz))\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n&gt; 1918: \t\t\t\tYou(\"are on solid %s again.\",\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)"
   },
   {
     "key": "L01919_01",
     "original": "ice",
     "translation": "",
-    "context": "src/hack.c:1919:30\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n> 1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");"
+    "stage": 0,
+    "context": "src/hack.c:1919:30\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n&gt; 1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");"
   },
   {
     "key": "L01919_02",
     "original": "land",
     "translation": "",
-    "context": "src/hack.c:1919:38\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n> 1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");"
+    "stage": 0,
+    "context": "src/hack.c:1919:38\n  1914: \t\t\t\tYou(\"pop into an air bubble.\");\n  1915: \t\t\telse if (is_lava(u.ux, u.uy))\n  1916: \t\t\t\tYou(\"leave the water...\");\t/* oops! */\n  1917: \t\t\telse\n  1918: \t\t\t\tYou(\"are on solid %s again.\",\n&gt; 1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");"
   },
   {
     "key": "L01924_01",
     "original": "pop out of the water like a cork!",
     "translation": "",
-    "context": "src/hack.c:1924:8\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n> 1924: \t\t\tYou(\"pop out of the water like a cork!\");\n  1925: \t\t/* KMH, balance patch -- new intrinsic */\n  1926: \t\telse if (Flying)\n  1927: \t\t\tYou(\"fly out of the water.\");\n  1928: \t\telse if (Wwalking)\n  1929: \t\t\tYou(\"slowly rise above the surface.\");"
+    "stage": 0,
+    "context": "src/hack.c:1924:8\n  1919: \t\t\t\t    is_ice(u.ux, u.uy) ? \"ice\" : \"land\");\n  1920: \t\t}\n  1921: \t\telse if (Is_waterlevel(&u.uz))\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n&gt; 1924: \t\t\tYou(\"pop out of the water like a cork!\");\n  1925: \t\t/* KMH, balance patch -- new intrinsic */\n  1926: \t\telse if (Flying)\n  1927: \t\t\tYou(\"fly out of the water.\");\n  1928: \t\telse if (Wwalking)\n  1929: \t\t\tYou(\"slowly rise above the surface.\");"
   },
   {
     "key": "L01927_01",
     "original": "fly out of the water.",
     "translation": "",
-    "context": "src/hack.c:1927:8\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");\n  1925: \t\t/* KMH, balance patch -- new intrinsic */\n  1926: \t\telse if (Flying)\n> 1927: \t\t\tYou(\"fly out of the water.\");\n  1928: \t\telse if (Wwalking)\n  1929: \t\t\tYou(\"slowly rise above the surface.\");\n  1930: /*              else if (Swimming)\n  1931: \t\t\tYou(\"paddle up to the surface.\");*/\n  1932: \t\telse"
+    "stage": 0,
+    "context": "src/hack.c:1927:8\n  1922: \t\t\tgoto stillinwater;\n  1923: \t\telse if (Levitation)\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");\n  1925: \t\t/* KMH, balance patch -- new intrinsic */\n  1926: \t\telse if (Flying)\n&gt; 1927: \t\t\tYou(\"fly out of the water.\");\n  1928: \t\telse if (Wwalking)\n  1929: \t\t\tYou(\"slowly rise above the surface.\");\n  1930: /*              else if (Swimming)\n  1931: \t\t\tYou(\"paddle up to the surface.\");*/\n  1932: \t\telse"
   },
   {
     "key": "L01929_01",
     "original": "slowly rise above the surface.",
     "translation": "",
-    "context": "src/hack.c:1929:8\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");\n  1925: \t\t/* KMH, balance patch -- new intrinsic */\n  1926: \t\telse if (Flying)\n  1927: \t\t\tYou(\"fly out of the water.\");\n  1928: \t\telse if (Wwalking)\n> 1929: \t\t\tYou(\"slowly rise above the surface.\");\n  1930: /*              else if (Swimming)\n  1931: \t\t\tYou(\"paddle up to the surface.\");*/\n  1932: \t\telse\n  1933: \t\t\tgoto stillinwater;\n  1934: \t\twas_underwater = Underwater && !Is_waterlevel(&u.uz);"
+    "stage": 0,
+    "context": "src/hack.c:1929:8\n  1924: \t\t\tYou(\"pop out of the water like a cork!\");\n  1925: \t\t/* KMH, balance patch -- new intrinsic */\n  1926: \t\telse if (Flying)\n  1927: \t\t\tYou(\"fly out of the water.\");\n  1928: \t\telse if (Wwalking)\n&gt; 1929: \t\t\tYou(\"slowly rise above the surface.\");\n  1930: /*              else if (Swimming)\n  1931: \t\t\tYou(\"paddle up to the surface.\");*/\n  1932: \t\telse\n  1933: \t\t\tgoto stillinwater;\n  1934: \t\twas_underwater = Underwater && !Is_waterlevel(&u.uz);"
   },
   {
     "key": "L01981_01",
     "original": "%s suddenly drops from the %s!",
     "translation": "",
-    "context": "src/hack.c:1981:10\n  1976: \t}\n  1977: \tif((mtmp = m_at(u.ux, u.uy)) && !u.uswallow) {\n  1978: \t\tmtmp->mundetected = mtmp->msleeping = 0;\n  1979: \t\tswitch(mtmp->data->mlet) {\n  1980: \t\t    case S_PIERCER:\n> 1981: \t\t\tpline(\"%s suddenly drops from the %s!\",\n  1982: \t\t\t      Amonnam(mtmp), ceiling(u.ux,u.uy));\n  1983: \t\t\tif(mtmp->mtame) /* jumps to greet you, not attack */\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n  1986: \t\t\t    pline(\"Its blow glances off your helmet.\");"
+    "stage": 0,
+    "context": "src/hack.c:1981:10\n  1976: \t}\n  1977: \tif((mtmp = m_at(u.ux, u.uy)) && !u.uswallow) {\n  1978: \t\tmtmp-&gt;mundetected = mtmp-&gt;msleeping = 0;\n  1979: \t\tswitch(mtmp-&gt;data-&gt;mlet) {\n  1980: \t\t    case S_PIERCER:\n&gt; 1981: \t\t\tpline(\"%s suddenly drops from the %s!\",\n  1982: \t\t\t      Amonnam(mtmp), ceiling(u.ux,u.uy));\n  1983: \t\t\tif(mtmp-&gt;mtame) /* jumps to greet you, not attack */\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n  1986: \t\t\t    pline(\"Its blow glances off your helmet.\");"
   },
   {
     "key": "L01986_01",
     "original": "Its blow glances off your helmet.",
     "translation": "",
-    "context": "src/hack.c:1986:14\n  1981: \t\t\tpline(\"%s suddenly drops from the %s!\",\n  1982: \t\t\t      Amonnam(mtmp), ceiling(u.ux,u.uy));\n  1983: \t\t\tif(mtmp->mtame) /* jumps to greet you, not attack */\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n> 1986: \t\t\t    pline(\"Its blow glances off your helmet.\");\n  1987: \t\t\telse if (u.uac + 3 <= rnd(20))\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;"
+    "stage": 0,
+    "context": "src/hack.c:1986:14\n  1981: \t\t\tpline(\"%s suddenly drops from the %s!\",\n  1982: \t\t\t      Amonnam(mtmp), ceiling(u.ux,u.uy));\n  1983: \t\t\tif(mtmp-&gt;mtame) /* jumps to greet you, not attack */\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n&gt; 1986: \t\t\t    pline(\"Its blow glances off your helmet.\");\n  1987: \t\t\telse if (u.uac + 3 &lt;= rnd(20))\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;"
   },
   {
     "key": "L01988_01",
     "original": "are almost hit by %s!",
     "translation": "",
-    "context": "src/hack.c:1988:12\n  1983: \t\t\tif(mtmp->mtame) /* jumps to greet you, not attack */\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n  1986: \t\t\t    pline(\"Its blow glances off your helmet.\");\n  1987: \t\t\telse if (u.uac + 3 <= rnd(20))\n> 1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n  1992: \t\t\t    You(\"are hit by %s!\",\n  1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));"
+    "stage": 0,
+    "context": "src/hack.c:1988:12\n  1983: \t\t\tif(mtmp-&gt;mtame) /* jumps to greet you, not attack */\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n  1986: \t\t\t    pline(\"Its blow glances off your helmet.\");\n  1987: \t\t\telse if (u.uac + 3 &lt;= rnd(20))\n&gt; 1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n  1992: \t\t\t    You(\"are hit by %s!\",\n  1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));"
   },
   {
     "key": "L01989_01",
     "original": "falling",
     "translation": "",
-    "context": "src/hack.c:1989:31\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n  1986: \t\t\t    pline(\"Its blow glances off your helmet.\");\n  1987: \t\t\telse if (u.uac + 3 <= rnd(20))\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n> 1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n  1992: \t\t\t    You(\"are hit by %s!\",\n  1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1994: \t\t\t    dmg = d(4,6);"
+    "stage": 0,
+    "context": "src/hack.c:1989:31\n  1984: \t\t\t    ;\n  1985: \t\t\telse if(uarmh && is_metallic(uarmh))\n  1986: \t\t\t    pline(\"Its blow glances off your helmet.\");\n  1987: \t\t\telse if (u.uac + 3 &lt;= rnd(20))\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n&gt; 1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n  1992: \t\t\t    You(\"are hit by %s!\",\n  1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1994: \t\t\t    dmg = d(4,6);"
   },
   {
     "key": "L01992_01",
     "original": "are hit by %s!",
     "translation": "",
-    "context": "src/hack.c:1992:12\n  1987: \t\t\telse if (u.uac + 3 <= rnd(20))\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n> 1992: \t\t\t    You(\"are hit by %s!\",\n  1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1994: \t\t\t    dmg = d(4,6);\n  1995: \t\t\t    if(Half_physical_damage) dmg = (dmg+1) / 2;\n  1996: \t\t\t    mdamageu(mtmp, dmg);\n  1997: \t\t\t}"
+    "stage": 0,
+    "context": "src/hack.c:1992:12\n  1987: \t\t\telse if (u.uac + 3 &lt;= rnd(20))\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n&gt; 1992: \t\t\t    You(\"are hit by %s!\",\n  1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1994: \t\t\t    dmg = d(4,6);\n  1995: \t\t\t    if(Half_physical_damage) dmg = (dmg+1) / 2;\n  1996: \t\t\t    mdamageu(mtmp, dmg);\n  1997: \t\t\t}"
   },
   {
     "key": "L01993_01",
     "original": "falling",
     "translation": "",
-    "context": "src/hack.c:1993:31\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n  1992: \t\t\t    You(\"are hit by %s!\",\n> 1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1994: \t\t\t    dmg = d(4,6);\n  1995: \t\t\t    if(Half_physical_damage) dmg = (dmg+1) / 2;\n  1996: \t\t\t    mdamageu(mtmp, dmg);\n  1997: \t\t\t}\n  1998: \t\t\tbreak;"
+    "stage": 0,
+    "context": "src/hack.c:1993:31\n  1988: \t\t\t    You(\"are almost hit by %s!\",\n  1989: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1990: \t\t\telse {\n  1991: \t\t\t    int dmg;\n  1992: \t\t\t    You(\"are hit by %s!\",\n&gt; 1993: \t\t\t\tx_monnam(mtmp, ARTICLE_A, \"falling\", 0, TRUE));\n  1994: \t\t\t    dmg = d(4,6);\n  1995: \t\t\t    if(Half_physical_damage) dmg = (dmg+1) / 2;\n  1996: \t\t\t    mdamageu(mtmp, dmg);\n  1997: \t\t\t}\n  1998: \t\t\tbreak;"
   },
   {
     "key": "L02001_01",
     "original": "%s jumps near you from the %s.",
     "translation": "",
-    "context": "src/hack.c:2001:14\n  1996: \t\t\t    mdamageu(mtmp, dmg);\n  1997: \t\t\t}\n  1998: \t\t\tbreak;\n  1999: \t\t    default:\t/* monster surprises you. */\n  2000: \t\t\tif(mtmp->mtame)\n> 2001: \t\t\t    pline(\"%s jumps near you from the %s.\",\n  2002: \t\t\t\t\tAmonnam(mtmp), ceiling(u.ux,u.uy));\n  2003: \t\t\telse if(mtmp->mpeaceful) {\n  2004: \t\t\t\tYou(\"surprise %s!\",\n  2005: \t\t\t\t    Blind && !sensemon(mtmp) ?\n  2006: \t\t\t\t    something : a_monnam(mtmp));"
+    "stage": 0,
+    "context": "src/hack.c:2001:14\n  1996: \t\t\t    mdamageu(mtmp, dmg);\n  1997: \t\t\t}\n  1998: \t\t\tbreak;\n  1999: \t\t    default:\t/* monster surprises you. */\n  2000: \t\t\tif(mtmp-&gt;mtame)\n&gt; 2001: \t\t\t    pline(\"%s jumps near you from the %s.\",\n  2002: \t\t\t\t\tAmonnam(mtmp), ceiling(u.ux,u.uy));\n  2003: \t\t\telse if(mtmp-&gt;mpeaceful) {\n  2004: \t\t\t\tYou(\"surprise %s!\",\n  2005: \t\t\t\t    Blind && !sensemon(mtmp) ?\n  2006: \t\t\t\t    something : a_monnam(mtmp));"
   },
   {
     "key": "L02004_01",
     "original": "surprise %s!",
     "translation": "",
-    "context": "src/hack.c:2004:9\n  1999: \t\t    default:\t/* monster surprises you. */\n  2000: \t\t\tif(mtmp->mtame)\n  2001: \t\t\t    pline(\"%s jumps near you from the %s.\",\n  2002: \t\t\t\t\tAmonnam(mtmp), ceiling(u.ux,u.uy));\n  2003: \t\t\telse if(mtmp->mpeaceful) {\n> 2004: \t\t\t\tYou(\"surprise %s!\",\n  2005: \t\t\t\t    Blind && !sensemon(mtmp) ?\n  2006: \t\t\t\t    something : a_monnam(mtmp));\n  2007: \t\t\t\tmtmp->mpeaceful = 0;\n  2008: \t\t\t} else\n  2009: \t\t\t    pline(\"%s attacks you by surprise!\","
+    "stage": 0,
+    "context": "src/hack.c:2004:9\n  1999: \t\t    default:\t/* monster surprises you. */\n  2000: \t\t\tif(mtmp-&gt;mtame)\n  2001: \t\t\t    pline(\"%s jumps near you from the %s.\",\n  2002: \t\t\t\t\tAmonnam(mtmp), ceiling(u.ux,u.uy));\n  2003: \t\t\telse if(mtmp-&gt;mpeaceful) {\n&gt; 2004: \t\t\t\tYou(\"surprise %s!\",\n  2005: \t\t\t\t    Blind && !sensemon(mtmp) ?\n  2006: \t\t\t\t    something : a_monnam(mtmp));\n  2007: \t\t\t\tmtmp-&gt;mpeaceful = 0;\n  2008: \t\t\t} else\n  2009: \t\t\t    pline(\"%s attacks you by surprise!\","
   },
   {
     "key": "L02009_01",
     "original": "%s attacks you by surprise!",
     "translation": "",
-    "context": "src/hack.c:2009:14\n  2004: \t\t\t\tYou(\"surprise %s!\",\n  2005: \t\t\t\t    Blind && !sensemon(mtmp) ?\n  2006: \t\t\t\t    something : a_monnam(mtmp));\n  2007: \t\t\t\tmtmp->mpeaceful = 0;\n  2008: \t\t\t} else\n> 2009: \t\t\t    pline(\"%s attacks you by surprise!\",\n  2010: \t\t\t\t\tAmonnam(mtmp));\n  2011: \t\t\tbreak;\n  2012: \t\t}\n  2013: \t\tmnexto(mtmp); /* have to move the monster */\n  2014: \t}"
+    "stage": 0,
+    "context": "src/hack.c:2009:14\n  2004: \t\t\t\tYou(\"surprise %s!\",\n  2005: \t\t\t\t    Blind && !sensemon(mtmp) ?\n  2006: \t\t\t\t    something : a_monnam(mtmp));\n  2007: \t\t\t\tmtmp-&gt;mpeaceful = 0;\n  2008: \t\t\t} else\n&gt; 2009: \t\t\t    pline(\"%s attacks you by surprise!\",\n  2010: \t\t\t\t\tAmonnam(mtmp));\n  2011: \t\t\tbreak;\n  2012: \t\t}\n  2013: \t\tmnexto(mtmp); /* have to move the monster */\n  2014: \t}"
   },
   {
     "key": "L02197_01",
     "original": "It %s rather %s down here.",
     "translation": "",
-    "context": "src/hack.c:2197:13\n  2192: \t    switch (rt) {\n  2193: \t\tcase ZOO:\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n> 2197: \t\t    pline(\"It %s rather %s down here.\",\n  2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n  2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");"
+    "stage": 0,
+    "context": "src/hack.c:2197:13\n  2192: \t    switch (rt) {\n  2193: \t\tcase ZOO:\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n&gt; 2197: \t\t    pline(\"It %s rather %s down here.\",\n  2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n  2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");"
   },
   {
     "key": "L02198_01",
     "original": "feels",
     "translation": "",
-    "context": "src/hack.c:2198:14\n  2193: \t\tcase ZOO:\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n> 2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n  2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;"
+    "stage": 0,
+    "context": "src/hack.c:2198:14\n  2193: \t\tcase ZOO:\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n&gt; 2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n  2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;"
   },
   {
     "key": "L02198_02",
     "original": "looks",
     "translation": "",
-    "context": "src/hack.c:2198:24\n  2193: \t\tcase ZOO:\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n> 2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n  2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;"
+    "stage": 0,
+    "context": "src/hack.c:2198:24\n  2193: \t\tcase ZOO:\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n&gt; 2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n  2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;"
   },
   {
     "key": "L02199_01",
     "original": "humid",
     "translation": "",
-    "context": "src/hack.c:2199:14\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n  2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n> 2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;\n  2204: \t\tcase REALZOO:"
+    "stage": 0,
+    "context": "src/hack.c:2199:14\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n  2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n&gt; 2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;\n  2204: \t\tcase REALZOO:"
   },
   {
     "key": "L02199_02",
     "original": "muddy",
     "translation": "",
-    "context": "src/hack.c:2199:24\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n  2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n> 2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;\n  2204: \t\tcase REALZOO:"
+    "stage": 0,
+    "context": "src/hack.c:2199:24\n  2194: \t\t    pline(\"欢迎来到戴维的宝藏动物园！\");\n  2195: \t\t    break;\n  2196: \t\tcase SWAMP:\n  2197: \t\t    pline(\"It %s rather %s down here.\",\n  2198: \t\t\t  Blind ? \"feels\" : \"looks\",\n&gt; 2199: \t\t\t  Blind ? \"humid\" : \"muddy\");\n  2200: \t\t    break;\n  2201: \t\tcase COURT:\n  2202: \t\t    You(\"进入了一个奢华无比的宫廷房间！\");\n  2203: \t\t    break;\n  2204: \t\tcase REALZOO:"
   },
   {
     "key": "L02208_01",
     "original": "enter a giant throne room!",
     "translation": "",
-    "context": "src/hack.c:2208:11\n  2203: \t\t    break;\n  2204: \t\tcase REALZOO:\n  2205: \t\t    You(\"进入了一个味特别大的动物园！\");\n  2206: \t\t    break;\n  2207: \t\tcase GIANTCOURT:\n> 2208: \t\t    You(\"enter a giant throne room!\");\n  2209: \t\t    break;\n  2210: \t\tcase DRAGONLAIR:\n  2211: \t\t    You(\"enter a dragon lair...\");\n  2212: \t\t    break;\n  2213: \t\tcase BADFOODSHOP:"
+    "stage": 0,
+    "context": "src/hack.c:2208:11\n  2203: \t\t    break;\n  2204: \t\tcase REALZOO:\n  2205: \t\t    You(\"进入了一个味特别大的动物园！\");\n  2206: \t\t    break;\n  2207: \t\tcase GIANTCOURT:\n&gt; 2208: \t\t    You(\"enter a giant throne room!\");\n  2209: \t\t    break;\n  2210: \t\tcase DRAGONLAIR:\n  2211: \t\t    You(\"enter a dragon lair...\");\n  2212: \t\t    break;\n  2213: \t\tcase BADFOODSHOP:"
   },
   {
     "key": "L02211_01",
     "original": "enter a dragon lair...",
     "translation": "",
-    "context": "src/hack.c:2211:11\n  2206: \t\t    break;\n  2207: \t\tcase GIANTCOURT:\n  2208: \t\t    You(\"enter a giant throne room!\");\n  2209: \t\t    break;\n  2210: \t\tcase DRAGONLAIR:\n> 2211: \t\t    You(\"enter a dragon lair...\");\n  2212: \t\t    break;\n  2213: \t\tcase BADFOODSHOP:\n  2214: \t\t    You(\"进入了一个被遗弃的商店……\");\n  2215: \t\t    break;\n  2216: \t\tcase LEPREHALL:"
+    "stage": 0,
+    "context": "src/hack.c:2211:11\n  2206: \t\t    break;\n  2207: \t\tcase GIANTCOURT:\n  2208: \t\t    You(\"enter a giant throne room!\");\n  2209: \t\t    break;\n  2210: \t\tcase DRAGONLAIR:\n&gt; 2211: \t\t    You(\"enter a dragon lair...\");\n  2212: \t\t    break;\n  2213: \t\tcase BADFOODSHOP:\n  2214: \t\t    You(\"进入了一个被遗弃的商店……\");\n  2215: \t\t    break;\n  2216: \t\tcase LEPREHALL:"
   },
   {
     "key": "L02221_01",
     "original": "Run",
     "translation": "",
-    "context": "src/hack.c:2221:48\n  2216: \t\tcase LEPREHALL:\n  2217: \t\t    You(\"进入了一座小矮妖大厅！\");\n  2218: \t\t    break;\n  2219: \t\tcase MORGUE:\n  2220: \t\t    if(midnight()) {\n> 2221: \t\t\tconst char *run = locomotion(youmonst.data, \"Run\");\n  2222: \t\t\tpline(\"%s away!  %s away!\", run, run);\n  2223: \t\t    } else\n  2224: \t\t\tYou(\"有一种诡异的感觉……\");\n  2225: \t\t    break;\n  2226: \t\tcase BEEHIVE:"
+    "stage": 0,
+    "context": "src/hack.c:2221:48\n  2216: \t\tcase LEPREHALL:\n  2217: \t\t    You(\"进入了一座小矮妖大厅！\");\n  2218: \t\t    break;\n  2219: \t\tcase MORGUE:\n  2220: \t\t    if(midnight()) {\n&gt; 2221: \t\t\tconst char *run = locomotion(youmonst.data, \"Run\");\n  2222: \t\t\tpline(\"%s away!  %s away!\", run, run);\n  2223: \t\t    } else\n  2224: \t\t\tYou(\"有一种诡异的感觉……\");\n  2225: \t\t    break;\n  2226: \t\tcase BEEHIVE:"
   },
   {
     "key": "L02222_01",
     "original": "%s away!  %s away!",
     "translation": "",
-    "context": "src/hack.c:2222:10\n  2217: \t\t    You(\"进入了一座小矮妖大厅！\");\n  2218: \t\t    break;\n  2219: \t\tcase MORGUE:\n  2220: \t\t    if(midnight()) {\n  2221: \t\t\tconst char *run = locomotion(youmonst.data, \"Run\");\n> 2222: \t\t\tpline(\"%s away!  %s away!\", run, run);\n  2223: \t\t    } else\n  2224: \t\t\tYou(\"有一种诡异的感觉……\");\n  2225: \t\t    break;\n  2226: \t\tcase BEEHIVE:\n  2227: \t\t    You(\"进入了一个巨型蜂巢！\");"
+    "stage": 0,
+    "context": "src/hack.c:2222:10\n  2217: \t\t    You(\"进入了一座小矮妖大厅！\");\n  2218: \t\t    break;\n  2219: \t\tcase MORGUE:\n  2220: \t\t    if(midnight()) {\n  2221: \t\t\tconst char *run = locomotion(youmonst.data, \"Run\");\n&gt; 2222: \t\t\tpline(\"%s away!  %s away!\", run, run);\n  2223: \t\t    } else\n  2224: \t\t\tYou(\"有一种诡异的感觉……\");\n  2225: \t\t    break;\n  2226: \t\tcase BEEHIVE:\n  2227: \t\t    You(\"进入了一个巨型蜂巢！\");"
   },
   {
     "key": "L02233_01",
     "original": "enter a strange hive!",
     "translation": "",
-    "context": "src/hack.c:2233:11\n  2228: \t\t    break;\n  2229: \t\tcase LEMUREPIT:\n  2230: \t\t    You(\"进入了一个全是尖叫着的狐猴坑！\");\n  2231: \t\t    break;\n  2232: \t\tcase MIGOHIVE:\n> 2233: \t\t    You(\"enter a strange hive!\");\n  2234: \t\t    break;\n  2235: \t\tcase FUNGUSFARM:\n  2236: \t\t    You(\"enter a room full of fungi!\");\n  2237: \t\t    break;\n  2238: \t\tcase COCKNEST:"
+    "stage": 0,
+    "context": "src/hack.c:2233:11\n  2228: \t\t    break;\n  2229: \t\tcase LEMUREPIT:\n  2230: \t\t    You(\"进入了一个全是尖叫着的狐猴坑！\");\n  2231: \t\t    break;\n  2232: \t\tcase MIGOHIVE:\n&gt; 2233: \t\t    You(\"enter a strange hive!\");\n  2234: \t\t    break;\n  2235: \t\tcase FUNGUSFARM:\n  2236: \t\t    You(\"enter a room full of fungi!\");\n  2237: \t\t    break;\n  2238: \t\tcase COCKNEST:"
   },
   {
     "key": "L02236_01",
     "original": "enter a room full of fungi!",
     "translation": "",
-    "context": "src/hack.c:2236:11\n  2231: \t\t    break;\n  2232: \t\tcase MIGOHIVE:\n  2233: \t\t    You(\"enter a strange hive!\");\n  2234: \t\t    break;\n  2235: \t\tcase FUNGUSFARM:\n> 2236: \t\t    You(\"enter a room full of fungi!\");\n  2237: \t\t    break;\n  2238: \t\tcase COCKNEST:\n  2239: \t\t    You(\"enter a disgusting nest!\");\n  2240: \t\t    break;\n  2241: \t\tcase ANTHOLE:"
+    "stage": 0,
+    "context": "src/hack.c:2236:11\n  2231: \t\t    break;\n  2232: \t\tcase MIGOHIVE:\n  2233: \t\t    You(\"enter a strange hive!\");\n  2234: \t\t    break;\n  2235: \t\tcase FUNGUSFARM:\n&gt; 2236: \t\t    You(\"enter a room full of fungi!\");\n  2237: \t\t    break;\n  2238: \t\tcase COCKNEST:\n  2239: \t\t    You(\"enter a disgusting nest!\");\n  2240: \t\t    break;\n  2241: \t\tcase ANTHOLE:"
   },
   {
     "key": "L02239_01",
     "original": "enter a disgusting nest!",
     "translation": "",
-    "context": "src/hack.c:2239:11\n  2234: \t\t    break;\n  2235: \t\tcase FUNGUSFARM:\n  2236: \t\t    You(\"enter a room full of fungi!\");\n  2237: \t\t    break;\n  2238: \t\tcase COCKNEST:\n> 2239: \t\t    You(\"enter a disgusting nest!\");\n  2240: \t\t    break;\n  2241: \t\tcase ANTHOLE:\n  2242: \t\t    You(\"进入了一个蚁穴！\");\n  2243: \t\t    break;\n  2244: \t\tcase BARRACKS:"
+    "stage": 0,
+    "context": "src/hack.c:2239:11\n  2234: \t\t    break;\n  2235: \t\tcase FUNGUSFARM:\n  2236: \t\t    You(\"enter a room full of fungi!\");\n  2237: \t\t    break;\n  2238: \t\tcase COCKNEST:\n&gt; 2239: \t\t    You(\"enter a disgusting nest!\");\n  2240: \t\t    break;\n  2241: \t\tcase ANTHOLE:\n  2242: \t\t    You(\"进入了一个蚁穴！\");\n  2243: \t\t    break;\n  2244: \t\tcase BARRACKS:"
   },
   {
     "key": "L02255_01",
     "original": "%s, %s, welcome to Delphi!",
     "translation": "",
-    "context": "src/hack.c:2255:14\n  2250: \t\t    else\n  2251: \t\t\tYou(\"进入了一个被抛弃的营帐。\");\n  2252: \t\t    break;\n  2253: \t\tcase DELPHI:\n  2254: \t\t    if(monstinroom(&mons[PM_ORACLE], roomno))\n> 2255: \t\t\tverbalize(\"%s, %s, welcome to Delphi!\",\n  2256: \t\t\t\t\tHello((struct monst *) 0), plname);\n  2257: \t\t    break;\n  2258: \t\tcase TEMPLE:\n  2259: \t\t    intemple(roomno + ROOMOFFSET);\n  2260: \t\t    /* fall through */"
+    "stage": 0,
+    "context": "src/hack.c:2255:14\n  2250: \t\t    else\n  2251: \t\t\tYou(\"进入了一个被抛弃的营帐。\");\n  2252: \t\t    break;\n  2253: \t\tcase DELPHI:\n  2254: \t\t    if(monstinroom(&mons[PM_ORACLE], roomno))\n&gt; 2255: \t\t\tverbalize(\"%s, %s, welcome to Delphi!\",\n  2256: \t\t\t\t\tHello((struct monst *) 0), plname);\n  2257: \t\t    break;\n  2258: \t\tcase TEMPLE:\n  2259: \t\t    intemple(roomno + ROOMOFFSET);\n  2260: \t\t    /* fall through */"
   },
   {
     "key": "L02328_01",
     "original": "pick up %s tongue.",
     "translation": "",
-    "context": "src/hack.c:2328:11\n  2323: \tmulti = 0;\t/* always reset */\n  2324: \t/* uswallow case added by GAN 01/29/87 */\n  2325: \tif(u.uswallow) {\n  2326: \t    if (!u.ustuck->minvent) {\n  2327: \t\tif (is_animal(u.ustuck->data)) {\n> 2328: \t\t    You(\"pick up %s tongue.\",\n  2329: \t\t\t\t    s_suffix(mon_nam(u.ustuck)));\n  2330: \t\t    pline(\"但是它黏黏糊糊的，所以你把它丢了。\");\n  2331: \t\t} else\n  2332: \t\t    You(\"没有%s任何能捡起来的东西。\",\n  2333: \t\t\t  Blind ? \"feel\" : \"see\");"
+    "stage": 0,
+    "context": "src/hack.c:2328:11\n  2323: \tmulti = 0;\t/* always reset */\n  2324: \t/* uswallow case added by GAN 01/29/87 */\n  2325: \tif(u.uswallow) {\n  2326: \t    if (!u.ustuck-&gt;minvent) {\n  2327: \t\tif (is_animal(u.ustuck-&gt;data)) {\n&gt; 2328: \t\t    You(\"pick up %s tongue.\",\n  2329: \t\t\t\t    s_suffix(mon_nam(u.ustuck)));\n  2330: \t\t    pline(\"但是它黏黏糊糊的，所以你把它丢了。\");\n  2331: \t\t} else\n  2332: \t\t    You(\"没有%s任何能捡起来的东西。\",\n  2333: \t\t\t  Blind ? \"feel\" : \"see\");"
   },
   {
     "key": "L02333_01",
     "original": "feel",
     "translation": "",
-    "context": "src/hack.c:2333:14\n  2328: \t\t    You(\"pick up %s tongue.\",\n  2329: \t\t\t\t    s_suffix(mon_nam(u.ustuck)));\n  2330: \t\t    pline(\"但是它黏黏糊糊的，所以你把它丢了。\");\n  2331: \t\t} else\n  2332: \t\t    You(\"没有%s任何能捡起来的东西。\",\n> 2333: \t\t\t  Blind ? \"feel\" : \"see\");\n  2334: \t\treturn(1);\n  2335: \t    } else {\n  2336: \t    \tint tmpcount = -count;\n  2337: \t\treturn loot_mon(u.ustuck, &tmpcount, (boolean *)0);\n  2338: \t    }"
+    "stage": 0,
+    "context": "src/hack.c:2333:14\n  2328: \t\t    You(\"pick up %s tongue.\",\n  2329: \t\t\t\t    s_suffix(mon_nam(u.ustuck)));\n  2330: \t\t    pline(\"但是它黏黏糊糊的，所以你把它丢了。\");\n  2331: \t\t} else\n  2332: \t\t    You(\"没有%s任何能捡起来的东西。\",\n&gt; 2333: \t\t\t  Blind ? \"feel\" : \"see\");\n  2334: \t\treturn(1);\n  2335: \t    } else {\n  2336: \t    \tint tmpcount = -count;\n  2337: \t\treturn loot_mon(u.ustuck, &tmpcount, (boolean *)0);\n  2338: \t    }"
   },
   {
     "key": "L02333_02",
     "original": "see",
     "translation": "",
-    "context": "src/hack.c:2333:23\n  2328: \t\t    You(\"pick up %s tongue.\",\n  2329: \t\t\t\t    s_suffix(mon_nam(u.ustuck)));\n  2330: \t\t    pline(\"但是它黏黏糊糊的，所以你把它丢了。\");\n  2331: \t\t} else\n  2332: \t\t    You(\"没有%s任何能捡起来的东西。\",\n> 2333: \t\t\t  Blind ? \"feel\" : \"see\");\n  2334: \t\treturn(1);\n  2335: \t    } else {\n  2336: \t    \tint tmpcount = -count;\n  2337: \t\treturn loot_mon(u.ustuck, &tmpcount, (boolean *)0);\n  2338: \t    }"
+    "stage": 0,
+    "context": "src/hack.c:2333:23\n  2328: \t\t    You(\"pick up %s tongue.\",\n  2329: \t\t\t\t    s_suffix(mon_nam(u.ustuck)));\n  2330: \t\t    pline(\"但是它黏黏糊糊的，所以你把它丢了。\");\n  2331: \t\t} else\n  2332: \t\t    You(\"没有%s任何能捡起来的东西。\",\n&gt; 2333: \t\t\t  Blind ? \"feel\" : \"see\");\n  2334: \t\treturn(1);\n  2335: \t    } else {\n  2336: \t    \tint tmpcount = -count;\n  2337: \t\treturn loot_mon(u.ustuck, &tmpcount, (boolean *)0);\n  2338: \t    }"
   },
   {
     "key": "L02343_01",
     "original": "cannot dive into the water to pick things up.",
     "translation": "",
-    "context": "src/hack.c:2343:7\n  2338: \t    }\n  2339: \t}\n  2340: \tif(is_pool(u.ux, u.uy)) {\n  2341: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2342: \t\t\t|| (Flying && !Breathless)) {\n> 2343: \t\tYou(\"cannot dive into the water to pick things up.\");\n  2344: \t\treturn(0);\n  2345: \t    } else if (!Underwater) {\n  2346: \t\tYou_cant(\"even see the bottom, let alone pick up %s.\",\n  2347: \t\t\t\tsomething);\n  2348: \t\treturn(0);"
+    "stage": 0,
+    "context": "src/hack.c:2343:7\n  2338: \t    }\n  2339: \t}\n  2340: \tif(is_pool(u.ux, u.uy)) {\n  2341: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2342: \t\t\t|| (Flying && !Breathless)) {\n&gt; 2343: \t\tYou(\"cannot dive into the water to pick things up.\");\n  2344: \t\treturn(0);\n  2345: \t    } else if (!Underwater) {\n  2346: \t\tYou_cant(\"even see the bottom, let alone pick up %s.\",\n  2347: \t\t\t\tsomething);\n  2348: \t\treturn(0);"
   },
   {
     "key": "L02346_01",
     "original": "even see the bottom, let alone pick up %s.",
     "translation": "",
-    "context": "src/hack.c:2346:12\n  2341: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2342: \t\t\t|| (Flying && !Breathless)) {\n  2343: \t\tYou(\"cannot dive into the water to pick things up.\");\n  2344: \t\treturn(0);\n  2345: \t    } else if (!Underwater) {\n> 2346: \t\tYou_cant(\"even see the bottom, let alone pick up %s.\",\n  2347: \t\t\t\tsomething);\n  2348: \t\treturn(0);\n  2349: \t    }\n  2350: \t}\n  2351: \tif (is_lava(u.ux, u.uy)) {"
+    "stage": 0,
+    "context": "src/hack.c:2346:12\n  2341: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2342: \t\t\t|| (Flying && !Breathless)) {\n  2343: \t\tYou(\"cannot dive into the water to pick things up.\");\n  2344: \t\treturn(0);\n  2345: \t    } else if (!Underwater) {\n&gt; 2346: \t\tYou_cant(\"even see the bottom, let alone pick up %s.\",\n  2347: \t\t\t\tsomething);\n  2348: \t\treturn(0);\n  2349: \t    }\n  2350: \t}\n  2351: \tif (is_lava(u.ux, u.uy)) {"
   },
   {
     "key": "L02354_01",
     "original": "reach the bottom to pick things up.",
     "translation": "",
-    "context": "src/hack.c:2354:12\n  2349: \t    }\n  2350: \t}\n  2351: \tif (is_lava(u.ux, u.uy)) {\n  2352: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2353: \t\t\t|| (Flying && !Breathless)) {\n> 2354: \t\tYou_cant(\"reach the bottom to pick things up.\");\n  2355: \t\treturn(0);\n  2356: \t    } else if (!likes_lava(youmonst.data)) {\n  2357: \t\tYou(\"would burn to a crisp trying to pick things up.\");\n  2358: \t\treturn(0);\n  2359: \t    }"
+    "stage": 0,
+    "context": "src/hack.c:2354:12\n  2349: \t    }\n  2350: \t}\n  2351: \tif (is_lava(u.ux, u.uy)) {\n  2352: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2353: \t\t\t|| (Flying && !Breathless)) {\n&gt; 2354: \t\tYou_cant(\"reach the bottom to pick things up.\");\n  2355: \t\treturn(0);\n  2356: \t    } else if (!likes_lava(youmonst.data)) {\n  2357: \t\tYou(\"would burn to a crisp trying to pick things up.\");\n  2358: \t\treturn(0);\n  2359: \t    }"
   },
   {
     "key": "L02357_01",
     "original": "would burn to a crisp trying to pick things up.",
     "translation": "",
-    "context": "src/hack.c:2357:7\n  2352: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2353: \t\t\t|| (Flying && !Breathless)) {\n  2354: \t\tYou_cant(\"reach the bottom to pick things up.\");\n  2355: \t\treturn(0);\n  2356: \t    } else if (!likes_lava(youmonst.data)) {\n> 2357: \t\tYou(\"would burn to a crisp trying to pick things up.\");\n  2358: \t\treturn(0);\n  2359: \t    }\n  2360: \t}\n  2361: \tif(!OBJ_AT(u.ux, u.uy)) {\n  2362: \t\tThere(\"is nothing here to pick up.\");"
+    "stage": 0,
+    "context": "src/hack.c:2357:7\n  2352: \t    if (Wwalking || is_floater(youmonst.data) || is_clinger(youmonst.data)\n  2353: \t\t\t|| (Flying && !Breathless)) {\n  2354: \t\tYou_cant(\"reach the bottom to pick things up.\");\n  2355: \t\treturn(0);\n  2356: \t    } else if (!likes_lava(youmonst.data)) {\n&gt; 2357: \t\tYou(\"would burn to a crisp trying to pick things up.\");\n  2358: \t\treturn(0);\n  2359: \t    }\n  2360: \t}\n  2361: \tif(!OBJ_AT(u.ux, u.uy)) {\n  2362: \t\tThere(\"is nothing here to pick up.\");"
   },
   {
     "key": "L02362_01",
     "original": "is nothing here to pick up.",
     "translation": "",
-    "context": "src/hack.c:2362:9\n  2357: \t\tYou(\"would burn to a crisp trying to pick things up.\");\n  2358: \t\treturn(0);\n  2359: \t    }\n  2360: \t}\n  2361: \tif(!OBJ_AT(u.ux, u.uy)) {\n> 2362: \t\tThere(\"is nothing here to pick up.\");\n  2363: \t\treturn(0);\n  2364: \t}\n  2365: \tif (!can_reach_floor()) {\n  2366: #ifdef STEED\n  2367: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC)"
+    "stage": 0,
+    "context": "src/hack.c:2362:9\n  2357: \t\tYou(\"would burn to a crisp trying to pick things up.\");\n  2358: \t\treturn(0);\n  2359: \t    }\n  2360: \t}\n  2361: \tif(!OBJ_AT(u.ux, u.uy)) {\n&gt; 2362: \t\tThere(\"is nothing here to pick up.\");\n  2363: \t\treturn(0);\n  2364: \t}\n  2365: \tif (!can_reach_floor()) {\n  2366: #ifdef STEED\n  2367: \t\tif (u.usteed && P_SKILL(P_RIDING) &lt; P_BASIC)"
   },
   {
     "key": "L02368_01",
     "original": "aren't skilled enough to reach from %s.",
     "translation": "",
-    "context": "src/hack.c:2368:11\n  2363: \t\treturn(0);\n  2364: \t}\n  2365: \tif (!can_reach_floor()) {\n  2366: #ifdef STEED\n  2367: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC)\n> 2368: \t\t    You(\"aren't skilled enough to reach from %s.\",\n  2369: \t\t\ty_monnam(u.usteed));\n  2370: \t\telse\n  2371: #endif\n  2372: \t\tYou(\"cannot reach the %s.\", surface(u.ux,u.uy));\n  2373: \t\treturn(0);"
+    "stage": 0,
+    "context": "src/hack.c:2368:11\n  2363: \t\treturn(0);\n  2364: \t}\n  2365: \tif (!can_reach_floor()) {\n  2366: #ifdef STEED\n  2367: \t\tif (u.usteed && P_SKILL(P_RIDING) &lt; P_BASIC)\n&gt; 2368: \t\t    You(\"aren't skilled enough to reach from %s.\",\n  2369: \t\t\ty_monnam(u.usteed));\n  2370: \t\telse\n  2371: #endif\n  2372: \t\tYou(\"cannot reach the %s.\", surface(u.ux,u.uy));\n  2373: \t\treturn(0);"
   },
   {
     "key": "L02372_01",
     "original": "cannot reach the %s.",
     "translation": "",
-    "context": "src/hack.c:2372:7\n  2367: \t\tif (u.usteed && P_SKILL(P_RIDING) < P_BASIC)\n  2368: \t\t    You(\"aren't skilled enough to reach from %s.\",\n  2369: \t\t\ty_monnam(u.usteed));\n  2370: \t\telse\n  2371: #endif\n> 2372: \t\tYou(\"cannot reach the %s.\", surface(u.ux,u.uy));\n  2373: \t\treturn(0);\n  2374: \t}\n  2375: \n  2376:  \tif (traphere && traphere->tseen) {\n  2377: \t\t/* Allow pickup from holes and trap doors that you escaped from"
+    "stage": 0,
+    "context": "src/hack.c:2372:7\n  2367: \t\tif (u.usteed && P_SKILL(P_RIDING) &lt; P_BASIC)\n  2368: \t\t    You(\"aren't skilled enough to reach from %s.\",\n  2369: \t\t\ty_monnam(u.usteed));\n  2370: \t\telse\n  2371: #endif\n&gt; 2372: \t\tYou(\"cannot reach the %s.\", surface(u.ux,u.uy));\n  2373: \t\treturn(0);\n  2374: \t}\n  2375: \n  2376:  \tif (traphere && traphere-&gt;tseen) {\n  2377: \t\t/* Allow pickup from holes and trap doors that you escaped from"
   },
   {
     "key": "L02564_01",
     "original": "Elf",
     "translation": "",
-    "context": "src/hack.c:2564:18\n  2559:     if (Role_if(PM_WIZARD) || Race_if(PM_ELF) || Role_if(PM_VALKYRIE)) {\n  2560: \tconst char *who;\n  2561: \tint i, powercnt;\n  2562: \n  2563: \twho = (Role_if(PM_WIZARD) || Role_if(PM_VALKYRIE)) ?\n> 2564: \t\turole.name.m : \"Elf\";\n  2565: \tif (u.uhp == 1) {\n  2566: \t    pline(\"%s is about to die.\", who);\n  2567: \t} else {\n  2568: \t    for (i = 0, powercnt = 0; i < SIZE(powers); ++i)\n  2569: \t\tif (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;"
+    "stage": 0,
+    "context": "src/hack.c:2564:18\n  2559:     if (Role_if(PM_WIZARD) || Race_if(PM_ELF) || Role_if(PM_VALKYRIE)) {\n  2560: \tconst char *who;\n  2561: \tint i, powercnt;\n  2562: \n  2563: \twho = (Role_if(PM_WIZARD) || Role_if(PM_VALKYRIE)) ?\n&gt; 2564: \t\turole.name.m : \"Elf\";\n  2565: \tif (u.uhp == 1) {\n  2566: \t    pline(\"%s is about to die.\", who);\n  2567: \t} else {\n  2568: \t    for (i = 0, powercnt = 0; i &lt; SIZE(powers); ++i)\n  2569: \t\tif (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;"
   },
   {
     "key": "L02566_01",
     "original": "%s is about to die.",
     "translation": "",
-    "context": "src/hack.c:2566:12\n  2561: \tint i, powercnt;\n  2562: \n  2563: \twho = (Role_if(PM_WIZARD) || Role_if(PM_VALKYRIE)) ?\n  2564: \t\turole.name.m : \"Elf\";\n  2565: \tif (u.uhp == 1) {\n> 2566: \t    pline(\"%s is about to die.\", who);\n  2567: \t} else {\n  2568: \t    for (i = 0, powercnt = 0; i < SIZE(powers); ++i)\n  2569: \t\tif (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;\n  2570: \n  2571: \t    pline(powercnt >= 4 ? \"%s, all your powers will be lost...\""
+    "stage": 0,
+    "context": "src/hack.c:2566:12\n  2561: \tint i, powercnt;\n  2562: \n  2563: \twho = (Role_if(PM_WIZARD) || Role_if(PM_VALKYRIE)) ?\n  2564: \t\turole.name.m : \"Elf\";\n  2565: \tif (u.uhp == 1) {\n&gt; 2566: \t    pline(\"%s is about to die.\", who);\n  2567: \t} else {\n  2568: \t    for (i = 0, powercnt = 0; i &lt; SIZE(powers); ++i)\n  2569: \t\tif (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;\n  2570: \n  2571: \t    pline(powercnt &gt;= 4 ? \"%s, all your powers will be lost...\""
   },
   {
     "key": "L02571_01",
     "original": "%s, all your powers will be lost...",
     "translation": "",
-    "context": "src/hack.c:2571:28\n  2566: \t    pline(\"%s is about to die.\", who);\n  2567: \t} else {\n  2568: \t    for (i = 0, powercnt = 0; i < SIZE(powers); ++i)\n  2569: \t\tif (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;\n  2570: \n> 2571: \t    pline(powercnt >= 4 ? \"%s, all your powers will be lost...\"\n  2572: \t\t\t\t: \"%s，看来你马上就要魂归黄金王座了。\", who);\n  2573: \t}\n  2574:     } else {\n  2575: \tYou_hear(u.uhp == 1 ? \"the wailing of the Banshee...\"\n  2576: \t\t\t    : \"the howling of the CwnAnnwn...\");"
+    "stage": 0,
+    "context": "src/hack.c:2571:28\n  2566: \t    pline(\"%s is about to die.\", who);\n  2567: \t} else {\n  2568: \t    for (i = 0, powercnt = 0; i &lt; SIZE(powers); ++i)\n  2569: \t\tif (u.uprops[powers[i]].intrinsic & INTRINSIC) ++powercnt;\n  2570: \n&gt; 2571: \t    pline(powercnt &gt;= 4 ? \"%s, all your powers will be lost...\"\n  2572: \t\t\t\t: \"%s，看来你马上就要魂归黄金王座了。\", who);\n  2573: \t}\n  2574:     } else {\n  2575: \tYou_hear(u.uhp == 1 ? \"the wailing of the Banshee...\"\n  2576: \t\t\t    : \"the howling of the CwnAnnwn...\");"
   },
   {
     "key": "L02575_01",
     "original": "the wailing of the Banshee...",
     "translation": "",
-    "context": "src/hack.c:2575:24\n  2570: \n  2571: \t    pline(powercnt >= 4 ? \"%s, all your powers will be lost...\"\n  2572: \t\t\t\t: \"%s，看来你马上就要魂归黄金王座了。\", who);\n  2573: \t}\n  2574:     } else {\n> 2575: \tYou_hear(u.uhp == 1 ? \"the wailing of the Banshee...\"\n  2576: \t\t\t    : \"the howling of the CwnAnnwn...\");\n  2577:     }\n  2578: }\n  2579: \n  2580: void"
+    "stage": 0,
+    "context": "src/hack.c:2575:24\n  2570: \n  2571: \t    pline(powercnt &gt;= 4 ? \"%s, all your powers will be lost...\"\n  2572: \t\t\t\t: \"%s，看来你马上就要魂归黄金王座了。\", who);\n  2573: \t}\n  2574:     } else {\n&gt; 2575: \tYou_hear(u.uhp == 1 ? \"the wailing of the Banshee...\"\n  2576: \t\t\t    : \"the howling of the CwnAnnwn...\");\n  2577:     }\n  2578: }\n  2579: \n  2580: void"
   },
   {
     "key": "L02576_01",
     "original": "the howling of the CwnAnnwn...",
     "translation": "",
-    "context": "src/hack.c:2576:10\n  2571: \t    pline(powercnt >= 4 ? \"%s, all your powers will be lost...\"\n  2572: \t\t\t\t: \"%s，看来你马上就要魂归黄金王座了。\", who);\n  2573: \t}\n  2574:     } else {\n  2575: \tYou_hear(u.uhp == 1 ? \"the wailing of the Banshee...\"\n> 2576: \t\t\t    : \"the howling of the CwnAnnwn...\");\n  2577:     }\n  2578: }\n  2579: \n  2580: void\n  2581: nomul(nval)"
+    "stage": 0,
+    "context": "src/hack.c:2576:10\n  2571: \t    pline(powercnt &gt;= 4 ? \"%s, all your powers will be lost...\"\n  2572: \t\t\t\t: \"%s，看来你马上就要魂归黄金王座了。\", who);\n  2573: \t}\n  2574:     } else {\n  2575: \tYou_hear(u.uhp == 1 ? \"the wailing of the Banshee...\"\n&gt; 2576: \t\t\t    : \"the howling of the CwnAnnwn...\");\n  2577:     }\n  2578: }\n  2579: \n  2580: void\n  2581: nomul(nval)"
   },
   {
     "key": "L02634_01",
     "original": "(%d pts.)",
     "translation": "",
-    "context": "src/hack.c:2634:10\n  2629:     }\n  2630: #ifdef WIZARD\n  2631: \t\tif (wizard) lev = 1;\n  2632: #endif\n  2633: \t\tif(u.ulevel >= lev)\n> 2634: \t\t\tpline(\"(%d pts.)\", n);\n  2635:     }\n  2636: \treturn;\n  2637: }\n  2638: #endif\n  2639: "
+    "stage": 0,
+    "context": "src/hack.c:2634:10\n  2629:     }\n  2630: #ifdef WIZARD\n  2631: \t\tif (wizard) lev = 1;\n  2632: #endif\n  2633: \t\tif(u.ulevel &gt;= lev)\n&gt; 2634: \t\t\tpline(\"(%d pts.)\", n);\n  2635:     }\n  2636: \treturn;\n  2637: }\n  2638: #endif\n  2639: "
   },
   {
     "key": "L02656_01",
     "original": "[%d pts.]",
     "translation": "",
-    "context": "src/hack.c:2656:41\n  2651: \t\t/* NOTE: DO NOT RETURN - losehp is also called to check for death \n  2652: \t\t * via u.uhp < 1\n  2653: \t\t */\n  2654: \t}        \n  2655: #ifdef SHOW_DMG                \n> 2656: \telse if (flags.showdmg && n > 0) pline(\"[%d pts.]\", n); /* WAC see damage */\n  2657: #endif\n  2658: \n  2659: \tif (Upolyd) {\n  2660: \t\tu.mh -= n;\n  2661: \t\tif (u.mhmax < u.mh) u.mhmax = u.mh;"
+    "stage": 0,
+    "context": "src/hack.c:2656:41\n  2651: \t\t/* NOTE: DO NOT RETURN - losehp is also called to check for death \n  2652: \t\t * via u.uhp &lt; 1\n  2653: \t\t */\n  2654: \t}        \n  2655: #ifdef SHOW_DMG                \n&gt; 2656: \telse if (flags.showdmg && n &gt; 0) pline(\"[%d pts.]\", n); /* WAC see damage */\n  2657: #endif\n  2658: \n  2659: \tif (Upolyd) {\n  2660: \t\tu.mh -= n;\n  2661: \t\tif (u.mhmax &lt; u.mh) u.mhmax = u.mh;"
   }
 ]

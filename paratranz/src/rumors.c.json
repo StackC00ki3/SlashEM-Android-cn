@@ -3,198 +3,231 @@
     "key": "L00048_01",
     "original": "%6lx\\n",
     "translation": "",
-    "context": "src/rumors.c:48:19\n    43: {\n    44: \tchar line[BUFSZ];\n    45: \n    46: \t(void) dlb_fgets(line, sizeof line, fp); /* skip \"don't edit\" comment */\n    47: \t(void) dlb_fgets(line, sizeof line, fp);\n>   48: \tif (sscanf(line, \"%6lx\\n\", &true_rumor_size) == 1 &&\n    49: \t    true_rumor_size > 0L) {\n    50: \t    (void) dlb_fseek(fp, 0L, SEEK_CUR);\n    51: \t    true_rumor_start  = dlb_ftell(fp);\n    52: \t    true_rumor_end    = true_rumor_start + true_rumor_size;\n    53: \t    (void) dlb_fseek(fp, 0L, SEEK_END);"
+    "stage": 0,
+    "context": "src/rumors.c:48:19\n    43: {\n    44: \tchar line[BUFSZ];\n    45: \n    46: \t(void) dlb_fgets(line, sizeof line, fp); /* skip \"don't edit\" comment */\n    47: \t(void) dlb_fgets(line, sizeof line, fp);\n&gt;   48: \tif (sscanf(line, \"%6lx\\n\", &true_rumor_size) == 1 &&\n    49: \t    true_rumor_size &gt; 0L) {\n    50: \t    (void) dlb_fseek(fp, 0L, SEEK_CUR);\n    51: \t    true_rumor_start  = dlb_ftell(fp);\n    52: \t    true_rumor_end    = true_rumor_start + true_rumor_size;\n    53: \t    (void) dlb_fseek(fp, 0L, SEEK_END);"
   },
   {
     "key": "L00080_01",
     "original": "r",
     "translation": "",
-    "context": "src/rumors.c:80:54\n    75: \n    76: \trumor_buf[0] = '\\0';\n    77: \tif (true_rumor_size < 0L)\t/* we couldn't open NH_RUMORFILE */\n    78: \t\treturn rumor_buf;\n    79: \n>   80: \trumors = dlb_fopen_area(NH_RUMORAREA, NH_RUMORFILE, \"r\");\n    81: \n    82: \tif (rumors) {\n    83: \t    int count = 0;\n    84: \t    int adjtruth;\n    85: "
+    "stage": 0,
+    "context": "src/rumors.c:80:54\n    75: \n    76: \trumor_buf[0] = '\\0';\n    77: \tif (true_rumor_size &lt; 0L)\t/* we couldn't open NH_RUMORFILE */\n    78: \t\treturn rumor_buf;\n    79: \n&gt;   80: \trumors = dlb_fopen_area(NH_RUMORAREA, NH_RUMORFILE, \"r\");\n    81: \n    82: \tif (rumors) {\n    83: \t    int count = 0;\n    84: \t    int adjtruth;\n    85: "
   },
   {
     "key": "L00091_01",
     "original": "Error reading \\\"%.80s\\\".",
     "translation": "",
-    "context": "src/rumors.c:91:23\n    86: \t    do {\n    87: \t\trumor_buf[0] = '\\0';\n    88: \t\tif (true_rumor_size == 0L) {\t/* if this is 1st outrumor() */\n    89: \t\t    init_rumors(rumors);\n    90: \t\t    if (true_rumor_size < 0L) {\t/* init failed */\n>   91: \t\t\tSprintf(rumor_buf, \"Error reading \\\"%.80s\\\".\",\n    92: \t\t\t\tNH_RUMORFILE);\n    93: \t\t\treturn rumor_buf;\n    94: \t\t    }\n    95: \t\t}\n    96: \t\t/*"
+    "stage": 0,
+    "context": "src/rumors.c:91:23\n    86: \t    do {\n    87: \t\trumor_buf[0] = '\\0';\n    88: \t\tif (true_rumor_size == 0L) {\t/* if this is 1st outrumor() */\n    89: \t\t    init_rumors(rumors);\n    90: \t\t    if (true_rumor_size &lt; 0L) {\t/* init failed */\n&gt;   91: \t\t\tSprintf(rumor_buf, \"Error reading \\\"%.80s\\\".\",\n    92: \t\t\t\tNH_RUMORFILE);\n    93: \t\t\treturn rumor_buf;\n    94: \t\t    }\n    95: \t\t}\n    96: \t\t/*"
   },
   {
     "key": "L00111_01",
     "original": "strange truth value for rumor",
     "translation": "",
-    "context": "src/rumors.c:111:19\n   106: \t\t  case  0:\t/* once here, 0 => false rather than \"either\"*/\n   107: \t\t  case -1:  beginning = false_rumor_start;\n   108: \t\t\t    tidbit = Rand() % false_rumor_size;\n   109: \t\t\tbreak;\n   110: \t\t  default:\n>  111: \t\t\t    impossible(\"strange truth value for rumor\");\n   112: \t\t\treturn strcpy(rumor_buf, \"Oops...\");\n   113: \t\t}\n   114: \t\t(void) dlb_fseek(rumors, beginning + tidbit, SEEK_SET);\n   115: \t\t(void) dlb_fgets(line, sizeof line, rumors);\n   116: \t\tif (!dlb_fgets(line, sizeof line, rumors) ||"
+    "stage": 0,
+    "context": "src/rumors.c:111:19\n   106: \t\t  case  0:\t/* once here, 0 =&gt; false rather than \"either\"*/\n   107: \t\t  case -1:  beginning = false_rumor_start;\n   108: \t\t\t    tidbit = Rand() % false_rumor_size;\n   109: \t\t\tbreak;\n   110: \t\t  default:\n&gt;  111: \t\t\t    impossible(\"strange truth value for rumor\");\n   112: \t\t\treturn strcpy(rumor_buf, \"Oops...\");\n   113: \t\t}\n   114: \t\t(void) dlb_fseek(rumors, beginning + tidbit, SEEK_SET);\n   115: \t\t(void) dlb_fgets(line, sizeof line, rumors);\n   116: \t\tif (!dlb_fgets(line, sizeof line, rumors) ||"
   },
   {
     "key": "L00112_01",
     "original": "Oops...",
     "translation": "",
-    "context": "src/rumors.c:112:29\n   107: \t\t  case -1:  beginning = false_rumor_start;\n   108: \t\t\t    tidbit = Rand() % false_rumor_size;\n   109: \t\t\tbreak;\n   110: \t\t  default:\n   111: \t\t\t    impossible(\"strange truth value for rumor\");\n>  112: \t\t\treturn strcpy(rumor_buf, \"Oops...\");\n   113: \t\t}\n   114: \t\t(void) dlb_fseek(rumors, beginning + tidbit, SEEK_SET);\n   115: \t\t(void) dlb_fgets(line, sizeof line, rumors);\n   116: \t\tif (!dlb_fgets(line, sizeof line, rumors) ||\n   117: \t\t    (adjtruth > 0 && dlb_ftell(rumors) > true_rumor_end)) {"
+    "stage": 0,
+    "context": "src/rumors.c:112:29\n   107: \t\t  case -1:  beginning = false_rumor_start;\n   108: \t\t\t    tidbit = Rand() % false_rumor_size;\n   109: \t\t\tbreak;\n   110: \t\t  default:\n   111: \t\t\t    impossible(\"strange truth value for rumor\");\n&gt;  112: \t\t\treturn strcpy(rumor_buf, \"Oops...\");\n   113: \t\t}\n   114: \t\t(void) dlb_fseek(rumors, beginning + tidbit, SEEK_SET);\n   115: \t\t(void) dlb_fgets(line, sizeof line, rumors);\n   116: \t\tif (!dlb_fgets(line, sizeof line, rumors) ||\n   117: \t\t    (adjtruth &gt; 0 && dlb_ftell(rumors) &gt; true_rumor_end)) {"
   },
   {
     "key": "L00124_01",
     "original": "fortune",
     "translation": "",
-    "context": "src/rumors.c:124:68\n   119: \t\t\t(void) dlb_fseek(rumors, beginning, SEEK_SET);\n   120: \t\t\t(void) dlb_fgets(line, sizeof line, rumors);\n   121: \t\t}\n   122: \t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   123: \t\tStrcat(rumor_buf, xcrypt(line, xbuf));\n>  124: \t    } while(count++ < 50 && exclude_cookie && (strstri(rumor_buf, \"fortune\") || strstri(rumor_buf, \"pity\")));\n   125: \t    (void) dlb_fclose(rumors);\n   126: \t    if (count >= 50)\n   127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth > 0));"
+    "stage": 0,
+    "context": "src/rumors.c:124:68\n   119: \t\t\t(void) dlb_fseek(rumors, beginning, SEEK_SET);\n   120: \t\t\t(void) dlb_fgets(line, sizeof line, rumors);\n   121: \t\t}\n   122: \t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   123: \t\tStrcat(rumor_buf, xcrypt(line, xbuf));\n&gt;  124: \t    } while(count++ &lt; 50 && exclude_cookie && (strstri(rumor_buf, \"fortune\") || strstri(rumor_buf, \"pity\")));\n   125: \t    (void) dlb_fclose(rumors);\n   126: \t    if (count &gt;= 50)\n   127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth &gt; 0));"
   },
   {
     "key": "L00124_02",
     "original": "pity",
     "translation": "",
-    "context": "src/rumors.c:124:101\n   119: \t\t\t(void) dlb_fseek(rumors, beginning, SEEK_SET);\n   120: \t\t\t(void) dlb_fgets(line, sizeof line, rumors);\n   121: \t\t}\n   122: \t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   123: \t\tStrcat(rumor_buf, xcrypt(line, xbuf));\n>  124: \t    } while(count++ < 50 && exclude_cookie && (strstri(rumor_buf, \"fortune\") || strstri(rumor_buf, \"pity\")));\n   125: \t    (void) dlb_fclose(rumors);\n   126: \t    if (count >= 50)\n   127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth > 0));"
+    "stage": 0,
+    "context": "src/rumors.c:124:101\n   119: \t\t\t(void) dlb_fseek(rumors, beginning, SEEK_SET);\n   120: \t\t\t(void) dlb_fgets(line, sizeof line, rumors);\n   121: \t\t}\n   122: \t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   123: \t\tStrcat(rumor_buf, xcrypt(line, xbuf));\n&gt;  124: \t    } while(count++ &lt; 50 && exclude_cookie && (strstri(rumor_buf, \"fortune\") || strstri(rumor_buf, \"pity\")));\n   125: \t    (void) dlb_fclose(rumors);\n   126: \t    if (count &gt;= 50)\n   127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth &gt; 0));"
   },
   {
     "key": "L00127_01",
     "original": "Can't find non-cookie rumor?",
     "translation": "",
-    "context": "src/rumors.c:127:14\n   122: \t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   123: \t\tStrcat(rumor_buf, xcrypt(line, xbuf));\n   124: \t    } while(count++ < 50 && exclude_cookie && (strstri(rumor_buf, \"fortune\") || strstri(rumor_buf, \"pity\")));\n   125: \t    (void) dlb_fclose(rumors);\n   126: \t    if (count >= 50)\n>  127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth > 0));\n   130: \t} else {\n   131: \t\tpline(\"Can't open rumors file!\");\n   132: \t\ttrue_rumor_size = -1;\t/* don't try to open it again */"
+    "stage": 0,
+    "context": "src/rumors.c:127:14\n   122: \t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   123: \t\tStrcat(rumor_buf, xcrypt(line, xbuf));\n   124: \t    } while(count++ &lt; 50 && exclude_cookie && (strstri(rumor_buf, \"fortune\") || strstri(rumor_buf, \"pity\")));\n   125: \t    (void) dlb_fclose(rumors);\n   126: \t    if (count &gt;= 50)\n&gt;  127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth &gt; 0));\n   130: \t} else {\n   131: \t\tpline(\"Can't open rumors file!\");\n   132: \t\ttrue_rumor_size = -1;\t/* don't try to open it again */"
   },
   {
     "key": "L00131_01",
     "original": "Can't open rumors file!",
     "translation": "",
-    "context": "src/rumors.c:131:9\n   126: \t    if (count >= 50)\n   127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth > 0));\n   130: \t} else {\n>  131: \t\tpline(\"Can't open rumors file!\");\n   132: \t\ttrue_rumor_size = -1;\t/* don't try to open it again */\n   133: \t}\n   134: \treturn rumor_buf;\n   135: }\n   136: "
+    "stage": 0,
+    "context": "src/rumors.c:131:9\n   126: \t    if (count &gt;= 50)\n   127: \t\timpossible(\"Can't find non-cookie rumor?\");\n   128: \t    else\n   129: \t\texercise(A_WIS, (adjtruth &gt; 0));\n   130: \t} else {\n&gt;  131: \t\tpline(\"Can't open rumors file!\");\n   132: \t\ttrue_rumor_size = -1;\t/* don't try to open it again */\n   133: \t}\n   134: \treturn rumor_buf;\n   135: }\n   136: "
   },
   {
     "key": "L00143_01",
     "original": "This cookie has a scrap of paper inside.",
     "translation": "",
-    "context": "src/rumors.c:143:3\n   138: outrumor(truth, mechanism)\n   139: int truth; /* 1=true, -1=false, 0=either */\n   140: int mechanism;\n   141: {\n   142: \tstatic const char fortune_msg[] =\n>  143: \t\t\"This cookie has a scrap of paper inside.\";\n   144: \tconst char *line;\n   145: \tchar buf[BUFSZ];\n   146: \tboolean reading = (mechanism == BY_COOKIE ||\n   147: \t\t\t   mechanism == BY_PAPER);\n   148: "
+    "stage": 0,
+    "context": "src/rumors.c:143:3\n   138: outrumor(truth, mechanism)\n   139: int truth; /* 1=true, -1=false, 0=either */\n   140: int mechanism;\n   141: {\n   142: \tstatic const char fortune_msg[] =\n&gt;  143: \t\t\"This cookie has a scrap of paper inside.\";\n   144: \tconst char *line;\n   145: \tchar buf[BUFSZ];\n   146: \tboolean reading = (mechanism == BY_COOKIE ||\n   147: \t\t\t   mechanism == BY_PAPER);\n   148: "
   },
   {
     "key": "L00156_01",
     "original": "What a pity that you cannot read it!",
     "translation": "",
-    "context": "src/rumors.c:156:9\n   151: \t    if (is_fainted() && mechanism == BY_COOKIE)\n   152: \t    \treturn;\n   153: \t    else if (Blind) {\n   154: \t\tif (mechanism == BY_COOKIE)\n   155: \t\t\tpline(fortune_msg);\n>  156: \t\tpline(\"What a pity that you cannot read it!\");\n   157: \t    \treturn;\n   158: \t    }\n   159: \t}\n   160: \tline = getrumor(truth, buf, reading ? FALSE : TRUE);\n   161: \tif (!*line)"
+    "stage": 0,
+    "context": "src/rumors.c:156:9\n   151: \t    if (is_fainted() && mechanism == BY_COOKIE)\n   152: \t    \treturn;\n   153: \t    else if (Blind) {\n   154: \t\tif (mechanism == BY_COOKIE)\n   155: \t\t\tpline(fortune_msg);\n&gt;  156: \t\tpline(\"What a pity that you cannot read it!\");\n   157: \t    \treturn;\n   158: \t    }\n   159: \t}\n   160: \tline = getrumor(truth, buf, reading ? FALSE : TRUE);\n   161: \tif (!*line)"
   },
   {
     "key": "L00162_01",
     "original": "NetHack rumors file closed for renovation.",
     "translation": "",
-    "context": "src/rumors.c:162:10\n   157: \t    \treturn;\n   158: \t    }\n   159: \t}\n   160: \tline = getrumor(truth, buf, reading ? FALSE : TRUE);\n   161: \tif (!*line)\n>  162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :"
+    "stage": 0,
+    "context": "src/rumors.c:162:10\n   157: \t    \treturn;\n   158: \t    }\n   159: \t}\n   160: \tline = getrumor(truth, buf, reading ? FALSE : TRUE);\n   161: \tif (!*line)\n&gt;  162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :"
   },
   {
     "key": "L00166_01",
     "original": "True to her word, the Oracle %ssays: ",
     "translation": "",
-    "context": "src/rumors.c:166:9\n   161: \tif (!*line)\n   162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n>  166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;"
+    "stage": 0,
+    "context": "src/rumors.c:166:9\n   161: \tif (!*line)\n   162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n&gt;  166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;"
   },
   {
     "key": "L00167_01",
     "original": "offhandedly ",
     "translation": "",
-    "context": "src/rumors.c:167:16\n   162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n>  167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:"
+    "stage": 0,
+    "context": "src/rumors.c:167:16\n   162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n&gt;  167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:"
   },
   {
     "key": "L00167_02",
     "original": "casually ",
     "translation": "",
-    "context": "src/rumors.c:167:44\n   162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n>  167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:"
+    "stage": 0,
+    "context": "src/rumors.c:167:44\n   162: \t\tline = \"NetHack rumors file closed for renovation.\";\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n&gt;  167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:"
   },
   {
     "key": "L00168_01",
     "original": "nonchalantly ",
     "translation": "",
-    "context": "src/rumors.c:168:15\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n>  168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:\n   173: \t\tpline(fortune_msg);"
+    "stage": 0,
+    "context": "src/rumors.c:168:15\n   163: \tswitch (mechanism) {\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n&gt;  168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n   169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:\n   173: \t\tpline(fortune_msg);"
   },
   {
     "key": "L00169_01",
     "original": "%s",
     "translation": "",
-    "context": "src/rumors.c:169:13\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n>  169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:\n   173: \t\tpline(fortune_msg);\n   174: \t\t/* FALLTHRU */"
+    "stage": 0,
+    "context": "src/rumors.c:169:13\n   164: \t    case BY_ORACLE:\n   165: \t \t/* Oracle delivers the rumor */\n   166: \t\tpline(\"True to her word, the Oracle %ssays: \",\n   167: \t\t  (!rn2(4) ? \"offhandedly \" : (!rn2(3) ? \"casually \" :\n   168: \t\t  (rn2(2) ? \"nonchalantly \" : \"\"))));\n&gt;  169: \t\tverbalize(\"%s\", line);\n   170: \t\texercise(A_WIS, TRUE);\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:\n   173: \t\tpline(fortune_msg);\n   174: \t\t/* FALLTHRU */"
   },
   {
     "key": "L00176_01",
     "original": "It reads:",
     "translation": "",
-    "context": "src/rumors.c:176:9\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:\n   173: \t\tpline(fortune_msg);\n   174: \t\t/* FALLTHRU */\n   175: \t    case BY_PAPER:\n>  176: \t\tpline(\"It reads:\");\n   177: \t\tbreak;\n   178: \t}\n   179: \tpline(\"%s\", line);\n   180: }\n   181: "
+    "stage": 0,
+    "context": "src/rumors.c:176:9\n   171: \t\treturn;\n   172: \t    case BY_COOKIE:\n   173: \t\tpline(fortune_msg);\n   174: \t\t/* FALLTHRU */\n   175: \t    case BY_PAPER:\n&gt;  176: \t\tpline(\"It reads:\");\n   177: \t\tbreak;\n   178: \t}\n   179: \tpline(\"%s\", line);\n   180: }\n   181: "
   },
   {
     "key": "L00179_01",
     "original": "%s",
     "translation": "",
-    "context": "src/rumors.c:179:8\n   174: \t\t/* FALLTHRU */\n   175: \t    case BY_PAPER:\n   176: \t\tpline(\"It reads:\");\n   177: \t\tbreak;\n   178: \t}\n>  179: \tpline(\"%s\", line);\n   180: }\n   181: \n   182: STATIC_OVL void\n   183: init_oracles(fp)\n   184: dlb *fp;"
+    "stage": 0,
+    "context": "src/rumors.c:179:8\n   174: \t\t/* FALLTHRU */\n   175: \t    case BY_PAPER:\n   176: \t\tpline(\"It reads:\");\n   177: \t\tbreak;\n   178: \t}\n&gt;  179: \tpline(\"%s\", line);\n   180: }\n   181: \n   182: STATIC_OVL void\n   183: init_oracles(fp)\n   184: dlb *fp;"
   },
   {
     "key": "L00193_01",
     "original": "%5d\\n",
     "translation": "",
-    "context": "src/rumors.c:193:19\n   188: \tint cnt = 0;\n   189: \n   190: \t/* this assumes we're only called once */\n   191: \t(void) dlb_fgets(line, sizeof line, fp); /* skip \"don't edit\" comment*/\n   192: \t(void) dlb_fgets(line, sizeof line, fp);\n>  193: \tif (sscanf(line, \"%5d\\n\", &cnt) == 1 && cnt > 0) {\n   194: \t    oracle_cnt = (unsigned) cnt;\n   195: \t    oracle_loc = (long *) alloc((unsigned)cnt * sizeof (long));\n   196: \t    for (i = 0; i < cnt; i++) {\n   197: \t\t(void) dlb_fgets(line, sizeof line, fp);\n   198: \t\t(void) sscanf(line, \"%5lx\\n\", &oracle_loc[i]);"
+    "stage": 0,
+    "context": "src/rumors.c:193:19\n   188: \tint cnt = 0;\n   189: \n   190: \t/* this assumes we're only called once */\n   191: \t(void) dlb_fgets(line, sizeof line, fp); /* skip \"don't edit\" comment*/\n   192: \t(void) dlb_fgets(line, sizeof line, fp);\n&gt;  193: \tif (sscanf(line, \"%5d\\n\", &cnt) == 1 && cnt &gt; 0) {\n   194: \t    oracle_cnt = (unsigned) cnt;\n   195: \t    oracle_loc = (long *) alloc((unsigned)cnt * sizeof (long));\n   196: \t    for (i = 0; i &lt; cnt; i++) {\n   197: \t\t(void) dlb_fgets(line, sizeof line, fp);\n   198: \t\t(void) sscanf(line, \"%5lx\\n\", &oracle_loc[i]);"
   },
   {
     "key": "L00198_01",
     "original": "%5lx\\n",
     "translation": "",
-    "context": "src/rumors.c:198:23\n   193: \tif (sscanf(line, \"%5d\\n\", &cnt) == 1 && cnt > 0) {\n   194: \t    oracle_cnt = (unsigned) cnt;\n   195: \t    oracle_loc = (long *) alloc((unsigned)cnt * sizeof (long));\n   196: \t    for (i = 0; i < cnt; i++) {\n   197: \t\t(void) dlb_fgets(line, sizeof line, fp);\n>  198: \t\t(void) sscanf(line, \"%5lx\\n\", &oracle_loc[i]);\n   199: \t    }\n   200: \t}\n   201: \treturn;\n   202: }\n   203: "
+    "stage": 0,
+    "context": "src/rumors.c:198:23\n   193: \tif (sscanf(line, \"%5d\\n\", &cnt) == 1 && cnt &gt; 0) {\n   194: \t    oracle_cnt = (unsigned) cnt;\n   195: \t    oracle_loc = (long *) alloc((unsigned)cnt * sizeof (long));\n   196: \t    for (i = 0; i &lt; cnt; i++) {\n   197: \t\t(void) dlb_fgets(line, sizeof line, fp);\n&gt;  198: \t\t(void) sscanf(line, \"%5lx\\n\", &oracle_loc[i]);\n   199: \t    }\n   200: \t}\n   201: \treturn;\n   202: }\n   203: "
   },
   {
     "key": "L00248_01",
     "original": "r",
     "translation": "",
-    "context": "src/rumors.c:248:57\n   243: \n   244: \tif(oracle_flg < 0 ||\t\t\t/* couldn't open NH_ORACLEFILE */\n   245: \t   (oracle_flg > 0 && oracle_cnt == 0))\t/* oracles already exhausted */\n   246: \t\treturn;\n   247: \n>  248: \toracles = dlb_fopen_area(NH_ORACLEAREA, NH_ORACLEFILE, \"r\");\n   249: \n   250: \tif (oracles) {\n   251: \t\twinid tmpwin;\n   252: \t\tif (oracle_flg == 0) {\t/* if this is the first outoracle() */\n   253: \t\t\tinit_oracles(oracles);"
+    "stage": 0,
+    "context": "src/rumors.c:248:57\n   243: \n   244: \tif(oracle_flg &lt; 0 ||\t\t\t/* couldn't open NH_ORACLEFILE */\n   245: \t   (oracle_flg &gt; 0 && oracle_cnt == 0))\t/* oracles already exhausted */\n   246: \t\treturn;\n   247: \n&gt;  248: \toracles = dlb_fopen_area(NH_ORACLEAREA, NH_ORACLEFILE, \"r\");\n   249: \n   250: \tif (oracles) {\n   251: \t\twinid tmpwin;\n   252: \t\tif (oracle_flg == 0) {\t/* if this is the first outoracle() */\n   253: \t\t\tinit_oracles(oracles);"
   },
   {
     "key": "L00267_01",
     "original": "The Oracle scornfully takes all your money and says:",
     "translation": "",
-    "context": "src/rumors.c:267:13\n   262: \t\tif (!special) oracle_loc[oracle_idx] = oracle_loc[--oracle_cnt];\n   263: \n   264: \t\ttmpwin = create_nhwindow(NHW_TEXT);\n   265: \t\tif (delphi)\n   266: \t\t    putstr(tmpwin, 0, special ?\n>  267: \t\t          \"The Oracle scornfully takes all your money and says:\" :\n   268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n   270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: "
+    "stage": 0,
+    "context": "src/rumors.c:267:13\n   262: \t\tif (!special) oracle_loc[oracle_idx] = oracle_loc[--oracle_cnt];\n   263: \n   264: \t\ttmpwin = create_nhwindow(NHW_TEXT);\n   265: \t\tif (delphi)\n   266: \t\t    putstr(tmpwin, 0, special ?\n&gt;  267: \t\t          \"The Oracle scornfully takes all your money and says:\" :\n   268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n   270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: "
   },
   {
     "key": "L00268_01",
     "original": "The Oracle meditates for a moment and then intones:",
     "translation": "",
-    "context": "src/rumors.c:268:13\n   263: \n   264: \t\ttmpwin = create_nhwindow(NHW_TEXT);\n   265: \t\tif (delphi)\n   266: \t\t    putstr(tmpwin, 0, special ?\n   267: \t\t          \"The Oracle scornfully takes all your money and says:\" :\n>  268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n   270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: \n   273: \t\twhile(dlb_fgets(line, COLNO, oracles) && strcmp(line,\"---\\n\")) {"
+    "stage": 0,
+    "context": "src/rumors.c:268:13\n   263: \n   264: \t\ttmpwin = create_nhwindow(NHW_TEXT);\n   265: \t\tif (delphi)\n   266: \t\t    putstr(tmpwin, 0, special ?\n   267: \t\t          \"The Oracle scornfully takes all your money and says:\" :\n&gt;  268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n   270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: \n   273: \t\twhile(dlb_fgets(line, COLNO, oracles) && strcmp(line,\"---\\n\")) {"
   },
   {
     "key": "L00270_01",
     "original": "The message reads:",
     "translation": "",
-    "context": "src/rumors.c:270:25\n   265: \t\tif (delphi)\n   266: \t\t    putstr(tmpwin, 0, special ?\n   267: \t\t          \"The Oracle scornfully takes all your money and says:\" :\n   268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n>  270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: \n   273: \t\twhile(dlb_fgets(line, COLNO, oracles) && strcmp(line,\"---\\n\")) {\n   274: \t\t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   275: \t\t\tputstr(tmpwin, 0, xcrypt(line, xbuf));"
+    "stage": 0,
+    "context": "src/rumors.c:270:25\n   265: \t\tif (delphi)\n   266: \t\t    putstr(tmpwin, 0, special ?\n   267: \t\t          \"The Oracle scornfully takes all your money and says:\" :\n   268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n&gt;  270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: \n   273: \t\twhile(dlb_fgets(line, COLNO, oracles) && strcmp(line,\"---\\n\")) {\n   274: \t\t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   275: \t\t\tputstr(tmpwin, 0, xcrypt(line, xbuf));"
   },
   {
     "key": "L00273_01",
     "original": "---\\n",
     "translation": "",
-    "context": "src/rumors.c:273:56\n   268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n   270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: \n>  273: \t\twhile(dlb_fgets(line, COLNO, oracles) && strcmp(line,\"---\\n\")) {\n   274: \t\t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   275: \t\t\tputstr(tmpwin, 0, xcrypt(line, xbuf));\n   276: \t\t}\n   277: \t\tdisplay_nhwindow(tmpwin, TRUE);\n   278: \t\tdestroy_nhwindow(tmpwin);"
+    "stage": 0,
+    "context": "src/rumors.c:273:56\n   268: \t\t          \"The Oracle meditates for a moment and then intones:\");\n   269: \t\telse\n   270: \t\t    putstr(tmpwin, 0, \"The message reads:\");\n   271: \t\tputstr(tmpwin, 0, \"\");\n   272: \n&gt;  273: \t\twhile(dlb_fgets(line, COLNO, oracles) && strcmp(line,\"---\\n\")) {\n   274: \t\t\tif ((endp = index(line, '\\n')) != 0) *endp = 0;\n   275: \t\t\tputstr(tmpwin, 0, xcrypt(line, xbuf));\n   276: \t\t}\n   277: \t\tdisplay_nhwindow(tmpwin, TRUE);\n   278: \t\tdestroy_nhwindow(tmpwin);"
   },
   {
     "key": "L00281_01",
     "original": "Can't open oracles file!",
     "translation": "",
-    "context": "src/rumors.c:281:9\n   276: \t\t}\n   277: \t\tdisplay_nhwindow(tmpwin, TRUE);\n   278: \t\tdestroy_nhwindow(tmpwin);\n   279: \t\t(void) dlb_fclose(oracles);\n   280: \t} else {\n>  281: \t\tpline(\"Can't open oracles file!\");\n   282: \t\toracle_flg = -1;\t/* don't try to open it again */\n   283: \t}\n   284: }\n   285: \n   286: int"
+    "stage": 0,
+    "context": "src/rumors.c:281:9\n   276: \t\t}\n   277: \t\tdisplay_nhwindow(tmpwin, TRUE);\n   278: \t\tdestroy_nhwindow(tmpwin);\n   279: \t\t(void) dlb_fclose(oracles);\n   280: \t} else {\n&gt;  281: \t\tpline(\"Can't open oracles file!\");\n   282: \t\toracle_flg = -1;\t/* don't try to open it again */\n   283: \t}\n   284: }\n   285: \n   286: int"
   },
   {
     "key": "L00300_01",
     "original": "is no one here to consult.",
     "translation": "",
-    "context": "src/rumors.c:300:9\n   295: \tchar qbuf[QBUFSZ];\n   296: \n   297: \tmulti = 0;\n   298: \n   299: \tif (!oracl) {\n>  300: \t\tThere(\"is no one here to consult.\");\n   301: \t\treturn 0;\n   302: \t} else if (!oracl->mpeaceful) {\n   303: \t\tpline(\"%s is in no mood for consultations.\", Monnam(oracl));\n   304: \t\treturn 0;\n   305: #ifndef GOLDOBJ"
+    "stage": 0,
+    "context": "src/rumors.c:300:9\n   295: \tchar qbuf[QBUFSZ];\n   296: \n   297: \tmulti = 0;\n   298: \n   299: \tif (!oracl) {\n&gt;  300: \t\tThere(\"is no one here to consult.\");\n   301: \t\treturn 0;\n   302: \t} else if (!oracl-&gt;mpeaceful) {\n   303: \t\tpline(\"%s is in no mood for consultations.\", Monnam(oracl));\n   304: \t\treturn 0;\n   305: #ifndef GOLDOBJ"
   },
   {
     "key": "L00303_01",
     "original": "%s is in no mood for consultations.",
     "translation": "",
-    "context": "src/rumors.c:303:9\n   298: \n   299: \tif (!oracl) {\n   300: \t\tThere(\"is no one here to consult.\");\n   301: \t\treturn 0;\n   302: \t} else if (!oracl->mpeaceful) {\n>  303: \t\tpline(\"%s is in no mood for consultations.\", Monnam(oracl));\n   304: \t\treturn 0;\n   305: #ifndef GOLDOBJ\n   306: \t} else if (!u.ugold) {\n   307: #else\n   308: \t} else if (!umoney) {"
+    "stage": 0,
+    "context": "src/rumors.c:303:9\n   298: \n   299: \tif (!oracl) {\n   300: \t\tThere(\"is no one here to consult.\");\n   301: \t\treturn 0;\n   302: \t} else if (!oracl-&gt;mpeaceful) {\n&gt;  303: \t\tpline(\"%s is in no mood for consultations.\", Monnam(oracl));\n   304: \t\treturn 0;\n   305: #ifndef GOLDOBJ\n   306: \t} else if (!u.ugold) {\n   307: #else\n   308: \t} else if (!umoney) {"
   },
   {
     "key": "L00310_01",
     "original": "have no money.",
     "translation": "",
-    "context": "src/rumors.c:310:7\n   305: #ifndef GOLDOBJ\n   306: \t} else if (!u.ugold) {\n   307: #else\n   308: \t} else if (!umoney) {\n   309: #endif\n>  310: \t\tYou(\"have no money.\");\n   311: \t\treturn 0;\n   312: \t}\n   313: \n   314: \tSprintf(qbuf,\n   315: \t\t\"\\\"Wilt thou settle for a minor consultation?\\\" (%d %s)\","
+    "stage": 0,
+    "context": "src/rumors.c:310:7\n   305: #ifndef GOLDOBJ\n   306: \t} else if (!u.ugold) {\n   307: #else\n   308: \t} else if (!umoney) {\n   309: #endif\n&gt;  310: \t\tYou(\"have no money.\");\n   311: \t\treturn 0;\n   312: \t}\n   313: \n   314: \tSprintf(qbuf,\n   315: \t\t\"\\\"Wilt thou settle for a minor consultation?\\\" (%d %s)\","
   },
   {
     "key": "L00315_01",
     "original": "\\\"Wilt thou settle for a minor consultation?\\\" (%d %s)",
     "translation": "",
-    "context": "src/rumors.c:315:3\n   310: \t\tYou(\"have no money.\");\n   311: \t\treturn 0;\n   312: \t}\n   313: \n   314: \tSprintf(qbuf,\n>  315: \t\t\"\\\"Wilt thou settle for a minor consultation?\\\" (%d %s)\",\n   316: \t\tminor_cost, currency((long)minor_cost));\n   317: \tswitch (ynq(qbuf)) {\n   318: \t    default:\n   319: \t    case 'q':\n   320: \t\treturn 0;"
+    "stage": 0,
+    "context": "src/rumors.c:315:3\n   310: \t\tYou(\"have no money.\");\n   311: \t\treturn 0;\n   312: \t}\n   313: \n   314: \tSprintf(qbuf,\n&gt;  315: \t\t\"\\\"Wilt thou settle for a minor consultation?\\\" (%d %s)\",\n   316: \t\tminor_cost, currency((long)minor_cost));\n   317: \tswitch (ynq(qbuf)) {\n   318: \t    default:\n   319: \t    case 'q':\n   320: \t\treturn 0;"
   },
   {
     "key": "L00327_01",
     "original": "don't even have enough money for that!",
     "translation": "",
-    "context": "src/rumors.c:327:11\n   322: #ifndef GOLDOBJ\n   323: \t\tif (u.ugold < (long)minor_cost) {\n   324: #else\n   325: \t\tif (umoney < (long)minor_cost) {\n   326: #endif\n>  327: \t\t    You(\"don't even have enough money for that!\");\n   328: \t\t    return 0;\n   329: \t\t}\n   330: \t\tu_pay = minor_cost;\n   331: \t\tbreak;\n   332: \t    case 'n':"
+    "stage": 0,
+    "context": "src/rumors.c:327:11\n   322: #ifndef GOLDOBJ\n   323: \t\tif (u.ugold &lt; (long)minor_cost) {\n   324: #else\n   325: \t\tif (umoney &lt; (long)minor_cost) {\n   326: #endif\n&gt;  327: \t\t    You(\"don't even have enough money for that!\");\n   328: \t\t    return 0;\n   329: \t\t}\n   330: \t\tu_pay = minor_cost;\n   331: \t\tbreak;\n   332: \t    case 'n':"
   },
   {
     "key": "L00340_01",
     "original": "\\\"Then dost thou desire a major one?\\\" (%d %s)",
     "translation": "",
-    "context": "src/rumors.c:340:4\n   335: #else\n   336: \t\tif (umoney <= (long)minor_cost ||\t/* don't even ask */\n   337: #endif\n   338: \t\t    (oracle_cnt == 1 || oracle_flg < 0)) return 0;\n   339: \t\tSprintf(qbuf,\n>  340: \t\t\t\"\\\"Then dost thou desire a major one?\\\" (%d %s)\",\n   341: \t\t\tmajor_cost, currency((long)major_cost));\n   342: \t\tif (yn(qbuf) != 'y') return 0;\n   343: #ifndef GOLDOBJ\n   344: \t\tu_pay = (u.ugold < (long)major_cost ? (int)u.ugold\n   345: \t\t\t\t\t\t    : major_cost);"
+    "stage": 0,
+    "context": "src/rumors.c:340:4\n   335: #else\n   336: \t\tif (umoney &lt;= (long)minor_cost ||\t/* don't even ask */\n   337: #endif\n   338: \t\t    (oracle_cnt == 1 || oracle_flg &lt; 0)) return 0;\n   339: \t\tSprintf(qbuf,\n&gt;  340: \t\t\t\"\\\"Then dost thou desire a major one?\\\" (%d %s)\",\n   341: \t\t\tmajor_cost, currency((long)major_cost));\n   342: \t\tif (yn(qbuf) != 'y') return 0;\n   343: #ifndef GOLDOBJ\n   344: \t\tu_pay = (u.ugold &lt; (long)major_cost ? (int)u.ugold\n   345: \t\t\t\t\t\t    : major_cost);"
   }
 ]

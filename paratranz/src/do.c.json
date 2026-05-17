@@ -3,54 +3,63 @@
     "key": "L00066_01",
     "original": "Not a boulder?",
     "translation": "",
-    "context": "src/do.c:66:17\n    61: struct obj *otmp;\n    62: register int rx, ry;\n    63: boolean pushing;\n    64: {\n    65: \tif (!otmp || otmp->otyp != BOULDER)\n>   66: \t    impossible(\"Not a boulder?\");\n    67: \telse if (!Is_waterlevel(&u.uz) && (is_pool(rx,ry) || is_lava(rx,ry))) {\n    68: \t    boolean lava = is_lava(rx,ry), fills_up;\n    69: \t    const char *what = waterbody_name(rx,ry);\n    70: \t    schar ltyp = levl[rx][ry].typ;\n    71: \t    int chance = rn2(10);\t\t/* water: 90%; lava: 10% */"
+    "stage": 0,
+    "context": "src/do.c:66:17\n    61: struct obj *otmp;\n    62: register int rx, ry;\n    63: boolean pushing;\n    64: {\n    65: \tif (!otmp || otmp-&gt;otyp != BOULDER)\n&gt;   66: \t    impossible(\"Not a boulder?\");\n    67: \telse if (!Is_waterlevel(&u.uz) && (is_pool(rx,ry) || is_lava(rx,ry))) {\n    68: \t    boolean lava = is_lava(rx,ry), fills_up;\n    69: \t    const char *what = waterbody_name(rx,ry);\n    70: \t    schar ltyp = levl[rx][ry].typ;\n    71: \t    int chance = rn2(10);\t\t/* water: 90%; lava: 10% */"
   },
   {
     "key": "L00717_01",
     "original": "drop",
     "translation": "",
-    "context": "src/do.c:717:14\n   712: \tfree((genericptr_t) pick_list);\n   713:     } else if (flags.menu_style == MENU_COMBINATION) {\n   714: \tunsigned ggoresults = 0;\n   715: \tall_categories = FALSE;\n   716: \t/* Gather valid classes via traditional NetHack method */\n>  717: \ti = ggetobj(\"drop\", drop, 0, TRUE, &ggoresults);\n   718: \tif (i == -2) all_categories = TRUE;\n   719: \tif (ggoresults & ALL_FINISHED) {\n   720: \t\tn_dropped = i;\n   721: \t\tgoto drop_done;\n   722: \t}"
+    "stage": 0,
+    "context": "src/do.c:717:14\n   712: \tfree((genericptr_t) pick_list);\n   713:     } else if (flags.menu_style == MENU_COMBINATION) {\n   714: \tunsigned ggoresults = 0;\n   715: \tall_categories = FALSE;\n   716: \t/* Gather valid classes via traditional NetHack method */\n&gt;  717: \ti = ggetobj(\"drop\", drop, 0, TRUE, &ggoresults);\n   718: \tif (i == -2) all_categories = TRUE;\n   719: \tif (ggoresults & ALL_FINISHED) {\n   720: \t\tn_dropped = i;\n   721: \t\tgoto drop_done;\n   722: \t}"
   },
   {
     "key": "L00861_01",
     "original": "%s %s.",
     "translation": "",
-    "context": "src/do.c:861:10\n   856: \t\tYou(\"被你的宠物扯了回来!\");\n   857: \t\treturn(0);\n   858: \t}\n   859: \n   860: \tif (trap)\n>  861: \t    You(\"%s %s.\", locomotion(youmonst.data, \"跳\"),\n   862: \t\ttrap->ttyp == HOLE ? \"下那个坑\" : \"下那个陷阱门\");\n   863: \n   864: \tif (trap && Is_stronghold(&u.uz)) {\n   865: \t\tgoto_hell(FALSE, TRUE);\n   866: \t} else {"
+    "stage": 0,
+    "context": "src/do.c:861:10\n   856: \t\tYou(\"被你的宠物扯了回来!\");\n   857: \t\treturn(0);\n   858: \t}\n   859: \n   860: \tif (trap)\n&gt;  861: \t    You(\"%s %s.\", locomotion(youmonst.data, \"跳\"),\n   862: \t\ttrap-&gt;ttyp == HOLE ? \"下那个坑\" : \"下那个陷阱门\");\n   863: \n   864: \tif (trap && Is_stronghold(&u.uz)) {\n   865: \t\tgoto_hell(FALSE, TRUE);\n   866: \t} else {"
   },
   {
     "key": "L00942_01",
     "original": "%s",
     "translation": "",
-    "context": "src/do.c:942:9\n   937: \t\t * exceeded our quota. If that is the case then we\n   938: \t\t * cannot leave this level, and cannot save either.\n   939: \t\t * Another possibility is that the directory was not\n   940: \t\t * writable.\n   941: \t\t */\n>  942: \t\tpline(\"%s\", whynot);\n   943: \t\treturn -1;\n   944: \t}\n   945: \n   946: #ifdef MFLOPPY\n   947: \tif (!savelev(fd, ledger_no(&u.uz), COUNT_SAVE)) {"
+    "stage": 0,
+    "context": "src/do.c:942:9\n   937: \t\t * exceeded our quota. If that is the case then we\n   938: \t\t * cannot leave this level, and cannot save either.\n   939: \t\t * Another possibility is that the directory was not\n   940: \t\t * writable.\n   941: \t\t */\n&gt;  942: \t\tpline(\"%s\", whynot);\n   943: \t\treturn -1;\n   944: \t}\n   945: \n   946: #ifdef MFLOPPY\n   947: \tif (!savelev(fd, ledger_no(&u.uz), COUNT_SAVE)) {"
   },
   {
     "key": "L01149_01",
     "original": "%s",
     "translation": "",
-    "context": "src/do.c:1149:10\n  1144: \t\tnew = TRUE;\t/* made the level */\n  1145: \t} else {\n  1146: \t\t/* returning to previously visited level; reload it */\n  1147: \t\tfd = open_levelfile(new_ledger, whynot);\n  1148: \t\tif (fd < 0) {\n> 1149: \t\t\tpline(\"%s\", whynot);\n  1150: \t\t\tpline(\"有可能有人把这个关卡文件删除了,你得重新玩了.\");\n  1151: \t\t\tkiller = whynot;\n  1152: \t\t\tdone(TRICKED);\n  1153: \t\t\t/* we'll reach here if running in wizard mode */\n  1154: \t\t\terror(\"去你的!你这把游戏完了!重新玩去吧!\");"
+    "stage": 0,
+    "context": "src/do.c:1149:10\n  1144: \t\tnew = TRUE;\t/* made the level */\n  1145: \t} else {\n  1146: \t\t/* returning to previously visited level; reload it */\n  1147: \t\tfd = open_levelfile(new_ledger, whynot);\n  1148: \t\tif (fd &lt; 0) {\n&gt; 1149: \t\t\tpline(\"%s\", whynot);\n  1150: \t\t\tpline(\"有可能有人把这个关卡文件删除了,你得重新玩了.\");\n  1151: \t\t\tkiller = whynot;\n  1152: \t\t\tdone(TRICKED);\n  1153: \t\t\t/* we'll reach here if running in wizard mode */\n  1154: \t\t\terror(\"去你的!你这把游戏完了!重新玩去吧!\");"
   },
   {
     "key": "L01177_01",
     "original": "goto_level: no corresponding portal!",
     "translation": "",
-    "context": "src/do.c:1177:24\n  1172: \t    register struct trap *ttrap;\n  1173: \n  1174: \t    for (ttrap = ftrap; ttrap; ttrap = ttrap->ntrap)\n  1175: \t\tif (ttrap->ttyp == MAGIC_PORTAL) break;\n  1176: \n> 1177: \t    if (!ttrap) panic(\"goto_level: no corresponding portal!\");\n  1178: \t    seetrap(ttrap);\n  1179: \t    u_on_newpos(ttrap->tx, ttrap->ty);\n  1180: \t} else if (at_stairs && !In_endgame(&u.uz)) {\n  1181: \t    if (up) {\n  1182: \t\tif (at_ladder) {"
+    "stage": 0,
+    "context": "src/do.c:1177:24\n  1172: \t    register struct trap *ttrap;\n  1173: \n  1174: \t    for (ttrap = ftrap; ttrap; ttrap = ttrap-&gt;ntrap)\n  1175: \t\tif (ttrap-&gt;ttyp == MAGIC_PORTAL) break;\n  1176: \n&gt; 1177: \t    if (!ttrap) panic(\"goto_level: no corresponding portal!\");\n  1178: \t    seetrap(ttrap);\n  1179: \t    u_on_newpos(ttrap-&gt;tx, ttrap-&gt;ty);\n  1180: \t} else if (at_stairs && !In_endgame(&u.uz)) {\n  1181: \t    if (up) {\n  1182: \t\tif (at_ladder) {"
   },
   {
     "key": "L01381_01",
     "original": "The Quest",
     "translation": "",
-    "context": "src/do.c:1381:43\n  1376: \t\tresurrect();\n  1377: \tif (newdungeon && In_V_tower(&u.uz) && In_hell(&u.uz0))\n  1378: \t\tpline_The(\"炽热和烟雾都不见了.\");\n  1379: \n  1380: \t/* the message from your quest leader */\n> 1381: \tif (!In_quest(&u.uz0) && at_dgn_entrance(\"The Quest\") &&\n  1382: \t\t!(u.uevent.qexpelled || u.uevent.qcompleted || quest_status.leader_is_dead)) {\n  1383: \n  1384: \t\tif (u.uevent.qcalled) {\n  1385: \t\t\tcom_pager(Role_if(PM_ROGUE) ? 4 : 3);\n  1386: \t\t} else {"
+    "stage": 0,
+    "context": "src/do.c:1381:43\n  1376: \t\tresurrect();\n  1377: \tif (newdungeon && In_V_tower(&u.uz) && In_hell(&u.uz0))\n  1378: \t\tpline_The(\"炽热和烟雾都不见了.\");\n  1379: \n  1380: \t/* the message from your quest leader */\n&gt; 1381: \tif (!In_quest(&u.uz0) && at_dgn_entrance(\"The Quest\") &&\n  1382: \t\t!(u.uevent.qexpelled || u.uevent.qcompleted || quest_status.leader_is_dead)) {\n  1383: \n  1384: \t\tif (u.uevent.qcalled) {\n  1385: \t\t\tcom_pager(Role_if(PM_ROGUE) ? 4 : 3);\n  1386: \t\t} else {"
   },
   {
     "key": "L01617_01",
     "original": "%s %s",
     "translation": "",
-    "context": "src/do.c:1617:29\n  1612: \t\tbreak;\n  1613: \t   case OBJ_CONTAINED:\n  1614: \t   \tif (container_where == OBJ_MINVENT && cansee(mtmp->mx, mtmp->my) &&\n  1615: \t\t    mcarry && canseemon(mcarry) && container) {\n  1616: \t\t        char sackname[BUFSZ];\n> 1617: \t\t        Sprintf(sackname, \"%s %s\", s_suffix(mon_nam(mcarry)),\n  1618: \t\t\t\txname(container)); \n  1619: \t   \t\tpline(\"%s从%s里头爬了出来!\", Amonnam(mtmp), sackname);\n  1620: \t   \t} else if (container_where == OBJ_INVENT && container) {\n  1621: \t\t        char sackname[BUFSZ];\n  1622: \t\t        Strcpy(sackname, an(xname(container)));"
+    "stage": 0,
+    "context": "src/do.c:1617:29\n  1612: \t\tbreak;\n  1613: \t   case OBJ_CONTAINED:\n  1614: \t   \tif (container_where == OBJ_MINVENT && cansee(mtmp-&gt;mx, mtmp-&gt;my) &&\n  1615: \t\t    mcarry && canseemon(mcarry) && container) {\n  1616: \t\t        char sackname[BUFSZ];\n&gt; 1617: \t\t        Sprintf(sackname, \"%s %s\", s_suffix(mon_nam(mcarry)),\n  1618: \t\t\t\txname(container)); \n  1619: \t   \t\tpline(\"%s从%s里头爬了出来!\", Amonnam(mtmp), sackname);\n  1620: \t   \t} else if (container_where == OBJ_INVENT && container) {\n  1621: \t\t        char sackname[BUFSZ];\n  1622: \t\t        Strcpy(sackname, an(xname(container)));"
   },
   {
     "key": "L01636_01",
     "original": "revive_corpse: lost corpse @ %d",
     "translation": "",
-    "context": "src/do.c:1636:14\n  1631: \t\t\tpline(\"%s从%s里头逃跑了!\", Amonnam(mtmp), sackname);\n  1632: \t\t}\n  1633: \t\tbreak;\n  1634: \t    default:\n  1635: \t\t/* we should be able to handle the other cases... */\n> 1636: \t\timpossible(\"revive_corpse: lost corpse @ %d\", where);\n  1637: \t\tbreak;\n  1638: \t}\n  1639: \treturn TRUE;\n  1640:     }\n  1641:     return FALSE;"
+    "stage": 0,
+    "context": "src/do.c:1636:14\n  1631: \t\t\tpline(\"%s从%s里头逃跑了!\", Amonnam(mtmp), sackname);\n  1632: \t\t}\n  1633: \t\tbreak;\n  1634: \t    default:\n  1635: \t\t/* we should be able to handle the other cases... */\n&gt; 1636: \t\timpossible(\"revive_corpse: lost corpse @ %d\", where);\n  1637: \t\tbreak;\n  1638: \t}\n  1639: \treturn TRUE;\n  1640:     }\n  1641:     return FALSE;"
   }
 ]

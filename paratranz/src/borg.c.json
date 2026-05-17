@@ -3,6 +3,7 @@
     "key": "L00042_01",
     "original": "%c",
     "translation": "",
-    "context": "src/borg.c:42:22\n    37:    if (predicted_hp <= 0 || (u.uhp < u.uhpmax / 8)) pline(\"紧急事件！!\");\n    38: \n    39:    /* He's quite lame for now... */\n    40:    c = rand()%9 + '1';\n    41:    if (c == '5') c = '.';\n>   42:    sprintf(borg_line,\"%c\",c);\n    43:    return ('.');\n    44: }\n    45: #endif"
+    "stage": 0,
+    "context": "src/borg.c:42:22\n    37:    if (predicted_hp &lt;= 0 || (u.uhp &lt; u.uhpmax / 8)) pline(\"紧急事件！!\");\n    38: \n    39:    /* He's quite lame for now... */\n    40:    c = rand()%9 + '1';\n    41:    if (c == '5') c = '.';\n&gt;   42:    sprintf(borg_line,\"%c\",c);\n    43:    return ('.');\n    44: }\n    45: #endif"
   }
 ]

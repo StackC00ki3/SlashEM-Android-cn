@@ -3,30 +3,35 @@
     "key": "L00167_01",
     "original": "#levelchange",
     "translation": "",
-    "context": "src/exper.c:167:34\n   162: {\n   163: \tregister int num;\n   164: \n   165: #ifdef WIZARD\n   166: \t/* explicit wizard mode requests to reduce level are never fatal. */\n>  167: \tif (drainer && !strcmp(drainer, \"#levelchange\"))\n   168: \t\tdrainer = 0;\n   169: #endif\n   170: \n   171: \tif (!force && Drain_resistance) return;\n   172: "
+    "stage": 0,
+    "context": "src/exper.c:167:34\n   162: {\n   163: \tregister int num;\n   164: \n   165: #ifdef WIZARD\n   166: \t/* explicit wizard mode requests to reduce level are never fatal. */\n&gt;  167: \tif (drainer && !strcmp(drainer, \"#levelchange\"))\n   168: \t\tdrainer = 0;\n   169: #endif\n   170: \n   171: \tif (!force && Drain_resistance) return;\n   172: "
   },
   {
     "key": "L00174_01",
     "original": "%s level %d.",
     "translation": "",
-    "context": "src/exper.c:174:9\n   169: #endif\n   170: \n   171: \tif (!force && Drain_resistance) return;\n   172: \n   173: \tif (u.ulevel > 1) {\n>  174: \t\tpline(\"%s level %d.\", Goodbye(), u.ulevel--);\n   175: \t\t/* remove intrinsic abilities */\n   176: \t\tadjabil(u.ulevel + 1, u.ulevel);\n   177: \t\treset_rndmonst(NON_PM);\t/* new monster selection */\n   178: \t} else {\n   179: \t\tif (drainer) {"
+    "stage": 0,
+    "context": "src/exper.c:174:9\n   169: #endif\n   170: \n   171: \tif (!force && Drain_resistance) return;\n   172: \n   173: \tif (u.ulevel &gt; 1) {\n&gt;  174: \t\tpline(\"%s level %d.\", Goodbye(), u.ulevel--);\n   175: \t\t/* remove intrinsic abilities */\n   176: \t\tadjabil(u.ulevel + 1, u.ulevel);\n   177: \t\treset_rndmonst(NON_PM);\t/* new monster selection */\n   178: \t} else {\n   179: \t\tif (drainer) {"
   },
   {
     "key": "L00234_01",
     "original": "Welcome to experience level %d.",
     "translation": "",
-    "context": "src/exper.c:234:9\n   229: \tif(u.ulevel < MAXULEV && u.uexp >= newuexp(u.ulevel)) {\n   230: \n   231: \t\tu.ulevel++;\n   232: \t\tif (u.ulevelmax < u.ulevel) u.ulevelmax = u.ulevel;\t/* KMH */\n   233: \t\tif (u.uexp >= newuexp(u.ulevel)) u.uexp = newuexp(u.ulevel) - 1;\n>  234: \t\tpline(\"Welcome to experience level %d.\", u.ulevel);\n   235: \t\t/* give new intrinsics */\n   236: \t\tadjabil(u.ulevel - 1, u.ulevel);\n   237: \t\treset_rndmonst(NON_PM); /* new monster selection */\n   238: /* STEPHEN WHITE'S NEW CODE */                \n   239: \t\ttmp = newhp();"
+    "stage": 0,
+    "context": "src/exper.c:234:9\n   229: \tif(u.ulevel &lt; MAXULEV && u.uexp &gt;= newuexp(u.ulevel)) {\n   230: \n   231: \t\tu.ulevel++;\n   232: \t\tif (u.ulevelmax &lt; u.ulevel) u.ulevelmax = u.ulevel;\t/* KMH */\n   233: \t\tif (u.uexp &gt;= newuexp(u.ulevel)) u.uexp = newuexp(u.ulevel) - 1;\n&gt;  234: \t\tpline(\"Welcome to experience level %d.\", u.ulevel);\n   235: \t\t/* give new intrinsics */\n   236: \t\tadjabil(u.ulevel - 1, u.ulevel);\n   237: \t\treset_rndmonst(NON_PM); /* new monster selection */\n   238: /* STEPHEN WHITE'S NEW CODE */                \n   239: \t\ttmp = newhp();"
   },
   {
     "key": "L00281_01",
     "original": "more experienced.",
     "translation": "",
-    "context": "src/exper.c:281:22\n   276: pluslvl(incr)\n   277: boolean incr;\t/* true iff via incremental experience growth */\n   278: {\t\t/*\t(false for potion of gain level)      */\n   279: \tregister int num;\n   280: \n>  281: \tif (!incr) You_feel(\"more experienced.\");\n   282: \tnum = newhp();\n   283: \tu.uhpmax += num;\n   284: \tu.uhp += num;\n   285: \tif (Upolyd) {\n   286: \t    num = rnd(8);"
+    "stage": 0,
+    "context": "src/exper.c:281:22\n   276: pluslvl(incr)\n   277: boolean incr;\t/* true iff via incremental experience growth */\n   278: {\t\t/*\t(false for potion of gain level)      */\n   279: \tregister int num;\n   280: \n&gt;  281: \tif (!incr) You_feel(\"more experienced.\");\n   282: \tnum = newhp();\n   283: \tu.uhpmax += num;\n   284: \tu.uhp += num;\n   285: \tif (Upolyd) {\n   286: \t    num = rnd(8);"
   },
   {
     "key": "L00309_01",
     "original": "Welcome to experience level %d.",
     "translation": "",
-    "context": "src/exper.c:309:12\n   304: \t    } else {\n   305: \t\tu.uexp = newuexp(u.ulevel);\n   306: \t    }\n   307: \t    ++u.ulevel;\n   308: \t    if (u.ulevelmax < u.ulevel) u.ulevelmax = u.ulevel;\n>  309: \t    pline(\"Welcome to experience level %d.\", u.ulevel);\n   310: \t    adjabil(u.ulevel - 1, u.ulevel);\t/* give new intrinsics */\n   311: \t    reset_rndmonst(NON_PM);\t\t/* new monster selection */\n   312: \t}\n   313: \tflags.botl = 1;\n   314: }"
+    "stage": 0,
+    "context": "src/exper.c:309:12\n   304: \t    } else {\n   305: \t\tu.uexp = newuexp(u.ulevel);\n   306: \t    }\n   307: \t    ++u.ulevel;\n   308: \t    if (u.ulevelmax &lt; u.ulevel) u.ulevelmax = u.ulevel;\n&gt;  309: \t    pline(\"Welcome to experience level %d.\", u.ulevel);\n   310: \t    adjabil(u.ulevel - 1, u.ulevel);\t/* give new intrinsics */\n   311: \t    reset_rndmonst(NON_PM);\t\t/* new monster selection */\n   312: \t}\n   313: \tflags.botl = 1;\n   314: }"
   }
 ]

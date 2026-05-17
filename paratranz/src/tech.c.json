@@ -3,414 +3,483 @@
     "key": "L00041_01",
     "original": "no technique",
     "translation": "",
-    "context": "src/tech.c:41:2\n    36:  * Do try to keep the names <= 25 chars long, or else the\n    37:  * menu will look bad :B  WAC\n    38:  */\n    39:  \n    40: STATIC_OVL NEARDATA const char *tech_names[] = {\n>   41: \t\"no technique\",\n    42: \t\"狂暴\",\n    43: \t\"kiii\",\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\","
+    "stage": 0,
+    "context": "src/tech.c:41:2\n    36:  * Do try to keep the names &lt;= 25 chars long, or else the\n    37:  * menu will look bad :B  WAC\n    38:  */\n    39:  \n    40: STATIC_OVL NEARDATA const char *tech_names[] = {\n&gt;   41: \t\"no technique\",\n    42: \t\"狂暴\",\n    43: \t\"kiii\",\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\","
   },
   {
     "key": "L00043_01",
     "original": "kiii",
     "translation": "",
-    "context": "src/tech.c:43:2\n    38:  */\n    39:  \n    40: STATIC_OVL NEARDATA const char *tech_names[] = {\n    41: \t\"no technique\",\n    42: \t\"狂暴\",\n>   43: \t\"kiii\",\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n    47: \t\"missile flurry\",\n    48: \t\"操练武器\","
+    "stage": 0,
+    "context": "src/tech.c:43:2\n    38:  */\n    39:  \n    40: STATIC_OVL NEARDATA const char *tech_names[] = {\n    41: \t\"no technique\",\n    42: \t\"狂暴\",\n&gt;   43: \t\"kiii\",\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n    47: \t\"missile flurry\",\n    48: \t\"操练武器\","
   },
   {
     "key": "L00044_01",
     "original": "research",
     "translation": "",
-    "context": "src/tech.c:44:2\n    39:  \n    40: STATIC_OVL NEARDATA const char *tech_names[] = {\n    41: \t\"no technique\",\n    42: \t\"狂暴\",\n    43: \t\"kiii\",\n>   44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n    47: \t\"missile flurry\",\n    48: \t\"操练武器\",\n    49: \t\"eviscerate\","
+    "stage": 0,
+    "context": "src/tech.c:44:2\n    39:  \n    40: STATIC_OVL NEARDATA const char *tech_names[] = {\n    41: \t\"no technique\",\n    42: \t\"狂暴\",\n    43: \t\"kiii\",\n&gt;   44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n    47: \t\"missile flurry\",\n    48: \t\"操练武器\",\n    49: \t\"eviscerate\","
   },
   {
     "key": "L00047_01",
     "original": "missile flurry",
     "translation": "",
-    "context": "src/tech.c:47:2\n    42: \t\"狂暴\",\n    43: \t\"kiii\",\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n>   47: \t\"missile flurry\",\n    48: \t\"操练武器\",\n    49: \t\"eviscerate\",\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\","
+    "stage": 0,
+    "context": "src/tech.c:47:2\n    42: \t\"狂暴\",\n    43: \t\"kiii\",\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n&gt;   47: \t\"missile flurry\",\n    48: \t\"操练武器\",\n    49: \t\"eviscerate\",\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\","
   },
   {
     "key": "L00049_01",
     "original": "eviscerate",
     "translation": "",
-    "context": "src/tech.c:49:2\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n    47: \t\"missile flurry\",\n    48: \t\"操练武器\",\n>   49: \t\"eviscerate\",\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\",\n    53: \t\"vanish\",\n    54: \t\"割喉\","
+    "stage": 0,
+    "context": "src/tech.c:49:2\n    44: \t\"research\",\n    45: \t\"紧急手术\",\n    46: \t\"强化记忆\",\n    47: \t\"missile flurry\",\n    48: \t\"操练武器\",\n&gt;   49: \t\"eviscerate\",\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\",\n    53: \t\"vanish\",\n    54: \t\"割喉\","
   },
   {
     "key": "L00053_01",
     "original": "vanish",
     "translation": "",
-    "context": "src/tech.c:53:2\n    48: \t\"操练武器\",\n    49: \t\"eviscerate\",\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\",\n>   53: \t\"vanish\",\n    54: \t\"割喉\",\n    55: \t\"blessing\",\n    56: \t\"元素之拳\",\n    57: \t\"原始怒吼\",\n    58: \t\"液体跳跃\","
+    "stage": 0,
+    "context": "src/tech.c:53:2\n    48: \t\"操练武器\",\n    49: \t\"eviscerate\",\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\",\n&gt;   53: \t\"vanish\",\n    54: \t\"割喉\",\n    55: \t\"blessing\",\n    56: \t\"元素之拳\",\n    57: \t\"原始怒吼\",\n    58: \t\"液体跳跃\","
   },
   {
     "key": "L00055_01",
     "original": "blessing",
     "translation": "",
-    "context": "src/tech.c:55:2\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\",\n    53: \t\"vanish\",\n    54: \t\"割喉\",\n>   55: \t\"blessing\",\n    56: \t\"元素之拳\",\n    57: \t\"原始怒吼\",\n    58: \t\"液体跳跃\",\n    59: \t\"致命一击\",\n    60: \t\"控制魔印\","
+    "stage": 0,
+    "context": "src/tech.c:55:2\n    50: \t\"治愈之手\",\n    51: \t\"安抚坐骑\",\n    52: \t\"超度亡灵\",\n    53: \t\"vanish\",\n    54: \t\"割喉\",\n&gt;   55: \t\"blessing\",\n    56: \t\"元素之拳\",\n    57: \t\"原始怒吼\",\n    58: \t\"液体跳跃\",\n    59: \t\"致命一击\",\n    60: \t\"控制魔印\","
   },
   {
     "key": "L00070_01",
     "original": "blink",
     "translation": "",
-    "context": "src/tech.c:70:2\n    65: \t\"火焰防御之壁！\",\n    66: \t\"冰霜防御之壁\",\n    67: \t\"闪电防御之壁\",\n    68: \t\"锻造升级\",\n    69: \t\"怒气爆发\",\n>   70: \t\"blink\",\n    71: \t\"气功拳\",\n    72: \t\"抽取能量\",\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n    75: \t\"dazzle\","
+    "stage": 0,
+    "context": "src/tech.c:70:2\n    65: \t\"火焰防御之壁！\",\n    66: \t\"冰霜防御之壁\",\n    67: \t\"闪电防御之壁\",\n    68: \t\"锻造升级\",\n    69: \t\"怒气爆发\",\n&gt;   70: \t\"blink\",\n    71: \t\"气功拳\",\n    72: \t\"抽取能量\",\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n    75: \t\"dazzle\","
   },
   {
     "key": "L00075_01",
     "original": "dazzle",
     "translation": "",
-    "context": "src/tech.c:75:2\n    70: \t\"blink\",\n    71: \t\"气功拳\",\n    72: \t\"抽取能量\",\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n>   75: \t\"dazzle\",\n    76: \t\"地牢快打组合技\",\n    77: \t\"pummel\",\n    78: \t\"ground slam\",\n    79: \t\"轻盈冲刺\",\n    80: \t\"魔能浪涌\","
+    "stage": 0,
+    "context": "src/tech.c:75:2\n    70: \t\"blink\",\n    71: \t\"气功拳\",\n    72: \t\"抽取能量\",\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n&gt;   75: \t\"dazzle\",\n    76: \t\"地牢快打组合技\",\n    77: \t\"pummel\",\n    78: \t\"ground slam\",\n    79: \t\"轻盈冲刺\",\n    80: \t\"魔能浪涌\","
   },
   {
     "key": "L00077_01",
     "original": "pummel",
     "translation": "",
-    "context": "src/tech.c:77:2\n    72: \t\"抽取能量\",\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n    75: \t\"dazzle\",\n    76: \t\"地牢快打组合技\",\n>   77: \t\"pummel\",\n    78: \t\"ground slam\",\n    79: \t\"轻盈冲刺\",\n    80: \t\"魔能浪涌\",\n    81: \t\"意识震爆\",\n    82: \t\"吸血\","
+    "stage": 0,
+    "context": "src/tech.c:77:2\n    72: \t\"抽取能量\",\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n    75: \t\"dazzle\",\n    76: \t\"地牢快打组合技\",\n&gt;   77: \t\"pummel\",\n    78: \t\"ground slam\",\n    79: \t\"轻盈冲刺\",\n    80: \t\"魔能浪涌\",\n    81: \t\"意识震爆\",\n    82: \t\"吸血\","
   },
   {
     "key": "L00078_01",
     "original": "ground slam",
     "translation": "",
-    "context": "src/tech.c:78:2\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n    75: \t\"dazzle\",\n    76: \t\"地牢快打组合技\",\n    77: \t\"pummel\",\n>   78: \t\"ground slam\",\n    79: \t\"轻盈冲刺\",\n    80: \t\"魔能浪涌\",\n    81: \t\"意识震爆\",\n    82: \t\"吸血\",\n    83: \t\"\""
+    "stage": 0,
+    "context": "src/tech.c:78:2\n    73: \t\"气功治疗\",\n    74: \t\"缴械\",\n    75: \t\"dazzle\",\n    76: \t\"地牢快打组合技\",\n    77: \t\"pummel\",\n&gt;   78: \t\"ground slam\",\n    79: \t\"轻盈冲刺\",\n    80: \t\"魔能浪涌\",\n    81: \t\"意识震爆\",\n    82: \t\"吸血\",\n    83: \t\"\""
   },
   {
     "key": "L00364_01",
     "original": "a",
     "translation": "",
-    "context": "src/tech.c:364:44\n   359: \tif (ntechs == 0)  {\n   360:             You(\"现在没有掌握任何技巧。\");\n   361: \t    return FALSE;\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n>  364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n   365:             else if (ntechs < 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n   366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n   367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {"
+    "stage": 0,
+    "context": "src/tech.c:364:44\n   359: \tif (ntechs == 0)  {\n   360:             You(\"现在没有掌握任何技巧。\");\n   361: \t    return FALSE;\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n&gt;  364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n   365:             else if (ntechs &lt; 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n   366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n   367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {"
   },
   {
     "key": "L00365_01",
     "original": "a-%c",
     "translation": "",
-    "context": "src/tech.c:365:50\n   360:             You(\"现在没有掌握任何技巧。\");\n   361: \t    return FALSE;\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n   364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n>  365:             else if (ntechs < 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n   366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n   367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {\n   370:                 Sprintf(qbuf, \"想要施展什么技术？ [%s ?]\", lets);"
+    "stage": 0,
+    "context": "src/tech.c:365:50\n   360:             You(\"现在没有掌握任何技巧。\");\n   361: \t    return FALSE;\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n   364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n&gt;  365:             else if (ntechs &lt; 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n   366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n   367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {\n   370:                 Sprintf(qbuf, \"想要施展什么技术？ [%s ?]\", lets);"
   },
   {
     "key": "L00366_01",
     "original": "a-z A",
     "translation": "",
-    "context": "src/tech.c:366:51\n   361: \t    return FALSE;\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n   364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n   365:             else if (ntechs < 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n>  366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n   367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {\n   370:                 Sprintf(qbuf, \"想要施展什么技术？ [%s ?]\", lets);\n   371: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')"
+    "stage": 0,
+    "context": "src/tech.c:366:51\n   361: \t    return FALSE;\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n   364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n   365:             else if (ntechs &lt; 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n&gt;  366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n   367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {\n   370:                 Sprintf(qbuf, \"想要施展什么技术？ [%s ?]\", lets);\n   371: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')"
   },
   {
     "key": "L00367_01",
     "original": "a-z A-%c",
     "translation": "",
-    "context": "src/tech.c:367:32\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n   364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n   365:             else if (ntechs < 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n   366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n>  367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {\n   370:                 Sprintf(qbuf, \"想要施展什么技术？ [%s ?]\", lets);\n   371: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')\n   372: \t\t    break;"
+    "stage": 0,
+    "context": "src/tech.c:367:32\n   362: \t}\n   363: \tif (flags.menu_style == MENU_TRADITIONAL) {\n   364:             if (ntechs == 1)  Strcpy(lets, \"a\");\n   365:             else if (ntechs &lt; 27)  Sprintf(lets, \"a-%c\", 'a' + ntechs - 1);\n   366:             else if (ntechs == 27)  Sprintf(lets, \"a-z A\");\n&gt;  367:             else Sprintf(lets, \"a-z A-%c\", 'A' + ntechs - 27);\n   368: \n   369: \t    for(;;)  {\n   370:                 Sprintf(qbuf, \"想要施展什么技术？ [%s ?]\", lets);\n   371: \t\tif ((ilet = yn_function(qbuf, (char *)0, '\\0')) == '?')\n   372: \t\t    break;"
   },
   {
     "key": "L00424_01",
     "original": "    %-*s Level   Status",
     "translation": "",
-    "context": "src/tech.c:424:19\n   419: \t    for (longest = 0, i = 0; i < MAXTECH; i++) {\n   420: \t\tif (techid(i) == NO_TECH) continue;\n   421: \t\tif ((len = strlen(techname(i))) > longest)\n   422: \t\t    longest = len;\n   423: \t    }\n>  424: \t    Sprintf(buf, \"    %-*s Level   Status\", longest, \"Name\");\n   425: \t} else\n   426: \t    Sprintf(buf, \"Name\\tLevel\\tStatus\");\n   427: \n   428: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   429: "
+    "stage": 0,
+    "context": "src/tech.c:424:19\n   419: \t    for (longest = 0, i = 0; i &lt; MAXTECH; i++) {\n   420: \t\tif (techid(i) == NO_TECH) continue;\n   421: \t\tif ((len = strlen(techname(i))) &gt; longest)\n   422: \t\t    longest = len;\n   423: \t    }\n&gt;  424: \t    Sprintf(buf, \"    %-*s Level   Status\", longest, \"Name\");\n   425: \t} else\n   426: \t    Sprintf(buf, \"Name\\tLevel\\tStatus\");\n   427: \n   428: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   429: "
   },
   {
     "key": "L00424_02",
     "original": "Name",
     "translation": "",
-    "context": "src/tech.c:424:55\n   419: \t    for (longest = 0, i = 0; i < MAXTECH; i++) {\n   420: \t\tif (techid(i) == NO_TECH) continue;\n   421: \t\tif ((len = strlen(techname(i))) > longest)\n   422: \t\t    longest = len;\n   423: \t    }\n>  424: \t    Sprintf(buf, \"    %-*s Level   Status\", longest, \"Name\");\n   425: \t} else\n   426: \t    Sprintf(buf, \"Name\\tLevel\\tStatus\");\n   427: \n   428: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   429: "
+    "stage": 0,
+    "context": "src/tech.c:424:55\n   419: \t    for (longest = 0, i = 0; i &lt; MAXTECH; i++) {\n   420: \t\tif (techid(i) == NO_TECH) continue;\n   421: \t\tif ((len = strlen(techname(i))) &gt; longest)\n   422: \t\t    longest = len;\n   423: \t    }\n&gt;  424: \t    Sprintf(buf, \"    %-*s Level   Status\", longest, \"Name\");\n   425: \t} else\n   426: \t    Sprintf(buf, \"Name\\tLevel\\tStatus\");\n   427: \n   428: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   429: "
   },
   {
     "key": "L00426_01",
     "original": "Name\\tLevel\\tStatus",
     "translation": "",
-    "context": "src/tech.c:426:19\n   421: \t\tif ((len = strlen(techname(i))) > longest)\n   422: \t\t    longest = len;\n   423: \t    }\n   424: \t    Sprintf(buf, \"    %-*s Level   Status\", longest, \"Name\");\n   425: \t} else\n>  426: \t    Sprintf(buf, \"Name\\tLevel\\tStatus\");\n   427: \n   428: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   429: \n   430: \tfor (i = 0; i < MAXTECH; i++) {\n   431: \t    if (techid(i) == NO_TECH)"
+    "stage": 0,
+    "context": "src/tech.c:426:19\n   421: \t\tif ((len = strlen(techname(i))) &gt; longest)\n   422: \t\t    longest = len;\n   423: \t    }\n   424: \t    Sprintf(buf, \"    %-*s Level   Status\", longest, \"Name\");\n   425: \t} else\n&gt;  426: \t    Sprintf(buf, \"Name\\tLevel\\tStatus\");\n   427: \n   428: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   429: \n   430: \tfor (i = 0; i &lt; MAXTECH; i++) {\n   431: \t    if (techid(i) == NO_TECH)"
   },
   {
     "key": "L00446_01",
     "original": "%s%-*s %2d%c%c%c   %s(%i)",
     "translation": "",
-    "context": "src/tech.c:446:20\n   441: \t\tany.a_int = 0;\n   442: \t    }\n   443: #ifdef WIZARD\n   444: \t    if (wizard) \n   445: \t\tif (!iflags.menu_tab_sep)\t\t\t\n>  446: \t\t    Sprintf(buf, \"%s%-*s %2d%c%c%c   %s(%i)\",\n   447: \t\t\t    prefix, longest, techname(i), tlevel,\n   448: \t\t\t    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',\n   449: \t\t\t    tech_list[i].t_intrinsic & FROMRACE ? 'R' : ' ',\n   450: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   451: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :"
+    "stage": 0,
+    "context": "src/tech.c:446:20\n   441: \t\tany.a_int = 0;\n   442: \t    }\n   443: #ifdef WIZARD\n   444: \t    if (wizard) \n   445: \t\tif (!iflags.menu_tab_sep)\t\t\t\n&gt;  446: \t\t    Sprintf(buf, \"%s%-*s %2d%c%c%c   %s(%i)\",\n   447: \t\t\t    prefix, longest, techname(i), tlevel,\n   448: \t\t\t    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',\n   449: \t\t\t    tech_list[i].t_intrinsic & FROMRACE ? 'R' : ' ',\n   450: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   451: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :"
   },
   {
     "key": "L00455_01",
     "original": "Soon",
     "translation": "",
-    "context": "src/tech.c:455:36\n   450: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   451: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :\n   452: \t\t\t    tlevel <= 0 ? \"无法回忆\" :\n   453: \t\t\t    can_limitbreak() ? \"可极限激发\" :\n   454: \t\t\t    !techtout(i) ? \"可施展\" : \n>  455: \t\t\t    techtout(i) > 100 ? \"冷却中\" : \"Soon\",\n   456: \t\t\t    techtout(i));\n   457: \t\telse\n   458: \t\t    Sprintf(buf, \"%s%s\\t%2d%c%c%c\\t%s(%i)\",\n   459: \t\t\t    prefix, techname(i), tlevel,\n   460: \t\t\t    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',"
+    "stage": 0,
+    "context": "src/tech.c:455:36\n   450: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   451: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :\n   452: \t\t\t    tlevel &lt;= 0 ? \"无法回忆\" :\n   453: \t\t\t    can_limitbreak() ? \"可极限激发\" :\n   454: \t\t\t    !techtout(i) ? \"可施展\" : \n&gt;  455: \t\t\t    techtout(i) &gt; 100 ? \"冷却中\" : \"Soon\",\n   456: \t\t\t    techtout(i));\n   457: \t\telse\n   458: \t\t    Sprintf(buf, \"%s%s\\t%2d%c%c%c\\t%s(%i)\",\n   459: \t\t\t    prefix, techname(i), tlevel,\n   460: \t\t\t    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',"
   },
   {
     "key": "L00458_01",
     "original": "%s%s\\t%2d%c%c%c\\t%s(%i)",
     "translation": "",
-    "context": "src/tech.c:458:20\n   453: \t\t\t    can_limitbreak() ? \"可极限激发\" :\n   454: \t\t\t    !techtout(i) ? \"可施展\" : \n   455: \t\t\t    techtout(i) > 100 ? \"冷却中\" : \"Soon\",\n   456: \t\t\t    techtout(i));\n   457: \t\telse\n>  458: \t\t    Sprintf(buf, \"%s%s\\t%2d%c%c%c\\t%s(%i)\",\n   459: \t\t\t    prefix, techname(i), tlevel,\n   460: \t\t\t    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',\n   461: \t\t\t    tech_list[i].t_intrinsic & FROMRACE ? 'R' : ' ',\n   462: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   463: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :"
+    "stage": 0,
+    "context": "src/tech.c:458:20\n   453: \t\t\t    can_limitbreak() ? \"可极限激发\" :\n   454: \t\t\t    !techtout(i) ? \"可施展\" : \n   455: \t\t\t    techtout(i) &gt; 100 ? \"冷却中\" : \"Soon\",\n   456: \t\t\t    techtout(i));\n   457: \t\telse\n&gt;  458: \t\t    Sprintf(buf, \"%s%s\\t%2d%c%c%c\\t%s(%i)\",\n   459: \t\t\t    prefix, techname(i), tlevel,\n   460: \t\t\t    tech_list[i].t_intrinsic & FROMEXPER ? 'X' : ' ',\n   461: \t\t\t    tech_list[i].t_intrinsic & FROMRACE ? 'R' : ' ',\n   462: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   463: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :"
   },
   {
     "key": "L00467_01",
     "original": "Soon",
     "translation": "",
-    "context": "src/tech.c:467:36\n   462: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   463: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :\n   464: \t\t\t    tlevel <= 0 ? \"无法回忆\" :\n   465: \t\t\t    can_limitbreak() ? \"可极限激发\" :\n   466: \t\t\t    !techtout(i) ? \"可施展\" : \n>  467: \t\t\t    techtout(i) > 100 ? \"冷却中\" : \"Soon\",\n   468: \t\t\t    techtout(i));\n   469: \t    else\n   470: #endif\n   471: \t    if (!iflags.menu_tab_sep)\t\t\t\n   472: \t\tSprintf(buf, \"%s%-*s %5d   %s\","
+    "stage": 0,
+    "context": "src/tech.c:467:36\n   462: \t\t\t    tech_list[i].t_intrinsic & FROMOUTSIDE ? 'O' : ' ',\n   463: \t\t\t    tech_inuse(techid(i)) ? \"正在施展中\" :\n   464: \t\t\t    tlevel &lt;= 0 ? \"无法回忆\" :\n   465: \t\t\t    can_limitbreak() ? \"可极限激发\" :\n   466: \t\t\t    !techtout(i) ? \"可施展\" : \n&gt;  467: \t\t\t    techtout(i) &gt; 100 ? \"冷却中\" : \"Soon\",\n   468: \t\t\t    techtout(i));\n   469: \t    else\n   470: #endif\n   471: \t    if (!iflags.menu_tab_sep)\t\t\t\n   472: \t\tSprintf(buf, \"%s%-*s %5d   %s\","
   },
   {
     "key": "L00472_01",
     "original": "%s%-*s %5d   %s",
     "translation": "",
-    "context": "src/tech.c:472:16\n   467: \t\t\t    techtout(i) > 100 ? \"冷却中\" : \"Soon\",\n   468: \t\t\t    techtout(i));\n   469: \t    else\n   470: #endif\n   471: \t    if (!iflags.menu_tab_sep)\t\t\t\n>  472: \t\tSprintf(buf, \"%s%-*s %5d   %s\",\n   473: \t\t\tprefix, longest, techname(i), tlevel,\n   474: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   475: \t\t\ttlevel <= 0 ? \"无法回忆\" :\n   476: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   477: \t\t\t!techtout(i) ? \"可施展\" : "
+    "stage": 0,
+    "context": "src/tech.c:472:16\n   467: \t\t\t    techtout(i) &gt; 100 ? \"冷却中\" : \"Soon\",\n   468: \t\t\t    techtout(i));\n   469: \t    else\n   470: #endif\n   471: \t    if (!iflags.menu_tab_sep)\t\t\t\n&gt;  472: \t\tSprintf(buf, \"%s%-*s %5d   %s\",\n   473: \t\t\tprefix, longest, techname(i), tlevel,\n   474: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   475: \t\t\ttlevel &lt;= 0 ? \"无法回忆\" :\n   476: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   477: \t\t\t!techtout(i) ? \"可施展\" : "
   },
   {
     "key": "L00478_01",
     "original": "Soon",
     "translation": "",
-    "context": "src/tech.c:478:32\n   473: \t\t\tprefix, longest, techname(i), tlevel,\n   474: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   475: \t\t\ttlevel <= 0 ? \"无法回忆\" :\n   476: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   477: \t\t\t!techtout(i) ? \"可施展\" : \n>  478: \t\t\ttechtout(i) > 100 ? \"冷却中\" : \"Soon\");\n   479: \t    else\n   480: \t\tSprintf(buf, \"%s%s\\t%5d\\t%s\",\n   481: \t\t\tprefix, techname(i), tlevel,\n   482: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   483: \t\t\ttlevel <= 0 ? \"无法回忆\" :"
+    "stage": 0,
+    "context": "src/tech.c:478:32\n   473: \t\t\tprefix, longest, techname(i), tlevel,\n   474: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   475: \t\t\ttlevel &lt;= 0 ? \"无法回忆\" :\n   476: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   477: \t\t\t!techtout(i) ? \"可施展\" : \n&gt;  478: \t\t\ttechtout(i) &gt; 100 ? \"冷却中\" : \"Soon\");\n   479: \t    else\n   480: \t\tSprintf(buf, \"%s%s\\t%5d\\t%s\",\n   481: \t\t\tprefix, techname(i), tlevel,\n   482: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   483: \t\t\ttlevel &lt;= 0 ? \"无法回忆\" :"
   },
   {
     "key": "L00480_01",
     "original": "%s%s\\t%5d\\t%s",
     "translation": "",
-    "context": "src/tech.c:480:16\n   475: \t\t\ttlevel <= 0 ? \"无法回忆\" :\n   476: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   477: \t\t\t!techtout(i) ? \"可施展\" : \n   478: \t\t\ttechtout(i) > 100 ? \"冷却中\" : \"Soon\");\n   479: \t    else\n>  480: \t\tSprintf(buf, \"%s%s\\t%5d\\t%s\",\n   481: \t\t\tprefix, techname(i), tlevel,\n   482: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   483: \t\t\ttlevel <= 0 ? \"无法回忆\" :\n   484: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   485: \t\t\t!techtout(i) ? \"可施展\" : "
+    "stage": 0,
+    "context": "src/tech.c:480:16\n   475: \t\t\ttlevel &lt;= 0 ? \"无法回忆\" :\n   476: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   477: \t\t\t!techtout(i) ? \"可施展\" : \n   478: \t\t\ttechtout(i) &gt; 100 ? \"冷却中\" : \"Soon\");\n   479: \t    else\n&gt;  480: \t\tSprintf(buf, \"%s%s\\t%5d\\t%s\",\n   481: \t\t\tprefix, techname(i), tlevel,\n   482: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   483: \t\t\ttlevel &lt;= 0 ? \"无法回忆\" :\n   484: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   485: \t\t\t!techtout(i) ? \"可施展\" : "
   },
   {
     "key": "L00486_01",
     "original": "Soon",
     "translation": "",
-    "context": "src/tech.c:486:32\n   481: \t\t\tprefix, techname(i), tlevel,\n   482: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   483: \t\t\ttlevel <= 0 ? \"无法回忆\" :\n   484: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   485: \t\t\t!techtout(i) ? \"可施展\" : \n>  486: \t\t\ttechtout(i) > 100 ? \"冷却中\" : \"Soon\");\n   487: \n   488: \t    add_menu(tmpwin, NO_GLYPH, &any,\n   489: \t\t    techtout(i) ? 0 : let, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   490: \t    if (let++ == 'z') let = 'A';\n   491: \t}"
+    "stage": 0,
+    "context": "src/tech.c:486:32\n   481: \t\t\tprefix, techname(i), tlevel,\n   482: \t\t\ttech_inuse(techid(i)) ? \"正在施展中\" :\n   483: \t\t\ttlevel &lt;= 0 ? \"无法回忆\" :\n   484: \t\t\tcan_limitbreak() ? \"可极限激发\" :\n   485: \t\t\t!techtout(i) ? \"可施展\" : \n&gt;  486: \t\t\ttechtout(i) &gt; 100 ? \"冷却中\" : \"Soon\");\n   487: \n   488: \t    add_menu(tmpwin, NO_GLYPH, &any,\n   489: \t\t    techtout(i) ? 0 : let, 0, ATR_NONE, buf, MENU_UNSELECTED);\n   490: \t    if (let++ == 'z') let = 'A';\n   491: \t}"
   },
   {
     "key": "L00592_01",
     "original": "for a while",
     "translation": "",
-    "context": "src/tech.c:592:25\n   587: \t    return (0);\n   588: \t}\n   589:         if (techtout(tech_no) && !can_limitbreak()) {\n   590: \t    You(\"必须要%s才能再次使用技巧。\",\n   591:                 (techtout(tech_no) > 100) ?\n>  592:                         \"for a while\" : \"a little longer\");\n   593: #ifdef WIZARD\n   594:             if (!wizard || (yn(\"仍要使用技术吗？\") == 'n'))\n   595: #endif\n   596:                 return(0);\n   597:         }"
+    "stage": 0,
+    "context": "src/tech.c:592:25\n   587: \t    return (0);\n   588: \t}\n   589:         if (techtout(tech_no) && !can_limitbreak()) {\n   590: \t    You(\"必须要%s才能再次使用技巧。\",\n   591:                 (techtout(tech_no) &gt; 100) ?\n&gt;  592:                         \"for a while\" : \"a little longer\");\n   593: #ifdef WIZARD\n   594:             if (!wizard || (yn(\"仍要使用技术吗？\") == 'n'))\n   595: #endif\n   596:                 return(0);\n   597:         }"
   },
   {
     "key": "L00592_02",
     "original": "a little longer",
     "translation": "",
-    "context": "src/tech.c:592:41\n   587: \t    return (0);\n   588: \t}\n   589:         if (techtout(tech_no) && !can_limitbreak()) {\n   590: \t    You(\"必须要%s才能再次使用技巧。\",\n   591:                 (techtout(tech_no) > 100) ?\n>  592:                         \"for a while\" : \"a little longer\");\n   593: #ifdef WIZARD\n   594:             if (!wizard || (yn(\"仍要使用技术吗？\") == 'n'))\n   595: #endif\n   596:                 return(0);\n   597:         }"
+    "stage": 0,
+    "context": "src/tech.c:592:41\n   587: \t    return (0);\n   588: \t}\n   589:         if (techtout(tech_no) && !can_limitbreak()) {\n   590: \t    You(\"必须要%s才能再次使用技巧。\",\n   591:                 (techtout(tech_no) &gt; 100) ?\n&gt;  592:                         \"for a while\" : \"a little longer\");\n   593: #ifdef WIZARD\n   594:             if (!wizard || (yn(\"仍要使用技术吗？\") == 'n'))\n   595: #endif\n   596:                 return(0);\n   597:         }"
   },
   {
     "key": "L00625_01",
     "original": "holding a weapon",
     "translation": "",
-    "context": "src/tech.c:625:15\n   620: \t\tbreak;\n   621:             case T_EVISCERATE:\n   622: \t\t/* only when empty handed, in human form */\n   623: \t\tif (Upolyd || uwep || uarmg) {\n   624: \t\t    You_cant(\"在%s的时候这么干！\", Upolyd ? \"被变形的\" :\n>  625: \t\t\t    uwep ? \"holding a weapon\" : \"戴着手套的\");\n   626: \t\t    return 0;\n   627: \t\t}\n   628: \t\tYour(\"指甲变长，变成了金刚狼一样的爪子！\");\n   629: \t\taggravate();\n   630: \t\ttecht_inuse(tech_no) = d(2,4) + techlev(tech_no)/5 + 2;"
+    "stage": 0,
+    "context": "src/tech.c:625:15\n   620: \t\tbreak;\n   621:             case T_EVISCERATE:\n   622: \t\t/* only when empty handed, in human form */\n   623: \t\tif (Upolyd || uwep || uarmg) {\n   624: \t\t    You_cant(\"在%s的时候这么干！\", Upolyd ? \"被变形的\" :\n&gt;  625: \t\t\t    uwep ? \"holding a weapon\" : \"戴着手套的\");\n   626: \t\t    return 0;\n   627: \t\t}\n   628: \t\tYour(\"指甲变长，变成了金刚狼一样的爪子！\");\n   629: \t\taggravate();\n   630: \t\ttecht_inuse(tech_no) = d(2,4) + techlev(tech_no)/5 + 2;"
   },
   {
     "key": "L00651_01",
     "original": "%s %s become blurs as they reach for your quiver!",
     "translation": "",
-    "context": "src/tech.c:651:22\n   646: \t\t    You(\"聚精会神……\");\n   647: \t\t    if (studyspell()) t_timeout = rn1(1000,500); /*in spell.c*/\n   648: \t\t}\n   649:                break;\n   650:             case T_FLURRY:\n>  651:                 Your(\"%s %s become blurs as they reach for your quiver!\",\n   652: \t\t\tuarmg ? \"戴着手套的\" : \"光着的\",      /* Del Lamb */\n   653: \t\t\tmakeplural(body_part(HAND)));\n   654:                 techt_inuse(tech_no) = rnd((int) (techlev(tech_no)/6 + 1)) + 2;\n   655:                 t_timeout = rn1(1000,500);\n   656: \t\tbreak;"
+    "stage": 0,
+    "context": "src/tech.c:651:22\n   646: \t\t    You(\"聚精会神……\");\n   647: \t\t    if (studyspell()) t_timeout = rn1(1000,500); /*in spell.c*/\n   648: \t\t}\n   649:                break;\n   650:             case T_FLURRY:\n&gt;  651:                 Your(\"%s %s become blurs as they reach for your quiver!\",\n   652: \t\t\tuarmg ? \"戴着手套的\" : \"光着的\",      /* Del Lamb */\n   653: \t\t\tmakeplural(body_part(HAND)));\n   654:                 techt_inuse(tech_no) = rnd((int) (techlev(tech_no)/6 + 1)) + 2;\n   655:                 t_timeout = rn1(1000,500);\n   656: \t\tbreak;"
   },
   {
     "key": "L00703_01",
     "original": "dress your wounds with",
     "translation": "",
-    "context": "src/tech.c:703:8\n   698: \t\t\tbreak;\n   699: \t\t    } else pline(\"前提是你手里得要有把手术刀才行啊……\");\n   700: \t\t}\n   701: \t\tif (Upolyd ? u.mh < u.mhmax : u.uhp < u.uhpmax) {\n   702: \t\t    otmp = use_medical_kit(BANDAGE, FALSE,\n>  703: \t\t\t    \"dress your wounds with\");\n   704: \t\t    if (otmp) {\n   705: \t\t\tcheck_unpaid(otmp);\n   706: \t\t\tif (otmp->quan > 1L) {\n   707: \t\t\t    otmp->quan--;\n   708: \t\t\t    otmp->ocontainer->owt = weight(otmp->ocontainer);"
+    "stage": 0,
+    "context": "src/tech.c:703:8\n   698: \t\t\tbreak;\n   699: \t\t    } else pline(\"前提是你手里得要有把手术刀才行啊……\");\n   700: \t\t}\n   701: \t\tif (Upolyd ? u.mh &lt; u.mhmax : u.uhp &lt; u.uhpmax) {\n   702: \t\t    otmp = use_medical_kit(BANDAGE, FALSE,\n&gt;  703: \t\t\t    \"dress your wounds with\");\n   704: \t\t    if (otmp) {\n   705: \t\t\tcheck_unpaid(otmp);\n   706: \t\t\tif (otmp-&gt;quan &gt; 1L) {\n   707: \t\t\t    otmp-&gt;quan--;\n   708: \t\t\t    otmp-&gt;ocontainer-&gt;owt = weight(otmp-&gt;ocontainer);"
   },
   {
     "key": "L00779_01",
     "original": "perform a flashy twirl!",
     "translation": "",
-    "context": "src/tech.c:779:11\n   774: \t\t    You(\"决定还是算了吧。\");\n   775: \t\t    return(0);\n   776: \t\t}\n   777: \t\tmtmp = m_at(u.ux + u.dx, u.uy + u.dy);\n   778: \t\tif (!mtmp) {\n>  779: \t\t    You(\"perform a flashy twirl!\");\n   780: \t\t    return (0);\n   781: \t\t} else {\n   782: \t\t    int oldhp = mtmp->mhp;\n   783: \t\t    int tmp;\n   784: "
+    "stage": 0,
+    "context": "src/tech.c:779:11\n   774: \t\t    You(\"决定还是算了吧。\");\n   775: \t\t    return(0);\n   776: \t\t}\n   777: \t\tmtmp = m_at(u.ux + u.dx, u.uy + u.dy);\n   778: \t\tif (!mtmp) {\n&gt;  779: \t\t    You(\"perform a flashy twirl!\");\n   780: \t\t    return (0);\n   781: \t\t} else {\n   782: \t\t    int oldhp = mtmp-&gt;mhp;\n   783: \t\t    int tmp;\n   784: "
   },
   {
     "key": "L00832_01",
     "original": "sever %s head!",
     "translation": "",
-    "context": "src/tech.c:832:9\n   827: \t\t\t    You_cant(\"对%s施展了割喉！\", mon_nam(mtmp));\n   828: \t\t\telse {\n   829: \t\t\t    int tmp = 0;\n   830: \n   831: \t\t\t    if (rn2(5) < (techlev(tech_no)/10 + 1)) {\n>  832: \t\t\t\tYou(\"sever %s head!\", s_suffix(mon_nam(mtmp)));\n   833: \t\t\t\ttmp = mtmp->mhp;\n   834: \t\t\t    } else {\n   835: \t\t\t\tYou(\"狠狠地伤害了%s！\", s_suffix(mon_nam(mtmp)));\n   836: \t\t\t\ttmp = mtmp->mhp / 2;\n   837: \t\t\t    }"
+    "stage": 0,
+    "context": "src/tech.c:832:9\n   827: \t\t\t    You_cant(\"对%s施展了割喉！\", mon_nam(mtmp));\n   828: \t\t\telse {\n   829: \t\t\t    int tmp = 0;\n   830: \n   831: \t\t\t    if (rn2(5) &lt; (techlev(tech_no)/10 + 1)) {\n&gt;  832: \t\t\t\tYou(\"sever %s head!\", s_suffix(mon_nam(mtmp)));\n   833: \t\t\t\ttmp = mtmp-&gt;mhp;\n   834: \t\t\t    } else {\n   835: \t\t\t\tYou(\"狠狠地伤害了%s！\", s_suffix(mon_nam(mtmp)));\n   836: \t\t\t\ttmp = mtmp-&gt;mhp / 2;\n   837: \t\t\t    }"
   },
   {
     "key": "L00853_01",
     "original": "%s %s %s.",
     "translation": "",
-    "context": "src/tech.c:853:29\n   848: \t\tif ( !(obj = getobj(allowall, \"祝福哪个？\"))) return(0);\n   849: \t\tpline(\"你手中涌现出一股圣洁的光芒！\");\n   850:                 if (!Blind) (void) Shk_Your(Your_buf, obj);\n   851: \t\tif (obj->cursed) {\n   852:                 \tif (!Blind)\n>  853:                     \t\tpline(\"%s %s %s.\",Your_buf,\n   854: \t\t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   855: \t\t\t\t\t\t  hcolor(NH_AMBER));\n   856: \t\t\t\tuncurse(obj);\n   857: \t\t\t\tobj->bknown=1;\n   858: \t\t} else if(!obj->blessed) {"
+    "stage": 0,
+    "context": "src/tech.c:853:29\n   848: \t\tif ( !(obj = getobj(allowall, \"祝福哪个？\"))) return(0);\n   849: \t\tpline(\"你手中涌现出一股圣洁的光芒！\");\n   850:                 if (!Blind) (void) Shk_Your(Your_buf, obj);\n   851: \t\tif (obj-&gt;cursed) {\n   852:                 \tif (!Blind)\n&gt;  853:                     \t\tpline(\"%s %s %s.\",Your_buf,\n   854: \t\t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   855: \t\t\t\t\t\t  hcolor(NH_AMBER));\n   856: \t\t\t\tuncurse(obj);\n   857: \t\t\t\tobj-&gt;bknown=1;\n   858: \t\t} else if(!obj-&gt;blessed) {"
   },
   {
     "key": "L00854_01",
     "original": "softly glow",
     "translation": "",
-    "context": "src/tech.c:854:22\n   849: \t\tpline(\"你手中涌现出一股圣洁的光芒！\");\n   850:                 if (!Blind) (void) Shk_Your(Your_buf, obj);\n   851: \t\tif (obj->cursed) {\n   852:                 \tif (!Blind)\n   853:                     \t\tpline(\"%s %s %s.\",Your_buf,\n>  854: \t\t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   855: \t\t\t\t\t\t  hcolor(NH_AMBER));\n   856: \t\t\t\tuncurse(obj);\n   857: \t\t\t\tobj->bknown=1;\n   858: \t\t} else if(!obj->blessed) {\n   859: \t\t\tif (!Blind) {"
+    "stage": 0,
+    "context": "src/tech.c:854:22\n   849: \t\tpline(\"你手中涌现出一股圣洁的光芒！\");\n   850:                 if (!Blind) (void) Shk_Your(Your_buf, obj);\n   851: \t\tif (obj-&gt;cursed) {\n   852:                 \tif (!Blind)\n   853:                     \t\tpline(\"%s %s %s.\",Your_buf,\n&gt;  854: \t\t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   855: \t\t\t\t\t\t  hcolor(NH_AMBER));\n   856: \t\t\t\tuncurse(obj);\n   857: \t\t\t\tobj-&gt;bknown=1;\n   858: \t\t} else if(!obj-&gt;blessed) {\n   859: \t\t\tif (!Blind) {"
   },
   {
     "key": "L00861_01",
     "original": "%s %s with a%s %s aura.",
     "translation": "",
-    "context": "src/tech.c:861:11\n   856: \t\t\t\tuncurse(obj);\n   857: \t\t\t\tobj->bknown=1;\n   858: \t\t} else if(!obj->blessed) {\n   859: \t\t\tif (!Blind) {\n   860: \t\t\t\tstr = hcolor(NH_LIGHT_BLUE);\n>  861: \t\t\t\tpline(\"%s %s with a%s %s aura.\",\n   862: \t\t\t\t\t  Your_buf,\n   863: \t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   864: \t\t\t\t\t  index(vowels, *str) ? \"n\" : \"\", str);\n   865: \t\t\t}\n   866: \t\t\tbless(obj);"
+    "stage": 0,
+    "context": "src/tech.c:861:11\n   856: \t\t\t\tuncurse(obj);\n   857: \t\t\t\tobj-&gt;bknown=1;\n   858: \t\t} else if(!obj-&gt;blessed) {\n   859: \t\t\tif (!Blind) {\n   860: \t\t\t\tstr = hcolor(NH_LIGHT_BLUE);\n&gt;  861: \t\t\t\tpline(\"%s %s with a%s %s aura.\",\n   862: \t\t\t\t\t  Your_buf,\n   863: \t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   864: \t\t\t\t\t  index(vowels, *str) ? \"n\" : \"\", str);\n   865: \t\t\t}\n   866: \t\t\tbless(obj);"
   },
   {
     "key": "L00863_01",
     "original": "softly glow",
     "translation": "",
-    "context": "src/tech.c:863:21\n   858: \t\t} else if(!obj->blessed) {\n   859: \t\t\tif (!Blind) {\n   860: \t\t\t\tstr = hcolor(NH_LIGHT_BLUE);\n   861: \t\t\t\tpline(\"%s %s with a%s %s aura.\",\n   862: \t\t\t\t\t  Your_buf,\n>  863: \t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   864: \t\t\t\t\t  index(vowels, *str) ? \"n\" : \"\", str);\n   865: \t\t\t}\n   866: \t\t\tbless(obj);\n   867: \t\t\tobj->bknown=1;\n   868: \t\t} else {"
+    "stage": 0,
+    "context": "src/tech.c:863:21\n   858: \t\t} else if(!obj-&gt;blessed) {\n   859: \t\t\tif (!Blind) {\n   860: \t\t\t\tstr = hcolor(NH_LIGHT_BLUE);\n   861: \t\t\t\tpline(\"%s %s with a%s %s aura.\",\n   862: \t\t\t\t\t  Your_buf,\n&gt;  863: \t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n   864: \t\t\t\t\t  index(vowels, *str) ? \"n\" : \"\", str);\n   865: \t\t\t}\n   866: \t\t\tbless(obj);\n   867: \t\t\tobj-&gt;bknown=1;\n   868: \t\t} else {"
   },
   {
     "key": "L00864_01",
     "original": "n",
     "translation": "",
-    "context": "src/tech.c:864:30\n   859: \t\t\tif (!Blind) {\n   860: \t\t\t\tstr = hcolor(NH_LIGHT_BLUE);\n   861: \t\t\t\tpline(\"%s %s with a%s %s aura.\",\n   862: \t\t\t\t\t  Your_buf,\n   863: \t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n>  864: \t\t\t\t\t  index(vowels, *str) ? \"n\" : \"\", str);\n   865: \t\t\t}\n   866: \t\t\tbless(obj);\n   867: \t\t\tobj->bknown=1;\n   868: \t\t} else {\n   869: \t\t\tif (obj->bknown) {"
+    "stage": 0,
+    "context": "src/tech.c:864:30\n   859: \t\t\tif (!Blind) {\n   860: \t\t\t\tstr = hcolor(NH_LIGHT_BLUE);\n   861: \t\t\t\tpline(\"%s %s with a%s %s aura.\",\n   862: \t\t\t\t\t  Your_buf,\n   863: \t\t\t\t\t  aobjnam(obj, \"softly glow\"),\n&gt;  864: \t\t\t\t\t  index(vowels, *str) ? \"n\" : \"\", str);\n   865: \t\t\t}\n   866: \t\t\tbless(obj);\n   867: \t\t\tobj-&gt;bknown=1;\n   868: \t\t} else {\n   869: \t\t\tif (obj-&gt;bknown) {"
   },
   {
     "key": "L00940_01",
     "original": "flow there!",
     "translation": "",
-    "context": "src/tech.c:940:16\n   935: \t\t    return 0;\n   936: \t\t} else if (m_at(cc.x, cc.y) || !isok(cc.x, cc.y) ||\n   937: \t\t\tIS_ROCK(levl[cc.x][cc.y].typ) ||\n   938: \t\t\tsobj_at(BOULDER, cc.x, cc.y) ||\n   939: \t\t\tclosed_door(cc.x, cc.y)) {\n>  940: \t\t    You_cant(\"flow there!\"); /* MAR */\n   941: \t\t    return 0;\n   942: \t\t} else {\n   943: \t\t    You(\"全身都流体化了！\");\n   944: \t\t    if (Punished) {\n   945: \t\t\tYou(\"滑出了铁链上卡着你脚的锁。\");"
+    "stage": 0,
+    "context": "src/tech.c:940:16\n   935: \t\t    return 0;\n   936: \t\t} else if (m_at(cc.x, cc.y) || !isok(cc.x, cc.y) ||\n   937: \t\t\tIS_ROCK(levl[cc.x][cc.y].typ) ||\n   938: \t\t\tsobj_at(BOULDER, cc.x, cc.y) ||\n   939: \t\t\tclosed_door(cc.x, cc.y)) {\n&gt;  940: \t\t    You_cant(\"flow there!\"); /* MAR */\n   941: \t\t    return 0;\n   942: \t\t} else {\n   943: \t\t    You(\"全身都流体化了！\");\n   944: \t\t    if (Punished) {\n   945: \t\t\tYou(\"滑出了铁链上卡着你脚的锁。\");"
   },
   {
     "key": "L00992_01",
     "original": "catch %s in your acid trail!",
     "translation": "",
-    "context": "src/tech.c:992:16\n   987: \t\t\t    \n   988: \t\t\t    chance = rn2(20);\n   989: \t\t    \t    if (!chance || (3 - chance) > AC_VALUE(find_mac(mtmp)))\n   990: \t\t    \t    \tbreak;\n   991: \t\t\t    setmangry(mtmp);\n>  992: \t\t    \t    You(\"catch %s in your acid trail!\", mon_nam(mtmp));\n   993: \t\t    \t    if (!resists_acid(mtmp)) {\n   994: \t\t\t\tint tmp = 1;\n   995: \t\t\t\t/* Need to add a to-hit */\n   996: \t\t\t\ttmp += d(2,4);\n   997: \t\t\t\ttmp += rn2((int) (techlev(tech_no)/5 + 1));"
+    "stage": 0,
+    "context": "src/tech.c:992:16\n   987: \t\t\t    \n   988: \t\t\t    chance = rn2(20);\n   989: \t\t    \t    if (!chance || (3 - chance) &gt; AC_VALUE(find_mac(mtmp)))\n   990: \t\t    \t    \tbreak;\n   991: \t\t\t    setmangry(mtmp);\n&gt;  992: \t\t    \t    You(\"catch %s in your acid trail!\", mon_nam(mtmp));\n   993: \t\t    \t    if (!resists_acid(mtmp)) {\n   994: \t\t\t\tint tmp = 1;\n   995: \t\t\t\t/* Need to add a to-hit */\n   996: \t\t\t\ttmp += d(2,4);\n   997: \t\t\t\ttmp += rn2((int) (techlev(tech_no)/5 + 1));"
   },
   {
     "key": "L01106_01",
     "original": "don't have the strength to perform revivification!",
     "translation": "",
-    "context": "src/tech.c:1106:11\n  1101: \t\t    You(no_elbow_room);\n  1102: \t\t    return 0;\n  1103: \t\t}\n  1104:             \tnum = 100 - techlev(tech_no); /* WAC make this depend on mon? */\n  1105:             \tif ((Upolyd && u.mh <= num) || (!Upolyd && u.uhp <= num)){\n> 1106: \t\t    You(\"don't have the strength to perform revivification!\");\n  1107: \t\t    return 0;\n  1108:             \t}\n  1109: \n  1110:             \tobj = getobj((const char *)revivables, \"revive\");\n  1111:             \tif (!obj) return (0);"
+    "stage": 0,
+    "context": "src/tech.c:1106:11\n  1101: \t\t    You(no_elbow_room);\n  1102: \t\t    return 0;\n  1103: \t\t}\n  1104:             \tnum = 100 - techlev(tech_no); /* WAC make this depend on mon? */\n  1105:             \tif ((Upolyd && u.mh &lt;= num) || (!Upolyd && u.uhp &lt;= num)){\n&gt; 1106: \t\t    You(\"don't have the strength to perform revivification!\");\n  1107: \t\t    return 0;\n  1108:             \t}\n  1109: \n  1110:             \tobj = getobj((const char *)revivables, \"revive\");\n  1111:             \tif (!obj) return (0);"
   },
   {
     "key": "L01110_01",
     "original": "revive",
     "translation": "",
-    "context": "src/tech.c:1110:53\n  1105:             \tif ((Upolyd && u.mh <= num) || (!Upolyd && u.uhp <= num)){\n  1106: \t\t    You(\"don't have the strength to perform revivification!\");\n  1107: \t\t    return 0;\n  1108:             \t}\n  1109: \n> 1110:             \tobj = getobj((const char *)revivables, \"revive\");\n  1111:             \tif (!obj) return (0);\n  1112:             \tmtmp = revive(obj);\n  1113:             \tif (mtmp) {\n  1114: #ifdef BLACKMARKET\n  1115: \t\t    if (Is_blackmarket(&u.uz))"
+    "stage": 0,
+    "context": "src/tech.c:1110:53\n  1105:             \tif ((Upolyd && u.mh &lt;= num) || (!Upolyd && u.uhp &lt;= num)){\n  1106: \t\t    You(\"don't have the strength to perform revivification!\");\n  1107: \t\t    return 0;\n  1108:             \t}\n  1109: \n&gt; 1110:             \tobj = getobj((const char *)revivables, \"revive\");\n  1111:             \tif (!obj) return (0);\n  1112:             \tmtmp = revive(obj);\n  1113:             \tif (mtmp) {\n  1114: #ifdef BLACKMARKET\n  1115: \t\t    if (Is_blackmarket(&u.uz))"
   },
   {
     "key": "L01272_01",
     "original": "knock %s %s to the %s!",
     "translation": "",
-    "context": "src/tech.c:1272:12\n  1267: \t\t    roll = rn2(num + 1);\n  1268: \t\t    if (roll > 3) roll = 3;\n  1269: \t\t    switch (roll) {\n  1270: \t\t\tcase 2:\n  1271: \t\t\t    /* to floor near you */\n> 1272: \t\t\t    You(\"knock %s %s to the %s!\",\n  1273: \t\t\t\ts_suffix(mon_nam(mtmp)),\n  1274: \t\t\t\txname(obj),\n  1275: \t\t\t\tsurface(u.ux, u.uy));\n  1276: \t\t\t    if (obj->otyp == CRYSKNIFE &&\n  1277: \t\t\t\t    (!obj->oerodeproof || !rn2(10))) {"
+    "stage": 0,
+    "context": "src/tech.c:1272:12\n  1267: \t\t    roll = rn2(num + 1);\n  1268: \t\t    if (roll &gt; 3) roll = 3;\n  1269: \t\t    switch (roll) {\n  1270: \t\t\tcase 2:\n  1271: \t\t\t    /* to floor near you */\n&gt; 1272: \t\t\t    You(\"knock %s %s to the %s!\",\n  1273: \t\t\t\ts_suffix(mon_nam(mtmp)),\n  1274: \t\t\t\txname(obj),\n  1275: \t\t\t\tsurface(u.ux, u.uy));\n  1276: \t\t\t    if (obj-&gt;otyp == CRYSKNIFE &&\n  1277: \t\t\t\t    (!obj-&gt;oerodeproof || !rn2(10))) {"
   },
   {
     "key": "L01304_01",
     "original": "snatch %s %s!",
     "translation": "",
-    "context": "src/tech.c:1304:12\n  1299: \t\t\t\tstackobj(obj);\n  1300: \t\t\t\tbreak;\n  1301: \t\t\t    }\n  1302: #endif /* 0 */\n  1303: \t\t\t    /* right into your inventory */\n> 1304: \t\t\t    You(\"snatch %s %s!\", s_suffix(mon_nam(mtmp)),\n  1305: \t\t\t\t    xname(obj));\n  1306: \t\t\t    if (obj->otyp == CORPSE &&\n  1307: \t\t\t\t    touch_petrifies(&mons[obj->corpsenm]) &&\n  1308: \t\t\t\t    !uarmg && !Stone_resistance &&\n  1309: \t\t\t\t    !(poly_when_stoned(youmonst.data) &&"
+    "stage": 0,
+    "context": "src/tech.c:1304:12\n  1299: \t\t\t\tstackobj(obj);\n  1300: \t\t\t\tbreak;\n  1301: \t\t\t    }\n  1302: #endif /* 0 */\n  1303: \t\t\t    /* right into your inventory */\n&gt; 1304: \t\t\t    You(\"snatch %s %s!\", s_suffix(mon_nam(mtmp)),\n  1305: \t\t\t\t    xname(obj));\n  1306: \t\t\t    if (obj-&gt;otyp == CORPSE &&\n  1307: \t\t\t\t    touch_petrifies(&mons[obj-&gt;corpsenm]) &&\n  1308: \t\t\t\t    !uarmg && !Stone_resistance &&\n  1309: \t\t\t\t    !(poly_when_stoned(youmonst.data) &&"
   },
   {
     "key": "L01337_01",
     "original": "fail to dislodge %s %s.",
     "translation": "",
-    "context": "src/tech.c:1337:11\n  1332: \t\t\t    break;\n  1333: \t\t    }\n  1334: \t\t} else if (mtmp->mcanmove && !mtmp->msleeping)\n  1335: \t\t    pline(\"%s躲开了你的攻击。\", Monnam(mtmp));\n  1336: \t\telse\n> 1337: \t\t    You(\"fail to dislodge %s %s.\", s_suffix(mon_nam(mtmp)),\n  1338: \t\t\t    xname(obj));\n  1339: \t\twakeup(mtmp);\n  1340: \t\tif (!mtmp->mcanmove && !rn2(10)) {\n  1341: \t\t    mtmp->mcanmove = 1;\n  1342: \t\t    mtmp->mfrozen = 0;"
+    "stage": 0,
+    "context": "src/tech.c:1337:11\n  1332: \t\t\t    break;\n  1333: \t\t    }\n  1334: \t\t} else if (mtmp-&gt;mcanmove && !mtmp-&gt;msleeping)\n  1335: \t\t    pline(\"%s躲开了你的攻击。\", Monnam(mtmp));\n  1336: \t\telse\n&gt; 1337: \t\t    You(\"fail to dislodge %s %s.\", s_suffix(mon_nam(mtmp)),\n  1338: \t\t\t    xname(obj));\n  1339: \t\twakeup(mtmp);\n  1340: \t\tif (!mtmp-&gt;mcanmove && !rn2(10)) {\n  1341: \t\t    mtmp-&gt;mcanmove = 1;\n  1342: \t\t    mtmp-&gt;mfrozen = 0;"
   },
   {
     "key": "L01372_01",
     "original": "dazzle %s!",
     "translation": "",
-    "context": "src/tech.c:1372:8\n  1367:                 if (!haseyes(mtmp->data))\n  1368:                 \tpline(\"……但是%s没有眼睛！\", mon_nam(mtmp));\n  1369:                 else if (!mtmp->mcansee)\n  1370:                 \tpline(\"……但是%s看不见你！\", mon_nam(mtmp));\n  1371:                 if ((rn2(6) + rn2(6) + (techlev(tech_no) - mtmp->m_lev)) > 10) {\n> 1372: \t\t\tYou(\"dazzle %s!\", mon_nam(mtmp));\n  1373: \t\t\tmtmp->mcanmove = 0;\n  1374: \t\t\tmtmp->mfrozen = rnd(10);\n  1375: \t\t} else {\n  1376:                        pline(\"%s打破了你们之间的视线交汇！\", Monnam(mtmp));\n  1377: \t\t}"
+    "stage": 0,
+    "context": "src/tech.c:1372:8\n  1367:                 if (!haseyes(mtmp-&gt;data))\n  1368:                 \tpline(\"……但是%s没有眼睛！\", mon_nam(mtmp));\n  1369:                 else if (!mtmp-&gt;mcansee)\n  1370:                 \tpline(\"……但是%s看不见你！\", mon_nam(mtmp));\n  1371:                 if ((rn2(6) + rn2(6) + (techlev(tech_no) - mtmp-&gt;m_lev)) &gt; 10) {\n&gt; 1372: \t\t\tYou(\"dazzle %s!\", mon_nam(mtmp));\n  1373: \t\t\tmtmp-&gt;mcanmove = 0;\n  1374: \t\t\tmtmp-&gt;mfrozen = rnd(10);\n  1375: \t\t} else {\n  1376:                        pline(\"%s打破了你们之间的视线交汇！\", Monnam(mtmp));\n  1377: \t\t}"
   },
   {
     "key": "L01427_01",
     "original": "stretch.",
     "translation": "",
-    "context": "src/tech.c:1427:8\n  1422:                 t_timeout = rn1(1000,500);\n  1423: \t\tbreak;\n  1424:             case T_DASH:\n  1425: \t\tif (!getdir((char *)0)) return(0);\n  1426: \t\tif (!u.dx && !u.dy) {\n> 1427: \t\t\tYou(\"stretch.\");\n  1428: \t\t\treturn(0);\n  1429: \t\t}\n  1430:             \tif (!blitz_dash()) return(0);\n  1431:                 t_timeout = rn1(50, 25);\n  1432: \t\tbreak;"
+    "stage": 0,
+    "context": "src/tech.c:1427:8\n  1422:                 t_timeout = rn1(1000,500);\n  1423: \t\tbreak;\n  1424:             case T_DASH:\n  1425: \t\tif (!getdir((char *)0)) return(0);\n  1426: \t\tif (!u.dx && !u.dy) {\n&gt; 1427: \t\t\tYou(\"stretch.\");\n  1428: \t\t\treturn(0);\n  1429: \t\t}\n  1430:             \tif (!blitz_dash()) return(0);\n  1431:                 t_timeout = rn1(50, 25);\n  1432: \t\tbreak;"
   },
   {
     "key": "L01460_01",
     "original": "draw blood with",
     "translation": "",
-    "context": "src/tech.c:1460:38\n  1455: \t\t     * appropriate.\n  1456: \t\t     */\n  1457: \t\t    You(\"必须处于自己的原始形态才能抽血。\");\n  1458: \t\t    return(0);\n  1459: \t\t}\n> 1460: \t\tobj = use_medical_kit(PHIAL, TRUE, \"draw blood with\");\n  1461: \t\tif (!obj)\n  1462: \t\t    return 0;\n  1463: \t\tif (u.ulevel <= 1) {\n  1464: \t\t    You_cant(\"找到瓶子。\");\n  1465: \t\t    return 0;"
+    "stage": 0,
+    "context": "src/tech.c:1460:38\n  1455: \t\t     * appropriate.\n  1456: \t\t     */\n  1457: \t\t    You(\"必须处于自己的原始形态才能抽血。\");\n  1458: \t\t    return(0);\n  1459: \t\t}\n&gt; 1460: \t\tobj = use_medical_kit(PHIAL, TRUE, \"draw blood with\");\n  1461: \t\tif (!obj)\n  1462: \t\t    return 0;\n  1463: \t\tif (u.ulevel &lt;= 1) {\n  1464: \t\t    You_cant(\"找到瓶子。\");\n  1465: \t\t    return 0;"
   },
   {
     "key": "L01482_01",
     "original": "You fill, but have to drop, %s!",
     "translation": "",
-    "context": "src/tech.c:1482:4\n  1477: \t\t    u.uexp = newuexp(u.ulevel - 1);\n  1478: \t\totmp = mksobj(POT_VAMPIRE_BLOOD, FALSE, FALSE);\n  1479: \t\totmp->cursed = obj->cursed;\n  1480: \t\totmp->blessed = obj->blessed;\n  1481: \t\t(void) hold_another_object(otmp,\n> 1482: \t\t\t\"You fill, but have to drop, %s!\", doname(otmp),\n  1483: \t\t\t(const char *)0);\n  1484: \t\tt_timeout = rn1(1000, 500);\n  1485: \t\tbreak;\n  1486: \t    default:\n  1487: \t    \tpline (\"错误！无%i效果\", tech_no);"
+    "stage": 0,
+    "context": "src/tech.c:1482:4\n  1477: \t\t    u.uexp = newuexp(u.ulevel - 1);\n  1478: \t\totmp = mksobj(POT_VAMPIRE_BLOOD, FALSE, FALSE);\n  1479: \t\totmp-&gt;cursed = obj-&gt;cursed;\n  1480: \t\totmp-&gt;blessed = obj-&gt;blessed;\n  1481: \t\t(void) hold_another_object(otmp,\n&gt; 1482: \t\t\t\"You fill, but have to drop, %s!\", doname(otmp),\n  1483: \t\t\t(const char *)0);\n  1484: \t\tt_timeout = rn1(1000, 500);\n  1485: \t\tbreak;\n  1486: \t    default:\n  1487: \t    \tpline (\"错误！无%i效果\", tech_no);"
   },
   {
     "key": "L01507_01",
     "original": "invalid tech: %d",
     "translation": "",
-    "context": "src/tech.c:1507:29\n  1502: int tech_id;\n  1503: {\n  1504:         int i;\n  1505: \n  1506:         if (tech_id < 1 || tech_id > MAXTECH) {\n> 1507:                 impossible (\"invalid tech: %d\", tech_id);\n  1508:                 return(0);\n  1509:         }\n  1510:         for (i = 0; i < MAXTECH; i++) {\n  1511:                 if (techid(i) == tech_id) {\n  1512:                         return (techt_inuse(i));"
+    "stage": 0,
+    "context": "src/tech.c:1507:29\n  1502: int tech_id;\n  1503: {\n  1504:         int i;\n  1505: \n  1506:         if (tech_id &lt; 1 || tech_id &gt; MAXTECH) {\n&gt; 1507:                 impossible (\"invalid tech: %d\", tech_id);\n  1508:                 return(0);\n  1509:         }\n  1510:         for (i = 0; i &lt; MAXTECH; i++) {\n  1511:                 if (techid(i) == tech_id) {\n  1512:                         return (techt_inuse(i));"
   },
   {
     "key": "L01544_01",
     "original": "relax.",
     "translation": "",
-    "context": "src/tech.c:1544:8\n  1539: \t\t\tbreak;\n  1540: \t\t    case T_KIII:\n  1541: \t\t\tYou(\"冷静下来了。\");\n  1542: \t\t\tbreak;\n  1543: \t\t    case T_FLURRY:\n> 1544: \t\t\tYou(\"relax.\");\n  1545: \t\t\tbreak;\n  1546: \t\t    case T_E_FIST:\n  1547: \t\t\tYou(\"感觉这股力量消失了。\");\n  1548: \t\t\tbreak;\n  1549: \t\t    case T_SIGIL_TEMPEST:"
+    "stage": 0,
+    "context": "src/tech.c:1544:8\n  1539: \t\t\tbreak;\n  1540: \t\t    case T_KIII:\n  1541: \t\t\tYou(\"冷静下来了。\");\n  1542: \t\t\tbreak;\n  1543: \t\t    case T_FLURRY:\n&gt; 1544: \t\t\tYou(\"relax.\");\n  1545: \t\t\tbreak;\n  1546: \t\t    case T_E_FIST:\n  1547: \t\t\tYou(\"感觉这股力量消失了。\");\n  1548: \t\t\tbreak;\n  1549: \t\t    case T_SIGIL_TEMPEST:"
   },
   {
     "key": "L01984_01",
     "original": "%16s %10s %-17s",
     "translation": "",
-    "context": "src/tech.c:1984:22\n  1979: \n  1980: \ttmpwin = create_nhwindow(NHW_MENU);\n  1981: \tstart_menu(tmpwin);\n  1982: \tany.a_void = 0;         /* zero out all bits */\n  1983: \n> 1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        "
+    "stage": 0,
+    "context": "src/tech.c:1984:22\n  1979: \n  1980: \ttmpwin = create_nhwindow(NHW_MENU);\n  1981: \tstart_menu(tmpwin);\n  1982: \tany.a_void = 0;         /* zero out all bits */\n  1983: \n&gt; 1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        "
   },
   {
     "key": "L01986_01",
     "original": "%16s %10s %-17s",
     "translation": "",
-    "context": "src/tech.c:1986:22\n  1981: \tstart_menu(tmpwin);\n  1982: \tany.a_void = 0;         /* zero out all bits */\n  1983: \n  1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n> 1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");"
+    "stage": 0,
+    "context": "src/tech.c:1986:22\n  1981: \tstart_menu(tmpwin);\n  1982: \tany.a_void = 0;         /* zero out all bits */\n  1983: \n  1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n&gt; 1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");"
   },
   {
     "key": "L01986_02",
     "original": "[R = Right]",
     "translation": "",
-    "context": "src/tech.c:1986:59\n  1981: \tstart_menu(tmpwin);\n  1982: \tany.a_void = 0;         /* zero out all bits */\n  1983: \n  1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n> 1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");"
+    "stage": 0,
+    "context": "src/tech.c:1986:59\n  1981: \tstart_menu(tmpwin);\n  1982: \tany.a_void = 0;         /* zero out all bits */\n  1983: \n  1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n&gt; 1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");"
   },
   {
     "key": "L01988_01",
     "original": "%16s %10s %-17s",
     "translation": "",
-    "context": "src/tech.c:1988:22\n  1983: \n  1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n> 1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: "
+    "stage": 0,
+    "context": "src/tech.c:1988:22\n  1983: \n  1984:         Sprintf(buf, \"%16s %10s %-17s\", \"左上就是键盘的左上方移动按钮\", \"上就是按移动的上键\", \"右上就是键盘的右上方移动按钮\");\n  1985: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n&gt; 1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: "
   },
   {
     "key": "L01991_01",
     "original": "%-30s %10s   %s",
     "translation": "",
-    "context": "src/tech.c:1991:22\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n> 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
+    "stage": 0,
+    "context": "src/tech.c:1991:22\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n&gt; 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
   },
   {
     "key": "L01991_02",
     "original": "Name",
     "translation": "",
-    "context": "src/tech.c:1991:41\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n> 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
+    "stage": 0,
+    "context": "src/tech.c:1991:41\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n&gt; 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
   },
   {
     "key": "L01991_03",
     "original": "Type",
     "translation": "",
-    "context": "src/tech.c:1991:49\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n> 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
+    "stage": 0,
+    "context": "src/tech.c:1991:49\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n&gt; 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
   },
   {
     "key": "L01991_04",
     "original": "Command",
     "translation": "",
-    "context": "src/tech.c:1991:57\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n> 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
+    "stage": 0,
+    "context": "src/tech.c:1991:57\n  1986:         Sprintf(buf, \"%16s %10s %-17s\", \"左就是向左移动的按钮\", \"\", \"[R = Right]\");\n  1987: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1988:         Sprintf(buf, \"%16s %10s %-17s\", \"左下就是键盘的左下方移动按钮\", \"下就是按往下的移动键\", \"右下就是键盘的右下方移动按钮\");\n  1989: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);        \n  1990: \n&gt; 1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\","
   },
   {
     "key": "L01996_01",
     "original": "%-30s %10s   %s",
     "translation": "",
-    "context": "src/tech.c:1996:30\n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n> 1996:                 Sprintf(buf, \"%-30s %10s   %s\",\n  1997:                     (i && blitzes[i].blitz_tech == blitzes[(i-1)].blitz_tech ?\n  1998:                     \t\"\" : tech_names[blitzes[i].blitz_tech]), \n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n  2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? "
+    "stage": 0,
+    "context": "src/tech.c:1996:30\n  1991:         Sprintf(buf, \"%-30s %10s   %s\", \"Name\", \"Type\", \"Command\");\n  1992: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  1993: \n  1994:         for (i = 0; blitzes[i].blitz_len; i++) {\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n&gt; 1996:                 Sprintf(buf, \"%-30s %10s   %s\",\n  1997:                     (i && blitzes[i].blitz_tech == blitzes[(i-1)].blitz_tech ?\n  1998:                     \t\"\" : tech_names[blitzes[i].blitz_tech]), \n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n  2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? "
   },
   {
     "key": "L02000_01",
     "original": "starter",
     "translation": "",
-    "context": "src/tech.c:2000:22\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\",\n  1997:                     (i && blitzes[i].blitz_tech == blitzes[(i-1)].blitz_tech ?\n  1998:                     \t\"\" : tech_names[blitzes[i].blitz_tech]), \n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n> 2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? \n  2002: \t                    \t\"chain\" : \n  2003: \t                    \t(blitzes[i].blitz_type == BLITZ_END ? \n  2004:                     \t\t\t\"finisher\" : \"未知\"))),\n  2005:                     blitzes[i].blitz_cmd);"
+    "stage": 0,
+    "context": "src/tech.c:2000:22\n  1995: \t    if (tech_known(blitzes[i].blitz_tech)) {\n  1996:                 Sprintf(buf, \"%-30s %10s   %s\",\n  1997:                     (i && blitzes[i].blitz_tech == blitzes[(i-1)].blitz_tech ?\n  1998:                     \t\"\" : tech_names[blitzes[i].blitz_tech]), \n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n&gt; 2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? \n  2002: \t                    \t\"chain\" : \n  2003: \t                    \t(blitzes[i].blitz_type == BLITZ_END ? \n  2004:                     \t\t\t\"finisher\" : \"未知\"))),\n  2005:                     blitzes[i].blitz_cmd);"
   },
   {
     "key": "L02002_01",
     "original": "chain",
     "translation": "",
-    "context": "src/tech.c:2002:23\n  1997:                     (i && blitzes[i].blitz_tech == blitzes[(i-1)].blitz_tech ?\n  1998:                     \t\"\" : tech_names[blitzes[i].blitz_tech]), \n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n  2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? \n> 2002: \t                    \t\"chain\" : \n  2003: \t                    \t(blitzes[i].blitz_type == BLITZ_END ? \n  2004:                     \t\t\t\"finisher\" : \"未知\"))),\n  2005:                     blitzes[i].blitz_cmd);\n  2006: \n  2007: \t\tadd_menu(tmpwin, NO_GLYPH, &any,"
+    "stage": 0,
+    "context": "src/tech.c:2002:23\n  1997:                     (i && blitzes[i].blitz_tech == blitzes[(i-1)].blitz_tech ?\n  1998:                     \t\"\" : tech_names[blitzes[i].blitz_tech]), \n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n  2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? \n&gt; 2002: \t                    \t\"chain\" : \n  2003: \t                    \t(blitzes[i].blitz_type == BLITZ_END ? \n  2004:                     \t\t\t\"finisher\" : \"未知\"))),\n  2005:                     blitzes[i].blitz_cmd);\n  2006: \n  2007: \t\tadd_menu(tmpwin, NO_GLYPH, &any,"
   },
   {
     "key": "L02004_01",
     "original": "finisher",
     "translation": "",
-    "context": "src/tech.c:2004:24\n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n  2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? \n  2002: \t                    \t\"chain\" : \n  2003: \t                    \t(blitzes[i].blitz_type == BLITZ_END ? \n> 2004:                     \t\t\t\"finisher\" : \"未知\"))),\n  2005:                     blitzes[i].blitz_cmd);\n  2006: \n  2007: \t\tadd_menu(tmpwin, NO_GLYPH, &any,\n  2008:                          0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  2009: \t    }"
+    "stage": 0,
+    "context": "src/tech.c:2004:24\n  1999:                     (blitzes[i].blitz_type == BLITZ_START ? \n  2000:                     \t\"starter\" :\n  2001:                     \t(blitzes[i].blitz_type == BLITZ_CHAIN ? \n  2002: \t                    \t\"chain\" : \n  2003: \t                    \t(blitzes[i].blitz_type == BLITZ_END ? \n&gt; 2004:                     \t\t\t\"finisher\" : \"未知\"))),\n  2005:                     blitzes[i].blitz_cmd);\n  2006: \n  2007: \t\tadd_menu(tmpwin, NO_GLYPH, &any,\n  2008:                          0, 0, ATR_NONE, buf, MENU_UNSELECTED);\n  2009: \t    }"
   },
   {
     "key": "L02123_01",
     "original": "hurl %s downwards...",
     "translation": "",
-    "context": "src/tech.c:2123:6\n  2118: \n  2119: \t/* Slam the monster into the ground */\n  2120: \tmtmp = m_at(u.ux + u.dx, u.uy + u.dy);\n  2121: \tif (!mtmp || u.uswallow) return(1);\n  2122: \n> 2123: \tYou(\"hurl %s downwards...\", mon_nam(mtmp));\n  2124: \tif (Is_airlevel(&u.uz) || Is_waterlevel(&u.uz)) return(1);\n  2125: \n  2126: \tif (need_four(mtmp)) canhitmon = 4;\n  2127: \telse if (need_three(mtmp)) canhitmon = 3;\n  2128: \telse if (need_two(mtmp)) canhitmon = 2;"
+    "stage": 0,
+    "context": "src/tech.c:2123:6\n  2118: \n  2119: \t/* Slam the monster into the ground */\n  2120: \tmtmp = m_at(u.ux + u.dx, u.uy + u.dy);\n  2121: \tif (!mtmp || u.uswallow) return(1);\n  2122: \n&gt; 2123: \tYou(\"hurl %s downwards...\", mon_nam(mtmp));\n  2124: \tif (Is_airlevel(&u.uz) || Is_waterlevel(&u.uz)) return(1);\n  2125: \n  2126: \tif (need_four(mtmp)) canhitmon = 4;\n  2127: \telse if (need_three(mtmp)) canhitmon = 3;\n  2128: \telse if (need_two(mtmp)) canhitmon = 2;"
   },
   {
     "key": "L02152_01",
     "original": "%s slams into the ground, creating a crater!",
     "translation": "",
-    "context": "src/tech.c:2152:12\n  2147: \tif (chasm) {\n  2148: \t    if (!is_flyer(mtmp->data) && !is_clinger(mtmp->data))\n  2149: \t\tmtmp->mtrapped = 1;\n  2150: \t    chasm->tseen = 1;\n  2151: \t    levl[u.ux + u.dx][u.uy + u.dy].doormask = 0;\n> 2152: \t    pline(\"%s slams into the ground, creating a crater!\", Monnam(mtmp));\n  2153: \t    tmp *= 2;\n  2154: \t}\n  2155: \n  2156: \tmselftouch(mtmp, \"Falling, \", TRUE);\n  2157: \tif (!DEADMONSTER(mtmp)) {"
+    "stage": 0,
+    "context": "src/tech.c:2152:12\n  2147: \tif (chasm) {\n  2148: \t    if (!is_flyer(mtmp-&gt;data) && !is_clinger(mtmp-&gt;data))\n  2149: \t\tmtmp-&gt;mtrapped = 1;\n  2150: \t    chasm-&gt;tseen = 1;\n  2151: \t    levl[u.ux + u.dx][u.uy + u.dy].doormask = 0;\n&gt; 2152: \t    pline(\"%s slams into the ground, creating a crater!\", Monnam(mtmp));\n  2153: \t    tmp *= 2;\n  2154: \t}\n  2155: \n  2156: \tmselftouch(mtmp, \"Falling, \", TRUE);\n  2157: \tif (!DEADMONSTER(mtmp)) {"
   },
   {
     "key": "L02156_01",
     "original": "Falling, ",
     "translation": "",
-    "context": "src/tech.c:2156:19\n  2151: \t    levl[u.ux + u.dx][u.uy + u.dy].doormask = 0;\n  2152: \t    pline(\"%s slams into the ground, creating a crater!\", Monnam(mtmp));\n  2153: \t    tmp *= 2;\n  2154: \t}\n  2155: \n> 2156: \tmselftouch(mtmp, \"Falling, \", TRUE);\n  2157: \tif (!DEADMONSTER(mtmp)) {\n  2158: \t    if (objenchant < canhitmon)\n  2159: \t\tpline(\"%s看起来没有受伤。\", Monnam(mtmp));\n  2160: \t    else if ((mtmp->mhp -= tmp) <= 0) {\n  2161: \t\tif(!cansee(u.ux + u.dx, u.uy + u.dy))"
+    "stage": 0,
+    "context": "src/tech.c:2156:19\n  2151: \t    levl[u.ux + u.dx][u.uy + u.dy].doormask = 0;\n  2152: \t    pline(\"%s slams into the ground, creating a crater!\", Monnam(mtmp));\n  2153: \t    tmp *= 2;\n  2154: \t}\n  2155: \n&gt; 2156: \tmselftouch(mtmp, \"Falling, \", TRUE);\n  2157: \tif (!DEADMONSTER(mtmp)) {\n  2158: \t    if (objenchant &lt; canhitmon)\n  2159: \t\tpline(\"%s看起来没有受伤。\", Monnam(mtmp));\n  2160: \t    else if ((mtmp-&gt;mhp -= tmp) &lt;= 0) {\n  2161: \t\tif(!cansee(u.ux + u.dx, u.uy + u.dy))"
   },
   {
     "key": "L02164_01",
     "original": "destroy %s!",
     "translation": "",
-    "context": "src/tech.c:2164:11\n  2159: \t\tpline(\"%s看起来没有受伤。\", Monnam(mtmp));\n  2160: \t    else if ((mtmp->mhp -= tmp) <= 0) {\n  2161: \t\tif(!cansee(u.ux + u.dx, u.uy + u.dy))\n  2162: \t\t    pline(\"它被摧毁了！\");\n  2163: \t\telse {\n> 2164: \t\t    You(\"destroy %s!\", \t\n  2165: \t\t    \tmtmp->mtame\n  2166: \t\t\t    ? x_monnam(mtmp, ARTICLE_THE, \"poor\",\n  2167: \t\t\t\tmtmp->mnamelth ? SUPPRESS_SADDLE : 0, FALSE)\n  2168: \t\t\t    : mon_nam(mtmp));\n  2169: \t\t}"
+    "stage": 0,
+    "context": "src/tech.c:2164:11\n  2159: \t\tpline(\"%s看起来没有受伤。\", Monnam(mtmp));\n  2160: \t    else if ((mtmp-&gt;mhp -= tmp) &lt;= 0) {\n  2161: \t\tif(!cansee(u.ux + u.dx, u.uy + u.dy))\n  2162: \t\t    pline(\"它被摧毁了！\");\n  2163: \t\telse {\n&gt; 2164: \t\t    You(\"destroy %s!\", \t\n  2165: \t\t    \tmtmp-&gt;mtame\n  2166: \t\t\t    ? x_monnam(mtmp, ARTICLE_THE, \"poor\",\n  2167: \t\t\t\tmtmp-&gt;mnamelth ? SUPPRESS_SADDLE : 0, FALSE)\n  2168: \t\t\t    : mon_nam(mtmp));\n  2169: \t\t}"
   },
   {
     "key": "L02166_01",
     "original": "poor",
     "translation": "",
-    "context": "src/tech.c:2166:38\n  2161: \t\tif(!cansee(u.ux + u.dx, u.uy + u.dy))\n  2162: \t\t    pline(\"它被摧毁了！\");\n  2163: \t\telse {\n  2164: \t\t    You(\"destroy %s!\", \t\n  2165: \t\t    \tmtmp->mtame\n> 2166: \t\t\t    ? x_monnam(mtmp, ARTICLE_THE, \"poor\",\n  2167: \t\t\t\tmtmp->mnamelth ? SUPPRESS_SADDLE : 0, FALSE)\n  2168: \t\t\t    : mon_nam(mtmp));\n  2169: \t\t}\n  2170: \t\txkilled(mtmp,0);\n  2171: \t    }"
+    "stage": 0,
+    "context": "src/tech.c:2166:38\n  2161: \t\tif(!cansee(u.ux + u.dx, u.uy + u.dy))\n  2162: \t\t    pline(\"它被摧毁了！\");\n  2163: \t\telse {\n  2164: \t\t    You(\"destroy %s!\", \t\n  2165: \t\t    \tmtmp-&gt;mtame\n&gt; 2166: \t\t\t    ? x_monnam(mtmp, ARTICLE_THE, \"poor\",\n  2167: \t\t\t\tmtmp-&gt;mnamelth ? SUPPRESS_SADDLE : 0, FALSE)\n  2168: \t\t\t    : mon_nam(mtmp));\n  2169: \t\t}\n  2170: \t\txkilled(mtmp,0);\n  2171: \t    }"
   },
   {
     "key": "L02279_01",
     "original": "No intrinsic masks set (0x%lX).",
     "translation": "",
-    "context": "src/tech.c:2279:18\n  2274: \t\tmask = tech_list[tech_no].t_intrinsic;\n  2275: \t\tif (mask & FROMOUTSIDE) n++;\n  2276: \t\tif (mask & FROMRACE) n++;\n  2277: \t\tif (mask & FROMEXPER) n++;\n  2278: \t\tif (!n) {\n> 2279: \t\t    impossible(\"No intrinsic masks set (0x%lX).\", mask);\n  2280: \t\t    return;\n  2281: \t\t}\n  2282: \t\tn = rn2(n);\n  2283: \t\tif (mask & FROMOUTSIDE && !n--) mask = FROMOUTSIDE;\n  2284: \t\tif (mask & FROMRACE && !n--) mask = FROMRACE;"
+    "stage": 0,
+    "context": "src/tech.c:2279:18\n  2274: \t\tmask = tech_list[tech_no].t_intrinsic;\n  2275: \t\tif (mask & FROMOUTSIDE) n++;\n  2276: \t\tif (mask & FROMRACE) n++;\n  2277: \t\tif (mask & FROMEXPER) n++;\n  2278: \t\tif (!n) {\n&gt; 2279: \t\t    impossible(\"No intrinsic masks set (0x%lX).\", mask);\n  2280: \t\t    return;\n  2281: \t\t}\n  2282: \t\tn = rn2(n);\n  2283: \t\tif (mask & FROMOUTSIDE && !n--) mask = FROMOUTSIDE;\n  2284: \t\tif (mask & FROMRACE && !n--) mask = FROMRACE;"
   }
 ]

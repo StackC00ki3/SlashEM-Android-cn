@@ -3,336 +3,392 @@
     "key": "L00019_01",
     "original": "Dave",
     "translation": "",
-    "context": "src/mplayer.c:19:2\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n>   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
+    "stage": 0,
+    "context": "src/mplayer.c:19:2\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n&gt;   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
   },
   {
     "key": "L00019_02",
     "original": "Dean",
     "translation": "",
-    "context": "src/mplayer.c:19:10\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n>   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
+    "stage": 0,
+    "context": "src/mplayer.c:19:10\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n&gt;   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
   },
   {
     "key": "L00019_03",
     "original": "Eric",
     "translation": "",
-    "context": "src/mplayer.c:19:18\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n>   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
+    "stage": 0,
+    "context": "src/mplayer.c:19:18\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n&gt;   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
   },
   {
     "key": "L00019_04",
     "original": "Janet",
     "translation": "",
-    "context": "src/mplayer.c:19:33\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n>   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
+    "stage": 0,
+    "context": "src/mplayer.c:19:33\n    14:  * Keep in alphabetical order within teams.\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n&gt;   19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\","
   },
   {
     "key": "L00020_01",
     "original": "Ken",
     "translation": "",
-    "context": "src/mplayer.c:20:2\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n>   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
+    "stage": 0,
+    "context": "src/mplayer.c:20:2\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n&gt;   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
   },
   {
     "key": "L00020_02",
     "original": "Michael",
     "translation": "",
-    "context": "src/mplayer.c:20:15\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n>   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
+    "stage": 0,
+    "context": "src/mplayer.c:20:15\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n&gt;   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
   },
   {
     "key": "L00020_03",
     "original": "Mike",
     "translation": "",
-    "context": "src/mplayer.c:20:26\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n>   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
+    "stage": 0,
+    "context": "src/mplayer.c:20:26\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n&gt;   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
   },
   {
     "key": "L00020_04",
     "original": "Pat",
     "translation": "",
-    "context": "src/mplayer.c:20:34\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n>   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
+    "stage": 0,
+    "context": "src/mplayer.c:20:34\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n&gt;   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
   },
   {
     "key": "L00020_05",
     "original": "Paul",
     "translation": "",
-    "context": "src/mplayer.c:20:41\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n>   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
+    "stage": 0,
+    "context": "src/mplayer.c:20:41\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n&gt;   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
   },
   {
     "key": "L00020_06",
     "original": "Timo",
     "translation": "",
-    "context": "src/mplayer.c:20:56\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n>   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
+    "stage": 0,
+    "context": "src/mplayer.c:20:56\n    15:  * Same first name is entered once within each team.\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n&gt;   20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */"
   },
   {
     "key": "L00021_01",
     "original": "Warwick",
     "translation": "",
-    "context": "src/mplayer.c:21:2\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n>   21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\","
+    "stage": 0,
+    "context": "src/mplayer.c:21:2\n    16:  */\n    17: static const char *developers[] = {\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n&gt;   21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\","
   },
   {
     "key": "L00023_01",
     "original": "Bill",
     "translation": "",
-    "context": "src/mplayer.c:23:2\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:2\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00023_02",
     "original": "Eric",
     "translation": "",
-    "context": "src/mplayer.c:23:10\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:10\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00023_03",
     "original": "Keizo",
     "translation": "",
-    "context": "src/mplayer.c:23:18\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:18\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00023_04",
     "original": "Ken",
     "translation": "",
-    "context": "src/mplayer.c:23:27\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:27\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00023_05",
     "original": "Michael",
     "translation": "",
-    "context": "src/mplayer.c:23:40\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:40\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00023_06",
     "original": "Mike",
     "translation": "",
-    "context": "src/mplayer.c:23:51\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:51\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00023_07",
     "original": "Paul",
     "translation": "",
-    "context": "src/mplayer.c:23:59\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n>   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
+    "stage": 0,
+    "context": "src/mplayer.c:23:59\n    18: \t/* devteam */\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n&gt;   23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\","
   },
   {
     "key": "L00024_01",
     "original": "Stephen",
     "translation": "",
-    "context": "src/mplayer.c:24:2\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n>   24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */"
+    "stage": 0,
+    "context": "src/mplayer.c:24:2\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n&gt;   24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */"
   },
   {
     "key": "L00024_02",
     "original": "Timo",
     "translation": "",
-    "context": "src/mplayer.c:24:20\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n>   24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */"
+    "stage": 0,
+    "context": "src/mplayer.c:24:20\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n&gt;   24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */"
   },
   {
     "key": "L00024_03",
     "original": "Yitzhak",
     "translation": "",
-    "context": "src/mplayer.c:24:28\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n>   24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */"
+    "stage": 0,
+    "context": "src/mplayer.c:24:28\n    19: \t\"Dave\", \"Dean\", \"Eric\", \"伊扎克\", \"Janet\", \"杰西\",\n    20: \t\"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Pat\", \"Paul\", \"史蒂夫\", \"Timo\",\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n&gt;   24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */"
   },
   {
     "key": "L00026_01",
     "original": "Andy",
     "translation": "",
-    "context": "src/mplayer.c:26:2\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n>   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
+    "stage": 0,
+    "context": "src/mplayer.c:26:2\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n&gt;   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
   },
   {
     "key": "L00026_02",
     "original": "Gregg",
     "translation": "",
-    "context": "src/mplayer.c:26:10\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n>   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
+    "stage": 0,
+    "context": "src/mplayer.c:26:10\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n&gt;   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
   },
   {
     "key": "L00026_03",
     "original": "Janne",
     "translation": "",
-    "context": "src/mplayer.c:26:19\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n>   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
+    "stage": 0,
+    "context": "src/mplayer.c:26:19\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n&gt;   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
   },
   {
     "key": "L00026_04",
     "original": "Keni",
     "translation": "",
-    "context": "src/mplayer.c:26:28\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n>   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
+    "stage": 0,
+    "context": "src/mplayer.c:26:28\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n&gt;   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
   },
   {
     "key": "L00026_05",
     "original": "Mike",
     "translation": "",
-    "context": "src/mplayer.c:26:36\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n>   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
+    "stage": 0,
+    "context": "src/mplayer.c:26:36\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n&gt;   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
   },
   {
     "key": "L00026_06",
     "original": "Richard",
     "translation": "",
-    "context": "src/mplayer.c:26:51\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n>   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
+    "stage": 0,
+    "context": "src/mplayer.c:26:51\n    21: \t\"Warwick\",\n    22: \t/* PC team */\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n&gt;   26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */"
   },
   {
     "key": "L00028_01",
     "original": "Andy",
     "translation": "",
-    "context": "src/mplayer.c:28:2\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n>   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
+    "stage": 0,
+    "context": "src/mplayer.c:28:2\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n&gt;   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
   },
   {
     "key": "L00028_02",
     "original": "Chris",
     "translation": "",
-    "context": "src/mplayer.c:28:10\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n>   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
+    "stage": 0,
+    "context": "src/mplayer.c:28:10\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n&gt;   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
   },
   {
     "key": "L00028_03",
     "original": "Dean",
     "translation": "",
-    "context": "src/mplayer.c:28:19\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n>   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
+    "stage": 0,
+    "context": "src/mplayer.c:28:19\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n&gt;   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
   },
   {
     "key": "L00028_04",
     "original": "Jon",
     "translation": "",
-    "context": "src/mplayer.c:28:27\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n>   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
+    "stage": 0,
+    "context": "src/mplayer.c:28:27\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n&gt;   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
   },
   {
     "key": "L00028_05",
     "original": "Jonathan",
     "translation": "",
-    "context": "src/mplayer.c:28:34\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n>   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
+    "stage": 0,
+    "context": "src/mplayer.c:28:34\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n&gt;   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
   },
   {
     "key": "L00028_06",
     "original": "Wang",
     "translation": "",
-    "context": "src/mplayer.c:28:52\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n>   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
+    "stage": 0,
+    "context": "src/mplayer.c:28:52\n    23: \t\"Bill\", \"Eric\", \"Keizo\", \"Ken\", \"凯文\", \"Michael\", \"Mike\", \"Paul\",\n    24: \t\"Stephen\", \"史蒂夫\", \"Timo\", \"Yitzhak\",\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n&gt;   28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */"
   },
   {
     "key": "L00030_01",
     "original": "Eric",
     "translation": "",
-    "context": "src/mplayer.c:30:2\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n>   30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */"
+    "stage": 0,
+    "context": "src/mplayer.c:30:2\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n&gt;   30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */"
   },
   {
     "key": "L00030_02",
     "original": "Marvin",
     "translation": "",
-    "context": "src/mplayer.c:30:10\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n>   30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */"
+    "stage": 0,
+    "context": "src/mplayer.c:30:10\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n&gt;   30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */"
   },
   {
     "key": "L00030_03",
     "original": "Warwick",
     "translation": "",
-    "context": "src/mplayer.c:30:20\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n>   30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */"
+    "stage": 0,
+    "context": "src/mplayer.c:30:20\n    25: \t/* Amiga team */\n    26: \t\"Andy\", \"Gregg\", \"Janne\", \"Keni\", \"Mike\", \"奥拉夫\", \"Richard\",\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n&gt;   30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */"
   },
   {
     "key": "L00032_01",
     "original": "Dion",
     "translation": "",
-    "context": "src/mplayer.c:32:10\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n>   32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};"
+    "stage": 0,
+    "context": "src/mplayer.c:32:10\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n&gt;   32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};"
   },
   {
     "key": "L00032_02",
     "original": "Michael",
     "translation": "",
-    "context": "src/mplayer.c:32:18\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n>   32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};"
+    "stage": 0,
+    "context": "src/mplayer.c:32:18\n    27: \t/* Mac team */\n    28: \t\"Andy\", \"Chris\", \"Dean\", \"Jon\", \"Jonathan\", \"凯文\", \"Wang\",\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n&gt;   32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};"
   },
   {
     "key": "L00034_01",
     "original": "Helge",
     "translation": "",
-    "context": "src/mplayer.c:34:2\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n>   34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: "
+    "stage": 0,
+    "context": "src/mplayer.c:34:2\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n&gt;   34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: "
   },
   {
     "key": "L00034_02",
     "original": "Ron",
     "translation": "",
-    "context": "src/mplayer.c:34:11\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n>   34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: "
+    "stage": 0,
+    "context": "src/mplayer.c:34:11\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n&gt;   34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: "
   },
   {
     "key": "L00034_03",
     "original": "Timo",
     "translation": "",
-    "context": "src/mplayer.c:34:18\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n>   34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: "
+    "stage": 0,
+    "context": "src/mplayer.c:34:18\n    29: \t/* Atari team */\n    30: \t\"Eric\", \"Marvin\", \"Warwick\",\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n&gt;   34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n    36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: "
   },
   {
     "key": "L00036_01",
     "original": "Joshua",
     "translation": "",
-    "context": "src/mplayer.c:36:2\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n>   36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: \n    40: /* return a randomly chosen developer name */\n    41: STATIC_OVL const char *"
+    "stage": 0,
+    "context": "src/mplayer.c:36:2\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n&gt;   36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: \n    40: /* return a randomly chosen developer name */\n    41: STATIC_OVL const char *"
   },
   {
     "key": "L00036_02",
     "original": "Pat",
     "translation": "",
-    "context": "src/mplayer.c:36:12\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n>   36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: \n    40: /* return a randomly chosen developer name */\n    41: STATIC_OVL const char *"
+    "stage": 0,
+    "context": "src/mplayer.c:36:12\n    31: \t/* NT team */\n    32: \t\"亚历克斯\", \"Dion\", \"Michael\",\n    33: \t/* OS/2 team */\n    34: \t\"Helge\", \"Ron\", \"Timo\",\n    35: \t/* VMS team */\n&gt;   36: \t\"Joshua\", \"Pat\",\n    37: \t\"\"};\n    38: \n    39: \n    40: /* return a randomly chosen developer name */\n    41: STATIC_OVL const char *"
   },
   {
     "key": "L00076_01",
     "original": "Eve",
     "translation": "",
-    "context": "src/mplayer.c:76:28\n    71: \tboolean fmlkind = is_female(mtmp->data);\n    72: \tconst char *devnam;\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n>   76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))"
+    "stage": 0,
+    "context": "src/mplayer.c:76:28\n    71: \tboolean fmlkind = is_female(mtmp-&gt;data);\n    72: \tconst char *devnam;\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n&gt;   76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))"
   },
   {
     "key": "L00076_02",
     "original": "Adam",
     "translation": "",
-    "context": "src/mplayer.c:76:36\n    71: \tboolean fmlkind = is_female(mtmp->data);\n    72: \tconst char *devnam;\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n>   76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))"
+    "stage": 0,
+    "context": "src/mplayer.c:76:36\n    71: \tboolean fmlkind = is_female(mtmp-&gt;data);\n    72: \tconst char *devnam;\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n&gt;   76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))"
   },
   {
     "key": "L00077_01",
     "original": "Janet",
     "translation": "",
-    "context": "src/mplayer.c:77:39\n    72: \tconst char *devnam;\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n>   77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp->female = 1;"
+    "stage": 0,
+    "context": "src/mplayer.c:77:39\n    72: \tconst char *devnam;\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n&gt;   77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp-&gt;female = 1;"
   },
   {
     "key": "L00078_01",
     "original": "Maud",
     "translation": "",
-    "context": "src/mplayer.c:78:27\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n>   78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp->female = 1;\n    83: \telse"
+    "stage": 0,
+    "context": "src/mplayer.c:78:27\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n&gt;   78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp-&gt;female = 1;\n    83: \telse"
   },
   {
     "key": "L00078_02",
     "original": "Eve",
     "translation": "",
-    "context": "src/mplayer.c:78:36\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n>   78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp->female = 1;\n    83: \telse"
+    "stage": 0,
+    "context": "src/mplayer.c:78:36\n    73: \n    74: \tdevnam = dev_name();\n    75: \tif (!devnam)\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n&gt;   78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp-&gt;female = 1;\n    83: \telse"
   },
   {
     "key": "L00081_01",
     "original": "Janet",
     "translation": "",
-    "context": "src/mplayer.c:81:30\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n>   81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp->female = 1;\n    83: \telse\n    84: \t    mtmp->female = 0;\n    85: \tStrcat(nam, \" the \");\n    86: \tStrcat(nam, rank_of((int)mtmp->m_lev,"
+    "stage": 0,
+    "context": "src/mplayer.c:81:30\n    76: \t    Strcpy(nam, fmlkind ? \"Eve\" : \"Adam\");\n    77: \telse if (fmlkind && !!strcmp(devnam, \"Janet\"))\n    78: \t    Strcpy(nam, rn2(2) ? \"Maud\" : \"Eve\");\n    79: \telse Strcpy(nam, devnam);\n    80: \n&gt;   81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp-&gt;female = 1;\n    83: \telse\n    84: \t    mtmp-&gt;female = 0;\n    85: \tStrcat(nam, \" the \");\n    86: \tStrcat(nam, rank_of((int)mtmp-&gt;m_lev,"
   },
   {
     "key": "L00085_01",
     "original": " the ",
     "translation": "",
-    "context": "src/mplayer.c:85:14\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp->female = 1;\n    83: \telse\n    84: \t    mtmp->female = 0;\n>   85: \tStrcat(nam, \" the \");\n    86: \tStrcat(nam, rank_of((int)mtmp->m_lev,\n    87: \t\t\t    monsndx(mtmp->data),\n    88: \t\t\t    (boolean)mtmp->female));\n    89: }\n    90: "
+    "stage": 0,
+    "context": "src/mplayer.c:85:14\n    80: \n    81: \tif (fmlkind || !strcmp(nam, \"Janet\"))\n    82: \t    mtmp-&gt;female = 1;\n    83: \telse\n    84: \t    mtmp-&gt;female = 0;\n&gt;   85: \tStrcat(nam, \" the \");\n    86: \tStrcat(nam, rank_of((int)mtmp-&gt;m_lev,\n    87: \t\t\t    monsndx(mtmp-&gt;data),\n    88: \t\t\t    (boolean)mtmp-&gt;female));\n    89: }\n    90: "
   },
   {
     "key": "L00233_01",
     "original": "bad mplayer monster",
     "translation": "",
-    "context": "src/mplayer.c:233:23\n   228: \t\t    \tcloak = CLOAK_OF_MAGIC_RESISTANCE;\n   229: \t\t    }\n   230: \t\t    if (rn2(4)) helm = HELM_OF_BRILLIANCE;\n   231: \t\t    shield = STRANGE_OBJECT;\n   232: \t\t    break;\n>  233: \t\tdefault: impossible(\"bad mplayer monster\");\n   234: \t\t    weapon = 0;\n   235: \t\t    break;\n   236: \t    }\n   237: \n   238: \t    if (weapon != STRANGE_OBJECT) {"
+    "stage": 0,
+    "context": "src/mplayer.c:233:23\n   228: \t\t    \tcloak = CLOAK_OF_MAGIC_RESISTANCE;\n   229: \t\t    }\n   230: \t\t    if (rn2(4)) helm = HELM_OF_BRILLIANCE;\n   231: \t\t    shield = STRANGE_OBJECT;\n   232: \t\t    break;\n&gt;  233: \t\tdefault: impossible(\"bad mplayer monster\");\n   234: \t\t    weapon = 0;\n   235: \t\t    break;\n   236: \t    }\n   237: \n   238: \t    if (weapon != STRANGE_OBJECT) {"
   },
   {
     "key": "L00342_01",
     "original": "Mine should be the honor, not yours!",
     "translation": "",
-    "context": "src/mplayer.c:342:3\n   337: register struct monst *mtmp;\n   338: {\n   339: \tstatic const char *same_class_msg[3] = {\n   340: \t\t\"我不能赢，那你也别想赢！\",\n   341: \t\t\"你不配当MVP！你不配赢！\",\n>  342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n   344: \t\t\"The low-life wants to talk, eh?\",\n   345: \t\t\"Fight, scum!\",\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};"
+    "stage": 0,
+    "context": "src/mplayer.c:342:3\n   337: register struct monst *mtmp;\n   338: {\n   339: \tstatic const char *same_class_msg[3] = {\n   340: \t\t\"我不能赢，那你也别想赢！\",\n   341: \t\t\"你不配当MVP！你不配赢！\",\n&gt;  342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n   344: \t\t\"The low-life wants to talk, eh?\",\n   345: \t\t\"Fight, scum!\",\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};"
   },
   {
     "key": "L00344_01",
     "original": "The low-life wants to talk, eh?",
     "translation": "",
-    "context": "src/mplayer.c:344:3\n   339: \tstatic const char *same_class_msg[3] = {\n   340: \t\t\"我不能赢，那你也别想赢！\",\n   341: \t\t\"你不配当MVP！你不配赢！\",\n   342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n>  344: \t\t\"The low-life wants to talk, eh?\",\n   345: \t\t\"Fight, scum!\",\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp->mpeaceful) return; /* will drop to humanoid talk */"
+    "stage": 0,
+    "context": "src/mplayer.c:344:3\n   339: \tstatic const char *same_class_msg[3] = {\n   340: \t\t\"我不能赢，那你也别想赢！\",\n   341: \t\t\"你不配当MVP！你不配赢！\",\n   342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n&gt;  344: \t\t\"The low-life wants to talk, eh?\",\n   345: \t\t\"Fight, scum!\",\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp-&gt;mpeaceful) return; /* will drop to humanoid talk */"
   },
   {
     "key": "L00345_01",
     "original": "Fight, scum!",
     "translation": "",
-    "context": "src/mplayer.c:345:3\n   340: \t\t\"我不能赢，那你也别想赢！\",\n   341: \t\t\"你不配当MVP！你不配赢！\",\n   342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n   344: \t\t\"The low-life wants to talk, eh?\",\n>  345: \t\t\"Fight, scum!\",\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp->mpeaceful) return; /* will drop to humanoid talk */\n   350: "
+    "stage": 0,
+    "context": "src/mplayer.c:345:3\n   340: \t\t\"我不能赢，那你也别想赢！\",\n   341: \t\t\"你不配当MVP！你不配赢！\",\n   342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n   344: \t\t\"The low-life wants to talk, eh?\",\n&gt;  345: \t\t\"Fight, scum!\",\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp-&gt;mpeaceful) return; /* will drop to humanoid talk */\n   350: "
   },
   {
     "key": "L00346_01",
     "original": "Here is what I have to say!",
     "translation": "",
-    "context": "src/mplayer.c:346:3\n   341: \t\t\"你不配当MVP！你不配赢！\",\n   342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n   344: \t\t\"The low-life wants to talk, eh?\",\n   345: \t\t\"Fight, scum!\",\n>  346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp->mpeaceful) return; /* will drop to humanoid talk */\n   350: \n   351: \tpline(\"Talk? -- %s\","
+    "stage": 0,
+    "context": "src/mplayer.c:346:3\n   341: \t\t\"你不配当MVP！你不配赢！\",\n   342: \t\t\"Mine should be the honor, not yours!\",\n   343: \t},\t\t  *other_class_msg[3] = {\n   344: \t\t\"The low-life wants to talk, eh?\",\n   345: \t\t\"Fight, scum!\",\n&gt;  346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp-&gt;mpeaceful) return; /* will drop to humanoid talk */\n   350: \n   351: \tpline(\"Talk? -- %s\","
   },
   {
     "key": "L00351_01",
     "original": "Talk? -- %s",
     "translation": "",
-    "context": "src/mplayer.c:351:8\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp->mpeaceful) return; /* will drop to humanoid talk */\n   350: \n>  351: \tpline(\"Talk? -- %s\",\n   352: \t\t(mtmp->data == &mons[urole.malenum] ||\n   353: \t\tmtmp->data == &mons[urole.femalenum]) ?\n   354: \t\tsame_class_msg[rn2(3)] : other_class_msg[rn2(3)]);\n   355: }\n   356: "
+    "stage": 0,
+    "context": "src/mplayer.c:351:8\n   346: \t\t\"Here is what I have to say!\",\n   347: \t};\n   348: \n   349: \tif(mtmp-&gt;mpeaceful) return; /* will drop to humanoid talk */\n   350: \n&gt;  351: \tpline(\"Talk? -- %s\",\n   352: \t\t(mtmp-&gt;data == &mons[urole.malenum] ||\n   353: \t\tmtmp-&gt;data == &mons[urole.femalenum]) ?\n   354: \t\tsame_class_msg[rn2(3)] : other_class_msg[rn2(3)]);\n   355: }\n   356: "
   }
 ]

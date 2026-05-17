@@ -3,906 +3,1057 @@
     "key": "L00075_01",
     "original": "the splashing of a naiad.",
     "translation": "",
-    "context": "src/sounds.c:75:3\n    70: \n    71:     if (level.flags.nfountains && !rn2(400)) {\n    72: \tstatic const char * const fountain_msg[4] = {\n    73: \t\t\"水咕嘟咕嘟冒泡声。\",\n    74: \t\t\"水打在金币上的声音。\",\n>   75: \t\t\"the splashing of a naiad.\",\n    76: \t\t\"a soda fountain!\",\n    77: \t};\n    78: \tYou_hear(fountain_msg[rn2(3)+hallu]);\n    79:     }\n    80: #ifdef SINK"
+    "stage": 0,
+    "context": "src/sounds.c:75:3\n    70: \n    71:     if (level.flags.nfountains && !rn2(400)) {\n    72: \tstatic const char * const fountain_msg[4] = {\n    73: \t\t\"水咕嘟咕嘟冒泡声。\",\n    74: \t\t\"水打在金币上的声音。\",\n&gt;   75: \t\t\"the splashing of a naiad.\",\n    76: \t\t\"a soda fountain!\",\n    77: \t};\n    78: \tYou_hear(fountain_msg[rn2(3)+hallu]);\n    79:     }\n    80: #ifdef SINK"
   },
   {
     "key": "L00076_01",
     "original": "a soda fountain!",
     "translation": "",
-    "context": "src/sounds.c:76:3\n    71:     if (level.flags.nfountains && !rn2(400)) {\n    72: \tstatic const char * const fountain_msg[4] = {\n    73: \t\t\"水咕嘟咕嘟冒泡声。\",\n    74: \t\t\"水打在金币上的声音。\",\n    75: \t\t\"the splashing of a naiad.\",\n>   76: \t\t\"a soda fountain!\",\n    77: \t};\n    78: \tYou_hear(fountain_msg[rn2(3)+hallu]);\n    79:     }\n    80: #ifdef SINK\n    81:     if (level.flags.nsinks && !rn2(300)) {"
+    "stage": 0,
+    "context": "src/sounds.c:76:3\n    71:     if (level.flags.nfountains && !rn2(400)) {\n    72: \tstatic const char * const fountain_msg[4] = {\n    73: \t\t\"水咕嘟咕嘟冒泡声。\",\n    74: \t\t\"水打在金币上的声音。\",\n    75: \t\t\"the splashing of a naiad.\",\n&gt;   76: \t\t\"a soda fountain!\",\n    77: \t};\n    78: \tYou_hear(fountain_msg[rn2(3)+hallu]);\n    79:     }\n    80: #ifdef SINK\n    81:     if (level.flags.nsinks && !rn2(300)) {"
   },
   {
     "key": "L00083_01",
     "original": "a slow drip.",
     "translation": "",
-    "context": "src/sounds.c:83:3\n    78: \tYou_hear(fountain_msg[rn2(3)+hallu]);\n    79:     }\n    80: #ifdef SINK\n    81:     if (level.flags.nsinks && !rn2(300)) {\n    82: \tstatic const char * const sink_msg[3] = {\n>   83: \t\t\"a slow drip.\",\n    84: \t\t\"a gurgling noise.\",\n    85: \t\t\"洗碗的声音！\",\n    86: \t};\n    87: \tYou_hear(sink_msg[rn2(2)+hallu]);\n    88:     }"
+    "stage": 0,
+    "context": "src/sounds.c:83:3\n    78: \tYou_hear(fountain_msg[rn2(3)+hallu]);\n    79:     }\n    80: #ifdef SINK\n    81:     if (level.flags.nsinks && !rn2(300)) {\n    82: \tstatic const char * const sink_msg[3] = {\n&gt;   83: \t\t\"a slow drip.\",\n    84: \t\t\"a gurgling noise.\",\n    85: \t\t\"洗碗的声音！\",\n    86: \t};\n    87: \tYou_hear(sink_msg[rn2(2)+hallu]);\n    88:     }"
   },
   {
     "key": "L00084_01",
     "original": "a gurgling noise.",
     "translation": "",
-    "context": "src/sounds.c:84:3\n    79:     }\n    80: #ifdef SINK\n    81:     if (level.flags.nsinks && !rn2(300)) {\n    82: \tstatic const char * const sink_msg[3] = {\n    83: \t\t\"a slow drip.\",\n>   84: \t\t\"a gurgling noise.\",\n    85: \t\t\"洗碗的声音！\",\n    86: \t};\n    87: \tYou_hear(sink_msg[rn2(2)+hallu]);\n    88:     }\n    89: #endif"
+    "stage": 0,
+    "context": "src/sounds.c:84:3\n    79:     }\n    80: #ifdef SINK\n    81:     if (level.flags.nsinks && !rn2(300)) {\n    82: \tstatic const char * const sink_msg[3] = {\n    83: \t\t\"a slow drip.\",\n&gt;   84: \t\t\"a gurgling noise.\",\n    85: \t\t\"洗碗的声音！\",\n    86: \t};\n    87: \tYou_hear(sink_msg[rn2(2)+hallu]);\n    88:     }\n    89: #endif"
   },
   {
     "key": "L00092_01",
     "original": "the tones of courtly conversation.",
     "translation": "",
-    "context": "src/sounds.c:92:3\n    87: \tYou_hear(sink_msg[rn2(2)+hallu]);\n    88:     }\n    89: #endif\n    90:     if (level.flags.has_court && !rn2(200)) {\n    91: \tstatic const char * const throne_msg[4] = {\n>   92: \t\t\"the tones of courtly conversation.\",\n    93: \t\t\"a sceptre pounded in judgment.\",\n    94: \t\t\"有人大吼：“砍了%s的头！”\",\n    95: \t\t\"Queen Beruthiel's cats!\",\n    96: \t};\n    97: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {"
+    "stage": 0,
+    "context": "src/sounds.c:92:3\n    87: \tYou_hear(sink_msg[rn2(2)+hallu]);\n    88:     }\n    89: #endif\n    90:     if (level.flags.has_court && !rn2(200)) {\n    91: \tstatic const char * const throne_msg[4] = {\n&gt;   92: \t\t\"the tones of courtly conversation.\",\n    93: \t\t\"a sceptre pounded in judgment.\",\n    94: \t\t\"有人大吼：“砍了%s的头！”\",\n    95: \t\t\"Queen Beruthiel's cats!\",\n    96: \t};\n    97: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {"
   },
   {
     "key": "L00093_01",
     "original": "a sceptre pounded in judgment.",
     "translation": "",
-    "context": "src/sounds.c:93:3\n    88:     }\n    89: #endif\n    90:     if (level.flags.has_court && !rn2(200)) {\n    91: \tstatic const char * const throne_msg[4] = {\n    92: \t\t\"the tones of courtly conversation.\",\n>   93: \t\t\"a sceptre pounded in judgment.\",\n    94: \t\t\"有人大吼：“砍了%s的头！”\",\n    95: \t\t\"Queen Beruthiel's cats!\",\n    96: \t};\n    97: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n    98: \t    if (DEADMONSTER(mtmp)) continue;"
+    "stage": 0,
+    "context": "src/sounds.c:93:3\n    88:     }\n    89: #endif\n    90:     if (level.flags.has_court && !rn2(200)) {\n    91: \tstatic const char * const throne_msg[4] = {\n    92: \t\t\"the tones of courtly conversation.\",\n&gt;   93: \t\t\"a sceptre pounded in judgment.\",\n    94: \t\t\"有人大吼：“砍了%s的头！”\",\n    95: \t\t\"Queen Beruthiel's cats!\",\n    96: \t};\n    97: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n    98: \t    if (DEADMONSTER(mtmp)) continue;"
   },
   {
     "key": "L00095_01",
     "original": "Queen Beruthiel's cats!",
     "translation": "",
-    "context": "src/sounds.c:95:3\n    90:     if (level.flags.has_court && !rn2(200)) {\n    91: \tstatic const char * const throne_msg[4] = {\n    92: \t\t\"the tones of courtly conversation.\",\n    93: \t\t\"a sceptre pounded in judgment.\",\n    94: \t\t\"有人大吼：“砍了%s的头！”\",\n>   95: \t\t\"Queen Beruthiel's cats!\",\n    96: \t};\n    97: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n    98: \t    if (DEADMONSTER(mtmp)) continue;\n    99: \t    if ((mtmp->msleeping ||\n   100: \t\t\tis_lord(mtmp->data) || is_prince(mtmp->data)) &&"
+    "stage": 0,
+    "context": "src/sounds.c:95:3\n    90:     if (level.flags.has_court && !rn2(200)) {\n    91: \tstatic const char * const throne_msg[4] = {\n    92: \t\t\"the tones of courtly conversation.\",\n    93: \t\t\"a sceptre pounded in judgment.\",\n    94: \t\t\"有人大吼：“砍了%s的头！”\",\n&gt;   95: \t\t\"Queen Beruthiel's cats!\",\n    96: \t};\n    97: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n    98: \t    if (DEADMONSTER(mtmp)) continue;\n    99: \t    if ((mtmp-&gt;msleeping ||\n   100: \t\t\tis_lord(mtmp-&gt;data) || is_prince(mtmp-&gt;data)) &&"
   },
   {
     "key": "L00124_01",
     "original": "hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"",
     "translation": "",
-    "context": "src/sounds.c:124:3\n   119: \treturn;\n   120:     }\n   121:     if (level.flags.spooky && !rn2(200)) {\n   122: \tstatic const char *spooky_msg[24] = {\n   123: \t\t\"听见周围传来惨叫声！\",\n>  124: \t\t\"hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"\",\n   125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\","
+    "stage": 0,
+    "context": "src/sounds.c:124:3\n   119: \treturn;\n   120:     }\n   121:     if (level.flags.spooky && !rn2(200)) {\n   122: \tstatic const char *spooky_msg[24] = {\n   123: \t\t\"听见周围传来惨叫声！\",\n&gt;  124: \t\t\"hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"\",\n   125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\","
   },
   {
     "key": "L00125_01",
     "original": "hear a door creak ominously.",
     "translation": "",
-    "context": "src/sounds.c:125:3\n   120:     }\n   121:     if (level.flags.spooky && !rn2(200)) {\n   122: \tstatic const char *spooky_msg[24] = {\n   123: \t\t\"听见周围传来惨叫声！\",\n   124: \t\t\"hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"\",\n>  125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n   130: \t\t\"smell rotting corpses.\","
+    "stage": 0,
+    "context": "src/sounds.c:125:3\n   120:     }\n   121:     if (level.flags.spooky && !rn2(200)) {\n   122: \tstatic const char *spooky_msg[24] = {\n   123: \t\t\"听见周围传来惨叫声！\",\n   124: \t\t\"hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"\",\n&gt;  125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n   130: \t\t\"smell rotting corpses.\","
   },
   {
     "key": "L00128_01",
     "original": "hear anguished moaning and groaning coming out of the walls!",
     "translation": "",
-    "context": "src/sounds.c:128:3\n   123: \t\t\"听见周围传来惨叫声！\",\n   124: \t\t\"hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"\",\n   125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n>  128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n   130: \t\t\"smell rotting corpses.\",\n   131: \t\t\"smell chloroform!\",\n   132: \t\t\"感觉冰凉的手指摸到了你的脖子。\",\n   133: \t\t\"感觉你脸上好像被鬼魂摸了一下。\","
+    "stage": 0,
+    "context": "src/sounds.c:128:3\n   123: \t\t\"听见周围传来惨叫声！\",\n   124: \t\t\"hear a faint whisper: \\\"Please leave your measurements for your custom-made coffin.\\\"\",\n   125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n&gt;  128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n   130: \t\t\"smell rotting corpses.\",\n   131: \t\t\"smell chloroform!\",\n   132: \t\t\"感觉冰凉的手指摸到了你的脖子。\",\n   133: \t\t\"感觉你脸上好像被鬼魂摸了一下。\","
   },
   {
     "key": "L00130_01",
     "original": "smell rotting corpses.",
     "translation": "",
-    "context": "src/sounds.c:130:3\n   125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n>  130: \t\t\"smell rotting corpses.\",\n   131: \t\t\"smell chloroform!\",\n   132: \t\t\"感觉冰凉的手指摸到了你的脖子。\",\n   133: \t\t\"感觉你脸上好像被鬼魂摸了一下。\",\n   134: \t\t\"感觉有人正在你的坟头热舞蹦迪。\",\n   135: \t\t\"感觉有什么东西……在你背后喘气。\","
+    "stage": 0,
+    "context": "src/sounds.c:130:3\n   125: \t\t\"hear a door creak ominously.\",\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n&gt;  130: \t\t\"smell rotting corpses.\",\n   131: \t\t\"smell chloroform!\",\n   132: \t\t\"感觉冰凉的手指摸到了你的脖子。\",\n   133: \t\t\"感觉你脸上好像被鬼魂摸了一下。\",\n   134: \t\t\"感觉有人正在你的坟头热舞蹦迪。\",\n   135: \t\t\"感觉有什么东西……在你背后喘气。\","
   },
   {
     "key": "L00131_01",
     "original": "smell chloroform!",
     "translation": "",
-    "context": "src/sounds.c:131:3\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n   130: \t\t\"smell rotting corpses.\",\n>  131: \t\t\"smell chloroform!\",\n   132: \t\t\"感觉冰凉的手指摸到了你的脖子。\",\n   133: \t\t\"感觉你脸上好像被鬼魂摸了一下。\",\n   134: \t\t\"感觉有人正在你的坟头热舞蹦迪。\",\n   135: \t\t\"感觉有什么东西……在你背后喘气。\",\n   136: \t\t\"感觉这些墙正黑压压地朝你压过来。\","
+    "stage": 0,
+    "context": "src/sounds.c:131:3\n   126: \t\t\"听见你背后传来粗重的呼吸声！\",\n   127: \t\t\"听见有人拖着什么，而它的脚步声越来越近了！\",\n   128: \t\t\"hear anguished moaning and groaning coming out of the walls!\",\n   129: \t\t\"听见你背后传来疯狂的笑声！\",\n   130: \t\t\"smell rotting corpses.\",\n&gt;  131: \t\t\"smell chloroform!\",\n   132: \t\t\"感觉冰凉的手指摸到了你的脖子。\",\n   133: \t\t\"感觉你脸上好像被鬼魂摸了一下。\",\n   134: \t\t\"感觉有人正在你的坟头热舞蹦迪。\",\n   135: \t\t\"感觉有什么东西……在你背后喘气。\",\n   136: \t\t\"感觉这些墙正黑压压地朝你压过来。\","
   },
   {
     "key": "L00145_01",
     "original": "hear someone praising your valor!",
     "translation": "",
-    "context": "src/sounds.c:145:3\n   140: \t\t\"闻到你丈母娘在做饭！\",\n   141: \t\t\"闻到马粪味。\",\n   142: \t\t\"听见有人在大吼：“谁特么点了汉堡不来拿？！”\",\n   143: \t\t\"能听见非常微弱的《阴阳魔界》主题曲。\",\n   144: \t\t\"听见一个极其愤怒的顾客大吼：“我一定会回来的！”\",\n>  145: \t\t\"hear someone praising your valor!\",\n   146: \t\t\"听见有人在唱：“新年好啊新年好啊祝福大家新年好……”\",\n   147: \t};\n   148: \tYou(spooky_msg[rn2(15)+hallu*9]);\n   149: \treturn;\n   150:     }"
+    "stage": 0,
+    "context": "src/sounds.c:145:3\n   140: \t\t\"闻到你丈母娘在做饭！\",\n   141: \t\t\"闻到马粪味。\",\n   142: \t\t\"听见有人在大吼：“谁特么点了汉堡不来拿？！”\",\n   143: \t\t\"能听见非常微弱的《阴阳魔界》主题曲。\",\n   144: \t\t\"听见一个极其愤怒的顾客大吼：“我一定会回来的！”\",\n&gt;  145: \t\t\"hear someone praising your valor!\",\n   146: \t\t\"听见有人在唱：“新年好啊新年好啊祝福大家新年好……”\",\n   147: \t};\n   148: \tYou(spooky_msg[rn2(15)+hallu*9]);\n   149: \treturn;\n   150:     }"
   },
   {
     "key": "L00178_01",
     "original": "the quarterback calling the play.",
     "translation": "",
-    "context": "src/sounds.c:178:5\n   173: \t\t\t (ROOM_INDEX(sroom) + ROOMOFFSET))\n   174: #endif /* AZTEC_C_WORKAROUND */\n   175: \t\t    {\n   176: \t\t\tif (gold_in_vault)\n   177: \t\t\t    You_hear(!hallu ? \"有人正在清点金币。\" :\n>  178: \t\t\t\t\"the quarterback calling the play.\");\n   179: \t\t\telse\n   180: \t\t\t    You_hear(\"有人在找什么东西。\");\n   181: \t\t\tbreak;\n   182: \t\t    }\n   183: \t\t    /* fall into... (yes, even for hallucination) */"
+    "stage": 0,
+    "context": "src/sounds.c:178:5\n   173: \t\t\t (ROOM_INDEX(sroom) + ROOMOFFSET))\n   174: #endif /* AZTEC_C_WORKAROUND */\n   175: \t\t    {\n   176: \t\t\tif (gold_in_vault)\n   177: \t\t\t    You_hear(!hallu ? \"有人正在清点金币。\" :\n&gt;  178: \t\t\t\t\"the quarterback calling the play.\");\n   179: \t\t\telse\n   180: \t\t\t    You_hear(\"有人在找什么东西。\");\n   181: \t\t\tbreak;\n   182: \t\t    }\n   183: \t\t    /* fall into... (yes, even for hallucination) */"
   },
   {
     "key": "L00189_01",
     "original": "Ebenezer Scrooge!",
     "translation": "",
-    "context": "src/sounds.c:189:16\n   184: \t\t}\n   185: \t\tcase 0:\n   186: \t\t    You_hear(\"某个金库中的警卫传出的脚步声。\");\n   187: \t\t    break;\n   188: \t\tcase 2:\n>  189: \t\t    You_hear(\"Ebenezer Scrooge!\");\n   190: \t\t    break;\n   191: \t    }\n   192: \treturn;\n   193:     }\n   194:     if (level.flags.has_beehive && !rn2(200)) {"
+    "stage": 0,
+    "context": "src/sounds.c:189:16\n   184: \t\t}\n   185: \t\tcase 0:\n   186: \t\t    You_hear(\"某个金库中的警卫传出的脚步声。\");\n   187: \t\t    break;\n   188: \t\tcase 2:\n&gt;  189: \t\t    You_hear(\"Ebenezer Scrooge!\");\n   190: \t\t    break;\n   191: \t    }\n   192: \treturn;\n   193:     }\n   194:     if (level.flags.has_beehive && !rn2(200)) {"
   },
   {
     "key": "L00201_01",
     "original": "a low buzzing.",
     "translation": "",
-    "context": "src/sounds.c:201:13\n   196: \t    if (DEADMONSTER(mtmp)) continue;\n   197: \t    if ((mtmp->data->mlet == S_ANT && is_flyer(mtmp->data)) &&\n   198: \t\tmon_in_room(mtmp, BEEHIVE)) {\n   199: \t\tswitch (rn2(2)+hallu) {\n   200: \t\t    case 0:\n>  201: \t\t\tYou_hear(\"a low buzzing.\");\n   202: \t\t\tbreak;\n   203: \t\t    case 1:\n   204: \t\t\tYou_hear(\"一只愤怒的工蜂在嗡嗡叫。\");\n   205: \t\t\tbreak;\n   206: \t\t    case 2:"
+    "stage": 0,
+    "context": "src/sounds.c:201:13\n   196: \t    if (DEADMONSTER(mtmp)) continue;\n   197: \t    if ((mtmp-&gt;data-&gt;mlet == S_ANT && is_flyer(mtmp-&gt;data)) &&\n   198: \t\tmon_in_room(mtmp, BEEHIVE)) {\n   199: \t\tswitch (rn2(2)+hallu) {\n   200: \t\t    case 0:\n&gt;  201: \t\t\tYou_hear(\"a low buzzing.\");\n   202: \t\t\tbreak;\n   203: \t\t    case 1:\n   204: \t\t\tYou_hear(\"一只愤怒的工蜂在嗡嗡叫。\");\n   205: \t\t\tbreak;\n   206: \t\t    case 2:"
   },
   {
     "key": "L00207_01",
     "original": "bees in your %sbonnet!",
     "translation": "",
-    "context": "src/sounds.c:207:13\n   202: \t\t\tbreak;\n   203: \t\t    case 1:\n   204: \t\t\tYou_hear(\"一只愤怒的工蜂在嗡嗡叫。\");\n   205: \t\t\tbreak;\n   206: \t\t    case 2:\n>  207: \t\t\tYou_hear(\"bees in your %sbonnet!\",\n   208: \t\t\t    uarmh ? \"\" : \"(nonexistent) \");\n   209: \t\t\tbreak;\n   210: \t\t}\n   211: \t\treturn;\n   212: \t    }"
+    "stage": 0,
+    "context": "src/sounds.c:207:13\n   202: \t\t\tbreak;\n   203: \t\t    case 1:\n   204: \t\t\tYou_hear(\"一只愤怒的工蜂在嗡嗡叫。\");\n   205: \t\t\tbreak;\n   206: \t\t    case 2:\n&gt;  207: \t\t\tYou_hear(\"bees in your %sbonnet!\",\n   208: \t\t\t    uarmh ? \"\" : \"(nonexistent) \");\n   209: \t\t\tbreak;\n   210: \t\t}\n   211: \t\treturn;\n   212: \t    }"
   },
   {
     "key": "L00208_01",
     "original": "(nonexistent) ",
     "translation": "",
-    "context": "src/sounds.c:208:21\n   203: \t\t    case 1:\n   204: \t\t\tYou_hear(\"一只愤怒的工蜂在嗡嗡叫。\");\n   205: \t\t\tbreak;\n   206: \t\t    case 2:\n   207: \t\t\tYou_hear(\"bees in your %sbonnet!\",\n>  208: \t\t\t    uarmh ? \"\" : \"(nonexistent) \");\n   209: \t\t\tbreak;\n   210: \t\t}\n   211: \t\treturn;\n   212: \t    }\n   213: \t}"
+    "stage": 0,
+    "context": "src/sounds.c:208:21\n   203: \t\t    case 1:\n   204: \t\t\tYou_hear(\"一只愤怒的工蜂在嗡嗡叫。\");\n   205: \t\t\tbreak;\n   206: \t\t    case 2:\n   207: \t\t\tYou_hear(\"bees in your %sbonnet!\",\n&gt;  208: \t\t\t    uarmh ? \"\" : \"(nonexistent) \");\n   209: \t\t\tbreak;\n   210: \t\t}\n   211: \t\treturn;\n   212: \t    }\n   213: \t}"
   },
   {
     "key": "L00225_01",
     "original": "%s on the back of your %s stands up.",
     "translation": "",
-    "context": "src/sounds.c:225:14\n   220: \t\tswitch (rn2(2)+hallu) {\n   221: \t\t    case 0:\n   222: \t\t\tYou(\"突然意识到周围的环境安静到不正常。\");\n   223: \t\t\tbreak;\n   224: \t\t    case 1:\n>  225: \t\t\tpline_The(\"%s on the back of your %s stands up.\",\n   226: \t\t\t\tbody_part(HAIR), body_part(NECK));\n   227: \t\t\tbreak;\n   228: \t\t    case 2:\n   229: \t\t\tpline_The(\"%s on your %s seems to stand up.\",\n   230: \t\t\t\tbody_part(HAIR), body_part(HEAD));"
+    "stage": 0,
+    "context": "src/sounds.c:225:14\n   220: \t\tswitch (rn2(2)+hallu) {\n   221: \t\t    case 0:\n   222: \t\t\tYou(\"突然意识到周围的环境安静到不正常。\");\n   223: \t\t\tbreak;\n   224: \t\t    case 1:\n&gt;  225: \t\t\tpline_The(\"%s on the back of your %s stands up.\",\n   226: \t\t\t\tbody_part(HAIR), body_part(NECK));\n   227: \t\t\tbreak;\n   228: \t\t    case 2:\n   229: \t\t\tpline_The(\"%s on your %s seems to stand up.\",\n   230: \t\t\t\tbody_part(HAIR), body_part(HEAD));"
   },
   {
     "key": "L00229_01",
     "original": "%s on your %s seems to stand up.",
     "translation": "",
-    "context": "src/sounds.c:229:14\n   224: \t\t    case 1:\n   225: \t\t\tpline_The(\"%s on the back of your %s stands up.\",\n   226: \t\t\t\tbody_part(HAIR), body_part(NECK));\n   227: \t\t\tbreak;\n   228: \t\t    case 2:\n>  229: \t\t\tpline_The(\"%s on your %s seems to stand up.\",\n   230: \t\t\t\tbody_part(HAIR), body_part(HEAD));\n   231: \t\t\tbreak;\n   232: \t\t}\n   233: \t\treturn;\n   234: \t    }"
+    "stage": 0,
+    "context": "src/sounds.c:229:14\n   224: \t\t    case 1:\n   225: \t\t\tpline_The(\"%s on the back of your %s stands up.\",\n   226: \t\t\t\tbody_part(HAIR), body_part(NECK));\n   227: \t\t\tbreak;\n   228: \t\t    case 2:\n&gt;  229: \t\t\tpline_The(\"%s on your %s seems to stand up.\",\n   230: \t\t\t\tbody_part(HAIR), body_part(HEAD));\n   231: \t\t\tbreak;\n   232: \t\t}\n   233: \t\treturn;\n   234: \t    }"
   },
   {
     "key": "L00239_01",
     "original": "blades being honed.",
     "translation": "",
-    "context": "src/sounds.c:239:3\n   234: \t    }\n   235: \t}\n   236:     }\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n>  239: \t\t\"blades being honed.\",\n   240: \t\t\"loud snoring.\",\n   241: \t\t\"dice being thrown.\",\n   242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;"
+    "stage": 0,
+    "context": "src/sounds.c:239:3\n   234: \t    }\n   235: \t}\n   236:     }\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n&gt;  239: \t\t\"blades being honed.\",\n   240: \t\t\"loud snoring.\",\n   241: \t\t\"dice being thrown.\",\n   242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;"
   },
   {
     "key": "L00240_01",
     "original": "loud snoring.",
     "translation": "",
-    "context": "src/sounds.c:240:3\n   235: \t}\n   236:     }\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n   239: \t\t\"blades being honed.\",\n>  240: \t\t\"loud snoring.\",\n   241: \t\t\"dice being thrown.\",\n   242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;\n   245: "
+    "stage": 0,
+    "context": "src/sounds.c:240:3\n   235: \t}\n   236:     }\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n   239: \t\t\"blades being honed.\",\n&gt;  240: \t\t\"loud snoring.\",\n   241: \t\t\"dice being thrown.\",\n   242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;\n   245: "
   },
   {
     "key": "L00241_01",
     "original": "dice being thrown.",
     "translation": "",
-    "context": "src/sounds.c:241:3\n   236:     }\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n   239: \t\t\"blades being honed.\",\n   240: \t\t\"loud snoring.\",\n>  241: \t\t\"dice being thrown.\",\n   242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;\n   245: \n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {"
+    "stage": 0,
+    "context": "src/sounds.c:241:3\n   236:     }\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n   239: \t\t\"blades being honed.\",\n   240: \t\t\"loud snoring.\",\n&gt;  241: \t\t\"dice being thrown.\",\n   242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;\n   245: \n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {"
   },
   {
     "key": "L00242_01",
     "original": "General MacArthur!",
     "translation": "",
-    "context": "src/sounds.c:242:3\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n   239: \t\t\"blades being honed.\",\n   240: \t\t\"loud snoring.\",\n   241: \t\t\"dice being thrown.\",\n>  242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;\n   245: \n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   247: \t    if (DEADMONSTER(mtmp)) continue;"
+    "stage": 0,
+    "context": "src/sounds.c:242:3\n   237:     if (level.flags.has_barracks && !rn2(200)) {\n   238: \tstatic const char * const barracks_msg[4] = {\n   239: \t\t\"blades being honed.\",\n   240: \t\t\"loud snoring.\",\n   241: \t\t\"dice being thrown.\",\n&gt;  242: \t\t\"General MacArthur!\",\n   243: \t};\n   244: \tint count = 0;\n   245: \n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   247: \t    if (DEADMONSTER(mtmp)) continue;"
   },
   {
     "key": "L00250_01",
     "original": "watch",
     "translation": "",
-    "context": "src/sounds.c:250:31\n   245: \n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   247: \t    if (DEADMONSTER(mtmp)) continue;\n   248: \t    if (is_mercenary(mtmp->data) &&\n   249: #if 0\t\t/* don't bother excluding these */\n>  250: \t\t!strstri(mtmp->data->mname, \"watch\") &&\n   251: \t\t!strstri(mtmp->data->mname, \"guard\") &&\n   252: #endif\n   253: \t\tmon_in_room(mtmp, BARRACKS) &&\n   254: \t\t/* sleeping implies not-yet-disturbed (usually) */\n   255: \t\t(mtmp->msleeping || ++count > 5)) {"
+    "stage": 0,
+    "context": "src/sounds.c:250:31\n   245: \n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   247: \t    if (DEADMONSTER(mtmp)) continue;\n   248: \t    if (is_mercenary(mtmp-&gt;data) &&\n   249: #if 0\t\t/* don't bother excluding these */\n&gt;  250: \t\t!strstri(mtmp-&gt;data-&gt;mname, \"watch\") &&\n   251: \t\t!strstri(mtmp-&gt;data-&gt;mname, \"guard\") &&\n   252: #endif\n   253: \t\tmon_in_room(mtmp, BARRACKS) &&\n   254: \t\t/* sleeping implies not-yet-disturbed (usually) */\n   255: \t\t(mtmp-&gt;msleeping || ++count &gt; 5)) {"
   },
   {
     "key": "L00251_01",
     "original": "guard",
     "translation": "",
-    "context": "src/sounds.c:251:31\n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   247: \t    if (DEADMONSTER(mtmp)) continue;\n   248: \t    if (is_mercenary(mtmp->data) &&\n   249: #if 0\t\t/* don't bother excluding these */\n   250: \t\t!strstri(mtmp->data->mname, \"watch\") &&\n>  251: \t\t!strstri(mtmp->data->mname, \"guard\") &&\n   252: #endif\n   253: \t\tmon_in_room(mtmp, BARRACKS) &&\n   254: \t\t/* sleeping implies not-yet-disturbed (usually) */\n   255: \t\t(mtmp->msleeping || ++count > 5)) {\n   256: \t\tYou_hear(barracks_msg[rn2(3)+hallu]);"
+    "stage": 0,
+    "context": "src/sounds.c:251:31\n   246: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   247: \t    if (DEADMONSTER(mtmp)) continue;\n   248: \t    if (is_mercenary(mtmp-&gt;data) &&\n   249: #if 0\t\t/* don't bother excluding these */\n   250: \t\t!strstri(mtmp-&gt;data-&gt;mname, \"watch\") &&\n&gt;  251: \t\t!strstri(mtmp-&gt;data-&gt;mname, \"guard\") &&\n   252: #endif\n   253: \t\tmon_in_room(mtmp, BARRACKS) &&\n   254: \t\t/* sleeping implies not-yet-disturbed (usually) */\n   255: \t\t(mtmp-&gt;msleeping || ++count &gt; 5)) {\n   256: \t\tYou_hear(barracks_msg[rn2(3)+hallu]);"
   },
   {
     "key": "L00263_01",
     "original": "a sound reminiscent of an elephant stepping on a peanut.",
     "translation": "",
-    "context": "src/sounds.c:263:3\n   258: \t    }\n   259: \t}\n   260:     }\n   261:     if (level.flags.has_zoo && !rn2(200)) {\n   262: \tstatic const char * const zoo_msg[3] = {\n>  263: \t\t\"a sound reminiscent of an elephant stepping on a peanut.\",\n   264: \t\t\"a sound reminiscent of a seal barking.\",\n   265: \t\t\"Doctor Doolittle!\",\n   266: \t};\n   267: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   268: \t    if (DEADMONSTER(mtmp)) continue;"
+    "stage": 0,
+    "context": "src/sounds.c:263:3\n   258: \t    }\n   259: \t}\n   260:     }\n   261:     if (level.flags.has_zoo && !rn2(200)) {\n   262: \tstatic const char * const zoo_msg[3] = {\n&gt;  263: \t\t\"a sound reminiscent of an elephant stepping on a peanut.\",\n   264: \t\t\"a sound reminiscent of a seal barking.\",\n   265: \t\t\"Doctor Doolittle!\",\n   266: \t};\n   267: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   268: \t    if (DEADMONSTER(mtmp)) continue;"
   },
   {
     "key": "L00264_01",
     "original": "a sound reminiscent of a seal barking.",
     "translation": "",
-    "context": "src/sounds.c:264:3\n   259: \t}\n   260:     }\n   261:     if (level.flags.has_zoo && !rn2(200)) {\n   262: \tstatic const char * const zoo_msg[3] = {\n   263: \t\t\"a sound reminiscent of an elephant stepping on a peanut.\",\n>  264: \t\t\"a sound reminiscent of a seal barking.\",\n   265: \t\t\"Doctor Doolittle!\",\n   266: \t};\n   267: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   268: \t    if (DEADMONSTER(mtmp)) continue;\n   269: \t    if ((mtmp->msleeping || is_animal(mtmp->data)) &&"
+    "stage": 0,
+    "context": "src/sounds.c:264:3\n   259: \t}\n   260:     }\n   261:     if (level.flags.has_zoo && !rn2(200)) {\n   262: \tstatic const char * const zoo_msg[3] = {\n   263: \t\t\"a sound reminiscent of an elephant stepping on a peanut.\",\n&gt;  264: \t\t\"a sound reminiscent of a seal barking.\",\n   265: \t\t\"Doctor Doolittle!\",\n   266: \t};\n   267: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   268: \t    if (DEADMONSTER(mtmp)) continue;\n   269: \t    if ((mtmp-&gt;msleeping || is_animal(mtmp-&gt;data)) &&"
   },
   {
     "key": "L00265_01",
     "original": "Doctor Doolittle!",
     "translation": "",
-    "context": "src/sounds.c:265:3\n   260:     }\n   261:     if (level.flags.has_zoo && !rn2(200)) {\n   262: \tstatic const char * const zoo_msg[3] = {\n   263: \t\t\"a sound reminiscent of an elephant stepping on a peanut.\",\n   264: \t\t\"a sound reminiscent of a seal barking.\",\n>  265: \t\t\"Doctor Doolittle!\",\n   266: \t};\n   267: \tfor (mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   268: \t    if (DEADMONSTER(mtmp)) continue;\n   269: \t    if ((mtmp->msleeping || is_animal(mtmp->data)) &&\n   270: \t\t    mon_in_room(mtmp, ZOO)) {"
+    "stage": 0,
+    "context": "src/sounds.c:265:3\n   260:     }\n   261:     if (level.flags.has_zoo && !rn2(200)) {\n   262: \tstatic const char * const zoo_msg[3] = {\n   263: \t\t\"a sound reminiscent of an elephant stepping on a peanut.\",\n   264: \t\t\"a sound reminiscent of a seal barking.\",\n&gt;  265: \t\t\"Doctor Doolittle!\",\n   266: \t};\n   267: \tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   268: \t    if (DEADMONSTER(mtmp)) continue;\n   269: \t    if ((mtmp-&gt;msleeping || is_animal(mtmp-&gt;data)) &&\n   270: \t\t    mon_in_room(mtmp, ZOO)) {"
   },
   {
     "key": "L00285_01",
     "original": "someone cursing shoplifters.",
     "translation": "",
-    "context": "src/sounds.c:285:7\n   280: \t    return;\n   281: \t}\n   282: \tif (tended_shop(sroom) &&\n   283: \t\t!index(u.ushops, ROOM_INDEX(sroom) + ROOMOFFSET)) {\n   284: \t    static const char * const shop_msg[3] = {\n>  285: \t\t    \"someone cursing shoplifters.\",\n   286: \t\t    \"收银机结账时的叮当声。\",\n   287: \t\t    \"Neiman and Marcus arguing!\",\n   288: \t    };\n   289: \t    You_hear(shop_msg[rn2(2)+hallu]);\n   290: \t}"
+    "stage": 0,
+    "context": "src/sounds.c:285:7\n   280: \t    return;\n   281: \t}\n   282: \tif (tended_shop(sroom) &&\n   283: \t\t!index(u.ushops, ROOM_INDEX(sroom) + ROOMOFFSET)) {\n   284: \t    static const char * const shop_msg[3] = {\n&gt;  285: \t\t    \"someone cursing shoplifters.\",\n   286: \t\t    \"收银机结账时的叮当声。\",\n   287: \t\t    \"Neiman and Marcus arguing!\",\n   288: \t    };\n   289: \t    You_hear(shop_msg[rn2(2)+hallu]);\n   290: \t}"
   },
   {
     "key": "L00287_01",
     "original": "Neiman and Marcus arguing!",
     "translation": "",
-    "context": "src/sounds.c:287:7\n   282: \tif (tended_shop(sroom) &&\n   283: \t\t!index(u.ushops, ROOM_INDEX(sroom) + ROOMOFFSET)) {\n   284: \t    static const char * const shop_msg[3] = {\n   285: \t\t    \"someone cursing shoplifters.\",\n   286: \t\t    \"收银机结账时的叮当声。\",\n>  287: \t\t    \"Neiman and Marcus arguing!\",\n   288: \t    };\n   289: \t    You_hear(shop_msg[rn2(2)+hallu]);\n   290: \t}\n   291: \treturn;\n   292:     }"
+    "stage": 0,
+    "context": "src/sounds.c:287:7\n   282: \tif (tended_shop(sroom) &&\n   283: \t\t!index(u.ushops, ROOM_INDEX(sroom) + ROOMOFFSET)) {\n   284: \t    static const char * const shop_msg[3] = {\n   285: \t\t    \"someone cursing shoplifters.\",\n   286: \t\t    \"收银机结账时的叮当声。\",\n&gt;  287: \t\t    \"Neiman and Marcus arguing!\",\n   288: \t    };\n   289: \t    You_hear(shop_msg[rn2(2)+hallu]);\n   290: \t}\n   291: \treturn;\n   292:     }"
   },
   {
     "key": "L00301_01",
     "original": "a strange wind.",
     "translation": "",
-    "context": "src/sounds.c:301:7\n   296: \t    if (!DEADMONSTER(mtmp) && mtmp->data == &mons[PM_ORACLE])\n   297: \t\tbreak;\n   298: \t/* and don't produce silly effects when she's clearly visible */\n   299: \tif (mtmp && (hallu || !canseemon(mtmp))) {\n   300: \t    static const char * const ora_msg[5] = {\n>  301: \t\t    \"a strange wind.\",\t\t/* Jupiter at Dodona */\n   302: \t\t    \"convulsive ravings.\",\t/* Apollo at Delphi */\n   303: \t\t    \"一条蛇在打呼噜。\",\t\t/* AEsculapius at Epidaurus */\n   304: \t\t    \"有人说道：“我不要土拨鼠了！不要了！”\",\n   305: \t\t    \"ZOT陷阱被触发的巨大声响！\"\t\t/* both rec.humor.oracle */\n   306: \t    };"
+    "stage": 0,
+    "context": "src/sounds.c:301:7\n   296: \t    if (!DEADMONSTER(mtmp) && mtmp-&gt;data == &mons[PM_ORACLE])\n   297: \t\tbreak;\n   298: \t/* and don't produce silly effects when she's clearly visible */\n   299: \tif (mtmp && (hallu || !canseemon(mtmp))) {\n   300: \t    static const char * const ora_msg[5] = {\n&gt;  301: \t\t    \"a strange wind.\",\t\t/* Jupiter at Dodona */\n   302: \t\t    \"convulsive ravings.\",\t/* Apollo at Delphi */\n   303: \t\t    \"一条蛇在打呼噜。\",\t\t/* AEsculapius at Epidaurus */\n   304: \t\t    \"有人说道：“我不要土拨鼠了！不要了！”\",\n   305: \t\t    \"ZOT陷阱被触发的巨大声响！\"\t\t/* both rec.humor.oracle */\n   306: \t    };"
   },
   {
     "key": "L00302_01",
     "original": "convulsive ravings.",
     "translation": "",
-    "context": "src/sounds.c:302:7\n   297: \t\tbreak;\n   298: \t/* and don't produce silly effects when she's clearly visible */\n   299: \tif (mtmp && (hallu || !canseemon(mtmp))) {\n   300: \t    static const char * const ora_msg[5] = {\n   301: \t\t    \"a strange wind.\",\t\t/* Jupiter at Dodona */\n>  302: \t\t    \"convulsive ravings.\",\t/* Apollo at Delphi */\n   303: \t\t    \"一条蛇在打呼噜。\",\t\t/* AEsculapius at Epidaurus */\n   304: \t\t    \"有人说道：“我不要土拨鼠了！不要了！”\",\n   305: \t\t    \"ZOT陷阱被触发的巨大声响！\"\t\t/* both rec.humor.oracle */\n   306: \t    };\n   307: \t    /* KMH -- Give funny messages on Groundhog Day */"
+    "stage": 0,
+    "context": "src/sounds.c:302:7\n   297: \t\tbreak;\n   298: \t/* and don't produce silly effects when she's clearly visible */\n   299: \tif (mtmp && (hallu || !canseemon(mtmp))) {\n   300: \t    static const char * const ora_msg[5] = {\n   301: \t\t    \"a strange wind.\",\t\t/* Jupiter at Dodona */\n&gt;  302: \t\t    \"convulsive ravings.\",\t/* Apollo at Delphi */\n   303: \t\t    \"一条蛇在打呼噜。\",\t\t/* AEsculapius at Epidaurus */\n   304: \t\t    \"有人说道：“我不要土拨鼠了！不要了！”\",\n   305: \t\t    \"ZOT陷阱被触发的巨大声响！\"\t\t/* both rec.humor.oracle */\n   306: \t    };\n   307: \t    /* KMH -- Give funny messages on Groundhog Day */"
   },
   {
     "key": "L00314_01",
     "original": "One-eyed Sam's Market",
     "translation": "",
-    "context": "src/sounds.c:314:51\n   309: \t    You_hear(ora_msg[rn2(3)+hallu*2]);\n   310: \t}\n   311: \treturn;\n   312:     }\n   313: #ifdef BLACKMARKET\n>  314:     if (!Is_blackmarket(&u.uz) && at_dgn_entrance(\"One-eyed Sam's Market\") &&\n   315:         !rn2(200)) {\n   316:       static const char *blkmar_msg[3] = {\n   317:         \"你听见有人在抱怨价格太离谱。\",\n   318:         \"有人在说：“想买口粮么？只要900Zorkmid就能带回家。”\",\n   319:         \"You feel like searching for more gold.\","
+    "stage": 0,
+    "context": "src/sounds.c:314:51\n   309: \t    You_hear(ora_msg[rn2(3)+hallu*2]);\n   310: \t}\n   311: \treturn;\n   312:     }\n   313: #ifdef BLACKMARKET\n&gt;  314:     if (!Is_blackmarket(&u.uz) && at_dgn_entrance(\"One-eyed Sam's Market\") &&\n   315:         !rn2(200)) {\n   316:       static const char *blkmar_msg[3] = {\n   317:         \"你听见有人在抱怨价格太离谱。\",\n   318:         \"有人在说：“想买口粮么？只要900Zorkmid就能带回家。”\",\n   319:         \"You feel like searching for more gold.\","
   },
   {
     "key": "L00319_01",
     "original": "You feel like searching for more gold.",
     "translation": "",
-    "context": "src/sounds.c:319:9\n   314:     if (!Is_blackmarket(&u.uz) && at_dgn_entrance(\"One-eyed Sam's Market\") &&\n   315:         !rn2(200)) {\n   316:       static const char *blkmar_msg[3] = {\n   317:         \"你听见有人在抱怨价格太离谱。\",\n   318:         \"有人在说：“想买口粮么？只要900Zorkmid就能带回家。”\",\n>  319:         \"You feel like searching for more gold.\",\n   320:       };\n   321:       pline(blkmar_msg[rn2(2)+hallu]);\n   322:     }\n   323: #endif /* BLACKMARKET */\n   324: }"
+    "stage": 0,
+    "context": "src/sounds.c:319:9\n   314:     if (!Is_blackmarket(&u.uz) && at_dgn_entrance(\"One-eyed Sam's Market\") &&\n   315:         !rn2(200)) {\n   316:       static const char *blkmar_msg[3] = {\n   317:         \"你听见有人在抱怨价格太离谱。\",\n   318:         \"有人在说：“想买口粮么？只要900Zorkmid就能带回家。”\",\n&gt;  319:         \"You feel like searching for more gold.\",\n   320:       };\n   321:       pline(blkmar_msg[rn2(2)+hallu]);\n   322:     }\n   323: #endif /* BLACKMARKET */\n   324: }"
   },
   {
     "key": "L00330_01",
     "original": "beep",
     "translation": "",
-    "context": "src/sounds.c:330:5\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n>  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
+    "stage": 0,
+    "context": "src/sounds.c:330:5\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n&gt;  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
   },
   {
     "key": "L00330_02",
     "original": "boing",
     "translation": "",
-    "context": "src/sounds.c:330:13\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n>  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
+    "stage": 0,
+    "context": "src/sounds.c:330:13\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n&gt;  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
   },
   {
     "key": "L00330_03",
     "original": "sing",
     "translation": "",
-    "context": "src/sounds.c:330:22\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n>  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
+    "stage": 0,
+    "context": "src/sounds.c:330:22\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n&gt;  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
   },
   {
     "key": "L00330_04",
     "original": "belche",
     "translation": "",
-    "context": "src/sounds.c:330:30\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n>  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
+    "stage": 0,
+    "context": "src/sounds.c:330:30\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n&gt;  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
   },
   {
     "key": "L00330_05",
     "original": "creak",
     "translation": "",
-    "context": "src/sounds.c:330:40\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n>  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
+    "stage": 0,
+    "context": "src/sounds.c:330:40\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n&gt;  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
   },
   {
     "key": "L00330_06",
     "original": "rattle",
     "translation": "",
-    "context": "src/sounds.c:330:55\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n>  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
+    "stage": 0,
+    "context": "src/sounds.c:330:55\n   325: \n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n&gt;  330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n   331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */"
   },
   {
     "key": "L00331_01",
     "original": "ululate",
     "translation": "",
-    "context": "src/sounds.c:331:5\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n>  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
+    "stage": 0,
+    "context": "src/sounds.c:331:5\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n&gt;  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
   },
   {
     "key": "L00331_02",
     "original": "pop",
     "translation": "",
-    "context": "src/sounds.c:331:16\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n>  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
+    "stage": 0,
+    "context": "src/sounds.c:331:16\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n&gt;  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
   },
   {
     "key": "L00331_03",
     "original": "jingle",
     "translation": "",
-    "context": "src/sounds.c:331:23\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n>  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
+    "stage": 0,
+    "context": "src/sounds.c:331:23\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n&gt;  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
   },
   {
     "key": "L00331_04",
     "original": "sniffle",
     "translation": "",
-    "context": "src/sounds.c:331:33\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n>  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
+    "stage": 0,
+    "context": "src/sounds.c:331:33\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n&gt;  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
   },
   {
     "key": "L00331_05",
     "original": "tinkle",
     "translation": "",
-    "context": "src/sounds.c:331:44\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n>  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
+    "stage": 0,
+    "context": "src/sounds.c:331:44\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n&gt;  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
   },
   {
     "key": "L00331_06",
     "original": "eep",
     "translation": "",
-    "context": "src/sounds.c:331:54\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n>  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
+    "stage": 0,
+    "context": "src/sounds.c:331:54\n   326: #endif /* OVL0 */\n   327: #ifdef OVLB\n   328: \n   329: static const char * const h_sounds[] = {\n   330:     \"beep\", \"boing\", \"sing\", \"belche\", \"creak\", \"咳嗽\", \"rattle\",\n&gt;  331:     \"ululate\", \"pop\", \"jingle\", \"sniffle\", \"tinkle\", \"eep\"\n   332: };\n   333: \n   334: /* make the sounds of a pet in any level of distress */\n   335: /* (1 = \"whimper\", 2 = \"yelp\", 3 = \"growl\") */\n   336: void"
   },
   {
     "key": "L00355_01",
     "original": "strange level of distress",
     "translation": "",
-    "context": "src/sounds.c:355:8\n   350:     else if (lev == 2)\n   351: \tverb = yelp_sound(mtmp);\n   352:     else if (lev == 1)\n   353: \tverb = whimper_sound(mtmp);\n   354:     else\n>  355: \tpanic(\"strange level of distress\");\n   356: \n   357:     if (verb) {\n   358: \tpline(\"%s %s%c\", Monnam(mtmp), vtense((char *)0, verb),\n   359: \t\tlev>1?'!':'.');\n   360: \tif (flags.run) nomul(0);"
+    "stage": 0,
+    "context": "src/sounds.c:355:8\n   350:     else if (lev == 2)\n   351: \tverb = yelp_sound(mtmp);\n   352:     else if (lev == 1)\n   353: \tverb = whimper_sound(mtmp);\n   354:     else\n&gt;  355: \tpanic(\"strange level of distress\");\n   356: \n   357:     if (verb) {\n   358: \tpline(\"%s %s%c\", Monnam(mtmp), vtense((char *)0, verb),\n   359: \t\tlev&gt;1?'!':'.');\n   360: \tif (flags.run) nomul(0);"
   },
   {
     "key": "L00358_01",
     "original": "%s %s%c",
     "translation": "",
-    "context": "src/sounds.c:358:8\n   353: \tverb = whimper_sound(mtmp);\n   354:     else\n   355: \tpanic(\"strange level of distress\");\n   356: \n   357:     if (verb) {\n>  358: \tpline(\"%s %s%c\", Monnam(mtmp), vtense((char *)0, verb),\n   359: \t\tlev>1?'!':'.');\n   360: \tif (flags.run) nomul(0);\n   361: \twake_nearto(mtmp->mx,mtmp->my,mtmp->data->mlevel*6*lev);\n   362:     }\n   363: }"
+    "stage": 0,
+    "context": "src/sounds.c:358:8\n   353: \tverb = whimper_sound(mtmp);\n   354:     else\n   355: \tpanic(\"strange level of distress\");\n   356: \n   357:     if (verb) {\n&gt;  358: \tpline(\"%s %s%c\", Monnam(mtmp), vtense((char *)0, verb),\n   359: \t\tlev&gt;1?'!':'.');\n   360: \tif (flags.run) nomul(0);\n   361: \twake_nearto(mtmp-&gt;mx,mtmp-&gt;my,mtmp-&gt;data-&gt;mlevel*6*lev);\n   362:     }\n   363: }"
   },
   {
     "key": "L00377_01",
     "original": "hiss",
     "translation": "",
-    "context": "src/sounds.c:377:12\n   372: \tconst char *ret;\n   373: \n   374: \tswitch (mtmp->data->msound) {\n   375: \tcase MS_MEW:\n   376: \tcase MS_HISS:\n>  377: \t    ret = \"hiss\";\n   378: \t    break;\n   379: \tcase MS_BARK:\n   380: \tcase MS_GROWL:\n   381: \t    ret = \"growl\";\n   382: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:377:12\n   372: \tconst char *ret;\n   373: \n   374: \tswitch (mtmp-&gt;data-&gt;msound) {\n   375: \tcase MS_MEW:\n   376: \tcase MS_HISS:\n&gt;  377: \t    ret = \"hiss\";\n   378: \t    break;\n   379: \tcase MS_BARK:\n   380: \tcase MS_GROWL:\n   381: \t    ret = \"growl\";\n   382: \t    break;"
   },
   {
     "key": "L00381_01",
     "original": "growl",
     "translation": "",
-    "context": "src/sounds.c:381:12\n   376: \tcase MS_HISS:\n   377: \t    ret = \"hiss\";\n   378: \t    break;\n   379: \tcase MS_BARK:\n   380: \tcase MS_GROWL:\n>  381: \t    ret = \"growl\";\n   382: \t    break;\n   383: \tcase MS_ROAR:\n   384: \t    ret = \"roar\";\n   385: \t    break;\n   386: \tcase MS_BUZZ:"
+    "stage": 0,
+    "context": "src/sounds.c:381:12\n   376: \tcase MS_HISS:\n   377: \t    ret = \"hiss\";\n   378: \t    break;\n   379: \tcase MS_BARK:\n   380: \tcase MS_GROWL:\n&gt;  381: \t    ret = \"growl\";\n   382: \t    break;\n   383: \tcase MS_ROAR:\n   384: \t    ret = \"roar\";\n   385: \t    break;\n   386: \tcase MS_BUZZ:"
   },
   {
     "key": "L00384_01",
     "original": "roar",
     "translation": "",
-    "context": "src/sounds.c:384:12\n   379: \tcase MS_BARK:\n   380: \tcase MS_GROWL:\n   381: \t    ret = \"growl\";\n   382: \t    break;\n   383: \tcase MS_ROAR:\n>  384: \t    ret = \"roar\";\n   385: \t    break;\n   386: \tcase MS_BUZZ:\n   387: \t    ret = \"buzz\";\n   388: \t    break;\n   389: \tcase MS_SQEEK:"
+    "stage": 0,
+    "context": "src/sounds.c:384:12\n   379: \tcase MS_BARK:\n   380: \tcase MS_GROWL:\n   381: \t    ret = \"growl\";\n   382: \t    break;\n   383: \tcase MS_ROAR:\n&gt;  384: \t    ret = \"roar\";\n   385: \t    break;\n   386: \tcase MS_BUZZ:\n   387: \t    ret = \"buzz\";\n   388: \t    break;\n   389: \tcase MS_SQEEK:"
   },
   {
     "key": "L00387_01",
     "original": "buzz",
     "translation": "",
-    "context": "src/sounds.c:387:12\n   382: \t    break;\n   383: \tcase MS_ROAR:\n   384: \t    ret = \"roar\";\n   385: \t    break;\n   386: \tcase MS_BUZZ:\n>  387: \t    ret = \"buzz\";\n   388: \t    break;\n   389: \tcase MS_SQEEK:\n   390: \t    ret = \"squeal\";\n   391: \t    break;\n   392: \tcase MS_SQAWK:"
+    "stage": 0,
+    "context": "src/sounds.c:387:12\n   382: \t    break;\n   383: \tcase MS_ROAR:\n   384: \t    ret = \"roar\";\n   385: \t    break;\n   386: \tcase MS_BUZZ:\n&gt;  387: \t    ret = \"buzz\";\n   388: \t    break;\n   389: \tcase MS_SQEEK:\n   390: \t    ret = \"squeal\";\n   391: \t    break;\n   392: \tcase MS_SQAWK:"
   },
   {
     "key": "L00390_01",
     "original": "squeal",
     "translation": "",
-    "context": "src/sounds.c:390:12\n   385: \t    break;\n   386: \tcase MS_BUZZ:\n   387: \t    ret = \"buzz\";\n   388: \t    break;\n   389: \tcase MS_SQEEK:\n>  390: \t    ret = \"squeal\";\n   391: \t    break;\n   392: \tcase MS_SQAWK:\n   393: \t    ret = \"screech\";\n   394: \t    break;\n   395: \tcase MS_NEIGH:"
+    "stage": 0,
+    "context": "src/sounds.c:390:12\n   385: \t    break;\n   386: \tcase MS_BUZZ:\n   387: \t    ret = \"buzz\";\n   388: \t    break;\n   389: \tcase MS_SQEEK:\n&gt;  390: \t    ret = \"squeal\";\n   391: \t    break;\n   392: \tcase MS_SQAWK:\n   393: \t    ret = \"screech\";\n   394: \t    break;\n   395: \tcase MS_NEIGH:"
   },
   {
     "key": "L00393_01",
     "original": "screech",
     "translation": "",
-    "context": "src/sounds.c:393:12\n   388: \t    break;\n   389: \tcase MS_SQEEK:\n   390: \t    ret = \"squeal\";\n   391: \t    break;\n   392: \tcase MS_SQAWK:\n>  393: \t    ret = \"screech\";\n   394: \t    break;\n   395: \tcase MS_NEIGH:\n   396: \t    ret = \"neigh\";\n   397: \t    break;\n   398: \tcase MS_WAIL:"
+    "stage": 0,
+    "context": "src/sounds.c:393:12\n   388: \t    break;\n   389: \tcase MS_SQEEK:\n   390: \t    ret = \"squeal\";\n   391: \t    break;\n   392: \tcase MS_SQAWK:\n&gt;  393: \t    ret = \"screech\";\n   394: \t    break;\n   395: \tcase MS_NEIGH:\n   396: \t    ret = \"neigh\";\n   397: \t    break;\n   398: \tcase MS_WAIL:"
   },
   {
     "key": "L00396_01",
     "original": "neigh",
     "translation": "",
-    "context": "src/sounds.c:396:12\n   391: \t    break;\n   392: \tcase MS_SQAWK:\n   393: \t    ret = \"screech\";\n   394: \t    break;\n   395: \tcase MS_NEIGH:\n>  396: \t    ret = \"neigh\";\n   397: \t    break;\n   398: \tcase MS_WAIL:\n   399: \t    ret = \"wail\";\n   400: \t    break;\n   401: \tcase MS_SILENT:"
+    "stage": 0,
+    "context": "src/sounds.c:396:12\n   391: \t    break;\n   392: \tcase MS_SQAWK:\n   393: \t    ret = \"screech\";\n   394: \t    break;\n   395: \tcase MS_NEIGH:\n&gt;  396: \t    ret = \"neigh\";\n   397: \t    break;\n   398: \tcase MS_WAIL:\n   399: \t    ret = \"wail\";\n   400: \t    break;\n   401: \tcase MS_SILENT:"
   },
   {
     "key": "L00399_01",
     "original": "wail",
     "translation": "",
-    "context": "src/sounds.c:399:12\n   394: \t    break;\n   395: \tcase MS_NEIGH:\n   396: \t    ret = \"neigh\";\n   397: \t    break;\n   398: \tcase MS_WAIL:\n>  399: \t    ret = \"wail\";\n   400: \t    break;\n   401: \tcase MS_SILENT:\n   402: \t\tret = \"commotion\";\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:"
+    "stage": 0,
+    "context": "src/sounds.c:399:12\n   394: \t    break;\n   395: \tcase MS_NEIGH:\n   396: \t    ret = \"neigh\";\n   397: \t    break;\n   398: \tcase MS_WAIL:\n&gt;  399: \t    ret = \"wail\";\n   400: \t    break;\n   401: \tcase MS_SILENT:\n   402: \t\tret = \"commotion\";\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:"
   },
   {
     "key": "L00402_01",
     "original": "commotion",
     "translation": "",
-    "context": "src/sounds.c:402:9\n   397: \t    break;\n   398: \tcase MS_WAIL:\n   399: \t    ret = \"wail\";\n   400: \t    break;\n   401: \tcase MS_SILENT:\n>  402: \t\tret = \"commotion\";\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:\n   405: \t    ret = \"squaark\";\n   406: \t    break;\n   407: \tdefault:"
+    "stage": 0,
+    "context": "src/sounds.c:402:9\n   397: \t    break;\n   398: \tcase MS_WAIL:\n   399: \t    ret = \"wail\";\n   400: \t    break;\n   401: \tcase MS_SILENT:\n&gt;  402: \t\tret = \"commotion\";\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:\n   405: \t    ret = \"squaark\";\n   406: \t    break;\n   407: \tdefault:"
   },
   {
     "key": "L00405_01",
     "original": "squaark",
     "translation": "",
-    "context": "src/sounds.c:405:12\n   400: \t    break;\n   401: \tcase MS_SILENT:\n   402: \t\tret = \"commotion\";\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:\n>  405: \t    ret = \"squaark\";\n   406: \t    break;\n   407: \tdefault:\n   408: \t\tret = \"scream\";\n   409: \t}\n   410: \treturn ret;"
+    "stage": 0,
+    "context": "src/sounds.c:405:12\n   400: \t    break;\n   401: \tcase MS_SILENT:\n   402: \t\tret = \"commotion\";\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:\n&gt;  405: \t    ret = \"squaark\";\n   406: \t    break;\n   407: \tdefault:\n   408: \t\tret = \"scream\";\n   409: \t}\n   410: \treturn ret;"
   },
   {
     "key": "L00408_01",
     "original": "scream",
     "translation": "",
-    "context": "src/sounds.c:408:9\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:\n   405: \t    ret = \"squaark\";\n   406: \t    break;\n   407: \tdefault:\n>  408: \t\tret = \"scream\";\n   409: \t}\n   410: \treturn ret;\n   411: }\n   412: \n   413: /* the sounds of mistreated pets */"
+    "stage": 0,
+    "context": "src/sounds.c:408:9\n   403: \t\tbreak;\n   404: \tcase MS_PARROT:\n   405: \t    ret = \"squaark\";\n   406: \t    break;\n   407: \tdefault:\n&gt;  408: \t\tret = \"scream\";\n   409: \t}\n   410: \treturn ret;\n   411: }\n   412: \n   413: /* the sounds of mistreated pets */"
   },
   {
     "key": "L00425_01",
     "original": "yowl",
     "translation": "",
-    "context": "src/sounds.c:425:8\n   420: {\n   421:     const char *ret;\n   422: \n   423:     switch(mtmp->data->msound) {\n   424: \tcase MS_MEW:\n>  425: \tret = \"yowl\";\n   426: \t    break;\n   427: \tcase MS_BARK:\n   428: \tcase MS_GROWL:\n   429: \tret = \"yelp\";\n   430: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:425:8\n   420: {\n   421:     const char *ret;\n   422: \n   423:     switch(mtmp-&gt;data-&gt;msound) {\n   424: \tcase MS_MEW:\n&gt;  425: \tret = \"yowl\";\n   426: \t    break;\n   427: \tcase MS_BARK:\n   428: \tcase MS_GROWL:\n   429: \tret = \"yelp\";\n   430: \t    break;"
   },
   {
     "key": "L00429_01",
     "original": "yelp",
     "translation": "",
-    "context": "src/sounds.c:429:8\n   424: \tcase MS_MEW:\n   425: \tret = \"yowl\";\n   426: \t    break;\n   427: \tcase MS_BARK:\n   428: \tcase MS_GROWL:\n>  429: \tret = \"yelp\";\n   430: \t    break;\n   431: \tcase MS_ROAR:\n   432: \tret = \"snarl\";\n   433: \t    break;\n   434: \tcase MS_SQEEK:"
+    "stage": 0,
+    "context": "src/sounds.c:429:8\n   424: \tcase MS_MEW:\n   425: \tret = \"yowl\";\n   426: \t    break;\n   427: \tcase MS_BARK:\n   428: \tcase MS_GROWL:\n&gt;  429: \tret = \"yelp\";\n   430: \t    break;\n   431: \tcase MS_ROAR:\n   432: \tret = \"snarl\";\n   433: \t    break;\n   434: \tcase MS_SQEEK:"
   },
   {
     "key": "L00432_01",
     "original": "snarl",
     "translation": "",
-    "context": "src/sounds.c:432:8\n   427: \tcase MS_BARK:\n   428: \tcase MS_GROWL:\n   429: \tret = \"yelp\";\n   430: \t    break;\n   431: \tcase MS_ROAR:\n>  432: \tret = \"snarl\";\n   433: \t    break;\n   434: \tcase MS_SQEEK:\n   435: \tret = \"squeal\";\n   436: \t    break;\n   437: \tcase MS_SQAWK:"
+    "stage": 0,
+    "context": "src/sounds.c:432:8\n   427: \tcase MS_BARK:\n   428: \tcase MS_GROWL:\n   429: \tret = \"yelp\";\n   430: \t    break;\n   431: \tcase MS_ROAR:\n&gt;  432: \tret = \"snarl\";\n   433: \t    break;\n   434: \tcase MS_SQEEK:\n   435: \tret = \"squeal\";\n   436: \t    break;\n   437: \tcase MS_SQAWK:"
   },
   {
     "key": "L00435_01",
     "original": "squeal",
     "translation": "",
-    "context": "src/sounds.c:435:8\n   430: \t    break;\n   431: \tcase MS_ROAR:\n   432: \tret = \"snarl\";\n   433: \t    break;\n   434: \tcase MS_SQEEK:\n>  435: \tret = \"squeal\";\n   436: \t    break;\n   437: \tcase MS_SQAWK:\n   438: \tret = \"screak\";\n   439: \t    break;\n   440: \tcase MS_WAIL:"
+    "stage": 0,
+    "context": "src/sounds.c:435:8\n   430: \t    break;\n   431: \tcase MS_ROAR:\n   432: \tret = \"snarl\";\n   433: \t    break;\n   434: \tcase MS_SQEEK:\n&gt;  435: \tret = \"squeal\";\n   436: \t    break;\n   437: \tcase MS_SQAWK:\n   438: \tret = \"screak\";\n   439: \t    break;\n   440: \tcase MS_WAIL:"
   },
   {
     "key": "L00438_01",
     "original": "screak",
     "translation": "",
-    "context": "src/sounds.c:438:8\n   433: \t    break;\n   434: \tcase MS_SQEEK:\n   435: \tret = \"squeal\";\n   436: \t    break;\n   437: \tcase MS_SQAWK:\n>  438: \tret = \"screak\";\n   439: \t    break;\n   440: \tcase MS_WAIL:\n   441: \tret = \"wail\";\n   442: \t    break;\n   443:     default:"
+    "stage": 0,
+    "context": "src/sounds.c:438:8\n   433: \t    break;\n   434: \tcase MS_SQEEK:\n   435: \tret = \"squeal\";\n   436: \t    break;\n   437: \tcase MS_SQAWK:\n&gt;  438: \tret = \"screak\";\n   439: \t    break;\n   440: \tcase MS_WAIL:\n   441: \tret = \"wail\";\n   442: \t    break;\n   443:     default:"
   },
   {
     "key": "L00441_01",
     "original": "wail",
     "translation": "",
-    "context": "src/sounds.c:441:8\n   436: \t    break;\n   437: \tcase MS_SQAWK:\n   438: \tret = \"screak\";\n   439: \t    break;\n   440: \tcase MS_WAIL:\n>  441: \tret = \"wail\";\n   442: \t    break;\n   443:     default:\n   444: \tret = (const char*) 0;\n   445:     }\n   446:     return ret;"
+    "stage": 0,
+    "context": "src/sounds.c:441:8\n   436: \t    break;\n   437: \tcase MS_SQAWK:\n   438: \tret = \"screak\";\n   439: \t    break;\n   440: \tcase MS_WAIL:\n&gt;  441: \tret = \"wail\";\n   442: \t    break;\n   443:     default:\n   444: \tret = (const char*) 0;\n   445:     }\n   446:     return ret;"
   },
   {
     "key": "L00462_01",
     "original": "whimper",
     "translation": "",
-    "context": "src/sounds.c:462:8\n   457:     const char *ret;\n   458: \n   459:     switch (mtmp->data->msound) {\n   460: \tcase MS_MEW:\n   461: \tcase MS_GROWL:\n>  462: \tret = \"whimper\";\n   463: \t    break;\n   464: \tcase MS_BARK:\n   465: \tret = \"whine\";\n   466: \t    break;\n   467: \tcase MS_SQEEK:"
+    "stage": 0,
+    "context": "src/sounds.c:462:8\n   457:     const char *ret;\n   458: \n   459:     switch (mtmp-&gt;data-&gt;msound) {\n   460: \tcase MS_MEW:\n   461: \tcase MS_GROWL:\n&gt;  462: \tret = \"whimper\";\n   463: \t    break;\n   464: \tcase MS_BARK:\n   465: \tret = \"whine\";\n   466: \t    break;\n   467: \tcase MS_SQEEK:"
   },
   {
     "key": "L00465_01",
     "original": "whine",
     "translation": "",
-    "context": "src/sounds.c:465:8\n   460: \tcase MS_MEW:\n   461: \tcase MS_GROWL:\n   462: \tret = \"whimper\";\n   463: \t    break;\n   464: \tcase MS_BARK:\n>  465: \tret = \"whine\";\n   466: \t    break;\n   467: \tcase MS_SQEEK:\n   468: \tret = \"squeal\";\n   469: \t    break;\n   470:     default:"
+    "stage": 0,
+    "context": "src/sounds.c:465:8\n   460: \tcase MS_MEW:\n   461: \tcase MS_GROWL:\n   462: \tret = \"whimper\";\n   463: \t    break;\n   464: \tcase MS_BARK:\n&gt;  465: \tret = \"whine\";\n   466: \t    break;\n   467: \tcase MS_SQEEK:\n   468: \tret = \"squeal\";\n   469: \t    break;\n   470:     default:"
   },
   {
     "key": "L00468_01",
     "original": "squeal",
     "translation": "",
-    "context": "src/sounds.c:468:8\n   463: \t    break;\n   464: \tcase MS_BARK:\n   465: \tret = \"whine\";\n   466: \t    break;\n   467: \tcase MS_SQEEK:\n>  468: \tret = \"squeal\";\n   469: \t    break;\n   470:     default:\n   471: \tret = (const char *)0;\n   472:     }\n   473:     return ret;"
+    "stage": 0,
+    "context": "src/sounds.c:468:8\n   463: \t    break;\n   464: \tcase MS_BARK:\n   465: \tret = \"whine\";\n   466: \t    break;\n   467: \tcase MS_SQEEK:\n&gt;  468: \tret = \"squeal\";\n   469: \t    break;\n   470:     default:\n   471: \tret = (const char *)0;\n   472:     }\n   473:     return ret;"
   },
   {
     "key": "L00553_01",
     "original": "Good %s to you Master%s",
     "translation": "",
-    "context": "src/sounds.c:553:21\n   548: \t\t\t\t\turace.individual.f : (urace.individual.m) ?\n   549: \t\t\t\t\turace.individual.m : urace.noun;\n   550: \n   551: \t\tif (mtmp->mtame) {\n   552: \t\t\tif (kindred) {\n>  553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n   554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\","
+    "stage": 0,
+    "context": "src/sounds.c:553:21\n   548: \t\t\t\t\turace.individual.f : (urace.individual.m) ?\n   549: \t\t\t\t\turace.individual.m : urace.noun;\n   550: \n   551: \t\tif (mtmp-&gt;mtame) {\n   552: \t\t\tif (kindred) {\n&gt;  553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n   554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\","
   },
   {
     "key": "L00554_01",
     "original": "evening",
     "translation": "",
-    "context": "src/sounds.c:554:16\n   549: \t\t\t\t\turace.individual.m : urace.noun;\n   550: \n   551: \t\tif (mtmp->mtame) {\n   552: \t\t\tif (kindred) {\n   553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n>  554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\","
+    "stage": 0,
+    "context": "src/sounds.c:554:16\n   549: \t\t\t\t\turace.individual.m : urace.noun;\n   550: \n   551: \t\tif (mtmp-&gt;mtame) {\n   552: \t\t\tif (kindred) {\n   553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n&gt;  554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\","
   },
   {
     "key": "L00554_02",
     "original": "day",
     "translation": "",
-    "context": "src/sounds.c:554:28\n   549: \t\t\t\t\turace.individual.m : urace.noun;\n   550: \n   551: \t\tif (mtmp->mtame) {\n   552: \t\t\tif (kindred) {\n   553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n>  554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\","
+    "stage": 0,
+    "context": "src/sounds.c:554:28\n   549: \t\t\t\t\turace.individual.m : urace.noun;\n   550: \n   551: \t\tif (mtmp-&gt;mtame) {\n   552: \t\t\tif (kindred) {\n   553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n&gt;  554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\","
   },
   {
     "key": "L00558_01",
     "original": "%s%s",
     "translation": "",
-    "context": "src/sounds.c:558:27\n   553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n   554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n>  558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n   563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :"
+    "stage": 0,
+    "context": "src/sounds.c:558:27\n   553: \t\t\t\tSprintf(verbuf, \"Good %s to you Master%s\",\n   554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n&gt;  558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n   563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :"
   },
   {
     "key": "L00559_01",
     "original": "Child of the night, ",
     "translation": "",
-    "context": "src/sounds.c:559:18\n   554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n>  559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n   563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :\n   564: \t\t\t\t\t\"I find myself growing a little weary.\");"
+    "stage": 0,
+    "context": "src/sounds.c:559:18\n   554: \t\t\t\t\tisnight ? \"evening\" : \"day\",\n   555: \t\t\t\t\tisnight ? \"!\" : \"。为什么我们就不能歇会呢？\");\n   556: \t\t\t\tverbl_msg = verbuf;\n   557: \t\t    \t} else {\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n&gt;  559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n   563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :\n   564: \t\t\t\t\t\"I find myself growing a little weary.\");"
   },
   {
     "key": "L00563_01",
     "original": "I beg you, help me satisfy this growing craving!",
     "translation": "",
-    "context": "src/sounds.c:563:6\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n>  563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :\n   564: \t\t\t\t\t\"I find myself growing a little weary.\");\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp->mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {"
+    "stage": 0,
+    "context": "src/sounds.c:563:6\n   558: \t\t    \t    Sprintf(verbuf,\"%s%s\",\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n&gt;  563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :\n   564: \t\t\t\t\t\"I find myself growing a little weary.\");\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp-&gt;mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {"
   },
   {
     "key": "L00564_01",
     "original": "I find myself growing a little weary.",
     "translation": "",
-    "context": "src/sounds.c:564:6\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n   563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :\n>  564: \t\t\t\t\t\"I find myself growing a little weary.\");\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp->mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n   569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\","
+    "stage": 0,
+    "context": "src/sounds.c:564:6\n   559: \t\t\t\tnightchild ? \"Child of the night, \" : \"\",\n   560: \t\t\t\tmidnight() ?\n   561: \t\t\t\t\t\"我忍受不了出去吸血的欲望了！\" :\n   562: \t\t\t\tisnight ?\n   563: \t\t\t\t\t\"I beg you, help me satisfy this growing craving!\" :\n&gt;  564: \t\t\t\t\t\"I find myself growing a little weary.\");\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp-&gt;mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n   569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\","
   },
   {
     "key": "L00569_01",
     "original": "Good feeding %s!",
     "translation": "",
-    "context": "src/sounds.c:569:21\n   564: \t\t\t\t\t\"I find myself growing a little weary.\");\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp->mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n>  569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\",\n   570: \t    \t\t\t\tflags.female ? \"sister\" : \"brother\");\n   571: \t\t\t\tverbl_msg = verbuf;\n   572:  \t\t\t} else if (nightchild && isnight) {\n   573: \t\t\t\tSprintf(verbuf,\n   574: \t\t\t\t    \"哦，暗夜之子，能在这见到你可真好！\");"
+    "stage": 0,
+    "context": "src/sounds.c:569:21\n   564: \t\t\t\t\t\"I find myself growing a little weary.\");\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp-&gt;mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n&gt;  569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\",\n   570: \t    \t\t\t\tflags.female ? \"sister\" : \"brother\");\n   571: \t\t\t\tverbl_msg = verbuf;\n   572:  \t\t\t} else if (nightchild && isnight) {\n   573: \t\t\t\tSprintf(verbuf,\n   574: \t\t\t\t    \"哦，暗夜之子，能在这见到你可真好！\");"
   },
   {
     "key": "L00570_01",
     "original": "sister",
     "translation": "",
-    "context": "src/sounds.c:570:25\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp->mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n   569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\",\n>  570: \t    \t\t\t\tflags.female ? \"sister\" : \"brother\");\n   571: \t\t\t\tverbl_msg = verbuf;\n   572:  \t\t\t} else if (nightchild && isnight) {\n   573: \t\t\t\tSprintf(verbuf,\n   574: \t\t\t\t    \"哦，暗夜之子，能在这见到你可真好！\");\n   575: \t\t\t\tverbl_msg = verbuf;"
+    "stage": 0,
+    "context": "src/sounds.c:570:25\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp-&gt;mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n   569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\",\n&gt;  570: \t    \t\t\t\tflags.female ? \"sister\" : \"brother\");\n   571: \t\t\t\tverbl_msg = verbuf;\n   572:  \t\t\t} else if (nightchild && isnight) {\n   573: \t\t\t\tSprintf(verbuf,\n   574: \t\t\t\t    \"哦，暗夜之子，能在这见到你可真好！\");\n   575: \t\t\t\tverbl_msg = verbuf;"
   },
   {
     "key": "L00570_02",
     "original": "brother",
     "translation": "",
-    "context": "src/sounds.c:570:36\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp->mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n   569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\",\n>  570: \t    \t\t\t\tflags.female ? \"sister\" : \"brother\");\n   571: \t\t\t\tverbl_msg = verbuf;\n   572:  \t\t\t} else if (nightchild && isnight) {\n   573: \t\t\t\tSprintf(verbuf,\n   574: \t\t\t\t    \"哦，暗夜之子，能在这见到你可真好！\");\n   575: \t\t\t\tverbl_msg = verbuf;"
+    "stage": 0,
+    "context": "src/sounds.c:570:36\n   565: \t\t\t\tverbl_msg = verbuf;\n   566: \t\t\t}\n   567: \t\t} else if (mtmp-&gt;mpeaceful) {\n   568: \t\t\tif (kindred && isnight) {\n   569: \t\t\t\tSprintf(verbuf, \"Good feeding %s!\",\n&gt;  570: \t    \t\t\t\tflags.female ? \"sister\" : \"brother\");\n   571: \t\t\t\tverbl_msg = verbuf;\n   572:  \t\t\t} else if (nightchild && isnight) {\n   573: \t\t\t\tSprintf(verbuf,\n   574: \t\t\t\t    \"哦，暗夜之子，能在这见到你可真好！\");\n   575: \t\t\t\tverbl_msg = verbuf;"
   },
   {
     "key": "L00583_01",
     "original": "I vill come after %s without regret!",
     "translation": "",
-    "context": "src/sounds.c:583:9\n   578:     \t        } else {\n   579: \t\t\tint vampindex;\n   580: \t    \t\tstatic const char * const vampmsg[] = {\n   581: \t\t\t       /* These first two (0 and 1) are specially handled below */\n   582: \t    \t\t\t\"瓦要吸恁滴%s！\",\n>  583: \t    \t\t\t\"I vill come after %s without regret!\",\n   584: \t\t    \t       /* other famous vampire quotes can follow here if desired */\n   585: \t    \t\t};\n   586: \t\t\tif (kindred)\n   587: \t\t\t    verbl_msg = \"这是我的狩猎场，你怎么敢来冒犯我的！\";\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||"
+    "stage": 0,
+    "context": "src/sounds.c:583:9\n   578:     \t        } else {\n   579: \t\t\tint vampindex;\n   580: \t    \t\tstatic const char * const vampmsg[] = {\n   581: \t\t\t       /* These first two (0 and 1) are specially handled below */\n   582: \t    \t\t\t\"瓦要吸恁滴%s！\",\n&gt;  583: \t    \t\t\t\"I vill come after %s without regret!\",\n   584: \t\t    \t       /* other famous vampire quotes can follow here if desired */\n   585: \t    \t\t};\n   586: \t\t\tif (kindred)\n   587: \t\t\t    verbl_msg = \"这是我的狩猎场，你怎么敢来冒犯我的！\";\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||"
   },
   {
     "key": "L00591_01",
     "original": "%s! Your silver sheen does not frighten me!",
     "translation": "",
-    "context": "src/sounds.c:591:24\n   586: \t\t\tif (kindred)\n   587: \t\t\t    verbl_msg = \"这是我的狩猎场，你怎么敢来冒犯我的！\";\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||\n   589: \t\t\t\t youmonst.data == &mons[PM_BABY_SILVER_DRAGON]) {\n   590: \t\t\t    /* Silver dragons are silver in color, not made of silver */\n>  591: \t\t\t    Sprintf(verbuf, \"%s! Your silver sheen does not frighten me!\",\n   592: \t\t\t\t\tyoumonst.data == &mons[PM_SILVER_DRAGON] ?\n   593: \t\t\t\t\t\"Fool\" : \"Young Fool\");\n   594: \t\t\t    verbl_msg = verbuf; \n   595: \t\t\t} else {\n   596: \t\t\t    vampindex = rn2(SIZE(vampmsg));"
+    "stage": 0,
+    "context": "src/sounds.c:591:24\n   586: \t\t\tif (kindred)\n   587: \t\t\t    verbl_msg = \"这是我的狩猎场，你怎么敢来冒犯我的！\";\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||\n   589: \t\t\t\t youmonst.data == &mons[PM_BABY_SILVER_DRAGON]) {\n   590: \t\t\t    /* Silver dragons are silver in color, not made of silver */\n&gt;  591: \t\t\t    Sprintf(verbuf, \"%s! Your silver sheen does not frighten me!\",\n   592: \t\t\t\t\tyoumonst.data == &mons[PM_SILVER_DRAGON] ?\n   593: \t\t\t\t\t\"Fool\" : \"Young Fool\");\n   594: \t\t\t    verbl_msg = verbuf; \n   595: \t\t\t} else {\n   596: \t\t\t    vampindex = rn2(SIZE(vampmsg));"
   },
   {
     "key": "L00593_01",
     "original": "Fool",
     "translation": "",
-    "context": "src/sounds.c:593:6\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||\n   589: \t\t\t\t youmonst.data == &mons[PM_BABY_SILVER_DRAGON]) {\n   590: \t\t\t    /* Silver dragons are silver in color, not made of silver */\n   591: \t\t\t    Sprintf(verbuf, \"%s! Your silver sheen does not frighten me!\",\n   592: \t\t\t\t\tyoumonst.data == &mons[PM_SILVER_DRAGON] ?\n>  593: \t\t\t\t\t\"Fool\" : \"Young Fool\");\n   594: \t\t\t    verbl_msg = verbuf; \n   595: \t\t\t} else {\n   596: \t\t\t    vampindex = rn2(SIZE(vampmsg));\n   597: \t\t\t    if (vampindex == 0) {\n   598: \t\t\t\tSprintf(verbuf, vampmsg[vampindex], body_part(BLOOD));"
+    "stage": 0,
+    "context": "src/sounds.c:593:6\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||\n   589: \t\t\t\t youmonst.data == &mons[PM_BABY_SILVER_DRAGON]) {\n   590: \t\t\t    /* Silver dragons are silver in color, not made of silver */\n   591: \t\t\t    Sprintf(verbuf, \"%s! Your silver sheen does not frighten me!\",\n   592: \t\t\t\t\tyoumonst.data == &mons[PM_SILVER_DRAGON] ?\n&gt;  593: \t\t\t\t\t\"Fool\" : \"Young Fool\");\n   594: \t\t\t    verbl_msg = verbuf; \n   595: \t\t\t} else {\n   596: \t\t\t    vampindex = rn2(SIZE(vampmsg));\n   597: \t\t\t    if (vampindex == 0) {\n   598: \t\t\t\tSprintf(verbuf, vampmsg[vampindex], body_part(BLOOD));"
   },
   {
     "key": "L00593_02",
     "original": "Young Fool",
     "translation": "",
-    "context": "src/sounds.c:593:15\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||\n   589: \t\t\t\t youmonst.data == &mons[PM_BABY_SILVER_DRAGON]) {\n   590: \t\t\t    /* Silver dragons are silver in color, not made of silver */\n   591: \t\t\t    Sprintf(verbuf, \"%s! Your silver sheen does not frighten me!\",\n   592: \t\t\t\t\tyoumonst.data == &mons[PM_SILVER_DRAGON] ?\n>  593: \t\t\t\t\t\"Fool\" : \"Young Fool\");\n   594: \t\t\t    verbl_msg = verbuf; \n   595: \t\t\t} else {\n   596: \t\t\t    vampindex = rn2(SIZE(vampmsg));\n   597: \t\t\t    if (vampindex == 0) {\n   598: \t\t\t\tSprintf(verbuf, vampmsg[vampindex], body_part(BLOOD));"
+    "stage": 0,
+    "context": "src/sounds.c:593:15\n   588: \t\t\telse if (youmonst.data == &mons[PM_SILVER_DRAGON] ||\n   589: \t\t\t\t youmonst.data == &mons[PM_BABY_SILVER_DRAGON]) {\n   590: \t\t\t    /* Silver dragons are silver in color, not made of silver */\n   591: \t\t\t    Sprintf(verbuf, \"%s! Your silver sheen does not frighten me!\",\n   592: \t\t\t\t\tyoumonst.data == &mons[PM_SILVER_DRAGON] ?\n&gt;  593: \t\t\t\t\t\"Fool\" : \"Young Fool\");\n   594: \t\t\t    verbl_msg = verbuf; \n   595: \t\t\t} else {\n   596: \t\t\t    vampindex = rn2(SIZE(vampmsg));\n   597: \t\t\t    if (vampindex == 0) {\n   598: \t\t\t\tSprintf(verbuf, vampmsg[vampindex], body_part(BLOOD));"
   },
   {
     "key": "L00612_01",
     "original": "%s throws back %s head and lets out a blood curdling %s!",
     "translation": "",
-    "context": "src/sounds.c:612:9\n   607: \t        }\n   608: \t    }\n   609: \t    break;\n   610: \tcase MS_WERE:\n   611: \t    if (flags.moonphase == FULL_MOON && (night() ^ !rn2(13))) {\n>  612: \t\tpline(\"%s throws back %s head and lets out a blood curdling %s!\",\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n   614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp->mx, mtmp->my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg ="
+    "stage": 0,
+    "context": "src/sounds.c:612:9\n   607: \t        }\n   608: \t    }\n   609: \t    break;\n   610: \tcase MS_WERE:\n   611: \t    if (flags.moonphase == FULL_MOON && (night() ^ !rn2(13))) {\n&gt;  612: \t\tpline(\"%s throws back %s head and lets out a blood curdling %s!\",\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n   614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp-&gt;mx, mtmp-&gt;my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg ="
   },
   {
     "key": "L00614_01",
     "original": "shriek",
     "translation": "",
-    "context": "src/sounds.c:614:42\n   609: \t    break;\n   610: \tcase MS_WERE:\n   611: \t    if (flags.moonphase == FULL_MOON && (night() ^ !rn2(13))) {\n   612: \t\tpline(\"%s throws back %s head and lets out a blood curdling %s!\",\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n>  614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp->mx, mtmp->my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg =\n   618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:614:42\n   609: \t    break;\n   610: \tcase MS_WERE:\n   611: \t    if (flags.moonphase == FULL_MOON && (night() ^ !rn2(13))) {\n   612: \t\tpline(\"%s throws back %s head and lets out a blood curdling %s!\",\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n&gt;  614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp-&gt;mx, mtmp-&gt;my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg =\n   618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;"
   },
   {
     "key": "L00614_02",
     "original": "howl",
     "translation": "",
-    "context": "src/sounds.c:614:53\n   609: \t    break;\n   610: \tcase MS_WERE:\n   611: \t    if (flags.moonphase == FULL_MOON && (night() ^ !rn2(13))) {\n   612: \t\tpline(\"%s throws back %s head and lets out a blood curdling %s!\",\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n>  614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp->mx, mtmp->my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg =\n   618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:614:53\n   609: \t    break;\n   610: \tcase MS_WERE:\n   611: \t    if (flags.moonphase == FULL_MOON && (night() ^ !rn2(13))) {\n   612: \t\tpline(\"%s throws back %s head and lets out a blood curdling %s!\",\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n&gt;  614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp-&gt;mx, mtmp-&gt;my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg =\n   618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;"
   },
   {
     "key": "L00618_01",
     "original": "whispers inaudibly.  All you can make out is \\\"moon\\\".",
     "translation": "",
-    "context": "src/sounds.c:618:8\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n   614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp->mx, mtmp->my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg =\n>  618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;\n   620: \tcase MS_BARK:\n   621: \t    if (flags.moonphase == FULL_MOON && night()) {\n   622: \t\tpline_msg = \"howls.\";\n   623: \t    } else if (mtmp->mpeaceful) {"
+    "stage": 0,
+    "context": "src/sounds.c:618:8\n   613: \t\t      Monnam(mtmp), mhis(mtmp),\n   614: \t\t      ptr == &mons[PM_HUMAN_WERERAT] ? \"shriek\" : \"howl\");\n   615: \t\twake_nearto(mtmp-&gt;mx, mtmp-&gt;my, 11*11);\n   616: \t    } else\n   617: \t\tpline_msg =\n&gt;  618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;\n   620: \tcase MS_BARK:\n   621: \t    if (flags.moonphase == FULL_MOON && night()) {\n   622: \t\tpline_msg = \"howls.\";\n   623: \t    } else if (mtmp-&gt;mpeaceful) {"
   },
   {
     "key": "L00622_01",
     "original": "howls.",
     "translation": "",
-    "context": "src/sounds.c:622:15\n   617: \t\tpline_msg =\n   618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;\n   620: \tcase MS_BARK:\n   621: \t    if (flags.moonphase == FULL_MOON && night()) {\n>  622: \t\tpline_msg = \"howls.\";\n   623: \t    } else if (mtmp->mpeaceful) {\n   624: \t\tif (mtmp->mtame &&\n   625: \t\t\t(mtmp->mconf || mtmp->mflee || mtmp->mtrapped ||\n   626: \t\t\t moves > EDOG(mtmp)->hungrytime || mtmp->mtame < 5))\n   627: \t\t    pline_msg = \"whines.\";"
+    "stage": 0,
+    "context": "src/sounds.c:622:15\n   617: \t\tpline_msg =\n   618: \t\t     \"whispers inaudibly.  All you can make out is \\\"moon\\\".\";\n   619: \t    break;\n   620: \tcase MS_BARK:\n   621: \t    if (flags.moonphase == FULL_MOON && night()) {\n&gt;  622: \t\tpline_msg = \"howls.\";\n   623: \t    } else if (mtmp-&gt;mpeaceful) {\n   624: \t\tif (mtmp-&gt;mtame &&\n   625: \t\t\t(mtmp-&gt;mconf || mtmp-&gt;mflee || mtmp-&gt;mtrapped ||\n   626: \t\t\t moves &gt; EDOG(mtmp)-&gt;hungrytime || mtmp-&gt;mtame &lt; 5))\n   627: \t\t    pline_msg = \"whines.\";"
   },
   {
     "key": "L00627_01",
     "original": "whines.",
     "translation": "",
-    "context": "src/sounds.c:627:19\n   622: \t\tpline_msg = \"howls.\";\n   623: \t    } else if (mtmp->mpeaceful) {\n   624: \t\tif (mtmp->mtame &&\n   625: \t\t\t(mtmp->mconf || mtmp->mflee || mtmp->mtrapped ||\n   626: \t\t\t moves > EDOG(mtmp)->hungrytime || mtmp->mtame < 5))\n>  627: \t\t    pline_msg = \"whines.\";\n   628: \t\telse if (mtmp->mtame && EDOG(mtmp)->hungrytime > moves + 1000)\n   629: \t\t    pline_msg = \"yips.\";\n   630: \t\telse {\n   631: \t\t    if (mtmp->data != &mons[PM_DINGO])\t/* dingos do not actually bark */\n   632: \t\t\t    pline_msg = \"barks.\";"
+    "stage": 0,
+    "context": "src/sounds.c:627:19\n   622: \t\tpline_msg = \"howls.\";\n   623: \t    } else if (mtmp-&gt;mpeaceful) {\n   624: \t\tif (mtmp-&gt;mtame &&\n   625: \t\t\t(mtmp-&gt;mconf || mtmp-&gt;mflee || mtmp-&gt;mtrapped ||\n   626: \t\t\t moves &gt; EDOG(mtmp)-&gt;hungrytime || mtmp-&gt;mtame &lt; 5))\n&gt;  627: \t\t    pline_msg = \"whines.\";\n   628: \t\telse if (mtmp-&gt;mtame && EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n   629: \t\t    pline_msg = \"yips.\";\n   630: \t\telse {\n   631: \t\t    if (mtmp-&gt;data != &mons[PM_DINGO])\t/* dingos do not actually bark */\n   632: \t\t\t    pline_msg = \"barks.\";"
   },
   {
     "key": "L00629_01",
     "original": "yips.",
     "translation": "",
-    "context": "src/sounds.c:629:19\n   624: \t\tif (mtmp->mtame &&\n   625: \t\t\t(mtmp->mconf || mtmp->mflee || mtmp->mtrapped ||\n   626: \t\t\t moves > EDOG(mtmp)->hungrytime || mtmp->mtame < 5))\n   627: \t\t    pline_msg = \"whines.\";\n   628: \t\telse if (mtmp->mtame && EDOG(mtmp)->hungrytime > moves + 1000)\n>  629: \t\t    pline_msg = \"yips.\";\n   630: \t\telse {\n   631: \t\t    if (mtmp->data != &mons[PM_DINGO])\t/* dingos do not actually bark */\n   632: \t\t\t    pline_msg = \"barks.\";\n   633: \t\t}\n   634: \t    } else {"
+    "stage": 0,
+    "context": "src/sounds.c:629:19\n   624: \t\tif (mtmp-&gt;mtame &&\n   625: \t\t\t(mtmp-&gt;mconf || mtmp-&gt;mflee || mtmp-&gt;mtrapped ||\n   626: \t\t\t moves &gt; EDOG(mtmp)-&gt;hungrytime || mtmp-&gt;mtame &lt; 5))\n   627: \t\t    pline_msg = \"whines.\";\n   628: \t\telse if (mtmp-&gt;mtame && EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n&gt;  629: \t\t    pline_msg = \"yips.\";\n   630: \t\telse {\n   631: \t\t    if (mtmp-&gt;data != &mons[PM_DINGO])\t/* dingos do not actually bark */\n   632: \t\t\t    pline_msg = \"barks.\";\n   633: \t\t}\n   634: \t    } else {"
   },
   {
     "key": "L00632_01",
     "original": "barks.",
     "translation": "",
-    "context": "src/sounds.c:632:20\n   627: \t\t    pline_msg = \"whines.\";\n   628: \t\telse if (mtmp->mtame && EDOG(mtmp)->hungrytime > moves + 1000)\n   629: \t\t    pline_msg = \"yips.\";\n   630: \t\telse {\n   631: \t\t    if (mtmp->data != &mons[PM_DINGO])\t/* dingos do not actually bark */\n>  632: \t\t\t    pline_msg = \"barks.\";\n   633: \t\t}\n   634: \t    } else {\n   635: \t\tpline_msg = \"低声咆哮。\";\n   636: \t    }\n   637: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:632:20\n   627: \t\t    pline_msg = \"whines.\";\n   628: \t\telse if (mtmp-&gt;mtame && EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n   629: \t\t    pline_msg = \"yips.\";\n   630: \t\telse {\n   631: \t\t    if (mtmp-&gt;data != &mons[PM_DINGO])\t/* dingos do not actually bark */\n&gt;  632: \t\t\t    pline_msg = \"barks.\";\n   633: \t\t}\n   634: \t    } else {\n   635: \t\tpline_msg = \"低声咆哮。\";\n   636: \t    }\n   637: \t    break;"
   },
   {
     "key": "L00642_01",
     "original": "yowls.",
     "translation": "",
-    "context": "src/sounds.c:642:19\n   637: \t    break;\n   638: \tcase MS_MEW:\n   639: \t    if (mtmp->mtame) {\n   640: \t\tif (mtmp->mconf || mtmp->mflee || mtmp->mtrapped ||\n   641: \t\t\tmtmp->mtame < 5)\n>  642: \t\t    pline_msg = \"yowls.\";\n   643: \t\telse if (moves > EDOG(mtmp)->hungrytime)\n   644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)->hungrytime > moves + 1000)\n   646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse"
+    "stage": 0,
+    "context": "src/sounds.c:642:19\n   637: \t    break;\n   638: \tcase MS_MEW:\n   639: \t    if (mtmp-&gt;mtame) {\n   640: \t\tif (mtmp-&gt;mconf || mtmp-&gt;mflee || mtmp-&gt;mtrapped ||\n   641: \t\t\tmtmp-&gt;mtame &lt; 5)\n&gt;  642: \t\t    pline_msg = \"yowls.\";\n   643: \t\telse if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n   644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n   646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse"
   },
   {
     "key": "L00644_01",
     "original": "meows.",
     "translation": "",
-    "context": "src/sounds.c:644:19\n   639: \t    if (mtmp->mtame) {\n   640: \t\tif (mtmp->mconf || mtmp->mflee || mtmp->mtrapped ||\n   641: \t\t\tmtmp->mtame < 5)\n   642: \t\t    pline_msg = \"yowls.\";\n   643: \t\telse if (moves > EDOG(mtmp)->hungrytime)\n>  644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)->hungrytime > moves + 1000)\n   646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;"
+    "stage": 0,
+    "context": "src/sounds.c:644:19\n   639: \t    if (mtmp-&gt;mtame) {\n   640: \t\tif (mtmp-&gt;mconf || mtmp-&gt;mflee || mtmp-&gt;mtrapped ||\n   641: \t\t\tmtmp-&gt;mtame &lt; 5)\n   642: \t\t    pline_msg = \"yowls.\";\n   643: \t\telse if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n&gt;  644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n   646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;"
   },
   {
     "key": "L00646_01",
     "original": "purrs.",
     "translation": "",
-    "context": "src/sounds.c:646:19\n   641: \t\t\tmtmp->mtame < 5)\n   642: \t\t    pline_msg = \"yowls.\";\n   643: \t\telse if (moves > EDOG(mtmp)->hungrytime)\n   644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)->hungrytime > moves + 1000)\n>  646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:"
+    "stage": 0,
+    "context": "src/sounds.c:646:19\n   641: \t\t\tmtmp-&gt;mtame &lt; 5)\n   642: \t\t    pline_msg = \"yowls.\";\n   643: \t\telse if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n   644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n&gt;  646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:"
   },
   {
     "key": "L00648_01",
     "original": "mews.",
     "translation": "",
-    "context": "src/sounds.c:648:19\n   643: \t\telse if (moves > EDOG(mtmp)->hungrytime)\n   644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)->hungrytime > moves + 1000)\n   646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse\n>  648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n   652: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:648:19\n   643: \t\telse if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n   644: \t\t    pline_msg = \"meows.\";\n   645: \t\telse if (EDOG(mtmp)-&gt;hungrytime &gt; moves + 1000)\n   646: \t\t    pline_msg = \"purrs.\";\n   647: \t\telse\n&gt;  648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n   652: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;"
   },
   {
     "key": "L00652_01",
     "original": "snarls.",
     "translation": "",
-    "context": "src/sounds.c:652:36\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n>  652: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n   655: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:"
+    "stage": 0,
+    "context": "src/sounds.c:652:36\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n&gt;  652: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n   655: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:"
   },
   {
     "key": "L00652_02",
     "original": "growls!",
     "translation": "",
-    "context": "src/sounds.c:652:48\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n>  652: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n   655: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:"
+    "stage": 0,
+    "context": "src/sounds.c:652:48\n   647: \t\telse\n   648: \t\t    pline_msg = \"mews.\";\n   649: \t\tbreak;\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n&gt;  652: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n   655: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:"
   },
   {
     "key": "L00655_01",
     "original": "snarls.",
     "translation": "",
-    "context": "src/sounds.c:655:36\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n   652: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n>  655: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:\n   658: \t    pline_msg = \"squeaks.\";\n   659: \t    break;\n   660: \tcase MS_PARROT:"
+    "stage": 0,
+    "context": "src/sounds.c:655:36\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n   652: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n&gt;  655: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:\n   658: \t    pline_msg = \"squeaks.\";\n   659: \t    break;\n   660: \tcase MS_PARROT:"
   },
   {
     "key": "L00655_02",
     "original": "roars!",
     "translation": "",
-    "context": "src/sounds.c:655:48\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n   652: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n>  655: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:\n   658: \t    pline_msg = \"squeaks.\";\n   659: \t    break;\n   660: \tcase MS_PARROT:"
+    "stage": 0,
+    "context": "src/sounds.c:655:48\n   650: \t    } /* else FALLTHRU */\n   651: \tcase MS_GROWL:\n   652: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"growls!\";\n   653: \t    break;\n   654: \tcase MS_ROAR:\n&gt;  655: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:\n   658: \t    pline_msg = \"squeaks.\";\n   659: \t    break;\n   660: \tcase MS_PARROT:"
   },
   {
     "key": "L00658_01",
     "original": "squeaks.",
     "translation": "",
-    "context": "src/sounds.c:658:18\n   653: \t    break;\n   654: \tcase MS_ROAR:\n   655: \t    pline_msg = mtmp->mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:\n>  658: \t    pline_msg = \"squeaks.\";\n   659: \t    break;\n   660: \tcase MS_PARROT:\n   661: \t    switch (rn2(8)) {\n   662: \t\tdefault:\n   663: \t\tcase 0:"
+    "stage": 0,
+    "context": "src/sounds.c:658:18\n   653: \t    break;\n   654: \tcase MS_ROAR:\n   655: \t    pline_msg = mtmp-&gt;mpeaceful ? \"snarls.\" : \"roars!\";\n   656: \t    break;\n   657: \tcase MS_SQEEK:\n&gt;  658: \t    pline_msg = \"squeaks.\";\n   659: \t    break;\n   660: \tcase MS_PARROT:\n   661: \t    switch (rn2(8)) {\n   662: \t\tdefault:\n   663: \t\tcase 0:"
   },
   {
     "key": "L00664_01",
     "original": "squaarks louldly!",
     "translation": "",
-    "context": "src/sounds.c:664:19\n   659: \t    break;\n   660: \tcase MS_PARROT:\n   661: \t    switch (rn2(8)) {\n   662: \t\tdefault:\n   663: \t\tcase 0:\n>  664: \t\t    pline_msg = \"squaarks louldly!\";\n   665: \t\t    break;\n   666: \t\tcase 1:\n   667: \t\t    pline_msg = \"说到：“俺想造兰巴斯片儿！”\";\n   668: \t\t    break;\n   669: \t\tcase 2:"
+    "stage": 0,
+    "context": "src/sounds.c:664:19\n   659: \t    break;\n   660: \tcase MS_PARROT:\n   661: \t    switch (rn2(8)) {\n   662: \t\tdefault:\n   663: \t\tcase 0:\n&gt;  664: \t\t    pline_msg = \"squaarks louldly!\";\n   665: \t\t    break;\n   666: \t\tcase 1:\n   667: \t\t    pline_msg = \"说到：“俺想造兰巴斯片儿！”\";\n   668: \t\t    break;\n   669: \t\tcase 2:"
   },
   {
     "key": "L00670_01",
     "original": "says 'Nobody expects the Spanish Inquisition!'",
     "translation": "",
-    "context": "src/sounds.c:670:19\n   665: \t\t    break;\n   666: \t\tcase 1:\n   667: \t\t    pline_msg = \"说到：“俺想造兰巴斯片儿！”\";\n   668: \t\t    break;\n   669: \t\tcase 2:\n>  670: \t\t    pline_msg = \"says 'Nobody expects the Spanish Inquisition!'\";\n   671: \t\t    break;\n   672: \t\tcase 3:\n   673: \t\t    pline_msg = \"says 'Who's a good boy, then?'\";\n   674: \t\t    break;\n   675: \t\tcase 4:"
+    "stage": 0,
+    "context": "src/sounds.c:670:19\n   665: \t\t    break;\n   666: \t\tcase 1:\n   667: \t\t    pline_msg = \"说到：“俺想造兰巴斯片儿！”\";\n   668: \t\t    break;\n   669: \t\tcase 2:\n&gt;  670: \t\t    pline_msg = \"says 'Nobody expects the Spanish Inquisition!'\";\n   671: \t\t    break;\n   672: \t\tcase 3:\n   673: \t\t    pline_msg = \"says 'Who's a good boy, then?'\";\n   674: \t\t    break;\n   675: \t\tcase 4:"
   },
   {
     "key": "L00673_01",
     "original": "says 'Who's a good boy, then?'",
     "translation": "",
-    "context": "src/sounds.c:673:19\n   668: \t\t    break;\n   669: \t\tcase 2:\n   670: \t\t    pline_msg = \"says 'Nobody expects the Spanish Inquisition!'\";\n   671: \t\t    break;\n   672: \t\tcase 3:\n>  673: \t\t    pline_msg = \"says 'Who's a good boy, then?'\";\n   674: \t\t    break;\n   675: \t\tcase 4:\n   676: \t\t    pline_msg = \"说道：“看看你今天穿啥裤衩子！”\";\n   677: \t\t    break;\n   678: \t\tcase 5:"
+    "stage": 0,
+    "context": "src/sounds.c:673:19\n   668: \t\t    break;\n   669: \t\tcase 2:\n   670: \t\t    pline_msg = \"says 'Nobody expects the Spanish Inquisition!'\";\n   671: \t\t    break;\n   672: \t\tcase 3:\n&gt;  673: \t\t    pline_msg = \"says 'Who's a good boy, then?'\";\n   674: \t\t    break;\n   675: \t\tcase 4:\n   676: \t\t    pline_msg = \"说道：“看看你今天穿啥裤衩子！”\";\n   677: \t\t    break;\n   678: \t\tcase 5:"
   },
   {
     "key": "L00682_01",
     "original": "whistles suggestively!",
     "translation": "",
-    "context": "src/sounds.c:682:19\n   677: \t\t    break;\n   678: \t\tcase 5:\n   679: \t\t    pline_msg = \"说道：“你肯定搞不定这个游戏！”\";\n   680: \t\t    break;\n   681: \t\tcase 6:\n>  682: \t\t    pline_msg = \"whistles suggestively!\";\n   683: \t\t    break;\n   684: \t\tcase 7:\n   685: \t\t    pline_msg = \"说道：“你管这破烧火棍也叫剑？”\";\n   686: \t\t    break;\n   687: \t    }"
+    "stage": 0,
+    "context": "src/sounds.c:682:19\n   677: \t\t    break;\n   678: \t\tcase 5:\n   679: \t\t    pline_msg = \"说道：“你肯定搞不定这个游戏！”\";\n   680: \t\t    break;\n   681: \t\tcase 6:\n&gt;  682: \t\t    pline_msg = \"whistles suggestively!\";\n   683: \t\t    break;\n   684: \t\tcase 7:\n   685: \t\t    pline_msg = \"说道：“你管这破烧火棍也叫剑？”\";\n   686: \t\t    break;\n   687: \t    }"
   },
   {
     "key": "L00693_01",
     "original": "squawks.",
     "translation": "",
-    "context": "src/sounds.c:693:19\n   688: \t    break;\n   689: \tcase MS_SQAWK:\n   690: \t    if (ptr == &mons[PM_RAVEN] && !mtmp->mpeaceful)\n   691: \t    \tverbl_msg = \"永不复还！\";\n   692: \t    else\n>  693: \t    \tpline_msg = \"squawks.\";\n   694: \t    break;\n   695: \tcase MS_HISS:\n   696: \t    if (!mtmp->mpeaceful)\n   697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */"
+    "stage": 0,
+    "context": "src/sounds.c:693:19\n   688: \t    break;\n   689: \tcase MS_SQAWK:\n   690: \t    if (ptr == &mons[PM_RAVEN] && !mtmp-&gt;mpeaceful)\n   691: \t    \tverbl_msg = \"永不复还！\";\n   692: \t    else\n&gt;  693: \t    \tpline_msg = \"squawks.\";\n   694: \t    break;\n   695: \tcase MS_HISS:\n   696: \t    if (!mtmp-&gt;mpeaceful)\n   697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */"
   },
   {
     "key": "L00697_01",
     "original": "hisses!",
     "translation": "",
-    "context": "src/sounds.c:697:15\n   692: \t    else\n   693: \t    \tpline_msg = \"squawks.\";\n   694: \t    break;\n   695: \tcase MS_HISS:\n   696: \t    if (!mtmp->mpeaceful)\n>  697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n   701: \t    pline_msg = mtmp->mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:697:15\n   692: \t    else\n   693: \t    \tpline_msg = \"squawks.\";\n   694: \t    break;\n   695: \tcase MS_HISS:\n   696: \t    if (!mtmp-&gt;mpeaceful)\n&gt;  697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n   701: \t    pline_msg = mtmp-&gt;mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;"
   },
   {
     "key": "L00701_01",
     "original": "drones.",
     "translation": "",
-    "context": "src/sounds.c:701:36\n   696: \t    if (!mtmp->mpeaceful)\n   697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n>  701: \t    pline_msg = mtmp->mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;\n   703: \tcase MS_GRUNT:\n   704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:"
+    "stage": 0,
+    "context": "src/sounds.c:701:36\n   696: \t    if (!mtmp-&gt;mpeaceful)\n   697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n&gt;  701: \t    pline_msg = mtmp-&gt;mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;\n   703: \tcase MS_GRUNT:\n   704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:"
   },
   {
     "key": "L00701_02",
     "original": "buzzes angrily.",
     "translation": "",
-    "context": "src/sounds.c:701:48\n   696: \t    if (!mtmp->mpeaceful)\n   697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n>  701: \t    pline_msg = mtmp->mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;\n   703: \tcase MS_GRUNT:\n   704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:"
+    "stage": 0,
+    "context": "src/sounds.c:701:48\n   696: \t    if (!mtmp-&gt;mpeaceful)\n   697: \t\tpline_msg = \"hisses!\";\n   698: \t    else return 0;\t/* no sound */\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n&gt;  701: \t    pline_msg = mtmp-&gt;mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;\n   703: \tcase MS_GRUNT:\n   704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:"
   },
   {
     "key": "L00704_01",
     "original": "grunts.",
     "translation": "",
-    "context": "src/sounds.c:704:18\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n   701: \t    pline_msg = mtmp->mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;\n   703: \tcase MS_GRUNT:\n>  704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:\n   707: \t    if (mtmp->mtame < 5)\n   708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves > EDOG(mtmp)->hungrytime)"
+    "stage": 0,
+    "context": "src/sounds.c:704:18\n   699: \t    break;\n   700: \tcase MS_BUZZ:\n   701: \t    pline_msg = mtmp-&gt;mpeaceful ? \"drones.\" : \"buzzes angrily.\";\n   702: \t    break;\n   703: \tcase MS_GRUNT:\n&gt;  704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:\n   707: \t    if (mtmp-&gt;mtame &lt; 5)\n   708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves &gt; EDOG(mtmp)-&gt;hungrytime)"
   },
   {
     "key": "L00708_01",
     "original": "neighs.",
     "translation": "",
-    "context": "src/sounds.c:708:15\n   703: \tcase MS_GRUNT:\n   704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:\n   707: \t    if (mtmp->mtame < 5)\n>  708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves > EDOG(mtmp)->hungrytime)\n   710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n   712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:708:15\n   703: \tcase MS_GRUNT:\n   704: \t    pline_msg = \"grunts.\";\n   705: \t    break;\n   706: \tcase MS_NEIGH:\n   707: \t    if (mtmp-&gt;mtame &lt; 5)\n&gt;  708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n   710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n   712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;"
   },
   {
     "key": "L00710_01",
     "original": "whinnies.",
     "translation": "",
-    "context": "src/sounds.c:710:15\n   705: \t    break;\n   706: \tcase MS_NEIGH:\n   707: \t    if (mtmp->mtame < 5)\n   708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves > EDOG(mtmp)->hungrytime)\n>  710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n   712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;\n   714: \tcase MS_WAIL:\n   715: \t    pline_msg = \"wails mournfully.\";"
+    "stage": 0,
+    "context": "src/sounds.c:710:15\n   705: \t    break;\n   706: \tcase MS_NEIGH:\n   707: \t    if (mtmp-&gt;mtame &lt; 5)\n   708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n&gt;  710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n   712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;\n   714: \tcase MS_WAIL:\n   715: \t    pline_msg = \"wails mournfully.\";"
   },
   {
     "key": "L00712_01",
     "original": "whickers.",
     "translation": "",
-    "context": "src/sounds.c:712:15\n   707: \t    if (mtmp->mtame < 5)\n   708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves > EDOG(mtmp)->hungrytime)\n   710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n>  712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;\n   714: \tcase MS_WAIL:\n   715: \t    pline_msg = \"wails mournfully.\";\n   716: \t    break;\n   717: \tcase MS_GURGLE:"
+    "stage": 0,
+    "context": "src/sounds.c:712:15\n   707: \t    if (mtmp-&gt;mtame &lt; 5)\n   708: \t\tpline_msg = \"neighs.\";\n   709: \t    else if (moves &gt; EDOG(mtmp)-&gt;hungrytime)\n   710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n&gt;  712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;\n   714: \tcase MS_WAIL:\n   715: \t    pline_msg = \"wails mournfully.\";\n   716: \t    break;\n   717: \tcase MS_GURGLE:"
   },
   {
     "key": "L00715_01",
     "original": "wails mournfully.",
     "translation": "",
-    "context": "src/sounds.c:715:18\n   710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n   712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;\n   714: \tcase MS_WAIL:\n>  715: \t    pline_msg = \"wails mournfully.\";\n   716: \t    break;\n   717: \tcase MS_GURGLE:\n   718: \t    pline_msg = \"gurgles.\";\n   719: \t    break;\n   720: \tcase MS_BURBLE:"
+    "stage": 0,
+    "context": "src/sounds.c:715:18\n   710: \t\tpline_msg = \"whinnies.\";\n   711: \t    else\n   712: \t\tpline_msg = \"whickers.\";\n   713: \t    break;\n   714: \tcase MS_WAIL:\n&gt;  715: \t    pline_msg = \"wails mournfully.\";\n   716: \t    break;\n   717: \tcase MS_GURGLE:\n   718: \t    pline_msg = \"gurgles.\";\n   719: \t    break;\n   720: \tcase MS_BURBLE:"
   },
   {
     "key": "L00718_01",
     "original": "gurgles.",
     "translation": "",
-    "context": "src/sounds.c:718:18\n   713: \t    break;\n   714: \tcase MS_WAIL:\n   715: \t    pline_msg = \"wails mournfully.\";\n   716: \t    break;\n   717: \tcase MS_GURGLE:\n>  718: \t    pline_msg = \"gurgles.\";\n   719: \t    break;\n   720: \tcase MS_BURBLE:\n   721: \t    pline_msg = \"burbles.\";\n   722: \t    break;\n   723: \tcase MS_SHRIEK:"
+    "stage": 0,
+    "context": "src/sounds.c:718:18\n   713: \t    break;\n   714: \tcase MS_WAIL:\n   715: \t    pline_msg = \"wails mournfully.\";\n   716: \t    break;\n   717: \tcase MS_GURGLE:\n&gt;  718: \t    pline_msg = \"gurgles.\";\n   719: \t    break;\n   720: \tcase MS_BURBLE:\n   721: \t    pline_msg = \"burbles.\";\n   722: \t    break;\n   723: \tcase MS_SHRIEK:"
   },
   {
     "key": "L00721_01",
     "original": "burbles.",
     "translation": "",
-    "context": "src/sounds.c:721:18\n   716: \t    break;\n   717: \tcase MS_GURGLE:\n   718: \t    pline_msg = \"gurgles.\";\n   719: \t    break;\n   720: \tcase MS_BURBLE:\n>  721: \t    pline_msg = \"burbles.\";\n   722: \t    break;\n   723: \tcase MS_SHRIEK:\n   724: \t    pline_msg = \"shrieks.\";\n   725: \t    aggravate();\n   726: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:721:18\n   716: \t    break;\n   717: \tcase MS_GURGLE:\n   718: \t    pline_msg = \"gurgles.\";\n   719: \t    break;\n   720: \tcase MS_BURBLE:\n&gt;  721: \t    pline_msg = \"burbles.\";\n   722: \t    break;\n   723: \tcase MS_SHRIEK:\n   724: \t    pline_msg = \"shrieks.\";\n   725: \t    aggravate();\n   726: \t    break;"
   },
   {
     "key": "L00724_01",
     "original": "shrieks.",
     "translation": "",
-    "context": "src/sounds.c:724:18\n   719: \t    break;\n   720: \tcase MS_BURBLE:\n   721: \t    pline_msg = \"burbles.\";\n   722: \t    break;\n   723: \tcase MS_SHRIEK:\n>  724: \t    pline_msg = \"shrieks.\";\n   725: \t    aggravate();\n   726: \t    break;\n   727: \tcase MS_IMITATE:\n   728: \t    pline_msg = \"imitates you.\";\n   729: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:724:18\n   719: \t    break;\n   720: \tcase MS_BURBLE:\n   721: \t    pline_msg = \"burbles.\";\n   722: \t    break;\n   723: \tcase MS_SHRIEK:\n&gt;  724: \t    pline_msg = \"shrieks.\";\n   725: \t    aggravate();\n   726: \t    break;\n   727: \tcase MS_IMITATE:\n   728: \t    pline_msg = \"imitates you.\";\n   729: \t    break;"
   },
   {
     "key": "L00728_01",
     "original": "imitates you.",
     "translation": "",
-    "context": "src/sounds.c:728:18\n   723: \tcase MS_SHRIEK:\n   724: \t    pline_msg = \"shrieks.\";\n   725: \t    aggravate();\n   726: \t    break;\n   727: \tcase MS_IMITATE:\n>  728: \t    pline_msg = \"imitates you.\";\n   729: \t    break;\n   730: \tcase MS_SHEEP:\n   731: \t    pline_msg = \"baaaas.\";\n   732: \t    break;\n   733: \tcase MS_CHICKEN:"
+    "stage": 0,
+    "context": "src/sounds.c:728:18\n   723: \tcase MS_SHRIEK:\n   724: \t    pline_msg = \"shrieks.\";\n   725: \t    aggravate();\n   726: \t    break;\n   727: \tcase MS_IMITATE:\n&gt;  728: \t    pline_msg = \"imitates you.\";\n   729: \t    break;\n   730: \tcase MS_SHEEP:\n   731: \t    pline_msg = \"baaaas.\";\n   732: \t    break;\n   733: \tcase MS_CHICKEN:"
   },
   {
     "key": "L00731_01",
     "original": "baaaas.",
     "translation": "",
-    "context": "src/sounds.c:731:18\n   726: \t    break;\n   727: \tcase MS_IMITATE:\n   728: \t    pline_msg = \"imitates you.\";\n   729: \t    break;\n   730: \tcase MS_SHEEP:\n>  731: \t    pline_msg = \"baaaas.\";\n   732: \t    break;\n   733: \tcase MS_CHICKEN:\n   734: \t    pline_msg = \"clucks.\";\n   735: \t    break;\n   736: \tcase MS_COW:"
+    "stage": 0,
+    "context": "src/sounds.c:731:18\n   726: \t    break;\n   727: \tcase MS_IMITATE:\n   728: \t    pline_msg = \"imitates you.\";\n   729: \t    break;\n   730: \tcase MS_SHEEP:\n&gt;  731: \t    pline_msg = \"baaaas.\";\n   732: \t    break;\n   733: \tcase MS_CHICKEN:\n   734: \t    pline_msg = \"clucks.\";\n   735: \t    break;\n   736: \tcase MS_COW:"
   },
   {
     "key": "L00734_01",
     "original": "clucks.",
     "translation": "",
-    "context": "src/sounds.c:734:18\n   729: \t    break;\n   730: \tcase MS_SHEEP:\n   731: \t    pline_msg = \"baaaas.\";\n   732: \t    break;\n   733: \tcase MS_CHICKEN:\n>  734: \t    pline_msg = \"clucks.\";\n   735: \t    break;\n   736: \tcase MS_COW:\n   737: \t    pline_msg = \"bellows.\";\n   738: \t    break;\n   739: \tcase MS_BONES:"
+    "stage": 0,
+    "context": "src/sounds.c:734:18\n   729: \t    break;\n   730: \tcase MS_SHEEP:\n   731: \t    pline_msg = \"baaaas.\";\n   732: \t    break;\n   733: \tcase MS_CHICKEN:\n&gt;  734: \t    pline_msg = \"clucks.\";\n   735: \t    break;\n   736: \tcase MS_COW:\n   737: \t    pline_msg = \"bellows.\";\n   738: \t    break;\n   739: \tcase MS_BONES:"
   },
   {
     "key": "L00737_01",
     "original": "bellows.",
     "translation": "",
-    "context": "src/sounds.c:737:18\n   732: \t    break;\n   733: \tcase MS_CHICKEN:\n   734: \t    pline_msg = \"clucks.\";\n   735: \t    break;\n   736: \tcase MS_COW:\n>  737: \t    pline_msg = \"bellows.\";\n   738: \t    break;\n   739: \tcase MS_BONES:\n   740: \t    pline(\"%s rattles noisily.\", Monnam(mtmp));\n   741: \t    You(\"僵直住了一小会。\");\n   742: \t    nomul(-2);"
+    "stage": 0,
+    "context": "src/sounds.c:737:18\n   732: \t    break;\n   733: \tcase MS_CHICKEN:\n   734: \t    pline_msg = \"clucks.\";\n   735: \t    break;\n   736: \tcase MS_COW:\n&gt;  737: \t    pline_msg = \"bellows.\";\n   738: \t    break;\n   739: \tcase MS_BONES:\n   740: \t    pline(\"%s rattles noisily.\", Monnam(mtmp));\n   741: \t    You(\"僵直住了一小会。\");\n   742: \t    nomul(-2);"
   },
   {
     "key": "L00740_01",
     "original": "%s rattles noisily.",
     "translation": "",
-    "context": "src/sounds.c:740:12\n   735: \t    break;\n   736: \tcase MS_COW:\n   737: \t    pline_msg = \"bellows.\";\n   738: \t    break;\n   739: \tcase MS_BONES:\n>  740: \t    pline(\"%s rattles noisily.\", Monnam(mtmp));\n   741: \t    You(\"僵直住了一小会。\");\n   742: \t    nomul(-2);\n   743: \t    nomovemsg = 0;\n   744: \t    break;\n   745: \tcase MS_LAUGH:"
+    "stage": 0,
+    "context": "src/sounds.c:740:12\n   735: \t    break;\n   736: \tcase MS_COW:\n   737: \t    pline_msg = \"bellows.\";\n   738: \t    break;\n   739: \tcase MS_BONES:\n&gt;  740: \t    pline(\"%s rattles noisily.\", Monnam(mtmp));\n   741: \t    You(\"僵直住了一小会。\");\n   742: \t    nomul(-2);\n   743: \t    nomovemsg = 0;\n   744: \t    break;\n   745: \tcase MS_LAUGH:"
   },
   {
     "key": "L00748_01",
     "original": "snickers.",
     "translation": "",
-    "context": "src/sounds.c:748:23\n   743: \t    nomovemsg = 0;\n   744: \t    break;\n   745: \tcase MS_LAUGH:\n   746: \t    {\n   747: \t\tstatic const char * const laugh_msg[4] = {\n>  748: \t\t    \"嘻嘻笑。\", \"嘿嘿笑。\", \"snickers.\", \"大笑。\",\n   749: \t\t};\n   750: \t\tpline_msg = laugh_msg[rn2(4)];\n   751: \t    }\n   752: \t    break;\n   753: \tcase MS_MUMBLE:"
+    "stage": 0,
+    "context": "src/sounds.c:748:23\n   743: \t    nomovemsg = 0;\n   744: \t    break;\n   745: \tcase MS_LAUGH:\n   746: \t    {\n   747: \t\tstatic const char * const laugh_msg[4] = {\n&gt;  748: \t\t    \"嘻嘻笑。\", \"嘿嘿笑。\", \"snickers.\", \"大笑。\",\n   749: \t\t};\n   750: \t\tpline_msg = laugh_msg[rn2(4)];\n   751: \t    }\n   752: \t    break;\n   753: \tcase MS_MUMBLE:"
   },
   {
     "key": "L00754_01",
     "original": "mumbles incomprehensibly.",
     "translation": "",
-    "context": "src/sounds.c:754:18\n   749: \t\t};\n   750: \t\tpline_msg = laugh_msg[rn2(4)];\n   751: \t    }\n   752: \t    break;\n   753: \tcase MS_MUMBLE:\n>  754: \t    pline_msg = \"mumbles incomprehensibly.\";\n   755: \t    break;\n   756: \tcase MS_DJINNI:\n   757: \t    if (mtmp->mtame) {\n   758: \t\tverbl_msg = \"Sorry, I'm all out of wishes.\";\n   759: \t    } else if (mtmp->mpeaceful) {"
+    "stage": 0,
+    "context": "src/sounds.c:754:18\n   749: \t\t};\n   750: \t\tpline_msg = laugh_msg[rn2(4)];\n   751: \t    }\n   752: \t    break;\n   753: \tcase MS_MUMBLE:\n&gt;  754: \t    pline_msg = \"mumbles incomprehensibly.\";\n   755: \t    break;\n   756: \tcase MS_DJINNI:\n   757: \t    if (mtmp-&gt;mtame) {\n   758: \t\tverbl_msg = \"Sorry, I'm all out of wishes.\";\n   759: \t    } else if (mtmp-&gt;mpeaceful) {"
   },
   {
     "key": "L00758_01",
     "original": "Sorry, I'm all out of wishes.",
     "translation": "",
-    "context": "src/sounds.c:758:15\n   753: \tcase MS_MUMBLE:\n   754: \t    pline_msg = \"mumbles incomprehensibly.\";\n   755: \t    break;\n   756: \tcase MS_DJINNI:\n   757: \t    if (mtmp->mtame) {\n>  758: \t\tverbl_msg = \"Sorry, I'm all out of wishes.\";\n   759: \t    } else if (mtmp->mpeaceful) {\n   760: \t\tif (ptr == &mons[PM_WATER_DEMON])\n   761: \t\t    pline_msg = \"gurgles.\";\n   762: \t\telse\n   763: \t\t    verbl_msg = \"我自由啦！\";"
+    "stage": 0,
+    "context": "src/sounds.c:758:15\n   753: \tcase MS_MUMBLE:\n   754: \t    pline_msg = \"mumbles incomprehensibly.\";\n   755: \t    break;\n   756: \tcase MS_DJINNI:\n   757: \t    if (mtmp-&gt;mtame) {\n&gt;  758: \t\tverbl_msg = \"Sorry, I'm all out of wishes.\";\n   759: \t    } else if (mtmp-&gt;mpeaceful) {\n   760: \t\tif (ptr == &mons[PM_WATER_DEMON])\n   761: \t\t    pline_msg = \"gurgles.\";\n   762: \t\telse\n   763: \t\t    verbl_msg = \"我自由啦！\";"
   },
   {
     "key": "L00761_01",
     "original": "gurgles.",
     "translation": "",
-    "context": "src/sounds.c:761:19\n   756: \tcase MS_DJINNI:\n   757: \t    if (mtmp->mtame) {\n   758: \t\tverbl_msg = \"Sorry, I'm all out of wishes.\";\n   759: \t    } else if (mtmp->mpeaceful) {\n   760: \t\tif (ptr == &mons[PM_WATER_DEMON])\n>  761: \t\t    pline_msg = \"gurgles.\";\n   762: \t\telse\n   763: \t\t    verbl_msg = \"我自由啦！\";\n   764: \t    } else verbl_msg = \"我现在就教你不要打扰我这个道理！\";\n   765: \t    break;\n   766: \tcase MS_BOAST:\t/* giants */"
+    "stage": 0,
+    "context": "src/sounds.c:761:19\n   756: \tcase MS_DJINNI:\n   757: \t    if (mtmp-&gt;mtame) {\n   758: \t\tverbl_msg = \"Sorry, I'm all out of wishes.\";\n   759: \t    } else if (mtmp-&gt;mpeaceful) {\n   760: \t\tif (ptr == &mons[PM_WATER_DEMON])\n&gt;  761: \t\t    pline_msg = \"gurgles.\";\n   762: \t\telse\n   763: \t\t    verbl_msg = \"我自由啦！\";\n   764: \t    } else verbl_msg = \"我现在就教你不要打扰我这个道理！\";\n   765: \t    break;\n   766: \tcase MS_BOAST:\t/* giants */"
   },
   {
     "key": "L00769_01",
     "original": "%s boasts about %s gem collection.",
     "translation": "",
-    "context": "src/sounds.c:769:17\n   764: \t    } else verbl_msg = \"我现在就教你不要打扰我这个道理！\";\n   765: \t    break;\n   766: \tcase MS_BOAST:\t/* giants */\n   767: \t    if (!mtmp->mpeaceful) {\n   768: \t\tswitch (rn2(4)) {\n>  769: \t\tcase 0: pline(\"%s boasts about %s gem collection.\",\n   770: \t\t\t      Monnam(mtmp), mhis(mtmp));\n   771: \t\t\tbreak;\n   772: \t\tcase 1: pline_msg = \"抱怨只吃羊肉太不健康。\";\n   773: \t\t\tbreak;\n   774: \t       default: pline_msg = \"shouts \\\"Fee Fie Foe Foo!\\\" and guffaws.\";"
+    "stage": 0,
+    "context": "src/sounds.c:769:17\n   764: \t    } else verbl_msg = \"我现在就教你不要打扰我这个道理！\";\n   765: \t    break;\n   766: \tcase MS_BOAST:\t/* giants */\n   767: \t    if (!mtmp-&gt;mpeaceful) {\n   768: \t\tswitch (rn2(4)) {\n&gt;  769: \t\tcase 0: pline(\"%s boasts about %s gem collection.\",\n   770: \t\t\t      Monnam(mtmp), mhis(mtmp));\n   771: \t\t\tbreak;\n   772: \t\tcase 1: pline_msg = \"抱怨只吃羊肉太不健康。\";\n   773: \t\t\tbreak;\n   774: \t       default: pline_msg = \"shouts \\\"Fee Fie Foe Foo!\\\" and guffaws.\";"
   },
   {
     "key": "L00774_01",
     "original": "shouts \\\"Fee Fie Foe Foo!\\\" and guffaws.",
     "translation": "",
-    "context": "src/sounds.c:774:30\n   769: \t\tcase 0: pline(\"%s boasts about %s gem collection.\",\n   770: \t\t\t      Monnam(mtmp), mhis(mtmp));\n   771: \t\t\tbreak;\n   772: \t\tcase 1: pline_msg = \"抱怨只吃羊肉太不健康。\";\n   773: \t\t\tbreak;\n>  774: \t       default: pline_msg = \"shouts \\\"Fee Fie Foe Foo!\\\" and guffaws.\";\n   775: \t\t\twake_nearto(mtmp->mx, mtmp->my, 7*7);\n   776: \t\t\tbreak;\n   777: \t\t}\n   778: \t\tbreak;\n   779: \t    }"
+    "stage": 0,
+    "context": "src/sounds.c:774:30\n   769: \t\tcase 0: pline(\"%s boasts about %s gem collection.\",\n   770: \t\t\t      Monnam(mtmp), mhis(mtmp));\n   771: \t\t\tbreak;\n   772: \t\tcase 1: pline_msg = \"抱怨只吃羊肉太不健康。\";\n   773: \t\t\tbreak;\n&gt;  774: \t       default: pline_msg = \"shouts \\\"Fee Fie Foe Foo!\\\" and guffaws.\";\n   775: \t\t\twake_nearto(mtmp-&gt;mx, mtmp-&gt;my, 7*7);\n   776: \t\t\tbreak;\n   777: \t\t}\n   778: \t\tbreak;\n   779: \t    }"
   },
   {
     "key": "L00792_01",
     "original": "moans.",
     "translation": "",
-    "context": "src/sounds.c:792:15\n   787: \t    }\n   788: \t    /* Generic peaceful humanoid behaviour. */\n   789: \t    if (mtmp->mflee)\n   790: \t\tpline_msg = \"不想鸟你。\";\n   791: \t    else if (mtmp->mhp < mtmp->mhpmax/4)\n>  792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp->mconf || mtmp->mstun)\n   794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp->mcansee)\n   796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp->mtrapped) {"
+    "stage": 0,
+    "context": "src/sounds.c:792:15\n   787: \t    }\n   788: \t    /* Generic peaceful humanoid behaviour. */\n   789: \t    if (mtmp-&gt;mflee)\n   790: \t\tpline_msg = \"不想鸟你。\";\n   791: \t    else if (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax/4)\n&gt;  792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp-&gt;mconf || mtmp-&gt;mstun)\n   794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp-&gt;mcansee)\n   796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp-&gt;mtrapped) {"
   },
   {
     "key": "L00794_01",
     "original": "Huh?",
     "translation": "",
-    "context": "src/sounds.c:794:25\n   789: \t    if (mtmp->mflee)\n   790: \t\tpline_msg = \"不想鸟你。\";\n   791: \t    else if (mtmp->mhp < mtmp->mhpmax/4)\n   792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp->mconf || mtmp->mstun)\n>  794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp->mcansee)\n   796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp->mtrapped) {\n   798: \t\tstruct trap *t = t_at(mtmp->mx, mtmp->my);\n   799: "
+    "stage": 0,
+    "context": "src/sounds.c:794:25\n   789: \t    if (mtmp-&gt;mflee)\n   790: \t\tpline_msg = \"不想鸟你。\";\n   791: \t    else if (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax/4)\n   792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp-&gt;mconf || mtmp-&gt;mstun)\n&gt;  794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp-&gt;mcansee)\n   796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp-&gt;mtrapped) {\n   798: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n   799: "
   },
   {
     "key": "L00794_02",
     "original": "Eh?",
     "translation": "",
-    "context": "src/sounds.c:794:51\n   789: \t    if (mtmp->mflee)\n   790: \t\tpline_msg = \"不想鸟你。\";\n   791: \t    else if (mtmp->mhp < mtmp->mhpmax/4)\n   792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp->mconf || mtmp->mstun)\n>  794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp->mcansee)\n   796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp->mtrapped) {\n   798: \t\tstruct trap *t = t_at(mtmp->mx, mtmp->my);\n   799: "
+    "stage": 0,
+    "context": "src/sounds.c:794:51\n   789: \t    if (mtmp-&gt;mflee)\n   790: \t\tpline_msg = \"不想鸟你。\";\n   791: \t    else if (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax/4)\n   792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp-&gt;mconf || mtmp-&gt;mstun)\n&gt;  794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp-&gt;mcansee)\n   796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp-&gt;mtrapped) {\n   798: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n   799: "
   },
   {
     "key": "L00796_01",
     "original": "I can't see!",
     "translation": "",
-    "context": "src/sounds.c:796:15\n   791: \t    else if (mtmp->mhp < mtmp->mhpmax/4)\n   792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp->mconf || mtmp->mstun)\n   794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp->mcansee)\n>  796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp->mtrapped) {\n   798: \t\tstruct trap *t = t_at(mtmp->mx, mtmp->my);\n   799: \n   800: \t\tif (t) t->tseen = 1;\n   801: \t\tverbl_msg = \"我被困住了！\";"
+    "stage": 0,
+    "context": "src/sounds.c:796:15\n   791: \t    else if (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax/4)\n   792: \t\tpline_msg = \"moans.\";\n   793: \t    else if (mtmp-&gt;mconf || mtmp-&gt;mstun)\n   794: \t\tverbl_msg = !rn2(3) ? \"Huh?\" : rn2(2) ? \"啥事？\" : \"Eh?\";\n   795: \t    else if (!mtmp-&gt;mcansee)\n&gt;  796: \t\tverbl_msg = \"I can't see!\";\n   797: \t    else if (mtmp-&gt;mtrapped) {\n   798: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n   799: \n   800: \t\tif (t) t-&gt;tseen = 1;\n   801: \t\tverbl_msg = \"我被困住了！\";"
   },
   {
     "key": "L00815_01",
     "original": "discusses hunting.",
     "translation": "",
-    "context": "src/sounds.c:815:15\n   810: \t    else if (is_dwarf(ptr))\n   811: \t\tpline_msg = \"和你聊了一会挖矿的事。\";\n   812: \t    else if (likes_magic(ptr))\n   813: \t\tpline_msg = \"跟你讨论了一下法术。\";\n   814: \t    else if (ptr->mlet == S_CENTAUR)\n>  815: \t\tpline_msg = \"discusses hunting.\";\n   816: \t    else switch (monsndx(ptr)) {\n   817: \t\tcase PM_HOBBIT:\n   818: \t\t    pline_msg = (mtmp->mhpmax - mtmp->mhp >= 10) ?\n   819: \t\t\t\t\"正抱怨着这个地牢糟糕的卫生环境。\"\n   820: \t\t\t\t: \"问你知不知道至尊魔戒在哪。\";"
+    "stage": 0,
+    "context": "src/sounds.c:815:15\n   810: \t    else if (is_dwarf(ptr))\n   811: \t\tpline_msg = \"和你聊了一会挖矿的事。\";\n   812: \t    else if (likes_magic(ptr))\n   813: \t\tpline_msg = \"跟你讨论了一下法术。\";\n   814: \t    else if (ptr-&gt;mlet == S_CENTAUR)\n&gt;  815: \t\tpline_msg = \"discusses hunting.\";\n   816: \t    else switch (monsndx(ptr)) {\n   817: \t\tcase PM_HOBBIT:\n   818: \t\t    pline_msg = (mtmp-&gt;mhpmax - mtmp-&gt;mhp &gt;= 10) ?\n   819: \t\t\t\t\"正抱怨着这个地牢糟糕的卫生环境。\"\n   820: \t\t\t\t: \"问你知不知道至尊魔戒在哪。\";"
   },
   {
     "key": "L00824_01",
     "original": "mumbles something about Morgoth.",
     "translation": "",
-    "context": "src/sounds.c:824:16\n   819: \t\t\t\t\"正抱怨着这个地牢糟糕的卫生环境。\"\n   820: \t\t\t\t: \"问你知不知道至尊魔戒在哪。\";\n   821: \t\t    break;\n   822: #if 0\t/* OBSOLETE */\n   823: \t\tcase PM_FARMER_MAGGOT:\n>  824: \t\t\tpline_msg = \"mumbles something about Morgoth.\";\n   825: \t\t\tbreak;\n   826: #endif\n   827: \t\tcase PM_ARCHEOLOGIST:\n   828:     pline_msg = \"describes a recent article in \\\"Spelunker Today\\\" magazine.\";\n   829: \t\t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:824:16\n   819: \t\t\t\t\"正抱怨着这个地牢糟糕的卫生环境。\"\n   820: \t\t\t\t: \"问你知不知道至尊魔戒在哪。\";\n   821: \t\t    break;\n   822: #if 0\t/* OBSOLETE */\n   823: \t\tcase PM_FARMER_MAGGOT:\n&gt;  824: \t\t\tpline_msg = \"mumbles something about Morgoth.\";\n   825: \t\t\tbreak;\n   826: #endif\n   827: \t\tcase PM_ARCHEOLOGIST:\n   828:     pline_msg = \"describes a recent article in \\\"Spelunker Today\\\" magazine.\";\n   829: \t\t    break;"
   },
   {
     "key": "L00828_01",
     "original": "describes a recent article in \\\"Spelunker Today\\\" magazine.",
     "translation": "",
-    "context": "src/sounds.c:828:17\n   823: \t\tcase PM_FARMER_MAGGOT:\n   824: \t\t\tpline_msg = \"mumbles something about Morgoth.\";\n   825: \t\t\tbreak;\n   826: #endif\n   827: \t\tcase PM_ARCHEOLOGIST:\n>  828:     pline_msg = \"describes a recent article in \\\"Spelunker Today\\\" magazine.\";\n   829: \t\t    break;\n   830: #ifdef TOURIST\n   831: \t\tcase PM_TOURIST:\n   832: \t\t    verbl_msg = \"Aloha.\";\n   833: \t\t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:828:17\n   823: \t\tcase PM_FARMER_MAGGOT:\n   824: \t\t\tpline_msg = \"mumbles something about Morgoth.\";\n   825: \t\t\tbreak;\n   826: #endif\n   827: \t\tcase PM_ARCHEOLOGIST:\n&gt;  828:     pline_msg = \"describes a recent article in \\\"Spelunker Today\\\" magazine.\";\n   829: \t\t    break;\n   830: #ifdef TOURIST\n   831: \t\tcase PM_TOURIST:\n   832: \t\t    verbl_msg = \"Aloha.\";\n   833: \t\t    break;"
   },
   {
     "key": "L00832_01",
     "original": "Aloha.",
     "translation": "",
-    "context": "src/sounds.c:832:19\n   827: \t\tcase PM_ARCHEOLOGIST:\n   828:     pline_msg = \"describes a recent article in \\\"Spelunker Today\\\" magazine.\";\n   829: \t\t    break;\n   830: #ifdef TOURIST\n   831: \t\tcase PM_TOURIST:\n>  832: \t\t    verbl_msg = \"Aloha.\";\n   833: \t\t    break;\n   834: #endif\n   835: \t\tdefault:\n   836: \t\t    pline_msg = \"向你描述地牢探险的刺激。\";\n   837: \t\t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:832:19\n   827: \t\tcase PM_ARCHEOLOGIST:\n   828:     pline_msg = \"describes a recent article in \\\"Spelunker Today\\\" magazine.\";\n   829: \t\t    break;\n   830: #ifdef TOURIST\n   831: \t\tcase PM_TOURIST:\n&gt;  832: \t\t    verbl_msg = \"Aloha.\";\n   833: \t\t    break;\n   834: #endif\n   835: \t\tdefault:\n   836: \t\t    pline_msg = \"向你描述地牢探险的刺激。\";\n   837: \t\t    break;"
   },
   {
     "key": "L00853_01",
     "original": "Hello, sailor.",
     "translation": "",
-    "context": "src/sounds.c:853:16\n   848: #else\n   849: \t    switch ((poly_gender() == 0) ? rn2(3) : 0)\n   850: #endif\n   851: \t    {\n   852: \t\tcase 2:\n>  853: \t\t\tverbl_msg = \"Hello, sailor.\";\n   854: \t\t\tbreak;\n   855: \t\tcase 1:\n   856: \t\t\tpline_msg = \"comes on to you.\";\n   857: \t\t\tbreak;\n   858: \t\tdefault:"
+    "stage": 0,
+    "context": "src/sounds.c:853:16\n   848: #else\n   849: \t    switch ((poly_gender() == 0) ? rn2(3) : 0)\n   850: #endif\n   851: \t    {\n   852: \t\tcase 2:\n&gt;  853: \t\t\tverbl_msg = \"Hello, sailor.\";\n   854: \t\t\tbreak;\n   855: \t\tcase 1:\n   856: \t\t\tpline_msg = \"comes on to you.\";\n   857: \t\t\tbreak;\n   858: \t\tdefault:"
   },
   {
     "key": "L00856_01",
     "original": "comes on to you.",
     "translation": "",
-    "context": "src/sounds.c:856:16\n   851: \t    {\n   852: \t\tcase 2:\n   853: \t\t\tverbl_msg = \"Hello, sailor.\";\n   854: \t\t\tbreak;\n   855: \t\tcase 1:\n>  856: \t\t\tpline_msg = \"comes on to you.\";\n   857: \t\t\tbreak;\n   858: \t\tdefault:\n   859: \t\t\tpline_msg = \"cajoles you.\";\n   860: \t    }\n   861: \t    break;"
+    "stage": 0,
+    "context": "src/sounds.c:856:16\n   851: \t    {\n   852: \t\tcase 2:\n   853: \t\t\tverbl_msg = \"Hello, sailor.\";\n   854: \t\t\tbreak;\n   855: \t\tcase 1:\n&gt;  856: \t\t\tpline_msg = \"comes on to you.\";\n   857: \t\t\tbreak;\n   858: \t\tdefault:\n   859: \t\t\tpline_msg = \"cajoles you.\";\n   860: \t    }\n   861: \t    break;"
   },
   {
     "key": "L00859_01",
     "original": "cajoles you.",
     "translation": "",
-    "context": "src/sounds.c:859:16\n   854: \t\t\tbreak;\n   855: \t\tcase 1:\n   856: \t\t\tpline_msg = \"comes on to you.\";\n   857: \t\t\tbreak;\n   858: \t\tdefault:\n>  859: \t\t\tpline_msg = \"cajoles you.\";\n   860: \t    }\n   861: \t    break;\n   862: #ifdef KOPS\n   863: \tcase MS_ARREST:\n   864: \t    if (mtmp->mpeaceful)"
+    "stage": 0,
+    "context": "src/sounds.c:859:16\n   854: \t\t\tbreak;\n   855: \t\tcase 1:\n   856: \t\t\tpline_msg = \"comes on to you.\";\n   857: \t\t\tbreak;\n   858: \t\tdefault:\n&gt;  859: \t\t\tpline_msg = \"cajoles you.\";\n   860: \t    }\n   861: \t    break;\n   862: #ifdef KOPS\n   863: \tcase MS_ARREST:\n   864: \t    if (mtmp-&gt;mpeaceful)"
   },
   {
     "key": "L00865_01",
     "original": "Just the facts, %s.",
     "translation": "",
-    "context": "src/sounds.c:865:13\n   860: \t    }\n   861: \t    break;\n   862: #ifdef KOPS\n   863: \tcase MS_ARREST:\n   864: \t    if (mtmp->mpeaceful)\n>  865: \t\tverbalize(\"Just the facts, %s.\",\n   866: \t\t      flags.female ? \"女士\" : \"Sir\");\n   867: \t    else {\n   868: \t\tstatic const char * const arrest_msg[3] = {\n   869: \t\t    \"你现在所说的一切都将成为你的呈堂证供！\",\n   870: \t\t    \"你被捕了！\","
+    "stage": 0,
+    "context": "src/sounds.c:865:13\n   860: \t    }\n   861: \t    break;\n   862: #ifdef KOPS\n   863: \tcase MS_ARREST:\n   864: \t    if (mtmp-&gt;mpeaceful)\n&gt;  865: \t\tverbalize(\"Just the facts, %s.\",\n   866: \t\t      flags.female ? \"女士\" : \"Sir\");\n   867: \t    else {\n   868: \t\tstatic const char * const arrest_msg[3] = {\n   869: \t\t    \"你现在所说的一切都将成为你的呈堂证供！\",\n   870: \t\t    \"你被捕了！\","
   },
   {
     "key": "L00866_01",
     "original": "Sir",
     "translation": "",
-    "context": "src/sounds.c:866:31\n   861: \t    break;\n   862: #ifdef KOPS\n   863: \tcase MS_ARREST:\n   864: \t    if (mtmp->mpeaceful)\n   865: \t\tverbalize(\"Just the facts, %s.\",\n>  866: \t\t      flags.female ? \"女士\" : \"Sir\");\n   867: \t    else {\n   868: \t\tstatic const char * const arrest_msg[3] = {\n   869: \t\t    \"你现在所说的一切都将成为你的呈堂证供！\",\n   870: \t\t    \"你被捕了！\",\n   871: \t\t    \"我以法律的名义命令你停下！\","
+    "stage": 0,
+    "context": "src/sounds.c:866:31\n   861: \t    break;\n   862: #ifdef KOPS\n   863: \tcase MS_ARREST:\n   864: \t    if (mtmp-&gt;mpeaceful)\n   865: \t\tverbalize(\"Just the facts, %s.\",\n&gt;  866: \t\t      flags.female ? \"女士\" : \"Sir\");\n   867: \t    else {\n   868: \t\tstatic const char * const arrest_msg[3] = {\n   869: \t\t    \"你现在所说的一切都将成为你的呈堂证供！\",\n   870: \t\t    \"你被捕了！\",\n   871: \t\t    \"我以法律的名义命令你停下！\","
   },
   {
     "key": "L00895_01",
     "original": "seems to mutter a cantrip.",
     "translation": "",
-    "context": "src/sounds.c:895:18\n   890: \t\t\tbreak;\n   891: \t\t}\n   892: \t\t/* fall through */\n   893: \tcase MS_SPELL:\n   894: \t    /* deliberately vague, since it's not actually casting any spell */\n>  895: \t    pline_msg = \"seems to mutter a cantrip.\";\n   896: \t    break;\n   897: \tcase MS_NURSE:\n   898: \t    if (uwep && (uwep->oclass == WEAPON_CLASS || is_weptool(uwep))\n   899: \t\t|| (u.twoweap && uswapwep && (uswapwep->oclass == WEAPON_CLASS\n   900: \t\t|| is_weptool(uswapwep))))"
+    "stage": 0,
+    "context": "src/sounds.c:895:18\n   890: \t\t\tbreak;\n   891: \t\t}\n   892: \t\t/* fall through */\n   893: \tcase MS_SPELL:\n   894: \t    /* deliberately vague, since it's not actually casting any spell */\n&gt;  895: \t    pline_msg = \"seems to mutter a cantrip.\";\n   896: \t    break;\n   897: \tcase MS_NURSE:\n   898: \t    if (uwep && (uwep-&gt;oclass == WEAPON_CLASS || is_weptool(uwep))\n   899: \t\t|| (u.twoweap && uswapwep && (uswapwep-&gt;oclass == WEAPON_CLASS\n   900: \t\t|| is_weptool(uswapwep))))"
   },
   {
     "key": "L00918_01",
     "original": "Please drop that gold and follow me.",
     "translation": "",
-    "context": "src/sounds.c:918:15\n   913: #ifndef GOLDOBJ\n   914: \t    if (u.ugold)\n   915: #else\n   916: \t    if (money_cnt(invent))\n   917: #endif\n>  918: \t\tverbl_msg = \"Please drop that gold and follow me.\";\n   919: \t    else\n   920: \t\tverbl_msg = \"请跟上我的脚步。\";\n   921: \t    break;\n   922: \tcase MS_SOLDIER:\n   923: \t    {"
+    "stage": 0,
+    "context": "src/sounds.c:918:15\n   913: #ifndef GOLDOBJ\n   914: \t    if (u.ugold)\n   915: #else\n   916: \t    if (money_cnt(invent))\n   917: #endif\n&gt;  918: \t\tverbl_msg = \"Please drop that gold and follow me.\";\n   919: \t    else\n   920: \t\tverbl_msg = \"请跟上我的脚步。\";\n   921: \t    break;\n   922: \tcase MS_SOLDIER:\n   923: \t    {"
   },
   {
     "key": "L00925_01",
     "original": "Resistance is useless!",
     "translation": "",
-    "context": "src/sounds.c:925:7\n   920: \t\tverbl_msg = \"请跟上我的脚步。\";\n   921: \t    break;\n   922: \tcase MS_SOLDIER:\n   923: \t    {\n   924: \t\tstatic const char * const soldier_foe_msg[3] = {\n>  925: \t\t    \"Resistance is useless!\",\n   926: \t\t    \"你死定了！\",\n   927: \t\t    \"缴械投降不杀！\",\n   928: \t\t},\t\t  * const soldier_pax_msg[3] = {\n   929: \t\t    \"我们累死累活就赚这点钱！\",\n   930: \t\t    \"这个食物可不能分给兽人！\","
+    "stage": 0,
+    "context": "src/sounds.c:925:7\n   920: \t\tverbl_msg = \"请跟上我的脚步。\";\n   921: \t    break;\n   922: \tcase MS_SOLDIER:\n   923: \t    {\n   924: \t\tstatic const char * const soldier_foe_msg[3] = {\n&gt;  925: \t\t    \"Resistance is useless!\",\n   926: \t\t    \"你死定了！\",\n   927: \t\t    \"缴械投降不杀！\",\n   928: \t\t},\t\t  * const soldier_pax_msg[3] = {\n   929: \t\t    \"我们累死累活就赚这点钱！\",\n   930: \t\t    \"这个食物可不能分给兽人！\","
   },
   {
     "key": "L00944_01",
     "original": "%s %s",
     "translation": "",
-    "context": "src/sounds.c:944:26\n   939: \t\tpline_msg = \"正忙着读睡魔的第八章。\";\n   940: \t    else verbl_msg = \"那不然你觉得你还能是谁，战争？\";\n   941: \t    break;\n   942:     }\n   943: \n>  944:     if (pline_msg) pline(\"%s %s\", Monnam(mtmp), pline_msg);\n   945:     else if (verbl_msg) verbalize(verbl_msg);\n   946:     return(1);\n   947: }\n   948: \n   949: "
+    "stage": 0,
+    "context": "src/sounds.c:944:26\n   939: \t\tpline_msg = \"正忙着读睡魔的第八章。\";\n   940: \t    else verbl_msg = \"那不然你觉得你还能是谁，战争？\";\n   941: \t    break;\n   942:     }\n   943: \n&gt;  944:     if (pline_msg) pline(\"%s %s\", Monnam(mtmp), pline_msg);\n   945:     else if (verbl_msg) verbalize(verbl_msg);\n   946:     return(1);\n   947: }\n   948: \n   949: "
   },
   {
     "key": "L01007_01",
     "original": "up",
     "translation": "",
-    "context": "src/sounds.c:1007:34\n  1002: #ifdef STEED\n  1003:     if (u.usteed && u.dz > 0)\n  1004: \treturn (domonnoise(u.usteed));\n  1005: #endif\n  1006:     if (u.dz) {\n> 1007: \tpline(\"它们在%s可听不见你。\", u.dz < 0 ? \"up\" : \"下面\");\n  1008: \treturn(0);\n  1009:     }\n  1010: \n  1011:     if (u.dx == 0 && u.dy == 0) {\n  1012: /*"
+    "stage": 0,
+    "context": "src/sounds.c:1007:34\n  1002: #ifdef STEED\n  1003:     if (u.usteed && u.dz &gt; 0)\n  1004: \treturn (domonnoise(u.usteed));\n  1005: #endif\n  1006:     if (u.dz) {\n&gt; 1007: \tpline(\"它们在%s可听不见你。\", u.dz &lt; 0 ? \"up\" : \"下面\");\n  1008: \treturn(0);\n  1009:     }\n  1010: \n  1011:     if (u.dx == 0 && u.dy == 0) {\n  1012: /*"
   },
   {
     "key": "L01038_01",
     "original": "%s seems not to notice you.",
     "translation": "",
-    "context": "src/sounds.c:1038:12\n  1033:     /* sleeping monsters won't talk, except priests (who wake up) */\n  1034:     if ((!mtmp->mcanmove || mtmp->msleeping) && !mtmp->ispriest) {\n  1035: \t/* If it is unseen, the player can't tell the difference between\n  1036: \t   not noticing him and just not existing, so skip the message. */\n  1037: \tif (canspotmon(mtmp))\n> 1038: \t    pline(\"%s seems not to notice you.\", Monnam(mtmp));\n  1039: \treturn(0);\n  1040:     }\n  1041: \n  1042:     /* if this monster is waiting for something, prod it into action */\n  1043:     mtmp->mstrategy &= ~STRAT_WAITMASK;"
+    "stage": 0,
+    "context": "src/sounds.c:1038:12\n  1033:     /* sleeping monsters won't talk, except priests (who wake up) */\n  1034:     if ((!mtmp-&gt;mcanmove || mtmp-&gt;msleeping) && !mtmp-&gt;ispriest) {\n  1035: \t/* If it is unseen, the player can't tell the difference between\n  1036: \t   not noticing him and just not existing, so skip the message. */\n  1037: \tif (canspotmon(mtmp))\n&gt; 1038: \t    pline(\"%s seems not to notice you.\", Monnam(mtmp));\n  1039: \treturn(0);\n  1040:     }\n  1041: \n  1042:     /* if this monster is waiting for something, prod it into action */\n  1043:     mtmp-&gt;mstrategy &= ~STRAT_WAITMASK;"
   },
   {
     "key": "L01084_01",
     "original": "MESG \\\"%255[^\\\"]\\\"%*[\\t ]\\\"%255[^\\\"]\\\" %d",
     "translation": "",
-    "context": "src/sounds.c:1084:22\n  1079: \tchar text[256];\n  1080: \tchar filename[256];\n  1081: \tchar filespec[256];\n  1082: \tint volume;\n  1083: \n> 1084: \tif (sscanf(mapping, \"MESG \\\"%255[^\\\"]\\\"%*[\\t ]\\\"%255[^\\\"]\\\" %d\",\n  1085: \t\t   text, filename, &volume) == 3) {\n  1086: \t    const char *err;\n  1087: \t    audio_mapping *new_map;\n  1088: \n  1089: \t    if (strlen(sounddir) + strlen(filename) > 254) {"
+    "stage": 0,
+    "context": "src/sounds.c:1084:22\n  1079: \tchar text[256];\n  1080: \tchar filename[256];\n  1081: \tchar filespec[256];\n  1082: \tint volume;\n  1083: \n&gt; 1084: \tif (sscanf(mapping, \"MESG \\\"%255[^\\\"]\\\"%*[\\t ]\\\"%255[^\\\"]\\\" %d\",\n  1085: \t\t   text, filename, &volume) == 3) {\n  1086: \t    const char *err;\n  1087: \t    audio_mapping *new_map;\n  1088: \n  1089: \t    if (strlen(sounddir) + strlen(filename) &gt; 254) {"
   },
   {
     "key": "L01090_01",
     "original": "sound file name too long",
     "translation": "",
-    "context": "src/sounds.c:1090:13\n  1085: \t\t   text, filename, &volume) == 3) {\n  1086: \t    const char *err;\n  1087: \t    audio_mapping *new_map;\n  1088: \n  1089: \t    if (strlen(sounddir) + strlen(filename) > 254) {\n> 1090: \t\traw_print(\"sound file name too long\");\n  1091: \t\treturn 0;\n  1092: \t    }\n  1093: \t    Sprintf(filespec, \"%s/%s\", sounddir, filename);\n  1094: \n  1095: \t    if (can_read_file(filespec)) {"
+    "stage": 0,
+    "context": "src/sounds.c:1090:13\n  1085: \t\t   text, filename, &volume) == 3) {\n  1086: \t    const char *err;\n  1087: \t    audio_mapping *new_map;\n  1088: \n  1089: \t    if (strlen(sounddir) + strlen(filename) &gt; 254) {\n&gt; 1090: \t\traw_print(\"sound file name too long\");\n  1091: \t\treturn 0;\n  1092: \t    }\n  1093: \t    Sprintf(filespec, \"%s/%s\", sounddir, filename);\n  1094: \n  1095: \t    if (can_read_file(filespec)) {"
   },
   {
     "key": "L01093_01",
     "original": "%s/%s",
     "translation": "",
-    "context": "src/sounds.c:1093:24\n  1088: \n  1089: \t    if (strlen(sounddir) + strlen(filename) > 254) {\n  1090: \t\traw_print(\"sound file name too long\");\n  1091: \t\treturn 0;\n  1092: \t    }\n> 1093: \t    Sprintf(filespec, \"%s/%s\", sounddir, filename);\n  1094: \n  1095: \t    if (can_read_file(filespec)) {\n  1096: \t\tnew_map = (audio_mapping *)alloc(sizeof(audio_mapping));\n  1097: #ifdef USER_SOUNDS_REGEX\n  1098: \t\tnew_map->regex.translate = 0;"
+    "stage": 0,
+    "context": "src/sounds.c:1093:24\n  1088: \n  1089: \t    if (strlen(sounddir) + strlen(filename) &gt; 254) {\n  1090: \t\traw_print(\"sound file name too long\");\n  1091: \t\treturn 0;\n  1092: \t    }\n&gt; 1093: \t    Sprintf(filespec, \"%s/%s\", sounddir, filename);\n  1094: \n  1095: \t    if (can_read_file(filespec)) {\n  1096: \t\tnew_map = (audio_mapping *)alloc(sizeof(audio_mapping));\n  1097: #ifdef USER_SOUNDS_REGEX\n  1098: \t\tnew_map-&gt;regex.translate = 0;"
   },
   {
     "key": "L01125_01",
     "original": "cannot read %.243s",
     "translation": "",
-    "context": "src/sounds.c:1125:17\n  1120: \t\t    return 0;\n  1121: \t\t} else {\n  1122: \t\t    soundmap = new_map;\n  1123: \t\t}\n  1124: \t    } else {\n> 1125: \t\tSprintf(text, \"cannot read %.243s\", filespec);\n  1126: \t\traw_print(text);\n  1127: \t\treturn 0;\n  1128: \t    }\n  1129: \t} else {\n  1130: \t    raw_print(\"syntax error in SOUND\");"
+    "stage": 0,
+    "context": "src/sounds.c:1125:17\n  1120: \t\t    return 0;\n  1121: \t\t} else {\n  1122: \t\t    soundmap = new_map;\n  1123: \t\t}\n  1124: \t    } else {\n&gt; 1125: \t\tSprintf(text, \"cannot read %.243s\", filespec);\n  1126: \t\traw_print(text);\n  1127: \t\treturn 0;\n  1128: \t    }\n  1129: \t} else {\n  1130: \t    raw_print(\"syntax error in SOUND\");"
   },
   {
     "key": "L01130_01",
     "original": "syntax error in SOUND",
     "translation": "",
-    "context": "src/sounds.c:1130:16\n  1125: \t\tSprintf(text, \"cannot read %.243s\", filespec);\n  1126: \t\traw_print(text);\n  1127: \t\treturn 0;\n  1128: \t    }\n  1129: \t} else {\n> 1130: \t    raw_print(\"syntax error in SOUND\");\n  1131: \t    return 0;\n  1132: \t}\n  1133: \n  1134: \treturn 1;\n  1135: }"
+    "stage": 0,
+    "context": "src/sounds.c:1130:16\n  1125: \t\tSprintf(text, \"cannot read %.243s\", filespec);\n  1126: \t\traw_print(text);\n  1127: \t\treturn 0;\n  1128: \t    }\n  1129: \t} else {\n&gt; 1130: \t    raw_print(\"syntax error in SOUND\");\n  1131: \t    return 0;\n  1132: \t}\n  1133: \n  1134: \treturn 1;\n  1135: }"
   }
 ]

@@ -3,66 +3,77 @@
     "key": "L00212_01",
     "original": "%s%s!",
     "translation": "",
-    "context": "src/attrib.c:212:15\n   207: \t\tif(AMAX(ndx) < ATTRMIN(ndx))\n   208: \t\t    AMAX(ndx) = ATTRMIN(ndx);\n   209: \t    }\n   210: \t}\n   211: \tif (msgflg <= 0)\n>  212: \t    You_feel(\"%s%s!\",\n   213: \t\t  (incr > 1 || incr < -1) ? \"非常\": \"\",\n   214: \t\t  (incr > 0) ? plusattr[ndx] : minusattr[ndx]);\n   215: \tflags.botl = 1;\n   216: \tif (msgflg <= 1 && moves > 1 && (ndx == A_STR || ndx == A_CON))\n   217: \t\t(void)encumber_msg();"
+    "stage": 0,
+    "context": "src/attrib.c:212:15\n   207: \t\tif(AMAX(ndx) &lt; ATTRMIN(ndx))\n   208: \t\t    AMAX(ndx) = ATTRMIN(ndx);\n   209: \t    }\n   210: \t}\n   211: \tif (msgflg &lt;= 0)\n&gt;  212: \t    You_feel(\"%s%s!\",\n   213: \t\t  (incr &gt; 1 || incr &lt; -1) ? \"非常\": \"\",\n   214: \t\t  (incr &gt; 0) ? plusattr[ndx] : minusattr[ndx]);\n   215: \tflags.botl = 1;\n   216: \tif (msgflg &lt;= 1 && moves &gt; 1 && (ndx == A_STR || ndx == A_CON))\n   217: \t\t(void)encumber_msg();"
   },
   {
     "key": "L00365_01",
     "original": "%s, %s AEXE = %d",
     "translation": "",
-    "context": "src/attrib.c:365:9\n   360: \t\t *\n   361: \t\t *\tNote: *YES* ACURR is the right one to use.\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n>  365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}"
+    "stage": 0,
+    "context": "src/attrib.c:365:9\n   360: \t\t *\n   361: \t\t *\tNote: *YES* ACURR is the right one to use.\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n&gt;  365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}"
   },
   {
     "key": "L00366_01",
     "original": "Str",
     "translation": "",
-    "context": "src/attrib.c:366:19\n   361: \t\t *\tNote: *YES* ACURR is the right one to use.\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n>  366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves > 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();"
+    "stage": 0,
+    "context": "src/attrib.c:366:19\n   361: \t\t *\tNote: *YES* ACURR is the right one to use.\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n&gt;  366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves &gt; 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();"
   },
   {
     "key": "L00366_02",
     "original": "Wis",
     "translation": "",
-    "context": "src/attrib.c:366:42\n   361: \t\t *\tNote: *YES* ACURR is the right one to use.\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n>  366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves > 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();"
+    "stage": 0,
+    "context": "src/attrib.c:366:42\n   361: \t\t *\tNote: *YES* ACURR is the right one to use.\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n&gt;  366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves &gt; 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();"
   },
   {
     "key": "L00367_01",
     "original": "Dex",
     "translation": "",
-    "context": "src/attrib.c:367:19\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n>  367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves > 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }"
+    "stage": 0,
+    "context": "src/attrib.c:367:19\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n&gt;  367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves &gt; 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }"
   },
   {
     "key": "L00367_02",
     "original": "Con",
     "translation": "",
-    "context": "src/attrib.c:367:27\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n>  367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves > 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }"
+    "stage": 0,
+    "context": "src/attrib.c:367:27\n   362: \t\t */\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n&gt;  367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n   368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves &gt; 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }"
   },
   {
     "key": "L00368_01",
     "original": "inc",
     "translation": "",
-    "context": "src/attrib.c:368:19\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n>  368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves > 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }\n   373: "
+    "stage": 0,
+    "context": "src/attrib.c:368:19\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n&gt;  368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves &gt; 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }\n   373: "
   },
   {
     "key": "L00368_02",
     "original": "dec",
     "translation": "",
-    "context": "src/attrib.c:368:27\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) > ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n>  368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves > 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }\n   373: "
+    "stage": 0,
+    "context": "src/attrib.c:368:27\n   363: \t\tAEXE(i) += (inc_or_dec) ? (rn2(19) &gt; ACURR(i)) : -rn2(2);\n   364: #ifdef DEBUG\n   365: \t\tpline(\"%s, %s AEXE = %d\",\n   366: \t\t\t(i == A_STR) ? \"Str\" : (i == A_WIS) ? \"Wis\" :\n   367: \t\t\t(i == A_DEX) ? \"Dex\" : \"Con\",\n&gt;  368: \t\t\t(inc_or_dec) ? \"inc\" : \"dec\", AEXE(i));\n   369: #endif\n   370: \t}\n   371: \tif (moves &gt; 0 && (i == A_STR || i == A_CON)) (void)encumber_msg();\n   372: }\n   373: "
   },
   {
     "key": "L00528_01",
     "original": "exerchk: next check at %ld.",
     "translation": "",
-    "context": "src/attrib.c:528:12\n   523: \t\t    }\n   524: \t\t}\n   525: \t    }\n   526: \t    next_check += rn1(2000,2000);\n   527: #ifdef DEBUG\n>  528: \t    pline(\"exerchk: next check at %ld.\", next_check);\n   529: #endif\n   530: \t}\n   531: }\n   532: \n   533: /* next_check will otherwise have its initial 600L after a game restore */"
+    "stage": 0,
+    "context": "src/attrib.c:528:12\n   523: \t\t    }\n   524: \t\t}\n   525: \t    }\n   526: \t    next_check += rn1(2000,2000);\n   527: #ifdef DEBUG\n&gt;  528: \t    pline(\"exerchk: next check at %ld.\", next_check);\n   529: #endif\n   530: \t}\n   531: }\n   532: \n   533: /* next_check will otherwise have its initial 600L after a game restore */"
   },
   {
     "key": "L00693_01",
     "original": "%s!",
     "translation": "",
-    "context": "src/attrib.c:693:14\n   688: \t\t\t\t*(abil->ability) |= (mask|FROMOUTSIDE);\n   689: \t\t\telse\n   690: \t\t\t\t*(abil->ability) |= mask;\n   691: \t\t\tif(!(*(abil->ability) & INTRINSIC & ~mask)) {\n   692: \t\t\t    if(*(abil->gainstr))\n>  693: \t\t\t\tYou_feel(\"%s!\", abil->gainstr);\n   694: \t\t\t}\n   695: \t\t} else if (oldlevel >= abil->ulevel && newlevel < abil->ulevel) {\n   696: \t\t\t*(abil->ability) &= ~mask;\n   697: \t\t\tif(!(*(abil->ability) & INTRINSIC)) {\n   698: \t\t\t    if(*(abil->losestr))"
+    "stage": 0,
+    "context": "src/attrib.c:693:14\n   688: \t\t\t\t*(abil-&gt;ability) |= (mask|FROMOUTSIDE);\n   689: \t\t\telse\n   690: \t\t\t\t*(abil-&gt;ability) |= mask;\n   691: \t\t\tif(!(*(abil-&gt;ability) & INTRINSIC & ~mask)) {\n   692: \t\t\t    if(*(abil-&gt;gainstr))\n&gt;  693: \t\t\t\tYou_feel(\"%s!\", abil-&gt;gainstr);\n   694: \t\t\t}\n   695: \t\t} else if (oldlevel &gt;= abil-&gt;ulevel && newlevel &lt; abil-&gt;ulevel) {\n   696: \t\t\t*(abil-&gt;ability) &= ~mask;\n   697: \t\t\tif(!(*(abil-&gt;ability) & INTRINSIC)) {\n   698: \t\t\t    if(*(abil-&gt;losestr))"
   },
   {
     "key": "L00699_01",
     "original": "%s!",
     "translation": "",
-    "context": "src/attrib.c:699:14\n   694: \t\t\t}\n   695: \t\t} else if (oldlevel >= abil->ulevel && newlevel < abil->ulevel) {\n   696: \t\t\t*(abil->ability) &= ~mask;\n   697: \t\t\tif(!(*(abil->ability) & INTRINSIC)) {\n   698: \t\t\t    if(*(abil->losestr))\n>  699: \t\t\t\tYou_feel(\"%s!\", abil->losestr);\n   700: \t\t\t    else if(*(abil->gainstr))\n   701: \t\t\t\tYou_feel(\"不再%s!\", abil->gainstr);\n   702: \t\t\t}\n   703: \t\t}\n   704: \t    if (prevabil != *(abil->ability))\t/* it changed */"
+    "stage": 0,
+    "context": "src/attrib.c:699:14\n   694: \t\t\t}\n   695: \t\t} else if (oldlevel &gt;= abil-&gt;ulevel && newlevel &lt; abil-&gt;ulevel) {\n   696: \t\t\t*(abil-&gt;ability) &= ~mask;\n   697: \t\t\tif(!(*(abil-&gt;ability) & INTRINSIC)) {\n   698: \t\t\t    if(*(abil-&gt;losestr))\n&gt;  699: \t\t\t\tYou_feel(\"%s!\", abil-&gt;losestr);\n   700: \t\t\t    else if(*(abil-&gt;gainstr))\n   701: \t\t\t\tYou_feel(\"不再%s!\", abil-&gt;gainstr);\n   702: \t\t\t}\n   703: \t\t}\n   704: \t    if (prevabil != *(abil-&gt;ability))\t/* it changed */"
   }
 ]

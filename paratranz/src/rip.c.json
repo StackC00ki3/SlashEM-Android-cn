@@ -3,114 +3,133 @@
     "key": "L00028_01",
     "original": "                     /    REST    \\\\",
     "translation": "",
-    "context": "src/rip.c:28:1\n    23: #ifndef NH320_DEDICATION\n    24: /* A normal tombstone for end of game display. */\n    25: static const char *rip_txt[] = {\n    26: \"                       ----------\",\n    27: \"                      /          \\\\\",\n>   28: \"                     /    REST    \\\\\",\n    29: \"                    /      IN      \\\\\",\n    30: \"                   /     PEACE      \\\\\",\n    31: \"                  /                  \\\\\",\n    32: \"                  |                  |\", /* Name of player */\n    33: \"                  |                  |\", /* Amount of $ */"
+    "stage": 0,
+    "context": "src/rip.c:28:1\n    23: #ifndef NH320_DEDICATION\n    24: /* A normal tombstone for end of game display. */\n    25: static const char *rip_txt[] = {\n    26: \"                       ----------\",\n    27: \"                      /          \\\\\",\n&gt;   28: \"                     /    REST    \\\\\",\n    29: \"                    /      IN      \\\\\",\n    30: \"                   /     PEACE      \\\\\",\n    31: \"                  /                  \\\\\",\n    32: \"                  |                  |\", /* Name of player */\n    33: \"                  |                  |\", /* Amount of $ */"
   },
   {
     "key": "L00029_01",
     "original": "                    /      IN      \\\\",
     "translation": "",
-    "context": "src/rip.c:29:1\n    24: /* A normal tombstone for end of game display. */\n    25: static const char *rip_txt[] = {\n    26: \"                       ----------\",\n    27: \"                      /          \\\\\",\n    28: \"                     /    REST    \\\\\",\n>   29: \"                    /      IN      \\\\\",\n    30: \"                   /     PEACE      \\\\\",\n    31: \"                  /                  \\\\\",\n    32: \"                  |                  |\", /* Name of player */\n    33: \"                  |                  |\", /* Amount of $ */\n    34: \"                  |                  |\", /* Type of death */"
+    "stage": 0,
+    "context": "src/rip.c:29:1\n    24: /* A normal tombstone for end of game display. */\n    25: static const char *rip_txt[] = {\n    26: \"                       ----------\",\n    27: \"                      /          \\\\\",\n    28: \"                     /    REST    \\\\\",\n&gt;   29: \"                    /      IN      \\\\\",\n    30: \"                   /     PEACE      \\\\\",\n    31: \"                  /                  \\\\\",\n    32: \"                  |                  |\", /* Name of player */\n    33: \"                  |                  |\", /* Amount of $ */\n    34: \"                  |                  |\", /* Type of death */"
   },
   {
     "key": "L00030_01",
     "original": "                   /     PEACE      \\\\",
     "translation": "",
-    "context": "src/rip.c:30:1\n    25: static const char *rip_txt[] = {\n    26: \"                       ----------\",\n    27: \"                      /          \\\\\",\n    28: \"                     /    REST    \\\\\",\n    29: \"                    /      IN      \\\\\",\n>   30: \"                   /     PEACE      \\\\\",\n    31: \"                  /                  \\\\\",\n    32: \"                  |                  |\", /* Name of player */\n    33: \"                  |                  |\", /* Amount of $ */\n    34: \"                  |                  |\", /* Type of death */\n    35: \"                  |                  |\", /* . */"
+    "stage": 0,
+    "context": "src/rip.c:30:1\n    25: static const char *rip_txt[] = {\n    26: \"                       ----------\",\n    27: \"                      /          \\\\\",\n    28: \"                     /    REST    \\\\\",\n    29: \"                    /      IN      \\\\\",\n&gt;   30: \"                   /     PEACE      \\\\\",\n    31: \"                  /                  \\\\\",\n    32: \"                  |                  |\", /* Name of player */\n    33: \"                  |                  |\", /* Amount of $ */\n    34: \"                  |                  |\", /* Type of death */\n    35: \"                  |                  |\", /* . */"
   },
   {
     "key": "L00049_01",
     "original": "            /    REST    \\\\                  /    This    \\\\",
     "translation": "",
-    "context": "src/rip.c:49:1\n    44: #else\t/* NH320_DEDICATION */\n    45: /* NetHack 3.2.x displayed a dual tombstone as a tribute to Izchak. */\n    46: static const char *rip_txt[] = {\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n>   49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\","
+    "stage": 0,
+    "context": "src/rip.c:49:1\n    44: #else\t/* NH320_DEDICATION */\n    45: /* NetHack 3.2.x displayed a dual tombstone as a tribute to Izchak. */\n    46: static const char *rip_txt[] = {\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n&gt;   49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\","
   },
   {
     "key": "L00050_01",
     "original": "           /      IN      \\\\                /  release of  \\\\",
     "translation": "",
-    "context": "src/rip.c:50:1\n    45: /* NetHack 3.2.x displayed a dual tombstone as a tribute to Izchak. */\n    46: static const char *rip_txt[] = {\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n>   50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\","
+    "stage": 0,
+    "context": "src/rip.c:50:1\n    45: /* NetHack 3.2.x displayed a dual tombstone as a tribute to Izchak. */\n    46: static const char *rip_txt[] = {\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n&gt;   50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\","
   },
   {
     "key": "L00051_01",
     "original": "          /     PEACE      \\\\              /   NetHack is   \\\\",
     "translation": "",
-    "context": "src/rip.c:51:1\n    46: static const char *rip_txt[] = {\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n>   51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\","
+    "stage": 0,
+    "context": "src/rip.c:51:1\n    46: static const char *rip_txt[] = {\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n&gt;   51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\","
   },
   {
     "key": "L00052_01",
     "original": "         /                  \\\\            /   dedicated to   \\\\",
     "translation": "",
-    "context": "src/rip.c:52:1\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n>   52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\","
+    "stage": 0,
+    "context": "src/rip.c:52:1\n    47: \"              ----------                      ----------\",\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n&gt;   52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\","
   },
   {
     "key": "L00053_01",
     "original": "         |                  |            |  the memory of   |",
     "translation": "",
-    "context": "src/rip.c:53:1\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n>   53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\",\n    58: \"         |                  |            |     Ascended     |\","
+    "stage": 0,
+    "context": "src/rip.c:53:1\n    48: \"             /          \\\\                    /          \\\\\",\n    49: \"            /    REST    \\\\                  /    This    \\\\\",\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n&gt;   53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\",\n    58: \"         |                  |            |     Ascended     |\","
   },
   {
     "key": "L00055_01",
     "original": "         |                  |            |  Izchak Miller   |",
     "translation": "",
-    "context": "src/rip.c:55:1\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n>   55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\",\n    58: \"         |                  |            |     Ascended     |\",\n    59: \"         |       1001       |            |                  |\",\n    60: \"      *  |     *  *  *      | *        * |      *  *  *     | *\","
+    "stage": 0,
+    "context": "src/rip.c:55:1\n    50: \"           /      IN      \\\\                /  release of  \\\\\",\n    51: \"          /     PEACE      \\\\              /   NetHack is   \\\\\",\n    52: \"         /                  \\\\            /   dedicated to   \\\\\",\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n&gt;   55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\",\n    58: \"         |                  |            |     Ascended     |\",\n    59: \"         |       1001       |            |                  |\",\n    60: \"      *  |     *  *  *      | *        * |      *  *  *     | *\","
   },
   {
     "key": "L00058_01",
     "original": "         |                  |            |     Ascended     |",
     "translation": "",
-    "context": "src/rip.c:58:1\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\",\n>   58: \"         |                  |            |     Ascended     |\",\n    59: \"         |       1001       |            |                  |\",\n    60: \"      *  |     *  *  *      | *        * |      *  *  *     | *\",\n    61: \" _____)/\\\\|\\\\__//(\\\\/(/\\\\)/\\\\//\\\\/|_)________)/|\\\\\\\\_/_/(\\\\/(/\\\\)/\\\\/\\\\/|_)____\",\n    62: 0\n    63: };"
+    "stage": 0,
+    "context": "src/rip.c:58:1\n    53: \"         |                  |            |  the memory of   |\",\n    54: \"         |                  |            |                  |\",\n    55: \"         |                  |            |  Izchak Miller   |\",\n    56: \"         |                  |            |   1935 - 1994    |\",\n    57: \"         |                  |            |                  |\",\n&gt;   58: \"         |                  |            |     Ascended     |\",\n    59: \"         |       1001       |            |                  |\",\n    60: \"      *  |     *  *  *      | *        * |      *  *  *     | *\",\n    61: \" _____)/\\\\|\\\\__//(\\\\/(/\\\\)/\\\\//\\\\/|_)________)/|\\\\\\\\_/_/(\\\\/(/\\\\)/\\\\/\\\\/|_)____\",\n    62: 0\n    63: };"
   },
   {
     "key": "L00107_01",
     "original": "%s",
     "translation": "",
-    "context": "src/rip.c:107:15\n   102: \t\tStrcpy(dp[x], rip_txt[x]);\n   103: \t}\n   104: \tdp[x] = (char *)0;\n   105: \n   106: \t/* Put name on stone */\n>  107: \tSprintf(buf, \"%s\", plname);\n   108: \tbuf[STONE_LINE_LEN] = 0;\n   109: \tcenter(NAME_LINE, buf);\n   110: \n   111: \t/* Put $ on stone */\n   112: #ifndef GOLDOBJ"
+    "stage": 0,
+    "context": "src/rip.c:107:15\n   102: \t\tStrcpy(dp[x], rip_txt[x]);\n   103: \t}\n   104: \tdp[x] = (char *)0;\n   105: \n   106: \t/* Put name on stone */\n&gt;  107: \tSprintf(buf, \"%s\", plname);\n   108: \tbuf[STONE_LINE_LEN] = 0;\n   109: \tcenter(NAME_LINE, buf);\n   110: \n   111: \t/* Put $ on stone */\n   112: #ifndef GOLDOBJ"
   },
   {
     "key": "L00113_01",
     "original": "%ld Au",
     "translation": "",
-    "context": "src/rip.c:113:15\n   108: \tbuf[STONE_LINE_LEN] = 0;\n   109: \tcenter(NAME_LINE, buf);\n   110: \n   111: \t/* Put $ on stone */\n   112: #ifndef GOLDOBJ\n>  113: \tSprintf(buf, \"%ld Au\", u.ugold);\n   114: #else\n   115: \tSprintf(buf, \"%ld Au\", done_money);\n   116: #endif\n   117: \tbuf[STONE_LINE_LEN] = 0; /* It could be a *lot* of gold :-) */\n   118: \tcenter(GOLD_LINE, buf);"
+    "stage": 0,
+    "context": "src/rip.c:113:15\n   108: \tbuf[STONE_LINE_LEN] = 0;\n   109: \tcenter(NAME_LINE, buf);\n   110: \n   111: \t/* Put $ on stone */\n   112: #ifndef GOLDOBJ\n&gt;  113: \tSprintf(buf, \"%ld Au\", u.ugold);\n   114: #else\n   115: \tSprintf(buf, \"%ld Au\", done_money);\n   116: #endif\n   117: \tbuf[STONE_LINE_LEN] = 0; /* It could be a *lot* of gold :-) */\n   118: \tcenter(GOLD_LINE, buf);"
   },
   {
     "key": "L00115_01",
     "original": "%ld Au",
     "translation": "",
-    "context": "src/rip.c:115:15\n   110: \n   111: \t/* Put $ on stone */\n   112: #ifndef GOLDOBJ\n   113: \tSprintf(buf, \"%ld Au\", u.ugold);\n   114: #else\n>  115: \tSprintf(buf, \"%ld Au\", done_money);\n   116: #endif\n   117: \tbuf[STONE_LINE_LEN] = 0; /* It could be a *lot* of gold :-) */\n   118: \tcenter(GOLD_LINE, buf);\n   119: \n   120: \t/* Put together death description */"
+    "stage": 0,
+    "context": "src/rip.c:115:15\n   110: \n   111: \t/* Put $ on stone */\n   112: #ifndef GOLDOBJ\n   113: \tSprintf(buf, \"%ld Au\", u.ugold);\n   114: #else\n&gt;  115: \tSprintf(buf, \"%ld Au\", done_money);\n   116: #endif\n   117: \tbuf[STONE_LINE_LEN] = 0; /* It could be a *lot* of gold :-) */\n   118: \tcenter(GOLD_LINE, buf);\n   119: \n   120: \t/* Put together death description */"
   },
   {
     "key": "L00122_01",
     "original": "bad killer format?",
     "translation": "",
-    "context": "src/rip.c:122:23\n   117: \tbuf[STONE_LINE_LEN] = 0; /* It could be a *lot* of gold :-) */\n   118: \tcenter(GOLD_LINE, buf);\n   119: \n   120: \t/* Put together death description */\n   121: \tswitch (killer_format) {\n>  122: \t\tdefault: impossible(\"bad killer format?\");\n   123: \t\tcase KILLED_BY_AN:\n   124:                       if (Instant_Death) {\n   125:                         Strcpy(buf, \"instantly \");\n   126:                         strcat(buf, killed_by_prefix[how]);\n   127:                       }"
+    "stage": 0,
+    "context": "src/rip.c:122:23\n   117: \tbuf[STONE_LINE_LEN] = 0; /* It could be a *lot* of gold :-) */\n   118: \tcenter(GOLD_LINE, buf);\n   119: \n   120: \t/* Put together death description */\n   121: \tswitch (killer_format) {\n&gt;  122: \t\tdefault: impossible(\"bad killer format?\");\n   123: \t\tcase KILLED_BY_AN:\n   124:                       if (Instant_Death) {\n   125:                         Strcpy(buf, \"instantly \");\n   126:                         strcat(buf, killed_by_prefix[how]);\n   127:                       }"
   },
   {
     "key": "L00125_01",
     "original": "instantly ",
     "translation": "",
-    "context": "src/rip.c:125:37\n   120: \t/* Put together death description */\n   121: \tswitch (killer_format) {\n   122: \t\tdefault: impossible(\"bad killer format?\");\n   123: \t\tcase KILLED_BY_AN:\n   124:                       if (Instant_Death) {\n>  125:                         Strcpy(buf, \"instantly \");\n   126:                         strcat(buf, killed_by_prefix[how]);\n   127:                       }\n   128:                       else if (Quick_Death) {\n   129:                         Strcpy(buf, \"quickly \");\n   130:                         strcat(buf, killed_by_prefix[how]);"
+    "stage": 0,
+    "context": "src/rip.c:125:37\n   120: \t/* Put together death description */\n   121: \tswitch (killer_format) {\n   122: \t\tdefault: impossible(\"bad killer format?\");\n   123: \t\tcase KILLED_BY_AN:\n   124:                       if (Instant_Death) {\n&gt;  125:                         Strcpy(buf, \"instantly \");\n   126:                         strcat(buf, killed_by_prefix[how]);\n   127:                       }\n   128:                       else if (Quick_Death) {\n   129:                         Strcpy(buf, \"quickly \");\n   130:                         strcat(buf, killed_by_prefix[how]);"
   },
   {
     "key": "L00129_01",
     "original": "quickly ",
     "translation": "",
-    "context": "src/rip.c:129:37\n   124:                       if (Instant_Death) {\n   125:                         Strcpy(buf, \"instantly \");\n   126:                         strcat(buf, killed_by_prefix[how]);\n   127:                       }\n   128:                       else if (Quick_Death) {\n>  129:                         Strcpy(buf, \"quickly \");\n   130:                         strcat(buf, killed_by_prefix[how]);\n   131:                       } else Strcpy(buf, killed_by_prefix[how]);\n   132: \t\t\tStrcat(buf, an(killer));\n   133: \t\t\tbreak;\n   134: \t\tcase KILLED_BY:"
+    "stage": 0,
+    "context": "src/rip.c:129:37\n   124:                       if (Instant_Death) {\n   125:                         Strcpy(buf, \"instantly \");\n   126:                         strcat(buf, killed_by_prefix[how]);\n   127:                       }\n   128:                       else if (Quick_Death) {\n&gt;  129:                         Strcpy(buf, \"quickly \");\n   130:                         strcat(buf, killed_by_prefix[how]);\n   131:                       } else Strcpy(buf, killed_by_prefix[how]);\n   132: \t\t\tStrcat(buf, an(killer));\n   133: \t\t\tbreak;\n   134: \t\tcase KILLED_BY:"
   },
   {
     "key": "L00136_01",
     "original": "instantly ",
     "translation": "",
-    "context": "src/rip.c:136:37\n   131:                       } else Strcpy(buf, killed_by_prefix[how]);\n   132: \t\t\tStrcat(buf, an(killer));\n   133: \t\t\tbreak;\n   134: \t\tcase KILLED_BY:\n   135:                       if (Instant_Death) {\n>  136:                         Strcpy(buf, \"instantly \");\n   137:                         strcat(buf, killed_by_prefix[how]);\n   138:                       }\n   139:                       else if (Quick_Death) {\n   140:                         Strcpy(buf, \"quickly \");\n   141:                         strcat(buf, killed_by_prefix[how]);"
+    "stage": 0,
+    "context": "src/rip.c:136:37\n   131:                       } else Strcpy(buf, killed_by_prefix[how]);\n   132: \t\t\tStrcat(buf, an(killer));\n   133: \t\t\tbreak;\n   134: \t\tcase KILLED_BY:\n   135:                       if (Instant_Death) {\n&gt;  136:                         Strcpy(buf, \"instantly \");\n   137:                         strcat(buf, killed_by_prefix[how]);\n   138:                       }\n   139:                       else if (Quick_Death) {\n   140:                         Strcpy(buf, \"quickly \");\n   141:                         strcat(buf, killed_by_prefix[how]);"
   },
   {
     "key": "L00140_01",
     "original": "quickly ",
     "translation": "",
-    "context": "src/rip.c:140:37\n   135:                       if (Instant_Death) {\n   136:                         Strcpy(buf, \"instantly \");\n   137:                         strcat(buf, killed_by_prefix[how]);\n   138:                       }\n   139:                       else if (Quick_Death) {\n>  140:                         Strcpy(buf, \"quickly \");\n   141:                         strcat(buf, killed_by_prefix[how]);\n   142:                       } else Strcpy(buf, killed_by_prefix[how]);\n   143: \t\t\tStrcat(buf, killer);\n   144: \t\t\tbreak;\n   145: \t\tcase NO_KILLER_PREFIX:"
+    "stage": 0,
+    "context": "src/rip.c:140:37\n   135:                       if (Instant_Death) {\n   136:                         Strcpy(buf, \"instantly \");\n   137:                         strcat(buf, killed_by_prefix[how]);\n   138:                       }\n   139:                       else if (Quick_Death) {\n&gt;  140:                         Strcpy(buf, \"quickly \");\n   141:                         strcat(buf, killed_by_prefix[how]);\n   142:                       } else Strcpy(buf, killed_by_prefix[how]);\n   143: \t\t\tStrcat(buf, killer);\n   144: \t\t\tbreak;\n   145: \t\tcase NO_KILLER_PREFIX:"
   },
   {
     "key": "L00171_01",
     "original": "%4d",
     "translation": "",
-    "context": "src/rip.c:171:15\n   166: \t\t\tdpx= &dpx[i0];\n   167: \t\t} else  dpx= &dpx[i0+1];\n   168: \t}\n   169: \n   170: \t/* Put year on stone */\n>  171: \tSprintf(buf, \"%4d\", getyear());\n   172: \tcenter(YEAR_LINE, buf);\n   173: \n   174: \tputstr(tmpwin, 0, \"\");\n   175: \tfor(; *dp; dp++)\n   176: \t\tputstr(tmpwin, 0, *dp);"
+    "stage": 0,
+    "context": "src/rip.c:171:15\n   166: \t\t\tdpx= &dpx[i0];\n   167: \t\t} else  dpx= &dpx[i0+1];\n   168: \t}\n   169: \n   170: \t/* Put year on stone */\n&gt;  171: \tSprintf(buf, \"%4d\", getyear());\n   172: \tcenter(YEAR_LINE, buf);\n   173: \n   174: \tputstr(tmpwin, 0, \"\");\n   175: \tfor(; *dp; dp++)\n   176: \t\tputstr(tmpwin, 0, *dp);"
   }
 ]

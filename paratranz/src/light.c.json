@@ -3,126 +3,147 @@
     "key": "L00070_01",
     "original": "new_light_source:  illegal range %d",
     "translation": "",
-    "context": "src/light.c:70:13\n    65:     genericptr_t id;\n    66: {\n    67:     light_source *ls;\n    68: \n    69:     if (range > MAX_RADIUS || range < 1) {\n>   70: \timpossible(\"new_light_source:  illegal range %d\", range);\n    71: \treturn;\n    72:     }\n    73: \n    74:     ls = (light_source *) alloc(sizeof(light_source));\n    75: "
+    "stage": 0,
+    "context": "src/light.c:70:13\n    65:     genericptr_t id;\n    66: {\n    67:     light_source *ls;\n    68: \n    69:     if (range &gt; MAX_RADIUS || range &lt; 1) {\n&gt;   70: \timpossible(\"new_light_source:  illegal range %d\", range);\n    71: \treturn;\n    72:     }\n    73: \n    74:     ls = (light_source *) alloc(sizeof(light_source));\n    75: "
   },
   {
     "key": "L00131_01",
     "original": "del_light_source: not found type=%d, id=0x%lx",
     "translation": "",
-    "context": "src/light.c:131:16\n   126: \t    free((genericptr_t)curr);\n   127: \t    vision_full_recalc = 1;\n   128: \t    return;\n   129: \t}\n   130:     }\n>  131:     impossible(\"del_light_source: not found type=%d, id=0x%lx\", type, (long)id);\n   132: }\n   133: \n   134: /* Mark locations that are temporarily lit via mobile light sources. */\n   135: void\n   136: do_light_sources(cs_rows)"
+    "stage": 0,
+    "context": "src/light.c:131:16\n   126: \t    free((genericptr_t)curr);\n   127: \t    vision_full_recalc = 1;\n   128: \t    return;\n   129: \t}\n   130:     }\n&gt;  131:     impossible(\"del_light_source: not found type=%d, id=0x%lx\", type, (long)id);\n   132: }\n   133: \n   134: /* Mark locations that are temporarily lit via mobile light sources. */\n   135: void\n   136: do_light_sources(cs_rows)"
   },
   {
     "key": "L00272_01",
     "original": "counted %d light sources, wrote %d! [range=%d]",
     "translation": "",
-    "context": "src/light.c:272:12\n   267:     if (perform_bwrite(mode)) {\n   268: \tcount = maybe_write_ls(fd, range, FALSE);\n   269: \tbwrite(fd, (genericptr_t) &count, sizeof count);\n   270: \tactual = maybe_write_ls(fd, range, TRUE);\n   271: \tif (actual != count)\n>  272: \t    panic(\"counted %d light sources, wrote %d! [range=%d]\",\n   273: \t\t  count, actual, range);\n   274:     }\n   275: \n   276:     if (release_data(mode)) {\n   277: \tfor (prev = &light_base; (curr = *prev) != 0; ) {"
+    "stage": 0,
+    "context": "src/light.c:272:12\n   267:     if (perform_bwrite(mode)) {\n   268: \tcount = maybe_write_ls(fd, range, FALSE);\n   269: \tbwrite(fd, (genericptr_t) &count, sizeof count);\n   270: \tactual = maybe_write_ls(fd, range, TRUE);\n   271: \tif (actual != count)\n&gt;  272: \t    panic(\"counted %d light sources, wrote %d! [range=%d]\",\n   273: \t\t  count, actual, range);\n   274:     }\n   275: \n   276:     if (release_data(mode)) {\n   277: \tfor (prev = &light_base; (curr = *prev) != 0; ) {"
   },
   {
     "key": "L00279_01",
     "original": "save_light_sources: no id! [range=%d]",
     "translation": "",
-    "context": "src/light.c:279:14\n   274:     }\n   275: \n   276:     if (release_data(mode)) {\n   277: \tfor (prev = &light_base; (curr = *prev) != 0; ) {\n   278: \t    if (!curr->id) {\n>  279: \t\timpossible(\"save_light_sources: no id! [range=%d]\", range);\n   280: \t\tis_global = 0;\n   281: \t    } else\n   282: \t    switch (curr->type) {\n   283: \t    case LS_OBJECT:\n   284: \t\tis_global = !obj_is_local((struct obj *)curr->id);"
+    "stage": 0,
+    "context": "src/light.c:279:14\n   274:     }\n   275: \n   276:     if (release_data(mode)) {\n   277: \tfor (prev = &light_base; (curr = *prev) != 0; ) {\n   278: \t    if (!curr-&gt;id) {\n&gt;  279: \t\timpossible(\"save_light_sources: no id! [range=%d]\", range);\n   280: \t\tis_global = 0;\n   281: \t    } else\n   282: \t    switch (curr-&gt;type) {\n   283: \t    case LS_OBJECT:\n   284: \t\tis_global = !obj_is_local((struct obj *)curr-&gt;id);"
   },
   {
     "key": "L00297_01",
     "original": "save_light_sources: bad type (%d) [range=%d]",
     "translation": "",
-    "context": "src/light.c:297:14\n   292: \t    \t */\n   293: \t\tprev = &(*prev)->next;\n   294: \t\tcontinue; \n   295: \t    default:\n   296: \t\tis_global = 0;\n>  297: \t\timpossible(\"save_light_sources: bad type (%d) [range=%d]\",\n   298: \t\t\t   curr->type, range);\n   299: \t\tbreak;\n   300: \t    }\n   301: \t    /* if global and not doing local, or vice versa, remove it */\n   302: \t    if (is_global ^ (range == RANGE_LEVEL)) {"
+    "stage": 0,
+    "context": "src/light.c:297:14\n   292: \t    \t */\n   293: \t\tprev = &(*prev)-&gt;next;\n   294: \t\tcontinue; \n   295: \t    default:\n   296: \t\tis_global = 0;\n&gt;  297: \t\timpossible(\"save_light_sources: bad type (%d) [range=%d]\",\n   298: \t\t\t   curr-&gt;type, range);\n   299: \t\tbreak;\n   300: \t    }\n   301: \t    /* if global and not doing local, or vice versa, remove it */\n   302: \t    if (is_global ^ (range == RANGE_LEVEL)) {"
   },
   {
     "key": "L00348_01",
     "original": "relink_light_sources: no id mapping",
     "translation": "",
-    "context": "src/light.c:348:15\n   343:     for (ls = light_base; ls; ls = ls->next) {\n   344: \tif (ls->flags & LSF_NEEDS_FIXUP) {\n   345: \t    if (ls->type == LS_OBJECT || ls->type == LS_MONSTER) {\n   346: \t\tif (ghostly) {\n   347: \t\t    if (!lookup_id_mapping((unsigned)ls->id, &nid))\n>  348: \t\t\timpossible(\"relink_light_sources: no id mapping\");\n   349: \t\t} else\n   350: \t\t    nid = (unsigned) ls->id;\n   351: \t\tif (ls->type == LS_OBJECT) {\n   352: \t\t    which = 'o';\n   353: \t\t    ls->id = (genericptr_t) find_oid(nid);"
+    "stage": 0,
+    "context": "src/light.c:348:15\n   343:     for (ls = light_base; ls; ls = ls-&gt;next) {\n   344: \tif (ls-&gt;flags & LSF_NEEDS_FIXUP) {\n   345: \t    if (ls-&gt;type == LS_OBJECT || ls-&gt;type == LS_MONSTER) {\n   346: \t\tif (ghostly) {\n   347: \t\t    if (!lookup_id_mapping((unsigned)ls-&gt;id, &nid))\n&gt;  348: \t\t\timpossible(\"relink_light_sources: no id mapping\");\n   349: \t\t} else\n   350: \t\t    nid = (unsigned) ls-&gt;id;\n   351: \t\tif (ls-&gt;type == LS_OBJECT) {\n   352: \t\t    which = 'o';\n   353: \t\t    ls-&gt;id = (genericptr_t) find_oid(nid);"
   },
   {
     "key": "L00359_01",
     "original": "relink_light_sources: cant find %c_id %d",
     "translation": "",
-    "context": "src/light.c:359:18\n   354: \t\t} else {\n   355: \t\t    which = 'm';\n   356: \t\t    ls->id = (genericptr_t) find_mid(nid, FM_EVERYWHERE);\n   357: \t\t}\n   358: \t\tif (!ls->id)\n>  359: \t\t    impossible(\"relink_light_sources: cant find %c_id %d\",\n   360: \t\t\t       which, nid);\n   361: \t    } else\n   362: \t\timpossible(\"relink_light_sources: bad type (%d)\", ls->type);\n   363: \n   364: \t    ls->flags &= ~LSF_NEEDS_FIXUP;"
+    "stage": 0,
+    "context": "src/light.c:359:18\n   354: \t\t} else {\n   355: \t\t    which = 'm';\n   356: \t\t    ls-&gt;id = (genericptr_t) find_mid(nid, FM_EVERYWHERE);\n   357: \t\t}\n   358: \t\tif (!ls-&gt;id)\n&gt;  359: \t\t    impossible(\"relink_light_sources: cant find %c_id %d\",\n   360: \t\t\t       which, nid);\n   361: \t    } else\n   362: \t\timpossible(\"relink_light_sources: bad type (%d)\", ls-&gt;type);\n   363: \n   364: \t    ls-&gt;flags &= ~LSF_NEEDS_FIXUP;"
   },
   {
     "key": "L00362_01",
     "original": "relink_light_sources: bad type (%d)",
     "translation": "",
-    "context": "src/light.c:362:14\n   357: \t\t}\n   358: \t\tif (!ls->id)\n   359: \t\t    impossible(\"relink_light_sources: cant find %c_id %d\",\n   360: \t\t\t       which, nid);\n   361: \t    } else\n>  362: \t\timpossible(\"relink_light_sources: bad type (%d)\", ls->type);\n   363: \n   364: \t    ls->flags &= ~LSF_NEEDS_FIXUP;\n   365: \t}\n   366:     }\n   367: }"
+    "stage": 0,
+    "context": "src/light.c:362:14\n   357: \t\t}\n   358: \t\tif (!ls-&gt;id)\n   359: \t\t    impossible(\"relink_light_sources: cant find %c_id %d\",\n   360: \t\t\t       which, nid);\n   361: \t    } else\n&gt;  362: \t\timpossible(\"relink_light_sources: bad type (%d)\", ls-&gt;type);\n   363: \n   364: \t    ls-&gt;flags &= ~LSF_NEEDS_FIXUP;\n   365: \t}\n   366:     }\n   367: }"
   },
   {
     "key": "L00384_01",
     "original": "maybe_write_ls: no id! [range=%d]",
     "translation": "",
-    "context": "src/light.c:384:17\n   379:     int count = 0, is_global;\n   380:     light_source *ls;\n   381: \n   382:     for (ls = light_base; ls; ls = ls->next) {\n   383: \tif (!ls->id) {\n>  384: \t    impossible(\"maybe_write_ls: no id! [range=%d]\", range);\n   385: \t    continue;\n   386: \t}\n   387: \tswitch (ls->type) {\n   388: \tcase LS_OBJECT:\n   389: \t    is_global = !obj_is_local((struct obj *)ls->id);"
+    "stage": 0,
+    "context": "src/light.c:384:17\n   379:     int count = 0, is_global;\n   380:     light_source *ls;\n   381: \n   382:     for (ls = light_base; ls; ls = ls-&gt;next) {\n   383: \tif (!ls-&gt;id) {\n&gt;  384: \t    impossible(\"maybe_write_ls: no id! [range=%d]\", range);\n   385: \t    continue;\n   386: \t}\n   387: \tswitch (ls-&gt;type) {\n   388: \tcase LS_OBJECT:\n   389: \t    is_global = !obj_is_local((struct obj *)ls-&gt;id);"
   },
   {
     "key": "L00398_01",
     "original": "maybe_write_ls: bad type (%d) [range=%d]",
     "translation": "",
-    "context": "src/light.c:398:17\n   393: \t    break;\n   394: \t\tcase LS_TEMP:\n   395: \t\t    continue;\n   396: \tdefault:\n   397: \t    is_global = 0;\n>  398: \t    impossible(\"maybe_write_ls: bad type (%d) [range=%d]\",\n   399: \t\t       ls->type, range);\n   400: \t    break;\n   401: \t}\n   402: \t/* if global and not doing local, or vice versa, count it */\n   403: \tif (is_global ^ (range == RANGE_LEVEL)) {"
+    "stage": 0,
+    "context": "src/light.c:398:17\n   393: \t    break;\n   394: \t\tcase LS_TEMP:\n   395: \t\t    continue;\n   396: \tdefault:\n   397: \t    is_global = 0;\n&gt;  398: \t    impossible(\"maybe_write_ls: bad type (%d) [range=%d]\",\n   399: \t\t       ls-&gt;type, range);\n   400: \t    break;\n   401: \t}\n   402: \t/* if global and not doing local, or vice versa, count it */\n   403: \tif (is_global ^ (range == RANGE_LEVEL)) {"
   },
   {
     "key": "L00433_01",
     "original": "write_ls: can't find obj #%u!",
     "translation": "",
-    "context": "src/light.c:433:13\n   428: \t    if (ls->type == LS_OBJECT) {\n   429: \t\totmp = (struct obj *)ls->id;\n   430: \t\tls->id = (genericptr_t)otmp->o_id;\n   431: #ifdef DEBUG\n   432: \t\tif (find_oid((unsigned)ls->id) != otmp)\n>  433: \t\t    panic(\"write_ls: can't find obj #%u!\", (unsigned)ls->id);\n   434: #endif\n   435: \t    } else { /* ls->type == LS_MONSTER */\n   436: \t\tmtmp = (struct monst *)ls->id;\n   437: \t\tls->id = (genericptr_t)mtmp->m_id;\n   438: #ifdef DEBUG"
+    "stage": 0,
+    "context": "src/light.c:433:13\n   428: \t    if (ls-&gt;type == LS_OBJECT) {\n   429: \t\totmp = (struct obj *)ls-&gt;id;\n   430: \t\tls-&gt;id = (genericptr_t)otmp-&gt;o_id;\n   431: #ifdef DEBUG\n   432: \t\tif (find_oid((unsigned)ls-&gt;id) != otmp)\n&gt;  433: \t\t    panic(\"write_ls: can't find obj #%u!\", (unsigned)ls-&gt;id);\n   434: #endif\n   435: \t    } else { /* ls-&gt;type == LS_MONSTER */\n   436: \t\tmtmp = (struct monst *)ls-&gt;id;\n   437: \t\tls-&gt;id = (genericptr_t)mtmp-&gt;m_id;\n   438: #ifdef DEBUG"
   },
   {
     "key": "L00440_01",
     "original": "write_ls: can't find mon #%u!",
     "translation": "",
-    "context": "src/light.c:440:13\n   435: \t    } else { /* ls->type == LS_MONSTER */\n   436: \t\tmtmp = (struct monst *)ls->id;\n   437: \t\tls->id = (genericptr_t)mtmp->m_id;\n   438: #ifdef DEBUG\n   439: \t\tif (find_mid((unsigned)ls->id, FM_EVERYWHERE) != mtmp)\n>  440: \t\t    panic(\"write_ls: can't find mon #%u!\", (unsigned)ls->id);\n   441: #endif\n   442: \t    }\n   443: \t    ls->flags |= LSF_NEEDS_FIXUP;\n   444: \t    bwrite(fd, (genericptr_t)ls, sizeof(light_source));\n   445: \t    ls->id = arg_save;"
+    "stage": 0,
+    "context": "src/light.c:440:13\n   435: \t    } else { /* ls-&gt;type == LS_MONSTER */\n   436: \t\tmtmp = (struct monst *)ls-&gt;id;\n   437: \t\tls-&gt;id = (genericptr_t)mtmp-&gt;m_id;\n   438: #ifdef DEBUG\n   439: \t\tif (find_mid((unsigned)ls-&gt;id, FM_EVERYWHERE) != mtmp)\n&gt;  440: \t\t    panic(\"write_ls: can't find mon #%u!\", (unsigned)ls-&gt;id);\n   441: #endif\n   442: \t    }\n   443: \t    ls-&gt;flags |= LSF_NEEDS_FIXUP;\n   444: \t    bwrite(fd, (genericptr_t)ls, sizeof(light_source));\n   445: \t    ls-&gt;id = arg_save;"
   },
   {
     "key": "L00449_01",
     "original": "write_ls: bad type (%d)",
     "translation": "",
-    "context": "src/light.c:449:13\n   444: \t    bwrite(fd, (genericptr_t)ls, sizeof(light_source));\n   445: \t    ls->id = arg_save;\n   446: \t    ls->flags &= ~LSF_NEEDS_FIXUP;\n   447: \t}\n   448:     } else {\n>  449: \timpossible(\"write_ls: bad type (%d)\", ls->type);\n   450:     }\n   451: }\n   452: \n   453: /* Change light source's ID from src to dest. */\n   454: void"
+    "stage": 0,
+    "context": "src/light.c:449:13\n   444: \t    bwrite(fd, (genericptr_t)ls, sizeof(light_source));\n   445: \t    ls-&gt;id = arg_save;\n   446: \t    ls-&gt;flags &= ~LSF_NEEDS_FIXUP;\n   447: \t}\n   448:     } else {\n&gt;  449: \timpossible(\"write_ls: bad type (%d)\", ls-&gt;type);\n   450:     }\n   451: }\n   452: \n   453: /* Change light source's ID from src to dest. */\n   454: void"
   },
   {
     "key": "L00637_01",
     "original": "Mobile light sources: hero @ (%2d,%2d)",
     "translation": "",
-    "context": "src/light.c:637:18\n   632:     light_source *ls;\n   633: \n   634:     win = create_nhwindow(NHW_MENU);\t/* corner text window */\n   635:     if (win == WIN_ERR) return 0;\n   636: \n>  637:     Sprintf(buf, \"Mobile light sources: hero @ (%2d,%2d)\", u.ux, u.uy);\n   638:     putstr(win, 0, buf);\n   639:     putstr(win, 0, \"\");\n   640: \n   641:     if (light_base) {\n   642: \tputstr(win, 0, \"location range flags  type    id\");"
+    "stage": 0,
+    "context": "src/light.c:637:18\n   632:     light_source *ls;\n   633: \n   634:     win = create_nhwindow(NHW_MENU);\t/* corner text window */\n   635:     if (win == WIN_ERR) return 0;\n   636: \n&gt;  637:     Sprintf(buf, \"Mobile light sources: hero @ (%2d,%2d)\", u.ux, u.uy);\n   638:     putstr(win, 0, buf);\n   639:     putstr(win, 0, \"\");\n   640: \n   641:     if (light_base) {\n   642: \tputstr(win, 0, \"location range flags  type    id\");"
   },
   {
     "key": "L00642_01",
     "original": "location range flags  type    id",
     "translation": "",
-    "context": "src/light.c:642:17\n   637:     Sprintf(buf, \"Mobile light sources: hero @ (%2d,%2d)\", u.ux, u.uy);\n   638:     putstr(win, 0, buf);\n   639:     putstr(win, 0, \"\");\n   640: \n   641:     if (light_base) {\n>  642: \tputstr(win, 0, \"location range flags  type    id\");\n   643: \tputstr(win, 0, \"-------- ----- ------ ----  -------\");\n   644: \tfor (ls = light_base; ls; ls = ls->next) {\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls->x, ls->y, ls->range, ls->flags,\n   647: \t\t(ls->type == LS_OBJECT ? \"obj\" :"
+    "stage": 0,
+    "context": "src/light.c:642:17\n   637:     Sprintf(buf, \"Mobile light sources: hero @ (%2d,%2d)\", u.ux, u.uy);\n   638:     putstr(win, 0, buf);\n   639:     putstr(win, 0, \"\");\n   640: \n   641:     if (light_base) {\n&gt;  642: \tputstr(win, 0, \"location range flags  type    id\");\n   643: \tputstr(win, 0, \"-------- ----- ------ ----  -------\");\n   644: \tfor (ls = light_base; ls; ls = ls-&gt;next) {\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls-&gt;x, ls-&gt;y, ls-&gt;range, ls-&gt;flags,\n   647: \t\t(ls-&gt;type == LS_OBJECT ? \"obj\" :"
   },
   {
     "key": "L00645_01",
     "original": "  %2d,%2d   %2d   0x%04x  %s  %s",
     "translation": "",
-    "context": "src/light.c:645:19\n   640: \n   641:     if (light_base) {\n   642: \tputstr(win, 0, \"location range flags  type    id\");\n   643: \tputstr(win, 0, \"-------- ----- ------ ----  -------\");\n   644: \tfor (ls = light_base; ls; ls = ls->next) {\n>  645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls->x, ls->y, ls->range, ls->flags,\n   647: \t\t(ls->type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls->type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls->id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls->id == &youmonst) ? \"you\" :"
+    "stage": 0,
+    "context": "src/light.c:645:19\n   640: \n   641:     if (light_base) {\n   642: \tputstr(win, 0, \"location range flags  type    id\");\n   643: \tputstr(win, 0, \"-------- ----- ------ ----  -------\");\n   644: \tfor (ls = light_base; ls; ls = ls-&gt;next) {\n&gt;  645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls-&gt;x, ls-&gt;y, ls-&gt;range, ls-&gt;flags,\n   647: \t\t(ls-&gt;type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls-&gt;type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls-&gt;id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls-&gt;id == &youmonst) ? \"you\" :"
   },
   {
     "key": "L00647_01",
     "original": "obj",
     "translation": "",
-    "context": "src/light.c:647:28\n   642: \tputstr(win, 0, \"location range flags  type    id\");\n   643: \tputstr(win, 0, \"-------- ----- ------ ----  -------\");\n   644: \tfor (ls = light_base; ls; ls = ls->next) {\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls->x, ls->y, ls->range, ls->flags,\n>  647: \t\t(ls->type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls->type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls->id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls->id == &youmonst) ? \"you\" :\n   651: \t\t     \"<m>\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),"
+    "stage": 0,
+    "context": "src/light.c:647:28\n   642: \tputstr(win, 0, \"location range flags  type    id\");\n   643: \tputstr(win, 0, \"-------- ----- ------ ----  -------\");\n   644: \tfor (ls = light_base; ls; ls = ls-&gt;next) {\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls-&gt;x, ls-&gt;y, ls-&gt;range, ls-&gt;flags,\n&gt;  647: \t\t(ls-&gt;type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls-&gt;type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls-&gt;id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls-&gt;id == &youmonst) ? \"you\" :\n   651: \t\t     \"&lt;m&gt;\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),"
   },
   {
     "key": "L00649_01",
     "original": "mon",
     "translation": "",
-    "context": "src/light.c:649:47\n   644: \tfor (ls = light_base; ls; ls = ls->next) {\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls->x, ls->y, ls->range, ls->flags,\n   647: \t\t(ls->type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls->type == LS_MONSTER ?\n>  649: \t\t    (mon_is_local((struct monst *)ls->id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls->id == &youmonst) ? \"you\" :\n   651: \t\t     \"<m>\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls->id, arg_address));\n   654: \t    putstr(win, 0, buf);"
+    "stage": 0,
+    "context": "src/light.c:649:47\n   644: \tfor (ls = light_base; ls; ls = ls-&gt;next) {\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls-&gt;x, ls-&gt;y, ls-&gt;range, ls-&gt;flags,\n   647: \t\t(ls-&gt;type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls-&gt;type == LS_MONSTER ?\n&gt;  649: \t\t    (mon_is_local((struct monst *)ls-&gt;id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls-&gt;id == &youmonst) ? \"you\" :\n   651: \t\t     \"&lt;m&gt;\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls-&gt;id, arg_address));\n   654: \t    putstr(win, 0, buf);"
   },
   {
     "key": "L00650_01",
     "original": "you",
     "translation": "",
-    "context": "src/light.c:650:48\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls->x, ls->y, ls->range, ls->flags,\n   647: \t\t(ls->type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls->type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls->id) ? \"mon\" :\n>  650: \t\t     ((struct monst *)ls->id == &youmonst) ? \"you\" :\n   651: \t\t     \"<m>\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls->id, arg_address));\n   654: \t    putstr(win, 0, buf);\n   655: \t}"
+    "stage": 0,
+    "context": "src/light.c:650:48\n   645: \t    Sprintf(buf, \"  %2d,%2d   %2d   0x%04x  %s  %s\",\n   646: \t\tls-&gt;x, ls-&gt;y, ls-&gt;range, ls-&gt;flags,\n   647: \t\t(ls-&gt;type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls-&gt;type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls-&gt;id) ? \"mon\" :\n&gt;  650: \t\t     ((struct monst *)ls-&gt;id == &youmonst) ? \"you\" :\n   651: \t\t     \"&lt;m&gt;\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls-&gt;id, arg_address));\n   654: \t    putstr(win, 0, buf);\n   655: \t}"
   },
   {
     "key": "L00651_01",
     "original": "<m>",
     "translation": "",
-    "context": "src/light.c:651:8\n   646: \t\tls->x, ls->y, ls->range, ls->flags,\n   647: \t\t(ls->type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls->type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls->id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls->id == &youmonst) ? \"you\" :\n>  651: \t\t     \"<m>\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls->id, arg_address));\n   654: \t    putstr(win, 0, buf);\n   655: \t}\n   656:     } else"
+    "stage": -1,
+    "context": "src/light.c:651:8\n   646: \t\tls-&gt;x, ls-&gt;y, ls-&gt;range, ls-&gt;flags,\n   647: \t\t(ls-&gt;type == LS_OBJECT ? \"obj\" :\n   648: \t\t ls-&gt;type == LS_MONSTER ?\n   649: \t\t    (mon_is_local((struct monst *)ls-&gt;id) ? \"mon\" :\n   650: \t\t     ((struct monst *)ls-&gt;id == &youmonst) ? \"you\" :\n&gt;  651: \t\t     \"&lt;m&gt;\") :\t\t/* migrating monster */\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls-&gt;id, arg_address));\n   654: \t    putstr(win, 0, buf);\n   655: \t}\n   656:     } else"
   },
   {
     "key": "L00657_01",
     "original": "<none>",
     "translation": "",
-    "context": "src/light.c:657:17\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls->id, arg_address));\n   654: \t    putstr(win, 0, buf);\n   655: \t}\n   656:     } else\n>  657: \tputstr(win, 0, \"<none>\");\n   658: \n   659: \n   660:     display_nhwindow(win, FALSE);\n   661:     destroy_nhwindow(win);\n   662: "
+    "stage": -1,
+    "context": "src/light.c:657:17\n   652: \t\t \"???\"),\n   653: \t\tfmt_ptr(ls-&gt;id, arg_address));\n   654: \t    putstr(win, 0, buf);\n   655: \t}\n   656:     } else\n&gt;  657: \tputstr(win, 0, \"&lt;none&gt;\");\n   658: \n   659: \n   660:     display_nhwindow(win, FALSE);\n   661:     destroy_nhwindow(win);\n   662: "
   }
 ]

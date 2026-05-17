@@ -3,12 +3,14 @@
     "key": "L00138_01",
     "original": "%ld %ld %ld %ld %ld\\n",
     "translation": "",
-    "context": "src/dlb.c:138:27\n   133: {\n   134:     int i;\n   135:     char *sp;\n   136:     long liboffset, totalsize;\n   137: \n>  138:     if (fscanf(lp->fdata, \"%ld %ld %ld %ld %ld\\n\",\n   139: \t    &lp->rev,&lp->nentries,&lp->strsize,&liboffset,&totalsize) != 5)\n   140: \treturn FALSE;\n   141:     if (lp->rev > DLB_MAX_VERS || lp->rev < DLB_MIN_VERS) return FALSE;\n   142: \n   143:     lp->dir = (libdir *) alloc(lp->nentries * sizeof(libdir));"
+    "stage": 0,
+    "context": "src/dlb.c:138:27\n   133: {\n   134:     int i;\n   135:     char *sp;\n   136:     long liboffset, totalsize;\n   137: \n&gt;  138:     if (fscanf(lp-&gt;fdata, \"%ld %ld %ld %ld %ld\\n\",\n   139: \t    &lp-&gt;rev,&lp-&gt;nentries,&lp-&gt;strsize,&liboffset,&totalsize) != 5)\n   140: \treturn FALSE;\n   141:     if (lp-&gt;rev &gt; DLB_MAX_VERS || lp-&gt;rev &lt; DLB_MIN_VERS) return FALSE;\n   142: \n   143:     lp-&gt;dir = (libdir *) alloc(lp-&gt;nentries * sizeof(libdir));"
   },
   {
     "key": "L00149_01",
     "original": "%c%s %ld\\n",
     "translation": "",
-    "context": "src/dlb.c:149:24\n   144:     lp->sspace = (char *) alloc(lp->strsize);\n   145: \n   146:     /* read in each directory entry */\n   147:     for (i = 0, sp = lp->sspace; i < lp->nentries; i++) {\n   148: \tlp->dir[i].fname = sp;\n>  149: \tif (fscanf(lp->fdata, \"%c%s %ld\\n\",\n   150: \t\t\t&lp->dir[i].handling, sp, &lp->dir[i].foffset) != 3) {\n   151: \t    free((genericptr_t) lp->dir);\n   152: \t    free((genericptr_t) lp->sspace);\n   153: \t    lp->dir = (libdir *) 0;\n   154: \t    lp->sspace = (char *) 0;"
+    "stage": 0,
+    "context": "src/dlb.c:149:24\n   144:     lp-&gt;sspace = (char *) alloc(lp-&gt;strsize);\n   145: \n   146:     /* read in each directory entry */\n   147:     for (i = 0, sp = lp-&gt;sspace; i &lt; lp-&gt;nentries; i++) {\n   148: \tlp-&gt;dir[i].fname = sp;\n&gt;  149: \tif (fscanf(lp-&gt;fdata, \"%c%s %ld\\n\",\n   150: \t\t\t&lp-&gt;dir[i].handling, sp, &lp-&gt;dir[i].foffset) != 3) {\n   151: \t    free((genericptr_t) lp-&gt;dir);\n   152: \t    free((genericptr_t) lp-&gt;sspace);\n   153: \t    lp-&gt;dir = (libdir *) 0;\n   154: \t    lp-&gt;sspace = (char *) 0;"
   }
 ]

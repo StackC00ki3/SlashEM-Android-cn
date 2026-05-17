@@ -3,540 +3,630 @@
     "key": "L00356_01",
     "original": "    %-15s - %s.",
     "translation": "",
-    "context": "src/cmd.c:356:16\n   351: \tputstr(datawin, 0, \"\");\n   352: \tputstr(datawin, 0, \"    按#后再输入内容:\");\n   353: \tputstr(datawin, 0, \"\");\n   354: \n   355: \tfor(efp = extcmdlist; efp->ef_txt; efp++) {\n>  356: \t\tSprintf(buf, \"    %-15s - %s.\", efp->ef_txt, efp->ef_desc);\n   357: \t\tputstr(datawin, 0, buf);\n   358: \t}\n   359: \tdisplay_nhwindow(datawin, FALSE);\n   360: \tdestroy_nhwindow(datawin);\n   361: \treturn 0;"
+    "stage": 0,
+    "context": "src/cmd.c:356:16\n   351: \tputstr(datawin, 0, \"\");\n   352: \tputstr(datawin, 0, \"    按#后再输入内容:\");\n   353: \tputstr(datawin, 0, \"\");\n   354: \n   355: \tfor(efp = extcmdlist; efp-&gt;ef_txt; efp++) {\n&gt;  356: \t\tSprintf(buf, \"    %-15s - %s.\", efp-&gt;ef_txt, efp-&gt;ef_desc);\n   357: \t\tputstr(datawin, 0, buf);\n   358: \t}\n   359: \tdisplay_nhwindow(datawin, FALSE);\n   360: \tdestroy_nhwindow(datawin);\n   361: \treturn 0;"
   },
   {
     "key": "L00414_01",
     "original": "%%-%ds",
     "translation": "",
-    "context": "src/cmd.c:414:20\n   409: \t    for(efp = extcmdlist; efp->ef_txt; efp++) {\n   410: \t\tif (!matchlevel || !strncmp(efp->ef_txt, cbuf, matchlevel)) {\n   411: \t\t\tchoices[i++] = efp;\n   412: \t\t\tif ((int)strlen(efp->ef_desc) > biggest) {\n   413: \t\t\t\tbiggest = strlen(efp->ef_desc);\n>  414: \t\t\t\tSprintf(fmtstr,\"%%-%ds\", biggest + 15);\n   415: \t\t\t}\n   416: #ifdef DEBUG\n   417: \t\t\tif (i >= MAX_EXT_CMD - 2) {\n   418: \t\t\t    impossible(\"警告，错误命令！发到群里让我看看！\",\n   419: \t\t\t\t\tMAX_EXT_CMD - 2);"
+    "stage": 0,
+    "context": "src/cmd.c:414:20\n   409: \t    for(efp = extcmdlist; efp-&gt;ef_txt; efp++) {\n   410: \t\tif (!matchlevel || !strncmp(efp-&gt;ef_txt, cbuf, matchlevel)) {\n   411: \t\t\tchoices[i++] = efp;\n   412: \t\t\tif ((int)strlen(efp-&gt;ef_desc) &gt; biggest) {\n   413: \t\t\t\tbiggest = strlen(efp-&gt;ef_desc);\n&gt;  414: \t\t\t\tSprintf(fmtstr,\"%%-%ds\", biggest + 15);\n   415: \t\t\t}\n   416: #ifdef DEBUG\n   417: \t\t\tif (i &gt;= MAX_EXT_CMD - 2) {\n   418: \t\t\t    impossible(\"警告，错误命令！发到群里让我看看！\",\n   419: \t\t\t\t\tMAX_EXT_CMD - 2);"
   },
   {
     "key": "L00456_01",
     "original": "%s [%s]",
     "translation": "",
-    "context": "src/cmd.c:456:23\n   451: \t\t\tacount = 0;\n   452: \t\t    }\n   453: \t\t}\n   454: \t\tprevaccelerator = accelerator;\n   455: \t\tif (!acount || nchoices < (ROWNO - 3)) {\n>  456: \t\t    Sprintf(prompt, \"%s [%s]\", choices[i]->ef_txt,\n   457: \t\t\t\tchoices[i]->ef_desc);\n   458: \t\t} else if (acount == 1) {\n   459: \t\t    Sprintf(prompt, \"%s 或 %s\", choices[i-1]->ef_txt,\n   460: \t\t\t\tchoices[i]->ef_txt);\n   461: \t\t} else {"
+    "stage": 0,
+    "context": "src/cmd.c:456:23\n   451: \t\t\tacount = 0;\n   452: \t\t    }\n   453: \t\t}\n   454: \t\tprevaccelerator = accelerator;\n   455: \t\tif (!acount || nchoices &lt; (ROWNO - 3)) {\n&gt;  456: \t\t    Sprintf(prompt, \"%s [%s]\", choices[i]-&gt;ef_txt,\n   457: \t\t\t\tchoices[i]-&gt;ef_desc);\n   458: \t\t} else if (acount == 1) {\n   459: \t\t    Sprintf(prompt, \"%s 或 %s\", choices[i-1]-&gt;ef_txt,\n   460: \t\t\t\tchoices[i]-&gt;ef_txt);\n   461: \t\t} else {"
   },
   {
     "key": "L00462_01",
     "original": " or ",
     "translation": "",
-    "context": "src/cmd.c:462:21\n   457: \t\t\t\tchoices[i]->ef_desc);\n   458: \t\t} else if (acount == 1) {\n   459: \t\t    Sprintf(prompt, \"%s 或 %s\", choices[i-1]->ef_txt,\n   460: \t\t\t\tchoices[i]->ef_txt);\n   461: \t\t} else {\n>  462: \t\t    Strcat(prompt,\" or \");\n   463: \t\t    Strcat(prompt, choices[i]->ef_txt);\n   464: \t\t}\n   465: \t\t++acount;\n   466: \t    }\n   467: \t    if (acount) {"
+    "stage": 0,
+    "context": "src/cmd.c:462:21\n   457: \t\t\t\tchoices[i]-&gt;ef_desc);\n   458: \t\t} else if (acount == 1) {\n   459: \t\t    Sprintf(prompt, \"%s 或 %s\", choices[i-1]-&gt;ef_txt,\n   460: \t\t\t\tchoices[i]-&gt;ef_txt);\n   461: \t\t} else {\n&gt;  462: \t\t    Strcat(prompt,\" or \");\n   463: \t\t    Strcat(prompt, choices[i]-&gt;ef_txt);\n   464: \t\t}\n   465: \t\t++acount;\n   466: \t    }\n   467: \t    if (acount) {"
   },
   {
     "key": "L01039_01",
     "original": "%d",
     "translation": "",
-    "context": "src/cmd.c:1039:28\n  1034:     int ret;\n  1035: \n  1036:     getlin(\"你想升到多少级?\", buf);\n  1037:     (void)mungspaces(buf);\n  1038:     if (buf[0] == '\\033' || buf[0] == '\\0') ret = 0;\n> 1039:     else ret = sscanf(buf, \"%d\", &newlevel);\n  1040: \n  1041:     if (ret != 1) {\n  1042: \tpline(Never_mind);\n  1043: \treturn 0;\n  1044:     }"
+    "stage": 0,
+    "context": "src/cmd.c:1039:28\n  1034:     int ret;\n  1035: \n  1036:     getlin(\"你想升到多少级?\", buf);\n  1037:     (void)mungspaces(buf);\n  1038:     if (buf[0] == '\\033' || buf[0] == '\\0') ret = 0;\n&gt; 1039:     else ret = sscanf(buf, \"%d\", &newlevel);\n  1040: \n  1041:     if (ret != 1) {\n  1042: \tpline(Never_mind);\n  1043: \treturn 0;\n  1044:     }"
   },
   {
     "key": "L01054_01",
     "original": "#levelchange",
     "translation": "",
-    "context": "src/cmd.c:1054:13\n  1049: \t    You(\"已经达到你的经验下限了.\");\n  1050: \t    return 0;\n  1051: \t}\n  1052: \tif (newlevel < 1) newlevel = 1;\n  1053: \twhile (u.ulevel > newlevel)\n> 1054: \t    losexp(\"#levelchange\", TRUE);\n  1055:     } else {\n  1056: \tif (u.ulevel >= MAXULEV) {\n  1057: \t    You(\"你已经达到你所能达到的最高经验等级了.\");\n  1058: \t    return 0;\n  1059: \t}"
+    "stage": 0,
+    "context": "src/cmd.c:1054:13\n  1049: \t    You(\"已经达到你的经验下限了.\");\n  1050: \t    return 0;\n  1051: \t}\n  1052: \tif (newlevel &lt; 1) newlevel = 1;\n  1053: \twhile (u.ulevel &gt; newlevel)\n&gt; 1054: \t    losexp(\"#levelchange\", TRUE);\n  1055:     } else {\n  1056: \tif (u.ulevel &gt;= MAXULEV) {\n  1057: \t    You(\"你已经达到你所能达到的最高经验等级了.\");\n  1058: \t    return 0;\n  1059: \t}"
   },
   {
     "key": "L01112_01",
     "original": "%02x",
     "translation": "",
-    "context": "src/cmd.c:1112:24\n  1107: \t\t} else {\n  1108: \t\t    v = levl[x][y].seenv & 0xff;\n  1109: \t\t    if (v == 0)\n  1110: \t\t\trow[curx] = row[curx+1] = ' ';\n  1111: \t\t    else\n> 1112: \t\t\tSprintf(&row[curx], \"%02x\", v);\n  1113: \t\t}\n  1114: \t    }\n  1115: \t    /* remove trailing spaces */\n  1116: \t    for (x = curx-1; x >= 0; x--)\n  1117: \t\tif (row[x] != ' ') break;"
+    "stage": 0,
+    "context": "src/cmd.c:1112:24\n  1107: \t\t} else {\n  1108: \t\t    v = levl[x][y].seenv & 0xff;\n  1109: \t\t    if (v == 0)\n  1110: \t\t\trow[curx] = row[curx+1] = ' ';\n  1111: \t\t    else\n&gt; 1112: \t\t\tSprintf(&row[curx], \"%02x\", v);\n  1113: \t\t}\n  1114: \t    }\n  1115: \t    /* remove trailing spaces */\n  1116: \t    for (x = curx-1; x &gt;= 0; x--)\n  1117: \t\tif (row[x] != ' ') break;"
   },
   {
     "key": "L01225_01",
     "original": "%s%s%s.",
     "translation": "",
-    "context": "src/cmd.c:1225:15\n  1220: enlght_line(start, middle, end)\n  1221: const char *start, *middle, *end;\n  1222: {\n  1223: \tchar buf[BUFSZ];\n  1224: \n> 1225: \tSprintf(buf, \"%s%s%s.\", start, middle, end);\n  1226: \tputstr(en_win, 0, buf);\n  1227: }\n  1228: \n  1229: \n  1230: "
+    "stage": 0,
+    "context": "src/cmd.c:1225:15\n  1220: enlght_line(start, middle, end)\n  1221: const char *start, *middle, *end;\n  1222: {\n  1223: \tchar buf[BUFSZ];\n  1224: \n&gt; 1225: \tSprintf(buf, \"%s%s%s.\", start, middle, end);\n  1226: \tputstr(en_win, 0, buf);\n  1227: }\n  1228: \n  1229: \n  1230: "
   },
   {
     "key": "L01267_01",
     "original": " %d",
     "translation": "",
-    "context": "src/cmd.c:1267:16\n  1262: \telse if (u.ualign.record >= -3)\tyou_have(\"变成了叛徒\");\n  1263: \telse if (u.ualign.record >= -8)\tyou_have(\"成为了罪人\");\n  1264: \telse you_have(\"变成了逾越了底线之人。\");\n  1265: #ifdef WIZARD\n  1266: \tif (wizard) {\n> 1267: \t\tSprintf(buf, \" %d\", u.ualign.record);\n  1268: \t\tenl_msg(\"你的阵营值 \", \"是\", \"是\", buf);\n  1269: \t}\n  1270: #endif\n  1271: \n  1272: \t/*** Resistances to troubles ***/"
+    "stage": 0,
+    "context": "src/cmd.c:1267:16\n  1262: \telse if (u.ualign.record &gt;= -3)\tyou_have(\"变成了叛徒\");\n  1263: \telse if (u.ualign.record &gt;= -8)\tyou_have(\"成为了罪人\");\n  1264: \telse you_have(\"变成了逾越了底线之人。\");\n  1265: #ifdef WIZARD\n  1266: \tif (wizard) {\n&gt; 1267: \t\tSprintf(buf, \" %d\", u.ualign.record);\n  1268: \t\tenl_msg(\"你的阵营值 \", \"是\", \"是\", buf);\n  1269: \t}\n  1270: #endif\n  1271: \n  1272: \t/*** Resistances to troubles ***/"
   },
   {
     "key": "L01290_01",
     "original": "ed",
     "translation": "",
-    "context": "src/cmd.c:1290:24\n  1285: \tif (Invulnerable) you_are(\"刀枪不入的.\");\n  1286: \tif (u.uedibility) you_can(\"分辨出有害的食物.\");\n  1287: \n  1288: \t/*** Troubles ***/\n  1289: \tif (Halluc_resistance)\n> 1290: \t\tenl_msg(\"你可以抵抗\", \"\", \"ed\", \" 幻觉效果\");\n  1291: \tif (final) {\n  1292: \t\tif (Hallucination) you_are(\"正在幻觉效果下的\");\n  1293: \t\tif (Stunned) you_are(\"处于眩晕状态下的\");\n  1294: \t\tif (Confusion) you_are(\"处于混乱状态下的\");\n  1295: \t\tif (Blinded) you_are(\"暂时失明的\");"
+    "stage": 0,
+    "context": "src/cmd.c:1290:24\n  1285: \tif (Invulnerable) you_are(\"刀枪不入的.\");\n  1286: \tif (u.uedibility) you_can(\"分辨出有害的食物.\");\n  1287: \n  1288: \t/*** Troubles ***/\n  1289: \tif (Halluc_resistance)\n&gt; 1290: \t\tenl_msg(\"你可以抵抗\", \"\", \"ed\", \" 幻觉效果\");\n  1291: \tif (final) {\n  1292: \t\tif (Hallucination) you_are(\"正在幻觉效果下的\");\n  1293: \t\tif (Stunned) you_are(\"处于眩晕状态下的\");\n  1294: \t\tif (Confusion) you_are(\"处于混乱状态下的\");\n  1295: \t\tif (Blinded) you_are(\"暂时失明的\");"
   },
   {
     "key": "L01310_01",
     "original": "d",
     "translation": "",
-    "context": "src/cmd.c:1310:38\n  1305: \tif (Strangled) you_are((u.uburied) ? \"被活埋\" : \"被勒住脖子\");\n  1306: \tif (Glib) {\n  1307: \t\tSprintf(buf, \"%s非常的滑\", makeplural(body_part(FINGER)));\n  1308: \t\tyou_have(buf);\n  1309: \t}\n> 1310: \tif (Fumbling) enl_msg(\"你非常笨拙的\", \"\", \"d\", \"\");\n  1311: \tif (Wounded_legs\n  1312: #ifdef STEED\n  1313: \t    && !u.usteed\n  1314: #endif\n  1315: \t\t\t  ) {"
+    "stage": 0,
+    "context": "src/cmd.c:1310:38\n  1305: \tif (Strangled) you_are((u.uburied) ? \"被活埋\" : \"被勒住脖子\");\n  1306: \tif (Glib) {\n  1307: \t\tSprintf(buf, \"%s非常的滑\", makeplural(body_part(FINGER)));\n  1308: \t\tyou_have(buf);\n  1309: \t}\n&gt; 1310: \tif (Fumbling) enl_msg(\"你非常笨拙的\", \"\", \"d\", \"\");\n  1311: \tif (Wounded_legs\n  1312: #ifdef STEED\n  1313: \t    && !u.usteed\n  1314: #endif\n  1315: \t\t\t  ) {"
   },
   {
     "key": "L01423_01",
     "original": " (%u)",
     "translation": "",
-    "context": "src/cmd.c:1423:36\n  1418: \t}\n  1419: #endif\n  1420: \tif (u.uswallow) {\n  1421: \t    Sprintf(buf, \"被%s吞咽下去\", a_monnam(u.ustuck));\n  1422: #ifdef WIZARD\n> 1423: \t    if (wizard) Sprintf(eos(buf), \" (%u)\", u.uswldtim);\n  1424: #endif\n  1425: \t    you_are(buf);\n  1426: \t} else if (u.ustuck) {\n  1427: \t    Sprintf(buf, \"%s %s\",\n  1428: \t\t    (Upolyd && sticks(youmonst.data)) ? \"被卡住\" : \"被困住\","
+    "stage": 0,
+    "context": "src/cmd.c:1423:36\n  1418: \t}\n  1419: #endif\n  1420: \tif (u.uswallow) {\n  1421: \t    Sprintf(buf, \"被%s吞咽下去\", a_monnam(u.ustuck));\n  1422: #ifdef WIZARD\n&gt; 1423: \t    if (wizard) Sprintf(eos(buf), \" (%u)\", u.uswldtim);\n  1424: #endif\n  1425: \t    you_are(buf);\n  1426: \t} else if (u.ustuck) {\n  1427: \t    Sprintf(buf, \"%s %s\",\n  1428: \t\t    (Upolyd && sticks(youmonst.data)) ? \"被卡住\" : \"被困住\","
   },
   {
     "key": "L01427_01",
     "original": "%s %s",
     "translation": "",
-    "context": "src/cmd.c:1427:19\n  1422: #ifdef WIZARD\n  1423: \t    if (wizard) Sprintf(eos(buf), \" (%u)\", u.uswldtim);\n  1424: #endif\n  1425: \t    you_are(buf);\n  1426: \t} else if (u.ustuck) {\n> 1427: \t    Sprintf(buf, \"%s %s\",\n  1428: \t\t    (Upolyd && sticks(youmonst.data)) ? \"被卡住\" : \"被困住\",\n  1429: \t\t    a_monnam(u.ustuck));\n  1430: \t    you_are(buf);\n  1431: \t}\n  1432: "
+    "stage": 0,
+    "context": "src/cmd.c:1427:19\n  1422: #ifdef WIZARD\n  1423: \t    if (wizard) Sprintf(eos(buf), \" (%u)\", u.uswldtim);\n  1424: #endif\n  1425: \t    you_are(buf);\n  1426: \t} else if (u.ustuck) {\n&gt; 1427: \t    Sprintf(buf, \"%s %s\",\n  1428: \t\t    (Upolyd && sticks(youmonst.data)) ? \"被卡住\" : \"被困住\",\n  1429: \t\t    a_monnam(u.ustuck));\n  1430: \t    you_are(buf);\n  1431: \t}\n  1432: "
   },
   {
     "key": "L01465_01",
     "original": " (%d)",
     "translation": "",
-    "context": "src/cmd.c:1465:36\n  1460: \t}\n  1461: \tif (Upolyd) {\n  1462: \t    if (u.umonnum == u.ulycn) Strcpy(buf, \"在野兽形态\");\n  1463: \t    else Sprintf(buf, \"变成了%s\", an(youmonst.data->mname));\n  1464: #ifdef WIZARD\n> 1465: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.mtimedone);\n  1466: #endif\n  1467: \t    you_are(buf);\n  1468: \t}\n  1469: \tif (Unchanging) you_can(\"阻止你变形\");\n  1470: \tif (Fast) you_are(Very_fast ? \"非常快的\" : \"快的\");"
+    "stage": 0,
+    "context": "src/cmd.c:1465:36\n  1460: \t}\n  1461: \tif (Upolyd) {\n  1462: \t    if (u.umonnum == u.ulycn) Strcpy(buf, \"在野兽形态\");\n  1463: \t    else Sprintf(buf, \"变成了%s\", an(youmonst.data-&gt;mname));\n  1464: #ifdef WIZARD\n&gt; 1465: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.mtimedone);\n  1466: #endif\n  1467: \t    you_are(buf);\n  1468: \t}\n  1469: \tif (Unchanging) you_can(\"阻止你变形\");\n  1470: \tif (Fast) you_are(Very_fast ? \"非常快的\" : \"快的\");"
   },
   {
     "key": "L01497_01",
     "original": " (%d)",
     "translation": "",
-    "context": "src/cmd.c:1497:36\n  1492: \t    ltmp = abs((int)Luck);\n  1493: \t    Sprintf(buf, \"%s%s幸运\",\n  1494: \t\t    ltmp >= 10 ? \"极其 \" : ltmp >= 5 ? \"非常 \" : \"\",\n  1495: \t\t    Luck < 0 ? \"不\" : \"\");\n  1496: #ifdef WIZARD\n> 1497: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", Luck);\n  1498: #endif\n  1499: \t    you_are(buf);\n  1500: \t}\n  1501: #ifdef WIZARD\n  1502: \t else if (wizard) enl_msg(\"你的运气值 \", \"是\", \"是\", \" 零\");"
+    "stage": 0,
+    "context": "src/cmd.c:1497:36\n  1492: \t    ltmp = abs((int)Luck);\n  1493: \t    Sprintf(buf, \"%s%s幸运\",\n  1494: \t\t    ltmp &gt;= 10 ? \"极其 \" : ltmp &gt;= 5 ? \"非常 \" : \"\",\n  1495: \t\t    Luck &lt; 0 ? \"不\" : \"\");\n  1496: #ifdef WIZARD\n&gt; 1497: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", Luck);\n  1498: #endif\n  1499: \t    you_are(buf);\n  1500: \t}\n  1501: #ifdef WIZARD\n  1502: \t else if (wizard) enl_msg(\"你的运气值 \", \"是\", \"是\", \" 零\");"
   },
   {
     "key": "L01520_01",
     "original": " (%d)",
     "translation": "",
-    "context": "src/cmd.c:1520:36\n  1515: \tif (u.uhealbonus)\n  1516: \t{\n  1517: \t\tSprintf(buf, \"%s的治愈加成\", u.uhealbonus > 0 ? \"额外的\" :\n  1518: \t\t\t\"负面的\");\n  1519: #ifdef WIZARD\n> 1520: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.uhealbonus);\n  1521: #endif\n  1522: \t\tyou_have(buf);\n  1523: \t}\n  1524: #ifdef WIZARD\n  1525: \t else if (wizard) enl_msg(\"你的治愈加成 \", \"是\", \"是\", \" 零\");"
+    "stage": 0,
+    "context": "src/cmd.c:1520:36\n  1515: \tif (u.uhealbonus)\n  1516: \t{\n  1517: \t\tSprintf(buf, \"%s的治愈加成\", u.uhealbonus &gt; 0 ? \"额外的\" :\n  1518: \t\t\t\"负面的\");\n  1519: #ifdef WIZARD\n&gt; 1520: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.uhealbonus);\n  1521: #endif\n  1522: \t\tyou_have(buf);\n  1523: \t}\n  1524: #ifdef WIZARD\n  1525: \t else if (wizard) enl_msg(\"你的治愈加成 \", \"是\", \"是\", \" 零\");"
   },
   {
     "key": "L01532_01",
     "original": " (%d)",
     "translation": "",
-    "context": "src/cmd.c:1532:36\n  1527: \n  1528: \tif (u.ugangr) {\n  1529: \t    Sprintf(buf, \" 对你%s\",\n  1530: \t\t    u.ugangr > 6 ? \"极其的 \" : u.ugangr > 3 ? \"非常的 \" : \"\");\n  1531: #ifdef WIZARD\n> 1532: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.ugangr);\n  1533: #endif\n  1534: \t    enl_msg(u_gname(), \" 是\", \" 是\", buf);\n  1535: \t} else\n  1536: \t    /*\n  1537: \t     * We need to suppress this when the game is over, because death"
+    "stage": 0,
+    "context": "src/cmd.c:1532:36\n  1527: \n  1528: \tif (u.ugangr) {\n  1529: \t    Sprintf(buf, \" 对你%s\",\n  1530: \t\t    u.ugangr &gt; 6 ? \"极其的 \" : u.ugangr &gt; 3 ? \"非常的 \" : \"\");\n  1531: #ifdef WIZARD\n&gt; 1532: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.ugangr);\n  1533: #endif\n  1534: \t    enl_msg(u_gname(), \" 是\", \" 是\", buf);\n  1535: \t} else\n  1536: \t    /*\n  1537: \t     * We need to suppress this when the game is over, because death"
   },
   {
     "key": "L01550_01",
     "original": " (%d)",
     "translation": "",
-    "context": "src/cmd.c:1550:36\n  1545: \t\t    final ? \"够 \" : \"\", final ? \"\" : \"\");\n  1546: #else\n  1547: \t    Sprintf(buf, \"%s安全的祈祷\", can_pray(FALSE) ? \"\" : \"无法 \");\n  1548: #endif\n  1549: #ifdef WIZARD\n> 1550: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.ublesscnt);\n  1551: #endif\n  1552: \t    you_can(buf);\n  1553: #if 0\t/* WAC -- replaced by techniques */\n  1554: /*\t    Sprintf(buf, \"%s%suse%s your special\", !u.unextuse ? \"\" : \"not \",\n  1555: \t\t    final ? \"have \" : \"\", final ? \"d\" : \"\");*/"
+    "stage": 0,
+    "context": "src/cmd.c:1550:36\n  1545: \t\t    final ? \"够 \" : \"\", final ? \"\" : \"\");\n  1546: #else\n  1547: \t    Sprintf(buf, \"%s安全的祈祷\", can_pray(FALSE) ? \"\" : \"无法 \");\n  1548: #endif\n  1549: #ifdef WIZARD\n&gt; 1550: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.ublesscnt);\n  1551: #endif\n  1552: \t    you_can(buf);\n  1553: #if 0\t/* WAC -- replaced by techniques */\n  1554: /*\t    Sprintf(buf, \"%s%suse%s your special\", !u.unextuse ? \"\" : \"not \",\n  1555: \t\t    final ? \"have \" : \"\", final ? \"d\" : \"\");*/"
   },
   {
     "key": "L01558_01",
     "original": " (%d)",
     "translation": "",
-    "context": "src/cmd.c:1558:36\n  1553: #if 0\t/* WAC -- replaced by techniques */\n  1554: /*\t    Sprintf(buf, \"%s%suse%s your special\", !u.unextuse ? \"\" : \"not \",\n  1555: \t\t    final ? \"have \" : \"\", final ? \"d\" : \"\");*/\n  1556: \t    Sprintf(buf, \"%s使用你的特殊能力\", !u.unextuse ? \"\" : \"不能 \");\n  1557: #ifdef WIZARD\n> 1558: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.unextuse);\n  1559: #endif\n  1560: \t    you_can(buf);\n  1561: #endif\n  1562: \t}\n  1563: "
+    "stage": 0,
+    "context": "src/cmd.c:1558:36\n  1553: #if 0\t/* WAC -- replaced by techniques */\n  1554: /*\t    Sprintf(buf, \"%s%suse%s your special\", !u.unextuse ? \"\" : \"not \",\n  1555: \t\t    final ? \"have \" : \"\", final ? \"d\" : \"\");*/\n  1556: \t    Sprintf(buf, \"%s使用你的特殊能力\", !u.unextuse ? \"\" : \"不能 \");\n  1557: #ifdef WIZARD\n&gt; 1558: \t    if (wizard) Sprintf(eos(buf), \" (%d)\", u.unextuse);\n  1559: #endif\n  1560: \t    you_can(buf);\n  1561: #endif\n  1562: \t}\n  1563: "
   },
   {
     "key": "L01583_01",
     "original": " (%d%s time!)",
     "translation": "",
-    "context": "src/cmd.c:1583:28\n  1578: \t} else {\t\t/* game ended in character's death */\n  1579: \t    p = \"死掉了\";\n  1580: \t    switch (u.umortality) {\n  1581: \t    case 0:  impossible(\"啊？没死就去世了?太可怕了！来群里找我\");\n  1582: \t    case 1:  break;\t\t\t/* just \"are dead\" */\n> 1583: \t    default: Sprintf(buf, \" (%d%s time!)\", u.umortality,\n  1584: \t\t\t     ordin(u.umortality));\n  1585: \t\t     break;\n  1586: \t    }\n  1587: \t}\n  1588: \tif (p) enl_msg(You_, \"被杀死了 \", p, buf);"
+    "stage": 0,
+    "context": "src/cmd.c:1583:28\n  1578: \t} else {\t\t/* game ended in character's death */\n  1579: \t    p = \"死掉了\";\n  1580: \t    switch (u.umortality) {\n  1581: \t    case 0:  impossible(\"啊？没死就去世了?太可怕了！来群里找我\");\n  1582: \t    case 1:  break;\t\t\t/* just \"are dead\" */\n&gt; 1583: \t    default: Sprintf(buf, \" (%d%s time!)\", u.umortality,\n  1584: \t\t\t     ordin(u.umortality));\n  1585: \t\t     break;\n  1586: \t    }\n  1587: \t}\n  1588: \tif (p) enl_msg(You_, \"被杀死了 \", p, buf);"
   },
   {
     "key": "L01609_01",
     "original": "%-15s: %-12s",
     "translation": "",
-    "context": "src/cmd.c:1609:40\n  1604: \twinid tmpwin;\n  1605: \tmenu_item *selected;\n  1606: \tanything any;\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n> 1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n  1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n  1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n  1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;"
+    "stage": 0,
+    "context": "src/cmd.c:1609:40\n  1604: \twinid tmpwin;\n  1605: \tmenu_item *selected;\n  1606: \tanything any;\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n&gt; 1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n  1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n  1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n  1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;"
   },
   {
     "key": "L01610_01",
     "original": "%-17s%s",
     "translation": "",
-    "context": "src/cmd.c:1610:46\n  1605: \tmenu_item *selected;\n  1606: \tanything any;\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n  1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n> 1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n  1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n  1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;\n  1615: "
+    "stage": 0,
+    "context": "src/cmd.c:1610:46\n  1605: \tmenu_item *selected;\n  1606: \tanything any;\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n  1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n&gt; 1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n  1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n  1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;\n  1615: "
   },
   {
     "key": "L01611_01",
     "original": "%s:\\t%-12s",
     "translation": "",
-    "context": "src/cmd.c:1611:38\n  1606: \tanything any;\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n  1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n  1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n> 1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n  1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;\n  1615: \n  1616: \tfmtstr = iflags.menu_tab_sep ? tabbed_fmtstr : untabbed_fmtstr;"
+    "stage": 0,
+    "context": "src/cmd.c:1611:38\n  1606: \tanything any;\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n  1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n  1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n&gt; 1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n  1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;\n  1615: \n  1616: \tfmtstr = iflags.menu_tab_sep ? tabbed_fmtstr : untabbed_fmtstr;"
   },
   {
     "key": "L01612_01",
     "original": "%s\\t%s",
     "translation": "",
-    "context": "src/cmd.c:1612:44\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n  1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n  1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n  1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n> 1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;\n  1615: \n  1616: \tfmtstr = iflags.menu_tab_sep ? tabbed_fmtstr : untabbed_fmtstr;\n  1617: \tdeity_fmtstr = iflags.menu_tab_sep ?"
+    "stage": 0,
+    "context": "src/cmd.c:1612:44\n  1607: \tint genidx, n;\n  1608: \tchar buf[BUFSZ], buf2[BUFSZ];\n  1609: \tstatic const char untabbed_fmtstr[] = \"%-15s: %-12s\";\n  1610: \tstatic const char untabbed_deity_fmtstr[] = \"%-17s%s\";\n  1611: \tstatic const char tabbed_fmtstr[] = \"%s:\\t%-12s\";\n&gt; 1612: \tstatic const char tabbed_deity_fmtstr[] = \"%s\\t%s\";\n  1613: \tstatic const char *fmtstr;\n  1614: \tstatic const char *deity_fmtstr;\n  1615: \n  1616: \tfmtstr = iflags.menu_tab_sep ? tabbed_fmtstr : untabbed_fmtstr;\n  1617: \tdeity_fmtstr = iflags.menu_tab_sep ?"
   },
   {
     "key": "L01672_01",
     "original": " (s,c)",
     "translation": "",
-    "context": "src/cmd.c:1672:36\n  1667: \t/* Deity list */\n  1668: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, \"\", FALSE);\n  1669: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings, \"神明\", FALSE);\n  1670: \tSprintf(buf2, deity_fmtstr, align_gname(A_CHAOTIC),\n  1671: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n> 1672: \t\t&& u.ualign.type == A_CHAOTIC) ? \" (s,c)\" :\n  1673: \t    (u.ualignbase[A_ORIGINAL] == A_CHAOTIC)       ? \" (s)\" :\n  1674: \t    (u.ualign.type   == A_CHAOTIC)       ? \" (c)\" : \"\");\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: "
+    "stage": 0,
+    "context": "src/cmd.c:1672:36\n  1667: \t/* Deity list */\n  1668: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, \"\", FALSE);\n  1669: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings, \"神明\", FALSE);\n  1670: \tSprintf(buf2, deity_fmtstr, align_gname(A_CHAOTIC),\n  1671: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n&gt; 1672: \t\t&& u.ualign.type == A_CHAOTIC) ? \" (s,c)\" :\n  1673: \t    (u.ualignbase[A_ORIGINAL] == A_CHAOTIC)       ? \" (s)\" :\n  1674: \t    (u.ualign.type   == A_CHAOTIC)       ? \" (c)\" : \"\");\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: "
   },
   {
     "key": "L01673_01",
     "original": " (s)",
     "translation": "",
-    "context": "src/cmd.c:1673:54\n  1668: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, \"\", FALSE);\n  1669: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings, \"神明\", FALSE);\n  1670: \tSprintf(buf2, deity_fmtstr, align_gname(A_CHAOTIC),\n  1671: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1672: \t\t&& u.ualign.type == A_CHAOTIC) ? \" (s,c)\" :\n> 1673: \t    (u.ualignbase[A_ORIGINAL] == A_CHAOTIC)       ? \" (s)\" :\n  1674: \t    (u.ualign.type   == A_CHAOTIC)       ? \" (c)\" : \"\");\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),"
+    "stage": 0,
+    "context": "src/cmd.c:1673:54\n  1668: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, \"\", FALSE);\n  1669: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings, \"神明\", FALSE);\n  1670: \tSprintf(buf2, deity_fmtstr, align_gname(A_CHAOTIC),\n  1671: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1672: \t\t&& u.ualign.type == A_CHAOTIC) ? \" (s,c)\" :\n&gt; 1673: \t    (u.ualignbase[A_ORIGINAL] == A_CHAOTIC)       ? \" (s)\" :\n  1674: \t    (u.ualign.type   == A_CHAOTIC)       ? \" (c)\" : \"\");\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),"
   },
   {
     "key": "L01674_01",
     "original": " (c)",
     "translation": "",
-    "context": "src/cmd.c:1674:45\n  1669: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings, \"神明\", FALSE);\n  1670: \tSprintf(buf2, deity_fmtstr, align_gname(A_CHAOTIC),\n  1671: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1672: \t\t&& u.ualign.type == A_CHAOTIC) ? \" (s,c)\" :\n  1673: \t    (u.ualignbase[A_ORIGINAL] == A_CHAOTIC)       ? \" (s)\" :\n> 1674: \t    (u.ualign.type   == A_CHAOTIC)       ? \" (c)\" : \"\");\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type"
+    "stage": 0,
+    "context": "src/cmd.c:1674:45\n  1669: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings, \"神明\", FALSE);\n  1670: \tSprintf(buf2, deity_fmtstr, align_gname(A_CHAOTIC),\n  1671: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1672: \t\t&& u.ualign.type == A_CHAOTIC) ? \" (s,c)\" :\n  1673: \t    (u.ualignbase[A_ORIGINAL] == A_CHAOTIC)       ? \" (s)\" :\n&gt; 1674: \t    (u.ualign.type   == A_CHAOTIC)       ? \" (c)\" : \"\");\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type"
   },
   {
     "key": "L01680_01",
     "original": " (s,c)",
     "translation": "",
-    "context": "src/cmd.c:1680:36\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n> 1680: \t\t&& u.ualign.type == A_NEUTRAL) ? \" (s,c)\" :\n  1681: \t    (u.ualignbase[A_ORIGINAL] == A_NEUTRAL)       ? \" (s)\" :\n  1682: \t    (u.ualign.type   == A_NEUTRAL)       ? \" (c)\" : \"\");\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: "
+    "stage": 0,
+    "context": "src/cmd.c:1680:36\n  1675: \tSprintf(buf, fmtstr, \"混沌\", buf2);\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n&gt; 1680: \t\t&& u.ualign.type == A_NEUTRAL) ? \" (s,c)\" :\n  1681: \t    (u.ualignbase[A_ORIGINAL] == A_NEUTRAL)       ? \" (s)\" :\n  1682: \t    (u.ualign.type   == A_NEUTRAL)       ? \" (c)\" : \"\");\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: "
   },
   {
     "key": "L01681_01",
     "original": " (s)",
     "translation": "",
-    "context": "src/cmd.c:1681:54\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1680: \t\t&& u.ualign.type == A_NEUTRAL) ? \" (s,c)\" :\n> 1681: \t    (u.ualignbase[A_ORIGINAL] == A_NEUTRAL)       ? \" (s)\" :\n  1682: \t    (u.ualign.type   == A_NEUTRAL)       ? \" (c)\" : \"\");\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),"
+    "stage": 0,
+    "context": "src/cmd.c:1681:54\n  1676: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1680: \t\t&& u.ualign.type == A_NEUTRAL) ? \" (s,c)\" :\n&gt; 1681: \t    (u.ualignbase[A_ORIGINAL] == A_NEUTRAL)       ? \" (s)\" :\n  1682: \t    (u.ualign.type   == A_NEUTRAL)       ? \" (c)\" : \"\");\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),"
   },
   {
     "key": "L01682_01",
     "original": " (c)",
     "translation": "",
-    "context": "src/cmd.c:1682:45\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1680: \t\t&& u.ualign.type == A_NEUTRAL) ? \" (s,c)\" :\n  1681: \t    (u.ualignbase[A_ORIGINAL] == A_NEUTRAL)       ? \" (s)\" :\n> 1682: \t    (u.ualign.type   == A_NEUTRAL)       ? \" (c)\" : \"\");\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&"
+    "stage": 0,
+    "context": "src/cmd.c:1682:45\n  1677: \n  1678: \tSprintf(buf2, deity_fmtstr, align_gname(A_NEUTRAL),\n  1679: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type\n  1680: \t\t&& u.ualign.type == A_NEUTRAL) ? \" (s,c)\" :\n  1681: \t    (u.ualignbase[A_ORIGINAL] == A_NEUTRAL)       ? \" (s)\" :\n&gt; 1682: \t    (u.ualign.type   == A_NEUTRAL)       ? \" (c)\" : \"\");\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&"
   },
   {
     "key": "L01688_01",
     "original": " (s,c)",
     "translation": "",
-    "context": "src/cmd.c:1688:33\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&\n> 1688: \t\tu.ualign.type == A_LAWFUL)  ? \" (s,c)\" :\n  1689: \t    (u.ualignbase[A_ORIGINAL] == A_LAWFUL)        ? \" (s)\" :\n  1690: \t    (u.ualign.type   == A_LAWFUL)        ? \" (c)\" : \"\");\n  1691: \tSprintf(buf, fmtstr, \"秩序\", buf2);\n  1692: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1693: "
+    "stage": 0,
+    "context": "src/cmd.c:1688:33\n  1683: \tSprintf(buf, fmtstr, \"中立\", buf2);\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&\n&gt; 1688: \t\tu.ualign.type == A_LAWFUL)  ? \" (s,c)\" :\n  1689: \t    (u.ualignbase[A_ORIGINAL] == A_LAWFUL)        ? \" (s)\" :\n  1690: \t    (u.ualign.type   == A_LAWFUL)        ? \" (c)\" : \"\");\n  1691: \tSprintf(buf, fmtstr, \"秩序\", buf2);\n  1692: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1693: "
   },
   {
     "key": "L01689_01",
     "original": " (s)",
     "translation": "",
-    "context": "src/cmd.c:1689:54\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&\n  1688: \t\tu.ualign.type == A_LAWFUL)  ? \" (s,c)\" :\n> 1689: \t    (u.ualignbase[A_ORIGINAL] == A_LAWFUL)        ? \" (s)\" :\n  1690: \t    (u.ualign.type   == A_LAWFUL)        ? \" (c)\" : \"\");\n  1691: \tSprintf(buf, fmtstr, \"秩序\", buf2);\n  1692: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1693: \n  1694: \tend_menu(tmpwin, \"起始属性\");"
+    "stage": 0,
+    "context": "src/cmd.c:1689:54\n  1684: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&\n  1688: \t\tu.ualign.type == A_LAWFUL)  ? \" (s,c)\" :\n&gt; 1689: \t    (u.ualignbase[A_ORIGINAL] == A_LAWFUL)        ? \" (s)\" :\n  1690: \t    (u.ualign.type   == A_LAWFUL)        ? \" (c)\" : \"\");\n  1691: \tSprintf(buf, fmtstr, \"秩序\", buf2);\n  1692: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1693: \n  1694: \tend_menu(tmpwin, \"起始属性\");"
   },
   {
     "key": "L01690_01",
     "original": " (c)",
     "translation": "",
-    "context": "src/cmd.c:1690:45\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&\n  1688: \t\tu.ualign.type == A_LAWFUL)  ? \" (s,c)\" :\n  1689: \t    (u.ualignbase[A_ORIGINAL] == A_LAWFUL)        ? \" (s)\" :\n> 1690: \t    (u.ualign.type   == A_LAWFUL)        ? \" (c)\" : \"\");\n  1691: \tSprintf(buf, fmtstr, \"秩序\", buf2);\n  1692: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1693: \n  1694: \tend_menu(tmpwin, \"起始属性\");\n  1695: \tn = select_menu(tmpwin, PICK_NONE, &selected);"
+    "stage": 0,
+    "context": "src/cmd.c:1690:45\n  1685: \n  1686: \tSprintf(buf2, deity_fmtstr, align_gname(A_LAWFUL),\n  1687: \t    (u.ualignbase[A_ORIGINAL] == u.ualign.type &&\n  1688: \t\tu.ualign.type == A_LAWFUL)  ? \" (s,c)\" :\n  1689: \t    (u.ualignbase[A_ORIGINAL] == A_LAWFUL)        ? \" (s)\" :\n&gt; 1690: \t    (u.ualign.type   == A_LAWFUL)        ? \" (c)\" : \"\");\n  1691: \tSprintf(buf, fmtstr, \"秩序\", buf2);\n  1692: \tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE, buf, FALSE);\n  1693: \n  1694: \tend_menu(tmpwin, \"起始属性\");\n  1695: \tn = select_menu(tmpwin, PICK_NONE, &selected);"
   },
   {
     "key": "L01822_01",
     "original": "Help",
     "translation": "",
-    "context": "src/cmd.c:1822:25\n  1817: \t{'p', TRUE, (void *)0, \"玩家\"},\n  1818: \t{'d', TRUE, (void *)0, \"已经发现的物品\"},\n  1819: #ifdef WIZARD\n  1820: \t{'w', TRUE, (void *)0, \"!开启向导模式!\"},\n  1821: #endif\n> 1822: \t{'?', TRUE, (void *)0, \"Help\"},\n  1823: \t{0,0,0,0},\n  1824: };\n  1825: \n  1826: static const struct menu_tab discover_menu[] = {\n  1827: \t{'X', TRUE, dovspell, \"查看已知的咒语\"},                  /* Mike Stephenson */"
+    "stage": 0,
+    "context": "src/cmd.c:1822:25\n  1817: \t{'p', TRUE, (void *)0, \"玩家\"},\n  1818: \t{'d', TRUE, (void *)0, \"已经发现的物品\"},\n  1819: #ifdef WIZARD\n  1820: \t{'w', TRUE, (void *)0, \"!开启向导模式!\"},\n  1821: #endif\n&gt; 1822: \t{'?', TRUE, (void *)0, \"Help\"},\n  1823: \t{0,0,0,0},\n  1824: };\n  1825: \n  1826: static const struct menu_tab discover_menu[] = {\n  1827: \t{'X', TRUE, dovspell, \"查看已知的咒语\"},                  /* Mike Stephenson */"
   },
   {
     "key": "L01842_01",
     "original": "Help",
     "translation": "",
-    "context": "src/cmd.c:1842:3\n  1837: \t{\"玩家\", \"主界面\", player_menu},\n  1838: \t{\"已经鉴定的物品\", \"主界面\", discover_menu},\n  1839: #ifdef WIZARD\n  1840: \t{\"向导模式菜单\", \"主界面\", wizard_menu},\n  1841: #endif\n> 1842: \t{\"Help\", \"主界面\", help_menu},\n  1843: \t{\"主界面\",(char *)0, main_menu},\n  1844: \t{0,0,0},\n  1845: };\n  1846: \n  1847: STATIC_PTR int"
+    "stage": 0,
+    "context": "src/cmd.c:1842:3\n  1837: \t{\"玩家\", \"主界面\", player_menu},\n  1838: \t{\"已经鉴定的物品\", \"主界面\", discover_menu},\n  1839: #ifdef WIZARD\n  1840: \t{\"向导模式菜单\", \"主界面\", wizard_menu},\n  1841: #endif\n&gt; 1842: \t{\"Help\", \"主界面\", help_menu},\n  1843: \t{\"主界面\",(char *)0, main_menu},\n  1844: \t{0,0,0},\n  1845: };\n  1846: \n  1847: STATIC_PTR int"
   },
   {
     "key": "L01868_01",
     "original": "Wizard",
     "translation": "",
-    "context": "src/cmd.c:1868:78\n  1863:                 if (strcmp(menu_struct[i].m_header,menuname)) continue;\n  1864:                 current_menu = menu_struct[i].m_menu;\n  1865:                 for (n = 0; current_menu[n].m_item; n++) {\n  1866:                         if (u.uburied && !current_menu[n].can_if_buried) continue;\n  1867: #ifdef WIZARD\n> 1868: \t\t\tif (!wizard && !current_menu[n].m_funct && !strcmp(current_menu[n].m_item,\"Wizard\")) continue;\n  1869: #endif\n  1870:                         if (current_menu[n].m_char == (char)0) {\n  1871:                                 any.a_int = 0; \n  1872:                                 add_menu(win, NO_GLYPH, &any, 0, 0, ATR_BOLD,\n  1873:                                      current_menu[n].m_item, MENU_UNSELECTED);"
+    "stage": 0,
+    "context": "src/cmd.c:1868:78\n  1863:                 if (strcmp(menu_struct[i].m_header,menuname)) continue;\n  1864:                 current_menu = menu_struct[i].m_menu;\n  1865:                 for (n = 0; current_menu[n].m_item; n++) {\n  1866:                         if (u.uburied && !current_menu[n].can_if_buried) continue;\n  1867: #ifdef WIZARD\n&gt; 1868: \t\t\tif (!wizard && !current_menu[n].m_funct && !strcmp(current_menu[n].m_item,\"Wizard\")) continue;\n  1869: #endif\n  1870:                         if (current_menu[n].m_char == (char)0) {\n  1871:                                 any.a_int = 0; \n  1872:                                 add_menu(win, NO_GLYPH, &any, 0, 0, ATR_BOLD,\n  1873:                                      current_menu[n].m_item, MENU_UNSELECTED);"
   },
   {
     "key": "L01939_01",
     "original": "%s%d",
     "translation": "",
-    "context": "src/cmd.c:1939:22\n  1934: \tif (final\n  1935: #ifdef WIZARD\n  1936: \t\t|| wizard\n  1937: #endif\n  1938: \t  ) {\n> 1939: \t    Sprintf(numbuf, \"%s%d\",\n  1940: \t\t    (incamt > 0) ? \"+\" : \"\", incamt);\n  1941: \t    modif = (const char *) numbuf;\n  1942: \t} else {\n  1943: \t    int absamt = abs(incamt);\n  1944: "
+    "stage": 0,
+    "context": "src/cmd.c:1939:22\n  1934: \tif (final\n  1935: #ifdef WIZARD\n  1936: \t\t|| wizard\n  1937: #endif\n  1938: \t  ) {\n&gt; 1939: \t    Sprintf(numbuf, \"%s%d\",\n  1940: \t\t    (incamt &gt; 0) ? \"+\" : \"\", incamt);\n  1941: \t    modif = (const char *) numbuf;\n  1942: \t} else {\n  1943: \t    int absamt = abs(incamt);\n  1944: "
   },
   {
     "key": "L01957_01",
     "original": "%s %s %s",
     "translation": "",
-    "context": "src/cmd.c:1957:18\n  1952: \tif (!strcmp(inctyp, \"伤害\")) {\n  1953: \t    const char *ctmp = inctyp;\n  1954: \t    inctyp = bonus;\n  1955: \t    bonus = ctmp;\n  1956: \t}\n> 1957: \tSprintf(outbuf, \"%s %s %s\", an(modif), bonus, inctyp);\n  1958: \treturn outbuf;\n  1959: }\n  1960: \n  1961: void\n  1962: show_conduct(final)"
+    "stage": 0,
+    "context": "src/cmd.c:1957:18\n  1952: \tif (!strcmp(inctyp, \"伤害\")) {\n  1953: \t    const char *ctmp = inctyp;\n  1954: \t    inctyp = bonus;\n  1955: \t    bonus = ctmp;\n  1956: \t}\n&gt; 1957: \tSprintf(outbuf, \"%s %s %s\", an(modif), bonus, inctyp);\n  1958: \treturn outbuf;\n  1959: }\n  1960: \n  1961: void\n  1962: show_conduct(final)"
   },
   {
     "key": "L02360_01",
     "original": "%-18s %4ld  %6ld",
     "translation": "",
-    "context": "src/cmd.c:2360:32\n  2355: \t    n++;\t/* now an extra entry */\n  2356: \t}\n  2357: }\n  2358: \n  2359: \n> 2360: static const char template[] = \"%-18s %4ld  %6ld\";\n  2361: static const char count_str[] = \"                   count  bytes\";\n  2362: static const char separator[] = \"------------------ -----  ------\";\n  2363: \n  2364: STATIC_OVL void\n  2365: count_obj(chain, total_count, total_size, top, recurse)"
+    "stage": 0,
+    "context": "src/cmd.c:2360:32\n  2355: \t    n++;\t/* now an extra entry */\n  2356: \t}\n  2357: }\n  2358: \n  2359: \n&gt; 2360: static const char template[] = \"%-18s %4ld  %6ld\";\n  2361: static const char count_str[] = \"                   count  bytes\";\n  2362: static const char separator[] = \"------------------ -----  ------\";\n  2363: \n  2364: STATIC_OVL void\n  2365: count_obj(chain, total_count, total_size, top, recurse)"
   },
   {
     "key": "L02361_01",
     "original": "                   count  bytes",
     "translation": "",
-    "context": "src/cmd.c:2361:33\n  2356: \t}\n  2357: }\n  2358: \n  2359: \n  2360: static const char template[] = \"%-18s %4ld  %6ld\";\n> 2361: static const char count_str[] = \"                   count  bytes\";\n  2362: static const char separator[] = \"------------------ -----  ------\";\n  2363: \n  2364: STATIC_OVL void\n  2365: count_obj(chain, total_count, total_size, top, recurse)\n  2366: \tstruct obj *chain;"
+    "stage": 0,
+    "context": "src/cmd.c:2361:33\n  2356: \t}\n  2357: }\n  2358: \n  2359: \n  2360: static const char template[] = \"%-18s %4ld  %6ld\";\n&gt; 2361: static const char count_str[] = \"                   count  bytes\";\n  2362: static const char separator[] = \"------------------ -----  ------\";\n  2363: \n  2364: STATIC_OVL void\n  2365: count_obj(chain, total_count, total_size, top, recurse)\n  2366: \tstruct obj *chain;"
   },
   {
     "key": "L02493_01",
     "original": "invent",
     "translation": "",
-    "context": "src/cmd.c:2493:17\n  2488: \tSprintf(buf, \"大小%d\", (int) sizeof(struct obj));\n  2489: \tputstr(win, 0, buf);\n  2490: \tputstr(win, 0, \"\");\n  2491: \tputstr(win, 0, count_str);\n  2492: \n> 2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);"
+    "stage": 0,
+    "context": "src/cmd.c:2493:17\n  2488: \tSprintf(buf, \"大小%d\", (int) sizeof(struct obj));\n  2489: \tputstr(win, 0, buf);\n  2490: \tputstr(win, 0, \"\");\n  2491: \tputstr(win, 0, count_str);\n  2492: \n&gt; 2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);"
   },
   {
     "key": "L02494_01",
     "original": "fobj",
     "translation": "",
-    "context": "src/cmd.c:2494:17\n  2489: \tputstr(win, 0, buf);\n  2490: \tputstr(win, 0, \"\");\n  2491: \tputstr(win, 0, count_str);\n  2492: \n  2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n> 2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,"
+    "stage": 0,
+    "context": "src/cmd.c:2494:17\n  2489: \tputstr(win, 0, buf);\n  2490: \tputstr(win, 0, \"\");\n  2491: \tputstr(win, 0, count_str);\n  2492: \n  2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n&gt; 2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,"
   },
   {
     "key": "L02495_01",
     "original": "buried",
     "translation": "",
-    "context": "src/cmd.c:2495:17\n  2490: \tputstr(win, 0, \"\");\n  2491: \tputstr(win, 0, count_str);\n  2492: \n  2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n> 2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);"
+    "stage": 0,
+    "context": "src/cmd.c:2495:17\n  2490: \tputstr(win, 0, \"\");\n  2491: \tputstr(win, 0, count_str);\n  2492: \n  2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n&gt; 2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);"
   },
   {
     "key": "L02497_01",
     "original": "migrating obj",
     "translation": "",
-    "context": "src/cmd.c:2497:17\n  2492: \n  2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n> 2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n  2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);"
+    "stage": 0,
+    "context": "src/cmd.c:2497:17\n  2492: \n  2493: \tobj_chain(win, \"invent\", invent, &total_obj_count, &total_obj_size);\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n&gt; 2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n  2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);"
   },
   {
     "key": "L02499_01",
     "original": "minvent",
     "translation": "",
-    "context": "src/cmd.c:2499:24\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n> 2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n  2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);\n  2503: \n  2504: \tcontained(win, \"contained\","
+    "stage": 0,
+    "context": "src/cmd.c:2499:24\n  2494: \tobj_chain(win, \"fobj\", fobj, &total_obj_count, &total_obj_size);\n  2495: \tobj_chain(win, \"buried\", level.buriedobjlist,\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n&gt; 2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n  2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);\n  2503: \n  2504: \tcontained(win, \"contained\","
   },
   {
     "key": "L02501_01",
     "original": "migrating minvent",
     "translation": "",
-    "context": "src/cmd.c:2501:24\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n> 2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);\n  2503: \n  2504: \tcontained(win, \"contained\",\n  2505: \t\t\t\t&total_obj_count, &total_obj_size);\n  2506: "
+    "stage": 0,
+    "context": "src/cmd.c:2501:24\n  2496: \t\t\t\t&total_obj_count, &total_obj_size);\n  2497: \tobj_chain(win, \"migrating obj\", migrating_objs,\n  2498: \t\t\t\t&total_obj_count, &total_obj_size);\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n&gt; 2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);\n  2503: \n  2504: \tcontained(win, \"contained\",\n  2505: \t\t\t\t&total_obj_count, &total_obj_size);\n  2506: "
   },
   {
     "key": "L02504_01",
     "original": "contained",
     "translation": "",
-    "context": "src/cmd.c:2504:17\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n  2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);\n  2503: \n> 2504: \tcontained(win, \"contained\",\n  2505: \t\t\t\t&total_obj_count, &total_obj_size);\n  2506: \n  2507: \tputstr(win, 0, separator);\n  2508: \tSprintf(buf, template, \"总计\", total_obj_count, total_obj_size);\n  2509: \tputstr(win, 0, buf);"
+    "stage": 0,
+    "context": "src/cmd.c:2504:17\n  2499: \tmon_invent_chain(win, \"minvent\", fmon,\n  2500: \t\t\t\t&total_obj_count,&total_obj_size);\n  2501: \tmon_invent_chain(win, \"migrating minvent\", migrating_mons,\n  2502: \t\t\t\t&total_obj_count, &total_obj_size);\n  2503: \n&gt; 2504: \tcontained(win, \"contained\",\n  2505: \t\t\t\t&total_obj_count, &total_obj_size);\n  2506: \n  2507: \tputstr(win, 0, separator);\n  2508: \tSprintf(buf, template, \"总计\", total_obj_count, total_obj_size);\n  2509: \tputstr(win, 0, buf);"
   },
   {
     "key": "L02517_01",
     "original": "fmon",
     "translation": "",
-    "context": "src/cmd.c:2517:17\n  2512: \tputstr(win, 0, \"\");\n  2513: \tSprintf(buf, \"生物总占内存%d\", (int) sizeof(struct monst));\n  2514: \tputstr(win, 0, buf);\n  2515: \tputstr(win, 0, \"\");\n  2516: \n> 2517: \tmon_chain(win, \"fmon\", fmon,\n  2518: \t\t\t\t&total_mon_count, &total_mon_size);\n  2519: \tmon_chain(win, \"migrating\", migrating_mons,\n  2520: \t\t\t\t&total_mon_count, &total_mon_size);\n  2521: \n  2522: \tputstr(win, 0, separator);"
+    "stage": 0,
+    "context": "src/cmd.c:2517:17\n  2512: \tputstr(win, 0, \"\");\n  2513: \tSprintf(buf, \"生物总占内存%d\", (int) sizeof(struct monst));\n  2514: \tputstr(win, 0, buf);\n  2515: \tputstr(win, 0, \"\");\n  2516: \n&gt; 2517: \tmon_chain(win, \"fmon\", fmon,\n  2518: \t\t\t\t&total_mon_count, &total_mon_size);\n  2519: \tmon_chain(win, \"migrating\", migrating_mons,\n  2520: \t\t\t\t&total_mon_count, &total_mon_size);\n  2521: \n  2522: \tputstr(win, 0, separator);"
   },
   {
     "key": "L02519_01",
     "original": "migrating",
     "translation": "",
-    "context": "src/cmd.c:2519:17\n  2514: \tputstr(win, 0, buf);\n  2515: \tputstr(win, 0, \"\");\n  2516: \n  2517: \tmon_chain(win, \"fmon\", fmon,\n  2518: \t\t\t\t&total_mon_count, &total_mon_size);\n> 2519: \tmon_chain(win, \"migrating\", migrating_mons,\n  2520: \t\t\t\t&total_mon_count, &total_mon_size);\n  2521: \n  2522: \tputstr(win, 0, separator);\n  2523: \tSprintf(buf, template, \"Total\", total_mon_count, total_mon_size);\n  2524: \tputstr(win, 0, buf);"
+    "stage": 0,
+    "context": "src/cmd.c:2519:17\n  2514: \tputstr(win, 0, buf);\n  2515: \tputstr(win, 0, \"\");\n  2516: \n  2517: \tmon_chain(win, \"fmon\", fmon,\n  2518: \t\t\t\t&total_mon_count, &total_mon_size);\n&gt; 2519: \tmon_chain(win, \"migrating\", migrating_mons,\n  2520: \t\t\t\t&total_mon_count, &total_mon_size);\n  2521: \n  2522: \tputstr(win, 0, separator);\n  2523: \tSprintf(buf, template, \"Total\", total_mon_count, total_mon_size);\n  2524: \tputstr(win, 0, buf);"
   },
   {
     "key": "L02523_01",
     "original": "Total",
     "translation": "",
-    "context": "src/cmd.c:2523:25\n  2518: \t\t\t\t&total_mon_count, &total_mon_size);\n  2519: \tmon_chain(win, \"migrating\", migrating_mons,\n  2520: \t\t\t\t&total_mon_count, &total_mon_size);\n  2521: \n  2522: \tputstr(win, 0, separator);\n> 2523: \tSprintf(buf, template, \"Total\", total_mon_count, total_mon_size);\n  2524: \tputstr(win, 0, buf);\n  2525: \n  2526: #if defined(__BORLANDC__) && !defined(_WIN32)\n  2527: \tshow_borlandc_stats(win);\n  2528: #endif"
+    "stage": 0,
+    "context": "src/cmd.c:2523:25\n  2518: \t\t\t\t&total_mon_count, &total_mon_size);\n  2519: \tmon_chain(win, \"migrating\", migrating_mons,\n  2520: \t\t\t\t&total_mon_count, &total_mon_size);\n  2521: \n  2522: \tputstr(win, 0, separator);\n&gt; 2523: \tSprintf(buf, template, \"Total\", total_mon_count, total_mon_size);\n  2524: \tputstr(win, 0, buf);\n  2525: \n  2526: #if defined(__BORLANDC__) && !defined(_WIN32)\n  2527: \tshow_borlandc_stats(win);\n  2528: #endif"
   },
   {
     "key": "L02563_01",
     "original": "Contents of hero's memory at (%d, %d):",
     "translation": "",
-    "context": "src/cmd.c:2563:18\n  2558:     ans = getpos(&cc, FALSE, \"很有趣的地方\");\n  2559:     if (ans < 0 || cc.x < 0)\n  2560: \treturn 0;\t/* done */\n  2561:     lev = &levl[cc.x][cc.y];\n  2562:     win = create_nhwindow(NHW_MENU);\n> 2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n  2567: \t    lev->mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);"
+    "stage": 0,
+    "context": "src/cmd.c:2563:18\n  2558:     ans = getpos(&cc, FALSE, \"很有趣的地方\");\n  2559:     if (ans &lt; 0 || cc.x &lt; 0)\n  2560: \treturn 0;\t/* done */\n  2561:     lev = &levl[cc.x][cc.y];\n  2562:     win = create_nhwindow(NHW_MENU);\n&gt; 2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n  2567: \t    lev-&gt;mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);"
   },
   {
     "key": "L02566_01",
     "original": "Invisible monster: %s",
     "translation": "",
-    "context": "src/cmd.c:2566:18\n  2561:     lev = &levl[cc.x][cc.y];\n  2562:     win = create_nhwindow(NHW_MENU);\n  2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n> 2566:     Sprintf(buf, \"Invisible monster: %s\",\n  2567: \t    lev->mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev->mem_obj && lev->mem_corpse)\n  2570: \tif (mons[lev->mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\","
+    "stage": 0,
+    "context": "src/cmd.c:2566:18\n  2561:     lev = &levl[cc.x][cc.y];\n  2562:     win = create_nhwindow(NHW_MENU);\n  2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n&gt; 2566:     Sprintf(buf, \"Invisible monster: %s\",\n  2567: \t    lev-&gt;mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev-&gt;mem_obj && lev-&gt;mem_corpse)\n  2570: \tif (mons[lev-&gt;mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\","
   },
   {
     "key": "L02567_01",
     "original": "present",
     "translation": "",
-    "context": "src/cmd.c:2567:23\n  2562:     win = create_nhwindow(NHW_MENU);\n  2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n> 2567: \t    lev->mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev->mem_obj && lev->mem_corpse)\n  2570: \tif (mons[lev->mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev->mem_obj - 1]) ? \"\" : \"the \","
+    "stage": 0,
+    "context": "src/cmd.c:2567:23\n  2562:     win = create_nhwindow(NHW_MENU);\n  2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n&gt; 2567: \t    lev-&gt;mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev-&gt;mem_obj && lev-&gt;mem_corpse)\n  2570: \tif (mons[lev-&gt;mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev-&gt;mem_obj - 1]) ? \"\" : \"the \","
   },
   {
     "key": "L02567_02",
     "original": "none",
     "translation": "",
-    "context": "src/cmd.c:2567:35\n  2562:     win = create_nhwindow(NHW_MENU);\n  2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n> 2567: \t    lev->mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev->mem_obj && lev->mem_corpse)\n  2570: \tif (mons[lev->mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev->mem_obj - 1]) ? \"\" : \"the \","
+    "stage": 0,
+    "context": "src/cmd.c:2567:35\n  2562:     win = create_nhwindow(NHW_MENU);\n  2563:     Sprintf(buf, \"Contents of hero's memory at (%d, %d):\", cc.x, cc.y);\n  2564:     putstr(win, 0, buf);\n  2565:     putstr(win, 0, \"\");\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n&gt; 2567: \t    lev-&gt;mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev-&gt;mem_obj && lev-&gt;mem_corpse)\n  2570: \tif (mons[lev-&gt;mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev-&gt;mem_obj - 1]) ? \"\" : \"the \","
   },
   {
     "key": "L02571_01",
     "original": "Object: %s%s corpse",
     "translation": "",
-    "context": "src/cmd.c:2571:19\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n  2567: \t    lev->mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev->mem_obj && lev->mem_corpse)\n  2570: \tif (mons[lev->mem_obj - 1].geno & G_UNIQ)\n> 2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev->mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev->mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev->mem_obj - 1].mname);\n  2576:     else"
+    "stage": 0,
+    "context": "src/cmd.c:2571:19\n  2566:     Sprintf(buf, \"Invisible monster: %s\",\n  2567: \t    lev-&gt;mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev-&gt;mem_obj && lev-&gt;mem_corpse)\n  2570: \tif (mons[lev-&gt;mem_obj - 1].geno & G_UNIQ)\n&gt; 2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev-&gt;mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev-&gt;mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev-&gt;mem_obj - 1].mname);\n  2576:     else"
   },
   {
     "key": "L02572_01",
     "original": "the ",
     "translation": "",
-    "context": "src/cmd.c:2572:53\n  2567: \t    lev->mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev->mem_obj && lev->mem_corpse)\n  2570: \tif (mons[lev->mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n> 2572: \t\t    type_is_pname(&mons[lev->mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev->mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev->mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev->mem_obj ?"
+    "stage": 0,
+    "context": "src/cmd.c:2572:53\n  2567: \t    lev-&gt;mem_invis ? \"present\" : \"none\");\n  2568:     putstr(win, 0, buf);\n  2569:     if (lev-&gt;mem_obj && lev-&gt;mem_corpse)\n  2570: \tif (mons[lev-&gt;mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n&gt; 2572: \t\t    type_is_pname(&mons[lev-&gt;mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev-&gt;mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev-&gt;mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev-&gt;mem_obj ?"
   },
   {
     "key": "L02575_01",
     "original": "Object: %s corpse",
     "translation": "",
-    "context": "src/cmd.c:2575:19\n  2570: \tif (mons[lev->mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev->mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev->mem_obj - 1].mname));\n  2574: \telse\n> 2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev->mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev->mem_obj ?\n  2578: \t\tobj_typename(lev->mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev->mem_trap ?"
+    "stage": 0,
+    "context": "src/cmd.c:2575:19\n  2570: \tif (mons[lev-&gt;mem_obj - 1].geno & G_UNIQ)\n  2571: \t    Sprintf(buf, \"Object: %s%s corpse\",\n  2572: \t\t    type_is_pname(&mons[lev-&gt;mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev-&gt;mem_obj - 1].mname));\n  2574: \telse\n&gt; 2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev-&gt;mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev-&gt;mem_obj ?\n  2578: \t\tobj_typename(lev-&gt;mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev-&gt;mem_trap ?"
   },
   {
     "key": "L02577_01",
     "original": "Object: %s",
     "translation": "",
-    "context": "src/cmd.c:2577:15\n  2572: \t\t    type_is_pname(&mons[lev->mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev->mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev->mem_obj - 1].mname);\n  2576:     else\n> 2577: \tSprintf(buf, \"Object: %s\", lev->mem_obj ?\n  2578: \t\tobj_typename(lev->mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev->mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev->mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);"
+    "stage": 0,
+    "context": "src/cmd.c:2577:15\n  2572: \t\t    type_is_pname(&mons[lev-&gt;mem_obj - 1]) ? \"\" : \"the \",\n  2573: \t\t    s_suffix(mons[lev-&gt;mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev-&gt;mem_obj - 1].mname);\n  2576:     else\n&gt; 2577: \tSprintf(buf, \"Object: %s\", lev-&gt;mem_obj ?\n  2578: \t\tobj_typename(lev-&gt;mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev-&gt;mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev-&gt;mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);"
   },
   {
     "key": "L02578_01",
     "original": "none",
     "translation": "",
-    "context": "src/cmd.c:2578:36\n  2573: \t\t    s_suffix(mons[lev->mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev->mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev->mem_obj ?\n> 2578: \t\tobj_typename(lev->mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev->mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev->mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev->mem_bg].explanation);"
+    "stage": 0,
+    "context": "src/cmd.c:2578:36\n  2573: \t\t    s_suffix(mons[lev-&gt;mem_obj - 1].mname));\n  2574: \telse\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev-&gt;mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev-&gt;mem_obj ?\n&gt; 2578: \t\tobj_typename(lev-&gt;mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev-&gt;mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev-&gt;mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev-&gt;mem_bg].explanation);"
   },
   {
     "key": "L02580_01",
     "original": "Trap: %s",
     "translation": "",
-    "context": "src/cmd.c:2580:18\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev->mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev->mem_obj ?\n  2578: \t\tobj_typename(lev->mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n> 2580:     Sprintf(buf, \"Trap: %s\", lev->mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev->mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev->mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");"
+    "stage": 0,
+    "context": "src/cmd.c:2580:18\n  2575: \t    Sprintf(buf, \"Object: %s corpse\", mons[lev-&gt;mem_obj - 1].mname);\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev-&gt;mem_obj ?\n  2578: \t\tobj_typename(lev-&gt;mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n&gt; 2580:     Sprintf(buf, \"Trap: %s\", lev-&gt;mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev-&gt;mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev-&gt;mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");"
   },
   {
     "key": "L02581_01",
     "original": "none",
     "translation": "",
-    "context": "src/cmd.c:2581:59\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev->mem_obj ?\n  2578: \t\tobj_typename(lev->mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev->mem_trap ?\n> 2581: \t    defsyms[trap_to_defsym(lev->mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev->mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");\n  2586:     glyph = glyph_at(cc.x, cc.y);"
+    "stage": 0,
+    "context": "src/cmd.c:2581:59\n  2576:     else\n  2577: \tSprintf(buf, \"Object: %s\", lev-&gt;mem_obj ?\n  2578: \t\tobj_typename(lev-&gt;mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev-&gt;mem_trap ?\n&gt; 2581: \t    defsyms[trap_to_defsym(lev-&gt;mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev-&gt;mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");\n  2586:     glyph = glyph_at(cc.x, cc.y);"
   },
   {
     "key": "L02583_01",
     "original": "Backgroud: %s",
     "translation": "",
-    "context": "src/cmd.c:2583:18\n  2578: \t\tobj_typename(lev->mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev->mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev->mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n> 2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev->mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");\n  2586:     glyph = glyph_at(cc.x, cc.y);\n  2587:     Sprintf(buf, \"Buffered (3rd screen): \");\n  2588:     if (glyph_is_monster(glyph)) {"
+    "stage": 0,
+    "context": "src/cmd.c:2583:18\n  2578: \t\tobj_typename(lev-&gt;mem_obj - 1) : \"none\");\n  2579:     putstr(win, 0, buf);\n  2580:     Sprintf(buf, \"Trap: %s\", lev-&gt;mem_trap ?\n  2581: \t    defsyms[trap_to_defsym(lev-&gt;mem_trap)].explanation : \"none\");\n  2582:     putstr(win, 0, buf);\n&gt; 2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev-&gt;mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");\n  2586:     glyph = glyph_at(cc.x, cc.y);\n  2587:     Sprintf(buf, \"Buffered (3rd screen): \");\n  2588:     if (glyph_is_monster(glyph)) {"
   },
   {
     "key": "L02587_01",
     "original": "Buffered (3rd screen): ",
     "translation": "",
-    "context": "src/cmd.c:2587:18\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev->mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");\n  2586:     glyph = glyph_at(cc.x, cc.y);\n> 2587:     Sprintf(buf, \"Buffered (3rd screen): \");\n  2588:     if (glyph_is_monster(glyph)) {\n  2589: \tStrcat(buf, mons[glyph_to_mon(glyph)].mname);\n  2590: \tif (glyph_is_pet(glyph))\n  2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))"
+    "stage": 0,
+    "context": "src/cmd.c:2587:18\n  2582:     putstr(win, 0, buf);\n  2583:     Sprintf(buf, \"Backgroud: %s\", defsyms[lev-&gt;mem_bg].explanation);\n  2584:     putstr(win, 0, buf);\n  2585:     putstr(win, 0, \"\");\n  2586:     glyph = glyph_at(cc.x, cc.y);\n&gt; 2587:     Sprintf(buf, \"Buffered (3rd screen): \");\n  2588:     if (glyph_is_monster(glyph)) {\n  2589: \tStrcat(buf, mons[glyph_to_mon(glyph)].mname);\n  2590: \tif (glyph_is_pet(glyph))\n  2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))"
   },
   {
     "key": "L02591_01",
     "original": " (tame)",
     "translation": "",
-    "context": "src/cmd.c:2591:18\n  2586:     glyph = glyph_at(cc.x, cc.y);\n  2587:     Sprintf(buf, \"Buffered (3rd screen): \");\n  2588:     if (glyph_is_monster(glyph)) {\n  2589: \tStrcat(buf, mons[glyph_to_mon(glyph)].mname);\n  2590: \tif (glyph_is_pet(glyph))\n> 2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))\n  2593: \t    Strcat(buf, \" (ridden)\");\n  2594: \tif (glyph_is_detected_monster(glyph))\n  2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {"
+    "stage": 0,
+    "context": "src/cmd.c:2591:18\n  2586:     glyph = glyph_at(cc.x, cc.y);\n  2587:     Sprintf(buf, \"Buffered (3rd screen): \");\n  2588:     if (glyph_is_monster(glyph)) {\n  2589: \tStrcat(buf, mons[glyph_to_mon(glyph)].mname);\n  2590: \tif (glyph_is_pet(glyph))\n&gt; 2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))\n  2593: \t    Strcat(buf, \" (ridden)\");\n  2594: \tif (glyph_is_detected_monster(glyph))\n  2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {"
   },
   {
     "key": "L02593_01",
     "original": " (ridden)",
     "translation": "",
-    "context": "src/cmd.c:2593:18\n  2588:     if (glyph_is_monster(glyph)) {\n  2589: \tStrcat(buf, mons[glyph_to_mon(glyph)].mname);\n  2590: \tif (glyph_is_pet(glyph))\n  2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))\n> 2593: \t    Strcat(buf, \" (ridden)\");\n  2594: \tif (glyph_is_detected_monster(glyph))\n  2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);"
+    "stage": 0,
+    "context": "src/cmd.c:2593:18\n  2588:     if (glyph_is_monster(glyph)) {\n  2589: \tStrcat(buf, mons[glyph_to_mon(glyph)].mname);\n  2590: \tif (glyph_is_pet(glyph))\n  2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))\n&gt; 2593: \t    Strcat(buf, \" (ridden)\");\n  2594: \tif (glyph_is_detected_monster(glyph))\n  2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);"
   },
   {
     "key": "L02595_01",
     "original": " (detected)",
     "translation": "",
-    "context": "src/cmd.c:2595:18\n  2590: \tif (glyph_is_pet(glyph))\n  2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))\n  2593: \t    Strcat(buf, \" (ridden)\");\n  2594: \tif (glyph_is_detected_monster(glyph))\n> 2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n  2600: \t\tSprintf(eos(buf), \"%s%s corpse\","
+    "stage": 0,
+    "context": "src/cmd.c:2595:18\n  2590: \tif (glyph_is_pet(glyph))\n  2591: \t    Strcat(buf, \" (tame)\");\n  2592: \tif (glyph_is_ridden_monster(glyph))\n  2593: \t    Strcat(buf, \" (ridden)\");\n  2594: \tif (glyph_is_detected_monster(glyph))\n&gt; 2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n  2600: \t\tSprintf(eos(buf), \"%s%s corpse\","
   },
   {
     "key": "L02600_01",
     "original": "%s%s corpse",
     "translation": "",
-    "context": "src/cmd.c:2600:21\n  2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n> 2600: \t\tSprintf(eos(buf), \"%s%s corpse\",\n  2601: \t\t\ttype_is_pname(&mons[corpse]) ? \"\" : \"the \",\n  2602: \t\t\ts_suffix(mons[corpse].mname));\n  2603: \t    else\n  2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else"
+    "stage": 0,
+    "context": "src/cmd.c:2600:21\n  2595: \t    Strcat(buf, \" (detected)\");\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n&gt; 2600: \t\tSprintf(eos(buf), \"%s%s corpse\",\n  2601: \t\t\ttype_is_pname(&mons[corpse]) ? \"\" : \"the \",\n  2602: \t\t\ts_suffix(mons[corpse].mname));\n  2603: \t    else\n  2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else"
   },
   {
     "key": "L02601_01",
     "original": "the ",
     "translation": "",
-    "context": "src/cmd.c:2601:40\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n  2600: \t\tSprintf(eos(buf), \"%s%s corpse\",\n> 2601: \t\t\ttype_is_pname(&mons[corpse]) ? \"\" : \"the \",\n  2602: \t\t\ts_suffix(mons[corpse].mname));\n  2603: \t    else\n  2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else\n  2606: \t    Strcat(buf, obj_typename(glyph_to_obj(glyph)));"
+    "stage": 0,
+    "context": "src/cmd.c:2601:40\n  2596:     } else if (glyph_is_object(glyph)) {\n  2597: \tif (glyph_is_body(glyph)) {\n  2598: \t    int corpse = glyph_to_body(glyph);\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n  2600: \t\tSprintf(eos(buf), \"%s%s corpse\",\n&gt; 2601: \t\t\ttype_is_pname(&mons[corpse]) ? \"\" : \"the \",\n  2602: \t\t\ts_suffix(mons[corpse].mname));\n  2603: \t    else\n  2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else\n  2606: \t    Strcat(buf, obj_typename(glyph_to_obj(glyph)));"
   },
   {
     "key": "L02604_01",
     "original": "%s corpse",
     "translation": "",
-    "context": "src/cmd.c:2604:21\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n  2600: \t\tSprintf(eos(buf), \"%s%s corpse\",\n  2601: \t\t\ttype_is_pname(&mons[corpse]) ? \"\" : \"the \",\n  2602: \t\t\ts_suffix(mons[corpse].mname));\n  2603: \t    else\n> 2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else\n  2606: \t    Strcat(buf, obj_typename(glyph_to_obj(glyph)));\n  2607:     } else if (glyph_is_invisible(glyph))\n  2608: \tStrcat(buf, \"invisible monster\");\n  2609:     else if (glyph_is_cmap(glyph))"
+    "stage": 0,
+    "context": "src/cmd.c:2604:21\n  2599: \t    if (mons[corpse].geno & G_UNIQ)\n  2600: \t\tSprintf(eos(buf), \"%s%s corpse\",\n  2601: \t\t\ttype_is_pname(&mons[corpse]) ? \"\" : \"the \",\n  2602: \t\t\ts_suffix(mons[corpse].mname));\n  2603: \t    else\n&gt; 2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else\n  2606: \t    Strcat(buf, obj_typename(glyph_to_obj(glyph)));\n  2607:     } else if (glyph_is_invisible(glyph))\n  2608: \tStrcat(buf, \"invisible monster\");\n  2609:     else if (glyph_is_cmap(glyph))"
   },
   {
     "key": "L02608_01",
     "original": "invisible monster",
     "translation": "",
-    "context": "src/cmd.c:2608:14\n  2603: \t    else\n  2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else\n  2606: \t    Strcat(buf, obj_typename(glyph_to_obj(glyph)));\n  2607:     } else if (glyph_is_invisible(glyph))\n> 2608: \tStrcat(buf, \"invisible monster\");\n  2609:     else if (glyph_is_cmap(glyph))\n  2610: \tStrcat(buf, defsyms[glyph_to_cmap(glyph)].explanation);\n  2611:     else\n  2612: \tSprintf(eos(buf), \"[%d]\", glyph);\n  2613:     putstr(win, 0, buf);"
+    "stage": 0,
+    "context": "src/cmd.c:2608:14\n  2603: \t    else\n  2604: \t\tSprintf(eos(buf), \"%s corpse\", mons[corpse].mname);\n  2605: \t} else\n  2606: \t    Strcat(buf, obj_typename(glyph_to_obj(glyph)));\n  2607:     } else if (glyph_is_invisible(glyph))\n&gt; 2608: \tStrcat(buf, \"invisible monster\");\n  2609:     else if (glyph_is_cmap(glyph))\n  2610: \tStrcat(buf, defsyms[glyph_to_cmap(glyph)].explanation);\n  2611:     else\n  2612: \tSprintf(eos(buf), \"[%d]\", glyph);\n  2613:     putstr(win, 0, buf);"
   },
   {
     "key": "L02612_01",
     "original": "[%d]",
     "translation": "",
-    "context": "src/cmd.c:2612:20\n  2607:     } else if (glyph_is_invisible(glyph))\n  2608: \tStrcat(buf, \"invisible monster\");\n  2609:     else if (glyph_is_cmap(glyph))\n  2610: \tStrcat(buf, defsyms[glyph_to_cmap(glyph)].explanation);\n  2611:     else\n> 2612: \tSprintf(eos(buf), \"[%d]\", glyph);\n  2613:     putstr(win, 0, buf);\n  2614:     display_nhwindow(win, FALSE);\n  2615:     destroy_nhwindow(win);\n  2616:     return 0;\n  2617: }"
+    "stage": 0,
+    "context": "src/cmd.c:2612:20\n  2607:     } else if (glyph_is_invisible(glyph))\n  2608: \tStrcat(buf, \"invisible monster\");\n  2609:     else if (glyph_is_cmap(glyph))\n  2610: \tStrcat(buf, defsyms[glyph_to_cmap(glyph)].explanation);\n  2611:     else\n&gt; 2612: \tSprintf(eos(buf), \"[%d]\", glyph);\n  2613:     putstr(win, 0, buf);\n  2614:     display_nhwindow(win, FALSE);\n  2615:     destroy_nhwindow(win);\n  2616:     return 0;\n  2617: }"
   },
   {
     "key": "L02629_01",
     "original": "How many random monsters to migrate? [0]",
     "translation": "",
-    "context": "src/cmd.c:2629:9\n  2624: \tint mcount = 0;\n  2625: \tchar inbuf[BUFSZ];\n  2626: \tstruct permonst *ptr;\n  2627: \tstruct monst *mtmp;\n  2628: \td_level tolevel;\n> 2629: \tgetlin(\"How many random monsters to migrate? [0]\", inbuf);\n  2630: \tif (*inbuf == '\\033') return 0;\n  2631: \tmcount = atoi(inbuf);\n  2632: \tif (mcount < 0 || mcount > (COLNO * ROWNO) || Is_botlevel(&u.uz))\n  2633: \t\treturn 0;\n  2634: \twhile (mcount > 0) {"
+    "stage": 0,
+    "context": "src/cmd.c:2629:9\n  2624: \tint mcount = 0;\n  2625: \tchar inbuf[BUFSZ];\n  2626: \tstruct permonst *ptr;\n  2627: \tstruct monst *mtmp;\n  2628: \td_level tolevel;\n&gt; 2629: \tgetlin(\"How many random monsters to migrate? [0]\", inbuf);\n  2630: \tif (*inbuf == '\\033') return 0;\n  2631: \tmcount = atoi(inbuf);\n  2632: \tif (mcount &lt; 0 || mcount &gt; (COLNO * ROWNO) || Is_botlevel(&u.uz))\n  2633: \t\treturn 0;\n  2634: \twhile (mcount &gt; 0) {"
   },
   {
     "key": "L02990_01",
     "original": "EFGIOVW",
     "translation": "",
-    "context": "src/cmd.c:2990:38\n  2985: char sym;\n  2986: const char *msg;\n  2987: {\n  2988: \tchar ctrl;\n  2989: \twinid win;\n> 2990: \tstatic const char wiz_only_list[] = \"EFGIOVW\";\n  2991: \tchar buf[BUFSZ], buf2[BUFSZ], *expln;\n  2992: \n  2993: \twin = create_nhwindow(NHW_TEXT);\n  2994: \tif (!win) return FALSE;\n  2995: \tif (msg) {"
+    "stage": 0,
+    "context": "src/cmd.c:2990:38\n  2985: char sym;\n  2986: const char *msg;\n  2987: {\n  2988: \tchar ctrl;\n  2989: \twinid win;\n&gt; 2990: \tstatic const char wiz_only_list[] = \"EFGIOVW\";\n  2991: \tchar buf[BUFSZ], buf2[BUFSZ], *expln;\n  2992: \n  2993: \twin = create_nhwindow(NHW_TEXT);\n  2994: \tif (!win) return FALSE;\n  2995: \tif (msg) {"
   },
   {
     "key": "L02996_01",
     "original": "cmdassist: %s",
     "translation": "",
-    "context": "src/cmd.c:2996:16\n  2991: \tchar buf[BUFSZ], buf2[BUFSZ], *expln;\n  2992: \n  2993: \twin = create_nhwindow(NHW_TEXT);\n  2994: \tif (!win) return FALSE;\n  2995: \tif (msg) {\n> 2996: \t\tSprintf(buf, \"cmdassist: %s\", msg);\n  2997: \t\tputstr(win, 0, buf);\n  2998: \t\tputstr(win, 0, \"\");\n  2999: \t}\n  3000: \tif (letter(sym)) { \n  3001: \t    sym = highc(sym);"
+    "stage": 0,
+    "context": "src/cmd.c:2996:16\n  2991: \tchar buf[BUFSZ], buf2[BUFSZ], *expln;\n  2992: \n  2993: \twin = create_nhwindow(NHW_TEXT);\n  2994: \tif (!win) return FALSE;\n  2995: \tif (msg) {\n&gt; 2996: \t\tSprintf(buf, \"cmdassist: %s\", msg);\n  2997: \t\tputstr(win, 0, buf);\n  2998: \t\tputstr(win, 0, \"\");\n  2999: \t}\n  3000: \tif (letter(sym)) { \n  3001: \t    sym = highc(sym);"
   },
   {
     "key": "L03011_01",
     "original": " as specified in the Guidebook",
     "translation": "",
-    "context": "src/cmd.c:3011:4\n  3006: \t\t    || wizard\n  3007: #endif\n  3008: \t                     )) {\n  3009: \t\tSprintf(buf, \"你是不是在试图进行某个操作？^%c%s?\", sym,\n  3010: \t\t\tindex(wiz_only_list, sym) ? \"\" :\n> 3011: \t\t\t\" as specified in the Guidebook\");\n  3012: \t\tputstr(win, 0, buf);\n  3013: \t\tputstr(win, 0, \"\");\n  3014: \t\tputstr(win, 0, expln);\n  3015: \t\tputstr(win, 0, \"\");\n  3016: \t\tputstr(win, 0, \"要用那个操作，你得先按下\");"
+    "stage": 0,
+    "context": "src/cmd.c:3011:4\n  3006: \t\t    || wizard\n  3007: #endif\n  3008: \t                     )) {\n  3009: \t\tSprintf(buf, \"你是不是在试图进行某个操作？^%c%s?\", sym,\n  3010: \t\t\tindex(wiz_only_list, sym) ? \"\" :\n&gt; 3011: \t\t\t\" as specified in the Guidebook\");\n  3012: \t\tputstr(win, 0, buf);\n  3013: \t\tputstr(win, 0, \"\");\n  3014: \t\tputstr(win, 0, expln);\n  3015: \t\tputstr(win, 0, \"\");\n  3016: \t\tputstr(win, 0, \"要用那个操作，你得先按下\");"
   },
   {
     "key": "L03032_01",
     "original": "             k   ",
     "translation": "",
-    "context": "src/cmd.c:3032:21\n  3027: \t    putstr(win, 0, \"          4- . -6\");\n  3028: \t    putstr(win, 0, \"             |   \");\n  3029: \t    putstr(win, 0, \"             2   \");\n  3030: \t} else if (u.umonnum == PM_GRID_BUG) {\n  3031: \t    putstr(win, 0, \"按照你当前的移动形式，你可以进行的移动操作如下:\");\n> 3032: \t    putstr(win, 0, \"             k   \");\n  3033: \t    putstr(win, 0, \"             |   \");\n  3034: \t    putstr(win, 0, \"          h- . -l\");\n  3035: \t    putstr(win, 0, \"             |   \");\n  3036: \t    putstr(win, 0, \"             j   \");\n  3037: \t} else if (iflags.num_pad) {"
+    "stage": 0,
+    "context": "src/cmd.c:3032:21\n  3027: \t    putstr(win, 0, \"          4- . -6\");\n  3028: \t    putstr(win, 0, \"             |   \");\n  3029: \t    putstr(win, 0, \"             2   \");\n  3030: \t} else if (u.umonnum == PM_GRID_BUG) {\n  3031: \t    putstr(win, 0, \"按照你当前的移动形式，你可以进行的移动操作如下:\");\n&gt; 3032: \t    putstr(win, 0, \"             k   \");\n  3033: \t    putstr(win, 0, \"             |   \");\n  3034: \t    putstr(win, 0, \"          h- . -l\");\n  3035: \t    putstr(win, 0, \"             |   \");\n  3036: \t    putstr(win, 0, \"             j   \");\n  3037: \t} else if (iflags.num_pad) {"
   },
   {
     "key": "L03034_01",
     "original": "          h- . -l",
     "translation": "",
-    "context": "src/cmd.c:3034:21\n  3029: \t    putstr(win, 0, \"             2   \");\n  3030: \t} else if (u.umonnum == PM_GRID_BUG) {\n  3031: \t    putstr(win, 0, \"按照你当前的移动形式，你可以进行的移动操作如下:\");\n  3032: \t    putstr(win, 0, \"             k   \");\n  3033: \t    putstr(win, 0, \"             |   \");\n> 3034: \t    putstr(win, 0, \"          h- . -l\");\n  3035: \t    putstr(win, 0, \"             |   \");\n  3036: \t    putstr(win, 0, \"             j   \");\n  3037: \t} else if (iflags.num_pad) {\n  3038: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3039: \t    putstr(win, 0, \"          7  8  9\");"
+    "stage": 0,
+    "context": "src/cmd.c:3034:21\n  3029: \t    putstr(win, 0, \"             2   \");\n  3030: \t} else if (u.umonnum == PM_GRID_BUG) {\n  3031: \t    putstr(win, 0, \"按照你当前的移动形式，你可以进行的移动操作如下:\");\n  3032: \t    putstr(win, 0, \"             k   \");\n  3033: \t    putstr(win, 0, \"             |   \");\n&gt; 3034: \t    putstr(win, 0, \"          h- . -l\");\n  3035: \t    putstr(win, 0, \"             |   \");\n  3036: \t    putstr(win, 0, \"             j   \");\n  3037: \t} else if (iflags.num_pad) {\n  3038: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3039: \t    putstr(win, 0, \"          7  8  9\");"
   },
   {
     "key": "L03036_01",
     "original": "             j   ",
     "translation": "",
-    "context": "src/cmd.c:3036:21\n  3031: \t    putstr(win, 0, \"按照你当前的移动形式，你可以进行的移动操作如下:\");\n  3032: \t    putstr(win, 0, \"             k   \");\n  3033: \t    putstr(win, 0, \"             |   \");\n  3034: \t    putstr(win, 0, \"          h- . -l\");\n  3035: \t    putstr(win, 0, \"             |   \");\n> 3036: \t    putstr(win, 0, \"             j   \");\n  3037: \t} else if (iflags.num_pad) {\n  3038: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3039: \t    putstr(win, 0, \"          7  8  9\");\n  3040: \t    putstr(win, 0, \"           \\\\ | / \");\n  3041: \t    putstr(win, 0, \"          4- . -6\");"
+    "stage": 0,
+    "context": "src/cmd.c:3036:21\n  3031: \t    putstr(win, 0, \"按照你当前的移动形式，你可以进行的移动操作如下:\");\n  3032: \t    putstr(win, 0, \"             k   \");\n  3033: \t    putstr(win, 0, \"             |   \");\n  3034: \t    putstr(win, 0, \"          h- . -l\");\n  3035: \t    putstr(win, 0, \"             |   \");\n&gt; 3036: \t    putstr(win, 0, \"             j   \");\n  3037: \t} else if (iflags.num_pad) {\n  3038: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3039: \t    putstr(win, 0, \"          7  8  9\");\n  3040: \t    putstr(win, 0, \"           \\\\ | / \");\n  3041: \t    putstr(win, 0, \"          4- . -6\");"
   },
   {
     "key": "L03046_01",
     "original": "          y  k  u",
     "translation": "",
-    "context": "src/cmd.c:3046:21\n  3041: \t    putstr(win, 0, \"          4- . -6\");\n  3042: \t    putstr(win, 0, \"           / | \\\\ \");\n  3043: \t    putstr(win, 0, \"          1  2  3\");\n  3044: \t} else {\n  3045: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n> 3046: \t    putstr(win, 0, \"          y  k  u\");\n  3047: \t    putstr(win, 0, \"           \\\\ | / \");\n  3048: \t    putstr(win, 0, \"          h- . -l\");\n  3049: \t    putstr(win, 0, \"           / | \\\\ \");\n  3050: \t    putstr(win, 0, \"          b  j  n\");\n  3051: \t};"
+    "stage": 0,
+    "context": "src/cmd.c:3046:21\n  3041: \t    putstr(win, 0, \"          4- . -6\");\n  3042: \t    putstr(win, 0, \"           / | \\\\ \");\n  3043: \t    putstr(win, 0, \"          1  2  3\");\n  3044: \t} else {\n  3045: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n&gt; 3046: \t    putstr(win, 0, \"          y  k  u\");\n  3047: \t    putstr(win, 0, \"           \\\\ | / \");\n  3048: \t    putstr(win, 0, \"          h- . -l\");\n  3049: \t    putstr(win, 0, \"           / | \\\\ \");\n  3050: \t    putstr(win, 0, \"          b  j  n\");\n  3051: \t};"
   },
   {
     "key": "L03048_01",
     "original": "          h- . -l",
     "translation": "",
-    "context": "src/cmd.c:3048:21\n  3043: \t    putstr(win, 0, \"          1  2  3\");\n  3044: \t} else {\n  3045: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3046: \t    putstr(win, 0, \"          y  k  u\");\n  3047: \t    putstr(win, 0, \"           \\\\ | / \");\n> 3048: \t    putstr(win, 0, \"          h- . -l\");\n  3049: \t    putstr(win, 0, \"           / | \\\\ \");\n  3050: \t    putstr(win, 0, \"          b  j  n\");\n  3051: \t};\n  3052: \tputstr(win, 0, \"\");\n  3053: \tputstr(win, 0, \"          <  上\");"
+    "stage": 0,
+    "context": "src/cmd.c:3048:21\n  3043: \t    putstr(win, 0, \"          1  2  3\");\n  3044: \t} else {\n  3045: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3046: \t    putstr(win, 0, \"          y  k  u\");\n  3047: \t    putstr(win, 0, \"           \\\\ | / \");\n&gt; 3048: \t    putstr(win, 0, \"          h- . -l\");\n  3049: \t    putstr(win, 0, \"           / | \\\\ \");\n  3050: \t    putstr(win, 0, \"          b  j  n\");\n  3051: \t};\n  3052: \tputstr(win, 0, \"\");\n  3053: \tputstr(win, 0, \"          &lt;  上\");"
   },
   {
     "key": "L03050_01",
     "original": "          b  j  n",
     "translation": "",
-    "context": "src/cmd.c:3050:21\n  3045: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3046: \t    putstr(win, 0, \"          y  k  u\");\n  3047: \t    putstr(win, 0, \"           \\\\ | / \");\n  3048: \t    putstr(win, 0, \"          h- . -l\");\n  3049: \t    putstr(win, 0, \"           / | \\\\ \");\n> 3050: \t    putstr(win, 0, \"          b  j  n\");\n  3051: \t};\n  3052: \tputstr(win, 0, \"\");\n  3053: \tputstr(win, 0, \"          <  上\");\n  3054: \tputstr(win, 0, \"          >  下\");\n  3055: \tputstr(win, 0, \"          .  朝着你\");"
+    "stage": 0,
+    "context": "src/cmd.c:3050:21\n  3045: \t    putstr(win, 0, \"可用移动操作按键如下:\");\n  3046: \t    putstr(win, 0, \"          y  k  u\");\n  3047: \t    putstr(win, 0, \"           \\\\ | / \");\n  3048: \t    putstr(win, 0, \"          h- . -l\");\n  3049: \t    putstr(win, 0, \"           / | \\\\ \");\n&gt; 3050: \t    putstr(win, 0, \"          b  j  n\");\n  3051: \t};\n  3052: \tputstr(win, 0, \"\");\n  3053: \tputstr(win, 0, \"          &lt;  上\");\n  3054: \tputstr(win, 0, \"          &gt;  下\");\n  3055: \tputstr(win, 0, \"          .  朝着你\");"
   },
   {
     "key": "L03431_01",
     "original": "the desired destination",
     "translation": "",
-    "context": "src/cmd.c:3431:24\n  3426: \t    /* No cached destination, start attempt from current position */\n  3427: \t    cc.x = u.ux;\n  3428: \t    cc.y = u.uy;\n  3429: \t}\n  3430: \tpline(\"你想走到哪里?\");\n> 3431: \tif (getpos(&cc, TRUE, \"the desired destination\") < 0) {\n  3432: \t\t/* user pressed ESC */\n  3433: \t\treturn 0;\n  3434: \t}\n  3435: \tiflags.travelcc.x = u.tx = cc.x;\n  3436: \tiflags.travelcc.y = u.ty = cc.y;"
+    "stage": 0,
+    "context": "src/cmd.c:3431:24\n  3426: \t    /* No cached destination, start attempt from current position */\n  3427: \t    cc.x = u.ux;\n  3428: \t    cc.y = u.uy;\n  3429: \t}\n  3430: \tpline(\"你想走到哪里?\");\n&gt; 3431: \tif (getpos(&cc, TRUE, \"the desired destination\") &lt; 0) {\n  3432: \t\t/* user pressed ESC */\n  3433: \t\treturn 0;\n  3434: \t}\n  3435: \tiflags.travelcc.x = u.tx = cc.x;\n  3436: \tiflags.travelcc.y = u.ty = cc.y;"
   },
   {
     "key": "L03462_01",
     "original": "test win32 keystrokes",
     "translation": "",
-    "context": "src/cmd.c:3462:4\n  3457: \t\tchar *menutext;\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n> 3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n  3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};"
+    "stage": 0,
+    "context": "src/cmd.c:3462:4\n  3457: \t\tchar *menutext;\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n&gt; 3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n  3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};"
   },
   {
     "key": "L03462_02",
     "original": "tty",
     "translation": "",
-    "context": "src/cmd.c:3462:29\n  3457: \t\tchar *menutext;\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n> 3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n  3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};"
+    "stage": 0,
+    "context": "src/cmd.c:3462:29\n  3457: \t\tchar *menutext;\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n&gt; 3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n  3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};"
   },
   {
     "key": "L03463_01",
     "original": "show keystroke handler information",
     "translation": "",
-    "context": "src/cmd.c:3463:4\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n  3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n> 3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};\n  3468: "
+    "stage": 0,
+    "context": "src/cmd.c:3463:4\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n  3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n&gt; 3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};\n  3468: "
   },
   {
     "key": "L03463_02",
     "original": "tty",
     "translation": "",
-    "context": "src/cmd.c:3463:42\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n  3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n> 3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};\n  3468: "
+    "stage": 0,
+    "context": "src/cmd.c:3463:42\n  3458: \t\tchar *portname;\n  3459: \t\tvoid NDECL((*fn));\n  3460: \t} menu_selections[] = {\n  3461: #ifdef WIN32CON\n  3462: \t\t{\"test win32 keystrokes\", \"tty\", win32con_debug_keystrokes},\n&gt; 3463: \t\t{\"show keystroke handler information\", \"tty\",\n  3464: \t\t\t\twin32con_handler_info},\n  3465: #endif\n  3466: \t\t{(char *)0, (char *)0, (void NDECL((*)))0}/* array terminator */\n  3467: \t};\n  3468: "
   },
   {
     "key": "L03485_01",
     "original": "Which port debugging feature?",
     "translation": "",
-    "context": "src/cmd.c:3485:17\n  3480: \t\t\t\tcontinue;\n  3481: \t\t\tany.a_int = k+1;\n  3482: \t\t\tadd_menu(win, NO_GLYPH, &any, item++, 0, ATR_NONE,\n  3483: \t\t\t\tmenu_selections[k].menutext, MENU_UNSELECTED);\n  3484: \t\t}\n> 3485: \t\tend_menu(win, \"Which port debugging feature?\");\n  3486: \t\tn = select_menu(win, PICK_ONE, &pick_list);\n  3487: \t\tdestroy_nhwindow(win);\n  3488: \t\tif (n > 0) {\n  3489: \t\t\tn = pick_list[0].item.a_int - 1;\n  3490: \t\t\tfree((genericptr_t) pick_list);"
+    "stage": 0,
+    "context": "src/cmd.c:3485:17\n  3480: \t\t\t\tcontinue;\n  3481: \t\t\tany.a_int = k+1;\n  3482: \t\t\tadd_menu(win, NO_GLYPH, &any, item++, 0, ATR_NONE,\n  3483: \t\t\t\tmenu_selections[k].menutext, MENU_UNSELECTED);\n  3484: \t\t}\n&gt; 3485: \t\tend_menu(win, \"Which port debugging feature?\");\n  3486: \t\tn = select_menu(win, PICK_ONE, &pick_list);\n  3487: \t\tdestroy_nhwindow(win);\n  3488: \t\tif (n &gt; 0) {\n  3489: \t\t\tn = pick_list[0].item.a_int - 1;\n  3490: \t\t\tfree((genericptr_t) pick_list);"
   },
   {
     "key": "L03495_01",
     "original": "No port-specific debug capability defined.",
     "translation": "",
-    "context": "src/cmd.c:3495:9\n  3490: \t\t\tfree((genericptr_t) pick_list);\n  3491: \t\t\t/* execute the function */\n  3492: \t\t\t(*menu_selections[n].fn)();\n  3493: \t\t}\n  3494: \t} else\n> 3495: \t\tpline(\"No port-specific debug capability defined.\");\n  3496: \treturn 0;\n  3497: }\n  3498: # endif /*PORT_DEBUG*/\n  3499: \n  3500: #endif /* OVL0 */"
+    "stage": 0,
+    "context": "src/cmd.c:3495:9\n  3490: \t\t\tfree((genericptr_t) pick_list);\n  3491: \t\t\t/* execute the function */\n  3492: \t\t\t(*menu_selections[n].fn)();\n  3493: \t\t}\n  3494: \t} else\n&gt; 3495: \t\tpline(\"No port-specific debug capability defined.\");\n  3496: \treturn 0;\n  3497: }\n  3498: # endif /*PORT_DEBUG*/\n  3499: \n  3500: #endif /* OVL0 */"
   },
   {
     "key": "L03513_01",
     "original": " [N]  ?",
     "translation": "",
-    "context": "src/cmd.c:3513:41\n  3508: yn_function(query,resp, def)\n  3509: const char *query,*resp;\n  3510: char def;\n  3511: {\n  3512: \tchar qbuf[QBUFSZ];\n> 3513: \tunsigned truncspot, reduction = sizeof(\" [N]  ?\") + 1;\n  3514: \n  3515: \tif (resp) reduction += strlen(resp) + sizeof(\" () \");\n  3516: \tif (strlen(query) < (QBUFSZ - reduction))\n  3517: \t\treturn (*windowprocs.win_yn_function)(query, resp, def);\n  3518: \tpaniclog(\"Query truncated: \", query);"
+    "stage": 0,
+    "context": "src/cmd.c:3513:41\n  3508: yn_function(query,resp, def)\n  3509: const char *query,*resp;\n  3510: char def;\n  3511: {\n  3512: \tchar qbuf[QBUFSZ];\n&gt; 3513: \tunsigned truncspot, reduction = sizeof(\" [N]  ?\") + 1;\n  3514: \n  3515: \tif (resp) reduction += strlen(resp) + sizeof(\" () \");\n  3516: \tif (strlen(query) &lt; (QBUFSZ - reduction))\n  3517: \t\treturn (*windowprocs.win_yn_function)(query, resp, def);\n  3518: \tpaniclog(\"Query truncated: \", query);"
   },
   {
     "key": "L03518_01",
     "original": "Query truncated: ",
     "translation": "",
-    "context": "src/cmd.c:3518:11\n  3513: \tunsigned truncspot, reduction = sizeof(\" [N]  ?\") + 1;\n  3514: \n  3515: \tif (resp) reduction += strlen(resp) + sizeof(\" () \");\n  3516: \tif (strlen(query) < (QBUFSZ - reduction))\n  3517: \t\treturn (*windowprocs.win_yn_function)(query, resp, def);\n> 3518: \tpaniclog(\"Query truncated: \", query);\n  3519: \treduction += sizeof(\"...\");\n  3520: \ttruncspot = QBUFSZ - reduction;\n  3521: \t(void) strncpy(qbuf, query, (int)truncspot);\n  3522: \tqbuf[truncspot] = '\\0';\n  3523: \tStrcat(qbuf,\"...\");"
+    "stage": 0,
+    "context": "src/cmd.c:3518:11\n  3513: \tunsigned truncspot, reduction = sizeof(\" [N]  ?\") + 1;\n  3514: \n  3515: \tif (resp) reduction += strlen(resp) + sizeof(\" () \");\n  3516: \tif (strlen(query) &lt; (QBUFSZ - reduction))\n  3517: \t\treturn (*windowprocs.win_yn_function)(query, resp, def);\n&gt; 3518: \tpaniclog(\"Query truncated: \", query);\n  3519: \treduction += sizeof(\"...\");\n  3520: \ttruncspot = QBUFSZ - reduction;\n  3521: \t(void) strncpy(qbuf, query, (int)truncspot);\n  3522: \tqbuf[truncspot] = '\\0';\n  3523: \tStrcat(qbuf,\"...\");"
   }
 ]

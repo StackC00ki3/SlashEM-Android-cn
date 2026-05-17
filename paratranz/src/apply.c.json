@@ -3,282 +3,329 @@
     "key": "L00110_01",
     "original": "%s %s!",
     "translation": "",
-    "context": "src/apply.c:110:12\n   105: \t\tlong old;\n   106: \t\tswitch (rn2(3)) {\n   107: \t\tcase 2:\n   108: \t\t    old = Glib;\n   109: \t\t    incr_itimeout(&Glib, rn1(10, 3));\n>  110: \t\t    Your(\"%s %s!\", makeplural(body_part(HAND)),\n   111: \t\t\t(old ? \"比以前更加丰满了\" : \"变得滑滑腻腻的\"));\n   112: \t\t    return 1;\n   113: \t\tcase 1:\n   114: \t\t    if (!ublindf) {\n   115: \t\t\told = u.ucreamed;"
+    "stage": 0,
+    "context": "src/apply.c:110:12\n   105: \t\tlong old;\n   106: \t\tswitch (rn2(3)) {\n   107: \t\tcase 2:\n   108: \t\t    old = Glib;\n   109: \t\t    incr_itimeout(&Glib, rn1(10, 3));\n&gt;  110: \t\t    Your(\"%s %s!\", makeplural(body_part(HAND)),\n   111: \t\t\t(old ? \"比以前更加丰满了\" : \"变得滑滑腻腻的\"));\n   112: \t\t    return 1;\n   113: \t\tcase 1:\n   114: \t\t    if (!ublindf) {\n   115: \t\t\told = u.ucreamed;"
   },
   {
     "key": "L00637_01",
     "original": "look %s.",
     "translation": "",
-    "context": "src/apply.c:637:32\n   632: #endif /* OVL0 */\n   633: #ifdef OVLB\n   634: \n   635: #define WEAK\t3\t/* from eat.c */\n   636: \n>  637: static const char look_str[] = \"look %s.\";\n   638: \n   639: STATIC_OVL int\n   640: use_mirror(obj)\n   641: struct obj *obj;\n   642: {"
+    "stage": 0,
+    "context": "src/apply.c:637:32\n   632: #endif /* OVL0 */\n   633: #ifdef OVLB\n   634: \n   635: #define WEAK\t3\t/* from eat.c */\n   636: \n&gt;  637: static const char look_str[] = \"look %s.\";\n   638: \n   639: STATIC_OVL int\n   640: use_mirror(obj)\n   641: struct obj *obj;\n   642: {"
   },
   {
     "key": "L00804_01",
     "original": "AhDhGqEqDhEhAqDqFhGw",
     "translation": "",
-    "context": "src/apply.c:804:25\n   799: \n   800: \tYou(\"敲响了%s.\", the(xname(obj)));\n   801: \n   802: \tif (Underwater || (u.uswallow && ordinary)) {\n   803: #ifdef\tAMIGA\n>  804: \t    amii_speaker( obj, \"AhDhGqEqDhEhAqDqFhGw\", AMII_MUFFLED_VOLUME );\n   805: #endif\n   806: \t    pline(\"但是没啥声音.\");\n   807: \n   808: \t} else if (invoking && ordinary) {\n   809: \t    /* needs to be recharged... */"
+    "stage": 0,
+    "context": "src/apply.c:804:25\n   799: \n   800: \tYou(\"敲响了%s.\", the(xname(obj)));\n   801: \n   802: \tif (Underwater || (u.uswallow && ordinary)) {\n   803: #ifdef\tAMIGA\n&gt;  804: \t    amii_speaker( obj, \"AhDhGqEqDhEhAqDqFhGw\", AMII_MUFFLED_VOLUME );\n   805: #endif\n   806: \t    pline(\"但是没啥声音.\");\n   807: \n   808: \t} else if (invoking && ordinary) {\n   809: \t    /* needs to be recharged... */"
   },
   {
     "key": "L00815_01",
     "original": "ahdhgqeqdhehaqdqfhgw",
     "translation": "",
-    "context": "src/apply.c:815:25\n   810: \t    pline(\"但是它没发出声音.\");\n   811: \t    learno = TRUE;\t/* help player figure out why */\n   812: \n   813: \t} else if (ordinary) {\n   814: #ifdef\tAMIGA\n>  815: \t    amii_speaker( obj, \"ahdhgqeqdhehaqdqfhgw\", AMII_MUFFLED_VOLUME );\n   816: #endif\n   817: \t    if (obj->cursed && !rn2(4) &&\n   818: \t\t    /* note: once any of them are gone, we stop all of them */\n   819: \t\t    !(mvitals[PM_WOOD_NYMPH].mvflags & G_GONE) &&\n   820: \t\t    !(mvitals[PM_WATER_NYMPH].mvflags & G_GONE) &&"
+    "stage": 0,
+    "context": "src/apply.c:815:25\n   810: \t    pline(\"但是它没发出声音.\");\n   811: \t    learno = TRUE;\t/* help player figure out why */\n   812: \n   813: \t} else if (ordinary) {\n   814: #ifdef\tAMIGA\n&gt;  815: \t    amii_speaker( obj, \"ahdhgqeqdhehaqdqfhgw\", AMII_MUFFLED_VOLUME );\n   816: #endif\n   817: \t    if (obj-&gt;cursed && !rn2(4) &&\n   818: \t\t    /* note: once any of them are gone, we stop all of them */\n   819: \t\t    !(mvitals[PM_WOOD_NYMPH].mvflags & G_GONE) &&\n   820: \t\t    !(mvitals[PM_WATER_NYMPH].mvflags & G_GONE) &&"
   },
   {
     "key": "L00863_01",
     "original": "issue",
     "translation": "",
-    "context": "src/apply.c:863:22\n   858: \t\tmkundead(&mm, FALSE, NO_MINVENT);\n   859: \t\twakem = TRUE;\n   860: \n   861: \t    } else  if (invoking) {\n   862: \t\tpline(\"%s制造出一阵让人毛骨悚然的声音...\",\n>  863: \t\t      Tobjnam(obj, \"issue\"));\n   864: #ifdef\tAMIGA\n   865: \t\tamii_speaker( obj, \"aefeaefeaefeaefeaefe\", AMII_LOUDER_VOLUME );\n   866: #endif\n   867: \t\tobj->age = moves;\n   868: \t\tlearno = TRUE;"
+    "stage": 0,
+    "context": "src/apply.c:863:22\n   858: \t\tmkundead(&mm, FALSE, NO_MINVENT);\n   859: \t\twakem = TRUE;\n   860: \n   861: \t    } else  if (invoking) {\n   862: \t\tpline(\"%s制造出一阵让人毛骨悚然的声音...\",\n&gt;  863: \t\t      Tobjnam(obj, \"issue\"));\n   864: #ifdef\tAMIGA\n   865: \t\tamii_speaker( obj, \"aefeaefeaefeaefeaefe\", AMII_LOUDER_VOLUME );\n   866: #endif\n   867: \t\tobj-&gt;age = moves;\n   868: \t\tlearno = TRUE;"
   },
   {
     "key": "L00865_01",
     "original": "aefeaefeaefeaefeaefe",
     "translation": "",
-    "context": "src/apply.c:865:22\n   860: \n   861: \t    } else  if (invoking) {\n   862: \t\tpline(\"%s制造出一阵让人毛骨悚然的声音...\",\n   863: \t\t      Tobjnam(obj, \"issue\"));\n   864: #ifdef\tAMIGA\n>  865: \t\tamii_speaker( obj, \"aefeaefeaefeaefeaefe\", AMII_LOUDER_VOLUME );\n   866: #endif\n   867: \t\tobj->age = moves;\n   868: \t\tlearno = TRUE;\n   869: \t\twakem = TRUE;\n   870: "
+    "stage": 0,
+    "context": "src/apply.c:865:22\n   860: \n   861: \t    } else  if (invoking) {\n   862: \t\tpline(\"%s制造出一阵让人毛骨悚然的声音...\",\n   863: \t\t      Tobjnam(obj, \"issue\"));\n   864: #ifdef\tAMIGA\n&gt;  865: \t\tamii_speaker( obj, \"aefeaefeaefeaefeaefe\", AMII_LOUDER_VOLUME );\n   866: #endif\n   867: \t\tobj-&gt;age = moves;\n   868: \t\tlearno = TRUE;\n   869: \t\twakem = TRUE;\n   870: "
   },
   {
     "key": "L00875_01",
     "original": "ahahahDhEhCw",
     "translation": "",
-    "context": "src/apply.c:875:22\n   870: \n   871: \t    } else if (obj->blessed) {\n   872: \t\tint res = 0;\n   873: \n   874: #ifdef\tAMIGA\n>  875: \t\tamii_speaker( obj, \"ahahahDhEhCw\", AMII_SOFT_VOLUME );\n   876: #endif\n   877: \t\tif (uchain) {\n   878: \t\t    unpunish();\n   879: \t\t    res = 1;\n   880: \t\t}"
+    "stage": 0,
+    "context": "src/apply.c:875:22\n   870: \n   871: \t    } else if (obj-&gt;blessed) {\n   872: \t\tint res = 0;\n   873: \n   874: #ifdef\tAMIGA\n&gt;  875: \t\tamii_speaker( obj, \"ahahahDhEhCw\", AMII_SOFT_VOLUME );\n   876: #endif\n   877: \t\tif (uchain) {\n   878: \t\t    unpunish();\n   879: \t\t    res = 1;\n   880: \t\t}"
   },
   {
     "key": "L00892_01",
     "original": "AeFeaeFeAefegw",
     "translation": "",
-    "context": "src/apply.c:892:22\n   887: \t\t\t   learno = TRUE; break;\n   888: \t\t}\n   889: \n   890: \t    } else {  /* uncursed */\n   891: #ifdef\tAMIGA\n>  892: \t\tamii_speaker( obj, \"AeFeaeFeAefegw\", AMII_OKAY_VOLUME );\n   893: #endif\n   894: \t\tif (findit() != 0) learno = TRUE;\n   895: \t\telse pline(nothing_happens);\n   896: \t    }\n   897: "
+    "stage": 0,
+    "context": "src/apply.c:892:22\n   887: \t\t\t   learno = TRUE; break;\n   888: \t\t}\n   889: \n   890: \t    } else {  /* uncursed */\n   891: #ifdef\tAMIGA\n&gt;  892: \t\tamii_speaker( obj, \"AeFeaeFeAefegw\", AMII_OKAY_VOLUME );\n   893: #endif\n   894: \t\tif (findit() != 0) learno = TRUE;\n   895: \t\telse pline(nothing_happens);\n   896: \t    }\n   897: "
   },
   {
     "key": "L00934_01",
     "original": "are",
     "translation": "",
-    "context": "src/apply.c:934:19\n   929: \t\t\t      s, vtense(s, \"闪烁\"), vtense(s, \"熄灭\"));\n   930: \t\treturn;\n   931: \t}\n   932: \tif(obj->spe < 7) {\n   933: \t\tThere(\"%s只有%d %s in %s.\",\n>  934: \t\t      vtense(s, \"are\"), obj->spe, s, the(xname(obj)));\n   935: \t\tif (!Blind)\n   936: \t\t    pline(\"%s被点燃了.你能感受到微弱的%s.\",\n   937: \t\t\t  obj->spe == 1 ? \"它\" : \"它们\",\n   938: \t\t\t  Tobjnam(obj, \"亮光\"));\n   939: \t} else {"
+    "stage": 0,
+    "context": "src/apply.c:934:19\n   929: \t\t\t      s, vtense(s, \"闪烁\"), vtense(s, \"熄灭\"));\n   930: \t\treturn;\n   931: \t}\n   932: \tif(obj-&gt;spe &lt; 7) {\n   933: \t\tThere(\"%s只有%d %s in %s.\",\n&gt;  934: \t\t      vtense(s, \"are\"), obj-&gt;spe, s, the(xname(obj)));\n   935: \t\tif (!Blind)\n   936: \t\t    pline(\"%s被点燃了.你能感受到微弱的%s.\",\n   937: \t\t\t  obj-&gt;spe == 1 ? \"它\" : \"它们\",\n   938: \t\t\t  Tobjnam(obj, \"亮光\"));\n   939: \t} else {"
   },
   {
     "key": "L00987_01",
     "original": " to ?",
     "translation": "",
-    "context": "src/apply.c:987:26\n   982: \t\treturn;\n   983: \t}\n   984: \n   985: \tSprintf(qbuf, \" 把%s\", the(xname(obj)));\n   986: \tSprintf(eos(qbuf), \"添加到%s?\",\n>  987: \t\tsafe_qbuf(qbuf, sizeof(\" to ?\"), the(xname(otmp)),\n   988: \t\t\tthe(simple_typename(otmp->otyp)), \"it\"));\n   989: \tif(yn(qbuf) == 'n') {\n   990: \t\tif (!obj->lamplit)\n   991: \t\t    You(\"试图点燃%s...\", the(xname(obj)));\n   992: \t\tuse_lamp(obj);"
+    "stage": 0,
+    "context": "src/apply.c:987:26\n   982: \t\treturn;\n   983: \t}\n   984: \n   985: \tSprintf(qbuf, \" 把%s\", the(xname(obj)));\n   986: \tSprintf(eos(qbuf), \"添加到%s?\",\n&gt;  987: \t\tsafe_qbuf(qbuf, sizeof(\" to ?\"), the(xname(otmp)),\n   988: \t\t\tthe(simple_typename(otmp-&gt;otyp)), \"it\"));\n   989: \tif(yn(qbuf) == 'n') {\n   990: \t\tif (!obj-&gt;lamplit)\n   991: \t\t    You(\"试图点燃%s...\", the(xname(obj)));\n   992: \t\tuse_lamp(obj);"
   },
   {
     "key": "L00988_01",
     "original": "it",
     "translation": "",
-    "context": "src/apply.c:988:38\n   983: \t}\n   984: \n   985: \tSprintf(qbuf, \" 把%s\", the(xname(obj)));\n   986: \tSprintf(eos(qbuf), \"添加到%s?\",\n   987: \t\tsafe_qbuf(qbuf, sizeof(\" to ?\"), the(xname(otmp)),\n>  988: \t\t\tthe(simple_typename(otmp->otyp)), \"it\"));\n   989: \tif(yn(qbuf) == 'n') {\n   990: \t\tif (!obj->lamplit)\n   991: \t\t    You(\"试图点燃%s...\", the(xname(obj)));\n   992: \t\tuse_lamp(obj);\n   993: \t\treturn;"
+    "stage": 0,
+    "context": "src/apply.c:988:38\n   983: \t}\n   984: \n   985: \tSprintf(qbuf, \" 把%s\", the(xname(obj)));\n   986: \tSprintf(eos(qbuf), \"添加到%s?\",\n   987: \t\tsafe_qbuf(qbuf, sizeof(\" to ?\"), the(xname(otmp)),\n&gt;  988: \t\t\tthe(simple_typename(otmp-&gt;otyp)), \"it\"));\n   989: \tif(yn(qbuf) == 'n') {\n   990: \t\tif (!obj-&gt;lamplit)\n   991: \t\t    You(\"试图点燃%s...\", the(xname(obj)));\n   992: \t\tuse_lamp(obj);\n   993: \t\treturn;"
   },
   {
     "key": "L00999_01",
     "original": " more",
     "translation": "",
-    "context": "src/apply.c:999:36\n   994: \t} else {\n   995: \t\tif ((long)otmp->spe + obj->quan > 7L)\n   996: \t\t    obj = splitobj(obj, 7L - (long)otmp->spe);\n   997: \t\telse *optr = 0;\n   998: \t\tYou(\"把更多的%ld%s %s放到%s上.\",\n>  999: \t\t    obj->quan, !otmp->spe ? \"\" : \" more\",\n  1000: \t\t    s, the(xname(otmp)));\n  1001: \t\tif (obj->otyp == MAGIC_CANDLE) {\n  1002: \t\t    if (obj->lamplit)\n  1003: \t\t\tpline_The(\"这个%s%s很新.\", s,\n  1004: \t\t\t\tvtense(s, \"看起来\"));"
+    "stage": 0,
+    "context": "src/apply.c:999:36\n   994: \t} else {\n   995: \t\tif ((long)otmp-&gt;spe + obj-&gt;quan &gt; 7L)\n   996: \t\t    obj = splitobj(obj, 7L - (long)otmp-&gt;spe);\n   997: \t\telse *optr = 0;\n   998: \t\tYou(\"把更多的%ld%s %s放到%s上.\",\n&gt;  999: \t\t    obj-&gt;quan, !otmp-&gt;spe ? \"\" : \" more\",\n  1000: \t\t    s, the(xname(otmp)));\n  1001: \t\tif (obj-&gt;otyp == MAGIC_CANDLE) {\n  1002: \t\t    if (obj-&gt;lamplit)\n  1003: \t\t\tpline_The(\"这个%s%s很新.\", s,\n  1004: \t\t\t\tvtense(s, \"看起来\"));"
   },
   {
     "key": "L01015_01",
     "original": "new %s magically %s!",
     "translation": "",
-    "context": "src/apply.c:1015:17\n  1010: \t\t} else\n  1011: \t\tif (!otmp->spe || otmp->age > obj->age)\n  1012: \t\t    otmp->age = obj->age;\n  1013: \t\totmp->spe += (int)obj->quan;\n  1014: \t\tif (otmp->lamplit && !obj->lamplit)\n> 1015: \t\t    pline_The(\"new %s magically %s!\", s, vtense(s, \"点燃了\"));\n  1016: \t\telse if (!otmp->lamplit && obj->lamplit)\n  1017: \t\t    pline(\"%s烧完了.\", (obj->quan > 1L) ? \"它们\" : \"它\");\n  1018: \t\tif (obj->unpaid)\n  1019: \t\t    verbalize(\"你%s%s,所以你必须买下%s!\",\n  1020: \t\t\t      otmp->lamplit ? \"点着了\" : \"使用了\","
+    "stage": 0,
+    "context": "src/apply.c:1015:17\n  1010: \t\t} else\n  1011: \t\tif (!otmp-&gt;spe || otmp-&gt;age &gt; obj-&gt;age)\n  1012: \t\t    otmp-&gt;age = obj-&gt;age;\n  1013: \t\totmp-&gt;spe += (int)obj-&gt;quan;\n  1014: \t\tif (otmp-&gt;lamplit && !obj-&gt;lamplit)\n&gt; 1015: \t\t    pline_The(\"new %s magically %s!\", s, vtense(s, \"点燃了\"));\n  1016: \t\telse if (!otmp-&gt;lamplit && obj-&gt;lamplit)\n  1017: \t\t    pline(\"%s烧完了.\", (obj-&gt;quan &gt; 1L) ? \"它们\" : \"它\");\n  1018: \t\tif (obj-&gt;unpaid)\n  1019: \t\t    verbalize(\"你%s%s,所以你必须买下%s!\",\n  1020: \t\t\t      otmp-&gt;lamplit ? \"点着了\" : \"使用了\","
   },
   {
     "key": "L01076_01",
     "original": "%s %s out!",
     "translation": "",
-    "context": "src/apply.c:1076:13\n  1071: \t    if (obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||\n  1072: \t\tobj->otyp == BRASS_LANTERN || obj->otyp == POT_OIL ||\n  1073: \t\tobj->otyp == TORCH) {\n  1074: \t\t(void) get_obj_location(obj, &x, &y, 0);\n  1075: \t\tif (obj->where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n> 1076: \t\t    pline(\"%s %s out!\", Yname2(obj), otense(obj, \"go\"));\n  1077: \t\tend_burn(obj, TRUE);\n  1078: \t\treturn TRUE;\n  1079: \t    }\n  1080: \t    if (snuff_candle(obj)) return TRUE;\n  1081: \t}"
+    "stage": 0,
+    "context": "src/apply.c:1076:13\n  1071: \t    if (obj-&gt;otyp == OIL_LAMP || obj-&gt;otyp == MAGIC_LAMP ||\n  1072: \t\tobj-&gt;otyp == BRASS_LANTERN || obj-&gt;otyp == POT_OIL ||\n  1073: \t\tobj-&gt;otyp == TORCH) {\n  1074: \t\t(void) get_obj_location(obj, &x, &y, 0);\n  1075: \t\tif (obj-&gt;where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n&gt; 1076: \t\t    pline(\"%s %s out!\", Yname2(obj), otense(obj, \"go\"));\n  1077: \t\tend_burn(obj, TRUE);\n  1078: \t\treturn TRUE;\n  1079: \t    }\n  1080: \t    if (snuff_candle(obj)) return TRUE;\n  1081: \t}"
   },
   {
     "key": "L01076_02",
     "original": "go",
     "translation": "",
-    "context": "src/apply.c:1076:52\n  1071: \t    if (obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||\n  1072: \t\tobj->otyp == BRASS_LANTERN || obj->otyp == POT_OIL ||\n  1073: \t\tobj->otyp == TORCH) {\n  1074: \t\t(void) get_obj_location(obj, &x, &y, 0);\n  1075: \t\tif (obj->where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n> 1076: \t\t    pline(\"%s %s out!\", Yname2(obj), otense(obj, \"go\"));\n  1077: \t\tend_burn(obj, TRUE);\n  1078: \t\treturn TRUE;\n  1079: \t    }\n  1080: \t    if (snuff_candle(obj)) return TRUE;\n  1081: \t}"
+    "stage": 0,
+    "context": "src/apply.c:1076:52\n  1071: \t    if (obj-&gt;otyp == OIL_LAMP || obj-&gt;otyp == MAGIC_LAMP ||\n  1072: \t\tobj-&gt;otyp == BRASS_LANTERN || obj-&gt;otyp == POT_OIL ||\n  1073: \t\tobj-&gt;otyp == TORCH) {\n  1074: \t\t(void) get_obj_location(obj, &x, &y, 0);\n  1075: \t\tif (obj-&gt;where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n&gt; 1076: \t\t    pline(\"%s %s out!\", Yname2(obj), otense(obj, \"go\"));\n  1077: \t\tend_burn(obj, TRUE);\n  1078: \t\treturn TRUE;\n  1079: \t    }\n  1080: \t    if (snuff_candle(obj)) return TRUE;\n  1081: \t}"
   },
   {
     "key": "L01108_01",
     "original": "%s %s light!",
     "translation": "",
-    "context": "src/apply.c:1108:9\n  1103: \t\treturn FALSE;\n  1104: \t    if ((obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||\n  1105: \t\t obj->otyp == BRASS_LANTERN) && obj->cursed && !rn2(2))\n  1106: \t\treturn FALSE;\n  1107: \t    if (obj->where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n> 1108: \t\tpline(\"%s %s light!\", Yname2(obj), otense(obj, \"catch\"));\n  1109: \t    if (obj->otyp == POT_OIL) makeknown(obj->otyp);\n  1110: \t    if (obj->unpaid && costly_spot(u.ux, u.uy) && (obj->where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\","
+    "stage": 0,
+    "context": "src/apply.c:1108:9\n  1103: \t\treturn FALSE;\n  1104: \t    if ((obj-&gt;otyp == OIL_LAMP || obj-&gt;otyp == MAGIC_LAMP ||\n  1105: \t\t obj-&gt;otyp == BRASS_LANTERN) && obj-&gt;cursed && !rn2(2))\n  1106: \t\treturn FALSE;\n  1107: \t    if (obj-&gt;where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n&gt; 1108: \t\tpline(\"%s %s light!\", Yname2(obj), otense(obj, \"catch\"));\n  1109: \t    if (obj-&gt;otyp == POT_OIL) makeknown(obj-&gt;otyp);\n  1110: \t    if (obj-&gt;unpaid && costly_spot(u.ux, u.uy) && (obj-&gt;where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\","
   },
   {
     "key": "L01108_02",
     "original": "catch",
     "translation": "",
-    "context": "src/apply.c:1108:50\n  1103: \t\treturn FALSE;\n  1104: \t    if ((obj->otyp == OIL_LAMP || obj->otyp == MAGIC_LAMP ||\n  1105: \t\t obj->otyp == BRASS_LANTERN) && obj->cursed && !rn2(2))\n  1106: \t\treturn FALSE;\n  1107: \t    if (obj->where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n> 1108: \t\tpline(\"%s %s light!\", Yname2(obj), otense(obj, \"catch\"));\n  1109: \t    if (obj->otyp == POT_OIL) makeknown(obj->otyp);\n  1110: \t    if (obj->unpaid && costly_spot(u.ux, u.uy) && (obj->where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\","
+    "stage": 0,
+    "context": "src/apply.c:1108:50\n  1103: \t\treturn FALSE;\n  1104: \t    if ((obj-&gt;otyp == OIL_LAMP || obj-&gt;otyp == MAGIC_LAMP ||\n  1105: \t\t obj-&gt;otyp == BRASS_LANTERN) && obj-&gt;cursed && !rn2(2))\n  1106: \t\treturn FALSE;\n  1107: \t    if (obj-&gt;where == OBJ_MINVENT ? cansee(x,y) : !Blind)\n&gt; 1108: \t\tpline(\"%s %s light!\", Yname2(obj), otense(obj, \"catch\"));\n  1109: \t    if (obj-&gt;otyp == POT_OIL) makeknown(obj-&gt;otyp);\n  1110: \t    if (obj-&gt;unpaid && costly_spot(u.ux, u.uy) && (obj-&gt;where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\","
   },
   {
     "key": "L01113_01",
     "original": "That's in addition to the cost of %s %s, of course.",
     "translation": "",
-    "context": "src/apply.c:1113:20\n  1108: \t\tpline(\"%s %s light!\", Yname2(obj), otense(obj, \"catch\"));\n  1109: \t    if (obj->otyp == POT_OIL) makeknown(obj->otyp);\n  1110: \t    if (obj->unpaid && costly_spot(u.ux, u.uy) && (obj->where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n> 1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\",\n  1114: \t\t\t\tYname2(obj), obj->quan == 1 ? \"itself\" : \"themselves\");\n  1115: \t\tbill_dummy_object(obj);\n  1116: \t    }\n  1117: \t    begin_burn(obj, FALSE);\n  1118: \t    return TRUE;"
+    "stage": 0,
+    "context": "src/apply.c:1113:20\n  1108: \t\tpline(\"%s %s light!\", Yname2(obj), otense(obj, \"catch\"));\n  1109: \t    if (obj-&gt;otyp == POT_OIL) makeknown(obj-&gt;otyp);\n  1110: \t    if (obj-&gt;unpaid && costly_spot(u.ux, u.uy) && (obj-&gt;where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n&gt; 1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\",\n  1114: \t\t\t\tYname2(obj), obj-&gt;quan == 1 ? \"itself\" : \"themselves\");\n  1115: \t\tbill_dummy_object(obj);\n  1116: \t    }\n  1117: \t    begin_burn(obj, FALSE);\n  1118: \t    return TRUE;"
   },
   {
     "key": "L01114_01",
     "original": "itself",
     "translation": "",
-    "context": "src/apply.c:1114:35\n  1109: \t    if (obj->otyp == POT_OIL) makeknown(obj->otyp);\n  1110: \t    if (obj->unpaid && costly_spot(u.ux, u.uy) && (obj->where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\",\n> 1114: \t\t\t\tYname2(obj), obj->quan == 1 ? \"itself\" : \"themselves\");\n  1115: \t\tbill_dummy_object(obj);\n  1116: \t    }\n  1117: \t    begin_burn(obj, FALSE);\n  1118: \t    return TRUE;\n  1119: \t}"
+    "stage": 0,
+    "context": "src/apply.c:1114:35\n  1109: \t    if (obj-&gt;otyp == POT_OIL) makeknown(obj-&gt;otyp);\n  1110: \t    if (obj-&gt;unpaid && costly_spot(u.ux, u.uy) && (obj-&gt;where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\",\n&gt; 1114: \t\t\t\tYname2(obj), obj-&gt;quan == 1 ? \"itself\" : \"themselves\");\n  1115: \t\tbill_dummy_object(obj);\n  1116: \t    }\n  1117: \t    begin_burn(obj, FALSE);\n  1118: \t    return TRUE;\n  1119: \t}"
   },
   {
     "key": "L01114_02",
     "original": "themselves",
     "translation": "",
-    "context": "src/apply.c:1114:46\n  1109: \t    if (obj->otyp == POT_OIL) makeknown(obj->otyp);\n  1110: \t    if (obj->unpaid && costly_spot(u.ux, u.uy) && (obj->where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\",\n> 1114: \t\t\t\tYname2(obj), obj->quan == 1 ? \"itself\" : \"themselves\");\n  1115: \t\tbill_dummy_object(obj);\n  1116: \t    }\n  1117: \t    begin_burn(obj, FALSE);\n  1118: \t    return TRUE;\n  1119: \t}"
+    "stage": 0,
+    "context": "src/apply.c:1114:46\n  1109: \t    if (obj-&gt;otyp == POT_OIL) makeknown(obj-&gt;otyp);\n  1110: \t    if (obj-&gt;unpaid && costly_spot(u.ux, u.uy) && (obj-&gt;where == OBJ_INVENT)) {\n  1111: \t        /* if it catches while you have it, then it's your tough luck */\n  1112: \t\tcheck_unpaid(obj);\n  1113: \t        verbalize(\"That's in addition to the cost of %s %s, of course.\",\n&gt; 1114: \t\t\t\tYname2(obj), obj-&gt;quan == 1 ? \"itself\" : \"themselves\");\n  1115: \t\tbill_dummy_object(obj);\n  1116: \t    }\n  1117: \t    begin_burn(obj, FALSE);\n  1118: \t    return TRUE;\n  1119: \t}"
   },
   {
     "key": "L01188_01",
     "original": "s",
     "translation": "",
-    "context": "src/apply.c:1188:26\n  1183: \t\t} else if (obj->otyp == TORCH) {\n  1184: \t\t    check_unpaid(obj);\n  1185: \t\t    pline(\"%s的火苗%s燃烧的%s%s\",\n  1186: \t\t\ts_suffix(Yname2(obj)),\n  1187: \t\t\tplur(obj->quan),\n> 1188: \t\t\tobj->quan > 1L ? \"\" : \"s\",\n  1189: \t\t\tBlind ? \".\" : \" 非常亮!\");\n  1190: #ifdef LIGHTSABERS\n  1191: \t\t} else if (is_lightsaber(obj)) {\n  1192: \t\t    /* WAC -- lightsabers */\n  1193: \t\t    /* you can see the color of the blade */"
+    "stage": 0,
+    "context": "src/apply.c:1188:26\n  1183: \t\t} else if (obj-&gt;otyp == TORCH) {\n  1184: \t\t    check_unpaid(obj);\n  1185: \t\t    pline(\"%s的火苗%s燃烧的%s%s\",\n  1186: \t\t\ts_suffix(Yname2(obj)),\n  1187: \t\t\tplur(obj-&gt;quan),\n&gt; 1188: \t\t\tobj-&gt;quan &gt; 1L ? \"\" : \"s\",\n  1189: \t\t\tBlind ? \".\" : \" 非常亮!\");\n  1190: #ifdef LIGHTSABERS\n  1191: \t\t} else if (is_lightsaber(obj)) {\n  1192: \t\t    /* WAC -- lightsabers */\n  1193: \t\t    /* you can see the color of the blade */"
   },
   {
     "key": "L01266_01",
     "original": "potion",
     "translation": "",
-    "context": "src/apply.c:1266:6\n  1261: \tchar buf[BUFSZ];\n  1262: \tconst char *objnam =\n  1263: #ifdef FIREARMS\n  1264: \t    obj->otyp == POT_OIL ? \"药水\" : \"魔杖\";\n  1265: #else\n> 1266: \t    \"potion\";\n  1267: #endif\n  1268: \n  1269: \tif (u.uswallow) {\n  1270: \t    You(no_elbow_room);\n  1271: \t    return;"
+    "stage": 0,
+    "context": "src/apply.c:1266:6\n  1261: \tchar buf[BUFSZ];\n  1262: \tconst char *objnam =\n  1263: #ifdef FIREARMS\n  1264: \t    obj-&gt;otyp == POT_OIL ? \"药水\" : \"魔杖\";\n  1265: #else\n&gt; 1266: \t    \"potion\";\n  1267: #endif\n  1268: \n  1269: \tif (u.uswallow) {\n  1270: \t    You(no_elbow_room);\n  1271: \t    return;"
   },
   {
     "key": "L01336_01",
     "original": "rub",
     "translation": "",
-    "context": "src/apply.c:1336:35\n  1331: static NEARDATA const char cuddly[] = { TOOL_CLASS, GEM_CLASS, 0 };\n  1332: \n  1333: int\n  1334: dorub()\n  1335: {\n> 1336: \tstruct obj *obj = getobj(cuddly, \"rub\");\n  1337: \n  1338: \tif (obj && obj->oclass == GEM_CLASS) {\n  1339: \t    if (is_graystone(obj)) {\n  1340: \t\tuse_stone(obj);\n  1341: \t\treturn 1;"
+    "stage": 0,
+    "context": "src/apply.c:1336:35\n  1331: static NEARDATA const char cuddly[] = { TOOL_CLASS, GEM_CLASS, 0 };\n  1332: \n  1333: int\n  1334: dorub()\n  1335: {\n&gt; 1336: \tstruct obj *obj = getobj(cuddly, \"rub\");\n  1337: \n  1338: \tif (obj && obj-&gt;oclass == GEM_CLASS) {\n  1339: \t    if (is_graystone(obj)) {\n  1340: \t\tuse_stone(obj);\n  1341: \t\treturn 1;"
   },
   {
     "key": "L01348_01",
     "original": "rub",
     "translation": "",
-    "context": "src/apply.c:1348:31\n  1343: \t\tpline(\"你没法这么干，试试别的吧.\");\n  1344: \t\treturn 0;\n  1345: \t    }\n  1346: \t}\n  1347: \n> 1348: \tif (!obj || !wield_tool(obj, \"rub\")) return 0;\n  1349: \n  1350: \t/* now uwep is obj */\n  1351: \tif (uwep->otyp == MAGIC_LAMP) {\n  1352: \t    if (uwep->spe > 0 && !rn2(3)) {\n  1353: \t\tcheck_unpaid_usage(uwep, TRUE);\t\t/* unusual item use */"
+    "stage": 0,
+    "context": "src/apply.c:1348:31\n  1343: \t\tpline(\"你没法这么干，试试别的吧.\");\n  1344: \t\treturn 0;\n  1345: \t    }\n  1346: \t}\n  1347: \n&gt; 1348: \tif (!obj || !wield_tool(obj, \"rub\")) return 0;\n  1349: \n  1350: \t/* now uwep is obj */\n  1351: \tif (uwep-&gt;otyp == MAGIC_LAMP) {\n  1352: \t    if (uwep-&gt;spe &gt; 0 && !rn2(3)) {\n  1353: \t\tcheck_unpaid_usage(uwep, TRUE);\t\t/* unusual item use */"
   },
   {
     "key": "L01431_01",
     "original": "don't have enough traction to jump.",
     "translation": "",
-    "context": "src/apply.c:1431:7\n  1426: \t} else if (Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz)) {\n  1427: \t\tif (magic) {\n  1428: \t\t\tYou(\"在周围漂浮着飞了一圈.\");\n  1429: \t\t\treturn 1;\n  1430: \t\t} else {\n> 1431: \t\tYou(\"don't have enough traction to jump.\");\n  1432: \t\treturn 0;\n  1433: \t\t}\n  1434: \t} else if (!magic && near_capacity() > UNENCUMBERED) {\n  1435: \t\tYou(\"身上的东西太多没法跳起来！\");\n  1436: \t\treturn 0;"
+    "stage": 0,
+    "context": "src/apply.c:1431:7\n  1426: \t} else if (Levitation || Is_airlevel(&u.uz) || Is_waterlevel(&u.uz)) {\n  1427: \t\tif (magic) {\n  1428: \t\t\tYou(\"在周围漂浮着飞了一圈.\");\n  1429: \t\t\treturn 1;\n  1430: \t\t} else {\n&gt; 1431: \t\tYou(\"don't have enough traction to jump.\");\n  1432: \t\treturn 0;\n  1433: \t\t}\n  1434: \t} else if (!magic && near_capacity() &gt; UNENCUMBERED) {\n  1435: \t\tYou(\"身上的东西太多没法跳起来！\");\n  1436: \t\treturn 0;"
   },
   {
     "key": "L01466_01",
     "original": "the desired position",
     "translation": "",
-    "context": "src/apply.c:1466:24\n  1461: #endif\n  1462: \n  1463: \tpline(\"你想跳到哪里?\");\n  1464: \tcc.x = u.ux;\n  1465: \tcc.y = u.uy;\n> 1466: \tif (getpos(&cc, TRUE, \"the desired position\") < 0)\n  1467: \t\treturn 0;\t/* user pressed ESC */\n  1468: \tif (!magic && !(HJumping & ~INTRINSIC) && !EJumping &&\n  1469: \t\t\tdistu(cc.x, cc.y) != 5) {\n  1470: \t\t/* The Knight jumping restriction still applies when riding a\n  1471: \t\t * horse.  After all, what shape is the knight piece in chess?"
+    "stage": 0,
+    "context": "src/apply.c:1466:24\n  1461: #endif\n  1462: \n  1463: \tpline(\"你想跳到哪里?\");\n  1464: \tcc.x = u.ux;\n  1465: \tcc.y = u.uy;\n&gt; 1466: \tif (getpos(&cc, TRUE, \"the desired position\") &lt; 0)\n  1467: \t\treturn 0;\t/* user pressed ESC */\n  1468: \tif (!magic && !(HJumping & ~INTRINSIC) && !EJumping &&\n  1469: \t\t\tdistu(cc.x, cc.y) != 5) {\n  1470: \t\t/* The Knight jumping restriction still applies when riding a\n  1471: \t\t * horse.  After all, what shape is the knight piece in chess?"
   },
   {
     "key": "L01573_01",
     "original": "tin",
     "translation": "",
-    "context": "src/apply.c:1573:49\n  1568: \t */\n  1569: \tif (obj->spe <= 0) {\n  1570: \t\tYou(\"的装罐器里头空罐子用完了.\");\n  1571: \t\treturn;\n  1572: \t}\n> 1573: \tif (!(corpse = getobj((const char *)tinnables, \"tin\"))) return;\n  1574: \tif (corpse->otyp == CORPSE && (corpse->oeaten || corpse->odrained)) {\n  1575: \t\tYou(\"没法把已经吃了一半的%s做成罐头.\",something);\n  1576: \t\treturn;\n  1577: \t}\n  1578: \tif (!tinnable(corpse)) {"
+    "stage": 0,
+    "context": "src/apply.c:1573:49\n  1568: \t */\n  1569: \tif (obj-&gt;spe &lt;= 0) {\n  1570: \t\tYou(\"的装罐器里头空罐子用完了.\");\n  1571: \t\treturn;\n  1572: \t}\n&gt; 1573: \tif (!(corpse = getobj((const char *)tinnables, \"tin\"))) return;\n  1574: \tif (corpse-&gt;otyp == CORPSE && (corpse-&gt;oeaten || corpse-&gt;odrained)) {\n  1575: \t\tYou(\"没法把已经吃了一半的%s做成罐头.\",something);\n  1576: \t\treturn;\n  1577: \t}\n  1578: \tif (!tinnable(corpse)) {"
   },
   {
     "key": "L01818_01",
     "original": "null figurine in fig_transform()",
     "translation": "",
-    "context": "src/apply.c:1818:12\n  1813: \tboolean redraw = FALSE;\n  1814: \tchar monnambuf[BUFSZ], carriedby[BUFSZ];\n  1815: \n  1816: \tif (!figurine) {\n  1817: #ifdef DEBUG\n> 1818: \t    pline(\"null figurine in fig_transform()\");\n  1819: #endif\n  1820: \t    return;\n  1821: \t}\n  1822: \tsilent = (timeout != monstermoves); /* happened while away */\n  1823: \tokay_spot = get_obj_location(figurine, &cc.x, &cc.y, 0);"
+    "stage": 0,
+    "context": "src/apply.c:1818:12\n  1813: \tboolean redraw = FALSE;\n  1814: \tchar monnambuf[BUFSZ], carriedby[BUFSZ];\n  1815: \n  1816: \tif (!figurine) {\n  1817: #ifdef DEBUG\n&gt; 1818: \t    pline(\"null figurine in fig_transform()\");\n  1819: #endif\n  1820: \t    return;\n  1821: \t}\n  1822: \tsilent = (timeout != monstermoves); /* happened while away */\n  1823: \tokay_spot = get_obj_location(figurine, &cc.x, &cc.y, 0);"
   },
   {
     "key": "L01839_01",
     "original": "%s",
     "translation": "",
-    "context": "src/apply.c:1839:25\n  1834: \t}\n  1835: \n  1836: \tcansee_spot = cansee(cc.x, cc.y);\n  1837: \tmtmp = make_familiar(figurine, cc.x, cc.y, TRUE);\n  1838: \tif (mtmp) {\n> 1839: \t    Sprintf(monnambuf, \"%s\",an(m_monnam(mtmp)));\n  1840: \t    switch (figurine->where) {\n  1841: \t\tcase OBJ_INVENT:\n  1842: \t\t    if (Blind)\n  1843: \t\t\tYou_feel(\"%s从你的背包里头%s!\", something,\n  1844: \t\t\t    locomotion(mtmp->data,\"掉下来了\"));"
+    "stage": 0,
+    "context": "src/apply.c:1839:25\n  1834: \t}\n  1835: \n  1836: \tcansee_spot = cansee(cc.x, cc.y);\n  1837: \tmtmp = make_familiar(figurine, cc.x, cc.y, TRUE);\n  1838: \tif (mtmp) {\n&gt; 1839: \t    Sprintf(monnambuf, \"%s\",an(m_monnam(mtmp)));\n  1840: \t    switch (figurine-&gt;where) {\n  1841: \t\tcase OBJ_INVENT:\n  1842: \t\t    if (Blind)\n  1843: \t\t\tYou_feel(\"%s从你的背包里头%s!\", something,\n  1844: \t\t\t    locomotion(mtmp-&gt;data,\"掉下来了\"));"
   },
   {
     "key": "L01865_01",
     "original": "%s pack",
     "translation": "",
-    "context": "src/apply.c:1865:27\n  1860: \t\t    if (cansee_spot && !silent) {\n  1861: \t\t\tstruct monst *mon;\n  1862: \t\t\tmon = figurine->ocarry;\n  1863: \t\t\t/* figurine carring monster might be invisible */\n  1864: \t\t\tif (canseemon(figurine->ocarry)) {\n> 1865: \t\t\t    Sprintf(carriedby, \"%s pack\",\n  1866: \t\t\t\t     s_suffix(a_monnam(mon)));\n  1867: \t\t\t}\n  1868: \t\t\telse if (is_pool(mon->mx, mon->my))\n  1869: \t\t\t    Strcpy(carriedby, \"空荡荡的水池\");\n  1870: \t\t\telse"
+    "stage": 0,
+    "context": "src/apply.c:1865:27\n  1860: \t\t    if (cansee_spot && !silent) {\n  1861: \t\t\tstruct monst *mon;\n  1862: \t\t\tmon = figurine-&gt;ocarry;\n  1863: \t\t\t/* figurine carring monster might be invisible */\n  1864: \t\t\tif (canseemon(figurine-&gt;ocarry)) {\n&gt; 1865: \t\t\t    Sprintf(carriedby, \"%s pack\",\n  1866: \t\t\t\t     s_suffix(a_monnam(mon)));\n  1867: \t\t\t}\n  1868: \t\t\telse if (is_pool(mon-&gt;mx, mon-&gt;my))\n  1869: \t\t\t    Strcpy(carriedby, \"空荡荡的水池\");\n  1870: \t\t\telse"
   },
   {
     "key": "L01872_01",
     "original": "see %s %s out of %s!",
     "translation": "",
-    "context": "src/apply.c:1872:8\n  1867: \t\t\t}\n  1868: \t\t\telse if (is_pool(mon->mx, mon->my))\n  1869: \t\t\t    Strcpy(carriedby, \"空荡荡的水池\");\n  1870: \t\t\telse\n  1871: \t\t\t    Strcpy(carriedby, \"稀薄的空气\");\n> 1872: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n  1873: \t\t\t    locomotion(mtmp->data, \"drop\"), carriedby);\n  1874: \t\t    }\n  1875: \t\t    break;\n  1876: #if 0\n  1877: \t\tcase OBJ_MIGRATING:"
+    "stage": 0,
+    "context": "src/apply.c:1872:8\n  1867: \t\t\t}\n  1868: \t\t\telse if (is_pool(mon-&gt;mx, mon-&gt;my))\n  1869: \t\t\t    Strcpy(carriedby, \"空荡荡的水池\");\n  1870: \t\t\telse\n  1871: \t\t\t    Strcpy(carriedby, \"稀薄的空气\");\n&gt; 1872: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n  1873: \t\t\t    locomotion(mtmp-&gt;data, \"drop\"), carriedby);\n  1874: \t\t    }\n  1875: \t\t    break;\n  1876: #if 0\n  1877: \t\tcase OBJ_MIGRATING:"
   },
   {
     "key": "L01873_01",
     "original": "drop",
     "translation": "",
-    "context": "src/apply.c:1873:31\n  1868: \t\t\telse if (is_pool(mon->mx, mon->my))\n  1869: \t\t\t    Strcpy(carriedby, \"空荡荡的水池\");\n  1870: \t\t\telse\n  1871: \t\t\t    Strcpy(carriedby, \"稀薄的空气\");\n  1872: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n> 1873: \t\t\t    locomotion(mtmp->data, \"drop\"), carriedby);\n  1874: \t\t    }\n  1875: \t\t    break;\n  1876: #if 0\n  1877: \t\tcase OBJ_MIGRATING:\n  1878: \t\t    break;"
+    "stage": 0,
+    "context": "src/apply.c:1873:31\n  1868: \t\t\telse if (is_pool(mon-&gt;mx, mon-&gt;my))\n  1869: \t\t\t    Strcpy(carriedby, \"空荡荡的水池\");\n  1870: \t\t\telse\n  1871: \t\t\t    Strcpy(carriedby, \"稀薄的空气\");\n  1872: \t\t\tYou(\"see %s %s out of %s!\", monnambuf,\n&gt; 1873: \t\t\t    locomotion(mtmp-&gt;data, \"drop\"), carriedby);\n  1874: \t\t    }\n  1875: \t\t    break;\n  1876: #if 0\n  1877: \t\tcase OBJ_MIGRATING:\n  1878: \t\t    break;"
   },
   {
     "key": "L01882_01",
     "original": "figurine came to life where? (%d)",
     "translation": "",
-    "context": "src/apply.c:1882:18\n  1877: \t\tcase OBJ_MIGRATING:\n  1878: \t\t    break;\n  1879: #endif\n  1880: \n  1881: \t\tdefault:\n> 1882: \t\t    impossible(\"figurine came to life where? (%d)\",\n  1883: \t\t\t\t(int)figurine->where);\n  1884: \t\tbreak;\n  1885: \t    }\n  1886: \t}\n  1887: \t/* free figurine now */"
+    "stage": 0,
+    "context": "src/apply.c:1882:18\n  1877: \t\tcase OBJ_MIGRATING:\n  1878: \t\t    break;\n  1879: #endif\n  1880: \n  1881: \t\tdefault:\n&gt; 1882: \t\t    impossible(\"figurine came to life where? (%d)\",\n  1883: \t\t\t\t(int)figurine-&gt;where);\n  1884: \t\tbreak;\n  1885: \t    }\n  1886: \t}\n  1887: \t/* free figurine now */"
   },
   {
     "key": "L01990_01",
     "original": "grease",
     "translation": "",
-    "context": "src/apply.c:1990:30\n  1985: \t\t\tpline(\"%s从你的%s.\", Tobjnam(obj, \"滑落\"),\n  1986: \t\t\t      makeplural(body_part(FINGER)));\n  1987: \t\t\tdropx(obj);\n  1988: \t\t\treturn;\n  1989: \t\t}\n> 1990: \t\totmp = getobj(lubricables, \"grease\");\n  1991: \t\tif (!otmp) return;\n  1992: \t\tif ((otmp->owornmask & WORN_ARMOR) && uarmc) {\n  1993: \t\t\tStrcpy(buf, xname(uarmc));\n  1994: \t\t\tYou(need_to_remove_outer_armor, buf, xname(otmp));\n  1995: \t\t\treturn;"
+    "stage": 0,
+    "context": "src/apply.c:1990:30\n  1985: \t\t\tpline(\"%s从你的%s.\", Tobjnam(obj, \"滑落\"),\n  1986: \t\t\t      makeplural(body_part(FINGER)));\n  1987: \t\t\tdropx(obj);\n  1988: \t\t\treturn;\n  1989: \t\t}\n&gt; 1990: \t\totmp = getobj(lubricables, \"grease\");\n  1991: \t\tif (!otmp) return;\n  1992: \t\tif ((otmp-&gt;owornmask & WORN_ARMOR) && uarmc) {\n  1993: \t\t\tStrcpy(buf, xname(uarmc));\n  1994: \t\t\tYou(need_to_remove_outer_armor, buf, xname(otmp));\n  1995: \t\t\treturn;"
   },
   {
     "key": "L02000_01",
     "original": " and ",
     "translation": "",
-    "context": "src/apply.c:2000:35\n  1995: \t\t\treturn;\n  1996: \t\t}\n  1997: #ifdef TOURIST\n  1998: \t\tif ((otmp->owornmask & WORN_SHIRT) && (uarmc || uarm)) {\n  1999: \t\t\tStrcpy(buf, uarmc ? xname(uarmc) : \"\");\n> 2000: \t\t\tif (uarmc && uarm) Strcat(buf, \" and \");\n  2001: \t\t\tStrcat(buf, uarm ? xname(uarm) : \"\");\n  2002: \t\t\tYou(need_to_remove_outer_armor, buf, xname(otmp));\n  2003: \t\t\treturn;\n  2004: \t\t}\n  2005: #endif"
+    "stage": 0,
+    "context": "src/apply.c:2000:35\n  1995: \t\t\treturn;\n  1996: \t\t}\n  1997: #ifdef TOURIST\n  1998: \t\tif ((otmp-&gt;owornmask & WORN_SHIRT) && (uarmc || uarm)) {\n  1999: \t\t\tStrcpy(buf, uarmc ? xname(uarmc) : \"\");\n&gt; 2000: \t\t\tif (uarmc && uarm) Strcat(buf, \" and \");\n  2001: \t\t\tStrcat(buf, uarm ? xname(uarm) : \"\");\n  2002: \t\t\tYou(need_to_remove_outer_armor, buf, xname(otmp));\n  2003: \t\t\treturn;\n  2004: \t\t}\n  2005: #endif"
   },
   {
     "key": "L02111_01",
     "original": "%s",
     "translation": "",
-    "context": "src/apply.c:2111:17\n  2106: \t    reset_whetstone();\n  2107: \t} else {\n  2108: \t    if (Hallucination)\n  2109: \t\tpline(\"%s都是%s的错!\",\n  2110: \t\t    is_plural(ows) ? \"这\" : \"这些\", xname(ows));\n> 2111: \t    else pline(\"%s\", Blind ? \"哎呦，真是麻烦的活.\" :\n  2112: \t\t\"你磨了半天，总算看不见任何视觉上的改变了.\");\n  2113: \t    reset_whetstone();\n  2114: \t}\n  2115: \n  2116: \treturn 0;"
+    "stage": 0,
+    "context": "src/apply.c:2111:17\n  2106: \t    reset_whetstone();\n  2107: \t} else {\n  2108: \t    if (Hallucination)\n  2109: \t\tpline(\"%s都是%s的错!\",\n  2110: \t\t    is_plural(ows) ? \"这\" : \"这些\", xname(ows));\n&gt; 2111: \t    else pline(\"%s\", Blind ? \"哎呦，真是麻烦的活.\" :\n  2112: \t\t\"你磨了半天，总算看不见任何视觉上的改变了.\");\n  2113: \t    reset_whetstone();\n  2114: \t}\n  2115: \n  2116: \treturn 0;"
   },
   {
     "key": "L02125_01",
     "original": "sharpening",
     "translation": "",
-    "context": "src/apply.c:2125:25\n  2120: STATIC_OVL void\n  2121: use_whetstone(stone, obj)\n  2122: struct obj *stone, *obj;\n  2123: {\n  2124: \tboolean fail_use = TRUE;\n> 2125: \tconst char *occutext = \"sharpening\";\n  2126: \tint tmptime = 130 + (rnl(13) * 5);\n  2127: \n  2128: \tif (u.ustuck && sticks(youmonst.data)) {\n  2129: \t    You(\"至少应该先摆脱%s.\", mon_nam(u.ustuck));\n  2130: \t} else"
+    "stage": 0,
+    "context": "src/apply.c:2125:25\n  2120: STATIC_OVL void\n  2121: use_whetstone(stone, obj)\n  2122: struct obj *stone, *obj;\n  2123: {\n  2124: \tboolean fail_use = TRUE;\n&gt; 2125: \tconst char *occutext = \"sharpening\";\n  2126: \tint tmptime = 130 + (rnl(13) * 5);\n  2127: \n  2128: \tif (u.ustuck && sticks(youmonst.data)) {\n  2129: \t    You(\"至少应该先摆脱%s.\", mon_nam(u.ustuck));\n  2130: \t} else"
   },
   {
     "key": "L02243_01",
     "original": "rub on the stone%s",
     "translation": "",
-    "context": "src/apply.c:2243:23\n  2238:     if (!Blind) tstone->dknown = 1;\n  2239:     /* when the touchstone is fully known, don't bother listing extra\n  2240:        junk as likely candidates for rubbing */\n  2241:     choices = (tstone->otyp == TOUCHSTONE && tstone->dknown &&\n  2242: \t\tobjects[TOUCHSTONE].oc_name_known) ? justgems : allowall;\n> 2243:     Sprintf(stonebuf, \"rub on the stone%s\", plur(tstone->quan));\n  2244:     if ((obj = getobj(choices, stonebuf)) == 0)\n  2245: \treturn;\n  2246: #ifndef GOLDOBJ\n  2247:     if (obj->oclass == COIN_CLASS) {\n  2248: \tu.ugold += obj->quan;\t/* keep botl up to date */"
+    "stage": 0,
+    "context": "src/apply.c:2243:23\n  2238:     if (!Blind) tstone-&gt;dknown = 1;\n  2239:     /* when the touchstone is fully known, don't bother listing extra\n  2240:        junk as likely candidates for rubbing */\n  2241:     choices = (tstone-&gt;otyp == TOUCHSTONE && tstone-&gt;dknown &&\n  2242: \t\tobjects[TOUCHSTONE].oc_name_known) ? justgems : allowall;\n&gt; 2243:     Sprintf(stonebuf, \"rub on the stone%s\", plur(tstone-&gt;quan));\n  2244:     if ((obj = getobj(choices, stonebuf)) == 0)\n  2245: \treturn;\n  2246: #ifndef GOLDOBJ\n  2247:     if (obj-&gt;oclass == COIN_CLASS) {\n  2248: \tu.ugold += obj-&gt;quan;\t/* keep botl up to date */"
   },
   {
     "key": "L02323_01",
     "original": "are",
     "translation": "",
-    "context": "src/apply.c:2323:36\n  2318: \t    return;\n  2319: \tcase LIQUID:\n  2320: \t    if (!obj->known)\t\t/* note: not \"whetstone\" */\n  2321: \t\tYou(\"这玩意可不是什么吸水石头.\");\n  2322: \t    else\n> 2323: \t\tpline(\"%s变得湿了.\", Tobjnam(tstone, \"are\"));\n  2324: \t    return;\n  2325: \tcase WAX:\n  2326: \t    streak_color = \"蜡色的\";\n  2327: \t    break;\t\t/* okay even if not touchstone */\n  2328: \tcase WOOD:"
+    "stage": 0,
+    "context": "src/apply.c:2323:36\n  2318: \t    return;\n  2319: \tcase LIQUID:\n  2320: \t    if (!obj-&gt;known)\t\t/* note: not \"whetstone\" */\n  2321: \t\tYou(\"这玩意可不是什么吸水石头.\");\n  2322: \t    else\n&gt; 2323: \t\tpline(\"%s变得湿了.\", Tobjnam(tstone, \"are\"));\n  2324: \t    return;\n  2325: \tcase WAX:\n  2326: \t    streak_color = \"蜡色的\";\n  2327: \t    break;\t\t/* okay even if not touchstone */\n  2328: \tcase WOOD:"
   },
   {
     "key": "L02353_01",
     "original": "stone%s",
     "translation": "",
-    "context": "src/apply.c:2353:23\n  2348: \t    break;\n  2349: \t}\n  2350: \tbreak;\t\t/* default oclass */\n  2351:     }\n  2352: \n> 2353:     Sprintf(stonebuf, \"stone%s\", plur(tstone->quan));\n  2354:     if (do_scratch)\n  2355: \tpline(\"你在%s上搞出%s的痕迹。\",\n  2356: \t      streak_color ? streak_color : (const char *)\"\",\n  2357: \t      streak_color ? \" \" : \"\", stonebuf);\n  2358:     else if (streak_color)"
+    "stage": 0,
+    "context": "src/apply.c:2353:23\n  2348: \t    break;\n  2349: \t}\n  2350: \tbreak;\t\t/* default oclass */\n  2351:     }\n  2352: \n&gt; 2353:     Sprintf(stonebuf, \"stone%s\", plur(tstone-&gt;quan));\n  2354:     if (do_scratch)\n  2355: \tpline(\"你在%s上搞出%s的痕迹。\",\n  2356: \t      streak_color ? streak_color : (const char *)\"\",\n  2357: \t      streak_color ? \" \" : \"\", stonebuf);\n  2358:     else if (streak_color)"
   },
   {
     "key": "L02359_01",
     "original": "You see %s streaks on the %s.",
     "translation": "",
-    "context": "src/apply.c:2359:8\n  2354:     if (do_scratch)\n  2355: \tpline(\"你在%s上搞出%s的痕迹。\",\n  2356: \t      streak_color ? streak_color : (const char *)\"\",\n  2357: \t      streak_color ? \" \" : \"\", stonebuf);\n  2358:     else if (streak_color)\n> 2359: \tpline(\"You see %s streaks on the %s.\", streak_color, stonebuf);\n  2360:     else\n  2361: \tpline(scritch);\n  2362:     return;\n  2363: }\n  2364: "
+    "stage": 0,
+    "context": "src/apply.c:2359:8\n  2354:     if (do_scratch)\n  2355: \tpline(\"你在%s上搞出%s的痕迹。\",\n  2356: \t      streak_color ? streak_color : (const char *)\"\",\n  2357: \t      streak_color ? \" \" : \"\", stonebuf);\n  2358:     else if (streak_color)\n&gt; 2359: \tpline(\"You see %s streaks on the %s.\", streak_color, stonebuf);\n  2360:     else\n  2361: \tpline(scritch);\n  2362:     return;\n  2363: }\n  2364: "
   },
   {
     "key": "L02513_01",
     "original": "lash",
     "translation": "",
-    "context": "src/apply.c:2513:23\n  2508:     int rx, ry, proficient, res = 0;\n  2509:     const char *msg_slipsfree = \"牛鞭没打中.\";\n  2510:     const char *msg_snap = \"啪!\";\n  2511: \n  2512:     if (obj != uwep) {\n> 2513: \tif (!wield_tool(obj, \"lash\")) return 0;\n  2514: \telse res = 1;\n  2515:     }\n  2516:     if (!getdir((char *)0)) return res;\n  2517: \n  2518:     if (Stunned || (Confusion && !rn2(5))) confdir();"
+    "stage": 0,
+    "context": "src/apply.c:2513:23\n  2508:     int rx, ry, proficient, res = 0;\n  2509:     const char *msg_slipsfree = \"牛鞭没打中.\";\n  2510:     const char *msg_snap = \"啪!\";\n  2511: \n  2512:     if (obj != uwep) {\n&gt; 2513: \tif (!wield_tool(obj, \"lash\")) return 0;\n  2514: \telse res = 1;\n  2515:     }\n  2516:     if (!getdir((char *)0)) return res;\n  2517: \n  2518:     if (Stunned || (Confusion && !rn2(5))) confdir();"
   },
   {
     "key": "L02672_01",
     "original": "yank %s %s to the %s!",
     "translation": "",
-    "context": "src/apply.c:2672:11\n  2667: \t\tsetmnotwielded(mtmp,otmp);\n  2668: \n  2669: \t\tswitch (rn2(proficient + 1)) {\n  2670: \t\tcase 2:\n  2671: \t\t    /* to floor near you */\n> 2672: \t\t    You(\"yank %s %s to the %s!\", s_suffix(mon_nam(mtmp)),\n  2673: \t\t\tonambuf, surface(u.ux, u.uy));\n  2674: \t\t    place_object(otmp, u.ux, u.uy);\n  2675: \t\t    stackobj(otmp);\n  2676: \t\t    break;\n  2677: \t\tcase 3:"
+    "stage": 0,
+    "context": "src/apply.c:2672:11\n  2667: \t\tsetmnotwielded(mtmp,otmp);\n  2668: \n  2669: \t\tswitch (rn2(proficient + 1)) {\n  2670: \t\tcase 2:\n  2671: \t\t    /* to floor near you */\n&gt; 2672: \t\t    You(\"yank %s %s to the %s!\", s_suffix(mon_nam(mtmp)),\n  2673: \t\t\tonambuf, surface(u.ux, u.uy));\n  2674: \t\t    place_object(otmp, u.ux, u.uy);\n  2675: \t\t    stackobj(otmp);\n  2676: \t\t    break;\n  2677: \t\tcase 3:"
   },
   {
     "key": "L02776_01",
     "original": "swing",
     "translation": "",
-    "context": "src/apply.c:2776:27\n  2771: \tif (u.uswallow) {\n  2772: \t    pline(not_enough_room);\n  2773: \t    return (0);\n  2774: \t}\n  2775: \tif (obj != uwep) {\n> 2776: \t    if (!wield_tool(obj, \"swing\")) return(0);\n  2777: \t    else res = 1;\n  2778: \t}\n  2779: \n  2780: \t/* Prompt for a location */\n  2781: \tpline(where_to_hit);"
+    "stage": 0,
+    "context": "src/apply.c:2776:27\n  2771: \tif (u.uswallow) {\n  2772: \t    pline(not_enough_room);\n  2773: \t    return (0);\n  2774: \t}\n  2775: \tif (obj != uwep) {\n&gt; 2776: \t    if (!wield_tool(obj, \"swing\")) return(0);\n  2777: \t    else res = 1;\n  2778: \t}\n  2779: \n  2780: \t/* Prompt for a location */\n  2781: \tpline(where_to_hit);"
   },
   {
     "key": "L02974_01",
     "original": "cast",
     "translation": "",
-    "context": "src/apply.c:2974:27\n  2969: \tif (u.uswallow) {\n  2970: \t    pline(not_enough_room);\n  2971: \t    return (0);\n  2972: \t}\n  2973: \tif (obj != uwep) {\n> 2974: \t    if (!wield_tool(obj, \"cast\")) return(0);\n  2975: \t    else res = 1;\n  2976: \t}\n  2977:      /* assert(obj == uwep); */\n  2978: \n  2979: \t/* Prompt for a location */"
+    "stage": 0,
+    "context": "src/apply.c:2974:27\n  2969: \tif (u.uswallow) {\n  2970: \t    pline(not_enough_room);\n  2971: \t    return (0);\n  2972: \t}\n  2973: \tif (obj != uwep) {\n&gt; 2974: \t    if (!wield_tool(obj, \"cast\")) return(0);\n  2975: \t    else res = 1;\n  2976: \t}\n  2977:      /* assert(obj == uwep); */\n  2978: \n  2979: \t/* Prompt for a location */"
   },
   {
     "key": "L03018_01",
     "original": "%s",
     "translation": "",
-    "context": "src/apply.c:3018:19\n  3013: \t\t\t buf, MENU_UNSELECTED);\n  3014: \t    any.a_int++;\n  3015: \t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  3016: \t\t\t\"一个怪物\", MENU_UNSELECTED);\n  3017: \t    any.a_int++;\n> 3018: \t    Sprintf(buf, \"%s\", surface(cc.x, cc.y));\n  3019: \t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  3020: \t\t\t buf, MENU_UNSELECTED);\n  3021: \t    end_menu(tmpwin, \"瞄准哪个?\");\n  3022: \t    tohit = rn2(4);\n  3023: \t    if (select_menu(tmpwin, PICK_ONE, &selected) > 0 &&"
+    "stage": 0,
+    "context": "src/apply.c:3018:19\n  3013: \t\t\t buf, MENU_UNSELECTED);\n  3014: \t    any.a_int++;\n  3015: \t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  3016: \t\t\t\"一个怪物\", MENU_UNSELECTED);\n  3017: \t    any.a_int++;\n&gt; 3018: \t    Sprintf(buf, \"%s\", surface(cc.x, cc.y));\n  3019: \t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  3020: \t\t\t buf, MENU_UNSELECTED);\n  3021: \t    end_menu(tmpwin, \"瞄准哪个?\");\n  3022: \t    tohit = rn2(4);\n  3023: \t    if (select_menu(tmpwin, PICK_ONE, &selected) &gt; 0 &&"
   },
   {
     "key": "L03439_01",
     "original": "%s %s %s.",
     "translation": "",
-    "context": "src/apply.c:3439:14\n  3434: \t\t    /* sometimes the blessing will be worn off */\n  3435: \t\t    if (!rn2(49)) {\n  3436: \t\t\tif (!Blind) {\n  3437: \t\t\t    char buf[BUFSZ];\n  3438: \n> 3439: \t\t\t    pline(\"%s %s %s.\", Shk_Your(buf, obj),\n  3440: \t\t\t\t  aobjnam(obj, \"发出了\"), hcolor(\"棕色的光芒\"));\n  3441: \t\t\t    obj->bknown = 1;\n  3442: \t\t\t}\n  3443: \t\t\tunbless(obj);\n  3444: \t\t    }"
+    "stage": 0,
+    "context": "src/apply.c:3439:14\n  3434: \t\t    /* sometimes the blessing will be worn off */\n  3435: \t\t    if (!rn2(49)) {\n  3436: \t\t\tif (!Blind) {\n  3437: \t\t\t    char buf[BUFSZ];\n  3438: \n&gt; 3439: \t\t\t    pline(\"%s %s %s.\", Shk_Your(buf, obj),\n  3440: \t\t\t\t  aobjnam(obj, \"发出了\"), hcolor(\"棕色的光芒\"));\n  3441: \t\t\t    obj-&gt;bknown = 1;\n  3442: \t\t\t}\n  3443: \t\t\tunbless(obj);\n  3444: \t\t    }"
   }
 ]

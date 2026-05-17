@@ -3,192 +3,224 @@
     "key": "L00072_01",
     "original": "... into a pile of dust.",
     "translation": "",
-    "context": "src/dog.c:72:10\n    67: \t\tif ((mvitals[mndx].mvflags & G_EXTINCT) &&\n    68: \t\t\tmbirth_limit(mndx) != MAXMONNO) {\n    69: \t\t    if (!quietly)\n    70: \t\t\t/* have just been given \"You <do something with>\n    71: \t\t\t   the figurine and it transforms.\" message */\n>   72: \t\t\tpline(\"... into a pile of dust.\");\n    73: \t\t    break;\t/* mtmp is null */\n    74: \t\t}\n    75: \t    } else if (!rn2(3)) {\n    76: \t\tpm = &mons[pet_type()];\n    77: \t    } else {"
+    "stage": 0,
+    "context": "src/dog.c:72:10\n    67: \t\tif ((mvitals[mndx].mvflags & G_EXTINCT) &&\n    68: \t\t\tmbirth_limit(mndx) != MAXMONNO) {\n    69: \t\t    if (!quietly)\n    70: \t\t\t/* have just been given \"You &lt;do something with&gt;\n    71: \t\t\t   the figurine and it transforms.\" message */\n&gt;   72: \t\t\tpline(\"... into a pile of dust.\");\n    73: \t\t    break;\t/* mtmp is null */\n    74: \t\t}\n    75: \t    } else if (!rn2(3)) {\n    76: \t\tpm = &mons[pet_type()];\n    77: \t    } else {"
   },
   {
     "key": "L00081_01",
     "original": "seems to be nothing available for a familiar.",
     "translation": "",
-    "context": "src/dog.c:81:13\n    76: \t\tpm = &mons[pet_type()];\n    77: \t    } else {\n    78: \t\tpm = rndmonst();\n    79: \t\tif (!pm) {\n    80: \t\t  if (!quietly)\n>   81: \t\t    There(\"seems to be nothing available for a familiar.\");\n    82: \t\t  break;\n    83: \t\t}\n    84: \t    }\n    85: \n    86: \t    mtmp = makemon(pm, x, y, MM_EDOG|MM_IGNOREWATER);"
+    "stage": 0,
+    "context": "src/dog.c:81:13\n    76: \t\tpm = &mons[pet_type()];\n    77: \t    } else {\n    78: \t\tpm = rndmonst();\n    79: \t\tif (!pm) {\n    80: \t\t  if (!quietly)\n&gt;   81: \t\t    There(\"seems to be nothing available for a familiar.\");\n    82: \t\t  break;\n    83: \t\t}\n    84: \t    }\n    85: \n    86: \t    mtmp = makemon(pm, x, y, MM_EDOG|MM_IGNOREWATER);"
   },
   {
     "key": "L00089_01",
     "original": "figurine writhes and then shatters into pieces!",
     "translation": "",
-    "context": "src/dog.c:89:16\n    84: \t    }\n    85: \n    86: \t    mtmp = makemon(pm, x, y, MM_EDOG|MM_IGNOREWATER);\n    87: \t    if (otmp && !mtmp) { /* monster was genocided or square occupied */\n    88: \t \tif (!quietly)\n>   89: \t\t   pline_The(\"figurine writhes and then shatters into pieces!\");\n    90: \t\tbreak;\n    91: \t    }\n    92: \t} while (!mtmp && --trycnt > 0);\n    93: \n    94: \tif (!mtmp) return (struct monst *)0;"
+    "stage": 0,
+    "context": "src/dog.c:89:16\n    84: \t    }\n    85: \n    86: \t    mtmp = makemon(pm, x, y, MM_EDOG|MM_IGNOREWATER);\n    87: \t    if (otmp && !mtmp) { /* monster was genocided or square occupied */\n    88: \t \tif (!quietly)\n&gt;   89: \t\t   pline_The(\"figurine writhes and then shatters into pieces!\");\n    90: \t\tbreak;\n    91: \t    }\n    92: \t} while (!mtmp && --trycnt &gt; 0);\n    93: \n    94: \tif (!mtmp) return (struct monst *)0;"
   },
   {
     "key": "L00109_01",
     "original": "get a bad feeling about this.",
     "translation": "",
-    "context": "src/dog.c:109:14\n   104: \t    /* 0,1,2:  b=80%,10,10; nc=10%,80,10; c=10%,10,80 */\n   105: \t    if (chance > 0) {\n   106: \t\tmtmp->mtame = 0;\t/* not tame after all */\n   107: \t\tif (chance == 2) { /* hostile (cursed figurine) */\n   108: \t\t    if (!quietly)\n>  109: \t\t       You(\"get a bad feeling about this.\");\n   110: \t\t    mtmp->mpeaceful = 0;\n   111: \t\t    set_malign(mtmp);\n   112: \t\t}\n   113: \t    }\n   114: \t    /* if figurine has been named, give same name to the monster */"
+    "stage": 0,
+    "context": "src/dog.c:109:14\n   104: \t    /* 0,1,2:  b=80%,10,10; nc=10%,80,10; c=10%,10,80 */\n   105: \t    if (chance &gt; 0) {\n   106: \t\tmtmp-&gt;mtame = 0;\t/* not tame after all */\n   107: \t\tif (chance == 2) { /* hostile (cursed figurine) */\n   108: \t\t    if (!quietly)\n&gt;  109: \t\t       You(\"get a bad feeling about this.\");\n   110: \t\t    mtmp-&gt;mpeaceful = 0;\n   111: \t\t    set_malign(mtmp);\n   112: \t\t}\n   113: \t    }\n   114: \t    /* if figurine has been named, give same name to the monster */"
   },
   {
     "key": "L00206_01",
     "original": "Slasher",
     "translation": "",
-    "context": "src/dog.c:206:40\n   201: \t\tpetname = catname;\n   202: \n   203: \t/* default pet names */\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n>  206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n   207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n   208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n   209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: "
+    "stage": 0,
+    "context": "src/dog.c:206:40\n   201: \t\tpetname = catname;\n   202: \n   203: \t/* default pet names */\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n&gt;  206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n   207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n   208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n   209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: "
   },
   {
     "key": "L00207_01",
     "original": "Hachi",
     "translation": "",
-    "context": "src/dog.c:207:40\n   202: \n   203: \t/* default pet names */\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n   206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n>  207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n   208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n   209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: \n   212: \tmtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);"
+    "stage": 0,
+    "context": "src/dog.c:207:40\n   202: \n   203: \t/* default pet names */\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n   206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n&gt;  207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n   208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n   209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: \n   212: \tmtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);"
   },
   {
     "key": "L00208_01",
     "original": "Idefix",
     "translation": "",
-    "context": "src/dog.c:208:42\n   203: \t/* default pet names */\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n   206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n   207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n>  208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n   209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: \n   212: \tmtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);\n   213: "
+    "stage": 0,
+    "context": "src/dog.c:208:42\n   203: \t/* default pet names */\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n   206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n   207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n&gt;  208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n   209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: \n   212: \tmtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);\n   213: "
   },
   {
     "key": "L00209_01",
     "original": "Sirius",
     "translation": "",
-    "context": "src/dog.c:209:39\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n   206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n   207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n   208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n>  209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: \n   212: \tmtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);\n   213: \n   214: \tif(!mtmp) return((struct monst *) 0); /* pets were genocided */"
+    "stage": 0,
+    "context": "src/dog.c:209:39\n   204: \tif (!*petname && pettype == PM_LITTLE_DOG) {\n   205: \t    /* All of these names were for dogs. */\n   206: \t    if(Role_if(PM_CAVEMAN)) petname = \"Slasher\";   /* The Warrior */\n   207: \t    if(Role_if(PM_SAMURAI)) petname = \"Hachi\";     /* Shibuya Station */\n   208: \t    if(Role_if(PM_BARBARIAN)) petname = \"Idefix\";  /* Obelix */\n&gt;  209: \t    if(Role_if(PM_RANGER)) petname = \"Sirius\";     /* Orion's dog */\n   210: \t}\n   211: \n   212: \tmtmp = makemon(&mons[pettype], u.ux, u.uy, MM_EDOG);\n   213: \n   214: \tif(!mtmp) return((struct monst *) 0); /* pets were genocided */"
   },
   {
     "key": "L00220_01",
     "original": "merged saddle?",
     "translation": "",
-    "context": "src/dog.c:220:9\n   215: \n   216: #ifdef STEED\n   217: \t/* Horses already wear a saddle */\n   218: \tif (pettype == PM_PONY && !!(otmp = mksobj(SADDLE, TRUE, FALSE))) {\n   219: \t    if (mpickobj(mtmp, otmp))\n>  220: \t\tpanic(\"merged saddle?\");\n   221: \t    mtmp->misc_worn_check |= W_SADDLE;\n   222: \t    otmp->dknown = otmp->bknown = otmp->rknown = 1;\n   223: \t    otmp->owornmask = W_SADDLE;\n   224: \t    otmp->leashmon = mtmp->m_id;\n   225: \t    update_mon_intrinsics(mtmp, otmp, TRUE, TRUE);"
+    "stage": 0,
+    "context": "src/dog.c:220:9\n   215: \n   216: #ifdef STEED\n   217: \t/* Horses already wear a saddle */\n   218: \tif (pettype == PM_PONY && !!(otmp = mksobj(SADDLE, TRUE, FALSE))) {\n   219: \t    if (mpickobj(mtmp, otmp))\n&gt;  220: \t\tpanic(\"merged saddle?\");\n   221: \t    mtmp-&gt;misc_worn_check |= W_SADDLE;\n   222: \t    otmp-&gt;dknown = otmp-&gt;bknown = otmp-&gt;rknown = 1;\n   223: \t    otmp-&gt;owornmask = W_SADDLE;\n   224: \t    otmp-&gt;leashmon = mtmp-&gt;m_id;\n   225: \t    update_mon_intrinsics(mtmp, otmp, TRUE, TRUE);"
   },
   {
     "key": "L00382_01",
     "original": "mon_arrive: no corresponding portal?",
     "translation": "",
-    "context": "src/dog.c:382:21\n   377: \t\tfor (t = ftrap; t; t = t->ntrap)\n   378: \t\t    if (t->ttyp == MAGIC_PORTAL) break;\n   379: \t\tif (t) {\n   380: \t\t    xlocale = t->tx,  ylocale = t->ty;\n   381: \t\t    break;\n>  382: \t\t} else impossible(\"mon_arrive: no corresponding portal?\");\n   383: \t\t/*FALLTHRU*/\n   384: \t default:\n   385: \t case MIGR_RANDOM:\txlocale = ylocale = 0;\n   386: \t\t    break;\n   387: \t    }"
+    "stage": 0,
+    "context": "src/dog.c:382:21\n   377: \t\tfor (t = ftrap; t; t = t-&gt;ntrap)\n   378: \t\t    if (t-&gt;ttyp == MAGIC_PORTAL) break;\n   379: \t\tif (t) {\n   380: \t\t    xlocale = t-&gt;tx,  ylocale = t-&gt;ty;\n   381: \t\t    break;\n&gt;  382: \t\t} else impossible(\"mon_arrive: no corresponding portal?\");\n   383: \t\t/*FALLTHRU*/\n   384: \t default:\n   385: \t case MIGR_RANDOM:\txlocale = ylocale = 0;\n   386: \t\t    break;\n   387: \t    }"
   },
   {
     "key": "L00462_01",
     "original": "catchup from future time?",
     "translation": "",
-    "context": "src/dog.c:462:12\n   457: {\n   458: \tint imv = 0;\t/* avoid zillions of casts and lint warnings */\n   459: \n   460: #if defined(DEBUG) || defined(BETA)\n   461: \tif (nmv < 0L) {\t\t\t/* crash likely... */\n>  462: \t    panic(\"catchup from future time?\");\n   463: \t    /*NOTREACHED*/\n   464: \t    return;\n   465: \t} else if (nmv == 0L) {\t\t/* safe, but should'nt happen */\n   466: \t    impossible(\"catchup from now?\");\n   467: \t} else"
+    "stage": 0,
+    "context": "src/dog.c:462:12\n   457: {\n   458: \tint imv = 0;\t/* avoid zillions of casts and lint warnings */\n   459: \n   460: #if defined(DEBUG) || defined(BETA)\n   461: \tif (nmv &lt; 0L) {\t\t\t/* crash likely... */\n&gt;  462: \t    panic(\"catchup from future time?\");\n   463: \t    /*NOTREACHED*/\n   464: \t    return;\n   465: \t} else if (nmv == 0L) {\t\t/* safe, but should'nt happen */\n   466: \t    impossible(\"catchup from now?\");\n   467: \t} else"
   },
   {
     "key": "L00466_01",
     "original": "catchup from now?",
     "translation": "",
-    "context": "src/dog.c:466:17\n   461: \tif (nmv < 0L) {\t\t\t/* crash likely... */\n   462: \t    panic(\"catchup from future time?\");\n   463: \t    /*NOTREACHED*/\n   464: \t    return;\n   465: \t} else if (nmv == 0L) {\t\t/* safe, but should'nt happen */\n>  466: \t    impossible(\"catchup from now?\");\n   467: \t} else\n   468: #endif\n   469: \tif (nmv >= LARGEST_INT)\t\t/* paranoia */\n   470: \t    imv = LARGEST_INT - 1;\n   471: \telse"
+    "stage": 0,
+    "context": "src/dog.c:466:17\n   461: \tif (nmv &lt; 0L) {\t\t\t/* crash likely... */\n   462: \t    panic(\"catchup from future time?\");\n   463: \t    /*NOTREACHED*/\n   464: \t    return;\n   465: \t} else if (nmv == 0L) {\t\t/* safe, but should'nt happen */\n&gt;  466: \t    impossible(\"catchup from now?\");\n   467: \t} else\n   468: #endif\n   469: \tif (nmv &gt;= LARGEST_INT)\t\t/* paranoia */\n   470: \t    imv = LARGEST_INT - 1;\n   471: \telse"
   },
   {
     "key": "L00533_01",
     "original": "catching up for leashed monster?",
     "translation": "",
-    "context": "src/dog.c:533:17\n   528: \t}\n   529: \n   530: \tif (!mtmp->mtame && mtmp->mleashed) {\n   531: \t    /* leashed monsters should always be with hero, consequently\n   532: \t       never losing any time to be accounted for later */\n>  533: \t    impossible(\"catching up for leashed monster?\");\n   534: \t    m_unleash(mtmp, FALSE);\n   535: \t}\n   536: \n   537: \t/* recover lost hit points */\n   538: \tif (!regenerates(mtmp->data)) imv /= 20;"
+    "stage": 0,
+    "context": "src/dog.c:533:17\n   528: \t}\n   529: \n   530: \tif (!mtmp-&gt;mtame && mtmp-&gt;mleashed) {\n   531: \t    /* leashed monsters should always be with hero, consequently\n   532: \t       never losing any time to be accounted for later */\n&gt;  533: \t    impossible(\"catching up for leashed monster?\");\n   534: \t    m_unleash(mtmp, FALSE);\n   535: \t}\n   536: \n   537: \t/* recover lost hit points */\n   538: \tif (!regenerates(mtmp-&gt;data)) imv /= 20;"
   },
   {
     "key": "L00584_01",
     "original": "%s is still eating.",
     "translation": "",
-    "context": "src/dog.c:584:14\n   579: \t\t/* monster won't follow if it hasn't noticed you yet */\n   580: \t\t&& !(mtmp->mstrategy & STRAT_WAITFORU)) {\n   581: \t\tstay_behind = FALSE;\n   582: \t\tif (mtmp->mtame && mtmp->meating) {\n   583: \t\t\tif (canseemon(mtmp))\n>  584: \t\t\t    pline(\"%s is still eating.\", Monnam(mtmp));\n   585: \t\t\tstay_behind = TRUE;\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp->mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n   589: \t\t\tpline(\"%s can't follow you %s.\","
+    "stage": 0,
+    "context": "src/dog.c:584:14\n   579: \t\t/* monster won't follow if it hasn't noticed you yet */\n   580: \t\t&& !(mtmp-&gt;mstrategy & STRAT_WAITFORU)) {\n   581: \t\tstay_behind = FALSE;\n   582: \t\tif (mtmp-&gt;mtame && mtmp-&gt;meating) {\n   583: \t\t\tif (canseemon(mtmp))\n&gt;  584: \t\t\t    pline(\"%s is still eating.\", Monnam(mtmp));\n   585: \t\t\tstay_behind = TRUE;\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp-&gt;mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n   589: \t\t\tpline(\"%s can't follow you %s.\","
   },
   {
     "key": "L00589_01",
     "original": "%s can't follow you %s.",
     "translation": "",
-    "context": "src/dog.c:589:10\n   584: \t\t\t    pline(\"%s is still eating.\", Monnam(mtmp));\n   585: \t\t\tstay_behind = TRUE;\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp->mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n>  589: \t\t\tpline(\"%s can't follow you %s.\",\n   590: \t\t\t      Monnam(mtmp), Is_blackmarket(&u.uz) ?\n   591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {"
+    "stage": 0,
+    "context": "src/dog.c:589:10\n   584: \t\t\t    pline(\"%s is still eating.\", Monnam(mtmp));\n   585: \t\t\tstay_behind = TRUE;\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp-&gt;mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n&gt;  589: \t\t\tpline(\"%s can't follow you %s.\",\n   590: \t\t\t      Monnam(mtmp), Is_blackmarket(&u.uz) ?\n   591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {"
   },
   {
     "key": "L00591_01",
     "original": "through the portal",
     "translation": "",
-    "context": "src/dog.c:591:10\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp->mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n   589: \t\t\tpline(\"%s can't follow you %s.\",\n   590: \t\t\t      Monnam(mtmp), Is_blackmarket(&u.uz) ?\n>  591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {\n   595: \t\t\tif (canseemon(mtmp))\n   596: \t\t\t    pline(\"%s seems very disoriented for a moment.\","
+    "stage": 0,
+    "context": "src/dog.c:591:10\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp-&gt;mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n   589: \t\t\tpline(\"%s can't follow you %s.\",\n   590: \t\t\t      Monnam(mtmp), Is_blackmarket(&u.uz) ?\n&gt;  591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {\n   595: \t\t\tif (canseemon(mtmp))\n   596: \t\t\t    pline(\"%s seems very disoriented for a moment.\","
   },
   {
     "key": "L00591_02",
     "original": "into the Black Market",
     "translation": "",
-    "context": "src/dog.c:591:33\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp->mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n   589: \t\t\tpline(\"%s can't follow you %s.\",\n   590: \t\t\t      Monnam(mtmp), Is_blackmarket(&u.uz) ?\n>  591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {\n   595: \t\t\tif (canseemon(mtmp))\n   596: \t\t\t    pline(\"%s seems very disoriented for a moment.\","
+    "stage": 0,
+    "context": "src/dog.c:591:33\n   586: #ifdef BLACKMARKET                \n   587: \t\t} else if (mtmp-&gt;mtame && \n   588: \t\t    (Is_blackmarket(&new_dlevel) || Is_blackmarket(&u.uz))) {\n   589: \t\t\tpline(\"%s can't follow you %s.\",\n   590: \t\t\t      Monnam(mtmp), Is_blackmarket(&u.uz) ?\n&gt;  591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {\n   595: \t\t\tif (canseemon(mtmp))\n   596: \t\t\t    pline(\"%s seems very disoriented for a moment.\","
   },
   {
     "key": "L00596_01",
     "original": "%s seems very disoriented for a moment.",
     "translation": "",
-    "context": "src/dog.c:596:14\n   591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {\n   595: \t\t\tif (canseemon(mtmp))\n>  596: \t\t\t    pline(\"%s seems very disoriented for a moment.\",\n   597: \t\t\t\tMonnam(mtmp));\n   598: \t\t\tstay_behind = TRUE;\n   599: \t\t} else if (mtmp->mtame && mtmp->mtrapped) {\n   600: \t\t\tif (canseemon(mtmp))\n   601: \t\t\t    pline(\"%s is still trapped.\", Monnam(mtmp));"
+    "stage": 0,
+    "context": "src/dog.c:596:14\n   591: \t\t\t      \"through the portal\" : \"into the Black Market\");\n   592: \t\t\tstay_behind = TRUE;\n   593: #endif /* BLACKMARKET */\n   594: \t\t} else if (mon_has_amulet(mtmp)) {\n   595: \t\t\tif (canseemon(mtmp))\n&gt;  596: \t\t\t    pline(\"%s seems very disoriented for a moment.\",\n   597: \t\t\t\tMonnam(mtmp));\n   598: \t\t\tstay_behind = TRUE;\n   599: \t\t} else if (mtmp-&gt;mtame && mtmp-&gt;mtrapped) {\n   600: \t\t\tif (canseemon(mtmp))\n   601: \t\t\t    pline(\"%s is still trapped.\", Monnam(mtmp));"
   },
   {
     "key": "L00601_01",
     "original": "%s is still trapped.",
     "translation": "",
-    "context": "src/dog.c:601:14\n   596: \t\t\t    pline(\"%s seems very disoriented for a moment.\",\n   597: \t\t\t\tMonnam(mtmp));\n   598: \t\t\tstay_behind = TRUE;\n   599: \t\t} else if (mtmp->mtame && mtmp->mtrapped) {\n   600: \t\t\tif (canseemon(mtmp))\n>  601: \t\t\t    pline(\"%s is still trapped.\", Monnam(mtmp));\n   602: \t\t\tstay_behind = TRUE;\n   603: \t\t}\n   604: #ifdef STEED\n   605: \t\tif (mtmp == u.usteed) stay_behind = FALSE;\n   606: #endif"
+    "stage": 0,
+    "context": "src/dog.c:601:14\n   596: \t\t\t    pline(\"%s seems very disoriented for a moment.\",\n   597: \t\t\t\tMonnam(mtmp));\n   598: \t\t\tstay_behind = TRUE;\n   599: \t\t} else if (mtmp-&gt;mtame && mtmp-&gt;mtrapped) {\n   600: \t\t\tif (canseemon(mtmp))\n&gt;  601: \t\t\t    pline(\"%s is still trapped.\", Monnam(mtmp));\n   602: \t\t\tstay_behind = TRUE;\n   603: \t\t}\n   604: #ifdef STEED\n   605: \t\tif (mtmp == u.usteed) stay_behind = FALSE;\n   606: #endif"
   },
   {
     "key": "L00609_01",
     "original": "%s leash suddenly comes loose.",
     "translation": "",
-    "context": "src/dog.c:609:11\n   604: #ifdef STEED\n   605: \t\tif (mtmp == u.usteed) stay_behind = FALSE;\n   606: #endif\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp->mleashed) {\n>  609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp->data)\n   611: \t\t\t\t\t    ? (mtmp->female ? \"Her\" : \"His\")\n   612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}"
+    "stage": 0,
+    "context": "src/dog.c:609:11\n   604: #ifdef STEED\n   605: \t\tif (mtmp == u.usteed) stay_behind = FALSE;\n   606: #endif\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp-&gt;mleashed) {\n&gt;  609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp-&gt;data)\n   611: \t\t\t\t\t    ? (mtmp-&gt;female ? \"Her\" : \"His\")\n   612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}"
   },
   {
     "key": "L00611_01",
     "original": "Her",
     "translation": "",
-    "context": "src/dog.c:611:28\n   606: #endif\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp->mleashed) {\n   609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp->data)\n>  611: \t\t\t\t\t    ? (mtmp->female ? \"Her\" : \"His\")\n   612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}\n   615: \t\t\tcontinue;\n   616: \t\t}"
+    "stage": 0,
+    "context": "src/dog.c:611:28\n   606: #endif\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp-&gt;mleashed) {\n   609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp-&gt;data)\n&gt;  611: \t\t\t\t\t    ? (mtmp-&gt;female ? \"Her\" : \"His\")\n   612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}\n   615: \t\t\tcontinue;\n   616: \t\t}"
   },
   {
     "key": "L00611_02",
     "original": "His",
     "translation": "",
-    "context": "src/dog.c:611:36\n   606: #endif\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp->mleashed) {\n   609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp->data)\n>  611: \t\t\t\t\t    ? (mtmp->female ? \"Her\" : \"His\")\n   612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}\n   615: \t\t\tcontinue;\n   616: \t\t}"
+    "stage": 0,
+    "context": "src/dog.c:611:36\n   606: #endif\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp-&gt;mleashed) {\n   609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp-&gt;data)\n&gt;  611: \t\t\t\t\t    ? (mtmp-&gt;female ? \"Her\" : \"His\")\n   612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}\n   615: \t\t\tcontinue;\n   616: \t\t}"
   },
   {
     "key": "L00612_01",
     "original": "Its",
     "translation": "",
-    "context": "src/dog.c:612:12\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp->mleashed) {\n   609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp->data)\n   611: \t\t\t\t\t    ? (mtmp->female ? \"Her\" : \"His\")\n>  612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}\n   615: \t\t\tcontinue;\n   616: \t\t}\n   617: \t\tif (mtmp->isshk)"
+    "stage": 0,
+    "context": "src/dog.c:612:12\n   607: \t\tif (stay_behind) {\n   608: \t\t\tif (mtmp-&gt;mleashed) {\n   609: \t\t\t\tpline(\"%s leash suddenly comes loose.\",\n   610: \t\t\t\t\thumanoid(mtmp-&gt;data)\n   611: \t\t\t\t\t    ? (mtmp-&gt;female ? \"Her\" : \"His\")\n&gt;  612: \t\t\t\t\t    : \"Its\");\n   613: \t\t\t\tm_unleash(mtmp, FALSE);\n   614: \t\t\t}\n   615: \t\t\tcontinue;\n   616: \t\t}\n   617: \t\tif (mtmp-&gt;isshk)"
   },
   {
     "key": "L00651_01",
     "original": "%s leash goes slack.",
     "translation": "",
-    "context": "src/dog.c:651:9\n   646: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz),\n   647: \t\t\t\t MIGR_EXACT_XY, (coord *)0);\n   648: \t    } else if (mtmp->mleashed) {\n   649: \t\t/* this can happen if your quest leader ejects you from the\n   650: \t\t   \"home\" level while a leashed pet isn't next to you */\n>  651: \t\tpline(\"%s leash goes slack.\", s_suffix(Monnam(mtmp)));\n   652: \t\tm_unleash(mtmp, FALSE);\n   653: \t    }\n   654: \t}\n   655: }\n   656: "
+    "stage": 0,
+    "context": "src/dog.c:651:9\n   646: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz),\n   647: \t\t\t\t MIGR_EXACT_XY, (coord *)0);\n   648: \t    } else if (mtmp-&gt;mleashed) {\n   649: \t\t/* this can happen if your quest leader ejects you from the\n   650: \t\t   \"home\" level while a leashed pet isn't next to you */\n&gt;  651: \t\tpline(\"%s leash goes slack.\", s_suffix(Monnam(mtmp)));\n   652: \t\tm_unleash(mtmp, FALSE);\n   653: \t    }\n   654: \t}\n   655: }\n   656: "
   },
   {
     "key": "L00885_01",
     "original": "%s catches %s%s",
     "translation": "",
-    "context": "src/dog.c:885:13\n   880: \t\t/* pet will \"catch\" and eat this thrown food */\n   881: \t\tif (canseemon(mtmp)) {\n   882: \t\t    boolean big_corpse = (obj->otyp == CORPSE &&\n   883: \t\t\t\t\t  obj->corpsenm >= LOW_PM &&\n   884: \t\t\t\tmons[obj->corpsenm].msize > mtmp->data->msize);\n>  885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n   887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp->mx,mtmp->my))\n   889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */"
+    "stage": 0,
+    "context": "src/dog.c:885:13\n   880: \t\t/* pet will \"catch\" and eat this thrown food */\n   881: \t\tif (canseemon(mtmp)) {\n   882: \t\t    boolean big_corpse = (obj-&gt;otyp == CORPSE &&\n   883: \t\t\t\t\t  obj-&gt;corpsenm &gt;= LOW_PM &&\n   884: \t\t\t\tmons[obj-&gt;corpsenm].msize &gt; mtmp-&gt;data-&gt;msize);\n&gt;  885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n   887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n   889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */"
   },
   {
     "key": "L00887_01",
     "original": ", or vice versa!",
     "translation": "",
-    "context": "src/dog.c:887:26\n   882: \t\t    boolean big_corpse = (obj->otyp == CORPSE &&\n   883: \t\t\t\t\t  obj->corpsenm >= LOW_PM &&\n   884: \t\t\t\tmons[obj->corpsenm].msize > mtmp->data->msize);\n   885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n>  887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp->mx,mtmp->my))\n   889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */\n   891: \t\tplace_object(obj, mtmp->mx, mtmp->my);\n   892: \t\t(void) dog_eat(mtmp, obj, mtmp->mx, mtmp->my, FALSE);"
+    "stage": 0,
+    "context": "src/dog.c:887:26\n   882: \t\t    boolean big_corpse = (obj-&gt;otyp == CORPSE &&\n   883: \t\t\t\t\t  obj-&gt;corpsenm &gt;= LOW_PM &&\n   884: \t\t\t\tmons[obj-&gt;corpsenm].msize &gt; mtmp-&gt;data-&gt;msize);\n   885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n&gt;  887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n   889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */\n   891: \t\tplace_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n   892: \t\t(void) dog_eat(mtmp, obj, mtmp-&gt;mx, mtmp-&gt;my, FALSE);"
   },
   {
     "key": "L00889_01",
     "original": "%s.",
     "translation": "",
-    "context": "src/dog.c:889:13\n   884: \t\t\t\tmons[obj->corpsenm].msize > mtmp->data->msize);\n   885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n   887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp->mx,mtmp->my))\n>  889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */\n   891: \t\tplace_object(obj, mtmp->mx, mtmp->my);\n   892: \t\t(void) dog_eat(mtmp, obj, mtmp->mx, mtmp->my, FALSE);\n   893: \t\t/* eating might have killed it, but that doesn't matter here;\n   894: \t\t   a non-null result suppresses \"miss\" message for thrown"
+    "stage": 0,
+    "context": "src/dog.c:889:13\n   884: \t\t\t\tmons[obj-&gt;corpsenm].msize &gt; mtmp-&gt;data-&gt;msize);\n   885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n   887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n&gt;  889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */\n   891: \t\tplace_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n   892: \t\t(void) dog_eat(mtmp, obj, mtmp-&gt;mx, mtmp-&gt;my, FALSE);\n   893: \t\t/* eating might have killed it, but that doesn't matter here;\n   894: \t\t   a non-null result suppresses \"miss\" message for thrown"
   },
   {
     "key": "L00889_02",
     "original": "stop",
     "translation": "",
-    "context": "src/dog.c:889:33\n   884: \t\t\t\tmons[obj->corpsenm].msize > mtmp->data->msize);\n   885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n   887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp->mx,mtmp->my))\n>  889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */\n   891: \t\tplace_object(obj, mtmp->mx, mtmp->my);\n   892: \t\t(void) dog_eat(mtmp, obj, mtmp->mx, mtmp->my, FALSE);\n   893: \t\t/* eating might have killed it, but that doesn't matter here;\n   894: \t\t   a non-null result suppresses \"miss\" message for thrown"
+    "stage": 0,
+    "context": "src/dog.c:889:33\n   884: \t\t\t\tmons[obj-&gt;corpsenm].msize &gt; mtmp-&gt;data-&gt;msize);\n   885: \t\t    pline(\"%s catches %s%s\",\n   886: \t\t\t  Monnam(mtmp), the(xname(obj)),\n   887: \t\t\t  !big_corpse ? \".\" : \", or vice versa!\");\n   888: \t\t} else if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n&gt;  889: \t\t    pline(\"%s.\", Tobjnam(obj, \"stop\"));\n   890: \t\t/* dog_eat expects a floor object */\n   891: \t\tplace_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n   892: \t\t(void) dog_eat(mtmp, obj, mtmp-&gt;mx, mtmp-&gt;my, FALSE);\n   893: \t\t/* eating might have killed it, but that doesn't matter here;\n   894: \t\t   a non-null result suppresses \"miss\" message for thrown"
   },
   {
     "key": "L01004_01",
     "original": "%s %s to look you in the %s.",
     "translation": "",
-    "context": "src/dog.c:1004:10\n   999: \tif (edog->abuse >= 0 && edog->abuse < 10)\n  1000: \t    if (!rn2(edog->abuse + 1)) mtmp->mpeaceful = 1;\n  1001: \tif(!quietly && cansee(mtmp->mx, mtmp->my)) {\n  1002: \t    if (haseyes(youmonst.data)) {\n  1003: \t\tif (haseyes(mtmp->data))\n> 1004: \t\t\tpline(\"%s %s to look you in the %s.\",\n  1005: \t\t\t\tMonnam(mtmp),\n  1006: \t\t\t\tmtmp->mpeaceful ? \"seems unable\" :\n  1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse "
+    "stage": 0,
+    "context": "src/dog.c:1004:10\n   999: \tif (edog-&gt;abuse &gt;= 0 && edog-&gt;abuse &lt; 10)\n  1000: \t    if (!rn2(edog-&gt;abuse + 1)) mtmp-&gt;mpeaceful = 1;\n  1001: \tif(!quietly && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  1002: \t    if (haseyes(youmonst.data)) {\n  1003: \t\tif (haseyes(mtmp-&gt;data))\n&gt; 1004: \t\t\tpline(\"%s %s to look you in the %s.\",\n  1005: \t\t\t\tMonnam(mtmp),\n  1006: \t\t\t\tmtmp-&gt;mpeaceful ? \"seems unable\" :\n  1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse "
   },
   {
     "key": "L01006_01",
     "original": "seems unable",
     "translation": "",
-    "context": "src/dog.c:1006:23\n  1001: \tif(!quietly && cansee(mtmp->mx, mtmp->my)) {\n  1002: \t    if (haseyes(youmonst.data)) {\n  1003: \t\tif (haseyes(mtmp->data))\n  1004: \t\t\tpline(\"%s %s to look you in the %s.\",\n  1005: \t\t\t\tMonnam(mtmp),\n> 1006: \t\t\t\tmtmp->mpeaceful ? \"seems unable\" :\n  1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse \n  1010: \t\t\tpline(\"%s avoids your gaze.\",\n  1011: \t\t\t\tMonnam(mtmp));"
+    "stage": 0,
+    "context": "src/dog.c:1006:23\n  1001: \tif(!quietly && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  1002: \t    if (haseyes(youmonst.data)) {\n  1003: \t\tif (haseyes(mtmp-&gt;data))\n  1004: \t\t\tpline(\"%s %s to look you in the %s.\",\n  1005: \t\t\t\tMonnam(mtmp),\n&gt; 1006: \t\t\t\tmtmp-&gt;mpeaceful ? \"seems unable\" :\n  1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse \n  1010: \t\t\tpline(\"%s avoids your gaze.\",\n  1011: \t\t\t\tMonnam(mtmp));"
   },
   {
     "key": "L01007_01",
     "original": "refuses",
     "translation": "",
-    "context": "src/dog.c:1007:10\n  1002: \t    if (haseyes(youmonst.data)) {\n  1003: \t\tif (haseyes(mtmp->data))\n  1004: \t\t\tpline(\"%s %s to look you in the %s.\",\n  1005: \t\t\t\tMonnam(mtmp),\n  1006: \t\t\t\tmtmp->mpeaceful ? \"seems unable\" :\n> 1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse \n  1010: \t\t\tpline(\"%s avoids your gaze.\",\n  1011: \t\t\t\tMonnam(mtmp));\n  1012: \t    }"
+    "stage": 0,
+    "context": "src/dog.c:1007:10\n  1002: \t    if (haseyes(youmonst.data)) {\n  1003: \t\tif (haseyes(mtmp-&gt;data))\n  1004: \t\t\tpline(\"%s %s to look you in the %s.\",\n  1005: \t\t\t\tMonnam(mtmp),\n  1006: \t\t\t\tmtmp-&gt;mpeaceful ? \"seems unable\" :\n&gt; 1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse \n  1010: \t\t\tpline(\"%s avoids your gaze.\",\n  1011: \t\t\t\tMonnam(mtmp));\n  1012: \t    }"
   },
   {
     "key": "L01010_01",
     "original": "%s avoids your gaze.",
     "translation": "",
-    "context": "src/dog.c:1010:10\n  1005: \t\t\t\tMonnam(mtmp),\n  1006: \t\t\t\tmtmp->mpeaceful ? \"seems unable\" :\n  1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse \n> 1010: \t\t\tpline(\"%s avoids your gaze.\",\n  1011: \t\t\t\tMonnam(mtmp));\n  1012: \t    }\n  1013: \t}\n  1014:     } else {\n  1015: \t/* chance it goes wild anyway - Pet Semetary */"
+    "stage": 0,
+    "context": "src/dog.c:1010:10\n  1005: \t\t\t\tMonnam(mtmp),\n  1006: \t\t\t\tmtmp-&gt;mpeaceful ? \"seems unable\" :\n  1007: \t\t\t\t\t    \"refuses\",\n  1008: \t\t\t\tbody_part(EYE));\n  1009: \t\telse \n&gt; 1010: \t\t\tpline(\"%s avoids your gaze.\",\n  1011: \t\t\t\tMonnam(mtmp));\n  1012: \t    }\n  1013: \t}\n  1014:     } else {\n  1015: \t/* chance it goes wild anyway - Pet Semetary */"
   }
 ]

@@ -3,138 +3,161 @@
     "key": "L00471_01",
     "original": "Vlad was here",
     "translation": "",
-    "context": "src/mklev.c:471:4\n   466: static NEARDATA const char *trap_engravings[TRAPNUM] = {\n   467: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   468: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   469: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0,\n   470: \t\t\t/* 14..16: trap door, teleport, level-teleport */\n>  471: \t\t\t\"Vlad was here\", \"ad aerarium\", \"ad aerarium\",\n   472: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   473: \t\t\t(char *)0,\n   474: };\n   475: \n   476: STATIC_OVL void"
+    "stage": 0,
+    "context": "src/mklev.c:471:4\n   466: static NEARDATA const char *trap_engravings[TRAPNUM] = {\n   467: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   468: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   469: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0,\n   470: \t\t\t/* 14..16: trap door, teleport, level-teleport */\n&gt;  471: \t\t\t\"Vlad was here\", \"ad aerarium\", \"ad aerarium\",\n   472: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   473: \t\t\t(char *)0,\n   474: };\n   475: \n   476: STATIC_OVL void"
   },
   {
     "key": "L00471_02",
     "original": "ad aerarium",
     "translation": "",
-    "context": "src/mklev.c:471:21\n   466: static NEARDATA const char *trap_engravings[TRAPNUM] = {\n   467: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   468: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   469: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0,\n   470: \t\t\t/* 14..16: trap door, teleport, level-teleport */\n>  471: \t\t\t\"Vlad was here\", \"ad aerarium\", \"ad aerarium\",\n   472: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   473: \t\t\t(char *)0,\n   474: };\n   475: \n   476: STATIC_OVL void"
+    "stage": 0,
+    "context": "src/mklev.c:471:21\n   466: static NEARDATA const char *trap_engravings[TRAPNUM] = {\n   467: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   468: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   469: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0,\n   470: \t\t\t/* 14..16: trap door, teleport, level-teleport */\n&gt;  471: \t\t\t\"Vlad was here\", \"ad aerarium\", \"ad aerarium\",\n   472: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   473: \t\t\t(char *)0,\n   474: };\n   475: \n   476: STATIC_OVL void"
   },
   {
     "key": "L00471_03",
     "original": "ad aerarium",
     "translation": "",
-    "context": "src/mklev.c:471:36\n   466: static NEARDATA const char *trap_engravings[TRAPNUM] = {\n   467: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   468: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   469: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0,\n   470: \t\t\t/* 14..16: trap door, teleport, level-teleport */\n>  471: \t\t\t\"Vlad was here\", \"ad aerarium\", \"ad aerarium\",\n   472: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   473: \t\t\t(char *)0,\n   474: };\n   475: \n   476: STATIC_OVL void"
+    "stage": 0,
+    "context": "src/mklev.c:471:36\n   466: static NEARDATA const char *trap_engravings[TRAPNUM] = {\n   467: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   468: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   469: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0,\n   470: \t\t\t/* 14..16: trap door, teleport, level-teleport */\n&gt;  471: \t\t\t\"Vlad was here\", \"ad aerarium\", \"ad aerarium\",\n   472: \t\t\t(char *)0, (char *)0, (char *)0, (char *)0, (char *)0,\n   473: \t\t\t(char *)0,\n   474: };\n   475: \n   476: STATIC_OVL void"
   },
   {
     "key": "L00660_01",
     "original": "minefill",
     "translation": "",
-    "context": "src/mklev.c:660:15\n   655: \t\t    return;\n   656: \t    } else if (dungeons[u.uz.dnum].proto[0]) {\n   657: \t\t    makemaz(\"\");\n   658: \t\t    return;\n   659: \t    } else if (In_mines(&u.uz)) {\n>  660: \t\t    makemaz(\"minefill\");\n   661: \t\t    return;\n   662: \t    } else if (In_quest(&u.uz)) {\n   663: \t\t    char        fillname[16];\n   664: \t\t    s_level\t*loc_lev;\n   665: "
+    "stage": 0,
+    "context": "src/mklev.c:660:15\n   655: \t\t    return;\n   656: \t    } else if (dungeons[u.uz.dnum].proto[0]) {\n   657: \t\t    makemaz(\"\");\n   658: \t\t    return;\n   659: \t    } else if (In_mines(&u.uz)) {\n&gt;  660: \t\t    makemaz(\"minefill\");\n   661: \t\t    return;\n   662: \t    } else if (In_quest(&u.uz)) {\n   663: \t\t    char        fillname[16];\n   664: \t\t    s_level\t*loc_lev;\n   665: "
   },
   {
     "key": "L00666_01",
     "original": "%s-loca",
     "translation": "",
-    "context": "src/mklev.c:666:25\n   661: \t\t    return;\n   662: \t    } else if (In_quest(&u.uz)) {\n   663: \t\t    char        fillname[16];\n   664: \t\t    s_level\t*loc_lev;\n   665: \n>  666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n   669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n   671: \t\t\t   (u.uz.dlevel < loc_lev->dlevel.dlevel) ? \"a\" : \"b\");"
+    "stage": 0,
+    "context": "src/mklev.c:666:25\n   661: \t\t    return;\n   662: \t    } else if (In_quest(&u.uz)) {\n   663: \t\t    char        fillname[16];\n   664: \t\t    s_level\t*loc_lev;\n   665: \n&gt;  666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n   669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n   671: \t\t\t   (u.uz.dlevel &lt; loc_lev-&gt;dlevel.dlevel) ? \"a\" : \"b\");"
   },
   {
     "key": "L00669_01",
     "original": "%s-fil",
     "translation": "",
-    "context": "src/mklev.c:669:25\n   664: \t\t    s_level\t*loc_lev;\n   665: \n   666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n>  669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n   671: \t\t\t   (u.uz.dlevel < loc_lev->dlevel.dlevel) ? \"a\" : \"b\");\n   672: \t\t    makemaz(fillname);\n   673: \t\t    return;\n   674: \t    } else if(In_hell(&u.uz) ||"
+    "stage": 0,
+    "context": "src/mklev.c:669:25\n   664: \t\t    s_level\t*loc_lev;\n   665: \n   666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n&gt;  669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n   671: \t\t\t   (u.uz.dlevel &lt; loc_lev-&gt;dlevel.dlevel) ? \"a\" : \"b\");\n   672: \t\t    makemaz(fillname);\n   673: \t\t    return;\n   674: \t    } else if(In_hell(&u.uz) ||"
   },
   {
     "key": "L00671_01",
     "original": "a",
     "translation": "",
-    "context": "src/mklev.c:671:48\n   666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n   669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n>  671: \t\t\t   (u.uz.dlevel < loc_lev->dlevel.dlevel) ? \"a\" : \"b\");\n   672: \t\t    makemaz(fillname);\n   673: \t\t    return;\n   674: \t    } else if(In_hell(&u.uz) ||\n   675: \t\t  (rn2(5) && u.uz.dnum == medusa_level.dnum\n   676: \t\t\t  && depth(&u.uz) > depth(&medusa_level))) {"
+    "stage": 0,
+    "context": "src/mklev.c:671:48\n   666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n   669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n&gt;  671: \t\t\t   (u.uz.dlevel &lt; loc_lev-&gt;dlevel.dlevel) ? \"a\" : \"b\");\n   672: \t\t    makemaz(fillname);\n   673: \t\t    return;\n   674: \t    } else if(In_hell(&u.uz) ||\n   675: \t\t  (rn2(5) && u.uz.dnum == medusa_level.dnum\n   676: \t\t\t  && depth(&u.uz) &gt; depth(&medusa_level))) {"
   },
   {
     "key": "L00671_02",
     "original": "b",
     "translation": "",
-    "context": "src/mklev.c:671:54\n   666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n   669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n>  671: \t\t\t   (u.uz.dlevel < loc_lev->dlevel.dlevel) ? \"a\" : \"b\");\n   672: \t\t    makemaz(fillname);\n   673: \t\t    return;\n   674: \t    } else if(In_hell(&u.uz) ||\n   675: \t\t  (rn2(5) && u.uz.dnum == medusa_level.dnum\n   676: \t\t\t  && depth(&u.uz) > depth(&medusa_level))) {"
+    "stage": 0,
+    "context": "src/mklev.c:671:54\n   666: \t\t    Sprintf(fillname, \"%s-loca\", urole.filecode);\n   667: \t\t    loc_lev = find_level(fillname);\n   668: \n   669: \t\t    Sprintf(fillname, \"%s-fil\", urole.filecode);\n   670: \t\t    Strcat(fillname,\n&gt;  671: \t\t\t   (u.uz.dlevel &lt; loc_lev-&gt;dlevel.dlevel) ? \"a\" : \"b\");\n   672: \t\t    makemaz(fillname);\n   673: \t\t    return;\n   674: \t    } else if(In_hell(&u.uz) ||\n   675: \t\t  (rn2(5) && u.uz.dnum == medusa_level.dnum\n   676: \t\t\t  && depth(&u.uz) &gt; depth(&medusa_level))) {"
   },
   {
     "key": "L00725_01",
     "original": "trying to make a vault...",
     "translation": "",
-    "context": "src/mklev.c:725:14\n   720: \n   721: \t/* make a secret treasure vault, not connected to the rest */\n   722: \tif(do_vault()) {\n   723: \t\txchar w,h;\n   724: #ifdef DEBUG\n>  725: \t\tdebugpline(\"trying to make a vault...\");\n   726: #endif\n   727: \t\tw = 1;\n   728: \t\th = 1;\n   729: \t\tif (check_room(&vault_x, &w, &vault_y, &h, TRUE)) {\n   730: \t\t    fill_vault:"
+    "stage": 0,
+    "context": "src/mklev.c:725:14\n   720: \n   721: \t/* make a secret treasure vault, not connected to the rest */\n   722: \tif(do_vault()) {\n   723: \t\txchar w,h;\n   724: #ifdef DEBUG\n&gt;  725: \t\tdebugpline(\"trying to make a vault...\");\n   726: #endif\n   727: \t\tw = 1;\n   728: \t\th = 1;\n   729: \t\tif (check_room(&vault_x, &w, &vault_y, &h, TRUE)) {\n   730: \t\t    fill_vault:"
   },
   {
     "key": "L00752_01",
     "original": "SHOPTYPE",
     "translation": "",
-    "context": "src/mklev.c:752:25\n   747: \n   748:     {\n   749: \tregister int u_depth = depth(&u.uz);\n   750: \n   751: #ifdef WIZARD\n>  752: \tif(wizard && nh_getenv(\"SHOPTYPE\")) mkroom(SHOPBASE); else\n   753: #endif\n   754: \tif (u_depth > 1 &&\n   755: \t    u_depth < depth(&medusa_level) &&\n   756: \t    nroom >= room_threshold &&\n   757: \t    rn2(u_depth) < 3) mkroom(SHOPBASE);"
+    "stage": 0,
+    "context": "src/mklev.c:752:25\n   747: \n   748:     {\n   749: \tregister int u_depth = depth(&u.uz);\n   750: \n   751: #ifdef WIZARD\n&gt;  752: \tif(wizard && nh_getenv(\"SHOPTYPE\")) mkroom(SHOPBASE); else\n   753: #endif\n   754: \tif (u_depth &gt; 1 &&\n   755: \t    u_depth &lt; depth(&medusa_level) &&\n   756: \t    nroom &gt;= room_threshold &&\n   757: \t    rn2(u_depth) &lt; 3) mkroom(SHOPBASE);"
   },
   {
     "key": "L00888_01",
     "original": "tryct overflow4",
     "translation": "",
-    "context": "src/mklev.c:888:19\n   883: \t\tif(!rn2(5)) {\n   884: \t\t    (void) mkobj_at(0, somex(croom), somey(croom), TRUE);\n   885: \t\t    tryct = 0;\n   886: \t\t    while(!rn2(4)) {\n   887: \t\t\tif(++tryct > 100) {\n>  888: \t\t\t    impossible(\"tryct overflow4\");\n   889: \t\t\t    break;\n   890: \t\t\t}\n   891: \t\t\t(void) mkobj_at(0, somex(croom), somey(croom), TRUE);\n   892: \t\t    }\n   893: \t\t}"
+    "stage": 0,
+    "context": "src/mklev.c:888:19\n   883: \t\tif(!rn2(5)) {\n   884: \t\t    (void) mkobj_at(0, somex(croom), somey(croom), TRUE);\n   885: \t\t    tryct = 0;\n   886: \t\t    while(!rn2(4)) {\n   887: \t\t\tif(++tryct &gt; 100) {\n&gt;  888: \t\t\t    impossible(\"tryct overflow4\");\n   889: \t\t\t    break;\n   890: \t\t\t}\n   891: \t\t\t(void) mkobj_at(0, somex(croom), somey(croom), TRUE);\n   892: \t\t    }\n   893: \t\t}"
   },
   {
     "key": "L01101_01",
     "original": "Can't place branch!",
     "translation": "",
-    "context": "src/mklev.c:1101:14\n  1096: \t} else\n  1097: \t    croom = &rooms[rn2(nroom)];\n  1098: \n  1099: \tdo {\n  1100: \t    if (!somexy(croom, mp))\n> 1101: \t\timpossible(\"Can't place branch!\");\n  1102: \t} while(occupied(mp->x, mp->y) ||\n  1103: \t    (levl[mp->x][mp->y].typ != CORR && levl[mp->x][mp->y].typ != ROOM));\n  1104:     }\n  1105:     return croom;\n  1106: }"
+    "stage": 0,
+    "context": "src/mklev.c:1101:14\n  1096: \t} else\n  1097: \t    croom = &rooms[rn2(nroom)];\n  1098: \n  1099: \tdo {\n  1100: \t    if (!somexy(croom, mp))\n&gt; 1101: \t\timpossible(\"Can't place branch!\");\n  1102: \t} while(occupied(mp-&gt;x, mp-&gt;y) ||\n  1103: \t    (levl[mp-&gt;x][mp-&gt;y].typ != CORR && levl[mp-&gt;x][mp-&gt;y].typ != ROOM));\n  1104:     }\n  1105:     return croom;\n  1106: }"
   },
   {
     "key": "L01223_01",
     "original": "DOORMAX exceeded?",
     "translation": "",
-    "context": "src/mklev.c:1223:14\n  1218: dodoor(x,y,aroom)\n  1219: register int x, y;\n  1220: register struct mkroom *aroom;\n  1221: {\n  1222: \tif(doorindex >= DOORMAX) {\n> 1223: \t\timpossible(\"DOORMAX exceeded?\");\n  1224: \t\treturn;\n  1225: \t}\n  1226: \n  1227: \tdosdoor(x,y,aroom,rn2(8) ? DOOR : SDOOR);\n  1228: }"
+    "stage": 0,
+    "context": "src/mklev.c:1223:14\n  1218: dodoor(x,y,aroom)\n  1219: register int x, y;\n  1220: register struct mkroom *aroom;\n  1221: {\n  1222: \tif(doorindex &gt;= DOORMAX) {\n&gt; 1223: \t\timpossible(\"DOORMAX exceeded?\");\n  1224: \t\treturn;\n  1225: \t}\n  1226: \n  1227: \tdosdoor(x,y,aroom,rn2(8) ? DOOR : SDOOR);\n  1228: }"
   },
   {
     "key": "L01341_01",
     "original": "mkstairs:  bogus stair attempt at <%d,%d>",
     "translation": "",
-    "context": "src/mklev.c:1341:17\n  1336: xchar x, y;\n  1337: char  up;\n  1338: struct mkroom *croom;\n  1339: {\n  1340: \tif (!x) {\n> 1341: \t    impossible(\"mkstairs:  bogus stair attempt at <%d,%d>\", x, y);\n  1342: \t    return;\n  1343: \t}\n  1344: \n  1345: \t/*\n  1346: \t * We can't make a regular stair off an end of the dungeon.  This"
+    "stage": 0,
+    "context": "src/mklev.c:1341:17\n  1336: xchar x, y;\n  1337: char  up;\n  1338: struct mkroom *croom;\n  1339: {\n  1340: \tif (!x) {\n&gt; 1341: \t    impossible(\"mkstairs:  bogus stair attempt at &lt;%d,%d&gt;\", x, y);\n  1342: \t    return;\n  1343: \t}\n  1344: \n  1345: \t/*\n  1346: \t * We can't make a regular stair off an end of the dungeon.  This"
   },
   {
     "key": "L01477_01",
     "original": "Saved by the bell!",
     "translation": "",
-    "context": "src/mklev.c:1477:32\n  1472: \t    if (!somexy(croom, &m))\n  1473: \t\treturn;\n  1474: \t} while (occupied(m.x, m.y) || bydoor(m.x, m.y));\n  1475: \n  1476: \t/* Put a grave at m.x, m.y */\n> 1477: \tmake_grave(m.x, m.y, dobell ? \"Saved by the bell!\" : (char *) 0);\n  1478: \n  1479: \t/* Possibly fill it with objects */\n  1480: \tif (!rn2(3)) (void) mkgold(0L, m.x, m.y);\n  1481: \tfor (tryct = rn2(5); tryct; tryct--) {\n  1482: \t    otmp = mkobj(RANDOM_CLASS, TRUE);"
+    "stage": 0,
+    "context": "src/mklev.c:1477:32\n  1472: \t    if (!somexy(croom, &m))\n  1473: \t\treturn;\n  1474: \t} while (occupied(m.x, m.y) || bydoor(m.x, m.y));\n  1475: \n  1476: \t/* Put a grave at m.x, m.y */\n&gt; 1477: \tmake_grave(m.x, m.y, dobell ? \"Saved by the bell!\" : (char *) 0);\n  1478: \n  1479: \t/* Possibly fill it with objects */\n  1480: \tif (!rn2(3)) (void) mkgold(0L, m.x, m.y);\n  1481: \tfor (tryct = rn2(5); tryct; tryct--) {\n  1482: \t    otmp = mkobj(RANDOM_CLASS, TRUE);"
   },
   {
     "key": "L01514_01",
     "original": "floor shakes violently under you!",
     "translation": "",
-    "context": "src/mklev.c:1514:15\n  1509:     int dist;\n  1510:     xchar xmin = inv_pos.x, xmax = inv_pos.x;\n  1511:     xchar ymin = inv_pos.y, ymax = inv_pos.y;\n  1512:     register xchar i;\n  1513: \n> 1514:     pline_The(\"floor shakes violently under you!\");\n  1515:     pline_The(\"walls around you begin to bend and crumble!\");\n  1516:     display_nhwindow(WIN_MESSAGE, TRUE);\n  1517: \n  1518:     mkinvpos(xmin, ymin, 0);\t\t/* middle, before placing stairs */\n  1519: "
+    "stage": 0,
+    "context": "src/mklev.c:1514:15\n  1509:     int dist;\n  1510:     xchar xmin = inv_pos.x, xmax = inv_pos.x;\n  1511:     xchar ymin = inv_pos.y, ymax = inv_pos.y;\n  1512:     register xchar i;\n  1513: \n&gt; 1514:     pline_The(\"floor shakes violently under you!\");\n  1515:     pline_The(\"walls around you begin to bend and crumble!\");\n  1516:     display_nhwindow(WIN_MESSAGE, TRUE);\n  1517: \n  1518:     mkinvpos(xmin, ymin, 0);\t\t/* middle, before placing stairs */\n  1519: "
   },
   {
     "key": "L01515_01",
     "original": "walls around you begin to bend and crumble!",
     "translation": "",
-    "context": "src/mklev.c:1515:15\n  1510:     xchar xmin = inv_pos.x, xmax = inv_pos.x;\n  1511:     xchar ymin = inv_pos.y, ymax = inv_pos.y;\n  1512:     register xchar i;\n  1513: \n  1514:     pline_The(\"floor shakes violently under you!\");\n> 1515:     pline_The(\"walls around you begin to bend and crumble!\");\n  1516:     display_nhwindow(WIN_MESSAGE, TRUE);\n  1517: \n  1518:     mkinvpos(xmin, ymin, 0);\t\t/* middle, before placing stairs */\n  1519: \n  1520:     for(dist = 1; dist < 7; dist++) {"
+    "stage": 0,
+    "context": "src/mklev.c:1515:15\n  1510:     xchar xmin = inv_pos.x, xmax = inv_pos.x;\n  1511:     xchar ymin = inv_pos.y, ymax = inv_pos.y;\n  1512:     register xchar i;\n  1513: \n  1514:     pline_The(\"floor shakes violently under you!\");\n&gt; 1515:     pline_The(\"walls around you begin to bend and crumble!\");\n  1516:     display_nhwindow(WIN_MESSAGE, TRUE);\n  1517: \n  1518:     mkinvpos(xmin, ymin, 0);\t\t/* middle, before placing stairs */\n  1519: \n  1520:     for(dist = 1; dist &lt; 7; dist++) {"
   },
   {
     "key": "L01542_01",
     "original": "are standing at the top of a stairwell leading down!",
     "translation": "",
-    "context": "src/mklev.c:1542:9\n  1537: \n  1538: \tflush_screen(1);\t/* make sure the new glyphs shows up */\n  1539: \tdelay_output();\n  1540:     }\n  1541: \n> 1542:     You(\"are standing at the top of a stairwell leading down!\");\n  1543:     mkstairs(u.ux, u.uy, 0, (struct mkroom *)0); /* down */\n  1544:     newsym(u.ux, u.uy);\n  1545:     vision_full_recalc = 1;\t/* everything changed */\n  1546: }\n  1547: "
+    "stage": 0,
+    "context": "src/mklev.c:1542:9\n  1537: \n  1538: \tflush_screen(1);\t/* make sure the new glyphs shows up */\n  1539: \tdelay_output();\n  1540:     }\n  1541: \n&gt; 1542:     You(\"are standing at the top of a stairwell leading down!\");\n  1543:     mkstairs(u.ux, u.uy, 0, (struct mkroom *)0); /* down */\n  1544:     newsym(u.ux, u.uy);\n  1545:     vision_full_recalc = 1;\t/* everything changed */\n  1546: }\n  1547: "
   },
   {
     "key": "L01566_01",
     "original": "mkinvpos: <%d,%d> (%d) off map edge!",
     "translation": "",
-    "context": "src/mklev.c:1566:12\n  1561:     /* clip at existing map borders if necessary */\n  1562:     if (!within_bounded_area(x, y, x_maze_min + 1, y_maze_min + 1,\n  1563: \t\t\t\t   x_maze_max - 1, y_maze_max - 1)) {\n  1564: \t/* only outermost 2 columns and/or rows may be truncated due to edge */\n  1565: \tif (dist < (7 - 2))\n> 1566: \t    panic(\"mkinvpos: <%d,%d> (%d) off map edge!\", x, y, dist);\n  1567: \treturn;\n  1568:     }\n  1569: \n  1570:     /* clear traps */\n  1571:     if ((ttmp = t_at(x,y)) != 0) deltrap(ttmp);"
+    "stage": 0,
+    "context": "src/mklev.c:1566:12\n  1561:     /* clip at existing map borders if necessary */\n  1562:     if (!within_bounded_area(x, y, x_maze_min + 1, y_maze_min + 1,\n  1563: \t\t\t\t   x_maze_max - 1, y_maze_max - 1)) {\n  1564: \t/* only outermost 2 columns and/or rows may be truncated due to edge */\n  1565: \tif (dist &lt; (7 - 2))\n&gt; 1566: \t    panic(\"mkinvpos: &lt;%d,%d&gt; (%d) off map edge!\", x, y, dist);\n  1567: \treturn;\n  1568:     }\n  1569: \n  1570:     /* clear traps */\n  1571:     if ((ttmp = t_at(x,y)) != 0) deltrap(ttmp);"
   },
   {
     "key": "L01615_01",
     "original": "mkinvpos called with dist %d",
     "translation": "",
-    "context": "src/mklev.c:1615:13\n  1610:     case 5:\n  1611: \tlev->typ = MOAT;\n  1612: \t/* No kelp! */\n  1613: \tbreak;\n  1614:     default:\n> 1615: \timpossible(\"mkinvpos called with dist %d\", dist);\n  1616: \tbreak;\n  1617:     }\n  1618: \n  1619:     /* display new value of position; could have a monster/object on it */\n  1620:     newsym(x,y);"
+    "stage": 0,
+    "context": "src/mklev.c:1615:13\n  1610:     case 5:\n  1611: \tlev-&gt;typ = MOAT;\n  1612: \t/* No kelp! */\n  1613: \tbreak;\n  1614:     default:\n&gt; 1615: \timpossible(\"mkinvpos called with dist %d\", dist);\n  1616: \tbreak;\n  1617:     }\n  1618: \n  1619:     /* display new value of position; could have a monster/object on it */\n  1620:     newsym(x,y);"
   },
   {
     "key": "L01640_01",
     "original": "Fort Ludios",
     "translation": "",
-    "context": "src/mklev.c:1640:22\n  1635: \textern int n_dgns;\t\t/* from dungeon.c */\n  1636: \td_level *source;\n  1637: \tbranch *br;\n  1638: \tschar u_depth;\n  1639: \n> 1640: \tbr = dungeon_branch(\"Fort Ludios\");\n  1641: \tif (on_level(&knox_level, &br->end1)) {\n  1642: \t    source = &br->end2;\n  1643: \t} else {\n  1644: \t    /* disallow Knox branch on a level with one branch already */\n  1645: \t    if(Is_branchlev(&u.uz))"
+    "stage": 0,
+    "context": "src/mklev.c:1640:22\n  1635: \textern int n_dgns;\t\t/* from dungeon.c */\n  1636: \td_level *source;\n  1637: \tbranch *br;\n  1638: \tschar u_depth;\n  1639: \n&gt; 1640: \tbr = dungeon_branch(\"Fort Ludios\");\n  1641: \tif (on_level(&knox_level, &br-&gt;end1)) {\n  1642: \t    source = &br-&gt;end2;\n  1643: \t} else {\n  1644: \t    /* disallow Knox branch on a level with one branch already */\n  1645: \t    if(Is_branchlev(&u.uz))"
   },
   {
     "key": "L01658_01",
     "original": "The Quest",
     "translation": "",
-    "context": "src/mklev.c:1658:23\n  1653: \t\t\t\t      && !wizard\n  1654: #endif\n  1655: \t\t\t\t      )) return;\n  1656: \n  1657: \tif (! (u.uz.dnum == oracle_level.dnum\t    /* in main dungeon */\n> 1658: \t\t&& !at_dgn_entrance(\"The Quest\")    /* but not Quest's entry */\n  1659: \t\t&& (u_depth = depth(&u.uz)) > 10    /* beneath 10 */\n  1660: \t\t&& u_depth < depth(&medusa_level))) /* and above Medusa */\n  1661: \t    return;\n  1662: \n  1663: \t/* Adjust source to be current level and re-insert branch. */"
+    "stage": 0,
+    "context": "src/mklev.c:1658:23\n  1653: \t\t\t\t      && !wizard\n  1654: #endif\n  1655: \t\t\t\t      )) return;\n  1656: \n  1657: \tif (! (u.uz.dnum == oracle_level.dnum\t    /* in main dungeon */\n&gt; 1658: \t\t&& !at_dgn_entrance(\"The Quest\")    /* but not Quest's entry */\n  1659: \t\t&& (u_depth = depth(&u.uz)) &gt; 10    /* beneath 10 */\n  1660: \t\t&& u_depth &lt; depth(&medusa_level))) /* and above Medusa */\n  1661: \t    return;\n  1662: \n  1663: \t/* Adjust source to be current level and re-insert branch. */"
   },
   {
     "key": "L01668_01",
     "original": "Made knox portal.",
     "translation": "",
-    "context": "src/mklev.c:1668:8\n  1663: \t/* Adjust source to be current level and re-insert branch. */\n  1664: \t*source = u.uz;\n  1665: \tinsert_branch(br, TRUE);\n  1666: \n  1667: #ifdef DEBUG\n> 1668: \tpline(\"Made knox portal.\");\n  1669: #endif\n  1670: \tplace_branch(br, x, y);\n  1671: }\n  1672: \n  1673: /*mklev.c*/"
+    "stage": 0,
+    "context": "src/mklev.c:1668:8\n  1663: \t/* Adjust source to be current level and re-insert branch. */\n  1664: \t*source = u.uz;\n  1665: \tinsert_branch(br, TRUE);\n  1666: \n  1667: #ifdef DEBUG\n&gt; 1668: \tpline(\"Made knox portal.\");\n  1669: #endif\n  1670: \tplace_branch(br, x, y);\n  1671: }\n  1672: \n  1673: /*mklev.c*/"
   }
 ]

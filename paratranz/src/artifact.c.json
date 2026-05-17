@@ -3,72 +3,84 @@
     "key": "L00127_01",
     "original": "Warning: %s should be at least skilled.  Fixing...",
     "translation": "",
-    "context": "src/artifact.c:127:12\n   122: \tint skill = objects[artilist[urole.gift2arti].otyp].oc_skill;\n   123: \n   124: \tif (skill > P_NONE && P_SKILL(skill) < P_UNSKILLED)\n   125: \t    P_SKILL(skill) = P_UNSKILLED;\n   126: \tif (skill > P_NONE && P_MAX_SKILL(skill) < P_SKILLED) {\n>  127: \t    pline(\"Warning: %s should be at least skilled.  Fixing...\",\n   128: \t\t    artilist[urole.gift1arti].name);\n   129: \t    P_MAX_SKILL(skill) = P_SKILLED;\n   130: \t}\n   131:     }\n   132: #endif "
+    "stage": 0,
+    "context": "src/artifact.c:127:12\n   122: \tint skill = objects[artilist[urole.gift2arti].otyp].oc_skill;\n   123: \n   124: \tif (skill &gt; P_NONE && P_SKILL(skill) &lt; P_UNSKILLED)\n   125: \t    P_SKILL(skill) = P_UNSKILLED;\n   126: \tif (skill &gt; P_NONE && P_MAX_SKILL(skill) &lt; P_SKILLED) {\n&gt;  127: \t    pline(\"Warning: %s should be at least skilled.  Fixing...\",\n   128: \t\t    artilist[urole.gift1arti].name);\n   129: \t    P_MAX_SKILL(skill) = P_SKILLED;\n   130: \t}\n   131:     }\n   132: #endif "
   },
   {
     "key": "L00283_01",
     "original": "the ",
     "translation": "",
-    "context": "src/artifact.c:283:24\n   278: short *otyp;\n   279: {\n   280:     register const struct artifact *a;\n   281:     register const char *aname;\n   282: \n>  283:     if(!strncmpi(name, \"the \", 4)) name += 4;\n   284:     if(!strncmpi(name, \"涂毒的 \", 9)) name += 9;\n   285: \n   286:     for (a = artilist+1; a->otyp; a++) {\n   287: \taname = a->name;\n   288: \tif(!strncmpi(aname, \"the \", 4)) aname += 4;"
+    "stage": 0,
+    "context": "src/artifact.c:283:24\n   278: short *otyp;\n   279: {\n   280:     register const struct artifact *a;\n   281:     register const char *aname;\n   282: \n&gt;  283:     if(!strncmpi(name, \"the \", 4)) name += 4;\n   284:     if(!strncmpi(name, \"涂毒的 \", 9)) name += 9;\n   285: \n   286:     for (a = artilist+1; a-&gt;otyp; a++) {\n   287: \taname = a-&gt;name;\n   288: \tif(!strncmpi(aname, \"the \", 4)) aname += 4;"
   },
   {
     "key": "L00288_01",
     "original": "the ",
     "translation": "",
-    "context": "src/artifact.c:288:22\n   283:     if(!strncmpi(name, \"the \", 4)) name += 4;\n   284:     if(!strncmpi(name, \"涂毒的 \", 9)) name += 9;\n   285: \n   286:     for (a = artilist+1; a->otyp; a++) {\n   287: \taname = a->name;\n>  288: \tif(!strncmpi(aname, \"the \", 4)) aname += 4;\n   289: \tif(!strcmpi(name, aname)) {\n   290: \t    *otyp = a->otyp;\n   291: \t    return a->name;\n   292: \t}\n   293:     }"
+    "stage": 0,
+    "context": "src/artifact.c:288:22\n   283:     if(!strncmpi(name, \"the \", 4)) name += 4;\n   284:     if(!strncmpi(name, \"涂毒的 \", 9)) name += 9;\n   285: \n   286:     for (a = artilist+1; a-&gt;otyp; a++) {\n   287: \taname = a-&gt;name;\n&gt;  288: \tif(!strncmpi(aname, \"the \", 4)) aname += 4;\n   289: \tif(!strcmpi(name, aname)) {\n   290: \t    *otyp = a-&gt;otyp;\n   291: \t    return a-&gt;name;\n   292: \t}\n   293:     }"
   },
   {
     "key": "L00416_01",
     "original": "the ",
     "translation": "",
-    "context": "src/artifact.c:416:22\n   411: {\n   412: \tregister const struct artifact *a;\n   413: \tregister const char *aname;\n   414: \n   415: \tif (!*name) return FALSE;\n>  416: \tif (!strncmpi(name, \"the \", 4)) name += 4;\n   417: \n   418: \t\t/* Since almost every artifact is SPFX_RESTR, it doesn't cost\n   419: \t\t   us much to do the string comparison before the spfx check.\n   420: \t\t   Bug fix:  don't name multiple elven daggers \"Sting\".\n   421: \t\t */"
+    "stage": 0,
+    "context": "src/artifact.c:416:22\n   411: {\n   412: \tregister const struct artifact *a;\n   413: \tregister const char *aname;\n   414: \n   415: \tif (!*name) return FALSE;\n&gt;  416: \tif (!strncmpi(name, \"the \", 4)) name += 4;\n   417: \n   418: \t\t/* Since almost every artifact is SPFX_RESTR, it doesn't cost\n   419: \t\t   us much to do the string comparison before the spfx check.\n   420: \t\t   Bug fix:  don't name multiple elven daggers \"Sting\".\n   421: \t\t */"
   },
   {
     "key": "L00425_01",
     "original": "the ",
     "translation": "",
-    "context": "src/artifact.c:425:27\n   420: \t\t   Bug fix:  don't name multiple elven daggers \"Sting\".\n   421: \t\t */\n   422: \tfor (a = artilist+1; a->otyp; a++) {\n   423: \t    if (a->otyp != otmp->otyp) continue;\n   424: \t    aname = a->name;\n>  425: \t    if (!strncmpi(aname, \"the \", 4)) aname += 4;\n   426: \t    if (!strcmp(aname, name))\n   427: \t\treturn ((boolean)((a->spfx & (SPFX_NOGEN|SPFX_RESTR)) != 0 ||\n   428: \t\t\totmp->quan > 1L));\n   429: \t}\n   430: "
+    "stage": 0,
+    "context": "src/artifact.c:425:27\n   420: \t\t   Bug fix:  don't name multiple elven daggers \"Sting\".\n   421: \t\t */\n   422: \tfor (a = artilist+1; a-&gt;otyp; a++) {\n   423: \t    if (a-&gt;otyp != otmp-&gt;otyp) continue;\n   424: \t    aname = a-&gt;name;\n&gt;  425: \t    if (!strncmpi(aname, \"the \", 4)) aname += 4;\n   426: \t    if (!strcmp(aname, name))\n   427: \t\treturn ((boolean)((a-&gt;spfx & (SPFX_NOGEN|SPFX_RESTR)) != 0 ||\n   428: \t\t\totmp-&gt;quan &gt; 1L));\n   429: \t}\n   430: "
   },
   {
     "key": "L00871_01",
     "original": "  %s [%s %s]",
     "translation": "",
-    "context": "src/artifact.c:871:15\n   866: \tif (i == 0)\n   867: \t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings,\n   868: \t      \"神器\", MENU_UNSELECTED);\n   869: \tm = artidisco[i];\n   870: \totyp = artilist[m].otyp;\n>  871: \tSprintf(buf, \"  %s [%s %s]\", artiname(m),\n   872: \t\talign_str(artilist[m].alignment), simple_typename(otyp));\n   873: \tadd_menu(tmpwin, objnum_to_glyph(otyp), &any, 0, 0, ATR_NONE,\n   874: \t  buf, MENU_UNSELECTED);\n   875:     }\n   876:     return i;"
+    "stage": 0,
+    "context": "src/artifact.c:871:15\n   866: \tif (i == 0)\n   867: \t    add_menu(tmpwin, NO_GLYPH, &any, 0, 0, iflags.menu_headings,\n   868: \t      \"神器\", MENU_UNSELECTED);\n   869: \tm = artidisco[i];\n   870: \totyp = artilist[m].otyp;\n&gt;  871: \tSprintf(buf, \"  %s [%s %s]\", artiname(m),\n   872: \t\talign_str(artilist[m].alignment), simple_typename(otyp));\n   873: \tadd_menu(tmpwin, objnum_to_glyph(otyp), &any, 0, 0, ATR_NONE,\n   874: \t  buf, MENU_UNSELECTED);\n   875:     }\n   876:     return i;"
   },
   {
     "key": "L01067_01",
     "original": "%s %s!",
     "translation": "",
-    "context": "src/artifact.c:1067:12\n  1062:     }\n  1063: \n  1064:     if (youattack || youdefend || vis) {\n  1065: \t(void) upstart(hittee);\t/* capitalize */\n  1066: \tif (resisted) {\n> 1067: \t    pline(\"%s %s!\", hittee, vtense(hittee, \"抵抗\"));\n  1068: \t    shieldeff(youdefend ? u.ux : mdef->mx,\n  1069: \t\t      youdefend ? u.uy : mdef->my);\n  1070: \t}\n  1071: \tif ((do_stun || do_confuse) && flags.verbose) {\n  1072: \t    char buf[BUFSZ];"
+    "stage": 0,
+    "context": "src/artifact.c:1067:12\n  1062:     }\n  1063: \n  1064:     if (youattack || youdefend || vis) {\n  1065: \t(void) upstart(hittee);\t/* capitalize */\n  1066: \tif (resisted) {\n&gt; 1067: \t    pline(\"%s %s!\", hittee, vtense(hittee, \"抵抗\"));\n  1068: \t    shieldeff(youdefend ? u.ux : mdef-&gt;mx,\n  1069: \t\t      youdefend ? u.uy : mdef-&gt;my);\n  1070: \t}\n  1071: \tif ((do_stun || do_confuse) && flags.verbose) {\n  1072: \t    char buf[BUFSZ];"
   },
   {
     "key": "L01078_01",
     "original": "%s %s %s%c",
     "translation": "",
-    "context": "src/artifact.c:1078:12\n  1073: \n  1074: \t    buf[0] = '\\0';\n  1075: \t    if (do_stun) Strcat(buf, \"眩晕的\");\n  1076: \t    if (do_stun && do_confuse) Strcat(buf, \" 和 \");\n  1077: \t    if (do_confuse) Strcat(buf, \"混乱的\");\n> 1078: \t    pline(\"%s %s %s%c\", hittee, vtense(hittee, \"都\"),\n  1079: \t\t  buf, (do_stun && do_confuse) ? '!' : '.');\n  1080: \t}\n  1081:     }\n  1082: \n  1083:     return result;"
+    "stage": 0,
+    "context": "src/artifact.c:1078:12\n  1073: \n  1074: \t    buf[0] = '\\0';\n  1075: \t    if (do_stun) Strcat(buf, \"眩晕的\");\n  1076: \t    if (do_stun && do_confuse) Strcat(buf, \" 和 \");\n  1077: \t    if (do_confuse) Strcat(buf, \"混乱的\");\n&gt; 1078: \t    pline(\"%s %s %s%c\", hittee, vtense(hittee, \"都\"),\n  1079: \t\t  buf, (do_stun && do_confuse) ? '!' : '.');\n  1080: \t}\n  1081:     }\n  1082: \n  1083:     return result;"
   },
   {
     "key": "L01128_01",
     "original": "attacking yourself with weapon?",
     "translation": "",
-    "context": "src/artifact.c:1128:17\n  1123: \t    const struct artifact *weap = get_artifact(otmp);\n  1124: \t    special_applies = weap && spec_applies(weap, mdef);\n  1125: \t}\n  1126: \n  1127: \tif (youattack && youdefend) {\n> 1128: \t    impossible(\"attacking yourself with weapon?\");\n  1129: \t    return FALSE;\n  1130: \t}\n  1131: \n  1132: \trealizes_damage = (youdefend || vis || \n  1133: \t\t\t   /* feel the effect even if not seen */"
+    "stage": 0,
+    "context": "src/artifact.c:1128:17\n  1123: \t    const struct artifact *weap = get_artifact(otmp);\n  1124: \t    special_applies = weap && spec_applies(weap, mdef);\n  1125: \t}\n  1126: \n  1127: \tif (youattack && youdefend) {\n&gt; 1128: \t    impossible(\"attacking yourself with weapon?\");\n  1129: \t    return FALSE;\n  1130: \t}\n  1131: \n  1132: \trealizes_damage = (youdefend || vis || \n  1133: \t\t\t   /* feel the effect even if not seen */"
   },
   {
     "key": "L01436_01",
     "original": "%s %s!",
     "translation": "",
-    "context": "src/artifact.c:1436:10\n  1431: #endif\n  1432: \t    otmp->oartifact == ART_OGRESMASHER ||\n  1433: \t    otmp->oartifact == ART_ELFRIST) {\n  1434: \t\tif (dieroll < 4) {\n  1435: \t\t    if (realizes_damage) {\n> 1436: \t\t\tpline(\"%s %s!\", The(distant_name(otmp, xname)), Blind ?\n  1437: \t\t\t\t\"震耳欲聋地咆哮！\" : \"强烈的闪耀着\");\n  1438: \t\t\tpline(\"它用力地击中了%s!\", hittee);\n  1439: \t\t    }\n  1440: \t\t    cancel_monst(mdef, otmp, youattack, TRUE, magr == mdef);\n  1441: \t\t    return TRUE;"
+    "stage": 0,
+    "context": "src/artifact.c:1436:10\n  1431: #endif\n  1432: \t    otmp-&gt;oartifact == ART_OGRESMASHER ||\n  1433: \t    otmp-&gt;oartifact == ART_ELFRIST) {\n  1434: \t\tif (dieroll &lt; 4) {\n  1435: \t\t    if (realizes_damage) {\n&gt; 1436: \t\t\tpline(\"%s %s!\", The(distant_name(otmp, xname)), Blind ?\n  1437: \t\t\t\t\"震耳欲聋地咆哮！\" : \"强烈的闪耀着\");\n  1438: \t\t\tpline(\"它用力地击中了%s!\", hittee);\n  1439: \t\t    }\n  1440: \t\t    cancel_monst(mdef, otmp, youattack, TRUE, magr == mdef);\n  1441: \t\t    return TRUE;"
   },
   {
     "key": "L01899_01",
     "original": "%s:",
     "translation": "",
-    "context": "src/artifact.c:1899:8\n  1894: \t\treturn;\n  1895: \n  1896: \tline = getrumor(bcsign(obj), buf, TRUE);\n  1897: \tif (!*line)\n  1898: \t\tline = \"slash'em的谚语库需要更新，暂时没有。\";\n> 1899: \tpline(\"%s:\", Tobjnam(obj, \"小声的\"));\n  1900: \tverbalize(\"%s\", line);\n  1901: \treturn;\n  1902: }\n  1903: \n  1904: boolean"
+    "stage": 0,
+    "context": "src/artifact.c:1899:8\n  1894: \t\treturn;\n  1895: \n  1896: \tline = getrumor(bcsign(obj), buf, TRUE);\n  1897: \tif (!*line)\n  1898: \t\tline = \"slash'em的谚语库需要更新，暂时没有。\";\n&gt; 1899: \tpline(\"%s:\", Tobjnam(obj, \"小声的\"));\n  1900: \tverbalize(\"%s\", line);\n  1901: \treturn;\n  1902: }\n  1903: \n  1904: boolean"
   },
   {
     "key": "L01900_01",
     "original": "%s",
     "translation": "",
-    "context": "src/artifact.c:1900:12\n  1895: \n  1896: \tline = getrumor(bcsign(obj), buf, TRUE);\n  1897: \tif (!*line)\n  1898: \t\tline = \"slash'em的谚语库需要更新，暂时没有。\";\n  1899: \tpline(\"%s:\", Tobjnam(obj, \"小声的\"));\n> 1900: \tverbalize(\"%s\", line);\n  1901: \treturn;\n  1902: }\n  1903: \n  1904: boolean\n  1905: artifact_has_invprop(otmp, inv_prop)"
+    "stage": 0,
+    "context": "src/artifact.c:1900:12\n  1895: \n  1896: \tline = getrumor(bcsign(obj), buf, TRUE);\n  1897: \tif (!*line)\n  1898: \t\tline = \"slash'em的谚语库需要更新，暂时没有。\";\n  1899: \tpline(\"%s:\", Tobjnam(obj, \"小声的\"));\n&gt; 1900: \tverbalize(\"%s\", line);\n  1901: \treturn;\n  1902: }\n  1903: \n  1904: boolean\n  1905: artifact_has_invprop(otmp, inv_prop)"
   }
 ]

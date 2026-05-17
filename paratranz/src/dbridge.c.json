@@ -3,36 +3,42 @@
     "key": "L00250_01",
     "original": "entitycnt = %d",
     "translation": "",
-    "context": "src/dbridge.c:250:8\n   245: \t\tif ((occupants[entitycnt].edata) &&\n   246: \t\t    (occupants[entitycnt].ex == x) &&\n   247: \t\t    (occupants[entitycnt].ey == y))\n   248: \t\t\tbreak;\n   249: #ifdef D_DEBUG\n>  250: \tpline(\"entitycnt = %d\", entitycnt);\n   251: \twait_synch();\n   252: #endif\n   253: \treturn((entitycnt == ENTITIES)?\n   254: \t       (struct entity *)0 : &(occupants[entitycnt]));\n   255: }"
+    "stage": 0,
+    "context": "src/dbridge.c:250:8\n   245: \t\tif ((occupants[entitycnt].edata) &&\n   246: \t\t    (occupants[entitycnt].ex == x) &&\n   247: \t\t    (occupants[entitycnt].ey == y))\n   248: \t\t\tbreak;\n   249: #ifdef D_DEBUG\n&gt;  250: \tpline(\"entitycnt = %d\", entitycnt);\n   251: \twait_synch();\n   252: #endif\n   253: \treturn((entitycnt == ENTITIES)?\n   254: \t       (struct entity *)0 : &(occupants[entitycnt]));\n   255: }"
   },
   {
     "key": "L00638_01",
     "original": "Handling %s",
     "translation": "",
-    "context": "src/dbridge.c:638:10\n   633: \t\t\tpline(\"%s自杀了.\", E_phrase(etmp, \"选择\"));\n   634: #endif\n   635: \t\t} else {\n   636: \n   637: #ifdef D_DEBUG\n>  638: \t\t\tpline(\"Handling %s\", e_nam(other));\n   639: #endif\n   640: \t\t\twhile ((e_at(newx, newy) != 0) &&\n   641: \t\t\t       (e_at(newx, newy) != etmp))\n   642: \t\t\t\tdo_entity(other);\n   643: #ifdef D_DEBUG"
+    "stage": 0,
+    "context": "src/dbridge.c:638:10\n   633: \t\t\tpline(\"%s自杀了.\", E_phrase(etmp, \"选择\"));\n   634: #endif\n   635: \t\t} else {\n   636: \n   637: #ifdef D_DEBUG\n&gt;  638: \t\t\tpline(\"Handling %s\", e_nam(other));\n   639: #endif\n   640: \t\t\twhile ((e_at(newx, newy) != 0) &&\n   641: \t\t\t       (e_at(newx, newy) != etmp))\n   642: \t\t\t\tdo_entity(other);\n   643: #ifdef D_DEBUG"
   },
   {
     "key": "L00700_01",
     "original": "survive",
     "translation": "",
-    "context": "src/dbridge.c:700:33\n   695: \t\t\tkiller = \"吊桥的闸门\";\n   696: \t\t\te_died(etmp, 0, CRUSHING);\t       /* no message */\n   697: \t\t\treturn;\n   698: \t\t}\n   699: #ifdef D_DEBUG\n>  700: \t\tpline(\"%s在那边\", E_phrase(etmp, \"survive\"));\n   701: #endif\n   702: \t} else {\n   703: #ifdef D_DEBUG\n   704: \t\tpline(\"%s在吊桥的位置上\", E_phrase(etmp, \"are\"));\n   705: #endif"
+    "stage": 0,
+    "context": "src/dbridge.c:700:33\n   695: \t\t\tkiller = \"吊桥的闸门\";\n   696: \t\t\te_died(etmp, 0, CRUSHING);\t       /* no message */\n   697: \t\t\treturn;\n   698: \t\t}\n   699: #ifdef D_DEBUG\n&gt;  700: \t\tpline(\"%s在那边\", E_phrase(etmp, \"survive\"));\n   701: #endif\n   702: \t} else {\n   703: #ifdef D_DEBUG\n   704: \t\tpline(\"%s在吊桥的位置上\", E_phrase(etmp, \"are\"));\n   705: #endif"
   },
   {
     "key": "L00704_01",
     "original": "are",
     "translation": "",
-    "context": "src/dbridge.c:704:37\n   699: #ifdef D_DEBUG\n   700: \t\tpline(\"%s在那边\", E_phrase(etmp, \"survive\"));\n   701: #endif\n   702: \t} else {\n   703: #ifdef D_DEBUG\n>  704: \t\tpline(\"%s在吊桥的位置上\", E_phrase(etmp, \"are\"));\n   705: #endif\n   706: \t\tif (is_pool(etmp->ex, etmp->ey) && !e_inview)\n   707: \t\t\tif (flags.soundok)\n   708: \t\t\t\tYou_hear(\"水花飞溅声.\");\n   709: \t\tif (e_survives_at(etmp, etmp->ex, etmp->ey)) {"
+    "stage": 0,
+    "context": "src/dbridge.c:704:37\n   699: #ifdef D_DEBUG\n   700: \t\tpline(\"%s在那边\", E_phrase(etmp, \"survive\"));\n   701: #endif\n   702: \t} else {\n   703: #ifdef D_DEBUG\n&gt;  704: \t\tpline(\"%s在吊桥的位置上\", E_phrase(etmp, \"are\"));\n   705: #endif\n   706: \t\tif (is_pool(etmp-&gt;ex, etmp-&gt;ey) && !e_inview)\n   707: \t\t\tif (flags.soundok)\n   708: \t\t\t\tYou_hear(\"水花飞溅声.\");\n   709: \t\tif (e_survives_at(etmp, etmp-&gt;ex, etmp-&gt;ey)) {"
   },
   {
     "key": "L00874_01",
     "original": "fall",
     "translation": "",
-    "context": "src/dbridge.c:874:36\n   869: \t\t}\n   870: \t\tlev1->typ = lava ? LAVAPOOL : MOAT;\n   871: \t\tlev1->drawbridgemask = 0;\n   872: \t\tif ((otmp = sobj_at(BOULDER,x,y)) != 0) {\n   873: \t\t    obj_extract_self(otmp);\n>  874: \t\t    (void) flooreffects(otmp,x,y,\"fall\");\n   875: \t\t}\n   876: \t} else {\n   877: \t\tif (cansee(x,y))\n   878: \t\t\tpline_The(\"吊桥被分解了!\");\n   879: \t\telse"
+    "stage": 0,
+    "context": "src/dbridge.c:874:36\n   869: \t\t}\n   870: \t\tlev1-&gt;typ = lava ? LAVAPOOL : MOAT;\n   871: \t\tlev1-&gt;drawbridgemask = 0;\n   872: \t\tif ((otmp = sobj_at(BOULDER,x,y)) != 0) {\n   873: \t\t    obj_extract_self(otmp);\n&gt;  874: \t\t    (void) flooreffects(otmp,x,y,\"fall\");\n   875: \t\t}\n   876: \t} else {\n   877: \t\tif (cansee(x,y))\n   878: \t\t\tpline_The(\"吊桥被分解了!\");\n   879: \t\telse"
   },
   {
     "key": "L00913_01",
     "original": "are",
     "translation": "",
-    "context": "src/dbridge.c:913:37\n   908: \tset_entity(x, y, etmp1);\n   909: \tif (etmp1->edata) {\n   910: \t\te_inview = e_canseemon(etmp1);\n   911: \t\tif (e_missed(etmp1, TRUE)) {\n   912: #ifdef D_DEBUG\n>  913: \t\t\tpline(\"%s北方过了!\", E_phrase(etmp1, \"are\"));\n   914: #endif\n   915: \t\t} else {\n   916: \t\t\tif (e_inview) {\n   917: \t\t\t    if (!is_u(etmp1) && Hallucination)\n   918: \t\t\t\tpline(\"%s变成了一块铁块!\","
+    "stage": 0,
+    "context": "src/dbridge.c:913:37\n   908: \tset_entity(x, y, etmp1);\n   909: \tif (etmp1-&gt;edata) {\n   910: \t\te_inview = e_canseemon(etmp1);\n   911: \t\tif (e_missed(etmp1, TRUE)) {\n   912: #ifdef D_DEBUG\n&gt;  913: \t\t\tpline(\"%s北方过了!\", E_phrase(etmp1, \"are\"));\n   914: #endif\n   915: \t\t} else {\n   916: \t\t\tif (e_inview) {\n   917: \t\t\t    if (!is_u(etmp1) && Hallucination)\n   918: \t\t\t\tpline(\"%s变成了一块铁块!\","
   }
 ]

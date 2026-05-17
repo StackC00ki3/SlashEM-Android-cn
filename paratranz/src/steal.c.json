@@ -3,180 +3,210 @@
     "key": "L00019_01",
     "original": "shirt",
     "translation": "",
-    "context": "src/steal.c:19:21\n    14: equipname(otmp)\n    15: register struct obj *otmp;\n    16: {\n    17: \treturn (\n    18: #ifdef TOURIST\n>   19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :"
+    "stage": 0,
+    "context": "src/steal.c:19:21\n    14: equipname(otmp)\n    15: register struct obj *otmp;\n    16: {\n    17: \treturn (\n    18: #ifdef TOURIST\n&gt;   19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :"
   },
   {
     "key": "L00021_01",
     "original": "boots",
     "translation": "",
-    "context": "src/steal.c:21:21\n    16: {\n    17: \treturn (\n    18: #ifdef TOURIST\n    19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n>   21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n    25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }"
+    "stage": 0,
+    "context": "src/steal.c:21:21\n    16: {\n    17: \treturn (\n    18: #ifdef TOURIST\n    19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n&gt;   21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n    25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }"
   },
   {
     "key": "L00022_01",
     "original": "shield",
     "translation": "",
-    "context": "src/steal.c:22:21\n    17: \treturn (\n    18: #ifdef TOURIST\n    19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n>   22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n    25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: "
+    "stage": 0,
+    "context": "src/steal.c:22:21\n    17: \treturn (\n    18: #ifdef TOURIST\n    19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n&gt;   22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n    25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: "
   },
   {
     "key": "L00023_01",
     "original": "gloves",
     "translation": "",
-    "context": "src/steal.c:23:21\n    18: #ifdef TOURIST\n    19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n>   23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n    25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: \n    28: #ifndef GOLDOBJ"
+    "stage": 0,
+    "context": "src/steal.c:23:21\n    18: #ifdef TOURIST\n    19: \t\t(otmp == uarmu) ? \"shirt\" :\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n&gt;   23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n    25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: \n    28: #ifndef GOLDOBJ"
   },
   {
     "key": "L00025_01",
     "original": "helmet",
     "translation": "",
-    "context": "src/steal.c:25:21\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n>   25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: \n    28: #ifndef GOLDOBJ\n    29: long\t\t/* actually returns something that fits in an int */\n    30: somegold()"
+    "stage": 0,
+    "context": "src/steal.c:25:21\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n&gt;   25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: \n    28: #ifndef GOLDOBJ\n    29: long\t\t/* actually returns something that fits in an int */\n    30: somegold()"
   },
   {
     "key": "L00025_02",
     "original": "armor",
     "translation": "",
-    "context": "src/steal.c:25:32\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n>   25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: \n    28: #ifndef GOLDOBJ\n    29: long\t\t/* actually returns something that fits in an int */\n    30: somegold()"
+    "stage": 0,
+    "context": "src/steal.c:25:32\n    20: #endif\n    21: \t\t(otmp == uarmf) ? \"boots\" :\n    22: \t\t(otmp == uarms) ? \"shield\" :\n    23: \t\t(otmp == uarmg) ? \"gloves\" :\n    24: \t\t(otmp == uarmc) ? cloak_simple_name(otmp) :\n&gt;   25: \t\t(otmp == uarmh) ? \"helmet\" : \"armor\");\n    26: }\n    27: \n    28: #ifndef GOLDOBJ\n    29: long\t\t/* actually returns something that fits in an int */\n    30: somegold()"
   },
   {
     "key": "L00155_01",
     "original": "stealarm(): dead monster stealing",
     "translation": "",
-    "context": "src/steal.c:155:37\n   150: \n   151: \tfor(otmp = invent; otmp; otmp = otmp->nobj) {\n   152: \t    if(otmp->o_id == stealoid) {\n   153: \t\tfor(mtmp = fmon; mtmp; mtmp = mtmp->nmon) {\n   154: \t\t    if(mtmp->m_id == stealmid) {\n>  155: \t\t\tif(DEADMONSTER(mtmp)) impossible(\"stealarm(): dead monster stealing\"); \n   156: \t\t\tif(!dmgtype(mtmp->data, AD_SITM)) /* polymorphed */\n   157: \t\t\t    goto botm;\n   158: \t\t\tif(otmp->unpaid)\n   159: \t\t\t    subfrombill(otmp, shop_keeper(*u.ushops));\n   160: \t\t\tfreeinv(otmp);"
+    "stage": 0,
+    "context": "src/steal.c:155:37\n   150: \n   151: \tfor(otmp = invent; otmp; otmp = otmp-&gt;nobj) {\n   152: \t    if(otmp-&gt;o_id == stealoid) {\n   153: \t\tfor(mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon) {\n   154: \t\t    if(mtmp-&gt;m_id == stealmid) {\n&gt;  155: \t\t\tif(DEADMONSTER(mtmp)) impossible(\"stealarm(): dead monster stealing\"); \n   156: \t\t\tif(!dmgtype(mtmp-&gt;data, AD_SITM)) /* polymorphed */\n   157: \t\t\t    goto botm;\n   158: \t\t\tif(otmp-&gt;unpaid)\n   159: \t\t\t    subfrombill(otmp, shop_keeper(*u.ushops));\n   160: \t\t\tfreeinv(otmp);"
   },
   {
     "key": "L00161_01",
     "original": "%s steals %s!",
     "translation": "",
-    "context": "src/steal.c:161:10\n   156: \t\t\tif(!dmgtype(mtmp->data, AD_SITM)) /* polymorphed */\n   157: \t\t\t    goto botm;\n   158: \t\t\tif(otmp->unpaid)\n   159: \t\t\t    subfrombill(otmp, shop_keeper(*u.ushops));\n   160: \t\t\tfreeinv(otmp);\n>  161: \t\t\tpline(\"%s steals %s!\", Monnam(mtmp), doname(otmp));\n   162: \t\t\t(void) mpickobj(mtmp,otmp);\t/* may free otmp */\n   163: \t\t\t/* Implies seduction, \"you gladly hand over ...\"\n   164: \t\t\t   so we don't set mavenge bit here. */\n   165: \t\t\tmonflee(mtmp, 0, FALSE, FALSE);\n   166: \t\t\tif (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);"
+    "stage": 0,
+    "context": "src/steal.c:161:10\n   156: \t\t\tif(!dmgtype(mtmp-&gt;data, AD_SITM)) /* polymorphed */\n   157: \t\t\t    goto botm;\n   158: \t\t\tif(otmp-&gt;unpaid)\n   159: \t\t\t    subfrombill(otmp, shop_keeper(*u.ushops));\n   160: \t\t\tfreeinv(otmp);\n&gt;  161: \t\t\tpline(\"%s steals %s!\", Monnam(mtmp), doname(otmp));\n   162: \t\t\t(void) mpickobj(mtmp,otmp);\t/* may free otmp */\n   163: \t\t\t/* Implies seduction, \"you gladly hand over ...\"\n   164: \t\t\t   so we don't set mavenge bit here. */\n   165: \t\t\tmonflee(mtmp, 0, FALSE, FALSE);\n   166: \t\t\tif (!tele_restrict(mtmp)) (void) rloc(mtmp, FALSE);"
   },
   {
     "key": "L00294_01",
     "original": "Steal fails!",
     "translation": "",
-    "context": "src/steal.c:294:14\n   289: \t\t\t)\n   290: \t\tif((tmp -= ((otmp->owornmask &\n   291: \t\t\t(W_ARMOR | W_RING | W_AMUL | W_TOOL)) ? 5 : 1)) < 0)\n   292: \t\t\tbreak;\n   293: \tif(!otmp) {\n>  294: \t\timpossible(\"Steal fails!\");\n   295: \t\treturn(0);\n   296: \t}\n   297: \t/* can't steal gloves while wielding - so steal the wielded item. */\n   298: \tif (otmp == uarmg && uwep)\n   299: \t    otmp = uwep;"
+    "stage": 0,
+    "context": "src/steal.c:294:14\n   289: \t\t\t)\n   290: \t\tif((tmp -= ((otmp-&gt;owornmask &\n   291: \t\t\t(W_ARMOR | W_RING | W_AMUL | W_TOOL)) ? 5 : 1)) &lt; 0)\n   292: \t\t\tbreak;\n   293: \tif(!otmp) {\n&gt;  294: \t\timpossible(\"Steal fails!\");\n   295: \t\treturn(0);\n   296: \t}\n   297: \t/* can't steal gloves while wielding - so steal the wielded item. */\n   298: \tif (otmp == uarmg && uwep)\n   299: \t    otmp = uwep;"
   },
   {
     "key": "L00326_01",
     "original": "steal",
     "translation": "",
-    "context": "src/steal.c:326:39\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp->cursed && otmp->owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n>  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp->owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
+    "stage": 0,
+    "context": "src/steal.c:326:39\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp-&gt;cursed && otmp-&gt;owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n&gt;  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp-&gt;owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
   },
   {
     "key": "L00326_02",
     "original": "snatch",
     "translation": "",
-    "context": "src/steal.c:326:47\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp->cursed && otmp->owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n>  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp->owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
+    "stage": 0,
+    "context": "src/steal.c:326:47\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp-&gt;cursed && otmp-&gt;owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n&gt;  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp-&gt;owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
   },
   {
     "key": "L00326_03",
     "original": "grab",
     "translation": "",
-    "context": "src/steal.c:326:56\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp->cursed && otmp->owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n>  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp->owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
+    "stage": 0,
+    "context": "src/steal.c:326:56\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp-&gt;cursed && otmp-&gt;owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n&gt;  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp-&gt;owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
   },
   {
     "key": "L00326_04",
     "original": "take",
     "translation": "",
-    "context": "src/steal.c:326:63\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp->cursed && otmp->owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n>  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp->owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
+    "stage": 0,
+    "context": "src/steal.c:326:63\n   321: \t\tostuck = FALSE;\t/* not really worn; curse doesn't matter */\n   322: \t    else\n   323: \t\tostuck = (otmp-&gt;cursed && otmp-&gt;owornmask);\n   324: \n   325: \t    if (ostuck || !can_carry(mtmp, otmp)) {\n&gt;  326: \t\tstatic const char * const how[] = { \"steal\",\"snatch\",\"grab\",\"take\" };\n   327:  cant_take:\n   328: \t\tpline(\"%s试图%s你的%s，但最后还是放弃了。\",\n   329: \t\t      Monnam(mtmp), how[rn2(SIZE(how))],\n   330: \t\t      (otmp-&gt;owornmask & W_ARMOR) ? equipname(otmp) :\n   331: \t\t       cxname(otmp));"
   },
   {
     "key": "L00384_01",
     "original": "let %s take",
     "translation": "",
-    "context": "src/steal.c:384:21\n   379: \t\t\tif (multi < 0 && is_fainted()) unmul((char *)0);\n   380: \t\t\tslowly = (armordelay >= 1 || multi < 0);\n   381: \t\t\tif (do_charm) {\n   382: \t\t\t    char action[15];\n   383: \t\t\t    if (curssv)\n>  384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n   388: \t\t\t\t\t\"start removing\" : \"hand over\");\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\","
+    "stage": 0,
+    "context": "src/steal.c:384:21\n   379: \t\t\tif (multi &lt; 0 && is_fainted()) unmul((char *)0);\n   380: \t\t\tslowly = (armordelay &gt;= 1 || multi &lt; 0);\n   381: \t\t\tif (do_charm) {\n   382: \t\t\t    char action[15];\n   383: \t\t\t    if (curssv)\n&gt;  384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n   388: \t\t\t\t\t\"start removing\" : \"hand over\");\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\","
   },
   {
     "key": "L00388_01",
     "original": "start removing",
     "translation": "",
-    "context": "src/steal.c:388:6\n   383: \t\t\t    if (curssv)\n   384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n>  388: \t\t\t\t\t\"start removing\" : \"hand over\");\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse"
+    "stage": 0,
+    "context": "src/steal.c:388:6\n   383: \t\t\t    if (curssv)\n   384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n&gt;  388: \t\t\t\t\t\"start removing\" : \"hand over\");\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse"
   },
   {
     "key": "L00388_02",
     "original": "hand over",
     "translation": "",
-    "context": "src/steal.c:388:25\n   383: \t\t\t    if (curssv)\n   384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n>  388: \t\t\t\t\t\"start removing\" : \"hand over\");\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse"
+    "stage": 0,
+    "context": "src/steal.c:388:25\n   383: \t\t\t    if (curssv)\n   384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n&gt;  388: \t\t\t\t\t\"start removing\" : \"hand over\");\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse"
   },
   {
     "key": "L00389_01",
     "original": "%s charms you.  You gladly %s your %s.",
     "translation": "",
-    "context": "src/steal.c:389:14\n   384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n   388: \t\t\t\t\t\"start removing\" : \"hand over\");\n>  389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\","
+    "stage": 0,
+    "context": "src/steal.c:389:14\n   384: \t\t\t\tsprintf(action, \"let %s take\",\n   385: \t\t\t\t\tmhis(mtmp));\n   386: \t\t\t    else\n   387: \t\t\t\tstrcpy(action, slowly ?\n   388: \t\t\t\t\t\"start removing\" : \"hand over\");\n&gt;  389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\","
   },
   {
     "key": "L00394_01",
     "original": "%s seduces you and %s off your %s.",
     "translation": "",
-    "context": "src/steal.c:394:14\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n>  394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp->female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));"
+    "stage": 0,
+    "context": "src/steal.c:394:14\n   389: \t\t\t    pline(\"%s charms you.  You gladly %s your %s.\",\n   390: \t\t\t\t  !seen ? pronoun : Monnam(mtmp), action,\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n&gt;  394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp-&gt;female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));"
   },
   {
     "key": "L00396_01",
     "original": "beautiful",
     "translation": "",
-    "context": "src/steal.c:396:22\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n>  396: \t\t\t\t  mtmp->female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */"
+    "stage": 0,
+    "context": "src/steal.c:396:22\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n&gt;  396: \t\t\t\t  mtmp-&gt;female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */"
   },
   {
     "key": "L00396_02",
     "original": "handsome",
     "translation": "",
-    "context": "src/steal.c:396:36\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n>  396: \t\t\t\t  mtmp->female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */"
+    "stage": 0,
+    "context": "src/steal.c:396:36\n   391: \t\t\t\t  equipname(otmp));\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n&gt;  396: \t\t\t\t  mtmp-&gt;female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */"
   },
   {
     "key": "L00397_01",
     "original": "helps you to take",
     "translation": "",
-    "context": "src/steal.c:397:16\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp->female ? \"beautiful\" : \"handsome\"),\n>  397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */\n   402: \t\t\tnomul(-armordelay);"
+    "stage": 0,
+    "context": "src/steal.c:397:16\n   392: \t\t\t}\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp-&gt;female ? \"beautiful\" : \"handsome\"),\n&gt;  397: \t\t\t\t  curssv ? \"helps you to take\" :\n   398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */\n   402: \t\t\tnomul(-armordelay);"
   },
   {
     "key": "L00398_01",
     "original": "you start taking",
     "translation": "",
-    "context": "src/steal.c:398:16\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp->female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n>  398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */\n   402: \t\t\tnomul(-armordelay);\n   403: \t\t\tnomovemsg = 0;"
+    "stage": 0,
+    "context": "src/steal.c:398:16\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp-&gt;female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n&gt;  398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */\n   402: \t\t\tnomul(-armordelay);\n   403: \t\t\tnomovemsg = 0;"
   },
   {
     "key": "L00398_02",
     "original": "you take",
     "translation": "",
-    "context": "src/steal.c:398:37\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp->female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n>  398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */\n   402: \t\t\tnomul(-armordelay);\n   403: \t\t\tnomovemsg = 0;"
+    "stage": 0,
+    "context": "src/steal.c:398:37\n   393: \t\t\telse\n   394: \t\t\t    pline(\"%s seduces you and %s off your %s.\",\n   395: \t\t\t\t  !seen ? pronoun : Adjmonnam(mtmp,\n   396: \t\t\t\t  mtmp-&gt;female ? \"beautiful\" : \"handsome\"),\n   397: \t\t\t\t  curssv ? \"helps you to take\" :\n&gt;  398: \t\t\t\t  slowly ? \"you start taking\" : \"you take\",\n   399: \t\t\t\t  equipname(otmp));\n   400: \t\t\tnamed++;\n   401: \t\t\t/* the following is to set multi for later on */\n   402: \t\t\tnomul(-armordelay);\n   403: \t\t\tnomovemsg = 0;"
   },
   {
     "key": "L00435_01",
     "original": "%s stole %s.",
     "translation": "",
-    "context": "src/steal.c:435:8\n   430: \t * alignment penalty during retaliation;\n   431: \t */\n   432: \tmtmp->mavenge = 1;\n   433: \n   434: \tfreeinv(otmp);\n>  435: \tpline(\"%s stole %s.\", named ? \"It\" : Monnam(mtmp), doname(otmp));\n   436: \tcould_petrify = (otmp->otyp == CORPSE &&\n   437: \t\t\t touch_petrifies(&mons[otmp->corpsenm]));\n   438: \t(void) mpickobj(mtmp,otmp);\t/* may free otmp */\n   439: \tif (could_petrify && !(mtmp->misc_worn_check & W_ARMG)) {\n   440: \t    minstapetrify(mtmp, TRUE);"
+    "stage": 0,
+    "context": "src/steal.c:435:8\n   430: \t * alignment penalty during retaliation;\n   431: \t */\n   432: \tmtmp-&gt;mavenge = 1;\n   433: \n   434: \tfreeinv(otmp);\n&gt;  435: \tpline(\"%s stole %s.\", named ? \"It\" : Monnam(mtmp), doname(otmp));\n   436: \tcould_petrify = (otmp-&gt;otyp == CORPSE &&\n   437: \t\t\t touch_petrifies(&mons[otmp-&gt;corpsenm]));\n   438: \t(void) mpickobj(mtmp,otmp);\t/* may free otmp */\n   439: \tif (could_petrify && !(mtmp-&gt;misc_worn_check & W_ARMG)) {\n   440: \t    minstapetrify(mtmp, TRUE);"
   },
   {
     "key": "L00435_02",
     "original": "It",
     "translation": "",
-    "context": "src/steal.c:435:32\n   430: \t * alignment penalty during retaliation;\n   431: \t */\n   432: \tmtmp->mavenge = 1;\n   433: \n   434: \tfreeinv(otmp);\n>  435: \tpline(\"%s stole %s.\", named ? \"It\" : Monnam(mtmp), doname(otmp));\n   436: \tcould_petrify = (otmp->otyp == CORPSE &&\n   437: \t\t\t touch_petrifies(&mons[otmp->corpsenm]));\n   438: \t(void) mpickobj(mtmp,otmp);\t/* may free otmp */\n   439: \tif (could_petrify && !(mtmp->misc_worn_check & W_ARMG)) {\n   440: \t    minstapetrify(mtmp, TRUE);"
+    "stage": 0,
+    "context": "src/steal.c:435:32\n   430: \t * alignment penalty during retaliation;\n   431: \t */\n   432: \tmtmp-&gt;mavenge = 1;\n   433: \n   434: \tfreeinv(otmp);\n&gt;  435: \tpline(\"%s stole %s.\", named ? \"It\" : Monnam(mtmp), doname(otmp));\n   436: \tcould_petrify = (otmp-&gt;otyp == CORPSE &&\n   437: \t\t\t touch_petrifies(&mons[otmp-&gt;corpsenm]));\n   438: \t(void) mpickobj(mtmp,otmp);\t/* may free otmp */\n   439: \tif (could_petrify && !(mtmp-&gt;misc_worn_check & W_ARMG)) {\n   440: \t    minstapetrify(mtmp, TRUE);"
   },
   {
     "key": "L00473_01",
     "original": "%s out.",
     "translation": "",
-    "context": "src/steal.c:473:12\n   468:     if (otmp->lamplit &&  /* hack to avoid function calls for most objs */\n   469:       \tobj_sheds_light(otmp) &&\n   470: \tattacktype(mtmp->data, AT_ENGL)) {\n   471: \t/* this is probably a burning object that you dropped or threw */\n   472: \tif (u.uswallow && mtmp == u.ustuck && !Blind)\n>  473: \t    pline(\"%s out.\", Tobjnam(otmp, \"go\"));\n   474: \tsnuff_otmp = TRUE;\n   475:     }\n   476:     /* Must do carrying effects on object prior to add_to_minv() */\n   477:     carry_obj_effects(mtmp, otmp);\n   478:     /* add_to_minv() might free otmp [if merged with something else],"
+    "stage": 0,
+    "context": "src/steal.c:473:12\n   468:     if (otmp-&gt;lamplit &&  /* hack to avoid function calls for most objs */\n   469:       \tobj_sheds_light(otmp) &&\n   470: \tattacktype(mtmp-&gt;data, AT_ENGL)) {\n   471: \t/* this is probably a burning object that you dropped or threw */\n   472: \tif (u.uswallow && mtmp == u.ustuck && !Blind)\n&gt;  473: \t    pline(\"%s out.\", Tobjnam(otmp, \"go\"));\n   474: \tsnuff_otmp = TRUE;\n   475:     }\n   476:     /* Must do carrying effects on object prior to add_to_minv() */\n   477:     carry_obj_effects(mtmp, otmp);\n   478:     /* add_to_minv() might free otmp [if merged with something else],"
   },
   {
     "key": "L00473_02",
     "original": "go",
     "translation": "",
-    "context": "src/steal.c:473:37\n   468:     if (otmp->lamplit &&  /* hack to avoid function calls for most objs */\n   469:       \tobj_sheds_light(otmp) &&\n   470: \tattacktype(mtmp->data, AT_ENGL)) {\n   471: \t/* this is probably a burning object that you dropped or threw */\n   472: \tif (u.uswallow && mtmp == u.ustuck && !Blind)\n>  473: \t    pline(\"%s out.\", Tobjnam(otmp, \"go\"));\n   474: \tsnuff_otmp = TRUE;\n   475:     }\n   476:     /* Must do carrying effects on object prior to add_to_minv() */\n   477:     carry_obj_effects(mtmp, otmp);\n   478:     /* add_to_minv() might free otmp [if merged with something else],"
+    "stage": 0,
+    "context": "src/steal.c:473:37\n   468:     if (otmp-&gt;lamplit &&  /* hack to avoid function calls for most objs */\n   469:       \tobj_sheds_light(otmp) &&\n   470: \tattacktype(mtmp-&gt;data, AT_ENGL)) {\n   471: \t/* this is probably a burning object that you dropped or threw */\n   472: \tif (u.uswallow && mtmp == u.ustuck && !Blind)\n&gt;  473: \t    pline(\"%s out.\", Tobjnam(otmp, \"go\"));\n   474: \tsnuff_otmp = TRUE;\n   475:     }\n   476:     /* Must do carrying effects on object prior to add_to_minv() */\n   477:     carry_obj_effects(mtmp, otmp);\n   478:     /* add_to_minv() might free otmp [if merged with something else],"
   },
   {
     "key": "L00565_01",
     "original": "%s drops %s.",
     "translation": "",
-    "context": "src/steal.c:565:8\n   560: #endif\n   561: \t}\n   562: \tobj->owornmask = 0L;\n   563:     }\n   564:     if (verbosely && cansee(omx, omy))\n>  565: \tpline(\"%s drops %s.\", Monnam(mon), distant_name(obj, doname));\n   566:     if (!flooreffects(obj, omx, omy, \"fall\")) {\n   567: \tplace_object(obj, omx, omy);\n   568: \tstackobj(obj);\n   569:     }\n   570: }"
+    "stage": 0,
+    "context": "src/steal.c:565:8\n   560: #endif\n   561: \t}\n   562: \tobj-&gt;owornmask = 0L;\n   563:     }\n   564:     if (verbosely && cansee(omx, omy))\n&gt;  565: \tpline(\"%s drops %s.\", Monnam(mon), distant_name(obj, doname));\n   566:     if (!flooreffects(obj, omx, omy, \"fall\")) {\n   567: \tplace_object(obj, omx, omy);\n   568: \tstackobj(obj);\n   569:     }\n   570: }"
   },
   {
     "key": "L00566_01",
     "original": "fall",
     "translation": "",
-    "context": "src/steal.c:566:38\n   561: \t}\n   562: \tobj->owornmask = 0L;\n   563:     }\n   564:     if (verbosely && cansee(omx, omy))\n   565: \tpline(\"%s drops %s.\", Monnam(mon), distant_name(obj, doname));\n>  566:     if (!flooreffects(obj, omx, omy, \"fall\")) {\n   567: \tplace_object(obj, omx, omy);\n   568: \tstackobj(obj);\n   569:     }\n   570: }\n   571: "
+    "stage": 0,
+    "context": "src/steal.c:566:38\n   561: \t}\n   562: \tobj-&gt;owornmask = 0L;\n   563:     }\n   564:     if (verbosely && cansee(omx, omy))\n   565: \tpline(\"%s drops %s.\", Monnam(mon), distant_name(obj, doname));\n&gt;  566:     if (!flooreffects(obj, omx, omy, \"fall\")) {\n   567: \tplace_object(obj, omx, omy);\n   568: \tstackobj(obj);\n   569:     }\n   570: }\n   571: "
   },
   {
     "key": "L00641_01",
     "original": "%s drops %ld gold piece%s.",
     "translation": "",
-    "context": "src/steal.c:641:10\n   636: #ifndef GOLDOBJ\n   637: \tif (mtmp->mgold) {\n   638: \t\tregister long g = mtmp->mgold;\n   639: \t\t(void) mkgold(g, omx, omy);\n   640: \t\tif (is_pet && cansee(omx, omy) && flags.verbose)\n>  641: \t\t\tpline(\"%s drops %ld gold piece%s.\", Monnam(mtmp),\n   642: \t\t\t\tg, plur(g));\n   643: \t\tmtmp->mgold = 0L;\n   644: \t}\n   645: #endif\n   646: \t"
+    "stage": 0,
+    "context": "src/steal.c:641:10\n   636: #ifndef GOLDOBJ\n   637: \tif (mtmp-&gt;mgold) {\n   638: \t\tregister long g = mtmp-&gt;mgold;\n   639: \t\t(void) mkgold(g, omx, omy);\n   640: \t\tif (is_pet && cansee(omx, omy) && flags.verbose)\n&gt;  641: \t\t\tpline(\"%s drops %ld gold piece%s.\", Monnam(mtmp),\n   642: \t\t\t\tg, plur(g));\n   643: \t\tmtmp-&gt;mgold = 0L;\n   644: \t}\n   645: #endif\n   646: \t"
   }
 ]

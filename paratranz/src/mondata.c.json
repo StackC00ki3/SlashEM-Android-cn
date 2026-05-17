@@ -3,492 +3,574 @@
     "key": "L00209_01",
     "original": "visored helmet",
     "translation": "",
-    "context": "src/mondata.c:209:18\n   204: \tif (check_visor) {\n   205: \t    o = (mdef == &youmonst) ? invent : mdef->minvent;\n   206: \t    for ( ; o; o = o->nobj)\n   207: \t\tif ((o->owornmask & W_ARMH) &&\n   208: \t\t    (s = OBJ_DESCR(objects[o->otyp])) != (char *)0 &&\n>  209: \t\t    !strcmp(s, \"visored helmet\"))\n   210: \t\t    return FALSE;\n   211: \t}\n   212: \n   213: \treturn TRUE;\n   214: }"
+    "stage": 0,
+    "context": "src/mondata.c:209:18\n   204: \tif (check_visor) {\n   205: \t    o = (mdef == &youmonst) ? invent : mdef-&gt;minvent;\n   206: \t    for ( ; o; o = o-&gt;nobj)\n   207: \t\tif ((o-&gt;owornmask & W_ARMH) &&\n   208: \t\t    (s = OBJ_DESCR(objects[o-&gt;otyp])) != (char *)0 &&\n&gt;  209: \t\t    !strcmp(s, \"visored helmet\"))\n   210: \t\t    return FALSE;\n   211: \t}\n   212: \n   213: \treturn TRUE;\n   214: }"
   },
   {
     "key": "L00386_01",
     "original": "monsndx - could not index monster (%d)",
     "translation": "",
-    "context": "src/mondata.c:386:12\n   381: \tif (ptr == &upermonst) return PM_PLAYERMON;\n   382: \n   383: \ti = (int)(ptr - &mons[0]);\n   384: \tif (i < LOW_PM || i >= NUMMONS) {\n   385: \t\t/* ought to switch this to use `fmt_ptr' */\n>  386: \t    panic(\"monsndx - could not index monster (%d)\",\n   387: \t\t  i);\n   388: \t    return NON_PM;\t\t/* will not get here */\n   389: \t}\n   390: \n   391: \treturn(i);"
+    "stage": 0,
+    "context": "src/mondata.c:386:12\n   381: \tif (ptr == &upermonst) return PM_PLAYERMON;\n   382: \n   383: \ti = (int)(ptr - &mons[0]);\n   384: \tif (i &lt; LOW_PM || i &gt;= NUMMONS) {\n   385: \t\t/* ought to switch this to use `fmt_ptr' */\n&gt;  386: \t    panic(\"monsndx - could not index monster (%d)\",\n   387: \t\t  i);\n   388: \t    return NON_PM;\t\t/* will not get here */\n   389: \t}\n   390: \n   391: \treturn(i);"
   },
   {
     "key": "L00422_01",
     "original": "a ",
     "translation": "",
-    "context": "src/mondata.c:422:20\n   417: \tchar buf[BUFSZ];\n   418: \tint len, slen;\n   419: \n   420: \tstr = strcpy(buf, in_str);\n   421: \n>  422: \tif (!strncmp(str, \"a \", 2)) str += 2;\n   423: \telse if (!strncmp(str, \"an \", 3)) str += 3;\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: "
+    "stage": 0,
+    "context": "src/mondata.c:422:20\n   417: \tchar buf[BUFSZ];\n   418: \tint len, slen;\n   419: \n   420: \tstr = strcpy(buf, in_str);\n   421: \n&gt;  422: \tif (!strncmp(str, \"a \", 2)) str += 2;\n   423: \telse if (!strncmp(str, \"an \", 3)) str += 3;\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: "
   },
   {
     "key": "L00423_01",
     "original": "an ",
     "translation": "",
-    "context": "src/mondata.c:423:25\n   418: \tint len, slen;\n   419: \n   420: \tstr = strcpy(buf, in_str);\n   421: \n   422: \tif (!strncmp(str, \"a \", 2)) str += 2;\n>  423: \telse if (!strncmp(str, \"an \", 3)) str += 3;\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)"
+    "stage": 0,
+    "context": "src/mondata.c:423:25\n   418: \tint len, slen;\n   419: \n   420: \tstr = strcpy(buf, in_str);\n   421: \n   422: \tif (!strncmp(str, \"a \", 2)) str += 2;\n&gt;  423: \telse if (!strncmp(str, \"an \", 3)) str += 3;\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)"
   },
   {
     "key": "L00428_01",
     "original": "vortices",
     "translation": "",
-    "context": "src/mondata.c:428:24\n   423: \telse if (!strncmp(str, \"an \", 3)) str += 3;\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: \n>  428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");"
+    "stage": 0,
+    "context": "src/mondata.c:428:24\n   423: \telse if (!strncmp(str, \"an \", 3)) str += 3;\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: \n&gt;  428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");"
   },
   {
     "key": "L00429_01",
     "original": "ex",
     "translation": "",
-    "context": "src/mondata.c:429:18\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n>  429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */"
+    "stage": 0,
+    "context": "src/mondata.c:429:18\n   424: \n   425: \tslen = strlen(str);\n   426: \tterm = str + slen;\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n&gt;  429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */"
   },
   {
     "key": "L00431_01",
     "original": "ies",
     "translation": "",
-    "context": "src/mondata.c:431:40\n   426: \tterm = str + slen;\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n>  431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen > 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");"
+    "stage": 0,
+    "context": "src/mondata.c:431:40\n   426: \tterm = str + slen;\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n&gt;  431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");"
   },
   {
     "key": "L00432_01",
     "original": "zombies",
     "translation": "",
-    "context": "src/mondata.c:432:36\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n>  432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen > 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");\n   437: "
+    "stage": 0,
+    "context": "src/mondata.c:432:36\n   427: \n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n&gt;  432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");\n   437: "
   },
   {
     "key": "L00433_01",
     "original": "y",
     "translation": "",
-    "context": "src/mondata.c:433:21\n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n>  433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen > 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");\n   437: \n   438: \tslen = strlen(str); /* length possibly needs recomputing */"
+    "stage": 0,
+    "context": "src/mondata.c:433:21\n   428: \tif ((s = strstri(str, \"vortices\")) != 0)\n   429: \t    Strcpy(s+4, \"ex\");\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n&gt;  433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");\n   437: \n   438: \tslen = strlen(str); /* length possibly needs recomputing */"
   },
   {
     "key": "L00435_01",
     "original": "ves",
     "translation": "",
-    "context": "src/mondata.c:435:40\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n>  435: \telse if (slen > 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");\n   437: \n   438: \tslen = strlen(str); /* length possibly needs recomputing */\n   439: \n   440:     {"
+    "stage": 0,
+    "context": "src/mondata.c:435:40\n   430: \t/* be careful with \"ies\"; \"priest\", \"zombies\" */\n   431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n&gt;  435: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ves\"))\n   436: \t    Strcpy(term-3, \"f\");\n   437: \n   438: \tslen = strlen(str); /* length possibly needs recomputing */\n   439: \n   440:     {"
   },
   {
     "key": "L00436_01",
     "original": "f",
     "translation": "",
-    "context": "src/mondata.c:436:21\n   431: \telse if (slen > 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen < 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen > 3 && !strcmpi(term-3, \"ves\"))\n>  436: \t    Strcpy(term-3, \"f\");\n   437: \n   438: \tslen = strlen(str); /* length possibly needs recomputing */\n   439: \n   440:     {\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }"
+    "stage": 0,
+    "context": "src/mondata.c:436:21\n   431: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ies\") &&\n   432: \t\t    (slen &lt; 7 || strcmpi(term-7, \"zombies\")))\n   433: \t    Strcpy(term-3, \"y\");\n   434: \t/* luckily no monster names end in fe or ve with ves plurals */\n   435: \telse if (slen &gt; 3 && !strcmpi(term-3, \"ves\"))\n&gt;  436: \t    Strcpy(term-3, \"f\");\n   437: \n   438: \tslen = strlen(str); /* length possibly needs recomputing */\n   439: \n   440:     {\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }"
   },
   {
     "key": "L00444_01",
     "original": "grey dragon",
     "translation": "",
-    "context": "src/mondata.c:444:5\n   439: \n   440:     {\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n>  444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },"
+    "stage": 0,
+    "context": "src/mondata.c:444:5\n   439: \n   440:     {\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n&gt;  444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },"
   },
   {
     "key": "L00445_01",
     "original": "baby grey dragon",
     "translation": "",
-    "context": "src/mondata.c:445:5\n   440:     {\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n>  445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },"
+    "stage": 0,
+    "context": "src/mondata.c:445:5\n   440:     {\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n&gt;  445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },"
   },
   {
     "key": "L00446_01",
     "original": "grey unicorn",
     "translation": "",
-    "context": "src/mondata.c:446:5\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n>  446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */"
+    "stage": 0,
+    "context": "src/mondata.c:446:5\n   441: \tstatic const struct alt_spl { const char* name; short pm_val; }\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n&gt;  446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */"
   },
   {
     "key": "L00447_01",
     "original": "grey ooze",
     "translation": "",
-    "context": "src/mondata.c:447:5\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n>  447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },"
+    "stage": 0,
+    "context": "src/mondata.c:447:5\n   442: \t    names[] = {\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n&gt;  447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },"
   },
   {
     "key": "L00448_01",
     "original": "gray-elf",
     "translation": "",
-    "context": "src/mondata.c:448:5\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n>  448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },"
+    "stage": 0,
+    "context": "src/mondata.c:448:5\n   443: \t    /* Alternate spellings */\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n&gt;  448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },"
   },
   {
     "key": "L00449_01",
     "original": "mindflayer",
     "translation": "",
-    "context": "src/mondata.c:449:5\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n>  449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },"
+    "stage": 0,
+    "context": "src/mondata.c:449:5\n   444: \t\t{ \"grey dragon\",\tPM_GRAY_DRAGON },\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n&gt;  449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },"
   },
   {
     "key": "L00450_01",
     "original": "master mindflayer",
     "translation": "",
-    "context": "src/mondata.c:450:5\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n>  450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },"
+    "stage": 0,
+    "context": "src/mondata.c:450:5\n   445: \t\t{ \"baby grey dragon\",\tPM_BABY_GRAY_DRAGON },\n   446: \t\t{ \"grey unicorn\",\tPM_GRAY_UNICORN },\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n&gt;  450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },"
   },
   {
     "key": "L00452_01",
     "original": "ki rin",
     "translation": "",
-    "context": "src/mondata.c:452:5\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n>  452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },"
+    "stage": 0,
+    "context": "src/mondata.c:452:5\n   447: \t\t{ \"grey ooze\",\t\tPM_GRAY_OOZE },\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n&gt;  452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },"
   },
   {
     "key": "L00453_01",
     "original": "uruk hai",
     "translation": "",
-    "context": "src/mondata.c:453:5\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n>  453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },"
+    "stage": 0,
+    "context": "src/mondata.c:453:5\n   448: \t\t{ \"gray-elf\",\t\tPM_GREY_ELF },\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n&gt;  453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },"
   },
   {
     "key": "L00454_01",
     "original": "orc captain",
     "translation": "",
-    "context": "src/mondata.c:454:5\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n>  454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },"
+    "stage": 0,
+    "context": "src/mondata.c:454:5\n   449: \t\t{ \"mindflayer\",         PM_MIND_FLAYER },\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n&gt;  454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },"
   },
   {
     "key": "L00455_01",
     "original": "woodland elf",
     "translation": "",
-    "context": "src/mondata.c:455:5\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n>  455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */"
+    "stage": 0,
+    "context": "src/mondata.c:455:5\n   450: \t\t{ \"master mindflayer\",  PM_MASTER_MIND_FLAYER },\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n&gt;  455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */"
   },
   {
     "key": "L00456_01",
     "original": "green elf",
     "translation": "",
-    "context": "src/mondata.c:456:5\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n>  456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },"
+    "stage": 0,
+    "context": "src/mondata.c:456:5\n   451: \t    /* Hyphenated names */\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n&gt;  456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },"
   },
   {
     "key": "L00457_01",
     "original": "grey elf",
     "translation": "",
-    "context": "src/mondata.c:457:5\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n>  457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif"
+    "stage": 0,
+    "context": "src/mondata.c:457:5\n   452: \t\t{ \"ki rin\",\t\tPM_KI_RIN },\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n&gt;  457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif"
   },
   {
     "key": "L00458_01",
     "original": "gray elf",
     "translation": "",
-    "context": "src/mondata.c:458:5\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n>  458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },"
+    "stage": 0,
+    "context": "src/mondata.c:458:5\n   453: \t\t{ \"uruk hai\",\t\tPM_URUK_HAI },\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n&gt;  458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },"
   },
   {
     "key": "L00459_01",
     "original": "elf lord",
     "translation": "",
-    "context": "src/mondata.c:459:5\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n>  459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },"
+    "stage": 0,
+    "context": "src/mondata.c:459:5\n   454: \t\t{ \"orc captain\",\tPM_ORC_CAPTAIN },\n   455: \t\t{ \"woodland elf\",\tPM_WOODLAND_ELF },\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n&gt;  459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },"
   },
   {
     "key": "L00461_01",
     "original": "high elf",
     "translation": "",
-    "context": "src/mondata.c:461:5\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n>  461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },"
+    "stage": 0,
+    "context": "src/mondata.c:461:5\n   456: \t\t{ \"green elf\",\t\tPM_GREEN_ELF },\n   457: \t\t{ \"grey elf\",\t\tPM_GREY_ELF },\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n&gt;  461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },"
   },
   {
     "key": "L00463_01",
     "original": "olog hai",
     "translation": "",
-    "context": "src/mondata.c:463:5\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n>  463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },"
+    "stage": 0,
+    "context": "src/mondata.c:463:5\n   458: \t\t{ \"gray elf\",\t\tPM_GREY_ELF },\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n&gt;  463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },"
   },
   {
     "key": "L00464_01",
     "original": "arch lich",
     "translation": "",
-    "context": "src/mondata.c:464:5\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n>  464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },"
+    "stage": 0,
+    "context": "src/mondata.c:464:5\n   459: \t\t{ \"elf lord\",\t\tPM_ELF_LORD },\n   460: #if 0\t/* OBSOLETE */\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n&gt;  464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },"
   },
   {
     "key": "L00466_01",
     "original": "incubi",
     "translation": "",
-    "context": "src/mondata.c:466:5\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n>  466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },"
+    "stage": 0,
+    "context": "src/mondata.c:466:5\n   461: \t\t{ \"high elf\",\t\tPM_HIGH_ELF },\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n&gt;  466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },"
   },
   {
     "key": "L00467_01",
     "original": "succubi",
     "translation": "",
-    "context": "src/mondata.c:467:5\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n>  467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },"
+    "stage": 0,
+    "context": "src/mondata.c:467:5\n   462: #endif\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n&gt;  467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },"
   },
   {
     "key": "L00468_01",
     "original": "violet fungi",
     "translation": "",
-    "context": "src/mondata.c:468:5\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n>  468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },"
+    "stage": 0,
+    "context": "src/mondata.c:468:5\n   463: \t\t{ \"olog hai\",\t\tPM_OLOG_HAI },\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n&gt;  468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },"
   },
   {
     "key": "L00469_01",
     "original": "homunculi",
     "translation": "",
-    "context": "src/mondata.c:469:5\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n>  469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN"
+    "stage": 0,
+    "context": "src/mondata.c:469:5\n   464: \t\t{ \"arch lich\",\t\tPM_ARCH_LICH },\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n&gt;  469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN"
   },
   {
     "key": "L00470_01",
     "original": "baluchitheria",
     "translation": "",
-    "context": "src/mondata.c:470:5\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n>  470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/"
+    "stage": 0,
+    "context": "src/mondata.c:470:5\n   465: \t    /* Some irregular plurals */\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n&gt;  470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/"
   },
   {
     "key": "L00471_01",
     "original": "lurkers above",
     "translation": "",
-    "context": "src/mondata.c:471:5\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n>  471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif"
+    "stage": 0,
+    "context": "src/mondata.c:471:5\n   466: \t\t{ \"incubi\",\t\tPM_INCUBUS },\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n&gt;  471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif"
   },
   {
     "key": "L00472_01",
     "original": "cavemen",
     "translation": "",
-    "context": "src/mondata.c:472:5\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n>  472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },"
+    "stage": 0,
+    "context": "src/mondata.c:472:5\n   467: \t\t{ \"succubi\",\t\tPM_SUCCUBUS },\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n&gt;  472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },"
   },
   {
     "key": "L00473_01",
     "original": "cavewomen",
     "translation": "",
-    "context": "src/mondata.c:473:5\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n>  473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },"
+    "stage": 0,
+    "context": "src/mondata.c:473:5\n   468: \t\t{ \"violet fungi\",\tPM_VIOLET_FUNGUS },\n   469: \t\t{ \"homunculi\",\t\tPM_HOMUNCULUS },\n   470: \t\t{ \"baluchitheria\",\tPM_BALUCHITHERIUM },\n   471: \t\t{ \"lurkers above\",\tPM_LURKER_ABOVE },\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n&gt;  473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },"
   },
   {
     "key": "L00477_01",
     "original": "djinn",
     "translation": "",
-    "context": "src/mondata.c:477:5\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n>  477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },"
+    "stage": 0,
+    "context": "src/mondata.c:477:5\n   472: \t\t{ \"cavemen\",\t\tPM_CAVEMAN },\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n&gt;  477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },"
   },
   {
     "key": "L00478_01",
     "original": "mumakil",
     "translation": "",
-    "context": "src/mondata.c:478:5\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n>  478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */"
+    "stage": 0,
+    "context": "src/mondata.c:478:5\n   473: \t\t{ \"cavewomen\",\t\tPM_CAVEWOMAN },\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n&gt;  478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */"
   },
   {
     "key": "L00479_01",
     "original": "erinyes",
     "translation": "",
-    "context": "src/mondata.c:479:5\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n>  479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */\n   484: \t\t{ 0, 0 }"
+    "stage": 0,
+    "context": "src/mondata.c:479:5\n   474: #ifndef ZOUTHERN\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n&gt;  479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */\n   484: \t\t{ 0, 0 }"
   },
   {
     "key": "L00480_01",
     "original": "giant lice",
     "translation": "",
-    "context": "src/mondata.c:480:5\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n>  480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */\n   484: \t\t{ 0, 0 }\n   485: \t};"
+    "stage": 0,
+    "context": "src/mondata.c:480:5\n   475: /*\t\t{ \"zruties\",            PM_ZRUTY },*/\n   476: #endif\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n&gt;  480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n   482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */\n   484: \t\t{ 0, 0 }\n   485: \t};"
   },
   {
     "key": "L00482_01",
     "original": "master of thief",
     "translation": "",
-    "context": "src/mondata.c:482:5\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n>  482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */\n   484: \t\t{ 0, 0 }\n   485: \t};\n   486: \tregister const struct alt_spl *namep;\n   487: "
+    "stage": 0,
+    "context": "src/mondata.c:482:5\n   477: \t\t{ \"djinn\",\t\tPM_DJINNI },\n   478: \t\t{ \"mumakil\",\t\tPM_MUMAK },\n   479: \t\t{ \"erinyes\",\t\tPM_ERINYS },\n   480: \t\t{ \"giant lice\",         PM_GIANT_LOUSE },\t/* RJ */\n   481: \t    /* falsely caught by -ves check above */\n&gt;  482: \t\t{ \"master of thief\",\tPM_MASTER_OF_THIEVES },\n   483: \t    /* end of list */\n   484: \t\t{ 0, 0 }\n   485: \t};\n   486: \tregister const struct alt_spl *namep;\n   487: "
   },
   {
     "key": "L00499_01",
     "original": "s",
     "translation": "",
-    "context": "src/mondata.c:499:29\n   494: \t    register int m_i_len = strlen(mons[i].mname);\n   495: \t    if (m_i_len > len && !strncmpi(mons[i].mname, str, m_i_len)) {\n   496: \t\tif (m_i_len == slen) return i;\t/* exact match */\n   497: \t\telse if (slen > m_i_len &&\n   498: \t\t\t(str[m_i_len] == ' ' ||\n>  499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||"
+    "stage": 0,
+    "context": "src/mondata.c:499:29\n   494: \t    register int m_i_len = strlen(mons[i].mname);\n   495: \t    if (m_i_len &gt; len && !strncmpi(mons[i].mname, str, m_i_len)) {\n   496: \t\tif (m_i_len == slen) return i;\t/* exact match */\n   497: \t\telse if (slen &gt; m_i_len &&\n   498: \t\t\t(str[m_i_len] == ' ' ||\n&gt;  499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||"
   },
   {
     "key": "L00500_01",
     "original": "s ",
     "translation": "",
-    "context": "src/mondata.c:500:30\n   495: \t    if (m_i_len > len && !strncmpi(mons[i].mname, str, m_i_len)) {\n   496: \t\tif (m_i_len == slen) return i;\t/* exact match */\n   497: \t\telse if (slen > m_i_len &&\n   498: \t\t\t(str[m_i_len] == ' ' ||\n   499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n>  500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||"
+    "stage": 0,
+    "context": "src/mondata.c:500:30\n   495: \t    if (m_i_len &gt; len && !strncmpi(mons[i].mname, str, m_i_len)) {\n   496: \t\tif (m_i_len == slen) return i;\t/* exact match */\n   497: \t\telse if (slen &gt; m_i_len &&\n   498: \t\t\t(str[m_i_len] == ' ' ||\n   499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n&gt;  500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||"
   },
   {
     "key": "L00503_01",
     "original": "'s",
     "translation": "",
-    "context": "src/mondata.c:503:29\n   498: \t\t\t(str[m_i_len] == ' ' ||\n   499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n>  503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n   506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;"
+    "stage": 0,
+    "context": "src/mondata.c:503:29\n   498: \t\t\t(str[m_i_len] == ' ' ||\n   499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n&gt;  503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n   506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;"
   },
   {
     "key": "L00504_01",
     "original": "'s ",
     "translation": "",
-    "context": "src/mondata.c:504:30\n   499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n>  504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n   506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;\n   509: \t\t}"
+    "stage": 0,
+    "context": "src/mondata.c:504:30\n   499: \t\t\t !strcmpi(&str[m_i_len], \"s\") ||\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n&gt;  504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n   506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;\n   509: \t\t}"
   },
   {
     "key": "L00505_01",
     "original": "es",
     "translation": "",
-    "context": "src/mondata.c:505:29\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n>  505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n   506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;\n   509: \t\t}\n   510: \t    }"
+    "stage": 0,
+    "context": "src/mondata.c:505:29\n   500: \t\t\t !strncmpi(&str[m_i_len], \"s \", 2) ||\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n&gt;  505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n   506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;\n   509: \t\t}\n   510: \t    }"
   },
   {
     "key": "L00506_01",
     "original": "es ",
     "translation": "",
-    "context": "src/mondata.c:506:30\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n>  506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;\n   509: \t\t}\n   510: \t    }\n   511: \t}"
+    "stage": 0,
+    "context": "src/mondata.c:506:30\n   501: \t\t\t !strcmpi(&str[m_i_len], \"'\") ||\n   502: \t\t\t !strncmpi(&str[m_i_len], \"' \", 2) ||\n   503: \t\t\t !strcmpi(&str[m_i_len], \"'s\") ||\n   504: \t\t\t !strncmpi(&str[m_i_len], \"'s \", 3) ||\n   505: \t\t\t !strcmpi(&str[m_i_len], \"es\") ||\n&gt;  506: \t\t\t !strncmpi(&str[m_i_len], \"es \", 3))) {\n   507: \t\t    mntmp = i;\n   508: \t\t    len = m_i_len;\n   509: \t\t}\n   510: \t    }\n   511: \t}"
   },
   {
     "key": "L00685_01",
     "original": "float",
     "translation": "",
-    "context": "src/mondata.c:685:36\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n>  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
+    "stage": 0,
+    "context": "src/mondata.c:685:36\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n&gt;  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
   },
   {
     "key": "L00685_02",
     "original": "Float",
     "translation": "",
-    "context": "src/mondata.c:685:45\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n>  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
+    "stage": 0,
+    "context": "src/mondata.c:685:45\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n&gt;  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
   },
   {
     "key": "L00685_03",
     "original": "wobble",
     "translation": "",
-    "context": "src/mondata.c:685:54\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n>  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
+    "stage": 0,
+    "context": "src/mondata.c:685:54\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n&gt;  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
   },
   {
     "key": "L00685_04",
     "original": "Wobble",
     "translation": "",
-    "context": "src/mondata.c:685:64\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n>  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
+    "stage": 0,
+    "context": "src/mondata.c:685:64\n   680: {\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n&gt;  685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };"
   },
   {
     "key": "L00686_01",
     "original": "fly",
     "translation": "",
-    "context": "src/mondata.c:686:32\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n>  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
+    "stage": 0,
+    "context": "src/mondata.c:686:32\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n&gt;  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
   },
   {
     "key": "L00686_02",
     "original": "Fly",
     "translation": "",
-    "context": "src/mondata.c:686:39\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n>  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
+    "stage": 0,
+    "context": "src/mondata.c:686:39\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n&gt;  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
   },
   {
     "key": "L00686_03",
     "original": "flutter",
     "translation": "",
-    "context": "src/mondata.c:686:46\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n>  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
+    "stage": 0,
+    "context": "src/mondata.c:686:46\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n&gt;  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
   },
   {
     "key": "L00686_04",
     "original": "Flutter",
     "translation": "",
-    "context": "src/mondata.c:686:57\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n>  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
+    "stage": 0,
+    "context": "src/mondata.c:686:57\n   681:     if (mtmp == &youmonst && !Upolyd) return(&mons[urace.malenum]);\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n&gt;  686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };"
   },
   {
     "key": "L00687_01",
     "original": "fly",
     "translation": "",
-    "context": "src/mondata.c:687:32\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n>  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
+    "stage": 0,
+    "context": "src/mondata.c:687:32\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n&gt;  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
   },
   {
     "key": "L00687_02",
     "original": "Fly",
     "translation": "",
-    "context": "src/mondata.c:687:39\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n>  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
+    "stage": 0,
+    "context": "src/mondata.c:687:39\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n&gt;  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
   },
   {
     "key": "L00687_03",
     "original": "stagger",
     "translation": "",
-    "context": "src/mondata.c:687:46\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n>  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
+    "stage": 0,
+    "context": "src/mondata.c:687:46\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n&gt;  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
   },
   {
     "key": "L00687_04",
     "original": "Stagger",
     "translation": "",
-    "context": "src/mondata.c:687:57\n   682:     else return(mtmp->data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n>  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
+    "stage": 0,
+    "context": "src/mondata.c:687:57\n   682:     else return(mtmp-&gt;data);\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n&gt;  687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: "
   },
   {
     "key": "L00688_01",
     "original": "slither",
     "translation": "",
-    "context": "src/mondata.c:688:35\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n>  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
+    "stage": 0,
+    "context": "src/mondata.c:688:35\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n&gt;  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
   },
   {
     "key": "L00688_02",
     "original": "Slither",
     "translation": "",
-    "context": "src/mondata.c:688:46\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n>  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
+    "stage": 0,
+    "context": "src/mondata.c:688:46\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n&gt;  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
   },
   {
     "key": "L00688_03",
     "original": "falter",
     "translation": "",
-    "context": "src/mondata.c:688:57\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n>  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
+    "stage": 0,
+    "context": "src/mondata.c:688:57\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n&gt;  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
   },
   {
     "key": "L00688_04",
     "original": "Falter",
     "translation": "",
-    "context": "src/mondata.c:688:67\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n>  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
+    "stage": 0,
+    "context": "src/mondata.c:688:67\n   683: }\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n&gt;  688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *"
   },
   {
     "key": "L00689_01",
     "original": "ooze",
     "translation": "",
-    "context": "src/mondata.c:689:32\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n>  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
+    "stage": 0,
+    "context": "src/mondata.c:689:32\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n&gt;  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
   },
   {
     "key": "L00689_02",
     "original": "Ooze",
     "translation": "",
-    "context": "src/mondata.c:689:40\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n>  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
+    "stage": 0,
+    "context": "src/mondata.c:689:40\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n&gt;  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
   },
   {
     "key": "L00689_03",
     "original": "tremble",
     "translation": "",
-    "context": "src/mondata.c:689:48\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n>  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
+    "stage": 0,
+    "context": "src/mondata.c:689:48\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n&gt;  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
   },
   {
     "key": "L00689_04",
     "original": "Tremble",
     "translation": "",
-    "context": "src/mondata.c:689:59\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n>  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
+    "stage": 0,
+    "context": "src/mondata.c:689:59\n   684: \n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n&gt;  689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)"
   },
   {
     "key": "L00690_01",
     "original": "wiggle",
     "translation": "",
-    "context": "src/mondata.c:690:36\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n>  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
+    "stage": 0,
+    "context": "src/mondata.c:690:36\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n&gt;  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
   },
   {
     "key": "L00690_02",
     "original": "Wiggle",
     "translation": "",
-    "context": "src/mondata.c:690:46\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n>  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
+    "stage": 0,
+    "context": "src/mondata.c:690:46\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n&gt;  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
   },
   {
     "key": "L00690_03",
     "original": "pulsate",
     "translation": "",
-    "context": "src/mondata.c:690:56\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n>  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
+    "stage": 0,
+    "context": "src/mondata.c:690:56\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n&gt;  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
   },
   {
     "key": "L00690_04",
     "original": "Pulsate",
     "translation": "",
-    "context": "src/mondata.c:690:67\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n>  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
+    "stage": 0,
+    "context": "src/mondata.c:690:67\n   685: static const char *levitate[4]\t= { \"float\", \"Float\", \"wobble\", \"Wobble\" };\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n&gt;  690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n   691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;"
   },
   {
     "key": "L00691_01",
     "original": "crawl",
     "translation": "",
-    "context": "src/mondata.c:691:33\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n>  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
+    "stage": 0,
+    "context": "src/mondata.c:691:33\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n&gt;  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
   },
   {
     "key": "L00691_02",
     "original": "Crawl",
     "translation": "",
-    "context": "src/mondata.c:691:42\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n>  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
+    "stage": 0,
+    "context": "src/mondata.c:691:42\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n&gt;  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
   },
   {
     "key": "L00691_03",
     "original": "falter",
     "translation": "",
-    "context": "src/mondata.c:691:51\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n>  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
+    "stage": 0,
+    "context": "src/mondata.c:691:51\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n&gt;  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
   },
   {
     "key": "L00691_04",
     "original": "Falter",
     "translation": "",
-    "context": "src/mondata.c:691:61\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n>  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
+    "stage": 0,
+    "context": "src/mondata.c:691:61\n   686: static const char *flys[4]\t= { \"fly\", \"Fly\", \"flutter\", \"Flutter\" };\n   687: static const char *flyl[4]\t= { \"fly\", \"Fly\", \"stagger\", \"Stagger\" };\n   688: static const char *slither[4]\t= { \"slither\", \"Slither\", \"falter\", \"Falter\" };\n   689: static const char *ooze[4]\t= { \"ooze\", \"Ooze\", \"tremble\", \"Tremble\" };\n   690: static const char *immobile[4]\t= { \"wiggle\", \"Wiggle\", \"pulsate\", \"Pulsate\" };\n&gt;  691: static const char *crawl[4]\t= { \"crawl\", \"Crawl\", \"falter\", \"Falter\" };\n   692: \n   693: const char *\n   694: locomotion(ptr, def)\n   695: const struct permonst *ptr;\n   696: const char *def;"
   },
   {
     "key": "L00746_01",
     "original": "already on fire",
     "translation": "",
-    "context": "src/mondata.c:746:9\n   741:     switch (monsndx(mptr)) {\n   742:     case PM_FLAMING_SPHERE:\n   743:     case PM_FIRE_VORTEX:\n   744:     case PM_FIRE_ELEMENTAL:\n   745:     case PM_SALAMANDER:\n>  746: \twhat = \"already on fire\";\n   747: \tbreak;\n   748:     case PM_WATER_ELEMENTAL:\n   749:     case PM_FOG_CLOUD:\n   750:     case PM_STEAM_VORTEX:\n   751: \twhat = \"boiling\";"
+    "stage": 0,
+    "context": "src/mondata.c:746:9\n   741:     switch (monsndx(mptr)) {\n   742:     case PM_FLAMING_SPHERE:\n   743:     case PM_FIRE_VORTEX:\n   744:     case PM_FIRE_ELEMENTAL:\n   745:     case PM_SALAMANDER:\n&gt;  746: \twhat = \"already on fire\";\n   747: \tbreak;\n   748:     case PM_WATER_ELEMENTAL:\n   749:     case PM_FOG_CLOUD:\n   750:     case PM_STEAM_VORTEX:\n   751: \twhat = \"boiling\";"
   },
   {
     "key": "L00751_01",
     "original": "boiling",
     "translation": "",
-    "context": "src/mondata.c:751:9\n   746: \twhat = \"already on fire\";\n   747: \tbreak;\n   748:     case PM_WATER_ELEMENTAL:\n   749:     case PM_FOG_CLOUD:\n   750:     case PM_STEAM_VORTEX:\n>  751: \twhat = \"boiling\";\n   752: \tbreak;\n   753:     case PM_ICE_VORTEX:\n   754:     case PM_GLASS_GOLEM:\n   755: \twhat = \"melting\";\n   756: \tbreak;"
+    "stage": 0,
+    "context": "src/mondata.c:751:9\n   746: \twhat = \"already on fire\";\n   747: \tbreak;\n   748:     case PM_WATER_ELEMENTAL:\n   749:     case PM_FOG_CLOUD:\n   750:     case PM_STEAM_VORTEX:\n&gt;  751: \twhat = \"boiling\";\n   752: \tbreak;\n   753:     case PM_ICE_VORTEX:\n   754:     case PM_GLASS_GOLEM:\n   755: \twhat = \"melting\";\n   756: \tbreak;"
   },
   {
     "key": "L00755_01",
     "original": "melting",
     "translation": "",
-    "context": "src/mondata.c:755:9\n   750:     case PM_STEAM_VORTEX:\n   751: \twhat = \"boiling\";\n   752: \tbreak;\n   753:     case PM_ICE_VORTEX:\n   754:     case PM_GLASS_GOLEM:\n>  755: \twhat = \"melting\";\n   756: \tbreak;\n   757:     case PM_STONE_GOLEM:\n   758:     case PM_CLAY_GOLEM:\n   759:     case PM_GOLD_GOLEM:\n   760:     case PM_AIR_ELEMENTAL:"
+    "stage": 0,
+    "context": "src/mondata.c:755:9\n   750:     case PM_STEAM_VORTEX:\n   751: \twhat = \"boiling\";\n   752: \tbreak;\n   753:     case PM_ICE_VORTEX:\n   754:     case PM_GLASS_GOLEM:\n&gt;  755: \twhat = \"melting\";\n   756: \tbreak;\n   757:     case PM_STONE_GOLEM:\n   758:     case PM_CLAY_GOLEM:\n   759:     case PM_GOLD_GOLEM:\n   760:     case PM_AIR_ELEMENTAL:"
   },
   {
     "key": "L00764_01",
     "original": "heating up",
     "translation": "",
-    "context": "src/mondata.c:764:9\n   759:     case PM_GOLD_GOLEM:\n   760:     case PM_AIR_ELEMENTAL:\n   761:     case PM_EARTH_ELEMENTAL:\n   762:     case PM_DUST_VORTEX:\n   763:     case PM_ENERGY_VORTEX:\n>  764: \twhat = \"heating up\";\n   765: \tbreak;\n   766:     default:\n   767: \twhat = (mattk->aatyp == AT_HUGS) ? \"being roasted\" : \"on fire\";\n   768: \tbreak;\n   769:     }"
+    "stage": 0,
+    "context": "src/mondata.c:764:9\n   759:     case PM_GOLD_GOLEM:\n   760:     case PM_AIR_ELEMENTAL:\n   761:     case PM_EARTH_ELEMENTAL:\n   762:     case PM_DUST_VORTEX:\n   763:     case PM_ENERGY_VORTEX:\n&gt;  764: \twhat = \"heating up\";\n   765: \tbreak;\n   766:     default:\n   767: \twhat = (mattk-&gt;aatyp == AT_HUGS) ? \"being roasted\" : \"on fire\";\n   768: \tbreak;\n   769:     }"
   },
   {
     "key": "L00767_01",
     "original": "being roasted",
     "translation": "",
-    "context": "src/mondata.c:767:37\n   762:     case PM_DUST_VORTEX:\n   763:     case PM_ENERGY_VORTEX:\n   764: \twhat = \"heating up\";\n   765: \tbreak;\n   766:     default:\n>  767: \twhat = (mattk->aatyp == AT_HUGS) ? \"being roasted\" : \"on fire\";\n   768: \tbreak;\n   769:     }\n   770:     return what;\n   771: }\n   772: "
+    "stage": 0,
+    "context": "src/mondata.c:767:37\n   762:     case PM_DUST_VORTEX:\n   763:     case PM_ENERGY_VORTEX:\n   764: \twhat = \"heating up\";\n   765: \tbreak;\n   766:     default:\n&gt;  767: \twhat = (mattk-&gt;aatyp == AT_HUGS) ? \"being roasted\" : \"on fire\";\n   768: \tbreak;\n   769:     }\n   770:     return what;\n   771: }\n   772: "
   },
   {
     "key": "L00767_02",
     "original": "on fire",
     "translation": "",
-    "context": "src/mondata.c:767:55\n   762:     case PM_DUST_VORTEX:\n   763:     case PM_ENERGY_VORTEX:\n   764: \twhat = \"heating up\";\n   765: \tbreak;\n   766:     default:\n>  767: \twhat = (mattk->aatyp == AT_HUGS) ? \"being roasted\" : \"on fire\";\n   768: \tbreak;\n   769:     }\n   770:     return what;\n   771: }\n   772: "
+    "stage": 0,
+    "context": "src/mondata.c:767:55\n   762:     case PM_DUST_VORTEX:\n   763:     case PM_ENERGY_VORTEX:\n   764: \twhat = \"heating up\";\n   765: \tbreak;\n   766:     default:\n&gt;  767: \twhat = (mattk-&gt;aatyp == AT_HUGS) ? \"being roasted\" : \"on fire\";\n   768: \tbreak;\n   769:     }\n   770:     return what;\n   771: }\n   772: "
   }
 ]

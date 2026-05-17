@@ -3,558 +3,651 @@
     "key": "L00013_01",
     "original": "a strange sensation.",
     "translation": "",
-    "context": "src/sit.c:13:12\n     8: void\n     9: take_gold()\n    10: {\n    11: #ifndef GOLDOBJ\n    12: \tif (u.ugold <= 0)  {\n>   13: \t\tYou_feel(\"a strange sensation.\");\n    14: \t} else {\n    15: \t\tYou(\"notice you have no gold!\");\n    16: \t\tu.ugold = 0;\n    17: \t\tflags.botl = 1;\n    18: \t}"
+    "stage": 0,
+    "context": "src/sit.c:13:12\n     8: void\n     9: take_gold()\n    10: {\n    11: #ifndef GOLDOBJ\n    12: \tif (u.ugold &lt;= 0)  {\n&gt;   13: \t\tYou_feel(\"a strange sensation.\");\n    14: \t} else {\n    15: \t\tYou(\"notice you have no gold!\");\n    16: \t\tu.ugold = 0;\n    17: \t\tflags.botl = 1;\n    18: \t}"
   },
   {
     "key": "L00015_01",
     "original": "notice you have no gold!",
     "translation": "",
-    "context": "src/sit.c:15:7\n    10: {\n    11: #ifndef GOLDOBJ\n    12: \tif (u.ugold <= 0)  {\n    13: \t\tYou_feel(\"a strange sensation.\");\n    14: \t} else {\n>   15: \t\tYou(\"notice you have no gold!\");\n    16: \t\tu.ugold = 0;\n    17: \t\tflags.botl = 1;\n    18: \t}\n    19: #else\n    20:         struct obj *otmp, *nobj;"
+    "stage": 0,
+    "context": "src/sit.c:15:7\n    10: {\n    11: #ifndef GOLDOBJ\n    12: \tif (u.ugold &lt;= 0)  {\n    13: \t\tYou_feel(\"a strange sensation.\");\n    14: \t} else {\n&gt;   15: \t\tYou(\"notice you have no gold!\");\n    16: \t\tu.ugold = 0;\n    17: \t\tflags.botl = 1;\n    18: \t}\n    19: #else\n    20:         struct obj *otmp, *nobj;"
   },
   {
     "key": "L00030_01",
     "original": "a strange sensation.",
     "translation": "",
-    "context": "src/sit.c:30:12\n    25: \t\t\tlost_money = 1;\n    26: \t\t\tdelobj(otmp);\n    27: \t\t}\n    28: \t}\n    29: \tif (!lost_money)  {\n>   30: \t\tYou_feel(\"a strange sensation.\");\n    31: \t} else {\n    32: \t\tYou(\"notice you have no money!\");\n    33: \t\tflags.botl = 1;\n    34: \t}\n    35: #endif"
+    "stage": 0,
+    "context": "src/sit.c:30:12\n    25: \t\t\tlost_money = 1;\n    26: \t\t\tdelobj(otmp);\n    27: \t\t}\n    28: \t}\n    29: \tif (!lost_money)  {\n&gt;   30: \t\tYou_feel(\"a strange sensation.\");\n    31: \t} else {\n    32: \t\tYou(\"notice you have no money!\");\n    33: \t\tflags.botl = 1;\n    34: \t}\n    35: #endif"
   },
   {
     "key": "L00032_01",
     "original": "notice you have no money!",
     "translation": "",
-    "context": "src/sit.c:32:7\n    27: \t\t}\n    28: \t}\n    29: \tif (!lost_money)  {\n    30: \t\tYou_feel(\"a strange sensation.\");\n    31: \t} else {\n>   32: \t\tYou(\"notice you have no money!\");\n    33: \t\tflags.botl = 1;\n    34: \t}\n    35: #endif\n    36: }\n    37: "
+    "stage": 0,
+    "context": "src/sit.c:32:7\n    27: \t\t}\n    28: \t}\n    29: \tif (!lost_money)  {\n    30: \t\tYou_feel(\"a strange sensation.\");\n    31: \t} else {\n&gt;   32: \t\tYou(\"notice you have no money!\");\n    33: \t\tflags.botl = 1;\n    34: \t}\n    35: #endif\n    36: }\n    37: "
   },
   {
     "key": "L00041_01",
     "original": "sit on the %s.",
     "translation": "",
-    "context": "src/sit.c:41:36\n    36: }\n    37: \n    38: int\n    39: dosit()\n    40: {\n>   41: \tstatic const char sit_message[] = \"sit on the %s.\";\n    42: \tregister struct trap *trap;\n    43: \tregister int typ = levl[u.ux][u.uy].typ;\n    44: \n    45: \n    46: #ifdef STEED"
+    "stage": 0,
+    "context": "src/sit.c:41:36\n    36: }\n    37: \n    38: int\n    39: dosit()\n    40: {\n&gt;   41: \tstatic const char sit_message[] = \"sit on the %s.\";\n    42: \tregister struct trap *trap;\n    43: \tregister int typ = levl[u.ux][u.uy].typ;\n    44: \n    45: \n    46: #ifdef STEED"
   },
   {
     "key": "L00048_01",
     "original": "are already sitting on %s.",
     "translation": "",
-    "context": "src/sit.c:48:10\n    43: \tregister int typ = levl[u.ux][u.uy].typ;\n    44: \n    45: \n    46: #ifdef STEED\n    47: \tif (u.usteed) {\n>   48: \t    You(\"are already sitting on %s.\", mon_nam(u.usteed));\n    49: \t    return (0);\n    50: \t}\n    51: #endif\n    52: \n    53: \tif(!can_reach_floor())\t{"
+    "stage": 0,
+    "context": "src/sit.c:48:10\n    43: \tregister int typ = levl[u.ux][u.uy].typ;\n    44: \n    45: \n    46: #ifdef STEED\n    47: \tif (u.usteed) {\n&gt;   48: \t    You(\"are already sitting on %s.\", mon_nam(u.usteed));\n    49: \t    return (0);\n    50: \t}\n    51: #endif\n    52: \n    53: \tif(!can_reach_floor())\t{"
   },
   {
     "key": "L00055_01",
     "original": "tumble in place.",
     "translation": "",
-    "context": "src/sit.c:55:7\n    50: \t}\n    51: #endif\n    52: \n    53: \tif(!can_reach_floor())\t{\n    54: \t    if (Levitation)\n>   55: \t\tYou(\"tumble in place.\");\n    56: \t    else\n    57: \t\tYou(\"are sitting on air.\");\n    58: \t    return 0;\n    59: \t} else if (is_pool(u.ux, u.uy) && !Underwater) {  /* water walking */\n    60: \t    goto in_water;"
+    "stage": 0,
+    "context": "src/sit.c:55:7\n    50: \t}\n    51: #endif\n    52: \n    53: \tif(!can_reach_floor())\t{\n    54: \t    if (Levitation)\n&gt;   55: \t\tYou(\"tumble in place.\");\n    56: \t    else\n    57: \t\tYou(\"are sitting on air.\");\n    58: \t    return 0;\n    59: \t} else if (is_pool(u.ux, u.uy) && !Underwater) {  /* water walking */\n    60: \t    goto in_water;"
   },
   {
     "key": "L00057_01",
     "original": "are sitting on air.",
     "translation": "",
-    "context": "src/sit.c:57:7\n    52: \n    53: \tif(!can_reach_floor())\t{\n    54: \t    if (Levitation)\n    55: \t\tYou(\"tumble in place.\");\n    56: \t    else\n>   57: \t\tYou(\"are sitting on air.\");\n    58: \t    return 0;\n    59: \t} else if (is_pool(u.ux, u.uy) && !Underwater) {  /* water walking */\n    60: \t    goto in_water;\n    61: \t}\n    62: "
+    "stage": 0,
+    "context": "src/sit.c:57:7\n    52: \n    53: \tif(!can_reach_floor())\t{\n    54: \t    if (Levitation)\n    55: \t\tYou(\"tumble in place.\");\n    56: \t    else\n&gt;   57: \t\tYou(\"are sitting on air.\");\n    58: \t    return 0;\n    59: \t} else if (is_pool(u.ux, u.uy) && !Underwater) {  /* water walking */\n    60: \t    goto in_water;\n    61: \t}\n    62: "
   },
   {
     "key": "L00067_01",
     "original": "sit on %s.",
     "translation": "",
-    "context": "src/sit.c:67:10\n    62: \n    63: \tif(OBJ_AT(u.ux, u.uy)) {\n    64: \t    register struct obj *obj;\n    65: \n    66: \t    obj = level.objects[u.ux][u.uy];\n>   67: \t    You(\"sit on %s.\", the(xname(obj)));\n    68: \t    if (!(Is_box(obj) || objects[obj->otyp].oc_material == CLOTH))\n    69: \t\tpline(\"It's not very comfortable...\");\n    70: \n    71: \t} else if ((trap = t_at(u.ux, u.uy)) != 0 ||\n    72: \t\t   (u.utrap && (u.utraptype >= TT_LAVA))) {"
+    "stage": 0,
+    "context": "src/sit.c:67:10\n    62: \n    63: \tif(OBJ_AT(u.ux, u.uy)) {\n    64: \t    register struct obj *obj;\n    65: \n    66: \t    obj = level.objects[u.ux][u.uy];\n&gt;   67: \t    You(\"sit on %s.\", the(xname(obj)));\n    68: \t    if (!(Is_box(obj) || objects[obj-&gt;otyp].oc_material == CLOTH))\n    69: \t\tpline(\"It's not very comfortable...\");\n    70: \n    71: \t} else if ((trap = t_at(u.ux, u.uy)) != 0 ||\n    72: \t\t   (u.utrap && (u.utraptype &gt;= TT_LAVA))) {"
   },
   {
     "key": "L00069_01",
     "original": "It's not very comfortable...",
     "translation": "",
-    "context": "src/sit.c:69:9\n    64: \t    register struct obj *obj;\n    65: \n    66: \t    obj = level.objects[u.ux][u.uy];\n    67: \t    You(\"sit on %s.\", the(xname(obj)));\n    68: \t    if (!(Is_box(obj) || objects[obj->otyp].oc_material == CLOTH))\n>   69: \t\tpline(\"It's not very comfortable...\");\n    70: \n    71: \t} else if ((trap = t_at(u.ux, u.uy)) != 0 ||\n    72: \t\t   (u.utrap && (u.utraptype >= TT_LAVA))) {\n    73: \n    74: \t    if (u.utrap) {"
+    "stage": 0,
+    "context": "src/sit.c:69:9\n    64: \t    register struct obj *obj;\n    65: \n    66: \t    obj = level.objects[u.ux][u.uy];\n    67: \t    You(\"sit on %s.\", the(xname(obj)));\n    68: \t    if (!(Is_box(obj) || objects[obj-&gt;otyp].oc_material == CLOTH))\n&gt;   69: \t\tpline(\"It's not very comfortable...\");\n    70: \n    71: \t} else if ((trap = t_at(u.ux, u.uy)) != 0 ||\n    72: \t\t   (u.utrap && (u.utraptype &gt;= TT_LAVA))) {\n    73: \n    74: \t    if (u.utrap) {"
   },
   {
     "key": "L00077_01",
     "original": "sit down with your %s in the bear trap.",
     "translation": "",
-    "context": "src/sit.c:77:16\n    72: \t\t   (u.utrap && (u.utraptype >= TT_LAVA))) {\n    73: \n    74: \t    if (u.utrap) {\n    75: \t\texercise(A_WIS, FALSE);\t/* you're getting stuck longer */\n    76: \t\tif(u.utraptype == TT_BEARTRAP) {\n>   77: \t\t    You_cant(\"sit down with your %s in the bear trap.\", body_part(FOOT));\n    78: \t\t    u.utrap++;\n    79: \t        } else if(u.utraptype == TT_PIT) {\n    80: \t\t    if(trap->ttyp == SPIKED_PIT) {\n    81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n    82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);"
+    "stage": 0,
+    "context": "src/sit.c:77:16\n    72: \t\t   (u.utrap && (u.utraptype &gt;= TT_LAVA))) {\n    73: \n    74: \t    if (u.utrap) {\n    75: \t\texercise(A_WIS, FALSE);\t/* you're getting stuck longer */\n    76: \t\tif(u.utraptype == TT_BEARTRAP) {\n&gt;   77: \t\t    You_cant(\"sit down with your %s in the bear trap.\", body_part(FOOT));\n    78: \t\t    u.utrap++;\n    79: \t        } else if(u.utraptype == TT_PIT) {\n    80: \t\t    if(trap-&gt;ttyp == SPIKED_PIT) {\n    81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n    82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);"
   },
   {
     "key": "L00081_01",
     "original": "sit down on a spike.  Ouch!",
     "translation": "",
-    "context": "src/sit.c:81:8\n    76: \t\tif(u.utraptype == TT_BEARTRAP) {\n    77: \t\t    You_cant(\"sit down with your %s in the bear trap.\", body_part(FOOT));\n    78: \t\t    u.utrap++;\n    79: \t        } else if(u.utraptype == TT_PIT) {\n    80: \t\t    if(trap->ttyp == SPIKED_PIT) {\n>   81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n    82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n    85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);"
+    "stage": 0,
+    "context": "src/sit.c:81:8\n    76: \t\tif(u.utraptype == TT_BEARTRAP) {\n    77: \t\t    You_cant(\"sit down with your %s in the bear trap.\", body_part(FOOT));\n    78: \t\t    u.utrap++;\n    79: \t        } else if(u.utraptype == TT_PIT) {\n    80: \t\t    if(trap-&gt;ttyp == SPIKED_PIT) {\n&gt;   81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n    82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n    85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);"
   },
   {
     "key": "L00082_01",
     "original": "sitting on an iron spike",
     "translation": "",
-    "context": "src/sit.c:82:14\n    77: \t\t    You_cant(\"sit down with your %s in the bear trap.\", body_part(FOOT));\n    78: \t\t    u.utrap++;\n    79: \t        } else if(u.utraptype == TT_PIT) {\n    80: \t\t    if(trap->ttyp == SPIKED_PIT) {\n    81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n>   82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n    85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);\n    87: \t\t} else if(u.utraptype == TT_WEB) {"
+    "stage": 0,
+    "context": "src/sit.c:82:14\n    77: \t\t    You_cant(\"sit down with your %s in the bear trap.\", body_part(FOOT));\n    78: \t\t    u.utrap++;\n    79: \t        } else if(u.utraptype == TT_PIT) {\n    80: \t\t    if(trap-&gt;ttyp == SPIKED_PIT) {\n    81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n&gt;   82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n    85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);\n    87: \t\t} else if(u.utraptype == TT_WEB) {"
   },
   {
     "key": "L00085_01",
     "original": "sit down in the pit.",
     "translation": "",
-    "context": "src/sit.c:85:8\n    80: \t\t    if(trap->ttyp == SPIKED_PIT) {\n    81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n    82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n>   85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);\n    87: \t\t} else if(u.utraptype == TT_WEB) {\n    88: \t\t    You(\"sit in the spider web and get entangled further!\");\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {"
+    "stage": 0,
+    "context": "src/sit.c:85:8\n    80: \t\t    if(trap-&gt;ttyp == SPIKED_PIT) {\n    81: \t\t\tYou(\"sit down on a spike.  Ouch!\");\n    82: \t\t\tlosehp(1, \"sitting on an iron spike\", KILLED_BY);\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n&gt;   85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);\n    87: \t\t} else if(u.utraptype == TT_WEB) {\n    88: \t\t    You(\"sit in the spider web and get entangled further!\");\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {"
   },
   {
     "key": "L00088_01",
     "original": "sit in the spider web and get entangled further!",
     "translation": "",
-    "context": "src/sit.c:88:11\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n    85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);\n    87: \t\t} else if(u.utraptype == TT_WEB) {\n>   88: \t\t    You(\"sit in the spider web and get entangled further!\");\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n    92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);"
+    "stage": 0,
+    "context": "src/sit.c:88:11\n    83: \t\t\texercise(A_STR, FALSE);\n    84: \t\t    } else\n    85: \t\t\tYou(\"sit down in the pit.\");\n    86: \t\t    u.utrap += rn2(5);\n    87: \t\t} else if(u.utraptype == TT_WEB) {\n&gt;   88: \t\t    You(\"sit in the spider web and get entangled further!\");\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n    92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);"
   },
   {
     "key": "L00092_01",
     "original": "sit in the lava!",
     "translation": "",
-    "context": "src/sit.c:92:11\n    87: \t\t} else if(u.utraptype == TT_WEB) {\n    88: \t\t    You(\"sit in the spider web and get entangled further!\");\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n>   92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);\n    94: \t\t    losehp(d(2,10), \"sitting in lava\", KILLED_BY);\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n    96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;"
+    "stage": 0,
+    "context": "src/sit.c:92:11\n    87: \t\t} else if(u.utraptype == TT_WEB) {\n    88: \t\t    You(\"sit in the spider web and get entangled further!\");\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n&gt;   92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);\n    94: \t\t    losehp(d(2,10), \"sitting in lava\", KILLED_BY);\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n    96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;"
   },
   {
     "key": "L00094_01",
     "original": "sitting in lava",
     "translation": "",
-    "context": "src/sit.c:94:23\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n    92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);\n>   94: \t\t    losehp(d(2,10), \"sitting in lava\", KILLED_BY);\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n    96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;\n    98: \t\t}\n    99: \t    } else {"
+    "stage": 0,
+    "context": "src/sit.c:94:23\n    89: \t\t    u.utrap += rn1(10, 5);\n    90: \t\t} else if(u.utraptype == TT_LAVA) {\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n    92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);\n&gt;   94: \t\t    losehp(d(2,10), \"sitting in lava\", KILLED_BY);\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n    96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;\n    98: \t\t}\n    99: \t    } else {"
   },
   {
     "key": "L00096_01",
     "original": "maneuver to sit!",
     "translation": "",
-    "context": "src/sit.c:96:16\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n    92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);\n    94: \t\t    losehp(d(2,10), \"sitting in lava\", KILLED_BY);\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n>   96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;\n    98: \t\t}\n    99: \t    } else {\n   100: \t        You(\"sit down.\");\n   101: \t\tdotrap(trap, 0);"
+    "stage": 0,
+    "context": "src/sit.c:96:16\n    91: \t\t    /* Must have fire resistance or they'd be dead already */\n    92: \t\t    You(\"sit in the lava!\");\n    93: \t\t    u.utrap += rnd(4);\n    94: \t\t    losehp(d(2,10), \"sitting in lava\", KILLED_BY);\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n&gt;   96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;\n    98: \t\t}\n    99: \t    } else {\n   100: \t        You(\"sit down.\");\n   101: \t\tdotrap(trap, 0);"
   },
   {
     "key": "L00100_01",
     "original": "sit down.",
     "translation": "",
-    "context": "src/sit.c:100:14\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n    96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;\n    98: \t\t}\n    99: \t    } else {\n>  100: \t        You(\"sit down.\");\n   101: \t\tdotrap(trap, 0);\n   102: \t    }\n   103: \t} else if(Underwater || Is_waterlevel(&u.uz)) {\n   104: \t    if (Is_waterlevel(&u.uz))\n   105: \t\tThere(\"are no cushions floating nearby.\");"
+    "stage": 0,
+    "context": "src/sit.c:100:14\n    95: \t\t} else if(u.utraptype == TT_INFLOOR) {\n    96: \t\t    You_cant(\"maneuver to sit!\");\n    97: \t\t    u.utrap++;\n    98: \t\t}\n    99: \t    } else {\n&gt;  100: \t        You(\"sit down.\");\n   101: \t\tdotrap(trap, 0);\n   102: \t    }\n   103: \t} else if(Underwater || Is_waterlevel(&u.uz)) {\n   104: \t    if (Is_waterlevel(&u.uz))\n   105: \t\tThere(\"are no cushions floating nearby.\");"
   },
   {
     "key": "L00105_01",
     "original": "are no cushions floating nearby.",
     "translation": "",
-    "context": "src/sit.c:105:9\n   100: \t        You(\"sit down.\");\n   101: \t\tdotrap(trap, 0);\n   102: \t    }\n   103: \t} else if(Underwater || Is_waterlevel(&u.uz)) {\n   104: \t    if (Is_waterlevel(&u.uz))\n>  105: \t\tThere(\"are no cushions floating nearby.\");\n   106: \t    else\n   107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");"
+    "stage": 0,
+    "context": "src/sit.c:105:9\n   100: \t        You(\"sit down.\");\n   101: \t\tdotrap(trap, 0);\n   102: \t    }\n   103: \t} else if(Underwater || Is_waterlevel(&u.uz)) {\n   104: \t    if (Is_waterlevel(&u.uz))\n&gt;  105: \t\tThere(\"are no cushions floating nearby.\");\n   106: \t    else\n   107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");"
   },
   {
     "key": "L00107_01",
     "original": "sit down on the muddy bottom.",
     "translation": "",
-    "context": "src/sit.c:107:7\n   102: \t    }\n   103: \t} else if(Underwater || Is_waterlevel(&u.uz)) {\n   104: \t    if (Is_waterlevel(&u.uz))\n   105: \t\tThere(\"are no cushions floating nearby.\");\n   106: \t    else\n>  107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n   112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);"
+    "stage": 0,
+    "context": "src/sit.c:107:7\n   102: \t    }\n   103: \t} else if(Underwater || Is_waterlevel(&u.uz)) {\n   104: \t    if (Is_waterlevel(&u.uz))\n   105: \t\tThere(\"are no cushions floating nearby.\");\n   106: \t    else\n&gt;  107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n   112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);"
   },
   {
     "key": "L00110_01",
     "original": "sit in the water.",
     "translation": "",
-    "context": "src/sit.c:110:10\n   105: \t\tThere(\"are no cushions floating nearby.\");\n   106: \t    else\n   107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n>  110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n   112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   113: \t    else if (!rn2(10) && uarmf && uarmf->otyp != WATER_WALKING_BOOTS)\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS"
+    "stage": 0,
+    "context": "src/sit.c:110:10\n   105: \t\tThere(\"are no cushions floating nearby.\");\n   106: \t    else\n   107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n&gt;  110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n   112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   113: \t    else if (!rn2(10) && uarmf && uarmf-&gt;otyp != WATER_WALKING_BOOTS)\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS"
   },
   {
     "key": "L00112_01",
     "original": "armor",
     "translation": "",
-    "context": "src/sit.c:112:25\n   107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n>  112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   113: \t    else if (!rn2(10) && uarmf && uarmf->otyp != WATER_WALKING_BOOTS)\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: "
+    "stage": 0,
+    "context": "src/sit.c:112:25\n   107: \t\tYou(\"sit down on the muddy bottom.\");\n   108: \t} else if(is_pool(u.ux, u.uy)) {\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n&gt;  112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   113: \t    else if (!rn2(10) && uarmf && uarmf-&gt;otyp != WATER_WALKING_BOOTS)\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: "
   },
   {
     "key": "L00114_01",
     "original": "armor",
     "translation": "",
-    "context": "src/sit.c:114:25\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n   112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   113: \t    else if (!rn2(10) && uarmf && uarmf->otyp != WATER_WALKING_BOOTS)\n>  114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n   119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");"
+    "stage": 0,
+    "context": "src/sit.c:114:25\n   109:  in_water:\n   110: \t    You(\"sit in the water.\");\n   111: \t    if (!rn2(10) && uarm)\n   112: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   113: \t    else if (!rn2(10) && uarmf && uarmf-&gt;otyp != WATER_WALKING_BOOTS)\n&gt;  114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n   119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");"
   },
   {
     "key": "L00119_01",
     "original": "%s gets wet.",
     "translation": "",
-    "context": "src/sit.c:119:11\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n>  119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs > 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");"
+    "stage": 0,
+    "context": "src/sit.c:119:11\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n&gt;  119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs &gt; 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");"
   },
   {
     "key": "L00119_02",
     "original": "rump",
     "translation": "",
-    "context": "src/sit.c:119:53\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n>  119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs > 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");"
+    "stage": 0,
+    "context": "src/sit.c:119:53\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n&gt;  119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs &gt; 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");"
   },
   {
     "key": "L00119_03",
     "original": "underside",
     "translation": "",
-    "context": "src/sit.c:119:62\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n>  119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs > 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");"
+    "stage": 0,
+    "context": "src/sit.c:119:62\n   114: \t\t(void) rust_dmg(uarm, \"armor\", 1, TRUE, &youmonst);\n   115: #ifdef SINKS\n   116: \t} else if(IS_SINK(typ)) {\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n&gt;  119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs &gt; 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");"
   },
   {
     "key": "L00122_01",
     "original": "don't have to go...",
     "translation": "",
-    "context": "src/sit.c:122:38\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n   119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n>  122: \t    if ((!Sick) && (u.uhs > 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");\n   125: \t\t\telse You(\"grunt.\");\n   126: \t\t\tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n   127: \t\t\tif (u.uhs == 0) morehungry(rn2(400)+200);"
+    "stage": 0,
+    "context": "src/sit.c:122:38\n   117: \n   118: \t    You(sit_message, defsyms[S_sink].explanation);\n   119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n&gt;  122: \t    if ((!Sick) && (u.uhs &gt; 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");\n   125: \t\t\telse You(\"grunt.\");\n   126: \t\t\tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n   127: \t\t\tif (u.uhs == 0) morehungry(rn2(400)+200);"
   },
   {
     "key": "L00124_01",
     "original": "miss...",
     "translation": "",
-    "context": "src/sit.c:124:58\n   119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs > 0)) You(\"don't have to go...\");\n   123: \t    else {\n>  124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");\n   125: \t\t\telse You(\"grunt.\");\n   126: \t\t\tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n   127: \t\t\tif (u.uhs == 0) morehungry(rn2(400)+200);\n   128: \t    }\n   129: #endif"
+    "stage": 0,
+    "context": "src/sit.c:124:58\n   119: \t    Your(\"%s gets wet.\", humanoid(youmonst.data) ? \"rump\" : \"underside\");\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs &gt; 0)) You(\"don't have to go...\");\n   123: \t    else {\n&gt;  124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");\n   125: \t\t\telse You(\"grunt.\");\n   126: \t\t\tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n   127: \t\t\tif (u.uhs == 0) morehungry(rn2(400)+200);\n   128: \t    }\n   129: #endif"
   },
   {
     "key": "L00125_01",
     "original": "grunt.",
     "translation": "",
-    "context": "src/sit.c:125:13\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs > 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");\n>  125: \t\t\telse You(\"grunt.\");\n   126: \t\t\tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n   127: \t\t\tif (u.uhs == 0) morehungry(rn2(400)+200);\n   128: \t    }\n   129: #endif\n   130: \t} else if(IS_ALTAR(typ)) {"
+    "stage": 0,
+    "context": "src/sit.c:125:13\n   120: \t} else if(IS_TOILET(typ)) {\n   121: \t    You(sit_message, defsyms[S_toilet].explanation);\n   122: \t    if ((!Sick) && (u.uhs &gt; 0)) You(\"don't have to go...\");\n   123: \t    else {\n   124: \t\t\tif (Role_if(PM_BARBARIAN) || Role_if(PM_CAVEMAN)) You(\"miss...\");\n&gt;  125: \t\t\telse You(\"grunt.\");\n   126: \t\t\tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n   127: \t\t\tif (u.uhs == 0) morehungry(rn2(400)+200);\n   128: \t    }\n   129: #endif\n   130: \t} else if(IS_ALTAR(typ)) {"
   },
   {
     "key": "L00141_01",
     "original": "stairs",
     "translation": "",
-    "context": "src/sit.c:141:23\n   136: \n   137: \t    You(sit_message, defsyms[S_grave].explanation);\n   138: \n   139: \t} else if(typ == STAIRS) {\n   140: \n>  141: \t    You(sit_message, \"stairs\");\n   142: \n   143: \t} else if(typ == LADDER) {\n   144: \n   145: \t    You(sit_message, \"ladder\");\n   146: "
+    "stage": 0,
+    "context": "src/sit.c:141:23\n   136: \n   137: \t    You(sit_message, defsyms[S_grave].explanation);\n   138: \n   139: \t} else if(typ == STAIRS) {\n   140: \n&gt;  141: \t    You(sit_message, \"stairs\");\n   142: \n   143: \t} else if(typ == LADDER) {\n   144: \n   145: \t    You(sit_message, \"ladder\");\n   146: "
   },
   {
     "key": "L00145_01",
     "original": "ladder",
     "translation": "",
-    "context": "src/sit.c:145:23\n   140: \n   141: \t    You(sit_message, \"stairs\");\n   142: \n   143: \t} else if(typ == LADDER) {\n   144: \n>  145: \t    You(sit_message, \"ladder\");\n   146: \n   147: \t} else if (is_lava(u.ux, u.uy)) {\n   148: \n   149: \t    /* must be WWalking */\n   150: \t    You(sit_message, \"lava\");"
+    "stage": 0,
+    "context": "src/sit.c:145:23\n   140: \n   141: \t    You(sit_message, \"stairs\");\n   142: \n   143: \t} else if(typ == LADDER) {\n   144: \n&gt;  145: \t    You(sit_message, \"ladder\");\n   146: \n   147: \t} else if (is_lava(u.ux, u.uy)) {\n   148: \n   149: \t    /* must be WWalking */\n   150: \t    You(sit_message, \"lava\");"
   },
   {
     "key": "L00150_01",
     "original": "lava",
     "translation": "",
-    "context": "src/sit.c:150:23\n   145: \t    You(sit_message, \"ladder\");\n   146: \n   147: \t} else if (is_lava(u.ux, u.uy)) {\n   148: \n   149: \t    /* must be WWalking */\n>  150: \t    You(sit_message, \"lava\");\n   151: \t    burn_away_slime();\n   152: \t    if (likes_lava(youmonst.data)) {\n   153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }"
+    "stage": 0,
+    "context": "src/sit.c:150:23\n   145: \t    You(sit_message, \"ladder\");\n   146: \n   147: \t} else if (is_lava(u.ux, u.uy)) {\n   148: \n   149: \t    /* must be WWalking */\n&gt;  150: \t    You(sit_message, \"lava\");\n   151: \t    burn_away_slime();\n   152: \t    if (likes_lava(youmonst.data)) {\n   153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }"
   },
   {
     "key": "L00153_01",
     "original": "lava feels warm.",
     "translation": "",
-    "context": "src/sit.c:153:13\n   148: \n   149: \t    /* must be WWalking */\n   150: \t    You(sit_message, \"lava\");\n   151: \t    burn_away_slime();\n   152: \t    if (likes_lava(youmonst.data)) {\n>  153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }\n   156: \t    pline_The(\"lava burns you!\");\n   157: \t    if (Slimed) {\n   158: \t       pline(\"The slime is burned away!\");"
+    "stage": 0,
+    "context": "src/sit.c:153:13\n   148: \n   149: \t    /* must be WWalking */\n   150: \t    You(sit_message, \"lava\");\n   151: \t    burn_away_slime();\n   152: \t    if (likes_lava(youmonst.data)) {\n&gt;  153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }\n   156: \t    pline_The(\"lava burns you!\");\n   157: \t    if (Slimed) {\n   158: \t       pline(\"The slime is burned away!\");"
   },
   {
     "key": "L00156_01",
     "original": "lava burns you!",
     "translation": "",
-    "context": "src/sit.c:156:16\n   151: \t    burn_away_slime();\n   152: \t    if (likes_lava(youmonst.data)) {\n   153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }\n>  156: \t    pline_The(\"lava burns you!\");\n   157: \t    if (Slimed) {\n   158: \t       pline(\"The slime is burned away!\");\n   159: \t       Slimed = 0;\n   160: \t    }\n   161: \t    losehp(d((Fire_resistance ? 2 : 10), 10),"
+    "stage": 0,
+    "context": "src/sit.c:156:16\n   151: \t    burn_away_slime();\n   152: \t    if (likes_lava(youmonst.data)) {\n   153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }\n&gt;  156: \t    pline_The(\"lava burns you!\");\n   157: \t    if (Slimed) {\n   158: \t       pline(\"The slime is burned away!\");\n   159: \t       Slimed = 0;\n   160: \t    }\n   161: \t    losehp(d((Fire_resistance ? 2 : 10), 10),"
   },
   {
     "key": "L00158_01",
     "original": "The slime is burned away!",
     "translation": "",
-    "context": "src/sit.c:158:15\n   153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }\n   156: \t    pline_The(\"lava burns you!\");\n   157: \t    if (Slimed) {\n>  158: \t       pline(\"The slime is burned away!\");\n   159: \t       Slimed = 0;\n   160: \t    }\n   161: \t    losehp(d((Fire_resistance ? 2 : 10), 10),\n   162: \t\t   \"sitting on lava\", KILLED_BY);\n   163: "
+    "stage": 0,
+    "context": "src/sit.c:158:15\n   153: \t\tpline_The(\"lava feels warm.\");\n   154: \t\treturn 1;\n   155: \t    }\n   156: \t    pline_The(\"lava burns you!\");\n   157: \t    if (Slimed) {\n&gt;  158: \t       pline(\"The slime is burned away!\");\n   159: \t       Slimed = 0;\n   160: \t    }\n   161: \t    losehp(d((Fire_resistance ? 2 : 10), 10),\n   162: \t\t   \"sitting on lava\", KILLED_BY);\n   163: "
   },
   {
     "key": "L00162_01",
     "original": "sitting on lava",
     "translation": "",
-    "context": "src/sit.c:162:6\n   157: \t    if (Slimed) {\n   158: \t       pline(\"The slime is burned away!\");\n   159: \t       Slimed = 0;\n   160: \t    }\n   161: \t    losehp(d((Fire_resistance ? 2 : 10), 10),\n>  162: \t\t   \"sitting on lava\", KILLED_BY);\n   163: \n   164: \t} else if (is_ice(u.ux, u.uy)) {\n   165: \n   166: \t    You(sit_message, defsyms[S_ice].explanation);\n   167: \t    if (!Cold_resistance) pline_The(\"ice feels cold.\");"
+    "stage": 0,
+    "context": "src/sit.c:162:6\n   157: \t    if (Slimed) {\n   158: \t       pline(\"The slime is burned away!\");\n   159: \t       Slimed = 0;\n   160: \t    }\n   161: \t    losehp(d((Fire_resistance ? 2 : 10), 10),\n&gt;  162: \t\t   \"sitting on lava\", KILLED_BY);\n   163: \n   164: \t} else if (is_ice(u.ux, u.uy)) {\n   165: \n   166: \t    You(sit_message, defsyms[S_ice].explanation);\n   167: \t    if (!Cold_resistance) pline_The(\"ice feels cold.\");"
   },
   {
     "key": "L00167_01",
     "original": "ice feels cold.",
     "translation": "",
-    "context": "src/sit.c:167:38\n   162: \t\t   \"sitting on lava\", KILLED_BY);\n   163: \n   164: \t} else if (is_ice(u.ux, u.uy)) {\n   165: \n   166: \t    You(sit_message, defsyms[S_ice].explanation);\n>  167: \t    if (!Cold_resistance) pline_The(\"ice feels cold.\");\n   168: \n   169: \t} else if (typ == DRAWBRIDGE_DOWN) {\n   170: \n   171: \t    You(sit_message, \"drawbridge\");\n   172: "
+    "stage": 0,
+    "context": "src/sit.c:167:38\n   162: \t\t   \"sitting on lava\", KILLED_BY);\n   163: \n   164: \t} else if (is_ice(u.ux, u.uy)) {\n   165: \n   166: \t    You(sit_message, defsyms[S_ice].explanation);\n&gt;  167: \t    if (!Cold_resistance) pline_The(\"ice feels cold.\");\n   168: \n   169: \t} else if (typ == DRAWBRIDGE_DOWN) {\n   170: \n   171: \t    You(sit_message, \"drawbridge\");\n   172: "
   },
   {
     "key": "L00171_01",
     "original": "drawbridge",
     "translation": "",
-    "context": "src/sit.c:171:23\n   166: \t    You(sit_message, defsyms[S_ice].explanation);\n   167: \t    if (!Cold_resistance) pline_The(\"ice feels cold.\");\n   168: \n   169: \t} else if (typ == DRAWBRIDGE_DOWN) {\n   170: \n>  171: \t    You(sit_message, \"drawbridge\");\n   172: \n   173: \t} else if(IS_THRONE(typ)) {\n   174: \n   175: \t    You(sit_message, defsyms[S_throne].explanation);\n   176: \t    if (rnd(6) > 4)  {"
+    "stage": 0,
+    "context": "src/sit.c:171:23\n   166: \t    You(sit_message, defsyms[S_ice].explanation);\n   167: \t    if (!Cold_resistance) pline_The(\"ice feels cold.\");\n   168: \n   169: \t} else if (typ == DRAWBRIDGE_DOWN) {\n   170: \n&gt;  171: \t    You(sit_message, \"drawbridge\");\n   172: \n   173: \t} else if(IS_THRONE(typ)) {\n   174: \n   175: \t    You(sit_message, defsyms[S_throne].explanation);\n   176: \t    if (rnd(6) &gt; 4)  {"
   },
   {
     "key": "L00180_01",
     "original": "cursed throne",
     "translation": "",
-    "context": "src/sit.c:180:20\n   175: \t    You(sit_message, defsyms[S_throne].explanation);\n   176: \t    if (rnd(6) > 4)  {\n   177: \t\tswitch (rnd(13))  {\n   178: \t\t    case 1:\n   179: \t\t\t(void) adjattrib(rn2(A_MAX), -rn1(4,3), FALSE);\n>  180: \t\t\tlosehp(rnd(10), \"cursed throne\", KILLED_BY_AN);\n   181: \t\t\tbreak;\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:"
+    "stage": 0,
+    "context": "src/sit.c:180:20\n   175: \t    You(sit_message, defsyms[S_throne].explanation);\n   176: \t    if (rnd(6) &gt; 4)  {\n   177: \t\tswitch (rnd(13))  {\n   178: \t\t    case 1:\n   179: \t\t\t(void) adjattrib(rn2(A_MAX), -rn1(4,3), FALSE);\n&gt;  180: \t\t\tlosehp(rnd(10), \"cursed throne\", KILLED_BY_AN);\n   181: \t\t\tbreak;\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:"
   },
   {
     "key": "L00186_01",
     "original": "A%s electric shock shoots through your body!",
     "translation": "",
-    "context": "src/sit.c:186:10\n   181: \t\t\tbreak;\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n>  186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n   187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;"
+    "stage": 0,
+    "context": "src/sit.c:186:10\n   181: \t\t\tbreak;\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n&gt;  186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n   187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;"
   },
   {
     "key": "L00187_01",
     "original": "n",
     "translation": "",
-    "context": "src/sit.c:187:31\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n   186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n>  187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:"
+    "stage": 0,
+    "context": "src/sit.c:187:31\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n   186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n&gt;  187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:"
   },
   {
     "key": "L00187_02",
     "original": " massive",
     "translation": "",
-    "context": "src/sit.c:187:37\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n   186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n>  187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:"
+    "stage": 0,
+    "context": "src/sit.c:187:37\n   182: \t\t    case 2:\n   183: \t\t\t(void) adjattrib(rn2(A_MAX), 1, FALSE);\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n   186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n&gt;  187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:"
   },
   {
     "key": "L00189_01",
     "original": "electric chair",
     "translation": "",
-    "context": "src/sit.c:189:11\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n   186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n   187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n>  189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:\n   193: \t\t\tYou_feel(\"much, much better!\");\n   194: \t\t\tif (Upolyd) {"
+    "stage": 0,
+    "context": "src/sit.c:189:11\n   184: \t\t\tbreak;\n   185: \t\t    case 3:\n   186: \t\t\tpline(\"A%s electric shock shoots through your body!\",\n   187: \t\t\t      (Shock_resistance) ? \"n\" : \" massive\");\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n&gt;  189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:\n   193: \t\t\tYou_feel(\"much, much better!\");\n   194: \t\t\tif (Upolyd) {"
   },
   {
     "key": "L00193_01",
     "original": "much, much better!",
     "translation": "",
-    "context": "src/sit.c:193:13\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:\n>  193: \t\t\tYou_feel(\"much, much better!\");\n   194: \t\t\tif (Upolyd) {\n   195: \t\t\t    if (u.mh >= (u.mhmax - 5))  u.mhmax += 4;\n   196: \t\t\t    u.mh = u.mhmax;\n   197: \t\t\t}\n   198: \t\t\tif(u.uhp >= (u.uhpmax - 5))  u.uhpmax += 4;"
+    "stage": 0,
+    "context": "src/sit.c:193:13\n   188: \t\t\tlosehp(Shock_resistance ? rnd(6) : rnd(30),\n   189: \t\t\t       \"electric chair\", KILLED_BY_AN);\n   190: \t\t\texercise(A_CON, FALSE);\n   191: \t\t\tbreak;\n   192: \t\t    case 4:\n&gt;  193: \t\t\tYou_feel(\"much, much better!\");\n   194: \t\t\tif (Upolyd) {\n   195: \t\t\t    if (u.mh &gt;= (u.mhmax - 5))  u.mhmax += 4;\n   196: \t\t\t    u.mh = u.mhmax;\n   197: \t\t\t}\n   198: \t\t\tif(u.uhp &gt;= (u.uhpmax - 5))  u.uhpmax += 4;"
   },
   {
     "key": "L00211_01",
     "original": "your luck is changing.",
     "translation": "",
-    "context": "src/sit.c:211:17\n   206: \t\t\ttake_gold();\n   207: \t\t\tbreak;\n   208: \t\t    case 6:\n   209: /* ------------===========STEPHEN WHITE'S NEW CODE============------------ */                                                \n   210: \t\t\tif(u.uluck < 7) {\n>  211: \t\t\t    You_feel(\"your luck is changing.\");\n   212: \t\t\t    change_luck(5);\n   213: \t\t\t} else\t    makewish();\n   214: \t\t\tbreak;\n   215: \t\t    case 7:\n   216: \t\t\t{"
+    "stage": 0,
+    "context": "src/sit.c:211:17\n   206: \t\t\ttake_gold();\n   207: \t\t\tbreak;\n   208: \t\t    case 6:\n   209: /* ------------===========STEPHEN WHITE'S NEW CODE============------------ */                                                \n   210: \t\t\tif(u.uluck &lt; 7) {\n&gt;  211: \t\t\t    You_feel(\"your luck is changing.\");\n   212: \t\t\t    change_luck(5);\n   213: \t\t\t} else\t    makewish();\n   214: \t\t\tbreak;\n   215: \t\t    case 7:\n   216: \t\t\t{"
   },
   {
     "key": "L00219_01",
     "original": "A voice echoes:",
     "translation": "",
-    "context": "src/sit.c:219:10\n   214: \t\t\tbreak;\n   215: \t\t    case 7:\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n>  219: \t\t\tpline(\"A voice echoes:\");\n   220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n   221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;"
+    "stage": 0,
+    "context": "src/sit.c:219:10\n   214: \t\t\tbreak;\n   215: \t\t    case 7:\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n&gt;  219: \t\t\tpline(\"A voice echoes:\");\n   220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n   221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;"
   },
   {
     "key": "L00220_01",
     "original": "Thy audience hath been summoned, %s!",
     "translation": "",
-    "context": "src/sit.c:220:14\n   215: \t\t    case 7:\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n   219: \t\t\tpline(\"A voice echoes:\");\n>  220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n   221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}"
+    "stage": 0,
+    "context": "src/sit.c:220:14\n   215: \t\t    case 7:\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n   219: \t\t\tpline(\"A voice echoes:\");\n&gt;  220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n   221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}"
   },
   {
     "key": "L00221_01",
     "original": "Dame",
     "translation": "",
-    "context": "src/sit.c:221:22\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n   219: \t\t\tpline(\"A voice echoes:\");\n   220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n>  221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:"
+    "stage": 0,
+    "context": "src/sit.c:221:22\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n   219: \t\t\tpline(\"A voice echoes:\");\n   220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n&gt;  221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:"
   },
   {
     "key": "L00221_02",
     "original": "Sire",
     "translation": "",
-    "context": "src/sit.c:221:31\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n   219: \t\t\tpline(\"A voice echoes:\");\n   220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n>  221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:"
+    "stage": 0,
+    "context": "src/sit.c:221:31\n   216: \t\t\t{\n   217: \t\t\tregister int cnt = rnd(10);\n   218: \n   219: \t\t\tpline(\"A voice echoes:\");\n   220: \t\t\tverbalize(\"Thy audience hath been summoned, %s!\",\n&gt;  221: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:"
   },
   {
     "key": "L00227_01",
     "original": "A voice echoes:",
     "translation": "",
-    "context": "src/sit.c:227:10\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n>  227: \t\t\tpline(\"A voice echoes:\");\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:"
+    "stage": 0,
+    "context": "src/sit.c:227:10\n   222: \t\t\twhile(cnt--)\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n&gt;  227: \t\t\tpline(\"A voice echoes:\");\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:"
   },
   {
     "key": "L00228_01",
     "original": "By thy Imperious order, %s...",
     "translation": "",
-    "context": "src/sit.c:228:14\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n   227: \t\t\tpline(\"A voice echoes:\");\n>  228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");"
+    "stage": 0,
+    "context": "src/sit.c:228:14\n   223: \t\t\t    (void) makemon(courtmon(), u.ux, u.uy, NO_MM_FLAGS);\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n   227: \t\t\tpline(\"A voice echoes:\");\n&gt;  228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");"
   },
   {
     "key": "L00229_01",
     "original": "Dame",
     "translation": "",
-    "context": "src/sit.c:229:22\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n   227: \t\t\tpline(\"A voice echoes:\");\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n>  229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");\n   234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");"
+    "stage": 0,
+    "context": "src/sit.c:229:22\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n   227: \t\t\tpline(\"A voice echoes:\");\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n&gt;  229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");\n   234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");"
   },
   {
     "key": "L00229_02",
     "original": "Sire",
     "translation": "",
-    "context": "src/sit.c:229:31\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n   227: \t\t\tpline(\"A voice echoes:\");\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n>  229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");\n   234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");"
+    "stage": 0,
+    "context": "src/sit.c:229:31\n   224: \t\t\tbreak;\n   225: \t\t\t}\n   226: \t\t    case 8:\n   227: \t\t\tpline(\"A voice echoes:\");\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n&gt;  229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");\n   234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");"
   },
   {
     "key": "L00233_01",
     "original": "A voice echoes:",
     "translation": "",
-    "context": "src/sit.c:233:10\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n>  233: \t\t\tpline(\"A voice echoes:\");\n   234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");\n   235: \t\t\tif (Luck > 0)  {\n   236: \t\t\t    make_blinded(Blinded + rn1(100,250),TRUE);\n   237: \t\t\t} else\t    rndcurse();\n   238: \t\t\tbreak;"
+    "stage": 0,
+    "context": "src/sit.c:233:10\n   228: \t\t\tverbalize(\"By thy Imperious order, %s...\",\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n&gt;  233: \t\t\tpline(\"A voice echoes:\");\n   234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");\n   235: \t\t\tif (Luck &gt; 0)  {\n   236: \t\t\t    make_blinded(Blinded + rn1(100,250),TRUE);\n   237: \t\t\t} else\t    rndcurse();\n   238: \t\t\tbreak;"
   },
   {
     "key": "L00234_01",
     "original": "A curse upon thee for sitting upon this most holy throne!",
     "translation": "",
-    "context": "src/sit.c:234:12\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");\n>  234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");\n   235: \t\t\tif (Luck > 0)  {\n   236: \t\t\t    make_blinded(Blinded + rn1(100,250),TRUE);\n   237: \t\t\t} else\t    rndcurse();\n   238: \t\t\tbreak;\n   239: \t\t    case 10:"
+    "stage": 0,
+    "context": "src/sit.c:234:12\n   229: \t\t\t\t  flags.female ? \"Dame\" : \"Sire\");\n   230: \t\t\tdo_genocide(5);\t/* REALLY|ONTHRONE, see do_genocide() */\n   231: \t\t\tbreak;\n   232: \t\t    case 9:\n   233: \t\t\tpline(\"A voice echoes:\");\n&gt;  234: \tverbalize(\"A curse upon thee for sitting upon this most holy throne!\");\n   235: \t\t\tif (Luck &gt; 0)  {\n   236: \t\t\t    make_blinded(Blinded + rn1(100,250),TRUE);\n   237: \t\t\t} else\t    rndcurse();\n   238: \t\t\tbreak;\n   239: \t\t    case 10:"
   },
   {
     "key": "L00243_01",
     "original": "A terrible drone fills your head!",
     "translation": "",
-    "context": "src/sit.c:243:6\n   238: \t\t\tbreak;\n   239: \t\t    case 10:\n   240: \t\t\tif (Luck < 0 || (HSee_invisible & INTRINSIC))  {\n   241: \t\t\t\tif (level.flags.nommap) {\n   242: \t\t\t\t\tpline(\n>  243: \t\t\t\t\t\"A terrible drone fills your head!\");\n   244: \t\t\t\t\tmake_confused(HConfusion + rnd(30),\n   245: \t\t\t\t\t\t\t\t\tFALSE);\n   246: \t\t\t\t} else {\n   247: \t\t\t\t\tpline(\"An image forms in your mind.\");\n   248: \t\t\t\t\tdo_mapping();"
+    "stage": 0,
+    "context": "src/sit.c:243:6\n   238: \t\t\tbreak;\n   239: \t\t    case 10:\n   240: \t\t\tif (Luck &lt; 0 || (HSee_invisible & INTRINSIC))  {\n   241: \t\t\t\tif (level.flags.nommap) {\n   242: \t\t\t\t\tpline(\n&gt;  243: \t\t\t\t\t\"A terrible drone fills your head!\");\n   244: \t\t\t\t\tmake_confused(HConfusion + rnd(30),\n   245: \t\t\t\t\t\t\t\t\tFALSE);\n   246: \t\t\t\t} else {\n   247: \t\t\t\t\tpline(\"An image forms in your mind.\");\n   248: \t\t\t\t\tdo_mapping();"
   },
   {
     "key": "L00247_01",
     "original": "An image forms in your mind.",
     "translation": "",
-    "context": "src/sit.c:247:12\n   242: \t\t\t\t\tpline(\n   243: \t\t\t\t\t\"A terrible drone fills your head!\");\n   244: \t\t\t\t\tmake_confused(HConfusion + rnd(30),\n   245: \t\t\t\t\t\t\t\t\tFALSE);\n   246: \t\t\t\t} else {\n>  247: \t\t\t\t\tpline(\"An image forms in your mind.\");\n   248: \t\t\t\t\tdo_mapping();\n   249: \t\t\t\t}\n   250: \t\t\t} else  {\n   251: \t\t\t\tYour(\"vision becomes clear.\");\n   252: \t\t\t\tHSee_invisible |= FROMOUTSIDE;"
+    "stage": 0,
+    "context": "src/sit.c:247:12\n   242: \t\t\t\t\tpline(\n   243: \t\t\t\t\t\"A terrible drone fills your head!\");\n   244: \t\t\t\t\tmake_confused(HConfusion + rnd(30),\n   245: \t\t\t\t\t\t\t\t\tFALSE);\n   246: \t\t\t\t} else {\n&gt;  247: \t\t\t\t\tpline(\"An image forms in your mind.\");\n   248: \t\t\t\t\tdo_mapping();\n   249: \t\t\t\t}\n   250: \t\t\t} else  {\n   251: \t\t\t\tYour(\"vision becomes clear.\");\n   252: \t\t\t\tHSee_invisible |= FROMOUTSIDE;"
   },
   {
     "key": "L00251_01",
     "original": "vision becomes clear.",
     "translation": "",
-    "context": "src/sit.c:251:10\n   246: \t\t\t\t} else {\n   247: \t\t\t\t\tpline(\"An image forms in your mind.\");\n   248: \t\t\t\t\tdo_mapping();\n   249: \t\t\t\t}\n   250: \t\t\t} else  {\n>  251: \t\t\t\tYour(\"vision becomes clear.\");\n   252: \t\t\t\tHSee_invisible |= FROMOUTSIDE;\n   253: \t\t\t\tnewsym(u.ux, u.uy);\n   254: \t\t\t}\n   255: \t\t\tbreak;\n   256: \t\t    case 11:"
+    "stage": 0,
+    "context": "src/sit.c:251:10\n   246: \t\t\t\t} else {\n   247: \t\t\t\t\tpline(\"An image forms in your mind.\");\n   248: \t\t\t\t\tdo_mapping();\n   249: \t\t\t\t}\n   250: \t\t\t} else  {\n&gt;  251: \t\t\t\tYour(\"vision becomes clear.\");\n   252: \t\t\t\tHSee_invisible |= FROMOUTSIDE;\n   253: \t\t\t\tnewsym(u.ux, u.uy);\n   254: \t\t\t}\n   255: \t\t\tbreak;\n   256: \t\t    case 11:"
   },
   {
     "key": "L00258_01",
     "original": "threatened.",
     "translation": "",
-    "context": "src/sit.c:258:17\n   253: \t\t\t\tnewsym(u.ux, u.uy);\n   254: \t\t\t}\n   255: \t\t\tbreak;\n   256: \t\t    case 11:\n   257: \t\t\tif (Luck < 0)  {\n>  258: \t\t\t    You_feel(\"threatened.\");\n   259: \t\t\t    aggravate();\n   260: \t\t\t} else  {\n   261: \n   262: \t\t\t    You_feel(\"a wrenching sensation.\");\n   263: \t\t\t    tele();\t\t/* teleport him */"
+    "stage": 0,
+    "context": "src/sit.c:258:17\n   253: \t\t\t\tnewsym(u.ux, u.uy);\n   254: \t\t\t}\n   255: \t\t\tbreak;\n   256: \t\t    case 11:\n   257: \t\t\tif (Luck &lt; 0)  {\n&gt;  258: \t\t\t    You_feel(\"threatened.\");\n   259: \t\t\t    aggravate();\n   260: \t\t\t} else  {\n   261: \n   262: \t\t\t    You_feel(\"a wrenching sensation.\");\n   263: \t\t\t    tele();\t\t/* teleport him */"
   },
   {
     "key": "L00262_01",
     "original": "a wrenching sensation.",
     "translation": "",
-    "context": "src/sit.c:262:17\n   257: \t\t\tif (Luck < 0)  {\n   258: \t\t\t    You_feel(\"threatened.\");\n   259: \t\t\t    aggravate();\n   260: \t\t\t} else  {\n   261: \n>  262: \t\t\t    You_feel(\"a wrenching sensation.\");\n   263: \t\t\t    tele();\t\t/* teleport him */\n   264: \t\t\t}\n   265: \t\t\tbreak;\n   266: \t\t    case 12:\n   267: \t\t\tYou(\"are granted an insight!\");"
+    "stage": 0,
+    "context": "src/sit.c:262:17\n   257: \t\t\tif (Luck &lt; 0)  {\n   258: \t\t\t    You_feel(\"threatened.\");\n   259: \t\t\t    aggravate();\n   260: \t\t\t} else  {\n   261: \n&gt;  262: \t\t\t    You_feel(\"a wrenching sensation.\");\n   263: \t\t\t    tele();\t\t/* teleport him */\n   264: \t\t\t}\n   265: \t\t\tbreak;\n   266: \t\t    case 12:\n   267: \t\t\tYou(\"are granted an insight!\");"
   },
   {
     "key": "L00267_01",
     "original": "are granted an insight!",
     "translation": "",
-    "context": "src/sit.c:267:8\n   262: \t\t\t    You_feel(\"a wrenching sensation.\");\n   263: \t\t\t    tele();\t\t/* teleport him */\n   264: \t\t\t}\n   265: \t\t\tbreak;\n   266: \t\t    case 12:\n>  267: \t\t\tYou(\"are granted an insight!\");\n   268: \t\t\tif (invent) {\n   269: \t\t\t    /* rn2(5) agrees w/seffects() */\n   270: \t\t\t    identify_pack(rn2(5));\n   271: \t\t\t}\n   272: \t\t\tbreak;"
+    "stage": 0,
+    "context": "src/sit.c:267:8\n   262: \t\t\t    You_feel(\"a wrenching sensation.\");\n   263: \t\t\t    tele();\t\t/* teleport him */\n   264: \t\t\t}\n   265: \t\t\tbreak;\n   266: \t\t    case 12:\n&gt;  267: \t\t\tYou(\"are granted an insight!\");\n   268: \t\t\tif (invent) {\n   269: \t\t\t    /* rn2(5) agrees w/seffects() */\n   270: \t\t\t    identify_pack(rn2(5));\n   271: \t\t\t}\n   272: \t\t\tbreak;"
   },
   {
     "key": "L00274_01",
     "original": "mind turns into a pretzel!",
     "translation": "",
-    "context": "src/sit.c:274:9\n   269: \t\t\t    /* rn2(5) agrees w/seffects() */\n   270: \t\t\t    identify_pack(rn2(5));\n   271: \t\t\t}\n   272: \t\t\tbreak;\n   273: \t\t    case 13:\n>  274: \t\t\tYour(\"mind turns into a pretzel!\");\n   275: \t\t\tmake_confused(HConfusion + rn1(7,16),FALSE);\n   276: \t\t\tbreak;\n   277: \t\t    default:\timpossible(\"throne effect\");\n   278: \t\t\t\tbreak;\n   279: \t\t}"
+    "stage": 0,
+    "context": "src/sit.c:274:9\n   269: \t\t\t    /* rn2(5) agrees w/seffects() */\n   270: \t\t\t    identify_pack(rn2(5));\n   271: \t\t\t}\n   272: \t\t\tbreak;\n   273: \t\t    case 13:\n&gt;  274: \t\t\tYour(\"mind turns into a pretzel!\");\n   275: \t\t\tmake_confused(HConfusion + rn1(7,16),FALSE);\n   276: \t\t\tbreak;\n   277: \t\t    default:\timpossible(\"throne effect\");\n   278: \t\t\t\tbreak;\n   279: \t\t}"
   },
   {
     "key": "L00277_01",
     "original": "throne effect",
     "translation": "",
-    "context": "src/sit.c:277:27\n   272: \t\t\tbreak;\n   273: \t\t    case 13:\n   274: \t\t\tYour(\"mind turns into a pretzel!\");\n   275: \t\t\tmake_confused(HConfusion + rn1(7,16),FALSE);\n   276: \t\t\tbreak;\n>  277: \t\t    default:\timpossible(\"throne effect\");\n   278: \t\t\t\tbreak;\n   279: \t\t}\n   280: \t    } else {\n   281: \t\tif (is_prince(youmonst.data))\n   282: \t\t    You_feel(\"very comfortable here.\");"
+    "stage": 0,
+    "context": "src/sit.c:277:27\n   272: \t\t\tbreak;\n   273: \t\t    case 13:\n   274: \t\t\tYour(\"mind turns into a pretzel!\");\n   275: \t\t\tmake_confused(HConfusion + rn1(7,16),FALSE);\n   276: \t\t\tbreak;\n&gt;  277: \t\t    default:\timpossible(\"throne effect\");\n   278: \t\t\t\tbreak;\n   279: \t\t}\n   280: \t    } else {\n   281: \t\tif (is_prince(youmonst.data))\n   282: \t\t    You_feel(\"very comfortable here.\");"
   },
   {
     "key": "L00282_01",
     "original": "very comfortable here.",
     "translation": "",
-    "context": "src/sit.c:282:16\n   277: \t\t    default:\timpossible(\"throne effect\");\n   278: \t\t\t\tbreak;\n   279: \t\t}\n   280: \t    } else {\n   281: \t\tif (is_prince(youmonst.data))\n>  282: \t\t    You_feel(\"very comfortable here.\");\n   283: \t\telse\n   284: \t\t    You_feel(\"somehow out of place...\");\n   285: \t    }\n   286: \n   287: \t    if (!rn2(3) && IS_THRONE(levl[u.ux][u.uy].typ)) {"
+    "stage": 0,
+    "context": "src/sit.c:282:16\n   277: \t\t    default:\timpossible(\"throne effect\");\n   278: \t\t\t\tbreak;\n   279: \t\t}\n   280: \t    } else {\n   281: \t\tif (is_prince(youmonst.data))\n&gt;  282: \t\t    You_feel(\"very comfortable here.\");\n   283: \t\telse\n   284: \t\t    You_feel(\"somehow out of place...\");\n   285: \t    }\n   286: \n   287: \t    if (!rn2(3) && IS_THRONE(levl[u.ux][u.uy].typ)) {"
   },
   {
     "key": "L00284_01",
     "original": "somehow out of place...",
     "translation": "",
-    "context": "src/sit.c:284:16\n   279: \t\t}\n   280: \t    } else {\n   281: \t\tif (is_prince(youmonst.data))\n   282: \t\t    You_feel(\"very comfortable here.\");\n   283: \t\telse\n>  284: \t\t    You_feel(\"somehow out of place...\");\n   285: \t    }\n   286: \n   287: \t    if (!rn2(3) && IS_THRONE(levl[u.ux][u.uy].typ)) {\n   288: \t\t/* may have teleported */\n   289: \t\tlevl[u.ux][u.uy].typ = ROOM;"
+    "stage": 0,
+    "context": "src/sit.c:284:16\n   279: \t\t}\n   280: \t    } else {\n   281: \t\tif (is_prince(youmonst.data))\n   282: \t\t    You_feel(\"very comfortable here.\");\n   283: \t\telse\n&gt;  284: \t\t    You_feel(\"somehow out of place...\");\n   285: \t    }\n   286: \n   287: \t    if (!rn2(3) && IS_THRONE(levl[u.ux][u.uy].typ)) {\n   288: \t\t/* may have teleported */\n   289: \t\tlevl[u.ux][u.uy].typ = ROOM;"
   },
   {
     "key": "L00290_01",
     "original": "throne vanishes in a puff of logic.",
     "translation": "",
-    "context": "src/sit.c:290:13\n   285: \t    }\n   286: \n   287: \t    if (!rn2(3) && IS_THRONE(levl[u.ux][u.uy].typ)) {\n   288: \t\t/* may have teleported */\n   289: \t\tlevl[u.ux][u.uy].typ = ROOM;\n>  290: \t\tpline_The(\"throne vanishes in a puff of logic.\");\n   291: \t\tnewsym(u.ux,u.uy);\n   292: \t    }\n   293: \n   294: \t} else if (lays_eggs(youmonst.data)) {\n   295: \t\tstruct obj *uegg;"
+    "stage": 0,
+    "context": "src/sit.c:290:13\n   285: \t    }\n   286: \n   287: \t    if (!rn2(3) && IS_THRONE(levl[u.ux][u.uy].typ)) {\n   288: \t\t/* may have teleported */\n   289: \t\tlevl[u.ux][u.uy].typ = ROOM;\n&gt;  290: \t\tpline_The(\"throne vanishes in a puff of logic.\");\n   291: \t\tnewsym(u.ux,u.uy);\n   292: \t    }\n   293: \n   294: \t} else if (lays_eggs(youmonst.data)) {\n   295: \t\tstruct obj *uegg;"
   },
   {
     "key": "L00298_01",
     "original": "Males can't lay eggs!",
     "translation": "",
-    "context": "src/sit.c:298:10\n   293: \n   294: \t} else if (lays_eggs(youmonst.data)) {\n   295: \t\tstruct obj *uegg;\n   296: \n   297: \t\tif (!flags.female) {\n>  298: \t\t\tpline(\"Males can't lay eggs!\");\n   299: \t\t\treturn 0;\n   300: \t\t}\n   301: \n   302: \t\tif (u.uhunger < (int)objects[EGG].oc_nutrition) {\n   303: \t\t\tYou(\"don't have enough energy to lay an egg.\");"
+    "stage": 0,
+    "context": "src/sit.c:298:10\n   293: \n   294: \t} else if (lays_eggs(youmonst.data)) {\n   295: \t\tstruct obj *uegg;\n   296: \n   297: \t\tif (!flags.female) {\n&gt;  298: \t\t\tpline(\"Males can't lay eggs!\");\n   299: \t\t\treturn 0;\n   300: \t\t}\n   301: \n   302: \t\tif (u.uhunger &lt; (int)objects[EGG].oc_nutrition) {\n   303: \t\t\tYou(\"don't have enough energy to lay an egg.\");"
   },
   {
     "key": "L00303_01",
     "original": "don't have enough energy to lay an egg.",
     "translation": "",
-    "context": "src/sit.c:303:8\n   298: \t\t\tpline(\"Males can't lay eggs!\");\n   299: \t\t\treturn 0;\n   300: \t\t}\n   301: \n   302: \t\tif (u.uhunger < (int)objects[EGG].oc_nutrition) {\n>  303: \t\t\tYou(\"don't have enough energy to lay an egg.\");\n   304: \t\t\treturn 0;\n   305: \t\t}\n   306: \n   307: \t\tuegg = mksobj(EGG, FALSE, FALSE);\n   308: \t\tuegg->spe = 1;"
+    "stage": 0,
+    "context": "src/sit.c:303:8\n   298: \t\t\tpline(\"Males can't lay eggs!\");\n   299: \t\t\treturn 0;\n   300: \t\t}\n   301: \n   302: \t\tif (u.uhunger &lt; (int)objects[EGG].oc_nutrition) {\n&gt;  303: \t\t\tYou(\"don't have enough energy to lay an egg.\");\n   304: \t\t\treturn 0;\n   305: \t\t}\n   306: \n   307: \t\tuegg = mksobj(EGG, FALSE, FALSE);\n   308: \t\tuegg-&gt;spe = 1;"
   },
   {
     "key": "L00314_01",
     "original": "lay an egg.",
     "translation": "",
-    "context": "src/sit.c:314:7\n   309: \t\tuegg->quan = 1;\n   310: \t\tuegg->owt = weight(uegg);\n   311: \t\tuegg->corpsenm = egg_type_from_parent(u.umonnum, FALSE);\n   312: \t\tuegg->known = uegg->dknown = 1;\n   313: \t\tattach_egg_hatch_timeout(uegg);\n>  314: \t\tYou(\"lay an egg.\");\n   315: \t\tdropy(uegg);\n   316: \t\tstackobj(uegg);\n   317: \t\tmorehungry((int)objects[EGG].oc_nutrition);\n   318: \t} else if (u.uswallow)\n   319: \t\tThere(\"are no seats in here!\");"
+    "stage": 0,
+    "context": "src/sit.c:314:7\n   309: \t\tuegg-&gt;quan = 1;\n   310: \t\tuegg-&gt;owt = weight(uegg);\n   311: \t\tuegg-&gt;corpsenm = egg_type_from_parent(u.umonnum, FALSE);\n   312: \t\tuegg-&gt;known = uegg-&gt;dknown = 1;\n   313: \t\tattach_egg_hatch_timeout(uegg);\n&gt;  314: \t\tYou(\"lay an egg.\");\n   315: \t\tdropy(uegg);\n   316: \t\tstackobj(uegg);\n   317: \t\tmorehungry((int)objects[EGG].oc_nutrition);\n   318: \t} else if (u.uswallow)\n   319: \t\tThere(\"are no seats in here!\");"
   },
   {
     "key": "L00319_01",
     "original": "are no seats in here!",
     "translation": "",
-    "context": "src/sit.c:319:9\n   314: \t\tYou(\"lay an egg.\");\n   315: \t\tdropy(uegg);\n   316: \t\tstackobj(uegg);\n   317: \t\tmorehungry((int)objects[EGG].oc_nutrition);\n   318: \t} else if (u.uswallow)\n>  319: \t\tThere(\"are no seats in here!\");\n   320: \telse\n   321: \t\tpline(\"Having fun sitting on the %s?\", surface(u.ux,u.uy));\n   322: \treturn(1);\n   323: }\n   324: "
+    "stage": 0,
+    "context": "src/sit.c:319:9\n   314: \t\tYou(\"lay an egg.\");\n   315: \t\tdropy(uegg);\n   316: \t\tstackobj(uegg);\n   317: \t\tmorehungry((int)objects[EGG].oc_nutrition);\n   318: \t} else if (u.uswallow)\n&gt;  319: \t\tThere(\"are no seats in here!\");\n   320: \telse\n   321: \t\tpline(\"Having fun sitting on the %s?\", surface(u.ux,u.uy));\n   322: \treturn(1);\n   323: }\n   324: "
   },
   {
     "key": "L00321_01",
     "original": "Having fun sitting on the %s?",
     "translation": "",
-    "context": "src/sit.c:321:9\n   316: \t\tstackobj(uegg);\n   317: \t\tmorehungry((int)objects[EGG].oc_nutrition);\n   318: \t} else if (u.uswallow)\n   319: \t\tThere(\"are no seats in here!\");\n   320: \telse\n>  321: \t\tpline(\"Having fun sitting on the %s?\", surface(u.ux,u.uy));\n   322: \treturn(1);\n   323: }\n   324: \n   325: void\n   326: rndcurse()\t\t\t/* curse a few inventory items at random! */"
+    "stage": 0,
+    "context": "src/sit.c:321:9\n   316: \t\tstackobj(uegg);\n   317: \t\tmorehungry((int)objects[EGG].oc_nutrition);\n   318: \t} else if (u.uswallow)\n   319: \t\tThere(\"are no seats in here!\");\n   320: \telse\n&gt;  321: \t\tpline(\"Having fun sitting on the %s?\", surface(u.ux,u.uy));\n   322: \treturn(1);\n   323: }\n   324: \n   325: void\n   326: rndcurse()\t\t\t/* curse a few inventory items at random! */"
   },
   {
     "key": "L00331_01",
     "original": "feel a malignant aura surround %s.",
     "translation": "",
-    "context": "src/sit.c:331:33\n   326: rndcurse()\t\t\t/* curse a few inventory items at random! */\n   327: {\n   328: \tint\tnobj = 0;\n   329: \tint\tcnt, onum;\n   330: \tstruct\tobj\t*otmp;\n>  331: \tstatic const char mal_aura[] = \"feel a malignant aura surround %s.\";\n   332: \n   333: \tif (uwep && (uwep->oartifact == ART_MAGICBANE) && rn2(20)) {\n   334: \t    You(mal_aura, \"the magic-absorbing blade\");\n   335: \t    return;\n   336: \t}"
+    "stage": 0,
+    "context": "src/sit.c:331:33\n   326: rndcurse()\t\t\t/* curse a few inventory items at random! */\n   327: {\n   328: \tint\tnobj = 0;\n   329: \tint\tcnt, onum;\n   330: \tstruct\tobj\t*otmp;\n&gt;  331: \tstatic const char mal_aura[] = \"feel a malignant aura surround %s.\";\n   332: \n   333: \tif (uwep && (uwep-&gt;oartifact == ART_MAGICBANE) && rn2(20)) {\n   334: \t    You(mal_aura, \"the magic-absorbing blade\");\n   335: \t    return;\n   336: \t}"
   },
   {
     "key": "L00334_01",
     "original": "the magic-absorbing blade",
     "translation": "",
-    "context": "src/sit.c:334:20\n   329: \tint\tcnt, onum;\n   330: \tstruct\tobj\t*otmp;\n   331: \tstatic const char mal_aura[] = \"feel a malignant aura surround %s.\";\n   332: \n   333: \tif (uwep && (uwep->oartifact == ART_MAGICBANE) && rn2(20)) {\n>  334: \t    You(mal_aura, \"the magic-absorbing blade\");\n   335: \t    return;\n   336: \t}\n   337: \n   338: \tif(Antimagic) {\n   339: \t    shieldeff(u.ux, u.uy);"
+    "stage": 0,
+    "context": "src/sit.c:334:20\n   329: \tint\tcnt, onum;\n   330: \tstruct\tobj\t*otmp;\n   331: \tstatic const char mal_aura[] = \"feel a malignant aura surround %s.\";\n   332: \n   333: \tif (uwep && (uwep-&gt;oartifact == ART_MAGICBANE) && rn2(20)) {\n&gt;  334: \t    You(mal_aura, \"the magic-absorbing blade\");\n   335: \t    return;\n   336: \t}\n   337: \n   338: \tif(Antimagic) {\n   339: \t    shieldeff(u.ux, u.uy);"
   },
   {
     "key": "L00340_01",
     "original": "you",
     "translation": "",
-    "context": "src/sit.c:340:20\n   335: \t    return;\n   336: \t}\n   337: \n   338: \tif(Antimagic) {\n   339: \t    shieldeff(u.ux, u.uy);\n>  340: \t    You(mal_aura, \"you\");\n   341: \t}\n   342: \n   343: \tfor (otmp = invent; otmp; otmp = otmp->nobj) {\n   344: #ifdef GOLDOBJ\n   345: \t    /* gold isn't subject to being cursed or blessed */"
+    "stage": 0,
+    "context": "src/sit.c:340:20\n   335: \t    return;\n   336: \t}\n   337: \n   338: \tif(Antimagic) {\n   339: \t    shieldeff(u.ux, u.uy);\n&gt;  340: \t    You(mal_aura, \"you\");\n   341: \t}\n   342: \n   343: \tfor (otmp = invent; otmp; otmp = otmp-&gt;nobj) {\n   344: #ifdef GOLDOBJ\n   345: \t    /* gold isn't subject to being cursed or blessed */"
   },
   {
     "key": "L00367_01",
     "original": "%s!",
     "translation": "",
-    "context": "src/sit.c:367:13\n   362: \t\t   cursed item happens--avoid \"resists\" message in that case */\n   363: \t\tif (!otmp || otmp->cursed) continue;\t/* next target */\n   364: \n   365: \t\tif(otmp->oartifact && spec_ability(otmp, SPFX_INTEL) &&\n   366: \t\t   rn2(10) < 8) {\n>  367: \t\t    pline(\"%s!\", Tobjnam(otmp, \"resist\"));\n   368: \t\t    continue;\n   369: \t\t}\n   370: \n   371: \t\tif(otmp->blessed)\n   372: \t\t\tunbless(otmp);"
+    "stage": 0,
+    "context": "src/sit.c:367:13\n   362: \t\t   cursed item happens--avoid \"resists\" message in that case */\n   363: \t\tif (!otmp || otmp-&gt;cursed) continue;\t/* next target */\n   364: \n   365: \t\tif(otmp-&gt;oartifact && spec_ability(otmp, SPFX_INTEL) &&\n   366: \t\t   rn2(10) &lt; 8) {\n&gt;  367: \t\t    pline(\"%s!\", Tobjnam(otmp, \"resist\"));\n   368: \t\t    continue;\n   369: \t\t}\n   370: \n   371: \t\tif(otmp-&gt;blessed)\n   372: \t\t\tunbless(otmp);"
   },
   {
     "key": "L00367_02",
     "original": "resist",
     "translation": "",
-    "context": "src/sit.c:367:34\n   362: \t\t   cursed item happens--avoid \"resists\" message in that case */\n   363: \t\tif (!otmp || otmp->cursed) continue;\t/* next target */\n   364: \n   365: \t\tif(otmp->oartifact && spec_ability(otmp, SPFX_INTEL) &&\n   366: \t\t   rn2(10) < 8) {\n>  367: \t\t    pline(\"%s!\", Tobjnam(otmp, \"resist\"));\n   368: \t\t    continue;\n   369: \t\t}\n   370: \n   371: \t\tif(otmp->blessed)\n   372: \t\t\tunbless(otmp);"
+    "stage": 0,
+    "context": "src/sit.c:367:34\n   362: \t\t   cursed item happens--avoid \"resists\" message in that case */\n   363: \t\tif (!otmp || otmp-&gt;cursed) continue;\t/* next target */\n   364: \n   365: \t\tif(otmp-&gt;oartifact && spec_ability(otmp, SPFX_INTEL) &&\n   366: \t\t   rn2(10) &lt; 8) {\n&gt;  367: \t\t    pline(\"%s!\", Tobjnam(otmp, \"resist\"));\n   368: \t\t    continue;\n   369: \t\t}\n   370: \n   371: \t\tif(otmp-&gt;blessed)\n   372: \t\t\tunbless(otmp);"
   },
   {
     "key": "L00389_01",
     "original": "%s %s %s.",
     "translation": "",
-    "context": "src/sit.c:389:9\n   384: \t    if (otmp->blessed)\n   385: \t\tunbless(otmp);\n   386: \t    else\n   387: \t\tcurse(otmp);\n   388: \t    if (!Blind) {\n>  389: \t\tpline(\"%s %s %s.\",\n   390: \t\t      s_suffix(upstart(y_monnam(u.usteed))),\n   391: \t\t      aobjnam(otmp, \"glow\"),\n   392: \t\t      hcolor(otmp->cursed ? NH_BLACK : (const char *)\"brown\"));\n   393: \t\totmp->bknown = TRUE;\n   394: \t    }"
+    "stage": 0,
+    "context": "src/sit.c:389:9\n   384: \t    if (otmp-&gt;blessed)\n   385: \t\tunbless(otmp);\n   386: \t    else\n   387: \t\tcurse(otmp);\n   388: \t    if (!Blind) {\n&gt;  389: \t\tpline(\"%s %s %s.\",\n   390: \t\t      s_suffix(upstart(y_monnam(u.usteed))),\n   391: \t\t      aobjnam(otmp, \"glow\"),\n   392: \t\t      hcolor(otmp-&gt;cursed ? NH_BLACK : (const char *)\"brown\"));\n   393: \t\totmp-&gt;bknown = TRUE;\n   394: \t    }"
   },
   {
     "key": "L00391_01",
     "original": "glow",
     "translation": "",
-    "context": "src/sit.c:391:23\n   386: \t    else\n   387: \t\tcurse(otmp);\n   388: \t    if (!Blind) {\n   389: \t\tpline(\"%s %s %s.\",\n   390: \t\t      s_suffix(upstart(y_monnam(u.usteed))),\n>  391: \t\t      aobjnam(otmp, \"glow\"),\n   392: \t\t      hcolor(otmp->cursed ? NH_BLACK : (const char *)\"brown\"));\n   393: \t\totmp->bknown = TRUE;\n   394: \t    }\n   395: \t}\n   396: #endif\t/*STEED*/"
+    "stage": 0,
+    "context": "src/sit.c:391:23\n   386: \t    else\n   387: \t\tcurse(otmp);\n   388: \t    if (!Blind) {\n   389: \t\tpline(\"%s %s %s.\",\n   390: \t\t      s_suffix(upstart(y_monnam(u.usteed))),\n&gt;  391: \t\t      aobjnam(otmp, \"glow\"),\n   392: \t\t      hcolor(otmp-&gt;cursed ? NH_BLACK : (const char *)\"brown\"));\n   393: \t\totmp-&gt;bknown = TRUE;\n   394: \t    }\n   395: \t}\n   396: #endif\t/*STEED*/"
   },
   {
     "key": "L00392_01",
     "original": "brown",
     "translation": "",
-    "context": "src/sit.c:392:56\n   387: \t\tcurse(otmp);\n   388: \t    if (!Blind) {\n   389: \t\tpline(\"%s %s %s.\",\n   390: \t\t      s_suffix(upstart(y_monnam(u.usteed))),\n   391: \t\t      aobjnam(otmp, \"glow\"),\n>  392: \t\t      hcolor(otmp->cursed ? NH_BLACK : (const char *)\"brown\"));\n   393: \t\totmp->bknown = TRUE;\n   394: \t    }\n   395: \t}\n   396: #endif\t/*STEED*/\n   397: }"
+    "stage": 0,
+    "context": "src/sit.c:392:56\n   387: \t\tcurse(otmp);\n   388: \t    if (!Blind) {\n   389: \t\tpline(\"%s %s %s.\",\n   390: \t\t      s_suffix(upstart(y_monnam(u.usteed))),\n   391: \t\t      aobjnam(otmp, \"glow\"),\n&gt;  392: \t\t      hcolor(otmp-&gt;cursed ? NH_BLACK : (const char *)\"brown\"));\n   393: \t\totmp-&gt;bknown = TRUE;\n   394: \t    }\n   395: \t}\n   396: #endif\t/*STEED*/\n   397: }"
   },
   {
     "key": "L00405_01",
     "original": "warmer.",
     "translation": "",
-    "context": "src/sit.c:405:13\n   400: attrcurse()\t\t\t/* remove a random INTRINSIC ability */\n   401: {\n   402: \tswitch(rnd(11)) {\n   403: \tcase 1 : if (HFire_resistance & INTRINSIC) {\n   404: \t\t\tHFire_resistance &= ~INTRINSIC;\n>  405: \t\t\tYou_feel(\"warmer.\");\n   406: \t\t\tbreak;\n   407: \t\t}\n   408: \tcase 2 : if (HTeleportation & INTRINSIC) {\n   409: \t\t\tHTeleportation &= ~INTRINSIC;\n   410: \t\t\tYou_feel(\"less jumpy.\");"
+    "stage": 0,
+    "context": "src/sit.c:405:13\n   400: attrcurse()\t\t\t/* remove a random INTRINSIC ability */\n   401: {\n   402: \tswitch(rnd(11)) {\n   403: \tcase 1 : if (HFire_resistance & INTRINSIC) {\n   404: \t\t\tHFire_resistance &= ~INTRINSIC;\n&gt;  405: \t\t\tYou_feel(\"warmer.\");\n   406: \t\t\tbreak;\n   407: \t\t}\n   408: \tcase 2 : if (HTeleportation & INTRINSIC) {\n   409: \t\t\tHTeleportation &= ~INTRINSIC;\n   410: \t\t\tYou_feel(\"less jumpy.\");"
   },
   {
     "key": "L00410_01",
     "original": "less jumpy.",
     "translation": "",
-    "context": "src/sit.c:410:13\n   405: \t\t\tYou_feel(\"warmer.\");\n   406: \t\t\tbreak;\n   407: \t\t}\n   408: \tcase 2 : if (HTeleportation & INTRINSIC) {\n   409: \t\t\tHTeleportation &= ~INTRINSIC;\n>  410: \t\t\tYou_feel(\"less jumpy.\");\n   411: \t\t\tbreak;\n   412: \t\t}\n   413: \tcase 3 : if (HPoison_resistance & INTRINSIC) {\n   414: \t\t\tHPoison_resistance &= ~INTRINSIC;\n   415: \t\t\tYou_feel(\"a little sick!\");"
+    "stage": 0,
+    "context": "src/sit.c:410:13\n   405: \t\t\tYou_feel(\"warmer.\");\n   406: \t\t\tbreak;\n   407: \t\t}\n   408: \tcase 2 : if (HTeleportation & INTRINSIC) {\n   409: \t\t\tHTeleportation &= ~INTRINSIC;\n&gt;  410: \t\t\tYou_feel(\"less jumpy.\");\n   411: \t\t\tbreak;\n   412: \t\t}\n   413: \tcase 3 : if (HPoison_resistance & INTRINSIC) {\n   414: \t\t\tHPoison_resistance &= ~INTRINSIC;\n   415: \t\t\tYou_feel(\"a little sick!\");"
   },
   {
     "key": "L00415_01",
     "original": "a little sick!",
     "translation": "",
-    "context": "src/sit.c:415:13\n   410: \t\t\tYou_feel(\"less jumpy.\");\n   411: \t\t\tbreak;\n   412: \t\t}\n   413: \tcase 3 : if (HPoison_resistance & INTRINSIC) {\n   414: \t\t\tHPoison_resistance &= ~INTRINSIC;\n>  415: \t\t\tYou_feel(\"a little sick!\");\n   416: \t\t\tbreak;\n   417: \t\t}\n   418: \tcase 4 : if (HTelepat & INTRINSIC) {\n   419: \t\t\tHTelepat &= ~INTRINSIC;\n   420: \t\t\tif (Blind && !Blind_telepat)"
+    "stage": 0,
+    "context": "src/sit.c:415:13\n   410: \t\t\tYou_feel(\"less jumpy.\");\n   411: \t\t\tbreak;\n   412: \t\t}\n   413: \tcase 3 : if (HPoison_resistance & INTRINSIC) {\n   414: \t\t\tHPoison_resistance &= ~INTRINSIC;\n&gt;  415: \t\t\tYou_feel(\"a little sick!\");\n   416: \t\t\tbreak;\n   417: \t\t}\n   418: \tcase 4 : if (HTelepat & INTRINSIC) {\n   419: \t\t\tHTelepat &= ~INTRINSIC;\n   420: \t\t\tif (Blind && !Blind_telepat)"
   },
   {
     "key": "L00422_01",
     "original": "senses fail!",
     "translation": "",
-    "context": "src/sit.c:422:9\n   417: \t\t}\n   418: \tcase 4 : if (HTelepat & INTRINSIC) {\n   419: \t\t\tHTelepat &= ~INTRINSIC;\n   420: \t\t\tif (Blind && !Blind_telepat)\n   421: \t\t\t    see_monsters();\t/* Can't sense mons anymore! */\n>  422: \t\t\tYour(\"senses fail!\");\n   423: \t\t\tbreak;\n   424: \t\t}\n   425: \tcase 5 : if (HCold_resistance & INTRINSIC) {\n   426: \t\t\tHCold_resistance &= ~INTRINSIC;\n   427: \t\t\tYou_feel(\"cooler.\");"
+    "stage": 0,
+    "context": "src/sit.c:422:9\n   417: \t\t}\n   418: \tcase 4 : if (HTelepat & INTRINSIC) {\n   419: \t\t\tHTelepat &= ~INTRINSIC;\n   420: \t\t\tif (Blind && !Blind_telepat)\n   421: \t\t\t    see_monsters();\t/* Can't sense mons anymore! */\n&gt;  422: \t\t\tYour(\"senses fail!\");\n   423: \t\t\tbreak;\n   424: \t\t}\n   425: \tcase 5 : if (HCold_resistance & INTRINSIC) {\n   426: \t\t\tHCold_resistance &= ~INTRINSIC;\n   427: \t\t\tYou_feel(\"cooler.\");"
   },
   {
     "key": "L00427_01",
     "original": "cooler.",
     "translation": "",
-    "context": "src/sit.c:427:13\n   422: \t\t\tYour(\"senses fail!\");\n   423: \t\t\tbreak;\n   424: \t\t}\n   425: \tcase 5 : if (HCold_resistance & INTRINSIC) {\n   426: \t\t\tHCold_resistance &= ~INTRINSIC;\n>  427: \t\t\tYou_feel(\"cooler.\");\n   428: \t\t\tbreak;\n   429: \t\t}\n   430: \tcase 6 : if (HInvis & INTRINSIC) {\n   431: \t\t\tHInvis &= ~INTRINSIC;\n   432: \t\t\tYou_feel(\"paranoid.\");"
+    "stage": 0,
+    "context": "src/sit.c:427:13\n   422: \t\t\tYour(\"senses fail!\");\n   423: \t\t\tbreak;\n   424: \t\t}\n   425: \tcase 5 : if (HCold_resistance & INTRINSIC) {\n   426: \t\t\tHCold_resistance &= ~INTRINSIC;\n&gt;  427: \t\t\tYou_feel(\"cooler.\");\n   428: \t\t\tbreak;\n   429: \t\t}\n   430: \tcase 6 : if (HInvis & INTRINSIC) {\n   431: \t\t\tHInvis &= ~INTRINSIC;\n   432: \t\t\tYou_feel(\"paranoid.\");"
   },
   {
     "key": "L00432_01",
     "original": "paranoid.",
     "translation": "",
-    "context": "src/sit.c:432:13\n   427: \t\t\tYou_feel(\"cooler.\");\n   428: \t\t\tbreak;\n   429: \t\t}\n   430: \tcase 6 : if (HInvis & INTRINSIC) {\n   431: \t\t\tHInvis &= ~INTRINSIC;\n>  432: \t\t\tYou_feel(\"paranoid.\");\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n   437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\""
+    "stage": 0,
+    "context": "src/sit.c:432:13\n   427: \t\t\tYou_feel(\"cooler.\");\n   428: \t\t\tbreak;\n   429: \t\t}\n   430: \tcase 6 : if (HInvis & INTRINSIC) {\n   431: \t\t\tHInvis &= ~INTRINSIC;\n&gt;  432: \t\t\tYou_feel(\"paranoid.\");\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n   437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\""
   },
   {
     "key": "L00437_01",
     "original": "%s!",
     "translation": "",
-    "context": "src/sit.c:437:8\n   432: \t\t\tYou_feel(\"paranoid.\");\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n>  437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\"\n   438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;"
+    "stage": 0,
+    "context": "src/sit.c:437:8\n   432: \t\t\tYou_feel(\"paranoid.\");\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n&gt;  437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\"\n   438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;"
   },
   {
     "key": "L00437_02",
     "original": "tawt you taw a puttie tat",
     "translation": "",
-    "context": "src/sit.c:437:31\n   432: \t\t\tYou_feel(\"paranoid.\");\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n>  437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\"\n   438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;"
+    "stage": 0,
+    "context": "src/sit.c:437:31\n   432: \t\t\tYou_feel(\"paranoid.\");\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n&gt;  437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\"\n   438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;"
   },
   {
     "key": "L00438_01",
     "original": "thought you saw something",
     "translation": "",
-    "context": "src/sit.c:438:9\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n   437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\"\n>  438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;\n   443: \t\t\tYou_feel(\"slower.\");"
+    "stage": 0,
+    "context": "src/sit.c:438:9\n   433: \t\t\tbreak;\n   434: \t\t}\n   435: \tcase 7 : if (HSee_invisible & INTRINSIC) {\n   436: \t\t\tHSee_invisible &= ~INTRINSIC;\n   437: \t\t\tYou(\"%s!\", Hallucination ? \"tawt you taw a puttie tat\"\n&gt;  438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;\n   443: \t\t\tYou_feel(\"slower.\");"
   },
   {
     "key": "L00443_01",
     "original": "slower.",
     "translation": "",
-    "context": "src/sit.c:443:13\n   438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;\n>  443: \t\t\tYou_feel(\"slower.\");\n   444: \t\t\tbreak;\n   445: \t\t}\n   446: \tcase 9 : if (HStealth & INTRINSIC) {\n   447: \t\t\tHStealth &= ~INTRINSIC;\n   448: \t\t\tYou_feel(\"clumsy.\");"
+    "stage": 0,
+    "context": "src/sit.c:443:13\n   438: \t\t\t\t\t\t: \"thought you saw something\");\n   439: \t\t\tbreak;\n   440: \t\t}\n   441: \tcase 8 : if (HFast & INTRINSIC) {\n   442: \t\t\tHFast &= ~INTRINSIC;\n&gt;  443: \t\t\tYou_feel(\"slower.\");\n   444: \t\t\tbreak;\n   445: \t\t}\n   446: \tcase 9 : if (HStealth & INTRINSIC) {\n   447: \t\t\tHStealth &= ~INTRINSIC;\n   448: \t\t\tYou_feel(\"clumsy.\");"
   },
   {
     "key": "L00448_01",
     "original": "clumsy.",
     "translation": "",
-    "context": "src/sit.c:448:13\n   443: \t\t\tYou_feel(\"slower.\");\n   444: \t\t\tbreak;\n   445: \t\t}\n   446: \tcase 9 : if (HStealth & INTRINSIC) {\n   447: \t\t\tHStealth &= ~INTRINSIC;\n>  448: \t\t\tYou_feel(\"clumsy.\");\n   449: \t\t\tbreak;\n   450: \t\t}\n   451: \tcase 10: if (HProtection & INTRINSIC) {\n   452: \t\t\tHProtection &= ~INTRINSIC;\n   453: \t\t\tYou_feel(\"vulnerable.\");"
+    "stage": 0,
+    "context": "src/sit.c:448:13\n   443: \t\t\tYou_feel(\"slower.\");\n   444: \t\t\tbreak;\n   445: \t\t}\n   446: \tcase 9 : if (HStealth & INTRINSIC) {\n   447: \t\t\tHStealth &= ~INTRINSIC;\n&gt;  448: \t\t\tYou_feel(\"clumsy.\");\n   449: \t\t\tbreak;\n   450: \t\t}\n   451: \tcase 10: if (HProtection & INTRINSIC) {\n   452: \t\t\tHProtection &= ~INTRINSIC;\n   453: \t\t\tYou_feel(\"vulnerable.\");"
   },
   {
     "key": "L00453_01",
     "original": "vulnerable.",
     "translation": "",
-    "context": "src/sit.c:453:13\n   448: \t\t\tYou_feel(\"clumsy.\");\n   449: \t\t\tbreak;\n   450: \t\t}\n   451: \tcase 10: if (HProtection & INTRINSIC) {\n   452: \t\t\tHProtection &= ~INTRINSIC;\n>  453: \t\t\tYou_feel(\"vulnerable.\");\n   454: \t\t\tbreak;\n   455: \t\t}\n   456: \tcase 11: if (HAggravate_monster & INTRINSIC) {\n   457: \t\t\tHAggravate_monster &= ~INTRINSIC;\n   458: \t\t\tYou_feel(\"less attractive.\");"
+    "stage": 0,
+    "context": "src/sit.c:453:13\n   448: \t\t\tYou_feel(\"clumsy.\");\n   449: \t\t\tbreak;\n   450: \t\t}\n   451: \tcase 10: if (HProtection & INTRINSIC) {\n   452: \t\t\tHProtection &= ~INTRINSIC;\n&gt;  453: \t\t\tYou_feel(\"vulnerable.\");\n   454: \t\t\tbreak;\n   455: \t\t}\n   456: \tcase 11: if (HAggravate_monster & INTRINSIC) {\n   457: \t\t\tHAggravate_monster &= ~INTRINSIC;\n   458: \t\t\tYou_feel(\"less attractive.\");"
   },
   {
     "key": "L00458_01",
     "original": "less attractive.",
     "translation": "",
-    "context": "src/sit.c:458:13\n   453: \t\t\tYou_feel(\"vulnerable.\");\n   454: \t\t\tbreak;\n   455: \t\t}\n   456: \tcase 11: if (HAggravate_monster & INTRINSIC) {\n   457: \t\t\tHAggravate_monster &= ~INTRINSIC;\n>  458: \t\t\tYou_feel(\"less attractive.\");\n   459: \t\t\tbreak;\n   460: \t\t}\n   461: \tdefault: break;\n   462: \t}\n   463: }"
+    "stage": 0,
+    "context": "src/sit.c:458:13\n   453: \t\t\tYou_feel(\"vulnerable.\");\n   454: \t\t\tbreak;\n   455: \t\t}\n   456: \tcase 11: if (HAggravate_monster & INTRINSIC) {\n   457: \t\t\tHAggravate_monster &= ~INTRINSIC;\n&gt;  458: \t\t\tYou_feel(\"less attractive.\");\n   459: \t\t\tbreak;\n   460: \t\t}\n   461: \tdefault: break;\n   462: \t}\n   463: }"
   }
 ]

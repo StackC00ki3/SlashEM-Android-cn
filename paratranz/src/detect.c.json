@@ -3,12 +3,14 @@
     "key": "L00749_01",
     "original": "%s.",
     "translation": "",
-    "context": "src/detect.c:749:14\n   744: \tif (levl[x][y].doormask & D_TRAPPED)\n   745: \tsense_trap((struct trap *)0, x, y, sobj && sobj->cursed);\n   746:     }\n   747: \n   748:     newsym(u.ux,u.uy);\n>  749:     You_feel(\"%s.\", sobj && sobj->cursed ? \"极其贪婪\" : \"被人坑了\");\n   750:     display_nhwindow(WIN_MAP, TRUE);\n   751:     docrt();\n   752:     u.uinwater = uw;\n   753:     if (Underwater) under_water(2);\n   754:     if (u.uburied) under_ground(2);"
+    "stage": 0,
+    "context": "src/detect.c:749:14\n   744: \tif (levl[x][y].doormask & D_TRAPPED)\n   745: \tsense_trap((struct trap *)0, x, y, sobj && sobj-&gt;cursed);\n   746:     }\n   747: \n   748:     newsym(u.ux,u.uy);\n&gt;  749:     You_feel(\"%s.\", sobj && sobj-&gt;cursed ? \"极其贪婪\" : \"被人坑了\");\n   750:     display_nhwindow(WIN_MAP, TRUE);\n   751:     docrt();\n   752:     u.uinwater = uw;\n   753:     if (Underwater) under_water(2);\n   754:     if (u.uburied) under_ground(2);"
   },
   {
     "key": "L00835_01",
     "original": "%s!",
     "translation": "",
-    "context": "src/detect.c:835:17\n   830: \t    }\n   831: \t    break;\n   832: \tcase 4 : pline(\"%s你的精神!\", Tobjnam(obj, \"扰乱\"));\n   833: \t    (void) make_hallucinated(HHallucination + rnd(100),FALSE,0L);\n   834: \t    break;\n>  835: \tcase 5 : pline(\"%s!\", Tobjnam(obj, \"爆炸了\"));\n   836: \t    useup(obj);\n   837: \t    obj = 0;\t/* it's gone */\n   838: \t    losehp(rnd(30), \"突然爆炸的水晶球\", KILLED_BY_AN);\n   839: \t    break;\n   840: \t}"
+    "stage": 0,
+    "context": "src/detect.c:835:17\n   830: \t    }\n   831: \t    break;\n   832: \tcase 4 : pline(\"%s你的精神!\", Tobjnam(obj, \"扰乱\"));\n   833: \t    (void) make_hallucinated(HHallucination + rnd(100),FALSE,0L);\n   834: \t    break;\n&gt;  835: \tcase 5 : pline(\"%s!\", Tobjnam(obj, \"爆炸了\"));\n   836: \t    useup(obj);\n   837: \t    obj = 0;\t/* it's gone */\n   838: \t    losehp(rnd(30), \"突然爆炸的水晶球\", KILLED_BY_AN);\n   839: \t    break;\n   840: \t}"
   }
 ]

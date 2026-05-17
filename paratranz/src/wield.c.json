@@ -3,906 +3,1057 @@
     "key": "L00101_01",
     "original": "%s glowing.",
     "translation": "",
-    "context": "src/wield.c:101:24\n    96: \t */\n    97: \tsetworn(obj, W_WEP);\n    98: \tif (uwep == obj && olduwep && olduwep->oartifact == ART_SUNSWORD &&\n    99: \t\tolduwep->lamplit) {\n   100: \t    end_burn(olduwep, FALSE);\n>  101: \t    if (!Blind) pline(\"%s glowing.\", Tobjnam(olduwep, \"stop\"));\n   102: \t}\n   103: \t/* Note: Explicitly wielding a pick-axe will not give a \"bashing\"\n   104: \t * message.  Wielding one via 'a'pplying it will.\n   105: \t * 3.2.2:  Wielding arbitrary objects will give bashing message too.\n   106: \t */"
+    "stage": 0,
+    "context": "src/wield.c:101:24\n    96: \t */\n    97: \tsetworn(obj, W_WEP);\n    98: \tif (uwep == obj && olduwep && olduwep-&gt;oartifact == ART_SUNSWORD &&\n    99: \t\tolduwep-&gt;lamplit) {\n   100: \t    end_burn(olduwep, FALSE);\n&gt;  101: \t    if (!Blind) pline(\"%s glowing.\", Tobjnam(olduwep, \"stop\"));\n   102: \t}\n   103: \t/* Note: Explicitly wielding a pick-axe will not give a \"bashing\"\n   104: \t * message.  Wielding one via 'a'pplying it will.\n   105: \t * 3.2.2:  Wielding arbitrary objects will give bashing message too.\n   106: \t */"
   },
   {
     "key": "L00101_02",
     "original": "stop",
     "translation": "",
-    "context": "src/wield.c:101:56\n    96: \t */\n    97: \tsetworn(obj, W_WEP);\n    98: \tif (uwep == obj && olduwep && olduwep->oartifact == ART_SUNSWORD &&\n    99: \t\tolduwep->lamplit) {\n   100: \t    end_burn(olduwep, FALSE);\n>  101: \t    if (!Blind) pline(\"%s glowing.\", Tobjnam(olduwep, \"stop\"));\n   102: \t}\n   103: \t/* Note: Explicitly wielding a pick-axe will not give a \"bashing\"\n   104: \t * message.  Wielding one via 'a'pplying it will.\n   105: \t * 3.2.2:  Wielding arbitrary objects will give bashing message too.\n   106: \t */"
+    "stage": 0,
+    "context": "src/wield.c:101:56\n    96: \t */\n    97: \tsetworn(obj, W_WEP);\n    98: \tif (uwep == obj && olduwep && olduwep-&gt;oartifact == ART_SUNSWORD &&\n    99: \t\tolduwep-&gt;lamplit) {\n   100: \t    end_burn(olduwep, FALSE);\n&gt;  101: \t    if (!Blind) pline(\"%s glowing.\", Tobjnam(olduwep, \"stop\"));\n   102: \t}\n   103: \t/* Note: Explicitly wielding a pick-axe will not give a \"bashing\"\n   104: \t * message.  Wielding one via 'a'pplying it will.\n   105: \t * 3.2.2:  Wielding arbitrary objects will give bashing message too.\n   106: \t */"
   },
   {
     "key": "L00137_01",
     "original": "are empty %s.",
     "translation": "",
-    "context": "src/wield.c:137:7\n   132: \tint res = 0;\n   133: \n   134: \tif (!wep) {\n   135: \t    /* No weapon */\n   136: \t    if (uwep) {\n>  137: \t\tYou(\"are empty %s.\", body_part(HANDED));\n   138: \t\tsetuwep((struct obj *) 0, put_away);\n   139: \t\tres++;\n   140: \t    } else\n   141: \t\tYou(\"are already empty %s.\", body_part(HANDED));\n   142: \t} else if (!uarmg && !Stone_resistance && wep->otyp == CORPSE"
+    "stage": 0,
+    "context": "src/wield.c:137:7\n   132: \tint res = 0;\n   133: \n   134: \tif (!wep) {\n   135: \t    /* No weapon */\n   136: \t    if (uwep) {\n&gt;  137: \t\tYou(\"are empty %s.\", body_part(HANDED));\n   138: \t\tsetuwep((struct obj *) 0, put_away);\n   139: \t\tres++;\n   140: \t    } else\n   141: \t\tYou(\"are already empty %s.\", body_part(HANDED));\n   142: \t} else if (!uarmg && !Stone_resistance && wep-&gt;otyp == CORPSE"
   },
   {
     "key": "L00141_01",
     "original": "are already empty %s.",
     "translation": "",
-    "context": "src/wield.c:141:7\n   136: \t    if (uwep) {\n   137: \t\tYou(\"are empty %s.\", body_part(HANDED));\n   138: \t\tsetuwep((struct obj *) 0, put_away);\n   139: \t\tres++;\n   140: \t    } else\n>  141: \t\tYou(\"are already empty %s.\", body_part(HANDED));\n   142: \t} else if (!uarmg && !Stone_resistance && wep->otyp == CORPSE\n   143: \t\t\t\t&& touch_petrifies(&mons[wep->corpsenm])) {\n   144: \t    /* Prevent wielding cockatrice when not wearing gloves --KAA */\n   145: \t    char kbuf[BUFSZ];\n   146: "
+    "stage": 0,
+    "context": "src/wield.c:141:7\n   136: \t    if (uwep) {\n   137: \t\tYou(\"are empty %s.\", body_part(HANDED));\n   138: \t\tsetuwep((struct obj *) 0, put_away);\n   139: \t\tres++;\n   140: \t    } else\n&gt;  141: \t\tYou(\"are already empty %s.\", body_part(HANDED));\n   142: \t} else if (!uarmg && !Stone_resistance && wep-&gt;otyp == CORPSE\n   143: \t\t\t\t&& touch_petrifies(&mons[wep-&gt;corpsenm])) {\n   144: \t    /* Prevent wielding cockatrice when not wearing gloves --KAA */\n   145: \t    char kbuf[BUFSZ];\n   146: "
   },
   {
     "key": "L00147_01",
     "original": "wield the %s corpse in your bare %s.",
     "translation": "",
-    "context": "src/wield.c:147:10\n   142: \t} else if (!uarmg && !Stone_resistance && wep->otyp == CORPSE\n   143: \t\t\t\t&& touch_petrifies(&mons[wep->corpsenm])) {\n   144: \t    /* Prevent wielding cockatrice when not wearing gloves --KAA */\n   145: \t    char kbuf[BUFSZ];\n   146: \n>  147: \t    You(\"wield the %s corpse in your bare %s.\",\n   148: \t\tmons[wep->corpsenm].mname, makeplural(body_part(HAND)));\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep->corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\","
+    "stage": 0,
+    "context": "src/wield.c:147:10\n   142: \t} else if (!uarmg && !Stone_resistance && wep-&gt;otyp == CORPSE\n   143: \t\t\t\t&& touch_petrifies(&mons[wep-&gt;corpsenm])) {\n   144: \t    /* Prevent wielding cockatrice when not wearing gloves --KAA */\n   145: \t    char kbuf[BUFSZ];\n   146: \n&gt;  147: \t    You(\"wield the %s corpse in your bare %s.\",\n   148: \t\tmons[wep-&gt;corpsenm].mname, makeplural(body_part(HAND)));\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep-&gt;corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\","
   },
   {
     "key": "L00149_01",
     "original": "%s corpse",
     "translation": "",
-    "context": "src/wield.c:149:20\n   144: \t    /* Prevent wielding cockatrice when not wearing gloves --KAA */\n   145: \t    char kbuf[BUFSZ];\n   146: \n   147: \t    You(\"wield the %s corpse in your bare %s.\",\n   148: \t\tmons[wep->corpsenm].mname, makeplural(body_part(HAND)));\n>  149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep->corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n   154: \t\t    wep->otyp == BATTLE_AXE ? \"axe\" : \"weapon\");"
+    "stage": 0,
+    "context": "src/wield.c:149:20\n   144: \t    /* Prevent wielding cockatrice when not wearing gloves --KAA */\n   145: \t    char kbuf[BUFSZ];\n   146: \n   147: \t    You(\"wield the %s corpse in your bare %s.\",\n   148: \t\tmons[wep-&gt;corpsenm].mname, makeplural(body_part(HAND)));\n&gt;  149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep-&gt;corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n   154: \t\t    wep-&gt;otyp == BATTLE_AXE ? \"axe\" : \"weapon\");"
   },
   {
     "key": "L00152_01",
     "original": "cannot wield a two-handed %s while wearing a shield.",
     "translation": "",
-    "context": "src/wield.c:152:10\n   147: \t    You(\"wield the %s corpse in your bare %s.\",\n   148: \t\tmons[wep->corpsenm].mname, makeplural(body_part(HAND)));\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep->corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n>  152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n   154: \t\t    wep->otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep->oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {"
+    "stage": 0,
+    "context": "src/wield.c:152:10\n   147: \t    You(\"wield the %s corpse in your bare %s.\",\n   148: \t\tmons[wep-&gt;corpsenm].mname, makeplural(body_part(HAND)));\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep-&gt;corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n&gt;  152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n   154: \t\t    wep-&gt;otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep-&gt;oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {"
   },
   {
     "key": "L00153_01",
     "original": "sword",
     "translation": "",
-    "context": "src/wield.c:153:19\n   148: \t\tmons[wep->corpsenm].mname, makeplural(body_part(HAND)));\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep->corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n>  153: \t\tis_sword(wep) ? \"sword\" :\n   154: \t\t    wep->otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep->oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,"
+    "stage": 0,
+    "context": "src/wield.c:153:19\n   148: \t\tmons[wep-&gt;corpsenm].mname, makeplural(body_part(HAND)));\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep-&gt;corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n&gt;  153: \t\tis_sword(wep) ? \"sword\" :\n   154: \t\t    wep-&gt;otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep-&gt;oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,"
   },
   {
     "key": "L00154_01",
     "original": "axe",
     "translation": "",
-    "context": "src/wield.c:154:33\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep->corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n>  154: \t\t    wep->otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep->oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,\n   159: \t\t * can't retract claws"
+    "stage": 0,
+    "context": "src/wield.c:154:33\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep-&gt;corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n&gt;  154: \t\t    wep-&gt;otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep-&gt;oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,\n   159: \t\t * can't retract claws"
   },
   {
     "key": "L00154_02",
     "original": "weapon",
     "translation": "",
-    "context": "src/wield.c:154:41\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep->corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n>  154: \t\t    wep->otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep->oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,\n   159: \t\t * can't retract claws"
+    "stage": 0,
+    "context": "src/wield.c:154:41\n   149: \t    Sprintf(kbuf, \"%s corpse\", an(mons[wep-&gt;corpsenm].mname));\n   150: \t    instapetrify(kbuf);\n   151: \t} else if (uarms && bimanual(wep))\n   152: \t    You(\"cannot wield a two-handed %s while wearing a shield.\",\n   153: \t\tis_sword(wep) ? \"sword\" :\n&gt;  154: \t\t    wep-&gt;otyp == BATTLE_AXE ? \"axe\" : \"weapon\");\n   155: \telse if (wep-&gt;oartifact && !touch_artifact(wep, &youmonst)) {\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,\n   159: \t\t * can't retract claws"
   },
   {
     "key": "L00161_01",
     "original": "can't retract your claws!",
     "translation": "",
-    "context": "src/wield.c:161:7\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,\n   159: \t\t * can't retract claws\n   160: \t\t */\n>  161: \t\tYou(\"can't retract your claws!\");\n   162: \t} else {\n   163: \t    /* Weapon WILL be wielded after this point */\n   164: \t    res++;\n   165: \t    if (will_weld(wep)) {\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";"
+    "stage": 0,
+    "context": "src/wield.c:161:7\n   156: \t    res++;\t/* takes a turn even though it doesn't get wielded */\n   157: \t} else if (tech_inuse(T_EVISCERATE)) {\n   158: \t\t/* WAC - if you have 'L' has claws out and wields weapon,\n   159: \t\t * can't retract claws\n   160: \t\t */\n&gt;  161: \t\tYou(\"can't retract your claws!\");\n   162: \t} else {\n   163: \t    /* Weapon WILL be wielded after this point */\n   164: \t    res++;\n   165: \t    if (will_weld(wep)) {\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";"
   },
   {
     "key": "L00166_01",
     "original": "The ",
     "translation": "",
-    "context": "src/wield.c:166:43\n   161: \t\tYou(\"can't retract your claws!\");\n   162: \t} else {\n   163: \t    /* Weapon WILL be wielded after this point */\n   164: \t    res++;\n   165: \t    if (will_weld(wep)) {\n>  166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n   170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n   171: \t\t\t(wep->quan == 1L) ? \"itself\" : \"themselves\", /* a3 */"
+    "stage": 0,
+    "context": "src/wield.c:166:43\n   161: \t\tYou(\"can't retract your claws!\");\n   162: \t} else {\n   163: \t    /* Weapon WILL be wielded after this point */\n   164: \t    res++;\n   165: \t    if (will_weld(wep)) {\n&gt;  166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n   170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n   171: \t\t\t(wep-&gt;quan == 1L) ? \"itself\" : \"themselves\", /* a3 */"
   },
   {
     "key": "L00170_01",
     "original": "%s%s %s to your %s!",
     "translation": "",
-    "context": "src/wield.c:170:9\n   165: \t    if (will_weld(wep)) {\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n>  170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n   171: \t\t\t(wep->quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep->bknown = TRUE;"
+    "stage": 0,
+    "context": "src/wield.c:170:9\n   165: \t    if (will_weld(wep)) {\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n&gt;  170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n   171: \t\t\t(wep-&gt;quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep-&gt;bknown = TRUE;"
   },
   {
     "key": "L00170_02",
     "original": "weld",
     "translation": "",
-    "context": "src/wield.c:170:50\n   165: \t    if (will_weld(wep)) {\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n>  170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n   171: \t\t\t(wep->quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep->bknown = TRUE;"
+    "stage": 0,
+    "context": "src/wield.c:170:50\n   165: \t    if (will_weld(wep)) {\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n&gt;  170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n   171: \t\t\t(wep-&gt;quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep-&gt;bknown = TRUE;"
   },
   {
     "key": "L00171_01",
     "original": "itself",
     "translation": "",
-    "context": "src/wield.c:171:24\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n   170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n>  171: \t\t\t(wep->quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep->bknown = TRUE;\n   176: \t    } else {"
+    "stage": 0,
+    "context": "src/wield.c:171:24\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n   170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n&gt;  171: \t\t\t(wep-&gt;quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep-&gt;bknown = TRUE;\n   176: \t    } else {"
   },
   {
     "key": "L00171_02",
     "original": "themselves",
     "translation": "",
-    "context": "src/wield.c:171:35\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n   170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n>  171: \t\t\t(wep->quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep->bknown = TRUE;\n   176: \t    } else {"
+    "stage": 0,
+    "context": "src/wield.c:171:35\n   166: \t\tconst char *tmp = xname(wep), *thestr = \"The \";\n   167: \t\tif (strncmp(tmp, thestr, 4) && !strncmp(The(tmp),thestr,4))\n   168: \t\t    tmp = thestr;\n   169: \t\telse tmp = \"\";\n   170: \t\tpline(\"%s%s %s to your %s!\", tmp, aobjnam(wep, \"weld\"),\n&gt;  171: \t\t\t(wep-&gt;quan == 1L) ? \"itself\" : \"themselves\", /* a3 */\n   172: \t\t\tbimanual(wep) ?\n   173: \t\t\t\t(const char *)makeplural(body_part(HAND))\n   174: \t\t\t\t: body_part(HAND));\n   175: \t\twep-&gt;bknown = TRUE;\n   176: \t    } else {"
   },
   {
     "key": "L00196_01",
     "original": "%s to glow brilliantly!",
     "translation": "",
-    "context": "src/wield.c:196:13\n   191: \t    arti_speak(wep);\n   192: \n   193: \t    if (wep->oartifact == ART_SUNSWORD && !wep->lamplit) {\n   194: \t\tbegin_burn(wep, FALSE);\n   195: \t\tif (!Blind)\n>  196: \t\t    pline(\"%s to glow brilliantly!\", Tobjnam(wep, \"begin\"));\n   197: \t    }\n   198: \n   199: #if 0\n   200: \t    /* we'll get back to this someday, but it's not balanced yet */\n   201: \t    if (Race_if(PM_ELF) && !wep->oartifact &&"
+    "stage": 0,
+    "context": "src/wield.c:196:13\n   191: \t    arti_speak(wep);\n   192: \n   193: \t    if (wep-&gt;oartifact == ART_SUNSWORD && !wep-&gt;lamplit) {\n   194: \t\tbegin_burn(wep, FALSE);\n   195: \t\tif (!Blind)\n&gt;  196: \t\t    pline(\"%s to glow brilliantly!\", Tobjnam(wep, \"begin\"));\n   197: \t    }\n   198: \n   199: #if 0\n   200: \t    /* we'll get back to this someday, but it's not balanced yet */\n   201: \t    if (Race_if(PM_ELF) && !wep-&gt;oartifact &&"
   },
   {
     "key": "L00196_02",
     "original": "begin",
     "translation": "",
-    "context": "src/wield.c:196:53\n   191: \t    arti_speak(wep);\n   192: \n   193: \t    if (wep->oartifact == ART_SUNSWORD && !wep->lamplit) {\n   194: \t\tbegin_burn(wep, FALSE);\n   195: \t\tif (!Blind)\n>  196: \t\t    pline(\"%s to glow brilliantly!\", Tobjnam(wep, \"begin\"));\n   197: \t    }\n   198: \n   199: #if 0\n   200: \t    /* we'll get back to this someday, but it's not balanced yet */\n   201: \t    if (Race_if(PM_ELF) && !wep->oartifact &&"
+    "stage": 0,
+    "context": "src/wield.c:196:53\n   191: \t    arti_speak(wep);\n   192: \n   193: \t    if (wep-&gt;oartifact == ART_SUNSWORD && !wep-&gt;lamplit) {\n   194: \t\tbegin_burn(wep, FALSE);\n   195: \t\tif (!Blind)\n&gt;  196: \t\t    pline(\"%s to glow brilliantly!\", Tobjnam(wep, \"begin\"));\n   197: \t    }\n   198: \n   199: #if 0\n   200: \t    /* we'll get back to this someday, but it's not balanced yet */\n   201: \t    if (Race_if(PM_ELF) && !wep-&gt;oartifact &&"
   },
   {
     "key": "L00204_01",
     "original": "have an uneasy feeling about wielding cold iron.",
     "translation": "",
-    "context": "src/wield.c:204:7\n   199: #if 0\n   200: \t    /* we'll get back to this someday, but it's not balanced yet */\n   201: \t    if (Race_if(PM_ELF) && !wep->oartifact &&\n   202: \t\t\t    objects[wep->otyp].oc_material == IRON) {\n   203: \t\t/* Elves are averse to wielding cold iron */\n>  204: \t\tYou(\"have an uneasy feeling about wielding cold iron.\");\n   205: \t\tchange_luck(-1);\n   206: \t    }\n   207: #endif\n   208: \n   209: \t    if (wep->unpaid) {"
+    "stage": 0,
+    "context": "src/wield.c:204:7\n   199: #if 0\n   200: \t    /* we'll get back to this someday, but it's not balanced yet */\n   201: \t    if (Race_if(PM_ELF) && !wep-&gt;oartifact &&\n   202: \t\t\t    objects[wep-&gt;otyp].oc_material == IRON) {\n   203: \t\t/* Elves are averse to wielding cold iron */\n&gt;  204: \t\tYou(\"have an uneasy feeling about wielding cold iron.\");\n   205: \t\tchange_luck(-1);\n   206: \t    }\n   207: #endif\n   208: \n   209: \t    if (wep-&gt;unpaid) {"
   },
   {
     "key": "L00214_01",
     "original": "%s says \\\"You be careful with my %s!\\\"",
     "translation": "",
-    "context": "src/wield.c:214:13\n   209: \t    if (wep->unpaid) {\n   210: \t\tstruct monst *this_shkp;\n   211: \n   212: \t\tif ((this_shkp = shop_keeper(inside_shop(u.ux, u.uy))) !=\n   213: \t\t    (struct monst *)0) {\n>  214: \t\t    pline(\"%s says \\\"You be careful with my %s!\\\"\",\n   215: \t\t\t  shkname(this_shkp),\n   216: \t\t\t  xname(wep));\n   217: \t\t}\n   218: \t    }\n   219: \t}"
+    "stage": 0,
+    "context": "src/wield.c:214:13\n   209: \t    if (wep-&gt;unpaid) {\n   210: \t\tstruct monst *this_shkp;\n   211: \n   212: \t\tif ((this_shkp = shop_keeper(inside_shop(u.ux, u.uy))) !=\n   213: \t\t    (struct monst *)0) {\n&gt;  214: \t\t    pline(\"%s says \\\"You be careful with my %s!\\\"\",\n   215: \t\t\t  shkname(this_shkp),\n   216: \t\t\t  xname(wep));\n   217: \t\t}\n   218: \t    }\n   219: \t}"
   },
   {
     "key": "L00263_01",
     "original": "Don't be ridiculous!",
     "translation": "",
-    "context": "src/wield.c:263:9\n   258: \tint result;\n   259: \n   260: \t/* May we attempt this? */\n   261: \tmulti = 0;\n   262: \tif (cantwield(youmonst.data)) {\n>  263: \t\tpline(\"Don't be ridiculous!\");\n   264: \t\treturn(0);\n   265: \t}\n   266: \n   267: \t/* Prompt for a new weapon */\n   268: \tif (!(wep = getobj(wield_objs, \"wield\")))"
+    "stage": 0,
+    "context": "src/wield.c:263:9\n   258: \tint result;\n   259: \n   260: \t/* May we attempt this? */\n   261: \tmulti = 0;\n   262: \tif (cantwield(youmonst.data)) {\n&gt;  263: \t\tpline(\"Don't be ridiculous!\");\n   264: \t\treturn(0);\n   265: \t}\n   266: \n   267: \t/* Prompt for a new weapon */\n   268: \tif (!(wep = getobj(wield_objs, \"wield\")))"
   },
   {
     "key": "L00268_01",
     "original": "wield",
     "translation": "",
-    "context": "src/wield.c:268:33\n   263: \t\tpline(\"Don't be ridiculous!\");\n   264: \t\treturn(0);\n   265: \t}\n   266: \n   267: \t/* Prompt for a new weapon */\n>  268: \tif (!(wep = getobj(wield_objs, \"wield\")))\n   269: \t\t/* Cancelled */\n   270: \t\treturn (0);\n   271: \telse if (wep == uwep) {\n   272: \t    You(\"are already wielding that!\");\n   273: \t    if (is_weptool(wep)) unweapon = FALSE;\t/* [see setuwep()] */"
+    "stage": 0,
+    "context": "src/wield.c:268:33\n   263: \t\tpline(\"Don't be ridiculous!\");\n   264: \t\treturn(0);\n   265: \t}\n   266: \n   267: \t/* Prompt for a new weapon */\n&gt;  268: \tif (!(wep = getobj(wield_objs, \"wield\")))\n   269: \t\t/* Cancelled */\n   270: \t\treturn (0);\n   271: \telse if (wep == uwep) {\n   272: \t    You(\"are already wielding that!\");\n   273: \t    if (is_weptool(wep)) unweapon = FALSE;\t/* [see setuwep()] */"
   },
   {
     "key": "L00272_01",
     "original": "are already wielding that!",
     "translation": "",
-    "context": "src/wield.c:272:10\n   267: \t/* Prompt for a new weapon */\n   268: \tif (!(wep = getobj(wield_objs, \"wield\")))\n   269: \t\t/* Cancelled */\n   270: \t\treturn (0);\n   271: \telse if (wep == uwep) {\n>  272: \t    You(\"are already wielding that!\");\n   273: \t    if (is_weptool(wep)) unweapon = FALSE;\t/* [see setuwep()] */\n   274: \t\treturn (0);\n   275: \t} else if (welded(uwep)) {\n   276: \t\tweldmsg(uwep);\n   277: \t\t/* previously interrupted armor removal mustn't be resumed */"
+    "stage": 0,
+    "context": "src/wield.c:272:10\n   267: \t/* Prompt for a new weapon */\n   268: \tif (!(wep = getobj(wield_objs, \"wield\")))\n   269: \t\t/* Cancelled */\n   270: \t\treturn (0);\n   271: \telse if (wep == uwep) {\n&gt;  272: \t    You(\"are already wielding that!\");\n   273: \t    if (is_weptool(wep)) unweapon = FALSE;\t/* [see setuwep()] */\n   274: \t\treturn (0);\n   275: \t} else if (welded(uwep)) {\n   276: \t\tweldmsg(uwep);\n   277: \t\t/* previously interrupted armor removal mustn't be resumed */"
   },
   {
     "key": "L00294_01",
     "original": "cannot wield that!",
     "translation": "",
-    "context": "src/wield.c:294:7\n   289: \telse if (wep->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   290: #ifdef STEED\n   291: \t\t\t| W_SADDLE\n   292: #endif\n   293: \t\t\t)) {\n>  294: \t\tYou(\"cannot wield that!\");\n   295: \t\treturn (0);\n   296: \t}\n   297: \n   298: \t/* Set your new primary weapon */\n   299: \toldwep = uwep;"
+    "stage": 0,
+    "context": "src/wield.c:294:7\n   289: \telse if (wep-&gt;owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   290: #ifdef STEED\n   291: \t\t\t| W_SADDLE\n   292: #endif\n   293: \t\t\t)) {\n&gt;  294: \t\tYou(\"cannot wield that!\");\n   295: \t\treturn (0);\n   296: \t}\n   297: \n   298: \t/* Set your new primary weapon */\n   299: \toldwep = uwep;"
   },
   {
     "key": "L00318_01",
     "original": "Don't be ridiculous!",
     "translation": "",
-    "context": "src/wield.c:318:9\n   313: \n   314: \n   315: \t/* May we attempt this? */\n   316: \tmulti = 0;\n   317: \tif (cantwield(youmonst.data)) {\n>  318: \t\tpline(\"Don't be ridiculous!\");\n   319: \t\treturn(0);\n   320: \t}\n   321: \tif (welded(uwep)) {\n   322: \t\tweldmsg(uwep);\n   323: \t\treturn (0);"
+    "stage": 0,
+    "context": "src/wield.c:318:9\n   313: \n   314: \n   315: \t/* May we attempt this? */\n   316: \tmulti = 0;\n   317: \tif (cantwield(youmonst.data)) {\n&gt;  318: \t\tpline(\"Don't be ridiculous!\");\n   319: \t\treturn(0);\n   320: \t}\n   321: \tif (welded(uwep)) {\n   322: \t\tweldmsg(uwep);\n   323: \t\treturn (0);"
   },
   {
     "key": "L00346_01",
     "original": "have no secondary weapon readied.",
     "translation": "",
-    "context": "src/wield.c:346:8\n   341: \telse {\n   342: \t\tsetuswapwep(oldwep, FALSE);\n   343: \t\tif (uswapwep)\n   344: \t\t\tprinv((char *)0, uswapwep, 0L);\n   345: \t\telse\n>  346: \t\t\tYou(\"have no secondary weapon readied.\");\n   347: \t}\n   348: \n   349: \tif (u.twoweap && !can_twoweapon())\n   350: \t\tuntwoweapon();\n   351: "
+    "stage": 0,
+    "context": "src/wield.c:346:8\n   341: \telse {\n   342: \t\tsetuswapwep(oldwep, FALSE);\n   343: \t\tif (uswapwep)\n   344: \t\t\tprinv((char *)0, uswapwep, 0L);\n   345: \t\telse\n&gt;  346: \t\t\tYou(\"have no secondary weapon readied.\");\n   347: \t}\n   348: \n   349: \tif (u.twoweap && !can_twoweapon())\n   350: \t\tuntwoweapon();\n   351: "
   },
   {
     "key": "L00370_01",
     "original": "Note: Please use #quit if you wish to exit the game.",
     "translation": "",
-    "context": "src/wield.c:370:9\n   365: \tmulti = 0;\n   366: \n   367: \t/* Slash'EM has used Q for quiver since it started */\n   368: \t/* Because 'Q' used to be quit... */\n   369: \tif (flags.suppress_alert < FEATURE_NOTICE_VER(0,0,0))\n>  370: \t\tpline(\"Note: Please use #quit if you wish to exit the game.\");\n   371: \n   372: \t/* Prompt for a new quiver */\n   373: \tif (!(newquiver = getobj(quivee_types, \"ready\")))\n   374: \t\t/* Cancelled */\n   375: \t\treturn (0);"
+    "stage": 0,
+    "context": "src/wield.c:370:9\n   365: \tmulti = 0;\n   366: \n   367: \t/* Slash'EM has used Q for quiver since it started */\n   368: \t/* Because 'Q' used to be quit... */\n   369: \tif (flags.suppress_alert &lt; FEATURE_NOTICE_VER(0,0,0))\n&gt;  370: \t\tpline(\"Note: Please use #quit if you wish to exit the game.\");\n   371: \n   372: \t/* Prompt for a new quiver */\n   373: \tif (!(newquiver = getobj(quivee_types, \"ready\")))\n   374: \t\t/* Cancelled */\n   375: \t\treturn (0);"
   },
   {
     "key": "L00373_01",
     "original": "ready",
     "translation": "",
-    "context": "src/wield.c:373:41\n   368: \t/* Because 'Q' used to be quit... */\n   369: \tif (flags.suppress_alert < FEATURE_NOTICE_VER(0,0,0))\n   370: \t\tpline(\"Note: Please use #quit if you wish to exit the game.\");\n   371: \n   372: \t/* Prompt for a new quiver */\n>  373: \tif (!(newquiver = getobj(quivee_types, \"ready\")))\n   374: \t\t/* Cancelled */\n   375: \t\treturn (0);\n   376: \n   377: \t/* Handle no object, or object in other slot */\n   378: \t/* Any type is okay, since we give no intrinsics anyways */"
+    "stage": 0,
+    "context": "src/wield.c:373:41\n   368: \t/* Because 'Q' used to be quit... */\n   369: \tif (flags.suppress_alert &lt; FEATURE_NOTICE_VER(0,0,0))\n   370: \t\tpline(\"Note: Please use #quit if you wish to exit the game.\");\n   371: \n   372: \t/* Prompt for a new quiver */\n&gt;  373: \tif (!(newquiver = getobj(quivee_types, \"ready\")))\n   374: \t\t/* Cancelled */\n   375: \t\treturn (0);\n   376: \n   377: \t/* Handle no object, or object in other slot */\n   378: \t/* Any type is okay, since we give no intrinsics anyways */"
   },
   {
     "key": "L00382_01",
     "original": "now have no ammunition readied.",
     "translation": "",
-    "context": "src/wield.c:382:8\n   377: \t/* Handle no object, or object in other slot */\n   378: \t/* Any type is okay, since we give no intrinsics anyways */\n   379: \tif (newquiver == &zeroobj) {\n   380: \t\t/* Explicitly nothing */\n   381: \t\tif (uquiver) {\n>  382: \t\t\tYou(\"now have no ammunition readied.\");\n   383: \t\t\tsetuqwep(newquiver = (struct obj *) 0);\n   384: \t\t} else {\n   385: \t\t\tYou(\"already have no ammunition readied!\");\n   386: \t\t\treturn(0);\n   387: \t\t}"
+    "stage": 0,
+    "context": "src/wield.c:382:8\n   377: \t/* Handle no object, or object in other slot */\n   378: \t/* Any type is okay, since we give no intrinsics anyways */\n   379: \tif (newquiver == &zeroobj) {\n   380: \t\t/* Explicitly nothing */\n   381: \t\tif (uquiver) {\n&gt;  382: \t\t\tYou(\"now have no ammunition readied.\");\n   383: \t\t\tsetuqwep(newquiver = (struct obj *) 0);\n   384: \t\t} else {\n   385: \t\t\tYou(\"already have no ammunition readied!\");\n   386: \t\t\treturn(0);\n   387: \t\t}"
   },
   {
     "key": "L00385_01",
     "original": "already have no ammunition readied!",
     "translation": "",
-    "context": "src/wield.c:385:8\n   380: \t\t/* Explicitly nothing */\n   381: \t\tif (uquiver) {\n   382: \t\t\tYou(\"now have no ammunition readied.\");\n   383: \t\t\tsetuqwep(newquiver = (struct obj *) 0);\n   384: \t\t} else {\n>  385: \t\t\tYou(\"already have no ammunition readied!\");\n   386: \t\t\treturn(0);\n   387: \t\t}\n   388: \t} else if (newquiver == uquiver) {\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);"
+    "stage": 0,
+    "context": "src/wield.c:385:8\n   380: \t\t/* Explicitly nothing */\n   381: \t\tif (uquiver) {\n   382: \t\t\tYou(\"now have no ammunition readied.\");\n   383: \t\t\tsetuqwep(newquiver = (struct obj *) 0);\n   384: \t\t} else {\n&gt;  385: \t\t\tYou(\"already have no ammunition readied!\");\n   386: \t\t\treturn(0);\n   387: \t\t}\n   388: \t} else if (newquiver == uquiver) {\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);"
   },
   {
     "key": "L00389_01",
     "original": "That ammunition is already readied!",
     "translation": "",
-    "context": "src/wield.c:389:9\n   384: \t\t} else {\n   385: \t\t\tYou(\"already have no ammunition readied!\");\n   386: \t\t\treturn(0);\n   387: \t\t}\n   388: \t} else if (newquiver == uquiver) {\n>  389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n   393: \t\tpline(\"%s already being used as a weapon!\",\n   394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");"
+    "stage": 0,
+    "context": "src/wield.c:389:9\n   384: \t\t} else {\n   385: \t\t\tYou(\"already have no ammunition readied!\");\n   386: \t\t\treturn(0);\n   387: \t\t}\n   388: \t} else if (newquiver == uquiver) {\n&gt;  389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n   393: \t\tpline(\"%s already being used as a weapon!\",\n   394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");"
   },
   {
     "key": "L00393_01",
     "original": "%s already being used as a weapon!",
     "translation": "",
-    "context": "src/wield.c:393:9\n   388: \t} else if (newquiver == uquiver) {\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n>  393: \t\tpline(\"%s already being used as a weapon!\",\n   394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");\n   395: \t\treturn(0);\n   396: \t} else if (newquiver->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE"
+    "stage": 0,
+    "context": "src/wield.c:393:9\n   388: \t} else if (newquiver == uquiver) {\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n&gt;  393: \t\tpline(\"%s already being used as a weapon!\",\n   394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");\n   395: \t\treturn(0);\n   396: \t} else if (newquiver-&gt;owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE"
   },
   {
     "key": "L00394_01",
     "original": "That is",
     "translation": "",
-    "context": "src/wield.c:394:28\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n   393: \t\tpline(\"%s already being used as a weapon!\",\n>  394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");\n   395: \t\treturn(0);\n   396: \t} else if (newquiver->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE\n   399: #endif"
+    "stage": 0,
+    "context": "src/wield.c:394:28\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n   393: \t\tpline(\"%s already being used as a weapon!\",\n&gt;  394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");\n   395: \t\treturn(0);\n   396: \t} else if (newquiver-&gt;owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE\n   399: #endif"
   },
   {
     "key": "L00394_02",
     "original": "They are",
     "translation": "",
-    "context": "src/wield.c:394:40\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n   393: \t\tpline(\"%s already being used as a weapon!\",\n>  394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");\n   395: \t\treturn(0);\n   396: \t} else if (newquiver->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE\n   399: #endif"
+    "stage": 0,
+    "context": "src/wield.c:394:40\n   389: \t\tpline(\"That ammunition is already readied!\");\n   390: \t\treturn(0);\n   391: \t} else if (newquiver == uwep) {\n   392: \t\t/* Prevent accidentally readying the main weapon */\n   393: \t\tpline(\"%s already being used as a weapon!\",\n&gt;  394: \t\t      !is_plural(uwep) ? \"That is\" : \"They are\");\n   395: \t\treturn(0);\n   396: \t} else if (newquiver-&gt;owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE\n   399: #endif"
   },
   {
     "key": "L00401_01",
     "original": "cannot ready that!",
     "translation": "",
-    "context": "src/wield.c:401:7\n   396: \t} else if (newquiver->owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE\n   399: #endif\n   400: \t\t\t)) {\n>  401: \t\tYou(\"cannot ready that!\");\n   402: \t\treturn (0);\n   403: \t} else {\n   404: \t\tlong dummy;\n   405: \n   406: "
+    "stage": 0,
+    "context": "src/wield.c:401:7\n   396: \t} else if (newquiver-&gt;owornmask & (W_ARMOR | W_RING | W_AMUL | W_TOOL\n   397: #ifdef STEED\n   398: \t\t\t| W_SADDLE\n   399: #endif\n   400: \t\t\t)) {\n&gt;  401: \t\tYou(\"cannot ready that!\");\n   402: \t\treturn (0);\n   403: \t} else {\n   404: \t\tlong dummy;\n   405: \n   406: "
   },
   {
     "key": "L00438_01",
     "original": "wield",
     "translation": "",
-    "context": "src/wield.c:438:23\n   433:     const char *what;\n   434:     boolean more_than_1;\n   435: \n   436:     if (obj == uwep) return TRUE;   /* nothing to do if already wielding it */\n   437: \n>  438:     if (!verb) verb = \"wield\";\n   439:     what = xname(obj);\n   440:     more_than_1 = (obj->quan > 1L ||\n   441: \t\t   strstri(what, \"pair of \") != 0 ||\n   442: \t\t   strstri(what, \"s of \") != 0);\n   443: "
+    "stage": 0,
+    "context": "src/wield.c:438:23\n   433:     const char *what;\n   434:     boolean more_than_1;\n   435: \n   436:     if (obj == uwep) return TRUE;   /* nothing to do if already wielding it */\n   437: \n&gt;  438:     if (!verb) verb = \"wield\";\n   439:     what = xname(obj);\n   440:     more_than_1 = (obj-&gt;quan &gt; 1L ||\n   441: \t\t   strstri(what, \"pair of \") != 0 ||\n   442: \t\t   strstri(what, \"s of \") != 0);\n   443: "
   },
   {
     "key": "L00441_01",
     "original": "pair of ",
     "translation": "",
-    "context": "src/wield.c:441:20\n   436:     if (obj == uwep) return TRUE;   /* nothing to do if already wielding it */\n   437: \n   438:     if (!verb) verb = \"wield\";\n   439:     what = xname(obj);\n   440:     more_than_1 = (obj->quan > 1L ||\n>  441: \t\t   strstri(what, \"pair of \") != 0 ||\n   442: \t\t   strstri(what, \"s of \") != 0);\n   443: \n   444:     if (obj->owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: "
+    "stage": 0,
+    "context": "src/wield.c:441:20\n   436:     if (obj == uwep) return TRUE;   /* nothing to do if already wielding it */\n   437: \n   438:     if (!verb) verb = \"wield\";\n   439:     what = xname(obj);\n   440:     more_than_1 = (obj-&gt;quan &gt; 1L ||\n&gt;  441: \t\t   strstri(what, \"pair of \") != 0 ||\n   442: \t\t   strstri(what, \"s of \") != 0);\n   443: \n   444:     if (obj-&gt;owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: "
   },
   {
     "key": "L00442_01",
     "original": "s of ",
     "translation": "",
-    "context": "src/wield.c:442:20\n   437: \n   438:     if (!verb) verb = \"wield\";\n   439:     what = xname(obj);\n   440:     more_than_1 = (obj->quan > 1L ||\n   441: \t\t   strstri(what, \"pair of \") != 0 ||\n>  442: \t\t   strstri(what, \"s of \") != 0);\n   443: \n   444:     if (obj->owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n   447: \tYou_cant(\"%s %s %s while wearing %s.\","
+    "stage": 0,
+    "context": "src/wield.c:442:20\n   437: \n   438:     if (!verb) verb = \"wield\";\n   439:     what = xname(obj);\n   440:     more_than_1 = (obj-&gt;quan &gt; 1L ||\n   441: \t\t   strstri(what, \"pair of \") != 0 ||\n&gt;  442: \t\t   strstri(what, \"s of \") != 0);\n   443: \n   444:     if (obj-&gt;owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n   447: \tYou_cant(\"%s %s %s while wearing %s.\","
   },
   {
     "key": "L00447_01",
     "original": "%s %s %s while wearing %s.",
     "translation": "",
-    "context": "src/wield.c:447:11\n   442: \t\t   strstri(what, \"s of \") != 0);\n   443: \n   444:     if (obj->owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n>  447: \tYou_cant(\"%s %s %s while wearing %s.\",\n   448: \t\t verb, shk_your(yourbuf, obj), what,\n   449: \t\t more_than_1 ? \"them\" : \"it\");\n   450: \treturn FALSE;\n   451:     }\n   452:     if (welded(uwep)) {"
+    "stage": 0,
+    "context": "src/wield.c:447:11\n   442: \t\t   strstri(what, \"s of \") != 0);\n   443: \n   444:     if (obj-&gt;owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n&gt;  447: \tYou_cant(\"%s %s %s while wearing %s.\",\n   448: \t\t verb, shk_your(yourbuf, obj), what,\n   449: \t\t more_than_1 ? \"them\" : \"it\");\n   450: \treturn FALSE;\n   451:     }\n   452:     if (welded(uwep)) {"
   },
   {
     "key": "L00449_01",
     "original": "them",
     "translation": "",
-    "context": "src/wield.c:449:18\n   444:     if (obj->owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n   447: \tYou_cant(\"%s %s %s while wearing %s.\",\n   448: \t\t verb, shk_your(yourbuf, obj), what,\n>  449: \t\t more_than_1 ? \"them\" : \"it\");\n   450: \treturn FALSE;\n   451:     }\n   452:     if (welded(uwep)) {\n   453: \tif (flags.verbose) {\n   454: \t    const char *hand = body_part(HAND);"
+    "stage": 0,
+    "context": "src/wield.c:449:18\n   444:     if (obj-&gt;owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n   447: \tYou_cant(\"%s %s %s while wearing %s.\",\n   448: \t\t verb, shk_your(yourbuf, obj), what,\n&gt;  449: \t\t more_than_1 ? \"them\" : \"it\");\n   450: \treturn FALSE;\n   451:     }\n   452:     if (welded(uwep)) {\n   453: \tif (flags.verbose) {\n   454: \t    const char *hand = body_part(HAND);"
   },
   {
     "key": "L00449_02",
     "original": "it",
     "translation": "",
-    "context": "src/wield.c:449:27\n   444:     if (obj->owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n   447: \tYou_cant(\"%s %s %s while wearing %s.\",\n   448: \t\t verb, shk_your(yourbuf, obj), what,\n>  449: \t\t more_than_1 ? \"them\" : \"it\");\n   450: \treturn FALSE;\n   451:     }\n   452:     if (welded(uwep)) {\n   453: \tif (flags.verbose) {\n   454: \t    const char *hand = body_part(HAND);"
+    "stage": 0,
+    "context": "src/wield.c:449:27\n   444:     if (obj-&gt;owornmask & (W_ARMOR|W_RING|W_AMUL|W_TOOL)) {\n   445: \tchar yourbuf[BUFSZ];\n   446: \n   447: \tYou_cant(\"%s %s %s while wearing %s.\",\n   448: \t\t verb, shk_your(yourbuf, obj), what,\n&gt;  449: \t\t more_than_1 ? \"them\" : \"it\");\n   450: \treturn FALSE;\n   451:     }\n   452:     if (welded(uwep)) {\n   453: \tif (flags.verbose) {\n   454: \t    const char *hand = body_part(HAND);"
   },
   {
     "key": "L00457_01",
     "original": "pair of ",
     "translation": "",
-    "context": "src/wield.c:457:24\n   452:     if (welded(uwep)) {\n   453: \tif (flags.verbose) {\n   454: \t    const char *hand = body_part(HAND);\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n>  457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n   460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");"
+    "stage": 0,
+    "context": "src/wield.c:457:24\n   452:     if (welded(uwep)) {\n   453: \tif (flags.verbose) {\n   454: \t    const char *hand = body_part(HAND);\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n&gt;  457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n   460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");"
   },
   {
     "key": "L00459_01",
     "original": "Since your weapon is welded to your %s, you cannot %s %s %s.",
     "translation": "",
-    "context": "src/wield.c:459:7\n   454: \t    const char *hand = body_part(HAND);\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n>  459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n   460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;"
+    "stage": 0,
+    "context": "src/wield.c:459:7\n   454: \t    const char *hand = body_part(HAND);\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n&gt;  459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n   460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;"
   },
   {
     "key": "L00460_01",
     "original": "those",
     "translation": "",
-    "context": "src/wield.c:460:31\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n>  460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }"
+    "stage": 0,
+    "context": "src/wield.c:460:31\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n&gt;  460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }"
   },
   {
     "key": "L00460_02",
     "original": "that",
     "translation": "",
-    "context": "src/wield.c:460:41\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n>  460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }"
+    "stage": 0,
+    "context": "src/wield.c:460:41\n   455: \n   456: \t    if (bimanual(uwep)) hand = makeplural(hand);\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n&gt;  460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }"
   },
   {
     "key": "L00462_01",
     "original": "do that.",
     "translation": "",
-    "context": "src/wield.c:462:15\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n   460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n>  462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n   467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");"
+    "stage": 0,
+    "context": "src/wield.c:462:15\n   457: \t    if (strstri(what, \"pair of \") != 0) more_than_1 = FALSE;\n   458: \t    pline(\n   459: \t     \"Since your weapon is welded to your %s, you cannot %s %s %s.\",\n   460: \t\t  hand, verb, more_than_1 ? \"those\" : \"that\", xname(obj));\n   461: \t} else {\n&gt;  462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n   467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");"
   },
   {
     "key": "L00467_01",
     "original": "hold %s strongly enough.",
     "translation": "",
-    "context": "src/wield.c:467:11\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n>  467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\","
+    "stage": 0,
+    "context": "src/wield.c:467:11\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n&gt;  467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\","
   },
   {
     "key": "L00467_02",
     "original": "them",
     "translation": "",
-    "context": "src/wield.c:467:53\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n>  467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\","
+    "stage": 0,
+    "context": "src/wield.c:467:53\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n&gt;  467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\","
   },
   {
     "key": "L00467_03",
     "original": "it",
     "translation": "",
-    "context": "src/wield.c:467:62\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n>  467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\","
+    "stage": 0,
+    "context": "src/wield.c:467:62\n   462: \t    You_cant(\"do that.\");\n   463: \t}\n   464: \treturn FALSE;\n   465:     }\n   466:     if (cantwield(youmonst.data)) {\n&gt;  467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\","
   },
   {
     "key": "L00472_01",
     "original": "cannot %s a two-handed %s while wearing a shield.",
     "translation": "",
-    "context": "src/wield.c:472:6\n   467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n>  472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\",\n   473: \t    verb, (obj->oclass == WEAPON_CLASS) ? \"weapon\" : \"tool\");\n   474: \treturn FALSE;\n   475:     }\n   476:     if (uquiver == obj) setuqwep((struct obj *)0);\n   477:     if (uswapwep == obj) {"
+    "stage": 0,
+    "context": "src/wield.c:472:6\n   467: \tYou_cant(\"hold %s strongly enough.\", more_than_1 ? \"them\" : \"it\");\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n&gt;  472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\",\n   473: \t    verb, (obj-&gt;oclass == WEAPON_CLASS) ? \"weapon\" : \"tool\");\n   474: \treturn FALSE;\n   475:     }\n   476:     if (uquiver == obj) setuqwep((struct obj *)0);\n   477:     if (uswapwep == obj) {"
   },
   {
     "key": "L00473_01",
     "original": "weapon",
     "translation": "",
-    "context": "src/wield.c:473:44\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\",\n>  473: \t    verb, (obj->oclass == WEAPON_CLASS) ? \"weapon\" : \"tool\");\n   474: \treturn FALSE;\n   475:     }\n   476:     if (uquiver == obj) setuqwep((struct obj *)0);\n   477:     if (uswapwep == obj) {\n   478: \t(void) doswapweapon();"
+    "stage": 0,
+    "context": "src/wield.c:473:44\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\",\n&gt;  473: \t    verb, (obj-&gt;oclass == WEAPON_CLASS) ? \"weapon\" : \"tool\");\n   474: \treturn FALSE;\n   475:     }\n   476:     if (uquiver == obj) setuqwep((struct obj *)0);\n   477:     if (uswapwep == obj) {\n   478: \t(void) doswapweapon();"
   },
   {
     "key": "L00473_02",
     "original": "tool",
     "translation": "",
-    "context": "src/wield.c:473:55\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\",\n>  473: \t    verb, (obj->oclass == WEAPON_CLASS) ? \"weapon\" : \"tool\");\n   474: \treturn FALSE;\n   475:     }\n   476:     if (uquiver == obj) setuqwep((struct obj *)0);\n   477:     if (uswapwep == obj) {\n   478: \t(void) doswapweapon();"
+    "stage": 0,
+    "context": "src/wield.c:473:55\n   468: \treturn FALSE;\n   469:     }\n   470:     /* check shield */\n   471:     if (uarms && bimanual(obj)) {\n   472: \tYou(\"cannot %s a two-handed %s while wearing a shield.\",\n&gt;  473: \t    verb, (obj-&gt;oclass == WEAPON_CLASS) ? \"weapon\" : \"tool\");\n   474: \treturn FALSE;\n   475:     }\n   476:     if (uquiver == obj) setuqwep((struct obj *)0);\n   477:     if (uswapwep == obj) {\n   478: \t(void) doswapweapon();"
   },
   {
     "key": "L00482_01",
     "original": "now wield %s.",
     "translation": "",
-    "context": "src/wield.c:482:6\n   477:     if (uswapwep == obj) {\n   478: \t(void) doswapweapon();\n   479: \t/* doswapweapon might fail */\n   480: \tif (uswapwep == obj) return FALSE;\n   481:     } else {\n>  482: \tYou(\"now wield %s.\", doname(obj));\n   483: \tsetuwep(obj, TRUE);\n   484:     }\n   485:     if (uwep != obj) return FALSE;\t/* rewielded old object after dying */\n   486:     /* applying weapon or tool that gets wielded ends two-weapon combat */\n   487:     if (u.twoweap)"
+    "stage": 0,
+    "context": "src/wield.c:482:6\n   477:     if (uswapwep == obj) {\n   478: \t(void) doswapweapon();\n   479: \t/* doswapweapon might fail */\n   480: \tif (uswapwep == obj) return FALSE;\n   481:     } else {\n&gt;  482: \tYou(\"now wield %s.\", doname(obj));\n   483: \tsetuwep(obj, TRUE);\n   484:     }\n   485:     if (uwep != obj) return FALSE;\t/* rewielded old object after dying */\n   486:     /* applying weapon or tool that gets wielded ends two-weapon combat */\n   487:     if (u.twoweap)"
   },
   {
     "key": "L00508_01",
     "original": "two weapons",
     "translation": "",
-    "context": "src/wield.c:508:32\n   503: \tboolean disallowed_by_role;\n   504: \tstruct obj *otmp;\n   505: \n   506: #define NOT_WEAPON(obj) (obj && !is_weptool(obj) && obj->oclass != WEAPON_CLASS)\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n>  508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n   510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n   512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {"
+    "stage": 0,
+    "context": "src/wield.c:508:32\n   503: \tboolean disallowed_by_role;\n   504: \tstruct obj *otmp;\n   505: \n   506: #define NOT_WEAPON(obj) (obj && !is_weptool(obj) && obj-&gt;oclass != WEAPON_CLASS)\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n&gt;  508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n   510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n   512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {"
   },
   {
     "key": "L00508_02",
     "original": "more than one weapon",
     "translation": "",
-    "context": "src/wield.c:508:48\n   503: \tboolean disallowed_by_role;\n   504: \tstruct obj *otmp;\n   505: \n   506: #define NOT_WEAPON(obj) (obj && !is_weptool(obj) && obj->oclass != WEAPON_CLASS)\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n>  508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n   510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n   512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {"
+    "stage": 0,
+    "context": "src/wield.c:508:48\n   503: \tboolean disallowed_by_role;\n   504: \tstruct obj *otmp;\n   505: \n   506: #define NOT_WEAPON(obj) (obj && !is_weptool(obj) && obj-&gt;oclass != WEAPON_CLASS)\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n&gt;  508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n   510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n   512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {"
   },
   {
     "key": "L00510_01",
     "original": "Don't be ridiculous!",
     "translation": "",
-    "context": "src/wield.c:510:9\n   505: \n   506: #define NOT_WEAPON(obj) (obj && !is_weptool(obj) && obj->oclass != WEAPON_CLASS)\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n   508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n>  510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n   512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {\n   514: \t\tdisallowed_by_role = P_MAX_SKILL(P_TWO_WEAPON_COMBAT) < P_BASIC;\n   515: \t\tdisallowed_by_race = youmonst.data->mattk[1].aatyp != AT_WEAP;"
+    "stage": 0,
+    "context": "src/wield.c:510:9\n   505: \n   506: #define NOT_WEAPON(obj) (obj && !is_weptool(obj) && obj-&gt;oclass != WEAPON_CLASS)\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n   508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n&gt;  510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n   512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {\n   514: \t\tdisallowed_by_role = P_MAX_SKILL(P_TWO_WEAPON_COMBAT) &lt; P_BASIC;\n   515: \t\tdisallowed_by_race = youmonst.data-&gt;mattk[1].aatyp != AT_WEAP;"
   },
   {
     "key": "L00512_01",
     "original": "use %s in your current form.",
     "translation": "",
-    "context": "src/wield.c:512:12\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n   508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n   510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n>  512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {\n   514: \t\tdisallowed_by_role = P_MAX_SKILL(P_TWO_WEAPON_COMBAT) < P_BASIC;\n   515: \t\tdisallowed_by_race = youmonst.data->mattk[1].aatyp != AT_WEAP;\n   516: \t\t*buf = '\\0';\n   517: \t\tif (!disallowed_by_role)"
+    "stage": 0,
+    "context": "src/wield.c:512:12\n   507: \tif (!could_twoweap(youmonst.data) && (uwep || uswapwep)) {\n   508: \t    what = uwep && uswapwep ? \"two weapons\" : \"more than one weapon\";\n   509: \t    if (cantwield(youmonst.data))\n   510: \t\tpline(\"Don't be ridiculous!\");\n   511: \t    else if (Upolyd)\n&gt;  512: \t\tYou_cant(\"use %s in your current form.\", what);\n   513: \t    else {\n   514: \t\tdisallowed_by_role = P_MAX_SKILL(P_TWO_WEAPON_COMBAT) &lt; P_BASIC;\n   515: \t\tdisallowed_by_race = youmonst.data-&gt;mattk[1].aatyp != AT_WEAP;\n   516: \t\t*buf = '\\0';\n   517: \t\tif (!disallowed_by_role)"
   },
   {
     "key": "L00525_01",
     "original": "%s aren't able to use %s at once.",
     "translation": "",
-    "context": "src/wield.c:525:9\n   520: \t\t    if (!disallowed_by_role)\n   521: \t\t\tStrcat(buf, \" \");\n   522: \t\t    Strcat(buf, (flags.female && urole.name.f) ?\n   523: \t\t\t    urole.name.f : urole.name.m);\n   524: \t\t}\n>  525: \t\tpline(\"%s aren't able to use %s at once.\",\n   526: \t\t\tmakeplural(upstart(buf)), what);\n   527: \t    }\n   528: \t} else if (cantwield(youmonst.data))\n   529: \t    pline(\"Don't be ridiculous!\");\n   530: \telse if (youmonst.data->mattk[1].aatyp != AT_WEAP &&"
+    "stage": 0,
+    "context": "src/wield.c:525:9\n   520: \t\t    if (!disallowed_by_role)\n   521: \t\t\tStrcat(buf, \" \");\n   522: \t\t    Strcat(buf, (flags.female && urole.name.f) ?\n   523: \t\t\t    urole.name.f : urole.name.m);\n   524: \t\t}\n&gt;  525: \t\tpline(\"%s aren't able to use %s at once.\",\n   526: \t\t\tmakeplural(upstart(buf)), what);\n   527: \t    }\n   528: \t} else if (cantwield(youmonst.data))\n   529: \t    pline(\"Don't be ridiculous!\");\n   530: \telse if (youmonst.data-&gt;mattk[1].aatyp != AT_WEAP &&"
   },
   {
     "key": "L00529_01",
     "original": "Don't be ridiculous!",
     "translation": "",
-    "context": "src/wield.c:529:12\n   524: \t\t}\n   525: \t\tpline(\"%s aren't able to use %s at once.\",\n   526: \t\t\tmakeplural(upstart(buf)), what);\n   527: \t    }\n   528: \t} else if (cantwield(youmonst.data))\n>  529: \t    pline(\"Don't be ridiculous!\");\n   530: \telse if (youmonst.data->mattk[1].aatyp != AT_WEAP &&\n   531: \t\tyoumonst.data->mattk[1].aatyp != AT_CLAW) {\n   532: \t    if (Upolyd)\n   533: \t\tYou_cant(\"fight with two %s in your current form.\",\n   534: \t\t\tmakeplural(body_part(HAND)));"
+    "stage": 0,
+    "context": "src/wield.c:529:12\n   524: \t\t}\n   525: \t\tpline(\"%s aren't able to use %s at once.\",\n   526: \t\t\tmakeplural(upstart(buf)), what);\n   527: \t    }\n   528: \t} else if (cantwield(youmonst.data))\n&gt;  529: \t    pline(\"Don't be ridiculous!\");\n   530: \telse if (youmonst.data-&gt;mattk[1].aatyp != AT_WEAP &&\n   531: \t\tyoumonst.data-&gt;mattk[1].aatyp != AT_CLAW) {\n   532: \t    if (Upolyd)\n   533: \t\tYou_cant(\"fight with two %s in your current form.\",\n   534: \t\t\tmakeplural(body_part(HAND)));"
   },
   {
     "key": "L00533_01",
     "original": "fight with two %s in your current form.",
     "translation": "",
-    "context": "src/wield.c:533:12\n   528: \t} else if (cantwield(youmonst.data))\n   529: \t    pline(\"Don't be ridiculous!\");\n   530: \telse if (youmonst.data->mattk[1].aatyp != AT_WEAP &&\n   531: \t\tyoumonst.data->mattk[1].aatyp != AT_CLAW) {\n   532: \t    if (Upolyd)\n>  533: \t\tYou_cant(\"fight with two %s in your current form.\",\n   534: \t\t\tmakeplural(body_part(HAND)));\n   535: \t    else\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {"
+    "stage": 0,
+    "context": "src/wield.c:533:12\n   528: \t} else if (cantwield(youmonst.data))\n   529: \t    pline(\"Don't be ridiculous!\");\n   530: \telse if (youmonst.data-&gt;mattk[1].aatyp != AT_WEAP &&\n   531: \t\tyoumonst.data-&gt;mattk[1].aatyp != AT_CLAW) {\n   532: \t    if (Upolyd)\n&gt;  533: \t\tYou_cant(\"fight with two %s in your current form.\",\n   534: \t\t\tmakeplural(body_part(HAND)));\n   535: \t    else\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {"
   },
   {
     "key": "L00536_01",
     "original": "%s aren't able to fight two-handed.",
     "translation": "",
-    "context": "src/wield.c:536:9\n   531: \t\tyoumonst.data->mattk[1].aatyp != AT_CLAW) {\n   532: \t    if (Upolyd)\n   533: \t\tYou_cant(\"fight with two %s in your current form.\",\n   534: \t\t\tmakeplural(body_part(HAND)));\n   535: \t    else\n>  536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n   541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");"
+    "stage": 0,
+    "context": "src/wield.c:536:9\n   531: \t\tyoumonst.data-&gt;mattk[1].aatyp != AT_CLAW) {\n   532: \t    if (Upolyd)\n   533: \t\tYou_cant(\"fight with two %s in your current form.\",\n   534: \t\t\tmakeplural(body_part(HAND)));\n   535: \t    else\n&gt;  536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n   541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");"
   },
   {
     "key": "L00540_01",
     "original": "%s %s.",
     "translation": "",
-    "context": "src/wield.c:540:12\n   535: \t    else\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n>  540: \t    pline(\"%s %s.\", Yname2(otmp),\n   541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {"
+    "stage": 0,
+    "context": "src/wield.c:540:12\n   535: \t    else\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n&gt;  540: \t    pline(\"%s %s.\", Yname2(otmp),\n   541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {"
   },
   {
     "key": "L00541_01",
     "original": "aren't weapons",
     "translation": "",
-    "context": "src/wield.c:541:21\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n>  541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)"
+    "stage": 0,
+    "context": "src/wield.c:541:21\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n&gt;  541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)"
   },
   {
     "key": "L00541_02",
     "original": "isn't a weapon",
     "translation": "",
-    "context": "src/wield.c:541:40\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n>  541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)"
+    "stage": 0,
+    "context": "src/wield.c:541:40\n   536: \t\tpline(\"%s aren't able to fight two-handed.\",\n   537: \t\t\tupstart(makeplural(urace.noun)));\n   538: \t} else if (NOT_WEAPON(uwep) || NOT_WEAPON(uswapwep)) {\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n&gt;  541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)"
   },
   {
     "key": "L00544_01",
     "original": "%s isn't one-handed.",
     "translation": "",
-    "context": "src/wield.c:544:12\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n   541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n>  544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n   547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {"
+    "stage": 0,
+    "context": "src/wield.c:544:12\n   539: \t    otmp = NOT_WEAPON(uwep) ? uwep : uswapwep;\n   540: \t    pline(\"%s %s.\", Yname2(otmp),\n   541: \t\tis_plural(otmp) ? \"aren't weapons\" : \"isn't a weapon\");\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n&gt;  544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n   547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {"
   },
   {
     "key": "L00547_01",
     "original": "use two weapons",
     "translation": "",
-    "context": "src/wield.c:547:30\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n>  547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n   550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }"
+    "stage": 0,
+    "context": "src/wield.c:547:30\n   542: \t} else if ((uwep && bimanual(uwep)) || (uswapwep && bimanual(uswapwep))) {\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n&gt;  547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n   550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }"
   },
   {
     "key": "L00548_01",
     "original": "use more than one weapon",
     "translation": "",
-    "context": "src/wield.c:548:7\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n   547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n>  548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n   550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }\n   553: \t    You_cant(\"%s while wearing a shield.\", what);"
+    "stage": 0,
+    "context": "src/wield.c:548:7\n   543: \t    otmp = (uwep && bimanual(uwep)) ? uwep : uswapwep;\n   544: \t    pline(\"%s isn't one-handed.\", Yname2(otmp));\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n   547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n&gt;  548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n   550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }\n   553: \t    You_cant(\"%s while wearing a shield.\", what);"
   },
   {
     "key": "L00550_01",
     "original": "fight with two %s",
     "translation": "",
-    "context": "src/wield.c:550:16\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n   547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n>  550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }\n   553: \t    You_cant(\"%s while wearing a shield.\", what);\n   554: \t}\n   555:         /* WAC:  TODO: cannot wield conflicting alignment artifacts*/"
+    "stage": 0,
+    "context": "src/wield.c:550:16\n   545: \t} else if (uarms) {\n   546: \t    if (uwep || uswapwep)\n   547: \t\twhat = uwep && uswapwep ?  \"use two weapons\" :\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n&gt;  550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }\n   553: \t    You_cant(\"%s while wearing a shield.\", what);\n   554: \t}\n   555:         /* WAC:  TODO: cannot wield conflicting alignment artifacts*/"
   },
   {
     "key": "L00553_01",
     "original": "%s while wearing a shield.",
     "translation": "",
-    "context": "src/wield.c:553:15\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n   550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }\n>  553: \t    You_cant(\"%s while wearing a shield.\", what);\n   554: \t}\n   555:         /* WAC:  TODO: cannot wield conflicting alignment artifacts*/\n   556: #if 0\n   557:   \telse if (uswapwep->oartifact && ...)\n   558: \t    pline(\"%s resists being held second to another weapon!\","
+    "stage": 0,
+    "context": "src/wield.c:553:15\n   548: \t\t    \"use more than one weapon\";\n   549: \t    else {\n   550: \t\tsprintf(buf, \"fight with two %s\", makeplural(body_part(HAND)));\n   551: \t\twhat = buf;\n   552: \t    }\n&gt;  553: \t    You_cant(\"%s while wearing a shield.\", what);\n   554: \t}\n   555:         /* WAC:  TODO: cannot wield conflicting alignment artifacts*/\n   556: #if 0\n   557:   \telse if (uswapwep-&gt;oartifact && ...)\n   558: \t    pline(\"%s resists being held second to another weapon!\","
   },
   {
     "key": "L00558_01",
     "original": "%s resists being held second to another weapon!",
     "translation": "",
-    "context": "src/wield.c:558:12\n   553: \t    You_cant(\"%s while wearing a shield.\", what);\n   554: \t}\n   555:         /* WAC:  TODO: cannot wield conflicting alignment artifacts*/\n   556: #if 0\n   557:   \telse if (uswapwep->oartifact && ...)\n>  558: \t    pline(\"%s resists being held second to another weapon!\",\n   559: \t\t    Yname2(uswapwep));\n   560: #endif\n   561: \telse if (!uarmg && !Stone_resistance && \n   562: \t\t(uswapwep && uswapwep->otyp == CORPSE &&                   \n   563:                 (touch_petrifies(&mons[uswapwep->corpsenm])))) {"
+    "stage": 0,
+    "context": "src/wield.c:558:12\n   553: \t    You_cant(\"%s while wearing a shield.\", what);\n   554: \t}\n   555:         /* WAC:  TODO: cannot wield conflicting alignment artifacts*/\n   556: #if 0\n   557:   \telse if (uswapwep-&gt;oartifact && ...)\n&gt;  558: \t    pline(\"%s resists being held second to another weapon!\",\n   559: \t\t    Yname2(uswapwep));\n   560: #endif\n   561: \telse if (!uarmg && !Stone_resistance && \n   562: \t\t(uswapwep && uswapwep-&gt;otyp == CORPSE &&                   \n   563:                 (touch_petrifies(&mons[uswapwep-&gt;corpsenm])))) {"
   },
   {
     "key": "L00566_01",
     "original": "wield the %s corpse with your bare %s.",
     "translation": "",
-    "context": "src/wield.c:566:10\n   561: \telse if (!uarmg && !Stone_resistance && \n   562: \t\t(uswapwep && uswapwep->otyp == CORPSE &&                   \n   563:                 (touch_petrifies(&mons[uswapwep->corpsenm])))) {\n   564: \t    char kbuf[BUFSZ];\n   565: \n>  566: \t    You(\"wield the %s corpse with your bare %s.\",\n   567: \t\t    mons[uswapwep->corpsenm].mname, body_part(HAND));\n   568: \t    Sprintf(kbuf, \"%s corpse\", an(mons[uswapwep->corpsenm].mname));\n   569: \t    instapetrify(kbuf);\n   570:         } else if (uswapwep && (Glib || uswapwep->cursed)) {\n   571: \t    if (!Glib)"
+    "stage": 0,
+    "context": "src/wield.c:566:10\n   561: \telse if (!uarmg && !Stone_resistance && \n   562: \t\t(uswapwep && uswapwep-&gt;otyp == CORPSE &&                   \n   563:                 (touch_petrifies(&mons[uswapwep-&gt;corpsenm])))) {\n   564: \t    char kbuf[BUFSZ];\n   565: \n&gt;  566: \t    You(\"wield the %s corpse with your bare %s.\",\n   567: \t\t    mons[uswapwep-&gt;corpsenm].mname, body_part(HAND));\n   568: \t    Sprintf(kbuf, \"%s corpse\", an(mons[uswapwep-&gt;corpsenm].mname));\n   569: \t    instapetrify(kbuf);\n   570:         } else if (uswapwep && (Glib || uswapwep-&gt;cursed)) {\n   571: \t    if (!Glib)"
   },
   {
     "key": "L00568_01",
     "original": "%s corpse",
     "translation": "",
-    "context": "src/wield.c:568:20\n   563:                 (touch_petrifies(&mons[uswapwep->corpsenm])))) {\n   564: \t    char kbuf[BUFSZ];\n   565: \n   566: \t    You(\"wield the %s corpse with your bare %s.\",\n   567: \t\t    mons[uswapwep->corpsenm].mname, body_part(HAND));\n>  568: \t    Sprintf(kbuf, \"%s corpse\", an(mons[uswapwep->corpsenm].mname));\n   569: \t    instapetrify(kbuf);\n   570:         } else if (uswapwep && (Glib || uswapwep->cursed)) {\n   571: \t    if (!Glib)\n   572: \t\tuswapwep->bknown = TRUE;\n   573: \t    drop_uswapwep();"
+    "stage": 0,
+    "context": "src/wield.c:568:20\n   563:                 (touch_petrifies(&mons[uswapwep-&gt;corpsenm])))) {\n   564: \t    char kbuf[BUFSZ];\n   565: \n   566: \t    You(\"wield the %s corpse with your bare %s.\",\n   567: \t\t    mons[uswapwep-&gt;corpsenm].mname, body_part(HAND));\n&gt;  568: \t    Sprintf(kbuf, \"%s corpse\", an(mons[uswapwep-&gt;corpsenm].mname));\n   569: \t    instapetrify(kbuf);\n   570:         } else if (uswapwep && (Glib || uswapwep-&gt;cursed)) {\n   571: \t    if (!Glib)\n   572: \t\tuswapwep-&gt;bknown = TRUE;\n   573: \t    drop_uswapwep();"
   },
   {
     "key": "L00589_01",
     "original": "%s from your %s!",
     "translation": "",
-    "context": "src/wield.c:589:7\n   584: \tchar str[BUFSZ];\n   585: \tstruct obj *obj = uswapwep;\n   586: \n   587: \t/* Avoid trashing makeplural's static buffer */\n   588: \tStrcpy(str, makeplural(body_part(HAND)));\n>  589: \tYour(\"%s from your %s!\",  aobjnam(obj, \"slip\"), str);\n   590: \tsetuswapwep((struct obj *) 0, FALSE);\n   591: \tdropx(obj);\n   592: }\n   593: \n   594: int"
+    "stage": 0,
+    "context": "src/wield.c:589:7\n   584: \tchar str[BUFSZ];\n   585: \tstruct obj *obj = uswapwep;\n   586: \n   587: \t/* Avoid trashing makeplural's static buffer */\n   588: \tStrcpy(str, makeplural(body_part(HAND)));\n&gt;  589: \tYour(\"%s from your %s!\",  aobjnam(obj, \"slip\"), str);\n   590: \tsetuswapwep((struct obj *) 0, FALSE);\n   591: \tdropx(obj);\n   592: }\n   593: \n   594: int"
   },
   {
     "key": "L00589_02",
     "original": "slip",
     "translation": "",
-    "context": "src/wield.c:589:41\n   584: \tchar str[BUFSZ];\n   585: \tstruct obj *obj = uswapwep;\n   586: \n   587: \t/* Avoid trashing makeplural's static buffer */\n   588: \tStrcpy(str, makeplural(body_part(HAND)));\n>  589: \tYour(\"%s from your %s!\",  aobjnam(obj, \"slip\"), str);\n   590: \tsetuswapwep((struct obj *) 0, FALSE);\n   591: \tdropx(obj);\n   592: }\n   593: \n   594: int"
+    "stage": 0,
+    "context": "src/wield.c:589:41\n   584: \tchar str[BUFSZ];\n   585: \tstruct obj *obj = uswapwep;\n   586: \n   587: \t/* Avoid trashing makeplural's static buffer */\n   588: \tStrcpy(str, makeplural(body_part(HAND)));\n&gt;  589: \tYour(\"%s from your %s!\",  aobjnam(obj, \"slip\"), str);\n   590: \tsetuswapwep((struct obj *) 0, FALSE);\n   591: \tdropx(obj);\n   592: }\n   593: \n   594: int"
   },
   {
     "key": "L00600_01",
     "original": "switch to your primary weapon.",
     "translation": "",
-    "context": "src/wield.c:600:11\n   595: dotwoweapon()\n   596: {\n   597: \t/* You can always toggle it off */\n   598: \tif (u.twoweap) {\n   599: \t\tif (uwep)\n>  600: \t\t    You(\"switch to your primary weapon.\");\n   601: \t\telse if (uswapwep) {\n   602: \t\t    You(\"are empty %s.\", body_part(HANDED));\n   603: \t\t    unweapon = TRUE;\n   604: \t\t} else\n   605: \t\t    You(\"switch to your right %s.\", body_part(HAND));"
+    "stage": 0,
+    "context": "src/wield.c:600:11\n   595: dotwoweapon()\n   596: {\n   597: \t/* You can always toggle it off */\n   598: \tif (u.twoweap) {\n   599: \t\tif (uwep)\n&gt;  600: \t\t    You(\"switch to your primary weapon.\");\n   601: \t\telse if (uswapwep) {\n   602: \t\t    You(\"are empty %s.\", body_part(HANDED));\n   603: \t\t    unweapon = TRUE;\n   604: \t\t} else\n   605: \t\t    You(\"switch to your right %s.\", body_part(HAND));"
   },
   {
     "key": "L00602_01",
     "original": "are empty %s.",
     "translation": "",
-    "context": "src/wield.c:602:11\n   597: \t/* You can always toggle it off */\n   598: \tif (u.twoweap) {\n   599: \t\tif (uwep)\n   600: \t\t    You(\"switch to your primary weapon.\");\n   601: \t\telse if (uswapwep) {\n>  602: \t\t    You(\"are empty %s.\", body_part(HANDED));\n   603: \t\t    unweapon = TRUE;\n   604: \t\t} else\n   605: \t\t    You(\"switch to your right %s.\", body_part(HAND));\n   606: \t\tif (uswapwep)\n   607: \t\t    unwield(uswapwep, TRUE);"
+    "stage": 0,
+    "context": "src/wield.c:602:11\n   597: \t/* You can always toggle it off */\n   598: \tif (u.twoweap) {\n   599: \t\tif (uwep)\n   600: \t\t    You(\"switch to your primary weapon.\");\n   601: \t\telse if (uswapwep) {\n&gt;  602: \t\t    You(\"are empty %s.\", body_part(HANDED));\n   603: \t\t    unweapon = TRUE;\n   604: \t\t} else\n   605: \t\t    You(\"switch to your right %s.\", body_part(HAND));\n   606: \t\tif (uswapwep)\n   607: \t\t    unwield(uswapwep, TRUE);"
   },
   {
     "key": "L00605_01",
     "original": "switch to your right %s.",
     "translation": "",
-    "context": "src/wield.c:605:11\n   600: \t\t    You(\"switch to your primary weapon.\");\n   601: \t\telse if (uswapwep) {\n   602: \t\t    You(\"are empty %s.\", body_part(HANDED));\n   603: \t\t    unweapon = TRUE;\n   604: \t\t} else\n>  605: \t\t    You(\"switch to your right %s.\", body_part(HAND));\n   606: \t\tif (uswapwep)\n   607: \t\t    unwield(uswapwep, TRUE);\n   608: \t\tu.twoweap = 0;\n   609: \t\tupdate_inventory();\n   610: \t\treturn (0);"
+    "stage": 0,
+    "context": "src/wield.c:605:11\n   600: \t\t    You(\"switch to your primary weapon.\");\n   601: \t\telse if (uswapwep) {\n   602: \t\t    You(\"are empty %s.\", body_part(HANDED));\n   603: \t\t    unweapon = TRUE;\n   604: \t\t} else\n&gt;  605: \t\t    You(\"switch to your right %s.\", body_part(HAND));\n   606: \t\tif (uswapwep)\n   607: \t\t    unwield(uswapwep, TRUE);\n   608: \t\tu.twoweap = 0;\n   609: \t\tupdate_inventory();\n   610: \t\treturn (0);"
   },
   {
     "key": "L00617_01",
     "original": "begin two-weapon combat.",
     "translation": "",
-    "context": "src/wield.c:617:11\n   612: \n   613: \t/* May we use two weapons? */\n   614: \tif (can_twoweapon()) {\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n>  617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n   620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)"
+    "stage": 0,
+    "context": "src/wield.c:617:11\n   612: \n   613: \t/* May we use two weapons? */\n   614: \tif (can_twoweapon()) {\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n&gt;  617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n   620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)"
   },
   {
     "key": "L00619_01",
     "original": "begin fighting with a weapon and your %s %s.",
     "translation": "",
-    "context": "src/wield.c:619:11\n   614: \tif (can_twoweapon()) {\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n   617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n>  619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n   620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));"
+    "stage": 0,
+    "context": "src/wield.c:619:11\n   614: \tif (can_twoweapon()) {\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n   617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n&gt;  619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n   620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));"
   },
   {
     "key": "L00620_01",
     "original": "left",
     "translation": "",
-    "context": "src/wield.c:620:15\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n   617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n>  620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse"
+    "stage": 0,
+    "context": "src/wield.c:620:15\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n   617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n&gt;  620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse"
   },
   {
     "key": "L00620_02",
     "original": "right",
     "translation": "",
-    "context": "src/wield.c:620:24\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n   617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n>  620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse"
+    "stage": 0,
+    "context": "src/wield.c:620:24\n   615: \t\t/* Success! */\n   616: \t\tif (uwep && uswapwep)\n   617: \t\t    You(\"begin two-weapon combat.\");\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n&gt;  620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse"
   },
   {
     "key": "L00623_01",
     "original": "begin fighting with two %s.",
     "translation": "",
-    "context": "src/wield.c:623:11\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n   620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n>  623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse\n   626: \t\t    You(\"begin two-handed combat.\");\n   627: \t\tu.twoweap = 1;\n   628: \t\tupdate_inventory();"
+    "stage": 0,
+    "context": "src/wield.c:623:11\n   618: \t\telse if (uwep || uswapwep) {\n   619: \t\t    You(\"begin fighting with a weapon and your %s %s.\",\n   620: \t\t\t    uwep ? \"left\" : \"right\", body_part(HAND));\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n&gt;  623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse\n   626: \t\t    You(\"begin two-handed combat.\");\n   627: \t\tu.twoweap = 1;\n   628: \t\tupdate_inventory();"
   },
   {
     "key": "L00626_01",
     "original": "begin two-handed combat.",
     "translation": "",
-    "context": "src/wield.c:626:11\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse\n>  626: \t\t    You(\"begin two-handed combat.\");\n   627: \t\tu.twoweap = 1;\n   628: \t\tupdate_inventory();\n   629: \t\treturn (rnd(20) > ACURR(A_DEX));\n   630: \t}\n   631: \treturn (0);"
+    "stage": 0,
+    "context": "src/wield.c:626:11\n   621: \t\t    unweapon = FALSE;\n   622: \t\t} else if (Upolyd)\n   623: \t\t    You(\"begin fighting with two %s.\",\n   624: \t\t\t    makeplural(body_part(HAND)));\n   625: \t\telse\n&gt;  626: \t\t    You(\"begin two-handed combat.\");\n   627: \t\tu.twoweap = 1;\n   628: \t\tupdate_inventory();\n   629: \t\treturn (rnd(20) &gt; ACURR(A_DEX));\n   630: \t}\n   631: \treturn (0);"
   },
   {
     "key": "L00646_01",
     "original": "%s glowing.",
     "translation": "",
-    "context": "src/wield.c:646:25\n   641: uwepgone()\n   642: {\n   643: \tif (uwep) {\n   644: \t\tif (artifact_light(uwep) && uwep->lamplit) {\n   645: \t\t    end_burn(uwep, FALSE);\n>  646: \t\t    if (!Blind) pline(\"%s glowing.\", Tobjnam(uwep, \"stop\"));\n   647: \t\t}\n   648: \t\tunwield(uwep, FALSE);\n   649: \t\tsetworn((struct obj *)0, W_WEP);\n   650: \t\tunweapon = TRUE;\n   651: \t\tupdate_inventory();"
+    "stage": 0,
+    "context": "src/wield.c:646:25\n   641: uwepgone()\n   642: {\n   643: \tif (uwep) {\n   644: \t\tif (artifact_light(uwep) && uwep-&gt;lamplit) {\n   645: \t\t    end_burn(uwep, FALSE);\n&gt;  646: \t\t    if (!Blind) pline(\"%s glowing.\", Tobjnam(uwep, \"stop\"));\n   647: \t\t}\n   648: \t\tunwield(uwep, FALSE);\n   649: \t\tsetworn((struct obj *)0, W_WEP);\n   650: \t\tunweapon = TRUE;\n   651: \t\tupdate_inventory();"
   },
   {
     "key": "L00646_02",
     "original": "stop",
     "translation": "",
-    "context": "src/wield.c:646:54\n   641: uwepgone()\n   642: {\n   643: \tif (uwep) {\n   644: \t\tif (artifact_light(uwep) && uwep->lamplit) {\n   645: \t\t    end_burn(uwep, FALSE);\n>  646: \t\t    if (!Blind) pline(\"%s glowing.\", Tobjnam(uwep, \"stop\"));\n   647: \t\t}\n   648: \t\tunwield(uwep, FALSE);\n   649: \t\tsetworn((struct obj *)0, W_WEP);\n   650: \t\tunweapon = TRUE;\n   651: \t\tupdate_inventory();"
+    "stage": 0,
+    "context": "src/wield.c:646:54\n   641: uwepgone()\n   642: {\n   643: \tif (uwep) {\n   644: \t\tif (artifact_light(uwep) && uwep-&gt;lamplit) {\n   645: \t\t    end_burn(uwep, FALSE);\n&gt;  646: \t\t    if (!Blind) pline(\"%s glowing.\", Tobjnam(uwep, \"stop\"));\n   647: \t\t}\n   648: \t\tunwield(uwep, FALSE);\n   649: \t\tsetworn((struct obj *)0, W_WEP);\n   650: \t\tunweapon = TRUE;\n   651: \t\tupdate_inventory();"
   },
   {
     "key": "L00678_01",
     "original": "can no longer use two weapons at once.",
     "translation": "",
-    "context": "src/wield.c:678:11\n   673: void\n   674: untwoweapon()\n   675: {\n   676: \tif (u.twoweap) {\n   677: \t\tif (uwep && uswapwep)\n>  678: \t\t    You(\"can no longer use two weapons at once.\");\n   679: \t\telse if (cantwield(youmonst.data))\n   680: \t\t    You(\"can no longer control which %s to fight with.\",\n   681: \t\t\t    body_part(HAND));\n   682: \t\telse\n   683: \t\t    You(\"can no longer use two %s to fight.\","
+    "stage": 0,
+    "context": "src/wield.c:678:11\n   673: void\n   674: untwoweapon()\n   675: {\n   676: \tif (u.twoweap) {\n   677: \t\tif (uwep && uswapwep)\n&gt;  678: \t\t    You(\"can no longer use two weapons at once.\");\n   679: \t\telse if (cantwield(youmonst.data))\n   680: \t\t    You(\"can no longer control which %s to fight with.\",\n   681: \t\t\t    body_part(HAND));\n   682: \t\telse\n   683: \t\t    You(\"can no longer use two %s to fight.\","
   },
   {
     "key": "L00680_01",
     "original": "can no longer control which %s to fight with.",
     "translation": "",
-    "context": "src/wield.c:680:11\n   675: {\n   676: \tif (u.twoweap) {\n   677: \t\tif (uwep && uswapwep)\n   678: \t\t    You(\"can no longer use two weapons at once.\");\n   679: \t\telse if (cantwield(youmonst.data))\n>  680: \t\t    You(\"can no longer control which %s to fight with.\",\n   681: \t\t\t    body_part(HAND));\n   682: \t\telse\n   683: \t\t    You(\"can no longer use two %s to fight.\",\n   684: \t\t\t    makeplural(body_part(HAND)));\n   685: \t\tif (uswapwep)"
+    "stage": 0,
+    "context": "src/wield.c:680:11\n   675: {\n   676: \tif (u.twoweap) {\n   677: \t\tif (uwep && uswapwep)\n   678: \t\t    You(\"can no longer use two weapons at once.\");\n   679: \t\telse if (cantwield(youmonst.data))\n&gt;  680: \t\t    You(\"can no longer control which %s to fight with.\",\n   681: \t\t\t    body_part(HAND));\n   682: \t\telse\n   683: \t\t    You(\"can no longer use two %s to fight.\",\n   684: \t\t\t    makeplural(body_part(HAND)));\n   685: \t\tif (uswapwep)"
   },
   {
     "key": "L00683_01",
     "original": "can no longer use two %s to fight.",
     "translation": "",
-    "context": "src/wield.c:683:11\n   678: \t\t    You(\"can no longer use two weapons at once.\");\n   679: \t\telse if (cantwield(youmonst.data))\n   680: \t\t    You(\"can no longer control which %s to fight with.\",\n   681: \t\t\t    body_part(HAND));\n   682: \t\telse\n>  683: \t\t    You(\"can no longer use two %s to fight.\",\n   684: \t\t\t    makeplural(body_part(HAND)));\n   685: \t\tif (uswapwep)\n   686: \t\t    unwield(uswapwep, TRUE);\n   687: \t\tu.twoweap = FALSE;\n   688: \t\tupdate_inventory();"
+    "stage": 0,
+    "context": "src/wield.c:683:11\n   678: \t\t    You(\"can no longer use two weapons at once.\");\n   679: \t\telse if (cantwield(youmonst.data))\n   680: \t\t    You(\"can no longer control which %s to fight with.\",\n   681: \t\t\t    body_part(HAND));\n   682: \t\telse\n&gt;  683: \t\t    You(\"can no longer use two %s to fight.\",\n   684: \t\t\t    makeplural(body_part(HAND)));\n   685: \t\tif (uswapwep)\n   686: \t\t    unwield(uswapwep, TRUE);\n   687: \t\tu.twoweap = FALSE;\n   688: \t\tupdate_inventory();"
   },
   {
     "key": "L00725_01",
     "original": "%s.",
     "translation": "",
-    "context": "src/wield.c:725:9\n   720: #endif\n   721: \t\t\t\t\t)\n   722: \t    {\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n>  725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));"
+    "stage": 0,
+    "context": "src/wield.c:725:9\n   720: #endif\n   721: \t\t\t\t\t)\n   722: \t    {\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n&gt;  725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));"
   },
   {
     "key": "L00725_02",
     "original": "fade",
     "translation": "",
-    "context": "src/wield.c:725:32\n   720: #endif\n   721: \t\t\t\t\t)\n   722: \t    {\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n>  725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));"
+    "stage": 0,
+    "context": "src/wield.c:725:32\n   720: #endif\n   721: \t\t\t\t\t)\n   722: \t    {\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n&gt;  725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));"
   },
   {
     "key": "L00727_01",
     "original": "%s's %s.",
     "translation": "",
-    "context": "src/wield.c:727:10\n   722: \t    {\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n>  727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget->otyp = SCR_BLANK_PAPER;"
+    "stage": 0,
+    "context": "src/wield.c:727:10\n   722: \t    {\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n&gt;  727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget-&gt;otyp = SCR_BLANK_PAPER;"
   },
   {
     "key": "L00728_01",
     "original": "fade",
     "translation": "",
-    "context": "src/wield.c:728:26\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n>  728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget->otyp = SCR_BLANK_PAPER;\n   733: \t\ttarget->spe = 0;"
+    "stage": 0,
+    "context": "src/wield.c:728:26\n   723: \t\tif (!Blind) {\n   724: \t\t    if (victim == &youmonst)\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n&gt;  728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n   730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget-&gt;otyp = SCR_BLANK_PAPER;\n   733: \t\ttarget-&gt;spe = 0;"
   },
   {
     "key": "L00730_01",
     "original": "%s.",
     "translation": "",
-    "context": "src/wield.c:730:14\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n>  730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget->otyp = SCR_BLANK_PAPER;\n   733: \t\ttarget->spe = 0;\n   734: \t    }\n   735: \t} else if (target->oerodeproof ||"
+    "stage": 0,
+    "context": "src/wield.c:730:14\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n&gt;  730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget-&gt;otyp = SCR_BLANK_PAPER;\n   733: \t\ttarget-&gt;spe = 0;\n   734: \t    }\n   735: \t} else if (target-&gt;oerodeproof ||"
   },
   {
     "key": "L00730_02",
     "original": "fade",
     "translation": "",
-    "context": "src/wield.c:730:37\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n>  730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget->otyp = SCR_BLANK_PAPER;\n   733: \t\ttarget->spe = 0;\n   734: \t    }\n   735: \t} else if (target->oerodeproof ||"
+    "stage": 0,
+    "context": "src/wield.c:730:37\n   725: \t\t\tYour(\"%s.\", aobjnam(target, \"fade\"));\n   726: \t\t    else if (vismon)\n   727: \t\t\tpline(\"%s's %s.\", Monnam(victim),\n   728: \t\t\t      aobjnam(target, \"fade\"));\n   729: \t\t    else if (visobj)\n&gt;  730: \t\t\tpline_The(\"%s.\", aobjnam(target, \"fade\"));\n   731: \t\t}\n   732: \t\ttarget-&gt;otyp = SCR_BLANK_PAPER;\n   733: \t\ttarget-&gt;spe = 0;\n   734: \t    }\n   735: \t} else if (target-&gt;oerodeproof ||"
   },
   {
     "key": "L00739_01",
     "original": "%s not affected.",
     "translation": "",
-    "context": "src/wield.c:739:12\n   734: \t    }\n   735: \t} else if (target->oerodeproof ||\n   736: \t\t(acid_dmg ? !is_corrodeable(target) : !is_rustprone(target))) {\n   737: \t    if (flags.verbose || !(target->oerodeproof && target->rknown)) {\n   738: \t\tif (victim == &youmonst)\n>  739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n   741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n   742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }"
+    "stage": 0,
+    "context": "src/wield.c:739:12\n   734: \t    }\n   735: \t} else if (target-&gt;oerodeproof ||\n   736: \t\t(acid_dmg ? !is_corrodeable(target) : !is_rustprone(target))) {\n   737: \t    if (flags.verbose || !(target-&gt;oerodeproof && target-&gt;rknown)) {\n   738: \t\tif (victim == &youmonst)\n&gt;  739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n   741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n   742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }"
   },
   {
     "key": "L00739_02",
     "original": "are",
     "translation": "",
-    "context": "src/wield.c:739:48\n   734: \t    }\n   735: \t} else if (target->oerodeproof ||\n   736: \t\t(acid_dmg ? !is_corrodeable(target) : !is_rustprone(target))) {\n   737: \t    if (flags.verbose || !(target->oerodeproof && target->rknown)) {\n   738: \t\tif (victim == &youmonst)\n>  739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n   741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n   742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }"
+    "stage": 0,
+    "context": "src/wield.c:739:48\n   734: \t    }\n   735: \t} else if (target-&gt;oerodeproof ||\n   736: \t\t(acid_dmg ? !is_corrodeable(target) : !is_rustprone(target))) {\n   737: \t    if (flags.verbose || !(target-&gt;oerodeproof && target-&gt;rknown)) {\n   738: \t\tif (victim == &youmonst)\n&gt;  739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n   741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n   742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }"
   },
   {
     "key": "L00741_01",
     "original": "%s's %s not affected.",
     "translation": "",
-    "context": "src/wield.c:741:13\n   736: \t\t(acid_dmg ? !is_corrodeable(target) : !is_rustprone(target))) {\n   737: \t    if (flags.verbose || !(target->oerodeproof && target->rknown)) {\n   738: \t\tif (victim == &youmonst)\n   739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n>  741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n   742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {"
+    "stage": 0,
+    "context": "src/wield.c:741:13\n   736: \t\t(acid_dmg ? !is_corrodeable(target) : !is_rustprone(target))) {\n   737: \t    if (flags.verbose || !(target-&gt;oerodeproof && target-&gt;rknown)) {\n   738: \t\tif (victim == &youmonst)\n   739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n&gt;  741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n   742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {"
   },
   {
     "key": "L00742_01",
     "original": "are",
     "translation": "",
-    "context": "src/wield.c:742:20\n   737: \t    if (flags.verbose || !(target->oerodeproof && target->rknown)) {\n   738: \t\tif (victim == &youmonst)\n   739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n   741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n>  742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {\n   747: \t    if (victim == &youmonst)"
+    "stage": 0,
+    "context": "src/wield.c:742:20\n   737: \t    if (flags.verbose || !(target-&gt;oerodeproof && target-&gt;rknown)) {\n   738: \t\tif (victim == &youmonst)\n   739: \t\t    Your(\"%s not affected.\", aobjnam(target, \"are\"));\n   740: \t\telse if (vismon)\n   741: \t\t    pline(\"%s's %s not affected.\", Monnam(victim),\n&gt;  742: \t\t\taobjnam(target, \"are\"));\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {\n   747: \t    if (victim == &youmonst)"
   },
   {
     "key": "L00748_01",
     "original": "%s%s!",
     "translation": "",
-    "context": "src/wield.c:748:8\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n>  748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
+    "stage": 0,
+    "context": "src/wield.c:748:8\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n&gt;  748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
   },
   {
     "key": "L00748_02",
     "original": "corrode",
     "translation": "",
-    "context": "src/wield.c:748:44\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n>  748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
+    "stage": 0,
+    "context": "src/wield.c:748:44\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n&gt;  748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
   },
   {
     "key": "L00748_03",
     "original": "rust",
     "translation": "",
-    "context": "src/wield.c:748:56\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n>  748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
+    "stage": 0,
+    "context": "src/wield.c:748:56\n   743: \t\t/* no message if not carried */\n   744: \t    }\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n&gt;  748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
   },
   {
     "key": "L00749_01",
     "original": " completely",
     "translation": "",
-    "context": "src/wield.c:749:32\n   744: \t    }\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n>  749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :"
+    "stage": 0,
+    "context": "src/wield.c:749:32\n   744: \t    }\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n&gt;  749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :"
   },
   {
     "key": "L00750_01",
     "original": " further",
     "translation": "",
-    "context": "src/wield.c:750:17\n   745: \t    if (target->oerodeproof) target->rknown = TRUE;\n   746: \t} else if (erosion < MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n>  750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");"
+    "stage": 0,
+    "context": "src/wield.c:750:17\n   745: \t    if (target-&gt;oerodeproof) target-&gt;rknown = TRUE;\n   746: \t} else if (erosion &lt; MAX_ERODE) {\n   747: \t    if (victim == &youmonst)\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n&gt;  750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");"
   },
   {
     "key": "L00752_01",
     "original": "%s's %s%s!",
     "translation": "",
-    "context": "src/wield.c:752:9\n   747: \t    if (victim == &youmonst)\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n>  752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\","
+    "stage": 0,
+    "context": "src/wield.c:752:9\n   747: \t    if (victim == &youmonst)\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n&gt;  752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\","
   },
   {
     "key": "L00753_01",
     "original": "corrode",
     "translation": "",
-    "context": "src/wield.c:753:34\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n>  753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
+    "stage": 0,
+    "context": "src/wield.c:753:34\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n&gt;  753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
   },
   {
     "key": "L00753_02",
     "original": "rust",
     "translation": "",
-    "context": "src/wield.c:753:46\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n>  753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
+    "stage": 0,
+    "context": "src/wield.c:753:46\n   748: \t\tYour(\"%s%s!\", aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n&gt;  753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),"
   },
   {
     "key": "L00754_01",
     "original": " completely",
     "translation": "",
-    "context": "src/wield.c:754:32\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n>  754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :"
+    "stage": 0,
+    "context": "src/wield.c:754:32\n   749: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n&gt;  754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :"
   },
   {
     "key": "L00755_01",
     "original": " further",
     "translation": "",
-    "context": "src/wield.c:755:17\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n>  755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");"
+    "stage": 0,
+    "context": "src/wield.c:755:17\n   750: \t\t    erosion ? \" further\" : \"\");\n   751: \t    else if (vismon)\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n&gt;  755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");"
   },
   {
     "key": "L00757_01",
     "original": "%s%s!",
     "translation": "",
-    "context": "src/wield.c:757:13\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n>  757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget->oeroded2++;"
+    "stage": 0,
+    "context": "src/wield.c:757:13\n   752: \t\tpline(\"%s's %s%s!\", Monnam(victim),\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n&gt;  757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget-&gt;oeroded2++;"
   },
   {
     "key": "L00758_01",
     "original": "corrode",
     "translation": "",
-    "context": "src/wield.c:758:34\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n>  758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget->oeroded2++;\n   763: \t    else"
+    "stage": 0,
+    "context": "src/wield.c:758:34\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n&gt;  758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget-&gt;oeroded2++;\n   763: \t    else"
   },
   {
     "key": "L00758_02",
     "original": "rust",
     "translation": "",
-    "context": "src/wield.c:758:46\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n>  758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget->oeroded2++;\n   763: \t    else"
+    "stage": 0,
+    "context": "src/wield.c:758:46\n   753: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n&gt;  758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget-&gt;oeroded2++;\n   763: \t    else"
   },
   {
     "key": "L00759_01",
     "original": " completely",
     "translation": "",
-    "context": "src/wield.c:759:32\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n>  759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget->oeroded2++;\n   763: \t    else\n   764: \t\ttarget->oeroded++;"
+    "stage": 0,
+    "context": "src/wield.c:759:32\n   754: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n&gt;  759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n   760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget-&gt;oeroded2++;\n   763: \t    else\n   764: \t\ttarget-&gt;oeroded++;"
   },
   {
     "key": "L00760_01",
     "original": " further",
     "translation": "",
-    "context": "src/wield.c:760:17\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n>  760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget->oeroded2++;\n   763: \t    else\n   764: \t\ttarget->oeroded++;\n   765: \t} else {"
+    "stage": 0,
+    "context": "src/wield.c:760:17\n   755: \t\t    erosion ? \" further\" : \"\");\n   756: \t    else if (visobj)\n   757: \t\tpline_The(\"%s%s!\",\n   758: \t\t    aobjnam(target, acid_dmg ? \"corrode\" : \"rust\"),\n   759: \t\t    erosion+1 == MAX_ERODE ? \" completely\" :\n&gt;  760: \t\t    erosion ? \" further\" : \"\");\n   761: \t    if (acid_dmg)\n   762: \t\ttarget-&gt;oeroded2++;\n   763: \t    else\n   764: \t\ttarget-&gt;oeroded++;\n   765: \t} else {"
   },
   {
     "key": "L00768_01",
     "original": "%s completely %s.",
     "translation": "",
-    "context": "src/wield.c:768:12\n   763: \t    else\n   764: \t\ttarget->oeroded++;\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n>  768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),"
+    "stage": 0,
+    "context": "src/wield.c:768:12\n   763: \t    else\n   764: \t\ttarget-&gt;oeroded++;\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n&gt;  768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),"
   },
   {
     "key": "L00769_01",
     "original": "feel",
     "translation": "",
-    "context": "src/wield.c:769:28\n   764: \t\ttarget->oeroded++;\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n>  769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");"
+    "stage": 0,
+    "context": "src/wield.c:769:28\n   764: \t\ttarget-&gt;oeroded++;\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n&gt;  769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");"
   },
   {
     "key": "L00769_02",
     "original": "look",
     "translation": "",
-    "context": "src/wield.c:769:37\n   764: \t\ttarget->oeroded++;\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n>  769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");"
+    "stage": 0,
+    "context": "src/wield.c:769:37\n   764: \t\ttarget-&gt;oeroded++;\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n&gt;  769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");"
   },
   {
     "key": "L00770_01",
     "original": "corroded",
     "translation": "",
-    "context": "src/wield.c:770:15\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n>  770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)"
+    "stage": 0,
+    "context": "src/wield.c:770:15\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n&gt;  770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)"
   },
   {
     "key": "L00770_02",
     "original": "rusty",
     "translation": "",
-    "context": "src/wield.c:770:28\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n>  770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)"
+    "stage": 0,
+    "context": "src/wield.c:770:28\n   765: \t} else {\n   766: \t    if (flags.verbose) {\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n&gt;  770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)"
   },
   {
     "key": "L00772_01",
     "original": "%s's %s completely %s.",
     "translation": "",
-    "context": "src/wield.c:772:13\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n>  772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),"
+    "stage": 0,
+    "context": "src/wield.c:772:13\n   767: \t\tif (victim == &youmonst)\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n&gt;  772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),"
   },
   {
     "key": "L00773_01",
     "original": "look",
     "translation": "",
-    "context": "src/wield.c:773:20\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n>  773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");"
+    "stage": 0,
+    "context": "src/wield.c:773:20\n   768: \t\t    Your(\"%s completely %s.\",\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n&gt;  773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");"
   },
   {
     "key": "L00774_01",
     "original": "corroded",
     "translation": "",
-    "context": "src/wield.c:774:15\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n>  774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }"
+    "stage": 0,
+    "context": "src/wield.c:774:15\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n&gt;  774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }"
   },
   {
     "key": "L00774_02",
     "original": "rusty",
     "translation": "",
-    "context": "src/wield.c:774:28\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n>  774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }"
+    "stage": 0,
+    "context": "src/wield.c:774:28\n   769: \t\t\taobjnam(target, Blind ? \"feel\" : \"look\"),\n   770: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n&gt;  774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }"
   },
   {
     "key": "L00776_01",
     "original": "%s completely %s.",
     "translation": "",
-    "context": "src/wield.c:776:17\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n>  776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }"
+    "stage": 0,
+    "context": "src/wield.c:776:17\n   771: \t\telse if (vismon)\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n&gt;  776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }"
   },
   {
     "key": "L00777_01",
     "original": "look",
     "translation": "",
-    "context": "src/wield.c:777:20\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n>  777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }\n   782: "
+    "stage": 0,
+    "context": "src/wield.c:777:20\n   772: \t\t    pline(\"%s's %s completely %s.\", Monnam(victim),\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n&gt;  777: \t\t\taobjnam(target, \"look\"),\n   778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }\n   782: "
   },
   {
     "key": "L00778_01",
     "original": "corroded",
     "translation": "",
-    "context": "src/wield.c:778:15\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n>  778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }\n   782: \n   783: int"
+    "stage": 0,
+    "context": "src/wield.c:778:15\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n&gt;  778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }\n   782: \n   783: int"
   },
   {
     "key": "L00778_02",
     "original": "rusty",
     "translation": "",
-    "context": "src/wield.c:778:28\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n>  778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }\n   782: \n   783: int"
+    "stage": 0,
+    "context": "src/wield.c:778:28\n   773: \t\t\taobjnam(target, \"look\"),\n   774: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   775: \t\telse if (visobj)\n   776: \t\t    pline_The(\"%s completely %s.\",\n   777: \t\t\taobjnam(target, \"look\"),\n&gt;  778: \t\t\tacid_dmg ? \"corroded\" : \"rusty\");\n   779: \t    }\n   780: \t}\n   781: }\n   782: \n   783: int"
   },
   {
     "key": "L00795_01",
     "original": "Your %s %s.",
     "translation": "",
-    "context": "src/wield.c:795:16\n   790: \tint otyp = STRANGE_OBJECT;\n   791: \n   792: \tif(!uwep || (uwep->oclass != WEAPON_CLASS && !is_weptool(uwep))) {\n   793: \t\tchar buf[BUFSZ];\n   794: \n>  795: \t\tSprintf(buf, \"Your %s %s.\", makeplural(body_part(HAND)),\n   796: \t\t\t(amount >= 0) ? \"twitch\" : \"itch\");\n   797: \t\tstrange_feeling(otmp, buf);\n   798: \t\texercise(A_DEX, (boolean) (amount >= 0));\n   799: \t\treturn(0);\n   800: \t}"
+    "stage": 0,
+    "context": "src/wield.c:795:16\n   790: \tint otyp = STRANGE_OBJECT;\n   791: \n   792: \tif(!uwep || (uwep-&gt;oclass != WEAPON_CLASS && !is_weptool(uwep))) {\n   793: \t\tchar buf[BUFSZ];\n   794: \n&gt;  795: \t\tSprintf(buf, \"Your %s %s.\", makeplural(body_part(HAND)),\n   796: \t\t\t(amount &gt;= 0) ? \"twitch\" : \"itch\");\n   797: \t\tstrange_feeling(otmp, buf);\n   798: \t\texercise(A_DEX, (boolean) (amount &gt;= 0));\n   799: \t\treturn(0);\n   800: \t}"
   },
   {
     "key": "L00796_01",
     "original": "twitch",
     "translation": "",
-    "context": "src/wield.c:796:20\n   791: \n   792: \tif(!uwep || (uwep->oclass != WEAPON_CLASS && !is_weptool(uwep))) {\n   793: \t\tchar buf[BUFSZ];\n   794: \n   795: \t\tSprintf(buf, \"Your %s %s.\", makeplural(body_part(HAND)),\n>  796: \t\t\t(amount >= 0) ? \"twitch\" : \"itch\");\n   797: \t\tstrange_feeling(otmp, buf);\n   798: \t\texercise(A_DEX, (boolean) (amount >= 0));\n   799: \t\treturn(0);\n   800: \t}\n   801: "
+    "stage": 0,
+    "context": "src/wield.c:796:20\n   791: \n   792: \tif(!uwep || (uwep-&gt;oclass != WEAPON_CLASS && !is_weptool(uwep))) {\n   793: \t\tchar buf[BUFSZ];\n   794: \n   795: \t\tSprintf(buf, \"Your %s %s.\", makeplural(body_part(HAND)),\n&gt;  796: \t\t\t(amount &gt;= 0) ? \"twitch\" : \"itch\");\n   797: \t\tstrange_feeling(otmp, buf);\n   798: \t\texercise(A_DEX, (boolean) (amount &gt;= 0));\n   799: \t\treturn(0);\n   800: \t}\n   801: "
   },
   {
     "key": "L00796_02",
     "original": "itch",
     "translation": "",
-    "context": "src/wield.c:796:31\n   791: \n   792: \tif(!uwep || (uwep->oclass != WEAPON_CLASS && !is_weptool(uwep))) {\n   793: \t\tchar buf[BUFSZ];\n   794: \n   795: \t\tSprintf(buf, \"Your %s %s.\", makeplural(body_part(HAND)),\n>  796: \t\t\t(amount >= 0) ? \"twitch\" : \"itch\");\n   797: \t\tstrange_feeling(otmp, buf);\n   798: \t\texercise(A_DEX, (boolean) (amount >= 0));\n   799: \t\treturn(0);\n   800: \t}\n   801: "
+    "stage": 0,
+    "context": "src/wield.c:796:31\n   791: \n   792: \tif(!uwep || (uwep-&gt;oclass != WEAPON_CLASS && !is_weptool(uwep))) {\n   793: \t\tchar buf[BUFSZ];\n   794: \n   795: \t\tSprintf(buf, \"Your %s %s.\", makeplural(body_part(HAND)),\n&gt;  796: \t\t\t(amount &gt;= 0) ? \"twitch\" : \"itch\");\n   797: \t\tstrange_feeling(otmp, buf);\n   798: \t\texercise(A_DEX, (boolean) (amount &gt;= 0));\n   799: \t\treturn(0);\n   800: \t}\n   801: "
   },
   {
     "key": "L00807_01",
     "original": "weapon seems sharper now.",
     "translation": "",
-    "context": "src/wield.c:807:8\n   802: \tif (otmp && otmp->oclass == SCROLL_CLASS) otyp = otmp->otyp;\n   803: \n   804: \tif(uwep->otyp == WORM_TOOTH && amount >= 0) {\n   805: \t\tuwep->otyp = CRYSKNIFE;\n   806: \t\tuwep->oerodeproof = 0;\n>  807: \t\tYour(\"weapon seems sharper now.\");\n   808: \t\tuwep->cursed = 0;\n   809: \t\tif (otyp != STRANGE_OBJECT) makeknown(otyp);\n   810: \t\treturn(1);\n   811: \t}\n   812: "
+    "stage": 0,
+    "context": "src/wield.c:807:8\n   802: \tif (otmp && otmp-&gt;oclass == SCROLL_CLASS) otyp = otmp-&gt;otyp;\n   803: \n   804: \tif(uwep-&gt;otyp == WORM_TOOTH && amount &gt;= 0) {\n   805: \t\tuwep-&gt;otyp = CRYSKNIFE;\n   806: \t\tuwep-&gt;oerodeproof = 0;\n&gt;  807: \t\tYour(\"weapon seems sharper now.\");\n   808: \t\tuwep-&gt;cursed = 0;\n   809: \t\tif (otyp != STRANGE_OBJECT) makeknown(otyp);\n   810: \t\treturn(1);\n   811: \t}\n   812: "
   },
   {
     "key": "L00816_01",
     "original": "weapon seems duller now.",
     "translation": "",
-    "context": "src/wield.c:816:8\n   811: \t}\n   812: \n   813: \tif(uwep->otyp == CRYSKNIFE && amount < 0) {\n   814: \t\tuwep->otyp = WORM_TOOTH;\n   815: \t\tuwep->oerodeproof = 0;\n>  816: \t\tYour(\"weapon seems duller now.\");\n   817: \t\tif (otyp != STRANGE_OBJECT && otmp->bknown) makeknown(otyp);\n   818: \t\treturn(1);\n   819: \t}\n   820: \n   821: \tif (amount < 0 && uwep->oartifact && restrict_name(uwep, ONAME(uwep))) {"
+    "stage": 0,
+    "context": "src/wield.c:816:8\n   811: \t}\n   812: \n   813: \tif(uwep-&gt;otyp == CRYSKNIFE && amount &lt; 0) {\n   814: \t\tuwep-&gt;otyp = WORM_TOOTH;\n   815: \t\tuwep-&gt;oerodeproof = 0;\n&gt;  816: \t\tYour(\"weapon seems duller now.\");\n   817: \t\tif (otyp != STRANGE_OBJECT && otmp-&gt;bknown) makeknown(otyp);\n   818: \t\treturn(1);\n   819: \t}\n   820: \n   821: \tif (amount &lt; 0 && uwep-&gt;oartifact && restrict_name(uwep, ONAME(uwep))) {"
   },
   {
     "key": "L00823_01",
     "original": "%s %s.",
     "translation": "",
-    "context": "src/wield.c:823:8\n   818: \t\treturn(1);\n   819: \t}\n   820: \n   821: \tif (amount < 0 && uwep->oartifact && restrict_name(uwep, ONAME(uwep))) {\n   822: \t    if (!Blind)\n>  823: \t\tYour(\"%s %s.\", aobjnam(uwep, \"faintly glow\"), color);\n   824: \t    return(1);\n   825: \t}\n   826: \t/* there is a (soft) upper and lower limit to uwep->spe */\n   827: \tif(((uwep->spe > 5 && amount >= 0) || (uwep->spe < -5 && amount < 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {"
+    "stage": 0,
+    "context": "src/wield.c:823:8\n   818: \t\treturn(1);\n   819: \t}\n   820: \n   821: \tif (amount &lt; 0 && uwep-&gt;oartifact && restrict_name(uwep, ONAME(uwep))) {\n   822: \t    if (!Blind)\n&gt;  823: \t\tYour(\"%s %s.\", aobjnam(uwep, \"faintly glow\"), color);\n   824: \t    return(1);\n   825: \t}\n   826: \t/* there is a (soft) upper and lower limit to uwep-&gt;spe */\n   827: \tif(((uwep-&gt;spe &gt; 5 && amount &gt;= 0) || (uwep-&gt;spe &lt; -5 && amount &lt; 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {"
   },
   {
     "key": "L00823_02",
     "original": "faintly glow",
     "translation": "",
-    "context": "src/wield.c:823:32\n   818: \t\treturn(1);\n   819: \t}\n   820: \n   821: \tif (amount < 0 && uwep->oartifact && restrict_name(uwep, ONAME(uwep))) {\n   822: \t    if (!Blind)\n>  823: \t\tYour(\"%s %s.\", aobjnam(uwep, \"faintly glow\"), color);\n   824: \t    return(1);\n   825: \t}\n   826: \t/* there is a (soft) upper and lower limit to uwep->spe */\n   827: \tif(((uwep->spe > 5 && amount >= 0) || (uwep->spe < -5 && amount < 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {"
+    "stage": 0,
+    "context": "src/wield.c:823:32\n   818: \t\treturn(1);\n   819: \t}\n   820: \n   821: \tif (amount &lt; 0 && uwep-&gt;oartifact && restrict_name(uwep, ONAME(uwep))) {\n   822: \t    if (!Blind)\n&gt;  823: \t\tYour(\"%s %s.\", aobjnam(uwep, \"faintly glow\"), color);\n   824: \t    return(1);\n   825: \t}\n   826: \t/* there is a (soft) upper and lower limit to uwep-&gt;spe */\n   827: \tif(((uwep-&gt;spe &gt; 5 && amount &gt;= 0) || (uwep-&gt;spe &lt; -5 && amount &lt; 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {"
   },
   {
     "key": "L00830_01",
     "original": "%s %s for a while and then %s.",
     "translation": "",
-    "context": "src/wield.c:830:11\n   825: \t}\n   826: \t/* there is a (soft) upper and lower limit to uwep->spe */\n   827: \tif(((uwep->spe > 5 && amount >= 0) || (uwep->spe < -5 && amount < 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {\n   829: \t    if (!Blind)\n>  830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n   834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: "
+    "stage": 0,
+    "context": "src/wield.c:830:11\n   825: \t}\n   826: \t/* there is a (soft) upper and lower limit to uwep-&gt;spe */\n   827: \tif(((uwep-&gt;spe &gt; 5 && amount &gt;= 0) || (uwep-&gt;spe &lt; -5 && amount &lt; 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {\n   829: \t    if (!Blind)\n&gt;  830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n   834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: "
   },
   {
     "key": "L00831_01",
     "original": "violently glow",
     "translation": "",
-    "context": "src/wield.c:831:18\n   826: \t/* there is a (soft) upper and lower limit to uwep->spe */\n   827: \tif(((uwep->spe > 5 && amount >= 0) || (uwep->spe < -5 && amount < 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n>  831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n   834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */"
+    "stage": 0,
+    "context": "src/wield.c:831:18\n   826: \t/* there is a (soft) upper and lower limit to uwep-&gt;spe */\n   827: \tif(((uwep-&gt;spe &gt; 5 && amount &gt;= 0) || (uwep-&gt;spe &lt; -5 && amount &lt; 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n&gt;  831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n   834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */"
   },
   {
     "key": "L00832_01",
     "original": "evaporate",
     "translation": "",
-    "context": "src/wield.c:832:17\n   827: \tif(((uwep->spe > 5 && amount >= 0) || (uwep->spe < -5 && amount < 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n>  832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n   834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);"
+    "stage": 0,
+    "context": "src/wield.c:832:17\n   827: \tif(((uwep-&gt;spe &gt; 5 && amount &gt;= 0) || (uwep-&gt;spe &lt; -5 && amount &lt; 0))\n   828: \t\t\t\t\t\t\t\t&& rn2(3)) {\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n&gt;  832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n   834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);"
   },
   {
     "key": "L00834_01",
     "original": "%s.",
     "translation": "",
-    "context": "src/wield.c:834:8\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n>  834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {"
+    "stage": 0,
+    "context": "src/wield.c:834:8\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n&gt;  834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {"
   },
   {
     "key": "L00834_02",
     "original": "evaporate",
     "translation": "",
-    "context": "src/wield.c:834:29\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n>  834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {"
+    "stage": 0,
+    "context": "src/wield.c:834:29\n   829: \t    if (!Blind)\n   830: \t    Your(\"%s %s for a while and then %s.\",\n   831: \t\t aobjnam(uwep, \"violently glow\"), color,\n   832: \t\t otense(uwep, \"evaporate\"));\n   833: \t    else\n&gt;  834: \t\tYour(\"%s.\", aobjnam(uwep, \"evaporate\"));\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {"
   },
   {
     "key": "L00840_01",
     "original": "moment",
     "translation": "",
-    "context": "src/wield.c:840:37\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n>  840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n   842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep->known &&\n   845: \t\t    (amount > 0 || (amount < 0 && otmp->bknown)))"
+    "stage": 0,
+    "context": "src/wield.c:840:37\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n&gt;  840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n   842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep-&gt;known &&\n   845: \t\t    (amount &gt; 0 || (amount &lt; 0 && otmp-&gt;bknown)))"
   },
   {
     "key": "L00840_02",
     "original": "while",
     "translation": "",
-    "context": "src/wield.c:840:48\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n>  840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n   842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep->known &&\n   845: \t\t    (amount > 0 || (amount < 0 && otmp->bknown)))"
+    "stage": 0,
+    "context": "src/wield.c:840:48\n   835: \n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n&gt;  840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n   842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep-&gt;known &&\n   845: \t\t    (amount &gt; 0 || (amount &lt; 0 && otmp-&gt;bknown)))"
   },
   {
     "key": "L00841_01",
     "original": "%s %s for a %s.",
     "translation": "",
-    "context": "src/wield.c:841:11\n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n   840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n>  841: \t    Your(\"%s %s for a %s.\",\n   842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep->known &&\n   845: \t\t    (amount > 0 || (amount < 0 && otmp->bknown)))\n   846: \t\tmakeknown(otyp);"
+    "stage": 0,
+    "context": "src/wield.c:841:11\n   836: \t    useupall(uwep);\t/* let all of them disappear */\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n   840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n&gt;  841: \t    Your(\"%s %s for a %s.\",\n   842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep-&gt;known &&\n   845: \t\t    (amount &gt; 0 || (amount &lt; 0 && otmp-&gt;bknown)))\n   846: \t\tmakeknown(otyp);"
   },
   {
     "key": "L00842_01",
     "original": "violently glow",
     "translation": "",
-    "context": "src/wield.c:842:32\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n   840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n>  842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep->known &&\n   845: \t\t    (amount > 0 || (amount < 0 && otmp->bknown)))\n   846: \t\tmakeknown(otyp);\n   847: \t}"
+    "stage": 0,
+    "context": "src/wield.c:842:32\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n   840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n&gt;  842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep-&gt;known &&\n   845: \t\t    (amount &gt; 0 || (amount &lt; 0 && otmp-&gt;bknown)))\n   846: \t\tmakeknown(otyp);\n   847: \t}"
   },
   {
     "key": "L00842_02",
     "original": "glow",
     "translation": "",
-    "context": "src/wield.c:842:51\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n   840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n>  842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep->known &&\n   845: \t\t    (amount > 0 || (amount < 0 && otmp->bknown)))\n   846: \t\tmakeknown(otyp);\n   847: \t}"
+    "stage": 0,
+    "context": "src/wield.c:842:51\n   837: \t    return(1);\n   838: \t}\n   839: \tif (!Blind) {\n   840: \t    xtime = (amount*amount == 1) ? \"moment\" : \"while\";\n   841: \t    Your(\"%s %s for a %s.\",\n&gt;  842: \t\t aobjnam(uwep, amount == 0 ? \"violently glow\" : \"glow\"),\n   843: \t\t color, xtime);\n   844: \t    if (otyp != STRANGE_OBJECT && uwep-&gt;known &&\n   845: \t\t    (amount &gt; 0 || (amount &lt; 0 && otmp-&gt;bknown)))\n   846: \t\tmakeknown(otyp);\n   847: \t}"
   },
   {
     "key": "L00857_01",
     "original": "right %s %sches!",
     "translation": "",
-    "context": "src/wield.c:857:8\n   852: \t * Enchantment, which normally improves a weapon, has an\n   853: \t * addition adverse reaction on Magicbane whose effects are\n   854: \t * spe dependent.  Give an obscure clue here.\n   855: \t */\n   856: \tif (uwep->oartifact == ART_MAGICBANE && uwep->spe >= 0) {\n>  857: \t\tYour(\"right %s %sches!\",\n   858: \t\t\tbody_part(HAND),\n   859: \t\t\t(((amount > 1) && (uwep->spe > 1)) ? \"flin\" : \"it\"));\n   860: \t}\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */"
+    "stage": 0,
+    "context": "src/wield.c:857:8\n   852: \t * Enchantment, which normally improves a weapon, has an\n   853: \t * addition adverse reaction on Magicbane whose effects are\n   854: \t * spe dependent.  Give an obscure clue here.\n   855: \t */\n   856: \tif (uwep-&gt;oartifact == ART_MAGICBANE && uwep-&gt;spe &gt;= 0) {\n&gt;  857: \t\tYour(\"right %s %sches!\",\n   858: \t\t\tbody_part(HAND),\n   859: \t\t\t(((amount &gt; 1) && (uwep-&gt;spe &gt; 1)) ? \"flin\" : \"it\"));\n   860: \t}\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */"
   },
   {
     "key": "L00859_01",
     "original": "flin",
     "translation": "",
-    "context": "src/wield.c:859:41\n   854: \t * spe dependent.  Give an obscure clue here.\n   855: \t */\n   856: \tif (uwep->oartifact == ART_MAGICBANE && uwep->spe >= 0) {\n   857: \t\tYour(\"right %s %sches!\",\n   858: \t\t\tbody_part(HAND),\n>  859: \t\t\t(((amount > 1) && (uwep->spe > 1)) ? \"flin\" : \"it\"));\n   860: \t}\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep->spe > 5)"
+    "stage": 0,
+    "context": "src/wield.c:859:41\n   854: \t * spe dependent.  Give an obscure clue here.\n   855: \t */\n   856: \tif (uwep-&gt;oartifact == ART_MAGICBANE && uwep-&gt;spe &gt;= 0) {\n   857: \t\tYour(\"right %s %sches!\",\n   858: \t\t\tbody_part(HAND),\n&gt;  859: \t\t\t(((amount &gt; 1) && (uwep-&gt;spe &gt; 1)) ? \"flin\" : \"it\"));\n   860: \t}\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep-&gt;spe &gt; 5)"
   },
   {
     "key": "L00859_02",
     "original": "it",
     "translation": "",
-    "context": "src/wield.c:859:50\n   854: \t * spe dependent.  Give an obscure clue here.\n   855: \t */\n   856: \tif (uwep->oartifact == ART_MAGICBANE && uwep->spe >= 0) {\n   857: \t\tYour(\"right %s %sches!\",\n   858: \t\t\tbody_part(HAND),\n>  859: \t\t\t(((amount > 1) && (uwep->spe > 1)) ? \"flin\" : \"it\"));\n   860: \t}\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep->spe > 5)"
+    "stage": 0,
+    "context": "src/wield.c:859:50\n   854: \t * spe dependent.  Give an obscure clue here.\n   855: \t */\n   856: \tif (uwep-&gt;oartifact == ART_MAGICBANE && uwep-&gt;spe &gt;= 0) {\n   857: \t\tYour(\"right %s %sches!\",\n   858: \t\t\tbody_part(HAND),\n&gt;  859: \t\t\t(((amount &gt; 1) && (uwep-&gt;spe &gt; 1)) ? \"flin\" : \"it\"));\n   860: \t}\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep-&gt;spe &gt; 5)"
   },
   {
     "key": "L00866_01",
     "original": "%s unexpectedly.",
     "translation": "",
-    "context": "src/wield.c:866:11\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep->spe > 5)\n   865: \t\t&& (is_elven_weapon(uwep) || uwep->oartifact || !rn2(7)))\n>  866: \t    Your(\"%s unexpectedly.\",\n   867: \t\taobjnam(uwep, \"suddenly vibrate\"));\n   868: \n   869: \treturn(1);\n   870: }\n   871: "
+    "stage": 0,
+    "context": "src/wield.c:866:11\n   861: \n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep-&gt;spe &gt; 5)\n   865: \t\t&& (is_elven_weapon(uwep) || uwep-&gt;oartifact || !rn2(7)))\n&gt;  866: \t    Your(\"%s unexpectedly.\",\n   867: \t\taobjnam(uwep, \"suddenly vibrate\"));\n   868: \n   869: \treturn(1);\n   870: }\n   871: "
   },
   {
     "key": "L00867_01",
     "original": "suddenly vibrate",
     "translation": "",
-    "context": "src/wield.c:867:17\n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep->spe > 5)\n   865: \t\t&& (is_elven_weapon(uwep) || uwep->oartifact || !rn2(7)))\n   866: \t    Your(\"%s unexpectedly.\",\n>  867: \t\taobjnam(uwep, \"suddenly vibrate\"));\n   868: \n   869: \treturn(1);\n   870: }\n   871: \n   872: int"
+    "stage": 0,
+    "context": "src/wield.c:867:17\n   862: \t/* an elven magic clue, cookie@keebler */\n   863: \t/* elven weapons vibrate warningly when enchanted beyond a limit */\n   864: \tif ((uwep-&gt;spe &gt; 5)\n   865: \t\t&& (is_elven_weapon(uwep) || uwep-&gt;oartifact || !rn2(7)))\n   866: \t    Your(\"%s unexpectedly.\",\n&gt;  867: \t\taobjnam(uwep, \"suddenly vibrate\"));\n   868: \n   869: \treturn(1);\n   870: }\n   871: \n   872: int"
   },
   {
     "key": "L00890_01",
     "original": "%s %s welded to your %s!",
     "translation": "",
-    "context": "src/wield.c:890:7\n   885: register struct obj *obj;\n   886: {\n   887: \tlong savewornmask;\n   888: \n   889: \tsavewornmask = obj->owornmask;\n>  890: \tYour(\"%s %s welded to your %s!\",\n   891: \t\txname(obj), otense(obj, \"are\"),\n   892: \t\tbimanual(obj) ? (const char *)makeplural(body_part(HAND))\n   893: \t\t\t\t: body_part(HAND));\n   894: \tobj->owornmask = savewornmask;\n   895: }"
+    "stage": 0,
+    "context": "src/wield.c:890:7\n   885: register struct obj *obj;\n   886: {\n   887: \tlong savewornmask;\n   888: \n   889: \tsavewornmask = obj-&gt;owornmask;\n&gt;  890: \tYour(\"%s %s welded to your %s!\",\n   891: \t\txname(obj), otense(obj, \"are\"),\n   892: \t\tbimanual(obj) ? (const char *)makeplural(body_part(HAND))\n   893: \t\t\t\t: body_part(HAND));\n   894: \tobj-&gt;owornmask = savewornmask;\n   895: }"
   },
   {
     "key": "L00891_01",
     "original": "are",
     "translation": "",
-    "context": "src/wield.c:891:27\n   886: {\n   887: \tlong savewornmask;\n   888: \n   889: \tsavewornmask = obj->owornmask;\n   890: \tYour(\"%s %s welded to your %s!\",\n>  891: \t\txname(obj), otense(obj, \"are\"),\n   892: \t\tbimanual(obj) ? (const char *)makeplural(body_part(HAND))\n   893: \t\t\t\t: body_part(HAND));\n   894: \tobj->owornmask = savewornmask;\n   895: }\n   896: "
+    "stage": 0,
+    "context": "src/wield.c:891:27\n   886: {\n   887: \tlong savewornmask;\n   888: \n   889: \tsavewornmask = obj-&gt;owornmask;\n   890: \tYour(\"%s %s welded to your %s!\",\n&gt;  891: \t\txname(obj), otense(obj, \"are\"),\n   892: \t\tbimanual(obj) ? (const char *)makeplural(body_part(HAND))\n   893: \t\t\t\t: body_part(HAND));\n   894: \tobj-&gt;owornmask = savewornmask;\n   895: }\n   896: "
   },
   {
     "key": "L00904_01",
     "original": "extinguish %s before putting it away.",
     "translation": "",
-    "context": "src/wield.c:904:6\n   899: register struct obj *obj;\n   900: boolean put_away;\n   901: {\n   902:     /* MRKR: Extinguish torches when they are put away */\n   903:     if (put_away && obj->otyp == TORCH && obj->lamplit) {\n>  904: \tYou(\"extinguish %s before putting it away.\", yname(obj));\n   905: \tend_burn(obj, TRUE);\n   906:     }\n   907: }\n   908: \n   909: /*wield.c*/"
+    "stage": 0,
+    "context": "src/wield.c:904:6\n   899: register struct obj *obj;\n   900: boolean put_away;\n   901: {\n   902:     /* MRKR: Extinguish torches when they are put away */\n   903:     if (put_away && obj-&gt;otyp == TORCH && obj-&gt;lamplit) {\n&gt;  904: \tYou(\"extinguish %s before putting it away.\", yname(obj));\n   905: \tend_burn(obj, TRUE);\n   906:     }\n   907: }\n   908: \n   909: /*wield.c*/"
   }
 ]

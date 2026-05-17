@@ -3,588 +3,686 @@
     "key": "L00076_01",
     "original": "died",
     "translation": "",
-    "context": "src/end.c:76:2\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n>   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
+    "stage": 0,
+    "context": "src/end.c:76:2\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n&gt;   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
   },
   {
     "key": "L00076_02",
     "original": "betrayed",
     "translation": "",
-    "context": "src/end.c:76:10\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n>   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
+    "stage": 0,
+    "context": "src/end.c:76:10\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n&gt;   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
   },
   {
     "key": "L00076_03",
     "original": "choked",
     "translation": "",
-    "context": "src/end.c:76:22\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n>   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
+    "stage": 0,
+    "context": "src/end.c:76:22\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n&gt;   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
   },
   {
     "key": "L00076_04",
     "original": "poisoned",
     "translation": "",
-    "context": "src/end.c:76:32\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n>   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
+    "stage": 0,
+    "context": "src/end.c:76:32\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n&gt;   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
   },
   {
     "key": "L00076_05",
     "original": "starvation",
     "translation": "",
-    "context": "src/end.c:76:44\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n>   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
+    "stage": 0,
+    "context": "src/end.c:76:44\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n&gt;   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
   },
   {
     "key": "L00076_06",
     "original": "drowning",
     "translation": "",
-    "context": "src/end.c:76:58\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n>   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
+    "stage": 0,
+    "context": "src/end.c:76:58\n    71: \n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n&gt;   76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };"
   },
   {
     "key": "L00077_01",
     "original": "burning",
     "translation": "",
-    "context": "src/end.c:77:2\n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n>   77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: "
+    "stage": 0,
+    "context": "src/end.c:77:2\n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n&gt;   77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: "
   },
   {
     "key": "L00077_02",
     "original": "dissolving under the heat and pressure",
     "translation": "",
-    "context": "src/end.c:77:13\n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n>   77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: "
+    "stage": 0,
+    "context": "src/end.c:77:13\n    72: /*\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n&gt;   77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: "
   },
   {
     "key": "L00078_01",
     "original": "crushed",
     "translation": "",
-    "context": "src/end.c:78:2\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n>   78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */"
+    "stage": 0,
+    "context": "src/end.c:78:2\n    73:  * The order of these needs to match the macros in hack.h.\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n&gt;   78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */"
   },
   {
     "key": "L00079_01",
     "original": "genocided",
     "translation": "",
-    "context": "src/end.c:79:2\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n>   79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", "
+    "stage": 0,
+    "context": "src/end.c:79:2\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n&gt;   79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", "
   },
   {
     "key": "L00079_02",
     "original": "panic",
     "translation": "",
-    "context": "src/end.c:79:15\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n>   79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", "
+    "stage": 0,
+    "context": "src/end.c:79:15\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n&gt;   79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", "
   },
   {
     "key": "L00079_03",
     "original": "trickery",
     "translation": "",
-    "context": "src/end.c:79:24\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n>   79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", "
+    "stage": 0,
+    "context": "src/end.c:79:24\n    74:  */\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n&gt;   79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", "
   },
   {
     "key": "L00080_01",
     "original": "quit",
     "translation": "",
-    "context": "src/end.c:80:2\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n>   80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\","
+    "stage": 0,
+    "context": "src/end.c:80:2\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n&gt;   80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\","
   },
   {
     "key": "L00080_02",
     "original": "escaped",
     "translation": "",
-    "context": "src/end.c:80:10\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n>   80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\","
+    "stage": 0,
+    "context": "src/end.c:80:10\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n&gt;   80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\","
   },
   {
     "key": "L00080_03",
     "original": "ascended",
     "translation": "",
-    "context": "src/end.c:80:21\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n>   80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\","
+    "stage": 0,
+    "context": "src/end.c:80:21\n    75: static NEARDATA const char *deaths[] = {\t\t/* the array of death */\n    76: \t\"died\", \"betrayed\", \"choked\", \"poisoned\", \"starvation\", \"drowning\",\n    77: \t\"burning\", \"dissolving under the heat and pressure\",\n    78: \t\"crushed\", \"变成石头\", \"变成了史莱姆\",\n    79: \t\"genocided\", \"panic\", \"trickery\",\n&gt;   80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\","
   },
   {
     "key": "L00084_01",
     "original": "died",
     "translation": "",
-    "context": "src/end.c:84:2\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n>   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
+    "stage": 0,
+    "context": "src/end.c:84:2\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n&gt;   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
   },
   {
     "key": "L00084_02",
     "original": "were betrayed",
     "translation": "",
-    "context": "src/end.c:84:10\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n>   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
+    "stage": 0,
+    "context": "src/end.c:84:10\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n&gt;   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
   },
   {
     "key": "L00084_03",
     "original": "choked",
     "translation": "",
-    "context": "src/end.c:84:27\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n>   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
+    "stage": 0,
+    "context": "src/end.c:84:27\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n&gt;   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
   },
   {
     "key": "L00084_04",
     "original": "were poisoned",
     "translation": "",
-    "context": "src/end.c:84:37\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n>   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
+    "stage": 0,
+    "context": "src/end.c:84:37\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n&gt;   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
   },
   {
     "key": "L00084_05",
     "original": "starved",
     "translation": "",
-    "context": "src/end.c:84:54\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n>   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
+    "stage": 0,
+    "context": "src/end.c:84:54\n    79: \t\"genocided\", \"panic\", \"trickery\",\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n&gt;   84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };"
   },
   {
     "key": "L00085_01",
     "original": "drowned",
     "translation": "",
-    "context": "src/end.c:85:2\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n>   85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: "
+    "stage": 0,
+    "context": "src/end.c:85:2\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n&gt;   85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: "
   },
   {
     "key": "L00085_02",
     "original": "burned",
     "translation": "",
-    "context": "src/end.c:85:13\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n>   85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: "
+    "stage": 0,
+    "context": "src/end.c:85:13\n    80: \t\"quit\", \"escaped\", \"ascended\"\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n&gt;   85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: "
   },
   {
     "key": "L00086_01",
     "original": "were crushed",
     "translation": "",
-    "context": "src/end.c:86:2\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n>   86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/"
+    "stage": 0,
+    "context": "src/end.c:86:2\n    81: };\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n&gt;   86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/"
   },
   {
     "key": "L00087_01",
     "original": "were genocided",
     "translation": "",
-    "context": "src/end.c:87:2\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n>   87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void"
+    "stage": 0,
+    "context": "src/end.c:87:2\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n&gt;   87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void"
   },
   {
     "key": "L00087_02",
     "original": "panicked",
     "translation": "",
-    "context": "src/end.c:87:20\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n>   87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void"
+    "stage": 0,
+    "context": "src/end.c:87:20\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n&gt;   87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void"
   },
   {
     "key": "L00087_03",
     "original": "were tricked",
     "translation": "",
-    "context": "src/end.c:87:32\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n>   87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void"
+    "stage": 0,
+    "context": "src/end.c:87:32\n    82: \n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n&gt;   87: \t\"were genocided\", \"panicked\", \"were tricked\",\n    88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void"
   },
   {
     "key": "L00088_01",
     "original": "quit",
     "translation": "",
-    "context": "src/end.c:88:2\n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n>   88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void\n    93: done1(sig_unused)   /* called as signal() handler, so sent at least one arg */"
+    "stage": 0,
+    "context": "src/end.c:88:2\n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n&gt;   88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void\n    93: done1(sig_unused)   /* called as signal() handler, so sent at least one arg */"
   },
   {
     "key": "L00088_02",
     "original": "escaped",
     "translation": "",
-    "context": "src/end.c:88:10\n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n>   88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void\n    93: done1(sig_unused)   /* called as signal() handler, so sent at least one arg */"
+    "stage": 0,
+    "context": "src/end.c:88:10\n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n&gt;   88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void\n    93: done1(sig_unused)   /* called as signal() handler, so sent at least one arg */"
   },
   {
     "key": "L00088_03",
     "original": "ascended",
     "translation": "",
-    "context": "src/end.c:88:21\n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n>   88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void\n    93: done1(sig_unused)   /* called as signal() handler, so sent at least one arg */"
+    "stage": 0,
+    "context": "src/end.c:88:21\n    83: static NEARDATA const char *ends[] = {\t\t/* \"when you...\" */\n    84: \t\"died\", \"were betrayed\", \"choked\", \"were poisoned\", \"starved\", \n    85: \t\"drowned\", \"burned\", \"正在被岩浆融解\",\n    86: \t\"were crushed\", \"变成石头\", \"变成了史莱姆\",\n    87: \t\"were genocided\", \"panicked\", \"were tricked\",\n&gt;   88: \t\"quit\", \"escaped\", \"ascended\"\n    89: };\n    90: \n    91: /*ARGSUSED*/\n    92: void\n    93: done1(sig_unused)   /* called as signal() handler, so sent at least one arg */"
   },
   {
     "key": "L00144_01",
     "original": "Dump core?",
     "translation": "",
-    "context": "src/end.c:144:24\n   139: \t    const char *tmp = \"进入debug模式？\";\n   140: # else\n   141: #  ifdef LATTICE\n   142: \t    const char *tmp = \"是否创建快照？\";\n   143: #  else\n>  144: \t    const char *tmp = \"Dump core?\";\n   145: #  endif\n   146: # endif\n   147: \t    if ((c = ynq(tmp)) == 'y') {\n   148: \t\t(void) signal(SIGINT, (SIG_RET_TYPE) done1);\n   149: \t\texit_nhwindows((char *)0);"
+    "stage": 0,
+    "context": "src/end.c:144:24\n   139: \t    const char *tmp = \"进入debug模式？\";\n   140: # else\n   141: #  ifdef LATTICE\n   142: \t    const char *tmp = \"是否创建快照？\";\n   143: #  else\n&gt;  144: \t    const char *tmp = \"Dump core?\";\n   145: #  endif\n   146: # endif\n   147: \t    if ((c = ynq(tmp)) == 'y') {\n   148: \t\t(void) signal(SIGINT, (SIG_RET_TYPE) done1);\n   149: \t\texit_nhwindows((char *)0);"
   },
   {
     "key": "L00197_01",
     "original": "die...",
     "translation": "",
-    "context": "src/end.c:197:6\n   192: register struct monst *mtmp;\n   193: {\n   194: \tchar buf[BUFSZ];\n   195: \tboolean distorted = (boolean)(Hallucination && canspotmon(mtmp));\n   196: \n>  197: \tYou(\"die...\");\n   198: \t/* for those wand o'death, touch o'death, poisoned spike times... */        \n   199: \tif (Instant_Death)\n   200: \t    You(\"were hosed!\");\n   201: \tmark_synch();\t/* flush buffered screen output */\n   202: \tbuf[0] = '\\0';"
+    "stage": 0,
+    "context": "src/end.c:197:6\n   192: register struct monst *mtmp;\n   193: {\n   194: \tchar buf[BUFSZ];\n   195: \tboolean distorted = (boolean)(Hallucination && canspotmon(mtmp));\n   196: \n&gt;  197: \tYou(\"die...\");\n   198: \t/* for those wand o'death, touch o'death, poisoned spike times... */        \n   199: \tif (Instant_Death)\n   200: \t    You(\"were hosed!\");\n   201: \tmark_synch();\t/* flush buffered screen output */\n   202: \tbuf[0] = '\\0';"
   },
   {
     "key": "L00200_01",
     "original": "were hosed!",
     "translation": "",
-    "context": "src/end.c:200:10\n   195: \tboolean distorted = (boolean)(Hallucination && canspotmon(mtmp));\n   196: \n   197: \tYou(\"die...\");\n   198: \t/* for those wand o'death, touch o'death, poisoned spike times... */        \n   199: \tif (Instant_Death)\n>  200: \t    You(\"were hosed!\");\n   201: \tmark_synch();\t/* flush buffered screen output */\n   202: \tbuf[0] = '\\0';\n   203: \tkiller_format = KILLED_BY_AN;\n   204: \tif (!Blind || Blind_telepat) {        \n   205: \t/* \"killed by the high priest of Crom\" is okay, \"killed by the high\\n\t   priest\" alone isn't */"
+    "stage": 0,
+    "context": "src/end.c:200:10\n   195: \tboolean distorted = (boolean)(Hallucination && canspotmon(mtmp));\n   196: \n   197: \tYou(\"die...\");\n   198: \t/* for those wand o'death, touch o'death, poisoned spike times... */        \n   199: \tif (Instant_Death)\n&gt;  200: \t    You(\"were hosed!\");\n   201: \tmark_synch();\t/* flush buffered screen output */\n   202: \tbuf[0] = '\\0';\n   203: \tkiller_format = KILLED_BY_AN;\n   204: \tif (!Blind || Blind_telepat) {        \n   205: \t/* \"killed by the high priest of Crom\" is okay, \"killed by the high\\n\t   priest\" alone isn't */"
   },
   {
     "key": "L00208_01",
     "original": "the ",
     "translation": "",
-    "context": "src/end.c:208:15\n   203: \tkiller_format = KILLED_BY_AN;\n   204: \tif (!Blind || Blind_telepat) {        \n   205: \t/* \"killed by the high priest of Crom\" is okay, \"killed by the high\\n\t   priest\" alone isn't */\n   206: \tif ((mtmp->data->geno & G_UNIQ) != 0 && !(mtmp->data == &mons[PM_HIGH_PRIEST] && !mtmp->ispriest)) {\n   207: \t    if (!type_is_pname(mtmp->data))\n>  208: \t\tStrcat(buf, \"the \");\n   209: \t    killer_format = KILLED_BY;\n   210: \t}\n   211: \t/* _the_ <invisible> <distorted> ghost of Dudley */\n   212: \tif (mtmp->data == &mons[PM_GHOST] && mtmp->mnamelth) {\n   213: \t\tStrcat(buf, \"the \");"
+    "stage": 0,
+    "context": "src/end.c:208:15\n   203: \tkiller_format = KILLED_BY_AN;\n   204: \tif (!Blind || Blind_telepat) {        \n   205: \t/* \"killed by the high priest of Crom\" is okay, \"killed by the high\\n\t   priest\" alone isn't */\n   206: \tif ((mtmp-&gt;data-&gt;geno & G_UNIQ) != 0 && !(mtmp-&gt;data == &mons[PM_HIGH_PRIEST] && !mtmp-&gt;ispriest)) {\n   207: \t    if (!type_is_pname(mtmp-&gt;data))\n&gt;  208: \t\tStrcat(buf, \"the \");\n   209: \t    killer_format = KILLED_BY;\n   210: \t}\n   211: \t/* _the_ &lt;invisible&gt; &lt;distorted&gt; ghost of Dudley */\n   212: \tif (mtmp-&gt;data == &mons[PM_GHOST] && mtmp-&gt;mnamelth) {\n   213: \t\tStrcat(buf, \"the \");"
   },
   {
     "key": "L00213_01",
     "original": "the ",
     "translation": "",
-    "context": "src/end.c:213:15\n   208: \t\tStrcat(buf, \"the \");\n   209: \t    killer_format = KILLED_BY;\n   210: \t}\n   211: \t/* _the_ <invisible> <distorted> ghost of Dudley */\n   212: \tif (mtmp->data == &mons[PM_GHOST] && mtmp->mnamelth) {\n>  213: \t\tStrcat(buf, \"the \");\n   214: \t\tkiller_format = KILLED_BY;\n   215: \t}\n   216: \tif (mtmp->minvis)\n   217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)"
+    "stage": 0,
+    "context": "src/end.c:213:15\n   208: \t\tStrcat(buf, \"the \");\n   209: \t    killer_format = KILLED_BY;\n   210: \t}\n   211: \t/* _the_ &lt;invisible&gt; &lt;distorted&gt; ghost of Dudley */\n   212: \tif (mtmp-&gt;data == &mons[PM_GHOST] && mtmp-&gt;mnamelth) {\n&gt;  213: \t\tStrcat(buf, \"the \");\n   214: \t\tkiller_format = KILLED_BY;\n   215: \t}\n   216: \tif (mtmp-&gt;minvis)\n   217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)"
   },
   {
     "key": "L00217_01",
     "original": "invisible ",
     "translation": "",
-    "context": "src/end.c:217:15\n   212: \tif (mtmp->data == &mons[PM_GHOST] && mtmp->mnamelth) {\n   213: \t\tStrcat(buf, \"the \");\n   214: \t\tkiller_format = KILLED_BY;\n   215: \t}\n   216: \tif (mtmp->minvis)\n>  217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)\n   219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");"
+    "stage": 0,
+    "context": "src/end.c:217:15\n   212: \tif (mtmp-&gt;data == &mons[PM_GHOST] && mtmp-&gt;mnamelth) {\n   213: \t\tStrcat(buf, \"the \");\n   214: \t\tkiller_format = KILLED_BY;\n   215: \t}\n   216: \tif (mtmp-&gt;minvis)\n&gt;  217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)\n   219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");"
   },
   {
     "key": "L00219_01",
     "original": "hallucinogen-distorted ",
     "translation": "",
-    "context": "src/end.c:219:15\n   214: \t\tkiller_format = KILLED_BY;\n   215: \t}\n   216: \tif (mtmp->minvis)\n   217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)\n>  219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp->mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp->isshk) {"
+    "stage": 0,
+    "context": "src/end.c:219:15\n   214: \t\tkiller_format = KILLED_BY;\n   215: \t}\n   216: \tif (mtmp-&gt;minvis)\n   217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)\n&gt;  219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp-&gt;mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp-&gt;isshk) {"
   },
   {
     "key": "L00222_01",
     "original": "ghost",
     "translation": "",
-    "context": "src/end.c:222:15\n   217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)\n   219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n>  222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp->mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp->isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n   226: \t\t\t(mtmp->female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;"
+    "stage": 0,
+    "context": "src/end.c:222:15\n   217: \t\tStrcat(buf, \"invisible \");\n   218: \tif (distorted)\n   219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n&gt;  222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp-&gt;mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp-&gt;isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n   226: \t\t\t(mtmp-&gt;female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;"
   },
   {
     "key": "L00223_01",
     "original": " of %s",
     "translation": "",
-    "context": "src/end.c:223:41\n   218: \tif (distorted)\n   219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n>  223: \t\tif (mtmp->mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp->isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n   226: \t\t\t(mtmp->female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp->ispriest || mtmp->isminion) {"
+    "stage": 0,
+    "context": "src/end.c:223:41\n   218: \tif (distorted)\n   219: \t\tStrcat(buf, \"hallucinogen-distorted \");\n   220: \n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n&gt;  223: \t\tif (mtmp-&gt;mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp-&gt;isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n   226: \t\t\t(mtmp-&gt;female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp-&gt;ispriest || mtmp-&gt;isminion) {"
   },
   {
     "key": "L00225_01",
     "original": "%s %s, the shopkeeper",
     "translation": "",
-    "context": "src/end.c:225:21\n   220: \n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp->mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp->isshk) {\n>  225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n   226: \t\t\t(mtmp->female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp->ispriest || mtmp->isminion) {\n   229: \t\t/* m_monnam() suppresses \"the\" prefix plus \"invisible\", and\n   230: \t\t   it overrides the effect of Hallucination on priestname() */"
+    "stage": 0,
+    "context": "src/end.c:225:21\n   220: \n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp-&gt;mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp-&gt;isshk) {\n&gt;  225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n   226: \t\t\t(mtmp-&gt;female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp-&gt;ispriest || mtmp-&gt;isminion) {\n   229: \t\t/* m_monnam() suppresses \"the\" prefix plus \"invisible\", and\n   230: \t\t   it overrides the effect of Hallucination on priestname() */"
   },
   {
     "key": "L00226_01",
     "original": "Ms.",
     "translation": "",
-    "context": "src/end.c:226:20\n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp->mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp->isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n>  226: \t\t\t(mtmp->female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp->ispriest || mtmp->isminion) {\n   229: \t\t/* m_monnam() suppresses \"the\" prefix plus \"invisible\", and\n   230: \t\t   it overrides the effect of Hallucination on priestname() */\n   231: \t\tkiller = m_monnam(mtmp);"
+    "stage": 0,
+    "context": "src/end.c:226:20\n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp-&gt;mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp-&gt;isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n&gt;  226: \t\t\t(mtmp-&gt;female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp-&gt;ispriest || mtmp-&gt;isminion) {\n   229: \t\t/* m_monnam() suppresses \"the\" prefix plus \"invisible\", and\n   230: \t\t   it overrides the effect of Hallucination on priestname() */\n   231: \t\tkiller = m_monnam(mtmp);"
   },
   {
     "key": "L00226_02",
     "original": "Mr.",
     "translation": "",
-    "context": "src/end.c:226:28\n   221: \tif(mtmp->data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp->mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp->isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n>  226: \t\t\t(mtmp->female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp->ispriest || mtmp->isminion) {\n   229: \t\t/* m_monnam() suppresses \"the\" prefix plus \"invisible\", and\n   230: \t\t   it overrides the effect of Hallucination on priestname() */\n   231: \t\tkiller = m_monnam(mtmp);"
+    "stage": 0,
+    "context": "src/end.c:226:28\n   221: \tif(mtmp-&gt;data == &mons[PM_GHOST]) {\n   222: \t\tStrcat(buf, \"ghost\");\n   223: \t\tif (mtmp-&gt;mnamelth) Sprintf(eos(buf), \" of %s\", NAME(mtmp));\n   224: \t} else if(mtmp-&gt;isshk) {\n   225: \t\tSprintf(eos(buf), \"%s %s, the shopkeeper\",\n&gt;  226: \t\t\t(mtmp-&gt;female ? \"Ms.\" : \"Mr.\"), shkname(mtmp));\n   227: \t\tkiller_format = KILLED_BY;\n   228: \t} else if (mtmp-&gt;ispriest || mtmp-&gt;isminion) {\n   229: \t\t/* m_monnam() suppresses \"the\" prefix plus \"invisible\", and\n   230: \t\t   it overrides the effect of Hallucination on priestname() */\n   231: \t\tkiller = m_monnam(mtmp);"
   },
   {
     "key": "L00236_01",
     "original": " called %s",
     "translation": "",
-    "context": "src/end.c:236:25\n   231: \t\tkiller = m_monnam(mtmp);\n   232: \t\tStrcat(buf, killer);\n   233: \t} else {\n   234: \t\tStrcat(buf, mtmp->data->mname);\n   235: \t\tif (mtmp->mnamelth)\n>  236: \t\t    Sprintf(eos(buf), \" called %s\", NAME(mtmp));\n   237: \t}\n   238: \n   239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;"
+    "stage": 0,
+    "context": "src/end.c:236:25\n   231: \t\tkiller = m_monnam(mtmp);\n   232: \t\tStrcat(buf, killer);\n   233: \t} else {\n   234: \t\tStrcat(buf, mtmp-&gt;data-&gt;mname);\n   235: \t\tif (mtmp-&gt;mnamelth)\n&gt;  236: \t\t    Sprintf(eos(buf), \" called %s\", NAME(mtmp));\n   237: \t}\n   238: \n   239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;"
   },
   {
     "key": "L00239_01",
     "original": ", while helpless",
     "translation": "",
-    "context": "src/end.c:239:25\n   234: \t\tStrcat(buf, mtmp->data->mname);\n   235: \t\tif (mtmp->mnamelth)\n   236: \t\t    Sprintf(eos(buf), \" called %s\", NAME(mtmp));\n   237: \t}\n   238: \n>  239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;\n   242: \t\tStrcat(buf,\"something while blind\");\n   243: \t\tif (multi) Strcat(buf,\" and helpless\");\n   244: \t}"
+    "stage": 0,
+    "context": "src/end.c:239:25\n   234: \t\tStrcat(buf, mtmp-&gt;data-&gt;mname);\n   235: \t\tif (mtmp-&gt;mnamelth)\n   236: \t\t    Sprintf(eos(buf), \" called %s\", NAME(mtmp));\n   237: \t}\n   238: \n&gt;  239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;\n   242: \t\tStrcat(buf,\"something while blind\");\n   243: \t\tif (multi) Strcat(buf,\" and helpless\");\n   244: \t}"
   },
   {
     "key": "L00242_01",
     "original": "something while blind",
     "translation": "",
-    "context": "src/end.c:242:14\n   237: \t}\n   238: \n   239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;\n>  242: \t\tStrcat(buf,\"something while blind\");\n   243: \t\tif (multi) Strcat(buf,\" and helpless\");\n   244: \t}\n   245: \n   246: \tkiller = buf;\n   247: \tif (mtmp->data->mlet == S_WRAITH)"
+    "stage": 0,
+    "context": "src/end.c:242:14\n   237: \t}\n   238: \n   239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;\n&gt;  242: \t\tStrcat(buf,\"something while blind\");\n   243: \t\tif (multi) Strcat(buf,\" and helpless\");\n   244: \t}\n   245: \n   246: \tkiller = buf;\n   247: \tif (mtmp-&gt;data-&gt;mlet == S_WRAITH)"
   },
   {
     "key": "L00243_01",
     "original": " and helpless",
     "translation": "",
-    "context": "src/end.c:243:25\n   238: \n   239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;\n   242: \t\tStrcat(buf,\"something while blind\");\n>  243: \t\tif (multi) Strcat(buf,\" and helpless\");\n   244: \t}\n   245: \n   246: \tkiller = buf;\n   247: \tif (mtmp->data->mlet == S_WRAITH)\n   248: \t\tu.ugrave_arise = PM_WRAITH;"
+    "stage": 0,
+    "context": "src/end.c:243:25\n   238: \n   239: \t\tif (multi) Strcat(buf,\", while helpless\");\n   240: \t} else {\n   241: \t\tkiller_format = KILLED_BY;\n   242: \t\tStrcat(buf,\"something while blind\");\n&gt;  243: \t\tif (multi) Strcat(buf,\" and helpless\");\n   244: \t}\n   245: \n   246: \tkiller = buf;\n   247: \tif (mtmp-&gt;data-&gt;mlet == S_WRAITH)\n   248: \t\tu.ugrave_arise = PM_WRAITH;"
   },
   {
     "key": "L00290_01",
     "original": "Postgame wrapup disrupted.",
     "translation": "",
-    "context": "src/end.c:290:5\n   285: \t    exit_nhwindows((char *)0);\n   286: \t    iflags.window_inited = 0; /* they're gone; force raw_print()ing */\n   287: \t}\n   288: \n   289: \traw_print(program_state.gameover ?\n>  290: \t\t  \"Postgame wrapup disrupted.\" :\n   291: \t\t  !program_state.something_worth_saving ?\n   292: \t\t  \"程序初始化失败。\" :\n   293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)"
+    "stage": 0,
+    "context": "src/end.c:290:5\n   285: \t    exit_nhwindows((char *)0);\n   286: \t    iflags.window_inited = 0; /* they're gone; force raw_print()ing */\n   287: \t}\n   288: \n   289: \traw_print(program_state.gameover ?\n&gt;  290: \t\t  \"Postgame wrapup disrupted.\" :\n   291: \t\t  !program_state.something_worth_saving ?\n   292: \t\t  \"程序初始化失败。\" :\n   293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)"
   },
   {
     "key": "L00293_01",
     "original": "Suddenly, the dungeon collapses.",
     "translation": "",
-    "context": "src/end.c:293:5\n   288: \n   289: \traw_print(program_state.gameover ?\n   290: \t\t  \"Postgame wrapup disrupted.\" :\n   291: \t\t  !program_state.something_worth_saving ?\n   292: \t\t  \"程序初始化失败。\" :\n>  293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n   297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");"
+    "stage": 0,
+    "context": "src/end.c:293:5\n   288: \n   289: \traw_print(program_state.gameover ?\n   290: \t\t  \"Postgame wrapup disrupted.\" :\n   291: \t\t  !program_state.something_worth_saving ?\n   292: \t\t  \"程序初始化失败。\" :\n&gt;  293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n   297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");"
   },
   {
     "key": "L00297_01",
     "original": "Report the following error to \\\"%s\\\".",
     "translation": "",
-    "context": "src/end.c:297:17\n   292: \t\t  \"程序初始化失败。\" :\n   293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n>  297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n   300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)"
+    "stage": 0,
+    "context": "src/end.c:297:17\n   292: \t\t  \"程序初始化失败。\" :\n   293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n&gt;  297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n   300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)"
   },
   {
     "key": "L00298_01",
     "original": "slashem-discuss@lists.sourceforge.net",
     "translation": "",
-    "context": "src/end.c:298:4\n   293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n   297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n>  298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n   300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)\n   303: \t    raw_printf(\"Report error to \\\"%s\\\"%s.\","
+    "stage": 0,
+    "context": "src/end.c:298:4\n   293: \t\t  \"Suddenly, the dungeon collapses.\");\n   294: #if defined(WIZARD) && !defined(MICRO)\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n   297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n&gt;  298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n   300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)\n   303: \t    raw_printf(\"Report error to \\\"%s\\\"%s.\","
   },
   {
     "key": "L00300_01",
     "original": "\\nError save file being written.\\n",
     "translation": "",
-    "context": "src/end.c:300:16\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n   297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n>  300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)\n   303: \t    raw_printf(\"Report error to \\\"%s\\\"%s.\",\n   304: #  ifdef WIZARD_NAME\t/*(KR1ED)*/\n   305: \t\t\tWIZARD_NAME,"
+    "stage": 0,
+    "context": "src/end.c:300:16\n   295: # if defined(NOTIFY_NETHACK_BUGS)\n   296: \tif (!wizard)\n   297: \t    raw_printf(\"Report the following error to \\\"%s\\\".\",\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n&gt;  300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)\n   303: \t    raw_printf(\"Report error to \\\"%s\\\"%s.\",\n   304: #  ifdef WIZARD_NAME\t/*(KR1ED)*/\n   305: \t\t\tWIZARD_NAME,"
   },
   {
     "key": "L00303_01",
     "original": "Report error to \\\"%s\\\"%s.",
     "translation": "",
-    "context": "src/end.c:303:17\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n   300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)\n>  303: \t    raw_printf(\"Report error to \\\"%s\\\"%s.\",\n   304: #  ifdef WIZARD_NAME\t/*(KR1ED)*/\n   305: \t\t\tWIZARD_NAME,\n   306: #  else\n   307: \t\t\tWIZARD,\n   308: #  endif"
+    "stage": 0,
+    "context": "src/end.c:303:17\n   298: \t\t\t\"slashem-discuss@lists.sourceforge.net\");\n   299: \telse if (program_state.something_worth_saving)\n   300: \t    raw_print(\"\\nError save file being written.\\n\");\n   301: # else\n   302: \tif (!wizard)\n&gt;  303: \t    raw_printf(\"Report error to \\\"%s\\\"%s.\",\n   304: #  ifdef WIZARD_NAME\t/*(KR1ED)*/\n   305: \t\t\tWIZARD_NAME,\n   306: #  else\n   307: \t\t\tWIZARD,\n   308: #  endif"
   },
   {
     "key": "L00321_01",
     "original": "panic",
     "translation": "",
-    "context": "src/end.c:321:15\n   316: #endif\n   317: \t{\n   318: \t    char buf[BUFSZ];\n   319: \t    Vsprintf(buf,str,VA_ARGS);\n   320: \t    raw_print(buf);\n>  321: \t    paniclog(\"panic\", buf);\n   322: #ifdef ANDROID\n   323: \t    debuglog(\"panic: %s\", buf);\n   324: #endif\n   325: \t}\n   326: #ifdef WIN32"
+    "stage": 0,
+    "context": "src/end.c:321:15\n   316: #endif\n   317: \t{\n   318: \t    char buf[BUFSZ];\n   319: \t    Vsprintf(buf,str,VA_ARGS);\n   320: \t    raw_print(buf);\n&gt;  321: \t    paniclog(\"panic\", buf);\n   322: #ifdef ANDROID\n   323: \t    debuglog(\"panic: %s\", buf);\n   324: #endif\n   325: \t}\n   326: #ifdef WIN32"
   },
   {
     "key": "L00323_01",
     "original": "panic: %s",
     "translation": "",
-    "context": "src/end.c:323:15\n   318: \t    char buf[BUFSZ];\n   319: \t    Vsprintf(buf,str,VA_ARGS);\n   320: \t    raw_print(buf);\n   321: \t    paniclog(\"panic\", buf);\n   322: #ifdef ANDROID\n>  323: \t    debuglog(\"panic: %s\", buf);\n   324: #endif\n   325: \t}\n   326: #ifdef WIN32\n   327: \tinterject(INTERJECT_PANIC);\n   328: #endif"
+    "stage": 0,
+    "context": "src/end.c:323:15\n   318: \t    char buf[BUFSZ];\n   319: \t    Vsprintf(buf,str,VA_ARGS);\n   320: \t    raw_print(buf);\n   321: \t    paniclog(\"panic\", buf);\n   322: #ifdef ANDROID\n&gt;  323: \t    debuglog(\"panic: %s\", buf);\n   324: #endif\n   325: \t}\n   326: #ifdef WIN32\n   327: \tinterject(INTERJECT_PANIC);\n   328: #endif"
   },
   {
     "key": "L00369_01",
     "original": "should_query_disclose_option: bad category %c",
     "translation": "",
-    "context": "src/end.c:369:13\n   364: \t    *defquery = 'n';\n   365: \t    return TRUE;\n   366: \t}\n   367:     }\n   368:     if (defquery)\n>  369: \timpossible(\"should_query_disclose_option: bad category %c\", category);\n   370:     else\n   371: \timpossible(\"should_query_disclose_option: null defquery\");\n   372:     return TRUE;\n   373: }\n   374: "
+    "stage": 0,
+    "context": "src/end.c:369:13\n   364: \t    *defquery = 'n';\n   365: \t    return TRUE;\n   366: \t}\n   367:     }\n   368:     if (defquery)\n&gt;  369: \timpossible(\"should_query_disclose_option: bad category %c\", category);\n   370:     else\n   371: \timpossible(\"should_query_disclose_option: null defquery\");\n   372:     return TRUE;\n   373: }\n   374: "
   },
   {
     "key": "L00371_01",
     "original": "should_query_disclose_option: null defquery",
     "translation": "",
-    "context": "src/end.c:371:13\n   366: \t}\n   367:     }\n   368:     if (defquery)\n   369: \timpossible(\"should_query_disclose_option: bad category %c\", category);\n   370:     else\n>  371: \timpossible(\"should_query_disclose_option: null defquery\");\n   372:     return TRUE;\n   373: }\n   374: \n   375: STATIC_OVL void\n   376: disclose(how,taken)"
+    "stage": 0,
+    "context": "src/end.c:371:13\n   366: \t}\n   367:     }\n   368:     if (defquery)\n   369: \timpossible(\"should_query_disclose_option: bad category %c\", category);\n   370:     else\n&gt;  371: \timpossible(\"should_query_disclose_option: null defquery\");\n   372:     return TRUE;\n   373: }\n   374: \n   375: STATIC_OVL void\n   376: disclose(how,taken)"
   },
   {
     "key": "L00388_01",
     "original": "quit",
     "translation": "",
-    "context": "src/end.c:388:20\n   383: \tboolean hallu=FALSE;\n   384: \n   385: \tif (invent) {\n   386: \t    if(taken)\n   387: \t\tSprintf(qbuf,\"你想看看你%s时身上都有些什么东西吗？\",\n>  388: \t\t\t(how == QUIT) ? \"quit\" : \"died\");\n   389: \t    else\n   390: \t\tStrcpy(qbuf,\"Do you want your possessions identified?\");\n   391: \n   392: \t    ask = should_query_disclose_option('i', &defquery);\n   393: \t    if (!done_stopprint) {"
+    "stage": 0,
+    "context": "src/end.c:388:20\n   383: \tboolean hallu=FALSE;\n   384: \n   385: \tif (invent) {\n   386: \t    if(taken)\n   387: \t\tSprintf(qbuf,\"你想看看你%s时身上都有些什么东西吗？\",\n&gt;  388: \t\t\t(how == QUIT) ? \"quit\" : \"died\");\n   389: \t    else\n   390: \t\tStrcpy(qbuf,\"Do you want your possessions identified?\");\n   391: \n   392: \t    ask = should_query_disclose_option('i', &defquery);\n   393: \t    if (!done_stopprint) {"
   },
   {
     "key": "L00388_02",
     "original": "died",
     "translation": "",
-    "context": "src/end.c:388:29\n   383: \tboolean hallu=FALSE;\n   384: \n   385: \tif (invent) {\n   386: \t    if(taken)\n   387: \t\tSprintf(qbuf,\"你想看看你%s时身上都有些什么东西吗？\",\n>  388: \t\t\t(how == QUIT) ? \"quit\" : \"died\");\n   389: \t    else\n   390: \t\tStrcpy(qbuf,\"Do you want your possessions identified?\");\n   391: \n   392: \t    ask = should_query_disclose_option('i', &defquery);\n   393: \t    if (!done_stopprint) {"
+    "stage": 0,
+    "context": "src/end.c:388:29\n   383: \tboolean hallu=FALSE;\n   384: \n   385: \tif (invent) {\n   386: \t    if(taken)\n   387: \t\tSprintf(qbuf,\"你想看看你%s时身上都有些什么东西吗？\",\n&gt;  388: \t\t\t(how == QUIT) ? \"quit\" : \"died\");\n   389: \t    else\n   390: \t\tStrcpy(qbuf,\"Do you want your possessions identified?\");\n   391: \n   392: \t    ask = should_query_disclose_option('i', &defquery);\n   393: \t    if (!done_stopprint) {"
   },
   {
     "key": "L00390_01",
     "original": "Do you want your possessions identified?",
     "translation": "",
-    "context": "src/end.c:390:15\n   385: \tif (invent) {\n   386: \t    if(taken)\n   387: \t\tSprintf(qbuf,\"你想看看你%s时身上都有些什么东西吗？\",\n   388: \t\t\t(how == QUIT) ? \"quit\" : \"died\");\n   389: \t    else\n>  390: \t\tStrcpy(qbuf,\"Do you want your possessions identified?\");\n   391: \n   392: \t    ask = should_query_disclose_option('i', &defquery);\n   393: \t    if (!done_stopprint) {\n   394: \t\tc = ask ? yn_function(qbuf, ynqchars, defquery) : defquery;\n   395: \t\tif (c == 'y') {"
+    "stage": 0,
+    "context": "src/end.c:390:15\n   385: \tif (invent) {\n   386: \t    if(taken)\n   387: \t\tSprintf(qbuf,\"你想看看你%s时身上都有些什么东西吗？\",\n   388: \t\t\t(how == QUIT) ? \"quit\" : \"died\");\n   389: \t    else\n&gt;  390: \t\tStrcpy(qbuf,\"Do you want your possessions identified?\");\n   391: \n   392: \t    ask = should_query_disclose_option('i', &defquery);\n   393: \t    if (!done_stopprint) {\n   394: \t\tc = ask ? yn_function(qbuf, ynqchars, defquery) : defquery;\n   395: \t\tif (c == 'y') {"
   },
   {
     "key": "L00458_01",
     "original": "You survived that attempt on your life.",
     "translation": "",
-    "context": "src/end.c:458:14\n   453: \tif ((Sick & TIMEOUT) == 1) {\n   454: \t    u.usick_type = 0;\n   455: \t    Sick = 0;\n   456: \t}\n   457: \tif (how == CHOKING) init_uhunger();\n>  458: \tnomovemsg = \"You survived that attempt on your life.\";\n   459: \tflags.move = 0;\n   460: \tif(multi > 0) multi = 0; else multi = -1;\n   461: \tif(u.utrap && u.utraptype == TT_LAVA) u.utrap = 0;\n   462: \tflags.botl = 1;\n   463: \tu.ugrave_arise = NON_PM;"
+    "stage": 0,
+    "context": "src/end.c:458:14\n   453: \tif ((Sick & TIMEOUT) == 1) {\n   454: \t    u.usick_type = 0;\n   455: \t    Sick = 0;\n   456: \t}\n   457: \tif (how == CHOKING) init_uhunger();\n&gt;  458: \tnomovemsg = \"You survived that attempt on your life.\";\n   459: \tflags.move = 0;\n   460: \tif(multi &gt; 0) multi = 0; else multi = -1;\n   461: \tif(u.utrap && u.utraptype == TT_LAVA) u.utrap = 0;\n   462: \tflags.botl = 1;\n   463: \tu.ugrave_arise = NON_PM;"
   },
   {
     "key": "L00552_01",
     "original": "%s%s (worth %ld %s and %ld points)",
     "translation": "",
-    "context": "src/end.c:552:17\n   547: \t\tu.urexp += points;\n   548: \t    } else {\n   549: \t\tmakeknown(otmp->otyp);\n   550: \t\totmp->known = otmp->dknown = otmp->bknown = otmp->rknown = 1;\n   551: \t\t/* assumes artifacts don't have quan > 1 */\n>  552: \t\tSprintf(pbuf, \"%s%s (worth %ld %s and %ld points)\",\n   553: \t\t\tthe_unique_obj(otmp) ? \"The \" : \"\",\n   554: \t\t\totmp->oartifact ? artifact_name(xname(otmp), &dummy) :\n   555: \t\t\t\tOBJ_NAME(objects[otmp->otyp]),\n   556: \t\t\tvalue, currency(value), points);\n   557: \t\tputstr(endwin, 0, pbuf);"
+    "stage": 0,
+    "context": "src/end.c:552:17\n   547: \t\tu.urexp += points;\n   548: \t    } else {\n   549: \t\tmakeknown(otmp-&gt;otyp);\n   550: \t\totmp-&gt;known = otmp-&gt;dknown = otmp-&gt;bknown = otmp-&gt;rknown = 1;\n   551: \t\t/* assumes artifacts don't have quan &gt; 1 */\n&gt;  552: \t\tSprintf(pbuf, \"%s%s (worth %ld %s and %ld points)\",\n   553: \t\t\tthe_unique_obj(otmp) ? \"The \" : \"\",\n   554: \t\t\totmp-&gt;oartifact ? artifact_name(xname(otmp), &dummy) :\n   555: \t\t\t\tOBJ_NAME(objects[otmp-&gt;otyp]),\n   556: \t\t\tvalue, currency(value), points);\n   557: \t\tputstr(endwin, 0, pbuf);"
   },
   {
     "key": "L00553_01",
     "original": "The ",
     "translation": "",
-    "context": "src/end.c:553:27\n   548: \t    } else {\n   549: \t\tmakeknown(otmp->otyp);\n   550: \t\totmp->known = otmp->dknown = otmp->bknown = otmp->rknown = 1;\n   551: \t\t/* assumes artifacts don't have quan > 1 */\n   552: \t\tSprintf(pbuf, \"%s%s (worth %ld %s and %ld points)\",\n>  553: \t\t\tthe_unique_obj(otmp) ? \"The \" : \"\",\n   554: \t\t\totmp->oartifact ? artifact_name(xname(otmp), &dummy) :\n   555: \t\t\t\tOBJ_NAME(objects[otmp->otyp]),\n   556: \t\t\tvalue, currency(value), points);\n   557: \t\tputstr(endwin, 0, pbuf);\n   558: \t    }"
+    "stage": 0,
+    "context": "src/end.c:553:27\n   548: \t    } else {\n   549: \t\tmakeknown(otmp-&gt;otyp);\n   550: \t\totmp-&gt;known = otmp-&gt;dknown = otmp-&gt;bknown = otmp-&gt;rknown = 1;\n   551: \t\t/* assumes artifacts don't have quan &gt; 1 */\n   552: \t\tSprintf(pbuf, \"%s%s (worth %ld %s and %ld points)\",\n&gt;  553: \t\t\tthe_unique_obj(otmp) ? \"The \" : \"\",\n   554: \t\t\totmp-&gt;oartifact ? artifact_name(xname(otmp), &dummy) :\n   555: \t\t\t\tOBJ_NAME(objects[otmp-&gt;otyp]),\n   556: \t\t\tvalue, currency(value), points);\n   557: \t\tputstr(endwin, 0, pbuf);\n   558: \t    }"
   },
   {
     "key": "L00579_01",
     "original": "trickery",
     "translation": "",
-    "context": "src/end.c:579:12\n   574: \tstruct obj *corpse = (struct obj *)0;\n   575: \tlong umoney;\n   576: \n   577: \tif (how == TRICKED) {\n   578: \t    if (killer) {\n>  579: \t\tpaniclog(\"trickery\", killer);\n   580: \t\tkiller = 0;\n   581: \t    }\n   582: #ifdef WIZARD\n   583: \t    if (wizard) {\n   584: \t\tYou(\"这家伙玩向导模式都他妈不老实是吧。\");"
+    "stage": 0,
+    "context": "src/end.c:579:12\n   574: \tstruct obj *corpse = (struct obj *)0;\n   575: \tlong umoney;\n   576: \n   577: \tif (how == TRICKED) {\n   578: \t    if (killer) {\n&gt;  579: \t\tpaniclog(\"trickery\", killer);\n   580: \t\tkiller = 0;\n   581: \t    }\n   582: #ifdef WIZARD\n   583: \t    if (wizard) {\n   584: \t\tYou(\"这家伙玩向导模式都他妈不老实是吧。\");"
   },
   {
     "key": "L00591_01",
     "original": "done(how=%d moves=%ld dnum=%d dlevel=%d killer=%s)",
     "translation": "",
-    "context": "src/end.c:591:11\n   586: \t    }\n   587: #endif\n   588: \t}\n   589: \n   590: #ifdef ANDROID\n>  591: \tdebuglog(\"done(how=%d moves=%ld dnum=%d dlevel=%d killer=%s)\",\n   592: \t\thow, moves, u.uz.dnum, u.uz.dlevel,\n   593: \t\tkiller ? killer : \"(null)\");\n   594: #endif\n   595: \n   596: #ifdef ANDROID"
+    "stage": 0,
+    "context": "src/end.c:591:11\n   586: \t    }\n   587: #endif\n   588: \t}\n   589: \n   590: #ifdef ANDROID\n&gt;  591: \tdebuglog(\"done(how=%d moves=%ld dnum=%d dlevel=%d killer=%s)\",\n   592: \t\thow, moves, u.uz.dnum, u.uz.dlevel,\n   593: \t\tkiller ? killer : \"(null)\");\n   594: #endif\n   595: \n   596: #ifdef ANDROID"
   },
   {
     "key": "L00593_01",
     "original": "(null)",
     "translation": "",
-    "context": "src/end.c:593:21\n   588: \t}\n   589: \n   590: #ifdef ANDROID\n   591: \tdebuglog(\"done(how=%d moves=%ld dnum=%d dlevel=%d killer=%s)\",\n   592: \t\thow, moves, u.uz.dnum, u.uz.dlevel,\n>  593: \t\tkiller ? killer : \"(null)\");\n   594: #endif\n   595: \n   596: #ifdef ANDROID\n   597: \tif(how != TRICKED && how != QUIT && how != PANICKED && how != ESCAPED) {\n   598: \t\tand_you_die();"
+    "stage": 0,
+    "context": "src/end.c:593:21\n   588: \t}\n   589: \n   590: #ifdef ANDROID\n   591: \tdebuglog(\"done(how=%d moves=%ld dnum=%d dlevel=%d killer=%s)\",\n   592: \t\thow, moves, u.uz.dnum, u.uz.dlevel,\n&gt;  593: \t\tkiller ? killer : \"(null)\");\n   594: #endif\n   595: \n   596: #ifdef ANDROID\n   597: \tif(how != TRICKED && how != QUIT && how != PANICKED && how != ESCAPED) {\n   598: \t\tand_you_die();"
   },
   {
     "key": "L00620_01",
     "original": "begins to glow",
     "translation": "",
-    "context": "src/end.c:620:18\n   615: \tif (how < PANICKED) u.umortality++;\n   616: \tif (how == STONING && uamul && uamul->otyp == AMULET_VERSUS_STONE) {\n   617: \t\tpline(\"但是等一下……\");\n   618: \t\tmakeknown(AMULET_VERSUS_STONE);\n   619: \t\tYour(\"护身符%s%s！\",\n>  620: \t\t      !Blind ? \"begins to glow\" : \"feels warm\",\n   621: \t\t      uamul->cursed ? \" and disintegrates\" : \"\");\n   622: \t\t/* blessed -> uncursed -> cursed -> gone */\n   623: \t\tif (uamul->cursed)\n   624: \t\t\tuseup(uamul);\n   625: \t\telse if (uamul->blessed)"
+    "stage": 0,
+    "context": "src/end.c:620:18\n   615: \tif (how &lt; PANICKED) u.umortality++;\n   616: \tif (how == STONING && uamul && uamul-&gt;otyp == AMULET_VERSUS_STONE) {\n   617: \t\tpline(\"但是等一下……\");\n   618: \t\tmakeknown(AMULET_VERSUS_STONE);\n   619: \t\tYour(\"护身符%s%s！\",\n&gt;  620: \t\t      !Blind ? \"begins to glow\" : \"feels warm\",\n   621: \t\t      uamul-&gt;cursed ? \" and disintegrates\" : \"\");\n   622: \t\t/* blessed -&gt; uncursed -&gt; cursed -&gt; gone */\n   623: \t\tif (uamul-&gt;cursed)\n   624: \t\t\tuseup(uamul);\n   625: \t\telse if (uamul-&gt;blessed)"
   },
   {
     "key": "L00620_02",
     "original": "feels warm",
     "translation": "",
-    "context": "src/end.c:620:37\n   615: \tif (how < PANICKED) u.umortality++;\n   616: \tif (how == STONING && uamul && uamul->otyp == AMULET_VERSUS_STONE) {\n   617: \t\tpline(\"但是等一下……\");\n   618: \t\tmakeknown(AMULET_VERSUS_STONE);\n   619: \t\tYour(\"护身符%s%s！\",\n>  620: \t\t      !Blind ? \"begins to glow\" : \"feels warm\",\n   621: \t\t      uamul->cursed ? \" and disintegrates\" : \"\");\n   622: \t\t/* blessed -> uncursed -> cursed -> gone */\n   623: \t\tif (uamul->cursed)\n   624: \t\t\tuseup(uamul);\n   625: \t\telse if (uamul->blessed)"
+    "stage": 0,
+    "context": "src/end.c:620:37\n   615: \tif (how &lt; PANICKED) u.umortality++;\n   616: \tif (how == STONING && uamul && uamul-&gt;otyp == AMULET_VERSUS_STONE) {\n   617: \t\tpline(\"但是等一下……\");\n   618: \t\tmakeknown(AMULET_VERSUS_STONE);\n   619: \t\tYour(\"护身符%s%s！\",\n&gt;  620: \t\t      !Blind ? \"begins to glow\" : \"feels warm\",\n   621: \t\t      uamul-&gt;cursed ? \" and disintegrates\" : \"\");\n   622: \t\t/* blessed -&gt; uncursed -&gt; cursed -&gt; gone */\n   623: \t\tif (uamul-&gt;cursed)\n   624: \t\t\tuseup(uamul);\n   625: \t\telse if (uamul-&gt;blessed)"
   },
   {
     "key": "L00621_01",
     "original": " and disintegrates",
     "translation": "",
-    "context": "src/end.c:621:25\n   616: \tif (how == STONING && uamul && uamul->otyp == AMULET_VERSUS_STONE) {\n   617: \t\tpline(\"但是等一下……\");\n   618: \t\tmakeknown(AMULET_VERSUS_STONE);\n   619: \t\tYour(\"护身符%s%s！\",\n   620: \t\t      !Blind ? \"begins to glow\" : \"feels warm\",\n>  621: \t\t      uamul->cursed ? \" and disintegrates\" : \"\");\n   622: \t\t/* blessed -> uncursed -> cursed -> gone */\n   623: \t\tif (uamul->cursed)\n   624: \t\t\tuseup(uamul);\n   625: \t\telse if (uamul->blessed)\n   626: \t\t\tunbless(uamul);"
+    "stage": 0,
+    "context": "src/end.c:621:25\n   616: \tif (how == STONING && uamul && uamul-&gt;otyp == AMULET_VERSUS_STONE) {\n   617: \t\tpline(\"但是等一下……\");\n   618: \t\tmakeknown(AMULET_VERSUS_STONE);\n   619: \t\tYour(\"护身符%s%s！\",\n   620: \t\t      !Blind ? \"begins to glow\" : \"feels warm\",\n&gt;  621: \t\t      uamul-&gt;cursed ? \" and disintegrates\" : \"\");\n   622: \t\t/* blessed -&gt; uncursed -&gt; cursed -&gt; gone */\n   623: \t\tif (uamul-&gt;cursed)\n   624: \t\t\tuseup(uamul);\n   625: \t\telse if (uamul-&gt;blessed)\n   626: \t\t\tunbless(uamul);"
   },
   {
     "key": "L00641_01",
     "original": "medallion %s!",
     "translation": "",
-    "context": "src/end.c:641:8\n   636: \t\treturn;\n   637: \t}\n   638: \tif (Lifesaved && (how <= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n>  641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */"
+    "stage": 0,
+    "context": "src/end.c:641:8\n   636: \t\treturn;\n   637: \t}\n   638: \tif (Lifesaved && (how &lt;= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n&gt;  641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */"
   },
   {
     "key": "L00642_01",
     "original": "begins to glow",
     "translation": "",
-    "context": "src/end.c:642:18\n   637: \t}\n   638: \tif (Lifesaved && (how <= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n>  642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)"
+    "stage": 0,
+    "context": "src/end.c:642:18\n   637: \t}\n   638: \tif (Lifesaved && (how &lt;= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n&gt;  642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)"
   },
   {
     "key": "L00642_02",
     "original": "feels warm",
     "translation": "",
-    "context": "src/end.c:642:37\n   637: \t}\n   638: \tif (Lifesaved && (how <= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n>  642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)"
+    "stage": 0,
+    "context": "src/end.c:642:37\n   637: \t}\n   638: \tif (Lifesaved && (how &lt;= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n&gt;  642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)"
   },
   {
     "key": "L00643_01",
     "original": "vomit ...",
     "translation": "",
-    "context": "src/end.c:643:27\n   638: \tif (Lifesaved && (how <= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n>  643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)\n   648: \t\t\tuseup(uamul);"
+    "stage": 0,
+    "context": "src/end.c:643:27\n   638: \tif (Lifesaved && (how &lt;= GENOCIDED)) {\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n&gt;  643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)\n   648: \t\t\tuseup(uamul);"
   },
   {
     "key": "L00644_01",
     "original": "much better!",
     "translation": "",
-    "context": "src/end.c:644:12\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n>  644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)\n   648: \t\t\tuseup(uamul);\n   649: "
+    "stage": 0,
+    "context": "src/end.c:644:12\n   639: \t\tpline(\"但是等一下……\");\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n&gt;  644: \t\tYou_feel(\"much better!\");\n   645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)\n   648: \t\t\tuseup(uamul);\n   649: "
   },
   {
     "key": "L00645_01",
     "original": "medallion crumbles to dust!",
     "translation": "",
-    "context": "src/end.c:645:13\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n>  645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)\n   648: \t\t\tuseup(uamul);\n   649: \n   650: \t\t(void) adjattrib(A_CON, -1, TRUE);"
+    "stage": 0,
+    "context": "src/end.c:645:13\n   640: \t\tmakeknown(AMULET_OF_LIFE_SAVING);\n   641: \t\tYour(\"medallion %s!\",\n   642: \t\t      !Blind ? \"begins to glow\" : \"feels warm\");\n   643: \t\tif (how == CHOKING) You(\"vomit ...\");\n   644: \t\tYou_feel(\"much better!\");\n&gt;  645: \t\tpline_The(\"medallion crumbles to dust!\");\n   646: \t\t/* KMH -- Bullet-proofing */\n   647: \t\tif (uamul)\n   648: \t\t\tuseup(uamul);\n   649: \n   650: \t\t(void) adjattrib(A_CON, -1, TRUE);"
   },
   {
     "key": "L00668_01",
     "original": "choke",
     "translation": "",
-    "context": "src/end.c:668:23\n   663: \t\t\twizard ||\n   664: #endif\n   665: \t\t\tdiscover) && (how <= GENOCIDED || how == TURNED_SLIME)) {\n   666: \t\tif(yn(\"你选择死亡么？\") == 'y') goto die;\n   667: \t\tpline(\"行吧行吧行吧，你不会%s行吧，满足你。\",\n>  668: \t\t\t(how == CHOKING) ? \"choke\" : \"die\");\n   669: \t\tif(u.uhpmax <= 0) u.uhpmax = u.ulevel * 8;\t/* arbitrary */\n   670: \t\tsavelife(how);\n   671: \t\tkiller = 0;\n   672: \t\tkiller_format = 0;\n   673: \t\treturn;"
+    "stage": 0,
+    "context": "src/end.c:668:23\n   663: \t\t\twizard ||\n   664: #endif\n   665: \t\t\tdiscover) && (how &lt;= GENOCIDED || how == TURNED_SLIME)) {\n   666: \t\tif(yn(\"你选择死亡么？\") == 'y') goto die;\n   667: \t\tpline(\"行吧行吧行吧，你不会%s行吧，满足你。\",\n&gt;  668: \t\t\t(how == CHOKING) ? \"choke\" : \"die\");\n   669: \t\tif(u.uhpmax &lt;= 0) u.uhpmax = u.ulevel * 8;\t/* arbitrary */\n   670: \t\tsavelife(how);\n   671: \t\tkiller = 0;\n   672: \t\tkiller_format = 0;\n   673: \t\treturn;"
   },
   {
     "key": "L00668_02",
     "original": "die",
     "translation": "",
-    "context": "src/end.c:668:33\n   663: \t\t\twizard ||\n   664: #endif\n   665: \t\t\tdiscover) && (how <= GENOCIDED || how == TURNED_SLIME)) {\n   666: \t\tif(yn(\"你选择死亡么？\") == 'y') goto die;\n   667: \t\tpline(\"行吧行吧行吧，你不会%s行吧，满足你。\",\n>  668: \t\t\t(how == CHOKING) ? \"choke\" : \"die\");\n   669: \t\tif(u.uhpmax <= 0) u.uhpmax = u.ulevel * 8;\t/* arbitrary */\n   670: \t\tsavelife(how);\n   671: \t\tkiller = 0;\n   672: \t\tkiller_format = 0;\n   673: \t\treturn;"
+    "stage": 0,
+    "context": "src/end.c:668:33\n   663: \t\t\twizard ||\n   664: #endif\n   665: \t\t\tdiscover) && (how &lt;= GENOCIDED || how == TURNED_SLIME)) {\n   666: \t\tif(yn(\"你选择死亡么？\") == 'y') goto die;\n   667: \t\tpline(\"行吧行吧行吧，你不会%s行吧，满足你。\",\n&gt;  668: \t\t\t(how == CHOKING) ? \"choke\" : \"die\");\n   669: \t\tif(u.uhpmax &lt;= 0) u.uhpmax = u.ulevel * 8;\t/* arbitrary */\n   670: \t\tsavelife(how);\n   671: \t\tkiller = 0;\n   672: \t\tkiller_format = 0;\n   673: \t\treturn;"
   },
   {
     "key": "L00737_01",
     "original": "%s, %s%s",
     "translation": "",
-    "context": "src/end.c:737:17\n   732: \t\t\t(flags.female && urace.femalenum != NON_PM) ?\n   733: \t\t\turace.femalenum : urace.malenum);\n   734: \t\t}\n   735: \t\tcorpse = mk_named_object(CORPSE, &mons[mnum],\n   736: \t\t\t\t       u.ux, u.uy, plname);\n>  737: \t\tSprintf(pbuf, \"%s, %s%s\", plname,\n   738: \t\t\tkiller_format == NO_KILLER_PREFIX ? \"\" :\n   739: \t\t\tkilled_by_prefix[how],\n   740: \t\t\tkiller_format == KILLED_BY_AN ? an(killer) : killer);\n   741: \t\tmake_grave(u.ux, u.uy, pbuf);\n   742: \t    }"
+    "stage": 0,
+    "context": "src/end.c:737:17\n   732: \t\t\t(flags.female && urace.femalenum != NON_PM) ?\n   733: \t\t\turace.femalenum : urace.malenum);\n   734: \t\t}\n   735: \t\tcorpse = mk_named_object(CORPSE, &mons[mnum],\n   736: \t\t\t\t       u.ux, u.uy, plname);\n&gt;  737: \t\tSprintf(pbuf, \"%s, %s%s\", plname,\n   738: \t\t\tkiller_format == NO_KILLER_PREFIX ? \"\" :\n   739: \t\t\tkilled_by_prefix[how],\n   740: \t\t\tkiller_format == KILLED_BY_AN ? an(killer) : killer);\n   741: \t\tmake_grave(u.ux, u.uy, pbuf);\n   742: \t    }"
   },
   {
     "key": "L00768_01",
     "original": "none",
     "translation": "",
-    "context": "src/end.c:768:33\n   763: \n   764: \tclearlocks();\n   765: \n   766: \tif (have_windows) display_nhwindow(WIN_MESSAGE, FALSE);\n   767: \n>  768: \tif (strcmp(flags.end_disclose, \"none\") && how != PANICKED)\n   769: \t\tdisclose(how, taken);\n   770: \t/* finish_paybill should be called after disclosure but before bones */\n   771: \tif (bones_ok && taken) finish_paybill();\n   772: \n   773: \t/* calculate score, before creating bones [container gold] */"
+    "stage": 0,
+    "context": "src/end.c:768:33\n   763: \n   764: \tclearlocks();\n   765: \n   766: \tif (have_windows) display_nhwindow(WIN_MESSAGE, FALSE);\n   767: \n&gt;  768: \tif (strcmp(flags.end_disclose, \"none\") && how != PANICKED)\n   769: \t\tdisclose(how, taken);\n   770: \t/* finish_paybill should be called after disclosure but before bones */\n   771: \tif (bones_ok && taken) finish_paybill();\n   772: \n   773: \t/* calculate score, before creating bones [container gold] */"
   },
   {
     "key": "L00848_01",
     "original": "%s %s the %s...",
     "translation": "",
-    "context": "src/end.c:848:20\n   843: \t\tStrcat(kilbuf, \"（带着一个假的岩德护身符）\");\n   844: \t\t/* don't bother counting to see whether it should be plural */\n   845: \t}\n   846: \n   847: \tif (!done_stopprint) {\n>  848: \t    Sprintf(pbuf, \"%s %s the %s...\", Goodbye(), plname,\n   849: \t\t   how != ASCENDED ?\n   850: \t\t      (const char *) ((flags.female && urole.name.f) ?\n   851: \t\t         urole.name.f : urole.name.m) :\n   852: \t\t      (const char *) (flags.female ? \"Demigoddess\" : \"半神\"));\n   853: \t    putstr(endwin, 0, pbuf);"
+    "stage": 0,
+    "context": "src/end.c:848:20\n   843: \t\tStrcat(kilbuf, \"（带着一个假的岩德护身符）\");\n   844: \t\t/* don't bother counting to see whether it should be plural */\n   845: \t}\n   846: \n   847: \tif (!done_stopprint) {\n&gt;  848: \t    Sprintf(pbuf, \"%s %s the %s...\", Goodbye(), plname,\n   849: \t\t   how != ASCENDED ?\n   850: \t\t      (const char *) ((flags.female && urole.name.f) ?\n   851: \t\t         urole.name.f : urole.name.m) :\n   852: \t\t      (const char *) (flags.female ? \"Demigoddess\" : \"半神\"));\n   853: \t    putstr(endwin, 0, pbuf);"
   },
   {
     "key": "L00852_01",
     "original": "Demigoddess",
     "translation": "",
-    "context": "src/end.c:852:40\n   847: \tif (!done_stopprint) {\n   848: \t    Sprintf(pbuf, \"%s %s the %s...\", Goodbye(), plname,\n   849: \t\t   how != ASCENDED ?\n   850: \t\t      (const char *) ((flags.female && urole.name.f) ?\n   851: \t\t         urole.name.f : urole.name.m) :\n>  852: \t\t      (const char *) (flags.female ? \"Demigoddess\" : \"半神\"));\n   853: \t    putstr(endwin, 0, pbuf);\n   854: \t    putstr(endwin, 0, \"\");\n   855: \t}\n   856: \n   857: \tif (how == ESCAPED || how == ASCENDED) {"
+    "stage": 0,
+    "context": "src/end.c:852:40\n   847: \tif (!done_stopprint) {\n   848: \t    Sprintf(pbuf, \"%s %s the %s...\", Goodbye(), plname,\n   849: \t\t   how != ASCENDED ?\n   850: \t\t      (const char *) ((flags.female && urole.name.f) ?\n   851: \t\t         urole.name.f : urole.name.m) :\n&gt;  852: \t\t      (const char *) (flags.female ? \"Demigoddess\" : \"半神\"));\n   853: \t    putstr(endwin, 0, pbuf);\n   854: \t    putstr(endwin, 0, \"\");\n   855: \t}\n   856: \n   857: \tif (how == ESCAPED || how == ASCENDED) {"
   },
   {
     "key": "L00886_01",
     "original": " and %s",
     "translation": "",
-    "context": "src/end.c:886:23\n   881: \t    mtmp = mydogs;\n   882: \t    if (!done_stopprint) Strcpy(pbuf, \"你\");\n   883: \t    if (mtmp) {\n   884: \t\twhile (mtmp) {\n   885: \t\t    if (!done_stopprint)\n>  886: \t\t\tSprintf(eos(pbuf), \" and %s\", mon_nam(mtmp));\n   887: \t\t    if (mtmp->mtame)\n   888: \t\t\tu.urexp += mtmp->mhp;\n   889: \t\t    mtmp = mtmp->nmon;\n   890: \t\t}\n   891: \t\tif (!done_stopprint) putstr(endwin, 0, pbuf);"
+    "stage": 0,
+    "context": "src/end.c:886:23\n   881: \t    mtmp = mydogs;\n   882: \t    if (!done_stopprint) Strcpy(pbuf, \"你\");\n   883: \t    if (mtmp) {\n   884: \t\twhile (mtmp) {\n   885: \t\t    if (!done_stopprint)\n&gt;  886: \t\t\tSprintf(eos(pbuf), \" and %s\", mon_nam(mtmp));\n   887: \t\t    if (mtmp-&gt;mtame)\n   888: \t\t\tu.urexp += mtmp-&gt;mhp;\n   889: \t\t    mtmp = mtmp-&gt;nmon;\n   890: \t\t}\n   891: \t\tif (!done_stopprint) putstr(endwin, 0, pbuf);"
   },
   {
     "key": "L00922_01",
     "original": "%8ld %s (worth %ld %s),",
     "translation": "",
-    "context": "src/end.c:922:18\n   917: \t\t\tmakeknown(otmp->otyp);\n   918: \t\t\totmp->known = 1;\t/* for fake amulets */\n   919: \t\t\totmp->dknown = 1;\t/* seen it (blindness fix) */\n   920: \t\t\totmp->onamelth = 0;\n   921: \t\t\totmp->quan = count;\n>  922: \t\t\tSprintf(pbuf, \"%8ld %s (worth %ld %s),\",\n   923: \t\t\t\tcount, xname(otmp),\n   924: \t\t\t\tcount * (long)objects[typ].oc_cost, currency(2L));\n   925: \t\t\tobfree(otmp, (struct obj *)0);\n   926: \t\t    } else {\n   927: \t\t\tSprintf(pbuf,"
+    "stage": 0,
+    "context": "src/end.c:922:18\n   917: \t\t\tmakeknown(otmp-&gt;otyp);\n   918: \t\t\totmp-&gt;known = 1;\t/* for fake amulets */\n   919: \t\t\totmp-&gt;dknown = 1;\t/* seen it (blindness fix) */\n   920: \t\t\totmp-&gt;onamelth = 0;\n   921: \t\t\totmp-&gt;quan = count;\n&gt;  922: \t\t\tSprintf(pbuf, \"%8ld %s (worth %ld %s),\",\n   923: \t\t\t\tcount, xname(otmp),\n   924: \t\t\t\tcount * (long)objects[typ].oc_cost, currency(2L));\n   925: \t\t\tobfree(otmp, (struct obj *)0);\n   926: \t\t    } else {\n   927: \t\t\tSprintf(pbuf,"
   },
   {
     "key": "L00940_01",
     "original": "You %s beyond the confines of the dungeon",
     "translation": "",
-    "context": "src/end.c:940:17\n   935: \t} else if (!done_stopprint) {\n   936: \t    /* did not escape or ascend */\n   937: \t    if (u.uz.dnum == 0 && u.uz.dlevel <= 0) {\n   938: \t\t/* level teleported out of the dungeon; `how' is DIED,\n   939: \t\t   due to falling or to \"太早地上了天堂\" */\n>  940: \t\tSprintf(pbuf, \"You %s beyond the confines of the dungeon\",\n   941: \t\t\t(u.uz.dlevel < 0) ? \"passed away\" : ends[how]);\n   942: \t    } else {\n   943: \t\t/* more conventional demise */\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: "
+    "stage": 0,
+    "context": "src/end.c:940:17\n   935: \t} else if (!done_stopprint) {\n   936: \t    /* did not escape or ascend */\n   937: \t    if (u.uz.dnum == 0 && u.uz.dlevel &lt;= 0) {\n   938: \t\t/* level teleported out of the dungeon; `how' is DIED,\n   939: \t\t   due to falling or to \"太早地上了天堂\" */\n&gt;  940: \t\tSprintf(pbuf, \"You %s beyond the confines of the dungeon\",\n   941: \t\t\t(u.uz.dlevel &lt; 0) ? \"passed away\" : ends[how]);\n   942: \t    } else {\n   943: \t\t/* more conventional demise */\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: "
   },
   {
     "key": "L00941_01",
     "original": "passed away",
     "translation": "",
-    "context": "src/end.c:941:24\n   936: \t    /* did not escape or ascend */\n   937: \t    if (u.uz.dnum == 0 && u.uz.dlevel <= 0) {\n   938: \t\t/* level teleported out of the dungeon; `how' is DIED,\n   939: \t\t   due to falling or to \"太早地上了天堂\" */\n   940: \t\tSprintf(pbuf, \"You %s beyond the confines of the dungeon\",\n>  941: \t\t\t(u.uz.dlevel < 0) ? \"passed away\" : ends[how]);\n   942: \t    } else {\n   943: \t\t/* more conventional demise */\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: \n   946: \t\tif (Is_astralevel(&u.uz)) where = \"星界位面\";"
+    "stage": 0,
+    "context": "src/end.c:941:24\n   936: \t    /* did not escape or ascend */\n   937: \t    if (u.uz.dnum == 0 && u.uz.dlevel &lt;= 0) {\n   938: \t\t/* level teleported out of the dungeon; `how' is DIED,\n   939: \t\t   due to falling or to \"太早地上了天堂\" */\n   940: \t\tSprintf(pbuf, \"You %s beyond the confines of the dungeon\",\n&gt;  941: \t\t\t(u.uz.dlevel &lt; 0) ? \"passed away\" : ends[how]);\n   942: \t    } else {\n   943: \t\t/* more conventional demise */\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: \n   946: \t\tif (Is_astralevel(&u.uz)) where = \"星界位面\";"
   },
   {
     "key": "L00947_01",
     "original": "You %s in %s",
     "translation": "",
-    "context": "src/end.c:947:17\n   942: \t    } else {\n   943: \t\t/* more conventional demise */\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: \n   946: \t\tif (Is_astralevel(&u.uz)) where = \"星界位面\";\n>  947: \t\tSprintf(pbuf, \"You %s in %s\", ends[how], where);\n   948: \t\tif (!In_endgame(&u.uz) && !Is_knox(&u.uz))\n   949: \t\t    Sprintf(eos(pbuf), \" on dungeon level %d\",\n   950: \t\t\t    In_quest(&u.uz) ? dunlev(&u.uz) : depth(&u.uz));\n   951: \t    }\n   952: "
+    "stage": 0,
+    "context": "src/end.c:947:17\n   942: \t    } else {\n   943: \t\t/* more conventional demise */\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: \n   946: \t\tif (Is_astralevel(&u.uz)) where = \"星界位面\";\n&gt;  947: \t\tSprintf(pbuf, \"You %s in %s\", ends[how], where);\n   948: \t\tif (!In_endgame(&u.uz) && !Is_knox(&u.uz))\n   949: \t\t    Sprintf(eos(pbuf), \" on dungeon level %d\",\n   950: \t\t\t    In_quest(&u.uz) ? dunlev(&u.uz) : depth(&u.uz));\n   951: \t    }\n   952: "
   },
   {
     "key": "L00949_01",
     "original": " on dungeon level %d",
     "translation": "",
-    "context": "src/end.c:949:26\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: \n   946: \t\tif (Is_astralevel(&u.uz)) where = \"星界位面\";\n   947: \t\tSprintf(pbuf, \"You %s in %s\", ends[how], where);\n   948: \t\tif (!In_endgame(&u.uz) && !Is_knox(&u.uz))\n>  949: \t\t    Sprintf(eos(pbuf), \" on dungeon level %d\",\n   950: \t\t\t    In_quest(&u.uz) ? dunlev(&u.uz) : depth(&u.uz));\n   951: \t    }\n   952: \n   953: \t    Sprintf(eos(pbuf), \"有%ld点经验，\",\n   954: \t\t    u.urexp, plur(u.urexp));"
+    "stage": 0,
+    "context": "src/end.c:949:26\n   944: \t\tconst char *where = dungeons[u.uz.dnum].dname;\n   945: \n   946: \t\tif (Is_astralevel(&u.uz)) where = \"星界位面\";\n   947: \t\tSprintf(pbuf, \"You %s in %s\", ends[how], where);\n   948: \t\tif (!In_endgame(&u.uz) && !Is_knox(&u.uz))\n&gt;  949: \t\t    Sprintf(eos(pbuf), \" on dungeon level %d\",\n   950: \t\t\t    In_quest(&u.uz) ? dunlev(&u.uz) : depth(&u.uz));\n   951: \t    }\n   952: \n   953: \t    Sprintf(eos(pbuf), \"有%ld点经验，\",\n   954: \t\t    u.urexp, plur(u.urexp));"
   },
   {
     "key": "L01005_01",
     "original": "Contents of %s:",
     "translation": "",
-    "context": "src/end.c:1005:20\n  1000: \t    if (Is_container(box) || box->otyp == STATUE) {\n  1001: \t\tif (box->otyp == BAG_OF_TRICKS) {\n  1002: \t\t    continue;\t/* wrong type of container */\n  1003: \t\t} else if (box->cobj) {\n  1004: \t\t    winid tmpwin = create_nhwindow(NHW_MENU);\n> 1005: \t\t    Sprintf(buf, \"Contents of %s:\", the(xname(box)));\n  1006: \t\t    putstr(tmpwin, 0, buf);\n  1007: \t\t    putstr(tmpwin, 0, \"\");\n  1008: \t\t    for (obj = box->cobj; obj; obj = obj->nobj) {\n  1009: \t\t\tif (identified) {\n  1010: \t\t\t    makeknown(obj->otyp);"
+    "stage": 0,
+    "context": "src/end.c:1005:20\n  1000: \t    if (Is_container(box) || box-&gt;otyp == STATUE) {\n  1001: \t\tif (box-&gt;otyp == BAG_OF_TRICKS) {\n  1002: \t\t    continue;\t/* wrong type of container */\n  1003: \t\t} else if (box-&gt;cobj) {\n  1004: \t\t    winid tmpwin = create_nhwindow(NHW_MENU);\n&gt; 1005: \t\t    Sprintf(buf, \"Contents of %s:\", the(xname(box)));\n  1006: \t\t    putstr(tmpwin, 0, buf);\n  1007: \t\t    putstr(tmpwin, 0, \"\");\n  1008: \t\t    for (obj = box-&gt;cobj; obj; obj = obj-&gt;nobj) {\n  1009: \t\t\tif (identified) {\n  1010: \t\t\t    makeknown(obj-&gt;otyp);"
   },
   {
     "key": "L01021_01",
     "original": "%s empty.",
     "translation": "",
-    "context": "src/end.c:1021:13\n  1016: \t\t    display_nhwindow(tmpwin, TRUE);\n  1017: \t\t    destroy_nhwindow(tmpwin);\n  1018: \t\t    if (all_containers)\n  1019: \t\t\tcontainer_contents(box->cobj, identified, TRUE);\n  1020: \t\t} else {\n> 1021: \t\t    pline(\"%s empty.\", Tobjnam(box, \"are\"));\n  1022: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  1023: \t\t}\n  1024: \t    }\n  1025: \t    if (!all_containers)\n  1026: \t\tbreak;"
+    "stage": 0,
+    "context": "src/end.c:1021:13\n  1016: \t\t    display_nhwindow(tmpwin, TRUE);\n  1017: \t\t    destroy_nhwindow(tmpwin);\n  1018: \t\t    if (all_containers)\n  1019: \t\t\tcontainer_contents(box-&gt;cobj, identified, TRUE);\n  1020: \t\t} else {\n&gt; 1021: \t\t    pline(\"%s empty.\", Tobjnam(box, \"are\"));\n  1022: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  1023: \t\t}\n  1024: \t    }\n  1025: \t    if (!all_containers)\n  1026: \t\tbreak;"
   },
   {
     "key": "L01021_02",
     "original": "are",
     "translation": "",
-    "context": "src/end.c:1021:39\n  1016: \t\t    display_nhwindow(tmpwin, TRUE);\n  1017: \t\t    destroy_nhwindow(tmpwin);\n  1018: \t\t    if (all_containers)\n  1019: \t\t\tcontainer_contents(box->cobj, identified, TRUE);\n  1020: \t\t} else {\n> 1021: \t\t    pline(\"%s empty.\", Tobjnam(box, \"are\"));\n  1022: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  1023: \t\t}\n  1024: \t    }\n  1025: \t    if (!all_containers)\n  1026: \t\tbreak;"
+    "stage": 0,
+    "context": "src/end.c:1021:39\n  1016: \t\t    display_nhwindow(tmpwin, TRUE);\n  1017: \t\t    destroy_nhwindow(tmpwin);\n  1018: \t\t    if (all_containers)\n  1019: \t\t\tcontainer_contents(box-&gt;cobj, identified, TRUE);\n  1020: \t\t} else {\n&gt; 1021: \t\t    pline(\"%s empty.\", Tobjnam(box, \"are\"));\n  1022: \t\t    display_nhwindow(WIN_MESSAGE, FALSE);\n  1023: \t\t}\n  1024: \t    }\n  1025: \t    if (!all_containers)\n  1026: \t\tbreak;"
   },
   {
     "key": "L01036_01",
     "original": "to exit",
     "translation": "",
-    "context": "src/end.c:1036:12\n  1031: void\n  1032: terminate(status)\n  1033: int status;\n  1034: {\n  1035: #ifdef MAC\n> 1036: \tgetreturn(\"to exit\");\n  1037: #endif\n  1038: \t/* don't bother to try to release memory if we're in panic mode, to\n  1039: \t   avoid trouble in case that happens to be due to memory problems */\n  1040: \tif (!program_state.panicking) {\n  1041: \t    freedynamicdata();"
+    "stage": 0,
+    "context": "src/end.c:1036:12\n  1031: void\n  1032: terminate(status)\n  1033: int status;\n  1034: {\n  1035: #ifdef MAC\n&gt; 1036: \tgetreturn(\"to exit\");\n  1037: #endif\n  1038: \t/* don't bother to try to release memory if we're in panic mode, to\n  1039: \t   avoid trouble in case that happens to be due to memory problems */\n  1040: \tif (!program_state.panicking) {\n  1041: \t    freedynamicdata();"
   },
   {
     "key": "L01084_01",
     "original": "%s%s",
     "translation": "",
-    "context": "src/end.c:1084:17\n  1079: \t    /* countdown by monster \"toughness\" */\n  1080: \t    for (lev = max_lev; lev >= 0; lev--)\n  1081: \t      for (i = LOW_PM; i < NUMMONS; i++)\n  1082: \t\tif (mons[i].mlevel == lev && (nkilled = mvitals[i].died) > 0) {\n  1083: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST) {\n> 1084: \t\t\tSprintf(buf, \"%s%s\",\n  1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled > 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;"
+    "stage": 0,
+    "context": "src/end.c:1084:17\n  1079: \t    /* countdown by monster \"toughness\" */\n  1080: \t    for (lev = max_lev; lev &gt;= 0; lev--)\n  1081: \t      for (i = LOW_PM; i &lt; NUMMONS; i++)\n  1082: \t\tif (mons[i].mlevel == lev && (nkilled = mvitals[i].died) &gt; 0) {\n  1083: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST) {\n&gt; 1084: \t\t\tSprintf(buf, \"%s%s\",\n  1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled &gt; 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;"
   },
   {
     "key": "L01085_01",
     "original": "The ",
     "translation": "",
-    "context": "src/end.c:1085:32\n  1080: \t    for (lev = max_lev; lev >= 0; lev--)\n  1081: \t      for (i = LOW_PM; i < NUMMONS; i++)\n  1082: \t\tif (mons[i].mlevel == lev && (nkilled = mvitals[i].died) > 0) {\n  1083: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST) {\n  1084: \t\t\tSprintf(buf, \"%s%s\",\n> 1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled > 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n  1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;"
+    "stage": 0,
+    "context": "src/end.c:1085:32\n  1080: \t    for (lev = max_lev; lev &gt;= 0; lev--)\n  1081: \t      for (i = LOW_PM; i &lt; NUMMONS; i++)\n  1082: \t\tif (mons[i].mlevel == lev && (nkilled = mvitals[i].died) &gt; 0) {\n  1083: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST) {\n  1084: \t\t\tSprintf(buf, \"%s%s\",\n&gt; 1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled &gt; 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n  1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;"
   },
   {
     "key": "L01089_01",
     "original": " (twice)",
     "translation": "",
-    "context": "src/end.c:1089:31\n  1084: \t\t\tSprintf(buf, \"%s%s\",\n  1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled > 1) {\n  1088: \t\t\t    switch (nkilled) {\n> 1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n  1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;\n  1091: \t\t\t\tdefault: Sprintf(eos(buf),\" (%d time%s)\",\n  1092: \t\t\t\t\t\t nkilled, plur(nkilled));\n  1093: \t\t\t\t\t break;\n  1094: \t\t\t    }"
+    "stage": 0,
+    "context": "src/end.c:1089:31\n  1084: \t\t\tSprintf(buf, \"%s%s\",\n  1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled &gt; 1) {\n  1088: \t\t\t    switch (nkilled) {\n&gt; 1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n  1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;\n  1091: \t\t\t\tdefault: Sprintf(eos(buf),\" (%d time%s)\",\n  1092: \t\t\t\t\t\t nkilled, plur(nkilled));\n  1093: \t\t\t\t\t break;\n  1094: \t\t\t    }"
   },
   {
     "key": "L01090_01",
     "original": " (thrice)",
     "translation": "",
-    "context": "src/end.c:1090:31\n  1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled > 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n> 1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;\n  1091: \t\t\t\tdefault: Sprintf(eos(buf),\" (%d time%s)\",\n  1092: \t\t\t\t\t\t nkilled, plur(nkilled));\n  1093: \t\t\t\t\t break;\n  1094: \t\t\t    }\n  1095: \t\t\t}"
+    "stage": 0,
+    "context": "src/end.c:1090:31\n  1085: \t\t\t\t!type_is_pname(&mons[i]) ? \"The \" : \"\",\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled &gt; 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n&gt; 1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;\n  1091: \t\t\t\tdefault: Sprintf(eos(buf),\" (%d time%s)\",\n  1092: \t\t\t\t\t\t nkilled, plur(nkilled));\n  1093: \t\t\t\t\t break;\n  1094: \t\t\t    }\n  1095: \t\t\t}"
   },
   {
     "key": "L01091_01",
     "original": " (%d time%s)",
     "translation": "",
-    "context": "src/end.c:1091:31\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled > 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n  1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;\n> 1091: \t\t\t\tdefault: Sprintf(eos(buf),\" (%d time%s)\",\n  1092: \t\t\t\t\t\t nkilled, plur(nkilled));\n  1093: \t\t\t\t\t break;\n  1094: \t\t\t    }\n  1095: \t\t\t}\n  1096: \t\t    } else {"
+    "stage": 0,
+    "context": "src/end.c:1091:31\n  1086: \t\t\t\tmons[i].mname);\n  1087: \t\t\tif (nkilled &gt; 1) {\n  1088: \t\t\t    switch (nkilled) {\n  1089: \t\t\t\tcase 2:  Sprintf(eos(buf),\" (twice)\");  break;\n  1090: \t\t\t\tcase 3:  Sprintf(eos(buf),\" (thrice)\");  break;\n&gt; 1091: \t\t\t\tdefault: Sprintf(eos(buf),\" (%d time%s)\",\n  1092: \t\t\t\t\t\t nkilled, plur(nkilled));\n  1093: \t\t\t\t\t break;\n  1094: \t\t\t    }\n  1095: \t\t\t}\n  1096: \t\t    } else {"
   },
   {
     "key": "L01102_01",
     "original": "%d %s",
     "translation": "",
-    "context": "src/end.c:1102:21\n  1097: \t\t\t/* trolls or undead might have come back,\n  1098: \t\t\t   but we don't keep track of that */\n  1099: \t\t\tif (nkilled == 1)\n  1100: \t\t\t    Strcpy(buf, an(mons[i].mname));\n  1101: \t\t\telse\n> 1102: \t\t\t    Sprintf(buf, \"%d %s\",\n  1103: \t\t\t\t    nkilled, makeplural(mons[i].mname));\n  1104: \t\t    }\n  1105: \t\t    putstr(klwin, 0, buf);\n  1106: \t\t}\n  1107: \t    /*"
+    "stage": 0,
+    "context": "src/end.c:1102:21\n  1097: \t\t\t/* trolls or undead might have come back,\n  1098: \t\t\t   but we don't keep track of that */\n  1099: \t\t\tif (nkilled == 1)\n  1100: \t\t\t    Strcpy(buf, an(mons[i].mname));\n  1101: \t\t\telse\n&gt; 1102: \t\t\t    Sprintf(buf, \"%d %s\",\n  1103: \t\t\t\t    nkilled, makeplural(mons[i].mname));\n  1104: \t\t    }\n  1105: \t\t    putstr(klwin, 0, buf);\n  1106: \t\t}\n  1107: \t    /*"
   },
   {
     "key": "L01113_01",
     "original": "%ld creatures vanquished.",
     "translation": "",
-    "context": "src/end.c:1113:16\n  1108: \t     * if (Hallucination)\n  1109: \t     *     putstr(klwin, 0, \"and a partridge in a pear tree\");\n  1110: \t     */\n  1111: \t    if (ntypes > 1) {\n  1112: \t\tputstr(klwin, 0, \"\");\n> 1113: \t\tSprintf(buf, \"%ld creatures vanquished.\", total_killed);\n  1114: \t\tputstr(klwin, 0, buf);\n  1115: \t    }\n  1116: \t    display_nhwindow(klwin, TRUE);\n  1117: \t    destroy_nhwindow(klwin);\n  1118: \t}"
+    "stage": 0,
+    "context": "src/end.c:1113:16\n  1108: \t     * if (Hallucination)\n  1109: \t     *     putstr(klwin, 0, \"and a partridge in a pear tree\");\n  1110: \t     */\n  1111: \t    if (ntypes &gt; 1) {\n  1112: \t\tputstr(klwin, 0, \"\");\n&gt; 1113: \t\tSprintf(buf, \"%ld creatures vanquished.\", total_killed);\n  1114: \t\tputstr(klwin, 0, buf);\n  1115: \t    }\n  1116: \t    display_nhwindow(klwin, TRUE);\n  1117: \t    destroy_nhwindow(klwin);\n  1118: \t}"
   },
   {
     "key": "L01169_01",
     "original": "%s%s",
     "translation": "",
-    "context": "src/end.c:1169:17\n  1164: \t    putstr(klwin, 0, \"\");\n  1165: \n  1166: \t    for (i = LOW_PM; i < NUMMONS; i++)\n  1167: \t\tif (mvitals[i].mvflags & G_GENOD) {\n  1168: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST)\n> 1169: \t\t\tSprintf(buf, \"%s%s\",\n  1170: \t\t\t\t!type_is_pname(&mons[i]) ? \"\" : \"the \",\n  1171: \t\t\t\tmons[i].mname);\n  1172: \t\t    else\n  1173: \t\t\tStrcpy(buf, makeplural(mons[i].mname));\n  1174: \t\t    putstr(klwin, 0, buf);"
+    "stage": 0,
+    "context": "src/end.c:1169:17\n  1164: \t    putstr(klwin, 0, \"\");\n  1165: \n  1166: \t    for (i = LOW_PM; i &lt; NUMMONS; i++)\n  1167: \t\tif (mvitals[i].mvflags & G_GENOD) {\n  1168: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST)\n&gt; 1169: \t\t\tSprintf(buf, \"%s%s\",\n  1170: \t\t\t\t!type_is_pname(&mons[i]) ? \"\" : \"the \",\n  1171: \t\t\t\tmons[i].mname);\n  1172: \t\t    else\n  1173: \t\t\tStrcpy(buf, makeplural(mons[i].mname));\n  1174: \t\t    putstr(klwin, 0, buf);"
   },
   {
     "key": "L01170_01",
     "original": "the ",
     "translation": "",
-    "context": "src/end.c:1170:37\n  1165: \n  1166: \t    for (i = LOW_PM; i < NUMMONS; i++)\n  1167: \t\tif (mvitals[i].mvflags & G_GENOD) {\n  1168: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST)\n  1169: \t\t\tSprintf(buf, \"%s%s\",\n> 1170: \t\t\t\t!type_is_pname(&mons[i]) ? \"\" : \"the \",\n  1171: \t\t\t\tmons[i].mname);\n  1172: \t\t    else\n  1173: \t\t\tStrcpy(buf, makeplural(mons[i].mname));\n  1174: \t\t    putstr(klwin, 0, buf);\n  1175: \t\t}"
+    "stage": 0,
+    "context": "src/end.c:1170:37\n  1165: \n  1166: \t    for (i = LOW_PM; i &lt; NUMMONS; i++)\n  1167: \t\tif (mvitals[i].mvflags & G_GENOD) {\n  1168: \t\t    if ((mons[i].geno & G_UNIQ) && i != PM_HIGH_PRIEST)\n  1169: \t\t\tSprintf(buf, \"%s%s\",\n&gt; 1170: \t\t\t\t!type_is_pname(&mons[i]) ? \"\" : \"the \",\n  1171: \t\t\t\tmons[i].mname);\n  1172: \t\t    else\n  1173: \t\t\tStrcpy(buf, makeplural(mons[i].mname));\n  1174: \t\t    putstr(klwin, 0, buf);\n  1175: \t\t}"
   }
 ]
