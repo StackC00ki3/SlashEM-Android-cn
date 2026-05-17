@@ -291,7 +291,7 @@ def build_context(
     end = min(len(lines), line_number + window)
     context_lines = [f"{path.as_posix()}:{line_number}:{column_number}"]
     for lineno in range(start, end + 1):
-        prefix = ">" if lineno == line_number else " "
+        prefix = "TARGET" if lineno == line_number else "      "
         text = normalize_generated_text(lines[lineno - 1].rstrip("\n"))
         context_lines.append(f"{prefix}{lineno:5d}: {text}")
     return "\n".join(context_lines)
