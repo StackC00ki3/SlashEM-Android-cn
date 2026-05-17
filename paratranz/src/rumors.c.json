@@ -205,8 +205,8 @@
   {
     "key": "L00310_01",
     "original": "have no money.",
-    "translation": "",
-    "stage": 0,
+    "translation": "没钱。",
+    "stage": 1,
     "context": "src/rumors.c:310:7\n        305: #ifndef GOLDOBJ\n        306: \t} else if (!u.ugold) {\n        307: #else\n        308: \t} else if (!umoney) {\n        309: #endif\nTARGET  310: \t\tYou(\"have no money.\");\n        311: \t\treturn 0;\n        312: \t}\n        313: \n        314: \tSprintf(qbuf,\n        315: \t\t\"\\\"Wilt thou settle for a minor consultation?\\\" (%d %s)\","
   },
   {
