@@ -1334,7 +1334,7 @@
     "original": "nodot",
     "translation": "",
     "stage": 0,
-    "context": "src/pickup.c:2349:13\n  2344: \t\t\t\t      &menu_on_request)) {\n  2345: \t\t\tif (askchain((struct obj **)&current_container-&gt;cobj,\n  2346: \t\t\t\t     (one_by_one ? (char *)0 : select),\n  2347: \t\t\t\t     allflag, out_container,\n  2348: \t\t\t\t     (int FDECL((*),(OBJ_P)))0,\n&gt; 2349: \t\t\t\t     0, \"nodot\"))\n  2350: \t\t\t    used = 1;\n  2351: \t\t    } else if (menu_on_request &lt; 0) {\n  2352: \t\t\tused |= menu_loot(menu_on_request,\n  2353: \t\t\t\t\t  current_container, FALSE) &gt; 0;\n  2354: \t\t    }"
+    "context": "src/pickup.c:2349:13\n  2344: \t\t\t\t      &menu_on_request)) {\n  2345: \t\t\tif (askchain((struct obj **)¤t_container-&gt;cobj,\n  2346: \t\t\t\t     (one_by_one ? (char *)0 : select),\n  2347: \t\t\t\t     allflag, out_container,\n  2348: \t\t\t\t     (int FDECL((*),(OBJ_P)))0,\n&gt; 2349: \t\t\t\t     0, \"nodot\"))\n  2350: \t\t\t    used = 1;\n  2351: \t\t    } else if (menu_on_request &lt; 0) {\n  2352: \t\t\tused |= menu_loot(menu_on_request,\n  2353: \t\t\t\t\t  current_container, FALSE) &gt; 0;\n  2354: \t\t    }"
   },
   {
     "key": "L02368_01",

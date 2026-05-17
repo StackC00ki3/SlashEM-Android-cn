@@ -95,14 +95,14 @@
     "original": "Restoring:",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:628:27\n   623: \tcurs(WIN_MAP, 1, 1);\n   624: \tdotcnt = 0;\n   625: \tdotrow = 2;\n   626: # ifdef TTY_GRAPHICS\n   627: \tif (!strncmpi(\"tty\", windowprocs.name, 3))\n&gt;  628:     \t  putstr(WIN_MAP, 0, \"Restoring:\");\n   629: # endif\n   630: #endif\n   631: \twhile(1) {\n   632: #ifdef ZEROCOMP\n   633: \t\tif(mread(fd, (genericptr_t) &ltmp, sizeof ltmp) &lt; 0)"
+    "context": "src/restore.c:628:27\n   623: \tcurs(WIN_MAP, 1, 1);\n   624: \tdotcnt = 0;\n   625: \tdotrow = 2;\n   626: # ifdef TTY_GRAPHICS\n   627: \tif (!strncmpi(\"tty\", windowprocs.name, 3))\n&gt;  628:     \t  putstr(WIN_MAP, 0, \"Restoring:\");\n   629: # endif\n   630: #endif\n   631: \twhile(1) {\n   632: #ifdef ZEROCOMP\n   633: \t\tif(mread(fd, (genericptr_t) &lt;mp, sizeof ltmp) &lt; 0)"
   },
   {
     "key": "L00640_01",
     "original": "tty",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:640:17\n   635: \t\tif(read(fd, (genericptr_t) &ltmp, sizeof ltmp) != sizeof ltmp)\n   636: #endif\n   637: \t\t\tbreak;\n   638: \t\tgetlev(fd, 0, ltmp, FALSE);\n   639: #if defined(MICRO) && defined(TTY_GRAPHICS)\n&gt;  640: \t\tif (!strncmpi(\"tty\", windowprocs.name, 3)) {\n   641: \t\tcurs(WIN_MAP, 1+dotcnt++, dotrow);\n   642: \t\tif (dotcnt &gt;= (COLNO - 1)) {\n   643: \t\t\tdotrow++;\n   644: \t\t\tdotcnt = 0;\n   645: \t\t}"
+    "context": "src/restore.c:640:17\n   635: \t\tif(read(fd, (genericptr_t) &lt;mp, sizeof ltmp) != sizeof ltmp)\n   636: #endif\n   637: \t\t\tbreak;\n   638: \t\tgetlev(fd, 0, ltmp, FALSE);\n   639: #if defined(MICRO) && defined(TTY_GRAPHICS)\n&gt;  640: \t\tif (!strncmpi(\"tty\", windowprocs.name, 3)) {\n   641: \t\tcurs(WIN_MAP, 1+dotcnt++, dotrow);\n   642: \t\tif (dotcnt &gt;= (COLNO - 1)) {\n   643: \t\t\tdotrow++;\n   644: \t\t\tdotcnt = 0;\n   645: \t\t}"
   },
   {
     "key": "L00685_01",
@@ -151,7 +151,7 @@
     "original": "getlev: need portal but none found",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:927:21\n   922: \t\t    {\n   923: \t\t\tregister struct trap *ttmp;\n   924: \t\t\tfor(ttmp = ftrap; ttmp; ttmp = ttmp-&gt;ntrap)\n   925: \t\t\t    if (ttmp-&gt;ttyp == MAGIC_PORTAL)\n   926: \t\t\t\tbreak;\n&gt;  927: \t\t\tif (!ttmp) panic(\"getlev: need portal but none found\");\n   928: \t\t\tassign_level(&ttmp-&gt;dst, &ltmp);\n   929: \t\t    }\n   930: \t\t    break;\n   931: \t\t}\n   932: \t    } else if (!br) {"
+    "context": "src/restore.c:927:21\n   922: \t\t    {\n   923: \t\t\tregister struct trap *ttmp;\n   924: \t\t\tfor(ttmp = ftrap; ttmp; ttmp = ttmp-&gt;ntrap)\n   925: \t\t\t    if (ttmp-&gt;ttyp == MAGIC_PORTAL)\n   926: \t\t\t\tbreak;\n&gt;  927: \t\t\tif (!ttmp) panic(\"getlev: need portal but none found\");\n   928: \t\t\tassign_level(&ttmp-&gt;dst, &lt;mp);\n   929: \t\t    }\n   930: \t\t    break;\n   931: \t\t}\n   932: \t    } else if (!br) {"
   },
   {
     "key": "L01065_01",
