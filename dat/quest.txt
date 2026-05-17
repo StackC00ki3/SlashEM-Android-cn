@@ -50,1788 +50,1507 @@
 #       Archeologist
 #
 %Cc Arc 00001
-You are suddenly in familiar surroundings.  The buildings in the distance
-appear to be those of your old alma mater, but something is wrong.  It looks
-as if there has been a riot recently, or %H has
-been under siege.
+你突然出现在你过去曾经非常熟悉的那片土地上. 远处的那片建筑看起来非常像是
+你之前读考古专业的母校, 但是这块地方有眼睛的人都能看出来不对劲. 似乎
+要么这块地方之前爆发了游行,要么就是%H遭受了一场围攻!
 
-All of the windows are boarded up, and there are objects scattered around
-the entrance.
-
-Strange forbidding shapes seem to be moving in the distance.
+所有的窗户都被木板钉死了，各式各样的东西都掉在地上，五花八门乱七八糟.
+而且....远处似乎有什么奇怪的东西在移动......
 %E
 %Cp Arc 00002
-Once again, you are back at %H.
+你又一次的回到了%H.
 %E
 %Cp Arc 00003
-You are back at %H.
-You have an odd feeling this may be the last time you ever come here.
+你回到了%H.
+你突然有种再不做点什么你估计就再也回不来了的感觉,挺让你不自在的.
 %E
 %Cp Arc 00005
-"Did you see Lash LaRue in 'Song of Old Wyoming' the other night?"
+"你前天晚上有没有去看吴京演的战狼4啊？"
 %E
 %Cp Arc 00006
-"Hey man, got any potions of hallucination for sale?"
+"哥我求你了有没有幻觉药水我身上像有蚂蚁在爬给我一瓶吧求你了"
 %E
 %Cp Arc 00007
-"Did you see the artifact %l brought back from the last dig?"
+"哎，你去没去看%l上次挖回来的古董?据说值老鼻子钱了"
 %E
 %Cp Arc 00008
-"So what species do *you* think we evolved from?"
+"你觉得我们到底是从哪个物种进化来的？(托腮)"
 %E
 %Cp Arc 00009
-"So you're %ls prize pupil!  I don't know what he sees in you."
+"哦我去，你就是%l的关门弟子？我看你也没啥特别的嘛."
 %E
 %Cp Arc 00010
-"Did you see Lash LaRue in 'Song of Old Wyoming' the other night?"
+"好吧我觉得你看过那部电影了。"
 %E
 %Cp Arc 00011
-"Hey man, got any potions of hallucination for sale?"
+"哥我求你了有没有幻觉药水我身上像有蚂蚁在爬给我一瓶吧求你了"
 %E
 %Cp Arc 00012
-"I guess you are guaranteed to make full professor now."
+"太棒了，你这下肯定能写很多篇关于那个水晶球的论文了."
 %E
 %Cp Arc 00013
-"So, what was worse, %n or your entrance exams?"
+"唉，到底是打倒%n更难还是你的入学考试更难啊?"
 %E
 %Cp Arc 00014
-"%oC is impressive, but nothing like the bones I dug up!"
+"%oC确实怪牛逼的,但是绝对不如我前天挖出来的那些陪葬品！"
 %E
 %Cc Arc 00015
-"Finally you have returned, %p.  You were always
-my most promising student.  Allow me to see if you are ready for the
-most difficult task of your career."
+"%p，你可算是终于回来了.你一直都是我最得意的学生，让我看看你够不够格面对你
+未来职业生涯中最困难的一次挑战."
 %E
 %Cp Arc 00016
-"Again, %p, you stand before me.
-Let me see if you have gained experience in the interim."
+"%p，你又回来了，看看这次你有没有什么长进."
 %E
 %Cp Arc 00017
-"Once more, %p, you have returned from the field.
-Are you finally ready for the task that must be accomplished?"
+"%p，你终于又从那块地方回来了，你到底准备好了没有啊？"
 %E
 %Cc Arc 00018
-"%p, you have failed us.  All of my careful training has been in
-vain.  Begone!  Your tenure at this college has been revoked!
-
-"You are a disgrace to the profession!"
+"%p，你这个欺师灭祖的畜生！你背离了我们的初衷，把我们对你的厚望踩在脚底下并
+深深地背刺了我们！你再不走我就要过来揍你了!
+你简直是我们这一行的最大的耻辱！"
 %E
 %Cc Arc 00019
-"%p, you are yet too inexperienced to undertake such a demanding
-quest.  A mere %r could not possibly face the rigors demanded and
-survive.  Go forth, and come here again when your adventures have further
-taught you."
+"%p，你对于如此严苛的任务还不够成熟不够老练，仅仅是一个%r可没办法在你将要面对的
+极其严肃的任务中生还，回去，然后在你有更多经验与技巧之后再回来见我。"
 %E
 %Cc Arc 00020
-"%pC!  I've heard that you've been using sloppy techniques.  Your
-results lately can hardly be called suitable for %ra!
+"%pC!我可是听说你最近的考古技术一塌糊涂，投诉信都快把我淹死了！你还算不算是一个%ra!
 
-"How could you have strayed from the %a path?  Go from here, and come
-back only when you have purified yourself."
+"你怎么敢背弃%a的名声？给我出去，在你证明你变得纯洁后再给我回来."
 %E
 %Cc Arc 00021
-"Grave times have befallen the college, for %na has
-stolen %o.  Without it, the board of directors of
-the university will soon have no choice but to revoke our research grants.
+"哎呀我的妈呀，最近咱们这块可不太平了，因为那个%na把咱们的%o给偷跑了！
+没那个东西我们这个考古系的科研实验室就要被学院给拆了！.
 
-"You must locate the entrance to %i.  Within it,
-you will find %n.
+"你必须得找到%i的位置.有了它你就能找到%n.
 
-"You must then defeat %n and return %o
-to me.
+"然后把%n搞死之后把%o以最快的速度带过来给我！
 
-"Only in this way will we be able to prevent the budget cuts that could
-close this college.
+"就当看在我的面子上，把这事搞定，不然学院一旦把我们的预算削减我日子就要不好过了！
 
-"May the wisdom of %d be your guide."
+"愿%d的智慧指引你一路前行."
 %E
 %Cp Arc 00025
-"Beware, for %n is powerful and cunning."
+"小心点，%n是个很难缠的敌人。"
 %E
 %Cp Arc 00026
-"To locate the entrance to %i, you must pass
-many traps."
+"为了找到%i,你必须穿过层层陷阱！"
 %E
 %Cp Arc 00027
-"A %nt may be vulnerable to attacks by magical cold."
+"%nt如果被寒冷魔法打中估计会非常难受."
 %E
 %Cp Arc 00028
-"Call upon %d when you encounter %n."
+"在遭遇%n的时候别忘了向%d先祈祷祈祷."
 %E
 %Cp Arc 00029
-"You must destroy %n.  It will pursue you otherwise."
+"你必须彻底的消灭%n，不然这货会一直跟着你然后骚扰你."
 %E
 %Cp Arc 00030
-"%oC is a mighty talisman.  With it you
-can destroy %n."
+"%oC是个非常强大的神器，有了它你就能轻松地把%n像一个虫子一样碾死."
 %E
 %Cp Arc 00031
-"Go forth with the blessings of %d."
+"愿%d的神力保佑你."
 %E
 %Cp Arc 00032
-"I will have my %gP watch for your return."
+"我绝对会让%gP好好看看你是怎么胜利归来的."
 %E
 %Cp Arc 00033
-"Remember not to stray from the true %a path."
+"记得别从%a这条道路上走歪路就行."
 %E
 %Cp Arc 00034
-"You may be able to sense %o when you are near."
+"约摸着等你靠近%o的时候你就能感受到它了."
 %E
 %Cc Arc 00035
-A plain opens before you.  Beyond the plain lies a foreboding edifice.
+映入你眼帘的是一片平原，你感觉在目光所及之处有一种奇怪的力量涌动.
 
-You have the feeling that you will soon find the entrance to
-%i.
+你非常确定你很快就能找到通向%i的入口.
 %E
 %Cp Arc 00036
-Once again, you are near the entrance to %i.
+你又一次的到达了%i的入口附近.
 %E
 %Cc Arc 00040
-A strange feeling washes over you, and you think back to things you
-learned during the many lectures of %l.
+一种可怕的感觉席卷了你，让你感觉你像是在上%l的专业课！
 
-You realize the feeling must be the presence of %o.
+你非常确定%o就在附近，不然你不可能有这么大的反应的.
 %E
 %Cp Arc 00041
-The familiar presence of %o is in the ether.
+这种%o就在附近的感觉又一次爬了上来.
 %E
 %Cc Arc 00050
-"So, %p, you think that you can succeed in recovering
-%o, when your teacher, %l, has already failed.
+"哈哈哈，所以%p,你觉得你能成功的找回%o？我告诉你，你老师%l已经叫我打的屁滚尿流了！
 
-"Come, try your best!  I shall destroy you, and gnaw on your bones."
+"来来来打我来，我告诉你你死定了！我要把你杀了后再把你的头盖骨当碗使！"
 %E
 %Cc Arc 00051
-"Again you try to best me, eh %p?  Well, you shall fail again.
+"%p你又来不知死活的找我打架了？行吧反正你不可能赢的。
 
-"You shall never recover %o.
+"你这辈子都拿不回%o的.
 
-"I shall bear your soul to the Plane of Origins for my master's pleasure."
+"我应该把你的灵魂抽出来送我主人当礼物，接招吧！"
 %E
 %Cp Arc 00052
-"You persist yet %p!  Good.  Now, you shall die!"
+"%p你还在挣扎呢？好啊，快点去死吧！"
 %E
 %Cp Arc 00053
-"I shall have %o from you, %p, then feast
-upon your entrails!"
+"我就该把%o从你手里头抢回来。%p,然后把你吃干抹净！"
 %E
 %Cp Arc 00060
-"Try your best, %p.  You cannot defeat me."
+"就你这瘪犊子样根本打不动我，%p，你啥也不是。"
 %E
 %Cp Arc 00061
-"I shall rend the flesh from your body whilst you still breathe!"
+"等我把你打倒后我要在你还活着的时候把你身上的肉一片片撕下来吃！"
 %E
 %Cp Arc 00062
-"First you, %p, then I shall destroy your mentor, %l."
+"我先把你宰了，%p，然后再把你导师%l抓去当星怒."
 %E
 %Cp Arc 00063
-"Tiring yet, %p?  I draw my power from my master and cannot
-falter!"
+"哎呀%p，还在干无用功呐?我主人可是赐予了我力量的，我不可能输的！"
 %E
 %Cp Arc 00064
-"I shall rend thy soul from thy body and consume it!"
+"我要把你的灵魂从你的躯壳里头抽出来然后吃掉!"
 %E
 %Cp Arc 00065
-"You are far too %a -- it weakens you.  You shall die in this place."
+"你距离%a可是有点距离，它可救不了你了，你等着受死吧！"
 %E
 %Cp Arc 00066
-"%d has forsaken you!  You are lost now!"
+"%d已经抛弃了你了！看我降龙十八掌！"
 %E
 %Cp Arc 00067
-"A mere %r cannot hope to defeat me!"
+"就一个%r咋可能把我打倒？做梦吧你！"
 %E
 %Cp Arc 00068
-"If you are the best %l can send, I have nothing to fear."
+"如果就你这样的杂鱼是%l他手下最强的人,那看来我根本没有担心被偷家的必要了."
 %E
 %Cp Arc 00069
-"Die %c!  I shall exhibit your carcass as a trophy."
+"去死吧%c!我要把你的头盖骨放家里头当奖杯！"
 %E
 %Cc Arc 00070
-The power of %o flows through your body!  You feel
-as if you could now take on the Wizard of Yendor himself and win, but
-you know you must return %o to %l.
+%o的神力洗刷了你的身体！你感觉限制器可以手撕一百个岩德老登，但是首先你得先把%o送回给%l.
 %E
 %Cp Arc 00080
-The body of %n dissipates in a cloud of noxious fumes.
+%n的身躯变成了一团呛得要死的气雾.
 %E
 %Cc Arc 00081
-%lC touches %o briefly, gazes into it,
-then smiles at you and says:
+%lC轻轻地摸了一下%o,朝里头瞪了一会后,向你微笑了一下后说：
+"干得不错，%p. 你把%n干掉后拿回来了%o.  但是我怕这块地方改天又叫哪个不长眼的偷了。
 
-"Well done, %p.  You have defeated %n and
-recovered %o.  But I fear that it shall never be safe
-here.
+你干脆把%o拿着吧.你，%p, 我寻思你拿着这个不容易被抢。
 
-Please take %o with you.  You, %p, can
-guard it now far better than I.
-
-May the blessings of %d follow you and guard you."
+愿%d的祝福伴你左右。"
 %E
 # assumes Orb of Detection (glass object)
 %Cc Arc 00082
-"Careful, %p!  %oC might break, and that would be
-a tragic loss.  You are its keeper now, and the time has come to
-resume your search for the Amulet.  %Z await your
-return through the magic portal that brought you here."
+"哎呀我的妈呀，%p!  %oC是玻璃做的！你悠着点！要是摔了这玩意的话可没有第二件再让你砸了！
+你现在是它的保管者了，现在赶快回去找你的护身符去，%Z等着你回去呢。"
 %E
 %Cc Arc 00090
-"Welcome back, %p.  Have you progressed with your quest to
-regain the Amulet of Yendor for %d?"
+"欢迎回来！%p. 你为%d找护身符的任务搞得咋样了?"
 %E
 %Cc Arc 00091
-"Congratulations, %p.  I wondered if anyone could prevail against
-the Wizard and the minions of Moloch.  Now, you must embark on one
-final adventure.
+"恭喜恭喜，%p.我还以为没人能突破岩德巫师和摩洛的封锁拿到护身符，现在你得去把你
+剩下的任务搞完。
 
-"Take the Amulet, and find your way onto the astral plane.
-There you must find the altar of %d and sacrifice the
-Amulet on that altar to fulfill your destiny.
+"拿着护身符，穿越位面到达星界，然后把护身符献祭给%d的祭坛。
 
-"Remember, your path now should always be upwards."
+"记住，人往高处走，水往低处流，我挺看好你的，去吧."
 %E
 #
 #       Barbarian
 #
 %Cc Bar 00001
-Warily you scan your surroundings, all of your senses alert for signs
-of possible danger.  Off in the distance, you can %x the familiar shapes
-of %H.
+在你从传送门出来后你警惕的环顾四周, 你全身的毛孔都立了起来，让你感到一阵非常巨大的危险感.虽然在不远
+处你可以%x代表着%H的那熟悉的外观，这让你稍微地放松了一点........
 
-But why, you think, should %l be there?
+但是为什么你的直觉告诉你你的%l会在那边等你?
+与此同时，一阵黑魔法的气息让你打了个寒颤，你的每个细胞都在告诉着你大灾将至。
 
-Suddenly, the hairs on your neck stand on end as you detect the aura of
-evil magic in the air.
+再无多想，你握紧了你的武器，在粗重的呼吸声中轻声说道：
 
-Without thought, you ready your weapon, and mutter under your breath:
-
-    "By %d, there will be blood spilt today."
+    "以%d之名,今日此地将被血洗."
 %E
 %Cp Bar 00002
-Once again, you near %H.  You know that %l
-will be waiting.
+你又一次的回到了%H的附近. 你知道%l在等着你.
 %E
 %Cp Bar 00003
-Again, and you think possibly for the last time, you approach
-%H.
+你又一次，而且感觉到这极有可能是你最后一次的回到了%H的附近.
 %E
 %Cp Bar 00005
-"The battles here have been good -- our enemies' blood soaks the soil!"
+"上次的战争我们大获全胜——敌人的血染红了他们的土地!"
 %E
 %Cp Bar 00006
-"Remember that glory is crushing your enemies beneath your feet!"
+"记住，把敌人的身躯踩在你的身下是一种荣耀!"
 %E
 %Cp Bar 00007
-"There has been little treasure to loot, since the horde arrived."
+"自从那帮食人魔入侵我们这里后，我们都没东西可抢了."
 %E
 %Cp Bar 00008
-"The horde is mighty in numbers, but they have little courage."
+"那些入侵者在人数上占了优势，但很明显他们战斗的意志不如我们！"
 %E
 %Cp Bar 00009
-"%lC is a strange one, but he has helped defend us."
+"%lC他有点奇怪，但是他确实帮了我们大忙！"
 %E
 %Cp Bar 00010
-"The battles here have been good -- our enemies' blood soaks the soil!"
+"上次的战争我们大获全胜——敌人的血染红了他们的土地!"
 %E
 %Cp Bar 00011
-"Remember that glory is crushing your enemies beneath your feet!"
+"记住，把敌人的身躯踩在你的身下是一种荣耀!"
 %E
 %Cp Bar 00012
-"Times will be good again, now that the horde is vanquished."
+"我们接下来的日子估计会好过一点了——那帮该死的食人魔总算被赶跑了."
 %E
 %Cp Bar 00013
-"You have brought our clan much honor in defeating %n."
+"你在打败%n的这件功绩上为我们部落带来了莫大的荣耀！"
 %E
 %Cp Bar 00014
-"You will be a worthy successor to %l."
+"你绝对是%l的得力助手."
 %E
 %Cc Bar 00015
-"Ah, %p.  You have returned at last.  The world is in dire
-need of your help.  There is a great quest you must undertake.
+"啊，%p，你总算是回家了. 我们整个部落现在极其需要你的帮助，这个责任我恐怕不得不
+要由你背了。
 
-"But first, I must see if you are ready to take on such a challenge."
+"但是首先——我要看看你够不够格来接受这份任务."
 %E
 %Cp Bar 00016
-"%p, you are back.  Are you ready now for the challenge?"
+"%p，你又回来了，准备好了吗？"
 %E
 %Cp Bar 00017
-"Again, you stand before me, %p.  Surely you have prepared yourself."
+"你又一次的站在了我的面前，%p. 看来你已经准备好了对吗？"
 %E
 %Cc Bar 00018
-"Pah!  You have betrayed the gods, %p.  You will never attain
-the glory which you aspire to.  Your failure to follow the true path has
-closed this future to you.
+"呸！我压根没想到————你居然背叛了我们的伟大的神灵！%p.我发誓我会让你这辈子再也不可能
+得到你想要的宝物以及你所渴望的名利！这都是你自找的！
 
-"I will protect these people as best I can, but soon %n will overcome
-me and destroy all who once called you %s.  Now begone!"
+"我再也不会指望你了，我会独自保护我们部落的人，虽然我们迟早会被%n杀死，但我们会
+站着且光荣的面对我们的死亡！现在给我滚！"
 %E
 %Cc Bar 00019
-"%p, I fear that you are as yet too inexperienced to face
-%n.  Only %Ra with the help of %d could ever hope to
-defeat him."
+"%p,恐怕你还不能面对%n，你的战斗经验远远不足以胜任这份任务，只有%Ra才能承载着%d的帮助，
+然后成功的战胜他。"
 %E
 %Cc Bar 00020
-"%pC!  You have wandered from the path of the %a!
-If you attempt to overcome %n in this state, he will surely
-enslave your soul.  Your only hope, and ours, lies in your purification.
-Go forth, and return when you feel ready."
+"%pC!我必须警告你，你已经偏离了%a的道路!
+如果你以现在的状态就想打败%n，他会毋庸置疑的奴役你的灵魂！你的--同时也是我们的，唯一
+的希望，就是净化你的灵魂。
+先回去，等你等到足够纯洁了再回来见我。"
 %E
 %Cc Bar 00021
-"The world is in great need of your assistance, %p.
+"这个世界现在急需你的帮助，%p.
 
-"About six months ago, I learned that a mysterious sorcerer, known
-as %n, had begun to gather a large group of cutthroats and brigands
-about him.
+"六个月前，我收到部落密探，得知有一个神秘的掠夺者，就是%n，纠集了一群由割喉者和
+食人魔组成的，由他直接领导的军队。
 
-"At about the same time, these people you once rode with `liberated' a
-potent magical talisman, %o, from a Turanian caravan.
+"就在那会的时候，之前那些和你一起坐着图兰马车旅行的同伴们拿到了一个充满神奇魔力的
+神器，也就是%o后，不幸遭到了%n的袭击。
 
-"%nC and his Black Horde swept down upon %i and defeated
-the people there, driving them out into the desert.  He has taken
-%o, and seeks to bend it to his will.  I detected the
-subtle changes in the currents of fate, and joined these people.
-Then I sent forth a summons for you.
+"%nC和他的死亡军队袭击了%i然后把他们的防御摧毁并打败了他们，并且把他们赶进了沙漠里
+自生自灭，在这之后他夺取了%o，并且企图让它腐化后屈服于他的意志，幸运的是我在命运的
+长河中发现了这一件事所带来的命运扰动，并在得知这些事后我前去协助了这些人，然后现在我把你
+召唤过来，就是为了以下的事——————
 
-"If %n can bend %o to his will, he will become
-almost indestructible.  He will then be able to enslave the minds of
-men across the world.  You are the only hope.  The gods smile upon you,
-and with %d behind you, you alone can defeat %n.
+"如果%n试图让%o屈服的计划成功了,他将会变得近乎坚不可摧，并且在这之后他绝对会奴役全世界
+的人的意志，而你，你现在是我们的最后的希望了，我能看到幸运之神在你的命运上微笑着，而且
+%d也在背后支持着你，你一定可以打倒%n这个难缠的敌人的！
 
-"You must go to %i.  From there, you can track down
-%n, defeat him, and return %o to us.  Only
-then will the world be safe."
+"现在你必须动身去%i. 之后你就可以找到%n,打败它, 然后把%o送回来给我.只有这样
+世界才会重归和平。"
 %E
 %Cp Bar 00025
-"%nC is strong in the dark arts, but not immune to cold steel."
+"%nC在黑暗魔法上非常强大，但是他无法忍受寒冷的攻击."
 %E
 %Cp Bar 00026
-"Remember that %n is a great sorcerer.  He lived in the time
-of Atlantis."
+"记住%n是一个非常强大的掠夺者.他是亚特兰蒂斯时代的人。"
 %E
 %Cp Bar 00027
-"If you fail, %p, I will not be able to protect these people long."
+"如果万一你失败了，%p，我害怕我之后估计就要撑不住了."
 %E
 %Cp Bar 00028
-"To enter %i, you must be very stealthy.  The horde will be on
-guard."
+"如果你要进入%i,你必须非常的小心谨慎.他的军队八成在警戒状态。"
 %E
 %Cp Bar 00029
-"Call upon %d in your time of need."
+"在你需要帮助的时候就呼唤%d吧."
 %E
 %Cp Bar 00030
-"May %d protect you, and guide your steps."
+"愿%d保护你并指引你前行的道路."
 %E
 %Cp Bar 00031
-"If you can lay hands upon %o, carry it for good fortune."
+"如果你能重新拿回%o,拿着它就能得到好运."
 %E
 %Cp Bar 00032
-"I cannot stand against %ns sorcery.  But %d will help you."
+"我没有办法抵抗%n的侵略. 但是%d绝对会帮助你的."
 %E
 %Cp Bar 00033
-"Do not fear %n.  I know you can defeat him."
+"面对%n的时候不要退缩.我知道你肯定能胜过他的."
 %E
 %Cp Bar 00034
-"You have a great road to travel, %p, but only after you defeat
-%n."
+"你将会有一段非常壮阔的旅途, %p,但眼前当务之急是先把%n杀掉."
 %E
 %Cc Bar 00035
-The scent of water comes to you in the desert breeze.  You know that
-you have located %i.
+水的气息混杂着沙漠狂风向你席卷而来，你认为你已经到达了%i.
 %E
 %Cp Bar 00036
-Yet again you have a chance to infiltrate %i.
+你又一次前来试图潜入%i.
 %E
 %Cc Bar 00040
-The hairs on the nape of your neck lift as you sense an energy in the
-very air around you.  You fight down a primordial panic that seeks to
-make you turn and run.  This is surely the lair of %n.
+你脖子后的毛发随着空中一阵魔力的波动立了起来，而后不得不和一阵让你有着强烈逃跑欲望的魔力搏斗，
+很明显你到达了%n的巢穴.
 %E
 %Cp Bar 00041
-Yet again you feel the air around you heavy with malevolent magical energy.
+你又一次的感受到空气中盈满了恶意的魔法能量.
 %E
 %Cc Bar 00050
-"So.  This is what that second rate sorcerer %l sends to do his bidding.
-I have slain many before you.  You shall give me little sport.
-
-"Prepare to die, %c."
+"哦......看来你就是%l最后派来的战士？我已经杀了一堆了反正，你应该多努力几下让我能找个乐子。
+"现在准备去死吧，%c"
 %E
 %Cp Bar 00051
-"I have wasted too much time on you already.  Now, you shall die."
+"我在你身上已经浪费太多的时间了，赶快去死吧."
 %E
 %Cp Bar 00052
-"You return yet again, %c!  Are you prepared for death now?"
+"你居然还敢回来，%c!准备好接受你的命运了吗？"
 %E
 %Cp Bar 00053
-"I shall have %o back, you pitiful excuse for %ca.
-And your life as well."
+"我应该把%o从你手里拿回来,就你这样一点战士的样子都没有，还是赶快让我杀了吧。"
 %E
 %Cp Bar 00060
-"My pets will dine on your carcass tonight!"
+"等把你杀了，我的宠物今天晚上就能加餐了！"
 %E
 %Cp Bar 00061
-"You are a sorry excuse for %ra."
+"你对于%ra这个称号来说就是个可悲的废物."
 %E
 %Cp Bar 00062
-"Run while you can, %c.  My next spell will be your last."
+"%c，赶快逃命吧，我下一个咒语就是你的死期！"
 %E
 %Cp Bar 00063
-"I shall use your very skin to bind my next grimoire."
+"我应该把你的皮剥了拿来给我的剑做护手！"
 %E
 %Cp Bar 00064
-"%d cannot protect you now.  Here, you die."
+"%d没法再保护你了，这里就是你的葬身之处！"
 %E
 %Cp Bar 00065
-"Your %a nature makes you weak.  You cannot defeat me."
+"你的%a让你变得脆弱不堪，你不可能打败我的."
 %E
 %Cp Bar 00066
-"Come, %c.  I shall kill you, then unleash the horde on your tribe."
+"来吧，%c. 等我把你杀了以后我就会让军队消灭你的家人."
 %E
 %Cp Bar 00067
-"Once you are dead, my horde shall finish off %l, and your tribe."
+"等你死了以后，我的军队就会杀掉%l,当然也有你的部落成员."
 %E
 %Cp Bar 00068
-"Fight, %c, or are you afraid of the mighty %n?"
+"来打啊！%c！还是说你已经被强大无比的%n吓得尿裤子了?"
 %E
 %Cp Bar 00069
-"You have failed, %c.  Now, my victory is complete."
+"你已经死了，%c.我没有任何失败的可能."
 %E
 %Cc Bar 00070
-As you pick up %o, you feel the power of it
-flowing through your hands.  It seems to be in two or more places
-at once, even though you are holding it.
+当你捡起来%o以后,你感到它的力量涌入了你的身体里，看起来它在这个时空里，不，在许多个时空里，
+那里的你都在捧着它，是时候把它交付给&l了.
 %E
 %Cc Bar 00080
-%nC falls to the ground, and utters a last curse at you.  Then his
-body fades slowly, seemingly dispersing into the air around you.  You
-slowly become aware that the overpowering aura of magic in the air has
-begun to fade.
+%nC倒在了地上，在咽气前最后向你诅咒了一句后他的身体分解开来，看上去像是消散在了你周围的
+空气中，与此同时你突然发现周围的那股强大的魔法力量消失了。
 %E
 %Cc Bar 00081
-When %l sees %o, he smiles, and says:
+当%l看见你拿着的%o,他笑了一下后说:
 
-    Well done, %p.  You have saved the world from certain doom.
-    What, now, should be done with %o?
+    你干得很好，%p.你成功的把世界从毁灭边缘拉了回来，但是现在要面对一个问题就是：
+    我们，现在应该怎么处理%o？把它放在哪里？
 
-    These people, brave as they are, cannot hope to guard it from
-    other sorcerers who will detect it, as surely as %n did.
+    尽管我们的战士有着这样强壮的身躯和坚不可摧的意志，仍旧还是没有守住%o，可以预计的是
+    如果将来再次出现一个掠夺者，像%n这样的事绝对还会再次发生。
 
-    Take %o with you, %p.  It will guard you in
-    your adventures, and you can best guard it.  You embark on a
-    quest far greater than you realize.
+    %p，把%o拿着吧，它会在你的旅途上保护你，而且你的行为也证明了你有着足够的能力保护它，
+    你在这次任务中的表现远比你自己以为的要好得多。
 
-    Remember me, %p, and return when you have triumphed.  I
-    will tell you then of what you must do.  You will understand when the
-    time comes.
+    别把我忘了，%p, 在你取得功绩后别忘了回来探望我，我会告诉你下一步该怎么做的，至于为什么？
+    你到时候就知道了。
 %E
 %Cc Bar 00082
-%l gazes reverently at %o, then back at you.
+%l仔细地端详了一会%o,然后把它丢回给你.
 
-"You are its keeper now, and the time has come to resume your search
-for the Amulet.  %Z await your return through the
-magic portal which brought you here."
+"它现在是你的了，而且你应该继续你寻找护身符的冒险，%Z还在等待着你从那个魔法入口返回并
+接着探索呢。"
 %E
 %Cp Bar 00090
-"Tell us, %p, have you fared well on your great quest?"
+"来和我们讲讲吧，%p,你在寻找护身符的道路上是否一帆风顺?"
 %E
 %Cc Bar 00091
-"This is wondrous, %p.  I feared that you could not possibly
-succeed in your quest, but here you are in possession of the Amulet
-of Yendor!
+"这简直太棒了！%p.我还害怕你没办法成功的找到它，但是你不仅活着回来了，还成功的找到它了！
 
-"I have studied the texts of the magi constantly since you left.  In
-the Book of Skelos, I found this:
+"在你走后我仔细的研究了一下巫术占卜，然后在圣凯罗之书中，我发现了下面的一段话：
 
-    %d will cause a child to be sent into the world.  This child is to
-    be made strong by trial of battle and magic, for %d has willed it so.
-    It is said that the child of %d will recover the Amulet of Yendor
-    that was stolen from the Creator at the beginning of time.
+    据说%d在未来的某个时刻会在世上降下一个孩子，而这个孩子将会在魔法与战斗中变得强大，一如%d所愿一般成长，
+    最后那位孩子将会成功的为%d寻回那自世界伊始便被从造物主处窃取的岩德护身符。
 
-"As you now possess the amulet, %p, I suspect that the Book
-speaks of you.
+"现在你拿到了护身符，%p,我现在感觉那本书其实说的是你!
 
-    The child of %d will take the Amulet, and travel to the Astral
-    Plane, where the Great Temple of %d is to be found.  The Amulet
-    will be sacrificed to %d, there on His altar.  Then the child will
-    stand by %d as champion of all %cP for eternity.
+    %d之子会拿着护身符，到达星界，即%d的神庙所在之地，护身符会被他献祭
+    给%d的祭坛之上，随后那位命运之子将会和%d一样作为%cP的最强者而拥有永恒的生命。
 
-"This is all I know, %p.  I hope it will help you."
+"这就是我目前知道的所有信息了, %p.我希望我能帮上忙."
 %E
 #
 #       Cave(wo)man
 #
 %Cc Cav 00001
-You descend through a barely familiar stairwell that you remember
-%l showing you when you embarked upon your vision quest.
+你从楼梯慢慢的走了下去，然后看到了一个你差不多还有点印象的地方，%l在你出发前曾经
+带你来这边过。
 
-You arrive back at %H, but something seems
-wrong here.  The usual smoke and glowing light of the fires of the
-outer caves are absent, and an uneasy quiet fills the damp air.
+你现在虽然回到了%H,但很明显这边绝对出了什么大事，平日温馨的营火和打猎归来的人群一扫而空，
+取而代之的是让人非常不安的氛围.........
 %E
 %Cp Cav 00002
-Once again, you arrive back at %H.
+你又一次的回到了%H.
 %E
 %Cp Cav 00003
-For some reason, you think that this may be the last time you will
-enter %H.
+你又一次，而且感觉到这极有可能是你最后一次的回到了%H的附近.
 %E
 %Cp Cav 00005
-"We have not been able to gather as much food since the Giants sealed
-off our access to the outer world."
+"在巨人封锁了我们出去打猎的通道后我们现在几乎没啥可吃的了."
 %E
 %Cp Cav 00006
-"Since %n sent her minions, we have been constantly fighting."
+"自从%n开始让她的手下攻打我们，我们就一直处于混战之中."
 %E
 %Cp Cav 00007
-"I have heard your vision quest was successful.  Is this so?"
+"我听说你这一趟非常顺利，真的假的?"
 %E
 %Cp Cav 00008
-"So, tell me, %p, how have you fared?"
+"讲讲呗，%p，近来如何?"
 %E
 %Cp Cav 00009
-"%lC grows old.  We know not who will guide us after he ascends."
+"%lC越来越老了，等到她升天后我们应该怎么办呢......"
 %E
 %Cp Cav 00010
-"The rains have returned and the land grows lush again."
+"暴雨又回来了，看起来像是要发洪灾的样子."
 %E
 %Cp Cav 00011
-"Peace has returned, give thanks to %d!"
+"和平终归此地！感谢%d!"
 %E
 %Cp Cav 00012
-"Welcome back!  Did you find %o?"
+"欢迎回来！你找到%o了吗?"
 %E
 %Cp Cav 00013
-"So, %p, tell us the story of your fight with %n."
+"哎呀，%p，讲讲那会你怎么和%n英勇搏斗的呗."
 %E
 %Cp Cav 00014
-"%lC grows old.  Perhaps you will guide us after he ascends."
+"%lC越来越老了，但也许等到他升天后你就是下一个领导者."
 %E
 %Cc Cav 00015
-"You have returned from your vision quest, %p.  Thank %d.
+"你从外出探索的任务中总算活着回来了，%p.感谢%d.
 
-"We are in dire need of your help, my %S.
+"我们现在非常需要你的帮助，我的%S.
 
-"But first, I must see if you are yet capable of the quest I would
-ask you to undertake."
+"但是首先，我要检验一下你是否足够有能耐去应付这个差事."
 %E
 %Cp Cav 00016
-"Again, you return to us, %p.  Let me see if you are ready now."
+"你又一次的回来了%p.让我看看你现在准备好了没有."
 %E
 %Cp Cav 00017
-"Ah, %p.  Are you finally ready?"
+"啊，%p. 总算准备好了吧?"
 %E
 %Cc Cav 00018
-"%pC!  You have sealed our fate.  You seem unable to reform yourself,
-so I must select another to take your place.
+"%pC!你彻底的断绝了我们的期待，看起来你连你自己都捯饬不好,
+我必须选择另外的人来干这件事了.
 
-"Begone from %H!  You have betrayed us by choosing
-the path of the %C over the true path of the %L.
+"现在立马从%H滚出去!你选择了%C的方向，背叛了我们%L的道路！.
 
-"You no longer live in our eyes."
+"不要再出现在我的视野里，现在滚！"
 %E
 %Cc Cav 00019
-"Alas, %p, you are as yet too inexperienced to embark upon such
-a difficult quest as that I propose to give you.
+"唉，%p,看来这件差事对你来说还为时尚早，你缺乏经验，暂时无法胜任.
 
-"%rA could not possibly survive the rigors demanded to find
-%i, never mind to confront %n herself.
+"%rA对于找到%i并且把它带回来这件事的生还概率渺茫，更别说还要和%n搏斗了。
 
-"Adventure some more, and you will learn the skills you will require.
+"出去再多探索探索，也许等你探索的足够了就可以了.
 %d decrees it."
 %E
 %Cc Cav 00020
-"%pC!  You have deviated from my teachings.  You no longer follow
-the path of the %a as you should.  I banish you from these caves, to
-go forth and purify yourself.  Then, you might be able to accomplish this
-quest."
+"%pC!你一点也没有追随我的教诲.你知道你现在已经背叛了自己的道路了吗？我现在暂时
+将你驱逐出去，等你把自己净化了再回来，尔后你也许才能胜任这个任务。"
 %E
 %Cc Cav 00021
-"You are indeed ready now, %p.  I shall tell you a tale of
-great suffering among your people:
+"看起来你现在的确准备好了，%p，现在我要告诉你最近发生了什么:
 
-"Shortly after you left on your vision quest, the caves were invaded by
-the creatures sent against us by %n.
+"在你外出游历后不久，洞穴就被%n所派来的手下所入侵，并且和我们激烈的战斗了起来.
 
-"She, herself, could not attack us due to her great size, but her minions
-have harassed us ever since.  In the first attacks, many died, and the
-minions of %n managed to steal %o.
-They took it to %i and there, none of our
-%g warriors have been able to go.
+"她，那头母龙，由于自己的身形太过臃肿庞大而无法进入这里直接袭击我们，但她的手下
+一直在这里骚扰并偷袭我们，在第一次袭击时我们许多的人便因此而死，而且%n的手下甚至还
+偷走了%o！它们把它带到了%i那里，不幸的是我们的%g战士没有一个还有战斗的力气了。
 
-"You must find %i, and within it wrest
-%o from %n.  She guards it as
-jealously as she guards all treasures she attains.  But with it,
-we can make our caves safe once more.
+"你必须先找到%i,即%n和她所抢来的%o所在之处，她把它守的和其它她极其贪婪的夺来的物品一样的严密，
+但是如果你成功的夺回了它，我们就可以再一次让我们的洞穴变得安全了。
 
-"Please, %p, recover %o for us, and return it here."
+"%p,现在我请求你为了我们把%o找到，然后带过来给我."
 %E
 %Cp Cav 00025
-"%nC is immune to her own breath weapons.
-You should use magic upon her that she does not use herself."
+"%nC免疫她自身会使用的吐息的元素伤害，你应该使用那些她不曾使用的魔法来伤害她."
 %E
 %Cp Cav 00026
-"When you encounter %n, call upon %d for assistance."
+"当你面对%n的时候,请呼唤%d来帮助你."
 %E
 %Cp Cav 00027
-"There will be nowhere to hide inside %ns inner sanctum."
+"在%n的藏宝库内是没有掩体可供躲藏的."
 %E
 %Cp Cav 00028
-"Your best chance with %n will be to keep moving."
+"对付%n的最佳手段就是保持移动."
 %E
 %Cp Cav 00029
-"Do not be distracted by the great treasures in %ns lair.
-Concentrate on %o."
+"不要被%n的巢穴内部别的宝藏吸引，先拿到%o再说."
 %E
 %Cp Cav 00030
-"%oC is the only object that %n truly fears."
+"%oC是唯一一个%n会真的害怕的神器."
 %E
 %Cp Cav 00031
-"Do not be fooled by %ns size.  She is fast, and it is
-rumored that she uses magic."
+"不要被%n的庞大身躯所欺骗，她的速度其实非常快,而且据说她也会使用魔法."
 %E
 %Cp Cav 00032
-"I would send a party of %gP with you, but we will need all
-of our strength to defend ourselves."
+"如果可以的话我会派一些%gP来帮助你, 但是我们还需要人手来加强防御."
 %E
 %Cp Cav 00033
-"Remember, be %a at all times.  This is your strength."
+"记住，要一直作为%a走下去，这是你唯一的希望了."
 %E
 %Cp Cav 00034
-"If only we had an amulet of reflection, this would not have happened."
+"如果我们要是有个反射护身符，估计这一切都不会发生了."
 %E
 %Cc Cav 00035
-You %x many large claw marks on the ground.  The tunnels ahead
-of you are larger than most of those in any cave complex you have
-ever been in before.
+你%x地面上有很多巨大的爪痕.你面前的巨大的通道比你以前所见过的一切洞穴都要
+繁复且宽阔.
 
-Your nose detects the smell of carrion from within, and bones litter
-the sides of the tunnels.
+你闻到空气中有血的味道，而且在这通道周围还有许多被吃剩的骨头.
 %E
 %Cp Cav 00036
-Once again, you approach %i.
+你又一次到达了%i附近.
 %E
 %Cc Cav 00040
-You find yourself in a large cavern, with neatly polished walls, that
-nevertheless show signs of being scorched by fire.
+你发现你现在到达了一个巨大的洞穴,周围的墙壁闪亮到能照镜子,很明显
+这是被火焰灼烧的证明.
 
-Bones litter the floor, and there are objects scattered everywhere.
-The air is close with the stench of sulphurous fumes.
+地上有骨头，还有各种各样的东西也散落在地上，空气中充满了硫磺的气味。
 
-%nC is clearly visible, but she seems to be asleep.
+你可以看到%nC的巨大的身体，似乎她正在睡觉。
 %E
 %Cp Cav 00041
-Once again, you find yourself in the lair of %n.
+你又一次的抵达了%n的巢穴.
 %E
 %Cc Cav 00050
-"So, follower of %l, you seek to invade the lair of %n.
-Only my meals are allowed down here.  Prepare to be eaten!"
+"哦，你就是%l的战士？就是你想入侵伟大的%n的窝？
+只有我的食物才能进来，准备好当我的零食吧!"
 %E
 %Cp Cav 00051
-"So, again you face me, %c.  No one has ever before escaped me.
-Now I shall kill you."
+"所以你又回来了？%c？ 没人能从我的眼前逃跑，我现在就吃了你！"
 %E
 %Cp Cav 00052
-"You are getting annoying, %c.  Prepare to die."
+"你现在开始有点让我心烦了，%c，看我弄死你."
 %E
 %Cp Cav 00053
-"I'll have %o from you, %c.  You shall die."
+"我会把%o从你手里抢回来的，%c.受死吧."
 %E
 %Cp Cav 00060
-"You are weak, %c.  No challenge for the Mother of all Dragons."
+"你太脆了，%c.对于众龙之母来说你无足轻重."
 %E
 %Cp Cav 00061
-"I grow hungry, %r.  You look like a nice appetizer!"
+"我正好有点饿了，%r，你看起来像是个不错的开胃菜!"
 %E
 %Cp Cav 00062
-"Join me for lunch?  You're the main course, %c."
+"想进我午餐食谱吗？你会作为正餐的，%c."
 %E
 %Cp Cav 00063
-"With %o, I am invincible!  You cannot succeed."
+"只要我有%o,我就是无敌的！你不可能成功的！."
 %E
 %Cp Cav 00064
-"Your mentor, %l has failed.  You are nothing to fear."
+"你的导师%l已经是我的手下败将了.你对我来说没什么可怕的."
 %E
 %Cp Cav 00065
-"You shall die here, %c.  %rA cannot hope to defeat me."
+"你今日必定命丧此处，%c.仅仅是%rA可无法打败我."
 %E
 %Cp Cav 00066
-"You, a mere %r challenge the might of %n?  Hah!"
+"你？一个%r？胆敢挑战强大的%n? 哈哈哈哈哈哈哈哈哈哈哈哈!"
 %E
 %Cp Cav 00067
-"I am the Mother of all Dragons!  You cannot hope to defeat me."
+"我是众龙之母！打败我这种事，想都别想！"
 %E
 %Cp Cav 00068
-"My claws are sharp now.  I shall rip you to shreds!"
+"我把爪子磨尖了，现在我要把你撕成碎片!"
 %E
 %Cp Cav 00069
-"%d has deserted you, %c.  This is my domain."
+"%d已经抛弃掉你了，%c. 这是我的领土！"
 %E
 %Cc Cav 00070
-As you pick up %o it seems heavy at first, but as you
-hold it strength flows into your arms.
+当你刚拿起%o的时候它似乎非常沉重，但是当你握住它的时候一股力量涌入了你的胳膊。
 
-You suddenly feel full of power, as if nothing could possibly stand
-in your path.
+你突然感觉自己充满了力量，任何道路上的阻碍此时都看起来不堪一击。
 %E
 %Cp Cav 00080
-%nC sinks to the ground, her heads flailing about.
-As she dies, a cloud of noxious fumes billows about her.
+%nC沉重的倒在了地上，她的头还仰着，当她咽气时一股剧毒气体从她嘴里喷了出来。
 %E
 %Cc Cav 00081
-%lC glimpses %o in your possession.
-He smiles and says:
+%lC轻轻的把%o放进你的包里.
+他笑了一下然后说：
+    你做到了！你拯救了我们的生命，但是我害怕%o的强大力量会接着吸引那些%C的人，使得
+    这样的事件再发生一次。
 
-    You have done it!  We are saved.  But I fear that %o
-    will always be a target for %C forces who will want it for their
-    own.
-
-    To prevent further trouble, I would like you, %p,
-    to take %o away with you.  It will help you as you
-    quest for the Amulet of Yendor.
+    为了避免麻烦，我现在让你，%p，把%o拿着，它会帮助你在取得岩德护身符德路上
+    披荆斩棘度过难关的。
 %E
 %Cc Cav 00082
-%l grasps %o proudly for a moment, then looks at you.
+%l非常自豪的摸了摸%o一会,然后看向你.
 
-"You are its keeper now, and the time has come to resume your search
-for the Amulet.  %Z await your return through the
-magic portal which brought you here."
+"它现在是你的了，而且你应该继续你寻找护身符的冒险，%Z还在等待着你从那个魔法入口返回并
+ 接着探索呢."
 %E
 %Cp Cav 00090
-"%pC!  Welcome back.
-How goes your quest to recover the Amulet for %d?"
+"%pC! 欢迎回家，你为%d找护身符的任务搞得咋样了？
 %E
 %Cc Cav 00091
-"You have been successful, I see, %p.
+"看得出来，你做得很好，%p.
 
-"Now that the Amulet of Yendor is yours, here is what you must do:
+"现在护身符在你手上，记住我说的话然后跟着做:
 
-"Journey upwards to the open air.  The Amulet you carry will then
-take you into the Astral Planes, where the Great Temple of %d
-casts its influence throughout our world.
+"一直走到你进来的地方，你带着的护身符会带着你进入星界，那里%d的神圣主祭坛就是%d的神力
+所影响我们世界的地方。
 
-"Sacrifice the Amulet on the altar.  Thus shall %d become supreme!"
+"在祭坛上献祭护身符，让%d再次伟大!"
 %E
 #
 #	Flame Mage
 #
 %Cc Fla 00001
-Waves of blistering heat ripple off of the lava-covered landscape that
-surrounds you.  Off in the distance, you can see the craggy rocks
-of %H.
+这片岩浆包围着的土地上寸草不生，周围的熔岩噼啪作响并释放出阵阵热浪，不远处你能看到由火山石搭建的%H.
 
-Suddenly, the hairs on your neck stand on end as you detect a faint hint of
-evil moisture in the air.
+突然，在你捕捉到空中若隐若现的邪恶魔法波动后，你浑身的汗毛都立了起来.
 
 %E
 %Cp Fla 00002
-Once again, you near %H.  You know that %l
-will be waiting.
+你又一次的回到了%H. %l正在等着你。
 %E
 %Cp Fla 00003
-Again, and you think possibly for the last time, you approach
-%H.
+又一次，而且你估摸着是最后一次，你回到了%H.
 %E
 %Cp Fla 00005
-"The battles here have been good -- our enemies' blood has boiled away!"
+"我们之前的战斗很顺利————我们敌人的血洒落在地上并且蒸发!"
 %E
 %Cp Fla 00006
-"May your days always be warm!"
+"愿你的每一天都炽热无比!"
 %E
 %Cp Fla 00007
-"We have had trouble concentrating on our studies!"
+"它们来捣乱后我们根本没法集中注意力去研究魔法了!"
 %E
 %Cp Fla 00008
-"The water elementals are fierce, but they boil away under our fire!"
+"水元素虽然灵活，但在我们的炽火面前不值一提!"
 %E
 %Cp Fla 00009
-"%lC is a strange one, but he has helped defend us."
+"%lC很奇怪，但是他帮我们抵御住了敌人."
 %E
 %Cp Fla 00010
-"The battles here have been good -- our enemies' blood has boiled away!"
+"我们之前的战斗很顺利————我们敌人的血洒落在地上并且蒸发!
 %E
 %Cp Fla 00011
-"May your days always be warm!"
+"愿你的每一天都炽热无比!"
 %E
 %Cp Fla 00012
-"Since the defeat of the hoarde, all can concentrate fully on our studies!"
+"自从那帮烦人的家伙被赶走后，我们又可以仔细的研究魔法了!"
 %E
 %Cp Fla 00013
-"I'm taking my holidays in Gehennom this year - very warm there, supposedly"
+"我觉得我今年应该去葛汉洛姆度假，那边应该挺暖和的。"
 %E
 %Cp Fla 00014
-"Have you noticed how much stronger %l is since %o was recovered?"
+"你注意到自从%o被你取回后%l又重新充满力量了吗？"
 %E
 %Cc Fla 00015
-"Ah, %p.  You have returned at last.  The world is in dire
-need of your help.  There is a great quest you must undertake.
+"啊，%p你总算回来了，我们现在非常需要你的帮助，有一个非常艰巨的任务要托付给你。
 
-"But first, I must see if you are ready to take on such a challenge."
+"但是首先，我要看看你的法力是否足够应付这个问题."
 %E
 %Cp Fla 00016
-"%p, you are back.  Are you ready now for the challenge?"
+"%p，你回来啦？准备好了吗?"
 %E
 %Cp Fla 00017
-"Again, you stand before me, %p.  Surely you have prepared yourself."
+"你又一次回来了，%p.这次你绝对准备好了吧."
 %E
 %Cc Fla 00018
-"Pah!  You have betrayed the gods, %p.  You will never attain
-the glory which you aspire to.  Your failure to follow the true path has
-closed this future to you.
+"你你你———— %p.我这么含辛茹苦的教导你法术，把你培育成一个火焰法师，然后你就是这么对待
+我的？你就是这么对待我还有神圣的%d的？
 
-"I will protect these people as best I can, but soon %n will overcome
-me and destroy all who once called you %s.  Now begone!"
+"给我滚！立刻给我滚出去！我现在是一点也指望不上你了，与其让你去执行任务还不如让我就被%n砍了得了！
+滚！"
+
 %E
 %Cc Fla 00019
-"%p, I fear that you are as yet too inexperienced to face
-%n.  Only %Ra with the help of %d could ever hope to
-defeat him."
+"%p,看来你的法力还不够拿来面对%n.只有非常熟练的%Ra才能确保自己能全身而退。"
 %E
 %Cp Fla 00020
-"%p!  You have wandered from the path of the %a!
-If you attempt to overcome %n in this state, he will surely
-enslave your soul.  Your only hope, and ours, lies in your purification.
-Go forth, and return when you feel ready."
+"%p! 看来你已经脱离了%a的道路了！你要是这么下去很快就会沾染上暗黑魔法，从而成为
+第二个%n的！现在赶快出去把自己净化，在你准备好以后你再回来。
+
 %E
 %Cc Fla 00021
-"The world is in great need of your assistance, %p.
+"这个世界实在是乱套了，我们非常需要你的帮助，%p.
 
-"About six months ago, I learned that a mysterious sorcerer, known
-as %n, had begun to summon horrible elementals from the plane of 
-Water.
+"三个月以前，一个叫做%n的一个邪恶魔法师不知道用了什么手段召唤了一大堆的水位面的
+水元素来攻打我们。
 
-"%nC and his hordes of elementals swept down upon %H and stole
-%o, and seeks to bend it to his will.  
-After many brave wizards were slain by his watery servants, I
-sent forth a summons for you!
+"我们是在是守不住了，虽然我们在人数上占优势，但是经不住他能一直召唤水元素来攻击
+我们，许多的火焰法师被他那水元素仆人杀害掉了，所以我才这么着急的喊你回来帮助我们。
 
-"If %n can bend %o to his will, he will become
-almost indestructible.  He will then be able to enslave our elementals,
-and destroy us.  You are our only hope.  The gods smile upon you,
-and with %d behind you, you alone can defeat %n.
+"如果%n能彻底的奴役%o的力量，我们基本上就死定了！你，%p，必须立刻马上去把%o从
+%n手里夺回来，并且交还于我！
 
-"You must go to %i.  From there, you can track down
-%n, defeat him, and return %o to us.  Only
-then will the world be safe."
+"你得先到%i，然后才能开始追踪%o的位置，如果我猜的没错%o一定在%n的边上放着，
+只有把它成功的拿了回来我们的安全才能得以保障，现在上吧！"
 %E
 %Cp Fla 00025
-"%n is strong in the dark arts, but not immune to cold steel."
+"%n在水魔法上非常有手段来攻击你，但是你要用魔法对抗魔法！"
 %E
 %Cp Fla 00026
-"Remember that %n is a great sorcerer.  He lived in the time
-of Atlantis."
+"要记住%n是从冰河时代一直生存到现在的一个邪恶的侵略者，他的力量会很强大！."
 %E
 %Cp Fla 00027
-"If you fail, %p, I will not be able to protect these people long."
+"如果你失败了，%p，我基本上命就要交代在这里了."
 %E
 %Cp Fla 00028
-"To enter %i, you must be very stealthy.  The elementals will be on
-guard."
+"如果你打算进入%i，你最好小心点，因为%n的水元素在守着呢！"
 %E
 %Cp Fla 00029
-"Call upon %d in your time of need."
+"记得要是出了什么事，就喊%d来帮忙."
 %E
 %Cp Fla 00030
-"May %d protect you, and guide your steps."
+"记住，要速战速决，我们没有那么多时间消耗！"
 %E
 %Cp Fla 00031
-"If you can lay hands upon %o, carry it for good fortune."
+"如果你能拿到%o，赶快发挥出它的效力，来保你平安！"
 %E
 %Cp Fla 00032
-"I cannot stand against %ns sorcery.  But %d will help you."
+"别问我为什么不想下去，下面水太多了，我怕把衣服打湿了."
 %E
 %Cp Fla 00033
-"Do not fear %n.  I know you can defeat him."
+"一会见到%n你可千万别怂，打他！"
 %E
 %Cp Fla 00034
-"You have a great road to travel, %p, but only after you defeat
-%n."
+"等你把%n杀死以后，我会把你写进教材里头的."
 %E
 %Cc Fla 00035
-The soggy scent of water comes to you in the breeze.  You know that
-you have located %i.
+微风带着一股浓重的水汽吹向你，你肯定到了%i.
 %E
 %Cp Fla 00036
-Yet again you have a chance to infiltrate %i.
+你又一次的到达了%i.
 %E
 %Cc Fla 00040
-You sense an evil energy in the very air around you.  You fight
-down a primordial panic that seeks to make you turn and run.
-This is surely the lair of %n.
+你感觉周围的水雾变得更浓重了，水雾钻到你的肺里让你呼吸都变得困难，这绝对是%n的老巢了。
 %E
 %Cp Fla 00041
-Yet again you feel the air around you heavy with malevolent magical energy.
+你又一次的感受到周围满了恶意的魔法波动.
 %E
 %Cc Fla 00050
-"So.  This is what that second rate sorcerer %l sends to do his bidding.
-I have slain many before you.  You shall give me little sport.
+"所以在%l浪费了这么多的巫师后，他把你这个小不点派来了？
 
-"Prepare to die, %c."
+"赶快去死吧，别浪费我的时间，%c."
 %E
 %Cp Fla 00051
-"I have wasted too much time on you already.  Now, you shall die."
+"我的水元素之力会把你的生命之火熄灭的！"
 %E
 %Cp Fla 00052
-"You return yet again, %c!  Are you prepared for death now?"
+"%o已经是我的了，放弃吧。"
 %E
 %Cp Fla 00053
-"I shall have %o back, you pitiful excuse for %ca.
-And your life as well."
+"你这一辈子就和你刚刚的攻击一样没用."
 %E
 %Cp Fla 00060
-"My pets will dine on your carcass tonight!"
+"等我把你做掉以后，我要把你所有的朋友全部杀掉!"
 %E
 %Cp Fla 00061
-"You are a sorry excuse for %ra."
+"真不敢相信%l居然会派遣你来，你这个没用的废物."
 %E
 %Cp Fla 00062
-"Run while you can, %c.  My next spell will be your last."
+"跑啊，逃命啊，反正你都要死在我手下."
 %E
 %Cp Fla 00063
-"I shall use your very skin to bind my next grimoire."
+"要不我把你泡在水里活活淹死如何？"
 %E
 %Cp Fla 00064
-"%d cannot protect you now.  Here, you die."
+"你的%d已经抛弃掉你了."
 %E
 %Cp Fla 00065
-"Your %a nature makes you weak.  You cannot defeat me."
+"你看你现在这德行，还能称得上是%ra？"
 %E
 %Cp Fla 00066
-"Come, %c.  I shall kill you, then unleash the horde on your people."
+"来啊，%p，用你那微不足道的攻击打我啊."
 %E
 %Cp Fla 00067
-"Once you are dead, my horde shall finish off %l, and your people."
+"等你死了，你的一切我都会彻底摧毁掉！"
 %E
 %Cp Fla 00068
-"Fight, %c, or are you afraid of the mighty %nt?"
+"呵呵呵呵，你不会真的以为你能打败我吧?"
 %E
 %Cp Fla 00069
-"You have failed, %c.  Now, my victory is complete."
+"胜负已定，你毫无胜算！"
 %E
 %Cc Fla 00070
-As you pick up %o, you feel the power of it
-flowing through your hands.  It seems to be in two or more places
-at once, even though you are holding it.
+在你拾起%o的时候，一股力量猛地冲入了你的身体内，你感到这件神器的宝贵，同时你也对%n试图
+窃取这件充满力量的神器感到后怕，谢天谢地你阻止了他。
 %E
 %Cp Fla 00080
-%n falls to the ground, and utters a last curse at you.  Then his
-body fades slowly, seemingly dispersing into the air around you.  You
-slowly become aware that the overpowering aura of magic in the air has
-begun to fade.
+%n的头颅掉到了地上，尽管如此他仍旧怒目圆瞪的盯着你，在你准备结束他时，他猛地往你脸上喷了
+一口水，然后闭上了眼睛.
 %E
 %Cc Fla 00081
-When %l sees %o, he smiles, and says:
+当%l看见你拿着的%o时,他笑了一下，然后说:
 
-    Well done, %p.  You have saved the world from certain doom.
-    What, now, should be done with %o?
+    我就知道你能行，%p. 你成功的拯救了我们的生命，但是我们得好好商量怎么处置%o了。
 
-    These wizards, brave as they are, cannot hope to guard it from
-    other sorcerers who will detect it, as surely as %n did.
+    如你所见，强大的巫师已经在抵御入侵的时候死去了，我们现在非常缺乏守卫%o的中坚力量，
+    看来只好你拿着这件充满力量的宝物了。
 
-    Take %o with you, %p.  It will guard you in
-    your adventures, and you can best guard it.  You embark on a
-    quest far greater than you realize.
-
-    Remember me, %p, and return when you have triumphed.  I
-    will tell you then of what you must do.  You will understand when the
-    time comes.
+    不要忘记你是走在%a道路的人，要把这件宝物用在正确的方向上，现在继续你的旅途吧。
 %E
 %Cc Fla 00082
-%l gazes at %o warmly for a moment, then looks at you.
+%l仔细地看了一会%o，然后把它丢还给你：
 
-"You are its keeper now, and the time has come to resume your search
-for the Amulet.  %Z await your return through the
-magic portal which brought you here."
+"现在我把它的所有权交给你了，不要忘记你在%Z还有非常重要的事去做，带着我们巫师学院的祝福
+前进吧。"
 %E
 %Cp Fla 00090
-"Tell us, %p, have you fared well on your great quest?"
+"和我们讲讲吧%p,你的进展如何?"
 %E
 %Cc Fla 00091
-"This is wondrous, %p.  I feared that you could not possibly
-succeed in your quest, but here you are in possession of the Amulet
-of Yendor!
-
-"I have studied the texts of the magi constantly since you left.  In
-the Book of Skelos, I found this:
-
-    %d will cause a child to be sent into the world.  This child is to
-    be made strong by trial of battle and magic, for %d has willed it so.
-    It is said that the child of %d will recover the Amulet of Yendor
-    that was stolen from the Creator at the beginning of time.
-
-"As you now possess the amulet, %p, I suspect that the Book
-speaks of you.
-
-    The child of %d will take the Amulet, and travel to the Astral
-    Plane, where the Great Temple of %d is to be found.  The Amulet
-    will be sacrificed to %d, there on His altar.  Then the child will
-    stand by %d as champion of all %cP for eternity.
-
-"This is all I know, %p.  I hope it will help you."
+"%p，你要知道，像你这样出类拔萃的巫师现在已经很少了，我必须承认你的成就在未来会变得
+比为师更加宏伟，但是现在你必须先拿着护身符穿越层层阻碍，到达祭坛，并把它放在它应该在的地方。
+愿神保佑你。"
 %E
 #
 #       Healer
 #
 %Cc Hea 00001
-What sorcery has brought you back to %H?  The smell
-of fresh funeral pyres tells you that something is amiss with the healing
-powers that used to practice here.
+到底是什么把你带回了%H?你惊讶的注意到周围有很多新建的用于火化尸体的柴堆，这里过去擅长使用的
+治愈魔力肯定出了问题，不然病人死亡率不可能会这么高的。
 
-No rhizotomists are tending the materia medica gardens, and where are the
-common folk who used to come for the cures?
+以前看守药房的草药师不见了，而且平日前来求医问药的村民都去哪了？
 
-You know that you must quickly make your way to the collegium, and
-%ls iatreion, and find out what has happened in your
-absence.
+你认为你必须赶快到医院里头的%l的办公室去问问你不在的这段时间到底发生了什么！
+
 %E
 %Cp Hea 00002
-After your last experience you expected to be here, but you certainly
-did not expect to see things so much worse.  This time you must
-succeed.
+虽然你已经来过而且看过眼前的惨状了，但是你还是不敢相信事情居然变得这么糟糕，这一次
+你必须成功。
 %E
 %Cp Hea 00003
-Again, you %x %H in the distance.
+你又一次的%x远方的%H。
 
-The smell of death and disease permeates the air.  You do not have
-to be %Ra to know that %n is on the verge of victory.
+空气中弥漫着死亡与疾病的沉重味道，就算是最次的医生也能看出来%n就要胜利了。
 %E
 %Cp Hea 00005
-"Did you read that new treatise on the therapeutic use of leeches?"
+"你看了柳叶刀上关于那个手术的介绍了吗?"
 %E
 %Cp Hea 00006
-"Paint a red caduceus on your shield and monsters won't hit you."
+"给你的盾涂个红点，然后怪物就不会打你啦！"
 %E
 %Cp Hea 00007
-"I passed handwriting so they are demoting me a rank."
+"我总算把字写的只有药房能看清了，他们决定给我升职."
 %E
 %Cp Hea 00008
-"I've heard that even %l has not been able to cure Chiron."
+"我听说即便是%l也没有办法治愈卡戎。."
 %E
 %Cp Hea 00009
-"We think %n has used his alchemists, and %o,
-to unleash a new disease we call 'the cold' on Gehennom."
+"我们猜测%n让他手下的炼金学家连同%o的魔力一起在葛汉洛姆里释放了一种名为“伤寒”的新疾病。
 %E
 %Cp Hea 00010
-"Did you read that new treatise on the therapeutic use of leeches?"
+"你看了柳叶刀上关于那个手术的介绍了吗?"
 %E
 %Cp Hea 00011
-"Paint a red caduceus on your shield and monsters won't hit you."
+"给你的盾涂个红点，然后怪物就不会打你啦！好吧，说不定。"
 %E
 %Cp Hea 00012
-"How are you feeling?  Perhaps a good bleeding will improve your sprits."
+"感觉如何？也许放血疗法能让你感觉好受点."
 %E
 %Cp Hea 00013
-"Have you heard the absurd new theory that diseases are caused by
-microscopic organisms, and not ill humors?"
+"你听说最近医学界发现了一种能导致人体生病的微生物了吗?听起来还挺有道理的。"
 %E
 %Cp Hea 00014
-"I see that you bring %o, now you can cure this plague!"
+"我看见你把%o带回来了，我们终于能战胜这场瘟疫了!"
 %E
 %Cc Hea 00015
-Feebly, %l raises his head to look at you.
+%l非常虚弱的把头抬起来，看了看你.
 
-"It is good to see you again, %p.  I see the concern in your
-eyes, but do not worry for me.  I am not ready for Hades yet.  We have
-exhausted much of our healing powers holding off %n.
-I need your fresh strength to carry on our work.
+"唉，能再见到你真好，%p.我知道你很担忧我的身体，但是别太担心了，我还没打算去见阎王呢，
+我们为了抵御%n使用了太多的自己的治愈魔力，所以我现在非常需要你来协助我们  *咳嗽*
 
-"Come closer and let me lay hands on you, and determine if you have
-the skills necessary to accomplish this mission."
+"来，靠近点，让我把把脉，我需要先判断你是否有足够的能力完成这个任务."
 %E
 %Cp Hea 00016
-"Again you return to me, %p.  I sense that each trip back
-the pleurisy and maladies of our land begin to infect you.  Let us
-hope and pray to %d that you become ready for your task before
-you fall victim to the bad humors."
+"你又回来了，%p.我能看出来，你每次回来的时候我们这里的瘟疫对你的侵蚀就越大，我会为你
+不会在完成任务前就因病而死而向%d祷告的。
 %E
 %Cp Hea 00017
-"Chiron has fallen, Hermes has fallen, what else must I tell you to
-impress upon you the importance of your mission!  I hope that you
-have come prepared this time."
+"卡戎失败了，赫尔墨斯也失败了，你要我怎么说你才能明白这个任务有多么重要！我希望你能
+认真一点对待！
 %E
 %Cc Hea 00018
-"You have failed us, %p.  You are a quack!  A charlatan!
+"你背叛了我们，%p，你个庸医！你个卖狗皮膏药的江湖骗子！
 
-"Hades will be happy to hear that you are once again practicing your
-arts on the unsuspecting."
+"冥王看到你下一次在无辜的人的身上进行你那三脚猫的操作一定会很开心的。"
 %E
 %Cc Hea 00019
-"Alas, %p, you are yet too inexperienced to deal with the rigors
-of such a task.  You must be able to draw on the knowledge of botany,
-vetenary, and alchemy before I can send you on this quest with good
-conscience.
+"唉，%p，你现在的医术远远不足以这严峻任务的要求，你必须深刻的理解外科手术与医疗手段，
+还有炼金术，这样我才能够放心的让你去执行任务。
 
-"Return when you wear %Ra's caduceus."
+"等你取得%Ra的学位后再回来见我。"
 %E
 %Cc Hea 00020
-"You have learned much of the remedies that benefit, but you must also
-know which physic for which ail.  That is why %ds teachings are a
-part of your training.
+"你确实学会了很多的技巧，但是你还需要遵守医疗道德，这就是为什么我们上课的时候把%d的教导
+放在第一位。
 
-"Return to us when you have healed thyself."
+"等你把自己的道德治愈了再回来。"
 %E
 %Cc Hea 00021
-For the first time, you sense a smile on %ls face.
+你确信这是你第一次见到%l脸上露出笑容。
 
-    You have indeed learned as much as we can teach you in preparation
-    for this task.  Let me tell you what I know of the symptoms and hope
-    that you can provide a cure.
+    看来你确实实打实的学会了我们上课所讲的内容并可以熟练地付诸实践，那么
+    让我现在来告诉你这整件事的病因和症状。
 
-    A short while ago, the dreaded %nt was fooled by the gods
-    into thinking that he could use %o to find a
-    cure for old age.  Think of it, eternal youth!  But his good
-    health is accomplished by drawing the health from those around him.
+    一段时间之前，陷入恐慌的%n被众神愚弄，认为他可以通过%o来获得永生，你想想！
+    这可是永生！但是实际上他的永生的代价是吸取那些他周围的人的生命来得到的！
 
-    He has exhausted his own supply of healthy people and now he seeks to
-    extend his influence into our world.  You must recover from him
-    %o and break the spell.
+    现在他周围的健康人都被他吸取一空，所以他就打算把他的魔爪伸向我们的世界！
+    你必须从他的手里夺回%o然后打破这个咒语。
 
-    You must travel into the swamps to %i, and from there
-    follow the trail to %ns island lair.  Be careful.
+    你需要先穿过沼泽才能到达%i，在那里跟着踪迹就可以到%n的老窝，小心行事。
 %E
 %Cp Hea 00025
-"Remember, %p, to always wash your hands before operating."
+"记住,%p,每次做手术前，先洗手！"
 %E
 %Cp Hea 00026
-"%nC has no real magic of his own.  To this he is vulnerable."
+"%n的本身是没有魔法的，所以他并不免疫魔法攻击."
 %E
 %Cp Hea 00027
-"If you have been true to %d, you can draw on the power of
-%o."
+"如果你真的全心全意侍奉%d,你就可以使用%o的真正的魔法."
 %E
 %Cp Hea 00028
-"Bring with you antidotes for poisons."
+"记得带点解毒剂."
 %E
 %Cp Hea 00029
-"Remember this, %n can twist the powers of %o
-to hurt instead of heal."
+"记住，%n可以将%o的治愈魔力转换为吸取魔力."
 %E
 %Cp Hea 00030
-"I have sent for Chiron, but I am afraid he will come too late."
+"我已经向卡戎求助了，但看来我们撑不到他来的这一刻了."
 %E
 %Cp Hea 00031
-"Maybe when you return the snakes will once again begin to shed."
+"愿你归来之时蛇杖上的蛇重发生机."
 %E
 %Cp Hea 00032
-"The plague grows worse as we speak.  Hurry, %p!"
+"在我们谈话的时候瘟疫还在蔓延并害死无辜的人，快点，%p!"
 %E
 %Cp Hea 00033
-"Many times %n has caused trouble in these lands.  It is
-time that he was eradicated like the diseases he has caused."
+"%n在这些岛屿上天天捣乱，这次的瘟疫绝对是他的手笔."
 %E
 %Cp Hea 00034
-"With but one eye, %n should be easy to blind.  Remember this."
+"由于%n只有一只眼，所以他很容易被致盲，要记好！"
 %E
 %Cc Hea 00035
-You stand before the entrance to %i.  Strange
-scratching noises come from within the building.
+你站在前往%i的入口前. 眼前的建筑里头发出刺耳而又奇怪的嘎吱嘎吱声。
 
-The swampy ground around you seems to stink with disease.
+周围的沼泽似乎被瘟疫洗礼过，满是病菌.
 %E
 %Cp Hea 00036
-Once again you stand at the entrance to %i.
+你又一次的站在%i的入口前.
 %E
 %Cc Hea 00040
-You stand within sight of the infamous Isle of %n.  Even
-the words of %l had not prepared you for this.
+你站在%n的巢穴的外面，即便%l提前告诉过你这个地方有多可怕，眼前地狱一般的景象还是吓到你了。
 
-Steeling yourself against the wails of the ill that pierce your ears,
-you hurry on your task.  Maybe with %o you can
-heal them on your return, but not now.
+你设法在四周病人的惨叫声中稳住心神，接着往前走，也许如果你有%o你就可以治愈他们，但是你要先去拿到它。
+
 %E
 %Cp Hea 00041
-Once again, you %x the Isle of %n in the distance.
+你又一次的站在了%n的巢穴前。
 %E
 %Cc Hea 00050
-"They have made a mistake in sending you, %p.
+"他们选择让你过来就是个彻头彻尾的错误，%p.
 
-"When I add your youth to mine, it will just make it easier for me
-to defeat %l."
+"等我把你的健康也吸收完，我就会有足够的力量，那时就是你的导师的死期."
 %E
 %Cp Hea 00051
-"Unlike your patients, you seem to keep coming back, %p!"
+"你可一点不像你的病人，你总是当回头客！%p!"
 %E
 %Cp Hea 00052
-"Which would you like, %p?  Boils, pleurisy, convulsions?"
+"你喜欢什么？水煮？穿刺？还是剥皮？没事，我一会都会在你身上试试的！"
 %E
 %Cp Hea 00053
-"I'll have %o back from you, %r.  You are
-not going to live to escape this place."
+"我会把%o从你手上抢回来的，%p，我不会让你活着走出这里！"
 %E
 %Cp Hea 00060
-"They might as well give scalpels to wizards as to let you try to
-use %o!"
+"与其让你拿着%o，还不如让电子虫给别人做手术!"
 %E
 %Cp Hea 00061
-"If I could strike %l, surrounded by his %gP, imagine what I
-can do to you here by yourself."
+"想想吧，如果我能把%l还有他的学生们的生命全都吸收掉，该有多爽！"
 %E
 %Cp Hea 00062
-"I will put my %Rp to work making a physic out of your ashes."
+"我会把你的骨灰当蛋白粉泡着喝."
 %E
 %Cp Hea 00063
-"As we speak, Hades gathers your patients to join you."
+"在我们聊天的时候你的名字已经上了死亡名单了！"
 %E
 %Cp Hea 00064
-"After I'm done with you, I'll destroy %l as well."
+"等我把你杀掉以后，下一个就是%l了."
 %E
 %Cp Hea 00065
-"You will have to kill me if you ever hope to leave this place."
+"想离开这里？先从我的尸体上跨过去！"
 %E
 %Cp Hea 00066
-"I will impale your head on my caduceus for all to see."
+"我会把你的头割下来挂在我的墙外面来宣示我的胜利的！"
 %E
 %Cp Hea 00067
-"There is no materia medica in your sack which will cure you of me!"
+"你的包里可没有能治愈我对你造成的伤害的草药!"
 %E
 %Cp Hea 00068
-"Do not fight too hard, I want your soul strong, not weakened!"
+"哦，别挣扎了，我希望我到时候吸收的是一个健壮的灵魂，不是一个满身疮痍的!"
 %E
 %Cp Hea 00069
-"You should have stopped studying at vetenary."
+"你学那些东西还不如多吃几个土豆，反正都是一样的."
 %E
 %Cc Hea 00070
-As you pick up %o, you feel its healing begin to
-warm your soul.  You curse Zeus for taking it from its rightful owner,
-but at least you hope that %l can put it to good use once
-again.
+当你捡起来%o的时候，你感到它的神力开始温暖你的灵魂，你因为宙斯把它故意从它原本的主人处拿走
+而愤怒的骂了宙斯几句，但是最起码你现在拿到了%o，是时候把它送回%l手里了！
 %E
 %Cc Hea 00080
-The battered body of %n slumps to the ground and gasps
-out one last curse:
+%的身体沉重的倒在了地上，在咽气前挣扎着对你最后骂了几句：
 
-    You have defeated me, %p, but I shall have my revenge.
-    How, I shall not say, but this curse shall be like a
-    cancer on you.
+    你虽然打败了我，%p，但是我总有一天会回来的，尽管不是现在我要进行复仇，
+    但我要诅咒你，这句诅咒会变得像癌症一样在你身上生根发芽直至杀死你！
 
-With that %n dies.
+说完了以后%n就死了。
 %E
 %Cc Hea 00081
-As soon as %l sees %o he summons his %gP.
+当%l看见%o时，他惊喜的喊来了所有的%gP,
 
-Gently, %l reaches out and touches %o.
-He instructs each of the assembled to do the same.  When everyone
-has finished he speaks to you.
+%l首先轻轻地摸了一下%o，随后他呼唤其他的学徒一起来摸一下%o，等到每个人都摸完后
+他向你说道：
 
-    Now that we have been replenished we can defeat this plague.  You must
-    take %o with you and replenish the worlds you have
-    been called upon to travel next.  I wish you could ride Chiron to the
-    end of your journey, but I need him to help me spread the cure.  Go
-    now and continue your journey.
+    有了它的魔力后我们就可以对付瘟疫了，现在你可以先把%o拿着，然后回到那个你还有探索任务的
+    地牢里头去，我还是挺期望你能骑着卡戎去继续冒险的，但我还需要他帮我传播疾病的解药，
+    现在走吧，然后去完成你的任务。
+
 %E
 %Cc Hea 00082
-%l cautiously handles %o while watching you.
+%l小心翼翼的拿着%o，与此同时看着你：
 
-"You are its keeper now, and the time has come to resume your search
-for the Amulet.  %Z await your return through the
-magic portal which brought you here."
+"它现在是你的了，而且你应该继续你寻找护身符的冒险，%Z还在等待着你从那个魔法入口返回并
+  接着探索呢."
 %E
 %Cp Hea 00090
-"You have again returned to us, %p.  We have done well in your
-absence, yes?  How fare you upon your quest for the Amulet?"
+"你回来的正是时候, %p. 你不在的时候我们已经处理完大半的病人了，你最近任务进行的怎么样?"
 %E
 %Cc Hea 00091
-"Ah, you have recovered the Amulet, %p.  Well done!
+"啊，你找到了护身符，%p.太棒了!
 
-"Now, you should know that you must travel through the elemental planes
-to the astral, and there return the Amulet to %d.  Go forth and
-may our prayers be as a wind upon your back."
+"现在我要告诉你，你应该要做的是穿过四大元素位面，然后到达星界，在那里把护身符交还给%d，现在前进吧，
+愿我们的祈祷成为你前进路上的东风."
 %E
 #
 #       Ice Mage
 #
 %Cc Ice 00001
-The howling arctic wind is like a welcome home for you.
-Off in the distance, you can see the familiar ice crags that surround
-%H.
+这片寒冰包围着的土地上寸草不生，周围的寒风呜呜作响，不远处你能看到由雪搭建的%H.
 
-Suddenly, the hairs on your neck stand on end as you detect the aura of
-evil magic in the air.
+突然，在你捕捉到空中若隐若现的邪恶魔法波动后，你浑身的汗毛都立了起来.
 
 %E
 %Cp Ice 00002
-Once again, you near %H.  You know that %l
-will be waiting.
+你又一次的回到了%H. %l正在等着你。
 %E
 %Cp Ice 00003
-Again, and you think possibly for the last time, you approach
-%H.
+又一次，而且你估摸着是最后一次，你回到了%H.
 %E
 %Cp Ice 00005
-"Our enemies come from beneath the earth itself!"
+"我们之前的战斗很顺利————我们敌人的血洒落在地上并且冻成了冰块!"
 %E
 %Cp Ice 00006
-"Remember to pack a pick-axe!"
+"愿你的每一天都凉爽无比!"
 %E
 %Cp Ice 00007
-"There has been little studying accomplished since the horde arrived."
+"它们来捣乱后我们根本没法集中注意力去研究魔法了!"
 %E
 %Cp Ice 00008
-"The horde is mighty in numbers, but they have little courage."
+"土元素虽然灵活，但在我们的寒冷水魔法面前不值一提!"
 %E
 %Cp Ice 00009
-"%lC has helped defend us, but our strength is fading."
+"%lC很奇怪，但是他帮我们抵御住了敌人."
 %E
 %Cp Ice 00010
-"Remember to pack a pick-axe!"
+"我们之前的战斗很顺利————我们敌人的血洒落在地上并且冻结!
 %E
 %Cp Ice 00011
-"Since the defeat of the hoarde, all can concentrate fully on our studies!"
+"愿你的每一天都寒冷无比!"
 %E
 %Cp Ice 00012
-"The frozen lake looks beautiful today"
+"自从那帮烦人的家伙被赶走后，我们又可以仔细的研究魔法了!"
 %E
 %Cp Ice 00013
-"I always knew %n was too warm blooded to defeat us!"
+"我觉得我今年应该去女武神那边度假，那边应该挺凉快的。"
 %E
 %Cp Ice 00014
-"I've been trying to alter cone of cold from Vanilla to Chocolate - yum!"
+"你注意到自从%o被你取回后%l又重新充满力量了吗？"
 %E
 %Cc Ice 00015
-"Ah, %p.  You have returned at last.  The world is in dire
-need of your help.  There is a great quest you must undertake.
+"啊，%p你总算回来了，我们现在非常需要你的帮助，有一个非常艰巨的任务要托付给你。
 
-"But first, I must see if you are ready to take on such a challenge."
+"但是首先，我要看看你的法力是否足够应付这个问题."
 %E
 %Cp Ice 00016
-"%p, you are back.  Are you ready now for the challenge?"
+"%p，你回来啦？准备好了吗?"
 %E
 %Cp Ice 00017
-"Again, you stand before me, %p.  Surely you have prepared yourself."
+"你又一次回来了，%p.这次你绝对准备好了吧."
 %E
 %Cc Ice 00018
-"Pah!  You have betrayed the gods, %p.  You will never attain
-the glory which you aspire to.  Your failure to follow the true path has
-closed this future to you.
+"你你你———— %p.我这么含辛茹苦的教导你法术，把你培育成一个冰霜法师，然后你就是这么对待
+我的？你就是这么对待我还有神圣的%d的？
 
-"I will protect my people as best I can, but soon %n will overcome
-me and destroy all who once called you %s.  Now begone!"
+"给我滚！立刻给我滚出去！我现在是一点也指望不上你了，与其让你去执行任务还不如让我就被%n砍了得了！
+滚！"
+
 %E
 %Cc Ice 00019
-"%p, I fear that you are as yet too inexperienced to face
-%n.  Only %Ra with the help of %d could ever hope to
-defeat him."
+"%p,看来你的法力还不够拿来面对%n.只有非常熟练的%Ra才能确保自己能全身而退。"
 %E
 %Cp Ice 00020
-"%p!  You have wandered from the path of the %a!
-If you attempt to overcome %n in this state, he will surely
-enslave your soul.  Your only hope, and ours, lies in your purification.
-Go forth, and return when you are ready."
+"%p! 看来你已经脱离了%a的道路了！你要是这么下去很快就会沾染上暗黑魔法，从而成为
+第二个%n的！现在赶快出去把自己净化，在你准备好以后你再回来。
+
 %E
 %Cc Ice 00021
-"The world is in great need of your assistance, %p.
+"这个世界实在是乱套了，我们非常需要你的帮助，%p.
 
-"About six months ago, I learned that a mysterious sorcerer, known
-as %n, had begun to summon a large group of elementals and monsters.
+"三个月以前，一个叫做%n的一个邪恶魔法师不知道用了什么手段召唤了一大堆的土位面的
+土元素来攻打我们。
 
-"%nC and his horde swept down upon %H and stole 
-%o. He seeks to bend it to his will.  After we regrouped, 
-I sent forth a summons for you.
+"我们是在是守不住了，虽然我们在人数上占优势，但是经不住他能一直召唤土元素来攻击
+我们，许多的冰霜法师被他那土元素仆人杀害掉了，所以我才这么着急的喊你回来帮助我们。
 
-"If %n can bend %o to his will, he will become
-almost indestructible.  He will then be able to summon our elementals
-to him.  You are the only hope.  The gods smile upon you,
-and with %d behind you, you alone can defeat %n.
+"如果%n能彻底的奴役%o的力量，我们基本上就死定了！你，%p，必须立刻马上去把%o从
+%n手里夺回来，并且交还于我！
 
-"You must go to %i.  From there, you can track down
-%n, defeat him, and return %o to us.  Only
-then will the world be safe."
+"你得先到%i，然后才能开始追踪%o的位置，如果我猜的没错%o一定在%n的边上放着，
+只有把它成功的拿了回来我们的安全才能得以保障，现在上吧！"
 %E
 %Cp Ice 00025
-"%nC is strong in the dark arts, but not immune to cold steel."
+"%n在魔法上非常有手段来攻击你，但是你要用魔法对抗魔法！"
 %E
 %Cp Ice 00026
-"Remember that %n is a great sorcerer.  He has lived for a thousand years."
+"要记住%n是从冰河时代一直生存到现在的一个邪恶的侵略者，他的力量会很强大！."
 %E
 %Cp Ice 00027
-"If you fail, %p, I will not be able to protect these people long."
+"如果你失败了，%p，我基本上命就要交代在这里了."
 %E
 %Cp Ice 00028
-"To enter %i, you must be very stealthy.  The horde will be on
-guard."
+"如果你打算进入%i，你最好小心点，因为%n的土元素在守着呢！"
 %E
 %Cp Ice 00029
-"Call upon %d in your time of need."
+"记得要是出了什么事，就喊%d来帮忙."
 %E
 %Cp Ice 00030
-"May %d protect you, and guide your steps."
+"记住，要速战速决，我们没有那么多时间消耗！"
 %E
 %Cp Ice 00031
-"If you can lay hands upon %o, carry it for good fortune."
+"如果你能拿到%o，赶快发挥出它的效力，来保你平安！"
 %E
 %Cp Ice 00032
-"I cannot stand against %ns sorcery.  But %d will help you."
+"别问我为什么不想下去，下面土太多了，我怕把衣服搞脏了."
 %E
 %Cp Ice 00033
-"Do not fear %n.  I know you can defeat him."
+"一会见到%n你可千万别怂，打他！"
 %E
 %Cp Ice 00034
-"You have a great road to travel, %p, but only after you defeat
-%n."
+"等你把%n杀死以后，我会把你写进教材里头的."
 %E
 %Cc Ice 00035
-The air is heavy and claustrophobic. You know that you have located %i.
+微风带着一股浓重的土腥味吹向你，你肯定到了%i.
 %E
 %Cp Ice 00036
-Yet again you have a chance to infiltrate %i.
+你又一次的到达了%i.
 %E
 %Cc Ice 00040
-The hairs on the nape of your neck lift as you sense an energy in the
-very air around you.  You fight down a primordial panic that seeks to
-make you turn and run.  This is surely the lair of %n.
+你感觉周围的扬尘变得更浓重了，灰土钻到你的肺里让你呼吸都变得困难，这绝对是%n的老巢了。
 %E
 %Cp Ice 00041
-Yet again you feel the air around you heavy with malevolent magical energy.
+你又一次感到周围充满了黑暗魔法的波动.
 %E
 %Cc Ice 00050
-"So.  This is what that second rate sorcerer %l sends to do his bidding.
-I have slain many before you.  You shall give me little sport.
+"所以在%l浪费了这么多的巫师后，他把你这个小不点派来了？
 
-"Prepare to die, %c."
+"赶快去死吧，别浪费我的时间，%c."
 %E
 %Cp Ice 00051
-"I have wasted too much time on you already.  Now, you shall die."
+"我的土元素之力会把你活埋的！"
 %E
 %Cp Ice 00052
-"You return yet again, %c!  Are you prepared for death now?"
+"%o已经是我的了，放弃吧。"
 %E
 %Cp Ice 00053
-"I shall have %o back, you pitiful excuse for %ca.
-And your life as well."
+"你这一辈子就和你刚刚的攻击一样没用."
 %E
 %Cp Ice 00060
-"My pets will dine on your carcass tonight!"
+"等我把你做掉以后，我要把你所有的朋友全部杀掉!"
 %E
 %Cp Ice 00061
-"You are a sorry excuse for %ra."
+"真不敢相信%l居然会派遣你来，你这个没用的废物."
 %E
 %Cp Ice 00062
-"Run while you can, %c.  My next spell will be your last."
+"跑啊，逃命啊，反正你都要死在我手下."
 %E
 %Cp Ice 00063
-"I shall use your very skin to bind my next grimoire."
+"要不我把你埋在土里活活憋死如何？"
 %E
 %Cp Ice 00064
-"%d cannot protect you now.  Here, you die."
+"你的%d已经抛弃掉你了."
 %E
 %Cp Ice 00065
-"Your %a nature makes you weak.  You cannot defeat me."
+"你看你现在这德行，还能称得上是%ra？"
 %E
 %Cp Ice 00066
-"Come, %c.  I shall kill you, then unleash the horde on your people."
+"来啊，%p，用你那微不足道的攻击打我啊."
 %E
 %Cp Ice 00067
-"Once you are dead, my horde shall finish off %l, and your people."
+"等你死了，你的一切我都会彻底摧毁掉！"
 %E
 %Cp Ice 00068
-"Fight, %c, or are you afraid of the mighty %n?"
+"呵呵呵呵，你不会真的以为你能打败我吧?"
 %E
 %Cp Ice 00069
-"You have failed, %c.  Now, my victory is complete."
+"胜负已定，你毫无胜算！"
 %E
 %Cc Ice 00070
-As you pick up %o, you feel the power of it
-flowing through your hands.  It seems to be in two or more places
-at once, even though you are holding it.
+在你拾起%o的时候，一股力量猛地冲入了你的身体内，你感到这件神器的宝贵，同时你也对%n试图
+窃取这件充满力量的神器感到后怕，谢天谢地你阻止了他。
 %E
 %Cp Ice 00080
-%nC falls to the ground, and utters a last curse at you.  Then his
-body fades slowly, seemingly dispersing into the air around you.  You
-slowly become aware that the overpowering aura of magic in the air has
-begun to fade.
+%n的头颅掉到了地上，尽管如此他仍旧怒目圆瞪的盯着你，在你准备结束他时，他猛地往你那边丢了块石头
+，然后闭上了眼睛.
 %E
 %Cc Ice 00081
-When %l sees %o, he smiles, and says:
+当%l看见你拿着的%o时,他笑了一下，然后说:
 
-    Well done, %p.  You have saved the world from certain doom.
-    What, now, should be done with %o?
+    我就知道你能行，%p. 你成功的拯救了我们的生命，但是我们得好好商量怎么处置%o了。
 
-    Our people, brave as they are, cannot hope to guard it from
-    other sorcerers who will detect it, as surely as %n did.
+    如你所见，强大的巫师已经在抵御入侵的时候死去了，我们现在非常缺乏守卫%o的中坚力量，
+    看来只好你拿着这件充满力量的宝物了。
 
-    Take %o with you, %p.  It will guard you in
-    your adventures, and you can best guard it.  You embark on a
-    quest far greater than you realize.
-
-    Remember me, %p, and return when you have triumphed.  I
-    will tell you then of what you must do.  You will understand when the
-    time comes.
+    不要忘记你是走在%a道路的人，要把这件宝物用在正确的方向上，现在继续你的旅途吧。
 %E
 %Cc Ice 00082
-%l handles %o for a moment, then looks at you.
+%l仔细地看了一会%o，然后把它丢还给你：
 
-"You are its keeper now, and the time has come to resume your search
-for the Amulet.  %Z await your return through the
-magic portal which brought you here."
+"现在我把它的所有权交给你了，不要忘记你在%Z还有非常重要的事去做，带着我们巫师学院的祝福
+前进吧。"
 %E
 %Cp Ice 00090
-"Tell us, %p, have you fared well on your great quest?"
+"和我们讲讲吧%p,你的进展如何?"
 %E
 %Cc Ice 00091
-"This is wondrous, %p.  I feared that you could not possibly
-succeed in your quest, but here you are in possession of the Amulet
-of Yendor!
-
-"I have studied the texts of the magi constantly since you left.  In
-the Book of Skelos, I found this:
-
-    %dC will cause a child to be sent into the world.  This child is to
-    be made strong by trial of battle and magic, for %d has willed it so.
-    It is said that the child of %d will recover the Amulet of Yendor
-    that was stolen from the Creator at the beginning of time.
-
-"As you now possess the amulet, %p, I suspect that the Book
-speaks of you.
-
-    The child of %d will take the Amulet, and travel to the Astral
-    Plane, where the Great Temple of %d is to be found.  The Amulet
-    will be sacrificed to %d, there on His altar.  Then the child will
-    stand by %d as champion of all %cP for eternity.
-
-"This is all I know, %p.  I hope it will help you."
+"%p，你要知道，像你这样出类拔萃的巫师现在已经很少了，我必须承认你的成就在未来会变得
+比为师更加宏伟，但是现在你必须先拿着护身符穿越层层阻碍，到达祭坛，并把它放在它应该在的地方。
+愿神保佑你。"
 %E
 #
 #       Knight
 #
 %Cc Kni 00001
-You materialize in the shadows of %H.  Immediately, you notice
-that something is wrong.  The fields around the castle are trampled and
-withered, as if some great battle has been recently fought.
+你出现在了%H的阴影里，而后你立刻注意到这块地方的极大的不对劲，城堡周围的田野被践踏且凋零，
+如同此处发生过一场大战。
 
-Looking closer, you %x long gouges in the walls of %H.
-You know of only one creature that makes those kinds of marks...
+你往前走了点后，你%x有巨大的划痕刻在%H的城墙上，你知道只有一种可怕的生物才能搞出如此巨大
+的痕迹........
 %E
 %Cp Kni 00002
-Once again you stand in the shadows of %H.
+你又一次的站在%H投下的阴影中.
 %E
 %Cp Kni 00003
-Again, you stand before %H.  You vaguely sense that this
-may be the last time you stand before %l.
+你又一次的站在%H投下的阴影中，但你有一种不祥的预感，你感觉这会是你最后一次见到%l。
 %E
 %Cp Kni 00005
-"Hail, %p!  Verily, thou lookest well."
+"别来无恙，%p，汝视甚佳！"
 %E
 %Cp Kni 00006
-"There is word, %p, that %n hath been sighted in the fens
-near %i."
+"可以确定的是，%p,%i已经看到%n在附近出没了."
 %E
 %Cp Kni 00007
-"Thou art our only hope now, %p."
+"汝现在乃吾等唯一之希望，%p."
 %E
 %Cp Kni 00008
-"Verily, %l could have no better champion, %p."
+"%l将汝视为其最得力之骑士，%p."
 %E
 %Cp Kni 00009
-"Many brave %cP died when %n attacked."
+"吾等战士于抵御%n入侵时光荣牺牲,现%g十不存一。"
 %E
 %Cp Kni 00010
-"Hail, %p!  Verily, thou lookest well."
+"别来无恙，%p，汝视甚佳！"
 %E
 %Cp Kni 00011
-"So, %p, didst thou find %n in the fens
-near %i?"
+"汝是否已经抓到%n出没之证据？"
 %E
 %Cp Kni 00012
-"Worthy %p, hast thou proven thy right purpose on the body of %n?"
+"恭贺汝，%p,汝是否已经将%n以骑士礼仪斩杀之?"
 %E
 %Cp Kni 00013
-"Verily, %l could have no better champion, %p."
+"%l将汝视为其最得力之骑士！"
 %E
 %Cp Kni 00014
-"Hast thou indeed recovered %o?"
+"汝已然取回%o耶?"
 %E
 %Cc Kni 00015
-"Ah, %p.  We see thou hast received Our summons.
-We are in dire need of thy prowess.  But first, We must needs
-decide if thou art ready for this great undertaking."
+"啊，%p.汝应吾等召唤而来，此地急需汝之协助，但吾需先检验汝是否足以应对此事。"
 %E
 %Cp Kni 00016
-"Welcome again, %p.  We hope thou art ready now."
+"欢迎回来，%p.汝已准备好了?"
 %E
 %Cp Kni 00017
-"Once again, thou standest before Us, %p.  Art thou ready now?"
+"汝又一次返回此地，%p.汝准备好了?"
 %E
 %Cc Kni 00018
-"Thou disgracest this noble court with thine impure presence.  We have been
-lenient with thee, but no more.  Thy name shall be spoken no more.  We
-hereby strip thee of thy title, thy lands, and thy standing as %ca.
-Begone from Our sight!"
+"汝玷污了吾等骑士之精神，侮辱了吾等先辈之荣耀，吾对汝的耐心已然走至尽头，汝等不学无术之人，
+汝名将被史书抹去，冠之以不洁不敬之人名号，汝封地将被收回，作为汝等背弃吾等之惩罚，现在立刻离开！"
 %E
 %Cc Kni 00019
-"Verily, %p, thou hast done well.  That thou hast survived thus
-far is a credit to thy valor, but thou art yet unprepared for
-the demands required as Our Champion.  %rA, no matter how
-pure, could never hope to defeat the foul %n.
+"吾需承认，%p，汝做的很好，汝能存活至今其能力无需多言，但汝对于吾等之佼佼者其标准仍有距离，
+一个%rA，无论其何等之纯洁，对于将要面对的击败邪恶的%n之事定是徒劳无功。
 
-"Journey forth from this place, and hone thy skills.  Return to
-Our presence when thou hast attained the noble title of %R."
+"从此地离开后接着前进，精进汝之技艺，待到汝取得尊贵的%R的头衔后再来此地见吾。"
 %E
 %Cc Kni 00020
-"Thou dishonourest Us, %p!  Thou hast strayed from the path of
-chivalry! Go from Our presence and do penance.  Only when thou art again
-pure mayst thou return hence."
+"汝使吾等荣耀蒙羞！%p！汝已经走上了歪路！汝需离开此地，前去忏悔，当汝变得纯洁后再回来。"
 %E
 %Cc Kni 00021
-"Ah, %p.  Thou art truly ready, as no %c before thee hath
-been.  Hear now Our words:
+"啊，吾知道，%p，汝现在真正的准备好了，到目前为止汝乃%c中做的最好的一人，现在听吾细细道来：
 
-"As thou noticed as thou approached %H, a great battle hath
-been fought recently in these fields.  Know thou that Merlin himself
-came to aid Us here as We battled the foul %n.  In the midst of that
-battle, %n struck Merlin a great blow, felling him.  Then, as Our
-forces were pressed back, %n stole %o.
+"汝在进入%H之时应当注意到在此地发生过一场大战,汝需知晓：梅林亲自来协助吾等抵御那邪恶的%n，
+但战斗中%n狠狠地偷袭了梅林，将他击倒后在吾等回防前窃走了%o。
 
-"We eventually turned the tide, but lost many %cP in doing so.
-Merlin was taken off by his apprentice, but hath not recovered.  We have
-been told that so long as %n possesseth %o,
-Merlin will not regain his health.
+"吾等决死抵抗，尽管有许多%cP为此牺牲，但战争局势已然被翻转，而梅林其虽被学徒带回屋中
+休息，但其身受重伤无法康复，按其亲口所言，如邪恶的%n的手中之%o未被取回，则其将无法康复直至
+死亡。
 
-"We hereby charge thee with this most important of duties:
+"而吾等将把此最为重要之责任交付与你：
 
-"Go forth from this place, to the fens, and there thou wilt find
-%i.  From there, thou must track down %n.  Destroy the
-beast, and return to Us %o.  Only then can
-We restore Merlin to health."
+"从此地进发，到达那远处的%i，从那里汝便可以追踪到%n的踪迹，随后将其杀死，把%o带回来给吾，
+唯有此法可救梅林于水火之中。"
 %E
 %Cp Kni 00025
-"Remember, %p, follow always the path of %d."
+"牢记，%p,要追随着%d前行."
 %E
 %Cp Kni 00026
-"Though %n is verily a mighty foe, We have confidence in thy victory."
+"%n虽为一强大敌手，但吾等皆认为汝定可将其消灭."
 %E
 %Cp Kni 00027
-"Beware, for %n hath surrounded himself with hordes of foul creatures."
+"当心，邪恶的%n用其肮脏的法术召唤出了一整队怪物军队."
 %E
 %Cp Kni 00028
-"Great treasure, 'tis said, is hoarded in the lair of %n."
+"神话所言：巨量的财宝被%n储藏于其巢穴."
 %E
 %Cp Kni 00029
-"If thou possessest %o, %p, %ns magic
-shall therewith be thwarted."
+"汝若取得%o，则%n之邪恶魔法当不攻自破."
 %E
 %Cp Kni 00030
-"The gates of %i are guarded by forces unseen, %p.
-Go carefully."
+"%i之入口由%n以不可见力量设下重重阻碍，务必当心，%p."
 %E
 %Cp Kni 00031
-"Return %o to Us quickly, %p."
+"%p，尽快将%o带回来。"
 %E
 %Cp Kni 00032
-"Destroy %n, %p, else %H shall surely fall."
+"杀死%n，不然%H将危在旦夕."
 %E
 %Cp Kni 00033
-"Call upon %d when thou art in need."
+"于汝需要之时呼唤%d之名."
 %E
 %Cp Kni 00034
-"To find %i, thou must keep thy heart pure."
+"汝需保持心性纯洁以寻得%i所在之处."
 %E
 %Cc Kni 00035
-You stand at the foot of %i.  Atop, you can %x a shrine.
-Strange energies seem to be focused here, and the hair on the back
-of your neck stands on end.
+你站在%i底下，你可以在顶端%x一阵闪光，上面似乎有着奇怪的魔力波动，你后脊梁骨不禁发冷。
 %E
 %Cp Kni 00036
-Again, you stand at the foot of %i.
+你又一次站在了%i底下。
 %E
 %Cc Kni 00040
-As you exit the swamps, you %x before you a huge, gaping hole in the
-side of a hill.  From within, you smell the foul stench of carrion.
+当你越过沼泽后，你%x你面前的山上有着一个巨大的坑洞，在里头你闻到让你反胃的恶臭，
+你不禁捂住了自己的鼻子寻找恶臭的来源——————
 
-The pools on either side of the entrance are fouled with blood, and
-pieces of rusted metal and broken weapons show above the surface.
+你面前的池子里头装满了人血，地上散落着生锈的盔甲与武器，这一定是%n所为！
 %E
 %Cp Kni 00041
-Again, you stand at the entrance to %ns lair.
+你又一次的站在了%n的巢穴面前。
 %E
 %Cc Kni 00050
-"Hah!  Another puny %c seeks death.  I shall dine well tonight,
-then tomorrow, %H shall fall!"
+"呵！又是一个来找死的%c！我今天就要把你们这些说话不明不白的家伙全都吃掉，
+然后明天再吃你的%H!"
 %E
 %Cp Kni 00051
-"Again, thou challengest me, %r?  So be it.  Thou wilt die here."
+"你又过来挑衅我了，%r?如你所愿，我会把你杀掉的."
 %E
 %Cp Kni 00052
-"Thou art truly foolish, %r.  I shall dispatch thee anon."
+"你们这帮家伙真是蠢得可以，%p."
 %E
 %Cp Kni 00053
-"So, thou darest touch MY property!  I shall have that bauble back,
-puny %r.  Thou wilt die in agony!"
+"你敢碰*我*的东西！我保证把那些东西拿回来后我就要让你死在痛苦之中!"
 %E
 %Cp Kni 00060
-"A mere %r can never withstand me!"
+"一个蝼蚁一般的%r怎么敢在我眼前叫嚣!"
 %E
 %Cp Kni 00061
-"I shall kill thee now, and feast!"
+"把你的头咬掉以后直接生吃你，估计味道很好。"
 %E
 %Cp Kni 00062
-"Puny %c.  What manner of death dost thou wish?"
+"%c，你喜欢什么样的死法?"
 %E
 %Cp Kni 00063
-"First thee, %p, then I shall feast upon %l."
+"让我算算，先杀你，然后明天我就有空再去把%H也杀掉了."
 %E
 %Cp Kni 00064
-"Hah!  Thou hast failed, %r.  Now thou shalt die."
+"哼，你已经死了，%p，接受你的命运吧."
 %E
 %Cp Kni 00065
-"Die, %c.  Thou art as nothing against my might."
+"在我的力量之下没有什么东西能存活下来！."
 %E
 %Cp Kni 00066
-"I shall suck the marrow from thy bones, %c."
+"我估计你的骨髓吃起来会非常美味！%c！"
 %E
 %Cp Kni 00067
-"Let's see...  Broiled?  No.  Fried?  Nay.  Baked?  Yea verily,
-that is the way I like my %c for dinner."
+"让我想想，水煮？太淡了点，不要，油炸？卡路里太高了发胖，算了，
+要不烤着吃？感觉不错。哦抱歉，我刚刚在想怎么吃你比较合适！"
 %E
 %Cp Kni 00068
-"Thy strength waneth, %p.  The time of thy death draweth near."
+"你的力量就跟电子虫一样弱，%p，死神已经来找你了！"
 %E
 %Cp Kni 00069
-"Call upon thy precious %d, %p.  It shall not avail thee."
+"哎呦，怎么还不哭爹喊娘啊，快找你的%d来救你啊！哈哈哈哈哈！"
 %E
 %Cc Kni 00070
-As you pick up %o, you feel its protective fields
-form around your body.  You also feel a faint stirring in your mind,
-as if you are in two places at once, and in the second, you are waking
-from a long sleep.
+当你拿起%o之时你感到一股保护魔力环绕着你，同时你的脑海里出现了一个微弱的画面，如同
+你同时出现在两个不同的地方一样，而且同时，你感觉另一个地方的某人从漫长的睡眠中醒来了。
 %E
 %Cc Kni 00080
-As %n sinks to the ground, blood gushing from his open mouth, he
-defiantly curses you and %l:
+在%n的头慢慢倒在地上的时候，他从口中喷出大量的血，这头恶龙用微弱的声音诅咒你和%l：
 
-    Thou hast not won yet, %r.  By the gods, I shall return and dog
-    thy steps to the grave!
+    你还没有赢，%r，以众神之名，我会回归此地然后把你们全都送进坟墓里！
 
-His tail flailing madly, %n tries to crawl towards you, but slumps
-to the ground and dies in a pool of his own blood.
+他的尾巴疯狂的上下拍动着，同时他试图爬向你，但最后因为伤势死在了他自己的身体流出的血池里。
 %E
 %Cc Kni 00081
-As you approach %l, he beams at you and says:
+当你拿着%o靠近%l的时候，他猛地抬头看着你说道:
 
-    Well done!  Thou art truly the Champion of %H.  We
-    have received word that Merlin is recovering, and shall soon
-    rejoin Us.
+    汝做的极好！现在吾正式承认汝为%H的精锐骑士，吾等于梅林回复时收到其口信，其将
+    于不久后回归此处。
     
-    He hath instructed Us that thou art now to be the guardian of
-    %o.  He feeleth that thou mayst have need of
-    its powers in thine adventures.  It is Our wish that thou keepest
-    %o with thee as thou searchest for the fabled
-    Amulet of Yendor.
-%E
-# assumes Magic Mirror of Merlin (glass object)
+    梅林告诉吾其已将%o的守卫责任移交给汝，依梅林所预言，汝将会在未来的冒险中需要
+    %之力量相助，吾等衷心祝愿汝可在%o的帮助下顺利取得护身符。
+# 这他妈是玻璃的玩意
 %Cc Kni 00082
-"Careful, %p!  %oC might break, and that would
-be a tragic loss.  Thou art its keeper now, and the time hath come
-to resume thy search for the Amulet.  %Z await thy
-return through the magic portal that brought thee here."
+"注意！%p!  %o乃玻璃所制，汝若不慎将会造成一场巨大的悲剧！汝现在是其所有者了，
+现在汝是时候回去搜寻护身符，%Z等待着汝穿过魔法入口回归并继续任务。"
 %E
 %Cp Kni 00090
-"Well met, %p.  How goeth thy search for the Amulet of Yendor?"
+"别来无恙，%p，汝近来对护身符的寻找进度如何?"
 %E
 %Cc Kni 00091
-"Thou hast succeeded, We see, %p!  Now thou art commanded to take
-the Amulet to be sacrificed to %d in the plane of the astral.
+"吾早已预见汝必定成事！%p！而今汝需将护身符带入星界并在神圣的%d的祭坛上献祭之。
 
-"Merlin hath counseled Us that thou must travel always upwards through
-the planes of the elements, to achieve this goal.
+"梅林的占卜告诉吾等，汝一直向上，而后穿过元素之位面方可到达终点.
 
-"Go with %d, %p."
+"带着%d的荣耀前进, %p."
 %E
 #
 #       Monk
@@ -1840,66 +1559,59 @@ the planes of the elements, to achieve this goal.
 # to be treated as plural by messages which use %o.
 #
 %Cc Mon 00001
-You find yourself standing in sight of %H.  Something
-is obviously wrong here. Strange shapes lumber around
-outside %H!
+你发现你正站在%H前，眼前的景象绝对不正常——你看到有奇怪的东西包围了%H！
 
-You realize that the %l needs your assistance!
+你意识到%l现在需要你的帮助!
 %E
 %Cp Mon 00002
-Once again, you stand before %H.
+你又一次的站在了%H前.
 %E
 %Cp Mon 00003
-Again you face %H.  Your intuition hints that this may be
-the final time you come here.
+当你再一次的站在%H前时，你的直觉告诉你这可能是你最后一次回到这里了.
 %E
 %Cp Mon 00005
-"Greetings, honorable %r.  It is good to see you."
+"欢迎回来，尊敬的%r.近来可好？"
 %E
 %Cp Mon 00006
-"Ah, %p!  Surely you can help us in our hour of need."
+"啊，%p!你绝对可以帮我们走出这个困境的对吧？"
 %E
 %Cp Mon 00007
-"Greetings, %s.  %lC has great need of your help."
+"欢迎回来，%s.  %l现在非常需要你的帮助."
 %E
 %Cp Mon 00008
-"Alas, it seems as if even %d has deserted us."
+"唉，我甚至都感觉%d把我们早就抛弃掉了."
 %E
 %Cp Mon 00009
-"May %d be with you, %s."
+"愿%d与你同在."
 %E
 %Cp Mon 00010
-"Greetings, honorable %r.  It is good to see you again."
+"别来无恙啊%p，过得如何？"
 %E
 %Cp Mon 00011
-"Ah, %p!  Our deepest gratitude for all of your help."
+"啊！%p，来帮我们疏通一下筋脉吧？"
 %E
 %Cp Mon 00012
-"Greetings, %s.  Perhaps you will take some time to meditate with us?"
+"嘿，%p，要不要和我们一起打会坐？"
 %E
 %Cp Mon 00013
-"With this test behind you, may %d bring you enlightenment."
+"愿这次的考验让你之后的路一帆风顺."
 %E
 %Cp Mon 00014
-"May %d be with you, %s."
+"愿%d与你同在."
 %E
 %Cc Mon 00015
-"Ah, %p, my %S.  You have returned to us at last.
-A great blow has befallen our order; perhaps you can help us.
-First, however, I must determine if you are prepared for this
-great challenge."
+"啊，%p,我亲爱的%S.你现在总算回来了，我们现在面临着巨大的危机，也许你能帮我
+们走出困境，但是首先我必须先看看你是否准备好接受这个挑战了。"
 %E
 %Cp Mon 00016
-"Again, my %S, you stand before me.  Are you ready now to help us?"
+"我的%s，你又一次的回来了，这一次你准备好接受这个任务了吗?"
 %E
 %Cp Mon 00017
-"Once more, %p, you stand within the sanctum.  Are you ready now?"
+"%p，你又来到圣地了，现在准备好了吗?"
 %E
 %Cc Mon 00018
-"You are a heretic, %p!  How can you, %ra, deviate so from the
-teachings of %d?  Begone from this temple.  You are no longer
-%sa to this order.  We will pray to %d for other assistance,
-as you have failed us utterly."
+"你这个离经叛道的家伙！%p！你这个%ra怎么敢背叛%d的教导？现在立刻从这个寺庙里
+滚出去，不准再踏入半步，我们会请求%d给我们别的帮助！"
 %E
 %Cc Mon 00019
 "Alas, %p, it is not yet to be.  A mere %r could never
@@ -2881,34 +2593,28 @@ life and lost my lock pick in the process."
 rocks into worthless pieces of glass."
 %E
 %Cc Rog 00015
-"Well, look who it is boys -- %p has come home.  You seem to have
-fallen behind in your dues.  I should kill you as an example to these
-other worthless cutpurses, but I have a better plan.  If you are ready
-maybe you could work off your back dues by performing a little job for
-me.  Let us just see if you are ready..."
+"嘿，大伙看看，这是谁啊——%p回到这里来了.你上次的会费没交我可还记得呢，本来我应该把你杀了
+给那帮偷钱包的废物点心杀鸡儆猴，但我想出来个更好的方式让你赎罪。如果你准备好了的话，
+帮我办点事我就不计较你的会费问题了，但是让我先看看你到底准备好了没有……. 、"
 %E
 %Cp Rog 00016
-"Well, I didn't expect to see you back.  It shows that you are either stupid,
-or you are finally ready to accept my offer.  Let us hope for your sake it
-isn't stupidity that brings you back."
+"哦我没想到你又滚回来了，你回来究竟是蠢到无可救药还是终于准备好了？希望你不是
+蠢到再滚回来。"
 %E
 %Cp Rog 00017
-"Did you perhaps mistake me for some other %lt?  You must
-think me as stupid as your behavior.  I warn you not to try my patience."
+"你想为了那些%lt而愚弄我？我没你那么蠢，别挑战我的忍耐度。"
 %E
 %Cc Rog 00018
-"Well %gp, it looks like our friend has forgotten who is the boss
-around here.  Our friend seems to think that %rp have been put in
-charge.  Wrong.  DEAD WRONG!"
+"哎呀哎呀哎呀，%gp，我们的老伙计很明显忘了这儿的老大是谁了，它以为%rp
+夺了这的权了？错，大错特错！
 
 Your sudden shift in surroundings prevents you from hearing the end
 of %ls curse.
 %E
 %Cc Rog 00019
-"In the time that you've been gone you've only been able to master the
-arts of %ra?  I've trained ten times again as many %Rp
-in that time.  Maybe I should send one of them, no?  Where would that
-leave you, %p?  Oh yeah, I remember, I was going to kill you!"
+"你浪费了这么多时间就把技巧磨炼到了%ra上？有你这空我能训练出来十个%Rp！
+我应该让他们去做任务，你说不要？那我们上次说到哪了？%p？哦我想起来了，
+我要宰了你！"
 %E
 %Cc Rog 00020
 "Maybe I should chain you to my perch here for a while.  Perhaps watching
