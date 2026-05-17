@@ -16,6 +16,9 @@ jobs:
   sync-paratranz:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      checkout_ref: ${{ steps.ref.outputs.checkout_ref }}
 
     steps:
       - name: Check out repository
@@ -32,14 +35,31 @@ jobs:
           PARATRANZ_API_TOKEN: ${{ secrets.PARATRANZ_API_TOKEN }}
         run: python3 tools/paratranz_download.py
 
-      - name: Commit synced Paratranz files
+      - name: Capture checkout ref
+        id: ref
+        run: echo "checkout_ref=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Detect Paratranz changes
+        id: diff
         run: |
           if git diff --quiet -- paratranz; then
-            echo "paratranz is already in sync"
-            exit 0
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Commit synced Paratranz files
+        if: steps.diff.outputs.changed == 'true'
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add paratranz
           git commit -m "chore: sync paratranz from api"
           git push
+
+  build-after-sync:
+    needs: sync-paratranz
+    if: needs.sync-paratranz.outputs.changed == 'true'
+    uses: ./.github/workflows/build-android-apk.yml
+    with:
+      checkout_ref: ${{ needs.sync-paratranz.outputs.checkout_ref }}

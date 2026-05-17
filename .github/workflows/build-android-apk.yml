@@ -1,6 +1,11 @@
 name: Build Android APK
 
 on:
+  workflow_call:
+    inputs:
+      checkout_ref:
+        required: false
+        type: string
   workflow_dispatch:
   push:
   pull_request:
@@ -15,6 +20,8 @@ jobs:
     steps:
       - name: Check out SlashEM
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.checkout_ref || github.sha }}
 
       - name: Apply Paratranz translations
         run: python3 tools/paratranz_sync.py apply
