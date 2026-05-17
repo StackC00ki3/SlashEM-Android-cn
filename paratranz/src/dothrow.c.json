@@ -4,909 +4,909 @@
     "original": "throw",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:123:19\n   118:           possibly using a sling.\n   119:         */\n   120: \tif(obj-&gt;oclass == COIN_CLASS && obj != uquiver) return(throw_gold(obj));\n   121: #endif\n   122: \n&gt;  123: \tif(!canletgo(obj,\"throw\"))\n   124: \t\treturn(0);\n   125: \n   126: \tif(obj == uwep && welded(obj)) {\n   127: \t\tweldmsg(obj);\n   128: \t\treturn(1);"
+    "context": "src/dothrow.c:123:19\n        118:           possibly using a sling.\n        119:         */\n        120: \tif(obj-&gt;oclass == COIN_CLASS && obj != uquiver) return(throw_gold(obj));\n        121: #endif\n        122: \nTARGET  123: \tif(!canletgo(obj,\"throw\"))\n        124: \t\treturn(0);\n        125: \n        126: \tif(obj == uwep && welded(obj)) {\n        127: \t\tweldmsg(obj);\n        128: \t\treturn(1);"
   },
   {
     "key": "L00132_01",
     "original": "%s must be wielded before it can be thrown.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:132:12\n   127: \t\tweldmsg(obj);\n   128: \t\treturn(1);\n   129: \t}\n   130: \n   131: \tif (obj-&gt;oartifact == ART_MJOLLNIR && obj != uwep) {\n&gt;  132: \t    pline(\"%s must be wielded before it can be thrown.\",\n   133: \t\tThe(xname(obj)));\n   134: \t\treturn(0);\n   135: \t}\n   136: \tif ((obj-&gt;oartifact == ART_MJOLLNIR && ACURR(A_STR) &lt; STR19(25))\n   137: \t   || (obj-&gt;otyp == BOULDER && !throws_rocks(youmonst.data))) {"
+    "context": "src/dothrow.c:132:12\n        127: \t\tweldmsg(obj);\n        128: \t\treturn(1);\n        129: \t}\n        130: \n        131: \tif (obj-&gt;oartifact == ART_MJOLLNIR && obj != uwep) {\nTARGET  132: \t    pline(\"%s must be wielded before it can be thrown.\",\n        133: \t\tThe(xname(obj)));\n        134: \t\treturn(0);\n        135: \t}\n        136: \tif ((obj-&gt;oartifact == ART_MJOLLNIR && ACURR(A_STR) &lt; STR19(25))\n        137: \t   || (obj-&gt;otyp == BOULDER && !throws_rocks(youmonst.data))) {"
   },
   {
     "key": "L00138_01",
     "original": "It's too heavy.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:138:9\n   133: \t\tThe(xname(obj)));\n   134: \t\treturn(0);\n   135: \t}\n   136: \tif ((obj-&gt;oartifact == ART_MJOLLNIR && ACURR(A_STR) &lt; STR19(25))\n   137: \t   || (obj-&gt;otyp == BOULDER && !throws_rocks(youmonst.data))) {\n&gt;  138: \t\tpline(\"It's too heavy.\");\n   139: \t\treturn(1);\n   140: \t}\n   141: \tif(!u.dx && !u.dy && !u.dz) {\n   142: \t\tYou(\"cannot throw an object at yourself.\");\n   143: \t\treturn(0);"
+    "context": "src/dothrow.c:138:9\n        133: \t\tThe(xname(obj)));\n        134: \t\treturn(0);\n        135: \t}\n        136: \tif ((obj-&gt;oartifact == ART_MJOLLNIR && ACURR(A_STR) &lt; STR19(25))\n        137: \t   || (obj-&gt;otyp == BOULDER && !throws_rocks(youmonst.data))) {\nTARGET  138: \t\tpline(\"It's too heavy.\");\n        139: \t\treturn(1);\n        140: \t}\n        141: \tif(!u.dx && !u.dy && !u.dz) {\n        142: \t\tYou(\"cannot throw an object at yourself.\");\n        143: \t\treturn(0);"
   },
   {
     "key": "L00142_01",
     "original": "cannot throw an object at yourself.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:142:7\n   137: \t   || (obj-&gt;otyp == BOULDER && !throws_rocks(youmonst.data))) {\n   138: \t\tpline(\"It's too heavy.\");\n   139: \t\treturn(1);\n   140: \t}\n   141: \tif(!u.dx && !u.dy && !u.dz) {\n&gt;  142: \t\tYou(\"cannot throw an object at yourself.\");\n   143: \t\treturn(0);\n   144: \t}\n   145: \tu_wipe_engr(2);\n   146: \tif (!uarmg && !Stone_resistance && (obj-&gt;otyp == CORPSE &&\n   147: \t\t    touch_petrifies(&mons[obj-&gt;corpsenm]))) {"
+    "context": "src/dothrow.c:142:7\n        137: \t   || (obj-&gt;otyp == BOULDER && !throws_rocks(youmonst.data))) {\n        138: \t\tpline(\"It's too heavy.\");\n        139: \t\treturn(1);\n        140: \t}\n        141: \tif(!u.dx && !u.dy && !u.dz) {\nTARGET  142: \t\tYou(\"cannot throw an object at yourself.\");\n        143: \t\treturn(0);\n        144: \t}\n        145: \tu_wipe_engr(2);\n        146: \tif (!uarmg && !Stone_resistance && (obj-&gt;otyp == CORPSE &&\n        147: \t\t    touch_petrifies(&mons[obj-&gt;corpsenm]))) {"
   },
   {
     "key": "L00148_01",
     "original": "throw the %s corpse with your bare %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:148:7\n   143: \t\treturn(0);\n   144: \t}\n   145: \tu_wipe_engr(2);\n   146: \tif (!uarmg && !Stone_resistance && (obj-&gt;otyp == CORPSE &&\n   147: \t\t    touch_petrifies(&mons[obj-&gt;corpsenm]))) {\n&gt;  148: \t\tYou(\"throw the %s corpse with your bare %s.\",\n   149: \t\t    mons[obj-&gt;corpsenm].mname, body_part(HAND));\n   150: \t\tSprintf(killer_buf, \"%s corpse\", an(mons[obj-&gt;corpsenm].mname));\n   151: \t\tinstapetrify(killer_buf);\n   152: \t}\n   153: \tif (welded(obj)) {"
+    "context": "src/dothrow.c:148:7\n        143: \t\treturn(0);\n        144: \t}\n        145: \tu_wipe_engr(2);\n        146: \tif (!uarmg && !Stone_resistance && (obj-&gt;otyp == CORPSE &&\n        147: \t\t    touch_petrifies(&mons[obj-&gt;corpsenm]))) {\nTARGET  148: \t\tYou(\"throw the %s corpse with your bare %s.\",\n        149: \t\t    mons[obj-&gt;corpsenm].mname, body_part(HAND));\n        150: \t\tSprintf(killer_buf, \"%s corpse\", an(mons[obj-&gt;corpsenm].mname));\n        151: \t\tinstapetrify(killer_buf);\n        152: \t}\n        153: \tif (welded(obj)) {"
   },
   {
     "key": "L00150_01",
     "original": "%s corpse",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:150:23\n   145: \tu_wipe_engr(2);\n   146: \tif (!uarmg && !Stone_resistance && (obj-&gt;otyp == CORPSE &&\n   147: \t\t    touch_petrifies(&mons[obj-&gt;corpsenm]))) {\n   148: \t\tYou(\"throw the %s corpse with your bare %s.\",\n   149: \t\t    mons[obj-&gt;corpsenm].mname, body_part(HAND));\n&gt;  150: \t\tSprintf(killer_buf, \"%s corpse\", an(mons[obj-&gt;corpsenm].mname));\n   151: \t\tinstapetrify(killer_buf);\n   152: \t}\n   153: \tif (welded(obj)) {\n   154: \t\tweldmsg(obj);\n   155: \t\treturn 1;"
+    "context": "src/dothrow.c:150:23\n        145: \tu_wipe_engr(2);\n        146: \tif (!uarmg && !Stone_resistance && (obj-&gt;otyp == CORPSE &&\n        147: \t\t    touch_petrifies(&mons[obj-&gt;corpsenm]))) {\n        148: \t\tYou(\"throw the %s corpse with your bare %s.\",\n        149: \t\t    mons[obj-&gt;corpsenm].mname, body_part(HAND));\nTARGET  150: \t\tSprintf(killer_buf, \"%s corpse\", an(mons[obj-&gt;corpsenm].mname));\n        151: \t\tinstapetrify(killer_buf);\n        152: \t}\n        153: \tif (welded(obj)) {\n        154: \t\tweldmsg(obj);\n        155: \t\treturn 1;"
   },
   {
     "key": "L00223_01",
     "original": "let fly a volley of %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:223:11\n   218: \t\tmultishot += 1; /* Let'em rip! */\n   219: \n   220: \t\t/* more than usual == volley */\n   221: \t\tif (((shotlimit &lt;= 0) || (shotlimit &gt;= multishot)) && \n   222: \t\t\t(obj-&gt;quan &gt;= multishot))\n&gt;  223: \t\t    You(\"let fly a volley of %s!\", xname(obj));\n   224: \t    }\n   225: \n   226: \t    /* Shotlimit controls your rate of fire */\n   227: \t    if ((shotlimit &gt; 0) && (multishot &gt; shotlimit)) multishot = shotlimit;\n   228: "
+    "context": "src/dothrow.c:223:11\n        218: \t\tmultishot += 1; /* Let'em rip! */\n        219: \n        220: \t\t/* more than usual == volley */\n        221: \t\tif (((shotlimit &lt;= 0) || (shotlimit &gt;= multishot)) && \n        222: \t\t\t(obj-&gt;quan &gt;= multishot))\nTARGET  223: \t\t    You(\"let fly a volley of %s!\", xname(obj));\n        224: \t    }\n        225: \n        226: \t    /* Shotlimit controls your rate of fire */\n        227: \t    if ((shotlimit &gt; 0) && (multishot &gt; shotlimit)) multishot = shotlimit;\n        228: "
   },
   {
     "key": "L00258_01",
     "original": "%s %d %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:258:10\n   253: \tm_shot.s = ammo_and_launcher(obj,uwep) ? TRUE : FALSE;\n   254: \t/* give a message if shooting more than one, or if player\n   255: \t   attempted to specify a count */\n   256: \tif (multishot &gt; 1 || shotlimit &gt; 0) {\n   257: \t    /* \"You shoot N arrows.\" or \"You throw N daggers.\" */\n&gt;  258: \t    You(\"%s %d %s.\",\n   259: \t\tm_shot.s ? \"shoot\" : \"throw\",\n   260: \t\tmultishot,\t/* (might be 1 if player gave shotlimit) */\n   261: \t\t(multishot == 1) ? singular(obj, xname) :  xname(obj));\n   262: \t}\n   263: "
+    "context": "src/dothrow.c:258:10\n        253: \tm_shot.s = ammo_and_launcher(obj,uwep) ? TRUE : FALSE;\n        254: \t/* give a message if shooting more than one, or if player\n        255: \t   attempted to specify a count */\n        256: \tif (multishot &gt; 1 || shotlimit &gt; 0) {\n        257: \t    /* \"You shoot N arrows.\" or \"You throw N daggers.\" */\nTARGET  258: \t    You(\"%s %d %s.\",\n        259: \t\tm_shot.s ? \"shoot\" : \"throw\",\n        260: \t\tmultishot,\t/* (might be 1 if player gave shotlimit) */\n        261: \t\t(multishot == 1) ? singular(obj, xname) :  xname(obj));\n        262: \t}\n        263: "
   },
   {
     "key": "L00259_01",
     "original": "shoot",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:259:14\n   254: \t/* give a message if shooting more than one, or if player\n   255: \t   attempted to specify a count */\n   256: \tif (multishot &gt; 1 || shotlimit &gt; 0) {\n   257: \t    /* \"You shoot N arrows.\" or \"You throw N daggers.\" */\n   258: \t    You(\"%s %d %s.\",\n&gt;  259: \t\tm_shot.s ? \"shoot\" : \"throw\",\n   260: \t\tmultishot,\t/* (might be 1 if player gave shotlimit) */\n   261: \t\t(multishot == 1) ? singular(obj, xname) :  xname(obj));\n   262: \t}\n   263: \n   264: \twep_mask = obj-&gt;owornmask;"
+    "context": "src/dothrow.c:259:14\n        254: \t/* give a message if shooting more than one, or if player\n        255: \t   attempted to specify a count */\n        256: \tif (multishot &gt; 1 || shotlimit &gt; 0) {\n        257: \t    /* \"You shoot N arrows.\" or \"You throw N daggers.\" */\n        258: \t    You(\"%s %d %s.\",\nTARGET  259: \t\tm_shot.s ? \"shoot\" : \"throw\",\n        260: \t\tmultishot,\t/* (might be 1 if player gave shotlimit) */\n        261: \t\t(multishot == 1) ? singular(obj, xname) :  xname(obj));\n        262: \t}\n        263: \n        264: \twep_mask = obj-&gt;owornmask;"
   },
   {
     "key": "L00259_02",
     "original": "throw",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:259:24\n   254: \t/* give a message if shooting more than one, or if player\n   255: \t   attempted to specify a count */\n   256: \tif (multishot &gt; 1 || shotlimit &gt; 0) {\n   257: \t    /* \"You shoot N arrows.\" or \"You throw N daggers.\" */\n   258: \t    You(\"%s %d %s.\",\n&gt;  259: \t\tm_shot.s ? \"shoot\" : \"throw\",\n   260: \t\tmultishot,\t/* (might be 1 if player gave shotlimit) */\n   261: \t\t(multishot == 1) ? singular(obj, xname) :  xname(obj));\n   262: \t}\n   263: \n   264: \twep_mask = obj-&gt;owornmask;"
+    "context": "src/dothrow.c:259:24\n        254: \t/* give a message if shooting more than one, or if player\n        255: \t   attempted to specify a count */\n        256: \tif (multishot &gt; 1 || shotlimit &gt; 0) {\n        257: \t    /* \"You shoot N arrows.\" or \"You throw N daggers.\" */\n        258: \t    You(\"%s %d %s.\",\nTARGET  259: \t\tm_shot.s ? \"shoot\" : \"throw\",\n        260: \t\tmultishot,\t/* (might be 1 if player gave shotlimit) */\n        261: \t\t(multishot == 1) ? singular(obj, xname) :  xname(obj));\n        262: \t}\n        263: \n        264: \twep_mask = obj-&gt;owornmask;"
   },
   {
     "key": "L00310_01",
     "original": "are physically incapable of throwing anything.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:310:10\n   305: \t * Prior to 3.3.0, command ``3t'' meant ``t(shoot) t(shoot) t(shoot)''\n   306: \t * and took 3 turns.  Now it means ``t(shoot at most 3 missiles)''.\n   307: \t */\n   308: \n   309: \tif (notake(youmonst.data)) {\n&gt;  310: \t    You(\"are physically incapable of throwing anything.\");\n   311: \t    return 0;\n   312: \t}\n   313: \n   314: \tif(check_capacity((char *)0)) return(0);\n   315: \tobj = getobj(uslinging() ? bullets : toss_objs, \"throw\");"
+    "context": "src/dothrow.c:310:10\n        305: \t * Prior to 3.3.0, command ``3t'' meant ``t(shoot) t(shoot) t(shoot)''\n        306: \t * and took 3 turns.  Now it means ``t(shoot at most 3 missiles)''.\n        307: \t */\n        308: \n        309: \tif (notake(youmonst.data)) {\nTARGET  310: \t    You(\"are physically incapable of throwing anything.\");\n        311: \t    return 0;\n        312: \t}\n        313: \n        314: \tif(check_capacity((char *)0)) return(0);\n        315: \tobj = getobj(uslinging() ? bullets : toss_objs, \"throw\");"
   },
   {
     "key": "L00315_01",
     "original": "throw",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:315:50\n   310: \t    You(\"are physically incapable of throwing anything.\");\n   311: \t    return 0;\n   312: \t}\n   313: \n   314: \tif(check_capacity((char *)0)) return(0);\n&gt;  315: \tobj = getobj(uslinging() ? bullets : toss_objs, \"throw\");\n   316: \t/* it is also possible to throw food */\n   317: \t/* (or jewels, or iron balls... ) */\n   318: \n   319: \tif (!obj) return(0);\n   320: "
+    "context": "src/dothrow.c:315:50\n        310: \t    You(\"are physically incapable of throwing anything.\");\n        311: \t    return 0;\n        312: \t}\n        313: \n        314: \tif(check_capacity((char *)0)) return(0);\nTARGET  315: \tobj = getobj(uslinging() ? bullets : toss_objs, \"throw\");\n        316: \t/* it is also possible to throw food */\n        317: \t/* (or jewels, or iron balls... ) */\n        318: \n        319: \tif (!obj) return(0);\n        320: "
   },
   {
     "key": "L00408_01",
     "original": "are physically incapable of doing that.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:408:10\n   403: dofire()\n   404: {\n   405: \tint result, shotlimit;\n   406: \n   407: \tif (notake(youmonst.data)) {\n&gt;  408: \t    You(\"are physically incapable of doing that.\");\n   409: \t    return 0;\n   410: \t}\n   411: \n   412: \tif(check_capacity((char *)0)) return(0);\n   413: \tif (!uquiver) {"
+    "context": "src/dothrow.c:408:10\n        403: dofire()\n        404: {\n        405: \tint result, shotlimit;\n        406: \n        407: \tif (notake(youmonst.data)) {\nTARGET  408: \t    You(\"are physically incapable of doing that.\");\n        409: \t    return 0;\n        410: \t}\n        411: \n        412: \tif(check_capacity((char *)0)) return(0);\n        413: \tif (!uquiver) {"
   },
   {
     "key": "L00416_01",
     "original": "have no ammunition readied!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:416:8\n   411: \n   412: \tif(check_capacity((char *)0)) return(0);\n   413: \tif (!uquiver) {\n   414: \t\tif (!flags.autoquiver) {\n   415: \t\t\t/* Don't automatically fill the quiver */\n&gt;  416: \t\t\tYou(\"have no ammunition readied!\");\n   417: \t\t\treturn(dothrow());\n   418: \t\t}\n   419: \t\tautoquiver();\n   420: \t\tif (!uquiver) {\n   421: \t\t\tYou(\"have nothing appropriate for your quiver!\");"
+    "context": "src/dothrow.c:416:8\n        411: \n        412: \tif(check_capacity((char *)0)) return(0);\n        413: \tif (!uquiver) {\n        414: \t\tif (!flags.autoquiver) {\n        415: \t\t\t/* Don't automatically fill the quiver */\nTARGET  416: \t\t\tYou(\"have no ammunition readied!\");\n        417: \t\t\treturn(dothrow());\n        418: \t\t}\n        419: \t\tautoquiver();\n        420: \t\tif (!uquiver) {\n        421: \t\t\tYou(\"have nothing appropriate for your quiver!\");"
   },
   {
     "key": "L00421_01",
     "original": "have nothing appropriate for your quiver!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:421:8\n   416: \t\t\tYou(\"have no ammunition readied!\");\n   417: \t\t\treturn(dothrow());\n   418: \t\t}\n   419: \t\tautoquiver();\n   420: \t\tif (!uquiver) {\n&gt;  421: \t\t\tYou(\"have nothing appropriate for your quiver!\");\n   422: \t\t\treturn(dothrow());\n   423: \t\t} else {\n   424: \t\t\tYou(\"fill your quiver:\");\n   425: \t\t\tprinv((char *)0, uquiver, 0L);\n   426: \t\t}"
+    "context": "src/dothrow.c:421:8\n        416: \t\t\tYou(\"have no ammunition readied!\");\n        417: \t\t\treturn(dothrow());\n        418: \t\t}\n        419: \t\tautoquiver();\n        420: \t\tif (!uquiver) {\nTARGET  421: \t\t\tYou(\"have nothing appropriate for your quiver!\");\n        422: \t\t\treturn(dothrow());\n        423: \t\t} else {\n        424: \t\t\tYou(\"fill your quiver:\");\n        425: \t\t\tprinv((char *)0, uquiver, 0L);\n        426: \t\t}"
   },
   {
     "key": "L00424_01",
     "original": "fill your quiver:",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:424:8\n   419: \t\tautoquiver();\n   420: \t\tif (!uquiver) {\n   421: \t\t\tYou(\"have nothing appropriate for your quiver!\");\n   422: \t\t\treturn(dothrow());\n   423: \t\t} else {\n&gt;  424: \t\t\tYou(\"fill your quiver:\");\n   425: \t\t\tprinv((char *)0, uquiver, 0L);\n   426: \t\t}\n   427: \t}\n   428: \n   429: \t/*"
+    "context": "src/dothrow.c:424:8\n        419: \t\tautoquiver();\n        420: \t\tif (!uquiver) {\n        421: \t\t\tYou(\"have nothing appropriate for your quiver!\");\n        422: \t\t\treturn(dothrow());\n        423: \t\t} else {\nTARGET  424: \t\t\tYou(\"fill your quiver:\");\n        425: \t\t\tprinv((char *)0, uquiver, 0L);\n        426: \t\t}\n        427: \t}\n        428: \n        429: \t/*"
   },
   {
     "key": "L00474_01",
     "original": "%s hit%s the %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:474:9\n   469: \t\treturn;\n   470: \t}\n   471: \tif (IS_ALTAR(levl[u.ux][u.uy].typ))\n   472: \t\tdoaltarobj(obj);\n   473: \telse\n&gt;  474: \t\tpline(\"%s hit%s the %s.\", Doname2(obj),\n   475: \t\t      (obj-&gt;quan == 1L) ? \"s\" : \"\", surface(u.ux,u.uy));\n   476: \n   477: \tif (hero_breaks(obj, u.ux, u.uy, TRUE)) return;\n   478: \tif (ship_object(obj, u.ux, u.uy, FALSE)) return;\n   479: \tdropy(obj);"
+    "context": "src/dothrow.c:474:9\n        469: \t\treturn;\n        470: \t}\n        471: \tif (IS_ALTAR(levl[u.ux][u.uy].typ))\n        472: \t\tdoaltarobj(obj);\n        473: \telse\nTARGET  474: \t\tpline(\"%s hit%s the %s.\", Doname2(obj),\n        475: \t\t      (obj-&gt;quan == 1L) ? \"s\" : \"\", surface(u.ux,u.uy));\n        476: \n        477: \tif (hero_breaks(obj, u.ux, u.uy, TRUE)) return;\n        478: \tif (ship_object(obj, u.ux, u.uy, FALSE)) return;\n        479: \tdropy(obj);"
   },
   {
     "key": "L00475_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:475:29\n   470: \t}\n   471: \tif (IS_ALTAR(levl[u.ux][u.uy].typ))\n   472: \t\tdoaltarobj(obj);\n   473: \telse\n   474: \t\tpline(\"%s hit%s the %s.\", Doname2(obj),\n&gt;  475: \t\t      (obj-&gt;quan == 1L) ? \"s\" : \"\", surface(u.ux,u.uy));\n   476: \n   477: \tif (hero_breaks(obj, u.ux, u.uy, TRUE)) return;\n   478: \tif (ship_object(obj, u.ux, u.uy, FALSE)) return;\n   479: \tdropy(obj);\n   480: \tif (!u.uswallow) container_impact_dmg(obj);"
+    "context": "src/dothrow.c:475:29\n        470: \t}\n        471: \tif (IS_ALTAR(levl[u.ux][u.uy].typ))\n        472: \t\tdoaltarobj(obj);\n        473: \telse\n        474: \t\tpline(\"%s hit%s the %s.\", Doname2(obj),\nTARGET  475: \t\t      (obj-&gt;quan == 1L) ? \"s\" : \"\", surface(u.ux,u.uy));\n        476: \n        477: \tif (hero_breaks(obj, u.ux, u.uy, TRUE)) return;\n        478: \tif (ship_object(obj, u.ux, u.uy, FALSE)) return;\n        479: \tdropy(obj);\n        480: \tif (!u.uswallow) container_impact_dmg(obj);"
   },
   {
     "key": "L00585_01",
     "original": "the spirits holding you back.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:585:11\n   580:     struct monst *mon;\n   581:     boolean may_pass = TRUE;\n   582:     struct trap *ttmp;\n   583:     \n   584:     if (!isok(x,y)) {\n&gt;  585: \tYou_feel(\"the spirits holding you back.\");\n   586: \treturn FALSE;\n   587:     } else if (!in_out_region(x, y)) {\n   588: \treturn FALSE;\n   589:     } else if (*range == 0) {\n   590: \treturn FALSE;\t\t\t/* previous step wants to stop now */"
+    "context": "src/dothrow.c:585:11\n        580:     struct monst *mon;\n        581:     boolean may_pass = TRUE;\n        582:     struct trap *ttmp;\n        583:     \n        584:     if (!isok(x,y)) {\nTARGET  585: \tYou_feel(\"the spirits holding you back.\");\n        586: \treturn FALSE;\n        587:     } else if (!in_out_region(x, y)) {\n        588: \treturn FALSE;\n        589:     } else if (*range == 0) {\n        590: \treturn FALSE;\t\t\t/* previous step wants to stop now */"
   },
   {
     "key": "L00597_01",
     "original": "Ouch!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:597:12\n   592: \n   593:     if (!Passes_walls || !(may_pass = may_passwall(x, y))) {\n   594: \tif (IS_ROCK(levl[x][y].typ) || closed_door(x,y)) {\n   595: \t    const char *s;\n   596: \n&gt;  597: \t    pline(\"Ouch!\");\n   598: \t    if (IS_TREE(levl[x][y].typ))\n   599: \t\ts = \"bumping into a tree\";\n   600: \t    else if (IS_ROCK(levl[x][y].typ))\n   601: \t\ts = \"bumping into a wall\";\n   602: \t    else"
+    "context": "src/dothrow.c:597:12\n        592: \n        593:     if (!Passes_walls || !(may_pass = may_passwall(x, y))) {\n        594: \tif (IS_ROCK(levl[x][y].typ) || closed_door(x,y)) {\n        595: \t    const char *s;\n        596: \nTARGET  597: \t    pline(\"Ouch!\");\n        598: \t    if (IS_TREE(levl[x][y].typ))\n        599: \t\ts = \"bumping into a tree\";\n        600: \t    else if (IS_ROCK(levl[x][y].typ))\n        601: \t\ts = \"bumping into a wall\";\n        602: \t    else"
   },
   {
     "key": "L00599_01",
     "original": "bumping into a tree",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:599:7\n   594: \tif (IS_ROCK(levl[x][y].typ) || closed_door(x,y)) {\n   595: \t    const char *s;\n   596: \n   597: \t    pline(\"Ouch!\");\n   598: \t    if (IS_TREE(levl[x][y].typ))\n&gt;  599: \t\ts = \"bumping into a tree\";\n   600: \t    else if (IS_ROCK(levl[x][y].typ))\n   601: \t\ts = \"bumping into a wall\";\n   602: \t    else\n   603: \t\ts = \"bumping into a door\";\n   604: \t    losehp(rnd(2+*range), s, KILLED_BY);"
+    "context": "src/dothrow.c:599:7\n        594: \tif (IS_ROCK(levl[x][y].typ) || closed_door(x,y)) {\n        595: \t    const char *s;\n        596: \n        597: \t    pline(\"Ouch!\");\n        598: \t    if (IS_TREE(levl[x][y].typ))\nTARGET  599: \t\ts = \"bumping into a tree\";\n        600: \t    else if (IS_ROCK(levl[x][y].typ))\n        601: \t\ts = \"bumping into a wall\";\n        602: \t    else\n        603: \t\ts = \"bumping into a door\";\n        604: \t    losehp(rnd(2+*range), s, KILLED_BY);"
   },
   {
     "key": "L00601_01",
     "original": "bumping into a wall",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:601:7\n   596: \n   597: \t    pline(\"Ouch!\");\n   598: \t    if (IS_TREE(levl[x][y].typ))\n   599: \t\ts = \"bumping into a tree\";\n   600: \t    else if (IS_ROCK(levl[x][y].typ))\n&gt;  601: \t\ts = \"bumping into a wall\";\n   602: \t    else\n   603: \t\ts = \"bumping into a door\";\n   604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n   605: \t    return FALSE;\n   606: \t}"
+    "context": "src/dothrow.c:601:7\n        596: \n        597: \t    pline(\"Ouch!\");\n        598: \t    if (IS_TREE(levl[x][y].typ))\n        599: \t\ts = \"bumping into a tree\";\n        600: \t    else if (IS_ROCK(levl[x][y].typ))\nTARGET  601: \t\ts = \"bumping into a wall\";\n        602: \t    else\n        603: \t\ts = \"bumping into a door\";\n        604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n        605: \t    return FALSE;\n        606: \t}"
   },
   {
     "key": "L00603_01",
     "original": "bumping into a door",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:603:7\n   598: \t    if (IS_TREE(levl[x][y].typ))\n   599: \t\ts = \"bumping into a tree\";\n   600: \t    else if (IS_ROCK(levl[x][y].typ))\n   601: \t\ts = \"bumping into a wall\";\n   602: \t    else\n&gt;  603: \t\ts = \"bumping into a door\";\n   604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n   605: \t    return FALSE;\n   606: \t}\n   607: \tif (levl[x][y].typ == IRONBARS) {\n   608: \t    You(\"crash into some iron bars.  Ouch!\");"
+    "context": "src/dothrow.c:603:7\n        598: \t    if (IS_TREE(levl[x][y].typ))\n        599: \t\ts = \"bumping into a tree\";\n        600: \t    else if (IS_ROCK(levl[x][y].typ))\n        601: \t\ts = \"bumping into a wall\";\n        602: \t    else\nTARGET  603: \t\ts = \"bumping into a door\";\n        604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n        605: \t    return FALSE;\n        606: \t}\n        607: \tif (levl[x][y].typ == IRONBARS) {\n        608: \t    You(\"crash into some iron bars.  Ouch!\");"
   },
   {
     "key": "L00608_01",
     "original": "crash into some iron bars.  Ouch!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:608:10\n   603: \t\ts = \"bumping into a door\";\n   604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n   605: \t    return FALSE;\n   606: \t}\n   607: \tif (levl[x][y].typ == IRONBARS) {\n&gt;  608: \t    You(\"crash into some iron bars.  Ouch!\");\n   609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n   610: \t    return FALSE;\n   611: \t}\n   612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n   613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));"
+    "context": "src/dothrow.c:608:10\n        603: \t\ts = \"bumping into a door\";\n        604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n        605: \t    return FALSE;\n        606: \t}\n        607: \tif (levl[x][y].typ == IRONBARS) {\nTARGET  608: \t    You(\"crash into some iron bars.  Ouch!\");\n        609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n        610: \t    return FALSE;\n        611: \t}\n        612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n        613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));"
   },
   {
     "key": "L00609_01",
     "original": "crashing into iron bars",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:609:28\n   604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n   605: \t    return FALSE;\n   606: \t}\n   607: \tif (levl[x][y].typ == IRONBARS) {\n   608: \t    You(\"crash into some iron bars.  Ouch!\");\n&gt;  609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n   610: \t    return FALSE;\n   611: \t}\n   612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n   613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));\n   614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);"
+    "context": "src/dothrow.c:609:28\n        604: \t    losehp(rnd(2+*range), s, KILLED_BY);\n        605: \t    return FALSE;\n        606: \t}\n        607: \tif (levl[x][y].typ == IRONBARS) {\n        608: \t    You(\"crash into some iron bars.  Ouch!\");\nTARGET  609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n        610: \t    return FALSE;\n        611: \t}\n        612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n        613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));\n        614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);"
   },
   {
     "key": "L00613_01",
     "original": "bump into a %s.  Ouch!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:613:10\n   608: \t    You(\"crash into some iron bars.  Ouch!\");\n   609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n   610: \t    return FALSE;\n   611: \t}\n   612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n&gt;  613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));\n   614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);\n   615: \t    return FALSE;\n   616: \t}\n   617: \tif (!may_pass) {\n   618: \t    /* did we hit a no-dig non-wall position? */"
+    "context": "src/dothrow.c:613:10\n        608: \t    You(\"crash into some iron bars.  Ouch!\");\n        609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n        610: \t    return FALSE;\n        611: \t}\n        612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\nTARGET  613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));\n        614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);\n        615: \t    return FALSE;\n        616: \t}\n        617: \tif (!may_pass) {\n        618: \t    /* did we hit a no-dig non-wall position? */"
   },
   {
     "key": "L00614_01",
     "original": "bumping into a boulder",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:614:28\n   609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n   610: \t    return FALSE;\n   611: \t}\n   612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n   613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));\n&gt;  614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);\n   615: \t    return FALSE;\n   616: \t}\n   617: \tif (!may_pass) {\n   618: \t    /* did we hit a no-dig non-wall position? */\n   619: \t    You(\"smack into something!\");"
+    "context": "src/dothrow.c:614:28\n        609: \t    losehp(rnd(2+*range), \"crashing into iron bars\", KILLED_BY);\n        610: \t    return FALSE;\n        611: \t}\n        612: \tif ((obj = sobj_at(BOULDER,x,y)) != 0) {\n        613: \t    You(\"bump into a %s.  Ouch!\", xname(obj));\nTARGET  614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);\n        615: \t    return FALSE;\n        616: \t}\n        617: \tif (!may_pass) {\n        618: \t    /* did we hit a no-dig non-wall position? */\n        619: \t    You(\"smack into something!\");"
   },
   {
     "key": "L00619_01",
     "original": "smack into something!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:619:10\n   614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);\n   615: \t    return FALSE;\n   616: \t}\n   617: \tif (!may_pass) {\n   618: \t    /* did we hit a no-dig non-wall position? */\n&gt;  619: \t    You(\"smack into something!\");\n   620: \t    losehp(rnd(2+*range), \"touching the edge of the universe\", KILLED_BY);\n   621: \t    return FALSE;\n   622: \t}\n   623: \tif ((u.ux - x) && (u.uy - y) &&\n   624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {"
+    "context": "src/dothrow.c:619:10\n        614: \t    losehp(rnd(2+*range), \"bumping into a boulder\", KILLED_BY);\n        615: \t    return FALSE;\n        616: \t}\n        617: \tif (!may_pass) {\n        618: \t    /* did we hit a no-dig non-wall position? */\nTARGET  619: \t    You(\"smack into something!\");\n        620: \t    losehp(rnd(2+*range), \"touching the edge of the universe\", KILLED_BY);\n        621: \t    return FALSE;\n        622: \t}\n        623: \tif ((u.ux - x) && (u.uy - y) &&\n        624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {"
   },
   {
     "key": "L00620_01",
     "original": "touching the edge of the universe",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:620:28\n   615: \t    return FALSE;\n   616: \t}\n   617: \tif (!may_pass) {\n   618: \t    /* did we hit a no-dig non-wall position? */\n   619: \t    You(\"smack into something!\");\n&gt;  620: \t    losehp(rnd(2+*range), \"touching the edge of the universe\", KILLED_BY);\n   621: \t    return FALSE;\n   622: \t}\n   623: \tif ((u.ux - x) && (u.uy - y) &&\n   624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {\n   625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));"
+    "context": "src/dothrow.c:620:28\n        615: \t    return FALSE;\n        616: \t}\n        617: \tif (!may_pass) {\n        618: \t    /* did we hit a no-dig non-wall position? */\n        619: \t    You(\"smack into something!\");\nTARGET  620: \t    losehp(rnd(2+*range), \"touching the edge of the universe\", KILLED_BY);\n        621: \t    return FALSE;\n        622: \t}\n        623: \tif ((u.ux - x) && (u.uy - y) &&\n        624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {\n        625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));"
   },
   {
     "key": "L00628_01",
     "original": "%sget forcefully wedged into a crevice.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:628:7\n   623: \tif ((u.ux - x) && (u.uy - y) &&\n   624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {\n   625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));\n   626: \t    /* Move at a diagonal. */\n   627: \t    if (bigmonst(youmonst.data) || too_much) {\n&gt;  628: \t\tYou(\"%sget forcefully wedged into a crevice.\",\n   629: \t\t\ttoo_much ? \"and all your belongings \" : \"\");\n   630: \t\tlosehp(rnd(2+*range), \"wedging into a narrow crevice\", KILLED_BY);\n   631: \t\treturn FALSE;\n   632: \t    }\n   633: \t}"
+    "context": "src/dothrow.c:628:7\n        623: \tif ((u.ux - x) && (u.uy - y) &&\n        624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {\n        625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));\n        626: \t    /* Move at a diagonal. */\n        627: \t    if (bigmonst(youmonst.data) || too_much) {\nTARGET  628: \t\tYou(\"%sget forcefully wedged into a crevice.\",\n        629: \t\t\ttoo_much ? \"and all your belongings \" : \"\");\n        630: \t\tlosehp(rnd(2+*range), \"wedging into a narrow crevice\", KILLED_BY);\n        631: \t\treturn FALSE;\n        632: \t    }\n        633: \t}"
   },
   {
     "key": "L00629_01",
     "original": "and all your belongings ",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:629:15\n   624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {\n   625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));\n   626: \t    /* Move at a diagonal. */\n   627: \t    if (bigmonst(youmonst.data) || too_much) {\n   628: \t\tYou(\"%sget forcefully wedged into a crevice.\",\n&gt;  629: \t\t\ttoo_much ? \"and all your belongings \" : \"\");\n   630: \t\tlosehp(rnd(2+*range), \"wedging into a narrow crevice\", KILLED_BY);\n   631: \t\treturn FALSE;\n   632: \t    }\n   633: \t}\n   634:     }"
+    "context": "src/dothrow.c:629:15\n        624: \t\tbad_rock(&youmonst,u.ux,y) && bad_rock(&youmonst,x,u.uy)) {\n        625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));\n        626: \t    /* Move at a diagonal. */\n        627: \t    if (bigmonst(youmonst.data) || too_much) {\n        628: \t\tYou(\"%sget forcefully wedged into a crevice.\",\nTARGET  629: \t\t\ttoo_much ? \"and all your belongings \" : \"\");\n        630: \t\tlosehp(rnd(2+*range), \"wedging into a narrow crevice\", KILLED_BY);\n        631: \t\treturn FALSE;\n        632: \t    }\n        633: \t}\n        634:     }"
   },
   {
     "key": "L00630_01",
     "original": "wedging into a narrow crevice",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:630:25\n   625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));\n   626: \t    /* Move at a diagonal. */\n   627: \t    if (bigmonst(youmonst.data) || too_much) {\n   628: \t\tYou(\"%sget forcefully wedged into a crevice.\",\n   629: \t\t\ttoo_much ? \"and all your belongings \" : \"\");\n&gt;  630: \t\tlosehp(rnd(2+*range), \"wedging into a narrow crevice\", KILLED_BY);\n   631: \t\treturn FALSE;\n   632: \t    }\n   633: \t}\n   634:     }\n   635: "
+    "context": "src/dothrow.c:630:25\n        625: \t    boolean too_much = (invent && (inv_weight() + weight_cap() &gt; 600));\n        626: \t    /* Move at a diagonal. */\n        627: \t    if (bigmonst(youmonst.data) || too_much) {\n        628: \t\tYou(\"%sget forcefully wedged into a crevice.\",\n        629: \t\t\ttoo_much ? \"and all your belongings \" : \"\");\nTARGET  630: \t\tlosehp(rnd(2+*range), \"wedging into a narrow crevice\", KILLED_BY);\n        631: \t\treturn FALSE;\n        632: \t    }\n        633: \t}\n        634:     }\n        635: "
   },
   {
     "key": "L00637_01",
     "original": "bump into %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:637:6\n   632: \t    }\n   633: \t}\n   634:     }\n   635: \n   636:     if ((mon = m_at(x, y)) != 0) {\n&gt;  637: \tYou(\"bump into %s.\", a_monnam(mon));\n   638: \twakeup(mon);\n   639: \treturn FALSE;\n   640:     }\n   641:     if ((u.ux - x) && (u.uy - y) &&\n   642: \tbad_rock(&youmonst, u.ux, y) && bad_rock(&youmonst, x, u.uy)) {"
+    "context": "src/dothrow.c:637:6\n        632: \t    }\n        633: \t}\n        634:     }\n        635: \n        636:     if ((mon = m_at(x, y)) != 0) {\nTARGET  637: \tYou(\"bump into %s.\", a_monnam(mon));\n        638: \twakeup(mon);\n        639: \treturn FALSE;\n        640:     }\n        641:     if ((u.ux - x) && (u.uy - y) &&\n        642: \tbad_rock(&youmonst, u.ux, y) && bad_rock(&youmonst, x, u.uy)) {"
   },
   {
     "key": "L00645_01",
     "original": "come to an abrupt halt!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:645:10\n   640:     }\n   641:     if ((u.ux - x) && (u.uy - y) &&\n   642: \tbad_rock(&youmonst, u.ux, y) && bad_rock(&youmonst, x, u.uy)) {\n   643: \t/* Move at a diagonal. */\n   644: \tif (In_sokoban(&u.uz)) {\n&gt;  645: \t    You(\"come to an abrupt halt!\");\n   646: \t    return FALSE;\n   647: \t}\n   648:     }\n   649: \n   650:     ox = u.ux;"
+    "context": "src/dothrow.c:645:10\n        640:     }\n        641:     if ((u.ux - x) && (u.uy - y) &&\n        642: \tbad_rock(&youmonst, u.ux, y) && bad_rock(&youmonst, x, u.uy)) {\n        643: \t/* Move at a diagonal. */\n        644: \tif (In_sokoban(&u.uz)) {\nTARGET  645: \t    You(\"come to an abrupt halt!\");\n        646: \t    return FALSE;\n        647: \t}\n        648:     }\n        649: \n        650:     ox = u.ux;"
   },
   {
     "key": "L00680_01",
     "original": "pass right over %s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:680:11\n   675:     \t\tdotrap(ttmp,0);\n   676: \t\t*range = 0;\n   677: \t\treturn TRUE;\n   678:     \t} else {\n   679: \t\tif (ttmp-&gt;tseen)\n&gt;  680: \t\t    You(\"pass right over %s %s.\",\n   681: \t\t    \t(ttmp-&gt;ttyp == ARROW_TRAP) ? \"an\" : \"a\",\n   682: \t\t    \tdefsyms[trap_to_defsym(ttmp-&gt;ttyp)].explanation);\n   683:     \t}\n   684:     }\n   685:     if (--*range &lt; 0)\t\t/* make sure our range never goes negative */"
+    "context": "src/dothrow.c:680:11\n        675:     \t\tdotrap(ttmp,0);\n        676: \t\t*range = 0;\n        677: \t\treturn TRUE;\n        678:     \t} else {\n        679: \t\tif (ttmp-&gt;tseen)\nTARGET  680: \t\t    You(\"pass right over %s %s.\",\n        681: \t\t    \t(ttmp-&gt;ttyp == ARROW_TRAP) ? \"an\" : \"a\",\n        682: \t\t    \tdefsyms[trap_to_defsym(ttmp-&gt;ttyp)].explanation);\n        683:     \t}\n        684:     }\n        685:     if (--*range &lt; 0)\t\t/* make sure our range never goes negative */"
   },
   {
     "key": "L00681_01",
     "original": "an",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:681:37\n   676: \t\t*range = 0;\n   677: \t\treturn TRUE;\n   678:     \t} else {\n   679: \t\tif (ttmp-&gt;tseen)\n   680: \t\t    You(\"pass right over %s %s.\",\n&gt;  681: \t\t    \t(ttmp-&gt;ttyp == ARROW_TRAP) ? \"an\" : \"a\",\n   682: \t\t    \tdefsyms[trap_to_defsym(ttmp-&gt;ttyp)].explanation);\n   683:     \t}\n   684:     }\n   685:     if (--*range &lt; 0)\t\t/* make sure our range never goes negative */\n   686: \t*range = 0;"
+    "context": "src/dothrow.c:681:37\n        676: \t\t*range = 0;\n        677: \t\treturn TRUE;\n        678:     \t} else {\n        679: \t\tif (ttmp-&gt;tseen)\n        680: \t\t    You(\"pass right over %s %s.\",\nTARGET  681: \t\t    \t(ttmp-&gt;ttyp == ARROW_TRAP) ? \"an\" : \"a\",\n        682: \t\t    \tdefsyms[trap_to_defsym(ttmp-&gt;ttyp)].explanation);\n        683:     \t}\n        684:     }\n        685:     if (--*range &lt; 0)\t\t/* make sure our range never goes negative */\n        686: \t*range = 0;"
   },
   {
     "key": "L00681_02",
     "original": "a",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:681:44\n   676: \t\t*range = 0;\n   677: \t\treturn TRUE;\n   678:     \t} else {\n   679: \t\tif (ttmp-&gt;tseen)\n   680: \t\t    You(\"pass right over %s %s.\",\n&gt;  681: \t\t    \t(ttmp-&gt;ttyp == ARROW_TRAP) ? \"an\" : \"a\",\n   682: \t\t    \tdefsyms[trap_to_defsym(ttmp-&gt;ttyp)].explanation);\n   683:     \t}\n   684:     }\n   685:     if (--*range &lt; 0)\t\t/* make sure our range never goes negative */\n   686: \t*range = 0;"
+    "context": "src/dothrow.c:681:44\n        676: \t\t*range = 0;\n        677: \t\treturn TRUE;\n        678:     \t} else {\n        679: \t\tif (ttmp-&gt;tseen)\n        680: \t\t    You(\"pass right over %s %s.\",\nTARGET  681: \t\t    \t(ttmp-&gt;ttyp == ARROW_TRAP) ? \"an\" : \"a\",\n        682: \t\t    \tdefsyms[trap_to_defsym(ttmp-&gt;ttyp)].explanation);\n        683:     \t}\n        684:     }\n        685:     if (--*range &lt; 0)\t\t/* make sure our range never goes negative */\n        686: \t*range = 0;"
   },
   {
     "key": "L00737_01",
     "original": "a tug from the iron ball.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:737:11\n   732:      * towards the ball, if you are at the end of the chain.  Rather than\n   733:      * bother with all of that, assume that there is no slack in the chain\n   734:      * for diagonal movement, give the player a message and return.\n   735:      */\n   736:     if(Punished && !carried(uball)) {\n&gt;  737: \tYou_feel(\"a tug from the iron ball.\");\n   738: \tnomul(0);\n   739: \treturn;\n   740:     } else if (u.utrap) {\n   741: \tYou(\"are anchored by the %s.\",\n   742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :"
+    "context": "src/dothrow.c:737:11\n        732:      * towards the ball, if you are at the end of the chain.  Rather than\n        733:      * bother with all of that, assume that there is no slack in the chain\n        734:      * for diagonal movement, give the player a message and return.\n        735:      */\n        736:     if(Punished && !carried(uball)) {\nTARGET  737: \tYou_feel(\"a tug from the iron ball.\");\n        738: \tnomul(0);\n        739: \treturn;\n        740:     } else if (u.utrap) {\n        741: \tYou(\"are anchored by the %s.\",\n        742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :"
   },
   {
     "key": "L00741_01",
     "original": "are anchored by the %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:741:6\n   736:     if(Punished && !carried(uball)) {\n   737: \tYou_feel(\"a tug from the iron ball.\");\n   738: \tnomul(0);\n   739: \treturn;\n   740:     } else if (u.utrap) {\n&gt;  741: \tYou(\"are anchored by the %s.\",\n   742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n   743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n   744: \tnomul(0);\n   745: \treturn;\n   746:     }"
+    "context": "src/dothrow.c:741:6\n        736:     if(Punished && !carried(uball)) {\n        737: \tYou_feel(\"a tug from the iron ball.\");\n        738: \tnomul(0);\n        739: \treturn;\n        740:     } else if (u.utrap) {\nTARGET  741: \tYou(\"are anchored by the %s.\",\n        742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n        743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n        744: \tnomul(0);\n        745: \treturn;\n        746:     }"
   },
   {
     "key": "L00742_01",
     "original": "web",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:742:30\n   737: \tYou_feel(\"a tug from the iron ball.\");\n   738: \tnomul(0);\n   739: \treturn;\n   740:     } else if (u.utrap) {\n   741: \tYou(\"are anchored by the %s.\",\n&gt;  742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n   743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n   744: \tnomul(0);\n   745: \treturn;\n   746:     }\n   747: "
+    "context": "src/dothrow.c:742:30\n        737: \tYou_feel(\"a tug from the iron ball.\");\n        738: \tnomul(0);\n        739: \treturn;\n        740:     } else if (u.utrap) {\n        741: \tYou(\"are anchored by the %s.\",\nTARGET  742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n        743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n        744: \tnomul(0);\n        745: \treturn;\n        746:     }\n        747: "
   },
   {
     "key": "L00742_02",
     "original": "lava",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:742:63\n   737: \tYou_feel(\"a tug from the iron ball.\");\n   738: \tnomul(0);\n   739: \treturn;\n   740:     } else if (u.utrap) {\n   741: \tYou(\"are anchored by the %s.\",\n&gt;  742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n   743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n   744: \tnomul(0);\n   745: \treturn;\n   746:     }\n   747: "
+    "context": "src/dothrow.c:742:63\n        737: \tYou_feel(\"a tug from the iron ball.\");\n        738: \tnomul(0);\n        739: \treturn;\n        740:     } else if (u.utrap) {\n        741: \tYou(\"are anchored by the %s.\",\nTARGET  742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n        743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n        744: \tnomul(0);\n        745: \treturn;\n        746:     }\n        747: "
   },
   {
     "key": "L00743_01",
     "original": "trap",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:743:52\n   738: \tnomul(0);\n   739: \treturn;\n   740:     } else if (u.utrap) {\n   741: \tYou(\"are anchored by the %s.\",\n   742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\n&gt;  743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n   744: \tnomul(0);\n   745: \treturn;\n   746:     }\n   747: \n   748:     /* make sure dx and dy are [-1,0,1] */"
+    "context": "src/dothrow.c:743:52\n        738: \tnomul(0);\n        739: \treturn;\n        740:     } else if (u.utrap) {\n        741: \tYou(\"are anchored by the %s.\",\n        742: \t    u.utraptype == TT_WEB ? \"web\" : u.utraptype == TT_LAVA ? \"lava\" :\nTARGET  743: \t\tu.utraptype == TT_INFLOOR ? surface(u.ux,u.uy) : \"trap\");\n        744: \tnomul(0);\n        745: \treturn;\n        746:     }\n        747: \n        748:     /* make sure dx and dy are [-1,0,1] */"
   },
   {
     "key": "L00757_01",
     "original": "%s in the opposite direction.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:757:6\n   752:     if(!range || (!dx && !dy) || u.ustuck) return; /* paranoia */\n   753: \n   754:     nomul(-range);\n   755:     nomovemsg = 0;\n   756:     if (verbose)\n&gt;  757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n   762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");"
+    "context": "src/dothrow.c:757:6\n        752:     if(!range || (!dx && !dy) || u.ustuck) return; /* paranoia */\n        753: \n        754:     nomul(-range);\n        755:     nomovemsg = 0;\n        756:     if (verbose)\nTARGET  757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\n        762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");"
   },
   {
     "key": "L00757_02",
     "original": "hurtle",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:757:51\n   752:     if(!range || (!dx && !dy) || u.ustuck) return; /* paranoia */\n   753: \n   754:     nomul(-range);\n   755:     nomovemsg = 0;\n   756:     if (verbose)\n&gt;  757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n   762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");"
+    "context": "src/dothrow.c:757:51\n        752:     if(!range || (!dx && !dy) || u.ustuck) return; /* paranoia */\n        753: \n        754:     nomul(-range);\n        755:     nomovemsg = 0;\n        756:     if (verbose)\nTARGET  757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\n        762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");"
   },
   {
     "key": "L00757_03",
     "original": "float",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:757:62\n   752:     if(!range || (!dx && !dy) || u.ustuck) return; /* paranoia */\n   753: \n   754:     nomul(-range);\n   755:     nomovemsg = 0;\n   756:     if (verbose)\n&gt;  757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n   762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");"
+    "context": "src/dothrow.c:757:62\n        752:     if(!range || (!dx && !dy) || u.ustuck) return; /* paranoia */\n        753: \n        754:     nomul(-range);\n        755:     nomovemsg = 0;\n        756:     if (verbose)\nTARGET  757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\n        762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");"
   },
   {
     "key": "L00761_01",
     "original": "stop %sing after the first %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:761:6\n   756:     if (verbose)\n   757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n&gt;  761: \tYou(\"stop %sing after the first %s.\",\n   762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n   763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n   764:     }\n   765:     if (In_sokoban(&u.uz))\n   766: \tchange_luck(-1);\t/* Sokoban guilt */"
+    "context": "src/dothrow.c:761:6\n        756:     if (verbose)\n        757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\nTARGET  761: \tYou(\"stop %sing after the first %s.\",\n        762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n        763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n        764:     }\n        765:     if (In_sokoban(&u.uz))\n        766: \tchange_luck(-1);\t/* Sokoban guilt */"
   },
   {
     "key": "L00762_01",
     "original": "shoot",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:762:17\n   757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n&gt;  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n   763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n   764:     }\n   765:     if (In_sokoban(&u.uz))\n   766: \tchange_luck(-1);\t/* Sokoban guilt */\n   767:     uc.x = u.ux;"
+    "context": "src/dothrow.c:762:17\n        757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\nTARGET  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n        763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n        764:     }\n        765:     if (In_sokoban(&u.uz))\n        766: \tchange_luck(-1);\t/* Sokoban guilt */\n        767:     uc.x = u.ux;"
   },
   {
     "key": "L00762_02",
     "original": "throw",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:762:27\n   757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n&gt;  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n   763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n   764:     }\n   765:     if (In_sokoban(&u.uz))\n   766: \tchange_luck(-1);\t/* Sokoban guilt */\n   767:     uc.x = u.ux;"
+    "context": "src/dothrow.c:762:27\n        757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\nTARGET  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n        763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n        764:     }\n        765:     if (In_sokoban(&u.uz))\n        766: \tchange_luck(-1);\t/* Sokoban guilt */\n        767:     uc.x = u.ux;"
   },
   {
     "key": "L00762_03",
     "original": "shot",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:762:47\n   757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n&gt;  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n   763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n   764:     }\n   765:     if (In_sokoban(&u.uz))\n   766: \tchange_luck(-1);\t/* Sokoban guilt */\n   767:     uc.x = u.ux;"
+    "context": "src/dothrow.c:762:47\n        757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\nTARGET  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n        763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n        764:     }\n        765:     if (In_sokoban(&u.uz))\n        766: \tchange_luck(-1);\t/* Sokoban guilt */\n        767:     uc.x = u.ux;"
   },
   {
     "key": "L00762_04",
     "original": "toss",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:762:56\n   757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n   758:     /* if we're in the midst of shooting multiple projectiles, stop */\n   759:     if (m_shot.i &lt; m_shot.n) {\n   760: \t/* last message before hurtling was \"you shoot N arrows\" */\n   761: \tYou(\"stop %sing after the first %s.\",\n&gt;  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n   763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n   764:     }\n   765:     if (In_sokoban(&u.uz))\n   766: \tchange_luck(-1);\t/* Sokoban guilt */\n   767:     uc.x = u.ux;"
+    "context": "src/dothrow.c:762:56\n        757: \tYou(\"%s in the opposite direction.\", range &gt; 1 ? \"hurtle\" : \"float\");\n        758:     /* if we're in the midst of shooting multiple projectiles, stop */\n        759:     if (m_shot.i &lt; m_shot.n) {\n        760: \t/* last message before hurtling was \"you shoot N arrows\" */\n        761: \tYou(\"stop %sing after the first %s.\",\nTARGET  762: \t    m_shot.s ? \"shoot\" : \"throw\", m_shot.s ? \"shot\" : \"toss\");\n        763: \tm_shot.n = m_shot.i;\t/* make current shot be the last */\n        764:     }\n        765:     if (In_sokoban(&u.uz))\n        766: \tchange_luck(-1);\t/* Sokoban guilt */\n        767:     uc.x = u.ux;"
   },
   {
     "key": "L00860_01",
     "original": "%s hits the %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:860:9\n   855:     const char *almost;\n   856:     /* note: obj-&gt;quan == 1 */\n   857: \n   858:     if (hitsroof) {\n   859: \tif (breaktest(obj)) {\n&gt;  860: \t\tpline(\"%s hits the %s.\", Doname2(obj), ceiling(u.ux, u.uy));\n   861: \t\tbreakmsg(obj, !Blind);\n   862: \t\tbreakobj(obj, u.ux, u.uy, TRUE, TRUE);\n   863: \t\treturn FALSE;\n   864: \t}\n   865: \talmost = \"\";"
+    "context": "src/dothrow.c:860:9\n        855:     const char *almost;\n        856:     /* note: obj-&gt;quan == 1 */\n        857: \n        858:     if (hitsroof) {\n        859: \tif (breaktest(obj)) {\nTARGET  860: \t\tpline(\"%s hits the %s.\", Doname2(obj), ceiling(u.ux, u.uy));\n        861: \t\tbreakmsg(obj, !Blind);\n        862: \t\tbreakobj(obj, u.ux, u.uy, TRUE, TRUE);\n        863: \t\treturn FALSE;\n        864: \t}\n        865: \talmost = \"\";"
   },
   {
     "key": "L00867_01",
     "original": " almost",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:867:11\n   862: \t\tbreakobj(obj, u.ux, u.uy, TRUE, TRUE);\n   863: \t\treturn FALSE;\n   864: \t}\n   865: \talmost = \"\";\n   866:     } else {\n&gt;  867: \talmost = \" almost\";\n   868:     }\n   869:     pline(\"%s%s hits the %s, then falls back on top of your %s.\",\n   870: \t  Doname2(obj), almost, ceiling(u.ux,u.uy), body_part(HEAD));\n   871: \n   872:     /* object now hits you */"
+    "context": "src/dothrow.c:867:11\n        862: \t\tbreakobj(obj, u.ux, u.uy, TRUE, TRUE);\n        863: \t\treturn FALSE;\n        864: \t}\n        865: \talmost = \"\";\n        866:     } else {\nTARGET  867: \talmost = \" almost\";\n        868:     }\n        869:     pline(\"%s%s hits the %s, then falls back on top of your %s.\",\n        870: \t  Doname2(obj), almost, ceiling(u.ux,u.uy), body_part(HEAD));\n        871: \n        872:     /* object now hits you */"
   },
   {
     "key": "L00869_01",
     "original": "%s%s hits the %s, then falls back on top of your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:869:11\n   864: \t}\n   865: \talmost = \"\";\n   866:     } else {\n   867: \talmost = \" almost\";\n   868:     }\n&gt;  869:     pline(\"%s%s hits the %s, then falls back on top of your %s.\",\n   870: \t  Doname2(obj), almost, ceiling(u.ux,u.uy), body_part(HEAD));\n   871: \n   872:     /* object now hits you */\n   873: \n   874:     if (obj-&gt;oclass == POTION_CLASS) {"
+    "context": "src/dothrow.c:869:11\n        864: \t}\n        865: \talmost = \"\";\n        866:     } else {\n        867: \talmost = \" almost\";\n        868:     }\nTARGET  869:     pline(\"%s%s hits the %s, then falls back on top of your %s.\",\n        870: \t  Doname2(obj), almost, ceiling(u.ux,u.uy), body_part(HEAD));\n        871: \n        872:     /* object now hits you */\n        873: \n        874:     if (obj-&gt;oclass == POTION_CLASS) {"
   },
   {
     "key": "L00896_01",
     "original": "You've got it all over your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:896:9\n   891: \t\t    !uarmh && !Stone_resistance &&\n   892: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM)))\n   893: \t\tgoto petrify;\n   894: \tcase CREAM_PIE:\n   895: \tcase BLINDING_VENOM:\n&gt;  896: \t\tpline(\"You've got it all over your %s!\", body_part(FACE));\n   897: \t\tif (blindinc) {\n   898: \t\t    if (otyp == BLINDING_VENOM && !Blind)\n   899: \t\t\tpline(\"It blinds you!\");\n   900: \t\t    u.ucreamed += blindinc;\n   901: \t\t    make_blinded(Blinded + (long)blindinc, FALSE);"
+    "context": "src/dothrow.c:896:9\n        891: \t\t    !uarmh && !Stone_resistance &&\n        892: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM)))\n        893: \t\tgoto petrify;\n        894: \tcase CREAM_PIE:\n        895: \tcase BLINDING_VENOM:\nTARGET  896: \t\tpline(\"You've got it all over your %s!\", body_part(FACE));\n        897: \t\tif (blindinc) {\n        898: \t\t    if (otyp == BLINDING_VENOM && !Blind)\n        899: \t\t\tpline(\"It blinds you!\");\n        900: \t\t    u.ucreamed += blindinc;\n        901: \t\t    make_blinded(Blinded + (long)blindinc, FALSE);"
   },
   {
     "key": "L00899_01",
     "original": "It blinds you!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:899:10\n   894: \tcase CREAM_PIE:\n   895: \tcase BLINDING_VENOM:\n   896: \t\tpline(\"You've got it all over your %s!\", body_part(FACE));\n   897: \t\tif (blindinc) {\n   898: \t\t    if (otyp == BLINDING_VENOM && !Blind)\n&gt;  899: \t\t\tpline(\"It blinds you!\");\n   900: \t\t    u.ucreamed += blindinc;\n   901: \t\t    make_blinded(Blinded + (long)blindinc, FALSE);\n   902: \t\t    if (!Blind) Your(vision_clears);\n   903: \t\t}\n   904: \t\tbreak;"
+    "context": "src/dothrow.c:899:10\n        894: \tcase CREAM_PIE:\n        895: \tcase BLINDING_VENOM:\n        896: \t\tpline(\"You've got it all over your %s!\", body_part(FACE));\n        897: \t\tif (blindinc) {\n        898: \t\t    if (otyp == BLINDING_VENOM && !Blind)\nTARGET  899: \t\t\tpline(\"It blinds you!\");\n        900: \t\t    u.ucreamed += blindinc;\n        901: \t\t    make_blinded(Blinded + (long)blindinc, FALSE);\n        902: \t\t    if (!Blind) Your(vision_clears);\n        903: \t\t}\n        904: \t\tbreak;"
   },
   {
     "key": "L00934_01",
     "original": "Fortunately, you are wearing a hard helmet.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:934:13\n   929: \tif (Half_physical_damage) dmg = (dmg + 1) / 2;\n   930: \n   931: \tif (uarmh) {\n   932: \t    if (less_damage && dmg &lt; (Upolyd ? u.mh : u.uhp)) {\n   933: \t\tif (!artimsg)\n&gt;  934: \t\t    pline(\"Fortunately, you are wearing a hard helmet.\");\n   935: \t    } else if (flags.verbose &&\n   936: \t\t    !(obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])))\n   937: \t\tYour(\"%s does not protect you.\", xname(uarmh));\n   938: \t} else if (obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])) {\n   939: \t    if (!Stone_resistance &&"
+    "context": "src/dothrow.c:934:13\n        929: \tif (Half_physical_damage) dmg = (dmg + 1) / 2;\n        930: \n        931: \tif (uarmh) {\n        932: \t    if (less_damage && dmg &lt; (Upolyd ? u.mh : u.uhp)) {\n        933: \t\tif (!artimsg)\nTARGET  934: \t\t    pline(\"Fortunately, you are wearing a hard helmet.\");\n        935: \t    } else if (flags.verbose &&\n        936: \t\t    !(obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])))\n        937: \t\tYour(\"%s does not protect you.\", xname(uarmh));\n        938: \t} else if (obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])) {\n        939: \t    if (!Stone_resistance &&"
   },
   {
     "key": "L00937_01",
     "original": "%s does not protect you.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:937:8\n   932: \t    if (less_damage && dmg &lt; (Upolyd ? u.mh : u.uhp)) {\n   933: \t\tif (!artimsg)\n   934: \t\t    pline(\"Fortunately, you are wearing a hard helmet.\");\n   935: \t    } else if (flags.verbose &&\n   936: \t\t    !(obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])))\n&gt;  937: \t\tYour(\"%s does not protect you.\", xname(uarmh));\n   938: \t} else if (obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])) {\n   939: \t    if (!Stone_resistance &&\n   940: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n   941:  petrify:\n   942: \t\tkiller_format = KILLED_BY;"
+    "context": "src/dothrow.c:937:8\n        932: \t    if (less_damage && dmg &lt; (Upolyd ? u.mh : u.uhp)) {\n        933: \t\tif (!artimsg)\n        934: \t\t    pline(\"Fortunately, you are wearing a hard helmet.\");\n        935: \t    } else if (flags.verbose &&\n        936: \t\t    !(obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])))\nTARGET  937: \t\tYour(\"%s does not protect you.\", xname(uarmh));\n        938: \t} else if (obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])) {\n        939: \t    if (!Stone_resistance &&\n        940: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n        941:  petrify:\n        942: \t\tkiller_format = KILLED_BY;"
   },
   {
     "key": "L00943_01",
     "original": "elementary physics",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:943:12\n   938: \t} else if (obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])) {\n   939: \t    if (!Stone_resistance &&\n   940: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n   941:  petrify:\n   942: \t\tkiller_format = KILLED_BY;\n&gt;  943: \t\tkiller = \"elementary physics\";\t/* \"what goes up...\" */\n   944: \t\tYou(\"turn to stone.\");\n   945: \t\tif (obj) dropy(obj);\t/* bypass most of hitfloor() */\n   946: \t\tdone(STONING);\n   947: \t\treturn obj ? TRUE : FALSE;\n   948: \t    }"
+    "context": "src/dothrow.c:943:12\n        938: \t} else if (obj-&gt;otyp == CORPSE && touch_petrifies(&mons[obj-&gt;corpsenm])) {\n        939: \t    if (!Stone_resistance &&\n        940: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n        941:  petrify:\n        942: \t\tkiller_format = KILLED_BY;\nTARGET  943: \t\tkiller = \"elementary physics\";\t/* \"what goes up...\" */\n        944: \t\tYou(\"turn to stone.\");\n        945: \t\tif (obj) dropy(obj);\t/* bypass most of hitfloor() */\n        946: \t\tdone(STONING);\n        947: \t\treturn obj ? TRUE : FALSE;\n        948: \t    }"
   },
   {
     "key": "L00944_01",
     "original": "turn to stone.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:944:7\n   939: \t    if (!Stone_resistance &&\n   940: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n   941:  petrify:\n   942: \t\tkiller_format = KILLED_BY;\n   943: \t\tkiller = \"elementary physics\";\t/* \"what goes up...\" */\n&gt;  944: \t\tYou(\"turn to stone.\");\n   945: \t\tif (obj) dropy(obj);\t/* bypass most of hitfloor() */\n   946: \t\tdone(STONING);\n   947: \t\treturn obj ? TRUE : FALSE;\n   948: \t    }\n   949: \t}"
+    "context": "src/dothrow.c:944:7\n        939: \t    if (!Stone_resistance &&\n        940: \t\t    !(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n        941:  petrify:\n        942: \t\tkiller_format = KILLED_BY;\n        943: \t\tkiller = \"elementary physics\";\t/* \"what goes up...\" */\nTARGET  944: \t\tYou(\"turn to stone.\");\n        945: \t\tif (obj) dropy(obj);\t/* bypass most of hitfloor() */\n        946: \t\tdone(STONING);\n        947: \t\treturn obj ? TRUE : FALSE;\n        948: \t    }\n        949: \t}"
   },
   {
     "key": "L00951_01",
     "original": "falling object",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:951:14\n   946: \t\tdone(STONING);\n   947: \t\treturn obj ? TRUE : FALSE;\n   948: \t    }\n   949: \t}\n   950: \thitfloor(obj);\n&gt;  951: \tlosehp(dmg, \"falling object\", KILLED_BY_AN);\n   952:     }\n   953:     return TRUE;\n   954: }\n   955: \n   956: /* return true for weapon meant to be thrown; excludes ammo */"
+    "context": "src/dothrow.c:951:14\n        946: \t\tdone(STONING);\n        947: \t\treturn obj ? TRUE : FALSE;\n        948: \t    }\n        949: \t}\n        950: \thitfloor(obj);\nTARGET  951: \tlosehp(dmg, \"falling object\", KILLED_BY_AN);\n        952:     }\n        953:     return TRUE;\n        954: }\n        955: \n        956: /* return true for weapon meant to be thrown; excludes ammo */"
   },
   {
     "key": "L01013_01",
     "original": "%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1013:9\n  1008: \n  1009: \tobj-&gt;was_thrown = 1;\n  1010: \tif ((obj-&gt;cursed || obj-&gt;greased) && (u.dx || u.dy) && !rn2(7)) {\n  1011: \t    boolean slipok = TRUE;\n  1012: \t    if (ammo_and_launcher(obj, launcher))\n&gt; 1013: \t\tpline(\"%s!\", Tobjnam(obj, \"misfire\"));\n  1014: \t    else {\n  1015: \t\t/* only slip if it's greased or meant to be thrown */\n  1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n  1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n  1018: \t\t       a plural name; greased gloves or boots for instance. */"
+    "context": "src/dothrow.c:1013:9\n       1008: \n       1009: \tobj-&gt;was_thrown = 1;\n       1010: \tif ((obj-&gt;cursed || obj-&gt;greased) && (u.dx || u.dy) && !rn2(7)) {\n       1011: \t    boolean slipok = TRUE;\n       1012: \t    if (ammo_and_launcher(obj, launcher))\nTARGET 1013: \t\tpline(\"%s!\", Tobjnam(obj, \"misfire\"));\n       1014: \t    else {\n       1015: \t\t/* only slip if it's greased or meant to be thrown */\n       1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n       1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n       1018: \t\t       a plural name; greased gloves or boots for instance. */"
   },
   {
     "key": "L01013_02",
     "original": "misfire",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1013:29\n  1008: \n  1009: \tobj-&gt;was_thrown = 1;\n  1010: \tif ((obj-&gt;cursed || obj-&gt;greased) && (u.dx || u.dy) && !rn2(7)) {\n  1011: \t    boolean slipok = TRUE;\n  1012: \t    if (ammo_and_launcher(obj, launcher))\n&gt; 1013: \t\tpline(\"%s!\", Tobjnam(obj, \"misfire\"));\n  1014: \t    else {\n  1015: \t\t/* only slip if it's greased or meant to be thrown */\n  1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n  1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n  1018: \t\t       a plural name; greased gloves or boots for instance. */"
+    "context": "src/dothrow.c:1013:29\n       1008: \n       1009: \tobj-&gt;was_thrown = 1;\n       1010: \tif ((obj-&gt;cursed || obj-&gt;greased) && (u.dx || u.dy) && !rn2(7)) {\n       1011: \t    boolean slipok = TRUE;\n       1012: \t    if (ammo_and_launcher(obj, launcher))\nTARGET 1013: \t\tpline(\"%s!\", Tobjnam(obj, \"misfire\"));\n       1014: \t    else {\n       1015: \t\t/* only slip if it's greased or meant to be thrown */\n       1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n       1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n       1018: \t\t       a plural name; greased gloves or boots for instance. */"
   },
   {
     "key": "L01019_01",
     "original": "%s as you throw it!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1019:13\n  1014: \t    else {\n  1015: \t\t/* only slip if it's greased or meant to be thrown */\n  1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n  1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n  1018: \t\t       a plural name; greased gloves or boots for instance. */\n&gt; 1019: \t\t    pline(\"%s as you throw it!\", Tobjnam(obj, \"slip\"));\n  1020: \t\telse slipok = FALSE;\n  1021: \t    }\n  1022: \t    if (slipok) {\n  1023: \t\tu.dx = rn2(3)-1;\n  1024: \t\tu.dy = rn2(3)-1;"
+    "context": "src/dothrow.c:1019:13\n       1014: \t    else {\n       1015: \t\t/* only slip if it's greased or meant to be thrown */\n       1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n       1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n       1018: \t\t       a plural name; greased gloves or boots for instance. */\nTARGET 1019: \t\t    pline(\"%s as you throw it!\", Tobjnam(obj, \"slip\"));\n       1020: \t\telse slipok = FALSE;\n       1021: \t    }\n       1022: \t    if (slipok) {\n       1023: \t\tu.dx = rn2(3)-1;\n       1024: \t\tu.dy = rn2(3)-1;"
   },
   {
     "key": "L01019_02",
     "original": "slip",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1019:49\n  1014: \t    else {\n  1015: \t\t/* only slip if it's greased or meant to be thrown */\n  1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n  1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n  1018: \t\t       a plural name; greased gloves or boots for instance. */\n&gt; 1019: \t\t    pline(\"%s as you throw it!\", Tobjnam(obj, \"slip\"));\n  1020: \t\telse slipok = FALSE;\n  1021: \t    }\n  1022: \t    if (slipok) {\n  1023: \t\tu.dx = rn2(3)-1;\n  1024: \t\tu.dy = rn2(3)-1;"
+    "context": "src/dothrow.c:1019:49\n       1014: \t    else {\n       1015: \t\t/* only slip if it's greased or meant to be thrown */\n       1016: \t\tif (obj-&gt;greased || throwing_weapon(obj))\n       1017: \t\t    /* BUG: this message is grammatically incorrect if obj has\n       1018: \t\t       a plural name; greased gloves or boots for instance. */\nTARGET 1019: \t\t    pline(\"%s as you throw it!\", Tobjnam(obj, \"slip\"));\n       1020: \t\telse slipok = FALSE;\n       1021: \t    }\n       1022: \t    if (slipok) {\n       1023: \t\tu.dx = rn2(3)-1;\n       1024: \t\tu.dy = rn2(3)-1;"
   },
   {
     "key": "L01036_01",
     "original": "have so little stamina, %s drops from your grasp.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1036:10\n  1031: \t    calc_capacity((int)obj-&gt;owt) &gt; SLT_ENCUMBER &&\n  1032: \t    (Upolyd ? (u.mh &lt; 5 && u.mh != u.mhmax)\n  1033: \t     : (u.uhp &lt; 10 && u.uhp != u.uhpmax)) &&\n  1034: \t    obj-&gt;owt &gt; (unsigned)((Upolyd ? u.mh : u.uhp) * 2) &&\n  1035: \t    !Is_airlevel(&u.uz)) {\n&gt; 1036: \t    You(\"have so little stamina, %s drops from your grasp.\",\n  1037: \t\tthe(xname(obj)));\n  1038: \t    exercise(A_CON, FALSE);\n  1039: \t    u.dx = u.dy = 0;\n  1040: \t    u.dz = 1;\n  1041: \t}"
+    "context": "src/dothrow.c:1036:10\n       1031: \t    calc_capacity((int)obj-&gt;owt) &gt; SLT_ENCUMBER &&\n       1032: \t    (Upolyd ? (u.mh &lt; 5 && u.mh != u.mhmax)\n       1033: \t     : (u.uhp &lt; 10 && u.uhp != u.uhpmax)) &&\n       1034: \t    obj-&gt;owt &gt; (unsigned)((Upolyd ? u.mh : u.uhp) * 2) &&\n       1035: \t    !Is_airlevel(&u.uz)) {\nTARGET 1036: \t    You(\"have so little stamina, %s drops from your grasp.\",\n       1037: \t\tthe(xname(obj)));\n       1038: \t    exercise(A_CON, FALSE);\n       1039: \t    u.dx = u.dy = 0;\n       1040: \t    u.dz = 1;\n       1041: \t}"
   },
   {
     "key": "L01052_01",
     "original": "%s the %s and returns to your hand!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1052:9\n  1047: \t\tbhitpos.x = mon-&gt;mx;\n  1048: \t\tbhitpos.y = mon-&gt;my;\n  1049: \t} else if(u.dz) {\n  1050: \t    if (u.dz &lt; 0 && Role_if(PM_VALKYRIE) &&\n  1051: \t\t    obj-&gt;oartifact == ART_MJOLLNIR && !impaired) {\n&gt; 1052: \t\tpline(\"%s the %s and returns to your hand!\",\n  1053: \t\t      Tobjnam(obj, \"hit\"), ceiling(u.ux,u.uy));\n  1054: \t\tobj = addinv(obj);\n  1055: \t\t(void) encumber_msg();\n  1056: \t\tsetuwep(obj, TRUE);\n  1057: \t\tu.twoweap = twoweap;"
+    "context": "src/dothrow.c:1052:9\n       1047: \t\tbhitpos.x = mon-&gt;mx;\n       1048: \t\tbhitpos.y = mon-&gt;my;\n       1049: \t} else if(u.dz) {\n       1050: \t    if (u.dz &lt; 0 && Role_if(PM_VALKYRIE) &&\n       1051: \t\t    obj-&gt;oartifact == ART_MJOLLNIR && !impaired) {\nTARGET 1052: \t\tpline(\"%s the %s and returns to your hand!\",\n       1053: \t\t      Tobjnam(obj, \"hit\"), ceiling(u.ux,u.uy));\n       1054: \t\tobj = addinv(obj);\n       1055: \t\t(void) encumber_msg();\n       1056: \t\tsetuwep(obj, TRUE);\n       1057: \t\tu.twoweap = twoweap;"
   },
   {
     "key": "L01053_01",
     "original": "hit",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1053:22\n  1048: \t\tbhitpos.y = mon-&gt;my;\n  1049: \t} else if(u.dz) {\n  1050: \t    if (u.dz &lt; 0 && Role_if(PM_VALKYRIE) &&\n  1051: \t\t    obj-&gt;oartifact == ART_MJOLLNIR && !impaired) {\n  1052: \t\tpline(\"%s the %s and returns to your hand!\",\n&gt; 1053: \t\t      Tobjnam(obj, \"hit\"), ceiling(u.ux,u.uy));\n  1054: \t\tobj = addinv(obj);\n  1055: \t\t(void) encumber_msg();\n  1056: \t\tsetuwep(obj, TRUE);\n  1057: \t\tu.twoweap = twoweap;\n  1058: /*            if (!fire_weapon) setuwep(obj);                "
+    "context": "src/dothrow.c:1053:22\n       1048: \t\tbhitpos.y = mon-&gt;my;\n       1049: \t} else if(u.dz) {\n       1050: \t    if (u.dz &lt; 0 && Role_if(PM_VALKYRIE) &&\n       1051: \t\t    obj-&gt;oartifact == ART_MJOLLNIR && !impaired) {\n       1052: \t\tpline(\"%s the %s and returns to your hand!\",\nTARGET 1053: \t\t      Tobjnam(obj, \"hit\"), ceiling(u.ux,u.uy));\n       1054: \t\tobj = addinv(obj);\n       1055: \t\t(void) encumber_msg();\n       1056: \t\tsetuwep(obj, TRUE);\n       1057: \t\tu.twoweap = twoweap;\n       1058: /*            if (!fire_weapon) setuwep(obj);                "
   },
   {
     "key": "L01076_01",
     "original": "%s hit%s the %s and explodes in a ball of fire!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1076:13\n  1071: \t    else if (is_grenade(obj))\n  1072: \t\tarm_bomb(obj, TRUE);\n  1073: \t    else if (is_bullet(obj) && ammo_and_launcher(obj, launcher)) {\n  1074: \t\tif (!Is_airlevel(&u.uz) && !Is_waterlevel(&u.uz) && !Underwater\n  1075: \t\t\t&& (objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n&gt; 1076: \t\t    pline(\"%s hit%s the %s and explodes in a ball of fire!\",\n  1077: \t\t\t    Doname2(obj), (obj-&gt;quan == 1L) ? \"s\" : \"\",\n  1078: \t\t\t    u.dz &lt; 0 ? ceiling(u.ux, u.uy) : surface(u.ux, u.uy));\n  1079: \t\t    explode(u.ux, u.uy, ZT_SPELL(ZT_FIRE), d(3, 8),\n  1080: \t\t\t    WEAPON_CLASS, EXPL_FIERY);\n  1081: \t\t}"
+    "context": "src/dothrow.c:1076:13\n       1071: \t    else if (is_grenade(obj))\n       1072: \t\tarm_bomb(obj, TRUE);\n       1073: \t    else if (is_bullet(obj) && ammo_and_launcher(obj, launcher)) {\n       1074: \t\tif (!Is_airlevel(&u.uz) && !Is_waterlevel(&u.uz) && !Underwater\n       1075: \t\t\t&& (objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\nTARGET 1076: \t\t    pline(\"%s hit%s the %s and explodes in a ball of fire!\",\n       1077: \t\t\t    Doname2(obj), (obj-&gt;quan == 1L) ? \"s\" : \"\",\n       1078: \t\t\t    u.dz &lt; 0 ? ceiling(u.ux, u.uy) : surface(u.ux, u.uy));\n       1079: \t\t    explode(u.ux, u.uy, ZT_SPELL(ZT_FIRE), d(3, 8),\n       1080: \t\t\t    WEAPON_CLASS, EXPL_FIERY);\n       1081: \t\t}"
   },
   {
     "key": "L01077_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1077:42\n  1072: \t\tarm_bomb(obj, TRUE);\n  1073: \t    else if (is_bullet(obj) && ammo_and_launcher(obj, launcher)) {\n  1074: \t\tif (!Is_airlevel(&u.uz) && !Is_waterlevel(&u.uz) && !Underwater\n  1075: \t\t\t&& (objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n  1076: \t\t    pline(\"%s hit%s the %s and explodes in a ball of fire!\",\n&gt; 1077: \t\t\t    Doname2(obj), (obj-&gt;quan == 1L) ? \"s\" : \"\",\n  1078: \t\t\t    u.dz &lt; 0 ? ceiling(u.ux, u.uy) : surface(u.ux, u.uy));\n  1079: \t\t    explode(u.ux, u.uy, ZT_SPELL(ZT_FIRE), d(3, 8),\n  1080: \t\t\t    WEAPON_CLASS, EXPL_FIERY);\n  1081: \t\t}\n  1082: \t\tcheck_shop_obj(obj, u.ux, u.uy, TRUE);"
+    "context": "src/dothrow.c:1077:42\n       1072: \t\tarm_bomb(obj, TRUE);\n       1073: \t    else if (is_bullet(obj) && ammo_and_launcher(obj, launcher)) {\n       1074: \t\tif (!Is_airlevel(&u.uz) && !Is_waterlevel(&u.uz) && !Underwater\n       1075: \t\t\t&& (objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n       1076: \t\t    pline(\"%s hit%s the %s and explodes in a ball of fire!\",\nTARGET 1077: \t\t\t    Doname2(obj), (obj-&gt;quan == 1L) ? \"s\" : \"\",\n       1078: \t\t\t    u.dz &lt; 0 ? ceiling(u.ux, u.uy) : surface(u.ux, u.uy));\n       1079: \t\t    explode(u.ux, u.uy, ZT_SPELL(ZT_FIRE), d(3, 8),\n       1080: \t\t\t    WEAPON_CLASS, EXPL_FIERY);\n       1081: \t\t}\n       1082: \t\tcheck_shop_obj(obj, u.ux, u.uy, TRUE);"
   },
   {
     "key": "L01204_01",
     "original": "%s explodes in a ball of fire!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1204:9\n  1199: \tif (is_grenade(obj)) {\n  1200: \t    arm_bomb(obj, TRUE);\n  1201: \t} else if (ammo_and_launcher(obj, launcher) &&\n  1202: \t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n  1203: \t    if (cansee(bhitpos.x,bhitpos.y)) \n&gt; 1204: \t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n  1205: \t    else You_hear(\"an explosion\");\n  1206: \t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n  1207: \t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n  1208: \t}\n  1209: \tif (is_bullet(obj) && (ammo_and_launcher(obj, launcher) &&"
+    "context": "src/dothrow.c:1204:9\n       1199: \tif (is_grenade(obj)) {\n       1200: \t    arm_bomb(obj, TRUE);\n       1201: \t} else if (ammo_and_launcher(obj, launcher) &&\n       1202: \t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n       1203: \t    if (cansee(bhitpos.x,bhitpos.y)) \nTARGET 1204: \t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n       1205: \t    else You_hear(\"an explosion\");\n       1206: \t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n       1207: \t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n       1208: \t}\n       1209: \tif (is_bullet(obj) && (ammo_and_launcher(obj, launcher) &&"
   },
   {
     "key": "L01205_01",
     "original": "an explosion",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1205:20\n  1200: \t    arm_bomb(obj, TRUE);\n  1201: \t} else if (ammo_and_launcher(obj, launcher) &&\n  1202: \t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n  1203: \t    if (cansee(bhitpos.x,bhitpos.y)) \n  1204: \t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n&gt; 1205: \t    else You_hear(\"an explosion\");\n  1206: \t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n  1207: \t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n  1208: \t}\n  1209: \tif (is_bullet(obj) && (ammo_and_launcher(obj, launcher) &&\n  1210: \t\t!is_grenade(obj))) {"
+    "context": "src/dothrow.c:1205:20\n       1200: \t    arm_bomb(obj, TRUE);\n       1201: \t} else if (ammo_and_launcher(obj, launcher) &&\n       1202: \t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n       1203: \t    if (cansee(bhitpos.x,bhitpos.y)) \n       1204: \t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\nTARGET 1205: \t    else You_hear(\"an explosion\");\n       1206: \t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n       1207: \t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n       1208: \t}\n       1209: \tif (is_bullet(obj) && (ammo_and_launcher(obj, launcher) &&\n       1210: \t\t!is_grenade(obj))) {"
   },
   {
     "key": "L01228_01",
     "original": "%s to your hand!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1228:10\n  1223: \t\t\tRole_if(PM_VALKYRIE) && rn2(100)) {\n  1224: \t\t    /* we must be wearing Gauntlets of Power to get here */\n  1225: \t\t    sho_obj_return_to_u(obj);\t    /* display its flight */\n  1226: \n  1227: \t\t    if (!impaired && rn2(100)) {\n&gt; 1228: \t\t\tpline(\"%s to your hand!\", Tobjnam(obj, \"return\"));\n  1229: \t\t\tobj = addinv(obj);\n  1230: \t\t\t(void) encumber_msg();\n  1231: \t\t\tsetuwep(obj, TRUE);\n  1232: \t\t\tu.twoweap = twoweap;\n  1233: \t\t\tif(cansee(bhitpos.x, bhitpos.y))"
+    "context": "src/dothrow.c:1228:10\n       1223: \t\t\tRole_if(PM_VALKYRIE) && rn2(100)) {\n       1224: \t\t    /* we must be wearing Gauntlets of Power to get here */\n       1225: \t\t    sho_obj_return_to_u(obj);\t    /* display its flight */\n       1226: \n       1227: \t\t    if (!impaired && rn2(100)) {\nTARGET 1228: \t\t\tpline(\"%s to your hand!\", Tobjnam(obj, \"return\"));\n       1229: \t\t\tobj = addinv(obj);\n       1230: \t\t\t(void) encumber_msg();\n       1231: \t\t\tsetuwep(obj, TRUE);\n       1232: \t\t\tu.twoweap = twoweap;\n       1233: \t\t\tif(cansee(bhitpos.x, bhitpos.y))"
   },
   {
     "key": "L01228_02",
     "original": "return",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1228:43\n  1223: \t\t\tRole_if(PM_VALKYRIE) && rn2(100)) {\n  1224: \t\t    /* we must be wearing Gauntlets of Power to get here */\n  1225: \t\t    sho_obj_return_to_u(obj);\t    /* display its flight */\n  1226: \n  1227: \t\t    if (!impaired && rn2(100)) {\n&gt; 1228: \t\t\tpline(\"%s to your hand!\", Tobjnam(obj, \"return\"));\n  1229: \t\t\tobj = addinv(obj);\n  1230: \t\t\t(void) encumber_msg();\n  1231: \t\t\tsetuwep(obj, TRUE);\n  1232: \t\t\tu.twoweap = twoweap;\n  1233: \t\t\tif(cansee(bhitpos.x, bhitpos.y))"
+    "context": "src/dothrow.c:1228:43\n       1223: \t\t\tRole_if(PM_VALKYRIE) && rn2(100)) {\n       1224: \t\t    /* we must be wearing Gauntlets of Power to get here */\n       1225: \t\t    sho_obj_return_to_u(obj);\t    /* display its flight */\n       1226: \n       1227: \t\t    if (!impaired && rn2(100)) {\nTARGET 1228: \t\t\tpline(\"%s to your hand!\", Tobjnam(obj, \"return\"));\n       1229: \t\t\tobj = addinv(obj);\n       1230: \t\t\t(void) encumber_msg();\n       1231: \t\t\tsetuwep(obj, TRUE);\n       1232: \t\t\tu.twoweap = twoweap;\n       1233: \t\t\tif(cansee(bhitpos.x, bhitpos.y))"
   },
   {
     "key": "L01238_01",
     "original": "%s lands %s your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1238:22\n  1233: \t\t\tif(cansee(bhitpos.x, bhitpos.y))\n  1234: \t\t\t    newsym(bhitpos.x,bhitpos.y);\n  1235: \t\t    } else {\n  1236: \t\t\tint dmg = rn2(2);\n  1237: \t\t\tif (!dmg) {\n&gt; 1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n  1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n  1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n  1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {"
+    "context": "src/dothrow.c:1238:22\n       1233: \t\t\tif(cansee(bhitpos.x, bhitpos.y))\n       1234: \t\t\t    newsym(bhitpos.x,bhitpos.y);\n       1235: \t\t    } else {\n       1236: \t\t\tint dmg = rn2(2);\n       1237: \t\t\tif (!dmg) {\nTARGET 1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n       1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n       1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n       1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {"
   },
   {
     "key": "L01239_01",
     "original": "%s back to you, landing %s your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1239:6\n  1234: \t\t\t    newsym(bhitpos.x,bhitpos.y);\n  1235: \t\t    } else {\n  1236: \t\t\tint dmg = rn2(2);\n  1237: \t\t\tif (!dmg) {\n  1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n&gt; 1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n  1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n  1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);"
+    "context": "src/dothrow.c:1239:6\n       1234: \t\t\t    newsym(bhitpos.x,bhitpos.y);\n       1235: \t\t    } else {\n       1236: \t\t\tint dmg = rn2(2);\n       1237: \t\t\tif (!dmg) {\n       1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\nTARGET 1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n       1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n       1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);"
   },
   {
     "key": "L01240_01",
     "original": "return",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1240:40\n  1235: \t\t    } else {\n  1236: \t\t\tint dmg = rn2(2);\n  1237: \t\t\tif (!dmg) {\n  1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n  1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n&gt; 1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n  1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n  1245: \t\t\t    pline(Blind ? \"%s your %s!\" :"
+    "context": "src/dothrow.c:1240:40\n       1235: \t\t    } else {\n       1236: \t\t\tint dmg = rn2(2);\n       1237: \t\t\tif (!dmg) {\n       1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n       1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\nTARGET 1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n       1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\n       1245: \t\t\t    pline(Blind ? \"%s your %s!\" :"
   },
   {
     "key": "L01241_01",
     "original": "beneath",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1241:20\n  1236: \t\t\tint dmg = rn2(2);\n  1237: \t\t\tif (!dmg) {\n  1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n  1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n  1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n&gt; 1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n  1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n  1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\","
+    "context": "src/dothrow.c:1241:20\n       1236: \t\t\tint dmg = rn2(2);\n       1237: \t\t\tif (!dmg) {\n       1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n       1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n       1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\nTARGET 1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\n       1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n       1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\","
   },
   {
     "key": "L01241_02",
     "original": "at",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1241:32\n  1236: \t\t\tint dmg = rn2(2);\n  1237: \t\t\tif (!dmg) {\n  1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n  1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n  1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n&gt; 1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n  1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n  1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\","
+    "context": "src/dothrow.c:1241:32\n       1236: \t\t\tint dmg = rn2(2);\n       1237: \t\t\tif (!dmg) {\n       1238: \t\t\t    pline(Blind ? \"%s lands %s your %s.\" :\n       1239: \t\t\t\t\t\"%s back to you, landing %s your %s.\",\n       1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\nTARGET 1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\n       1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n       1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\","
   },
   {
     "key": "L01245_01",
     "original": "%s your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1245:22\n  1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n  1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n&gt; 1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n  1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\n  1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n  1248: \t\t\t\t  body_part(ARM));\n  1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n  1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);"
+    "context": "src/dothrow.c:1245:22\n       1240: \t\t\t\t  Blind ? Something : Tobjnam(obj, \"return\"),\n       1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\nTARGET 1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n       1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\n       1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n       1248: \t\t\t\t  body_part(ARM));\n       1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n       1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);"
   },
   {
     "key": "L01246_01",
     "original": "%s back toward you, hitting your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1246:6\n  1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n  1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n&gt; 1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\n  1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n  1248: \t\t\t\t  body_part(ARM));\n  1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n  1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);\n  1251: \t\t\t    losehp(dmg, xname(obj),"
+    "context": "src/dothrow.c:1246:6\n       1241: \t\t\t\t  Levitation ? \"beneath\" : \"at\",\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\n       1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\nTARGET 1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\n       1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n       1248: \t\t\t\t  body_part(ARM));\n       1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n       1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);\n       1251: \t\t\t    losehp(dmg, xname(obj),"
   },
   {
     "key": "L01247_01",
     "original": "hit",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1247:28\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n  1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n  1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\n&gt; 1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n  1248: \t\t\t\t  body_part(ARM));\n  1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n  1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);\n  1251: \t\t\t    losehp(dmg, xname(obj),\n  1252: \t\t\t\tobj_is_pname(obj) ? KILLED_BY : KILLED_BY_AN);"
+    "context": "src/dothrow.c:1247:28\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\n       1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n       1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\nTARGET 1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n       1248: \t\t\t\t  body_part(ARM));\n       1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n       1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);\n       1251: \t\t\t    losehp(dmg, xname(obj),\n       1252: \t\t\t\tobj_is_pname(obj) ? KILLED_BY : KILLED_BY_AN);"
   },
   {
     "key": "L01247_02",
     "original": "fly",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1247:36\n  1242: \t\t\t\t  makeplural(body_part(FOOT)));\n  1243: \t\t\t} else {\n  1244: \t\t\t    dmg += rnd(3);\n  1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n  1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\n&gt; 1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n  1248: \t\t\t\t  body_part(ARM));\n  1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n  1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);\n  1251: \t\t\t    losehp(dmg, xname(obj),\n  1252: \t\t\t\tobj_is_pname(obj) ? KILLED_BY : KILLED_BY_AN);"
+    "context": "src/dothrow.c:1247:36\n       1242: \t\t\t\t  makeplural(body_part(FOOT)));\n       1243: \t\t\t} else {\n       1244: \t\t\t    dmg += rnd(3);\n       1245: \t\t\t    pline(Blind ? \"%s your %s!\" :\n       1246: \t\t\t\t\t\"%s back toward you, hitting your %s!\",\nTARGET 1247: \t\t\t\t  Tobjnam(obj, Blind ? \"hit\" : \"fly\"),\n       1248: \t\t\t\t  body_part(ARM));\n       1249: \t\t\t    (void) artifact_hit((struct monst *)0,\n       1250: \t\t\t\t\t\t&youmonst, obj, &dmg, 0);\n       1251: \t\t\t    losehp(dmg, xname(obj),\n       1252: \t\t\t\tobj_is_pname(obj) ? KILLED_BY : KILLED_BY_AN);"
   },
   {
     "key": "L01274_01",
     "original": "fall",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1274:43\n  1269: \t\t    tmp_at(DISP_END, 0);\n  1270: \t\t    breakmsg(obj, cansee(bhitpos.x, bhitpos.y));\n  1271: \t\t    breakobj(obj, bhitpos.x, bhitpos.y, TRUE, TRUE);\n  1272: \t\t    return;\n  1273: \t\t}\n&gt; 1274: \t\tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return;\n  1275: \t\tobj_no_longer_held(obj);\n  1276: \t\tif (mon && mon-&gt;isshk && is_pick(obj)) {\n  1277: \t\t    if (cansee(bhitpos.x, bhitpos.y))\n  1278: \t\t\tpline(\"%s snatches up %s.\",\n  1279: \t\t\t      Monnam(mon), the(xname(obj)));"
+    "context": "src/dothrow.c:1274:43\n       1269: \t\t    tmp_at(DISP_END, 0);\n       1270: \t\t    breakmsg(obj, cansee(bhitpos.x, bhitpos.y));\n       1271: \t\t    breakobj(obj, bhitpos.x, bhitpos.y, TRUE, TRUE);\n       1272: \t\t    return;\n       1273: \t\t}\nTARGET 1274: \t\tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return;\n       1275: \t\tobj_no_longer_held(obj);\n       1276: \t\tif (mon && mon-&gt;isshk && is_pick(obj)) {\n       1277: \t\t    if (cansee(bhitpos.x, bhitpos.y))\n       1278: \t\t\tpline(\"%s snatches up %s.\",\n       1279: \t\t\t      Monnam(mon), the(xname(obj)));"
   },
   {
     "key": "L01278_01",
     "original": "%s snatches up %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1278:10\n  1273: \t\t}\n  1274: \t\tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return;\n  1275: \t\tobj_no_longer_held(obj);\n  1276: \t\tif (mon && mon-&gt;isshk && is_pick(obj)) {\n  1277: \t\t    if (cansee(bhitpos.x, bhitpos.y))\n&gt; 1278: \t\t\tpline(\"%s snatches up %s.\",\n  1279: \t\t\t      Monnam(mon), the(xname(obj)));\n  1280: \t\t    if(*u.ushops)\n  1281: \t\t\tcheck_shop_obj(obj, bhitpos.x, bhitpos.y, FALSE);\n  1282: \t\t    (void) mpickobj(mon, obj);\t/* may merge and free obj */\n  1283: \t\t    thrownobj = (struct obj*)0;"
+    "context": "src/dothrow.c:1278:10\n       1273: \t\t}\n       1274: \t\tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return;\n       1275: \t\tobj_no_longer_held(obj);\n       1276: \t\tif (mon && mon-&gt;isshk && is_pick(obj)) {\n       1277: \t\t    if (cansee(bhitpos.x, bhitpos.y))\nTARGET 1278: \t\t\tpline(\"%s snatches up %s.\",\n       1279: \t\t\t      Monnam(mon), the(xname(obj)));\n       1280: \t\t    if(*u.ushops)\n       1281: \t\t\tcheck_shop_obj(obj, bhitpos.x, bhitpos.y, FALSE);\n       1282: \t\t    (void) mpickobj(mon, obj);\t/* may merge and free obj */\n       1283: \t\t    thrownobj = (struct obj*)0;"
   },
   {
     "key": "L01363_01",
     "original": "%s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1363:8\n  1358:        avoid \"the arrow misses it,\" or worse, \"the arrows misses the mimic.\"\n  1359:        An attentive player will still notice that this is different from\n  1360:        an arrow just landing short of any target (no message in that case),\n  1361:        so will realize that there is a valid target here anyway. */\n  1362:     if (!canseemon(mon) || (mon-&gt;m_ap_type && mon-&gt;m_ap_type != M_AP_MONSTER))\n&gt; 1363: \tpline(\"%s %s.\", The(missile), otense(obj, \"miss\"));\n  1364:     else\n  1365: \tmiss(missile, mon);\n  1366:     if (!rn2(3)) wakeup(mon);\n  1367:     return;\n  1368: }"
+    "context": "src/dothrow.c:1363:8\n       1358:        avoid \"the arrow misses it,\" or worse, \"the arrows misses the mimic.\"\n       1359:        An attentive player will still notice that this is different from\n       1360:        an arrow just landing short of any target (no message in that case),\n       1361:        so will realize that there is a valid target here anyway. */\n       1362:     if (!canseemon(mon) || (mon-&gt;m_ap_type && mon-&gt;m_ap_type != M_AP_MONSTER))\nTARGET 1363: \tpline(\"%s %s.\", The(missile), otense(obj, \"miss\"));\n       1364:     else\n       1365: \tmiss(missile, mon);\n       1366:     if (!rn2(3)) wakeup(mon);\n       1367:     return;\n       1368: }"
   },
   {
     "key": "L01363_02",
     "original": "miss",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1363:44\n  1358:        avoid \"the arrow misses it,\" or worse, \"the arrows misses the mimic.\"\n  1359:        An attentive player will still notice that this is different from\n  1360:        an arrow just landing short of any target (no message in that case),\n  1361:        so will realize that there is a valid target here anyway. */\n  1362:     if (!canseemon(mon) || (mon-&gt;m_ap_type && mon-&gt;m_ap_type != M_AP_MONSTER))\n&gt; 1363: \tpline(\"%s %s.\", The(missile), otense(obj, \"miss\"));\n  1364:     else\n  1365: \tmiss(missile, mon);\n  1366:     if (!rn2(3)) wakeup(mon);\n  1367:     return;\n  1368: }"
+    "context": "src/dothrow.c:1363:44\n       1358:        avoid \"the arrow misses it,\" or worse, \"the arrows misses the mimic.\"\n       1359:        An attentive player will still notice that this is different from\n       1360:        an arrow just landing short of any target (no message in that case),\n       1361:        so will realize that there is a valid target here anyway. */\n       1362:     if (!canseemon(mon) || (mon-&gt;m_ap_type && mon-&gt;m_ap_type != M_AP_MONSTER))\nTARGET 1363: \tpline(\"%s %s.\", The(missile), otense(obj, \"miss\"));\n       1364:     else\n       1365: \tmiss(missile, mon);\n       1366:     if (!rn2(3)) wakeup(mon);\n       1367:     return;\n       1368: }"
   },
   {
     "key": "L01437_01",
     "original": "Unknown type of gloves (%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1437:14\n  1432: \t    case LEATHER_GLOVES:\n  1433: \t    case GAUNTLETS_OF_SWIMMING:            \n  1434: \t    case GAUNTLETS_OF_DEXTERITY:\n  1435: \t\tbreak;\n  1436: \t    default:\n&gt; 1437: \t\timpossible(\"Unknown type of gloves (%d)\", uarmg-&gt;otyp);\n  1438: \t\tbreak;\n  1439: \t    }\n  1440: \t}\n  1441: \n  1442: \ttmp += omon_adj(mon, obj, TRUE);"
+    "context": "src/dothrow.c:1437:14\n       1432: \t    case LEATHER_GLOVES:\n       1433: \t    case GAUNTLETS_OF_SWIMMING:            \n       1434: \t    case GAUNTLETS_OF_DEXTERITY:\n       1435: \t\tbreak;\n       1436: \t    default:\nTARGET 1437: \t\timpossible(\"Unknown type of gloves (%d)\", uarmg-&gt;otyp);\n       1438: \t\tbreak;\n       1439: \t    }\n       1440: \t}\n       1441: \n       1442: \ttmp += omon_adj(mon, obj, TRUE);"
   },
   {
     "key": "L01453_01",
     "original": "%s catches and drops %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1453:9\n  1448: \t}\n  1449: \n  1450: \t/* sleeping unicorns don't catch gems */\n  1451: \tif (obj-&gt;oclass == GEM_CLASS && is_unicorn(mon-&gt;data) && !mon-&gt;msleeping) {\n  1452: \t    if (mon-&gt;mtame) {\n&gt; 1453: \t\tpline(\"%s catches and drops %s.\", Monnam(mon), the(xname(obj)));\n  1454: \t\treturn 0;\n  1455: \t    } else {\n  1456: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n  1457: \t\treturn gem_accept(mon, obj);\n  1458: \t    }"
+    "context": "src/dothrow.c:1453:9\n       1448: \t}\n       1449: \n       1450: \t/* sleeping unicorns don't catch gems */\n       1451: \tif (obj-&gt;oclass == GEM_CLASS && is_unicorn(mon-&gt;data) && !mon-&gt;msleeping) {\n       1452: \t    if (mon-&gt;mtame) {\nTARGET 1453: \t\tpline(\"%s catches and drops %s.\", Monnam(mon), the(xname(obj)));\n       1454: \t\treturn 0;\n       1455: \t    } else {\n       1456: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n       1457: \t\treturn gem_accept(mon, obj);\n       1458: \t    }"
   },
   {
     "key": "L01456_01",
     "original": "%s catches %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1456:9\n  1451: \tif (obj-&gt;oclass == GEM_CLASS && is_unicorn(mon-&gt;data) && !mon-&gt;msleeping) {\n  1452: \t    if (mon-&gt;mtame) {\n  1453: \t\tpline(\"%s catches and drops %s.\", Monnam(mon), the(xname(obj)));\n  1454: \t\treturn 0;\n  1455: \t    } else {\n&gt; 1456: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n  1457: \t\treturn gem_accept(mon, obj);\n  1458: \t    }\n  1459: \t}\n  1460: \n  1461: \t/* don't make game unwinnable if naive player throws artifact"
+    "context": "src/dothrow.c:1456:9\n       1451: \tif (obj-&gt;oclass == GEM_CLASS && is_unicorn(mon-&gt;data) && !mon-&gt;msleeping) {\n       1452: \t    if (mon-&gt;mtame) {\n       1453: \t\tpline(\"%s catches and drops %s.\", Monnam(mon), the(xname(obj)));\n       1454: \t\treturn 0;\n       1455: \t    } else {\nTARGET 1456: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n       1457: \t\treturn gem_accept(mon, obj);\n       1458: \t    }\n       1459: \t}\n       1460: \n       1461: \t/* don't make game unwinnable if naive player throws artifact"
   },
   {
     "key": "L01469_01",
     "original": "%s catches %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1469:9\n  1464: \t    /* not wakeup(), which angers non-tame monsters */\n  1465: \t    mon-&gt;msleeping = 0;\n  1466: \t    mon-&gt;mstrategy &= ~STRAT_WAITMASK;\n  1467: \n  1468: \t    if (mon-&gt;mcanmove) {\n&gt; 1469: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n  1470: \t\tif (mon-&gt;mpeaceful) {\n  1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n  1472: \n  1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n  1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),"
+    "context": "src/dothrow.c:1469:9\n       1464: \t    /* not wakeup(), which angers non-tame monsters */\n       1465: \t    mon-&gt;msleeping = 0;\n       1466: \t    mon-&gt;mstrategy &= ~STRAT_WAITMASK;\n       1467: \n       1468: \t    if (mon-&gt;mcanmove) {\nTARGET 1469: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n       1470: \t\tif (mon-&gt;mpeaceful) {\n       1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n       1472: \n       1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n       1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),"
   },
   {
     "key": "L01474_01",
     "original": "%s %s %s back to you.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1474:13\n  1469: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n  1470: \t\tif (mon-&gt;mpeaceful) {\n  1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n  1472: \n  1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n&gt; 1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),\n  1475: \t\t\t  (next2u ? \"hands\" : \"tosses\"), the(xname(obj)));\n  1476: \t\t    if (!next2u) sho_obj_return_to_u(obj);\n  1477: \t\t    obj = addinv(obj);\t/* back into your inventory */\n  1478: \t\t    (void) encumber_msg();\n  1479: \t\t} else {"
+    "context": "src/dothrow.c:1474:13\n       1469: \t\tpline(\"%s catches %s.\", Monnam(mon), the(xname(obj)));\n       1470: \t\tif (mon-&gt;mpeaceful) {\n       1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n       1472: \n       1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\nTARGET 1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),\n       1475: \t\t\t  (next2u ? \"hands\" : \"tosses\"), the(xname(obj)));\n       1476: \t\t    if (!next2u) sho_obj_return_to_u(obj);\n       1477: \t\t    obj = addinv(obj);\t/* back into your inventory */\n       1478: \t\t    (void) encumber_msg();\n       1479: \t\t} else {"
   },
   {
     "key": "L01475_01",
     "original": "hands",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1475:16\n  1470: \t\tif (mon-&gt;mpeaceful) {\n  1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n  1472: \n  1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n  1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),\n&gt; 1475: \t\t\t  (next2u ? \"hands\" : \"tosses\"), the(xname(obj)));\n  1476: \t\t    if (!next2u) sho_obj_return_to_u(obj);\n  1477: \t\t    obj = addinv(obj);\t/* back into your inventory */\n  1478: \t\t    (void) encumber_msg();\n  1479: \t\t} else {\n  1480: \t\t    /* angry leader caught it and isn't returning it */"
+    "context": "src/dothrow.c:1475:16\n       1470: \t\tif (mon-&gt;mpeaceful) {\n       1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n       1472: \n       1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n       1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),\nTARGET 1475: \t\t\t  (next2u ? \"hands\" : \"tosses\"), the(xname(obj)));\n       1476: \t\t    if (!next2u) sho_obj_return_to_u(obj);\n       1477: \t\t    obj = addinv(obj);\t/* back into your inventory */\n       1478: \t\t    (void) encumber_msg();\n       1479: \t\t} else {\n       1480: \t\t    /* angry leader caught it and isn't returning it */"
   },
   {
     "key": "L01475_02",
     "original": "tosses",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1475:26\n  1470: \t\tif (mon-&gt;mpeaceful) {\n  1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n  1472: \n  1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n  1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),\n&gt; 1475: \t\t\t  (next2u ? \"hands\" : \"tosses\"), the(xname(obj)));\n  1476: \t\t    if (!next2u) sho_obj_return_to_u(obj);\n  1477: \t\t    obj = addinv(obj);\t/* back into your inventory */\n  1478: \t\t    (void) encumber_msg();\n  1479: \t\t} else {\n  1480: \t\t    /* angry leader caught it and isn't returning it */"
+    "context": "src/dothrow.c:1475:26\n       1470: \t\tif (mon-&gt;mpeaceful) {\n       1471: \t\t    boolean next2u = monnear(mon, u.ux, u.uy);\n       1472: \n       1473: \t\t    finish_quest(obj);\t/* acknowledge quest completion */\n       1474: \t\t    pline(\"%s %s %s back to you.\", Monnam(mon),\nTARGET 1475: \t\t\t  (next2u ? \"hands\" : \"tosses\"), the(xname(obj)));\n       1476: \t\t    if (!next2u) sho_obj_return_to_u(obj);\n       1477: \t\t    obj = addinv(obj);\t/* back into your inventory */\n       1478: \t\t    (void) encumber_msg();\n       1479: \t\t} else {\n       1480: \t\t    /* angry leader caught it and isn't returning it */"
   },
   {
     "key": "L01527_01",
     "original": "(%i/20)",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1527:12\n  1522: \t\t/* we know we're dealing with a weapon or weptool handled\n  1523: \t\t   by WEAPON_SKILLS once ammo objects have been excluded */\n  1524: \t\ttmp += weapon_hit_bonus(obj);\n  1525: \t    }\n  1526: #ifdef DEBUG\n&gt; 1527: \t    pline(\"(%i/20)\", tmp);\n  1528: #endif\n  1529: \n  1530: \t    if (tmp &gt;= rnd(20)) {\n  1531: \t\tif (hmon(mon,obj,thrown?thrown:3)) {  /* mon still alive */\n  1532: \t\t    (void) cutworm(mon, bhitpos.x, bhitpos.y, obj);"
+    "context": "src/dothrow.c:1527:12\n       1522: \t\t/* we know we're dealing with a weapon or weptool handled\n       1523: \t\t   by WEAPON_SKILLS once ammo objects have been excluded */\n       1524: \t\ttmp += weapon_hit_bonus(obj);\n       1525: \t    }\n       1526: #ifdef DEBUG\nTARGET 1527: \t    pline(\"(%i/20)\", tmp);\n       1528: #endif\n       1529: \n       1530: \t    if (tmp &gt;= rnd(20)) {\n       1531: \t\tif (hmon(mon,obj,thrown?thrown:3)) {  /* mon still alive */\n       1532: \t\t    (void) cutworm(mon, bhitpos.x, bhitpos.y, obj);"
   },
   {
     "key": "L01540_01",
     "original": "%s explodes in a ball of fire!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1540:10\n  1535: \n  1536: \t\t/* Detonate bolts shot by Hellfire */\n  1537: \t\tif (ammo_and_launcher(obj, launcher) &&\n  1538: \t\t\t(launcher-&gt;oartifact == ART_HELLFIRE)) {\n  1539: \t\t    if (cansee(bhitpos.x,bhitpos.y)) \n&gt; 1540: \t\t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n  1541: \t\t    else You_hear(\"an explosion\");\n  1542: \t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n  1543: \t\t\t    d(2,6), WEAPON_CLASS, EXPL_FIERY);\n  1544: \t\t}\n  1545: "
+    "context": "src/dothrow.c:1540:10\n       1535: \n       1536: \t\t/* Detonate bolts shot by Hellfire */\n       1537: \t\tif (ammo_and_launcher(obj, launcher) &&\n       1538: \t\t\t(launcher-&gt;oartifact == ART_HELLFIRE)) {\n       1539: \t\t    if (cansee(bhitpos.x,bhitpos.y)) \nTARGET 1540: \t\t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n       1541: \t\t    else You_hear(\"an explosion\");\n       1542: \t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n       1543: \t\t\t    d(2,6), WEAPON_CLASS, EXPL_FIERY);\n       1544: \t\t}\n       1545: "
   },
   {
     "key": "L01541_01",
     "original": "an explosion",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1541:21\n  1536: \t\t/* Detonate bolts shot by Hellfire */\n  1537: \t\tif (ammo_and_launcher(obj, launcher) &&\n  1538: \t\t\t(launcher-&gt;oartifact == ART_HELLFIRE)) {\n  1539: \t\t    if (cansee(bhitpos.x,bhitpos.y)) \n  1540: \t\t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\n&gt; 1541: \t\t    else You_hear(\"an explosion\");\n  1542: \t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n  1543: \t\t\t    d(2,6), WEAPON_CLASS, EXPL_FIERY);\n  1544: \t\t}\n  1545: \n  1546: \t\t/* projectiles other than magic stones"
+    "context": "src/dothrow.c:1541:21\n       1536: \t\t/* Detonate bolts shot by Hellfire */\n       1537: \t\tif (ammo_and_launcher(obj, launcher) &&\n       1538: \t\t\t(launcher-&gt;oartifact == ART_HELLFIRE)) {\n       1539: \t\t    if (cansee(bhitpos.x,bhitpos.y)) \n       1540: \t\t\tpline(\"%s explodes in a ball of fire!\", Doname2(obj));\nTARGET 1541: \t\t    else You_hear(\"an explosion\");\n       1542: \t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n       1543: \t\t\t    d(2,6), WEAPON_CLASS, EXPL_FIERY);\n       1544: \t\t}\n       1545: \n       1546: \t\t/* projectiles other than magic stones"
   },
   {
     "key": "L01588_01",
     "original": "%s explodes in a ball of fire!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1588:11\n  1583: \t\t\tif ((thrown == 1 || thrown == 2) && is_grenade(obj)) {\n  1584: \t\t\t    grenade_explode(obj, bhitpos.x, bhitpos.y, TRUE, 0);\n  1585: \t\t\t} else if (ammo_and_launcher(obj, launcher) &&\n  1586: \t\t\t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n  1587: \t\t\t    if (cansee(bhitpos.x,bhitpos.y)) \n&gt; 1588: \t\t\t\tpline(\"%s explodes in a ball of fire!\",\n  1589: \t\t\t\t\tDoname2(obj));\n  1590: \t\t\t    else You_hear(\"an explosion\");\n  1591: \t\t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n  1592: \t\t\t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n  1593: \t\t\t    obfree(obj, (struct obj *)0);"
+    "context": "src/dothrow.c:1588:11\n       1583: \t\t\tif ((thrown == 1 || thrown == 2) && is_grenade(obj)) {\n       1584: \t\t\t    grenade_explode(obj, bhitpos.x, bhitpos.y, TRUE, 0);\n       1585: \t\t\t} else if (ammo_and_launcher(obj, launcher) &&\n       1586: \t\t\t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n       1587: \t\t\t    if (cansee(bhitpos.x,bhitpos.y)) \nTARGET 1588: \t\t\t\tpline(\"%s explodes in a ball of fire!\",\n       1589: \t\t\t\t\tDoname2(obj));\n       1590: \t\t\t    else You_hear(\"an explosion\");\n       1591: \t\t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n       1592: \t\t\t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n       1593: \t\t\t    obfree(obj, (struct obj *)0);"
   },
   {
     "key": "L01590_01",
     "original": "an explosion",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1590:22\n  1585: \t\t\t} else if (ammo_and_launcher(obj, launcher) &&\n  1586: \t\t\t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n  1587: \t\t\t    if (cansee(bhitpos.x,bhitpos.y)) \n  1588: \t\t\t\tpline(\"%s explodes in a ball of fire!\",\n  1589: \t\t\t\t\tDoname2(obj));\n&gt; 1590: \t\t\t    else You_hear(\"an explosion\");\n  1591: \t\t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n  1592: \t\t\t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n  1593: \t\t\t    obfree(obj, (struct obj *)0);\n  1594: \t\t\t} else\n  1595: #endif"
+    "context": "src/dothrow.c:1590:22\n       1585: \t\t\t} else if (ammo_and_launcher(obj, launcher) &&\n       1586: \t\t\t\t(objects[obj-&gt;otyp].oc_dir & EXPLOSION)) {\n       1587: \t\t\t    if (cansee(bhitpos.x,bhitpos.y)) \n       1588: \t\t\t\tpline(\"%s explodes in a ball of fire!\",\n       1589: \t\t\t\t\tDoname2(obj));\nTARGET 1590: \t\t\t    else You_hear(\"an explosion\");\n       1591: \t\t\t    explode(bhitpos.x, bhitpos.y, ZT_SPELL(ZT_FIRE),\n       1592: \t\t\t\t    d(3,8), WEAPON_CLASS, EXPL_FIERY);\n       1593: \t\t\t    obfree(obj, (struct obj *)0);\n       1594: \t\t\t} else\n       1595: #endif"
   },
   {
     "key": "L01662_01",
     "original": "%s into %s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1662:12\n  1657: \t\t\t\tdelobj(obj);\n  1658: \t\t\t\treturn 1;\n  1659: \t\t\t}\n  1660: \t    \t}\n  1661: \t    }\n&gt; 1662: \t    pline(\"%s into %s %s.\",\n  1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\n  1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n  1665: \t} else {\n  1666: \t    tmiss(obj, mon);\n  1667: \t}"
+    "context": "src/dothrow.c:1662:12\n       1657: \t\t\t\tdelobj(obj);\n       1658: \t\t\t\treturn 1;\n       1659: \t\t\t}\n       1660: \t    \t}\n       1661: \t    }\nTARGET 1662: \t    pline(\"%s into %s %s.\",\n       1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\n       1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n       1665: \t} else {\n       1666: \t    tmiss(obj, mon);\n       1667: \t}"
   },
   {
     "key": "L01663_01",
     "original": "vanish",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1663:16\n  1658: \t\t\t\treturn 1;\n  1659: \t\t\t}\n  1660: \t    \t}\n  1661: \t    }\n  1662: \t    pline(\"%s into %s %s.\",\n&gt; 1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\n  1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n  1665: \t} else {\n  1666: \t    tmiss(obj, mon);\n  1667: \t}\n  1668: \treturn 0;"
+    "context": "src/dothrow.c:1663:16\n       1658: \t\t\t\treturn 1;\n       1659: \t\t\t}\n       1660: \t    \t}\n       1661: \t    }\n       1662: \t    pline(\"%s into %s %s.\",\nTARGET 1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\n       1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n       1665: \t} else {\n       1666: \t    tmiss(obj, mon);\n       1667: \t}\n       1668: \treturn 0;"
   },
   {
     "key": "L01664_01",
     "original": "entrails",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1664:31\n  1659: \t\t\t}\n  1660: \t    \t}\n  1661: \t    }\n  1662: \t    pline(\"%s into %s %s.\",\n  1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\n&gt; 1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n  1665: \t} else {\n  1666: \t    tmiss(obj, mon);\n  1667: \t}\n  1668: \treturn 0;\n  1669: }"
+    "context": "src/dothrow.c:1664:31\n       1659: \t\t\t}\n       1660: \t    \t}\n       1661: \t    }\n       1662: \t    pline(\"%s into %s %s.\",\n       1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\nTARGET 1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n       1665: \t} else {\n       1666: \t    tmiss(obj, mon);\n       1667: \t}\n       1668: \treturn 0;\n       1669: }"
   },
   {
     "key": "L01664_02",
     "original": "currents",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1664:44\n  1659: \t\t\t}\n  1660: \t    \t}\n  1661: \t    }\n  1662: \t    pline(\"%s into %s %s.\",\n  1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\n&gt; 1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n  1665: \t} else {\n  1666: \t    tmiss(obj, mon);\n  1667: \t}\n  1668: \treturn 0;\n  1669: }"
+    "context": "src/dothrow.c:1664:44\n       1659: \t\t\t}\n       1660: \t    \t}\n       1661: \t    }\n       1662: \t    pline(\"%s into %s %s.\",\n       1663: \t\tTobjnam(obj, \"vanish\"), s_suffix(mon_nam(mon)),\nTARGET 1664: \t\tis_animal(u.ustuck-&gt;data) ? \"entrails\" : \"currents\");\n       1665: \t} else {\n       1666: \t    tmiss(obj, mon);\n       1667: \t}\n       1668: \treturn 0;\n       1669: }"
   },
   {
     "key": "L01680_01",
     "original": " is not interested in your junk.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1680:40\n  1675: {\n  1676: \tchar buf[BUFSZ];\n  1677: \tboolean is_buddy = sgn(mon-&gt;data-&gt;maligntyp) == sgn(u.ualign.type);\n  1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n  1679: \tint ret = 0;\n&gt; 1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n  1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n  1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n  1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n  1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n  1685: "
+    "context": "src/dothrow.c:1680:40\n       1675: {\n       1676: \tchar buf[BUFSZ];\n       1677: \tboolean is_buddy = sgn(mon-&gt;data-&gt;maligntyp) == sgn(u.ualign.type);\n       1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n       1679: \tint ret = 0;\nTARGET 1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n       1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n       1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n       1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n       1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n       1685: "
   },
   {
     "key": "L01681_01",
     "original": " accepts your gift.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1681:44\n  1676: \tchar buf[BUFSZ];\n  1677: \tboolean is_buddy = sgn(mon-&gt;data-&gt;maligntyp) == sgn(u.ualign.type);\n  1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n  1679: \tint ret = 0;\n  1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n&gt; 1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n  1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n  1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n  1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n  1685: \n  1686: \tStrcpy(buf,Monnam(mon));"
+    "context": "src/dothrow.c:1681:44\n       1676: \tchar buf[BUFSZ];\n       1677: \tboolean is_buddy = sgn(mon-&gt;data-&gt;maligntyp) == sgn(u.ualign.type);\n       1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n       1679: \tint ret = 0;\n       1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\nTARGET 1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n       1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n       1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n       1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n       1685: \n       1686: \tStrcpy(buf,Monnam(mon));"
   },
   {
     "key": "L01682_01",
     "original": " hesitatingly",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1682:43\n  1677: \tboolean is_buddy = sgn(mon-&gt;data-&gt;maligntyp) == sgn(u.ualign.type);\n  1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n  1679: \tint ret = 0;\n  1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n  1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n&gt; 1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n  1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n  1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n  1685: \n  1686: \tStrcpy(buf,Monnam(mon));\n  1687: \tmon-&gt;mpeaceful = 1;"
+    "context": "src/dothrow.c:1682:43\n       1677: \tboolean is_buddy = sgn(mon-&gt;data-&gt;maligntyp) == sgn(u.ualign.type);\n       1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n       1679: \tint ret = 0;\n       1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n       1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\nTARGET 1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n       1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n       1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n       1685: \n       1686: \tStrcpy(buf,Monnam(mon));\n       1687: \tmon-&gt;mpeaceful = 1;"
   },
   {
     "key": "L01683_01",
     "original": " graciously",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1683:40\n  1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n  1679: \tint ret = 0;\n  1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n  1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n  1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n&gt; 1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n  1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n  1685: \n  1686: \tStrcpy(buf,Monnam(mon));\n  1687: \tmon-&gt;mpeaceful = 1;\n  1688: \tmon-&gt;mavenge = 0;"
+    "context": "src/dothrow.c:1683:40\n       1678: \tboolean is_gem = objects[obj-&gt;otyp].oc_material == GEMSTONE;\n       1679: \tint ret = 0;\n       1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n       1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n       1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\nTARGET 1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n       1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n       1685: \n       1686: \tStrcpy(buf,Monnam(mon));\n       1687: \tmon-&gt;mpeaceful = 1;\n       1688: \tmon-&gt;mavenge = 0;"
   },
   {
     "key": "L01684_01",
     "original": " gratefully",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1684:41\n  1679: \tint ret = 0;\n  1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n  1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n  1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n  1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\n&gt; 1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n  1685: \n  1686: \tStrcpy(buf,Monnam(mon));\n  1687: \tmon-&gt;mpeaceful = 1;\n  1688: \tmon-&gt;mavenge = 0;\n  1689: "
+    "context": "src/dothrow.c:1684:41\n       1679: \tint ret = 0;\n       1680: \tstatic NEARDATA const char nogood[] = \" is not interested in your junk.\";\n       1681: \tstatic NEARDATA const char acceptgift[] = \" accepts your gift.\";\n       1682: \tstatic NEARDATA const char maybeluck[] = \" hesitatingly\";\n       1683: \tstatic NEARDATA const char noluck[] = \" graciously\";\nTARGET 1684: \tstatic NEARDATA const char addluck[] = \" gratefully\";\n       1685: \n       1686: \tStrcpy(buf,Monnam(mon));\n       1687: \tmon-&gt;mpeaceful = 1;\n       1688: \tmon-&gt;mavenge = 0;\n       1689: "
   },
   {
     "key": "L01738_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1738:19\n  1733: \tif(*u.ushops) check_shop_obj(obj, mon-&gt;mx, mon-&gt;my, TRUE);\n  1734: \t(void) mpickobj(mon, obj);\t/* may merge and free obj */\n  1735: \tret = 1;\n  1736: \n  1737: nopick:\n&gt; 1738: \tif(!Blind) pline(\"%s\", buf);\n  1739: \tif (!tele_restrict(mon)) (void) rloc(mon, FALSE);\n  1740: \treturn(ret);\n  1741: }\n  1742: \n  1743: /*"
+    "context": "src/dothrow.c:1738:19\n       1733: \tif(*u.ushops) check_shop_obj(obj, mon-&gt;mx, mon-&gt;my, TRUE);\n       1734: \t(void) mpickobj(mon, obj);\t/* may merge and free obj */\n       1735: \tret = 1;\n       1736: \n       1737: nopick:\nTARGET 1738: \tif(!Blind) pline(\"%s\", buf);\n       1739: \tif (!tele_restrict(mon)) (void) rloc(mon, FALSE);\n       1740: \treturn(ret);\n       1741: }\n       1742: \n       1743: /*"
   },
   {
     "key": "L01846_01",
     "original": "You'll regret this infamous offense!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1846:11\n  1841: \t\t\t\t/* Regardless of your race/alignment etc.\n  1842: \t\t\t\t * Lawful and neutral gods really _dont_\n  1843: \t\t\t\t * like vampire or (presumed) human blood\n  1844: \t\t\t\t * on their altars.\n  1845: \t\t\t\t */\n&gt; 1846: \t\t\t\tpline(\"You'll regret this infamous offense!\");\n  1847: \t\t\t\texercise(A_WIS, FALSE);\n  1848: \t\t\t    }\n  1849: \t\t\t    /* curse the lawful/neutral altar */\n  1850: \t\t\t    pline_The(\"altar is stained with blood.\");\n  1851: \t\t\t    if (!Is_astralevel(&u.uz))"
+    "context": "src/dothrow.c:1846:11\n       1841: \t\t\t\t/* Regardless of your race/alignment etc.\n       1842: \t\t\t\t * Lawful and neutral gods really _dont_\n       1843: \t\t\t\t * like vampire or (presumed) human blood\n       1844: \t\t\t\t * on their altars.\n       1845: \t\t\t\t */\nTARGET 1846: \t\t\t\tpline(\"You'll regret this infamous offense!\");\n       1847: \t\t\t\texercise(A_WIS, FALSE);\n       1848: \t\t\t    }\n       1849: \t\t\t    /* curse the lawful/neutral altar */\n       1850: \t\t\t    pline_The(\"altar is stained with blood.\");\n       1851: \t\t\t    if (!Is_astralevel(&u.uz))"
   },
   {
     "key": "L01850_01",
     "original": "altar is stained with blood.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1850:18\n  1845: \t\t\t\t */\n  1846: \t\t\t\tpline(\"You'll regret this infamous offense!\");\n  1847: \t\t\t\texercise(A_WIS, FALSE);\n  1848: \t\t\t    }\n  1849: \t\t\t    /* curse the lawful/neutral altar */\n&gt; 1850: \t\t\t    pline_The(\"altar is stained with blood.\");\n  1851: \t\t\t    if (!Is_astralevel(&u.uz))\n  1852: \t\t\t\tlevl[x][y].altarmask = AM_CHAOTIC;\n  1853: \t\t\t    angry_priest();\n  1854: \t\t\t} else if (distu(x,y) &lt;= 2) {\n  1855: \t\t\t    if (!breathless(youmonst.data) || haseyes(youmonst.data)) {"
+    "context": "src/dothrow.c:1850:18\n       1845: \t\t\t\t */\n       1846: \t\t\t\tpline(\"You'll regret this infamous offense!\");\n       1847: \t\t\t\texercise(A_WIS, FALSE);\n       1848: \t\t\t    }\n       1849: \t\t\t    /* curse the lawful/neutral altar */\nTARGET 1850: \t\t\t    pline_The(\"altar is stained with blood.\");\n       1851: \t\t\t    if (!Is_astralevel(&u.uz))\n       1852: \t\t\t\tlevl[x][y].altarmask = AM_CHAOTIC;\n       1853: \t\t\t    angry_priest();\n       1854: \t\t\t} else if (distu(x,y) &lt;= 2) {\n       1855: \t\t\t    if (!breathless(youmonst.data) || haseyes(youmonst.data)) {"
   },
   {
     "key": "L01859_01",
     "original": "smell a peculiar odor...",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1859:14\n  1854: \t\t\t} else if (distu(x,y) &lt;= 2) {\n  1855: \t\t\t    if (!breathless(youmonst.data) || haseyes(youmonst.data)) {\n  1856: \t\t\t\tif (obj-&gt;otyp != POT_WATER) {\n  1857: \t\t\t\t\tif (!breathless(youmonst.data))\n  1858: \t\t\t    \t\t     /* [what about \"familiar odor\" when known?] */\n&gt; 1859: \t\t\t\t\t    You(\"smell a peculiar odor...\");\n  1860: \t\t\t\t\telse {\n  1861: \t\t\t\t\t    int numeyes = eyecount(youmonst.data);\n  1862: \t\t\t\t\t    Your(\"%s water%s.\",\n  1863: \t\t\t\t\t\t (numeyes == 1) ? body_part(EYE) :\n  1864: \t\t\t\t\t\t\tmakeplural(body_part(EYE)),"
+    "context": "src/dothrow.c:1859:14\n       1854: \t\t\t} else if (distu(x,y) &lt;= 2) {\n       1855: \t\t\t    if (!breathless(youmonst.data) || haseyes(youmonst.data)) {\n       1856: \t\t\t\tif (obj-&gt;otyp != POT_WATER) {\n       1857: \t\t\t\t\tif (!breathless(youmonst.data))\n       1858: \t\t\t    \t\t     /* [what about \"familiar odor\" when known?] */\nTARGET 1859: \t\t\t\t\t    You(\"smell a peculiar odor...\");\n       1860: \t\t\t\t\telse {\n       1861: \t\t\t\t\t    int numeyes = eyecount(youmonst.data);\n       1862: \t\t\t\t\t    Your(\"%s water%s.\",\n       1863: \t\t\t\t\t\t (numeyes == 1) ? body_part(EYE) :\n       1864: \t\t\t\t\t\t\tmakeplural(body_part(EYE)),"
   },
   {
     "key": "L01862_01",
     "original": "%s water%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1862:15\n  1857: \t\t\t\t\tif (!breathless(youmonst.data))\n  1858: \t\t\t    \t\t     /* [what about \"familiar odor\" when known?] */\n  1859: \t\t\t\t\t    You(\"smell a peculiar odor...\");\n  1860: \t\t\t\t\telse {\n  1861: \t\t\t\t\t    int numeyes = eyecount(youmonst.data);\n&gt; 1862: \t\t\t\t\t    Your(\"%s water%s.\",\n  1863: \t\t\t\t\t\t (numeyes == 1) ? body_part(EYE) :\n  1864: \t\t\t\t\t\t\tmakeplural(body_part(EYE)),\n  1865: \t\t\t\t\t\t (numeyes == 1) ? \"s\" : \"\");\n  1866: \t\t\t\t\t}\n  1867: \t\t\t\t}"
+    "context": "src/dothrow.c:1862:15\n       1857: \t\t\t\t\tif (!breathless(youmonst.data))\n       1858: \t\t\t    \t\t     /* [what about \"familiar odor\" when known?] */\n       1859: \t\t\t\t\t    You(\"smell a peculiar odor...\");\n       1860: \t\t\t\t\telse {\n       1861: \t\t\t\t\t    int numeyes = eyecount(youmonst.data);\nTARGET 1862: \t\t\t\t\t    Your(\"%s water%s.\",\n       1863: \t\t\t\t\t\t (numeyes == 1) ? body_part(EYE) :\n       1864: \t\t\t\t\t\t\tmakeplural(body_part(EYE)),\n       1865: \t\t\t\t\t\t (numeyes == 1) ? \"s\" : \"\");\n       1866: \t\t\t\t\t}\n       1867: \t\t\t\t}"
   },
   {
     "key": "L01865_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1865:25\n  1860: \t\t\t\t\telse {\n  1861: \t\t\t\t\t    int numeyes = eyecount(youmonst.data);\n  1862: \t\t\t\t\t    Your(\"%s water%s.\",\n  1863: \t\t\t\t\t\t (numeyes == 1) ? body_part(EYE) :\n  1864: \t\t\t\t\t\t\tmakeplural(body_part(EYE)),\n&gt; 1865: \t\t\t\t\t\t (numeyes == 1) ? \"s\" : \"\");\n  1866: \t\t\t\t\t}\n  1867: \t\t\t\t}\n  1868: \t\t\t\tpotionbreathe(obj);\n  1869: \t\t\t    }\n  1870: \t\t\t}"
+    "context": "src/dothrow.c:1865:25\n       1860: \t\t\t\t\telse {\n       1861: \t\t\t\t\t    int numeyes = eyecount(youmonst.data);\n       1862: \t\t\t\t\t    Your(\"%s water%s.\",\n       1863: \t\t\t\t\t\t (numeyes == 1) ? body_part(EYE) :\n       1864: \t\t\t\t\t\t\tmakeplural(body_part(EYE)),\nTARGET 1865: \t\t\t\t\t\t (numeyes == 1) ? \"s\" : \"\");\n       1866: \t\t\t\t\t}\n       1867: \t\t\t\t}\n       1868: \t\t\t\tpotionbreathe(obj);\n       1869: \t\t\t    }\n       1870: \t\t\t}"
   },
   {
     "key": "L01946_01",
     "original": "breaking odd object?",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1946:15\n  1941: \n  1942: \tto_pieces = \"\";\n  1943: \tswitch (obj-&gt;oclass == POTION_CLASS ? POT_WATER : obj-&gt;otyp) {\n  1944: \t\tdefault: /* glass or crystal wand */\n  1945: \t\t    if (obj-&gt;oclass != WAND_CLASS)\n&gt; 1946: \t\t\timpossible(\"breaking odd object?\");\n  1947: \t\tcase CRYSTAL_PLATE_MAIL:\n  1948: \t\tcase LENSES:\n  1949: \t\tcase MIRROR:\n  1950: \t\tcase CRYSTAL_BALL:\n  1951: #ifdef TOURIST"
+    "context": "src/dothrow.c:1946:15\n       1941: \n       1942: \tto_pieces = \"\";\n       1943: \tswitch (obj-&gt;oclass == POTION_CLASS ? POT_WATER : obj-&gt;otyp) {\n       1944: \t\tdefault: /* glass or crystal wand */\n       1945: \t\t    if (obj-&gt;oclass != WAND_CLASS)\nTARGET 1946: \t\t\timpossible(\"breaking odd object?\");\n       1947: \t\tcase CRYSTAL_PLATE_MAIL:\n       1948: \t\tcase LENSES:\n       1949: \t\tcase MIRROR:\n       1950: \t\tcase CRYSTAL_BALL:\n       1951: #ifdef TOURIST"
   },
   {
     "key": "L01954_01",
     "original": " into a thousand pieces",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1954:16\n  1949: \t\tcase MIRROR:\n  1950: \t\tcase CRYSTAL_BALL:\n  1951: #ifdef TOURIST\n  1952: \t\tcase EXPENSIVE_CAMERA:\n  1953: #endif\n&gt; 1954: \t\t\tto_pieces = \" into a thousand pieces\";\n  1955: \t\t\t/*FALLTHRU*/\n  1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n  1957: \t\t\tif (!in_view)\n  1958: \t\t\t    You_hear(\"%s shatter!\", something);\n  1959: \t\t\telse"
+    "context": "src/dothrow.c:1954:16\n       1949: \t\tcase MIRROR:\n       1950: \t\tcase CRYSTAL_BALL:\n       1951: #ifdef TOURIST\n       1952: \t\tcase EXPENSIVE_CAMERA:\n       1953: #endif\nTARGET 1954: \t\t\tto_pieces = \" into a thousand pieces\";\n       1955: \t\t\t/*FALLTHRU*/\n       1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n       1957: \t\t\tif (!in_view)\n       1958: \t\t\t    You_hear(\"%s shatter!\", something);\n       1959: \t\t\telse"
   },
   {
     "key": "L01958_01",
     "original": "%s shatter!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1958:17\n  1953: #endif\n  1954: \t\t\tto_pieces = \" into a thousand pieces\";\n  1955: \t\t\t/*FALLTHRU*/\n  1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n  1957: \t\t\tif (!in_view)\n&gt; 1958: \t\t\t    You_hear(\"%s shatter!\", something);\n  1959: \t\t\telse\n  1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n  1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n  1962: \t\t\tbreak;\n  1963: \t\tcase EGG:"
+    "context": "src/dothrow.c:1958:17\n       1953: #endif\n       1954: \t\t\tto_pieces = \" into a thousand pieces\";\n       1955: \t\t\t/*FALLTHRU*/\n       1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n       1957: \t\t\tif (!in_view)\nTARGET 1958: \t\t\t    You_hear(\"%s shatter!\", something);\n       1959: \t\t\telse\n       1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n       1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n       1962: \t\t\tbreak;\n       1963: \t\tcase EGG:"
   },
   {
     "key": "L01960_01",
     "original": "%s shatter%s%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1960:14\n  1955: \t\t\t/*FALLTHRU*/\n  1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n  1957: \t\t\tif (!in_view)\n  1958: \t\t\t    You_hear(\"%s shatter!\", something);\n  1959: \t\t\telse\n&gt; 1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n  1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n  1962: \t\t\tbreak;\n  1963: \t\tcase EGG:\n  1964: \t\tcase MELON:\n  1965: \t\t\tpline(\"Splat!\");"
+    "context": "src/dothrow.c:1960:14\n       1955: \t\t\t/*FALLTHRU*/\n       1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n       1957: \t\t\tif (!in_view)\n       1958: \t\t\t    You_hear(\"%s shatter!\", something);\n       1959: \t\t\telse\nTARGET 1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n       1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n       1962: \t\t\tbreak;\n       1963: \t\tcase EGG:\n       1964: \t\tcase MELON:\n       1965: \t\t\tpline(\"Splat!\");"
   },
   {
     "key": "L01961_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1961:22\n  1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n  1957: \t\t\tif (!in_view)\n  1958: \t\t\t    You_hear(\"%s shatter!\", something);\n  1959: \t\t\telse\n  1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n&gt; 1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n  1962: \t\t\tbreak;\n  1963: \t\tcase EGG:\n  1964: \t\tcase MELON:\n  1965: \t\t\tpline(\"Splat!\");\n  1966: \t\t\tbreak;"
+    "context": "src/dothrow.c:1961:22\n       1956: \t\tcase POT_WATER:\t\t/* really, all potions */\n       1957: \t\t\tif (!in_view)\n       1958: \t\t\t    You_hear(\"%s shatter!\", something);\n       1959: \t\t\telse\n       1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\nTARGET 1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n       1962: \t\t\tbreak;\n       1963: \t\tcase EGG:\n       1964: \t\tcase MELON:\n       1965: \t\t\tpline(\"Splat!\");\n       1966: \t\t\tbreak;"
   },
   {
     "key": "L01965_01",
     "original": "Splat!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1965:10\n  1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n  1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n  1962: \t\t\tbreak;\n  1963: \t\tcase EGG:\n  1964: \t\tcase MELON:\n&gt; 1965: \t\t\tpline(\"Splat!\");\n  1966: \t\t\tbreak;\n  1967: \t\tcase CREAM_PIE:\n  1968: \t\t\tif (in_view) pline(\"What a mess!\");\n  1969: \t\t\tbreak;\n  1970: \t\tcase ACID_VENOM:"
+    "context": "src/dothrow.c:1965:10\n       1960: \t\t\t    pline(\"%s shatter%s%s!\", Doname2(obj),\n       1961: \t\t\t\t(obj-&gt;quan==1) ? \"s\" : \"\", to_pieces);\n       1962: \t\t\tbreak;\n       1963: \t\tcase EGG:\n       1964: \t\tcase MELON:\nTARGET 1965: \t\t\tpline(\"Splat!\");\n       1966: \t\t\tbreak;\n       1967: \t\tcase CREAM_PIE:\n       1968: \t\t\tif (in_view) pline(\"What a mess!\");\n       1969: \t\t\tbreak;\n       1970: \t\tcase ACID_VENOM:"
   },
   {
     "key": "L01968_01",
     "original": "What a mess!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1968:23\n  1963: \t\tcase EGG:\n  1964: \t\tcase MELON:\n  1965: \t\t\tpline(\"Splat!\");\n  1966: \t\t\tbreak;\n  1967: \t\tcase CREAM_PIE:\n&gt; 1968: \t\t\tif (in_view) pline(\"What a mess!\");\n  1969: \t\t\tbreak;\n  1970: \t\tcase ACID_VENOM:\n  1971: \t\tcase BLINDING_VENOM:\n  1972: \t\t\tpline(\"Splash!\");\n  1973: \t\t\tbreak;"
+    "context": "src/dothrow.c:1968:23\n       1963: \t\tcase EGG:\n       1964: \t\tcase MELON:\n       1965: \t\t\tpline(\"Splat!\");\n       1966: \t\t\tbreak;\n       1967: \t\tcase CREAM_PIE:\nTARGET 1968: \t\t\tif (in_view) pline(\"What a mess!\");\n       1969: \t\t\tbreak;\n       1970: \t\tcase ACID_VENOM:\n       1971: \t\tcase BLINDING_VENOM:\n       1972: \t\t\tpline(\"Splash!\");\n       1973: \t\t\tbreak;"
   },
   {
     "key": "L01972_01",
     "original": "Splash!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1972:10\n  1967: \t\tcase CREAM_PIE:\n  1968: \t\t\tif (in_view) pline(\"What a mess!\");\n  1969: \t\t\tbreak;\n  1970: \t\tcase ACID_VENOM:\n  1971: \t\tcase BLINDING_VENOM:\n&gt; 1972: \t\t\tpline(\"Splash!\");\n  1973: \t\t\tbreak;\n  1974: \t}\n  1975: }\n  1976: \n  1977: STATIC_OVL int"
+    "context": "src/dothrow.c:1972:10\n       1967: \t\tcase CREAM_PIE:\n       1968: \t\t\tif (in_view) pline(\"What a mess!\");\n       1969: \t\t\tbreak;\n       1970: \t\tcase ACID_VENOM:\n       1971: \t\tcase BLINDING_VENOM:\nTARGET 1972: \t\t\tpline(\"Splash!\");\n       1973: \t\t\tbreak;\n       1974: \t}\n       1975: }\n       1976: \n       1977: STATIC_OVL int"
   },
   {
     "key": "L01993_01",
     "original": "cannot throw gold at yourself.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:1993:7\n  1988: #ifndef GOLDOBJ\n  1989: \t\tu.ugold += obj-&gt;quan;\n  1990: \t\tflags.botl = 1;\n  1991: \t\tdealloc_obj(obj);\n  1992: #endif\n&gt; 1993: \t\tYou(\"cannot throw gold at yourself.\");\n  1994: \t\treturn(0);\n  1995: \t}\n  1996: #ifdef GOLDOBJ\n  1997:         freeinv(obj);\n  1998: #endif"
+    "context": "src/dothrow.c:1993:7\n       1988: #ifndef GOLDOBJ\n       1989: \t\tu.ugold += obj-&gt;quan;\n       1990: \t\tflags.botl = 1;\n       1991: \t\tdealloc_obj(obj);\n       1992: #endif\nTARGET 1993: \t\tYou(\"cannot throw gold at yourself.\");\n       1994: \t\treturn(0);\n       1995: \t}\n       1996: #ifdef GOLDOBJ\n       1997:         freeinv(obj);\n       1998: #endif"
   },
   {
     "key": "L02001_01",
     "original": "%s in the %s's entrails.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2001:4\n  1996: #ifdef GOLDOBJ\n  1997:         freeinv(obj);\n  1998: #endif\n  1999: \tif(u.uswallow) {\n  2000: \t\tpline(is_animal(u.ustuck-&gt;data) ?\n&gt; 2001: \t\t\t\"%s in the %s's entrails.\" : \"%s into %s.\",\n  2002: #ifndef GOLDOBJ\n  2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n  2004: \t\tu.ustuck-&gt;mgold += zorks;\n  2005: \t\tdealloc_obj(obj);\n  2006: #else"
+    "context": "src/dothrow.c:2001:4\n       1996: #ifdef GOLDOBJ\n       1997:         freeinv(obj);\n       1998: #endif\n       1999: \tif(u.uswallow) {\n       2000: \t\tpline(is_animal(u.ustuck-&gt;data) ?\nTARGET 2001: \t\t\t\"%s in the %s's entrails.\" : \"%s into %s.\",\n       2002: #ifndef GOLDOBJ\n       2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n       2004: \t\tu.ustuck-&gt;mgold += zorks;\n       2005: \t\tdealloc_obj(obj);\n       2006: #else"
   },
   {
     "key": "L02001_02",
     "original": "%s into %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2001:33\n  1996: #ifdef GOLDOBJ\n  1997:         freeinv(obj);\n  1998: #endif\n  1999: \tif(u.uswallow) {\n  2000: \t\tpline(is_animal(u.ustuck-&gt;data) ?\n&gt; 2001: \t\t\t\"%s in the %s's entrails.\" : \"%s into %s.\",\n  2002: #ifndef GOLDOBJ\n  2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n  2004: \t\tu.ustuck-&gt;mgold += zorks;\n  2005: \t\tdealloc_obj(obj);\n  2006: #else"
+    "context": "src/dothrow.c:2001:33\n       1996: #ifdef GOLDOBJ\n       1997:         freeinv(obj);\n       1998: #endif\n       1999: \tif(u.uswallow) {\n       2000: \t\tpline(is_animal(u.ustuck-&gt;data) ?\nTARGET 2001: \t\t\t\"%s in the %s's entrails.\" : \"%s into %s.\",\n       2002: #ifndef GOLDOBJ\n       2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n       2004: \t\tu.ustuck-&gt;mgold += zorks;\n       2005: \t\tdealloc_obj(obj);\n       2006: #else"
   },
   {
     "key": "L02003_01",
     "original": "The gold disappears",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2003:4\n  1998: #endif\n  1999: \tif(u.uswallow) {\n  2000: \t\tpline(is_animal(u.ustuck-&gt;data) ?\n  2001: \t\t\t\"%s in the %s's entrails.\" : \"%s into %s.\",\n  2002: #ifndef GOLDOBJ\n&gt; 2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n  2004: \t\tu.ustuck-&gt;mgold += zorks;\n  2005: \t\tdealloc_obj(obj);\n  2006: #else\n  2007: \t\t\t\"The money disappears\", mon_nam(u.ustuck));\n  2008: \t\tadd_to_minv(u.ustuck, obj);"
+    "context": "src/dothrow.c:2003:4\n       1998: #endif\n       1999: \tif(u.uswallow) {\n       2000: \t\tpline(is_animal(u.ustuck-&gt;data) ?\n       2001: \t\t\t\"%s in the %s's entrails.\" : \"%s into %s.\",\n       2002: #ifndef GOLDOBJ\nTARGET 2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n       2004: \t\tu.ustuck-&gt;mgold += zorks;\n       2005: \t\tdealloc_obj(obj);\n       2006: #else\n       2007: \t\t\t\"The money disappears\", mon_nam(u.ustuck));\n       2008: \t\tadd_to_minv(u.ustuck, obj);"
   },
   {
     "key": "L02007_01",
     "original": "The money disappears",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2007:4\n  2002: #ifndef GOLDOBJ\n  2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n  2004: \t\tu.ustuck-&gt;mgold += zorks;\n  2005: \t\tdealloc_obj(obj);\n  2006: #else\n&gt; 2007: \t\t\t\"The money disappears\", mon_nam(u.ustuck));\n  2008: \t\tadd_to_minv(u.ustuck, obj);\n  2009: #endif\n  2010: \t\treturn(1);\n  2011: \t}\n  2012: "
+    "context": "src/dothrow.c:2007:4\n       2002: #ifndef GOLDOBJ\n       2003: \t\t\t\"The gold disappears\", mon_nam(u.ustuck));\n       2004: \t\tu.ustuck-&gt;mgold += zorks;\n       2005: \t\tdealloc_obj(obj);\n       2006: #else\nTARGET 2007: \t\t\t\"The money disappears\", mon_nam(u.ustuck));\n       2008: \t\tadd_to_minv(u.ustuck, obj);\n       2009: #endif\n       2010: \t\treturn(1);\n       2011: \t}\n       2012: "
   },
   {
     "key": "L02016_01",
     "original": "gold hits the %s, then falls back on top of your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2016:12\n  2011: \t}\n  2012: \n  2013: \tif(u.dz) {\n  2014: \t\tif (u.dz &lt; 0 && !Is_airlevel(&u.uz) &&\n  2015: \t\t\t\t\t!Underwater && !Is_waterlevel(&u.uz)) {\n&gt; 2016: \tpline_The(\"gold hits the %s, then falls back on top of your %s.\",\n  2017: \t\t    ceiling(u.ux,u.uy), body_part(HEAD));\n  2018: \t\t    /* some self damage? */\n  2019: \t\t    if(uarmh) pline(\"Fortunately, you are wearing a helmet!\");\n  2020: \t\t}\n  2021: \t\tbhitpos.x = u.ux;"
+    "context": "src/dothrow.c:2016:12\n       2011: \t}\n       2012: \n       2013: \tif(u.dz) {\n       2014: \t\tif (u.dz &lt; 0 && !Is_airlevel(&u.uz) &&\n       2015: \t\t\t\t\t!Underwater && !Is_waterlevel(&u.uz)) {\nTARGET 2016: \tpline_The(\"gold hits the %s, then falls back on top of your %s.\",\n       2017: \t\t    ceiling(u.ux,u.uy), body_part(HEAD));\n       2018: \t\t    /* some self damage? */\n       2019: \t\t    if(uarmh) pline(\"Fortunately, you are wearing a helmet!\");\n       2020: \t\t}\n       2021: \t\tbhitpos.x = u.ux;"
   },
   {
     "key": "L02019_01",
     "original": "Fortunately, you are wearing a helmet!",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2019:23\n  2014: \t\tif (u.dz &lt; 0 && !Is_airlevel(&u.uz) &&\n  2015: \t\t\t\t\t!Underwater && !Is_waterlevel(&u.uz)) {\n  2016: \tpline_The(\"gold hits the %s, then falls back on top of your %s.\",\n  2017: \t\t    ceiling(u.ux,u.uy), body_part(HEAD));\n  2018: \t\t    /* some self damage? */\n&gt; 2019: \t\t    if(uarmh) pline(\"Fortunately, you are wearing a helmet!\");\n  2020: \t\t}\n  2021: \t\tbhitpos.x = u.ux;\n  2022: \t\tbhitpos.y = u.uy;\n  2023: \t} else {\n  2024: \t\t/* consistent with range for normal objects */"
+    "context": "src/dothrow.c:2019:23\n       2014: \t\tif (u.dz &lt; 0 && !Is_airlevel(&u.uz) &&\n       2015: \t\t\t\t\t!Underwater && !Is_waterlevel(&u.uz)) {\n       2016: \tpline_The(\"gold hits the %s, then falls back on top of your %s.\",\n       2017: \t\t    ceiling(u.ux,u.uy), body_part(HEAD));\n       2018: \t\t    /* some self damage? */\nTARGET 2019: \t\t    if(uarmh) pline(\"Fortunately, you are wearing a helmet!\");\n       2020: \t\t}\n       2021: \t\tbhitpos.x = u.ux;\n       2022: \t\tbhitpos.y = u.uy;\n       2023: \t} else {\n       2024: \t\t/* consistent with range for normal objects */"
   },
   {
     "key": "L02050_01",
     "original": "fall",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2050:42\n  2045: \t\t\t\treturn 1;\n  2046: \t\t\t}\n  2047: \t\t}\n  2048: \t}\n  2049: \n&gt; 2050: \tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return(1);\n  2051: \tif(u.dz &gt; 0)\n  2052: \t\tpline_The(\"gold hits the %s.\", surface(bhitpos.x,bhitpos.y));\n  2053: \tplace_object(obj,bhitpos.x,bhitpos.y);\n  2054: \tif(*u.ushops) sellobj(obj, bhitpos.x, bhitpos.y);\n  2055: \tstackobj(obj);"
+    "context": "src/dothrow.c:2050:42\n       2045: \t\t\t\treturn 1;\n       2046: \t\t\t}\n       2047: \t\t}\n       2048: \t}\n       2049: \nTARGET 2050: \tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return(1);\n       2051: \tif(u.dz &gt; 0)\n       2052: \t\tpline_The(\"gold hits the %s.\", surface(bhitpos.x,bhitpos.y));\n       2053: \tplace_object(obj,bhitpos.x,bhitpos.y);\n       2054: \tif(*u.ushops) sellobj(obj, bhitpos.x, bhitpos.y);\n       2055: \tstackobj(obj);"
   },
   {
     "key": "L02052_01",
     "original": "gold hits the %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/dothrow.c:2052:13\n  2047: \t\t}\n  2048: \t}\n  2049: \n  2050: \tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return(1);\n  2051: \tif(u.dz &gt; 0)\n&gt; 2052: \t\tpline_The(\"gold hits the %s.\", surface(bhitpos.x,bhitpos.y));\n  2053: \tplace_object(obj,bhitpos.x,bhitpos.y);\n  2054: \tif(*u.ushops) sellobj(obj, bhitpos.x, bhitpos.y);\n  2055: \tstackobj(obj);\n  2056: \tnewsym(bhitpos.x,bhitpos.y);\n  2057: \treturn(1);"
+    "context": "src/dothrow.c:2052:13\n       2047: \t\t}\n       2048: \t}\n       2049: \n       2050: \tif(flooreffects(obj,bhitpos.x,bhitpos.y,\"fall\")) return(1);\n       2051: \tif(u.dz &gt; 0)\nTARGET 2052: \t\tpline_The(\"gold hits the %s.\", surface(bhitpos.x,bhitpos.y));\n       2053: \tplace_object(obj,bhitpos.x,bhitpos.y);\n       2054: \tif(*u.ushops) sellobj(obj, bhitpos.x, bhitpos.y);\n       2055: \tstackobj(obj);\n       2056: \tnewsym(bhitpos.x,bhitpos.y);\n       2057: \treturn(1);"
   }
 ]

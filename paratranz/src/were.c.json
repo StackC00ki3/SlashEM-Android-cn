@@ -4,153 +4,153 @@
     "original": "wolf",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:25:40\n    20: \t\tnew_were(mon);\t\t/* change into animal form */\n    21: \t\tif (flags.soundok && !canseemon(mon)) {\n    22: \t\t    const char *howler;\n    23: \n    24: \t\t    switch (monsndx(mon-&gt;data)) {\n&gt;   25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n    26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n    27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n    28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n    29: \t\t    default:\t\t\thowler = (char *)0; break;\n    30: \t\t    }"
+    "context": "src/were.c:25:40\n         20: \t\tnew_were(mon);\t\t/* change into animal form */\n         21: \t\tif (flags.soundok && !canseemon(mon)) {\n         22: \t\t    const char *howler;\n         23: \n         24: \t\t    switch (monsndx(mon-&gt;data)) {\nTARGET   25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n         26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n         27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n         28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n         29: \t\t    default:\t\t\thowler = (char *)0; break;\n         30: \t\t    }"
   },
   {
     "key": "L00026_01",
     "original": "jackal",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:26:42\n    21: \t\tif (flags.soundok && !canseemon(mon)) {\n    22: \t\t    const char *howler;\n    23: \n    24: \t\t    switch (monsndx(mon-&gt;data)) {\n    25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n&gt;   26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n    27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n    28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n    29: \t\t    default:\t\t\thowler = (char *)0; break;\n    30: \t\t    }\n    31: \t\t    if (howler)"
+    "context": "src/were.c:26:42\n         21: \t\tif (flags.soundok && !canseemon(mon)) {\n         22: \t\t    const char *howler;\n         23: \n         24: \t\t    switch (monsndx(mon-&gt;data)) {\n         25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\nTARGET   26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n         27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n         28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n         29: \t\t    default:\t\t\thowler = (char *)0; break;\n         30: \t\t    }\n         31: \t\t    if (howler)"
   },
   {
     "key": "L00027_01",
     "original": "panther",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:27:43\n    22: \t\t    const char *howler;\n    23: \n    24: \t\t    switch (monsndx(mon-&gt;data)) {\n    25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n    26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n&gt;   27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n    28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n    29: \t\t    default:\t\t\thowler = (char *)0; break;\n    30: \t\t    }\n    31: \t\t    if (howler)\n    32: \t\t\tYou_hear(\"a %s howling at the moon.\", howler);"
+    "context": "src/were.c:27:43\n         22: \t\t    const char *howler;\n         23: \n         24: \t\t    switch (monsndx(mon-&gt;data)) {\n         25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n         26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\nTARGET   27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n         28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n         29: \t\t    default:\t\t\thowler = (char *)0; break;\n         30: \t\t    }\n         31: \t\t    if (howler)\n         32: \t\t\tYou_hear(\"a %s howling at the moon.\", howler);"
   },
   {
     "key": "L00028_01",
     "original": "tiger",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:28:41\n    23: \n    24: \t\t    switch (monsndx(mon-&gt;data)) {\n    25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n    26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n    27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n&gt;   28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n    29: \t\t    default:\t\t\thowler = (char *)0; break;\n    30: \t\t    }\n    31: \t\t    if (howler)\n    32: \t\t\tYou_hear(\"a %s howling at the moon.\", howler);\n    33: \t\t}"
+    "context": "src/were.c:28:41\n         23: \n         24: \t\t    switch (monsndx(mon-&gt;data)) {\n         25: \t\t    case PM_HUMAN_WEREWOLF:\thowler = \"wolf\";    break;\n         26: \t\t    case PM_HUMAN_WEREJACKAL:\thowler = \"jackal\";  break;\n         27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\nTARGET   28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n         29: \t\t    default:\t\t\thowler = (char *)0; break;\n         30: \t\t    }\n         31: \t\t    if (howler)\n         32: \t\t\tYou_hear(\"a %s howling at the moon.\", howler);\n         33: \t\t}"
   },
   {
     "key": "L00032_01",
     "original": "a %s howling at the moon.",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:32:13\n    27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n    28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n    29: \t\t    default:\t\t\thowler = (char *)0; break;\n    30: \t\t    }\n    31: \t\t    if (howler)\n&gt;   32: \t\t\tYou_hear(\"a %s howling at the moon.\", howler);\n    33: \t\t}\n    34: \t    }\n    35: \t} else if (!rn2(30) || Protection_from_shape_changers) {\n    36: \t    new_were(mon);\t\t/* change back into human form */\n    37: \t}"
+    "context": "src/were.c:32:13\n         27: \t\t    case PM_HUMAN_WEREPANTHER:\thowler = \"panther\"; break;\n         28: \t\t    case PM_HUMAN_WERETIGER:\thowler = \"tiger\";   break;\n         29: \t\t    default:\t\t\thowler = (char *)0; break;\n         30: \t\t    }\n         31: \t\t    if (howler)\nTARGET   32: \t\t\tYou_hear(\"a %s howling at the moon.\", howler);\n         33: \t\t}\n         34: \t    }\n         35: \t} else if (!rn2(30) || Protection_from_shape_changers) {\n         36: \t    new_were(mon);\t\t/* change back into human form */\n         37: \t}"
   },
   {
     "key": "L00074_01",
     "original": "unknown lycanthrope %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:74:17\n    69: {\n    70: \tregister int pm;\n    71: \n    72: \tpm = counter_were(monsndx(mon-&gt;data));\n    73: \tif(!pm) {\n&gt;   74: \t    impossible(\"unknown lycanthrope %s.\", mon-&gt;data-&gt;mname);\n    75: \t    return;\n    76: \t}\n    77: \n    78: \tif(canseemon(mon) && !Hallucination)\n    79: \t    pline(\"%s changes into a %s.\", Monnam(mon),"
+    "context": "src/were.c:74:17\n         69: {\n         70: \tregister int pm;\n         71: \n         72: \tpm = counter_were(monsndx(mon-&gt;data));\n         73: \tif(!pm) {\nTARGET   74: \t    impossible(\"unknown lycanthrope %s.\", mon-&gt;data-&gt;mname);\n         75: \t    return;\n         76: \t}\n         77: \n         78: \tif(canseemon(mon) && !Hallucination)\n         79: \t    pline(\"%s changes into a %s.\", Monnam(mon),"
   },
   {
     "key": "L00079_01",
     "original": "%s changes into a %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:79:12\n    74: \t    impossible(\"unknown lycanthrope %s.\", mon-&gt;data-&gt;mname);\n    75: \t    return;\n    76: \t}\n    77: \n    78: \tif(canseemon(mon) && !Hallucination)\n&gt;   79: \t    pline(\"%s changes into a %s.\", Monnam(mon),\n    80: \t\t\tis_human(&mons[pm]) ? \"human\" :\n    81: \t\t\tmons[pm].mname+4);\n    82: \n    83: \tset_mon_data(mon, &mons[pm], 0);\n    84: \tif (mon-&gt;msleeping || !mon-&gt;mcanmove) {"
+    "context": "src/were.c:79:12\n         74: \t    impossible(\"unknown lycanthrope %s.\", mon-&gt;data-&gt;mname);\n         75: \t    return;\n         76: \t}\n         77: \n         78: \tif(canseemon(mon) && !Hallucination)\nTARGET   79: \t    pline(\"%s changes into a %s.\", Monnam(mon),\n         80: \t\t\tis_human(&mons[pm]) ? \"human\" :\n         81: \t\t\tmons[pm].mname+4);\n         82: \n         83: \tset_mon_data(mon, &mons[pm], 0);\n         84: \tif (mon-&gt;msleeping || !mon-&gt;mcanmove) {"
   },
   {
     "key": "L00080_01",
     "original": "human",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:80:26\n    75: \t    return;\n    76: \t}\n    77: \n    78: \tif(canseemon(mon) && !Hallucination)\n    79: \t    pline(\"%s changes into a %s.\", Monnam(mon),\n&gt;   80: \t\t\tis_human(&mons[pm]) ? \"human\" :\n    81: \t\t\tmons[pm].mname+4);\n    82: \n    83: \tset_mon_data(mon, &mons[pm], 0);\n    84: \tif (mon-&gt;msleeping || !mon-&gt;mcanmove) {\n    85: \t    /* transformation wakens and/or revitalizes */"
+    "context": "src/were.c:80:26\n         75: \t    return;\n         76: \t}\n         77: \n         78: \tif(canseemon(mon) && !Hallucination)\n         79: \t    pline(\"%s changes into a %s.\", Monnam(mon),\nTARGET   80: \t\t\tis_human(&mons[pm]) ? \"human\" :\n         81: \t\t\tmons[pm].mname+4);\n         82: \n         83: \tset_mon_data(mon, &mons[pm], 0);\n         84: \tif (mon-&gt;msleeping || !mon-&gt;mcanmove) {\n         85: \t    /* transformation wakens and/or revitalizes */"
   },
   {
     "key": "L00125_01",
     "original": "rat",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:125:31\n   120: \t   switch(pm) {\n   121: \n   122: \t\tcase PM_WERERAT:\n   123: \t\tcase PM_HUMAN_WERERAT:\n   124: \t\t\ttyp = rn2(3) ? PM_SEWER_RAT : rn2(3) ? PM_GIANT_RAT : PM_RABID_RAT ;\n&gt;  125: \t\t\tif (genbuf) Strcpy(genbuf, \"rat\");\n   126: \t\t\tbreak;\n   127: \t\tcase PM_WEREJACKAL:\n   128: \t\tcase PM_HUMAN_WEREJACKAL:\n   129: \t\t\ttyp = PM_JACKAL;\n   130: \t\t\tif (genbuf) Strcpy(genbuf, \"jackal\");"
+    "context": "src/were.c:125:31\n        120: \t   switch(pm) {\n        121: \n        122: \t\tcase PM_WERERAT:\n        123: \t\tcase PM_HUMAN_WERERAT:\n        124: \t\t\ttyp = rn2(3) ? PM_SEWER_RAT : rn2(3) ? PM_GIANT_RAT : PM_RABID_RAT ;\nTARGET  125: \t\t\tif (genbuf) Strcpy(genbuf, \"rat\");\n        126: \t\t\tbreak;\n        127: \t\tcase PM_WEREJACKAL:\n        128: \t\tcase PM_HUMAN_WEREJACKAL:\n        129: \t\t\ttyp = PM_JACKAL;\n        130: \t\t\tif (genbuf) Strcpy(genbuf, \"jackal\");"
   },
   {
     "key": "L00130_01",
     "original": "jackal",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:130:31\n   125: \t\t\tif (genbuf) Strcpy(genbuf, \"rat\");\n   126: \t\t\tbreak;\n   127: \t\tcase PM_WEREJACKAL:\n   128: \t\tcase PM_HUMAN_WEREJACKAL:\n   129: \t\t\ttyp = PM_JACKAL;\n&gt;  130: \t\t\tif (genbuf) Strcpy(genbuf, \"jackal\");\n   131: \t\t\tbreak;\n   132: \t\tcase PM_WEREWOLF:\n   133: \t\tcase PM_HUMAN_WEREWOLF:\n   134: \t\t\ttyp = rn2(5) ? PM_WOLF : PM_WINTER_WOLF ;\n   135: \t\t\tif (genbuf) Strcpy(genbuf, \"wolf\");"
+    "context": "src/were.c:130:31\n        125: \t\t\tif (genbuf) Strcpy(genbuf, \"rat\");\n        126: \t\t\tbreak;\n        127: \t\tcase PM_WEREJACKAL:\n        128: \t\tcase PM_HUMAN_WEREJACKAL:\n        129: \t\t\ttyp = PM_JACKAL;\nTARGET  130: \t\t\tif (genbuf) Strcpy(genbuf, \"jackal\");\n        131: \t\t\tbreak;\n        132: \t\tcase PM_WEREWOLF:\n        133: \t\tcase PM_HUMAN_WEREWOLF:\n        134: \t\t\ttyp = rn2(5) ? PM_WOLF : PM_WINTER_WOLF ;\n        135: \t\t\tif (genbuf) Strcpy(genbuf, \"wolf\");"
   },
   {
     "key": "L00135_01",
     "original": "wolf",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:135:31\n   130: \t\t\tif (genbuf) Strcpy(genbuf, \"jackal\");\n   131: \t\t\tbreak;\n   132: \t\tcase PM_WEREWOLF:\n   133: \t\tcase PM_HUMAN_WEREWOLF:\n   134: \t\t\ttyp = rn2(5) ? PM_WOLF : PM_WINTER_WOLF ;\n&gt;  135: \t\t\tif (genbuf) Strcpy(genbuf, \"wolf\");\n   136: \t\t\tbreak;\n   137: \t\tcase PM_WEREPANTHER:\n   138: \t\tcase PM_HUMAN_WEREPANTHER:\n   139: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_PANTHER ;\n   140: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");"
+    "context": "src/were.c:135:31\n        130: \t\t\tif (genbuf) Strcpy(genbuf, \"jackal\");\n        131: \t\t\tbreak;\n        132: \t\tcase PM_WEREWOLF:\n        133: \t\tcase PM_HUMAN_WEREWOLF:\n        134: \t\t\ttyp = rn2(5) ? PM_WOLF : PM_WINTER_WOLF ;\nTARGET  135: \t\t\tif (genbuf) Strcpy(genbuf, \"wolf\");\n        136: \t\t\tbreak;\n        137: \t\tcase PM_WEREPANTHER:\n        138: \t\tcase PM_HUMAN_WEREPANTHER:\n        139: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_PANTHER ;\n        140: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");"
   },
   {
     "key": "L00140_01",
     "original": "large cat",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:140:31\n   135: \t\t\tif (genbuf) Strcpy(genbuf, \"wolf\");\n   136: \t\t\tbreak;\n   137: \t\tcase PM_WEREPANTHER:\n   138: \t\tcase PM_HUMAN_WEREPANTHER:\n   139: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_PANTHER ;\n&gt;  140: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n   141: \t\t\tbreak;\n   142: \t\tcase PM_WERETIGER:\n   143: \t\tcase PM_HUMAN_WERETIGER:\n   144: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_TIGER ;\n   145: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");"
+    "context": "src/were.c:140:31\n        135: \t\t\tif (genbuf) Strcpy(genbuf, \"wolf\");\n        136: \t\t\tbreak;\n        137: \t\tcase PM_WEREPANTHER:\n        138: \t\tcase PM_HUMAN_WEREPANTHER:\n        139: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_PANTHER ;\nTARGET  140: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n        141: \t\t\tbreak;\n        142: \t\tcase PM_WERETIGER:\n        143: \t\tcase PM_HUMAN_WERETIGER:\n        144: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_TIGER ;\n        145: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");"
   },
   {
     "key": "L00145_01",
     "original": "large cat",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:145:31\n   140: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n   141: \t\t\tbreak;\n   142: \t\tcase PM_WERETIGER:\n   143: \t\tcase PM_HUMAN_WERETIGER:\n   144: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_TIGER ;\n&gt;  145: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n   146: \t\t\tbreak;\n   147: \t\tcase PM_WERESNAKE:\n   148: \t\tcase PM_HUMAN_WERESNAKE:\n   149: \t\t\ttyp = rn2(5) ? PM_SNAKE : PM_PIT_VIPER ;\n   150: \t\t\tif (genbuf) Strcpy(genbuf, \"snake\");"
+    "context": "src/were.c:145:31\n        140: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n        141: \t\t\tbreak;\n        142: \t\tcase PM_WERETIGER:\n        143: \t\tcase PM_HUMAN_WERETIGER:\n        144: \t\t\ttyp = rn2(5) ? PM_JAGUAR : PM_TIGER ;\nTARGET  145: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n        146: \t\t\tbreak;\n        147: \t\tcase PM_WERESNAKE:\n        148: \t\tcase PM_HUMAN_WERESNAKE:\n        149: \t\t\ttyp = rn2(5) ? PM_SNAKE : PM_PIT_VIPER ;\n        150: \t\t\tif (genbuf) Strcpy(genbuf, \"snake\");"
   },
   {
     "key": "L00150_01",
     "original": "snake",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:150:31\n   145: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n   146: \t\t\tbreak;\n   147: \t\tcase PM_WERESNAKE:\n   148: \t\tcase PM_HUMAN_WERESNAKE:\n   149: \t\t\ttyp = rn2(5) ? PM_SNAKE : PM_PIT_VIPER ;\n&gt;  150: \t\t\tif (genbuf) Strcpy(genbuf, \"snake\");\n   151: \t\t\tbreak;\n   152: \t\tcase PM_WERESPIDER:\n   153: \t\tcase PM_HUMAN_WERESPIDER:\n   154: \t\t\ttyp = rn2(5) ? PM_CAVE_SPIDER : PM_RECLUSE_SPIDER ;\n   155: \t\t\tif (genbuf) Strcpy(genbuf, \"spider\");"
+    "context": "src/were.c:150:31\n        145: \t\t\tif (genbuf) Strcpy(genbuf, \"large cat\");\n        146: \t\t\tbreak;\n        147: \t\tcase PM_WERESNAKE:\n        148: \t\tcase PM_HUMAN_WERESNAKE:\n        149: \t\t\ttyp = rn2(5) ? PM_SNAKE : PM_PIT_VIPER ;\nTARGET  150: \t\t\tif (genbuf) Strcpy(genbuf, \"snake\");\n        151: \t\t\tbreak;\n        152: \t\tcase PM_WERESPIDER:\n        153: \t\tcase PM_HUMAN_WERESPIDER:\n        154: \t\t\ttyp = rn2(5) ? PM_CAVE_SPIDER : PM_RECLUSE_SPIDER ;\n        155: \t\t\tif (genbuf) Strcpy(genbuf, \"spider\");"
   },
   {
     "key": "L00155_01",
     "original": "spider",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:155:31\n   150: \t\t\tif (genbuf) Strcpy(genbuf, \"snake\");\n   151: \t\t\tbreak;\n   152: \t\tcase PM_WERESPIDER:\n   153: \t\tcase PM_HUMAN_WERESPIDER:\n   154: \t\t\ttyp = rn2(5) ? PM_CAVE_SPIDER : PM_RECLUSE_SPIDER ;\n&gt;  155: \t\t\tif (genbuf) Strcpy(genbuf, \"spider\");\n   156: \t\t\tbreak;\n   157: \t\tdefault:\n   158: \t\t\tcontinue;\n   159: \t    }\n   160: \t    mtmp = makemon(&mons[typ], u.ux, u.uy, NO_MM_FLAGS);"
+    "context": "src/were.c:155:31\n        150: \t\t\tif (genbuf) Strcpy(genbuf, \"snake\");\n        151: \t\t\tbreak;\n        152: \t\tcase PM_WERESPIDER:\n        153: \t\tcase PM_HUMAN_WERESPIDER:\n        154: \t\t\ttyp = rn2(5) ? PM_CAVE_SPIDER : PM_RECLUSE_SPIDER ;\nTARGET  155: \t\t\tif (genbuf) Strcpy(genbuf, \"spider\");\n        156: \t\t\tbreak;\n        157: \t\tdefault:\n        158: \t\t\tcontinue;\n        159: \t    }\n        160: \t    mtmp = makemon(&mons[typ], u.ux, u.uy, NO_MM_FLAGS);"
   },
   {
     "key": "L00179_01",
     "original": "Do you want to change into %s? ",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:179:20\n   174: \tchar qbuf[QBUFSZ];\n   175: \n   176: \tif (Unchanging || (u.umonnum == u.ulycn)) return;\n   177: \tif (Polymorph_control) {\n   178: \t    /* `+4' =&gt; skip \"were\" prefix to get name of beast */\n&gt;  179: \t    Sprintf(qbuf, \"Do you want to change into %s? \",\n   180: \t\t    an(mons[u.ulycn].mname+4));\n   181: \t    if(yn(qbuf) == 'n') return;\n   182: \t}\n   183: \t(void) polymon(u.ulycn);\n   184: }"
+    "context": "src/were.c:179:20\n        174: \tchar qbuf[QBUFSZ];\n        175: \n        176: \tif (Unchanging || (u.umonnum == u.ulycn)) return;\n        177: \tif (Polymorph_control) {\n        178: \t    /* `+4' =&gt; skip \"were\" prefix to get name of beast */\nTARGET  179: \t    Sprintf(qbuf, \"Do you want to change into %s? \",\n        180: \t\t    an(mons[u.ulycn].mname+4));\n        181: \t    if(yn(qbuf) == 'n') return;\n        182: \t}\n        183: \t(void) polymon(u.ulycn);\n        184: }"
   },
   {
     "key": "L00197_01",
     "original": "purified while stuck in creature form",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:197:16\n   192: \tif (purify) {\n   193: \t    if (Race_if(PM_HUMAN_WEREWOLF)) {\n   194: \t\t/* An attempt to purify you has been made! */\n   195: \t\tif (in_wereform && Unchanging) {\n   196: \t\t    killer_format = NO_KILLER_PREFIX;\n&gt;  197: \t\t    killer = \"purified while stuck in creature form\";\n   198: \t\t    pline_The(\"purification was deadly...\");\n   199: \t\t    done(DIED);\n   200: \t\t} else {\n   201: \t\t    You_feel(\"very bad!\");\n   202: \t\t    if (in_wereform)"
+    "context": "src/were.c:197:16\n        192: \tif (purify) {\n        193: \t    if (Race_if(PM_HUMAN_WEREWOLF)) {\n        194: \t\t/* An attempt to purify you has been made! */\n        195: \t\tif (in_wereform && Unchanging) {\n        196: \t\t    killer_format = NO_KILLER_PREFIX;\nTARGET  197: \t\t    killer = \"purified while stuck in creature form\";\n        198: \t\t    pline_The(\"purification was deadly...\");\n        199: \t\t    done(DIED);\n        200: \t\t} else {\n        201: \t\t    You_feel(\"very bad!\");\n        202: \t\t    if (in_wereform)"
   },
   {
     "key": "L00198_01",
     "original": "purification was deadly...",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:198:17\n   193: \t    if (Race_if(PM_HUMAN_WEREWOLF)) {\n   194: \t\t/* An attempt to purify you has been made! */\n   195: \t\tif (in_wereform && Unchanging) {\n   196: \t\t    killer_format = NO_KILLER_PREFIX;\n   197: \t\t    killer = \"purified while stuck in creature form\";\n&gt;  198: \t\t    pline_The(\"purification was deadly...\");\n   199: \t\t    done(DIED);\n   200: \t\t} else {\n   201: \t\t    You_feel(\"very bad!\");\n   202: \t\t    if (in_wereform)\n   203: \t\t\trehumanize();"
+    "context": "src/were.c:198:17\n        193: \t    if (Race_if(PM_HUMAN_WEREWOLF)) {\n        194: \t\t/* An attempt to purify you has been made! */\n        195: \t\tif (in_wereform && Unchanging) {\n        196: \t\t    killer_format = NO_KILLER_PREFIX;\n        197: \t\t    killer = \"purified while stuck in creature form\";\nTARGET  198: \t\t    pline_The(\"purification was deadly...\");\n        199: \t\t    done(DIED);\n        200: \t\t} else {\n        201: \t\t    You_feel(\"very bad!\");\n        202: \t\t    if (in_wereform)\n        203: \t\t\trehumanize();"
   },
   {
     "key": "L00201_01",
     "original": "very bad!",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:201:16\n   196: \t\t    killer_format = NO_KILLER_PREFIX;\n   197: \t\t    killer = \"purified while stuck in creature form\";\n   198: \t\t    pline_The(\"purification was deadly...\");\n   199: \t\t    done(DIED);\n   200: \t\t} else {\n&gt;  201: \t\t    You_feel(\"very bad!\");\n   202: \t\t    if (in_wereform)\n   203: \t\t\trehumanize();\n   204: \t\t    (void) adjattrib(A_STR, -rn1(3,3), 2);\n   205: \t\t    (void) adjattrib(A_CON, -rn1(3,3), 1);\n   206: \t\t    losehp(u.uhp - (u.uhp &gt; 10 ? rnd(5) : 1), \"purification\","
+    "context": "src/were.c:201:16\n        196: \t\t    killer_format = NO_KILLER_PREFIX;\n        197: \t\t    killer = \"purified while stuck in creature form\";\n        198: \t\t    pline_The(\"purification was deadly...\");\n        199: \t\t    done(DIED);\n        200: \t\t} else {\nTARGET  201: \t\t    You_feel(\"very bad!\");\n        202: \t\t    if (in_wereform)\n        203: \t\t\trehumanize();\n        204: \t\t    (void) adjattrib(A_STR, -rn1(3,3), 2);\n        205: \t\t    (void) adjattrib(A_CON, -rn1(3,3), 1);\n        206: \t\t    losehp(u.uhp - (u.uhp &gt; 10 ? rnd(5) : 1), \"purification\","
   },
   {
     "key": "L00206_01",
     "original": "purification",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:206:49\n   201: \t\t    You_feel(\"very bad!\");\n   202: \t\t    if (in_wereform)\n   203: \t\t\trehumanize();\n   204: \t\t    (void) adjattrib(A_STR, -rn1(3,3), 2);\n   205: \t\t    (void) adjattrib(A_CON, -rn1(3,3), 1);\n&gt;  206: \t\t    losehp(u.uhp - (u.uhp &gt; 10 ? rnd(5) : 1), \"purification\",\n   207: \t\t\t    KILLED_BY);\n   208: \t\t}\n   209: \t\treturn;\n   210: \t    }\n   211: \t    You_feel(\"purified.\");"
+    "context": "src/were.c:206:49\n        201: \t\t    You_feel(\"very bad!\");\n        202: \t\t    if (in_wereform)\n        203: \t\t\trehumanize();\n        204: \t\t    (void) adjattrib(A_STR, -rn1(3,3), 2);\n        205: \t\t    (void) adjattrib(A_CON, -rn1(3,3), 1);\nTARGET  206: \t\t    losehp(u.uhp - (u.uhp &gt; 10 ? rnd(5) : 1), \"purification\",\n        207: \t\t\t    KILLED_BY);\n        208: \t\t}\n        209: \t\treturn;\n        210: \t    }\n        211: \t    You_feel(\"purified.\");"
   },
   {
     "key": "L00211_01",
     "original": "purified.",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:211:15\n   206: \t\t    losehp(u.uhp - (u.uhp &gt; 10 ? rnd(5) : 1), \"purification\",\n   207: \t\t\t    KILLED_BY);\n   208: \t\t}\n   209: \t\treturn;\n   210: \t    }\n&gt;  211: \t    You_feel(\"purified.\");\n   212: \t    u.ulycn = NON_PM;\t/* cure lycanthropy */\n   213: \t    upermonst.mflags2 &= ~M2_WERE;\n   214: \t}\n   215: \tif (!Unchanging && in_wereform &&\n   216: \t\t(!Polymorph_control || yn(\"Remain in beast form?\") == 'n'))"
+    "context": "src/were.c:211:15\n        206: \t\t    losehp(u.uhp - (u.uhp &gt; 10 ? rnd(5) : 1), \"purification\",\n        207: \t\t\t    KILLED_BY);\n        208: \t\t}\n        209: \t\treturn;\n        210: \t    }\nTARGET  211: \t    You_feel(\"purified.\");\n        212: \t    u.ulycn = NON_PM;\t/* cure lycanthropy */\n        213: \t    upermonst.mflags2 &= ~M2_WERE;\n        214: \t}\n        215: \tif (!Unchanging && in_wereform &&\n        216: \t\t(!Polymorph_control || yn(\"Remain in beast form?\") == 'n'))"
   },
   {
     "key": "L00216_01",
     "original": "Remain in beast form?",
     "translation": "",
     "stage": 0,
-    "context": "src/were.c:216:29\n   211: \t    You_feel(\"purified.\");\n   212: \t    u.ulycn = NON_PM;\t/* cure lycanthropy */\n   213: \t    upermonst.mflags2 &= ~M2_WERE;\n   214: \t}\n   215: \tif (!Unchanging && in_wereform &&\n&gt;  216: \t\t(!Polymorph_control || yn(\"Remain in beast form?\") == 'n'))\n   217: \t    rehumanize();\n   218: }\n   219: \n   220: #endif /* OVLB */\n   221: "
+    "context": "src/were.c:216:29\n        211: \t    You_feel(\"purified.\");\n        212: \t    u.ulycn = NON_PM;\t/* cure lycanthropy */\n        213: \t    upermonst.mflags2 &= ~M2_WERE;\n        214: \t}\n        215: \tif (!Unchanging && in_wereform &&\nTARGET  216: \t\t(!Polymorph_control || yn(\"Remain in beast form?\") == 'n'))\n        217: \t    rehumanize();\n        218: }\n        219: \n        220: #endif /* OVLB */\n        221: "
   }
 ]

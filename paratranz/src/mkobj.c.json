@@ -4,328 +4,328 @@
     "original": "probtype error, oclass=%d i=%d",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:137:9\n   132: \n   133: \ti = bases[(int)oclass];\n   134: \twhile((prob -= objects[i].oc_prob) &gt; 0) i++;\n   135: \n   136: \tif(objects[i].oc_class != oclass || !OBJ_NAME(objects[i]))\n&gt;  137: \t\tpanic(\"probtype error, oclass=%d i=%d\", (int) oclass, i);\n   138: \n   139: \treturn(mksobj(i, TRUE, artif));\n   140: }\n   141: \n   142: STATIC_OVL void"
+    "context": "src/mkobj.c:137:9\n        132: \n        133: \ti = bases[(int)oclass];\n        134: \twhile((prob -= objects[i].oc_prob) &gt; 0) i++;\n        135: \n        136: \tif(objects[i].oc_class != oclass || !OBJ_NAME(objects[i]))\nTARGET  137: \t\tpanic(\"probtype error, oclass=%d i=%d\", (int) oclass, i);\n        138: \n        139: \treturn(mksobj(i, TRUE, artif));\n        140: }\n        141: \n        142: STATIC_OVL void"
   },
   {
     "key": "L00251_01",
     "original": "splitobj",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:251:12\n   246: long num;\n   247: {\n   248: \tstruct obj *otmp;\n   249: \n   250: \tif (obj-&gt;cobj || num &lt;= 0L || obj-&gt;quan &lt;= num)\n&gt;  251: \t    panic(\"splitobj\");\t/* can't split containers */\n   252: \totmp = newobj(obj-&gt;oxlth + obj-&gt;onamelth);\n   253: \t*otmp = *obj;\t\t/* copies whole structure */\n   254: \totmp-&gt;o_id = flags.ident++;\n   255: \tif (!otmp-&gt;o_id) otmp-&gt;o_id = flags.ident++;\t/* ident overflowed */\n   256: \totmp-&gt;timed = 0;\t/* not timed, yet */"
+    "context": "src/mkobj.c:251:12\n        246: long num;\n        247: {\n        248: \tstruct obj *otmp;\n        249: \n        250: \tif (obj-&gt;cobj || num &lt;= 0L || obj-&gt;quan &lt;= num)\nTARGET  251: \t    panic(\"splitobj\");\t/* can't split containers */\n        252: \totmp = newobj(obj-&gt;oxlth + obj-&gt;onamelth);\n        253: \t*otmp = *obj;\t\t/* copies whole structure */\n        254: \totmp-&gt;o_id = flags.ident++;\n        255: \tif (!otmp-&gt;o_id) otmp-&gt;o_id = flags.ident++;\t/* ident overflowed */\n        256: \totmp-&gt;timed = 0;\t/* not timed, yet */"
   },
   {
     "key": "L00341_01",
     "original": "replace_object: obj position",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:341:8\n   336: \totmp-&gt;nobj = obj-&gt;nobj;\n   337: \tobj-&gt;nobj = otmp;\n   338: \textract_nobj(obj, &billobjs);\n   339: \tbreak;\n   340:     default:\n&gt;  341: \tpanic(\"replace_object: obj position\");\n   342: \tbreak;\n   343:     }\n   344: }\n   345: \n   346: /*"
+    "context": "src/mkobj.c:341:8\n        336: \totmp-&gt;nobj = obj-&gt;nobj;\n        337: \tobj-&gt;nobj = otmp;\n        338: \textract_nobj(obj, &billobjs);\n        339: \tbreak;\n        340:     default:\nTARGET  341: \tpanic(\"replace_object: obj position\");\n        342: \tbreak;\n        343:     }\n        344: }\n        345: \n        346: /*"
   },
   {
     "key": "L00730_01",
     "original": "impossible mkobj %d, sym '%c'.",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:730:14\n   725: \t\t}\n   726: \t\tbreak;\n   727: \tcase COIN_CLASS:\n   728: \t\tbreak;\t/* do nothing */\n   729: \tdefault:\n&gt;  730: \t\timpossible(\"impossible mkobj %d, sym '%c'.\", otmp-&gt;otyp,\n   731: \t\t\t\t\t\tobjects[otmp-&gt;otyp].oc_class);\n   732: \t\treturn (struct obj *)0;\n   733: \t}\n   734: \n   735: \t/* Some things must get done (timers) even if init = 0 */"
+    "context": "src/mkobj.c:730:14\n        725: \t\t}\n        726: \t\tbreak;\n        727: \tcase COIN_CLASS:\n        728: \t\tbreak;\t/* do nothing */\n        729: \tdefault:\nTARGET  730: \t\timpossible(\"impossible mkobj %d, sym '%c'.\", otmp-&gt;otyp,\n        731: \t\t\t\t\t\tobjects[otmp-&gt;otyp].oc_class);\n        732: \t\treturn (struct obj *)0;\n        733: \t}\n        734: \n        735: \t/* Some things must get done (timers) even if init = 0 */"
   },
   {
     "key": "L01071_01",
     "original": "making corpstat type %d",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1071:17\n  1066: boolean init;\n  1067: {\n  1068: \tregister struct obj *otmp;\n  1069: \n  1070: \tif (objtype != CORPSE && objtype != STATUE)\n&gt; 1071: \t    impossible(\"making corpstat type %d\", objtype);\n  1072: \tif (x == 0 && y == 0) {\t\t/* special case - random placement */\n  1073: \t\totmp = mksobj(objtype, init, FALSE);\n  1074: \t\tif (otmp) rloco(otmp);\n  1075: \t} else\n  1076: \t\totmp = mksobj_at(objtype, x, y, init, FALSE);"
+    "context": "src/mkobj.c:1071:17\n       1066: boolean init;\n       1067: {\n       1068: \tregister struct obj *otmp;\n       1069: \n       1070: \tif (objtype != CORPSE && objtype != STATUE)\nTARGET 1071: \t    impossible(\"making corpstat type %d\", objtype);\n       1072: \tif (x == 0 && y == 0) {\t\t/* special case - random placement */\n       1073: \t\totmp = mksobj(objtype, init, FALSE);\n       1074: \t\tif (otmp) rloco(otmp);\n       1075: \t} else\n       1076: \t\totmp = mksobj_at(objtype, x, y, init, FALSE);"
   },
   {
     "key": "L01262_01",
     "original": "place_object: obj not free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1262:8\n  1257: int x, y;\n  1258: {\n  1259:     register struct obj *otmp2 = level.objects[x][y];\n  1260: \n  1261:     if (otmp-&gt;where != OBJ_FREE)\n&gt; 1262: \tpanic(\"place_object: obj not free\");\n  1263: \n  1264:     obj_no_longer_held(otmp);\n  1265:     if (otmp-&gt;otyp == BOULDER) block_point(x,y);\t/* vision */\n  1266: \n  1267:     /* obj goes under boulders */"
+    "context": "src/mkobj.c:1262:8\n       1257: int x, y;\n       1258: {\n       1259:     register struct obj *otmp2 = level.objects[x][y];\n       1260: \n       1261:     if (otmp-&gt;where != OBJ_FREE)\nTARGET 1262: \tpanic(\"place_object: obj not free\");\n       1263: \n       1264:     obj_no_longer_held(otmp);\n       1265:     if (otmp-&gt;otyp == BOULDER) block_point(x,y);\t/* vision */\n       1266: \n       1267:     /* obj goes under boulders */"
   },
   {
     "key": "L01331_01",
     "original": "%s age has ice modifications:otmp->age = %ld, returning %ld.",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1331:12\n  1326:     if (otmp-&gt;otyp == CORPSE && ON_ICE(otmp)) {\n  1327: \t/* Adjust the age; must be same as obj_timer_checks() for off ice*/\n  1328: \tage = monstermoves - otmp-&gt;age;\n  1329: \tretval = otmp-&gt;age + (age / ROT_ICE_ADJUSTMENT);\n  1330: #ifdef DEBUG_EFFECTS\n&gt; 1331: \tpline_The(\"%s age has ice modifications:otmp-&gt;age = %ld, returning %ld.\",\n  1332: \t\ts_suffix(doname(otmp)),otmp-&gt;age, retval);\n  1333: \tpline(\"Effective age of corpse: %ld.\",\n  1334: \t\tmonstermoves - retval);\n  1335: #endif\n  1336:     }"
+    "context": "src/mkobj.c:1331:12\n       1326:     if (otmp-&gt;otyp == CORPSE && ON_ICE(otmp)) {\n       1327: \t/* Adjust the age; must be same as obj_timer_checks() for off ice*/\n       1328: \tage = monstermoves - otmp-&gt;age;\n       1329: \tretval = otmp-&gt;age + (age / ROT_ICE_ADJUSTMENT);\n       1330: #ifdef DEBUG_EFFECTS\nTARGET 1331: \tpline_The(\"%s age has ice modifications:otmp-&gt;age = %ld, returning %ld.\",\n       1332: \t\ts_suffix(doname(otmp)),otmp-&gt;age, retval);\n       1333: \tpline(\"Effective age of corpse: %ld.\",\n       1334: \t\tmonstermoves - retval);\n       1335: #endif\n       1336:     }"
   },
   {
     "key": "L01333_01",
     "original": "Effective age of corpse: %ld.",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1333:8\n  1328: \tage = monstermoves - otmp-&gt;age;\n  1329: \tretval = otmp-&gt;age + (age / ROT_ICE_ADJUSTMENT);\n  1330: #ifdef DEBUG_EFFECTS\n  1331: \tpline_The(\"%s age has ice modifications:otmp-&gt;age = %ld, returning %ld.\",\n  1332: \t\ts_suffix(doname(otmp)),otmp-&gt;age, retval);\n&gt; 1333: \tpline(\"Effective age of corpse: %ld.\",\n  1334: \t\tmonstermoves - retval);\n  1335: #endif\n  1336:     }\n  1337:     return retval;\n  1338: }"
+    "context": "src/mkobj.c:1333:8\n       1328: \tage = monstermoves - otmp-&gt;age;\n       1329: \tretval = otmp-&gt;age + (age / ROT_ICE_ADJUSTMENT);\n       1330: #ifdef DEBUG_EFFECTS\n       1331: \tpline_The(\"%s age has ice modifications:otmp-&gt;age = %ld, returning %ld.\",\n       1332: \t\ts_suffix(doname(otmp)),otmp-&gt;age, retval);\nTARGET 1333: \tpline(\"Effective age of corpse: %ld.\",\n       1334: \t\tmonstermoves - retval);\n       1335: #endif\n       1336:     }\n       1337:     return retval;\n       1338: }"
   },
   {
     "key": "L01370_01",
     "original": "%s is now on ice at %d,%d.",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1370:12\n  1365: \t    \n  1366: \t    tleft = tleft - monstermoves;\n  1367: \t    /* mark the corpse as being on ice */\n  1368: \t    ON_ICE(otmp) = 1;\n  1369: #ifdef DEBUG_EFFECTS\n&gt; 1370: \t    pline(\"%s is now on ice at %d,%d.\", The(xname(otmp)),x,y);\n  1371: #endif\n  1372: \t    /* Adjust the time remaining */\n  1373: \t    tleft *= ROT_ICE_ADJUSTMENT;\n  1374: \t    restart_timer = TRUE;\n  1375: \t    /* Adjust the age; must be same as in obj_ice_age() */"
+    "context": "src/mkobj.c:1370:12\n       1365: \t    \n       1366: \t    tleft = tleft - monstermoves;\n       1367: \t    /* mark the corpse as being on ice */\n       1368: \t    ON_ICE(otmp) = 1;\n       1369: #ifdef DEBUG_EFFECTS\nTARGET 1370: \t    pline(\"%s is now on ice at %d,%d.\", The(xname(otmp)),x,y);\n       1371: #endif\n       1372: \t    /* Adjust the time remaining */\n       1373: \t    tleft *= ROT_ICE_ADJUSTMENT;\n       1374: \t    restart_timer = TRUE;\n       1375: \t    /* Adjust the age; must be same as in obj_ice_age() */"
   },
   {
     "key": "L01399_01",
     "original": "%s is no longer on ice at %d,%d.",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1399:13\n  1394: \t\tlong age;\n  1395: \n  1396: \t\ttleft = tleft - monstermoves;\n  1397: \t\tON_ICE(otmp) = 0;\n  1398: #ifdef DEBUG_EFFECTS\n&gt; 1399: \t    \tpline(\"%s is no longer on ice at %d,%d.\", The(xname(otmp)),x,y);\n  1400: #endif\n  1401: \t\t/* Adjust the remaining time */\n  1402: \t\ttleft /= ROT_ICE_ADJUSTMENT;\n  1403: \t\trestart_timer = TRUE;\n  1404: \t\t/* Adjust the age */"
+    "context": "src/mkobj.c:1399:13\n       1394: \t\tlong age;\n       1395: \n       1396: \t\ttleft = tleft - monstermoves;\n       1397: \t\tON_ICE(otmp) = 0;\n       1398: #ifdef DEBUG_EFFECTS\nTARGET 1399: \t    \tpline(\"%s is no longer on ice at %d,%d.\", The(xname(otmp)),x,y);\n       1400: #endif\n       1401: \t\t/* Adjust the remaining time */\n       1402: \t\ttleft /= ROT_ICE_ADJUSTMENT;\n       1403: \t\trestart_timer = TRUE;\n       1404: \t\t/* Adjust the age */"
   },
   {
     "key": "L01425_01",
     "original": "remove_object: obj not on floor",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1425:8\n  1420: {\n  1421:     xchar x = otmp-&gt;ox;\n  1422:     xchar y = otmp-&gt;oy;\n  1423: \n  1424:     if (otmp-&gt;where != OBJ_FLOOR)\n&gt; 1425: \tpanic(\"remove_object: obj not on floor\");\n  1426:     if (otmp-&gt;otyp == BOULDER) unblock_point(x,y); /* vision */\n  1427:     extract_nexthere(otmp, &level.objects[x][y]);\n  1428:     extract_nobj(otmp, &fobj);\n  1429:     if (otmp-&gt;timed) obj_timer_checks(otmp,x,y,0);\n  1430: }"
+    "context": "src/mkobj.c:1425:8\n       1420: {\n       1421:     xchar x = otmp-&gt;ox;\n       1422:     xchar y = otmp-&gt;oy;\n       1423: \n       1424:     if (otmp-&gt;where != OBJ_FLOOR)\nTARGET 1425: \tpanic(\"remove_object: obj not on floor\");\n       1426:     if (otmp-&gt;otyp == BOULDER) unblock_point(x,y); /* vision */\n       1427:     extract_nexthere(otmp, &level.objects[x][y]);\n       1428:     extract_nobj(otmp, &fobj);\n       1429:     if (otmp-&gt;timed) obj_timer_checks(otmp,x,y,0);\n       1430: }"
   },
   {
     "key": "L01451_01",
     "original": "%s discarded from %s inventory",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1451:17\n  1446: \t    obj_extract_self(curr);\n  1447: \t    (void) add_to_minv(mtmp, curr);\n  1448: \t}\n  1449: \tobj_extract_self(otmp);\n  1450: \tif (evades_destruction(otmp)) {\n&gt; 1451: \t    impossible(\"%s discarded from %s inventory\",\n  1452: \t      obj_typename(otmp-&gt;otyp), s_suffix(mon_nam(mtmp)));\n  1453: \t    place_object(otmp, mtmp-&gt;mx, mtmp-&gt;my);\n  1454: \t    continue;\n  1455: \t}\n  1456: \tobfree(otmp, (struct obj *)0);\t/* dealloc_obj() isn't sufficient */"
+    "context": "src/mkobj.c:1451:17\n       1446: \t    obj_extract_self(curr);\n       1447: \t    (void) add_to_minv(mtmp, curr);\n       1448: \t}\n       1449: \tobj_extract_self(otmp);\n       1450: \tif (evades_destruction(otmp)) {\nTARGET 1451: \t    impossible(\"%s discarded from %s inventory\",\n       1452: \t      obj_typename(otmp-&gt;otyp), s_suffix(mon_nam(mtmp)));\n       1453: \t    place_object(otmp, mtmp-&gt;mx, mtmp-&gt;my);\n       1454: \t    continue;\n       1455: \t}\n       1456: \tobfree(otmp, (struct obj *)0);\t/* dealloc_obj() isn't sufficient */"
   },
   {
     "key": "L01506_01",
     "original": "obj_extract_self",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1506:12\n  1501: \t    break;\n  1502: \tcase OBJ_ONBILL:\n  1503: \t    extract_nobj(obj, &billobjs);\n  1504: \t    break;\n  1505: \tdefault:\n&gt; 1506: \t    panic(\"obj_extract_self\");\n  1507: \t    break;\n  1508:     }\n  1509: }\n  1510: \n  1511: /* Extract a contained indestructable object (if one exists) and return it */"
+    "context": "src/mkobj.c:1506:12\n       1501: \t    break;\n       1502: \tcase OBJ_ONBILL:\n       1503: \t    extract_nobj(obj, &billobjs);\n       1504: \t    break;\n       1505: \tdefault:\nTARGET 1506: \t    panic(\"obj_extract_self\");\n       1507: \t    break;\n       1508:     }\n       1509: }\n       1510: \n       1511: /* Extract a contained indestructable object (if one exists) and return it */"
   },
   {
     "key": "L01545_01",
     "original": "extract_nobj: object lost",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1545:22\n  1540: \t    else\n  1541: \t\t*head_ptr = curr-&gt;nobj;\n  1542: \t    break;\n  1543: \t}\n  1544:     }\n&gt; 1545:     if (!curr) panic(\"extract_nobj: object lost\");\n  1546:     obj-&gt;where = OBJ_FREE;\n  1547: }\n  1548: \n  1549: \n  1550: /*"
+    "context": "src/mkobj.c:1545:22\n       1540: \t    else\n       1541: \t\t*head_ptr = curr-&gt;nobj;\n       1542: \t    break;\n       1543: \t}\n       1544:     }\nTARGET 1545:     if (!curr) panic(\"extract_nobj: object lost\");\n       1546:     obj-&gt;where = OBJ_FREE;\n       1547: }\n       1548: \n       1549: \n       1550: /*"
   },
   {
     "key": "L01572_01",
     "original": "extract_nexthere: object lost",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1572:22\n  1567: \t    else\n  1568: \t\t*head_ptr = curr-&gt;nexthere;\n  1569: \t    break;\n  1570: \t}\n  1571:     }\n&gt; 1572:     if (!curr) panic(\"extract_nexthere: object lost\");\n  1573: }\n  1574: \n  1575: \n  1576: /*\n  1577:  * Add obj to mon's inventory.  If obj is able to merge with something already"
+    "context": "src/mkobj.c:1572:22\n       1567: \t    else\n       1568: \t\t*head_ptr = curr-&gt;nexthere;\n       1569: \t    break;\n       1570: \t}\n       1571:     }\nTARGET 1572:     if (!curr) panic(\"extract_nexthere: object lost\");\n       1573: }\n       1574: \n       1575: \n       1576: /*\n       1577:  * Add obj to mon's inventory.  If obj is able to merge with something already"
   },
   {
     "key": "L01589_01",
     "original": "add_to_minv: obj not free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1589:8\n  1584:     struct obj *obj;\n  1585: {\n  1586:     struct obj *otmp;\n  1587: \n  1588:     if (obj-&gt;where != OBJ_FREE)\n&gt; 1589: \tpanic(\"add_to_minv: obj not free\");\n  1590: \n  1591:     /* merge if possible */\n  1592:     for (otmp = mon-&gt;minvent; otmp; otmp = otmp-&gt;nobj)\n  1593: \tif (merged(&otmp, &obj))\n  1594: \t    return 1;\t/* obj merged and then free'd */"
+    "context": "src/mkobj.c:1589:8\n       1584:     struct obj *obj;\n       1585: {\n       1586:     struct obj *otmp;\n       1587: \n       1588:     if (obj-&gt;where != OBJ_FREE)\nTARGET 1589: \tpanic(\"add_to_minv: obj not free\");\n       1590: \n       1591:     /* merge if possible */\n       1592:     for (otmp = mon-&gt;minvent; otmp; otmp = otmp-&gt;nobj)\n       1593: \tif (merged(&otmp, &obj))\n       1594: \t    return 1;\t/* obj merged and then free'd */"
   },
   {
     "key": "L01614_01",
     "original": "add_to_container: obj not free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1614:8\n  1609:     struct obj *container, *obj;\n  1610: {\n  1611:     struct obj *otmp;\n  1612: \n  1613:     if (obj-&gt;where != OBJ_FREE)\n&gt; 1614: \tpanic(\"add_to_container: obj not free\");\n  1615:     if (container-&gt;where != OBJ_INVENT && container-&gt;where != OBJ_MINVENT)\n  1616: \tobj_no_longer_held(obj);\n  1617: \n  1618:     /* merge if possible */\n  1619:     for (otmp = container-&gt;cobj; otmp; otmp = otmp-&gt;nobj)"
+    "context": "src/mkobj.c:1614:8\n       1609:     struct obj *container, *obj;\n       1610: {\n       1611:     struct obj *otmp;\n       1612: \n       1613:     if (obj-&gt;where != OBJ_FREE)\nTARGET 1614: \tpanic(\"add_to_container: obj not free\");\n       1615:     if (container-&gt;where != OBJ_INVENT && container-&gt;where != OBJ_MINVENT)\n       1616: \tobj_no_longer_held(obj);\n       1617: \n       1618:     /* merge if possible */\n       1619:     for (otmp = container-&gt;cobj; otmp; otmp = otmp-&gt;nobj)"
   },
   {
     "key": "L01634_01",
     "original": "add_to_migration: obj not free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1634:8\n  1629: void\n  1630: add_to_migration(obj)\n  1631:     struct obj *obj;\n  1632: {\n  1633:     if (obj-&gt;where != OBJ_FREE)\n&gt; 1634: \tpanic(\"add_to_migration: obj not free\");\n  1635: \n  1636:     obj-&gt;where = OBJ_MIGRATING;\n  1637:     obj-&gt;nobj = migrating_objs;\n  1638:     migrating_objs = obj;\n  1639: }"
+    "context": "src/mkobj.c:1634:8\n       1629: void\n       1630: add_to_migration(obj)\n       1631:     struct obj *obj;\n       1632: {\n       1633:     if (obj-&gt;where != OBJ_FREE)\nTARGET 1634: \tpanic(\"add_to_migration: obj not free\");\n       1635: \n       1636:     obj-&gt;where = OBJ_MIGRATING;\n       1637:     obj-&gt;nobj = migrating_objs;\n       1638:     migrating_objs = obj;\n       1639: }"
   },
   {
     "key": "L01646_01",
     "original": "add_to_buried: obj not free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1646:8\n  1641: void\n  1642: add_to_buried(obj)\n  1643:     struct obj *obj;\n  1644: {\n  1645:     if (obj-&gt;where != OBJ_FREE)\n&gt; 1646: \tpanic(\"add_to_buried: obj not free\");\n  1647: \n  1648:     obj-&gt;where = OBJ_BURIED;\n  1649:     obj-&gt;nobj = level.buriedobjlist;\n  1650:     level.buriedobjlist = obj;\n  1651: }"
+    "context": "src/mkobj.c:1646:8\n       1641: void\n       1642: add_to_buried(obj)\n       1643:     struct obj *obj;\n       1644: {\n       1645:     if (obj-&gt;where != OBJ_FREE)\nTARGET 1646: \tpanic(\"add_to_buried: obj not free\");\n       1647: \n       1648:     obj-&gt;where = OBJ_BURIED;\n       1649:     obj-&gt;nobj = level.buriedobjlist;\n       1650:     level.buriedobjlist = obj;\n       1651: }"
   },
   {
     "key": "L01676_01",
     "original": "dealloc_obj: obj not free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1676:8\n  1671: void\n  1672: dealloc_obj(obj)\n  1673:     struct obj *obj;\n  1674: {\n  1675:     if (obj-&gt;where != OBJ_FREE)\n&gt; 1676: \tpanic(\"dealloc_obj: obj not free\");\n  1677: \n  1678:     /* free up any timers attached to the object */\n  1679:     if (obj-&gt;timed)\n  1680: \tobj_stop_timers(obj);\n  1681: "
+    "context": "src/mkobj.c:1676:8\n       1671: void\n       1672: dealloc_obj(obj)\n       1673:     struct obj *obj;\n       1674: {\n       1675:     if (obj-&gt;where != OBJ_FREE)\nTARGET 1676: \tpanic(\"dealloc_obj: obj not free\");\n       1677: \n       1678:     /* free up any timers attached to the object */\n       1679:     if (obj-&gt;timed)\n       1680: \tobj_stop_timers(obj);\n       1681: "
   },
   {
     "key": "L01715_01",
     "original": "fobj sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1715:12\n  1710:     struct obj *obj;\n  1711:     struct monst *mon;\n  1712:     const char *mesg;\n  1713:     char obj_address[20], mon_address[20];  /* room for formatted pointers */\n  1714: \n&gt; 1715:     mesg = \"fobj sanity\";\n  1716:     for (obj = fobj; obj; obj = obj-&gt;nobj) {\n  1717: \tif (obj-&gt;where != OBJ_FLOOR) {\n  1718: \t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,\n  1719: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1720: \t\twhere_name(obj-&gt;where),"
+    "context": "src/mkobj.c:1715:12\n       1710:     struct obj *obj;\n       1711:     struct monst *mon;\n       1712:     const char *mesg;\n       1713:     char obj_address[20], mon_address[20];  /* room for formatted pointers */\n       1714: \nTARGET 1715:     mesg = \"fobj sanity\";\n       1716:     for (obj = fobj; obj; obj = obj-&gt;nobj) {\n       1717: \tif (obj-&gt;where != OBJ_FLOOR) {\n       1718: \t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,\n       1719: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1720: \t\twhere_name(obj-&gt;where),"
   },
   {
     "key": "L01718_01",
     "original": "%s%s obj %s %s@(%d,%d): %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1718:12\n  1713:     char obj_address[20], mon_address[20];  /* room for formatted pointers */\n  1714: \n  1715:     mesg = \"fobj sanity\";\n  1716:     for (obj = fobj; obj; obj = obj-&gt;nobj) {\n  1717: \tif (obj-&gt;where != OBJ_FLOOR) {\n&gt; 1718: \t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,\n  1719: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1720: \t\twhere_name(obj-&gt;where),\n  1721: \t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n  1722: \t}\n  1723: \tcheck_contained(obj, mesg);"
+    "context": "src/mkobj.c:1718:12\n       1713:     char obj_address[20], mon_address[20];  /* room for formatted pointers */\n       1714: \n       1715:     mesg = \"fobj sanity\";\n       1716:     for (obj = fobj; obj; obj = obj-&gt;nobj) {\n       1717: \tif (obj-&gt;where != OBJ_FLOOR) {\nTARGET 1718: \t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,\n       1719: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1720: \t\twhere_name(obj-&gt;where),\n       1721: \t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n       1722: \t}\n       1723: \tcheck_contained(obj, mesg);"
   },
   {
     "key": "L01726_01",
     "original": "location sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1726:12\n  1721: \t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n  1722: \t}\n  1723: \tcheck_contained(obj, mesg);\n  1724:     }\n  1725: \n&gt; 1726:     mesg = \"location sanity\";\n  1727:     for (x = 0; x &lt; COLNO; x++)\n  1728: \tfor (y = 0; y &lt; ROWNO; y++)\n  1729: \t    for (obj = level.objects[x][y]; obj; obj = obj-&gt;nexthere)\n  1730: \t\tif (obj-&gt;where != OBJ_FLOOR) {\n  1731: \t\t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,"
+    "context": "src/mkobj.c:1726:12\n       1721: \t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n       1722: \t}\n       1723: \tcheck_contained(obj, mesg);\n       1724:     }\n       1725: \nTARGET 1726:     mesg = \"location sanity\";\n       1727:     for (x = 0; x &lt; COLNO; x++)\n       1728: \tfor (y = 0; y &lt; ROWNO; y++)\n       1729: \t    for (obj = level.objects[x][y]; obj; obj = obj-&gt;nexthere)\n       1730: \t\tif (obj-&gt;where != OBJ_FLOOR) {\n       1731: \t\t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,"
   },
   {
     "key": "L01731_01",
     "original": "%s%s obj %s %s@(%d,%d): %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1731:13\n  1726:     mesg = \"location sanity\";\n  1727:     for (x = 0; x &lt; COLNO; x++)\n  1728: \tfor (y = 0; y &lt; ROWNO; y++)\n  1729: \t    for (obj = level.objects[x][y]; obj; obj = obj-&gt;nexthere)\n  1730: \t\tif (obj-&gt;where != OBJ_FLOOR) {\n&gt; 1731: \t\t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,\n  1732: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1733: \t\t\twhere_name(obj-&gt;where),\n  1734: \t\t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n  1735: \t\t}\n  1736: "
+    "context": "src/mkobj.c:1731:13\n       1726:     mesg = \"location sanity\";\n       1727:     for (x = 0; x &lt; COLNO; x++)\n       1728: \tfor (y = 0; y &lt; ROWNO; y++)\n       1729: \t    for (obj = level.objects[x][y]; obj; obj = obj-&gt;nexthere)\n       1730: \t\tif (obj-&gt;where != OBJ_FLOOR) {\nTARGET 1731: \t\t    pline(\"%s%s obj %s %s@(%d,%d): %s\\n\", msgprefix, mesg,\n       1732: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1733: \t\t\twhere_name(obj-&gt;where),\n       1734: \t\t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n       1735: \t\t}\n       1736: "
   },
   {
     "key": "L01737_01",
     "original": "invent sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1737:12\n  1732: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1733: \t\t\twhere_name(obj-&gt;where),\n  1734: \t\t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n  1735: \t\t}\n  1736: \n&gt; 1737:     mesg = \"invent sanity\";\n  1738:     for (obj = invent; obj; obj = obj-&gt;nobj) {\n  1739: \tif (obj-&gt;where != OBJ_INVENT) {\n  1740: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1741: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1742: \t\twhere_name(obj-&gt;where), doname(obj));"
+    "context": "src/mkobj.c:1737:12\n       1732: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1733: \t\t\twhere_name(obj-&gt;where),\n       1734: \t\t\tobj-&gt;ox, obj-&gt;oy, doname(obj));\n       1735: \t\t}\n       1736: \nTARGET 1737:     mesg = \"invent sanity\";\n       1738:     for (obj = invent; obj; obj = obj-&gt;nobj) {\n       1739: \tif (obj-&gt;where != OBJ_INVENT) {\n       1740: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1741: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1742: \t\twhere_name(obj-&gt;where), doname(obj));"
   },
   {
     "key": "L01740_01",
     "original": "%s%s obj %s %s: %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1740:12\n  1735: \t\t}\n  1736: \n  1737:     mesg = \"invent sanity\";\n  1738:     for (obj = invent; obj; obj = obj-&gt;nobj) {\n  1739: \tif (obj-&gt;where != OBJ_INVENT) {\n&gt; 1740: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1741: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1742: \t\twhere_name(obj-&gt;where), doname(obj));\n  1743: \t}\n  1744: \tcheck_contained(obj, mesg);\n  1745:     }"
+    "context": "src/mkobj.c:1740:12\n       1735: \t\t}\n       1736: \n       1737:     mesg = \"invent sanity\";\n       1738:     for (obj = invent; obj; obj = obj-&gt;nobj) {\n       1739: \tif (obj-&gt;where != OBJ_INVENT) {\nTARGET 1740: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1741: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1742: \t\twhere_name(obj-&gt;where), doname(obj));\n       1743: \t}\n       1744: \tcheck_contained(obj, mesg);\n       1745:     }"
   },
   {
     "key": "L01747_01",
     "original": "migrating sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1747:12\n  1742: \t\twhere_name(obj-&gt;where), doname(obj));\n  1743: \t}\n  1744: \tcheck_contained(obj, mesg);\n  1745:     }\n  1746: \n&gt; 1747:     mesg = \"migrating sanity\";\n  1748:     for (obj = migrating_objs; obj; obj = obj-&gt;nobj) {\n  1749: \tif (obj-&gt;where != OBJ_MIGRATING) {\n  1750: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1751: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1752: \t\twhere_name(obj-&gt;where), doname(obj));"
+    "context": "src/mkobj.c:1747:12\n       1742: \t\twhere_name(obj-&gt;where), doname(obj));\n       1743: \t}\n       1744: \tcheck_contained(obj, mesg);\n       1745:     }\n       1746: \nTARGET 1747:     mesg = \"migrating sanity\";\n       1748:     for (obj = migrating_objs; obj; obj = obj-&gt;nobj) {\n       1749: \tif (obj-&gt;where != OBJ_MIGRATING) {\n       1750: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1751: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1752: \t\twhere_name(obj-&gt;where), doname(obj));"
   },
   {
     "key": "L01750_01",
     "original": "%s%s obj %s %s: %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1750:12\n  1745:     }\n  1746: \n  1747:     mesg = \"migrating sanity\";\n  1748:     for (obj = migrating_objs; obj; obj = obj-&gt;nobj) {\n  1749: \tif (obj-&gt;where != OBJ_MIGRATING) {\n&gt; 1750: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1751: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1752: \t\twhere_name(obj-&gt;where), doname(obj));\n  1753: \t}\n  1754: \tcheck_contained(obj, mesg);\n  1755:     }"
+    "context": "src/mkobj.c:1750:12\n       1745:     }\n       1746: \n       1747:     mesg = \"migrating sanity\";\n       1748:     for (obj = migrating_objs; obj; obj = obj-&gt;nobj) {\n       1749: \tif (obj-&gt;where != OBJ_MIGRATING) {\nTARGET 1750: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1751: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1752: \t\twhere_name(obj-&gt;where), doname(obj));\n       1753: \t}\n       1754: \tcheck_contained(obj, mesg);\n       1755:     }"
   },
   {
     "key": "L01757_01",
     "original": "buried sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1757:12\n  1752: \t\twhere_name(obj-&gt;where), doname(obj));\n  1753: \t}\n  1754: \tcheck_contained(obj, mesg);\n  1755:     }\n  1756: \n&gt; 1757:     mesg = \"buried sanity\";\n  1758:     for (obj = level.buriedobjlist; obj; obj = obj-&gt;nobj) {\n  1759: \tif (obj-&gt;where != OBJ_BURIED) {\n  1760: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1761: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1762: \t\twhere_name(obj-&gt;where), doname(obj));"
+    "context": "src/mkobj.c:1757:12\n       1752: \t\twhere_name(obj-&gt;where), doname(obj));\n       1753: \t}\n       1754: \tcheck_contained(obj, mesg);\n       1755:     }\n       1756: \nTARGET 1757:     mesg = \"buried sanity\";\n       1758:     for (obj = level.buriedobjlist; obj; obj = obj-&gt;nobj) {\n       1759: \tif (obj-&gt;where != OBJ_BURIED) {\n       1760: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1761: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1762: \t\twhere_name(obj-&gt;where), doname(obj));"
   },
   {
     "key": "L01760_01",
     "original": "%s%s obj %s %s: %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1760:12\n  1755:     }\n  1756: \n  1757:     mesg = \"buried sanity\";\n  1758:     for (obj = level.buriedobjlist; obj; obj = obj-&gt;nobj) {\n  1759: \tif (obj-&gt;where != OBJ_BURIED) {\n&gt; 1760: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1761: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1762: \t\twhere_name(obj-&gt;where), doname(obj));\n  1763: \t}\n  1764: \tcheck_contained(obj, mesg);\n  1765:     }"
+    "context": "src/mkobj.c:1760:12\n       1755:     }\n       1756: \n       1757:     mesg = \"buried sanity\";\n       1758:     for (obj = level.buriedobjlist; obj; obj = obj-&gt;nobj) {\n       1759: \tif (obj-&gt;where != OBJ_BURIED) {\nTARGET 1760: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1761: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1762: \t\twhere_name(obj-&gt;where), doname(obj));\n       1763: \t}\n       1764: \tcheck_contained(obj, mesg);\n       1765:     }"
   },
   {
     "key": "L01767_01",
     "original": "bill sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1767:12\n  1762: \t\twhere_name(obj-&gt;where), doname(obj));\n  1763: \t}\n  1764: \tcheck_contained(obj, mesg);\n  1765:     }\n  1766: \n&gt; 1767:     mesg = \"bill sanity\";\n  1768:     for (obj = billobjs; obj; obj = obj-&gt;nobj) {\n  1769: \tif (obj-&gt;where != OBJ_ONBILL) {\n  1770: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1771: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1772: \t\twhere_name(obj-&gt;where), doname(obj));"
+    "context": "src/mkobj.c:1767:12\n       1762: \t\twhere_name(obj-&gt;where), doname(obj));\n       1763: \t}\n       1764: \tcheck_contained(obj, mesg);\n       1765:     }\n       1766: \nTARGET 1767:     mesg = \"bill sanity\";\n       1768:     for (obj = billobjs; obj; obj = obj-&gt;nobj) {\n       1769: \tif (obj-&gt;where != OBJ_ONBILL) {\n       1770: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1771: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1772: \t\twhere_name(obj-&gt;where), doname(obj));"
   },
   {
     "key": "L01770_01",
     "original": "%s%s obj %s %s: %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1770:12\n  1765:     }\n  1766: \n  1767:     mesg = \"bill sanity\";\n  1768:     for (obj = billobjs; obj; obj = obj-&gt;nobj) {\n  1769: \tif (obj-&gt;where != OBJ_ONBILL) {\n&gt; 1770: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1771: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1772: \t\twhere_name(obj-&gt;where), doname(obj));\n  1773: \t}\n  1774: \t/* shouldn't be a full container on the bill */\n  1775: \tif (obj-&gt;cobj) {"
+    "context": "src/mkobj.c:1770:12\n       1765:     }\n       1766: \n       1767:     mesg = \"bill sanity\";\n       1768:     for (obj = billobjs; obj; obj = obj-&gt;nobj) {\n       1769: \tif (obj-&gt;where != OBJ_ONBILL) {\nTARGET 1770: \t    pline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1771: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1772: \t\twhere_name(obj-&gt;where), doname(obj));\n       1773: \t}\n       1774: \t/* shouldn't be a full container on the bill */\n       1775: \tif (obj-&gt;cobj) {"
   },
   {
     "key": "L01776_01",
     "original": "%s%s obj %s contains %s! %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1776:12\n  1771: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1772: \t\twhere_name(obj-&gt;where), doname(obj));\n  1773: \t}\n  1774: \t/* shouldn't be a full container on the bill */\n  1775: \tif (obj-&gt;cobj) {\n&gt; 1776: \t    pline(\"%s%s obj %s contains %s! %s\\n\", msgprefix, mesg,\n  1777: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1778: \t\tsomething, doname(obj));\n  1779: \t}\n  1780:     }\n  1781: "
+    "context": "src/mkobj.c:1776:12\n       1771: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1772: \t\twhere_name(obj-&gt;where), doname(obj));\n       1773: \t}\n       1774: \t/* shouldn't be a full container on the bill */\n       1775: \tif (obj-&gt;cobj) {\nTARGET 1776: \t    pline(\"%s%s obj %s contains %s! %s\\n\", msgprefix, mesg,\n       1777: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1778: \t\tsomething, doname(obj));\n       1779: \t}\n       1780:     }\n       1781: "
   },
   {
     "key": "L01782_01",
     "original": "minvent sanity",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1782:12\n  1777: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1778: \t\tsomething, doname(obj));\n  1779: \t}\n  1780:     }\n  1781: \n&gt; 1782:     mesg = \"minvent sanity\";\n  1783:     for (mon = fmon; mon; mon = mon-&gt;nmon)\n  1784: \tfor (obj = mon-&gt;minvent; obj; obj = obj-&gt;nobj) {\n  1785: \t    if (obj-&gt;where != OBJ_MINVENT) {\n  1786: \t\tpline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1787: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),"
+    "context": "src/mkobj.c:1782:12\n       1777: \t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1778: \t\tsomething, doname(obj));\n       1779: \t}\n       1780:     }\n       1781: \nTARGET 1782:     mesg = \"minvent sanity\";\n       1783:     for (mon = fmon; mon; mon = mon-&gt;nmon)\n       1784: \tfor (obj = mon-&gt;minvent; obj; obj = obj-&gt;nobj) {\n       1785: \t    if (obj-&gt;where != OBJ_MINVENT) {\n       1786: \t\tpline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1787: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),"
   },
   {
     "key": "L01786_01",
     "original": "%s%s obj %s %s: %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1786:9\n  1781: \n  1782:     mesg = \"minvent sanity\";\n  1783:     for (mon = fmon; mon; mon = mon-&gt;nmon)\n  1784: \tfor (obj = mon-&gt;minvent; obj; obj = obj-&gt;nobj) {\n  1785: \t    if (obj-&gt;where != OBJ_MINVENT) {\n&gt; 1786: \t\tpline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1787: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1788: \t\t\twhere_name(obj-&gt;where), doname(obj));\n  1789: \t    }\n  1790: \t    if (obj-&gt;ocarry != mon) {\n  1791: \t\tpline(\"%s%s obj %s (%s) not held by mon %s (%s)\\n\", msgprefix, mesg,"
+    "context": "src/mkobj.c:1786:9\n       1781: \n       1782:     mesg = \"minvent sanity\";\n       1783:     for (mon = fmon; mon; mon = mon-&gt;nmon)\n       1784: \tfor (obj = mon-&gt;minvent; obj; obj = obj-&gt;nobj) {\n       1785: \t    if (obj-&gt;where != OBJ_MINVENT) {\nTARGET 1786: \t\tpline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1787: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1788: \t\t\twhere_name(obj-&gt;where), doname(obj));\n       1789: \t    }\n       1790: \t    if (obj-&gt;ocarry != mon) {\n       1791: \t\tpline(\"%s%s obj %s (%s) not held by mon %s (%s)\\n\", msgprefix, mesg,"
   },
   {
     "key": "L01791_01",
     "original": "%s%s obj %s (%s) not held by mon %s (%s)\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1791:9\n  1786: \t\tpline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n  1787: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1788: \t\t\twhere_name(obj-&gt;where), doname(obj));\n  1789: \t    }\n  1790: \t    if (obj-&gt;ocarry != mon) {\n&gt; 1791: \t\tpline(\"%s%s obj %s (%s) not held by mon %s (%s)\\n\", msgprefix, mesg,\n  1792: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n  1793: \t\t\tdoname(obj),\n  1794: \t\t\tfmt_ptr((genericptr_t)mon, mon_address),\n  1795: \t\t\tmon_nam(mon));\n  1796: \t    }"
+    "context": "src/mkobj.c:1791:9\n       1786: \t\tpline(\"%s%s obj %s %s: %s\\n\", msgprefix, mesg,\n       1787: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1788: \t\t\twhere_name(obj-&gt;where), doname(obj));\n       1789: \t    }\n       1790: \t    if (obj-&gt;ocarry != mon) {\nTARGET 1791: \t\tpline(\"%s%s obj %s (%s) not held by mon %s (%s)\\n\", msgprefix, mesg,\n       1792: \t\t\tfmt_ptr((genericptr_t)obj, obj_address),\n       1793: \t\t\tdoname(obj),\n       1794: \t\t\tfmt_ptr((genericptr_t)mon, mon_address),\n       1795: \t\t\tmon_nam(mon));\n       1796: \t    }"
   },
   {
     "key": "L01803_01",
     "original": "free",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1803:2\n  1798: \t}\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n&gt; 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n  1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)"
+    "context": "src/mkobj.c:1803:2\n       1798: \t}\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\nTARGET 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n       1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)"
   },
   {
     "key": "L01803_02",
     "original": "floor",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1803:11\n  1798: \t}\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n&gt; 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n  1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)"
+    "context": "src/mkobj.c:1803:11\n       1798: \t}\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\nTARGET 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n       1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)"
   },
   {
     "key": "L01803_03",
     "original": "contained",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1803:20\n  1798: \t}\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n&gt; 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n  1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)"
+    "context": "src/mkobj.c:1803:20\n       1798: \t}\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\nTARGET 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n       1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)"
   },
   {
     "key": "L01803_04",
     "original": "invent",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1803:33\n  1798: \t}\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n&gt; 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n  1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)"
+    "context": "src/mkobj.c:1803:33\n       1798: \t}\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\nTARGET 1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n       1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)"
   },
   {
     "key": "L01804_01",
     "original": "minvent",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1804:2\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n  1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n&gt; 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)\n  1809:     int where;"
+    "context": "src/mkobj.c:1804:2\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\n       1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\nTARGET 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)\n       1809:     int where;"
   },
   {
     "key": "L01804_02",
     "original": "migrating",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1804:13\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n  1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n&gt; 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)\n  1809:     int where;"
+    "context": "src/mkobj.c:1804:13\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\n       1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\nTARGET 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)\n       1809:     int where;"
   },
   {
     "key": "L01804_03",
     "original": "buried",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1804:26\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n  1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n&gt; 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)\n  1809:     int where;"
+    "context": "src/mkobj.c:1804:26\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\n       1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\nTARGET 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)\n       1809:     int where;"
   },
   {
     "key": "L01804_04",
     "original": "onbill",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1804:36\n  1799: }\n  1800: \n  1801: /* This must stay consistent with the defines in obj.h. */\n  1802: static const char *obj_state_names[NOBJ_STATES] = {\n  1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\n&gt; 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n  1805: };\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)\n  1809:     int where;"
+    "context": "src/mkobj.c:1804:36\n       1799: }\n       1800: \n       1801: /* This must stay consistent with the defines in obj.h. */\n       1802: static const char *obj_state_names[NOBJ_STATES] = {\n       1803: \t\"free\",\t\t\"floor\",\t\"contained\",\t\"invent\",\nTARGET 1804: \t\"minvent\",\t\"migrating\",\t\"buried\",\t\"onbill\"\n       1805: };\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)\n       1809:     int where;"
   },
   {
     "key": "L01811_01",
     "original": "unknown",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1811:46\n  1806: \n  1807: STATIC_OVL const char *\n  1808: where_name(where)\n  1809:     int where;\n  1810: {\n&gt; 1811:     return (where&lt;0 || where&gt;=NOBJ_STATES) ? \"unknown\" : obj_state_names[where];\n  1812: }\n  1813: \n  1814: /* obj sanity check: check objs contained by container */\n  1815: STATIC_OVL void\n  1816: check_contained(container, mesg)"
+    "context": "src/mkobj.c:1811:46\n       1806: \n       1807: STATIC_OVL const char *\n       1808: where_name(where)\n       1809:     int where;\n       1810: {\nTARGET 1811:     return (where&lt;0 || where&gt;=NOBJ_STATES) ? \"unknown\" : obj_state_names[where];\n       1812: }\n       1813: \n       1814: /* obj sanity check: check objs contained by container */\n       1815: STATIC_OVL void\n       1816: check_contained(container, mesg)"
   },
   {
     "key": "L01825_01",
     "original": "%scontained %s obj %s: %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1825:12\n  1820:     struct obj *obj;\n  1821:     char obj1_address[20], obj2_address[20];\n  1822: \n  1823:     for (obj = container-&gt;cobj; obj; obj = obj-&gt;nobj) {\n  1824: \tif (obj-&gt;where != OBJ_CONTAINED)\n&gt; 1825: \t    pline(\"%scontained %s obj %s: %s\\n\", msgprefix, mesg,\n  1826: \t\tfmt_ptr((genericptr_t)obj, obj1_address),\n  1827: \t\twhere_name(obj-&gt;where));\n  1828: \telse if (obj-&gt;ocontainer != container)\n  1829: \t    pline(\"%s%s obj %s not in container %s\\n\", msgprefix, mesg,\n  1830: \t\tfmt_ptr((genericptr_t)obj, obj1_address),"
+    "context": "src/mkobj.c:1825:12\n       1820:     struct obj *obj;\n       1821:     char obj1_address[20], obj2_address[20];\n       1822: \n       1823:     for (obj = container-&gt;cobj; obj; obj = obj-&gt;nobj) {\n       1824: \tif (obj-&gt;where != OBJ_CONTAINED)\nTARGET 1825: \t    pline(\"%scontained %s obj %s: %s\\n\", msgprefix, mesg,\n       1826: \t\tfmt_ptr((genericptr_t)obj, obj1_address),\n       1827: \t\twhere_name(obj-&gt;where));\n       1828: \telse if (obj-&gt;ocontainer != container)\n       1829: \t    pline(\"%s%s obj %s not in container %s\\n\", msgprefix, mesg,\n       1830: \t\tfmt_ptr((genericptr_t)obj, obj1_address),"
   },
   {
     "key": "L01829_01",
     "original": "%s%s obj %s not in container %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/mkobj.c:1829:12\n  1824: \tif (obj-&gt;where != OBJ_CONTAINED)\n  1825: \t    pline(\"%scontained %s obj %s: %s\\n\", msgprefix, mesg,\n  1826: \t\tfmt_ptr((genericptr_t)obj, obj1_address),\n  1827: \t\twhere_name(obj-&gt;where));\n  1828: \telse if (obj-&gt;ocontainer != container)\n&gt; 1829: \t    pline(\"%s%s obj %s not in container %s\\n\", msgprefix, mesg,\n  1830: \t\tfmt_ptr((genericptr_t)obj, obj1_address),\n  1831: \t\tfmt_ptr((genericptr_t)container, obj2_address));\n  1832:     }\n  1833: }\n  1834: #endif /* OBJ_SANITY || WIZARD */"
+    "context": "src/mkobj.c:1829:12\n       1824: \tif (obj-&gt;where != OBJ_CONTAINED)\n       1825: \t    pline(\"%scontained %s obj %s: %s\\n\", msgprefix, mesg,\n       1826: \t\tfmt_ptr((genericptr_t)obj, obj1_address),\n       1827: \t\twhere_name(obj-&gt;where));\n       1828: \telse if (obj-&gt;ocontainer != container)\nTARGET 1829: \t    pline(\"%s%s obj %s not in container %s\\n\", msgprefix, mesg,\n       1830: \t\tfmt_ptr((genericptr_t)obj, obj1_address),\n       1831: \t\tfmt_ptr((genericptr_t)container, obj2_address));\n       1832:     }\n       1833: }\n       1834: #endif /* OBJ_SANITY || WIZARD */"
   }
 ]

@@ -4,27 +4,27 @@
     "original": "mana was = %d now = %d",
     "translation": "",
     "stage": 0,
-    "context": "src/allmain.c:268:23\n   263: \t\t\t\t((wtcap &lt; MOD_ENCUMBER || !flags.mv) &&\n   264: \t\t\t\t(!(moves%((MAXULEV + 15 - u.ulevel) *                                    \n   265: \t\t\t\t(Role_if(PM_WIZARD) ? 3 : 4) / 6)))))) {\n   266: \t\t\tu.uen += rn1((int)(ACURR(A_WIS) + ACURR(A_INT)) / 15 + 1,1);\n   267: #ifdef WIZ_PATCH_DEBUG\n&gt;  268:                 pline(\"mana was = %d now = %d\",temp,u.uen);\n   269: #endif\n   270: \n   271: \t\t\tif (u.uen &gt; u.uenmax)  u.uen = u.uenmax;\n   272: \t\t\tflags.botl = 1;\n   273: \t\t    }"
+    "context": "src/allmain.c:268:23\n        263: \t\t\t\t((wtcap &lt; MOD_ENCUMBER || !flags.mv) &&\n        264: \t\t\t\t(!(moves%((MAXULEV + 15 - u.ulevel) *                                    \n        265: \t\t\t\t(Role_if(PM_WIZARD) ? 3 : 4) / 6)))))) {\n        266: \t\t\tu.uen += rn1((int)(ACURR(A_WIS) + ACURR(A_INT)) / 15 + 1,1);\n        267: #ifdef WIZ_PATCH_DEBUG\nTARGET  268:                 pline(\"mana was = %d now = %d\",temp,u.uen);\n        269: #endif\n        270: \n        271: \t\t\tif (u.uen &gt; u.uenmax)  u.uen = u.uenmax;\n        272: \t\t\tflags.botl = 1;\n        273: \t\t    }"
   },
   {
     "key": "L00524_01",
     "original": "mac",
     "translation": "",
     "stage": 0,
-    "context": "src/allmain.c:524:39\n   519:     /*\n   520:      * This _is_ the right place for this - maybe we will\n   521:      * have to split display_gamewindows into create_gamewindows\n   522:      * and show_gamewindows to get rid of this ifdef...\n   523:      */\n&gt;  524: \tif ( ! strcmp ( windowprocs . name , \"mac\" ) ) {\n   525: \t    SanePositions ( ) ;\n   526: \t}\n   527: #endif\n   528: \n   529:     /*"
+    "context": "src/allmain.c:524:39\n        519:     /*\n        520:      * This _is_ the right place for this - maybe we will\n        521:      * have to split display_gamewindows into create_gamewindows\n        522:      * and show_gamewindows to get rid of this ifdef...\n        523:      */\nTARGET  524: \tif ( ! strcmp ( windowprocs . name , \"mac\" ) ) {\n        525: \t    SanePositions ( ) ;\n        526: \t}\n        527: #endif\n        528: \n        529:     /*"
   },
   {
     "key": "L00626_01",
     "original": " %s",
     "translation": "",
     "stage": 0,
-    "context": "src/allmain.c:626:20\n   621:      * Sex is shown for new games except when it is redundant; for\n   622:      * restores it's only shown if different from its original value.\n   623:      */\n   624:     *buf = '\\0';\n   625:     if (new_game || u.ualignbase[A_ORIGINAL] != u.ualignbase[A_CURRENT])\n&gt;  626: \tSprintf(eos(buf), \" %s\", align_str(u.ualignbase[A_ORIGINAL]));\n   627:     if (!urole.name.f &&\n   628: \t    (new_game ? (urole.allow & ROLE_GENDMASK) == (ROLE_MALE|ROLE_FEMALE) :\n   629: \t     currentgend != flags.initgend))\n   630: \tSprintf(eos(buf), \" %s\", genders[currentgend].adj);\n   631: "
+    "context": "src/allmain.c:626:20\n        621:      * Sex is shown for new games except when it is redundant; for\n        622:      * restores it's only shown if different from its original value.\n        623:      */\n        624:     *buf = '\\0';\n        625:     if (new_game || u.ualignbase[A_ORIGINAL] != u.ualignbase[A_CURRENT])\nTARGET  626: \tSprintf(eos(buf), \" %s\", align_str(u.ualignbase[A_ORIGINAL]));\n        627:     if (!urole.name.f &&\n        628: \t    (new_game ? (urole.allow & ROLE_GENDMASK) == (ROLE_MALE|ROLE_FEMALE) :\n        629: \t     currentgend != flags.initgend))\n        630: \tSprintf(eos(buf), \" %s\", genders[currentgend].adj);\n        631: "
   },
   {
     "key": "L00630_01",
     "original": " %s",
     "translation": "",
     "stage": 0,
-    "context": "src/allmain.c:630:20\n   625:     if (new_game || u.ualignbase[A_ORIGINAL] != u.ualignbase[A_CURRENT])\n   626: \tSprintf(eos(buf), \" %s\", align_str(u.ualignbase[A_ORIGINAL]));\n   627:     if (!urole.name.f &&\n   628: \t    (new_game ? (urole.allow & ROLE_GENDMASK) == (ROLE_MALE|ROLE_FEMALE) :\n   629: \t     currentgend != flags.initgend))\n&gt;  630: \tSprintf(eos(buf), \" %s\", genders[currentgend].adj);\n   631: \n   632: #if 0\n   633:     pline(new_game ? \"%s %s,欢迎来到slash'em!你的身份是%s %s %s.\"\n   634: \t\t   : \"%s %s,%s %s %s,欢迎来到slash'em!\",\n   635: \t  Hello((struct monst *) 0), plname, buf, urace.adj,"
+    "context": "src/allmain.c:630:20\n        625:     if (new_game || u.ualignbase[A_ORIGINAL] != u.ualignbase[A_CURRENT])\n        626: \tSprintf(eos(buf), \" %s\", align_str(u.ualignbase[A_ORIGINAL]));\n        627:     if (!urole.name.f &&\n        628: \t    (new_game ? (urole.allow & ROLE_GENDMASK) == (ROLE_MALE|ROLE_FEMALE) :\n        629: \t     currentgend != flags.initgend))\nTARGET  630: \tSprintf(eos(buf), \" %s\", genders[currentgend].adj);\n        631: \n        632: #if 0\n        633:     pline(new_game ? \"%s %s,欢迎来到slash'em!你的身份是%s %s %s.\"\n        634: \t\t   : \"%s %s,%s %s %s,欢迎来到slash'em!\",\n        635: \t  Hello((struct monst *) 0), plname, buf, urace.adj,"
   }
 ]

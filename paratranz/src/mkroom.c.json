@@ -4,20 +4,20 @@
     "original": "Tried to make a room of type %d.",
     "translation": "",
     "stage": 0,
-    "context": "src/mkroom.c:71:22\n    66: \tcase COCKNEST:\tmkzoo(COCKNEST); break;\n    67: \tcase ANTHOLE:\tmkzoo(ANTHOLE); break;\n    68: \tcase LEMUREPIT: mkzoo(LEMUREPIT); break;\n    69: \tcase MIGOHIVE:  mkzoo(MIGOHIVE); break;\n    70: \tcase FUNGUSFARM: mkzoo(FUNGUSFARM); break;\n&gt;   71: \tdefault:\timpossible(\"Tried to make a room of type %d.\", roomtype);\n    72:     }\n    73: }\n    74: \n    75: STATIC_OVL void\n    76: mkshop()"
+    "context": "src/mkroom.c:71:22\n         66: \tcase COCKNEST:\tmkzoo(COCKNEST); break;\n         67: \tcase ANTHOLE:\tmkzoo(ANTHOLE); break;\n         68: \tcase LEMUREPIT: mkzoo(LEMUREPIT); break;\n         69: \tcase MIGOHIVE:  mkzoo(MIGOHIVE); break;\n         70: \tcase FUNGUSFARM: mkzoo(FUNGUSFARM); break;\nTARGET   71: \tdefault:\timpossible(\"Tried to make a room of type %d.\", roomtype);\n         72:     }\n         73: }\n         74: \n         75: STATIC_OVL void\n         76: mkshop()"
   },
   {
     "key": "L00086_01",
     "original": "SHOPTYPE",
     "translation": "",
     "stage": 0,
-    "context": "src/mkroom.c:86:18\n    81: \tchar *ep = (char *)0;\t/* (init == lint suppression) */\n    82: \n    83: \t/* first determine shoptype */\n    84: \tif(wizard){\n    85: #ifndef MAC\n&gt;   86: \t\tep = nh_getenv(\"SHOPTYPE\");\n    87: \t\tif(ep){\n    88: \t\t\tif(*ep == 'z' || *ep == 'Z'){\n    89: \t\t\t\tmkzoo(ZOO);\n    90: \t\t\t\treturn;\n    91: \t\t\t}"
+    "context": "src/mkroom.c:86:18\n         81: \tchar *ep = (char *)0;\t/* (init == lint suppression) */\n         82: \n         83: \t/* first determine shoptype */\n         84: \tif(wizard){\n         85: #ifndef MAC\nTARGET   86: \t\tep = nh_getenv(\"SHOPTYPE\");\n         87: \t\tif(ep){\n         88: \t\t\tif(*ep == 'z' || *ep == 'Z'){\n         89: \t\t\t\tmkzoo(ZOO);\n         90: \t\t\t\treturn;\n         91: \t\t\t}"
   },
   {
     "key": "L00158_01",
     "original": "rooms not closed by -1?",
     "translation": "",
     "stage": 0,
-    "context": "src/mkroom.c:158:10\n   153: \t}\n   154: #endif\n   155: \tfor(sroom = &rooms[0]; ; sroom++){\n   156: \t\tif(sroom-&gt;hx &lt; 0) return;\n   157: \t\tif(sroom - rooms &gt;= nroom) {\n&gt;  158: \t\t\tpline(\"rooms not closed by -1?\");\n   159: \t\t\treturn;\n   160: \t\t}\n   161: \t\tif(sroom-&gt;rtype != OROOM) continue;\n   162: \t\tif(has_dnstairs(sroom) || has_upstairs(sroom))\n   163: \t\t\tcontinue;"
+    "context": "src/mkroom.c:158:10\n        153: \t}\n        154: #endif\n        155: \tfor(sroom = &rooms[0]; ; sroom++){\n        156: \t\tif(sroom-&gt;hx &lt; 0) return;\n        157: \t\tif(sroom - rooms &gt;= nroom) {\nTARGET  158: \t\t\tpline(\"rooms not closed by -1?\");\n        159: \t\t\treturn;\n        160: \t\t}\n        161: \t\tif(sroom-&gt;rtype != OROOM) continue;\n        162: \t\tif(has_dnstairs(sroom) || has_upstairs(sroom))\n        163: \t\t\tcontinue;"
   }
 ]

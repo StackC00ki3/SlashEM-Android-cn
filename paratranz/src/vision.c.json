@@ -4,34 +4,34 @@
     "original": "close_shadow:  bad value",
     "translation": "",
     "stage": 0,
-    "context": "src/vision.c:1602:13\n  1597:     if ((sdx = (start_col-block_col)) &lt; 0) sdx = -sdx;\t\t/* src   dx */\n  1598:     if ((pdy = (block_row-this_row))  &lt; 0) pdy = -pdy;\t\t/* point dy */\n  1599: \n  1600:     if (sdy &lt; 0 || sdy &gt;= CLOSE_MAX_SB_DY || sdx &gt;= CLOSE_MAX_SB_DX ||\n  1601: \t\t\t\t\t\t    pdy &gt;= CLOSE_MAX_BC_DY) {\n&gt; 1602: \timpossible(\"close_shadow:  bad value\");\n  1603: \treturn block_col;\n  1604:     }\n  1605:     offset = close_dy[sdy]-&gt;close[sdx][pdy];\n  1606:     if (side == FROM_RIGHT)\n  1607: \treturn block_col + offset;"
+    "context": "src/vision.c:1602:13\n       1597:     if ((sdx = (start_col-block_col)) &lt; 0) sdx = -sdx;\t\t/* src   dx */\n       1598:     if ((pdy = (block_row-this_row))  &lt; 0) pdy = -pdy;\t\t/* point dy */\n       1599: \n       1600:     if (sdy &lt; 0 || sdy &gt;= CLOSE_MAX_SB_DY || sdx &gt;= CLOSE_MAX_SB_DX ||\n       1601: \t\t\t\t\t\t    pdy &gt;= CLOSE_MAX_BC_DY) {\nTARGET 1602: \timpossible(\"close_shadow:  bad value\");\n       1603: \treturn block_col;\n       1604:     }\n       1605:     offset = close_dy[sdy]-&gt;close[sdx][pdy];\n       1606:     if (side == FROM_RIGHT)\n       1607: \treturn block_col + offset;"
   },
   {
     "key": "L01637_01",
     "original": "far_shadow:  bad value",
     "translation": "",
     "stage": 0,
-    "context": "src/vision.c:1637:13\n  1632:     if ((sdx = (start_col-block_col)) &lt; 0) sdx = -sdx; --sdx;\t/* src   dx */\n  1633:     if ((pdy = (block_row-this_row))  &lt; 0) pdy = -pdy; --pdy;\t/* point dy */\n  1634: \n  1635:     if (sdy &gt;= FAR_MAX_SB_DY || sdx &lt; 0 || sdx &gt;= FAR_MAX_SB_DX ||\n  1636: \t\t\t\t\t    pdy &lt; 0 || pdy &gt;= FAR_MAX_BC_DY) {\n&gt; 1637: \timpossible(\"far_shadow:  bad value\");\n  1638: \treturn block_col;\n  1639:     }\n  1640:     if ((offset = far_dy[sdy]-&gt;far_q[sdx][pdy]) == OFF_TABLE) offset = -1;\n  1641:     if (side == FROM_RIGHT)\n  1642: \treturn block_col + offset;"
+    "context": "src/vision.c:1637:13\n       1632:     if ((sdx = (start_col-block_col)) &lt; 0) sdx = -sdx; --sdx;\t/* src   dx */\n       1633:     if ((pdy = (block_row-this_row))  &lt; 0) pdy = -pdy; --pdy;\t/* point dy */\n       1634: \n       1635:     if (sdy &gt;= FAR_MAX_SB_DY || sdx &lt; 0 || sdx &gt;= FAR_MAX_SB_DX ||\n       1636: \t\t\t\t\t    pdy &lt; 0 || pdy &gt;= FAR_MAX_BC_DY) {\nTARGET 1637: \timpossible(\"far_shadow:  bad value\");\n       1638: \treturn block_col;\n       1639:     }\n       1640:     if ((offset = far_dy[sdy]-&gt;far_q[sdx][pdy]) == OFF_TABLE) offset = -1;\n       1641:     if (side == FROM_RIGHT)\n       1642: \treturn block_col + offset;"
   },
   {
     "key": "L02130_01",
     "original": "view_from called with range %d",
     "translation": "",
     "stage": 0,
-    "context": "src/vision.c:2130:12\n  2125: \t    (viz_clear_rows[srow][scol+1] ? right_ptrs[srow][scol+1] : scol+1);\n  2126:     }\n  2127: \n  2128:     if(range) {\n  2129: \tif(range &gt; MAX_RADIUS || range &lt; 1)\n&gt; 2130: \t    panic(\"view_from called with range %d\", range);\n  2131: \tlimits = circle_ptr(range) + 1; /* start at next row */\n  2132: \tif(left &lt; scol - range) left = scol - range;\n  2133: \tif(right &gt; scol + range) right = scol + range;\n  2134:     } else\n  2135: \tlimits = (char*) 0;"
+    "context": "src/vision.c:2130:12\n       2125: \t    (viz_clear_rows[srow][scol+1] ? right_ptrs[srow][scol+1] : scol+1);\n       2126:     }\n       2127: \n       2128:     if(range) {\n       2129: \tif(range &gt; MAX_RADIUS || range &lt; 1)\nTARGET 2130: \t    panic(\"view_from called with range %d\", range);\n       2131: \tlimits = circle_ptr(range) + 1; /* start at next row */\n       2132: \tif(left &lt; scol - range) left = scol - range;\n       2133: \tif(right &gt; scol + range) right = scol + range;\n       2134:     } else\n       2135: \tlimits = (char*) 0;"
   },
   {
     "key": "L02547_01",
     "original": "view_from called with range %d",
     "translation": "",
     "stage": 0,
-    "context": "src/vision.c:2547:12\n  2542: \t\t(is_clear(srow,scol+1) ? right_ptrs[srow][scol+1] : scol+1);\n  2543:     }\n  2544: \n  2545:     if(range) {\n  2546: \tif(range &gt; MAX_RADIUS || range &lt; 1)\n&gt; 2547: \t    panic(\"view_from called with range %d\", range);\n  2548: \tlimits = circle_ptr(range) + 1; /* start at next row */\n  2549: \tif(left &lt; scol - range) left = scol - range;\n  2550: \tif(right &gt; scol + range) right = scol + range;\n  2551:     } else\n  2552: \tlimits = (char*) 0;"
+    "context": "src/vision.c:2547:12\n       2542: \t\t(is_clear(srow,scol+1) ? right_ptrs[srow][scol+1] : scol+1);\n       2543:     }\n       2544: \n       2545:     if(range) {\n       2546: \tif(range &gt; MAX_RADIUS || range &lt; 1)\nTARGET 2547: \t    panic(\"view_from called with range %d\", range);\n       2548: \tlimits = circle_ptr(range) + 1; /* start at next row */\n       2549: \tif(left &lt; scol - range) left = scol - range;\n       2550: \tif(right &gt; scol + range) right = scol + range;\n       2551:     } else\n       2552: \tlimits = (char*) 0;"
   },
   {
     "key": "L02613_01",
     "original": "do_clear_area:  illegal range %d",
     "translation": "",
     "stage": 0,
-    "context": "src/vision.c:2613:9\n  2608: \t    register int x;\n  2609: \t    int y, min_x, max_x, max_y, offset;\n  2610: \t    char *limits;\n  2611: \n  2612: \t    if (range &gt; MAX_RADIUS || range &lt; 1)\n&gt; 2613: \t\tpanic(\"do_clear_area:  illegal range %d\", range);\n  2614: \t    if(vision_full_recalc)\n  2615: \t\tvision_recalc(0);\t/* recalc vision if dirty */\n  2616: \t    limits = circle_ptr(range);\n  2617: \t    if ((max_y = (srow + range)) &gt;= ROWNO) max_y = ROWNO-1;\n  2618: \t    if ((y = (srow - range)) &lt; 0) y = 0;"
+    "context": "src/vision.c:2613:9\n       2608: \t    register int x;\n       2609: \t    int y, min_x, max_x, max_y, offset;\n       2610: \t    char *limits;\n       2611: \n       2612: \t    if (range &gt; MAX_RADIUS || range &lt; 1)\nTARGET 2613: \t\tpanic(\"do_clear_area:  illegal range %d\", range);\n       2614: \t    if(vision_full_recalc)\n       2615: \t\tvision_recalc(0);\t/* recalc vision if dirty */\n       2616: \t    limits = circle_ptr(range);\n       2617: \t    if ((max_y = (srow + range)) &gt;= ROWNO) max_y = ROWNO-1;\n       2618: \t    if ((y = (srow - range)) &lt; 0) y = 0;"
   }
 ]

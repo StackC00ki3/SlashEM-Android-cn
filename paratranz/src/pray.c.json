@@ -4,1133 +4,1133 @@
     "original": "booms out",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:54:5\n    49:  *\tMoloch is unaligned.\n    50:  */\n    51: static const char\t*Moloch = \"摩洛\";\n    52: \n    53: static const char *godvoices[] = {\n&gt;   54:     \"booms out\",\n    55:     \"thunders\",\n    56:     \"rings out\",\n    57:     \"booms\",\n    58: };\n    59: "
+    "context": "src/pray.c:54:5\n         49:  *\tMoloch is unaligned.\n         50:  */\n         51: static const char\t*Moloch = \"摩洛\";\n         52: \n         53: static const char *godvoices[] = {\nTARGET   54:     \"booms out\",\n         55:     \"thunders\",\n         56:     \"rings out\",\n         57:     \"booms\",\n         58: };\n         59: "
   },
   {
     "key": "L00055_01",
     "original": "thunders",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:55:5\n    50:  */\n    51: static const char\t*Moloch = \"摩洛\";\n    52: \n    53: static const char *godvoices[] = {\n    54:     \"booms out\",\n&gt;   55:     \"thunders\",\n    56:     \"rings out\",\n    57:     \"booms\",\n    58: };\n    59: \n    60: /* values calculated when prayer starts, and used when completed */"
+    "context": "src/pray.c:55:5\n         50:  */\n         51: static const char\t*Moloch = \"摩洛\";\n         52: \n         53: static const char *godvoices[] = {\n         54:     \"booms out\",\nTARGET   55:     \"thunders\",\n         56:     \"rings out\",\n         57:     \"booms\",\n         58: };\n         59: \n         60: /* values calculated when prayer starts, and used when completed */"
   },
   {
     "key": "L00056_01",
     "original": "rings out",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:56:5\n    51: static const char\t*Moloch = \"摩洛\";\n    52: \n    53: static const char *godvoices[] = {\n    54:     \"booms out\",\n    55:     \"thunders\",\n&gt;   56:     \"rings out\",\n    57:     \"booms\",\n    58: };\n    59: \n    60: /* values calculated when prayer starts, and used when completed */\n    61: static aligntyp p_aligntyp;"
+    "context": "src/pray.c:56:5\n         51: static const char\t*Moloch = \"摩洛\";\n         52: \n         53: static const char *godvoices[] = {\n         54:     \"booms out\",\n         55:     \"thunders\",\nTARGET   56:     \"rings out\",\n         57:     \"booms\",\n         58: };\n         59: \n         60: /* values calculated when prayer starts, and used when completed */\n         61: static aligntyp p_aligntyp;"
   },
   {
     "key": "L00057_01",
     "original": "booms",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:57:5\n    52: \n    53: static const char *godvoices[] = {\n    54:     \"booms out\",\n    55:     \"thunders\",\n    56:     \"rings out\",\n&gt;   57:     \"booms\",\n    58: };\n    59: \n    60: /* values calculated when prayer starts, and used when completed */\n    61: static aligntyp p_aligntyp;\n    62: static int p_trouble;"
+    "context": "src/pray.c:57:5\n         52: \n         53: static const char *godvoices[] = {\n         54:     \"booms out\",\n         55:     \"thunders\",\n         56:     \"rings out\",\nTARGET   57:     \"booms\",\n         58: };\n         59: \n         60: /* values calculated when prayer starts, and used when completed */\n         61: static aligntyp p_aligntyp;\n         62: static int p_trouble;"
   },
   {
     "key": "L00278_01",
     "original": "left ring softly glows",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:278:42\n   273: register int trouble;\n   274: {\n   275: \tint i;\n   276: \tstruct obj *otmp = 0;\n   277: \tconst char *what = (const char *)0;\n&gt;  278: \tstatic NEARDATA const char leftglow[] = \"left ring softly glows\",\n   279: \t\t\t\t   rightglow[] = \"right ring softly glows\";\n   280: \n   281: \tswitch (trouble) {\n   282: \t    case TROUBLE_STONED:\n   283: \t\t    You_feel(\"more limber.\");"
+    "context": "src/pray.c:278:42\n        273: register int trouble;\n        274: {\n        275: \tint i;\n        276: \tstruct obj *otmp = 0;\n        277: \tconst char *what = (const char *)0;\nTARGET  278: \tstatic NEARDATA const char leftglow[] = \"left ring softly glows\",\n        279: \t\t\t\t   rightglow[] = \"right ring softly glows\";\n        280: \n        281: \tswitch (trouble) {\n        282: \t    case TROUBLE_STONED:\n        283: \t\t    You_feel(\"more limber.\");"
   },
   {
     "key": "L00279_01",
     "original": "right ring softly glows",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:279:22\n   274: {\n   275: \tint i;\n   276: \tstruct obj *otmp = 0;\n   277: \tconst char *what = (const char *)0;\n   278: \tstatic NEARDATA const char leftglow[] = \"left ring softly glows\",\n&gt;  279: \t\t\t\t   rightglow[] = \"right ring softly glows\";\n   280: \n   281: \tswitch (trouble) {\n   282: \t    case TROUBLE_STONED:\n   283: \t\t    You_feel(\"more limber.\");\n   284: \t\t    Stoned = 0;"
+    "context": "src/pray.c:279:22\n        274: {\n        275: \tint i;\n        276: \tstruct obj *otmp = 0;\n        277: \tconst char *what = (const char *)0;\n        278: \tstatic NEARDATA const char leftglow[] = \"left ring softly glows\",\nTARGET  279: \t\t\t\t   rightglow[] = \"right ring softly glows\";\n        280: \n        281: \tswitch (trouble) {\n        282: \t    case TROUBLE_STONED:\n        283: \t\t    You_feel(\"more limber.\");\n        284: \t\t    Stoned = 0;"
   },
   {
     "key": "L00283_01",
     "original": "more limber.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:283:16\n   278: \tstatic NEARDATA const char leftglow[] = \"left ring softly glows\",\n   279: \t\t\t\t   rightglow[] = \"right ring softly glows\";\n   280: \n   281: \tswitch (trouble) {\n   282: \t    case TROUBLE_STONED:\n&gt;  283: \t\t    You_feel(\"more limber.\");\n   284: \t\t    Stoned = 0;\n   285: \t\t    flags.botl = 1;\n   286: \t\t    delayed_killer = 0;\n   287: \t\t    break;\n   288: \t    case TROUBLE_SLIMED:"
+    "context": "src/pray.c:283:16\n        278: \tstatic NEARDATA const char leftglow[] = \"left ring softly glows\",\n        279: \t\t\t\t   rightglow[] = \"right ring softly glows\";\n        280: \n        281: \tswitch (trouble) {\n        282: \t    case TROUBLE_STONED:\nTARGET  283: \t\t    You_feel(\"more limber.\");\n        284: \t\t    Stoned = 0;\n        285: \t\t    flags.botl = 1;\n        286: \t\t    delayed_killer = 0;\n        287: \t\t    break;\n        288: \t    case TROUBLE_SLIMED:"
   },
   {
     "key": "L00315_01",
     "original": "%s feels content.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:315:12\n   310: \t\t    break;\n   311: \t    case TROUBLE_STARVING:\n   312: \t\t    losestr(-1);\n   313: \t\t    /* fall into... */\n   314: \t    case TROUBLE_HUNGRY:\n&gt;  315: \t\t    Your(\"%s feels content.\", body_part(STOMACH));\n   316: \t\t    init_uhunger ();\n   317: \t\t    flags.botl = 1;\n   318: \t\t    break;\n   319: \t    case TROUBLE_SICK:\n   320: \t\t    You_feel(\"better.\");"
+    "context": "src/pray.c:315:12\n        310: \t\t    break;\n        311: \t    case TROUBLE_STARVING:\n        312: \t\t    losestr(-1);\n        313: \t\t    /* fall into... */\n        314: \t    case TROUBLE_HUNGRY:\nTARGET  315: \t\t    Your(\"%s feels content.\", body_part(STOMACH));\n        316: \t\t    init_uhunger ();\n        317: \t\t    flags.botl = 1;\n        318: \t\t    break;\n        319: \t    case TROUBLE_SICK:\n        320: \t\t    You_feel(\"better.\");"
   },
   {
     "key": "L00320_01",
     "original": "better.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:320:16\n   315: \t\t    Your(\"%s feels content.\", body_part(STOMACH));\n   316: \t\t    init_uhunger ();\n   317: \t\t    flags.botl = 1;\n   318: \t\t    break;\n   319: \t    case TROUBLE_SICK:\n&gt;  320: \t\t    You_feel(\"better.\");\n   321: \t\t    make_sick(0L, (char *) 0, FALSE, SICK_ALL);\n   322: \t\t    break;\n   323: \t    case TROUBLE_HIT:\n   324: \t\t    /* \"fix all troubles\" will keep trying if hero has\n   325: \t\t       5 or less hit points, so make sure they're always"
+    "context": "src/pray.c:320:16\n        315: \t\t    Your(\"%s feels content.\", body_part(STOMACH));\n        316: \t\t    init_uhunger ();\n        317: \t\t    flags.botl = 1;\n        318: \t\t    break;\n        319: \t    case TROUBLE_SICK:\nTARGET  320: \t\t    You_feel(\"better.\");\n        321: \t\t    make_sick(0L, (char *) 0, FALSE, SICK_ALL);\n        322: \t\t    break;\n        323: \t    case TROUBLE_HIT:\n        324: \t\t    /* \"fix all troubles\" will keep trying if hero has\n        325: \t\t       5 or less hit points, so make sure they're always"
   },
   {
     "key": "L00343_01",
     "original": "surroundings change.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:343:12\n   338: \t    case TROUBLE_COLLAPSING:\n   339: \t\t    ABASE(A_STR) = AMAX(A_STR);\n   340: \t\t    flags.botl = 1;\n   341: \t\t    break;\n   342: \t    case TROUBLE_STUCK_IN_WALL:\n&gt;  343: \t\t    Your(\"surroundings change.\");\n   344: \t\t    /* no control, but works on no-teleport levels */\n   345: \t\t    (void) safe_teleds(FALSE);\n   346: \t\t    break;\n   347: \t    case TROUBLE_CURSED_LEVITATION:\n   348: \t\t    if (Cursed_obj(uarmf, LEVITATION_BOOTS)) {"
+    "context": "src/pray.c:343:12\n        338: \t    case TROUBLE_COLLAPSING:\n        339: \t\t    ABASE(A_STR) = AMAX(A_STR);\n        340: \t\t    flags.botl = 1;\n        341: \t\t    break;\n        342: \t    case TROUBLE_STUCK_IN_WALL:\nTARGET  343: \t\t    Your(\"surroundings change.\");\n        344: \t\t    /* no control, but works on no-teleport levels */\n        345: \t\t    (void) safe_teleds(FALSE);\n        346: \t\t    break;\n        347: \t    case TROUBLE_CURSED_LEVITATION:\n        348: \t\t    if (Cursed_obj(uarmf, LEVITATION_BOOTS)) {"
   },
   {
     "key": "L00363_01",
     "original": "shape becomes uncertain.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:363:13\n   358: \t\t\totmp = uwep;\n   359: \t\t\tgoto decurse;\n   360: \t\t    }\n   361: \t\t    if (Upolyd && nohands(youmonst.data)) {\n   362: \t\t\tif (!Unchanging) {\n&gt;  363: \t\t\t    Your(\"shape becomes uncertain.\");\n   364: \t\t\t    rehumanize();  /* \"You return to {normal} form.\" */\n   365: \t\t\t} else if ((otmp = unchanger()) != 0 && otmp-&gt;cursed) {\n   366: \t\t\t    /* otmp is an amulet of unchanging */\n   367: \t\t\t    goto decurse;\n   368: \t\t\t}"
+    "context": "src/pray.c:363:13\n        358: \t\t\totmp = uwep;\n        359: \t\t\tgoto decurse;\n        360: \t\t    }\n        361: \t\t    if (Upolyd && nohands(youmonst.data)) {\n        362: \t\t\tif (!Unchanging) {\nTARGET  363: \t\t\t    Your(\"shape becomes uncertain.\");\n        364: \t\t\t    rehumanize();  /* \"You return to {normal} form.\" */\n        365: \t\t\t} else if ((otmp = unchanger()) != 0 && otmp-&gt;cursed) {\n        366: \t\t\t    /* otmp is an amulet of unchanging */\n        367: \t\t\t    goto decurse;\n        368: \t\t\t}"
   },
   {
     "key": "L00371_01",
     "original": "fix_worst_trouble: couldn't cure hands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:371:15\n   366: \t\t\t    /* otmp is an amulet of unchanging */\n   367: \t\t\t    goto decurse;\n   368: \t\t\t}\n   369: \t\t    }\n   370: \t\t    if (nohands(youmonst.data) || !freehand())\n&gt;  371: \t\t\timpossible(\"fix_worst_trouble: couldn't cure hands.\");\n   372: \t\t    break;\n   373: \t    case TROUBLE_CURSED_BLINDFOLD:\n   374: \t\t    otmp = ublindf;\n   375: \t\t    goto decurse;\n   376: \t    case TROUBLE_LYCANTHROPE:"
+    "context": "src/pray.c:371:15\n        366: \t\t\t    /* otmp is an amulet of unchanging */\n        367: \t\t\t    goto decurse;\n        368: \t\t\t}\n        369: \t\t    }\n        370: \t\t    if (nohands(youmonst.data) || !freehand())\nTARGET  371: \t\t\timpossible(\"fix_worst_trouble: couldn't cure hands.\");\n        372: \t\t    break;\n        373: \t    case TROUBLE_CURSED_BLINDFOLD:\n        374: \t\t    otmp = ublindf;\n        375: \t\t    goto decurse;\n        376: \t    case TROUBLE_LYCANTHROPE:"
   },
   {
     "key": "L00382_01",
     "original": "chain disappears.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:382:12\n   377: \t\t    you_unwere(TRUE);\n   378: \t\t    break;\n   379: \t/*\n   380: \t */\n   381: \t    case TROUBLE_PUNISHED:\n&gt;  382: \t\t    Your(\"chain disappears.\");\n   383: \t\t    unpunish();\n   384: \t\t    break;\n   385: \t    case TROUBLE_FUMBLING:\n   386: \t\t    if (Cursed_obj(uarmg, GAUNTLETS_OF_FUMBLING))\n   387: \t\t\totmp = uarmg;"
+    "context": "src/pray.c:382:12\n        377: \t\t    you_unwere(TRUE);\n        378: \t\t    break;\n        379: \t/*\n        380: \t */\n        381: \t    case TROUBLE_PUNISHED:\nTARGET  382: \t\t    Your(\"chain disappears.\");\n        383: \t\t    unpunish();\n        384: \t\t    break;\n        385: \t    case TROUBLE_FUMBLING:\n        386: \t\t    if (Cursed_obj(uarmg, GAUNTLETS_OF_FUMBLING))\n        387: \t\t\totmp = uarmg;"
   },
   {
     "key": "L00404_01",
     "original": "%s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:404:9\n   399: \t\t\timpossible(\"修复错误：没有没被诅咒的东西。\");\n   400: \t\t\treturn;\n   401: \t\t    }\n   402: \t\t    uncurse(otmp);\n   403: \t\t    if (!Blind) {\n&gt;  404: \t\t\tYour(\"%s %s.\", what ? what :\n   405: \t\t\t\t(const char *)aobjnam(otmp, \"softly glow\"),\n   406: \t\t\t     hcolor(NH_AMBER));\n   407: \t\t\totmp-&gt;bknown = TRUE;\n   408: \t\t    }\n   409: \t\t    update_inventory();"
+    "context": "src/pray.c:404:9\n        399: \t\t\timpossible(\"修复错误：没有没被诅咒的东西。\");\n        400: \t\t\treturn;\n        401: \t\t    }\n        402: \t\t    uncurse(otmp);\n        403: \t\t    if (!Blind) {\nTARGET  404: \t\t\tYour(\"%s %s.\", what ? what :\n        405: \t\t\t\t(const char *)aobjnam(otmp, \"softly glow\"),\n        406: \t\t\t     hcolor(NH_AMBER));\n        407: \t\t\totmp-&gt;bknown = TRUE;\n        408: \t\t    }\n        409: \t\t    update_inventory();"
   },
   {
     "key": "L00405_01",
     "original": "softly glow",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:405:33\n   400: \t\t\treturn;\n   401: \t\t    }\n   402: \t\t    uncurse(otmp);\n   403: \t\t    if (!Blind) {\n   404: \t\t\tYour(\"%s %s.\", what ? what :\n&gt;  405: \t\t\t\t(const char *)aobjnam(otmp, \"softly glow\"),\n   406: \t\t\t     hcolor(NH_AMBER));\n   407: \t\t\totmp-&gt;bknown = TRUE;\n   408: \t\t    }\n   409: \t\t    update_inventory();\n   410: \t\t    break;"
+    "context": "src/pray.c:405:33\n        400: \t\t\treturn;\n        401: \t\t    }\n        402: \t\t    uncurse(otmp);\n        403: \t\t    if (!Blind) {\n        404: \t\t\tYour(\"%s %s.\", what ? what :\nTARGET  405: \t\t\t\t(const char *)aobjnam(otmp, \"softly glow\"),\n        406: \t\t\t     hcolor(NH_AMBER));\n        407: \t\t\totmp-&gt;bknown = TRUE;\n        408: \t\t    }\n        409: \t\t    update_inventory();\n        410: \t\t    break;"
   },
   {
     "key": "L00415_01",
     "original": "in good health again.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:415:13\n   410: \t\t    break;\n   411: \t    case TROUBLE_POISONED:\n   412: \t\t    if (Hallucination)\n   413: \t\t\tpline(\"你背后的水箱里头好像有只老虎。\");\n   414: \t\t    else\n&gt;  415: \t\t\tYou_feel(\"in good health again.\");\n   416: \t\t    for(i=0; i&lt;A_MAX; i++) {\n   417: \t\t\tif(ABASE(i) &lt; AMAX(i)) {\n   418: \t\t\t\tABASE(i) = AMAX(i);\n   419: \t\t\t\tflags.botl = 1;\n   420: \t\t\t}"
+    "context": "src/pray.c:415:13\n        410: \t\t    break;\n        411: \t    case TROUBLE_POISONED:\n        412: \t\t    if (Hallucination)\n        413: \t\t\tpline(\"你背后的水箱里头好像有只老虎。\");\n        414: \t\t    else\nTARGET  415: \t\t\tYou_feel(\"in good health again.\");\n        416: \t\t    for(i=0; i&lt;A_MAX; i++) {\n        417: \t\t\tif(ABASE(i) &lt; AMAX(i)) {\n        418: \t\t\t\tABASE(i) = AMAX(i);\n        419: \t\t\t\tflags.botl = 1;\n        420: \t\t\t}"
   },
   {
     "key": "L00429_01",
     "original": "%s feel%s better.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:429:9\n   424: \t    case TROUBLE_BLIND:\n   425: \t    \t    {\n   426: \t    \t    \tint num_eyes = eyecount(youmonst.data);\n   427: \t\t    const char *eye = body_part(EYE);\n   428: \n&gt;  429: \t\t\tYour(\"%s feel%s better.\",\n   430: \t\t\t (num_eyes == 1) ? eye : makeplural(eye),\n   431: \t\t\t     (num_eyes == 1) ? \"s\" : \"\");\n   432: \t\t    u.ucreamed = 0;\n   433: \t\t\tmake_blinded(0L,FALSE);\n   434: \t\t\tbreak;"
+    "context": "src/pray.c:429:9\n        424: \t    case TROUBLE_BLIND:\n        425: \t    \t    {\n        426: \t    \t    \tint num_eyes = eyecount(youmonst.data);\n        427: \t\t    const char *eye = body_part(EYE);\n        428: \nTARGET  429: \t\t\tYour(\"%s feel%s better.\",\n        430: \t\t\t (num_eyes == 1) ? eye : makeplural(eye),\n        431: \t\t\t     (num_eyes == 1) ? \"s\" : \"\");\n        432: \t\t    u.ucreamed = 0;\n        433: \t\t\tmake_blinded(0L,FALSE);\n        434: \t\t\tbreak;"
   },
   {
     "key": "L00431_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:431:27\n   426: \t    \t    \tint num_eyes = eyecount(youmonst.data);\n   427: \t\t    const char *eye = body_part(EYE);\n   428: \n   429: \t\t\tYour(\"%s feel%s better.\",\n   430: \t\t\t (num_eyes == 1) ? eye : makeplural(eye),\n&gt;  431: \t\t\t     (num_eyes == 1) ? \"s\" : \"\");\n   432: \t\t    u.ucreamed = 0;\n   433: \t\t\tmake_blinded(0L,FALSE);\n   434: \t\t\tbreak;\n   435: \t\t    }\n   436: \t    case TROUBLE_WOUNDED_LEGS:"
+    "context": "src/pray.c:431:27\n        426: \t    \t    \tint num_eyes = eyecount(youmonst.data);\n        427: \t\t    const char *eye = body_part(EYE);\n        428: \n        429: \t\t\tYour(\"%s feel%s better.\",\n        430: \t\t\t (num_eyes == 1) ? eye : makeplural(eye),\nTARGET  431: \t\t\t     (num_eyes == 1) ? \"s\" : \"\");\n        432: \t\t    u.ucreamed = 0;\n        433: \t\t\tmake_blinded(0L,FALSE);\n        434: \t\t\tbreak;\n        435: \t\t    }\n        436: \t    case TROUBLE_WOUNDED_LEGS:"
   },
   {
     "key": "L00446_01",
     "original": "Looks like you are back in Kansas.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:446:14\n   441: \t\t    break;\n   442: \t    case TROUBLE_CONFUSED:\n   443: \t\t    make_confused(0L,TRUE);\n   444: \t\t    break;\n   445: \t    case TROUBLE_HALLUCINATION:\n&gt;  446: \t\t    pline (\"Looks like you are back in Kansas.\");\n   447: \t\t    (void) make_hallucinated(0L,FALSE,0L);\n   448: \t\t    break;\n   449: \t    case TROUBLE_LOW_ENERGY:\n   450: \t\t    You_feel(\"revitalised.\");\n   451: \t\t    u.uen = u.uenmax;"
+    "context": "src/pray.c:446:14\n        441: \t\t    break;\n        442: \t    case TROUBLE_CONFUSED:\n        443: \t\t    make_confused(0L,TRUE);\n        444: \t\t    break;\n        445: \t    case TROUBLE_HALLUCINATION:\nTARGET  446: \t\t    pline (\"Looks like you are back in Kansas.\");\n        447: \t\t    (void) make_hallucinated(0L,FALSE,0L);\n        448: \t\t    break;\n        449: \t    case TROUBLE_LOW_ENERGY:\n        450: \t\t    You_feel(\"revitalised.\");\n        451: \t\t    u.uen = u.uenmax;"
   },
   {
     "key": "L00450_01",
     "original": "revitalised.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:450:16\n   445: \t    case TROUBLE_HALLUCINATION:\n   446: \t\t    pline (\"Looks like you are back in Kansas.\");\n   447: \t\t    (void) make_hallucinated(0L,FALSE,0L);\n   448: \t\t    break;\n   449: \t    case TROUBLE_LOW_ENERGY:\n&gt;  450: \t\t    You_feel(\"revitalised.\");\n   451: \t\t    u.uen = u.uenmax;\n   452: \t\t    flags.botl = 1;\n   453: \t\t    break;\n   454: #ifdef STEED\n   455: \t    case TROUBLE_SADDLE:"
+    "context": "src/pray.c:450:16\n        445: \t    case TROUBLE_HALLUCINATION:\n        446: \t\t    pline (\"Looks like you are back in Kansas.\");\n        447: \t\t    (void) make_hallucinated(0L,FALSE,0L);\n        448: \t\t    break;\n        449: \t    case TROUBLE_LOW_ENERGY:\nTARGET  450: \t\t    You_feel(\"revitalised.\");\n        451: \t\t    u.uen = u.uenmax;\n        452: \t\t    flags.botl = 1;\n        453: \t\t    break;\n        454: #ifdef STEED\n        455: \t    case TROUBLE_SADDLE:"
   },
   {
     "key": "L00459_01",
     "original": "%s %s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:459:10\n   454: #ifdef STEED\n   455: \t    case TROUBLE_SADDLE:\n   456: \t\t    otmp = which_armor(u.usteed, W_SADDLE);\n   457: \t\t    uncurse(otmp);\n   458: \t\t    if (!Blind) {\n&gt;  459: \t\t\tpline(\"%s %s %s.\",\n   460: \t\t\t      s_suffix(upstart(y_monnam(u.usteed))),\n   461: \t\t\t      aobjnam(otmp, \"softly glow\"),\n   462: \t\t\t      hcolor(NH_AMBER));\n   463: \t\t\totmp-&gt;bknown = TRUE;\n   464: \t\t    }"
+    "context": "src/pray.c:459:10\n        454: #ifdef STEED\n        455: \t    case TROUBLE_SADDLE:\n        456: \t\t    otmp = which_armor(u.usteed, W_SADDLE);\n        457: \t\t    uncurse(otmp);\n        458: \t\t    if (!Blind) {\nTARGET  459: \t\t\tpline(\"%s %s %s.\",\n        460: \t\t\t      s_suffix(upstart(y_monnam(u.usteed))),\n        461: \t\t\t      aobjnam(otmp, \"softly glow\"),\n        462: \t\t\t      hcolor(NH_AMBER));\n        463: \t\t\totmp-&gt;bknown = TRUE;\n        464: \t\t    }"
   },
   {
     "key": "L00461_01",
     "original": "softly glow",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:461:24\n   456: \t\t    otmp = which_armor(u.usteed, W_SADDLE);\n   457: \t\t    uncurse(otmp);\n   458: \t\t    if (!Blind) {\n   459: \t\t\tpline(\"%s %s %s.\",\n   460: \t\t\t      s_suffix(upstart(y_monnam(u.usteed))),\n&gt;  461: \t\t\t      aobjnam(otmp, \"softly glow\"),\n   462: \t\t\t      hcolor(NH_AMBER));\n   463: \t\t\totmp-&gt;bknown = TRUE;\n   464: \t\t    }\n   465: \t\t    break;\n   466: #endif"
+    "context": "src/pray.c:461:24\n        456: \t\t    otmp = which_armor(u.usteed, W_SADDLE);\n        457: \t\t    uncurse(otmp);\n        458: \t\t    if (!Blind) {\n        459: \t\t\tpline(\"%s %s %s.\",\n        460: \t\t\t      s_suffix(upstart(y_monnam(u.usteed))),\nTARGET  461: \t\t\t      aobjnam(otmp, \"softly glow\"),\n        462: \t\t\t      hcolor(NH_AMBER));\n        463: \t\t\totmp-&gt;bknown = TRUE;\n        464: \t\t    }\n        465: \t\t    break;\n        466: #endif"
   },
   {
     "key": "L00497_01",
     "original": "%s reflects from your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:497:24\n   492: \t    pline(\"突然，一道闪电劈中了你！\");\n   493: \t    if (Reflecting) {\n   494: \t\tshieldeff(u.ux, u.uy);\n   495: \t\tif (Blind) pline(\"出于某种原因，你没有受到任何影响。\");\n   496: \t\telse\n&gt;  497: \t\t    (void) ureflects(\"%s reflects from your %s.\", \"It\");\n   498: \t    } else if (Shock_resistance) {\n   499: \t\tshieldeff(u.ux, u.uy);\n   500: \t\tpline(\"它貌似没有影响到你。\");\n   501: \t    } else fry_by_god(resp_god);\n   502: \t}"
+    "context": "src/pray.c:497:24\n        492: \t    pline(\"突然，一道闪电劈中了你！\");\n        493: \t    if (Reflecting) {\n        494: \t\tshieldeff(u.ux, u.uy);\n        495: \t\tif (Blind) pline(\"出于某种原因，你没有受到任何影响。\");\n        496: \t\telse\nTARGET  497: \t\t    (void) ureflects(\"%s reflects from your %s.\", \"It\");\n        498: \t    } else if (Shock_resistance) {\n        499: \t\tshieldeff(u.ux, u.uy);\n        500: \t\tpline(\"它貌似没有影响到你。\");\n        501: \t    } else fry_by_god(resp_god);\n        502: \t}"
   },
   {
     "key": "L00497_02",
     "original": "It",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:497:53\n   492: \t    pline(\"突然，一道闪电劈中了你！\");\n   493: \t    if (Reflecting) {\n   494: \t\tshieldeff(u.ux, u.uy);\n   495: \t\tif (Blind) pline(\"出于某种原因，你没有受到任何影响。\");\n   496: \t\telse\n&gt;  497: \t\t    (void) ureflects(\"%s reflects from your %s.\", \"It\");\n   498: \t    } else if (Shock_resistance) {\n   499: \t\tshieldeff(u.ux, u.uy);\n   500: \t\tpline(\"它貌似没有影响到你。\");\n   501: \t    } else fry_by_god(resp_god);\n   502: \t}"
+    "context": "src/pray.c:497:53\n        492: \t    pline(\"突然，一道闪电劈中了你！\");\n        493: \t    if (Reflecting) {\n        494: \t\tshieldeff(u.ux, u.uy);\n        495: \t\tif (Blind) pline(\"出于某种原因，你没有受到任何影响。\");\n        496: \t\telse\nTARGET  497: \t\t    (void) ureflects(\"%s reflects from your %s.\", \"It\");\n        498: \t    } else if (Shock_resistance) {\n        499: \t\tshieldeff(u.ux, u.uy);\n        500: \t\tpline(\"它貌似没有影响到你。\");\n        501: \t    } else fry_by_god(resp_god);\n        502: \t}"
   },
   {
     "key": "L00504_01",
     "original": "%s is not deterred...",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:504:8\n   499: \t\tshieldeff(u.ux, u.uy);\n   500: \t\tpline(\"它貌似没有影响到你。\");\n   501: \t    } else fry_by_god(resp_god);\n   502: \t}\n   503: \n&gt;  504: \tpline(\"%s is not deterred...\", align_gname(resp_god));\n   505: \tif (u.uswallow) {\n   506: \t    pline(\"A wide-angle disintegration beam aimed at you hits %s!\",\n   507: \t\t\tmon_nam(u.ustuck));\n   508: \t    if (!resists_disint(u.ustuck)) {\n   509: \t\tpline(\"%s被电得外焦里嫩！\", Monnam(u.ustuck));"
+    "context": "src/pray.c:504:8\n        499: \t\tshieldeff(u.ux, u.uy);\n        500: \t\tpline(\"它貌似没有影响到你。\");\n        501: \t    } else fry_by_god(resp_god);\n        502: \t}\n        503: \nTARGET  504: \tpline(\"%s is not deterred...\", align_gname(resp_god));\n        505: \tif (u.uswallow) {\n        506: \t    pline(\"A wide-angle disintegration beam aimed at you hits %s!\",\n        507: \t\t\tmon_nam(u.ustuck));\n        508: \t    if (!resists_disint(u.ustuck)) {\n        509: \t\tpline(\"%s被电得外焦里嫩！\", Monnam(u.ustuck));"
   },
   {
     "key": "L00506_01",
     "original": "A wide-angle disintegration beam aimed at you hits %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:506:12\n   501: \t    } else fry_by_god(resp_god);\n   502: \t}\n   503: \n   504: \tpline(\"%s is not deterred...\", align_gname(resp_god));\n   505: \tif (u.uswallow) {\n&gt;  506: \t    pline(\"A wide-angle disintegration beam aimed at you hits %s!\",\n   507: \t\t\tmon_nam(u.ustuck));\n   508: \t    if (!resists_disint(u.ustuck)) {\n   509: \t\tpline(\"%s被电得外焦里嫩！\", Monnam(u.ustuck));\n   510: \t\txkilled(u.ustuck, 2); /* no corpse */\n   511: \t    } else"
+    "context": "src/pray.c:506:12\n        501: \t    } else fry_by_god(resp_god);\n        502: \t}\n        503: \n        504: \tpline(\"%s is not deterred...\", align_gname(resp_god));\n        505: \tif (u.uswallow) {\nTARGET  506: \t    pline(\"A wide-angle disintegration beam aimed at you hits %s!\",\n        507: \t\t\tmon_nam(u.ustuck));\n        508: \t    if (!resists_disint(u.ustuck)) {\n        509: \t\tpline(\"%s被电得外焦里嫩！\", Monnam(u.ustuck));\n        510: \t\txkilled(u.ustuck, 2); /* no corpse */\n        511: \t    } else"
   },
   {
     "key": "L00534_01",
     "original": "bask in its %s glow for a minute...",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:534:7\n   529: \t    if (uarmu && !uarm && !uarmc) (void) destroy_arm(uarmu);\n   530: #endif\n   531: \t    if (!Disint_resistance)\n   532: \t\tfry_by_god(resp_god);\n   533: \t    else {\n&gt;  534: \t\tYou(\"bask in its %s glow for a minute...\", NH_BLACK);\n   535: \t\tgodvoice(resp_god, \"汝进一步地惹怒了吾！\");\n   536: \t    }\n   537: \t    if (Is_astralevel(&u.uz) || Is_sanctum(&u.uz)) {\n   538: \t\t/* one more try for high altars */\n   539: \t\tverbalize(\"汝逃不过吾的怒火！凡人！\");"
+    "context": "src/pray.c:534:7\n        529: \t    if (uarmu && !uarm && !uarmc) (void) destroy_arm(uarmu);\n        530: #endif\n        531: \t    if (!Disint_resistance)\n        532: \t\tfry_by_god(resp_god);\n        533: \t    else {\nTARGET  534: \t\tYou(\"bask in its %s glow for a minute...\", NH_BLACK);\n        535: \t\tgodvoice(resp_god, \"汝进一步地惹怒了吾！\");\n        536: \t    }\n        537: \t    if (Is_astralevel(&u.uz) || Is_sanctum(&u.uz)) {\n        538: \t\t/* one more try for high altars */\n        539: \t\tverbalize(\"汝逃不过吾的怒火！凡人！\");"
   },
   {
     "key": "L00594_01",
     "original": "that %s is %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:594:23\n   589: \tif (maxanger &lt; 1) maxanger = 1; /* possible if bad align & good luck */\n   590: \telse if (maxanger &gt; 15) maxanger = 15;\t/* be reasonable */\n   591: \n   592: \tswitch (rn2(maxanger)) {\n   593: \t    case 0:\n&gt;  594: \t    case 1:\tYou_feel(\"that %s is %s.\", align_gname(resp_god),\n   595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n   596: \t\t\tbreak;\n   597: \t    case 2:\n   598: \t    case 3:\n   599: \t\t\tgodvoice(resp_god,(char *)0);"
+    "context": "src/pray.c:594:23\n        589: \tif (maxanger &lt; 1) maxanger = 1; /* possible if bad align & good luck */\n        590: \telse if (maxanger &gt; 15) maxanger = 15;\t/* be reasonable */\n        591: \n        592: \tswitch (rn2(maxanger)) {\n        593: \t    case 0:\nTARGET  594: \t    case 1:\tYou_feel(\"that %s is %s.\", align_gname(resp_god),\n        595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n        596: \t\t\tbreak;\n        597: \t    case 2:\n        598: \t    case 3:\n        599: \t\t\tgodvoice(resp_god,(char *)0);"
   },
   {
     "key": "L00595_01",
     "original": "bummed",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:595:24\n   590: \telse if (maxanger &gt; 15) maxanger = 15;\t/* be reasonable */\n   591: \n   592: \tswitch (rn2(maxanger)) {\n   593: \t    case 0:\n   594: \t    case 1:\tYou_feel(\"that %s is %s.\", align_gname(resp_god),\n&gt;  595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n   596: \t\t\tbreak;\n   597: \t    case 2:\n   598: \t    case 3:\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\","
+    "context": "src/pray.c:595:24\n        590: \telse if (maxanger &gt; 15) maxanger = 15;\t/* be reasonable */\n        591: \n        592: \tswitch (rn2(maxanger)) {\n        593: \t    case 0:\n        594: \t    case 1:\tYou_feel(\"that %s is %s.\", align_gname(resp_god),\nTARGET  595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n        596: \t\t\tbreak;\n        597: \t    case 2:\n        598: \t    case 3:\n        599: \t\t\tgodvoice(resp_god,(char *)0);\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\","
   },
   {
     "key": "L00595_02",
     "original": "displeased",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:595:35\n   590: \telse if (maxanger &gt; 15) maxanger = 15;\t/* be reasonable */\n   591: \n   592: \tswitch (rn2(maxanger)) {\n   593: \t    case 0:\n   594: \t    case 1:\tYou_feel(\"that %s is %s.\", align_gname(resp_god),\n&gt;  595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n   596: \t\t\tbreak;\n   597: \t    case 2:\n   598: \t    case 3:\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\","
+    "context": "src/pray.c:595:35\n        590: \telse if (maxanger &gt; 15) maxanger = 15;\t/* be reasonable */\n        591: \n        592: \tswitch (rn2(maxanger)) {\n        593: \t    case 0:\n        594: \t    case 1:\tYou_feel(\"that %s is %s.\", align_gname(resp_god),\nTARGET  595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n        596: \t\t\tbreak;\n        597: \t    case 2:\n        598: \t    case 3:\n        599: \t\t\tgodvoice(resp_god,(char *)0);\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\","
   },
   {
     "key": "L00600_01",
     "original": "\\\"Thou %s, %s.\\\"",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:600:10\n   595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n   596: \t\t\tbreak;\n   597: \t    case 2:\n   598: \t    case 3:\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n&gt;  600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n   601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n   602: \t\t\t\t? \"hast strayed from the path\" :\n   603: \t\t\t\t\t\t\"art arrogant\",\n   604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");"
+    "context": "src/pray.c:600:10\n        595: \t\t\t    Hallucination ? \"bummed\" : \"displeased\");\n        596: \t\t\tbreak;\n        597: \t    case 2:\n        598: \t    case 3:\n        599: \t\t\tgodvoice(resp_god,(char *)0);\nTARGET  600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n        601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n        602: \t\t\t\t? \"hast strayed from the path\" :\n        603: \t\t\t\t\t\t\"art arrogant\",\n        604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");"
   },
   {
     "key": "L00602_01",
     "original": "hast strayed from the path",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:602:7\n   597: \t    case 2:\n   598: \t    case 3:\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n   601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n&gt;  602: \t\t\t\t? \"hast strayed from the path\" :\n   603: \t\t\t\t\t\t\"art arrogant\",\n   604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n   606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n   607: \t\t\tlosexp((char *)0, FALSE);"
+    "context": "src/pray.c:602:7\n        597: \t    case 2:\n        598: \t    case 3:\n        599: \t\t\tgodvoice(resp_god,(char *)0);\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n        601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\nTARGET  602: \t\t\t\t? \"hast strayed from the path\" :\n        603: \t\t\t\t\t\t\"art arrogant\",\n        604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n        606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n        607: \t\t\tlosexp((char *)0, FALSE);"
   },
   {
     "key": "L00603_01",
     "original": "art arrogant",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:603:7\n   598: \t    case 3:\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n   601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n   602: \t\t\t\t? \"hast strayed from the path\" :\n&gt;  603: \t\t\t\t\t\t\"art arrogant\",\n   604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n   606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n   607: \t\t\tlosexp((char *)0, FALSE);\n   608: \t\t\tbreak;"
+    "context": "src/pray.c:603:7\n        598: \t    case 3:\n        599: \t\t\tgodvoice(resp_god,(char *)0);\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n        601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n        602: \t\t\t\t? \"hast strayed from the path\" :\nTARGET  603: \t\t\t\t\t\t\"art arrogant\",\n        604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n        606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n        607: \t\t\tlosexp((char *)0, FALSE);\n        608: \t\t\tbreak;"
   },
   {
     "key": "L00604_01",
     "original": "mortal",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:604:43\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n   601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n   602: \t\t\t\t? \"hast strayed from the path\" :\n   603: \t\t\t\t\t\t\"art arrogant\",\n&gt;  604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n   606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n   607: \t\t\tlosexp((char *)0, FALSE);\n   608: \t\t\tbreak;\n   609: \t    case 6:\tif (!Punished) {"
+    "context": "src/pray.c:604:43\n        599: \t\t\tgodvoice(resp_god,(char *)0);\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n        601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n        602: \t\t\t\t? \"hast strayed from the path\" :\n        603: \t\t\t\t\t\t\"art arrogant\",\nTARGET  604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n        606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n        607: \t\t\tlosexp((char *)0, FALSE);\n        608: \t\t\tbreak;\n        609: \t    case 6:\tif (!Punished) {"
   },
   {
     "key": "L00604_02",
     "original": "creature",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:604:54\n   599: \t\t\tgodvoice(resp_god,(char *)0);\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n   601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n   602: \t\t\t\t? \"hast strayed from the path\" :\n   603: \t\t\t\t\t\t\"art arrogant\",\n&gt;  604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n   606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n   607: \t\t\tlosexp((char *)0, FALSE);\n   608: \t\t\tbreak;\n   609: \t    case 6:\tif (!Punished) {"
+    "context": "src/pray.c:604:54\n        599: \t\t\tgodvoice(resp_god,(char *)0);\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n        601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n        602: \t\t\t\t? \"hast strayed from the path\" :\n        603: \t\t\t\t\t\t\"art arrogant\",\nTARGET  604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n        606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n        607: \t\t\tlosexp((char *)0, FALSE);\n        608: \t\t\tbreak;\n        609: \t    case 6:\tif (!Punished) {"
   },
   {
     "key": "L00605_01",
     "original": "Thou must relearn thy lessons!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:605:14\n   600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n   601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n   602: \t\t\t\t? \"hast strayed from the path\" :\n   603: \t\t\t\t\t\t\"art arrogant\",\n   604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n&gt;  605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n   606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n   607: \t\t\tlosexp((char *)0, FALSE);\n   608: \t\t\tbreak;\n   609: \t    case 6:\tif (!Punished) {\n   610: \t\t\t    gods_angry(resp_god);"
+    "context": "src/pray.c:605:14\n        600: \t\t\tpline(\"\\\"Thou %s, %s.\\\"\",\n        601: \t\t\t    (ugod_is_angry() && resp_god == u.ualign.type)\n        602: \t\t\t\t? \"hast strayed from the path\" :\n        603: \t\t\t\t\t\t\"art arrogant\",\n        604: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\nTARGET  605: \t\t\tverbalize(\"Thou must relearn thy lessons!\");\n        606: \t\t\t(void) adjattrib(A_WIS, -3, FALSE);\n        607: \t\t\tlosexp((char *)0, FALSE);\n        608: \t\t\tbreak;\n        609: \t    case 6:\tif (!Punished) {\n        610: \t\t\t    gods_angry(resp_god);"
   },
   {
     "key": "L00623_01",
     "original": "Thou durst %s me?",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:623:14\n   618: \t\t\t\t  An(hcolor(NH_BLACK)));\n   619: \t\t\trndcurse();\n   620: \t\t\tbreak;\n   621: \t    case 7:\n   622: \t    case 8:\tgodvoice(resp_god,(char *)0);\n&gt;  623: \t\t\tverbalize(\"Thou durst %s me?\",\n   624: \t\t\t\t  (on_altar() &&\n   625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n   626: \t\t\t\t  \"scorn\":\"call upon\");\n   627: \t\t\tpline(\"“那就去死吧！%s！”\",\n   628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");"
+    "context": "src/pray.c:623:14\n        618: \t\t\t\t  An(hcolor(NH_BLACK)));\n        619: \t\t\trndcurse();\n        620: \t\t\tbreak;\n        621: \t    case 7:\n        622: \t    case 8:\tgodvoice(resp_god,(char *)0);\nTARGET  623: \t\t\tverbalize(\"Thou durst %s me?\",\n        624: \t\t\t\t  (on_altar() &&\n        625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n        626: \t\t\t\t  \"scorn\":\"call upon\");\n        627: \t\t\tpline(\"“那就去死吧！%s！”\",\n        628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");"
   },
   {
     "key": "L00626_01",
     "original": "scorn",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:626:7\n   621: \t    case 7:\n   622: \t    case 8:\tgodvoice(resp_god,(char *)0);\n   623: \t\t\tverbalize(\"Thou durst %s me?\",\n   624: \t\t\t\t  (on_altar() &&\n   625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n&gt;  626: \t\t\t\t  \"scorn\":\"call upon\");\n   627: \t\t\tpline(\"“那就去死吧！%s！”\",\n   628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   629: \t\t\tsummon_minion(resp_god, FALSE);\n   630: \t\t\tbreak;\n   631: "
+    "context": "src/pray.c:626:7\n        621: \t    case 7:\n        622: \t    case 8:\tgodvoice(resp_god,(char *)0);\n        623: \t\t\tverbalize(\"Thou durst %s me?\",\n        624: \t\t\t\t  (on_altar() &&\n        625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\nTARGET  626: \t\t\t\t  \"scorn\":\"call upon\");\n        627: \t\t\tpline(\"“那就去死吧！%s！”\",\n        628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        629: \t\t\tsummon_minion(resp_god, FALSE);\n        630: \t\t\tbreak;\n        631: "
   },
   {
     "key": "L00626_02",
     "original": "call upon",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:626:15\n   621: \t    case 7:\n   622: \t    case 8:\tgodvoice(resp_god,(char *)0);\n   623: \t\t\tverbalize(\"Thou durst %s me?\",\n   624: \t\t\t\t  (on_altar() &&\n   625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n&gt;  626: \t\t\t\t  \"scorn\":\"call upon\");\n   627: \t\t\tpline(\"“那就去死吧！%s！”\",\n   628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   629: \t\t\tsummon_minion(resp_god, FALSE);\n   630: \t\t\tbreak;\n   631: "
+    "context": "src/pray.c:626:15\n        621: \t    case 7:\n        622: \t    case 8:\tgodvoice(resp_god,(char *)0);\n        623: \t\t\tverbalize(\"Thou durst %s me?\",\n        624: \t\t\t\t  (on_altar() &&\n        625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\nTARGET  626: \t\t\t\t  \"scorn\":\"call upon\");\n        627: \t\t\tpline(\"“那就去死吧！%s！”\",\n        628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        629: \t\t\tsummon_minion(resp_god, FALSE);\n        630: \t\t\tbreak;\n        631: "
   },
   {
     "key": "L00628_01",
     "original": "mortal",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:628:43\n   623: \t\t\tverbalize(\"Thou durst %s me?\",\n   624: \t\t\t\t  (on_altar() &&\n   625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n   626: \t\t\t\t  \"scorn\":\"call upon\");\n   627: \t\t\tpline(\"“那就去死吧！%s！”\",\n&gt;  628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   629: \t\t\tsummon_minion(resp_god, FALSE);\n   630: \t\t\tbreak;\n   631: \n   632: \t    default:\tgods_angry(resp_god);\n   633: \t\t\tgod_zaps_you(resp_god);"
+    "context": "src/pray.c:628:43\n        623: \t\t\tverbalize(\"Thou durst %s me?\",\n        624: \t\t\t\t  (on_altar() &&\n        625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n        626: \t\t\t\t  \"scorn\":\"call upon\");\n        627: \t\t\tpline(\"“那就去死吧！%s！”\",\nTARGET  628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        629: \t\t\tsummon_minion(resp_god, FALSE);\n        630: \t\t\tbreak;\n        631: \n        632: \t    default:\tgods_angry(resp_god);\n        633: \t\t\tgod_zaps_you(resp_god);"
   },
   {
     "key": "L00628_02",
     "original": "creature",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:628:54\n   623: \t\t\tverbalize(\"Thou durst %s me?\",\n   624: \t\t\t\t  (on_altar() &&\n   625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n   626: \t\t\t\t  \"scorn\":\"call upon\");\n   627: \t\t\tpline(\"“那就去死吧！%s！”\",\n&gt;  628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   629: \t\t\tsummon_minion(resp_god, FALSE);\n   630: \t\t\tbreak;\n   631: \n   632: \t    default:\tgods_angry(resp_god);\n   633: \t\t\tgod_zaps_you(resp_god);"
+    "context": "src/pray.c:628:54\n        623: \t\t\tverbalize(\"Thou durst %s me?\",\n        624: \t\t\t\t  (on_altar() &&\n        625: \t\t\t\t   (a_align(u.ux,u.uy) != resp_god)) ?\n        626: \t\t\t\t  \"scorn\":\"call upon\");\n        627: \t\t\tpline(\"“那就去死吧！%s！”\",\nTARGET  628: \t\t\t      youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        629: \t\t\tsummon_minion(resp_god, FALSE);\n        630: \t\t\tbreak;\n        631: \n        632: \t    default:\tgods_angry(resp_god);\n        633: \t\t\tgod_zaps_you(resp_god);"
   },
   {
     "key": "L00651_01",
     "original": "%s %s into %s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:651:12\n   646: \tconst char *str;\n   647: {\n   648: \tif (Blind) str = Something;\n   649: \tif (u.uswallow) {\n   650: \t    /* barrier between you and the floor */\n&gt;  651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n   654: \t    pline(\"%s %s %s your %s!\", str,\n   655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n   656: \t\t  Levitation ? \"beneath\" : \"at\","
+    "context": "src/pray.c:651:12\n        646: \tconst char *str;\n        647: {\n        648: \tif (Blind) str = Something;\n        649: \tif (u.uswallow) {\n        650: \t    /* barrier between you and the floor */\nTARGET  651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\n        654: \t    pline(\"%s %s %s your %s!\", str,\n        655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n        656: \t\t  Levitation ? \"beneath\" : \"at\","
   },
   {
     "key": "L00651_02",
     "original": "drop",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:651:50\n   646: \tconst char *str;\n   647: {\n   648: \tif (Blind) str = Something;\n   649: \tif (u.uswallow) {\n   650: \t    /* barrier between you and the floor */\n&gt;  651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n   654: \t    pline(\"%s %s %s your %s!\", str,\n   655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n   656: \t\t  Levitation ? \"beneath\" : \"at\","
+    "context": "src/pray.c:651:50\n        646: \tconst char *str;\n        647: {\n        648: \tif (Blind) str = Something;\n        649: \tif (u.uswallow) {\n        650: \t    /* barrier between you and the floor */\nTARGET  651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\n        654: \t    pline(\"%s %s %s your %s!\", str,\n        655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n        656: \t\t  Levitation ? \"beneath\" : \"at\","
   },
   {
     "key": "L00654_01",
     "original": "%s %s %s your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:654:12\n   649: \tif (u.uswallow) {\n   650: \t    /* barrier between you and the floor */\n   651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n&gt;  654: \t    pline(\"%s %s %s your %s!\", str,\n   655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n   656: \t\t  Levitation ? \"beneath\" : \"at\",\n   657: \t\t  makeplural(body_part(FOOT)));\n   658: \t}\n   659: }"
+    "context": "src/pray.c:654:12\n        649: \tif (u.uswallow) {\n        650: \t    /* barrier between you and the floor */\n        651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\nTARGET  654: \t    pline(\"%s %s %s your %s!\", str,\n        655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n        656: \t\t  Levitation ? \"beneath\" : \"at\",\n        657: \t\t  makeplural(body_part(FOOT)));\n        658: \t}\n        659: }"
   },
   {
     "key": "L00655_01",
     "original": "lands",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:655:13\n   650: \t    /* barrier between you and the floor */\n   651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n   654: \t    pline(\"%s %s %s your %s!\", str,\n&gt;  655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n   656: \t\t  Levitation ? \"beneath\" : \"at\",\n   657: \t\t  makeplural(body_part(FOOT)));\n   658: \t}\n   659: }\n   660: "
+    "context": "src/pray.c:655:13\n        650: \t    /* barrier between you and the floor */\n        651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\n        654: \t    pline(\"%s %s %s your %s!\", str,\nTARGET  655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n        656: \t\t  Levitation ? \"beneath\" : \"at\",\n        657: \t\t  makeplural(body_part(FOOT)));\n        658: \t}\n        659: }\n        660: "
   },
   {
     "key": "L00655_02",
     "original": "appear",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:655:35\n   650: \t    /* barrier between you and the floor */\n   651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n   654: \t    pline(\"%s %s %s your %s!\", str,\n&gt;  655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n   656: \t\t  Levitation ? \"beneath\" : \"at\",\n   657: \t\t  makeplural(body_part(FOOT)));\n   658: \t}\n   659: }\n   660: "
+    "context": "src/pray.c:655:35\n        650: \t    /* barrier between you and the floor */\n        651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\n        654: \t    pline(\"%s %s %s your %s!\", str,\nTARGET  655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n        656: \t\t  Levitation ? \"beneath\" : \"at\",\n        657: \t\t  makeplural(body_part(FOOT)));\n        658: \t}\n        659: }\n        660: "
   },
   {
     "key": "L00656_01",
     "original": "beneath",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:656:18\n   651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n   654: \t    pline(\"%s %s %s your %s!\", str,\n   655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n&gt;  656: \t\t  Levitation ? \"beneath\" : \"at\",\n   657: \t\t  makeplural(body_part(FOOT)));\n   658: \t}\n   659: }\n   660: \n   661: #ifdef ELBERETH"
+    "context": "src/pray.c:656:18\n        651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\n        654: \t    pline(\"%s %s %s your %s!\", str,\n        655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\nTARGET  656: \t\t  Levitation ? \"beneath\" : \"at\",\n        657: \t\t  makeplural(body_part(FOOT)));\n        658: \t}\n        659: }\n        660: \n        661: #ifdef ELBERETH"
   },
   {
     "key": "L00656_02",
     "original": "at",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:656:30\n   651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n   652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n   653: \t} else {\n   654: \t    pline(\"%s %s %s your %s!\", str,\n   655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\n&gt;  656: \t\t  Levitation ? \"beneath\" : \"at\",\n   657: \t\t  makeplural(body_part(FOOT)));\n   658: \t}\n   659: }\n   660: \n   661: #ifdef ELBERETH"
+    "context": "src/pray.c:656:30\n        651: \t    pline(\"%s %s into %s %s.\", str, vtense(str, \"drop\"),\n        652: \t\t  s_suffix(mon_nam(u.ustuck)), mbodypart(u.ustuck, STOMACH));\n        653: \t} else {\n        654: \t    pline(\"%s %s %s your %s!\", str,\n        655: \t\t  Blind ? \"lands\" : vtense(str, \"appear\"),\nTARGET  656: \t\t  Levitation ? \"beneath\" : \"at\",\n        657: \t\t  makeplural(body_part(FOOT)));\n        658: \t}\n        659: }\n        660: \n        661: #ifdef ELBERETH"
   },
   {
     "key": "L00690_01",
     "original": "Thou shalt be my Envoy of Balance!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:690:12\n   685: \tbreak;\n   686:     case A_NEUTRAL:\n   687: \tu.uevent.uhand_of_elbereth = 2;\n   688: \tin_hand = (uwep && uwep-&gt;oartifact == ART_VORPAL_BLADE);\n   689: \talready_exists = exist_artifact(LONG_SWORD, artiname(ART_VORPAL_BLADE));\n&gt;  690: \tverbalize(\"Thou shalt be my Envoy of Balance!\");\n   691: \tbreak;\n   692:     case A_CHAOTIC:\n   693: \tu.uevent.uhand_of_elbereth = 3;\n   694: \tin_hand = (uwep && uwep-&gt;oartifact == ART_STORMBRINGER);\n   695: \talready_exists = exist_artifact(RUNESWORD, artiname(ART_STORMBRINGER));"
+    "context": "src/pray.c:690:12\n        685: \tbreak;\n        686:     case A_NEUTRAL:\n        687: \tu.uevent.uhand_of_elbereth = 2;\n        688: \tin_hand = (uwep && uwep-&gt;oartifact == ART_VORPAL_BLADE);\n        689: \talready_exists = exist_artifact(LONG_SWORD, artiname(ART_VORPAL_BLADE));\nTARGET  690: \tverbalize(\"Thou shalt be my Envoy of Balance!\");\n        691: \tbreak;\n        692:     case A_CHAOTIC:\n        693: \tu.uevent.uhand_of_elbereth = 3;\n        694: \tin_hand = (uwep && uwep-&gt;oartifact == ART_STORMBRINGER);\n        695: \talready_exists = exist_artifact(RUNESWORD, artiname(ART_STORMBRINGER));"
   },
   {
     "key": "L00697_01",
     "original": "steal souls",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:697:43\n   692:     case A_CHAOTIC:\n   693: \tu.uevent.uhand_of_elbereth = 3;\n   694: \tin_hand = (uwep && uwep-&gt;oartifact == ART_STORMBRINGER);\n   695: \talready_exists = exist_artifact(RUNESWORD, artiname(ART_STORMBRINGER));\n   696: \tverbalize(\"吾选定了汝，为了吾的荣耀而去%s吧！\",\n&gt;  697: \t\t  already_exists && !in_hand ? \"屠戮生灵\" : \"steal souls\");\n   698: \tbreak;\n   699:     }\n   700: \n   701:     class_gift = STRANGE_OBJECT;\n   702:     /* 3.3.[01] had this in the A_NEUTRAL case below,"
+    "context": "src/pray.c:697:43\n        692:     case A_CHAOTIC:\n        693: \tu.uevent.uhand_of_elbereth = 3;\n        694: \tin_hand = (uwep && uwep-&gt;oartifact == ART_STORMBRINGER);\n        695: \talready_exists = exist_artifact(RUNESWORD, artiname(ART_STORMBRINGER));\n        696: \tverbalize(\"吾选定了汝，为了吾的荣耀而去%s吧！\",\nTARGET  697: \t\t  already_exists && !in_hand ? \"屠戮生灵\" : \"steal souls\");\n        698: \tbreak;\n        699:     }\n        700: \n        701:     class_gift = STRANGE_OBJECT;\n        702:     /* 3.3.[01] had this in the A_NEUTRAL case below,"
   },
   {
     "key": "L00713_01",
     "original": "A spellbook",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:713:15\n   708: \tclass_gift = SPE_FINGER_OF_DEATH;\n   709:  make_splbk:\n   710: \tobj = mksobj(class_gift, TRUE, FALSE);\n   711: \tbless(obj);\n   712: \tobj-&gt;bknown = TRUE;\n&gt;  713: \tat_your_feet(\"A spellbook\");\n   714: \tdropy(obj);\n   715: \tu.ugifts++;\n   716: \t/* when getting a new book for known spell, enhance\n   717: \t   currently wielded weapon rather than the book */\n   718: \tfor (sp_no = 0; sp_no &lt; MAXSPELL; sp_no++)"
+    "context": "src/pray.c:713:15\n        708: \tclass_gift = SPE_FINGER_OF_DEATH;\n        709:  make_splbk:\n        710: \tobj = mksobj(class_gift, TRUE, FALSE);\n        711: \tbless(obj);\n        712: \tobj-&gt;bknown = TRUE;\nTARGET  713: \tat_your_feet(\"A spellbook\");\n        714: \tdropy(obj);\n        715: \tu.ugifts++;\n        716: \t/* when getting a new book for known spell, enhance\n        717: \t   currently wielded weapon rather than the book */\n        718: \tfor (sp_no = 0; sp_no &lt; MAXSPELL; sp_no++)"
   },
   {
     "key": "L00736_01",
     "original": "sword shines brightly for a moment.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:736:23\n   731:     switch (u.ualign.type) {\n   732:     case A_LAWFUL:\n   733: \tif (class_gift != STRANGE_OBJECT) {\n   734: \t    ;\t\t/* already got bonus above */\n   735: \t} else if (obj && obj-&gt;otyp == LONG_SWORD && !obj-&gt;oartifact) {\n&gt;  736: \t    if (!Blind) Your(\"sword shines brightly for a moment.\");\n   737: \t    obj = oname(obj, artiname(ART_EXCALIBUR));\n   738: \t    if (obj && obj-&gt;oartifact == ART_EXCALIBUR) u.ugifts++;\n   739: \t}\n   740: \t/* acquire Excalibur's skill regardless of weapon or gift */\n   741: \tunrestrict_weapon_skill(P_LONG_SWORD);"
+    "context": "src/pray.c:736:23\n        731:     switch (u.ualign.type) {\n        732:     case A_LAWFUL:\n        733: \tif (class_gift != STRANGE_OBJECT) {\n        734: \t    ;\t\t/* already got bonus above */\n        735: \t} else if (obj && obj-&gt;otyp == LONG_SWORD && !obj-&gt;oartifact) {\nTARGET  736: \t    if (!Blind) Your(\"sword shines brightly for a moment.\");\n        737: \t    obj = oname(obj, artiname(ART_EXCALIBUR));\n        738: \t    if (obj && obj-&gt;oartifact == ART_EXCALIBUR) u.ugifts++;\n        739: \t}\n        740: \t/* acquire Excalibur's skill regardless of weapon or gift */\n        741: \tunrestrict_weapon_skill(P_LONG_SWORD);"
   },
   {
     "key": "L00749_01",
     "original": "%s goes snicker-snack!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:749:11\n   744: \tbreak;\n   745:     case A_NEUTRAL:\n   746: \tif (class_gift != STRANGE_OBJECT) {\n   747: \t    ;\t\t/* already got bonus above */\n   748: \t} else if (in_hand) {\n&gt;  749: \t    Your(\"%s goes snicker-snack!\", xname(obj));\n   750: \t    obj-&gt;dknown = TRUE;\n   751: \t} else if (!already_exists) {\n   752: \t    obj = mksobj(LONG_SWORD, FALSE, FALSE);\n   753: \t    obj = oname(obj, artiname(ART_VORPAL_BLADE));\n   754: \t    obj-&gt;spe = 1;"
+    "context": "src/pray.c:749:11\n        744: \tbreak;\n        745:     case A_NEUTRAL:\n        746: \tif (class_gift != STRANGE_OBJECT) {\n        747: \t    ;\t\t/* already got bonus above */\n        748: \t} else if (in_hand) {\nTARGET  749: \t    Your(\"%s goes snicker-snack!\", xname(obj));\n        750: \t    obj-&gt;dknown = TRUE;\n        751: \t} else if (!already_exists) {\n        752: \t    obj = mksobj(LONG_SWORD, FALSE, FALSE);\n        753: \t    obj = oname(obj, artiname(ART_VORPAL_BLADE));\n        754: \t    obj-&gt;spe = 1;"
   },
   {
     "key": "L00755_01",
     "original": "A sword",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:755:19\n   750: \t    obj-&gt;dknown = TRUE;\n   751: \t} else if (!already_exists) {\n   752: \t    obj = mksobj(LONG_SWORD, FALSE, FALSE);\n   753: \t    obj = oname(obj, artiname(ART_VORPAL_BLADE));\n   754: \t    obj-&gt;spe = 1;\n&gt;  755: \t    at_your_feet(\"A sword\");\n   756: \t    dropy(obj);\n   757: \t    u.ugifts++;\n   758: \t}\n   759: \t/* acquire Vorpal Blade's skill regardless of weapon or gift */\n   760: \tunrestrict_weapon_skill(P_LONG_SWORD);"
+    "context": "src/pray.c:755:19\n        750: \t    obj-&gt;dknown = TRUE;\n        751: \t} else if (!already_exists) {\n        752: \t    obj = mksobj(LONG_SWORD, FALSE, FALSE);\n        753: \t    obj = oname(obj, artiname(ART_VORPAL_BLADE));\n        754: \t    obj-&gt;spe = 1;\nTARGET  755: \t    at_your_feet(\"A sword\");\n        756: \t    dropy(obj);\n        757: \t    u.ugifts++;\n        758: \t}\n        759: \t/* acquire Vorpal Blade's skill regardless of weapon or gift */\n        760: \tunrestrict_weapon_skill(P_LONG_SWORD);"
   },
   {
     "key": "L00768_01",
     "original": "%s sword",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:768:20\n   763: \tbreak;\n   764:     case A_CHAOTIC:\n   765:       {\n   766: \tchar swordbuf[BUFSZ];\n   767: \n&gt;  768: \tSprintf(swordbuf, \"%s sword\", hcolor(NH_BLACK));\n   769: \tif (class_gift != STRANGE_OBJECT) {\n   770: \t    ;\t\t/* already got bonus above */\n   771: \t} else if (in_hand) {\n   772: \t    Your(\"%s hums ominously!\", swordbuf);\n   773: \t    obj-&gt;dknown = TRUE;"
+    "context": "src/pray.c:768:20\n        763: \tbreak;\n        764:     case A_CHAOTIC:\n        765:       {\n        766: \tchar swordbuf[BUFSZ];\n        767: \nTARGET  768: \tSprintf(swordbuf, \"%s sword\", hcolor(NH_BLACK));\n        769: \tif (class_gift != STRANGE_OBJECT) {\n        770: \t    ;\t\t/* already got bonus above */\n        771: \t} else if (in_hand) {\n        772: \t    Your(\"%s hums ominously!\", swordbuf);\n        773: \t    obj-&gt;dknown = TRUE;"
   },
   {
     "key": "L00772_01",
     "original": "%s hums ominously!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:772:11\n   767: \n   768: \tSprintf(swordbuf, \"%s sword\", hcolor(NH_BLACK));\n   769: \tif (class_gift != STRANGE_OBJECT) {\n   770: \t    ;\t\t/* already got bonus above */\n   771: \t} else if (in_hand) {\n&gt;  772: \t    Your(\"%s hums ominously!\", swordbuf);\n   773: \t    obj-&gt;dknown = TRUE;\n   774: \t} else if (!already_exists) {\n   775: \t    obj = mksobj(RUNESWORD, FALSE, FALSE);\n   776: \t    obj = oname(obj, artiname(ART_STORMBRINGER));\n   777: \t    at_your_feet(An(swordbuf));"
+    "context": "src/pray.c:772:11\n        767: \n        768: \tSprintf(swordbuf, \"%s sword\", hcolor(NH_BLACK));\n        769: \tif (class_gift != STRANGE_OBJECT) {\n        770: \t    ;\t\t/* already got bonus above */\n        771: \t} else if (in_hand) {\nTARGET  772: \t    Your(\"%s hums ominously!\", swordbuf);\n        773: \t    obj-&gt;dknown = TRUE;\n        774: \t} else if (!already_exists) {\n        775: \t    obj = mksobj(RUNESWORD, FALSE, FALSE);\n        776: \t    obj = oname(obj, artiname(ART_STORMBRINGER));\n        777: \t    at_your_feet(An(swordbuf));"
   },
   {
     "key": "L00808_01",
     "original": "unworthy.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:808:11\n   803: \t} else if (obj-&gt;spe &lt; 1) obj-&gt;spe = 1;\n   804: \t/* acquire skill in this weapon */\n   805: \tunrestrict_weapon_skill(weapon_type(obj));\n   806:     } else if (class_gift == STRANGE_OBJECT) {\n   807: \t/* opportunity knocked, but there was nobody home... */\n&gt;  808: \tYou_feel(\"unworthy.\");\n   809:     }\n   810:     update_inventory();\n   811:     return;\n   812: }\n   813: #endif\t/*ELBERETH*/"
+    "context": "src/pray.c:808:11\n        803: \t} else if (obj-&gt;spe &lt; 1) obj-&gt;spe = 1;\n        804: \t/* acquire skill in this weapon */\n        805: \tunrestrict_weapon_skill(weapon_type(obj));\n        806:     } else if (class_gift == STRANGE_OBJECT) {\n        807: \t/* opportunity knocked, but there was nobody home... */\nTARGET  808: \tYou_feel(\"unworthy.\");\n        809:     }\n        810:     update_inventory();\n        811:     return;\n        812: }\n        813: #endif\t/*ELBERETH*/"
   },
   {
     "key": "L00823_01",
     "original": "that %s is %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:823:11\n   818: {\n   819: \t/* don't use p_trouble, worst trouble may get fixed while praying */\n   820: \tint trouble = in_trouble();\t/* what's your worst difficulty? */\n   821: \tint pat_on_head = 0, kick_on_butt;\n   822: \n&gt;  823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n   825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n   827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n   828: \t    Hallucination ? \"full\" : \"satisfied\");"
+    "context": "src/pray.c:823:11\n        818: {\n        819: \t/* don't use p_trouble, worst trouble may get fixed while praying */\n        820: \tint trouble = in_trouble();\t/* what's your worst difficulty? */\n        821: \tint pat_on_head = 0, kick_on_butt;\n        822: \nTARGET  823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\n        825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\n        827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n        828: \t    Hallucination ? \"full\" : \"satisfied\");"
   },
   {
     "key": "L00825_01",
     "original": "pleased as punch",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:825:22\n   820: \tint trouble = in_trouble();\t/* what's your worst difficulty? */\n   821: \tint pat_on_head = 0, kick_on_butt;\n   822: \n   823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n&gt;  825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n   827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n   828: \t    Hallucination ? \"full\" : \"satisfied\");\n   829: \n   830: \t/* not your deity */"
+    "context": "src/pray.c:825:22\n        820: \tint trouble = in_trouble();\t/* what's your worst difficulty? */\n        821: \tint pat_on_head = 0, kick_on_butt;\n        822: \n        823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\nTARGET  825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\n        827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n        828: \t    Hallucination ? \"full\" : \"satisfied\");\n        829: \n        830: \t/* not your deity */"
   },
   {
     "key": "L00825_02",
     "original": "well-pleased",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:825:43\n   820: \tint trouble = in_trouble();\t/* what's your worst difficulty? */\n   821: \tint pat_on_head = 0, kick_on_butt;\n   822: \n   823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n&gt;  825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n   827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n   828: \t    Hallucination ? \"full\" : \"satisfied\");\n   829: \n   830: \t/* not your deity */"
+    "context": "src/pray.c:825:43\n        820: \tint trouble = in_trouble();\t/* what's your worst difficulty? */\n        821: \tint pat_on_head = 0, kick_on_butt;\n        822: \n        823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\nTARGET  825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\n        827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n        828: \t    Hallucination ? \"full\" : \"satisfied\");\n        829: \n        830: \t/* not your deity */"
   },
   {
     "key": "L00827_01",
     "original": "ticklish",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:827:22\n   822: \n   823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n   825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n&gt;  827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n   828: \t    Hallucination ? \"full\" : \"satisfied\");\n   829: \n   830: \t/* not your deity */\n   831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n   832: \t\tadjalign(-1);"
+    "context": "src/pray.c:827:22\n        822: \n        823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\n        825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\nTARGET  827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n        828: \t    Hallucination ? \"full\" : \"satisfied\");\n        829: \n        830: \t/* not your deity */\n        831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n        832: \t\tadjalign(-1);"
   },
   {
     "key": "L00827_02",
     "original": "pleased",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:827:35\n   822: \n   823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n   825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n&gt;  827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n   828: \t    Hallucination ? \"full\" : \"satisfied\");\n   829: \n   830: \t/* not your deity */\n   831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n   832: \t\tadjalign(-1);"
+    "context": "src/pray.c:827:35\n        822: \n        823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\n        825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\nTARGET  827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n        828: \t    Hallucination ? \"full\" : \"satisfied\");\n        829: \n        830: \t/* not your deity */\n        831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n        832: \t\tadjalign(-1);"
   },
   {
     "key": "L00828_01",
     "original": "full",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:828:22\n   823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n   825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n   827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n&gt;  828: \t    Hallucination ? \"full\" : \"satisfied\");\n   829: \n   830: \t/* not your deity */\n   831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n   832: \t\tadjalign(-1);\n   833: \t\treturn;"
+    "context": "src/pray.c:828:22\n        823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\n        825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\n        827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\nTARGET  828: \t    Hallucination ? \"full\" : \"satisfied\");\n        829: \n        830: \t/* not your deity */\n        831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n        832: \t\tadjalign(-1);\n        833: \t\treturn;"
   },
   {
     "key": "L00828_02",
     "original": "satisfied",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:828:31\n   823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n   824: \t    u.ualign.record &gt;= DEVOUT ?\n   825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n   826: \t    u.ualign.record &gt;= STRIDENT ?\n   827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\n&gt;  828: \t    Hallucination ? \"full\" : \"satisfied\");\n   829: \n   830: \t/* not your deity */\n   831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n   832: \t\tadjalign(-1);\n   833: \t\treturn;"
+    "context": "src/pray.c:828:31\n        823: \tYou_feel(\"that %s is %s.\", align_gname(g_align),\n        824: \t    u.ualign.record &gt;= DEVOUT ?\n        825: \t    Hallucination ? \"pleased as punch\" : \"well-pleased\" :\n        826: \t    u.ualign.record &gt;= STRIDENT ?\n        827: \t    Hallucination ? \"ticklish\" : \"pleased\" :\nTARGET  828: \t    Hallucination ? \"full\" : \"satisfied\");\n        829: \n        830: \t/* not your deity */\n        831: \tif (on_altar() && p_aligntyp != u.ualign.type) {\n        832: \t\tadjalign(-1);\n        833: \t\treturn;"
   },
   {
     "key": "L00892_01",
     "original": " and %s now as good as new",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:892:27\n   887: \t\t\t is_weptool(uwep))) {\n   888: \t\tchar repair_buf[BUFSZ];\n   889: \n   890: \t\t*repair_buf = '\\0';\n   891: \t\tif (uwep-&gt;oeroded || uwep-&gt;oeroded2)\n&gt;  892: \t\t    Sprintf(repair_buf, \" and %s now as good as new\",\n   893: \t\t\t    otense(uwep, \"are\"));\n   894: \n   895: \t\tif (uwep-&gt;cursed) {\n   896: \t\t    uncurse(uwep);\n   897: \t\t    uwep-&gt;bknown = TRUE;"
+    "context": "src/pray.c:892:27\n        887: \t\t\t is_weptool(uwep))) {\n        888: \t\tchar repair_buf[BUFSZ];\n        889: \n        890: \t\t*repair_buf = '\\0';\n        891: \t\tif (uwep-&gt;oeroded || uwep-&gt;oeroded2)\nTARGET  892: \t\t    Sprintf(repair_buf, \" and %s now as good as new\",\n        893: \t\t\t    otense(uwep, \"are\"));\n        894: \n        895: \t\tif (uwep-&gt;cursed) {\n        896: \t\t    uncurse(uwep);\n        897: \t\t    uwep-&gt;bknown = TRUE;"
   },
   {
     "key": "L00893_01",
     "original": "are",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:893:21\n   888: \t\tchar repair_buf[BUFSZ];\n   889: \n   890: \t\t*repair_buf = '\\0';\n   891: \t\tif (uwep-&gt;oeroded || uwep-&gt;oeroded2)\n   892: \t\t    Sprintf(repair_buf, \" and %s now as good as new\",\n&gt;  893: \t\t\t    otense(uwep, \"are\"));\n   894: \n   895: \t\tif (uwep-&gt;cursed) {\n   896: \t\t    uncurse(uwep);\n   897: \t\t    uwep-&gt;bknown = TRUE;\n   898: \t\t    if (!Blind)"
+    "context": "src/pray.c:893:21\n        888: \t\tchar repair_buf[BUFSZ];\n        889: \n        890: \t\t*repair_buf = '\\0';\n        891: \t\tif (uwep-&gt;oeroded || uwep-&gt;oeroded2)\n        892: \t\t    Sprintf(repair_buf, \" and %s now as good as new\",\nTARGET  893: \t\t\t    otense(uwep, \"are\"));\n        894: \n        895: \t\tif (uwep-&gt;cursed) {\n        896: \t\t    uncurse(uwep);\n        897: \t\t    uwep-&gt;bknown = TRUE;\n        898: \t\t    if (!Blind)"
   },
   {
     "key": "L00899_01",
     "original": "%s %s%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:899:9\n   894: \n   895: \t\tif (uwep-&gt;cursed) {\n   896: \t\t    uncurse(uwep);\n   897: \t\t    uwep-&gt;bknown = TRUE;\n   898: \t\t    if (!Blind)\n&gt;  899: \t\t\tYour(\"%s %s%s.\", aobjnam(uwep, \"softly glow\"),\n   900: \t\t\t     hcolor(NH_AMBER), repair_buf);\n   901: \t\t    else You_feel(\"the power of %s over your %s.\",\n   902: \t\t\tu_gname(), xname(uwep));\n   903: \t\t    *repair_buf = '\\0';\n   904: \t\t} else if (!uwep-&gt;blessed) {"
+    "context": "src/pray.c:899:9\n        894: \n        895: \t\tif (uwep-&gt;cursed) {\n        896: \t\t    uncurse(uwep);\n        897: \t\t    uwep-&gt;bknown = TRUE;\n        898: \t\t    if (!Blind)\nTARGET  899: \t\t\tYour(\"%s %s%s.\", aobjnam(uwep, \"softly glow\"),\n        900: \t\t\t     hcolor(NH_AMBER), repair_buf);\n        901: \t\t    else You_feel(\"the power of %s over your %s.\",\n        902: \t\t\tu_gname(), xname(uwep));\n        903: \t\t    *repair_buf = '\\0';\n        904: \t\t} else if (!uwep-&gt;blessed) {"
   },
   {
     "key": "L00899_02",
     "original": "softly glow",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:899:35\n   894: \n   895: \t\tif (uwep-&gt;cursed) {\n   896: \t\t    uncurse(uwep);\n   897: \t\t    uwep-&gt;bknown = TRUE;\n   898: \t\t    if (!Blind)\n&gt;  899: \t\t\tYour(\"%s %s%s.\", aobjnam(uwep, \"softly glow\"),\n   900: \t\t\t     hcolor(NH_AMBER), repair_buf);\n   901: \t\t    else You_feel(\"the power of %s over your %s.\",\n   902: \t\t\tu_gname(), xname(uwep));\n   903: \t\t    *repair_buf = '\\0';\n   904: \t\t} else if (!uwep-&gt;blessed) {"
+    "context": "src/pray.c:899:35\n        894: \n        895: \t\tif (uwep-&gt;cursed) {\n        896: \t\t    uncurse(uwep);\n        897: \t\t    uwep-&gt;bknown = TRUE;\n        898: \t\t    if (!Blind)\nTARGET  899: \t\t\tYour(\"%s %s%s.\", aobjnam(uwep, \"softly glow\"),\n        900: \t\t\t     hcolor(NH_AMBER), repair_buf);\n        901: \t\t    else You_feel(\"the power of %s over your %s.\",\n        902: \t\t\tu_gname(), xname(uwep));\n        903: \t\t    *repair_buf = '\\0';\n        904: \t\t} else if (!uwep-&gt;blessed) {"
   },
   {
     "key": "L00901_01",
     "original": "the power of %s over your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:901:21\n   896: \t\t    uncurse(uwep);\n   897: \t\t    uwep-&gt;bknown = TRUE;\n   898: \t\t    if (!Blind)\n   899: \t\t\tYour(\"%s %s%s.\", aobjnam(uwep, \"softly glow\"),\n   900: \t\t\t     hcolor(NH_AMBER), repair_buf);\n&gt;  901: \t\t    else You_feel(\"the power of %s over your %s.\",\n   902: \t\t\tu_gname(), xname(uwep));\n   903: \t\t    *repair_buf = '\\0';\n   904: \t\t} else if (!uwep-&gt;blessed) {\n   905: \t\t    bless(uwep);\n   906: \t\t    uwep-&gt;bknown = TRUE;"
+    "context": "src/pray.c:901:21\n        896: \t\t    uncurse(uwep);\n        897: \t\t    uwep-&gt;bknown = TRUE;\n        898: \t\t    if (!Blind)\n        899: \t\t\tYour(\"%s %s%s.\", aobjnam(uwep, \"softly glow\"),\n        900: \t\t\t     hcolor(NH_AMBER), repair_buf);\nTARGET  901: \t\t    else You_feel(\"the power of %s over your %s.\",\n        902: \t\t\tu_gname(), xname(uwep));\n        903: \t\t    *repair_buf = '\\0';\n        904: \t\t} else if (!uwep-&gt;blessed) {\n        905: \t\t    bless(uwep);\n        906: \t\t    uwep-&gt;bknown = TRUE;"
   },
   {
     "key": "L00908_01",
     "original": "%s with %s aura%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:908:9\n   903: \t\t    *repair_buf = '\\0';\n   904: \t\t} else if (!uwep-&gt;blessed) {\n   905: \t\t    bless(uwep);\n   906: \t\t    uwep-&gt;bknown = TRUE;\n   907: \t\t    if (!Blind)\n&gt;  908: \t\t\tYour(\"%s with %s aura%s.\",\n   909: \t\t\t     aobjnam(uwep, \"softly glow\"),\n   910: \t\t\t     an(hcolor(NH_LIGHT_BLUE)), repair_buf);\n   911: \t\t    else You_feel(\"the blessing of %s over your %s.\",\n   912: \t\t\tu_gname(), xname(uwep));\n   913: \t\t    *repair_buf = '\\0';"
+    "context": "src/pray.c:908:9\n        903: \t\t    *repair_buf = '\\0';\n        904: \t\t} else if (!uwep-&gt;blessed) {\n        905: \t\t    bless(uwep);\n        906: \t\t    uwep-&gt;bknown = TRUE;\n        907: \t\t    if (!Blind)\nTARGET  908: \t\t\tYour(\"%s with %s aura%s.\",\n        909: \t\t\t     aobjnam(uwep, \"softly glow\"),\n        910: \t\t\t     an(hcolor(NH_LIGHT_BLUE)), repair_buf);\n        911: \t\t    else You_feel(\"the blessing of %s over your %s.\",\n        912: \t\t\tu_gname(), xname(uwep));\n        913: \t\t    *repair_buf = '\\0';"
   },
   {
     "key": "L00909_01",
     "original": "softly glow",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:909:23\n   904: \t\t} else if (!uwep-&gt;blessed) {\n   905: \t\t    bless(uwep);\n   906: \t\t    uwep-&gt;bknown = TRUE;\n   907: \t\t    if (!Blind)\n   908: \t\t\tYour(\"%s with %s aura%s.\",\n&gt;  909: \t\t\t     aobjnam(uwep, \"softly glow\"),\n   910: \t\t\t     an(hcolor(NH_LIGHT_BLUE)), repair_buf);\n   911: \t\t    else You_feel(\"the blessing of %s over your %s.\",\n   912: \t\t\tu_gname(), xname(uwep));\n   913: \t\t    *repair_buf = '\\0';\n   914: \t\t}"
+    "context": "src/pray.c:909:23\n        904: \t\t} else if (!uwep-&gt;blessed) {\n        905: \t\t    bless(uwep);\n        906: \t\t    uwep-&gt;bknown = TRUE;\n        907: \t\t    if (!Blind)\n        908: \t\t\tYour(\"%s with %s aura%s.\",\nTARGET  909: \t\t\t     aobjnam(uwep, \"softly glow\"),\n        910: \t\t\t     an(hcolor(NH_LIGHT_BLUE)), repair_buf);\n        911: \t\t    else You_feel(\"the blessing of %s over your %s.\",\n        912: \t\t\tu_gname(), xname(uwep));\n        913: \t\t    *repair_buf = '\\0';\n        914: \t\t}"
   },
   {
     "key": "L00911_01",
     "original": "the blessing of %s over your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:911:21\n   906: \t\t    uwep-&gt;bknown = TRUE;\n   907: \t\t    if (!Blind)\n   908: \t\t\tYour(\"%s with %s aura%s.\",\n   909: \t\t\t     aobjnam(uwep, \"softly glow\"),\n   910: \t\t\t     an(hcolor(NH_LIGHT_BLUE)), repair_buf);\n&gt;  911: \t\t    else You_feel(\"the blessing of %s over your %s.\",\n   912: \t\t\tu_gname(), xname(uwep));\n   913: \t\t    *repair_buf = '\\0';\n   914: \t\t}\n   915: \n   916: \t\t/* fix any rust/burn/rot damage, but don't protect"
+    "context": "src/pray.c:911:21\n        906: \t\t    uwep-&gt;bknown = TRUE;\n        907: \t\t    if (!Blind)\n        908: \t\t\tYour(\"%s with %s aura%s.\",\n        909: \t\t\t     aobjnam(uwep, \"softly glow\"),\n        910: \t\t\t     an(hcolor(NH_LIGHT_BLUE)), repair_buf);\nTARGET  911: \t\t    else You_feel(\"the blessing of %s over your %s.\",\n        912: \t\t\tu_gname(), xname(uwep));\n        913: \t\t    *repair_buf = '\\0';\n        914: \t\t}\n        915: \n        916: \t\t/* fix any rust/burn/rot damage, but don't protect"
   },
   {
     "key": "L00923_01",
     "original": "%s as good as new!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:923:9\n   918: \t\tif (uwep-&gt;oeroded || uwep-&gt;oeroded2) {\n   919: \t\t    uwep-&gt;oeroded = uwep-&gt;oeroded2 = 0;\n   920: \t\t    /* only give this message if we didn't just bless\n   921: \t\t       or uncurse (which has already given a message) */\n   922: \t\t    if (*repair_buf)\n&gt;  923: \t\t\tYour(\"%s as good as new!\",\n   924: \t\t\t     aobjnam(uwep, Blind ? \"feel\" : \"look\"));\n   925: \t\t}\n   926: \t\tupdate_inventory();\n   927: \t    }\n   928: \t    break;"
+    "context": "src/pray.c:923:9\n        918: \t\tif (uwep-&gt;oeroded || uwep-&gt;oeroded2) {\n        919: \t\t    uwep-&gt;oeroded = uwep-&gt;oeroded2 = 0;\n        920: \t\t    /* only give this message if we didn't just bless\n        921: \t\t       or uncurse (which has already given a message) */\n        922: \t\t    if (*repair_buf)\nTARGET  923: \t\t\tYour(\"%s as good as new!\",\n        924: \t\t\t     aobjnam(uwep, Blind ? \"feel\" : \"look\"));\n        925: \t\t}\n        926: \t\tupdate_inventory();\n        927: \t    }\n        928: \t    break;"
   },
   {
     "key": "L00924_01",
     "original": "feel",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:924:31\n   919: \t\t    uwep-&gt;oeroded = uwep-&gt;oeroded2 = 0;\n   920: \t\t    /* only give this message if we didn't just bless\n   921: \t\t       or uncurse (which has already given a message) */\n   922: \t\t    if (*repair_buf)\n   923: \t\t\tYour(\"%s as good as new!\",\n&gt;  924: \t\t\t     aobjnam(uwep, Blind ? \"feel\" : \"look\"));\n   925: \t\t}\n   926: \t\tupdate_inventory();\n   927: \t    }\n   928: \t    break;\n   929: \tcase 3:"
+    "context": "src/pray.c:924:31\n        919: \t\t    uwep-&gt;oeroded = uwep-&gt;oeroded2 = 0;\n        920: \t\t    /* only give this message if we didn't just bless\n        921: \t\t       or uncurse (which has already given a message) */\n        922: \t\t    if (*repair_buf)\n        923: \t\t\tYour(\"%s as good as new!\",\nTARGET  924: \t\t\t     aobjnam(uwep, Blind ? \"feel\" : \"look\"));\n        925: \t\t}\n        926: \t\tupdate_inventory();\n        927: \t    }\n        928: \t    break;\n        929: \tcase 3:"
   },
   {
     "key": "L00924_02",
     "original": "look",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:924:40\n   919: \t\t    uwep-&gt;oeroded = uwep-&gt;oeroded2 = 0;\n   920: \t\t    /* only give this message if we didn't just bless\n   921: \t\t       or uncurse (which has already given a message) */\n   922: \t\t    if (*repair_buf)\n   923: \t\t\tYour(\"%s as good as new!\",\n&gt;  924: \t\t\t     aobjnam(uwep, Blind ? \"feel\" : \"look\"));\n   925: \t\t}\n   926: \t\tupdate_inventory();\n   927: \t    }\n   928: \t    break;\n   929: \tcase 3:"
+    "context": "src/pray.c:924:40\n        919: \t\t    uwep-&gt;oeroded = uwep-&gt;oeroded2 = 0;\n        920: \t\t    /* only give this message if we didn't just bless\n        921: \t\t       or uncurse (which has already given a message) */\n        922: \t\t    if (*repair_buf)\n        923: \t\t\tYour(\"%s as good as new!\",\nTARGET  924: \t\t\t     aobjnam(uwep, Blind ? \"feel\" : \"look\"));\n        925: \t\t}\n        926: \t\tupdate_inventory();\n        927: \t    }\n        928: \t    break;\n        929: \tcase 3:"
   },
   {
     "key": "L00935_01",
     "original": "mortal",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:935:39\n   930: \t    /* takes 2 hints to get the music to enter the stronghold */\n   931: \t    if (!u.uevent.uopened_dbridge) {\n   932: \t\tif (u.uevent.uheard_tune &lt; 1) {\n   933: \t\t    godvoice(g_align,(char *)0);\n   934: \t\t    verbalize(\"听好了！%s！\",\n&gt;  935: \t\t\t  youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   936: \t\t    verbalize(\n   937: \t\t\t\"若想进入城堡，汝需奏响正确的旋律！\");\n   938: \t\t    u.uevent.uheard_tune++;\n   939: \t\t    break;\n   940: \t\t} else if (u.uevent.uheard_tune &lt; 2) {"
+    "context": "src/pray.c:935:39\n        930: \t    /* takes 2 hints to get the music to enter the stronghold */\n        931: \t    if (!u.uevent.uopened_dbridge) {\n        932: \t\tif (u.uevent.uheard_tune &lt; 1) {\n        933: \t\t    godvoice(g_align,(char *)0);\n        934: \t\t    verbalize(\"听好了！%s！\",\nTARGET  935: \t\t\t  youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        936: \t\t    verbalize(\n        937: \t\t\t\"若想进入城堡，汝需奏响正确的旋律！\");\n        938: \t\t    u.uevent.uheard_tune++;\n        939: \t\t    break;\n        940: \t\t} else if (u.uevent.uheard_tune &lt; 2) {"
   },
   {
     "key": "L00935_02",
     "original": "creature",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:935:50\n   930: \t    /* takes 2 hints to get the music to enter the stronghold */\n   931: \t    if (!u.uevent.uopened_dbridge) {\n   932: \t\tif (u.uevent.uheard_tune &lt; 1) {\n   933: \t\t    godvoice(g_align,(char *)0);\n   934: \t\t    verbalize(\"听好了！%s！\",\n&gt;  935: \t\t\t  youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n   936: \t\t    verbalize(\n   937: \t\t\t\"若想进入城堡，汝需奏响正确的旋律！\");\n   938: \t\t    u.uevent.uheard_tune++;\n   939: \t\t    break;\n   940: \t\t} else if (u.uevent.uheard_tune &lt; 2) {"
+    "context": "src/pray.c:935:50\n        930: \t    /* takes 2 hints to get the music to enter the stronghold */\n        931: \t    if (!u.uevent.uopened_dbridge) {\n        932: \t\tif (u.uevent.uheard_tune &lt; 1) {\n        933: \t\t    godvoice(g_align,(char *)0);\n        934: \t\t    verbalize(\"听好了！%s！\",\nTARGET  935: \t\t\t  youmonst.data-&gt;mlet == S_HUMAN ? \"mortal\" : \"creature\");\n        936: \t\t    verbalize(\n        937: \t\t\t\"若想进入城堡，汝需奏响正确的旋律！\");\n        938: \t\t    u.uevent.uheard_tune++;\n        939: \t\t    break;\n        940: \t\t} else if (u.uevent.uheard_tune &lt; 2) {"
   },
   {
     "key": "L00942_01",
     "original": "It sounds like:  \\\"%s\\\".",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:942:13\n   937: \t\t\t\"若想进入城堡，汝需奏响正确的旋律！\");\n   938: \t\t    u.uevent.uheard_tune++;\n   939: \t\t    break;\n   940: \t\t} else if (u.uevent.uheard_tune &lt; 2) {\n   941: \t\t    You_hear(\"一阵圣洁的音乐……\");\n&gt;  942: \t\t    pline(\"It sounds like:  \\\"%s\\\".\", tune);\n   943: \t\t    u.uevent.uheard_tune++;\n   944: \t\t    break;\n   945: \t\t}\n   946: \t    }\n   947: \t    /* Otherwise, falls into next case */"
+    "context": "src/pray.c:942:13\n        937: \t\t\t\"若想进入城堡，汝需奏响正确的旋律！\");\n        938: \t\t    u.uevent.uheard_tune++;\n        939: \t\t    break;\n        940: \t\t} else if (u.uevent.uheard_tune &lt; 2) {\n        941: \t\t    You_hear(\"一阵圣洁的音乐……\");\nTARGET  942: \t\t    pline(\"It sounds like:  \\\"%s\\\".\", tune);\n        943: \t\t    u.uevent.uheard_tune++;\n        944: \t\t    break;\n        945: \t\t}\n        946: \t    }\n        947: \t    /* Otherwise, falls into next case */"
   },
   {
     "key": "L00950_01",
     "original": "are surrounded by %s glow.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:950:7\n   945: \t\t}\n   946: \t    }\n   947: \t    /* Otherwise, falls into next case */\n   948: \tcase 2:\n   949: \t    if (!Blind)\n&gt;  950: \t\tYou(\"are surrounded by %s glow.\", an(hcolor(NH_GOLDEN)));\n   951: \t    /* if any levels have been lost (and not yet regained),\n   952: \t       treat this effect like blessed full healing */\n   953: \t    if (u.ulevel &lt; u.ulevelmax) {\n   954: \t\tu.ulevelmax -= 1;\t/* see potion.c */\n   955: \t\tpluslvl(FALSE);"
+    "context": "src/pray.c:950:7\n        945: \t\t}\n        946: \t    }\n        947: \t    /* Otherwise, falls into next case */\n        948: \tcase 2:\n        949: \t    if (!Blind)\nTARGET  950: \t\tYou(\"are surrounded by %s glow.\", an(hcolor(NH_GOLDEN)));\n        951: \t    /* if any levels have been lost (and not yet regained),\n        952: \t       treat this effect like blessed full healing */\n        953: \t    if (u.ulevel &lt; u.ulevelmax) {\n        954: \t\tu.ulevelmax -= 1;\t/* see potion.c */\n        955: \t\tpluslvl(FALSE);"
   },
   {
     "key": "L00973_01",
     "original": "the power of %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:973:12\n   968: \tcase 4: {\n   969: \t    register struct obj *otmp;\n   970: \t    int any = 0;\n   971: \n   972: \t    if (Blind)\n&gt;  973: \t\tYou_feel(\"the power of %s.\", u_gname());\n   974: \t    else You(\"are surrounded by %s aura.\",\n   975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n   976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n   977: \t\tif (otmp-&gt;cursed) {\n   978: \t\t    uncurse(otmp);"
+    "context": "src/pray.c:973:12\n        968: \tcase 4: {\n        969: \t    register struct obj *otmp;\n        970: \t    int any = 0;\n        971: \n        972: \t    if (Blind)\nTARGET  973: \t\tYou_feel(\"the power of %s.\", u_gname());\n        974: \t    else You(\"are surrounded by %s aura.\",\n        975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n        976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n        977: \t\tif (otmp-&gt;cursed) {\n        978: \t\t    uncurse(otmp);"
   },
   {
     "key": "L00974_01",
     "original": "are surrounded by %s aura.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:974:15\n   969: \t    register struct obj *otmp;\n   970: \t    int any = 0;\n   971: \n   972: \t    if (Blind)\n   973: \t\tYou_feel(\"the power of %s.\", u_gname());\n&gt;  974: \t    else You(\"are surrounded by %s aura.\",\n   975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n   976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n   977: \t\tif (otmp-&gt;cursed) {\n   978: \t\t    uncurse(otmp);\n   979: \t\t    if (!Blind) {"
+    "context": "src/pray.c:974:15\n        969: \t    register struct obj *otmp;\n        970: \t    int any = 0;\n        971: \n        972: \t    if (Blind)\n        973: \t\tYou_feel(\"the power of %s.\", u_gname());\nTARGET  974: \t    else You(\"are surrounded by %s aura.\",\n        975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n        976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n        977: \t\tif (otmp-&gt;cursed) {\n        978: \t\t    uncurse(otmp);\n        979: \t\t    if (!Blind) {"
   },
   {
     "key": "L00980_01",
     "original": "%s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:980:9\n   975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n   976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n   977: \t\tif (otmp-&gt;cursed) {\n   978: \t\t    uncurse(otmp);\n   979: \t\t    if (!Blind) {\n&gt;  980: \t\t\tYour(\"%s %s.\", aobjnam(otmp, \"softly glow\"),\n   981: \t\t\t     hcolor(NH_AMBER));\n   982: \t\t\totmp-&gt;bknown = TRUE;\n   983: \t\t\t++any;\n   984: \t\t    }\n   985: \t\t}"
+    "context": "src/pray.c:980:9\n        975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n        976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n        977: \t\tif (otmp-&gt;cursed) {\n        978: \t\t    uncurse(otmp);\n        979: \t\t    if (!Blind) {\nTARGET  980: \t\t\tYour(\"%s %s.\", aobjnam(otmp, \"softly glow\"),\n        981: \t\t\t     hcolor(NH_AMBER));\n        982: \t\t\totmp-&gt;bknown = TRUE;\n        983: \t\t\t++any;\n        984: \t\t    }\n        985: \t\t}"
   },
   {
     "key": "L00980_02",
     "original": "softly glow",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:980:33\n   975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n   976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n   977: \t\tif (otmp-&gt;cursed) {\n   978: \t\t    uncurse(otmp);\n   979: \t\t    if (!Blind) {\n&gt;  980: \t\t\tYour(\"%s %s.\", aobjnam(otmp, \"softly glow\"),\n   981: \t\t\t     hcolor(NH_AMBER));\n   982: \t\t\totmp-&gt;bknown = TRUE;\n   983: \t\t\t++any;\n   984: \t\t    }\n   985: \t\t}"
+    "context": "src/pray.c:980:33\n        975: \t\t     an(hcolor(NH_LIGHT_BLUE)));\n        976: \t    for(otmp=invent; otmp; otmp=otmp-&gt;nobj) {\n        977: \t\tif (otmp-&gt;cursed) {\n        978: \t\t    uncurse(otmp);\n        979: \t\t    if (!Blind) {\nTARGET  980: \t\t\tYour(\"%s %s.\", aobjnam(otmp, \"softly glow\"),\n        981: \t\t\t     hcolor(NH_AMBER));\n        982: \t\t\totmp-&gt;bknown = TRUE;\n        983: \t\t\t++any;\n        984: \t\t    }\n        985: \t\t}"
   },
   {
     "key": "L01003_01",
     "original": "An object",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1003:19\n   998: #endif\t/*ELBERETH*/\n   999: \tcase 6:\t{\n  1000: \t    struct obj *otmp;\n  1001: \t    int sp_no, trycnt = u.ulevel + 1;\n  1002: \n&gt; 1003: \t    at_your_feet(\"An object\");\n  1004: \t    /* not yet known spells given preference over already known ones */\n  1005: \t    /* Also, try to grant a spell for which there is a skill slot */\n  1006: \t    otmp = mkobj(SPBOOK_CLASS, TRUE);\n  1007: \t    while (--trycnt &gt; 0) {\n  1008: \t\tif (otmp-&gt;otyp != SPE_BLANK_PAPER) {"
+    "context": "src/pray.c:1003:19\n        998: #endif\t/*ELBERETH*/\n        999: \tcase 6:\t{\n       1000: \t    struct obj *otmp;\n       1001: \t    int sp_no, trycnt = u.ulevel + 1;\n       1002: \nTARGET 1003: \t    at_your_feet(\"An object\");\n       1004: \t    /* not yet known spells given preference over already known ones */\n       1005: \t    /* Also, try to grant a spell for which there is a skill slot */\n       1006: \t    otmp = mkobj(SPBOOK_CLASS, TRUE);\n       1007: \t    while (--trycnt &gt; 0) {\n       1008: \t\tif (otmp-&gt;otyp != SPE_BLANK_PAPER) {"
   },
   {
     "key": "L01025_01",
     "original": "\\\"and thus I grant thee the gift of %s!\\\"",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1025:22\n  1020: \t    bless(otmp);\n  1021: \t    place_object(otmp, u.ux, u.uy);\n  1022: \t    break;\n  1023: \t}\n  1024: \tcase 5: {\n&gt; 1025: \t    const char *msg=\"\\\"and thus I grant thee the gift of %s!\\\"\";\n  1026: \t    godvoice(u.ualign.type, \"汝的进展使吾倍感欣慰，\");\n  1027: \t    if (!(HTelepat & INTRINSIC))  {\n  1028: \t\tHTelepat |= FROMOUTSIDE;\n  1029: \t\tpline(msg, \"心灵感应\");\n  1030: \t\tif (Blind) see_monsters();"
+    "context": "src/pray.c:1025:22\n       1020: \t    bless(otmp);\n       1021: \t    place_object(otmp, u.ux, u.uy);\n       1022: \t    break;\n       1023: \t}\n       1024: \tcase 5: {\nTARGET 1025: \t    const char *msg=\"\\\"and thus I grant thee the gift of %s!\\\"\";\n       1026: \t    godvoice(u.ualign.type, \"汝的进展使吾倍感欣慰，\");\n       1027: \t    if (!(HTelepat & INTRINSIC))  {\n       1028: \t\tHTelepat |= FROMOUTSIDE;\n       1029: \t\tpline(msg, \"心灵感应\");\n       1030: \t\tif (Blind) see_monsters();"
   },
   {
     "key": "L01033_01",
     "original": "Speed",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1033:14\n  1028: \t\tHTelepat |= FROMOUTSIDE;\n  1029: \t\tpline(msg, \"心灵感应\");\n  1030: \t\tif (Blind) see_monsters();\n  1031: \t    } else if (!(HFast & INTRINSIC))  {\n  1032: \t\tHFast |= FROMOUTSIDE;\n&gt; 1033: \t\tpline(msg, \"Speed\");\n  1034: \t    } else if (!(HStealth & INTRINSIC))  {\n  1035: \t\tHStealth |= FROMOUTSIDE;\n  1036: \t\tpline(msg, \"潜行\");\n  1037: \t    } else {\n  1038: \t\tif (!(HProtection & INTRINSIC))  {"
+    "context": "src/pray.c:1033:14\n       1028: \t\tHTelepat |= FROMOUTSIDE;\n       1029: \t\tpline(msg, \"心灵感应\");\n       1030: \t\tif (Blind) see_monsters();\n       1031: \t    } else if (!(HFast & INTRINSIC))  {\n       1032: \t\tHFast |= FROMOUTSIDE;\nTARGET 1033: \t\tpline(msg, \"Speed\");\n       1034: \t    } else if (!(HStealth & INTRINSIC))  {\n       1035: \t\tHStealth |= FROMOUTSIDE;\n       1036: \t\tpline(msg, \"潜行\");\n       1037: \t    } else {\n       1038: \t\tif (!(HProtection & INTRINSIC))  {"
   },
   {
     "key": "L01042_01",
     "original": "my protection",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1042:14\n  1037: \t    } else {\n  1038: \t\tif (!(HProtection & INTRINSIC))  {\n  1039: \t\t    HProtection |= FROMOUTSIDE;\n  1040: \t\t    if (!u.ublessed)  u.ublessed = rn1(3, 2);\n  1041: \t\t} else u.ublessed++;\n&gt; 1042: \t\tpline(msg, \"my protection\");\n  1043: \t    }\n  1044: \t    verbalize(\"以吾的名义妥善地使用它！\");\n  1045: \t    break;\n  1046: \t}\n  1047: \tdefault:\timpossible(\"Confused deity!\");"
+    "context": "src/pray.c:1042:14\n       1037: \t    } else {\n       1038: \t\tif (!(HProtection & INTRINSIC))  {\n       1039: \t\t    HProtection |= FROMOUTSIDE;\n       1040: \t\t    if (!u.ublessed)  u.ublessed = rn1(3, 2);\n       1041: \t\t} else u.ublessed++;\nTARGET 1042: \t\tpline(msg, \"my protection\");\n       1043: \t    }\n       1044: \t    verbalize(\"以吾的名义妥善地使用它！\");\n       1045: \t    break;\n       1046: \t}\n       1047: \tdefault:\timpossible(\"Confused deity!\");"
   },
   {
     "key": "L01047_01",
     "original": "Confused deity!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1047:22\n  1042: \t\tpline(msg, \"my protection\");\n  1043: \t    }\n  1044: \t    verbalize(\"以吾的名义妥善地使用它！\");\n  1045: \t    break;\n  1046: \t}\n&gt; 1047: \tdefault:\timpossible(\"Confused deity!\");\n  1048: \t    break;\n  1049: \t}\n  1050: \n  1051: \tu.ublesscnt = rnz(350);\n  1052: \tkick_on_butt = u.uevent.udemigod ? 1 : 0;"
+    "context": "src/pray.c:1047:22\n       1042: \t\tpline(msg, \"my protection\");\n       1043: \t    }\n       1044: \t    verbalize(\"以吾的名义妥善地使用它！\");\n       1045: \t    break;\n       1046: \t}\nTARGET 1047: \tdefault:\timpossible(\"Confused deity!\");\n       1048: \t    break;\n       1049: \t}\n       1050: \n       1051: \tu.ublesscnt = rnz(350);\n       1052: \tkick_on_butt = u.uevent.udemigod ? 1 : 0;"
   },
   {
     "key": "L01084_01",
     "original": "%s potion%s on the altar glow%s %s for a moment.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1084:8\n  1079: \t    changed += otmp-&gt;quan;\n  1080: \t} else if(otmp-&gt;oclass == POTION_CLASS)\n  1081: \t    other = TRUE;\n  1082:     }\n  1083:     if(!Blind && changed) {\n&gt; 1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n  1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n  1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n  1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n  1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n  1089:     }"
+    "context": "src/pray.c:1084:8\n       1079: \t    changed += otmp-&gt;quan;\n       1080: \t} else if(otmp-&gt;oclass == POTION_CLASS)\n       1081: \t    other = TRUE;\n       1082:     }\n       1083:     if(!Blind && changed) {\nTARGET 1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n       1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n       1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n       1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n       1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n       1089:     }"
   },
   {
     "key": "L01085_01",
     "original": "Some of the",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1085:35\n  1080: \t} else if(otmp-&gt;oclass == POTION_CLASS)\n  1081: \t    other = TRUE;\n  1082:     }\n  1083:     if(!Blind && changed) {\n  1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n&gt; 1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n  1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n  1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n  1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n  1089:     }\n  1090:     return((boolean)(changed &gt; 0L));"
+    "context": "src/pray.c:1085:35\n       1080: \t} else if(otmp-&gt;oclass == POTION_CLASS)\n       1081: \t    other = TRUE;\n       1082:     }\n       1083:     if(!Blind && changed) {\n       1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\nTARGET 1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n       1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n       1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n       1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n       1089:     }\n       1090:     return((boolean)(changed &gt; 0L));"
   },
   {
     "key": "L01086_01",
     "original": "One of the",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1086:15\n  1081: \t    other = TRUE;\n  1082:     }\n  1083:     if(!Blind && changed) {\n  1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n  1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n&gt; 1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n  1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n  1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n  1089:     }\n  1090:     return((boolean)(changed &gt; 0L));\n  1091: }"
+    "context": "src/pray.c:1086:15\n       1081: \t    other = TRUE;\n       1082:     }\n       1083:     if(!Blind && changed) {\n       1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n       1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\nTARGET 1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n       1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n       1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n       1089:     }\n       1090:     return((boolean)(changed &gt; 0L));\n       1091: }"
   },
   {
     "key": "L01086_02",
     "original": "The",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1086:30\n  1081: \t    other = TRUE;\n  1082:     }\n  1083:     if(!Blind && changed) {\n  1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n  1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n&gt; 1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n  1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n  1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n  1089:     }\n  1090:     return((boolean)(changed &gt; 0L));\n  1091: }"
+    "context": "src/pray.c:1086:30\n       1081: \t    other = TRUE;\n       1082:     }\n       1083:     if(!Blind && changed) {\n       1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n       1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\nTARGET 1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n       1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n       1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n       1089:     }\n       1090:     return((boolean)(changed &gt; 0L));\n       1091: }"
   },
   {
     "key": "L01087_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1087:35\n  1082:     }\n  1083:     if(!Blind && changed) {\n  1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n  1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n  1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n&gt; 1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n  1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n  1089:     }\n  1090:     return((boolean)(changed &gt; 0L));\n  1091: }\n  1092: "
+    "context": "src/pray.c:1087:35\n       1082:     }\n       1083:     if(!Blind && changed) {\n       1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n       1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n       1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\nTARGET 1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n       1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n       1089:     }\n       1090:     return((boolean)(changed &gt; 0L));\n       1091: }\n       1092: "
   },
   {
     "key": "L01087_02",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1087:67\n  1082:     }\n  1083:     if(!Blind && changed) {\n  1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n  1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n  1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\n&gt; 1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n  1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n  1089:     }\n  1090:     return((boolean)(changed &gt; 0L));\n  1091: }\n  1092: "
+    "context": "src/pray.c:1087:67\n       1082:     }\n       1083:     if(!Blind && changed) {\n       1084: \tpline(\"%s potion%s on the altar glow%s %s for a moment.\",\n       1085: \t      ((other && changed &gt; 1L) ? \"Some of the\" :\n       1086: \t\t\t\t\t(other ? \"One of the\" : \"The\")),\nTARGET 1087: \t      ((other || changed &gt; 1L) ? \"s\" : \"\"), (changed &gt; 1L ? \"\" : \"s\"),\n       1088: \t      (bless_water ? hcolor(NH_LIGHT_BLUE) : hcolor(NH_BLACK)));\n       1089:     }\n       1090:     return((boolean)(changed &gt; 0L));\n       1091: }\n       1092: "
   },
   {
     "key": "L01104_01",
     "original": "voice of %s %s: %s%s%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1104:15\n  1099:     if(words)\n  1100: \tquot = \"\\\"\";\n  1101:     else\n  1102: \twords = \"\";\n  1103: \n&gt; 1104:     pline_The(\"voice of %s %s: %s%s%s\", align_gname(g_align),\n  1105: \t  godvoices[rn2(SIZE(godvoices))], quot, words, quot);\n  1106: }\n  1107: \n  1108: STATIC_OVL void\n  1109: gods_angry(g_align)"
+    "context": "src/pray.c:1104:15\n       1099:     if(words)\n       1100: \tquot = \"\\\"\";\n       1101:     else\n       1102: \twords = \"\";\n       1103: \nTARGET 1104:     pline_The(\"voice of %s %s: %s%s%s\", align_gname(g_align),\n       1105: \t  godvoices[rn2(SIZE(godvoices))], quot, words, quot);\n       1106: }\n       1107: \n       1108: STATIC_OVL void\n       1109: gods_angry(g_align)"
   },
   {
     "key": "L01136_01",
     "original": "sacrifice sprouts wings and a propeller and roars away!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1136:8\n  1131: register struct obj *otmp;\n  1132: {\n  1133:     if (Hallucination)\n  1134: \tswitch (rn2(3)) {\n  1135: \t    case 0:\n&gt; 1136: \t\tYour(\"sacrifice sprouts wings and a propeller and roars away!\");\n  1137: \t\tbreak;\n  1138: \t    case 1:\n  1139: \t\tYour(\"祭品飞了起来，然后逐渐变大……最后像泡泡一样破掉了！\");\n  1140: \t\tbreak;\n  1141: \t    case 2:"
+    "context": "src/pray.c:1136:8\n       1131: register struct obj *otmp;\n       1132: {\n       1133:     if (Hallucination)\n       1134: \tswitch (rn2(3)) {\n       1135: \t    case 0:\nTARGET 1136: \t\tYour(\"sacrifice sprouts wings and a propeller and roars away!\");\n       1137: \t\tbreak;\n       1138: \t    case 1:\n       1139: \t\tYour(\"祭品飞了起来，然后逐渐变大……最后像泡泡一样破掉了！\");\n       1140: \t\tbreak;\n       1141: \t    case 2:"
   },
   {
     "key": "L01148_01",
     "original": "flash of light",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1148:36\n  1143: \t\tbreak;\n  1144: \t}\n  1145:     else if (Blind && u.ualign.type == A_LAWFUL)\n  1146: \tYour(\"祭品消失了！\");\n  1147:     else Your(\"祭品在一阵%s中化作了虚无！\",\n&gt; 1148: \t      u.ualign.type == A_LAWFUL ? \"flash of light\" : \"burst of flame\");\n  1149:     if (carried(otmp)) useup(otmp);\n  1150:     else useupf(otmp, 1L);\n  1151:     exercise(A_WIS, TRUE);\n  1152: }\n  1153: "
+    "context": "src/pray.c:1148:36\n       1143: \t\tbreak;\n       1144: \t}\n       1145:     else if (Blind && u.ualign.type == A_LAWFUL)\n       1146: \tYour(\"祭品消失了！\");\n       1147:     else Your(\"祭品在一阵%s中化作了虚无！\",\nTARGET 1148: \t      u.ualign.type == A_LAWFUL ? \"flash of light\" : \"burst of flame\");\n       1149:     if (carried(otmp)) useup(otmp);\n       1150:     else useupf(otmp, 1L);\n       1151:     exercise(A_WIS, TRUE);\n       1152: }\n       1153: "
   },
   {
     "key": "L01148_02",
     "original": "burst of flame",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1148:55\n  1143: \t\tbreak;\n  1144: \t}\n  1145:     else if (Blind && u.ualign.type == A_LAWFUL)\n  1146: \tYour(\"祭品消失了！\");\n  1147:     else Your(\"祭品在一阵%s中化作了虚无！\",\n&gt; 1148: \t      u.ualign.type == A_LAWFUL ? \"flash of light\" : \"burst of flame\");\n  1149:     if (carried(otmp)) useup(otmp);\n  1150:     else useupf(otmp, 1L);\n  1151:     exercise(A_WIS, TRUE);\n  1152: }\n  1153: "
+    "context": "src/pray.c:1148:55\n       1143: \t\tbreak;\n       1144: \t}\n       1145:     else if (Blind && u.ualign.type == A_LAWFUL)\n       1146: \tYour(\"祭品消失了！\");\n       1147:     else Your(\"祭品在一阵%s中化作了虚无！\",\nTARGET 1148: \t      u.ualign.type == A_LAWFUL ? \"flash of light\" : \"burst of flame\");\n       1149:     if (carried(otmp)) useup(otmp);\n       1150:     else useupf(otmp, 1L);\n       1151:     exercise(A_WIS, TRUE);\n       1152: }\n       1153: "
   },
   {
     "key": "L01177_01",
     "original": "unaligned player?",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1177:17\n  1172: \tcase A_CHAOTIC:\n  1173: \tcase A_NONE:\n  1174: \t    mnum = chaotic_minion(u.ulevel);\n  1175: \t    break;\n  1176: \tdefault:\n&gt; 1177: \t    impossible(\"unaligned player?\");\n  1178: \t    mnum = ndemon(A_NONE);\n  1179: \t    break;\n  1180:     }\n  1181:     mon = make_pet_minion(mnum,alignment);\n  1182:     if (mon) {"
+    "context": "src/pray.c:1177:17\n       1172: \tcase A_CHAOTIC:\n       1173: \tcase A_NONE:\n       1174: \t    mnum = chaotic_minion(u.ulevel);\n       1175: \t    break;\n       1176: \tdefault:\nTARGET 1177: \t    impossible(\"unaligned player?\");\n       1178: \t    mnum = ndemon(A_NONE);\n       1179: \t    break;\n       1180:     }\n       1181:     mon = make_pet_minion(mnum,alignment);\n       1182:     if (mon) {"
   },
   {
     "key": "L01185_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1185:9\n  1180:     }\n  1181:     mon = make_pet_minion(mnum,alignment);\n  1182:     if (mon) {\n  1183: \tswitch ((int)alignment) {\n  1184: \t   case A_LAWFUL:\n&gt; 1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n  1186: \t\t \"There is a puff of white fog!\");\n  1187: \t   break;\n  1188: \t   case A_NEUTRAL:\n  1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n  1190: \t\t \"一阵灰烟在你身边冒出！\");"
+    "context": "src/pray.c:1185:9\n       1180:     }\n       1181:     mon = make_pet_minion(mnum,alignment);\n       1182:     if (mon) {\n       1183: \tswitch ((int)alignment) {\n       1184: \t   case A_LAWFUL:\nTARGET 1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n       1186: \t\t \"There is a puff of white fog!\");\n       1187: \t   break;\n       1188: \t   case A_NEUTRAL:\n       1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n       1190: \t\t \"一阵灰烟在你身边冒出！\");"
   },
   {
     "key": "L01185_02",
     "original": "You feel the presence of goodness.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1185:23\n  1180:     }\n  1181:     mon = make_pet_minion(mnum,alignment);\n  1182:     if (mon) {\n  1183: \tswitch ((int)alignment) {\n  1184: \t   case A_LAWFUL:\n&gt; 1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n  1186: \t\t \"There is a puff of white fog!\");\n  1187: \t   break;\n  1188: \t   case A_NEUTRAL:\n  1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n  1190: \t\t \"一阵灰烟在你身边冒出！\");"
+    "context": "src/pray.c:1185:23\n       1180:     }\n       1181:     mon = make_pet_minion(mnum,alignment);\n       1182:     if (mon) {\n       1183: \tswitch ((int)alignment) {\n       1184: \t   case A_LAWFUL:\nTARGET 1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n       1186: \t\t \"There is a puff of white fog!\");\n       1187: \t   break;\n       1188: \t   case A_NEUTRAL:\n       1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n       1190: \t\t \"一阵灰烟在你身边冒出！\");"
   },
   {
     "key": "L01186_01",
     "original": "There is a puff of white fog!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1186:4\n  1181:     mon = make_pet_minion(mnum,alignment);\n  1182:     if (mon) {\n  1183: \tswitch ((int)alignment) {\n  1184: \t   case A_LAWFUL:\n  1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n&gt; 1186: \t\t \"There is a puff of white fog!\");\n  1187: \t   break;\n  1188: \t   case A_NEUTRAL:\n  1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n  1190: \t\t \"一阵灰烟在你身边冒出！\");\n  1191: \t   break;"
+    "context": "src/pray.c:1186:4\n       1181:     mon = make_pet_minion(mnum,alignment);\n       1182:     if (mon) {\n       1183: \tswitch ((int)alignment) {\n       1184: \t   case A_LAWFUL:\n       1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\nTARGET 1186: \t\t \"There is a puff of white fog!\");\n       1187: \t   break;\n       1188: \t   case A_NEUTRAL:\n       1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n       1190: \t\t \"一阵灰烟在你身边冒出！\");\n       1191: \t   break;"
   },
   {
     "key": "L01189_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1189:9\n  1184: \t   case A_LAWFUL:\n  1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n  1186: \t\t \"There is a puff of white fog!\");\n  1187: \t   break;\n  1188: \t   case A_NEUTRAL:\n&gt; 1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n  1190: \t\t \"一阵灰烟在你身边冒出！\");\n  1191: \t   break;\n  1192: \t   case A_CHAOTIC:\n  1193: \t   case A_NONE:\n  1194: \t\tpline(\"%s\", Blind ? \"你听见一阵邪恶的笑声！\" :"
+    "context": "src/pray.c:1189:9\n       1184: \t   case A_LAWFUL:\n       1185: \t\tpline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n       1186: \t\t \"There is a puff of white fog!\");\n       1187: \t   break;\n       1188: \t   case A_NEUTRAL:\nTARGET 1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n       1190: \t\t \"一阵灰烟在你身边冒出！\");\n       1191: \t   break;\n       1192: \t   case A_CHAOTIC:\n       1193: \t   case A_NONE:\n       1194: \t\tpline(\"%s\", Blind ? \"你听见一阵邪恶的笑声！\" :"
   },
   {
     "key": "L01194_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1194:9\n  1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n  1190: \t\t \"一阵灰烟在你身边冒出！\");\n  1191: \t   break;\n  1192: \t   case A_CHAOTIC:\n  1193: \t   case A_NONE:\n&gt; 1194: \t\tpline(\"%s\", Blind ? \"你听见一阵邪恶的笑声！\" :\n  1195: \t\t \"A miasma of stinking vapors coalesces around you!\");\n  1196: \t   break;\n  1197: \t}\n  1198: \tgodvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n  1199: \treturn;"
+    "context": "src/pray.c:1194:9\n       1189: \t\tpline(\"%s\", Blind ? \"你听见大地在颤抖……\" :\n       1190: \t\t \"一阵灰烟在你身边冒出！\");\n       1191: \t   break;\n       1192: \t   case A_CHAOTIC:\n       1193: \t   case A_NONE:\nTARGET 1194: \t\tpline(\"%s\", Blind ? \"你听见一阵邪恶的笑声！\" :\n       1195: \t\t \"A miasma of stinking vapors coalesces around you!\");\n       1196: \t   break;\n       1197: \t}\n       1198: \tgodvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n       1199: \treturn;"
   },
   {
     "key": "L01195_01",
     "original": "A miasma of stinking vapors coalesces around you!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1195:4\n  1190: \t\t \"一阵灰烟在你身边冒出！\");\n  1191: \t   break;\n  1192: \t   case A_CHAOTIC:\n  1193: \t   case A_NONE:\n  1194: \t\tpline(\"%s\", Blind ? \"你听见一阵邪恶的笑声！\" :\n&gt; 1195: \t\t \"A miasma of stinking vapors coalesces around you!\");\n  1196: \t   break;\n  1197: \t}\n  1198: \tgodvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n  1199: \treturn;\n  1200:     }"
+    "context": "src/pray.c:1195:4\n       1190: \t\t \"一阵灰烟在你身边冒出！\");\n       1191: \t   break;\n       1192: \t   case A_CHAOTIC:\n       1193: \t   case A_NONE:\n       1194: \t\tpline(\"%s\", Blind ? \"你听见一阵邪恶的笑声！\" :\nTARGET 1195: \t\t \"A miasma of stinking vapors coalesces around you!\");\n       1196: \t   break;\n       1197: \t}\n       1198: \tgodvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n       1199: \treturn;\n       1200:     }"
   },
   {
     "key": "L01215_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1215:11\n  1210:     int mnum;\n  1211:     int mon;\n  1212: \n  1213:     mnum = lawful_minion(u.ulevel);\n  1214:     mon = make_pet_minion(mnum,A_LAWFUL);\n&gt; 1215:     pline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n  1216: \t \"There is a puff of white fog!\");\n  1217:     if (u.uhp &gt; (u.uhpmax / 10)) godvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n  1218:     else godvoice(u.ualign.type, \"吾的仆从将前来救汝于水火之中！\");\n  1219: }\n  1220: "
+    "context": "src/pray.c:1215:11\n       1210:     int mnum;\n       1211:     int mon;\n       1212: \n       1213:     mnum = lawful_minion(u.ulevel);\n       1214:     mon = make_pet_minion(mnum,A_LAWFUL);\nTARGET 1215:     pline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n       1216: \t \"There is a puff of white fog!\");\n       1217:     if (u.uhp &gt; (u.uhpmax / 10)) godvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n       1218:     else godvoice(u.ualign.type, \"吾的仆从将前来救汝于水火之中！\");\n       1219: }\n       1220: "
   },
   {
     "key": "L01215_02",
     "original": "You feel the presence of goodness.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1215:25\n  1210:     int mnum;\n  1211:     int mon;\n  1212: \n  1213:     mnum = lawful_minion(u.ulevel);\n  1214:     mon = make_pet_minion(mnum,A_LAWFUL);\n&gt; 1215:     pline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n  1216: \t \"There is a puff of white fog!\");\n  1217:     if (u.uhp &gt; (u.uhpmax / 10)) godvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n  1218:     else godvoice(u.ualign.type, \"吾的仆从将前来救汝于水火之中！\");\n  1219: }\n  1220: "
+    "context": "src/pray.c:1215:25\n       1210:     int mnum;\n       1211:     int mon;\n       1212: \n       1213:     mnum = lawful_minion(u.ulevel);\n       1214:     mon = make_pet_minion(mnum,A_LAWFUL);\nTARGET 1215:     pline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n       1216: \t \"There is a puff of white fog!\");\n       1217:     if (u.uhp &gt; (u.uhpmax / 10)) godvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n       1218:     else godvoice(u.ualign.type, \"吾的仆从将前来救汝于水火之中！\");\n       1219: }\n       1220: "
   },
   {
     "key": "L01216_01",
     "original": "There is a puff of white fog!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1216:3\n  1211:     int mon;\n  1212: \n  1213:     mnum = lawful_minion(u.ulevel);\n  1214:     mon = make_pet_minion(mnum,A_LAWFUL);\n  1215:     pline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\n&gt; 1216: \t \"There is a puff of white fog!\");\n  1217:     if (u.uhp &gt; (u.uhpmax / 10)) godvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n  1218:     else godvoice(u.ualign.type, \"吾的仆从将前来救汝于水火之中！\");\n  1219: }\n  1220: \n  1221: "
+    "context": "src/pray.c:1216:3\n       1211:     int mon;\n       1212: \n       1213:     mnum = lawful_minion(u.ulevel);\n       1214:     mon = make_pet_minion(mnum,A_LAWFUL);\n       1215:     pline(\"%s\", Blind ? \"You feel the presence of goodness.\" :\nTARGET 1216: \t \"There is a puff of white fog!\");\n       1217:     if (u.uhp &gt; (u.uhpmax / 10)) godvoice(u.ualign.type, \"吾的仆从将前来协助汝！\");\n       1218:     else godvoice(u.ualign.type, \"吾的仆从将前来救汝于水火之中！\");\n       1219: }\n       1220: \n       1221: "
   },
   {
     "key": "L01243_01",
     "original": "%s looks at you %sfully.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1243:8\n  1238: \t}\n  1239: \n  1240: \t/* you're handling this corpse, even if it was killed upon the altar */\n  1241: \tfeel_cockatrice(otmp, TRUE);\n  1242: \n&gt; 1243: \tpline(\"%s looks at you %sfully.\", Monnam(mtmp), woodchuck ? \"scorn\" : \"thought\");\n  1244: \toutrumor(woodchuck ? -1 : 0, FALSE);\n  1245: \tconsume_offering(otmp);\n  1246: \tadjalign(-1);\t/* Your god is jealous */\n  1247: \tif (woodchuck) {\n  1248: \t\t/* You are annoying the Oracle */"
+    "context": "src/pray.c:1243:8\n       1238: \t}\n       1239: \n       1240: \t/* you're handling this corpse, even if it was killed upon the altar */\n       1241: \tfeel_cockatrice(otmp, TRUE);\n       1242: \nTARGET 1243: \tpline(\"%s looks at you %sfully.\", Monnam(mtmp), woodchuck ? \"scorn\" : \"thought\");\n       1244: \toutrumor(woodchuck ? -1 : 0, FALSE);\n       1245: \tconsume_offering(otmp);\n       1246: \tadjalign(-1);\t/* Your god is jealous */\n       1247: \tif (woodchuck) {\n       1248: \t\t/* You are annoying the Oracle */"
   },
   {
     "key": "L01243_02",
     "original": "scorn",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1243:62\n  1238: \t}\n  1239: \n  1240: \t/* you're handling this corpse, even if it was killed upon the altar */\n  1241: \tfeel_cockatrice(otmp, TRUE);\n  1242: \n&gt; 1243: \tpline(\"%s looks at you %sfully.\", Monnam(mtmp), woodchuck ? \"scorn\" : \"thought\");\n  1244: \toutrumor(woodchuck ? -1 : 0, FALSE);\n  1245: \tconsume_offering(otmp);\n  1246: \tadjalign(-1);\t/* Your god is jealous */\n  1247: \tif (woodchuck) {\n  1248: \t\t/* You are annoying the Oracle */"
+    "context": "src/pray.c:1243:62\n       1238: \t}\n       1239: \n       1240: \t/* you're handling this corpse, even if it was killed upon the altar */\n       1241: \tfeel_cockatrice(otmp, TRUE);\n       1242: \nTARGET 1243: \tpline(\"%s looks at you %sfully.\", Monnam(mtmp), woodchuck ? \"scorn\" : \"thought\");\n       1244: \toutrumor(woodchuck ? -1 : 0, FALSE);\n       1245: \tconsume_offering(otmp);\n       1246: \tadjalign(-1);\t/* Your god is jealous */\n       1247: \tif (woodchuck) {\n       1248: \t\t/* You are annoying the Oracle */"
   },
   {
     "key": "L01243_03",
     "original": "thought",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1243:72\n  1238: \t}\n  1239: \n  1240: \t/* you're handling this corpse, even if it was killed upon the altar */\n  1241: \tfeel_cockatrice(otmp, TRUE);\n  1242: \n&gt; 1243: \tpline(\"%s looks at you %sfully.\", Monnam(mtmp), woodchuck ? \"scorn\" : \"thought\");\n  1244: \toutrumor(woodchuck ? -1 : 0, FALSE);\n  1245: \tconsume_offering(otmp);\n  1246: \tadjalign(-1);\t/* Your god is jealous */\n  1247: \tif (woodchuck) {\n  1248: \t\t/* You are annoying the Oracle */"
+    "context": "src/pray.c:1243:72\n       1238: \t}\n       1239: \n       1240: \t/* you're handling this corpse, even if it was killed upon the altar */\n       1241: \tfeel_cockatrice(otmp, TRUE);\n       1242: \nTARGET 1243: \tpline(\"%s looks at you %sfully.\", Monnam(mtmp), woodchuck ? \"scorn\" : \"thought\");\n       1244: \toutrumor(woodchuck ? -1 : 0, FALSE);\n       1245: \tconsume_offering(otmp);\n       1246: \tadjalign(-1);\t/* Your god is jealous */\n       1247: \tif (woodchuck) {\n       1248: \t\t/* You are annoying the Oracle */"
   },
   {
     "key": "L01277_01",
     "original": "are not standing on an altar.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1277:6\n  1272: \t    pline(\"我没看见除你之外的人献祭过。\");\n  1273: \t    return 0;\n  1274: \t}\n  1275:     }\n  1276:     if (!orac && (!on_altar() || u.uswallow)) {\n&gt; 1277: \tYou(\"are not standing on an altar.\");\n  1278: \treturn 0;\n  1279:     }\n  1280: \n  1281:     if (In_endgame(&u.uz)) {\n  1282: \tif (!(otmp = getobj(sacrifice_types, \"sacrifice\"))) return 0;"
+    "context": "src/pray.c:1277:6\n       1272: \t    pline(\"我没看见除你之外的人献祭过。\");\n       1273: \t    return 0;\n       1274: \t}\n       1275:     }\n       1276:     if (!orac && (!on_altar() || u.uswallow)) {\nTARGET 1277: \tYou(\"are not standing on an altar.\");\n       1278: \treturn 0;\n       1279:     }\n       1280: \n       1281:     if (In_endgame(&u.uz)) {\n       1282: \tif (!(otmp = getobj(sacrifice_types, \"sacrifice\"))) return 0;"
   },
   {
     "key": "L01282_01",
     "original": "sacrifice",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1282:39\n  1277: \tYou(\"are not standing on an altar.\");\n  1278: \treturn 0;\n  1279:     }\n  1280: \n  1281:     if (In_endgame(&u.uz)) {\n&gt; 1282: \tif (!(otmp = getobj(sacrifice_types, \"sacrifice\"))) return 0;\n  1283:     } else {\n  1284: \tif (!(otmp = getobj(ext_sacrifice_types, \"sacrifice\"))) return 0;\n  1285:     }\n  1286: \n  1287:     /* KMH -- offerings to Oracle */"
+    "context": "src/pray.c:1282:39\n       1277: \tYou(\"are not standing on an altar.\");\n       1278: \treturn 0;\n       1279:     }\n       1280: \n       1281:     if (In_endgame(&u.uz)) {\nTARGET 1282: \tif (!(otmp = getobj(sacrifice_types, \"sacrifice\"))) return 0;\n       1283:     } else {\n       1284: \tif (!(otmp = getobj(ext_sacrifice_types, \"sacrifice\"))) return 0;\n       1285:     }\n       1286: \n       1287:     /* KMH -- offerings to Oracle */"
   },
   {
     "key": "L01284_01",
     "original": "sacrifice",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1284:43\n  1279:     }\n  1280: \n  1281:     if (In_endgame(&u.uz)) {\n  1282: \tif (!(otmp = getobj(sacrifice_types, \"sacrifice\"))) return 0;\n  1283:     } else {\n&gt; 1284: \tif (!(otmp = getobj(ext_sacrifice_types, \"sacrifice\"))) return 0;\n  1285:     }\n  1286: \n  1287:     /* KMH -- offerings to Oracle */\n  1288:     if (orac) return (offer_oracle(orac, otmp));\n  1289: "
+    "context": "src/pray.c:1284:43\n       1279:     }\n       1280: \n       1281:     if (In_endgame(&u.uz)) {\n       1282: \tif (!(otmp = getobj(sacrifice_types, \"sacrifice\"))) return 0;\n       1283:     } else {\nTARGET 1284: \tif (!(otmp = getobj(ext_sacrifice_types, \"sacrifice\"))) return 0;\n       1285:     }\n       1286: \n       1287:     /* KMH -- offerings to Oracle */\n       1288:     if (orac) return (offer_oracle(orac, otmp));\n       1289: "
   },
   {
     "key": "L01330_01",
     "original": "find the idea very satisfying.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1330:7\n  1325: \t    if (otmp-&gt;oeaten)\n  1326: \t\tvalue = eaten_stat(value, otmp);\n  1327: \n  1328: \tif (your_race(ptr)) {\n  1329: \t    if (is_demon(youmonst.data) || Race_if(PM_HUMAN_WEREWOLF)) {\n&gt; 1330: \t\tYou(\"find the idea very satisfying.\");\n  1331: \t\texercise(A_WIS, TRUE);\n  1332: \t    } else if (u.ualign.type != A_CHAOTIC) {\n  1333: \t\t    pline(\"你会后悔进行了这场不洁的献祭！\");\n  1334: \t\t    exercise(A_WIS, FALSE);\n  1335: \t    }"
+    "context": "src/pray.c:1330:7\n       1325: \t    if (otmp-&gt;oeaten)\n       1326: \t\tvalue = eaten_stat(value, otmp);\n       1327: \n       1328: \tif (your_race(ptr)) {\n       1329: \t    if (is_demon(youmonst.data) || Race_if(PM_HUMAN_WEREWOLF)) {\nTARGET 1330: \t\tYou(\"find the idea very satisfying.\");\n       1331: \t\texercise(A_WIS, TRUE);\n       1332: \t    } else if (u.ualign.type != A_CHAOTIC) {\n       1333: \t\t    pline(\"你会后悔进行了这场不洁的献祭！\");\n       1334: \t\t    exercise(A_WIS, FALSE);\n       1335: \t    }"
   },
   {
     "key": "L01341_01",
     "original": "altar is stained with %s blood.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1341:17\n  1336: \n  1337: \t    if (altaralign != A_CHAOTIC && altaralign != A_NONE) {\n  1338: \t\t/* curse the lawful/neutral altar */\n  1339: \t\tint race = mrace2race(ptr-&gt;mflags2);\n  1340: \t\tif (race != ROLE_NONE)\n&gt; 1341: \t\t    pline_The(\"altar is stained with %s blood.\",\n  1342: \t\t\t    races[race].adj);\n  1343: \t\telse\n  1344: \t\t    impossible(\"Bad monster race?\");\n  1345: \t\tif(!Is_astralevel(&u.uz))\n  1346: \t\t    levl[u.ux][u.uy].altarmask = AM_CHAOTIC;"
+    "context": "src/pray.c:1341:17\n       1336: \n       1337: \t    if (altaralign != A_CHAOTIC && altaralign != A_NONE) {\n       1338: \t\t/* curse the lawful/neutral altar */\n       1339: \t\tint race = mrace2race(ptr-&gt;mflags2);\n       1340: \t\tif (race != ROLE_NONE)\nTARGET 1341: \t\t    pline_The(\"altar is stained with %s blood.\",\n       1342: \t\t\t    races[race].adj);\n       1343: \t\telse\n       1344: \t\t    impossible(\"Bad monster race?\");\n       1345: \t\tif(!Is_astralevel(&u.uz))\n       1346: \t\t    levl[u.ux][u.uy].altarmask = AM_CHAOTIC;"
   },
   {
     "key": "L01344_01",
     "original": "Bad monster race?",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1344:18\n  1339: \t\tint race = mrace2race(ptr-&gt;mflags2);\n  1340: \t\tif (race != ROLE_NONE)\n  1341: \t\t    pline_The(\"altar is stained with %s blood.\",\n  1342: \t\t\t    races[race].adj);\n  1343: \t\telse\n&gt; 1344: \t\t    impossible(\"Bad monster race?\");\n  1345: \t\tif(!Is_astralevel(&u.uz))\n  1346: \t\t    levl[u.ux][u.uy].altarmask = AM_CHAOTIC;\n  1347: \t\tangry_priest();\n  1348: \t    } else {\n  1349: \t\tstruct monst *dmon;"
+    "context": "src/pray.c:1344:18\n       1339: \t\tint race = mrace2race(ptr-&gt;mflags2);\n       1340: \t\tif (race != ROLE_NONE)\n       1341: \t\t    pline_The(\"altar is stained with %s blood.\",\n       1342: \t\t\t    races[race].adj);\n       1343: \t\telse\nTARGET 1344: \t\t    impossible(\"Bad monster race?\");\n       1345: \t\tif(!Is_astralevel(&u.uz))\n       1346: \t\t    levl[u.ux][u.uy].altarmask = AM_CHAOTIC;\n       1347: \t\tangry_priest();\n       1348: \t    } else {\n       1349: \t\tstruct monst *dmon;"
   },
   {
     "key": "L01363_01",
     "original": "cloud dissipates",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1363:23\n  1358: \t\t\t  an(hcolor(NH_BLACK)));\n  1359: \t\t    levl[u.ux][u.uy].typ = ROOM;\n  1360: \t\t    levl[u.ux][u.uy].altarmask = 0;\n  1361: \t\t    newsym(u.ux, u.uy);\n  1362: \t\t    angry_priest();\n&gt; 1363: \t\t    demonless_msg = \"cloud dissipates\";\n  1364: \t\t} else {\n  1365: \t\t    /* either you're chaotic or altar is Moloch's or both */\n  1366: \t\t    pline_The(\"血液覆盖了祭坛，随后一阵黑烟凝结成型！\");\n  1367: \t\t    change_luck(altaralign == A_NONE ? -2 : 2);\n  1368: \t\t    demonless_msg = \"blood coagulates\";"
+    "context": "src/pray.c:1363:23\n       1358: \t\t\t  an(hcolor(NH_BLACK)));\n       1359: \t\t    levl[u.ux][u.uy].typ = ROOM;\n       1360: \t\t    levl[u.ux][u.uy].altarmask = 0;\n       1361: \t\t    newsym(u.ux, u.uy);\n       1362: \t\t    angry_priest();\nTARGET 1363: \t\t    demonless_msg = \"cloud dissipates\";\n       1364: \t\t} else {\n       1365: \t\t    /* either you're chaotic or altar is Moloch's or both */\n       1366: \t\t    pline_The(\"血液覆盖了祭坛，随后一阵黑烟凝结成型！\");\n       1367: \t\t    change_luck(altaralign == A_NONE ? -2 : 2);\n       1368: \t\t    demonless_msg = \"blood coagulates\";"
   },
   {
     "key": "L01368_01",
     "original": "blood coagulates",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1368:23\n  1363: \t\t    demonless_msg = \"cloud dissipates\";\n  1364: \t\t} else {\n  1365: \t\t    /* either you're chaotic or altar is Moloch's or both */\n  1366: \t\t    pline_The(\"血液覆盖了祭坛，随后一阵黑烟凝结成型！\");\n  1367: \t\t    change_luck(altaralign == A_NONE ? -2 : 2);\n&gt; 1368: \t\t    demonless_msg = \"blood coagulates\";\n  1369: \t\t}\n  1370: \t\tif ((pm = dlord(altaralign)) != NON_PM &&\n  1371: \t\t    (dmon = makemon(&mons[pm], u.ux, u.uy, NO_MM_FLAGS))) {\n  1372: \t\t    /* here to be seen */\n  1373: \t\t    dmon-&gt;minvis = FALSE;"
+    "context": "src/pray.c:1368:23\n       1363: \t\t    demonless_msg = \"cloud dissipates\";\n       1364: \t\t} else {\n       1365: \t\t    /* either you're chaotic or altar is Moloch's or both */\n       1366: \t\t    pline_The(\"血液覆盖了祭坛，随后一阵黑烟凝结成型！\");\n       1367: \t\t    change_luck(altaralign == A_NONE ? -2 : 2);\nTARGET 1368: \t\t    demonless_msg = \"blood coagulates\";\n       1369: \t\t}\n       1370: \t\tif ((pm = dlord(altaralign)) != NON_PM &&\n       1371: \t\t    (dmon = makemon(&mons[pm], u.ux, u.uy, NO_MM_FLAGS))) {\n       1372: \t\t    /* here to be seen */\n       1373: \t\t    dmon-&gt;minvis = FALSE;"
   },
   {
     "key": "L01374_01",
     "original": "have summoned %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1374:11\n  1369: \t\t}\n  1370: \t\tif ((pm = dlord(altaralign)) != NON_PM &&\n  1371: \t\t    (dmon = makemon(&mons[pm], u.ux, u.uy, NO_MM_FLAGS))) {\n  1372: \t\t    /* here to be seen */\n  1373: \t\t    dmon-&gt;minvis = FALSE;\n&gt; 1374: \t\t    You(\"have summoned %s!\", a_monnam(dmon));\n  1375: \t\t    if (sgn(u.ualign.type) == sgn(dmon-&gt;data-&gt;maligntyp)) {\n  1376: \t\t\tdmon-&gt;mpeaceful = TRUE;\n  1377: \t\t\t} else if (is_dprince(dmon-&gt;data)) {\n  1378: \t\t\tswitch (rn2(5)) {\n  1379: \t\t\t  case 0:"
+    "context": "src/pray.c:1374:11\n       1369: \t\t}\n       1370: \t\tif ((pm = dlord(altaralign)) != NON_PM &&\n       1371: \t\t    (dmon = makemon(&mons[pm], u.ux, u.uy, NO_MM_FLAGS))) {\n       1372: \t\t    /* here to be seen */\n       1373: \t\t    dmon-&gt;minvis = FALSE;\nTARGET 1374: \t\t    You(\"have summoned %s!\", a_monnam(dmon));\n       1375: \t\t    if (sgn(u.ualign.type) == sgn(dmon-&gt;data-&gt;maligntyp)) {\n       1376: \t\t\tdmon-&gt;mpeaceful = TRUE;\n       1377: \t\t\t} else if (is_dprince(dmon-&gt;data)) {\n       1378: \t\t\tswitch (rn2(5)) {\n       1379: \t\t\t  case 0:"
   },
   {
     "key": "L01401_01",
     "original": "%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1401:20\n  1396: \t\t\t       pline(\"由于你让它获得了不少乐子，所以它决定……实现你一个愿望！\");\n  1397: \t\t\t       makewish();\n  1398: \t\t\t  break;\n  1399: \t\t       }\n  1400: \t\t    }\n&gt; 1401: \t\t} else pline_The(\"%s.\", demonless_msg);\n  1402: \t    }\n  1403: \n  1404: \t    if (u.ualign.type != A_CHAOTIC) {\n  1405: \t\tadjalign(-5);\n  1406: \t\tu.ugangr += 3;"
+    "context": "src/pray.c:1401:20\n       1396: \t\t\t       pline(\"由于你让它获得了不少乐子，所以它决定……实现你一个愿望！\");\n       1397: \t\t\t       makewish();\n       1398: \t\t\t  break;\n       1399: \t\t       }\n       1400: \t\t    }\nTARGET 1401: \t\t} else pline_The(\"%s.\", demonless_msg);\n       1402: \t    }\n       1403: \n       1404: \t    if (u.ualign.type != A_CHAOTIC) {\n       1405: \t\tadjalign(-5);\n       1406: \t\tu.ugangr += 3;"
   },
   {
     "key": "L01433_01",
     "original": "chaos",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1433:11\n  1428: \n  1429: \t    /* If same as altar, always a very bad action. */\n  1430: \t    if (unicalign == altaralign) {\n  1431: \t\tpline(\"这种行为是对%s的极度亵渎和侮辱！\",\n  1432: \t\t      (unicalign == A_CHAOTIC)\n&gt; 1433: \t\t      ? \"chaos\" : unicalign ? \"law\" : \"balance\");\n  1434: \t\t(void) adjattrib(A_WIS, -1, TRUE);\n  1435: \t\tvalue = -5;\n  1436: \t    } else if (u.ualign.type == altaralign) {\n  1437: \t\t/* If different from altar, and altar is same as yours, */\n  1438: \t\t/* it's a very good action */"
+    "context": "src/pray.c:1433:11\n       1428: \n       1429: \t    /* If same as altar, always a very bad action. */\n       1430: \t    if (unicalign == altaralign) {\n       1431: \t\tpline(\"这种行为是对%s的极度亵渎和侮辱！\",\n       1432: \t\t      (unicalign == A_CHAOTIC)\nTARGET 1433: \t\t      ? \"chaos\" : unicalign ? \"law\" : \"balance\");\n       1434: \t\t(void) adjattrib(A_WIS, -1, TRUE);\n       1435: \t\tvalue = -5;\n       1436: \t    } else if (u.ualign.type == altaralign) {\n       1437: \t\t/* If different from altar, and altar is same as yours, */\n       1438: \t\t/* it's a very good action */"
   },
   {
     "key": "L01433_02",
     "original": "law",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1433:33\n  1428: \n  1429: \t    /* If same as altar, always a very bad action. */\n  1430: \t    if (unicalign == altaralign) {\n  1431: \t\tpline(\"这种行为是对%s的极度亵渎和侮辱！\",\n  1432: \t\t      (unicalign == A_CHAOTIC)\n&gt; 1433: \t\t      ? \"chaos\" : unicalign ? \"law\" : \"balance\");\n  1434: \t\t(void) adjattrib(A_WIS, -1, TRUE);\n  1435: \t\tvalue = -5;\n  1436: \t    } else if (u.ualign.type == altaralign) {\n  1437: \t\t/* If different from altar, and altar is same as yours, */\n  1438: \t\t/* it's a very good action */"
+    "context": "src/pray.c:1433:33\n       1428: \n       1429: \t    /* If same as altar, always a very bad action. */\n       1430: \t    if (unicalign == altaralign) {\n       1431: \t\tpline(\"这种行为是对%s的极度亵渎和侮辱！\",\n       1432: \t\t      (unicalign == A_CHAOTIC)\nTARGET 1433: \t\t      ? \"chaos\" : unicalign ? \"law\" : \"balance\");\n       1434: \t\t(void) adjattrib(A_WIS, -1, TRUE);\n       1435: \t\tvalue = -5;\n       1436: \t    } else if (u.ualign.type == altaralign) {\n       1437: \t\t/* If different from altar, and altar is same as yours, */\n       1438: \t\t/* it's a very good action */"
   },
   {
     "key": "L01433_03",
     "original": "balance",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1433:41\n  1428: \n  1429: \t    /* If same as altar, always a very bad action. */\n  1430: \t    if (unicalign == altaralign) {\n  1431: \t\tpline(\"这种行为是对%s的极度亵渎和侮辱！\",\n  1432: \t\t      (unicalign == A_CHAOTIC)\n&gt; 1433: \t\t      ? \"chaos\" : unicalign ? \"law\" : \"balance\");\n  1434: \t\t(void) adjattrib(A_WIS, -1, TRUE);\n  1435: \t\tvalue = -5;\n  1436: \t    } else if (u.ualign.type == altaralign) {\n  1437: \t\t/* If different from altar, and altar is same as yours, */\n  1438: \t\t/* it's a very good action */"
+    "context": "src/pray.c:1433:41\n       1428: \n       1429: \t    /* If same as altar, always a very bad action. */\n       1430: \t    if (unicalign == altaralign) {\n       1431: \t\tpline(\"这种行为是对%s的极度亵渎和侮辱！\",\n       1432: \t\t      (unicalign == A_CHAOTIC)\nTARGET 1433: \t\t      ? \"chaos\" : unicalign ? \"law\" : \"balance\");\n       1434: \t\t(void) adjattrib(A_WIS, -1, TRUE);\n       1435: \t\tvalue = -5;\n       1436: \t    } else if (u.ualign.type == altaralign) {\n       1437: \t\t/* If different from altar, and altar is same as yours, */\n       1438: \t\t/* it's a very good action */"
   },
   {
     "key": "L01440_01",
     "original": "appropriately %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1440:16\n  1435: \t\tvalue = -5;\n  1436: \t    } else if (u.ualign.type == altaralign) {\n  1437: \t\t/* If different from altar, and altar is same as yours, */\n  1438: \t\t/* it's a very good action */\n  1439: \t\tif (u.ualign.record &lt; ALIGNLIM)\n&gt; 1440: \t\t    You_feel(\"appropriately %s.\", align_str(u.ualign.type));\n  1441: \t\telse You_feel(\"你正走在完全正确的道路上。\");\n  1442: \t\tadjalign(5);\n  1443: #ifdef NOARTIFACTWISH\n  1444: \t\tu.usacrifice += 5;\n  1445: #endif"
+    "context": "src/pray.c:1440:16\n       1435: \t\tvalue = -5;\n       1436: \t    } else if (u.ualign.type == altaralign) {\n       1437: \t\t/* If different from altar, and altar is same as yours, */\n       1438: \t\t/* it's a very good action */\n       1439: \t\tif (u.ualign.record &lt; ALIGNLIM)\nTARGET 1440: \t\t    You_feel(\"appropriately %s.\", align_str(u.ualign.type));\n       1441: \t\telse You_feel(\"你正走在完全正确的道路上。\");\n       1442: \t\tadjalign(5);\n       1443: #ifdef NOARTIFACTWISH\n       1444: \t\tu.usacrifice += 5;\n       1445: #endif"
   },
   {
     "key": "L01478_01",
     "original": "Fortunately, %s permits you to live...",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1478:9\n  1473: \t\t   carries you off on their shoulders */\n  1474: \t\tadjalign(-99);\n  1475: \t\tpline(\"%s接受了你的“礼物”，然后掌管了%s……\",\n  1476: \t\t      a_gname(), u_gname());\n  1477: \t\tpline(\"%s暴怒了……\", u_gname());\n&gt; 1478: \t\tpline(\"Fortunately, %s permits you to live...\", a_gname());\n  1479: \t\tpline(\"一阵%s烟在你身边冒出……\",\n  1480: \t\t      hcolor((const char *)\"orange\"));\n  1481: \t\tdone(ESCAPED);\n  1482: \t    } else { /* super big win */\n  1483: \t\tadjalign(10);"
+    "context": "src/pray.c:1478:9\n       1473: \t\t   carries you off on their shoulders */\n       1474: \t\tadjalign(-99);\n       1475: \t\tpline(\"%s接受了你的“礼物”，然后掌管了%s……\",\n       1476: \t\t      a_gname(), u_gname());\n       1477: \t\tpline(\"%s暴怒了……\", u_gname());\nTARGET 1478: \t\tpline(\"Fortunately, %s permits you to live...\", a_gname());\n       1479: \t\tpline(\"一阵%s烟在你身边冒出……\",\n       1480: \t\t      hcolor((const char *)\"orange\"));\n       1481: \t\tdone(ESCAPED);\n       1482: \t    } else { /* super big win */\n       1483: \t\tadjalign(10);"
   },
   {
     "key": "L01480_01",
     "original": "orange",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1480:30\n  1475: \t\tpline(\"%s接受了你的“礼物”，然后掌管了%s……\",\n  1476: \t\t      a_gname(), u_gname());\n  1477: \t\tpline(\"%s暴怒了……\", u_gname());\n  1478: \t\tpline(\"Fortunately, %s permits you to live...\", a_gname());\n  1479: \t\tpline(\"一阵%s烟在你身边冒出……\",\n&gt; 1480: \t\t      hcolor((const char *)\"orange\"));\n  1481: \t\tdone(ESCAPED);\n  1482: \t    } else { /* super big win */\n  1483: \t\tadjalign(10);\n  1484: pline(\"你在一支隐形的唱诗班的歌声中，沐浴着圣洁的光辉……\");\n  1485: \t\tgodvoice(altaralign, \"吾向你表示祝贺，凡人！\");"
+    "context": "src/pray.c:1480:30\n       1475: \t\tpline(\"%s接受了你的“礼物”，然后掌管了%s……\",\n       1476: \t\t      a_gname(), u_gname());\n       1477: \t\tpline(\"%s暴怒了……\", u_gname());\n       1478: \t\tpline(\"Fortunately, %s permits you to live...\", a_gname());\n       1479: \t\tpline(\"一阵%s烟在你身边冒出……\",\nTARGET 1480: \t\t      hcolor((const char *)\"orange\"));\n       1481: \t\tdone(ESCAPED);\n       1482: \t    } else { /* super big win */\n       1483: \t\tadjalign(10);\n       1484: pline(\"你在一支隐形的唱诗班的歌声中，沐浴着圣洁的光辉……\");\n       1485: \t\tgodvoice(altaralign, \"吾向你表示祝贺，凡人！\");"
   },
   {
     "key": "L01488_01",
     "original": "ascend to the status of Demigod%s...",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1488:7\n  1483: \t\tadjalign(10);\n  1484: pline(\"你在一支隐形的唱诗班的歌声中，沐浴着圣洁的光辉……\");\n  1485: \t\tgodvoice(altaralign, \"吾向你表示祝贺，凡人！\");\n  1486: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1487: verbalize(\"为了回报汝所一路经历的磨难，吾赐予汝不朽之礼！\");\n&gt; 1488: \t\tYou(\"ascend to the status of Demigod%s...\",\n  1489: \t\t    flags.female ? \"dess\" : \"\");\n  1490: \t\tdone(ASCENDED);\n  1491: \t    }\n  1492: \t}\n  1493:     } /* real Amulet */"
+    "context": "src/pray.c:1488:7\n       1483: \t\tadjalign(10);\n       1484: pline(\"你在一支隐形的唱诗班的歌声中，沐浴着圣洁的光辉……\");\n       1485: \t\tgodvoice(altaralign, \"吾向你表示祝贺，凡人！\");\n       1486: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n       1487: verbalize(\"为了回报汝所一路经历的磨难，吾赐予汝不朽之礼！\");\nTARGET 1488: \t\tYou(\"ascend to the status of Demigod%s...\",\n       1489: \t\t    flags.female ? \"dess\" : \"\");\n       1490: \t\tdone(ASCENDED);\n       1491: \t    }\n       1492: \t}\n       1493:     } /* real Amulet */"
   },
   {
     "key": "L01489_01",
     "original": "dess",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1489:22\n  1484: pline(\"你在一支隐形的唱诗班的歌声中，沐浴着圣洁的光辉……\");\n  1485: \t\tgodvoice(altaralign, \"吾向你表示祝贺，凡人！\");\n  1486: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n  1487: verbalize(\"为了回报汝所一路经历的磨难，吾赐予汝不朽之礼！\");\n  1488: \t\tYou(\"ascend to the status of Demigod%s...\",\n&gt; 1489: \t\t    flags.female ? \"dess\" : \"\");\n  1490: \t\tdone(ASCENDED);\n  1491: \t    }\n  1492: \t}\n  1493:     } /* real Amulet */\n  1494: "
+    "context": "src/pray.c:1489:22\n       1484: pline(\"你在一支隐形的唱诗班的歌声中，沐浴着圣洁的光辉……\");\n       1485: \t\tgodvoice(altaralign, \"吾向你表示祝贺，凡人！\");\n       1486: \t\tdisplay_nhwindow(WIN_MESSAGE, FALSE);\n       1487: verbalize(\"为了回报汝所一路经历的磨难，吾赐予汝不朽之礼！\");\n       1488: \t\tYou(\"ascend to the status of Demigod%s...\",\nTARGET 1489: \t\t    flags.female ? \"dess\" : \"\");\n       1490: \t\tdone(ASCENDED);\n       1491: \t    }\n       1492: \t}\n       1493:     } /* real Amulet */\n       1494: "
   },
   {
     "key": "L01497_01",
     "original": "a nearby thunderclap.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1497:12\n  1492: \t}\n  1493:     } /* real Amulet */\n  1494: \n  1495:     if (otmp-&gt;otyp == FAKE_AMULET_OF_YENDOR) {\n  1496: \t    if (flags.soundok)\n&gt; 1497: \t\tYou_hear(\"a nearby thunderclap.\");\n  1498: \t    if (!otmp-&gt;known) {\n  1499: \t\tYou(\"意识到你犯下了一个%s。\",\n  1500: \t\t    Hallucination ? \"boo-boo\" : \"mistake\");\n  1501: \t\totmp-&gt;known = TRUE;\n  1502: \t\tchange_luck(-1);"
+    "context": "src/pray.c:1497:12\n       1492: \t}\n       1493:     } /* real Amulet */\n       1494: \n       1495:     if (otmp-&gt;otyp == FAKE_AMULET_OF_YENDOR) {\n       1496: \t    if (flags.soundok)\nTARGET 1497: \t\tYou_hear(\"a nearby thunderclap.\");\n       1498: \t    if (!otmp-&gt;known) {\n       1499: \t\tYou(\"意识到你犯下了一个%s。\",\n       1500: \t\t    Hallucination ? \"boo-boo\" : \"mistake\");\n       1501: \t\totmp-&gt;known = TRUE;\n       1502: \t\tchange_luck(-1);"
   },
   {
     "key": "L01500_01",
     "original": "boo-boo",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1500:23\n  1495:     if (otmp-&gt;otyp == FAKE_AMULET_OF_YENDOR) {\n  1496: \t    if (flags.soundok)\n  1497: \t\tYou_hear(\"a nearby thunderclap.\");\n  1498: \t    if (!otmp-&gt;known) {\n  1499: \t\tYou(\"意识到你犯下了一个%s。\",\n&gt; 1500: \t\t    Hallucination ? \"boo-boo\" : \"mistake\");\n  1501: \t\totmp-&gt;known = TRUE;\n  1502: \t\tchange_luck(-1);\n  1503: \t\treturn 1;\n  1504: \t    } else {\n  1505: \t\t/* don't you dare try to fool the gods */"
+    "context": "src/pray.c:1500:23\n       1495:     if (otmp-&gt;otyp == FAKE_AMULET_OF_YENDOR) {\n       1496: \t    if (flags.soundok)\n       1497: \t\tYou_hear(\"a nearby thunderclap.\");\n       1498: \t    if (!otmp-&gt;known) {\n       1499: \t\tYou(\"意识到你犯下了一个%s。\",\nTARGET 1500: \t\t    Hallucination ? \"boo-boo\" : \"mistake\");\n       1501: \t\totmp-&gt;known = TRUE;\n       1502: \t\tchange_luck(-1);\n       1503: \t\treturn 1;\n       1504: \t    } else {\n       1505: \t\t/* don't you dare try to fool the gods */"
   },
   {
     "key": "L01500_02",
     "original": "mistake",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1500:35\n  1495:     if (otmp-&gt;otyp == FAKE_AMULET_OF_YENDOR) {\n  1496: \t    if (flags.soundok)\n  1497: \t\tYou_hear(\"a nearby thunderclap.\");\n  1498: \t    if (!otmp-&gt;known) {\n  1499: \t\tYou(\"意识到你犯下了一个%s。\",\n&gt; 1500: \t\t    Hallucination ? \"boo-boo\" : \"mistake\");\n  1501: \t\totmp-&gt;known = TRUE;\n  1502: \t\tchange_luck(-1);\n  1503: \t\treturn 1;\n  1504: \t    } else {\n  1505: \t\t/* don't you dare try to fool the gods */"
+    "context": "src/pray.c:1500:35\n       1495:     if (otmp-&gt;otyp == FAKE_AMULET_OF_YENDOR) {\n       1496: \t    if (flags.soundok)\n       1497: \t\tYou_hear(\"a nearby thunderclap.\");\n       1498: \t    if (!otmp-&gt;known) {\n       1499: \t\tYou(\"意识到你犯下了一个%s。\",\nTARGET 1500: \t\t    Hallucination ? \"boo-boo\" : \"mistake\");\n       1501: \t\totmp-&gt;known = TRUE;\n       1502: \t\tchange_luck(-1);\n       1503: \t\treturn 1;\n       1504: \t    } else {\n       1505: \t\t/* don't you dare try to fool the gods */"
   },
   {
     "key": "L01527_01",
     "original": "the air around you grow charged...",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1527:11\n  1522: \t(Is_astralevel(&u.uz) || Is_sanctum(&u.uz))) {\n  1523: \t/*\n  1524: \t * REAL BAD NEWS!!! High altars cannot be converted.  Even an attempt\n  1525: \t * gets the god who owns it truely pissed off.\n  1526: \t */\n&gt; 1527: \tYou_feel(\"the air around you grow charged...\");\n  1528: \tpline(\"在那一刹那，你意识到了%s已经注意到了你的所作所为……\", a_gname());\n  1529: \tgodvoice(altaralign, \"凡人，汝竟敢玷污吾的至高神殿！\");\n  1530: \t/* Throw everything we have at the player */\n  1531: \tgod_zaps_you(altaralign);\n  1532:     } else if (value &lt; 0) { /* I don't think the gods are gonna like this... */"
+    "context": "src/pray.c:1527:11\n       1522: \t(Is_astralevel(&u.uz) || Is_sanctum(&u.uz))) {\n       1523: \t/*\n       1524: \t * REAL BAD NEWS!!! High altars cannot be converted.  Even an attempt\n       1525: \t * gets the god who owns it truely pissed off.\n       1526: \t */\nTARGET 1527: \tYou_feel(\"the air around you grow charged...\");\n       1528: \tpline(\"在那一刹那，你意识到了%s已经注意到了你的所作所为……\", a_gname());\n       1529: \tgodvoice(altaralign, \"凡人，汝竟敢玷污吾的至高神殿！\");\n       1530: \t/* Throw everything we have at the player */\n       1531: \tgod_zaps_you(altaralign);\n       1532:     } else if (value &lt; 0) { /* I don't think the gods are gonna like this... */"
   },
   {
     "key": "L01558_01",
     "original": "have a sudden sense of a new direction.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1558:11\n  1553: \t\t    else\n  1554: \t\t\tu.ualign.type = u.ualignbase[A_CURRENT] = altaralign;\n  1555: \t\t    u.ublessed = 0;\n  1556: \t\t    flags.botl = 1;\n  1557: \n&gt; 1558: \t\t    You(\"have a sudden sense of a new direction.\");\n  1559: \t\t    /* Beware, Conversion is costly */\n  1560: \t\t    change_luck(-3);\n  1561: \t\t    u.ublesscnt += 300;\n  1562: \t\t    adjalign((int)(u.ualignbase[A_ORIGINAL] * (ALIGNLIM / 2)));\n  1563: \t\t} else {"
+    "context": "src/pray.c:1558:11\n       1553: \t\t    else\n       1554: \t\t\tu.ualign.type = u.ualignbase[A_CURRENT] = altaralign;\n       1555: \t\t    u.ublessed = 0;\n       1556: \t\t    flags.botl = 1;\n       1557: \nTARGET 1558: \t\t    You(\"have a sudden sense of a new direction.\");\n       1559: \t\t    /* Beware, Conversion is costly */\n       1560: \t\t    change_luck(-3);\n       1561: \t\t    u.ublesscnt += 300;\n       1562: \t\t    adjalign((int)(u.ualignbase[A_ORIGINAL] * (ALIGNLIM / 2)));\n       1563: \t\t} else {"
   },
   {
     "key": "L01578_01",
     "original": "sense a conflict between %s and %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1578:7\n  1573: \t\t    if (!Inhell) angrygods(u.ualign.type);\n  1574: \t\t}\n  1575: \t\treturn(1);\n  1576: \t    } else {\n  1577: \t\tconsume_offering(otmp);\n&gt; 1578: \t\tYou(\"sense a conflict between %s and %s.\",\n  1579: \t\t    u_gname(), a_gname());\n  1580: \t\tif (rn2(8 + u.ulevel) &gt; 5) {\n  1581: \t\t    struct monst *pri;\n  1582: \t\t    You_feel(\"the power of %s increase.\", u_gname());\n  1583: \t\t    if (rnl(u.ulevel) &gt; 3) {"
+    "context": "src/pray.c:1578:7\n       1573: \t\t    if (!Inhell) angrygods(u.ualign.type);\n       1574: \t\t}\n       1575: \t\treturn(1);\n       1576: \t    } else {\n       1577: \t\tconsume_offering(otmp);\nTARGET 1578: \t\tYou(\"sense a conflict between %s and %s.\",\n       1579: \t\t    u_gname(), a_gname());\n       1580: \t\tif (rn2(8 + u.ulevel) &gt; 5) {\n       1581: \t\t    struct monst *pri;\n       1582: \t\t    You_feel(\"the power of %s increase.\", u_gname());\n       1583: \t\t    if (rnl(u.ulevel) &gt; 3) {"
   },
   {
     "key": "L01582_01",
     "original": "the power of %s increase.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1582:16\n  1577: \t\tconsume_offering(otmp);\n  1578: \t\tYou(\"sense a conflict between %s and %s.\",\n  1579: \t\t    u_gname(), a_gname());\n  1580: \t\tif (rn2(8 + u.ulevel) &gt; 5) {\n  1581: \t\t    struct monst *pri;\n&gt; 1582: \t\t    You_feel(\"the power of %s increase.\", u_gname());\n  1583: \t\t    if (rnl(u.ulevel) &gt; 3) {\n  1584: \t\t    \t/* KMH -- Only a chance of this happening */\n  1585: \t\t\t\tYou(\"感觉%s对你非常生气！\", a_gname());                    \n  1586: \t\t\t\tsummon_minion(altaralign, FALSE);\n  1587: \t\t\t\tsummon_minion(altaralign, FALSE);"
+    "context": "src/pray.c:1582:16\n       1577: \t\tconsume_offering(otmp);\n       1578: \t\tYou(\"sense a conflict between %s and %s.\",\n       1579: \t\t    u_gname(), a_gname());\n       1580: \t\tif (rn2(8 + u.ulevel) &gt; 5) {\n       1581: \t\t    struct monst *pri;\nTARGET 1582: \t\t    You_feel(\"the power of %s increase.\", u_gname());\n       1583: \t\t    if (rnl(u.ulevel) &gt; 3) {\n       1584: \t\t    \t/* KMH -- Only a chance of this happening */\n       1585: \t\t\t\tYou(\"感觉%s对你非常生气！\", a_gname());                    \n       1586: \t\t\t\tsummon_minion(altaralign, FALSE);\n       1587: \t\t\t\tsummon_minion(altaralign, FALSE);"
   },
   {
     "key": "L01601_01",
     "original": "altar glows %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1601:14\n  1596: \t\t    levl[u.ux][u.uy].altarmask &= AM_SHRINE;\n  1597: \t\t    /* the following accommodates stupid compilers */\n  1598: \t\t    levl[u.ux][u.uy].altarmask =\n  1599: \t\t\tlevl[u.ux][u.uy].altarmask | (Align2amask(u.ualign.type));\n  1600: \t\t    if (!Blind)\n&gt; 1601: \t\t\tpline_The(\"altar glows %s.\",\n  1602: \t\t\t      hcolor(\n  1603: \t\t\t      u.ualign.type == A_LAWFUL ? NH_WHITE :\n  1604: \t\t\t      u.ualign.type ? NH_BLACK : (const char *)\"gray\"));\n  1605: \n  1606: \t\t    if (rnl(u.ulevel) &gt; 6 && u.ualign.record &gt; 0 &&"
+    "context": "src/pray.c:1601:14\n       1596: \t\t    levl[u.ux][u.uy].altarmask &= AM_SHRINE;\n       1597: \t\t    /* the following accommodates stupid compilers */\n       1598: \t\t    levl[u.ux][u.uy].altarmask =\n       1599: \t\t\tlevl[u.ux][u.uy].altarmask | (Align2amask(u.ualign.type));\n       1600: \t\t    if (!Blind)\nTARGET 1601: \t\t\tpline_The(\"altar glows %s.\",\n       1602: \t\t\t      hcolor(\n       1603: \t\t\t      u.ualign.type == A_LAWFUL ? NH_WHITE :\n       1604: \t\t\t      u.ualign.type ? NH_BLACK : (const char *)\"gray\"));\n       1605: \n       1606: \t\t    if (rnl(u.ulevel) &gt; 6 && u.ualign.record &gt; 0 &&"
   },
   {
     "key": "L01604_01",
     "original": "gray",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1604:51\n  1599: \t\t\tlevl[u.ux][u.uy].altarmask | (Align2amask(u.ualign.type));\n  1600: \t\t    if (!Blind)\n  1601: \t\t\tpline_The(\"altar glows %s.\",\n  1602: \t\t\t      hcolor(\n  1603: \t\t\t      u.ualign.type == A_LAWFUL ? NH_WHITE :\n&gt; 1604: \t\t\t      u.ualign.type ? NH_BLACK : (const char *)\"gray\"));\n  1605: \n  1606: \t\t    if (rnl(u.ulevel) &gt; 6 && u.ualign.record &gt; 0 &&\n  1607: \t\t       rnd(u.ualign.record) &gt; (3*ALIGNLIM)/4)\n  1608: \t\t\tsummon_minion(altaralign, TRUE);\n  1609: \t\t    /* anger priest; test handles bones files */"
+    "context": "src/pray.c:1604:51\n       1599: \t\t\tlevl[u.ux][u.uy].altarmask | (Align2amask(u.ualign.type));\n       1600: \t\t    if (!Blind)\n       1601: \t\t\tpline_The(\"altar glows %s.\",\n       1602: \t\t\t      hcolor(\n       1603: \t\t\t      u.ualign.type == A_LAWFUL ? NH_WHITE :\nTARGET 1604: \t\t\t      u.ualign.type ? NH_BLACK : (const char *)\"gray\"));\n       1605: \n       1606: \t\t    if (rnl(u.ulevel) &gt; 6 && u.ualign.record &gt; 0 &&\n       1607: \t\t       rnd(u.ualign.record) &gt; (3*ALIGNLIM)/4)\n       1608: \t\t\tsummon_minion(altaralign, TRUE);\n       1609: \t\t    /* anger priest; test handles bones files */"
   },
   {
     "key": "L01637_01",
     "original": "%s seems %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1637:13\n  1632: \t    u.ugangr -=\n  1633: \t\t((value * (u.ualign.type == A_CHAOTIC ? 2 : 3)) / MAXVALUE);\n  1634: \t    if(u.ugangr &lt; 0) u.ugangr = 0;\n  1635: \t    if(u.ugangr != saved_anger) {\n  1636: \t\tif (u.ugangr) {\n&gt; 1637: \t\t    pline(\"%s seems %s.\", u_gname(),\n  1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n  1639: \n  1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1641: \t\t} else {\n  1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?"
+    "context": "src/pray.c:1637:13\n       1632: \t    u.ugangr -=\n       1633: \t\t((value * (u.ualign.type == A_CHAOTIC ? 2 : 3)) / MAXVALUE);\n       1634: \t    if(u.ugangr &lt; 0) u.ugangr = 0;\n       1635: \t    if(u.ugangr != saved_anger) {\n       1636: \t\tif (u.ugangr) {\nTARGET 1637: \t\t    pline(\"%s seems %s.\", u_gname(),\n       1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n       1639: \n       1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1641: \t\t} else {\n       1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?"
   },
   {
     "key": "L01638_01",
     "original": "groovy",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1638:22\n  1633: \t\t((value * (u.ualign.type == A_CHAOTIC ? 2 : 3)) / MAXVALUE);\n  1634: \t    if(u.ugangr &lt; 0) u.ugangr = 0;\n  1635: \t    if(u.ugangr != saved_anger) {\n  1636: \t\tif (u.ugangr) {\n  1637: \t\t    pline(\"%s seems %s.\", u_gname(),\n&gt; 1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n  1639: \n  1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1641: \t\t} else {\n  1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n  1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");"
+    "context": "src/pray.c:1638:22\n       1633: \t\t((value * (u.ualign.type == A_CHAOTIC ? 2 : 3)) / MAXVALUE);\n       1634: \t    if(u.ugangr &lt; 0) u.ugangr = 0;\n       1635: \t    if(u.ugangr != saved_anger) {\n       1636: \t\tif (u.ugangr) {\n       1637: \t\t    pline(\"%s seems %s.\", u_gname(),\nTARGET 1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n       1639: \n       1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1641: \t\t} else {\n       1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n       1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");"
   },
   {
     "key": "L01638_02",
     "original": "slightly mollified",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1638:33\n  1633: \t\t((value * (u.ualign.type == A_CHAOTIC ? 2 : 3)) / MAXVALUE);\n  1634: \t    if(u.ugangr &lt; 0) u.ugangr = 0;\n  1635: \t    if(u.ugangr != saved_anger) {\n  1636: \t\tif (u.ugangr) {\n  1637: \t\t    pline(\"%s seems %s.\", u_gname(),\n&gt; 1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n  1639: \n  1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1641: \t\t} else {\n  1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n  1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");"
+    "context": "src/pray.c:1638:33\n       1633: \t\t((value * (u.ualign.type == A_CHAOTIC ? 2 : 3)) / MAXVALUE);\n       1634: \t    if(u.ugangr &lt; 0) u.ugangr = 0;\n       1635: \t    if(u.ugangr != saved_anger) {\n       1636: \t\tif (u.ugangr) {\n       1637: \t\t    pline(\"%s seems %s.\", u_gname(),\nTARGET 1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n       1639: \n       1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1641: \t\t} else {\n       1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n       1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");"
   },
   {
     "key": "L01642_01",
     "original": "%s seems %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1642:13\n  1637: \t\t    pline(\"%s seems %s.\", u_gname(),\n  1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n  1639: \n  1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1641: \t\t} else {\n&gt; 1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n  1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");\n  1644: \n  1645: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n  1646: \t\t}\n  1647: \t    } else { /* not satisfied yet */"
+    "context": "src/pray.c:1642:13\n       1637: \t\t    pline(\"%s seems %s.\", u_gname(),\n       1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n       1639: \n       1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1641: \t\t} else {\nTARGET 1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n       1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");\n       1644: \n       1645: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n       1646: \t\t}\n       1647: \t    } else { /* not satisfied yet */"
   },
   {
     "key": "L01643_01",
     "original": "cosmic (not a new fact)",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1643:6\n  1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n  1639: \n  1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1641: \t\t} else {\n  1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n&gt; 1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");\n  1644: \n  1645: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n  1646: \t\t}\n  1647: \t    } else { /* not satisfied yet */\n  1648: \t\tif (Hallucination)"
+    "context": "src/pray.c:1643:6\n       1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n       1639: \n       1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1641: \t\t} else {\n       1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\nTARGET 1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");\n       1644: \n       1645: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n       1646: \t\t}\n       1647: \t    } else { /* not satisfied yet */\n       1648: \t\tif (Hallucination)"
   },
   {
     "key": "L01643_02",
     "original": "mollified",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1643:34\n  1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n  1639: \n  1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1641: \t\t} else {\n  1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\n&gt; 1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");\n  1644: \n  1645: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n  1646: \t\t}\n  1647: \t    } else { /* not satisfied yet */\n  1648: \t\tif (Hallucination)"
+    "context": "src/pray.c:1643:34\n       1638: \t\t\t  Hallucination ? \"groovy\" : \"slightly mollified\");\n       1639: \n       1640: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1641: \t\t} else {\n       1642: \t\t    pline(\"%s seems %s.\", u_gname(), Hallucination ?\nTARGET 1643: \t\t\t  \"cosmic (not a new fact)\" : \"mollified\");\n       1644: \n       1645: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n       1646: \t\t}\n       1647: \t    } else { /* not satisfied yet */\n       1648: \t\tif (Hallucination)"
   },
   {
     "key": "L01656_01",
     "original": "partially absolved.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1656:15\n  1651: \t    }\n  1652: \t} else if(ugod_is_angry()) {\n  1653: \t    if(value &gt; MAXVALUE) value = MAXVALUE;\n  1654: \t    if(value &gt; -u.ualign.record) value = -u.ualign.record;\n  1655: \t    adjalign(value);\n&gt; 1656: \t    You_feel(\"partially absolved.\");\n  1657: \t} else if (u.ublesscnt &gt; 0) {\n  1658: \t    u.ublesscnt -=\n  1659: \t\t((value * (u.ualign.type == A_CHAOTIC ? 500 : 300)) / MAXVALUE);\n  1660: \t    if(u.ublesscnt &lt; 0) u.ublesscnt = 0;\n  1661: \t    if(u.ublesscnt != saved_cnt) {"
+    "context": "src/pray.c:1656:15\n       1651: \t    }\n       1652: \t} else if(ugod_is_angry()) {\n       1653: \t    if(value &gt; MAXVALUE) value = MAXVALUE;\n       1654: \t    if(value &gt; -u.ualign.record) value = -u.ualign.record;\n       1655: \t    adjalign(value);\nTARGET 1656: \t    You_feel(\"partially absolved.\");\n       1657: \t} else if (u.ublesscnt &gt; 0) {\n       1658: \t    u.ublesscnt -=\n       1659: \t\t((value * (u.ualign.type == A_CHAOTIC ? 500 : 300)) / MAXVALUE);\n       1660: \t    if(u.ublesscnt &lt; 0) u.ublesscnt = 0;\n       1661: \t    if(u.ublesscnt != saved_cnt) {"
   },
   {
     "key": "L01666_01",
     "original": "have a hopeful feeling.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1666:8\n  1661: \t    if(u.ublesscnt != saved_cnt) {\n  1662: \t\tif (u.ublesscnt) {\n  1663: \t\t    if (Hallucination)\n  1664: \t\t\tYou(\"意识到神和你我之间是不同的。\");\n  1665: \t\t    else\n&gt; 1666: \t\t\tYou(\"have a hopeful feeling.\");\n  1667: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1668: \t\t} else {\n  1669: \t\t    if (Hallucination)\n  1670: \t\t\tpline(\"总之你想吃一小块炸洋葱了。\");\n  1671: \t\t    else"
+    "context": "src/pray.c:1666:8\n       1661: \t    if(u.ublesscnt != saved_cnt) {\n       1662: \t\tif (u.ublesscnt) {\n       1663: \t\t    if (Hallucination)\n       1664: \t\t\tYou(\"意识到神和你我之间是不同的。\");\n       1665: \t\t    else\nTARGET 1666: \t\t\tYou(\"have a hopeful feeling.\");\n       1667: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1668: \t\t} else {\n       1669: \t\t    if (Hallucination)\n       1670: \t\t\tpline(\"总之你想吃一小块炸洋葱了。\");\n       1671: \t\t    else"
   },
   {
     "key": "L01672_01",
     "original": "have a feeling of reconciliation.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1672:8\n  1667: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n  1668: \t\t} else {\n  1669: \t\t    if (Hallucination)\n  1670: \t\t\tpline(\"总之你想吃一小块炸洋葱了。\");\n  1671: \t\t    else\n&gt; 1672: \t\t\tYou(\"have a feeling of reconciliation.\");\n  1673: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n  1674: \t\t}\n  1675: \t    }\n  1676: \t} else {\n  1677: \t    int nartifacts = nartifact_exist();"
+    "context": "src/pray.c:1672:8\n       1667: \t\t    if ((int)u.uluck &lt; 0) change_luck(1);\n       1668: \t\t} else {\n       1669: \t\t    if (Hallucination)\n       1670: \t\t\tpline(\"总之你想吃一小块炸洋葱了。\");\n       1671: \t\t    else\nTARGET 1672: \t\t\tYou(\"have a feeling of reconciliation.\");\n       1673: \t\t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n       1674: \t\t}\n       1675: \t    }\n       1676: \t} else {\n       1677: \t    int nartifacts = nartifact_exist();"
   },
   {
     "key": "L01690_01",
     "original": "An object",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1690:20\n  1685: \t\tif (otmp) {\n  1686: \t\t    if (otmp-&gt;spe &lt; 0) otmp-&gt;spe = 0;\n  1687: \t\t    if (otmp-&gt;cursed) uncurse(otmp);\n  1688: \t\t    otmp-&gt;oerodeproof = TRUE;\n  1689: \t\t    dropy(otmp);\n&gt; 1690: \t\t    at_your_feet(\"An object\");\n  1691: \t\t    godvoice(u.ualign.type, \"要好好运用吾赐予汝的礼物！\");\n  1692: \t\t    u.ugifts++;\n  1693: \t\t    u.ublesscnt = rnz(300 + (50 * nartifacts));\n  1694: \t\t    exercise(A_WIS, TRUE);\n  1695: \t\t    /* make sure we can use this weapon */"
+    "context": "src/pray.c:1690:20\n       1685: \t\tif (otmp) {\n       1686: \t\t    if (otmp-&gt;spe &lt; 0) otmp-&gt;spe = 0;\n       1687: \t\t    if (otmp-&gt;cursed) uncurse(otmp);\n       1688: \t\t    otmp-&gt;oerodeproof = TRUE;\n       1689: \t\t    dropy(otmp);\nTARGET 1690: \t\t    at_your_feet(\"An object\");\n       1691: \t\t    godvoice(u.ualign.type, \"要好好运用吾赐予汝的礼物！\");\n       1692: \t\t    u.ugifts++;\n       1693: \t\t    u.ublesscnt = rnz(300 + (50 * nartifacts));\n       1694: \t\t    exercise(A_WIS, TRUE);\n       1695: \t\t    /* make sure we can use this weapon */"
   },
   {
     "key": "L01723_01",
     "original": "think %s brushed your %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1723:11\n  1718: \n  1719: \t    change_luck((value * LUCKMAX) / (MAXVALUE * 2));\n  1720: \t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n  1721: \t    if (u.uluck != saved_luck) {\n  1722: \t\tif (Blind)\n&gt; 1723: \t\t    You(\"think %s brushed your %s.\",something, body_part(FOOT));\n  1724: \t\telse You(Hallucination ?\n  1725: \t\t    \"看见你的脚边有一头螃蟹草，这当然是这个地牢里比较好笑的东西。\" :\n  1726: \t\t    \"瞥见一朵四叶草落在你的%s旁。\",\n  1727: \t\t    makeplural(body_part(FOOT)));\n  1728: \t    }"
+    "context": "src/pray.c:1723:11\n       1718: \n       1719: \t    change_luck((value * LUCKMAX) / (MAXVALUE * 2));\n       1720: \t    if ((int)u.uluck &lt; 0) u.uluck = 0;\n       1721: \t    if (u.uluck != saved_luck) {\n       1722: \t\tif (Blind)\nTARGET 1723: \t\t    You(\"think %s brushed your %s.\",something, body_part(FOOT));\n       1724: \t\telse You(Hallucination ?\n       1725: \t\t    \"看见你的脚边有一头螃蟹草，这当然是这个地牢里比较好笑的东西。\" :\n       1726: \t\t    \"瞥见一朵四叶草落在你的%s旁。\",\n       1727: \t\t    makeplural(body_part(FOOT)));\n       1728: \t    }"
   },
   {
     "key": "L01748_01",
     "original": "very idea of praying to a %s god is repugnant to you.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1748:16\n  1743:     p_aligntyp = on_altar() ? a_align(u.ux,u.uy) : u.ualign.type;\n  1744:     p_trouble = in_trouble();\n  1745: \n  1746:     if (is_demon(youmonst.data) && (p_aligntyp != A_CHAOTIC)) {\n  1747: \tif (praying)\n&gt; 1748: \t    pline_The(\"very idea of praying to a %s god is repugnant to you.\",\n  1749: \t\t  p_aligntyp ? \"秩序\" : \"neutral\");\n  1750: \treturn FALSE;\n  1751:     }\n  1752: \n  1753:     if (praying)"
+    "context": "src/pray.c:1748:16\n       1743:     p_aligntyp = on_altar() ? a_align(u.ux,u.uy) : u.ualign.type;\n       1744:     p_trouble = in_trouble();\n       1745: \n       1746:     if (is_demon(youmonst.data) && (p_aligntyp != A_CHAOTIC)) {\n       1747: \tif (praying)\nTARGET 1748: \t    pline_The(\"very idea of praying to a %s god is repugnant to you.\",\n       1749: \t\t  p_aligntyp ? \"秩序\" : \"neutral\");\n       1750: \treturn FALSE;\n       1751:     }\n       1752: \n       1753:     if (praying)"
   },
   {
     "key": "L01749_01",
     "original": "neutral",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1749:25\n  1744:     p_trouble = in_trouble();\n  1745: \n  1746:     if (is_demon(youmonst.data) && (p_aligntyp != A_CHAOTIC)) {\n  1747: \tif (praying)\n  1748: \t    pline_The(\"very idea of praying to a %s god is repugnant to you.\",\n&gt; 1749: \t\t  p_aligntyp ? \"秩序\" : \"neutral\");\n  1750: \treturn FALSE;\n  1751:     }\n  1752: \n  1753:     if (praying)\n  1754: \tYou(\"begin praying to %s.\", align_gname(p_aligntyp));"
+    "context": "src/pray.c:1749:25\n       1744:     p_trouble = in_trouble();\n       1745: \n       1746:     if (is_demon(youmonst.data) && (p_aligntyp != A_CHAOTIC)) {\n       1747: \tif (praying)\n       1748: \t    pline_The(\"very idea of praying to a %s god is repugnant to you.\",\nTARGET 1749: \t\t  p_aligntyp ? \"秩序\" : \"neutral\");\n       1750: \treturn FALSE;\n       1751:     }\n       1752: \n       1753:     if (praying)\n       1754: \tYou(\"begin praying to %s.\", align_gname(p_aligntyp));"
   },
   {
     "key": "L01754_01",
     "original": "begin praying to %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1754:6\n  1749: \t\t  p_aligntyp ? \"秩序\" : \"neutral\");\n  1750: \treturn FALSE;\n  1751:     }\n  1752: \n  1753:     if (praying)\n&gt; 1754: \tYou(\"begin praying to %s.\", align_gname(p_aligntyp));\n  1755: \n  1756:     if (u.ualign.type && u.ualign.type == -p_aligntyp)\n  1757: \talignment = -u.ualign.record;\t\t/* Opposite alignment altar */\n  1758:     else if (u.ualign.type != p_aligntyp)\n  1759: \talignment = u.ualign.record / 2;\t/* Different alignment altar */"
+    "context": "src/pray.c:1754:6\n       1749: \t\t  p_aligntyp ? \"秩序\" : \"neutral\");\n       1750: \treturn FALSE;\n       1751:     }\n       1752: \n       1753:     if (praying)\nTARGET 1754: \tYou(\"begin praying to %s.\", align_gname(p_aligntyp));\n       1755: \n       1756:     if (u.ualign.type && u.ualign.type == -p_aligntyp)\n       1757: \talignment = -u.ualign.record;\t\t/* Opposite alignment altar */\n       1758:     else if (u.ualign.type != p_aligntyp)\n       1759: \talignment = u.ualign.record / 2;\t/* Different alignment altar */"
   },
   {
     "key": "L01803_01",
     "original": "He ignores your pleas.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1803:12\n  1798:     flags.soundok = 1;\n  1799: \n  1800:     if (IS_TOILET(levl[u.ux][u.uy].typ)) {\n  1801: \tpline(\"你朝着陶瓷厕具之神祈祷。\");\n  1802: \tif (!Sick && !HConfusion && !HStun) {\n&gt; 1803: \t    pline(\"He ignores your pleas.\");\n  1804: \t    return(1);\n  1805: \t}\n  1806: \tpline(\"他向你微笑了一下。\");\n  1807: \tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n  1808: \tif (HConfusion) make_confused(0L, TRUE);"
+    "context": "src/pray.c:1803:12\n       1798:     flags.soundok = 1;\n       1799: \n       1800:     if (IS_TOILET(levl[u.ux][u.uy].typ)) {\n       1801: \tpline(\"你朝着陶瓷厕具之神祈祷。\");\n       1802: \tif (!Sick && !HConfusion && !HStun) {\nTARGET 1803: \t    pline(\"He ignores your pleas.\");\n       1804: \t    return(1);\n       1805: \t}\n       1806: \tpline(\"他向你微笑了一下。\");\n       1807: \tif (Sick) make_sick(0L, (char *)0, TRUE, SICK_ALL);\n       1808: \tif (HConfusion) make_confused(0L, TRUE);"
   },
   {
     "key": "L01833_01",
     "original": "are surrounded by a shimmering light.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1833:18\n  1828:     nomovemsg = \"你完成了祈祷。\";\n  1829:     afternmv = prayer_done;\n  1830: \n  1831: \t/* if you've been true to your god you can't die while you pray */\n  1832:     if(p_type == 3 && !Inhell) {\n&gt; 1833: \tif (!Blind) You(\"are surrounded by a shimmering light.\");\n  1834: \tu.uinvulnerable = TRUE;\n  1835:     }\n  1836:     return(1);\n  1837: }\n  1838: "
+    "context": "src/pray.c:1833:18\n       1828:     nomovemsg = \"你完成了祈祷。\";\n       1829:     afternmv = prayer_done;\n       1830: \n       1831: \t/* if you've been true to your god you can't die while you pray */\n       1832:     if(p_type == 3 && !Inhell) {\nTARGET 1833: \tif (!Blind) You(\"are surrounded by a shimmering light.\");\n       1834: \tu.uinvulnerable = TRUE;\n       1835:     }\n       1836:     return(1);\n       1837: }\n       1838: "
   },
   {
     "key": "L01944_01",
     "original": "Calling upon %s, you chant an arcane formula.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:1944:8\n  1939: \tif (Inhell) {\n  1940: \t    pline(\"你正处于葛汉诺姆中，所以你的%s帮不到你。\", u_gname());\n  1941: \t    aggravate();\n  1942: \t    return(0);\n  1943: \t}\n&gt; 1944: \tpline(\"Calling upon %s, you chant an arcane formula.\", u_gname());\n  1945: \texercise(A_WIS, TRUE);\n  1946: \n  1947: \t/* note: does not perform unturn_dead() on victims' inventories */\n  1948: \trange = BOLT_LIM + (u.ulevel / 5);\t/* 5 to 11 */\n  1949: \trange *= range;"
+    "context": "src/pray.c:1944:8\n       1939: \tif (Inhell) {\n       1940: \t    pline(\"你正处于葛汉诺姆中，所以你的%s帮不到你。\", u_gname());\n       1941: \t    aggravate();\n       1942: \t    return(0);\n       1943: \t}\nTARGET 1944: \tpline(\"Calling upon %s, you chant an arcane formula.\", u_gname());\n       1945: \texercise(A_WIS, TRUE);\n       1946: \n       1947: \t/* note: does not perform unturn_dead() on victims' inventories */\n       1948: \trange = BOLT_LIM + (u.ulevel / 5);\t/* 5 to 11 */\n       1949: \trange *= range;"
   },
   {
     "key": "L02035_01",
     "original": "unknown alignment.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2035:27\n  2030:     switch (alignment) {\n  2031:      case A_NONE:\tgnam = Moloch; break;\n  2032:      case A_LAWFUL:\tgnam = urole.lgod; break;\n  2033:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n  2034:      case A_CHAOTIC:\tgnam = urole.cgod; break;\n&gt; 2035:      default:\t\timpossible(\"unknown alignment.\");\n  2036: \t\t\tgnam = \"someone\"; break;\n  2037:     }\n  2038:     if (*gnam == '_') ++gnam;\n  2039:     return gnam;\n  2040: }"
+    "context": "src/pray.c:2035:27\n       2030:     switch (alignment) {\n       2031:      case A_NONE:\tgnam = Moloch; break;\n       2032:      case A_LAWFUL:\tgnam = urole.lgod; break;\n       2033:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n       2034:      case A_CHAOTIC:\tgnam = urole.cgod; break;\nTARGET 2035:      default:\t\timpossible(\"unknown alignment.\");\n       2036: \t\t\tgnam = \"someone\"; break;\n       2037:     }\n       2038:     if (*gnam == '_') ++gnam;\n       2039:     return gnam;\n       2040: }"
   },
   {
     "key": "L02036_01",
     "original": "someone",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2036:11\n  2031:      case A_NONE:\tgnam = Moloch; break;\n  2032:      case A_LAWFUL:\tgnam = urole.lgod; break;\n  2033:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n  2034:      case A_CHAOTIC:\tgnam = urole.cgod; break;\n  2035:      default:\t\timpossible(\"unknown alignment.\");\n&gt; 2036: \t\t\tgnam = \"someone\"; break;\n  2037:     }\n  2038:     if (*gnam == '_') ++gnam;\n  2039:     return gnam;\n  2040: }\n  2041: "
+    "context": "src/pray.c:2036:11\n       2031:      case A_NONE:\tgnam = Moloch; break;\n       2032:      case A_LAWFUL:\tgnam = urole.lgod; break;\n       2033:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n       2034:      case A_CHAOTIC:\tgnam = urole.cgod; break;\n       2035:      default:\t\timpossible(\"unknown alignment.\");\nTARGET 2036: \t\t\tgnam = \"someone\"; break;\n       2037:     }\n       2038:     if (*gnam == '_') ++gnam;\n       2039:     return gnam;\n       2040: }\n       2041: "
   },
   {
     "key": "L02070_01",
     "original": "god",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2070:33\n  2065: /* deity's title */\n  2066: const char *\n  2067: align_gtitle(alignment)\n  2068: aligntyp alignment;\n  2069: {\n&gt; 2070:     const char *gnam, *result = \"god\";\n  2071: \n  2072:     switch (alignment) {\n  2073:      case A_LAWFUL:\tgnam = urole.lgod; break;\n  2074:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n  2075:      case A_CHAOTIC:\tgnam = urole.cgod; break;"
+    "context": "src/pray.c:2070:33\n       2065: /* deity's title */\n       2066: const char *\n       2067: align_gtitle(alignment)\n       2068: aligntyp alignment;\n       2069: {\nTARGET 2070:     const char *gnam, *result = \"god\";\n       2071: \n       2072:     switch (alignment) {\n       2073:      case A_LAWFUL:\tgnam = urole.lgod; break;\n       2074:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n       2075:      case A_CHAOTIC:\tgnam = urole.cgod; break;"
   },
   {
     "key": "L02078_01",
     "original": "goddess",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2078:40\n  2073:      case A_LAWFUL:\tgnam = urole.lgod; break;\n  2074:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n  2075:      case A_CHAOTIC:\tgnam = urole.cgod; break;\n  2076:      default:\t\tgnam = 0; break;\n  2077:     }\n&gt; 2078:     if (gnam && *gnam == '_') result = \"goddess\";\n  2079:     return result;\n  2080: }\n  2081: \n  2082: void\n  2083: altar_wrath(x, y)"
+    "context": "src/pray.c:2078:40\n       2073:      case A_LAWFUL:\tgnam = urole.lgod; break;\n       2074:      case A_NEUTRAL:\tgnam = urole.ngod; break;\n       2075:      case A_CHAOTIC:\tgnam = urole.cgod; break;\n       2076:      default:\t\tgnam = 0; break;\n       2077:     }\nTARGET 2078:     if (gnam && *gnam == '_') result = \"goddess\";\n       2079:     return result;\n       2080: }\n       2081: \n       2082: void\n       2083: altar_wrath(x, y)"
   },
   {
     "key": "L02092_01",
     "original": "A voice (could it be %s?) whispers:",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2092:8\n  2087: \n  2088:     if(!strcmp(align_gname(altaralign), u_gname())) {\n  2089: \tgodvoice(altaralign, \"汝怎敢玷污吾的祭坛！\");\n  2090: \t(void) adjattrib(A_WIS, -1, FALSE);\n  2091:     } else {\n&gt; 2092: \tpline(\"A voice (could it be %s?) whispers:\",\n  2093: \t      align_gname(altaralign));\n  2094: \tverbalize(\"异教徒，汝将付出代价！\");\n  2095: \tchange_luck(-1);\n  2096:     }\n  2097: }"
+    "context": "src/pray.c:2092:8\n       2087: \n       2088:     if(!strcmp(align_gname(altaralign), u_gname())) {\n       2089: \tgodvoice(altaralign, \"汝怎敢玷污吾的祭坛！\");\n       2090: \t(void) adjattrib(A_WIS, -1, FALSE);\n       2091:     } else {\nTARGET 2092: \tpline(\"A voice (could it be %s?) whispers:\",\n       2093: \t      align_gname(altaralign));\n       2094: \tverbalize(\"异教徒，汝将付出代价！\");\n       2095: \tchange_luck(-1);\n       2096:     }\n       2097: }"
   },
   {
     "key": "L02188_01",
     "original": "%s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2188:13\n  2183: \t\t\t    return; /* Nothing to do! */\n  2184: \t\t    }\n  2185: \t\t    bless(otmp);\n  2186: \t\t    otmp-&gt;bknown = TRUE;\n  2187: \t\t    if (!Blind)\n&gt; 2188: \t\t\t    Your(\"%s %s.\",\n  2189: \t\t\t\t what ? what :\n  2190: \t\t\t\t (const char *)aobjnam (otmp, \"softly glow\"),\n  2191: \t\t\t\t hcolor(NH_AMBER));\n  2192: \t\t\tbreak;\n  2193: \t\t}"
+    "context": "src/pray.c:2188:13\n       2183: \t\t\t    return; /* Nothing to do! */\n       2184: \t\t    }\n       2185: \t\t    bless(otmp);\n       2186: \t\t    otmp-&gt;bknown = TRUE;\n       2187: \t\t    if (!Blind)\nTARGET 2188: \t\t\t    Your(\"%s %s.\",\n       2189: \t\t\t\t what ? what :\n       2190: \t\t\t\t (const char *)aobjnam (otmp, \"softly glow\"),\n       2191: \t\t\t\t hcolor(NH_AMBER));\n       2192: \t\t\tbreak;\n       2193: \t\t}"
   },
   {
     "key": "L02190_01",
     "original": "softly glow",
     "translation": "",
     "stage": 0,
-    "context": "src/pray.c:2190:35\n  2185: \t\t    bless(otmp);\n  2186: \t\t    otmp-&gt;bknown = TRUE;\n  2187: \t\t    if (!Blind)\n  2188: \t\t\t    Your(\"%s %s.\",\n  2189: \t\t\t\t what ? what :\n&gt; 2190: \t\t\t\t (const char *)aobjnam (otmp, \"softly glow\"),\n  2191: \t\t\t\t hcolor(NH_AMBER));\n  2192: \t\t\tbreak;\n  2193: \t\t}\n  2194: \t}\n  2195: }"
+    "context": "src/pray.c:2190:35\n       2185: \t\t    bless(otmp);\n       2186: \t\t    otmp-&gt;bknown = TRUE;\n       2187: \t\t    if (!Blind)\n       2188: \t\t\t    Your(\"%s %s.\",\n       2189: \t\t\t\t what ? what :\nTARGET 2190: \t\t\t\t (const char *)aobjnam (otmp, \"softly glow\"),\n       2191: \t\t\t\t hcolor(NH_AMBER));\n       2192: \t\t\tbreak;\n       2193: \t\t}\n       2194: \t}\n       2195: }"
   }
 ]

@@ -4,531 +4,531 @@
     "original": "Your ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:133:25\n   128: void\n   129: Your VA_DECL(const char *,line)\n   130: \tchar *tmp;\n   131: \tVA_START(line);\n   132: \tVA_INIT(line, const char *);\n&gt;  133: \tvpline(YouMessage(tmp, \"Your \", line), VA_ARGS);\n   134: \tVA_END();\n   135: }\n   136: \n   137: /*VARARGS1*/\n   138: void"
+    "context": "src/pline.c:133:25\n        128: void\n        129: Your VA_DECL(const char *,line)\n        130: \tchar *tmp;\n        131: \tVA_START(line);\n        132: \tVA_INIT(line, const char *);\nTARGET  133: \tvpline(YouMessage(tmp, \"Your \", line), VA_ARGS);\n        134: \tVA_END();\n        135: }\n        136: \n        137: /*VARARGS1*/\n        138: void"
   },
   {
     "key": "L00164_01",
     "original": "The ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:164:25\n   159: void\n   160: pline_The VA_DECL(const char *,line)\n   161: \tchar *tmp;\n   162: \tVA_START(line);\n   163: \tVA_INIT(line, const char *);\n&gt;  164: \tvpline(YouMessage(tmp, \"The \", line), VA_ARGS);\n   165: \tVA_END();\n   166: }\n   167: \n   168: /*VARARGS1*/\n   169: void"
+    "context": "src/pline.c:164:25\n        159: void\n        160: pline_The VA_DECL(const char *,line)\n        161: \tchar *tmp;\n        162: \tVA_START(line);\n        163: \tVA_INIT(line, const char *);\nTARGET  164: \tvpline(YouMessage(tmp, \"The \", line), VA_ARGS);\n        165: \tVA_END();\n        166: }\n        167: \n        168: /*VARARGS1*/\n        169: void"
   },
   {
     "key": "L00174_01",
     "original": "There ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:174:25\n   169: void\n   170: There VA_DECL(const char *,line)\n   171: \tchar *tmp;\n   172: \tVA_START(line);\n   173: \tVA_INIT(line, const char *);\n&gt;  174: \tvpline(YouMessage(tmp, \"There \", line), VA_ARGS);\n   175: \tVA_END();\n   176: }\n   177: \n   178: /*VARARGS1*/\n   179: void"
+    "context": "src/pline.c:174:25\n        169: void\n        170: There VA_DECL(const char *,line)\n        171: \tchar *tmp;\n        172: \tVA_START(line);\n        173: \tVA_INIT(line, const char *);\nTARGET  174: \tvpline(YouMessage(tmp, \"There \", line), VA_ARGS);\n        175: \tVA_END();\n        176: }\n        177: \n        178: /*VARARGS1*/\n        179: void"
   },
   {
     "key": "L00185_01",
     "original": "You barely hear ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:185:18\n   180: You_hear VA_DECL(const char *,line)\n   181: \tchar *tmp;\n   182: \tVA_START(line);\n   183: \tVA_INIT(line, const char *);\n   184: \tif (Underwater)\n&gt;  185: \t\tYouPrefix(tmp, \"You barely hear \", line);\n   186: \telse if (u.usleep)\n   187: \t\tYouPrefix(tmp, \"你在梦中梦见你听见\", line);\n   188: \telse\n   189: \t\tYouPrefix(tmp, \"你听见\", line);\n   190: \tvpline(strcat(tmp, line), VA_ARGS);"
+    "context": "src/pline.c:185:18\n        180: You_hear VA_DECL(const char *,line)\n        181: \tchar *tmp;\n        182: \tVA_START(line);\n        183: \tVA_INIT(line, const char *);\n        184: \tif (Underwater)\nTARGET  185: \t\tYouPrefix(tmp, \"You barely hear \", line);\n        186: \telse if (u.usleep)\n        187: \t\tYouPrefix(tmp, \"你在梦中梦见你听见\", line);\n        188: \telse\n        189: \t\tYouPrefix(tmp, \"你听见\", line);\n        190: \tvpline(strcat(tmp, line), VA_ARGS);"
   },
   {
     "key": "L00256_01",
     "original": "impossible called impossible",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:256:9\n   251: void\n   252: impossible VA_DECL(const char *, s)\n   253: \tVA_START(s);\n   254: \tVA_INIT(s, const char *);\n   255: \tif (program_state.in_impossible)\n&gt;  256: \t\tpanic(\"impossible called impossible\");\n   257: \tprogram_state.in_impossible = 1;\n   258: \t{\n   259: \t    char pbuf[BUFSZ];\n   260: \t    Vsprintf(pbuf,s,VA_ARGS);\n   261: \t    paniclog(\"impossible\", pbuf);"
+    "context": "src/pline.c:256:9\n        251: void\n        252: impossible VA_DECL(const char *, s)\n        253: \tVA_START(s);\n        254: \tVA_INIT(s, const char *);\n        255: \tif (program_state.in_impossible)\nTARGET  256: \t\tpanic(\"impossible called impossible\");\n        257: \tprogram_state.in_impossible = 1;\n        258: \t{\n        259: \t    char pbuf[BUFSZ];\n        260: \t    Vsprintf(pbuf,s,VA_ARGS);\n        261: \t    paniclog(\"impossible\", pbuf);"
   },
   {
     "key": "L00261_01",
     "original": "impossible",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:261:15\n   256: \t\tpanic(\"impossible called impossible\");\n   257: \tprogram_state.in_impossible = 1;\n   258: \t{\n   259: \t    char pbuf[BUFSZ];\n   260: \t    Vsprintf(pbuf,s,VA_ARGS);\n&gt;  261: \t    paniclog(\"impossible\", pbuf);\n   262: #ifdef ANDROID\n   263: \t    debuglog(\"impossible: %s\", pbuf);\n   264: #endif\n   265: \t}\n   266: \tvpline(s,VA_ARGS);"
+    "context": "src/pline.c:261:15\n        256: \t\tpanic(\"impossible called impossible\");\n        257: \tprogram_state.in_impossible = 1;\n        258: \t{\n        259: \t    char pbuf[BUFSZ];\n        260: \t    Vsprintf(pbuf,s,VA_ARGS);\nTARGET  261: \t    paniclog(\"impossible\", pbuf);\n        262: #ifdef ANDROID\n        263: \t    debuglog(\"impossible: %s\", pbuf);\n        264: #endif\n        265: \t}\n        266: \tvpline(s,VA_ARGS);"
   },
   {
     "key": "L00263_01",
     "original": "impossible: %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:263:15\n   258: \t{\n   259: \t    char pbuf[BUFSZ];\n   260: \t    Vsprintf(pbuf,s,VA_ARGS);\n   261: \t    paniclog(\"impossible\", pbuf);\n   262: #ifdef ANDROID\n&gt;  263: \t    debuglog(\"impossible: %s\", pbuf);\n   264: #endif\n   265: \t}\n   266: \tvpline(s,VA_ARGS);\n   267: \tpline(\"Program in disorder - perhaps you'd better #quit.\");\n   268: \tprogram_state.in_impossible = 0;"
+    "context": "src/pline.c:263:15\n        258: \t{\n        259: \t    char pbuf[BUFSZ];\n        260: \t    Vsprintf(pbuf,s,VA_ARGS);\n        261: \t    paniclog(\"impossible\", pbuf);\n        262: #ifdef ANDROID\nTARGET  263: \t    debuglog(\"impossible: %s\", pbuf);\n        264: #endif\n        265: \t}\n        266: \tvpline(s,VA_ARGS);\n        267: \tpline(\"Program in disorder - perhaps you'd better #quit.\");\n        268: \tprogram_state.in_impossible = 0;"
   },
   {
     "key": "L00267_01",
     "original": "Program in disorder - perhaps you'd better #quit.",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:267:8\n   262: #ifdef ANDROID\n   263: \t    debuglog(\"impossible: %s\", pbuf);\n   264: #endif\n   265: \t}\n   266: \tvpline(s,VA_ARGS);\n&gt;  267: \tpline(\"Program in disorder - perhaps you'd better #quit.\");\n   268: \tprogram_state.in_impossible = 0;\n   269: \tVA_END();\n   270: }\n   271: \n   272: const char *"
+    "context": "src/pline.c:267:8\n        262: #ifdef ANDROID\n        263: \t    debuglog(\"impossible: %s\", pbuf);\n        264: #endif\n        265: \t}\n        266: \tvpline(s,VA_ARGS);\nTARGET  267: \tpline(\"Program in disorder - perhaps you'd better #quit.\");\n        268: \tprogram_state.in_impossible = 0;\n        269: \tVA_END();\n        270: }\n        271: \n        272: const char *"
   },
   {
     "key": "L00277_01",
     "original": "chaotic",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:277:25\n   272: const char *\n   273: align_str(alignment)\n   274:     aligntyp alignment;\n   275: {\n   276:     switch ((int)alignment) {\n&gt;  277: \tcase A_CHAOTIC: return \"chaotic\";\n   278: \tcase A_NEUTRAL: return \"neutral\";\n   279: \tcase A_LAWFUL:\treturn \"lawful\";\n   280: \tcase A_NONE:\treturn \"unaligned\";\n   281:     }\n   282:     return \"unknown\";"
+    "context": "src/pline.c:277:25\n        272: const char *\n        273: align_str(alignment)\n        274:     aligntyp alignment;\n        275: {\n        276:     switch ((int)alignment) {\nTARGET  277: \tcase A_CHAOTIC: return \"chaotic\";\n        278: \tcase A_NEUTRAL: return \"neutral\";\n        279: \tcase A_LAWFUL:\treturn \"lawful\";\n        280: \tcase A_NONE:\treturn \"unaligned\";\n        281:     }\n        282:     return \"unknown\";"
   },
   {
     "key": "L00278_01",
     "original": "neutral",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:278:25\n   273: align_str(alignment)\n   274:     aligntyp alignment;\n   275: {\n   276:     switch ((int)alignment) {\n   277: \tcase A_CHAOTIC: return \"chaotic\";\n&gt;  278: \tcase A_NEUTRAL: return \"neutral\";\n   279: \tcase A_LAWFUL:\treturn \"lawful\";\n   280: \tcase A_NONE:\treturn \"unaligned\";\n   281:     }\n   282:     return \"unknown\";\n   283: }"
+    "context": "src/pline.c:278:25\n        273: align_str(alignment)\n        274:     aligntyp alignment;\n        275: {\n        276:     switch ((int)alignment) {\n        277: \tcase A_CHAOTIC: return \"chaotic\";\nTARGET  278: \tcase A_NEUTRAL: return \"neutral\";\n        279: \tcase A_LAWFUL:\treturn \"lawful\";\n        280: \tcase A_NONE:\treturn \"unaligned\";\n        281:     }\n        282:     return \"unknown\";\n        283: }"
   },
   {
     "key": "L00279_01",
     "original": "lawful",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:279:24\n   274:     aligntyp alignment;\n   275: {\n   276:     switch ((int)alignment) {\n   277: \tcase A_CHAOTIC: return \"chaotic\";\n   278: \tcase A_NEUTRAL: return \"neutral\";\n&gt;  279: \tcase A_LAWFUL:\treturn \"lawful\";\n   280: \tcase A_NONE:\treturn \"unaligned\";\n   281:     }\n   282:     return \"unknown\";\n   283: }\n   284: "
+    "context": "src/pline.c:279:24\n        274:     aligntyp alignment;\n        275: {\n        276:     switch ((int)alignment) {\n        277: \tcase A_CHAOTIC: return \"chaotic\";\n        278: \tcase A_NEUTRAL: return \"neutral\";\nTARGET  279: \tcase A_LAWFUL:\treturn \"lawful\";\n        280: \tcase A_NONE:\treturn \"unaligned\";\n        281:     }\n        282:     return \"unknown\";\n        283: }\n        284: "
   },
   {
     "key": "L00280_01",
     "original": "unaligned",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:280:22\n   275: {\n   276:     switch ((int)alignment) {\n   277: \tcase A_CHAOTIC: return \"chaotic\";\n   278: \tcase A_NEUTRAL: return \"neutral\";\n   279: \tcase A_LAWFUL:\treturn \"lawful\";\n&gt;  280: \tcase A_NONE:\treturn \"unaligned\";\n   281:     }\n   282:     return \"unknown\";\n   283: }\n   284: \n   285: void"
+    "context": "src/pline.c:280:22\n        275: {\n        276:     switch ((int)alignment) {\n        277: \tcase A_CHAOTIC: return \"chaotic\";\n        278: \tcase A_NEUTRAL: return \"neutral\";\n        279: \tcase A_LAWFUL:\treturn \"lawful\";\nTARGET  280: \tcase A_NONE:\treturn \"unaligned\";\n        281:     }\n        282:     return \"unknown\";\n        283: }\n        284: \n        285: void"
   },
   {
     "key": "L00282_01",
     "original": "unknown",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:282:12\n   277: \tcase A_CHAOTIC: return \"chaotic\";\n   278: \tcase A_NEUTRAL: return \"neutral\";\n   279: \tcase A_LAWFUL:\treturn \"lawful\";\n   280: \tcase A_NONE:\treturn \"unaligned\";\n   281:     }\n&gt;  282:     return \"unknown\";\n   283: }\n   284: \n   285: void\n   286: mstatusline(mtmp)\n   287: register struct monst *mtmp;"
+    "context": "src/pline.c:282:12\n        277: \tcase A_CHAOTIC: return \"chaotic\";\n        278: \tcase A_NEUTRAL: return \"neutral\";\n        279: \tcase A_LAWFUL:\treturn \"lawful\";\n        280: \tcase A_NONE:\treturn \"unaligned\";\n        281:     }\nTARGET  282:     return \"unknown\";\n        283: }\n        284: \n        285: void\n        286: mstatusline(mtmp)\n        287: register struct monst *mtmp;"
   },
   {
     "key": "L00302_01",
     "original": ", tame",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:302:36\n   297: \talignment = (alignment &gt; 0) ? A_LAWFUL :\n   298: \t\t(alignment &lt; 0) ? A_CHAOTIC :\n   299: \t\tA_NEUTRAL;\n   300: \n   301: \tinfo[0] = 0;\n&gt;  302: \tif (mtmp-&gt;mtame) {\t  Strcat(info, \", tame\");\n   303: #ifdef WIZARD\n   304: \t    if (wizard) {\n   305: \t\tSprintf(eos(info), \" (%d\", mtmp-&gt;mtame);\n   306: \t\tif (!mtmp-&gt;isminion)\n   307: \t\t    Sprintf(eos(info), \"; hungry %ld; apport %d\","
+    "context": "src/pline.c:302:36\n        297: \talignment = (alignment &gt; 0) ? A_LAWFUL :\n        298: \t\t(alignment &lt; 0) ? A_CHAOTIC :\n        299: \t\tA_NEUTRAL;\n        300: \n        301: \tinfo[0] = 0;\nTARGET  302: \tif (mtmp-&gt;mtame) {\t  Strcat(info, \", tame\");\n        303: #ifdef WIZARD\n        304: \t    if (wizard) {\n        305: \t\tSprintf(eos(info), \" (%d\", mtmp-&gt;mtame);\n        306: \t\tif (!mtmp-&gt;isminion)\n        307: \t\t    Sprintf(eos(info), \"; hungry %ld; apport %d\","
   },
   {
     "key": "L00305_01",
     "original": " (%d",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:305:22\n   300: \n   301: \tinfo[0] = 0;\n   302: \tif (mtmp-&gt;mtame) {\t  Strcat(info, \", tame\");\n   303: #ifdef WIZARD\n   304: \t    if (wizard) {\n&gt;  305: \t\tSprintf(eos(info), \" (%d\", mtmp-&gt;mtame);\n   306: \t\tif (!mtmp-&gt;isminion)\n   307: \t\t    Sprintf(eos(info), \"; hungry %ld; apport %d\",\n   308: \t\t\tEDOG(mtmp)-&gt;hungrytime, EDOG(mtmp)-&gt;apport);\n   309: \t\tStrcat(info, \")\");\n   310: \t    }"
+    "context": "src/pline.c:305:22\n        300: \n        301: \tinfo[0] = 0;\n        302: \tif (mtmp-&gt;mtame) {\t  Strcat(info, \", tame\");\n        303: #ifdef WIZARD\n        304: \t    if (wizard) {\nTARGET  305: \t\tSprintf(eos(info), \" (%d\", mtmp-&gt;mtame);\n        306: \t\tif (!mtmp-&gt;isminion)\n        307: \t\t    Sprintf(eos(info), \"; hungry %ld; apport %d\",\n        308: \t\t\tEDOG(mtmp)-&gt;hungrytime, EDOG(mtmp)-&gt;apport);\n        309: \t\tStrcat(info, \")\");\n        310: \t    }"
   },
   {
     "key": "L00307_01",
     "original": "; hungry %ld; apport %d",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:307:26\n   302: \tif (mtmp-&gt;mtame) {\t  Strcat(info, \", tame\");\n   303: #ifdef WIZARD\n   304: \t    if (wizard) {\n   305: \t\tSprintf(eos(info), \" (%d\", mtmp-&gt;mtame);\n   306: \t\tif (!mtmp-&gt;isminion)\n&gt;  307: \t\t    Sprintf(eos(info), \"; hungry %ld; apport %d\",\n   308: \t\t\tEDOG(mtmp)-&gt;hungrytime, EDOG(mtmp)-&gt;apport);\n   309: \t\tStrcat(info, \")\");\n   310: \t    }\n   311: #endif\n   312: \t}"
+    "context": "src/pline.c:307:26\n        302: \tif (mtmp-&gt;mtame) {\t  Strcat(info, \", tame\");\n        303: #ifdef WIZARD\n        304: \t    if (wizard) {\n        305: \t\tSprintf(eos(info), \" (%d\", mtmp-&gt;mtame);\n        306: \t\tif (!mtmp-&gt;isminion)\nTARGET  307: \t\t    Sprintf(eos(info), \"; hungry %ld; apport %d\",\n        308: \t\t\tEDOG(mtmp)-&gt;hungrytime, EDOG(mtmp)-&gt;apport);\n        309: \t\tStrcat(info, \")\");\n        310: \t    }\n        311: #endif\n        312: \t}"
   },
   {
     "key": "L00313_01",
     "original": ", peaceful",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:313:41\n   308: \t\t\tEDOG(mtmp)-&gt;hungrytime, EDOG(mtmp)-&gt;apport);\n   309: \t\tStrcat(info, \")\");\n   310: \t    }\n   311: #endif\n   312: \t}\n&gt;  313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n   314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n   315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)"
+    "context": "src/pline.c:313:41\n        308: \t\t\tEDOG(mtmp)-&gt;hungrytime, EDOG(mtmp)-&gt;apport);\n        309: \t\tStrcat(info, \")\");\n        310: \t    }\n        311: #endif\n        312: \t}\nTARGET  313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n        314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n        315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)"
   },
   {
     "key": "L00314_01",
     "original": ", traitor",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:314:41\n   309: \t\tStrcat(info, \")\");\n   310: \t    }\n   311: #endif\n   312: \t}\n   313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n&gt;  314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n   315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n   319: \t\t\t\t  Strcat(info, \", blind\");"
+    "context": "src/pline.c:314:41\n        309: \t\tStrcat(info, \")\");\n        310: \t    }\n        311: #endif\n        312: \t}\n        313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\nTARGET  314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n        315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n        319: \t\t\t\t  Strcat(info, \", blind\");"
   },
   {
     "key": "L00315_01",
     "original": ", eating",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:315:36\n   310: \t    }\n   311: #endif\n   312: \t}\n   313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n   314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n&gt;  315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n   319: \t\t\t\t  Strcat(info, \", blind\");\n   320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");"
+    "context": "src/pline.c:315:36\n        310: \t    }\n        311: #endif\n        312: \t}\n        313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n        314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\nTARGET  315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n        319: \t\t\t\t  Strcat(info, \", blind\");\n        320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");"
   },
   {
     "key": "L00316_01",
     "original": ", cancelled",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:316:34\n   311: #endif\n   312: \t}\n   313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n   314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n   315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n&gt;  316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n   319: \t\t\t\t  Strcat(info, \", blind\");\n   320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n   321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");"
+    "context": "src/pline.c:316:34\n        311: #endif\n        312: \t}\n        313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n        314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n        315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\nTARGET  316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n        319: \t\t\t\t  Strcat(info, \", blind\");\n        320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n        321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");"
   },
   {
     "key": "L00317_01",
     "original": ", confused",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:317:34\n   312: \t}\n   313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n   314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n   315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n&gt;  317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n   319: \t\t\t\t  Strcat(info, \", blind\");\n   320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n   321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n   322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy"
+    "context": "src/pline.c:317:34\n        312: \t}\n        313: \telse if (mtmp-&gt;mpeaceful) Strcat(info, \", peaceful\");\n        314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n        315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\nTARGET  317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n        319: \t\t\t\t  Strcat(info, \", blind\");\n        320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n        321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n        322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy"
   },
   {
     "key": "L00319_01",
     "original": ", blind",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:319:20\n   314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n   315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n&gt;  319: \t\t\t\t  Strcat(info, \", blind\");\n   320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n   321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n   322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n   323: \t   (donning armor, for instance) as well as paralysis */\n   324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");"
+    "context": "src/pline.c:319:20\n        314: \telse if (mtmp-&gt;mtraitor)  Strcat(info, \", traitor\");\n        315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\nTARGET  319: \t\t\t\t  Strcat(info, \", blind\");\n        320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n        321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n        322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n        323: \t   (donning armor, for instance) as well as paralysis */\n        324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");"
   },
   {
     "key": "L00320_01",
     "original": ", stunned",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:320:34\n   315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n   319: \t\t\t\t  Strcat(info, \", blind\");\n&gt;  320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n   321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n   322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n   323: \t   (donning armor, for instance) as well as paralysis */\n   324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n   325: #else"
+    "context": "src/pline.c:320:34\n        315: \tif (mtmp-&gt;meating)\t  Strcat(info, \", eating\");\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n        319: \t\t\t\t  Strcat(info, \", blind\");\nTARGET  320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n        321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n        322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n        323: \t   (donning armor, for instance) as well as paralysis */\n        324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n        325: #else"
   },
   {
     "key": "L00321_01",
     "original": ", asleep",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:321:38\n   316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n   317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n   318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n   319: \t\t\t\t  Strcat(info, \", blind\");\n   320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n&gt;  321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n   322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n   323: \t   (donning armor, for instance) as well as paralysis */\n   324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n   325: #else\n   326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)"
+    "context": "src/pline.c:321:38\n        316: \tif (mtmp-&gt;mcan)\t\t  Strcat(info, \", cancelled\");\n        317: \tif (mtmp-&gt;mconf)\t  Strcat(info, \", confused\");\n        318: \tif (mtmp-&gt;mblinded || !mtmp-&gt;mcansee)\n        319: \t\t\t\t  Strcat(info, \", blind\");\n        320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\nTARGET  321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n        322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n        323: \t   (donning armor, for instance) as well as paralysis */\n        324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n        325: #else\n        326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)"
   },
   {
     "key": "L00324_01",
     "original": ", paralyzed",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:324:41\n   319: \t\t\t\t  Strcat(info, \", blind\");\n   320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n   321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n   322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n   323: \t   (donning armor, for instance) as well as paralysis */\n&gt;  324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n   325: #else\n   326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)\n   327: \t\t\t\t  Strcat(info, \", can't move\");\n   328: #endif\n   329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */"
+    "context": "src/pline.c:324:41\n        319: \t\t\t\t  Strcat(info, \", blind\");\n        320: \tif (mtmp-&gt;mstun)\t  Strcat(info, \", stunned\");\n        321: \tif (mtmp-&gt;msleeping)\t  Strcat(info, \", asleep\");\n        322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n        323: \t   (donning armor, for instance) as well as paralysis */\nTARGET  324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n        325: #else\n        326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)\n        327: \t\t\t\t  Strcat(info, \", can't move\");\n        328: #endif\n        329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */"
   },
   {
     "key": "L00327_01",
     "original": ", can't move",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:327:20\n   322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n   323: \t   (donning armor, for instance) as well as paralysis */\n   324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n   325: #else\n   326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)\n&gt;  327: \t\t\t\t  Strcat(info, \", can't move\");\n   328: #endif\n   329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n   330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n   331: \t\t\t\t  Strcat(info, \", meditating\");\n   332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");"
+    "context": "src/pline.c:327:20\n        322: #if 0\t/* unfortunately mfrozen covers temporary sleep and being busy\n        323: \t   (donning armor, for instance) as well as paralysis */\n        324: \telse if (mtmp-&gt;mfrozen)\t  Strcat(info, \", paralyzed\");\n        325: #else\n        326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)\nTARGET  327: \t\t\t\t  Strcat(info, \", can't move\");\n        328: #endif\n        329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n        330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n        331: \t\t\t\t  Strcat(info, \", meditating\");\n        332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");"
   },
   {
     "key": "L00331_01",
     "original": ", meditating",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:331:20\n   326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)\n   327: \t\t\t\t  Strcat(info, \", can't move\");\n   328: #endif\n   329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n   330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n&gt;  331: \t\t\t\t  Strcat(info, \", meditating\");\n   332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n   333: #ifdef WIZARD\n   334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n   335: #endif\n   336: \t}"
+    "context": "src/pline.c:331:20\n        326: \telse if (mtmp-&gt;mfrozen || !mtmp-&gt;mcanmove)\n        327: \t\t\t\t  Strcat(info, \", can't move\");\n        328: #endif\n        329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n        330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\nTARGET  331: \t\t\t\t  Strcat(info, \", meditating\");\n        332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n        333: #ifdef WIZARD\n        334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n        335: #endif\n        336: \t}"
   },
   {
     "key": "L00332_01",
     "original": ", scared",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:332:41\n   327: \t\t\t\t  Strcat(info, \", can't move\");\n   328: #endif\n   329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n   330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n   331: \t\t\t\t  Strcat(info, \", meditating\");\n&gt;  332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n   333: #ifdef WIZARD\n   334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n   335: #endif\n   336: \t}\n   337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");"
+    "context": "src/pline.c:332:41\n        327: \t\t\t\t  Strcat(info, \", can't move\");\n        328: #endif\n        329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n        330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n        331: \t\t\t\t  Strcat(info, \", meditating\");\nTARGET  332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n        333: #ifdef WIZARD\n        334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n        335: #endif\n        336: \t}\n        337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");"
   },
   {
     "key": "L00334_01",
     "original": " (%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:334:40\n   329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n   330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n   331: \t\t\t\t  Strcat(info, \", meditating\");\n   332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n   333: #ifdef WIZARD\n&gt;  334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n   335: #endif\n   336: \t}\n   337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n   339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :"
+    "context": "src/pline.c:334:40\n        329: \t\t\t\t  /* [arbitrary reason why it isn't moving] */\n        330: \telse if (mtmp-&gt;mstrategy & STRAT_WAITMASK)\n        331: \t\t\t\t  Strcat(info, \", meditating\");\n        332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n        333: #ifdef WIZARD\nTARGET  334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n        335: #endif\n        336: \t}\n        337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n        339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :"
   },
   {
     "key": "L00337_01",
     "original": ", trapped",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:337:37\n   332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n   333: #ifdef WIZARD\n   334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n   335: #endif\n   336: \t}\n&gt;  337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n   339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n   340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n   341: \t\t\t\t\t\", ???? speed\");\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");"
+    "context": "src/pline.c:337:37\n        332: \telse if (mtmp-&gt;mflee) {\t  Strcat(info, \", scared\");\n        333: #ifdef WIZARD\n        334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n        335: #endif\n        336: \t}\nTARGET  337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n        339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n        340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n        341: \t\t\t\t\t\", ???? speed\");\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");"
   },
   {
     "key": "L00339_01",
     "original": ", fast",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:339:30\n   334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n   335: #endif\n   336: \t}\n   337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n&gt;  339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n   340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n   341: \t\t\t\t\t\", ???? speed\");\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,"
+    "context": "src/pline.c:339:30\n        334: \t    if (wizard)\t\t  Sprintf(eos(info), \" (%d)\", mtmp-&gt;mfleetim);\n        335: #endif\n        336: \t}\n        337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\nTARGET  339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n        340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n        341: \t\t\t\t\t\", ???? speed\");\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,"
   },
   {
     "key": "L00340_01",
     "original": ", slow",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:340:30\n   335: #endif\n   336: \t}\n   337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n   339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n&gt;  340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n   341: \t\t\t\t\t\", ???? speed\");\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :"
+    "context": "src/pline.c:340:30\n        335: #endif\n        336: \t}\n        337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n        339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\nTARGET  340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n        341: \t\t\t\t\t\", ???? speed\");\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :"
   },
   {
     "key": "L00341_01",
     "original": ", ???? speed",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:341:6\n   336: \t}\n   337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n   339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n   340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n&gt;  341: \t\t\t\t\t\", ???? speed\");\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?"
+    "context": "src/pline.c:341:6\n        336: \t}\n        337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n        339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n        340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\nTARGET  341: \t\t\t\t\t\", ???? speed\");\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?"
   },
   {
     "key": "L00342_01",
     "original": ", concealed",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:342:40\n   337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n   339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n   340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n   341: \t\t\t\t\t\", ???? speed\");\n&gt;  342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n   347: \t\t\t\t\", swallowed you\" :"
+    "context": "src/pline.c:342:40\n        337: \tif (mtmp-&gt;mtrapped)\t  Strcat(info, \", trapped\");\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n        339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n        340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n        341: \t\t\t\t\t\", ???? speed\");\nTARGET  342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n        347: \t\t\t\t\", swallowed you\" :"
   },
   {
     "key": "L00343_01",
     "original": ", invisible",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:343:35\n   338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n   339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n   340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n   341: \t\t\t\t\t\", ???? speed\");\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n&gt;  343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n   347: \t\t\t\t\", swallowed you\" :\n   348: \t\t\t\t\", engulfed you\") :"
+    "context": "src/pline.c:343:35\n        338: \tif (mtmp-&gt;mspeed)\t  Strcat(info,\n        339: \t\t\t\t\tmtmp-&gt;mspeed == MFAST ? \", fast\" :\n        340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n        341: \t\t\t\t\t\", ???? speed\");\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\nTARGET  343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n        347: \t\t\t\t\", swallowed you\" :\n        348: \t\t\t\t\", engulfed you\") :"
   },
   {
     "key": "L00345_01",
     "original": ", held by you",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:345:30\n   340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n   341: \t\t\t\t\t\", ???? speed\");\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n&gt;  345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n   347: \t\t\t\t\", swallowed you\" :\n   348: \t\t\t\t\", engulfed you\") :\n   349: \t\t\t\t\", holding you\");\n   350: #ifdef STEED"
+    "context": "src/pline.c:345:30\n        340: \t\t\t\t\tmtmp-&gt;mspeed == MSLOW ? \", slow\" :\n        341: \t\t\t\t\t\", ???? speed\");\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\nTARGET  345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n        347: \t\t\t\t\", swallowed you\" :\n        348: \t\t\t\t\", engulfed you\") :\n        349: \t\t\t\t\", holding you\");\n        350: #ifdef STEED"
   },
   {
     "key": "L00347_01",
     "original": ", swallowed you",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:347:5\n   342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n&gt;  347: \t\t\t\t\", swallowed you\" :\n   348: \t\t\t\t\", engulfed you\") :\n   349: \t\t\t\t\", holding you\");\n   350: #ifdef STEED\n   351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n   352: #endif"
+    "context": "src/pline.c:347:5\n        342: \tif (mtmp-&gt;mundetected)\t  Strcat(info, \", concealed\");\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\nTARGET  347: \t\t\t\t\", swallowed you\" :\n        348: \t\t\t\t\", engulfed you\") :\n        349: \t\t\t\t\", holding you\");\n        350: #ifdef STEED\n        351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n        352: #endif"
   },
   {
     "key": "L00348_01",
     "original": ", engulfed you",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:348:5\n   343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n   347: \t\t\t\t\", swallowed you\" :\n&gt;  348: \t\t\t\t\", engulfed you\") :\n   349: \t\t\t\t\", holding you\");\n   350: #ifdef STEED\n   351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n   352: #endif\n   353: "
+    "context": "src/pline.c:348:5\n        343: \tif (mtmp-&gt;minvis)\t  Strcat(info, \", invisible\");\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n        347: \t\t\t\t\", swallowed you\" :\nTARGET  348: \t\t\t\t\", engulfed you\") :\n        349: \t\t\t\t\", holding you\");\n        350: #ifdef STEED\n        351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n        352: #endif\n        353: "
   },
   {
     "key": "L00349_01",
     "original": ", holding you",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:349:5\n   344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n   345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n   347: \t\t\t\t\", swallowed you\" :\n   348: \t\t\t\t\", engulfed you\") :\n&gt;  349: \t\t\t\t\", holding you\");\n   350: #ifdef STEED\n   351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n   352: #endif\n   353: \n   354: \t/* avoid \"Status of the invisible newt ..., invisible\" */"
+    "context": "src/pline.c:349:5\n        344: \tif (mtmp == u.ustuck)\t  Strcat(info,\n        345: \t\t\t(sticks(youmonst.data)) ? \", held by you\" :\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n        347: \t\t\t\t\", swallowed you\" :\n        348: \t\t\t\t\", engulfed you\") :\nTARGET  349: \t\t\t\t\", holding you\");\n        350: #ifdef STEED\n        351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n        352: #endif\n        353: \n        354: \t/* avoid \"Status of the invisible newt ..., invisible\" */"
   },
   {
     "key": "L00351_01",
     "original": ", carrying you",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:351:39\n   346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n   347: \t\t\t\t\", swallowed you\" :\n   348: \t\t\t\t\", engulfed you\") :\n   349: \t\t\t\t\", holding you\");\n   350: #ifdef STEED\n&gt;  351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n   352: #endif\n   353: \n   354: \t/* avoid \"Status of the invisible newt ..., invisible\" */\n   355: \t/* and unlike a normal mon_nam, use \"saddled\" even if it has a name */\n   356: \tStrcpy(monnambuf, x_monnam(mtmp, ARTICLE_THE, (char *)0,"
+    "context": "src/pline.c:351:39\n        346: \t\t\t\tu.uswallow ? (is_animal(u.ustuck-&gt;data) ?\n        347: \t\t\t\t\", swallowed you\" :\n        348: \t\t\t\t\", engulfed you\") :\n        349: \t\t\t\t\", holding you\");\n        350: #ifdef STEED\nTARGET  351: \tif (mtmp == u.usteed)\t  Strcat(info, \", carrying you\");\n        352: #endif\n        353: \n        354: \t/* avoid \"Status of the invisible newt ..., invisible\" */\n        355: \t/* and unlike a normal mon_nam, use \"saddled\" even if it has a name */\n        356: \tStrcpy(monnambuf, x_monnam(mtmp, ARTICLE_THE, (char *)0,"
   },
   {
     "key": "L00359_01",
     "original": "Status of %s (%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:359:8\n   354: \t/* avoid \"Status of the invisible newt ..., invisible\" */\n   355: \t/* and unlike a normal mon_nam, use \"saddled\" even if it has a name */\n   356: \tStrcpy(monnambuf, x_monnam(mtmp, ARTICLE_THE, (char *)0,\n   357: \t    (SUPPRESS_IT|SUPPRESS_INVISIBLE), FALSE));\n   358: \n&gt;  359: \tpline(\"Status of %s (%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   360: \t\tmonnambuf,\n   361: \t\talign_str(alignment),\n   362: \t\tmtmp-&gt;m_lev,\n   363: \t\tmtmp-&gt;mhp,\n   364: \t\tmtmp-&gt;mhpmax,"
+    "context": "src/pline.c:359:8\n        354: \t/* avoid \"Status of the invisible newt ..., invisible\" */\n        355: \t/* and unlike a normal mon_nam, use \"saddled\" even if it has a name */\n        356: \tStrcpy(monnambuf, x_monnam(mtmp, ARTICLE_THE, (char *)0,\n        357: \t    (SUPPRESS_IT|SUPPRESS_INVISIBLE), FALSE));\n        358: \nTARGET  359: \tpline(\"Status of %s (%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        360: \t\tmonnambuf,\n        361: \t\talign_str(alignment),\n        362: \t\tmtmp-&gt;m_lev,\n        363: \t\tmtmp-&gt;mhp,\n        364: \t\tmtmp-&gt;mhpmax,"
   },
   {
     "key": "L00378_01",
     "original": ", dying from",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:378:16\n   373: {\n   374: \tchar info[BUFSZ];\n   375: \n   376: \tinfo[0] = '\\0';\n   377: \tif (Sick) {\n&gt;  378: \t\tStrcat(info, \", dying from\");\n   379: \t\tif (u.usick_type & SICK_VOMITABLE)\n   380: \t\t\tStrcat(info, \" food poisoning\");\n   381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n   382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n   383: \t\t\t\tStrcat(info, \" and\");"
+    "context": "src/pline.c:378:16\n        373: {\n        374: \tchar info[BUFSZ];\n        375: \n        376: \tinfo[0] = '\\0';\n        377: \tif (Sick) {\nTARGET  378: \t\tStrcat(info, \", dying from\");\n        379: \t\tif (u.usick_type & SICK_VOMITABLE)\n        380: \t\t\tStrcat(info, \" food poisoning\");\n        381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n        382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n        383: \t\t\t\tStrcat(info, \" and\");"
   },
   {
     "key": "L00380_01",
     "original": " food poisoning",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:380:17\n   375: \n   376: \tinfo[0] = '\\0';\n   377: \tif (Sick) {\n   378: \t\tStrcat(info, \", dying from\");\n   379: \t\tif (u.usick_type & SICK_VOMITABLE)\n&gt;  380: \t\t\tStrcat(info, \" food poisoning\");\n   381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n   382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n   383: \t\t\t\tStrcat(info, \" and\");\n   384: \t\t\tStrcat(info, \" illness\");\n   385: \t\t}"
+    "context": "src/pline.c:380:17\n        375: \n        376: \tinfo[0] = '\\0';\n        377: \tif (Sick) {\n        378: \t\tStrcat(info, \", dying from\");\n        379: \t\tif (u.usick_type & SICK_VOMITABLE)\nTARGET  380: \t\t\tStrcat(info, \" food poisoning\");\n        381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n        382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n        383: \t\t\t\tStrcat(info, \" and\");\n        384: \t\t\tStrcat(info, \" illness\");\n        385: \t\t}"
   },
   {
     "key": "L00383_01",
     "original": " and",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:383:18\n   378: \t\tStrcat(info, \", dying from\");\n   379: \t\tif (u.usick_type & SICK_VOMITABLE)\n   380: \t\t\tStrcat(info, \" food poisoning\");\n   381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n   382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n&gt;  383: \t\t\t\tStrcat(info, \" and\");\n   384: \t\t\tStrcat(info, \" illness\");\n   385: \t\t}\n   386: \t}\n   387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");"
+    "context": "src/pline.c:383:18\n        378: \t\tStrcat(info, \", dying from\");\n        379: \t\tif (u.usick_type & SICK_VOMITABLE)\n        380: \t\t\tStrcat(info, \" food poisoning\");\n        381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n        382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\nTARGET  383: \t\t\t\tStrcat(info, \" and\");\n        384: \t\t\tStrcat(info, \" illness\");\n        385: \t\t}\n        386: \t}\n        387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");"
   },
   {
     "key": "L00384_01",
     "original": " illness",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:384:17\n   379: \t\tif (u.usick_type & SICK_VOMITABLE)\n   380: \t\t\tStrcat(info, \" food poisoning\");\n   381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n   382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n   383: \t\t\t\tStrcat(info, \" and\");\n&gt;  384: \t\t\tStrcat(info, \" illness\");\n   385: \t\t}\n   386: \t}\n   387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n   389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");"
+    "context": "src/pline.c:384:17\n        379: \t\tif (u.usick_type & SICK_VOMITABLE)\n        380: \t\t\tStrcat(info, \" food poisoning\");\n        381: \t\tif (u.usick_type & SICK_NONVOMITABLE) {\n        382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n        383: \t\t\t\tStrcat(info, \" and\");\nTARGET  384: \t\t\tStrcat(info, \" illness\");\n        385: \t\t}\n        386: \t}\n        387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n        389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");"
   },
   {
     "key": "L00387_01",
     "original": ", solidifying",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:387:28\n   382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n   383: \t\t\t\tStrcat(info, \" and\");\n   384: \t\t\tStrcat(info, \" illness\");\n   385: \t\t}\n   386: \t}\n&gt;  387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n   389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n   390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n   391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n   392: \tif (Blind) {"
+    "context": "src/pline.c:387:28\n        382: \t\t\tif (u.usick_type & SICK_VOMITABLE)\n        383: \t\t\t\tStrcat(info, \" and\");\n        384: \t\t\tStrcat(info, \" illness\");\n        385: \t\t}\n        386: \t}\nTARGET  387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n        389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n        390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n        391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n        392: \tif (Blind) {"
   },
   {
     "key": "L00388_01",
     "original": ", becoming slimy",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:388:28\n   383: \t\t\t\tStrcat(info, \" and\");\n   384: \t\t\tStrcat(info, \" illness\");\n   385: \t\t}\n   386: \t}\n   387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n&gt;  388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n   389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n   390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n   391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n   392: \tif (Blind) {\n   393: \t    Strcat(info, \", blind\");"
+    "context": "src/pline.c:388:28\n        383: \t\t\t\tStrcat(info, \" and\");\n        384: \t\t\tStrcat(info, \" illness\");\n        385: \t\t}\n        386: \t}\n        387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\nTARGET  388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n        389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n        390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n        391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n        392: \tif (Blind) {\n        393: \t    Strcat(info, \", blind\");"
   },
   {
     "key": "L00389_01",
     "original": ", being strangled",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:389:31\n   384: \t\t\tStrcat(info, \" illness\");\n   385: \t\t}\n   386: \t}\n   387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n&gt;  389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n   390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n   391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n   392: \tif (Blind) {\n   393: \t    Strcat(info, \", blind\");\n   394: \t    if (u.ucreamed) {"
+    "context": "src/pline.c:389:31\n        384: \t\t\tStrcat(info, \" illness\");\n        385: \t\t}\n        386: \t}\n        387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\nTARGET  389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n        390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n        391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n        392: \tif (Blind) {\n        393: \t    Strcat(info, \", blind\");\n        394: \t    if (u.ucreamed) {"
   },
   {
     "key": "L00390_01",
     "original": ", nauseated",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:390:30\n   385: \t\t}\n   386: \t}\n   387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n   389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n&gt;  390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n   391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n   392: \tif (Blind) {\n   393: \t    Strcat(info, \", blind\");\n   394: \t    if (u.ucreamed) {\n   395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded"
+    "context": "src/pline.c:390:30\n        385: \t\t}\n        386: \t}\n        387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n        389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\nTARGET  390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n        391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n        392: \tif (Blind) {\n        393: \t    Strcat(info, \", blind\");\n        394: \t    if (u.ucreamed) {\n        395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded"
   },
   {
     "key": "L00391_01",
     "original": ", confused",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:391:31\n   386: \t}\n   387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n   389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n   390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n&gt;  391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n   392: \tif (Blind) {\n   393: \t    Strcat(info, \", blind\");\n   394: \t    if (u.ucreamed) {\n   395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n   396: \t\t\t\t\t\t|| !haseyes(youmonst.data))"
+    "context": "src/pline.c:391:31\n        386: \t}\n        387: \tif (Stoned)\t\tStrcat(info, \", solidifying\");\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n        389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n        390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\nTARGET  391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n        392: \tif (Blind) {\n        393: \t    Strcat(info, \", blind\");\n        394: \t    if (u.ucreamed) {\n        395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n        396: \t\t\t\t\t\t|| !haseyes(youmonst.data))"
   },
   {
     "key": "L00393_01",
     "original": ", blind",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:393:19\n   388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n   389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n   390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n   391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n   392: \tif (Blind) {\n&gt;  393: \t    Strcat(info, \", blind\");\n   394: \t    if (u.ucreamed) {\n   395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n   396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n   397: \t\t    Strcat(info, \", cover\");\n   398: \t\tStrcat(info, \"ed by sticky goop\");"
+    "context": "src/pline.c:393:19\n        388: \tif (Slimed)\t\tStrcat(info, \", becoming slimy\");\n        389: \tif (Strangled)\t\tStrcat(info, \", being strangled\");\n        390: \tif (Vomiting)\t\tStrcat(info, \", nauseated\"); /* !\"nauseous\" */\n        391: \tif (Confusion)\t\tStrcat(info, \", confused\");\n        392: \tif (Blind) {\nTARGET  393: \t    Strcat(info, \", blind\");\n        394: \t    if (u.ucreamed) {\n        395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n        396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n        397: \t\t    Strcat(info, \", cover\");\n        398: \t\tStrcat(info, \"ed by sticky goop\");"
   },
   {
     "key": "L00397_01",
     "original": ", cover",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:397:20\n   392: \tif (Blind) {\n   393: \t    Strcat(info, \", blind\");\n   394: \t    if (u.ucreamed) {\n   395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n   396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n&gt;  397: \t\t    Strcat(info, \", cover\");\n   398: \t\tStrcat(info, \"ed by sticky goop\");\n   399: \t    }\t/* note: \"goop\" == \"glop\"; variation is intentional */\n   400: \t}\n   401: \tif (Stunned)\t\tStrcat(info, \", stunned\");\n   402: #ifdef STEED"
+    "context": "src/pline.c:397:20\n        392: \tif (Blind) {\n        393: \t    Strcat(info, \", blind\");\n        394: \t    if (u.ucreamed) {\n        395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n        396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\nTARGET  397: \t\t    Strcat(info, \", cover\");\n        398: \t\tStrcat(info, \"ed by sticky goop\");\n        399: \t    }\t/* note: \"goop\" == \"glop\"; variation is intentional */\n        400: \t}\n        401: \tif (Stunned)\t\tStrcat(info, \", stunned\");\n        402: #ifdef STEED"
   },
   {
     "key": "L00398_01",
     "original": "ed by sticky goop",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:398:16\n   393: \t    Strcat(info, \", blind\");\n   394: \t    if (u.ucreamed) {\n   395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n   396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n   397: \t\t    Strcat(info, \", cover\");\n&gt;  398: \t\tStrcat(info, \"ed by sticky goop\");\n   399: \t    }\t/* note: \"goop\" == \"glop\"; variation is intentional */\n   400: \t}\n   401: \tif (Stunned)\t\tStrcat(info, \", stunned\");\n   402: #ifdef STEED\n   403: \tif (!u.usteed)"
+    "context": "src/pline.c:398:16\n        393: \t    Strcat(info, \", blind\");\n        394: \t    if (u.ucreamed) {\n        395: \t\tif ((long)u.ucreamed &lt; Blinded || Blindfolded\n        396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n        397: \t\t    Strcat(info, \", cover\");\nTARGET  398: \t\tStrcat(info, \"ed by sticky goop\");\n        399: \t    }\t/* note: \"goop\" == \"glop\"; variation is intentional */\n        400: \t}\n        401: \tif (Stunned)\t\tStrcat(info, \", stunned\");\n        402: #ifdef STEED\n        403: \tif (!u.usteed)"
   },
   {
     "key": "L00401_01",
     "original": ", stunned",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:401:29\n   396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n   397: \t\t    Strcat(info, \", cover\");\n   398: \t\tStrcat(info, \"ed by sticky goop\");\n   399: \t    }\t/* note: \"goop\" == \"glop\"; variation is intentional */\n   400: \t}\n&gt;  401: \tif (Stunned)\t\tStrcat(info, \", stunned\");\n   402: #ifdef STEED\n   403: \tif (!u.usteed)\n   404: #endif\n   405: \tif (Wounded_legs) {\n   406: \t    const char *what = body_part(LEG);"
+    "context": "src/pline.c:401:29\n        396: \t\t\t\t\t\t|| !haseyes(youmonst.data))\n        397: \t\t    Strcat(info, \", cover\");\n        398: \t\tStrcat(info, \"ed by sticky goop\");\n        399: \t    }\t/* note: \"goop\" == \"glop\"; variation is intentional */\n        400: \t}\nTARGET  401: \tif (Stunned)\t\tStrcat(info, \", stunned\");\n        402: #ifdef STEED\n        403: \tif (!u.usteed)\n        404: #endif\n        405: \tif (Wounded_legs) {\n        406: \t    const char *what = body_part(LEG);"
   },
   {
     "key": "L00409_01",
     "original": ", injured %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:409:24\n   404: #endif\n   405: \tif (Wounded_legs) {\n   406: \t    const char *what = body_part(LEG);\n   407: \t    if ((Wounded_legs & BOTH_SIDES) == BOTH_SIDES)\n   408: \t\twhat = makeplural(what);\n&gt;  409: \t\t\t\tSprintf(eos(info), \", injured %s\", what);\n   410: \t}\n   411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n   413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?"
+    "context": "src/pline.c:409:24\n        404: #endif\n        405: \tif (Wounded_legs) {\n        406: \t    const char *what = body_part(LEG);\n        407: \t    if ((Wounded_legs & BOTH_SIDES) == BOTH_SIDES)\n        408: \t\twhat = makeplural(what);\nTARGET  409: \t\t\t\tSprintf(eos(info), \", injured %s\", what);\n        410: \t}\n        411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\n        413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?"
   },
   {
     "key": "L00411_01",
     "original": ", slippery %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:411:32\n   406: \t    const char *what = body_part(LEG);\n   407: \t    if ((Wounded_legs & BOTH_SIDES) == BOTH_SIDES)\n   408: \t\twhat = makeplural(what);\n   409: \t\t\t\tSprintf(eos(info), \", injured %s\", what);\n   410: \t}\n&gt;  411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n   413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n   415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n   416: \tif (u.uundetected)\tStrcat(info, \", concealed\");"
+    "context": "src/pline.c:411:32\n        406: \t    const char *what = body_part(LEG);\n        407: \t    if ((Wounded_legs & BOTH_SIDES) == BOTH_SIDES)\n        408: \t\twhat = makeplural(what);\n        409: \t\t\t\tSprintf(eos(info), \", injured %s\", what);\n        410: \t}\nTARGET  411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\n        413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n        415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n        416: \tif (u.uundetected)\tStrcat(info, \", concealed\");"
   },
   {
     "key": "L00413_01",
     "original": ", trapped",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:413:29\n   408: \t\twhat = makeplural(what);\n   409: \t\t\t\tSprintf(eos(info), \", injured %s\", what);\n   410: \t}\n   411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n&gt;  413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n   415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n   416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n   417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {"
+    "context": "src/pline.c:413:29\n        408: \t\twhat = makeplural(what);\n        409: \t\t\t\tSprintf(eos(info), \", injured %s\", what);\n        410: \t}\n        411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\nTARGET  413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n        415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n        416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n        417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {"
   },
   {
     "key": "L00415_01",
     "original": ", very fast",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:415:7\n   410: \t}\n   411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n   413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n&gt;  415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n   416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n   417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {\n   419: \t    if (sticks(youmonst.data))\n   420: \t\tStrcat(info, \", holding \");"
+    "context": "src/pline.c:415:7\n        410: \t}\n        411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\n        413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?\nTARGET  415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n        416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n        417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {\n        419: \t    if (sticks(youmonst.data))\n        420: \t\tStrcat(info, \", holding \");"
   },
   {
     "key": "L00415_02",
     "original": ", fast",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:415:23\n   410: \t}\n   411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n   413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n&gt;  415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n   416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n   417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {\n   419: \t    if (sticks(youmonst.data))\n   420: \t\tStrcat(info, \", holding \");"
+    "context": "src/pline.c:415:23\n        410: \t}\n        411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\n        413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?\nTARGET  415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n        416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n        417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {\n        419: \t    if (sticks(youmonst.data))\n        420: \t\tStrcat(info, \", holding \");"
   },
   {
     "key": "L00416_01",
     "original": ", concealed",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:416:34\n   411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n   413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n   415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n&gt;  416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n   417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {\n   419: \t    if (sticks(youmonst.data))\n   420: \t\tStrcat(info, \", holding \");\n   421: \t    else"
+    "context": "src/pline.c:416:34\n        411: \tif (Glib)\t\tSprintf(eos(info), \", slippery %s\",\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\n        413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n        415: \t\t\t\t\t\t\", very fast\" : \", fast\");\nTARGET  416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n        417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {\n        419: \t    if (sticks(youmonst.data))\n        420: \t\tStrcat(info, \", holding \");\n        421: \t    else"
   },
   {
     "key": "L00417_01",
     "original": ", invisible",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:417:27\n   412: \t\t\t\t\tmakeplural(body_part(HAND)));\n   413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n   414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n   415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n   416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n&gt;  417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {\n   419: \t    if (sticks(youmonst.data))\n   420: \t\tStrcat(info, \", holding \");\n   421: \t    else\n   422: \t\tStrcat(info, \", held by \");"
+    "context": "src/pline.c:417:27\n        412: \t\t\t\t\tmakeplural(body_part(HAND)));\n        413: \tif (u.utrap)\t\tStrcat(info, \", trapped\");\n        414: \tif (Fast)\t\tStrcat(info, Very_fast ?\n        415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n        416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\nTARGET  417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {\n        419: \t    if (sticks(youmonst.data))\n        420: \t\tStrcat(info, \", holding \");\n        421: \t    else\n        422: \t\tStrcat(info, \", held by \");"
   },
   {
     "key": "L00420_01",
     "original": ", holding ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:420:16\n   415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n   416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n   417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {\n   419: \t    if (sticks(youmonst.data))\n&gt;  420: \t\tStrcat(info, \", holding \");\n   421: \t    else\n   422: \t\tStrcat(info, \", held by \");\n   423: \t    Strcat(info, mon_nam(u.ustuck));\n   424: \t}\n   425: "
+    "context": "src/pline.c:420:16\n        415: \t\t\t\t\t\t\", very fast\" : \", fast\");\n        416: \tif (u.uundetected)\tStrcat(info, \", concealed\");\n        417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {\n        419: \t    if (sticks(youmonst.data))\nTARGET  420: \t\tStrcat(info, \", holding \");\n        421: \t    else\n        422: \t\tStrcat(info, \", held by \");\n        423: \t    Strcat(info, mon_nam(u.ustuck));\n        424: \t}\n        425: "
   },
   {
     "key": "L00422_01",
     "original": ", held by ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:422:16\n   417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n   418: \tif (u.ustuck) {\n   419: \t    if (sticks(youmonst.data))\n   420: \t\tStrcat(info, \", holding \");\n   421: \t    else\n&gt;  422: \t\tStrcat(info, \", held by \");\n   423: \t    Strcat(info, mon_nam(u.ustuck));\n   424: \t}\n   425: \n   426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   427: \t\tplname,"
+    "context": "src/pline.c:422:16\n        417: \tif (Invis)\t\tStrcat(info, \", invisible\");\n        418: \tif (u.ustuck) {\n        419: \t    if (sticks(youmonst.data))\n        420: \t\tStrcat(info, \", holding \");\n        421: \t    else\nTARGET  422: \t\tStrcat(info, \", held by \");\n        423: \t    Strcat(info, mon_nam(u.ustuck));\n        424: \t}\n        425: \n        426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        427: \t\tplname,"
   },
   {
     "key": "L00426_01",
     "original": "Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:426:8\n   421: \t    else\n   422: \t\tStrcat(info, \", held by \");\n   423: \t    Strcat(info, mon_nam(u.ustuck));\n   424: \t}\n   425: \n&gt;  426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   427: \t\tplname,\n   428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n   429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :"
+    "context": "src/pline.c:426:8\n        421: \t    else\n        422: \t\tStrcat(info, \", held by \");\n        423: \t    Strcat(info, mon_nam(u.ustuck));\n        424: \t}\n        425: \nTARGET  426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        427: \t\tplname,\n        428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n        429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :"
   },
   {
     "key": "L00428_01",
     "original": "piously ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:428:33\n   423: \t    Strcat(info, mon_nam(u.ustuck));\n   424: \t}\n   425: \n   426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   427: \t\tplname,\n&gt;  428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n   429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n   433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :"
+    "context": "src/pline.c:428:33\n        423: \t    Strcat(info, mon_nam(u.ustuck));\n        424: \t}\n        425: \n        426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        427: \t\tplname,\nTARGET  428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n        429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\n        433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :"
   },
   {
     "key": "L00429_01",
     "original": "devoutly ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:429:32\n   424: \t}\n   425: \n   426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   427: \t\tplname,\n   428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n&gt;  429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n   433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n   434: \t\t    (u.ualign.record == 0) ? \"nominally \" :"
+    "context": "src/pline.c:429:32\n        424: \t}\n        425: \n        426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        427: \t\tplname,\n        428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\nTARGET  429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\n        433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n        434: \t\t    (u.ualign.record == 0) ? \"nominally \" :"
   },
   {
     "key": "L00430_01",
     "original": "fervently ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:430:31\n   425: \n   426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   427: \t\tplname,\n   428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n   429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n&gt;  430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n   433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n   434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n   435: \t\t\t\t\t    \"insufficiently \","
+    "context": "src/pline.c:430:31\n        425: \n        426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        427: \t\tplname,\n        428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n        429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\nTARGET  430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\n        433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n        434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n        435: \t\t\t\t\t    \"insufficiently \","
   },
   {
     "key": "L00431_01",
     "original": "stridently ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:431:31\n   426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n   427: \t\tplname,\n   428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n   429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n&gt;  431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n   433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n   434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n   435: \t\t\t\t\t    \"insufficiently \",\n   436: \t\talign_str(u.ualign.type),"
+    "context": "src/pline.c:431:31\n        426: \tpline(\"Status of %s (%s%s):  Level %d  HP %d(%d)  Pw %d(%d)  AC %d%s.\",\n        427: \t\tplname,\n        428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n        429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\nTARGET  431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\n        433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n        434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n        435: \t\t\t\t\t    \"insufficiently \",\n        436: \t\talign_str(u.ualign.type),"
   },
   {
     "key": "L00433_01",
     "original": "haltingly ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:433:32\n   428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n   429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n&gt;  433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n   434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n   435: \t\t\t\t\t    \"insufficiently \",\n   436: \t\talign_str(u.ualign.type),\n   437: \t\tUpolyd ? mons[u.umonnum].mlevel : u.ulevel,\n   438: \t\tUpolyd ? u.mh : u.uhp,"
+    "context": "src/pline.c:433:32\n        428: \t\t    (u.ualign.record &gt;= 20) ? \"piously \" :\n        429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\nTARGET  433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n        434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n        435: \t\t\t\t\t    \"insufficiently \",\n        436: \t\talign_str(u.ualign.type),\n        437: \t\tUpolyd ? mons[u.umonnum].mlevel : u.ulevel,\n        438: \t\tUpolyd ? u.mh : u.uhp,"
   },
   {
     "key": "L00434_01",
     "original": "nominally ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:434:32\n   429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n   433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n&gt;  434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n   435: \t\t\t\t\t    \"insufficiently \",\n   436: \t\talign_str(u.ualign.type),\n   437: \t\tUpolyd ? mons[u.umonnum].mlevel : u.ulevel,\n   438: \t\tUpolyd ? u.mh : u.uhp,\n   439: \t\tUpolyd ? u.mhmax : u.uhpmax,"
+    "context": "src/pline.c:434:32\n        429: \t\t    (u.ualign.record &gt; 13) ? \"devoutly \" :\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\n        433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\nTARGET  434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n        435: \t\t\t\t\t    \"insufficiently \",\n        436: \t\talign_str(u.ualign.type),\n        437: \t\tUpolyd ? mons[u.umonnum].mlevel : u.ulevel,\n        438: \t\tUpolyd ? u.mh : u.uhp,\n        439: \t\tUpolyd ? u.mhmax : u.uhpmax,"
   },
   {
     "key": "L00435_01",
     "original": "insufficiently ",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:435:10\n   430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n   431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n   432: \t\t    (u.ualign.record == 3) ? \"\" :\n   433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n   434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\n&gt;  435: \t\t\t\t\t    \"insufficiently \",\n   436: \t\talign_str(u.ualign.type),\n   437: \t\tUpolyd ? mons[u.umonnum].mlevel : u.ulevel,\n   438: \t\tUpolyd ? u.mh : u.uhp,\n   439: \t\tUpolyd ? u.mhmax : u.uhpmax,\n   440: \t\tu.uen,"
+    "context": "src/pline.c:435:10\n        430: \t\t    (u.ualign.record &gt; 8) ? \"fervently \" :\n        431: \t\t    (u.ualign.record &gt; 3) ? \"stridently \" :\n        432: \t\t    (u.ualign.record == 3) ? \"\" :\n        433: \t\t    (u.ualign.record &gt;= 1) ? \"haltingly \" :\n        434: \t\t    (u.ualign.record == 0) ? \"nominally \" :\nTARGET  435: \t\t\t\t\t    \"insufficiently \",\n        436: \t\talign_str(u.ualign.type),\n        437: \t\tUpolyd ? mons[u.umonnum].mlevel : u.ulevel,\n        438: \t\tUpolyd ? u.mh : u.uhp,\n        439: \t\tUpolyd ? u.mhmax : u.uhpmax,\n        440: \t\tu.uen,"
   },
   {
     "key": "L00449_01",
     "original": "%s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:449:8\n   444: }\n   445: \n   446: void\n   447: self_invis_message()\n   448: {\n&gt;  449: \tpline(\"%s %s.\",\n   450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n   451: \t    See_invisible ? \"can see right through yourself\" :\n   452: \t\t\"can't see yourself\");\n   453: }\n   454: "
+    "context": "src/pline.c:449:8\n        444: }\n        445: \n        446: void\n        447: self_invis_message()\n        448: {\nTARGET  449: \tpline(\"%s %s.\",\n        450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n        451: \t    See_invisible ? \"can see right through yourself\" :\n        452: \t\t\"can't see yourself\");\n        453: }\n        454: "
   },
   {
     "key": "L00450_01",
     "original": "Far out, man!  You",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:450:22\n   445: \n   446: void\n   447: self_invis_message()\n   448: {\n   449: \tpline(\"%s %s.\",\n&gt;  450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n   451: \t    See_invisible ? \"can see right through yourself\" :\n   452: \t\t\"can't see yourself\");\n   453: }\n   454: \n   455: #endif /* OVLB */"
+    "context": "src/pline.c:450:22\n        445: \n        446: void\n        447: self_invis_message()\n        448: {\n        449: \tpline(\"%s %s.\",\nTARGET  450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n        451: \t    See_invisible ? \"can see right through yourself\" :\n        452: \t\t\"can't see yourself\");\n        453: }\n        454: \n        455: #endif /* OVLB */"
   },
   {
     "key": "L00450_02",
     "original": "Gee!  All of a sudden, you",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:450:45\n   445: \n   446: void\n   447: self_invis_message()\n   448: {\n   449: \tpline(\"%s %s.\",\n&gt;  450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n   451: \t    See_invisible ? \"can see right through yourself\" :\n   452: \t\t\"can't see yourself\");\n   453: }\n   454: \n   455: #endif /* OVLB */"
+    "context": "src/pline.c:450:45\n        445: \n        446: void\n        447: self_invis_message()\n        448: {\n        449: \tpline(\"%s %s.\",\nTARGET  450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n        451: \t    See_invisible ? \"can see right through yourself\" :\n        452: \t\t\"can't see yourself\");\n        453: }\n        454: \n        455: #endif /* OVLB */"
   },
   {
     "key": "L00451_01",
     "original": "can see right through yourself",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:451:22\n   446: void\n   447: self_invis_message()\n   448: {\n   449: \tpline(\"%s %s.\",\n   450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n&gt;  451: \t    See_invisible ? \"can see right through yourself\" :\n   452: \t\t\"can't see yourself\");\n   453: }\n   454: \n   455: #endif /* OVLB */\n   456: /*pline.c*/"
+    "context": "src/pline.c:451:22\n        446: void\n        447: self_invis_message()\n        448: {\n        449: \tpline(\"%s %s.\",\n        450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\nTARGET  451: \t    See_invisible ? \"can see right through yourself\" :\n        452: \t\t\"can't see yourself\");\n        453: }\n        454: \n        455: #endif /* OVLB */\n        456: /*pline.c*/"
   },
   {
     "key": "L00452_01",
     "original": "can't see yourself",
     "translation": "",
     "stage": 0,
-    "context": "src/pline.c:452:3\n   447: self_invis_message()\n   448: {\n   449: \tpline(\"%s %s.\",\n   450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n   451: \t    See_invisible ? \"can see right through yourself\" :\n&gt;  452: \t\t\"can't see yourself\");\n   453: }\n   454: \n   455: #endif /* OVLB */\n   456: /*pline.c*/"
+    "context": "src/pline.c:452:3\n        447: self_invis_message()\n        448: {\n        449: \tpline(\"%s %s.\",\n        450: \t    Hallucination ? \"Far out, man!  You\" : \"Gee!  All of a sudden, you\",\n        451: \t    See_invisible ? \"can see right through yourself\" :\nTARGET  452: \t\t\"can't see yourself\");\n        453: }\n        454: \n        455: #endif /* OVLB */\n        456: /*pline.c*/"
   }
 ]

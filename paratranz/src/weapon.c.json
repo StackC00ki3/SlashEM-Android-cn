@@ -4,643 +4,643 @@
     "original": "no skill",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:81:5\n    76: #endif\n    77: };\n    78: \n    79: \n    80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n&gt;   81:     \"no skill\",\n    82:     \"polearms\",\n    83:     \"saber\",\n    84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\","
+    "context": "src/weapon.c:81:5\n         76: #endif\n         77: };\n         78: \n         79: \n         80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\nTARGET   81:     \"no skill\",\n         82:     \"polearms\",\n         83:     \"saber\",\n         84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\","
   },
   {
     "key": "L00082_01",
     "original": "polearms",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:82:5\n    77: };\n    78: \n    79: \n    80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n    81:     \"no skill\",\n&gt;   82:     \"polearms\",\n    83:     \"saber\",\n    84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\","
+    "context": "src/weapon.c:82:5\n         77: };\n         78: \n         79: \n         80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n         81:     \"no skill\",\nTARGET   82:     \"polearms\",\n         83:     \"saber\",\n         84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\","
   },
   {
     "key": "L00083_01",
     "original": "saber",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:83:5\n    78: \n    79: \n    80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n    81:     \"no skill\",\n    82:     \"polearms\",\n&gt;   83:     \"saber\",\n    84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\","
+    "context": "src/weapon.c:83:5\n         78: \n         79: \n         80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n         81:     \"no skill\",\n         82:     \"polearms\",\nTARGET   83:     \"saber\",\n         84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\","
   },
   {
     "key": "L00084_01",
     "original": "hammer",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:84:5\n    79: \n    80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n    81:     \"no skill\",\n    82:     \"polearms\",\n    83:     \"saber\",\n&gt;   84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\","
+    "context": "src/weapon.c:84:5\n         79: \n         80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n         81:     \"no skill\",\n         82:     \"polearms\",\n         83:     \"saber\",\nTARGET   84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\","
   },
   {
     "key": "L00085_01",
     "original": "whip",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:85:5\n    80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n    81:     \"no skill\",\n    82:     \"polearms\",\n    83:     \"saber\",\n    84:     \"hammer\",\n&gt;   85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\","
+    "context": "src/weapon.c:85:5\n         80: STATIC_OVL NEARDATA const char * const odd_skill_names[] = {\n         81:     \"no skill\",\n         82:     \"polearms\",\n         83:     \"saber\",\n         84:     \"hammer\",\nTARGET   85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\","
   },
   {
     "key": "L00086_01",
     "original": "paddle",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:86:5\n    81:     \"no skill\",\n    82:     \"polearms\",\n    83:     \"saber\",\n    84:     \"hammer\",\n    85:     \"whip\",\n&gt;   86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\","
+    "context": "src/weapon.c:86:5\n         81:     \"no skill\",\n         82:     \"polearms\",\n         83:     \"saber\",\n         84:     \"hammer\",\n         85:     \"whip\",\nTARGET   86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\","
   },
   {
     "key": "L00087_01",
     "original": "firearms",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:87:5\n    82:     \"polearms\",\n    83:     \"saber\",\n    84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\",\n&gt;   87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\","
+    "context": "src/weapon.c:87:5\n         82:     \"polearms\",\n         83:     \"saber\",\n         84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\",\nTARGET   87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\","
   },
   {
     "key": "L00088_01",
     "original": "attack spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:88:5\n    83:     \"saber\",\n    84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\",\n&gt;   88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\","
+    "context": "src/weapon.c:88:5\n         83:     \"saber\",\n         84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\",\nTARGET   88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\","
   },
   {
     "key": "L00089_01",
     "original": "healing spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:89:5\n    84:     \"hammer\",\n    85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\",\n&gt;   89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\","
+    "context": "src/weapon.c:89:5\n         84:     \"hammer\",\n         85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\",\nTARGET   89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\","
   },
   {
     "key": "L00090_01",
     "original": "divination spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:90:5\n    85:     \"whip\",\n    86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n&gt;   90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\","
+    "context": "src/weapon.c:90:5\n         85:     \"whip\",\n         86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\",\nTARGET   90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\","
   },
   {
     "key": "L00091_01",
     "original": "enchantment spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:91:5\n    86:     \"paddle\",\n    87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n&gt;   91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\","
+    "context": "src/weapon.c:91:5\n         86:     \"paddle\",\n         87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\",\nTARGET   91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\","
   },
   {
     "key": "L00092_01",
     "original": "protection spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:92:5\n    87:     \"firearms\",\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n&gt;   92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n    97:     \"riding\","
+    "context": "src/weapon.c:92:5\n         87:     \"firearms\",\n         88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\nTARGET   92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\",\n         97:     \"riding\","
   },
   {
     "key": "L00093_01",
     "original": "body spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:93:5\n    88:     \"attack spells\",\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n&gt;   93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n    97:     \"riding\",\n    98:     \"two-handed combat\","
+    "context": "src/weapon.c:93:5\n         88:     \"attack spells\",\n         89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\nTARGET   93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\",\n         97:     \"riding\",\n         98:     \"two-handed combat\","
   },
   {
     "key": "L00094_01",
     "original": "matter spells",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:94:5\n    89:     \"healing spells\",\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\",\n&gt;   94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n    97:     \"riding\",\n    98:     \"two-handed combat\",\n    99: #ifdef LIGHTSABERS"
+    "context": "src/weapon.c:94:5\n         89:     \"healing spells\",\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\",\nTARGET   94:     \"matter spells\",\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\",\n         97:     \"riding\",\n         98:     \"two-handed combat\",\n         99: #ifdef LIGHTSABERS"
   },
   {
     "key": "L00095_01",
     "original": "bare-handed combat",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:95:5\n    90:     \"divination spells\",\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\",\n&gt;   95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n    97:     \"riding\",\n    98:     \"two-handed combat\",\n    99: #ifdef LIGHTSABERS\n   100:     \"lightsaber\""
+    "context": "src/weapon.c:95:5\n         90:     \"divination spells\",\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\",\nTARGET   95:     \"bare-handed combat\",\n         96:     \"martial arts\",\n         97:     \"riding\",\n         98:     \"two-handed combat\",\n         99: #ifdef LIGHTSABERS\n        100:     \"lightsaber\""
   },
   {
     "key": "L00096_01",
     "original": "martial arts",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:96:5\n    91:     \"enchantment spells\",\n    92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n&gt;   96:     \"martial arts\",\n    97:     \"riding\",\n    98:     \"two-handed combat\",\n    99: #ifdef LIGHTSABERS\n   100:     \"lightsaber\"\n   101: #endif"
+    "context": "src/weapon.c:96:5\n         91:     \"enchantment spells\",\n         92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\",\nTARGET   96:     \"martial arts\",\n         97:     \"riding\",\n         98:     \"two-handed combat\",\n         99: #ifdef LIGHTSABERS\n        100:     \"lightsaber\"\n        101: #endif"
   },
   {
     "key": "L00097_01",
     "original": "riding",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:97:5\n    92:     \"protection spells\",\n    93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n&gt;   97:     \"riding\",\n    98:     \"two-handed combat\",\n    99: #ifdef LIGHTSABERS\n   100:     \"lightsaber\"\n   101: #endif\n   102: };"
+    "context": "src/weapon.c:97:5\n         92:     \"protection spells\",\n         93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\",\nTARGET   97:     \"riding\",\n         98:     \"two-handed combat\",\n         99: #ifdef LIGHTSABERS\n        100:     \"lightsaber\"\n        101: #endif\n        102: };"
   },
   {
     "key": "L00098_01",
     "original": "two-handed combat",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:98:5\n    93:     \"body spells\",\n    94:     \"matter spells\",\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n    97:     \"riding\",\n&gt;   98:     \"two-handed combat\",\n    99: #ifdef LIGHTSABERS\n   100:     \"lightsaber\"\n   101: #endif\n   102: };\n   103: "
+    "context": "src/weapon.c:98:5\n         93:     \"body spells\",\n         94:     \"matter spells\",\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\",\n         97:     \"riding\",\nTARGET   98:     \"two-handed combat\",\n         99: #ifdef LIGHTSABERS\n        100:     \"lightsaber\"\n        101: #endif\n        102: };\n        103: "
   },
   {
     "key": "L00100_01",
     "original": "lightsaber",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:100:5\n    95:     \"bare-handed combat\",\n    96:     \"martial arts\",\n    97:     \"riding\",\n    98:     \"two-handed combat\",\n    99: #ifdef LIGHTSABERS\n&gt;  100:     \"lightsaber\"\n   101: #endif\n   102: };\n   103: \n   104: \n   105: STATIC_OVL void"
+    "context": "src/weapon.c:100:5\n         95:     \"bare-handed combat\",\n         96:     \"martial arts\",\n         97:     \"riding\",\n         98:     \"two-handed combat\",\n         99: #ifdef LIGHTSABERS\nTARGET  100:     \"lightsaber\"\n        101: #endif\n        102: };\n        103: \n        104: \n        105: STATIC_OVL void"
   },
   {
     "key": "L00109_01",
     "original": "more %s in your %sskills.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:109:11\n   104: \n   105: STATIC_OVL void\n   106: give_may_advance_msg(skill)\n   107: int skill;\n   108: {\n&gt;  109: \tYou_feel(\"more %s in your %sskills.\",\n   110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n   111: \t\tskill == P_NONE ?\n   112: \t\t\t\"\" :\n   113: \t\tskill &lt;= P_LAST_WEAPON ?\n   114: \t\t\t\"weapon \" :"
+    "context": "src/weapon.c:109:11\n        104: \n        105: STATIC_OVL void\n        106: give_may_advance_msg(skill)\n        107: int skill;\n        108: {\nTARGET  109: \tYou_feel(\"more %s in your %sskills.\",\n        110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n        111: \t\tskill == P_NONE ?\n        112: \t\t\t\"\" :\n        113: \t\tskill &lt;= P_LAST_WEAPON ?\n        114: \t\t\t\"weapon \" :"
   },
   {
     "key": "L00110_01",
     "original": "confident",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:110:29\n   105: STATIC_OVL void\n   106: give_may_advance_msg(skill)\n   107: int skill;\n   108: {\n   109: \tYou_feel(\"more %s in your %sskills.\",\n&gt;  110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n   111: \t\tskill == P_NONE ?\n   112: \t\t\t\"\" :\n   113: \t\tskill &lt;= P_LAST_WEAPON ?\n   114: \t\t\t\"weapon \" :\n   115: \t\tskill &lt;= P_LAST_SPELL ?"
+    "context": "src/weapon.c:110:29\n        105: STATIC_OVL void\n        106: give_may_advance_msg(skill)\n        107: int skill;\n        108: {\n        109: \tYou_feel(\"more %s in your %sskills.\",\nTARGET  110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n        111: \t\tskill == P_NONE ?\n        112: \t\t\t\"\" :\n        113: \t\tskill &lt;= P_LAST_WEAPON ?\n        114: \t\t\t\"weapon \" :\n        115: \t\tskill &lt;= P_LAST_SPELL ?"
   },
   {
     "key": "L00110_02",
     "original": "comfortable",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:110:43\n   105: STATIC_OVL void\n   106: give_may_advance_msg(skill)\n   107: int skill;\n   108: {\n   109: \tYou_feel(\"more %s in your %sskills.\",\n&gt;  110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n   111: \t\tskill == P_NONE ?\n   112: \t\t\t\"\" :\n   113: \t\tskill &lt;= P_LAST_WEAPON ?\n   114: \t\t\t\"weapon \" :\n   115: \t\tskill &lt;= P_LAST_SPELL ?"
+    "context": "src/weapon.c:110:43\n        105: STATIC_OVL void\n        106: give_may_advance_msg(skill)\n        107: int skill;\n        108: {\n        109: \tYou_feel(\"more %s in your %sskills.\",\nTARGET  110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n        111: \t\tskill == P_NONE ?\n        112: \t\t\t\"\" :\n        113: \t\tskill &lt;= P_LAST_WEAPON ?\n        114: \t\t\t\"weapon \" :\n        115: \t\tskill &lt;= P_LAST_SPELL ?"
   },
   {
     "key": "L00114_01",
     "original": "weapon ",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:114:4\n   109: \tYou_feel(\"more %s in your %sskills.\",\n   110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n   111: \t\tskill == P_NONE ?\n   112: \t\t\t\"\" :\n   113: \t\tskill &lt;= P_LAST_WEAPON ?\n&gt;  114: \t\t\t\"weapon \" :\n   115: \t\tskill &lt;= P_LAST_SPELL ?\n   116: \t\t\t\"spell casting \" :\n   117:             skill &lt;= P_LAST_H_TO_H ?\n   118: \t            \"fighting \":\n   119: \t            \"\");"
+    "context": "src/weapon.c:114:4\n        109: \tYou_feel(\"more %s in your %sskills.\",\n        110: \t    !P_RESTRICTED(skill) ? \"confident\" : \"comfortable\",\n        111: \t\tskill == P_NONE ?\n        112: \t\t\t\"\" :\n        113: \t\tskill &lt;= P_LAST_WEAPON ?\nTARGET  114: \t\t\t\"weapon \" :\n        115: \t\tskill &lt;= P_LAST_SPELL ?\n        116: \t\t\t\"spell casting \" :\n        117:             skill &lt;= P_LAST_H_TO_H ?\n        118: \t            \"fighting \":\n        119: \t            \"\");"
   },
   {
     "key": "L00116_01",
     "original": "spell casting ",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:116:4\n   111: \t\tskill == P_NONE ?\n   112: \t\t\t\"\" :\n   113: \t\tskill &lt;= P_LAST_WEAPON ?\n   114: \t\t\t\"weapon \" :\n   115: \t\tskill &lt;= P_LAST_SPELL ?\n&gt;  116: \t\t\t\"spell casting \" :\n   117:             skill &lt;= P_LAST_H_TO_H ?\n   118: \t            \"fighting \":\n   119: \t            \"\");\n   120: }\n   121: "
+    "context": "src/weapon.c:116:4\n        111: \t\tskill == P_NONE ?\n        112: \t\t\t\"\" :\n        113: \t\tskill &lt;= P_LAST_WEAPON ?\n        114: \t\t\t\"weapon \" :\n        115: \t\tskill &lt;= P_LAST_SPELL ?\nTARGET  116: \t\t\t\"spell casting \" :\n        117:             skill &lt;= P_LAST_H_TO_H ?\n        118: \t            \"fighting \":\n        119: \t            \"\");\n        120: }\n        121: "
   },
   {
     "key": "L00118_01",
     "original": "fighting ",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:118:14\n   113: \t\tskill &lt;= P_LAST_WEAPON ?\n   114: \t\t\t\"weapon \" :\n   115: \t\tskill &lt;= P_LAST_SPELL ?\n   116: \t\t\t\"spell casting \" :\n   117:             skill &lt;= P_LAST_H_TO_H ?\n&gt;  118: \t            \"fighting \":\n   119: \t            \"\");\n   120: }\n   121: \n   122: #endif\t/* OVLB */\n   123: "
+    "context": "src/weapon.c:118:14\n        113: \t\tskill &lt;= P_LAST_WEAPON ?\n        114: \t\t\t\"weapon \" :\n        115: \t\tskill &lt;= P_LAST_SPELL ?\n        116: \t\t\t\"spell casting \" :\n        117:             skill &lt;= P_LAST_H_TO_H ?\nTARGET  118: \t            \"fighting \":\n        119: \t            \"\");\n        120: }\n        121: \n        122: #endif\t/* OVLB */\n        123: "
   },
   {
     "key": "L00700_01",
     "original": "%s drops %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:700:13\n   695: \t\tsetmnotwielded(mon, mw_tmp);\n   696: \t\tMON_NOWEP(mon);\n   697: \t\tmon-&gt;weapon_check = NO_WEAPON_WANTED;\n   698: \t\tobj_extract_self(obj);\n   699: \t\tif (cansee(mon-&gt;mx, mon-&gt;my)) {\n&gt;  700: \t\t    pline(\"%s drops %s.\", Monnam(mon),\n   701: \t\t\t  distant_name(obj, doname));\n   702: \t\t    newsym(mon-&gt;mx, mon-&gt;my);\n   703: \t\t}\n   704: \t\t/* might be dropping object into water or lava */\n   705: \t\tif (!flooreffects(obj, mon-&gt;mx, mon-&gt;my, \"drop\")) {"
+    "context": "src/weapon.c:700:13\n        695: \t\tsetmnotwielded(mon, mw_tmp);\n        696: \t\tMON_NOWEP(mon);\n        697: \t\tmon-&gt;weapon_check = NO_WEAPON_WANTED;\n        698: \t\tobj_extract_self(obj);\n        699: \t\tif (cansee(mon-&gt;mx, mon-&gt;my)) {\nTARGET  700: \t\t    pline(\"%s drops %s.\", Monnam(mon),\n        701: \t\t\t  distant_name(obj, doname));\n        702: \t\t    newsym(mon-&gt;mx, mon-&gt;my);\n        703: \t\t}\n        704: \t\t/* might be dropping object into water or lava */\n        705: \t\tif (!flooreffects(obj, mon-&gt;mx, mon-&gt;my, \"drop\")) {"
   },
   {
     "key": "L00705_01",
     "original": "drop",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:705:44\n   700: \t\t    pline(\"%s drops %s.\", Monnam(mon),\n   701: \t\t\t  distant_name(obj, doname));\n   702: \t\t    newsym(mon-&gt;mx, mon-&gt;my);\n   703: \t\t}\n   704: \t\t/* might be dropping object into water or lava */\n&gt;  705: \t\tif (!flooreffects(obj, mon-&gt;mx, mon-&gt;my, \"drop\")) {\n   706: \t\t    if (polyspot) bypass_obj(obj);\n   707: \t\t    place_object(obj, mon-&gt;mx, mon-&gt;my);\n   708: \t\t    stackobj(obj);\n   709: \t\t}\n   710: \t\treturn;"
+    "context": "src/weapon.c:705:44\n        700: \t\t    pline(\"%s drops %s.\", Monnam(mon),\n        701: \t\t\t  distant_name(obj, doname));\n        702: \t\t    newsym(mon-&gt;mx, mon-&gt;my);\n        703: \t\t}\n        704: \t\t/* might be dropping object into water or lava */\nTARGET  705: \t\tif (!flooreffects(obj, mon-&gt;mx, mon-&gt;my, \"drop\")) {\n        706: \t\t    if (polyspot) bypass_obj(obj);\n        707: \t\t    place_object(obj, mon-&gt;mx, mon-&gt;my);\n        708: \t\t    stackobj(obj);\n        709: \t\t}\n        710: \t\treturn;"
   },
   {
     "key": "L00771_01",
     "original": "weapon_check %d for %s?",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:771:23\n   766: \t\t\tif (!obj || which_armor(mon, W_ARMS)) {\n   767: \t\t\t    obj = m_carrying(mon, PICK_AXE);\n   768: \t\t\t    if (!obj) obj = m_carrying(mon, AXE);\n   769: \t\t\t}\n   770: \t\t\tbreak;\n&gt;  771: \t\tdefault: impossible(\"weapon_check %d for %s?\",\n   772: \t\t\t\tmon-&gt;weapon_check, mon_nam(mon));\n   773: \t\t\treturn 0;\n   774: \t}\n   775: \tif (obj && obj != &zeroobj) {\n   776: \t\tstruct obj *mw_tmp = MON_WEP(mon);"
+    "context": "src/weapon.c:771:23\n        766: \t\t\tif (!obj || which_armor(mon, W_ARMS)) {\n        767: \t\t\t    obj = m_carrying(mon, PICK_AXE);\n        768: \t\t\t    if (!obj) obj = m_carrying(mon, AXE);\n        769: \t\t\t}\n        770: \t\t\tbreak;\nTARGET  771: \t\tdefault: impossible(\"weapon_check %d for %s?\",\n        772: \t\t\t\tmon-&gt;weapon_check, mon_nam(mon));\n        773: \t\t\treturn 0;\n        774: \t}\n        775: \tif (obj && obj != &zeroobj) {\n        776: \t\tstruct obj *mw_tmp = MON_WEP(mon);"
   },
   {
     "key": "L00798_01",
     "original": "%s welded to %s %s",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:798:24\n   793: \t\t    if (canseemon(mon)) {\n   794: \t\t\tchar welded_buf[BUFSZ];\n   795: \t\t\tconst char *mon_hand = mbodypart(mon, HAND);\n   796: \n   797: \t\t\tif (bimanual(mw_tmp)) mon_hand = makeplural(mon_hand);\n&gt;  798: \t\t\tSprintf(welded_buf, \"%s welded to %s %s\",\n   799: \t\t\t\totense(mw_tmp, \"are\"),\n   800: \t\t\t\tmhis(mon), mon_hand);\n   801: \n   802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n   803: \t\t\t    pline(\"Since %s weapon%s %s,\","
+    "context": "src/weapon.c:798:24\n        793: \t\t    if (canseemon(mon)) {\n        794: \t\t\tchar welded_buf[BUFSZ];\n        795: \t\t\tconst char *mon_hand = mbodypart(mon, HAND);\n        796: \n        797: \t\t\tif (bimanual(mw_tmp)) mon_hand = makeplural(mon_hand);\nTARGET  798: \t\t\tSprintf(welded_buf, \"%s welded to %s %s\",\n        799: \t\t\t\totense(mw_tmp, \"are\"),\n        800: \t\t\t\tmhis(mon), mon_hand);\n        801: \n        802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n        803: \t\t\t    pline(\"Since %s weapon%s %s,\","
   },
   {
     "key": "L00799_01",
     "original": "are",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:799:20\n   794: \t\t\tchar welded_buf[BUFSZ];\n   795: \t\t\tconst char *mon_hand = mbodypart(mon, HAND);\n   796: \n   797: \t\t\tif (bimanual(mw_tmp)) mon_hand = makeplural(mon_hand);\n   798: \t\t\tSprintf(welded_buf, \"%s welded to %s %s\",\n&gt;  799: \t\t\t\totense(mw_tmp, \"are\"),\n   800: \t\t\t\tmhis(mon), mon_hand);\n   801: \n   802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n   803: \t\t\t    pline(\"Since %s weapon%s %s,\",\n   804: \t\t\t\t  s_suffix(mon_nam(mon)),"
+    "context": "src/weapon.c:799:20\n        794: \t\t\tchar welded_buf[BUFSZ];\n        795: \t\t\tconst char *mon_hand = mbodypart(mon, HAND);\n        796: \n        797: \t\t\tif (bimanual(mw_tmp)) mon_hand = makeplural(mon_hand);\n        798: \t\t\tSprintf(welded_buf, \"%s welded to %s %s\",\nTARGET  799: \t\t\t\totense(mw_tmp, \"are\"),\n        800: \t\t\t\tmhis(mon), mon_hand);\n        801: \n        802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n        803: \t\t\t    pline(\"Since %s weapon%s %s,\",\n        804: \t\t\t\t  s_suffix(mon_nam(mon)),"
   },
   {
     "key": "L00803_01",
     "original": "Since %s weapon%s %s,",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:803:14\n   798: \t\t\tSprintf(welded_buf, \"%s welded to %s %s\",\n   799: \t\t\t\totense(mw_tmp, \"are\"),\n   800: \t\t\t\tmhis(mon), mon_hand);\n   801: \n   802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n&gt;  803: \t\t\t    pline(\"Since %s weapon%s %s,\",\n   804: \t\t\t\t  s_suffix(mon_nam(mon)),\n   805: \t\t\t\t  plur(mw_tmp-&gt;quan), welded_buf);\n   806: \t\t\t    pline(\"%s cannot wield that %s.\",\n   807: \t\t\t\tmon_nam(mon), xname(obj));\n   808: \t\t\t} else {"
+    "context": "src/weapon.c:803:14\n        798: \t\t\tSprintf(welded_buf, \"%s welded to %s %s\",\n        799: \t\t\t\totense(mw_tmp, \"are\"),\n        800: \t\t\t\tmhis(mon), mon_hand);\n        801: \n        802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\nTARGET  803: \t\t\t    pline(\"Since %s weapon%s %s,\",\n        804: \t\t\t\t  s_suffix(mon_nam(mon)),\n        805: \t\t\t\t  plur(mw_tmp-&gt;quan), welded_buf);\n        806: \t\t\t    pline(\"%s cannot wield that %s.\",\n        807: \t\t\t\tmon_nam(mon), xname(obj));\n        808: \t\t\t} else {"
   },
   {
     "key": "L00806_01",
     "original": "%s cannot wield that %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:806:14\n   801: \n   802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n   803: \t\t\t    pline(\"Since %s weapon%s %s,\",\n   804: \t\t\t\t  s_suffix(mon_nam(mon)),\n   805: \t\t\t\t  plur(mw_tmp-&gt;quan), welded_buf);\n&gt;  806: \t\t\t    pline(\"%s cannot wield that %s.\",\n   807: \t\t\t\tmon_nam(mon), xname(obj));\n   808: \t\t\t} else {\n   809: \t\t\t    pline(\"%s tries to wield %s.\", Monnam(mon),\n   810: \t\t\t\tdoname(obj));\n   811: \t\t\t    pline(\"%s %s %s!\","
+    "context": "src/weapon.c:806:14\n        801: \n        802: \t\t\tif (obj-&gt;otyp == PICK_AXE) {\n        803: \t\t\t    pline(\"Since %s weapon%s %s,\",\n        804: \t\t\t\t  s_suffix(mon_nam(mon)),\n        805: \t\t\t\t  plur(mw_tmp-&gt;quan), welded_buf);\nTARGET  806: \t\t\t    pline(\"%s cannot wield that %s.\",\n        807: \t\t\t\tmon_nam(mon), xname(obj));\n        808: \t\t\t} else {\n        809: \t\t\t    pline(\"%s tries to wield %s.\", Monnam(mon),\n        810: \t\t\t\tdoname(obj));\n        811: \t\t\t    pline(\"%s %s %s!\","
   },
   {
     "key": "L00809_01",
     "original": "%s tries to wield %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:809:14\n   804: \t\t\t\t  s_suffix(mon_nam(mon)),\n   805: \t\t\t\t  plur(mw_tmp-&gt;quan), welded_buf);\n   806: \t\t\t    pline(\"%s cannot wield that %s.\",\n   807: \t\t\t\tmon_nam(mon), xname(obj));\n   808: \t\t\t} else {\n&gt;  809: \t\t\t    pline(\"%s tries to wield %s.\", Monnam(mon),\n   810: \t\t\t\tdoname(obj));\n   811: \t\t\t    pline(\"%s %s %s!\",\n   812: \t\t\t\t  s_suffix(Monnam(mon)),\n   813: \t\t\t\t  xname(mw_tmp), welded_buf);\n   814: \t\t\t}"
+    "context": "src/weapon.c:809:14\n        804: \t\t\t\t  s_suffix(mon_nam(mon)),\n        805: \t\t\t\t  plur(mw_tmp-&gt;quan), welded_buf);\n        806: \t\t\t    pline(\"%s cannot wield that %s.\",\n        807: \t\t\t\tmon_nam(mon), xname(obj));\n        808: \t\t\t} else {\nTARGET  809: \t\t\t    pline(\"%s tries to wield %s.\", Monnam(mon),\n        810: \t\t\t\tdoname(obj));\n        811: \t\t\t    pline(\"%s %s %s!\",\n        812: \t\t\t\t  s_suffix(Monnam(mon)),\n        813: \t\t\t\t  xname(mw_tmp), welded_buf);\n        814: \t\t\t}"
   },
   {
     "key": "L00811_01",
     "original": "%s %s %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:811:14\n   806: \t\t\t    pline(\"%s cannot wield that %s.\",\n   807: \t\t\t\tmon_nam(mon), xname(obj));\n   808: \t\t\t} else {\n   809: \t\t\t    pline(\"%s tries to wield %s.\", Monnam(mon),\n   810: \t\t\t\tdoname(obj));\n&gt;  811: \t\t\t    pline(\"%s %s %s!\",\n   812: \t\t\t\t  s_suffix(Monnam(mon)),\n   813: \t\t\t\t  xname(mw_tmp), welded_buf);\n   814: \t\t\t}\n   815: \t\t\tmw_tmp-&gt;bknown = 1;\n   816: \t\t    }"
+    "context": "src/weapon.c:811:14\n        806: \t\t\t    pline(\"%s cannot wield that %s.\",\n        807: \t\t\t\tmon_nam(mon), xname(obj));\n        808: \t\t\t} else {\n        809: \t\t\t    pline(\"%s tries to wield %s.\", Monnam(mon),\n        810: \t\t\t\tdoname(obj));\nTARGET  811: \t\t\t    pline(\"%s %s %s!\",\n        812: \t\t\t\t  s_suffix(Monnam(mon)),\n        813: \t\t\t\t  xname(mw_tmp), welded_buf);\n        814: \t\t\t}\n        815: \t\t\tmw_tmp-&gt;bknown = 1;\n        816: \t\t    }"
   },
   {
     "key": "L00824_01",
     "original": "%s wields %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:824:13\n   819: \t\t}\n   820: \t\tmon-&gt;mw = obj;\t\t/* wield obj */\n   821: \t\tsetmnotwielded(mon, mw_tmp);\n   822: \t\tmon-&gt;weapon_check = NEED_WEAPON;\n   823: \t\tif (canseemon(mon)) {\n&gt;  824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n   825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n   826: \t\t\tpline(\"%s %s to %s %s!\",\n   827: \t\t\t    Tobjnam(obj, \"weld\"),\n   828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n   829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));"
+    "context": "src/weapon.c:824:13\n        819: \t\t}\n        820: \t\tmon-&gt;mw = obj;\t\t/* wield obj */\n        821: \t\tsetmnotwielded(mon, mw_tmp);\n        822: \t\tmon-&gt;weapon_check = NEED_WEAPON;\n        823: \t\tif (canseemon(mon)) {\nTARGET  824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n        825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n        826: \t\t\tpline(\"%s %s to %s %s!\",\n        827: \t\t\t    Tobjnam(obj, \"weld\"),\n        828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n        829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));"
   },
   {
     "key": "L00826_01",
     "original": "%s %s to %s %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:826:10\n   821: \t\tsetmnotwielded(mon, mw_tmp);\n   822: \t\tmon-&gt;weapon_check = NEED_WEAPON;\n   823: \t\tif (canseemon(mon)) {\n   824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n   825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n&gt;  826: \t\t\tpline(\"%s %s to %s %s!\",\n   827: \t\t\t    Tobjnam(obj, \"weld\"),\n   828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n   829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n   830: \t\t\tobj-&gt;bknown = 1;\n   831: \t\t    }"
+    "context": "src/weapon.c:826:10\n        821: \t\tsetmnotwielded(mon, mw_tmp);\n        822: \t\tmon-&gt;weapon_check = NEED_WEAPON;\n        823: \t\tif (canseemon(mon)) {\n        824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n        825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\nTARGET  826: \t\t\tpline(\"%s %s to %s %s!\",\n        827: \t\t\t    Tobjnam(obj, \"weld\"),\n        828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n        829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n        830: \t\t\tobj-&gt;bknown = 1;\n        831: \t\t    }"
   },
   {
     "key": "L00827_01",
     "original": "weld",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:827:21\n   822: \t\tmon-&gt;weapon_check = NEED_WEAPON;\n   823: \t\tif (canseemon(mon)) {\n   824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n   825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n   826: \t\t\tpline(\"%s %s to %s %s!\",\n&gt;  827: \t\t\t    Tobjnam(obj, \"weld\"),\n   828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n   829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n   830: \t\t\tobj-&gt;bknown = 1;\n   831: \t\t    }\n   832: \t\t}"
+    "context": "src/weapon.c:827:21\n        822: \t\tmon-&gt;weapon_check = NEED_WEAPON;\n        823: \t\tif (canseemon(mon)) {\n        824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n        825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n        826: \t\t\tpline(\"%s %s to %s %s!\",\nTARGET  827: \t\t\t    Tobjnam(obj, \"weld\"),\n        828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n        829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n        830: \t\t\tobj-&gt;bknown = 1;\n        831: \t\t    }\n        832: \t\t}"
   },
   {
     "key": "L00828_01",
     "original": "themselves",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:828:25\n   823: \t\tif (canseemon(mon)) {\n   824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n   825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n   826: \t\t\tpline(\"%s %s to %s %s!\",\n   827: \t\t\t    Tobjnam(obj, \"weld\"),\n&gt;  828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n   829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n   830: \t\t\tobj-&gt;bknown = 1;\n   831: \t\t    }\n   832: \t\t}\n   833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {"
+    "context": "src/weapon.c:828:25\n        823: \t\tif (canseemon(mon)) {\n        824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n        825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n        826: \t\t\tpline(\"%s %s to %s %s!\",\n        827: \t\t\t    Tobjnam(obj, \"weld\"),\nTARGET  828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n        829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n        830: \t\t\tobj-&gt;bknown = 1;\n        831: \t\t    }\n        832: \t\t}\n        833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {"
   },
   {
     "key": "L00828_02",
     "original": "itself",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:828:40\n   823: \t\tif (canseemon(mon)) {\n   824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n   825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n   826: \t\t\tpline(\"%s %s to %s %s!\",\n   827: \t\t\t    Tobjnam(obj, \"weld\"),\n&gt;  828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n   829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n   830: \t\t\tobj-&gt;bknown = 1;\n   831: \t\t    }\n   832: \t\t}\n   833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {"
+    "context": "src/weapon.c:828:40\n        823: \t\tif (canseemon(mon)) {\n        824: \t\t    pline(\"%s wields %s!\", Monnam(mon), doname(obj));\n        825: \t\t    if (obj-&gt;cursed && obj-&gt;otyp != CORPSE) {\n        826: \t\t\tpline(\"%s %s to %s %s!\",\n        827: \t\t\t    Tobjnam(obj, \"weld\"),\nTARGET  828: \t\t\t    is_plural(obj) ? \"themselves\" : \"itself\",\n        829: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n        830: \t\t\tobj-&gt;bknown = 1;\n        831: \t\t    }\n        832: \t\t}\n        833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {"
   },
   {
     "key": "L00836_01",
     "original": "%s brilliantly in %s %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:836:10\n   831: \t\t    }\n   832: \t\t}\n   833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {\n   834: \t\t    begin_burn(obj, FALSE);\n   835: \t\t    if (canseemon(mon))\n&gt;  836: \t\t\tpline(\"%s brilliantly in %s %s!\",\n   837: \t\t\t    Tobjnam(obj, \"glow\"), \n   838: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n   839: \t\t}\n   840: \t\tobj-&gt;owornmask = W_WEP;\n   841: #ifdef LIGHTSABERS"
+    "context": "src/weapon.c:836:10\n        831: \t\t    }\n        832: \t\t}\n        833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {\n        834: \t\t    begin_burn(obj, FALSE);\n        835: \t\t    if (canseemon(mon))\nTARGET  836: \t\t\tpline(\"%s brilliantly in %s %s!\",\n        837: \t\t\t    Tobjnam(obj, \"glow\"), \n        838: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n        839: \t\t}\n        840: \t\tobj-&gt;owornmask = W_WEP;\n        841: #ifdef LIGHTSABERS"
   },
   {
     "key": "L00837_01",
     "original": "glow",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:837:21\n   832: \t\t}\n   833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {\n   834: \t\t    begin_burn(obj, FALSE);\n   835: \t\t    if (canseemon(mon))\n   836: \t\t\tpline(\"%s brilliantly in %s %s!\",\n&gt;  837: \t\t\t    Tobjnam(obj, \"glow\"), \n   838: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n   839: \t\t}\n   840: \t\tobj-&gt;owornmask = W_WEP;\n   841: #ifdef LIGHTSABERS\n   842: \t\tif (is_lightsaber(obj))"
+    "context": "src/weapon.c:837:21\n        832: \t\t}\n        833: \t\tif (artifact_light(obj) && !obj-&gt;lamplit) {\n        834: \t\t    begin_burn(obj, FALSE);\n        835: \t\t    if (canseemon(mon))\n        836: \t\t\tpline(\"%s brilliantly in %s %s!\",\nTARGET  837: \t\t\t    Tobjnam(obj, \"glow\"), \n        838: \t\t\t    s_suffix(mon_nam(mon)), mbodypart(mon,HAND));\n        839: \t\t}\n        840: \t\tobj-&gt;owornmask = W_WEP;\n        841: #ifdef LIGHTSABERS\n        842: \t\tif (is_lightsaber(obj))"
   },
   {
     "key": "L00863_01",
     "original": "%s %s flickers and goes out.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:863:29\n   858: \tif (!obj || !is_lightsaber(obj)) return;\n   859: \n   860: \t/* WAC - Check lightsaber is on */\n   861: \tif (!obj-&gt;lamplit) {\n   862: \t    if (obj-&gt;cursed && !rn2(2)) {\n&gt;  863: \t\tif (canseemon(mon)) pline(\"%s %s flickers and goes out.\", \n   864: \t\t\ts_suffix(Monnam(mon)), xname(obj));\n   865: \n   866: \t    } else {\n   867: \t\tif (canseemon(mon)) {\n   868: \t\t\tmakeknown(obj-&gt;otyp);"
+    "context": "src/weapon.c:863:29\n        858: \tif (!obj || !is_lightsaber(obj)) return;\n        859: \n        860: \t/* WAC - Check lightsaber is on */\n        861: \tif (!obj-&gt;lamplit) {\n        862: \t    if (obj-&gt;cursed && !rn2(2)) {\nTARGET  863: \t\tif (canseemon(mon)) pline(\"%s %s flickers and goes out.\", \n        864: \t\t\ts_suffix(Monnam(mon)), xname(obj));\n        865: \n        866: \t    } else {\n        867: \t\tif (canseemon(mon)) {\n        868: \t\t\tmakeknown(obj-&gt;otyp);"
   },
   {
     "key": "L00869_01",
     "original": "%s ignites %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:869:10\n   864: \t\t\ts_suffix(Monnam(mon)), xname(obj));\n   865: \n   866: \t    } else {\n   867: \t\tif (canseemon(mon)) {\n   868: \t\t\tmakeknown(obj-&gt;otyp);\n&gt;  869: \t\t\tpline(\"%s ignites %s.\", Monnam(mon),\n   870: \t\t\t\tan(xname(obj)));\n   871: \t\t}\t    \t\n   872: \t\tbegin_burn(obj, FALSE);\n   873: \t    }\n   874: \t} else {"
+    "context": "src/weapon.c:869:10\n        864: \t\t\ts_suffix(Monnam(mon)), xname(obj));\n        865: \n        866: \t    } else {\n        867: \t\tif (canseemon(mon)) {\n        868: \t\t\tmakeknown(obj-&gt;otyp);\nTARGET  869: \t\t\tpline(\"%s ignites %s.\", Monnam(mon),\n        870: \t\t\t\tan(xname(obj)));\n        871: \t\t}\t    \t\n        872: \t\tbegin_burn(obj, FALSE);\n        873: \t    }\n        874: \t} else {"
   },
   {
     "key": "L00879_01",
     "original": "%s ignites the second blade of %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:879:30\n   874: \t} else {\n   875: \t\t/* Double Lightsaber in single mode? Ignite second blade */\n   876: \t\tif (obj-&gt;otyp == RED_DOUBLE_LIGHTSABER && !obj-&gt;altmode) {\n   877: \t\t    /* Do we want to activate dual bladed mode? */\n   878: \t\t    if (!obj-&gt;altmode && (!obj-&gt;cursed || rn2(4))) {\n&gt;  879: \t\t\tif (canseemon(mon)) pline(\"%s ignites the second blade of %s.\", \n   880: \t\t\t\tMonnam(mon), an(xname(obj)));\n   881: \t\t    \tobj-&gt;altmode = TRUE;\n   882: \t\t    \treturn;\n   883: \t\t    } else obj-&gt;altmode = FALSE;\n   884: \t\t    lightsaber_deactivate(obj, TRUE);"
+    "context": "src/weapon.c:879:30\n        874: \t} else {\n        875: \t\t/* Double Lightsaber in single mode? Ignite second blade */\n        876: \t\tif (obj-&gt;otyp == RED_DOUBLE_LIGHTSABER && !obj-&gt;altmode) {\n        877: \t\t    /* Do we want to activate dual bladed mode? */\n        878: \t\t    if (!obj-&gt;altmode && (!obj-&gt;cursed || rn2(4))) {\nTARGET  879: \t\t\tif (canseemon(mon)) pline(\"%s ignites the second blade of %s.\", \n        880: \t\t\t\tMonnam(mon), an(xname(obj)));\n        881: \t\t    \tobj-&gt;altmode = TRUE;\n        882: \t\t    \treturn;\n        883: \t\t    } else obj-&gt;altmode = FALSE;\n        884: \t\t    lightsaber_deactivate(obj, TRUE);"
   },
   {
     "key": "L00969_01",
     "original": "Unskilled",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:969:29\n   964: char *buf;\n   965: {\n   966:     const char *ptr;\n   967: \n   968:     switch (P_SKILL(skill)) {\n&gt;  969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n   970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n   971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n   972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n   973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: "
+    "context": "src/weapon.c:969:29\n        964: char *buf;\n        965: {\n        966:     const char *ptr;\n        967: \n        968:     switch (P_SKILL(skill)) {\nTARGET  969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n        970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n        971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n        972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n        973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: "
   },
   {
     "key": "L00970_01",
     "original": "Basic",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:970:27\n   965: {\n   966:     const char *ptr;\n   967: \n   968:     switch (P_SKILL(skill)) {\n   969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n&gt;  970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n   971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n   972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n   973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: \n   975:             if (skill &lt;= P_LAST_WEAPON)"
+    "context": "src/weapon.c:970:27\n        965: {\n        966:     const char *ptr;\n        967: \n        968:     switch (P_SKILL(skill)) {\n        969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\nTARGET  970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n        971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n        972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n        973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: \n        975:             if (skill &lt;= P_LAST_WEAPON)"
   },
   {
     "key": "L00971_01",
     "original": "Skilled",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:971:29\n   966:     const char *ptr;\n   967: \n   968:     switch (P_SKILL(skill)) {\n   969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n   970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n&gt;  971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n   972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n   973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: \n   975:             if (skill &lt;= P_LAST_WEAPON)\n   976:                     ptr = \"Wizard\" ;"
+    "context": "src/weapon.c:971:29\n        966:     const char *ptr;\n        967: \n        968:     switch (P_SKILL(skill)) {\n        969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n        970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\nTARGET  971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n        972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n        973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: \n        975:             if (skill &lt;= P_LAST_WEAPON)\n        976:                     ptr = \"Wizard\" ;"
   },
   {
     "key": "L00972_01",
     "original": "Expert",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:972:28\n   967: \n   968:     switch (P_SKILL(skill)) {\n   969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n   970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n   971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n&gt;  972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n   973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: \n   975:             if (skill &lt;= P_LAST_WEAPON)\n   976:                     ptr = \"Wizard\" ;\n   977:             else if (skill &lt;= P_LAST_SPELL)"
+    "context": "src/weapon.c:972:28\n        967: \n        968:     switch (P_SKILL(skill)) {\n        969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n        970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n        971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\nTARGET  972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n        973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: \n        975:             if (skill &lt;= P_LAST_WEAPON)\n        976:                     ptr = \"Wizard\" ;\n        977:             else if (skill &lt;= P_LAST_SPELL)"
   },
   {
     "key": "L00973_01",
     "original": "Master",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:973:28\n   968:     switch (P_SKILL(skill)) {\n   969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n   970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n   971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n   972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n&gt;  973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: \n   975:             if (skill &lt;= P_LAST_WEAPON)\n   976:                     ptr = \"Wizard\" ;\n   977:             else if (skill &lt;= P_LAST_SPELL)\n   978:                     ptr = \"Legendary\";"
+    "context": "src/weapon.c:973:28\n        968:     switch (P_SKILL(skill)) {\n        969: \tcase P_UNSKILLED:    ptr = \"Unskilled\"; break;\n        970: \tcase P_BASIC:\t     ptr = \"Basic\";     break;\n        971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n        972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\nTARGET  973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: \n        975:             if (skill &lt;= P_LAST_WEAPON)\n        976:                     ptr = \"Wizard\" ;\n        977:             else if (skill &lt;= P_LAST_SPELL)\n        978:                     ptr = \"Legendary\";"
   },
   {
     "key": "L00976_01",
     "original": "Wizard",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:976:27\n   971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n   972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n   973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: \n   975:             if (skill &lt;= P_LAST_WEAPON)\n&gt;  976:                     ptr = \"Wizard\" ;\n   977:             else if (skill &lt;= P_LAST_SPELL)\n   978:                     ptr = \"Legendary\";\n   979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n   980: \t    \t    ptr = \"Grand Master\"; \n   981: \t    else ptr = \"Unprecedented\";"
+    "context": "src/weapon.c:976:27\n        971: \tcase P_SKILLED:\t     ptr = \"Skilled\";   break;\n        972: \tcase P_EXPERT:\t     ptr = \"Expert\";    break;\n        973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: \n        975:             if (skill &lt;= P_LAST_WEAPON)\nTARGET  976:                     ptr = \"Wizard\" ;\n        977:             else if (skill &lt;= P_LAST_SPELL)\n        978:                     ptr = \"Legendary\";\n        979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n        980: \t    \t    ptr = \"Grand Master\"; \n        981: \t    else ptr = \"Unprecedented\";"
   },
   {
     "key": "L00978_01",
     "original": "Legendary",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:978:27\n   973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n   974: \tcase P_GRAND_MASTER: \n   975:             if (skill &lt;= P_LAST_WEAPON)\n   976:                     ptr = \"Wizard\" ;\n   977:             else if (skill &lt;= P_LAST_SPELL)\n&gt;  978:                     ptr = \"Legendary\";\n   979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n   980: \t    \t    ptr = \"Grand Master\"; \n   981: \t    else ptr = \"Unprecedented\";\n   982: \t    break;\n   983: \tdefault:\t     ptr = \"Unknown\";\tbreak;"
+    "context": "src/weapon.c:978:27\n        973: \tcase P_MASTER:\t     ptr = \"Master\";    break;\n        974: \tcase P_GRAND_MASTER: \n        975:             if (skill &lt;= P_LAST_WEAPON)\n        976:                     ptr = \"Wizard\" ;\n        977:             else if (skill &lt;= P_LAST_SPELL)\nTARGET  978:                     ptr = \"Legendary\";\n        979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n        980: \t    \t    ptr = \"Grand Master\"; \n        981: \t    else ptr = \"Unprecedented\";\n        982: \t    break;\n        983: \tdefault:\t     ptr = \"Unknown\";\tbreak;"
   },
   {
     "key": "L00980_01",
     "original": "Grand Master",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:980:17\n   975:             if (skill &lt;= P_LAST_WEAPON)\n   976:                     ptr = \"Wizard\" ;\n   977:             else if (skill &lt;= P_LAST_SPELL)\n   978:                     ptr = \"Legendary\";\n   979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n&gt;  980: \t    \t    ptr = \"Grand Master\"; \n   981: \t    else ptr = \"Unprecedented\";\n   982: \t    break;\n   983: \tdefault:\t     ptr = \"Unknown\";\tbreak;\n   984:     }\n   985:     Strcpy(buf, ptr);"
+    "context": "src/weapon.c:980:17\n        975:             if (skill &lt;= P_LAST_WEAPON)\n        976:                     ptr = \"Wizard\" ;\n        977:             else if (skill &lt;= P_LAST_SPELL)\n        978:                     ptr = \"Legendary\";\n        979: \t    else if (skill &lt;= P_LAST_H_TO_H) \nTARGET  980: \t    \t    ptr = \"Grand Master\"; \n        981: \t    else ptr = \"Unprecedented\";\n        982: \t    break;\n        983: \tdefault:\t     ptr = \"Unknown\";\tbreak;\n        984:     }\n        985:     Strcpy(buf, ptr);"
   },
   {
     "key": "L00981_01",
     "original": "Unprecedented",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:981:17\n   976:                     ptr = \"Wizard\" ;\n   977:             else if (skill &lt;= P_LAST_SPELL)\n   978:                     ptr = \"Legendary\";\n   979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n   980: \t    \t    ptr = \"Grand Master\"; \n&gt;  981: \t    else ptr = \"Unprecedented\";\n   982: \t    break;\n   983: \tdefault:\t     ptr = \"Unknown\";\tbreak;\n   984:     }\n   985:     Strcpy(buf, ptr);\n   986:     return buf;"
+    "context": "src/weapon.c:981:17\n        976:                     ptr = \"Wizard\" ;\n        977:             else if (skill &lt;= P_LAST_SPELL)\n        978:                     ptr = \"Legendary\";\n        979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n        980: \t    \t    ptr = \"Grand Master\"; \nTARGET  981: \t    else ptr = \"Unprecedented\";\n        982: \t    break;\n        983: \tdefault:\t     ptr = \"Unknown\";\tbreak;\n        984:     }\n        985:     Strcpy(buf, ptr);\n        986:     return buf;"
   },
   {
     "key": "L00983_01",
     "original": "Unknown",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:983:22\n   978:                     ptr = \"Legendary\";\n   979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n   980: \t    \t    ptr = \"Grand Master\"; \n   981: \t    else ptr = \"Unprecedented\";\n   982: \t    break;\n&gt;  983: \tdefault:\t     ptr = \"Unknown\";\tbreak;\n   984:     }\n   985:     Strcpy(buf, ptr);\n   986:     return buf;\n   987: }\n   988: "
+    "context": "src/weapon.c:983:22\n        978:                     ptr = \"Legendary\";\n        979: \t    else if (skill &lt;= P_LAST_H_TO_H) \n        980: \t    \t    ptr = \"Grand Master\"; \n        981: \t    else ptr = \"Unprecedented\";\n        982: \t    break;\nTARGET  983: \tdefault:\t     ptr = \"Unknown\";\tbreak;\n        984:     }\n        985:     Strcpy(buf, ptr);\n        986:     return buf;\n        987: }\n        988: "
   },
   {
     "key": "L01087_01",
     "original": "are now %s skilled in %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1087:9\n  1082:     \n  1083:     u.weapon_slots -= slots_required(skill);\n  1084:     P_SKILL(skill)++;\n  1085:     u.skill_record[u.skills_advanced++] = skill;\n  1086:     /* subtly change the advance message to indicate no more advancement */\n&gt; 1087:     You(\"are now %s skilled in %s.\",\n  1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n  1089: \tP_NAME(skill));\n  1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n  1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n  1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);"
+    "context": "src/weapon.c:1087:9\n       1082:     \n       1083:     u.weapon_slots -= slots_required(skill);\n       1084:     P_SKILL(skill)++;\n       1085:     u.skill_record[u.skills_advanced++] = skill;\n       1086:     /* subtly change the advance message to indicate no more advancement */\nTARGET 1087:     You(\"are now %s skilled in %s.\",\n       1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n       1089: \tP_NAME(skill));\n       1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n       1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n       1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);"
   },
   {
     "key": "L01088_01",
     "original": "most",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1088:41\n  1083:     u.weapon_slots -= slots_required(skill);\n  1084:     P_SKILL(skill)++;\n  1085:     u.skill_record[u.skills_advanced++] = skill;\n  1086:     /* subtly change the advance message to indicate no more advancement */\n  1087:     You(\"are now %s skilled in %s.\",\n&gt; 1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n  1089: \tP_NAME(skill));\n  1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n  1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n  1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);\n  1093:     \tYou(\"learn how to perform disarm!\");"
+    "context": "src/weapon.c:1088:41\n       1083:     u.weapon_slots -= slots_required(skill);\n       1084:     P_SKILL(skill)++;\n       1085:     u.skill_record[u.skills_advanced++] = skill;\n       1086:     /* subtly change the advance message to indicate no more advancement */\n       1087:     You(\"are now %s skilled in %s.\",\nTARGET 1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n       1089: \tP_NAME(skill));\n       1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n       1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n       1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);\n       1093:     \tYou(\"learn how to perform disarm!\");"
   },
   {
     "key": "L01088_02",
     "original": "more",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1088:50\n  1083:     u.weapon_slots -= slots_required(skill);\n  1084:     P_SKILL(skill)++;\n  1085:     u.skill_record[u.skills_advanced++] = skill;\n  1086:     /* subtly change the advance message to indicate no more advancement */\n  1087:     You(\"are now %s skilled in %s.\",\n&gt; 1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n  1089: \tP_NAME(skill));\n  1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n  1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n  1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);\n  1093:     \tYou(\"learn how to perform disarm!\");"
+    "context": "src/weapon.c:1088:50\n       1083:     u.weapon_slots -= slots_required(skill);\n       1084:     P_SKILL(skill)++;\n       1085:     u.skill_record[u.skills_advanced++] = skill;\n       1086:     /* subtly change the advance message to indicate no more advancement */\n       1087:     You(\"are now %s skilled in %s.\",\nTARGET 1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n       1089: \tP_NAME(skill));\n       1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n       1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n       1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);\n       1093:     \tYou(\"learn how to perform disarm!\");"
   },
   {
     "key": "L01093_01",
     "original": "learn how to perform disarm!",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1093:10\n  1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n  1089: \tP_NAME(skill));\n  1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n  1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n  1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);\n&gt; 1093:     \tYou(\"learn how to perform disarm!\");\n  1094:     }\n  1095: }\n  1096: \n  1097: const static struct skill_range {\n  1098: \tshort first, last;"
+    "context": "src/weapon.c:1093:10\n       1088: \tP_SKILL(skill) &gt;= P_MAX_SKILL(skill) ? \"most\" : \"more\",\n       1089: \tP_NAME(skill));\n       1090:     if (!tech_known(T_DISARM) && (P_SKILL(skill) == P_SKILLED) && \n       1091:     \t\tskill &lt;= P_LAST_WEAPON && skill != P_WHIP) {\n       1092:     \tlearntech(T_DISARM, FROMOUTSIDE, 1);\nTARGET 1093:     \tYou(\"learn how to perform disarm!\");\n       1094:     }\n       1095: }\n       1096: \n       1097: const static struct skill_range {\n       1098: \tshort first, last;"
   },
   {
     "key": "L01101_01",
     "original": "Fighting Skills",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1101:38\n  1096: \n  1097: const static struct skill_range {\n  1098: \tshort first, last;\n  1099: \tconst char *name;\n  1100: } skill_ranges[] = {\n&gt; 1101:     { P_FIRST_H_TO_H, P_LAST_H_TO_H, \"Fighting Skills\" },\n  1102:     { P_FIRST_WEAPON, P_LAST_WEAPON, \"Weapon Skills\" },\n  1103:     { P_FIRST_SPELL,  P_LAST_SPELL,  \"Spellcasting Skills\" },\n  1104: };\n  1105: \n  1106: /*"
+    "context": "src/weapon.c:1101:38\n       1096: \n       1097: const static struct skill_range {\n       1098: \tshort first, last;\n       1099: \tconst char *name;\n       1100: } skill_ranges[] = {\nTARGET 1101:     { P_FIRST_H_TO_H, P_LAST_H_TO_H, \"Fighting Skills\" },\n       1102:     { P_FIRST_WEAPON, P_LAST_WEAPON, \"Weapon Skills\" },\n       1103:     { P_FIRST_SPELL,  P_LAST_SPELL,  \"Spellcasting Skills\" },\n       1104: };\n       1105: \n       1106: /*"
   },
   {
     "key": "L01102_01",
     "original": "Weapon Skills",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1102:38\n  1097: const static struct skill_range {\n  1098: \tshort first, last;\n  1099: \tconst char *name;\n  1100: } skill_ranges[] = {\n  1101:     { P_FIRST_H_TO_H, P_LAST_H_TO_H, \"Fighting Skills\" },\n&gt; 1102:     { P_FIRST_WEAPON, P_LAST_WEAPON, \"Weapon Skills\" },\n  1103:     { P_FIRST_SPELL,  P_LAST_SPELL,  \"Spellcasting Skills\" },\n  1104: };\n  1105: \n  1106: /*\n  1107:  * The `#enhance' extended command.  What we _really_ would like is"
+    "context": "src/weapon.c:1102:38\n       1097: const static struct skill_range {\n       1098: \tshort first, last;\n       1099: \tconst char *name;\n       1100: } skill_ranges[] = {\n       1101:     { P_FIRST_H_TO_H, P_LAST_H_TO_H, \"Fighting Skills\" },\nTARGET 1102:     { P_FIRST_WEAPON, P_LAST_WEAPON, \"Weapon Skills\" },\n       1103:     { P_FIRST_SPELL,  P_LAST_SPELL,  \"Spellcasting Skills\" },\n       1104: };\n       1105: \n       1106: /*\n       1107:  * The `#enhance' extended command.  What we _really_ would like is"
   },
   {
     "key": "L01103_01",
     "original": "Spellcasting Skills",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1103:38\n  1098: \tshort first, last;\n  1099: \tconst char *name;\n  1100: } skill_ranges[] = {\n  1101:     { P_FIRST_H_TO_H, P_LAST_H_TO_H, \"Fighting Skills\" },\n  1102:     { P_FIRST_WEAPON, P_LAST_WEAPON, \"Weapon Skills\" },\n&gt; 1103:     { P_FIRST_SPELL,  P_LAST_SPELL,  \"Spellcasting Skills\" },\n  1104: };\n  1105: \n  1106: /*\n  1107:  * The `#enhance' extended command.  What we _really_ would like is\n  1108:  * to keep being able to pick things to advance until we couldn't any"
+    "context": "src/weapon.c:1103:38\n       1098: \tshort first, last;\n       1099: \tconst char *name;\n       1100: } skill_ranges[] = {\n       1101:     { P_FIRST_H_TO_H, P_LAST_H_TO_H, \"Fighting Skills\" },\n       1102:     { P_FIRST_WEAPON, P_LAST_WEAPON, \"Weapon Skills\" },\nTARGET 1103:     { P_FIRST_SPELL,  P_LAST_SPELL,  \"Spellcasting Skills\" },\n       1104: };\n       1105: \n       1106: /*\n       1107:  * The `#enhance' extended command.  What we _really_ would like is\n       1108:  * to keep being able to pick things to advance until we couldn't any"
   },
   {
     "key": "L01127_01",
     "original": "Advance skills without practice?",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1127:19\n  1122:     anything any;\n  1123:     winid win;\n  1124:     boolean speedy = FALSE;\n  1125: \n  1126: #ifdef WIZARD\n&gt; 1127: \tif (wizard && yn(\"Advance skills without practice?\") == 'y')\n  1128: \t    speedy = TRUE;\n  1129: #endif\n  1130: \n  1131: \tdo {\n  1132: \t    /* find longest available skill name, count those that can advance */"
+    "context": "src/weapon.c:1127:19\n       1122:     anything any;\n       1123:     winid win;\n       1124:     boolean speedy = FALSE;\n       1125: \n       1126: #ifdef WIZARD\nTARGET 1127: \tif (wizard && yn(\"Advance skills without practice?\") == 'y')\n       1128: \t    speedy = TRUE;\n       1129: #endif\n       1130: \n       1131: \tdo {\n       1132: \t    /* find longest available skill name, count those that can advance */"
   },
   {
     "key": "L01155_01",
     "original": "(Skill%s flagged by \\\"*\\\" may be enhanced %s.)",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1155:8\n  1150: \t       with \"*\" or \"#\" below */\n  1151: \t    if (eventually_advance &gt; 0 || maxxed_cnt &gt; 0) {\n  1152: \t\tany.a_void = 0;\n  1153: \t\tif (eventually_advance &gt; 0) {\n  1154: \t\t    Sprintf(buf,\n&gt; 1155: \t\t\t    \"(Skill%s flagged by \\\"*\\\" may be enhanced %s.)\",\n  1156: \t\t\t    plur(eventually_advance),\n  1157: \t\t\t    (u.ulevel &lt; MAXULEV) ?\n  1158: \t\t\t\t\"when you're more experienced\" :\n  1159: \t\t\t\t\"if skill slots become available\");\n  1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,"
+    "context": "src/weapon.c:1155:8\n       1150: \t       with \"*\" or \"#\" below */\n       1151: \t    if (eventually_advance &gt; 0 || maxxed_cnt &gt; 0) {\n       1152: \t\tany.a_void = 0;\n       1153: \t\tif (eventually_advance &gt; 0) {\n       1154: \t\t    Sprintf(buf,\nTARGET 1155: \t\t\t    \"(Skill%s flagged by \\\"*\\\" may be enhanced %s.)\",\n       1156: \t\t\t    plur(eventually_advance),\n       1157: \t\t\t    (u.ulevel &lt; MAXULEV) ?\n       1158: \t\t\t\t\"when you're more experienced\" :\n       1159: \t\t\t\t\"if skill slots become available\");\n       1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,"
   },
   {
     "key": "L01158_01",
     "original": "when you're more experienced",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1158:5\n  1153: \t\tif (eventually_advance &gt; 0) {\n  1154: \t\t    Sprintf(buf,\n  1155: \t\t\t    \"(Skill%s flagged by \\\"*\\\" may be enhanced %s.)\",\n  1156: \t\t\t    plur(eventually_advance),\n  1157: \t\t\t    (u.ulevel &lt; MAXULEV) ?\n&gt; 1158: \t\t\t\t\"when you're more experienced\" :\n  1159: \t\t\t\t\"if skill slots become available\");\n  1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1161: \t\t\t     buf, MENU_UNSELECTED);\n  1162: \t\t}\n  1163: \t\tif (maxxed_cnt &gt; 0) {"
+    "context": "src/weapon.c:1158:5\n       1153: \t\tif (eventually_advance &gt; 0) {\n       1154: \t\t    Sprintf(buf,\n       1155: \t\t\t    \"(Skill%s flagged by \\\"*\\\" may be enhanced %s.)\",\n       1156: \t\t\t    plur(eventually_advance),\n       1157: \t\t\t    (u.ulevel &lt; MAXULEV) ?\nTARGET 1158: \t\t\t\t\"when you're more experienced\" :\n       1159: \t\t\t\t\"if skill slots become available\");\n       1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1161: \t\t\t     buf, MENU_UNSELECTED);\n       1162: \t\t}\n       1163: \t\tif (maxxed_cnt &gt; 0) {"
   },
   {
     "key": "L01159_01",
     "original": "if skill slots become available",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1159:5\n  1154: \t\t    Sprintf(buf,\n  1155: \t\t\t    \"(Skill%s flagged by \\\"*\\\" may be enhanced %s.)\",\n  1156: \t\t\t    plur(eventually_advance),\n  1157: \t\t\t    (u.ulevel &lt; MAXULEV) ?\n  1158: \t\t\t\t\"when you're more experienced\" :\n&gt; 1159: \t\t\t\t\"if skill slots become available\");\n  1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1161: \t\t\t     buf, MENU_UNSELECTED);\n  1162: \t\t}\n  1163: \t\tif (maxxed_cnt &gt; 0) {\n  1164: \t\t    Sprintf(buf,"
+    "context": "src/weapon.c:1159:5\n       1154: \t\t    Sprintf(buf,\n       1155: \t\t\t    \"(Skill%s flagged by \\\"*\\\" may be enhanced %s.)\",\n       1156: \t\t\t    plur(eventually_advance),\n       1157: \t\t\t    (u.ulevel &lt; MAXULEV) ?\n       1158: \t\t\t\t\"when you're more experienced\" :\nTARGET 1159: \t\t\t\t\"if skill slots become available\");\n       1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1161: \t\t\t     buf, MENU_UNSELECTED);\n       1162: \t\t}\n       1163: \t\tif (maxxed_cnt &gt; 0) {\n       1164: \t\t    Sprintf(buf,"
   },
   {
     "key": "L01165_01",
     "original": "(Skill%s flagged by \\\"#\\\" cannot be enhanced any further.)",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1165:5\n  1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1161: \t\t\t     buf, MENU_UNSELECTED);\n  1162: \t\t}\n  1163: \t\tif (maxxed_cnt &gt; 0) {\n  1164: \t\t    Sprintf(buf,\n&gt; 1165: \t\t  \"(Skill%s flagged by \\\"#\\\" cannot be enhanced any further.)\",\n  1166: \t\t\t    plur(maxxed_cnt));\n  1167: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1168: \t\t\t     buf, MENU_UNSELECTED);\n  1169: \t\t}\n  1170: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,"
+    "context": "src/weapon.c:1165:5\n       1160: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1161: \t\t\t     buf, MENU_UNSELECTED);\n       1162: \t\t}\n       1163: \t\tif (maxxed_cnt &gt; 0) {\n       1164: \t\t    Sprintf(buf,\nTARGET 1165: \t\t  \"(Skill%s flagged by \\\"#\\\" cannot be enhanced any further.)\",\n       1166: \t\t\t    plur(maxxed_cnt));\n       1167: \t\t    add_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1168: \t\t\t     buf, MENU_UNSELECTED);\n       1169: \t\t}\n       1170: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,"
   },
   {
     "key": "L01211_01",
     "original": " %s%-*s %-12s %4d(%4d)",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1211:17\n  1206: \t\t\t\tmaxxed_cnt &gt; 0) ? \"    \" : \"\";\n  1207: \t\t(void) skill_level_name(i, sklnambuf);\n  1208: #ifdef WIZARD\n  1209: \t\tif (wizard) {\n  1210: \t\t    if (!iflags.menu_tab_sep)\n&gt; 1211: \t\t\tSprintf(buf, \" %s%-*s %-12s %4d(%4d)\",\n  1212: \t\t\t    prefix, longest, P_NAME(i), sklnambuf,\n  1213: \t\t\t    P_ADVANCE(i),\n  1214: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n  1215: \t\t    else\n  1216: \t\t\tSprintf(buf, \" %s%s\\t%s\\t%5d(%4d)\","
+    "context": "src/weapon.c:1211:17\n       1206: \t\t\t\tmaxxed_cnt &gt; 0) ? \"    \" : \"\";\n       1207: \t\t(void) skill_level_name(i, sklnambuf);\n       1208: #ifdef WIZARD\n       1209: \t\tif (wizard) {\n       1210: \t\t    if (!iflags.menu_tab_sep)\nTARGET 1211: \t\t\tSprintf(buf, \" %s%-*s %-12s %4d(%4d)\",\n       1212: \t\t\t    prefix, longest, P_NAME(i), sklnambuf,\n       1213: \t\t\t    P_ADVANCE(i),\n       1214: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n       1215: \t\t    else\n       1216: \t\t\tSprintf(buf, \" %s%s\\t%s\\t%5d(%4d)\","
   },
   {
     "key": "L01216_01",
     "original": " %s%s\\t%s\\t%5d(%4d)",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1216:17\n  1211: \t\t\tSprintf(buf, \" %s%-*s %-12s %4d(%4d)\",\n  1212: \t\t\t    prefix, longest, P_NAME(i), sklnambuf,\n  1213: \t\t\t    P_ADVANCE(i),\n  1214: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n  1215: \t\t    else\n&gt; 1216: \t\t\tSprintf(buf, \" %s%s\\t%s\\t%5d(%4d)\",\n  1217: \t\t\t    prefix, P_NAME(i), sklnambuf,\n  1218: \t\t\t    P_ADVANCE(i),\n  1219: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n  1220: \t\t } else\n  1221: #endif"
+    "context": "src/weapon.c:1216:17\n       1211: \t\t\tSprintf(buf, \" %s%-*s %-12s %4d(%4d)\",\n       1212: \t\t\t    prefix, longest, P_NAME(i), sklnambuf,\n       1213: \t\t\t    P_ADVANCE(i),\n       1214: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n       1215: \t\t    else\nTARGET 1216: \t\t\tSprintf(buf, \" %s%s\\t%s\\t%5d(%4d)\",\n       1217: \t\t\t    prefix, P_NAME(i), sklnambuf,\n       1218: \t\t\t    P_ADVANCE(i),\n       1219: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n       1220: \t\t } else\n       1221: #endif"
   },
   {
     "key": "L01224_01",
     "original": " %s %-*s [%s]",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1224:17\n  1219: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n  1220: \t\t } else\n  1221: #endif\n  1222: \t\t{\n  1223: \t\t    if (!iflags.menu_tab_sep)\n&gt; 1224: \t\t\tSprintf(buf, \" %s %-*s [%s]\",\n  1225: \t\t\t    prefix, longest, P_NAME(i), sklnambuf);\n  1226: \t\t    else\n  1227: \t\t\tSprintf(buf, \" %s%s\\t[%s]\",\n  1228: \t\t\t    prefix, P_NAME(i), sklnambuf);\n  1229: \t\t}"
+    "context": "src/weapon.c:1224:17\n       1219: \t\t\t    practice_needed_to_advance(P_SKILL(i), i));\n       1220: \t\t } else\n       1221: #endif\n       1222: \t\t{\n       1223: \t\t    if (!iflags.menu_tab_sep)\nTARGET 1224: \t\t\tSprintf(buf, \" %s %-*s [%s]\",\n       1225: \t\t\t    prefix, longest, P_NAME(i), sklnambuf);\n       1226: \t\t    else\n       1227: \t\t\tSprintf(buf, \" %s%s\\t[%s]\",\n       1228: \t\t\t    prefix, P_NAME(i), sklnambuf);\n       1229: \t\t}"
   },
   {
     "key": "L01227_01",
     "original": " %s%s\\t[%s]",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1227:17\n  1222: \t\t{\n  1223: \t\t    if (!iflags.menu_tab_sep)\n  1224: \t\t\tSprintf(buf, \" %s %-*s [%s]\",\n  1225: \t\t\t    prefix, longest, P_NAME(i), sklnambuf);\n  1226: \t\t    else\n&gt; 1227: \t\t\tSprintf(buf, \" %s%s\\t[%s]\",\n  1228: \t\t\t    prefix, P_NAME(i), sklnambuf);\n  1229: \t\t}\n  1230: \t\tany.a_int = can_advance(i, speedy) ? i+1 : 0;\n  1231: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1232: \t\t\t buf, MENU_UNSELECTED);"
+    "context": "src/weapon.c:1227:17\n       1222: \t\t{\n       1223: \t\t    if (!iflags.menu_tab_sep)\n       1224: \t\t\tSprintf(buf, \" %s %-*s [%s]\",\n       1225: \t\t\t    prefix, longest, P_NAME(i), sklnambuf);\n       1226: \t\t    else\nTARGET 1227: \t\t\tSprintf(buf, \" %s%s\\t[%s]\",\n       1228: \t\t\t    prefix, P_NAME(i), sklnambuf);\n       1229: \t\t}\n       1230: \t\tany.a_int = can_advance(i, speedy) ? i+1 : 0;\n       1231: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1232: \t\t\t buf, MENU_UNSELECTED);"
   },
   {
     "key": "L01235_01",
     "original": "Pick a skill to advance:",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1235:37\n  1230: \t\tany.a_int = can_advance(i, speedy) ? i+1 : 0;\n  1231: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1232: \t\t\t buf, MENU_UNSELECTED);\n  1233: \t    }\n  1234: \n&gt; 1235: \t    Strcpy(buf, (to_advance &gt; 0) ? \"Pick a skill to advance:\" :\n  1236: \t\t\t\t\t   \"Current skills:\");\n  1237: #ifdef WIZARD\n  1238: \t    if (wizard && !speedy)\n  1239: \t\tSprintf(eos(buf), \"  (%d slot%s available)\",\n  1240: \t\t\tu.weapon_slots, plur(u.weapon_slots));"
+    "context": "src/weapon.c:1235:37\n       1230: \t\tany.a_int = can_advance(i, speedy) ? i+1 : 0;\n       1231: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1232: \t\t\t buf, MENU_UNSELECTED);\n       1233: \t    }\n       1234: \nTARGET 1235: \t    Strcpy(buf, (to_advance &gt; 0) ? \"Pick a skill to advance:\" :\n       1236: \t\t\t\t\t   \"Current skills:\");\n       1237: #ifdef WIZARD\n       1238: \t    if (wizard && !speedy)\n       1239: \t\tSprintf(eos(buf), \"  (%d slot%s available)\",\n       1240: \t\t\tu.weapon_slots, plur(u.weapon_slots));"
   },
   {
     "key": "L01236_01",
     "original": "Current skills:",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1236:9\n  1231: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n  1232: \t\t\t buf, MENU_UNSELECTED);\n  1233: \t    }\n  1234: \n  1235: \t    Strcpy(buf, (to_advance &gt; 0) ? \"Pick a skill to advance:\" :\n&gt; 1236: \t\t\t\t\t   \"Current skills:\");\n  1237: #ifdef WIZARD\n  1238: \t    if (wizard && !speedy)\n  1239: \t\tSprintf(eos(buf), \"  (%d slot%s available)\",\n  1240: \t\t\tu.weapon_slots, plur(u.weapon_slots));\n  1241: #endif"
+    "context": "src/weapon.c:1236:9\n       1231: \t\tadd_menu(win, NO_GLYPH, &any, 0, 0, ATR_NONE,\n       1232: \t\t\t buf, MENU_UNSELECTED);\n       1233: \t    }\n       1234: \n       1235: \t    Strcpy(buf, (to_advance &gt; 0) ? \"Pick a skill to advance:\" :\nTARGET 1236: \t\t\t\t\t   \"Current skills:\");\n       1237: #ifdef WIZARD\n       1238: \t    if (wizard && !speedy)\n       1239: \t\tSprintf(eos(buf), \"  (%d slot%s available)\",\n       1240: \t\t\tu.weapon_slots, plur(u.weapon_slots));\n       1241: #endif"
   },
   {
     "key": "L01239_01",
     "original": "  (%d slot%s available)",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1239:21\n  1234: \n  1235: \t    Strcpy(buf, (to_advance &gt; 0) ? \"Pick a skill to advance:\" :\n  1236: \t\t\t\t\t   \"Current skills:\");\n  1237: #ifdef WIZARD\n  1238: \t    if (wizard && !speedy)\n&gt; 1239: \t\tSprintf(eos(buf), \"  (%d slot%s available)\",\n  1240: \t\t\tu.weapon_slots, plur(u.weapon_slots));\n  1241: #endif\n  1242: \t    end_menu(win, buf);\n  1243: \t    n = select_menu(win, to_advance ? PICK_ONE : PICK_NONE, &selected);\n  1244: \t    destroy_nhwindow(win);"
+    "context": "src/weapon.c:1239:21\n       1234: \n       1235: \t    Strcpy(buf, (to_advance &gt; 0) ? \"Pick a skill to advance:\" :\n       1236: \t\t\t\t\t   \"Current skills:\");\n       1237: #ifdef WIZARD\n       1238: \t    if (wizard && !speedy)\nTARGET 1239: \t\tSprintf(eos(buf), \"  (%d slot%s available)\",\n       1240: \t\t\tu.weapon_slots, plur(u.weapon_slots));\n       1241: #endif\n       1242: \t    end_menu(win, buf);\n       1243: \t    n = select_menu(win, to_advance ? PICK_ONE : PICK_NONE, &selected);\n       1244: \t    destroy_nhwindow(win);"
   },
   {
     "key": "L01252_01",
     "original": "you could be more dangerous!",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1252:26\n  1247: \t\tfree((genericptr_t)selected);\n  1248: \t\tskill_advance(n);\n  1249: \t\t/* check for more skills able to advance, if so then .. */\n  1250: \t\tfor (n = i = 0; i &lt; P_NUM_SKILLS; i++) {\n  1251: \t\t    if (can_advance(i, speedy)) {\n&gt; 1252: \t\t\tif (!speedy) You_feel(\"you could be more dangerous!\");\n  1253: \t\t\tn++;\n  1254: \t\t\tbreak;\n  1255: \t\t    }\n  1256: \t\t}\n  1257: \t    }"
+    "context": "src/weapon.c:1252:26\n       1247: \t\tfree((genericptr_t)selected);\n       1248: \t\tskill_advance(n);\n       1249: \t\t/* check for more skills able to advance, if so then .. */\n       1250: \t\tfor (n = i = 0; i &lt; P_NUM_SKILLS; i++) {\n       1251: \t\t    if (can_advance(i, speedy)) {\nTARGET 1252: \t\t\tif (!speedy) You_feel(\"you could be more dangerous!\");\n       1253: \t\t\tn++;\n       1254: \t\t\tbreak;\n       1255: \t\t    }\n       1256: \t\t}\n       1257: \t    }"
   },
   {
     "key": "L01329_01",
     "original": "lose_weapon_skill (%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1329:9\n  1324: \tif (u.weapon_slots) {\n  1325: \t    u.weapon_slots--;\n  1326: \t} else if (u.skills_advanced) {\n  1327: \t    skill = u.skill_record[--u.skills_advanced];\n  1328: \t    if (P_SKILL(skill) &lt;= P_UNSKILLED)\n&gt; 1329: \t\tpanic(\"lose_weapon_skill (%d)\", skill);\n  1330: \t    if (skill &lt;= P_LAST_WEAPON && skill != P_WHIP &&\n  1331: \t\t    P_SKILL(skill) == P_SKILLED)\n  1332: \t\tmaybe_loose_disarm = TRUE;\n  1333: \t    P_SKILL(skill)--;\t/* drop skill one level */\n  1334: \t    /* Lost skill might have taken more than one slot; refund rest. */"
+    "context": "src/weapon.c:1329:9\n       1324: \tif (u.weapon_slots) {\n       1325: \t    u.weapon_slots--;\n       1326: \t} else if (u.skills_advanced) {\n       1327: \t    skill = u.skill_record[--u.skills_advanced];\n       1328: \t    if (P_SKILL(skill) &lt;= P_UNSKILLED)\nTARGET 1329: \t\tpanic(\"lose_weapon_skill (%d)\", skill);\n       1330: \t    if (skill &lt;= P_LAST_WEAPON && skill != P_WHIP &&\n       1331: \t\t    P_SKILL(skill) == P_SKILLED)\n       1332: \t\tmaybe_loose_disarm = TRUE;\n       1333: \t    P_SKILL(skill)--;\t/* drop skill one level */\n       1334: \t    /* Lost skill might have taken more than one slot; refund rest. */"
   },
   {
     "key": "L01394_01",
     "original": "weapon_hit_bonus: bad skill %d",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1394:37\n  1389: {\n  1390:     int type, wep_type, bonus = 0;\n  1391: #if 0\n  1392:     int skill;\n  1393: #endif\n&gt; 1394:     static const char bad_skill[] = \"weapon_hit_bonus: bad skill %d\";\n  1395: \n  1396:     wep_type = weapon_type(weapon);\n  1397: #if 0\n  1398:     /* use two weapon skill only if attacking with one of the wielded weapons */\n  1399:     type = (u.twoweap && (weapon == uwep || weapon == uswapwep)) ?"
+    "context": "src/weapon.c:1394:37\n       1389: {\n       1390:     int type, wep_type, bonus = 0;\n       1391: #if 0\n       1392:     int skill;\n       1393: #endif\nTARGET 1394:     static const char bad_skill[] = \"weapon_hit_bonus: bad skill %d\";\n       1395: \n       1396:     wep_type = weapon_type(weapon);\n       1397: #if 0\n       1398:     /* use two weapon skill only if attacking with one of the wielded weapons */\n       1399:     type = (u.twoweap && (weapon == uwep || weapon == uswapwep)) ?"
   },
   {
     "key": "L01493_01",
     "original": "weapon_dam_bonus: bad skill %d",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1493:26\n  1488:     type = wep_type;\n  1489:     if (type == P_NONE) {\n  1490: \tbonus = 0;\n  1491:     } else if (type &lt;= P_LAST_WEAPON) {\n  1492: \tswitch (P_SKILL(type)) {\n&gt; 1493: \t    default: impossible(\"weapon_dam_bonus: bad skill %d\",P_SKILL(type));\n  1494: \t\t     /* fall through */\n  1495: \t    case P_ISRESTRICTED:\n  1496: \t    case P_UNSKILLED:\tbonus = -2; break;\n  1497: \t    case P_BASIC:\tbonus =  0; break;\n  1498: \t    case P_SKILLED:\tbonus =  1; break;"
+    "context": "src/weapon.c:1493:26\n       1488:     type = wep_type;\n       1489:     if (type == P_NONE) {\n       1490: \tbonus = 0;\n       1491:     } else if (type &lt;= P_LAST_WEAPON) {\n       1492: \tswitch (P_SKILL(type)) {\nTARGET 1493: \t    default: impossible(\"weapon_dam_bonus: bad skill %d\",P_SKILL(type));\n       1494: \t\t     /* fall through */\n       1495: \t    case P_ISRESTRICTED:\n       1496: \t    case P_UNSKILLED:\tbonus = -2; break;\n       1497: \t    case P_BASIC:\tbonus =  0; break;\n       1498: \t    case P_SKILLED:\tbonus =  1; break;"
   },
   {
     "key": "L01557_01",
     "original": "skill_bonus: bad skill %d",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1557:27\n  1552:     int bonus = 0;\n  1553:     if (type == P_NONE) {\n  1554: \t\tbonus = 0;\n  1555:     } else if (type &lt;= P_LAST_WEAPON) {\n  1556: \t\tswitch (P_SKILL(type)) {\n&gt; 1557: \t\t    default: impossible(\"skill_bonus: bad skill %d\",P_SKILL(type));\n  1558: \t\t\t     /* fall through */\n  1559: \t\t    case P_ISRESTRICTED:\n  1560: \t\t    case P_UNSKILLED:   bonus = -2; break;\n  1561: \t\t    case P_BASIC:       bonus =  0; break;\n  1562: \t\t    case P_SKILLED:     bonus =  1; break;"
+    "context": "src/weapon.c:1557:27\n       1552:     int bonus = 0;\n       1553:     if (type == P_NONE) {\n       1554: \t\tbonus = 0;\n       1555:     } else if (type &lt;= P_LAST_WEAPON) {\n       1556: \t\tswitch (P_SKILL(type)) {\nTARGET 1557: \t\t    default: impossible(\"skill_bonus: bad skill %d\",P_SKILL(type));\n       1558: \t\t\t     /* fall through */\n       1559: \t\t    case P_ISRESTRICTED:\n       1560: \t\t    case P_UNSKILLED:   bonus = -2; break;\n       1561: \t\t    case P_BASIC:       bonus =  0; break;\n       1562: \t\t    case P_SKILLED:     bonus =  1; break;"
   },
   {
     "key": "L01572_01",
     "original": "skill_bonus: bad skill %d",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1572:27\n  1567:     } else if (type == P_BARE_HANDED_COMBAT || type == P_MARTIAL_ARTS) {\n  1568: \t\tbonus = (P_SKILL(type) * (martial_bonus() ? 2 : 1)) / 2;\n  1569:     } else {\n  1570:     \t\t/* Misc. */\n  1571: \t\tswitch (P_SKILL(type)) {\n&gt; 1572: \t\t    default: impossible(\"skill_bonus: bad skill %d\",P_SKILL(type));\n  1573: \t\t\t     /* fall through */\n  1574: \t\t    case P_ISRESTRICTED:\n  1575: \t\t    case P_UNSKILLED:   bonus = -2; break;\n  1576: \t\t    case P_BASIC:       bonus =  0; break;\n  1577: \t\t    case P_SKILLED:     bonus =  1; break;"
+    "context": "src/weapon.c:1572:27\n       1567:     } else if (type == P_BARE_HANDED_COMBAT || type == P_MARTIAL_ARTS) {\n       1568: \t\tbonus = (P_SKILL(type) * (martial_bonus() ? 2 : 1)) / 2;\n       1569:     } else {\n       1570:     \t\t/* Misc. */\n       1571: \t\tswitch (P_SKILL(type)) {\nTARGET 1572: \t\t    default: impossible(\"skill_bonus: bad skill %d\",P_SKILL(type));\n       1573: \t\t\t     /* fall through */\n       1574: \t\t    case P_ISRESTRICTED:\n       1575: \t\t    case P_UNSKILLED:   bonus = -2; break;\n       1576: \t\t    case P_BASIC:       bonus =  0; break;\n       1577: \t\t    case P_SKILLED:     bonus =  1; break;"
   },
   {
     "key": "L01654_01",
     "original": "Warning: %s should be at least skilled.  Fixing...",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1654:10\n  1649: \t    skill = get_obj_skill(obj);\n  1650: \t    if (skill != P_NONE) {\n  1651: \t\tP_SKILL(skill) = P_BASIC;\n  1652: \t\t/* KMH -- If you came into the dungeon with it, you should at least be skilled */\n  1653: \t\tif (P_MAX_SKILL(skill) &lt; P_SKILLED) {\n&gt; 1654: \t\t\tpline(\"Warning: %s should be at least skilled.  Fixing...\", P_NAME(skill));\n  1655: \t\t\tP_MAX_SKILL(skill) = P_SKILLED;\n  1656: \t\t}\n  1657: \t    }\n  1658: \t}\n  1659: "
+    "context": "src/weapon.c:1654:10\n       1649: \t    skill = get_obj_skill(obj);\n       1650: \t    if (skill != P_NONE) {\n       1651: \t\tP_SKILL(skill) = P_BASIC;\n       1652: \t\t/* KMH -- If you came into the dungeon with it, you should at least be skilled */\n       1653: \t\tif (P_MAX_SKILL(skill) &lt; P_SKILLED) {\nTARGET 1654: \t\t\tpline(\"Warning: %s should be at least skilled.  Fixing...\", P_NAME(skill));\n       1655: \t\t\tP_MAX_SKILL(skill) = P_SKILLED;\n       1656: \t\t}\n       1657: \t    }\n       1658: \t}\n       1659: "
   },
   {
     "key": "L01696_01",
     "original": "skill_init: curr > max: %s",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1696:18\n  1691: \t * & set advance\n  1692: \t */\n  1693: \tfor (skill = 0; skill &lt; P_NUM_SKILLS; skill++) {\n  1694: \t    if (!P_RESTRICTED(skill)) {\n  1695: \t\tif (P_MAX_SKILL(skill) &lt; P_SKILL(skill)) {\n&gt; 1696: \t\t    impossible(\"skill_init: curr &gt; max: %s\", P_NAME(skill));\n  1697: \t\t    P_MAX_SKILL(skill) = P_SKILL(skill);\n  1698: \t\t}\n  1699: \t\tP_ADVANCE(skill) = practice_needed_to_advance(P_SKILL(skill)-1,skill);\n  1700: \t    }\n  1701: \t}"
+    "context": "src/weapon.c:1696:18\n       1691: \t * & set advance\n       1692: \t */\n       1693: \tfor (skill = 0; skill &lt; P_NUM_SKILLS; skill++) {\n       1694: \t    if (!P_RESTRICTED(skill)) {\n       1695: \t\tif (P_MAX_SKILL(skill) &lt; P_SKILL(skill)) {\nTARGET 1696: \t\t    impossible(\"skill_init: curr &gt; max: %s\", P_NAME(skill));\n       1697: \t\t    P_MAX_SKILL(skill) = P_SKILL(skill);\n       1698: \t\t}\n       1699: \t\tP_ADVANCE(skill) = practice_needed_to_advance(P_SKILL(skill)-1,skill);\n       1700: \t    }\n       1701: \t}"
   },
   {
     "key": "L01715_01",
     "original": "finish your practice session.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1715:6\n  1710: \t\tuse_skill(weapon_type(uwep), 1);\n  1711: \t\t/*WAC a bit of practice so even if you're interrupted\n  1712: \t\t  you won't be wasting your time ;B*/\n  1713: \t\treturn(1); /* still busy */\n  1714:     }\n&gt; 1715: \tYou(\"finish your practice session.\");\n  1716: \tuse_skill(weapon_type(uwep),\n  1717: \t    practice_needed_to_advance(P_SKILL(weapon_type(uwep)),weapon_type(uwep))/3);\n  1718: \treturn(0);\n  1719: }\n  1720: "
+    "context": "src/weapon.c:1715:6\n       1710: \t\tuse_skill(weapon_type(uwep), 1);\n       1711: \t\t/*WAC a bit of practice so even if you're interrupted\n       1712: \t\t  you won't be wasting your time ;B*/\n       1713: \t\treturn(1); /* still busy */\n       1714:     }\nTARGET 1715: \tYou(\"finish your practice session.\");\n       1716: \tuse_skill(weapon_type(uwep),\n       1717: \t    practice_needed_to_advance(P_SKILL(weapon_type(uwep)),weapon_type(uwep))/3);\n       1718: \treturn(0);\n       1719: }\n       1720: "
   },
   {
     "key": "L01726_01",
     "original": "Skill at normal max. Practice?",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1726:24\n  1721: void\n  1722: practice_weapon()\n  1723: {\n  1724: \tif (can_practice(weapon_type(uwep))\n  1725: #ifdef WIZARD\n&gt; 1726: \t    || (wizard && (yn(\"Skill at normal max. Practice?\") == 'y'))\n  1727: #endif\n  1728: \t    ) {\n  1729: \t\tif (uwep)    \n  1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n  1731: \t\telse"
+    "context": "src/weapon.c:1726:24\n       1721: void\n       1722: practice_weapon()\n       1723: {\n       1724: \tif (can_practice(weapon_type(uwep))\n       1725: #ifdef WIZARD\nTARGET 1726: \t    || (wizard && (yn(\"Skill at normal max. Practice?\") == 'y'))\n       1727: #endif\n       1728: \t    ) {\n       1729: \t\tif (uwep)    \n       1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n       1731: \t\telse"
   },
   {
     "key": "L01730_01",
     "original": "start practicing intensely with %s",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1730:11\n  1725: #ifdef WIZARD\n  1726: \t    || (wizard && (yn(\"Skill at normal max. Practice?\") == 'y'))\n  1727: #endif\n  1728: \t    ) {\n  1729: \t\tif (uwep)    \n&gt; 1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n  1731: \t\telse\n  1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n  1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n  1734: \t\tmakeplural(body_part(HAND)));\n  1735: "
+    "context": "src/weapon.c:1730:11\n       1725: #ifdef WIZARD\n       1726: \t    || (wizard && (yn(\"Skill at normal max. Practice?\") == 'y'))\n       1727: #endif\n       1728: \t    ) {\n       1729: \t\tif (uwep)    \nTARGET 1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n       1731: \t\telse\n       1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n       1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n       1734: \t\tmakeplural(body_part(HAND)));\n       1735: "
   },
   {
     "key": "L01732_01",
     "original": "start practicing intensely with your %s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1732:11\n  1727: #endif\n  1728: \t    ) {\n  1729: \t\tif (uwep)    \n  1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n  1731: \t\telse\n&gt; 1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n  1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n  1734: \t\tmakeplural(body_part(HAND)));\n  1735: \n  1736: \t\tdelay=-10;\n  1737: \t\tset_occupation(practice, \"practicing\", 0);"
+    "context": "src/weapon.c:1732:11\n       1727: #endif\n       1728: \t    ) {\n       1729: \t\tif (uwep)    \n       1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n       1731: \t\telse\nTARGET 1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n       1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n       1734: \t\tmakeplural(body_part(HAND)));\n       1735: \n       1736: \t\tdelay=-10;\n       1737: \t\tset_occupation(practice, \"practicing\", 0);"
   },
   {
     "key": "L01733_01",
     "original": "gloved",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1733:23\n  1728: \t    ) {\n  1729: \t\tif (uwep)    \n  1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n  1731: \t\telse\n  1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n&gt; 1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n  1734: \t\tmakeplural(body_part(HAND)));\n  1735: \n  1736: \t\tdelay=-10;\n  1737: \t\tset_occupation(practice, \"practicing\", 0);\n  1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))"
+    "context": "src/weapon.c:1733:23\n       1728: \t    ) {\n       1729: \t\tif (uwep)    \n       1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n       1731: \t\telse\n       1732: \t\t    You(\"start practicing intensely with your %s %s.\",\nTARGET 1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n       1734: \t\tmakeplural(body_part(HAND)));\n       1735: \n       1736: \t\tdelay=-10;\n       1737: \t\tset_occupation(practice, \"practicing\", 0);\n       1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))"
   },
   {
     "key": "L01733_02",
     "original": "bare",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1733:34\n  1728: \t    ) {\n  1729: \t\tif (uwep)    \n  1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n  1731: \t\telse\n  1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n&gt; 1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n  1734: \t\tmakeplural(body_part(HAND)));\n  1735: \n  1736: \t\tdelay=-10;\n  1737: \t\tset_occupation(practice, \"practicing\", 0);\n  1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))"
+    "context": "src/weapon.c:1733:34\n       1728: \t    ) {\n       1729: \t\tif (uwep)    \n       1730: \t\t    You(\"start practicing intensely with %s\",doname(uwep));\n       1731: \t\telse\n       1732: \t\t    You(\"start practicing intensely with your %s %s.\",\nTARGET 1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n       1734: \t\tmakeplural(body_part(HAND)));\n       1735: \n       1736: \t\tdelay=-10;\n       1737: \t\tset_occupation(practice, \"practicing\", 0);\n       1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))"
   },
   {
     "key": "L01737_01",
     "original": "practicing",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1737:28\n  1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n  1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n  1734: \t\tmakeplural(body_part(HAND)));\n  1735: \n  1736: \t\tdelay=-10;\n&gt; 1737: \t\tset_occupation(practice, \"practicing\", 0);\n  1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))\n  1739: \t\tYou(\"cannot increase your skill in %s.\", P_NAME(weapon_type(uwep)));\n  1740: \telse You(\"cannot learn much about %s right now.\",\n  1741:                 P_NAME(weapon_type(uwep)));\n  1742:                 "
+    "context": "src/weapon.c:1737:28\n       1732: \t\t    You(\"start practicing intensely with your %s %s.\",\n       1733: \t\t            uarmg ? \"gloved\" : \"bare\",      /* Del Lamb */\n       1734: \t\tmakeplural(body_part(HAND)));\n       1735: \n       1736: \t\tdelay=-10;\nTARGET 1737: \t\tset_occupation(practice, \"practicing\", 0);\n       1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))\n       1739: \t\tYou(\"cannot increase your skill in %s.\", P_NAME(weapon_type(uwep)));\n       1740: \telse You(\"cannot learn much about %s right now.\",\n       1741:                 P_NAME(weapon_type(uwep)));\n       1742:                 "
   },
   {
     "key": "L01739_01",
     "original": "cannot increase your skill in %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1739:7\n  1734: \t\tmakeplural(body_part(HAND)));\n  1735: \n  1736: \t\tdelay=-10;\n  1737: \t\tset_occupation(practice, \"practicing\", 0);\n  1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))\n&gt; 1739: \t\tYou(\"cannot increase your skill in %s.\", P_NAME(weapon_type(uwep)));\n  1740: \telse You(\"cannot learn much about %s right now.\",\n  1741:                 P_NAME(weapon_type(uwep)));\n  1742:                 \n  1743: }\n  1744: "
+    "context": "src/weapon.c:1739:7\n       1734: \t\tmakeplural(body_part(HAND)));\n       1735: \n       1736: \t\tdelay=-10;\n       1737: \t\tset_occupation(practice, \"practicing\", 0);\n       1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))\nTARGET 1739: \t\tYou(\"cannot increase your skill in %s.\", P_NAME(weapon_type(uwep)));\n       1740: \telse You(\"cannot learn much about %s right now.\",\n       1741:                 P_NAME(weapon_type(uwep)));\n       1742:                 \n       1743: }\n       1744: "
   },
   {
     "key": "L01740_01",
     "original": "cannot learn much about %s right now.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1740:11\n  1735: \n  1736: \t\tdelay=-10;\n  1737: \t\tset_occupation(practice, \"practicing\", 0);\n  1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))\n  1739: \t\tYou(\"cannot increase your skill in %s.\", P_NAME(weapon_type(uwep)));\n&gt; 1740: \telse You(\"cannot learn much about %s right now.\",\n  1741:                 P_NAME(weapon_type(uwep)));\n  1742:                 \n  1743: }\n  1744: \n  1745: void"
+    "context": "src/weapon.c:1740:11\n       1735: \n       1736: \t\tdelay=-10;\n       1737: \t\tset_occupation(practice, \"practicing\", 0);\n       1738: \t} else if (P_SKILL(weapon_type(uwep)) &gt;= P_MAX_SKILL(weapon_type(uwep)))\n       1739: \t\tYou(\"cannot increase your skill in %s.\", P_NAME(weapon_type(uwep)));\nTARGET 1740: \telse You(\"cannot learn much about %s right now.\",\n       1741:                 P_NAME(weapon_type(uwep)));\n       1742:                 \n       1743: }\n       1744: \n       1745: void"
   },
   {
     "key": "L01754_01",
     "original": "%s in %s %s %s glowing.",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1754:12\n  1749: {\n  1750:     if (!obj) return;\n  1751:     if (artifact_light(obj) && obj-&gt;lamplit) {\n  1752: \tend_burn(obj, FALSE);\n  1753: \tif (canseemon(mon))\n&gt; 1754: \t    pline(\"%s in %s %s %s glowing.\", The(xname(obj)),\n  1755: \t\t  s_suffix(mon_nam(mon)), mbodypart(mon,HAND),\n  1756: \t\t  otense(obj, \"stop\"));\n  1757:     }\n  1758:     obj-&gt;owornmask &= ~W_WEP;\n  1759: }"
+    "context": "src/weapon.c:1754:12\n       1749: {\n       1750:     if (!obj) return;\n       1751:     if (artifact_light(obj) && obj-&gt;lamplit) {\n       1752: \tend_burn(obj, FALSE);\n       1753: \tif (canseemon(mon))\nTARGET 1754: \t    pline(\"%s in %s %s %s glowing.\", The(xname(obj)),\n       1755: \t\t  s_suffix(mon_nam(mon)), mbodypart(mon,HAND),\n       1756: \t\t  otense(obj, \"stop\"));\n       1757:     }\n       1758:     obj-&gt;owornmask &= ~W_WEP;\n       1759: }"
   },
   {
     "key": "L01756_01",
     "original": "stop",
     "translation": "",
     "stage": 0,
-    "context": "src/weapon.c:1756:17\n  1751:     if (artifact_light(obj) && obj-&gt;lamplit) {\n  1752: \tend_burn(obj, FALSE);\n  1753: \tif (canseemon(mon))\n  1754: \t    pline(\"%s in %s %s %s glowing.\", The(xname(obj)),\n  1755: \t\t  s_suffix(mon_nam(mon)), mbodypart(mon,HAND),\n&gt; 1756: \t\t  otense(obj, \"stop\"));\n  1757:     }\n  1758:     obj-&gt;owornmask &= ~W_WEP;\n  1759: }\n  1760: \n  1761: #endif /* OVLB */"
+    "context": "src/weapon.c:1756:17\n       1751:     if (artifact_light(obj) && obj-&gt;lamplit) {\n       1752: \tend_burn(obj, FALSE);\n       1753: \tif (canseemon(mon))\n       1754: \t    pline(\"%s in %s %s %s glowing.\", The(xname(obj)),\n       1755: \t\t  s_suffix(mon_nam(mon)), mbodypart(mon,HAND),\nTARGET 1756: \t\t  otense(obj, \"stop\"));\n       1757:     }\n       1758:     obj-&gt;owornmask &= ~W_WEP;\n       1759: }\n       1760: \n       1761: #endif /* OVLB */"
   }
 ]

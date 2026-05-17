@@ -4,433 +4,433 @@
     "original": "hjkl",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:25:32\n    20:     char sbuf[BUFSZ];\n    21:     boolean doing_what_is;\n    22:     winid tmpwin = create_nhwindow(NHW_MENU);\n    23: \n    24:     Sprintf(sbuf, \"按[%s]来把光标移动到%s.\",\n&gt;   25: \t    iflags.num_pad ? \"2468\" : \"hjkl\", goal);\n    26:     putstr(tmpwin, 0, sbuf);\n    27:     putstr(tmpwin, 0, \"使用[HJKL]来一次性移动8格光标.\");\n    28:     putstr(tmpwin, 0, \"或者使用其余的按钮 (ex. &lt;).\");\n    29:     /* disgusting hack; the alternate selection characters work for any\n    30:        getpos call, but they only matter for dowhatis (and doquickwhatis) */"
+    "context": "src/do_name.c:25:32\n         20:     char sbuf[BUFSZ];\n         21:     boolean doing_what_is;\n         22:     winid tmpwin = create_nhwindow(NHW_MENU);\n         23: \n         24:     Sprintf(sbuf, \"按[%s]来把光标移动到%s.\",\nTARGET   25: \t    iflags.num_pad ? \"2468\" : \"hjkl\", goal);\n         26:     putstr(tmpwin, 0, sbuf);\n         27:     putstr(tmpwin, 0, \"使用[HJKL]来一次性移动8格光标.\");\n         28:     putstr(tmpwin, 0, \"或者使用其余的按钮 (ex. &lt;).\");\n         29:     /* disgusting hack; the alternate selection characters work for any\n         30:        getpos call, but they only matter for dowhatis (and doquickwhatis) */"
   },
   {
     "key": "L00471_01",
     "original": "call",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:471:26\n   466: \t\tbreak;\n   467: \tdefault :\n   468: #ifdef REDO\n   469: \t\tsavech(ch);\n   470: #endif\n&gt;  471: \t\tobj = getobj(callable, \"call\");\n   472: \t\tif (obj) {\n   473: \t\t\t/* behave as if examining it in inventory;\n   474: \t\t\t   this might set dknown if it was picked up\n   475: \t\t\t   while blind and the hero can now see */\n   476: \t\t\t(void) xname(obj);"
+    "context": "src/do_name.c:471:26\n        466: \t\tbreak;\n        467: \tdefault :\n        468: #ifdef REDO\n        469: \t\tsavech(ch);\n        470: #endif\nTARGET  471: \t\tobj = getobj(callable, \"call\");\n        472: \t\tif (obj) {\n        473: \t\t\t/* behave as if examining it in inventory;\n        474: \t\t\t   this might set dknown if it was picked up\n        475: \t\t\t   while blind and the hero can now see */\n        476: \t\t\t(void) xname(obj);"
   },
   {
     "key": "L00618_01",
     "original": "it",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:618:18\n   613: \n   614: \tbuf[0] = 0;\n   615: \n   616: \t/* unseen monsters, etc.  Use \"it\" */\n   617: \tif (do_it) {\n&gt;  618: \t    Strcpy(buf, \"it\");\n   619: \t    return buf;\n   620: \t}\n   621: \n   622: \t/* priests and minions: don't even use this function */\n   623: \tif (mtmp-&gt;ispriest || mtmp-&gt;isminion) {"
+    "context": "src/do_name.c:618:18\n        613: \n        614: \tbuf[0] = 0;\n        615: \n        616: \t/* unseen monsters, etc.  Use \"it\" */\n        617: \tif (do_it) {\nTARGET  618: \t    Strcpy(buf, \"it\");\n        619: \t    return buf;\n        620: \t}\n        621: \n        622: \t/* priests and minions: don't even use this function */\n        623: \tif (mtmp-&gt;ispriest || mtmp-&gt;isminion) {"
   },
   {
     "key": "L00635_01",
     "original": "the ",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:635:52\n   630: \t    if (!do_hallu) EHalluc_resistance = 1L;\n   631: \t    if (!do_invis) mtmp-&gt;minvis = 0;\n   632: \t    name = priestname(mtmp, priestnambuf);\n   633: \t    EHalluc_resistance = save_prop;\n   634: \t    mtmp-&gt;minvis = save_invis;\n&gt;  635: \t    if (article == ARTICLE_NONE && !strncmp(name, \"the \", 4))\n   636: \t\tname += 4;\n   637: \t    return strcpy(buf, name);\n   638: \t}\n   639: \n   640: \t/* Shopkeepers: use shopkeeper name.  For normal shopkeepers, just"
+    "context": "src/do_name.c:635:52\n        630: \t    if (!do_hallu) EHalluc_resistance = 1L;\n        631: \t    if (!do_invis) mtmp-&gt;minvis = 0;\n        632: \t    name = priestname(mtmp, priestnambuf);\n        633: \t    EHalluc_resistance = save_prop;\n        634: \t    mtmp-&gt;minvis = save_invis;\nTARGET  635: \t    if (article == ARTICLE_NONE && !strncmp(name, \"the \", 4))\n        636: \t\tname += 4;\n        637: \t    return strcpy(buf, name);\n        638: \t}\n        639: \n        640: \t/* Shopkeepers: use shopkeeper name.  For normal shopkeepers, just"
   },
   {
     "key": "L00693_01",
     "original": " the ",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:693:57\n   688: \t\tSprintf(eos(buf), \"%s的鬼魂\", s_suffix(name));\n   689: \t\tname_at_start = TRUE;\n   690: \t    } else if (called) {\n   691: \t\tSprintf(eos(buf), \"%s，叫做%s\", mdat-&gt;mname, name);\n   692: \t\tname_at_start = (boolean)type_is_pname(mdat);\n&gt;  693: \t    } else if (is_mplayer(mdat) && (bp = strstri(name, \" the \")) != 0) {\n   694: \t\t/* &lt;name&gt; the &lt;adjective&gt; &lt;invisible&gt; &lt;saddled&gt; &lt;rank&gt; */\n   695: \t\tchar pbuf[BUFSZ];\n   696: \n   697: \t\tStrcpy(pbuf, name);\n   698: \t\tpbuf[bp - name + 5] = '\\0'; /* adjectives right after \" the \" */"
+    "context": "src/do_name.c:693:57\n        688: \t\tSprintf(eos(buf), \"%s的鬼魂\", s_suffix(name));\n        689: \t\tname_at_start = TRUE;\n        690: \t    } else if (called) {\n        691: \t\tSprintf(eos(buf), \"%s，叫做%s\", mdat-&gt;mname, name);\n        692: \t\tname_at_start = (boolean)type_is_pname(mdat);\nTARGET  693: \t    } else if (is_mplayer(mdat) && (bp = strstri(name, \" the \")) != 0) {\n        694: \t\t/* &lt;name&gt; the &lt;adjective&gt; &lt;invisible&gt; &lt;saddled&gt; &lt;rank&gt; */\n        695: \t\tchar pbuf[BUFSZ];\n        696: \n        697: \t\tStrcpy(pbuf, name);\n        698: \t\tpbuf[bp - name + 5] = '\\0'; /* adjectives right after \" the \" */"
   },
   {
     "key": "L00740_01",
     "original": "the ",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:740:20\n   735: \t\t    Strcpy(buf2, \"你的 \");\n   736: \t\t    Strcat(buf2, buf);\n   737: \t\t    Strcpy(buf, buf2);\n   738: \t\t    return buf;\n   739: \t\tcase ARTICLE_THE:\n&gt;  740: \t\t    Strcpy(buf2, \"the \");\n   741: \t\t    Strcat(buf2, buf);\n   742: \t\t    Strcpy(buf, buf2);\n   743: \t\t    return buf;\n   744: \t\tcase ARTICLE_A:\n   745: \t\t    return(an(buf));"
+    "context": "src/do_name.c:740:20\n        735: \t\t    Strcpy(buf2, \"你的 \");\n        736: \t\t    Strcat(buf2, buf);\n        737: \t\t    Strcpy(buf, buf2);\n        738: \t\t    return buf;\n        739: \t\tcase ARTICLE_THE:\nTARGET  740: \t\t    Strcpy(buf2, \"the \");\n        741: \t\t    Strcat(buf2, buf);\n        742: \t\t    Strcpy(buf, buf2);\n        743: \t\t    return buf;\n        744: \t\tcase ARTICLE_A:\n        745: \t\t    return(an(buf));"
   },
   {
     "key": "L00900_01",
     "original": "C++",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:900:8\n   895: \t\t\t\t\t\t/* misc. */\n   896: \t\"家人们谁懂啊\", \"圣诞树杀人魔\", \"幸运杀手\", \"唐吉可德\",\n   897: \t\"残疾人\", \"脚恶魔\",\t\t/* Quendor (Zork, &c.) */\n   898: \t\"古代的非常牛逼的非常伟大的一个恶魔\", \"瞎子\",\n   899: \t\t\t\t\t\t/* Moria */\n&gt;  900: \t\"傻子\", \"C++\", \"python\", \"维纳斯\",\n   901: \t\t\t\t\t\t/* Rogue */\n   902: \t\"乱叫的金币\",\t\t\t/* Wizardry */\n   903: \t\"警报\",                                /* Greek legend */\n   904: \t\"杀人兔\",\t\t\t\t/* Monty Python */\n   905: \t\"啊嗷嗷嗷嗷\",\t\t/* The Princess Bride */"
+    "context": "src/do_name.c:900:8\n        895: \t\t\t\t\t\t/* misc. */\n        896: \t\"家人们谁懂啊\", \"圣诞树杀人魔\", \"幸运杀手\", \"唐吉可德\",\n        897: \t\"残疾人\", \"脚恶魔\",\t\t/* Quendor (Zork, &c.) */\n        898: \t\"古代的非常牛逼的非常伟大的一个恶魔\", \"瞎子\",\n        899: \t\t\t\t\t\t/* Moria */\nTARGET  900: \t\"傻子\", \"C++\", \"python\", \"维纳斯\",\n        901: \t\t\t\t\t\t/* Rogue */\n        902: \t\"乱叫的金币\",\t\t\t/* Wizardry */\n        903: \t\"警报\",                                /* Greek legend */\n        904: \t\"杀人兔\",\t\t\t\t/* Monty Python */\n        905: \t\"啊嗷嗷嗷嗷\",\t\t/* The Princess Bride */"
   },
   {
     "key": "L00900_02",
     "original": "python",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:900:15\n   895: \t\t\t\t\t\t/* misc. */\n   896: \t\"家人们谁懂啊\", \"圣诞树杀人魔\", \"幸运杀手\", \"唐吉可德\",\n   897: \t\"残疾人\", \"脚恶魔\",\t\t/* Quendor (Zork, &c.) */\n   898: \t\"古代的非常牛逼的非常伟大的一个恶魔\", \"瞎子\",\n   899: \t\t\t\t\t\t/* Moria */\n&gt;  900: \t\"傻子\", \"C++\", \"python\", \"维纳斯\",\n   901: \t\t\t\t\t\t/* Rogue */\n   902: \t\"乱叫的金币\",\t\t\t/* Wizardry */\n   903: \t\"警报\",                                /* Greek legend */\n   904: \t\"杀人兔\",\t\t\t\t/* Monty Python */\n   905: \t\"啊嗷嗷嗷嗷\",\t\t/* The Princess Bride */"
+    "context": "src/do_name.c:900:15\n        895: \t\t\t\t\t\t/* misc. */\n        896: \t\"家人们谁懂啊\", \"圣诞树杀人魔\", \"幸运杀手\", \"唐吉可德\",\n        897: \t\"残疾人\", \"脚恶魔\",\t\t/* Quendor (Zork, &c.) */\n        898: \t\"古代的非常牛逼的非常伟大的一个恶魔\", \"瞎子\",\n        899: \t\t\t\t\t\t/* Moria */\nTARGET  900: \t\"傻子\", \"C++\", \"python\", \"维纳斯\",\n        901: \t\t\t\t\t\t/* Rogue */\n        902: \t\"乱叫的金币\",\t\t\t/* Wizardry */\n        903: \t\"警报\",                                /* Greek legend */\n        904: \t\"杀人兔\",\t\t\t\t/* Monty Python */\n        905: \t\"啊嗷嗷嗷嗷\",\t\t/* The Princess Bride */"
   },
   {
     "key": "L00909_01",
     "original": "tangle tree",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:909:2\n   904: \t\"杀人兔\",\t\t\t\t/* Monty Python */\n   905: \t\"啊嗷嗷嗷嗷\",\t\t/* The Princess Bride */\n   906: \t\"&*@!&#)*@!)(\",\t/* \"Only you can prevent forest fires!\" */\n   907: \t\"李白\",\t\t\t\t/* Discworld */\n   908: \t\"恩特\",\t\t\t\t\t/* Lord of the Rings */\n&gt;  909: \t\"tangle tree\", \"威哥\",                /* Xanth */\n   910: \t\"黑色的白兔\", \"爬行的鲨鱼\",\t\t/* Lewis Carroll */\n   911: \t\"浦西-浦东\",\t\t\t/* Dr. Doolittle */\n   912: \t\"爆炸狂魔\",\t\t\t\t/* The Smurfs */\n   913: \t\"星际迷航主题曲\", \"克林贡人\", \"博格\",\t\t/* Star Trek */\n   914: \t\"卢克\",\t\t\t\t\t/* Star Wars */"
+    "context": "src/do_name.c:909:2\n        904: \t\"杀人兔\",\t\t\t\t/* Monty Python */\n        905: \t\"啊嗷嗷嗷嗷\",\t\t/* The Princess Bride */\n        906: \t\"&*@!&#)*@!)(\",\t/* \"Only you can prevent forest fires!\" */\n        907: \t\"李白\",\t\t\t\t/* Discworld */\n        908: \t\"恩特\",\t\t\t\t\t/* Lord of the Rings */\nTARGET  909: \t\"tangle tree\", \"威哥\",                /* Xanth */\n        910: \t\"黑色的白兔\", \"爬行的鲨鱼\",\t\t/* Lewis Carroll */\n        911: \t\"浦西-浦东\",\t\t\t/* Dr. Doolittle */\n        912: \t\"爆炸狂魔\",\t\t\t\t/* The Smurfs */\n        913: \t\"星际迷航主题曲\", \"克林贡人\", \"博格\",\t\t/* Star Trek */\n        914: \t\"卢克\",\t\t\t\t\t/* Star Wars */"
   },
   {
     "key": "L00923_01",
     "original": "BOOMER!",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:923:2\n   918: \t\"压缩失败\",\t\t\t\t/* Pokemon (Meowth) */\n   919: \t\"哥斯拉\", \"金刚\",\t\t/* monster movies */\n   920: \t\"地震野兽\",\t\t\t/* old L of SH */\n   921: \t\"不存在的ID\",\t\t\t\t/* Robotech */\n   922: \t\"终结者\",\t\t\t\t/* The Terminator */\n&gt;  923: \t\"BOOMER!\",\t\t\t\t/* Bubblegum Crisis */\n   924: \t\"Dalek\",\t\t\t\t/* Dr. Who (\"Exterminate!\") */\n   925: \t\"纳米机器人\", \"史诗级的野兽\",\n   926: \t\t\t\t\t\t/* HGttG */\n   927: \t\"忍者神龟\",\t\t/* TMNT */\n   928: \t\"巫师兔\",\t\t\t/* Usagi Yojimbo */"
+    "context": "src/do_name.c:923:2\n        918: \t\"压缩失败\",\t\t\t\t/* Pokemon (Meowth) */\n        919: \t\"哥斯拉\", \"金刚\",\t\t/* monster movies */\n        920: \t\"地震野兽\",\t\t\t/* old L of SH */\n        921: \t\"不存在的ID\",\t\t\t\t/* Robotech */\n        922: \t\"终结者\",\t\t\t\t/* The Terminator */\nTARGET  923: \t\"BOOMER!\",\t\t\t\t/* Bubblegum Crisis */\n        924: \t\"Dalek\",\t\t\t\t/* Dr. Who (\"Exterminate!\") */\n        925: \t\"纳米机器人\", \"史诗级的野兽\",\n        926: \t\t\t\t\t\t/* HGttG */\n        927: \t\"忍者神龟\",\t\t/* TMNT */\n        928: \t\"巫师兔\",\t\t\t/* Usagi Yojimbo */"
   },
   {
     "key": "L00924_01",
     "original": "Dalek",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:924:2\n   919: \t\"哥斯拉\", \"金刚\",\t\t/* monster movies */\n   920: \t\"地震野兽\",\t\t\t/* old L of SH */\n   921: \t\"不存在的ID\",\t\t\t\t/* Robotech */\n   922: \t\"终结者\",\t\t\t\t/* The Terminator */\n   923: \t\"BOOMER!\",\t\t\t\t/* Bubblegum Crisis */\n&gt;  924: \t\"Dalek\",\t\t\t\t/* Dr. Who (\"Exterminate!\") */\n   925: \t\"纳米机器人\", \"史诗级的野兽\",\n   926: \t\t\t\t\t\t/* HGttG */\n   927: \t\"忍者神龟\",\t\t/* TMNT */\n   928: \t\"巫师兔\",\t\t\t/* Usagi Yojimbo */\n   929: \t\"啊啊啊诶\",\t\t\t\t/* Cerebus */"
+    "context": "src/do_name.c:924:2\n        919: \t\"哥斯拉\", \"金刚\",\t\t/* monster movies */\n        920: \t\"地震野兽\",\t\t\t/* old L of SH */\n        921: \t\"不存在的ID\",\t\t\t\t/* Robotech */\n        922: \t\"终结者\",\t\t\t\t/* The Terminator */\n        923: \t\"BOOMER!\",\t\t\t\t/* Bubblegum Crisis */\nTARGET  924: \t\"Dalek\",\t\t\t\t/* Dr. Who (\"Exterminate!\") */\n        925: \t\"纳米机器人\", \"史诗级的野兽\",\n        926: \t\t\t\t\t\t/* HGttG */\n        927: \t\"忍者神龟\",\t\t/* TMNT */\n        928: \t\"巫师兔\",\t\t\t/* Usagi Yojimbo */\n        929: \t\"啊啊啊诶\",\t\t\t\t/* Cerebus */"
   },
   {
     "key": "L00979_01",
     "original": "ROGUEOPTS",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:979:24\n   974: const char *\n   975: roguename() /* Name of a Rogue player */\n   976: {\n   977: \tchar *i, *opts;\n   978: \n&gt;  979: \tif ((opts = nh_getenv(\"ROGUEOPTS\")) != 0) {\n   980: \t\tfor (i = opts; *i; i++)\n   981: \t\t\tif (!strncmp(\"name=\",i,5)) {\n   982: \t\t\t\tchar *j;\n   983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n   984: \t\t\t\t\t*j = (char)0;"
+    "context": "src/do_name.c:979:24\n        974: const char *\n        975: roguename() /* Name of a Rogue player */\n        976: {\n        977: \tchar *i, *opts;\n        978: \nTARGET  979: \tif ((opts = nh_getenv(\"ROGUEOPTS\")) != 0) {\n        980: \t\tfor (i = opts; *i; i++)\n        981: \t\t\tif (!strncmp(\"name=\",i,5)) {\n        982: \t\t\t\tchar *j;\n        983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n        984: \t\t\t\t\t*j = (char)0;"
   },
   {
     "key": "L00981_01",
     "original": "name=",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:981:17\n   976: {\n   977: \tchar *i, *opts;\n   978: \n   979: \tif ((opts = nh_getenv(\"ROGUEOPTS\")) != 0) {\n   980: \t\tfor (i = opts; *i; i++)\n&gt;  981: \t\t\tif (!strncmp(\"name=\",i,5)) {\n   982: \t\t\t\tchar *j;\n   983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n   984: \t\t\t\t\t*j = (char)0;\n   985: \t\t\t\treturn i+5;\n   986: \t\t\t}"
+    "context": "src/do_name.c:981:17\n        976: {\n        977: \tchar *i, *opts;\n        978: \n        979: \tif ((opts = nh_getenv(\"ROGUEOPTS\")) != 0) {\n        980: \t\tfor (i = opts; *i; i++)\nTARGET  981: \t\t\tif (!strncmp(\"name=\",i,5)) {\n        982: \t\t\t\tchar *j;\n        983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n        984: \t\t\t\t\t*j = (char)0;\n        985: \t\t\t\treturn i+5;\n        986: \t\t\t}"
   },
   {
     "key": "L00988_01",
     "original": "Michael Toy",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:988:28\n   983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n   984: \t\t\t\t\t*j = (char)0;\n   985: \t\t\t\treturn i+5;\n   986: \t\t\t}\n   987: \t}\n&gt;  988: \treturn rn2(3) ? (rn2(2) ? \"Michael Toy\" : \"Kenneth Arnold\")\n   989: \t\t: \"Glenn Wichman\";\n   990: }\n   991: #endif /* REINCARNATION */\n   992: #endif /* OVLB */\n   993: "
+    "context": "src/do_name.c:988:28\n        983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n        984: \t\t\t\t\t*j = (char)0;\n        985: \t\t\t\treturn i+5;\n        986: \t\t\t}\n        987: \t}\nTARGET  988: \treturn rn2(3) ? (rn2(2) ? \"Michael Toy\" : \"Kenneth Arnold\")\n        989: \t\t: \"Glenn Wichman\";\n        990: }\n        991: #endif /* REINCARNATION */\n        992: #endif /* OVLB */\n        993: "
   },
   {
     "key": "L00988_02",
     "original": "Kenneth Arnold",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:988:44\n   983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n   984: \t\t\t\t\t*j = (char)0;\n   985: \t\t\t\treturn i+5;\n   986: \t\t\t}\n   987: \t}\n&gt;  988: \treturn rn2(3) ? (rn2(2) ? \"Michael Toy\" : \"Kenneth Arnold\")\n   989: \t\t: \"Glenn Wichman\";\n   990: }\n   991: #endif /* REINCARNATION */\n   992: #endif /* OVLB */\n   993: "
+    "context": "src/do_name.c:988:44\n        983: \t\t\t\tif ((j = index(i+5,',')) != 0)\n        984: \t\t\t\t\t*j = (char)0;\n        985: \t\t\t\treturn i+5;\n        986: \t\t\t}\n        987: \t}\nTARGET  988: \treturn rn2(3) ? (rn2(2) ? \"Michael Toy\" : \"Kenneth Arnold\")\n        989: \t\t: \"Glenn Wichman\";\n        990: }\n        991: #endif /* REINCARNATION */\n        992: #endif /* OVLB */\n        993: "
   },
   {
     "key": "L00989_01",
     "original": "Glenn Wichman",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:989:5\n   984: \t\t\t\t\t*j = (char)0;\n   985: \t\t\t\treturn i+5;\n   986: \t\t\t}\n   987: \t}\n   988: \treturn rn2(3) ? (rn2(2) ? \"Michael Toy\" : \"Kenneth Arnold\")\n&gt;  989: \t\t: \"Glenn Wichman\";\n   990: }\n   991: #endif /* REINCARNATION */\n   992: #endif /* OVLB */\n   993: \n   994: #ifdef OVL2"
+    "context": "src/do_name.c:989:5\n        984: \t\t\t\t\t*j = (char)0;\n        985: \t\t\t\treturn i+5;\n        986: \t\t\t}\n        987: \t}\n        988: \treturn rn2(3) ? (rn2(2) ? \"Michael Toy\" : \"Kenneth Arnold\")\nTARGET  989: \t\t: \"Glenn Wichman\";\n        990: }\n        991: #endif /* REINCARNATION */\n        992: #endif /* OVLB */\n        993: \n        994: #ifdef OVL2"
   },
   {
     "key": "L00999_01",
     "original": "salty",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:999:2\n   994: #ifdef OVL2\n   995: \n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n&gt;  999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\","
+    "context": "src/do_name.c:999:2\n        994: #ifdef OVL2\n        995: \n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\nTARGET  999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\","
   },
   {
     "key": "L01000_01",
     "original": "striped",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1000:2\n   995: \n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n&gt; 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\""
+    "context": "src/do_name.c:1000:2\n        995: \n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\nTARGET 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\""
   },
   {
     "key": "L01000_02",
     "original": "spiral",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1000:13\n   995: \n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n&gt; 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\""
+    "context": "src/do_name.c:1000:13\n        995: \n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\nTARGET 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\""
   },
   {
     "key": "L01000_03",
     "original": "swirly",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1000:23\n   995: \n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n&gt; 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\""
+    "context": "src/do_name.c:1000:23\n        995: \n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\nTARGET 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\""
   },
   {
     "key": "L01000_04",
     "original": "plaid",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1000:33\n   995: \n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n&gt; 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\""
+    "context": "src/do_name.c:1000:33\n        995: \n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\nTARGET 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\""
   },
   {
     "key": "L01000_05",
     "original": "argyle",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1000:50\n   995: \n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n&gt; 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\""
+    "context": "src/do_name.c:1000:50\n        995: \n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\nTARGET 1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\""
   },
   {
     "key": "L01001_01",
     "original": "paisley",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1001:2\n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n&gt; 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };"
+    "context": "src/do_name.c:1001:2\n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\nTARGET 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };"
   },
   {
     "key": "L01001_02",
     "original": "blotchy",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1001:13\n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n&gt; 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };"
+    "context": "src/do_name.c:1001:13\n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\nTARGET 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };"
   },
   {
     "key": "L01001_03",
     "original": "guernsey-spotted",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1001:24\n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n&gt; 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };"
+    "context": "src/do_name.c:1001:24\n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\nTARGET 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };"
   },
   {
     "key": "L01001_04",
     "original": "polka-dotted",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1001:44\n   996: static NEARDATA const char * const hcolors[] = {\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n&gt; 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };"
+    "context": "src/do_name.c:1001:44\n        996: static NEARDATA const char * const hcolors[] = {\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\nTARGET 1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };"
   },
   {
     "key": "L01002_01",
     "original": "square",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1002:2\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n&gt; 1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: "
+    "context": "src/do_name.c:1002:2\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\nTARGET 1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: "
   },
   {
     "key": "L01002_02",
     "original": "round",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1002:12\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n&gt; 1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: "
+    "context": "src/do_name.c:1002:12\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\nTARGET 1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: "
   },
   {
     "key": "L01002_03",
     "original": "triangular",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1002:21\n   997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n&gt; 1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: "
+    "context": "src/do_name.c:1002:21\n        997: \t\"超级紫色的\", \"恐惧色的\", \"很蓝的橙色的\",\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\nTARGET 1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: "
   },
   {
     "key": "L01003_01",
     "original": "cabernet",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1003:2\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n&gt; 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *"
+    "context": "src/do_name.c:1003:2\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\nTARGET 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *"
   },
   {
     "key": "L01003_02",
     "original": "sangria",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1003:14\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n&gt; 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *"
+    "context": "src/do_name.c:1003:14\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\nTARGET 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *"
   },
   {
     "key": "L01003_03",
     "original": "fuchsia",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1003:25\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n&gt; 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *"
+    "context": "src/do_name.c:1003:25\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\nTARGET 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *"
   },
   {
     "key": "L01003_04",
     "original": "wisteria",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1003:36\n   998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n&gt; 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *"
+    "context": "src/do_name.c:1003:36\n        998: \t\"红加绿色的\", \"黑白色的\", \"亮黑色的\", \"mtf色的\",\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\nTARGET 1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *"
   },
   {
     "key": "L01004_01",
     "original": "lemon-lime",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1004:2\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n&gt; 1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *\n  1009: hcolor(colorpref)"
+    "context": "src/do_name.c:1004:2\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\nTARGET 1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *\n       1009: hcolor(colorpref)"
   },
   {
     "key": "L01004_02",
     "original": "strawberry-banana",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1004:16\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n&gt; 1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *\n  1009: hcolor(colorpref)"
+    "context": "src/do_name.c:1004:16\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\nTARGET 1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *\n       1009: hcolor(colorpref)"
   },
   {
     "key": "L01004_03",
     "original": "peppermint",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1004:37\n   999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n&gt; 1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n  1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *\n  1009: hcolor(colorpref)"
+    "context": "src/do_name.c:1004:37\n        999: \t\"salty\", \"甜的\", \"酸的\", \"苦的\",\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\nTARGET 1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n       1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *\n       1009: hcolor(colorpref)"
   },
   {
     "key": "L01005_01",
     "original": "romantic",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1005:2\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n&gt; 1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *\n  1009: hcolor(colorpref)\n  1010: const char *colorpref;"
+    "context": "src/do_name.c:1005:2\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\nTARGET 1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *\n       1009: hcolor(colorpref)\n       1010: const char *colorpref;"
   },
   {
     "key": "L01005_02",
     "original": "incandescent",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1005:14\n  1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n  1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n  1002: \t\"square\", \"round\", \"triangular\",\n  1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n  1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\n&gt; 1005: \t\"romantic\", \"incandescent\"\n  1006: };\n  1007: \n  1008: const char *\n  1009: hcolor(colorpref)\n  1010: const char *colorpref;"
+    "context": "src/do_name.c:1005:14\n       1000: \t\"striped\", \"spiral\", \"swirly\", \"plaid\", \"付了钱的\", \"argyle\",\n       1001: \t\"paisley\", \"blotchy\", \"guernsey-spotted\", \"polka-dotted\",\n       1002: \t\"square\", \"round\", \"triangular\",\n       1003: \t\"cabernet\", \"sangria\", \"fuchsia\", \"wisteria\",\n       1004: \t\"lemon-lime\", \"strawberry-banana\", \"peppermint\",\nTARGET 1005: \t\"romantic\", \"incandescent\"\n       1006: };\n       1007: \n       1008: const char *\n       1009: hcolor(colorpref)\n       1010: const char *colorpref;"
   },
   {
     "key": "L01022_01",
     "original": "colorless",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1022:3\n  1017: const char *\n  1018: rndcolor()\n  1019: {\n  1020: \tint k = rn2(CLR_MAX);\n  1021: \treturn Hallucination ? hcolor((char *)0) : (k == NO_COLOR) ?\n&gt; 1022: \t\t\"colorless\" : c_obj_colors[k];\n  1023: }\n  1024: \n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {"
+    "context": "src/do_name.c:1022:3\n       1017: const char *\n       1018: rndcolor()\n       1019: {\n       1020: \tint k = rn2(CLR_MAX);\n       1021: \treturn Hallucination ? hcolor((char *)0) : (k == NO_COLOR) ?\nTARGET 1022: \t\t\"colorless\" : c_obj_colors[k];\n       1023: }\n       1024: \n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {"
   },
   {
     "key": "L01028_01",
     "original": "Carnivorous Vulgaris",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1028:2\n  1023: }\n  1024: \n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {\n&gt; 1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\","
+    "context": "src/do_name.c:1028:2\n       1023: }\n       1024: \n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {\nTARGET 1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\","
   },
   {
     "key": "L01028_02",
     "original": "Road-Runnerus Digestus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1028:25\n  1023: }\n  1024: \n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {\n&gt; 1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\","
+    "context": "src/do_name.c:1028:25\n       1023: }\n       1024: \n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {\nTARGET 1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\","
   },
   {
     "key": "L01029_01",
     "original": "Eatibus Anythingus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1029:2\n  1024: \n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n&gt; 1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\","
+    "context": "src/do_name.c:1029:2\n       1024: \n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\nTARGET 1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\","
   },
   {
     "key": "L01029_02",
     "original": "Famishus-Famishus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1029:25\n  1024: \n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n&gt; 1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\","
+    "context": "src/do_name.c:1029:25\n       1024: \n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\nTARGET 1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\","
   },
   {
     "key": "L01030_01",
     "original": "Eatibus Almost Anythingus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1030:2\n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n&gt; 1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\","
+    "context": "src/do_name.c:1030:2\n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\nTARGET 1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\","
   },
   {
     "key": "L01030_02",
     "original": "Eatius Birdius",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1030:30\n  1025: /* Aliases for road-runner nemesis\n  1026:  */\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n&gt; 1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\","
+    "context": "src/do_name.c:1030:30\n       1025: /* Aliases for road-runner nemesis\n       1026:  */\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\nTARGET 1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\","
   },
   {
     "key": "L01031_01",
     "original": "Famishius Fantasticus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1031:2\n  1026:  */\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n&gt; 1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\","
+    "context": "src/do_name.c:1031:2\n       1026:  */\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\nTARGET 1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\","
   },
   {
     "key": "L01031_02",
     "original": "Eternalii Famishiis",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1031:26\n  1026:  */\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n&gt; 1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\","
+    "context": "src/do_name.c:1031:26\n       1026:  */\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\nTARGET 1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\","
   },
   {
     "key": "L01032_01",
     "original": "Famishus Vulgarus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1032:2\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n&gt; 1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\","
+    "context": "src/do_name.c:1032:2\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\nTARGET 1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\","
   },
   {
     "key": "L01032_02",
     "original": "Famishius Vulgaris Ingeniusi",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1032:22\n  1027: static const char * const coynames[] = {\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n&gt; 1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\","
+    "context": "src/do_name.c:1032:22\n       1027: static const char * const coynames[] = {\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\nTARGET 1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\","
   },
   {
     "key": "L01033_01",
     "original": "Eatius-Slobbius",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1033:2\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n&gt; 1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\""
+    "context": "src/do_name.c:1033:2\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\nTARGET 1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\""
   },
   {
     "key": "L01033_02",
     "original": "Hardheadipus Oedipus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1033:20\n  1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n&gt; 1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\""
+    "context": "src/do_name.c:1033:20\n       1028: \t\"Carnivorous Vulgaris\",\"Road-Runnerus Digestus\",\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\nTARGET 1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\""
   },
   {
     "key": "L01034_01",
     "original": "Carnivorous Slobbius",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1034:2\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n&gt; 1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };"
+    "context": "src/do_name.c:1034:2\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\nTARGET 1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };"
   },
   {
     "key": "L01034_02",
     "original": "Hard-Headipus Ravenus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1034:25\n  1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n&gt; 1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };"
+    "context": "src/do_name.c:1034:25\n       1029: \t\"Eatibus Anythingus\"  ,\"Famishus-Famishus\",\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\nTARGET 1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };"
   },
   {
     "key": "L01035_01",
     "original": "Evereadii Eatibus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1035:2\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n&gt; 1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t"
+    "context": "src/do_name.c:1035:2\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\nTARGET 1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t"
   },
   {
     "key": "L01035_02",
     "original": "Apetitius Giganticus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1035:22\n  1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n&gt; 1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t"
+    "context": "src/do_name.c:1035:22\n       1030: \t\"Eatibus Almost Anythingus\",\"Eatius Birdius\",\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\nTARGET 1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t"
   },
   {
     "key": "L01036_01",
     "original": "Hungrii Flea-Bagius",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1036:2\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n&gt; 1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t\n  1041: char *"
+    "context": "src/do_name.c:1036:2\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\nTARGET 1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t\n       1041: char *"
   },
   {
     "key": "L01036_02",
     "original": "Overconfidentii Vulgaris",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1036:24\n  1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n&gt; 1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t\n  1041: char *"
+    "context": "src/do_name.c:1036:24\n       1031: \t\"Famishius Fantasticus\",\"Eternalii Famishiis\",\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\nTARGET 1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t\n       1041: char *"
   },
   {
     "key": "L01037_01",
     "original": "Caninus Nervous Rex",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1037:2\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n&gt; 1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t\n  1041: char *\n  1042: coyotename(mtmp, buf)"
+    "context": "src/do_name.c:1037:2\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\nTARGET 1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t\n       1041: char *\n       1042: coyotename(mtmp, buf)"
   },
   {
     "key": "L01037_02",
     "original": "Grotesques Appetitus",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1037:24\n  1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n&gt; 1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n  1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t\n  1041: char *\n  1042: coyotename(mtmp, buf)"
+    "context": "src/do_name.c:1037:24\n       1032: \t\"Famishus Vulgarus\",\"Famishius Vulgaris Ingeniusi\",\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\nTARGET 1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n       1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t\n       1041: char *\n       1042: coyotename(mtmp, buf)"
   },
   {
     "key": "L01038_01",
     "original": "Nemesis Riduclii",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1038:2\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n&gt; 1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t\n  1041: char *\n  1042: coyotename(mtmp, buf)\n  1043: struct monst *mtmp;"
+    "context": "src/do_name.c:1038:2\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\nTARGET 1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t\n       1041: char *\n       1042: coyotename(mtmp, buf)\n       1043: struct monst *mtmp;"
   },
   {
     "key": "L01038_02",
     "original": "Canis latrans",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1038:21\n  1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n  1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n  1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n  1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n  1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\n&gt; 1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n  1039: };\n  1040: \t\n  1041: char *\n  1042: coyotename(mtmp, buf)\n  1043: struct monst *mtmp;"
+    "context": "src/do_name.c:1038:21\n       1033: \t\"Eatius-Slobbius\",\"Hardheadipus Oedipus\",\n       1034: \t\"Carnivorous Slobbius\",\"Hard-Headipus Ravenus\",\n       1035: \t\"Evereadii Eatibus\",\"Apetitius Giganticus\",\n       1036: \t\"Hungrii Flea-Bagius\",\"Overconfidentii Vulgaris\",\n       1037: \t\"Caninus Nervous Rex\",\"Grotesques Appetitus\",\nTARGET 1038: \t\"Nemesis Riduclii\",\"Canis latrans\"\n       1039: };\n       1040: \t\n       1041: char *\n       1042: coyotename(mtmp, buf)\n       1043: struct monst *mtmp;"
   },
   {
     "key": "L01047_01",
     "original": "%s - %s",
     "translation": "",
     "stage": 0,
-    "context": "src/do_name.c:1047:15\n  1042: coyotename(mtmp, buf)\n  1043: struct monst *mtmp;\n  1044: char *buf;\n  1045: {\n  1046:     if (mtmp && buf) {\n&gt; 1047: \tSprintf(buf, \"%s - %s\",\n  1048: \t    x_monnam(mtmp, ARTICLE_NONE, (char *)0, 0, TRUE),\n  1049: \t    mtmp-&gt;mcan ? coynames[SIZE(coynames)-1] : coynames[rn2(SIZE(coynames)-1)]);\n  1050:     }\n  1051:     return buf;\n  1052: }"
+    "context": "src/do_name.c:1047:15\n       1042: coyotename(mtmp, buf)\n       1043: struct monst *mtmp;\n       1044: char *buf;\n       1045: {\n       1046:     if (mtmp && buf) {\nTARGET 1047: \tSprintf(buf, \"%s - %s\",\n       1048: \t    x_monnam(mtmp, ARTICLE_NONE, (char *)0, 0, TRUE),\n       1049: \t    mtmp-&gt;mcan ? coynames[SIZE(coynames)-1] : coynames[rn2(SIZE(coynames)-1)]);\n       1050:     }\n       1051:     return buf;\n       1052: }"
   }
 ]

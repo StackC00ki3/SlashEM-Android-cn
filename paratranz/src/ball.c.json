@@ -4,6 +4,6 @@
     "original": "bad chain movement",
     "translation": "",
     "stage": 0,
-    "context": "src/ball.c:552:23\n   547: \t\t       teleported, for this to happen) */\n   548: \t\t    *chainx = x;\n   549: \t\t    *chainy = y;\n   550: \t\t    break;\n   551: \t\t\n&gt;  552: \t\tdefault: impossible(\"bad chain movement\");\n   553: \t\t    break;\n   554: \t    }\n   555: #undef SKIP_TO_DRAG\n   556: #undef IS_CHAIN_ROCK\n   557: #undef CHAIN_IN_MIDDLE"
+    "context": "src/ball.c:552:23\n        547: \t\t       teleported, for this to happen) */\n        548: \t\t    *chainx = x;\n        549: \t\t    *chainy = y;\n        550: \t\t    break;\n        551: \t\t\nTARGET  552: \t\tdefault: impossible(\"bad chain movement\");\n        553: \t\t    break;\n        554: \t    }\n        555: #undef SKIP_TO_DRAG\n        556: #undef IS_CHAIN_ROCK\n        557: #undef CHAIN_IN_MIDDLE"
   }
 ]

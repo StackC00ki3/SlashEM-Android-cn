@@ -4,881 +4,881 @@
     "original": " or ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:48:25\n    43:     int space_left;\t/* space remaining in buf */\n    44: \n    45:     if (strstri(buf, new_str)) return 0;\n    46: \n    47:     space_left = BUFSZ - strlen(buf) - 1;\n&gt;   48:     (void) strncat(buf, \" or \", space_left);\n    49:     (void) strncat(buf, new_str, space_left - 4);\n    50:     return 1;\n    51: }\n    52: \n    53: /*"
+    "context": "src/pager.c:48:25\n         43:     int space_left;\t/* space remaining in buf */\n         44: \n         45:     if (strstri(buf, new_str)) return 0;\n         46: \n         47:     space_left = BUFSZ - strlen(buf) - 1;\nTARGET   48:     (void) strncat(buf, \" or \", space_left);\n         49:     (void) strncat(buf, new_str, space_left - 4);\n         50:     return 1;\n         51: }\n         52: \n         53: /*"
   },
   {
     "key": "L00074_01",
     "original": "%s ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:74:20\n    69: \tchar race[QBUFSZ];\n    70: \n    71: \t/* if not polymorphed, show both the role and the race */\n    72: \trace[0] = 0;\n    73: \tif (!Upolyd) {\n&gt;   74: \t    Sprintf(race, \"%s \", urace.adj);\n    75: \t}\n    76: \n    77: \tSprintf(buf, \"%s%s%s called %s\",\n    78: \t\tInvis ? \"invisible \" : \"\",\n    79: \t\trace,"
+    "context": "src/pager.c:74:20\n         69: \tchar race[QBUFSZ];\n         70: \n         71: \t/* if not polymorphed, show both the role and the race */\n         72: \trace[0] = 0;\n         73: \tif (!Upolyd) {\nTARGET   74: \t    Sprintf(race, \"%s \", urace.adj);\n         75: \t}\n         76: \n         77: \tSprintf(buf, \"%s%s%s called %s\",\n         78: \t\tInvis ? \"invisible \" : \"\",\n         79: \t\trace,"
   },
   {
     "key": "L00077_01",
     "original": "%s%s%s called %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:77:15\n    72: \trace[0] = 0;\n    73: \tif (!Upolyd) {\n    74: \t    Sprintf(race, \"%s \", urace.adj);\n    75: \t}\n    76: \n&gt;   77: \tSprintf(buf, \"%s%s%s called %s\",\n    78: \t\tInvis ? \"invisible \" : \"\",\n    79: \t\trace,\n    80: \t\tmons[u.umonnum].mname,\n    81: \t\tplname);\n    82: \t/* file lookup can't distinguish between \"gnomish wizard\" monster"
+    "context": "src/pager.c:77:15\n         72: \trace[0] = 0;\n         73: \tif (!Upolyd) {\n         74: \t    Sprintf(race, \"%s \", urace.adj);\n         75: \t}\n         76: \nTARGET   77: \tSprintf(buf, \"%s%s%s called %s\",\n         78: \t\tInvis ? \"invisible \" : \"\",\n         79: \t\trace,\n         80: \t\tmons[u.umonnum].mname,\n         81: \t\tplname);\n         82: \t/* file lookup can't distinguish between \"gnomish wizard\" monster"
   },
   {
     "key": "L00078_01",
     "original": "invisible ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:78:11\n    73: \tif (!Upolyd) {\n    74: \t    Sprintf(race, \"%s \", urace.adj);\n    75: \t}\n    76: \n    77: \tSprintf(buf, \"%s%s%s called %s\",\n&gt;   78: \t\tInvis ? \"invisible \" : \"\",\n    79: \t\trace,\n    80: \t\tmons[u.umonnum].mname,\n    81: \t\tplname);\n    82: \t/* file lookup can't distinguish between \"gnomish wizard\" monster\n    83: \t   and correspondingly named player character, always picking the"
+    "context": "src/pager.c:78:11\n         73: \tif (!Upolyd) {\n         74: \t    Sprintf(race, \"%s \", urace.adj);\n         75: \t}\n         76: \n         77: \tSprintf(buf, \"%s%s%s called %s\",\nTARGET   78: \t\tInvis ? \"invisible \" : \"\",\n         79: \t\trace,\n         80: \t\tmons[u.umonnum].mname,\n         81: \t\tplname);\n         82: \t/* file lookup can't distinguish between \"gnomish wizard\" monster\n         83: \t   and correspondingly named player character, always picking the"
   },
   {
     "key": "L00096_01",
     "original": "%s ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:96:20\n    91: \t/* if not polymorphed, show both the role and the race */\n    92: \trole[0] = 0;\n    93: \trace[0] = 0;\n    94: \t\n    95: \tif (!Upolyd) {\n&gt;   96: \t    Sprintf(race, \"%s \", urace.adj);\n    97: \t    Sprintf(role, \"%s \", urole.name);\n    98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n    99: \n   100: \tSprintf(buf, \"%s%s%s called %s\",\n   101: \t\tInvis ? \"invisible \" : \"\","
+    "context": "src/pager.c:96:20\n         91: \t/* if not polymorphed, show both the role and the race */\n         92: \trole[0] = 0;\n         93: \trace[0] = 0;\n         94: \t\n         95: \tif (!Upolyd) {\nTARGET   96: \t    Sprintf(race, \"%s \", urace.adj);\n         97: \t    Sprintf(role, \"%s \", urole.name);\n         98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n         99: \n        100: \tSprintf(buf, \"%s%s%s called %s\",\n        101: \t\tInvis ? \"invisible \" : \"\","
   },
   {
     "key": "L00097_01",
     "original": "%s ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:97:20\n    92: \trole[0] = 0;\n    93: \trace[0] = 0;\n    94: \t\n    95: \tif (!Upolyd) {\n    96: \t    Sprintf(race, \"%s \", urace.adj);\n&gt;   97: \t    Sprintf(role, \"%s \", urole.name);\n    98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n    99: \n   100: \tSprintf(buf, \"%s%s%s called %s\",\n   101: \t\tInvis ? \"invisible \" : \"\",\n   102: \t\trace,"
+    "context": "src/pager.c:97:20\n         92: \trole[0] = 0;\n         93: \trace[0] = 0;\n         94: \t\n         95: \tif (!Upolyd) {\n         96: \t    Sprintf(race, \"%s \", urace.adj);\nTARGET   97: \t    Sprintf(role, \"%s \", urole.name);\n         98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n         99: \n        100: \tSprintf(buf, \"%s%s%s called %s\",\n        101: \t\tInvis ? \"invisible \" : \"\",\n        102: \t\trace,"
   },
   {
     "key": "L00098_01",
     "original": "%s ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:98:23\n    93: \trace[0] = 0;\n    94: \t\n    95: \tif (!Upolyd) {\n    96: \t    Sprintf(race, \"%s \", urace.adj);\n    97: \t    Sprintf(role, \"%s \", urole.name);\n&gt;   98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n    99: \n   100: \tSprintf(buf, \"%s%s%s called %s\",\n   101: \t\tInvis ? \"invisible \" : \"\",\n   102: \t\trace,\n   103: \t\trole,"
+    "context": "src/pager.c:98:23\n         93: \trace[0] = 0;\n         94: \t\n         95: \tif (!Upolyd) {\n         96: \t    Sprintf(race, \"%s \", urace.adj);\n         97: \t    Sprintf(role, \"%s \", urole.name);\nTARGET   98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n         99: \n        100: \tSprintf(buf, \"%s%s%s called %s\",\n        101: \t\tInvis ? \"invisible \" : \"\",\n        102: \t\trace,\n        103: \t\trole,"
   },
   {
     "key": "L00100_01",
     "original": "%s%s%s called %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:100:15\n    95: \tif (!Upolyd) {\n    96: \t    Sprintf(race, \"%s \", urace.adj);\n    97: \t    Sprintf(role, \"%s \", urole.name);\n    98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n    99: \n&gt;  100: \tSprintf(buf, \"%s%s%s called %s\",\n   101: \t\tInvis ? \"invisible \" : \"\",\n   102: \t\trace,\n   103: \t\trole,\n   104: \t\tplname);\n   105: #endif"
+    "context": "src/pager.c:100:15\n         95: \tif (!Upolyd) {\n         96: \t    Sprintf(race, \"%s \", urace.adj);\n         97: \t    Sprintf(role, \"%s \", urole.name);\n         98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n         99: \nTARGET  100: \tSprintf(buf, \"%s%s%s called %s\",\n        101: \t\tInvis ? \"invisible \" : \"\",\n        102: \t\trace,\n        103: \t\trole,\n        104: \t\tplname);\n        105: #endif"
   },
   {
     "key": "L00101_01",
     "original": "invisible ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:101:11\n    96: \t    Sprintf(race, \"%s \", urace.adj);\n    97: \t    Sprintf(role, \"%s \", urole.name);\n    98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n    99: \n   100: \tSprintf(buf, \"%s%s%s called %s\",\n&gt;  101: \t\tInvis ? \"invisible \" : \"\",\n   102: \t\trace,\n   103: \t\trole,\n   104: \t\tplname);\n   105: #endif\n   106: "
+    "context": "src/pager.c:101:11\n         96: \t    Sprintf(race, \"%s \", urace.adj);\n         97: \t    Sprintf(role, \"%s \", urole.name);\n         98: \t} else Sprintf(race, \"%s \", mons[u.umonnum].mname);\n         99: \n        100: \tSprintf(buf, \"%s%s%s called %s\",\nTARGET  101: \t\tInvis ? \"invisible \" : \"\",\n        102: \t\trace,\n        103: \t\trole,\n        104: \t\tplname);\n        105: #endif\n        106: "
   },
   {
     "key": "L00112_01",
     "original": ", mounted on %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:112:24\n   107: \n   108: #ifdef STEED\n   109: \tif (u.usteed) {\n   110: \t    char steedbuf[BUFSZ];\n   111: \n&gt;  112: \t    Sprintf(steedbuf, \", mounted on %s\", y_monnam(u.usteed));\n   113: \t    /* assert((sizeof buf &gt;= strlen(buf)+strlen(steedbuf)+1); */\n   114: \t    Strcat(buf, steedbuf);\n   115: \t}\n   116: #endif\n   117: \t/* When you see yourself normally, no explanation is appended"
+    "context": "src/pager.c:112:24\n        107: \n        108: #ifdef STEED\n        109: \tif (u.usteed) {\n        110: \t    char steedbuf[BUFSZ];\n        111: \nTARGET  112: \t    Sprintf(steedbuf, \", mounted on %s\", y_monnam(u.usteed));\n        113: \t    /* assert((sizeof buf &gt;= strlen(buf)+strlen(steedbuf)+1); */\n        114: \t    Strcat(buf, steedbuf);\n        115: \t}\n        116: #endif\n        117: \t/* When you see yourself normally, no explanation is appended"
   },
   {
     "key": "L00129_01",
     "original": " [seen: %s%s%s%s%s]",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:129:21\n   124: \t    if (Infravision)\t how |= 1;\n   125: \t    if (Unblind_telepat) how |= 2;\n   126: \t    if (Detect_monsters) how |= 4;\n   127: \n   128: \t    if (how)\n&gt;  129: \t\tSprintf(eos(buf), \" [seen: %s%s%s%s%s]\",\n   130: \t\t\t(how & 1) ? \"infravision\" : \"\",\n   131: \t\t\t/* add comma if telep and infrav */\n   132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n   133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n   134: \t\t\t/* add comma if detect and (infrav or telep or both) */"
+    "context": "src/pager.c:129:21\n        124: \t    if (Infravision)\t how |= 1;\n        125: \t    if (Unblind_telepat) how |= 2;\n        126: \t    if (Detect_monsters) how |= 4;\n        127: \n        128: \t    if (how)\nTARGET  129: \t\tSprintf(eos(buf), \" [seen: %s%s%s%s%s]\",\n        130: \t\t\t(how & 1) ? \"infravision\" : \"\",\n        131: \t\t\t/* add comma if telep and infrav */\n        132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n        133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n        134: \t\t\t/* add comma if detect and (infrav or telep or both) */"
   },
   {
     "key": "L00130_01",
     "original": "infravision",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:130:16\n   125: \t    if (Unblind_telepat) how |= 2;\n   126: \t    if (Detect_monsters) how |= 4;\n   127: \n   128: \t    if (how)\n   129: \t\tSprintf(eos(buf), \" [seen: %s%s%s%s%s]\",\n&gt;  130: \t\t\t(how & 1) ? \"infravision\" : \"\",\n   131: \t\t\t/* add comma if telep and infrav */\n   132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n   133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n   134: \t\t\t/* add comma if detect and (infrav or telep or both) */\n   135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\","
+    "context": "src/pager.c:130:16\n        125: \t    if (Unblind_telepat) how |= 2;\n        126: \t    if (Detect_monsters) how |= 4;\n        127: \n        128: \t    if (how)\n        129: \t\tSprintf(eos(buf), \" [seen: %s%s%s%s%s]\",\nTARGET  130: \t\t\t(how & 1) ? \"infravision\" : \"\",\n        131: \t\t\t/* add comma if telep and infrav */\n        132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n        133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n        134: \t\t\t/* add comma if detect and (infrav or telep or both) */\n        135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\","
   },
   {
     "key": "L00133_01",
     "original": "telepathy",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:133:16\n   128: \t    if (how)\n   129: \t\tSprintf(eos(buf), \" [seen: %s%s%s%s%s]\",\n   130: \t\t\t(how & 1) ? \"infravision\" : \"\",\n   131: \t\t\t/* add comma if telep and infrav */\n   132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n&gt;  133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n   134: \t\t\t/* add comma if detect and (infrav or telep or both) */\n   135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\",\n   136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n   137: \t}\n   138:     } else if (u.uswallow) {"
+    "context": "src/pager.c:133:16\n        128: \t    if (how)\n        129: \t\tSprintf(eos(buf), \" [seen: %s%s%s%s%s]\",\n        130: \t\t\t(how & 1) ? \"infravision\" : \"\",\n        131: \t\t\t/* add comma if telep and infrav */\n        132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\nTARGET  133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n        134: \t\t\t/* add comma if detect and (infrav or telep or both) */\n        135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\",\n        136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n        137: \t}\n        138:     } else if (u.uswallow) {"
   },
   {
     "key": "L00136_01",
     "original": "monster detection",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:136:16\n   131: \t\t\t/* add comma if telep and infrav */\n   132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n   133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n   134: \t\t\t/* add comma if detect and (infrav or telep or both) */\n   135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\",\n&gt;  136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n   137: \t}\n   138:     } else if (u.uswallow) {\n   139: \t/* all locations when swallowed other than the hero are the monster */\n   140: \tSprintf(buf, \"interior of %s\",\n   141: \t\t\t\t    Blind ? \"a monster\" : a_monnam(u.ustuck));"
+    "context": "src/pager.c:136:16\n        131: \t\t\t/* add comma if telep and infrav */\n        132: \t\t\t((how & 3) &gt; 2) ? \", \" : \"\",\n        133: \t\t\t(how & 2) ? \"telepathy\" : \"\",\n        134: \t\t\t/* add comma if detect and (infrav or telep or both) */\n        135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\",\nTARGET  136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n        137: \t}\n        138:     } else if (u.uswallow) {\n        139: \t/* all locations when swallowed other than the hero are the monster */\n        140: \tSprintf(buf, \"interior of %s\",\n        141: \t\t\t\t    Blind ? \"a monster\" : a_monnam(u.ustuck));"
   },
   {
     "key": "L00140_01",
     "original": "interior of %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:140:15\n   135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\",\n   136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n   137: \t}\n   138:     } else if (u.uswallow) {\n   139: \t/* all locations when swallowed other than the hero are the monster */\n&gt;  140: \tSprintf(buf, \"interior of %s\",\n   141: \t\t\t\t    Blind ? \"a monster\" : a_monnam(u.ustuck));\n   142: \tpm = u.ustuck-&gt;data;\n   143:     } else if (glyph_is_monster(glyph)) {\n   144: \tbhitpos.x = x;\n   145: \tbhitpos.y = y;"
+    "context": "src/pager.c:140:15\n        135: \t\t\t((how & 7) &gt; 4) ? \", \" : \"\",\n        136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n        137: \t}\n        138:     } else if (u.uswallow) {\n        139: \t/* all locations when swallowed other than the hero are the monster */\nTARGET  140: \tSprintf(buf, \"interior of %s\",\n        141: \t\t\t\t    Blind ? \"a monster\" : a_monnam(u.ustuck));\n        142: \tpm = u.ustuck-&gt;data;\n        143:     } else if (glyph_is_monster(glyph)) {\n        144: \tbhitpos.x = x;\n        145: \tbhitpos.y = y;"
   },
   {
     "key": "L00141_01",
     "original": "a monster",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:141:17\n   136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n   137: \t}\n   138:     } else if (u.uswallow) {\n   139: \t/* all locations when swallowed other than the hero are the monster */\n   140: \tSprintf(buf, \"interior of %s\",\n&gt;  141: \t\t\t\t    Blind ? \"a monster\" : a_monnam(u.ustuck));\n   142: \tpm = u.ustuck-&gt;data;\n   143:     } else if (glyph_is_monster(glyph)) {\n   144: \tbhitpos.x = x;\n   145: \tbhitpos.y = y;\n   146: \tmtmp = m_at(x,y);"
+    "context": "src/pager.c:141:17\n        136: \t\t\t(how & 4) ? \"monster detection\" : \"\");\n        137: \t}\n        138:     } else if (u.uswallow) {\n        139: \t/* all locations when swallowed other than the hero are the monster */\n        140: \tSprintf(buf, \"interior of %s\",\nTARGET  141: \t\t\t\t    Blind ? \"a monster\" : a_monnam(u.ustuck));\n        142: \tpm = u.ustuck-&gt;data;\n        143:     } else if (glyph_is_monster(glyph)) {\n        144: \tbhitpos.x = x;\n        145: \tbhitpos.y = y;\n        146: \tmtmp = m_at(x,y);"
   },
   {
     "key": "L00157_01",
     "original": "%s%s%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:157:19\n   152: \t\tname = coyotename(mtmp, monnambuf);\n   153: \t    else\n   154: \t\tname = distant_monnam(mtmp, ARTICLE_NONE, monnambuf);\n   155: \n   156: \t    pm = mtmp-&gt;data;\n&gt;  157: \t    Sprintf(buf, \"%s%s%s\",\n   158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n   159: \t\t\t((mtmp-&gt;isshk && accurate)\n   160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n   161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n   162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\","
+    "context": "src/pager.c:157:19\n        152: \t\tname = coyotename(mtmp, monnambuf);\n        153: \t    else\n        154: \t\tname = distant_monnam(mtmp, ARTICLE_NONE, monnambuf);\n        155: \n        156: \t    pm = mtmp-&gt;data;\nTARGET  157: \t    Sprintf(buf, \"%s%s%s\",\n        158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n        159: \t\t\t((mtmp-&gt;isshk && accurate)\n        160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n        161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n        162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\","
   },
   {
     "key": "L00160_01",
     "original": "tail of ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:160:7\n   155: \n   156: \t    pm = mtmp-&gt;data;\n   157: \t    Sprintf(buf, \"%s%s%s\",\n   158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n   159: \t\t\t((mtmp-&gt;isshk && accurate)\n&gt;  160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n   161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n   162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?"
+    "context": "src/pager.c:160:7\n        155: \n        156: \t    pm = mtmp-&gt;data;\n        157: \t    Sprintf(buf, \"%s%s%s\",\n        158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n        159: \t\t\t((mtmp-&gt;isshk && accurate)\nTARGET  160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n        161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n        162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?"
   },
   {
     "key": "L00160_02",
     "original": "tail of a ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:160:20\n   155: \n   156: \t    pm = mtmp-&gt;data;\n   157: \t    Sprintf(buf, \"%s%s%s\",\n   158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n   159: \t\t\t((mtmp-&gt;isshk && accurate)\n&gt;  160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n   161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n   162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?"
+    "context": "src/pager.c:160:20\n        155: \n        156: \t    pm = mtmp-&gt;data;\n        157: \t    Sprintf(buf, \"%s%s%s\",\n        158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n        159: \t\t\t((mtmp-&gt;isshk && accurate)\nTARGET  160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n        161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n        162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?"
   },
   {
     "key": "L00161_01",
     "original": "tame ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:161:35\n   156: \t    pm = mtmp-&gt;data;\n   157: \t    Sprintf(buf, \"%s%s%s\",\n   158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n   159: \t\t\t((mtmp-&gt;isshk && accurate)\n   160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n&gt;  161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n   162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n   166: \t\t\t\", being held\" : \", holding you\");"
+    "context": "src/pager.c:161:35\n        156: \t    pm = mtmp-&gt;data;\n        157: \t    Sprintf(buf, \"%s%s%s\",\n        158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n        159: \t\t\t((mtmp-&gt;isshk && accurate)\n        160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\nTARGET  161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n        162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n        166: \t\t\t\", being held\" : \", holding you\");"
   },
   {
     "key": "L00162_01",
     "original": "peaceful ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:162:39\n   157: \t    Sprintf(buf, \"%s%s%s\",\n   158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n   159: \t\t\t((mtmp-&gt;isshk && accurate)\n   160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n   161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n&gt;  162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n   166: \t\t\t\", being held\" : \", holding you\");\n   167: \t    if (mtmp-&gt;mleashed)"
+    "context": "src/pager.c:162:39\n        157: \t    Sprintf(buf, \"%s%s%s\",\n        158: \t\t    (mtmp-&gt;mx != x || mtmp-&gt;my != y) ?\n        159: \t\t\t((mtmp-&gt;isshk && accurate)\n        160: \t\t\t\t? \"tail of \" : \"tail of a \") : \"\",\n        161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\nTARGET  162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n        166: \t\t\t\", being held\" : \", holding you\");\n        167: \t    if (mtmp-&gt;mleashed)"
   },
   {
     "key": "L00166_01",
     "original": ", being held",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:166:4\n   161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n   162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n&gt;  166: \t\t\t\", being held\" : \", holding you\");\n   167: \t    if (mtmp-&gt;mleashed)\n   168: \t\tStrcat(buf, \", leashed to you\");\n   169: \n   170: \t    if (mtmp-&gt;mtrapped && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n   171: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/pager.c:166:4\n        161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n        162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\nTARGET  166: \t\t\t\", being held\" : \", holding you\");\n        167: \t    if (mtmp-&gt;mleashed)\n        168: \t\tStrcat(buf, \", leashed to you\");\n        169: \n        170: \t    if (mtmp-&gt;mtrapped && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n        171: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L00166_02",
     "original": ", holding you",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:166:21\n   161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n   162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n&gt;  166: \t\t\t\", being held\" : \", holding you\");\n   167: \t    if (mtmp-&gt;mleashed)\n   168: \t\tStrcat(buf, \", leashed to you\");\n   169: \n   170: \t    if (mtmp-&gt;mtrapped && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n   171: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/pager.c:166:21\n        161: \t\t    (mtmp-&gt;mtame && accurate) ? \"tame \" :\n        162: \t\t    (mtmp-&gt;mpeaceful && accurate) ? \"peaceful \" : \"\",\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\nTARGET  166: \t\t\t\", being held\" : \", holding you\");\n        167: \t    if (mtmp-&gt;mleashed)\n        168: \t\tStrcat(buf, \", leashed to you\");\n        169: \n        170: \t    if (mtmp-&gt;mtrapped && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n        171: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L00168_01",
     "original": ", leashed to you",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:168:15\n   163: \t\t    name);\n   164: \t    if (u.ustuck == mtmp)\n   165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n   166: \t\t\t\", being held\" : \", holding you\");\n   167: \t    if (mtmp-&gt;mleashed)\n&gt;  168: \t\tStrcat(buf, \", leashed to you\");\n   169: \n   170: \t    if (mtmp-&gt;mtrapped && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n   171: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n   172: \t\tint tt = t ? t-&gt;ttyp : NO_TRAP;\n   173: "
+    "context": "src/pager.c:168:15\n        163: \t\t    name);\n        164: \t    if (u.ustuck == mtmp)\n        165: \t\tStrcat(buf, (Upolyd && sticks(youmonst.data)) ?\n        166: \t\t\t\", being held\" : \", holding you\");\n        167: \t    if (mtmp-&gt;mleashed)\nTARGET  168: \t\tStrcat(buf, \", leashed to you\");\n        169: \n        170: \t    if (mtmp-&gt;mtrapped && cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n        171: \t\tstruct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n        172: \t\tint tt = t ? t-&gt;ttyp : NO_TRAP;\n        173: "
   },
   {
     "key": "L00177_01",
     "original": ", trapped in %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:177:25\n   172: \t\tint tt = t ? t-&gt;ttyp : NO_TRAP;\n   173: \n   174: \t\t/* newsym lets you know of the trap, so mention it here */\n   175: \t\tif (tt == BEAR_TRAP || tt == PIT ||\n   176: \t\t\ttt == SPIKED_PIT || tt == WEB)\n&gt;  177: \t\t    Sprintf(eos(buf), \", trapped in %s\",\n   178: \t\t\t    an(defsyms[trap_to_defsym(tt)].explanation));\n   179: \t    }\n   180: \n   181: \t    {\n   182: \t\tint ways_seen = 0, normal = 0, xraydist;"
+    "context": "src/pager.c:177:25\n        172: \t\tint tt = t ? t-&gt;ttyp : NO_TRAP;\n        173: \n        174: \t\t/* newsym lets you know of the trap, so mention it here */\n        175: \t\tif (tt == BEAR_TRAP || tt == PIT ||\n        176: \t\t\ttt == SPIKED_PIT || tt == WEB)\nTARGET  177: \t\t    Sprintf(eos(buf), \", trapped in %s\",\n        178: \t\t\t    an(defsyms[trap_to_defsym(tt)].explanation));\n        179: \t    }\n        180: \n        181: \t    {\n        182: \t\tint ways_seen = 0, normal = 0, xraydist;"
   },
   {
     "key": "L00212_01",
     "original": "normal vision",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:212:19\n   207: \t\tif (MATCH_WARN_OF_MON(mtmp))\n   208: \t\t    ways_seen++;\n   209: \n   210: \t\tif (ways_seen &gt; 1 || !normal) {\n   211: \t\t    if (normal) {\n&gt;  212: \t\t\tStrcat(monbuf, \"normal vision\");\n   213: \t\t\t/* can't actually be 1 yet here */\n   214: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   215: \t\t    }\n   216: \t\t    if (useemon && mtmp-&gt;minvis) {\n   217: \t\t\tStrcat(monbuf, \"see invisible\");"
+    "context": "src/pager.c:212:19\n        207: \t\tif (MATCH_WARN_OF_MON(mtmp))\n        208: \t\t    ways_seen++;\n        209: \n        210: \t\tif (ways_seen &gt; 1 || !normal) {\n        211: \t\t    if (normal) {\nTARGET  212: \t\t\tStrcat(monbuf, \"normal vision\");\n        213: \t\t\t/* can't actually be 1 yet here */\n        214: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        215: \t\t    }\n        216: \t\t    if (useemon && mtmp-&gt;minvis) {\n        217: \t\t\tStrcat(monbuf, \"see invisible\");"
   },
   {
     "key": "L00217_01",
     "original": "see invisible",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:217:19\n   212: \t\t\tStrcat(monbuf, \"normal vision\");\n   213: \t\t\t/* can't actually be 1 yet here */\n   214: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   215: \t\t    }\n   216: \t\t    if (useemon && mtmp-&gt;minvis) {\n&gt;  217: \t\t\tStrcat(monbuf, \"see invisible\");\n   218: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   219: \t\t    }\n   220: \t\t    if ((!mtmp-&gt;minvis || See_invisible) &&\n   221: \t\t\t    see_with_infrared(mtmp)) {\n   222: \t\t\tStrcat(monbuf, \"infravision\");"
+    "context": "src/pager.c:217:19\n        212: \t\t\tStrcat(monbuf, \"normal vision\");\n        213: \t\t\t/* can't actually be 1 yet here */\n        214: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        215: \t\t    }\n        216: \t\t    if (useemon && mtmp-&gt;minvis) {\nTARGET  217: \t\t\tStrcat(monbuf, \"see invisible\");\n        218: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        219: \t\t    }\n        220: \t\t    if ((!mtmp-&gt;minvis || See_invisible) &&\n        221: \t\t\t    see_with_infrared(mtmp)) {\n        222: \t\t\tStrcat(monbuf, \"infravision\");"
   },
   {
     "key": "L00222_01",
     "original": "infravision",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:222:19\n   217: \t\t\tStrcat(monbuf, \"see invisible\");\n   218: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   219: \t\t    }\n   220: \t\t    if ((!mtmp-&gt;minvis || See_invisible) &&\n   221: \t\t\t    see_with_infrared(mtmp)) {\n&gt;  222: \t\t\tStrcat(monbuf, \"infravision\");\n   223: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   224: \t\t    }\n   225: \t\t    if (tp_sensemon(mtmp)) {\n   226: \t\t\tStrcat(monbuf, \"telepathy\");\n   227: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");"
+    "context": "src/pager.c:222:19\n        217: \t\t\tStrcat(monbuf, \"see invisible\");\n        218: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        219: \t\t    }\n        220: \t\t    if ((!mtmp-&gt;minvis || See_invisible) &&\n        221: \t\t\t    see_with_infrared(mtmp)) {\nTARGET  222: \t\t\tStrcat(monbuf, \"infravision\");\n        223: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        224: \t\t    }\n        225: \t\t    if (tp_sensemon(mtmp)) {\n        226: \t\t\tStrcat(monbuf, \"telepathy\");\n        227: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");"
   },
   {
     "key": "L00226_01",
     "original": "telepathy",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:226:19\n   221: \t\t\t    see_with_infrared(mtmp)) {\n   222: \t\t\tStrcat(monbuf, \"infravision\");\n   223: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   224: \t\t    }\n   225: \t\t    if (tp_sensemon(mtmp)) {\n&gt;  226: \t\t\tStrcat(monbuf, \"telepathy\");\n   227: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   228: \t\t    }\n   229: \t\t    if (useemon && xraydist &gt; 0 &&\n   230: \t\t\t    distu(mtmp-&gt;mx, mtmp-&gt;my) &lt;= xraydist) {\n   231: \t\t\t/* Eyes of the Overworld */"
+    "context": "src/pager.c:226:19\n        221: \t\t\t    see_with_infrared(mtmp)) {\n        222: \t\t\tStrcat(monbuf, \"infravision\");\n        223: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        224: \t\t    }\n        225: \t\t    if (tp_sensemon(mtmp)) {\nTARGET  226: \t\t\tStrcat(monbuf, \"telepathy\");\n        227: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        228: \t\t    }\n        229: \t\t    if (useemon && xraydist &gt; 0 &&\n        230: \t\t\t    distu(mtmp-&gt;mx, mtmp-&gt;my) &lt;= xraydist) {\n        231: \t\t\t/* Eyes of the Overworld */"
   },
   {
     "key": "L00232_01",
     "original": "astral vision",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:232:19\n   227: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   228: \t\t    }\n   229: \t\t    if (useemon && xraydist &gt; 0 &&\n   230: \t\t\t    distu(mtmp-&gt;mx, mtmp-&gt;my) &lt;= xraydist) {\n   231: \t\t\t/* Eyes of the Overworld */\n&gt;  232: \t\t\tStrcat(monbuf, \"astral vision\");\n   233: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   234: \t\t    }\n   235: \t\t    if (Detect_monsters) {\n   236: \t\t\tStrcat(monbuf, \"monster detection\");\n   237: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");"
+    "context": "src/pager.c:232:19\n        227: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        228: \t\t    }\n        229: \t\t    if (useemon && xraydist &gt; 0 &&\n        230: \t\t\t    distu(mtmp-&gt;mx, mtmp-&gt;my) &lt;= xraydist) {\n        231: \t\t\t/* Eyes of the Overworld */\nTARGET  232: \t\t\tStrcat(monbuf, \"astral vision\");\n        233: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        234: \t\t    }\n        235: \t\t    if (Detect_monsters) {\n        236: \t\t\tStrcat(monbuf, \"monster detection\");\n        237: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");"
   },
   {
     "key": "L00236_01",
     "original": "monster detection",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:236:19\n   231: \t\t\t/* Eyes of the Overworld */\n   232: \t\t\tStrcat(monbuf, \"astral vision\");\n   233: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   234: \t\t    }\n   235: \t\t    if (Detect_monsters) {\n&gt;  236: \t\t\tStrcat(monbuf, \"monster detection\");\n   237: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   238: \t\t    }\n   239: \t\t    if (MATCH_WARN_OF_MON(mtmp)) {\n   240: \t\t    \tchar wbuf[BUFSZ];\n   241: \t\t\tif (Hallucination)"
+    "context": "src/pager.c:236:19\n        231: \t\t\t/* Eyes of the Overworld */\n        232: \t\t\tStrcat(monbuf, \"astral vision\");\n        233: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        234: \t\t    }\n        235: \t\t    if (Detect_monsters) {\nTARGET  236: \t\t\tStrcat(monbuf, \"monster detection\");\n        237: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        238: \t\t    }\n        239: \t\t    if (MATCH_WARN_OF_MON(mtmp)) {\n        240: \t\t    \tchar wbuf[BUFSZ];\n        241: \t\t\tif (Hallucination)"
   },
   {
     "key": "L00242_01",
     "original": "paranoid delusion",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:242:20\n   237: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   238: \t\t    }\n   239: \t\t    if (MATCH_WARN_OF_MON(mtmp)) {\n   240: \t\t    \tchar wbuf[BUFSZ];\n   241: \t\t\tif (Hallucination)\n&gt;  242: \t\t\t\tStrcat(monbuf, \"paranoid delusion\");\n   243: \t\t\telse {\n   244: \t\t\t\tSprintf(wbuf, \"warned of %s\",\n   245: \t\t\t\t\tmakeplural(mtmp-&gt;data-&gt;mname));\n   246: \t\t    \t\tStrcat(monbuf, wbuf);\n   247: \t\t    \t}"
+    "context": "src/pager.c:242:20\n        237: \t\t\tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        238: \t\t    }\n        239: \t\t    if (MATCH_WARN_OF_MON(mtmp)) {\n        240: \t\t    \tchar wbuf[BUFSZ];\n        241: \t\t\tif (Hallucination)\nTARGET  242: \t\t\t\tStrcat(monbuf, \"paranoid delusion\");\n        243: \t\t\telse {\n        244: \t\t\t\tSprintf(wbuf, \"warned of %s\",\n        245: \t\t\t\t\tmakeplural(mtmp-&gt;data-&gt;mname));\n        246: \t\t    \t\tStrcat(monbuf, wbuf);\n        247: \t\t    \t}"
   },
   {
     "key": "L00244_01",
     "original": "warned of %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:244:19\n   239: \t\t    if (MATCH_WARN_OF_MON(mtmp)) {\n   240: \t\t    \tchar wbuf[BUFSZ];\n   241: \t\t\tif (Hallucination)\n   242: \t\t\t\tStrcat(monbuf, \"paranoid delusion\");\n   243: \t\t\telse {\n&gt;  244: \t\t\t\tSprintf(wbuf, \"warned of %s\",\n   245: \t\t\t\t\tmakeplural(mtmp-&gt;data-&gt;mname));\n   246: \t\t    \t\tStrcat(monbuf, wbuf);\n   247: \t\t    \t}\n   248: \t\t    \tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n   249: \t\t    }"
+    "context": "src/pager.c:244:19\n        239: \t\t    if (MATCH_WARN_OF_MON(mtmp)) {\n        240: \t\t    \tchar wbuf[BUFSZ];\n        241: \t\t\tif (Hallucination)\n        242: \t\t\t\tStrcat(monbuf, \"paranoid delusion\");\n        243: \t\t\telse {\nTARGET  244: \t\t\t\tSprintf(wbuf, \"warned of %s\",\n        245: \t\t\t\t\tmakeplural(mtmp-&gt;data-&gt;mname));\n        246: \t\t    \t\tStrcat(monbuf, wbuf);\n        247: \t\t    \t}\n        248: \t\t    \tif (ways_seen-- &gt; 1) Strcat(monbuf, \", \");\n        249: \t\t    }"
   },
   {
     "key": "L00271_01",
     "original": " embedded in stone",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:271:18\n   266: \t    }\n   267: \t} else\n   268: \t    Strcpy(buf, distant_name(otmp, xname));\n   269: \n   270: \tif (levl[x][y].typ == STONE || levl[x][y].typ == SCORR)\n&gt;  271: \t    Strcat(buf, \" embedded in stone\");\n   272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n   273: \t    Strcat(buf, \" embedded in a wall\");\n   274: \telse if (closed_door(x,y))\n   275: \t    Strcat(buf, \" embedded in a door\");\n   276: \telse if (is_pool(x,y))"
+    "context": "src/pager.c:271:18\n        266: \t    }\n        267: \t} else\n        268: \t    Strcpy(buf, distant_name(otmp, xname));\n        269: \n        270: \tif (levl[x][y].typ == STONE || levl[x][y].typ == SCORR)\nTARGET  271: \t    Strcat(buf, \" embedded in stone\");\n        272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n        273: \t    Strcat(buf, \" embedded in a wall\");\n        274: \telse if (closed_door(x,y))\n        275: \t    Strcat(buf, \" embedded in a door\");\n        276: \telse if (is_pool(x,y))"
   },
   {
     "key": "L00273_01",
     "original": " embedded in a wall",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:273:18\n   268: \t    Strcpy(buf, distant_name(otmp, xname));\n   269: \n   270: \tif (levl[x][y].typ == STONE || levl[x][y].typ == SCORR)\n   271: \t    Strcat(buf, \" embedded in stone\");\n   272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n&gt;  273: \t    Strcat(buf, \" embedded in a wall\");\n   274: \telse if (closed_door(x,y))\n   275: \t    Strcat(buf, \" embedded in a door\");\n   276: \telse if (is_pool(x,y))\n   277: \t    Strcat(buf, \" in water\");\n   278: \telse if (is_lava(x,y))"
+    "context": "src/pager.c:273:18\n        268: \t    Strcpy(buf, distant_name(otmp, xname));\n        269: \n        270: \tif (levl[x][y].typ == STONE || levl[x][y].typ == SCORR)\n        271: \t    Strcat(buf, \" embedded in stone\");\n        272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\nTARGET  273: \t    Strcat(buf, \" embedded in a wall\");\n        274: \telse if (closed_door(x,y))\n        275: \t    Strcat(buf, \" embedded in a door\");\n        276: \telse if (is_pool(x,y))\n        277: \t    Strcat(buf, \" in water\");\n        278: \telse if (is_lava(x,y))"
   },
   {
     "key": "L00275_01",
     "original": " embedded in a door",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:275:18\n   270: \tif (levl[x][y].typ == STONE || levl[x][y].typ == SCORR)\n   271: \t    Strcat(buf, \" embedded in stone\");\n   272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n   273: \t    Strcat(buf, \" embedded in a wall\");\n   274: \telse if (closed_door(x,y))\n&gt;  275: \t    Strcat(buf, \" embedded in a door\");\n   276: \telse if (is_pool(x,y))\n   277: \t    Strcat(buf, \" in water\");\n   278: \telse if (is_lava(x,y))\n   279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n   280:     } else if (glyph_is_trap(glyph)) {"
+    "context": "src/pager.c:275:18\n        270: \tif (levl[x][y].typ == STONE || levl[x][y].typ == SCORR)\n        271: \t    Strcat(buf, \" embedded in stone\");\n        272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n        273: \t    Strcat(buf, \" embedded in a wall\");\n        274: \telse if (closed_door(x,y))\nTARGET  275: \t    Strcat(buf, \" embedded in a door\");\n        276: \telse if (is_pool(x,y))\n        277: \t    Strcat(buf, \" in water\");\n        278: \telse if (is_lava(x,y))\n        279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n        280:     } else if (glyph_is_trap(glyph)) {"
   },
   {
     "key": "L00277_01",
     "original": " in water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:277:18\n   272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n   273: \t    Strcat(buf, \" embedded in a wall\");\n   274: \telse if (closed_door(x,y))\n   275: \t    Strcat(buf, \" embedded in a door\");\n   276: \telse if (is_pool(x,y))\n&gt;  277: \t    Strcat(buf, \" in water\");\n   278: \telse if (is_lava(x,y))\n   279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n   280:     } else if (glyph_is_trap(glyph)) {\n   281: \tint tnum = what_trap(glyph_to_trap(glyph));\n   282: \tStrcpy(buf, defsyms[trap_to_defsym(tnum)].explanation);"
+    "context": "src/pager.c:277:18\n        272: \telse if (IS_WALL(levl[x][y].typ) || levl[x][y].typ == SDOOR)\n        273: \t    Strcat(buf, \" embedded in a wall\");\n        274: \telse if (closed_door(x,y))\n        275: \t    Strcat(buf, \" embedded in a door\");\n        276: \telse if (is_pool(x,y))\nTARGET  277: \t    Strcat(buf, \" in water\");\n        278: \telse if (is_lava(x,y))\n        279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n        280:     } else if (glyph_is_trap(glyph)) {\n        281: \tint tnum = what_trap(glyph_to_trap(glyph));\n        282: \tStrcpy(buf, defsyms[trap_to_defsym(tnum)].explanation);"
   },
   {
     "key": "L00279_01",
     "original": " in molten lava",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:279:18\n   274: \telse if (closed_door(x,y))\n   275: \t    Strcat(buf, \" embedded in a door\");\n   276: \telse if (is_pool(x,y))\n   277: \t    Strcat(buf, \" in water\");\n   278: \telse if (is_lava(x,y))\n&gt;  279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n   280:     } else if (glyph_is_trap(glyph)) {\n   281: \tint tnum = what_trap(glyph_to_trap(glyph));\n   282: \tStrcpy(buf, defsyms[trap_to_defsym(tnum)].explanation);\n   283:     } else if(!glyph_is_cmap(glyph)) {\n   284: \tStrcpy(buf,\"dark part of a room\");"
+    "context": "src/pager.c:279:18\n        274: \telse if (closed_door(x,y))\n        275: \t    Strcat(buf, \" embedded in a door\");\n        276: \telse if (is_pool(x,y))\n        277: \t    Strcat(buf, \" in water\");\n        278: \telse if (is_lava(x,y))\nTARGET  279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n        280:     } else if (glyph_is_trap(glyph)) {\n        281: \tint tnum = what_trap(glyph_to_trap(glyph));\n        282: \tStrcpy(buf, defsyms[trap_to_defsym(tnum)].explanation);\n        283:     } else if(!glyph_is_cmap(glyph)) {\n        284: \tStrcpy(buf,\"dark part of a room\");"
   },
   {
     "key": "L00284_01",
     "original": "dark part of a room",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:284:13\n   279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n   280:     } else if (glyph_is_trap(glyph)) {\n   281: \tint tnum = what_trap(glyph_to_trap(glyph));\n   282: \tStrcpy(buf, defsyms[trap_to_defsym(tnum)].explanation);\n   283:     } else if(!glyph_is_cmap(glyph)) {\n&gt;  284: \tStrcpy(buf,\"dark part of a room\");\n   285:     } else switch(glyph_to_cmap(glyph)) {\n   286:     case S_altar:\n   287: \tif(!In_endgame(&u.uz))\n   288: \t    Sprintf(buf, \"%s altar\",\n   289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));"
+    "context": "src/pager.c:284:13\n        279: \t    Strcat(buf, \" in molten lava\");\t/* [can this ever happen?] */\n        280:     } else if (glyph_is_trap(glyph)) {\n        281: \tint tnum = what_trap(glyph_to_trap(glyph));\n        282: \tStrcpy(buf, defsyms[trap_to_defsym(tnum)].explanation);\n        283:     } else if(!glyph_is_cmap(glyph)) {\nTARGET  284: \tStrcpy(buf,\"dark part of a room\");\n        285:     } else switch(glyph_to_cmap(glyph)) {\n        286:     case S_altar:\n        287: \tif(!In_endgame(&u.uz))\n        288: \t    Sprintf(buf, \"%s altar\",\n        289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));"
   },
   {
     "key": "L00288_01",
     "original": "%s altar",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:288:19\n   283:     } else if(!glyph_is_cmap(glyph)) {\n   284: \tStrcpy(buf,\"dark part of a room\");\n   285:     } else switch(glyph_to_cmap(glyph)) {\n   286:     case S_altar:\n   287: \tif(!In_endgame(&u.uz))\n&gt;  288: \t    Sprintf(buf, \"%s altar\",\n   289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));\n   290: \telse Sprintf(buf, \"aligned altar\");\n   291: \tbreak;\n   292:     case S_ndoor:\n   293: \tif (is_drawbridge_wall(x, y) &gt;= 0)"
+    "context": "src/pager.c:288:19\n        283:     } else if(!glyph_is_cmap(glyph)) {\n        284: \tStrcpy(buf,\"dark part of a room\");\n        285:     } else switch(glyph_to_cmap(glyph)) {\n        286:     case S_altar:\n        287: \tif(!In_endgame(&u.uz))\nTARGET  288: \t    Sprintf(buf, \"%s altar\",\n        289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));\n        290: \telse Sprintf(buf, \"aligned altar\");\n        291: \tbreak;\n        292:     case S_ndoor:\n        293: \tif (is_drawbridge_wall(x, y) &gt;= 0)"
   },
   {
     "key": "L00290_01",
     "original": "aligned altar",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:290:20\n   285:     } else switch(glyph_to_cmap(glyph)) {\n   286:     case S_altar:\n   287: \tif(!In_endgame(&u.uz))\n   288: \t    Sprintf(buf, \"%s altar\",\n   289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));\n&gt;  290: \telse Sprintf(buf, \"aligned altar\");\n   291: \tbreak;\n   292:     case S_ndoor:\n   293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n   294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n   295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)"
+    "context": "src/pager.c:290:20\n        285:     } else switch(glyph_to_cmap(glyph)) {\n        286:     case S_altar:\n        287: \tif(!In_endgame(&u.uz))\n        288: \t    Sprintf(buf, \"%s altar\",\n        289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));\nTARGET  290: \telse Sprintf(buf, \"aligned altar\");\n        291: \tbreak;\n        292:     case S_ndoor:\n        293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n        294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n        295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)"
   },
   {
     "key": "L00294_01",
     "original": "open drawbridge portcullis",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:294:17\n   289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));\n   290: \telse Sprintf(buf, \"aligned altar\");\n   291: \tbreak;\n   292:     case S_ndoor:\n   293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n&gt;  294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n   295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)\n   296: \t    Strcpy(buf,\"broken door\");\n   297: \telse\n   298: \t    Strcpy(buf,\"doorway\");\n   299: \tbreak;"
+    "context": "src/pager.c:294:17\n        289: \t\talign_str(Amask2align(levl[x][y].altarmask & ~AM_SHRINE)));\n        290: \telse Sprintf(buf, \"aligned altar\");\n        291: \tbreak;\n        292:     case S_ndoor:\n        293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\nTARGET  294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n        295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)\n        296: \t    Strcpy(buf,\"broken door\");\n        297: \telse\n        298: \t    Strcpy(buf,\"doorway\");\n        299: \tbreak;"
   },
   {
     "key": "L00296_01",
     "original": "broken door",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:296:17\n   291: \tbreak;\n   292:     case S_ndoor:\n   293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n   294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n   295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)\n&gt;  296: \t    Strcpy(buf,\"broken door\");\n   297: \telse\n   298: \t    Strcpy(buf,\"doorway\");\n   299: \tbreak;\n   300:     case S_cloud:\n   301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");"
+    "context": "src/pager.c:296:17\n        291: \tbreak;\n        292:     case S_ndoor:\n        293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n        294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n        295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)\nTARGET  296: \t    Strcpy(buf,\"broken door\");\n        297: \telse\n        298: \t    Strcpy(buf,\"doorway\");\n        299: \tbreak;\n        300:     case S_cloud:\n        301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");"
   },
   {
     "key": "L00298_01",
     "original": "doorway",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:298:17\n   293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n   294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n   295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)\n   296: \t    Strcpy(buf,\"broken door\");\n   297: \telse\n&gt;  298: \t    Strcpy(buf,\"doorway\");\n   299: \tbreak;\n   300:     case S_cloud:\n   301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n   302: \tbreak;\n   303:     case S_water:"
+    "context": "src/pager.c:298:17\n        293: \tif (is_drawbridge_wall(x, y) &gt;= 0)\n        294: \t    Strcpy(buf,\"open drawbridge portcullis\");\n        295: \telse if ((levl[x][y].doormask & ~D_TRAPPED) == D_BROKEN)\n        296: \t    Strcpy(buf,\"broken door\");\n        297: \telse\nTARGET  298: \t    Strcpy(buf,\"doorway\");\n        299: \tbreak;\n        300:     case S_cloud:\n        301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n        302: \tbreak;\n        303:     case S_water:"
   },
   {
     "key": "L00301_01",
     "original": "cloudy area",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:301:35\n   296: \t    Strcpy(buf,\"broken door\");\n   297: \telse\n   298: \t    Strcpy(buf,\"doorway\");\n   299: \tbreak;\n   300:     case S_cloud:\n&gt;  301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n   302: \tbreak;\n   303:     case S_water:\n   304:     case S_pool:\n   305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n   306: \tbreak;"
+    "context": "src/pager.c:301:35\n        296: \t    Strcpy(buf,\"broken door\");\n        297: \telse\n        298: \t    Strcpy(buf,\"doorway\");\n        299: \tbreak;\n        300:     case S_cloud:\nTARGET  301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n        302: \tbreak;\n        303:     case S_water:\n        304:     case S_pool:\n        305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n        306: \tbreak;"
   },
   {
     "key": "L00301_02",
     "original": "fog/vapor cloud",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:301:51\n   296: \t    Strcpy(buf,\"broken door\");\n   297: \telse\n   298: \t    Strcpy(buf,\"doorway\");\n   299: \tbreak;\n   300:     case S_cloud:\n&gt;  301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n   302: \tbreak;\n   303:     case S_water:\n   304:     case S_pool:\n   305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n   306: \tbreak;"
+    "context": "src/pager.c:301:51\n        296: \t    Strcpy(buf,\"broken door\");\n        297: \telse\n        298: \t    Strcpy(buf,\"doorway\");\n        299: \tbreak;\n        300:     case S_cloud:\nTARGET  301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n        302: \tbreak;\n        303:     case S_water:\n        304:     case S_pool:\n        305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n        306: \tbreak;"
   },
   {
     "key": "L00305_01",
     "original": "sparkling water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:305:33\n   300:     case S_cloud:\n   301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n   302: \tbreak;\n   303:     case S_water:\n   304:     case S_pool:\n&gt;  305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n   306: \tbreak;\n   307:     default:\n   308: \tStrcpy(buf,defsyms[glyph_to_cmap(glyph)].explanation);\n   309: \tbreak;\n   310:     }"
+    "context": "src/pager.c:305:33\n        300:     case S_cloud:\n        301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n        302: \tbreak;\n        303:     case S_water:\n        304:     case S_pool:\nTARGET  305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n        306: \tbreak;\n        307:     default:\n        308: \tStrcpy(buf,defsyms[glyph_to_cmap(glyph)].explanation);\n        309: \tbreak;\n        310:     }"
   },
   {
     "key": "L00305_02",
     "original": "water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:305:53\n   300:     case S_cloud:\n   301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n   302: \tbreak;\n   303:     case S_water:\n   304:     case S_pool:\n&gt;  305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n   306: \tbreak;\n   307:     default:\n   308: \tStrcpy(buf,defsyms[glyph_to_cmap(glyph)].explanation);\n   309: \tbreak;\n   310:     }"
+    "context": "src/pager.c:305:53\n        300:     case S_cloud:\n        301: \tStrcpy(buf, Is_airlevel(&u.uz) ? \"cloudy area\" : \"fog/vapor cloud\");\n        302: \tbreak;\n        303:     case S_water:\n        304:     case S_pool:\nTARGET  305: \tStrcpy(buf, level.flags.lethe? \"sparkling water\" : \"water\");\n        306: \tbreak;\n        307:     default:\n        308: \tStrcpy(buf,defsyms[glyph_to_cmap(glyph)].explanation);\n        309: \tbreak;\n        310:     }"
   },
   {
     "key": "L00338_01",
     "original": "r",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:338:51\n   333:     char *ep, *dbase_str;\n   334:     long txt_offset;\n   335:     int chk_skip;\n   336:     boolean found_in_file = FALSE, skipping_entry = FALSE;\n   337: \n&gt;  338:     fp = dlb_fopen_area(NH_DATAAREA, NH_DATAFILE, \"r\");\n   339:     if (!fp) {\n   340: \tpline(\"Cannot open data file!\");\n   341: \treturn;\n   342:     }\n   343: "
+    "context": "src/pager.c:338:51\n        333:     char *ep, *dbase_str;\n        334:     long txt_offset;\n        335:     int chk_skip;\n        336:     boolean found_in_file = FALSE, skipping_entry = FALSE;\n        337: \nTARGET  338:     fp = dlb_fopen_area(NH_DATAAREA, NH_DATAFILE, \"r\");\n        339:     if (!fp) {\n        340: \tpline(\"Cannot open data file!\");\n        341: \treturn;\n        342:     }\n        343: "
   },
   {
     "key": "L00340_01",
     "original": "Cannot open data file!",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:340:8\n   335:     int chk_skip;\n   336:     boolean found_in_file = FALSE, skipping_entry = FALSE;\n   337: \n   338:     fp = dlb_fopen_area(NH_DATAAREA, NH_DATAFILE, \"r\");\n   339:     if (!fp) {\n&gt;  340: \tpline(\"Cannot open data file!\");\n   341: \treturn;\n   342:     }\n   343: \n   344:     /* To prevent the need for entries in data.base like *ngel to account\n   345:      * for Angel and angel, make the lookup string the same for both"
+    "context": "src/pager.c:340:8\n        335:     int chk_skip;\n        336:     boolean found_in_file = FALSE, skipping_entry = FALSE;\n        337: \n        338:     fp = dlb_fopen_area(NH_DATAAREA, NH_DATAFILE, \"r\");\n        339:     if (!fp) {\nTARGET  340: \tpline(\"Cannot open data file!\");\n        341: \treturn;\n        342:     }\n        343: \n        344:     /* To prevent the need for entries in data.base like *ngel to account\n        345:      * for Angel and angel, make the lookup string the same for both"
   },
   {
     "key": "L00353_01",
     "original": "interior of ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:353:29\n   348:     if (pm != (struct permonst *) 0 && !user_typed_name)\n   349: \tdbase_str = strcpy(newstr, pm-&gt;mname);\n   350:     else dbase_str = strcpy(newstr, inp);\n   351:     (void) lcase(dbase_str);\n   352: \n&gt;  353:     if (!strncmp(dbase_str, \"interior of \", 12))\n   354: \tdbase_str += 12;\n   355:     if (!strncmp(dbase_str, \"a \", 2))\n   356: \tdbase_str += 2;\n   357:     else if (!strncmp(dbase_str, \"an \", 3))\n   358: \tdbase_str += 3;"
+    "context": "src/pager.c:353:29\n        348:     if (pm != (struct permonst *) 0 && !user_typed_name)\n        349: \tdbase_str = strcpy(newstr, pm-&gt;mname);\n        350:     else dbase_str = strcpy(newstr, inp);\n        351:     (void) lcase(dbase_str);\n        352: \nTARGET  353:     if (!strncmp(dbase_str, \"interior of \", 12))\n        354: \tdbase_str += 12;\n        355:     if (!strncmp(dbase_str, \"a \", 2))\n        356: \tdbase_str += 2;\n        357:     else if (!strncmp(dbase_str, \"an \", 3))\n        358: \tdbase_str += 3;"
   },
   {
     "key": "L00355_01",
     "original": "a ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:355:29\n   350:     else dbase_str = strcpy(newstr, inp);\n   351:     (void) lcase(dbase_str);\n   352: \n   353:     if (!strncmp(dbase_str, \"interior of \", 12))\n   354: \tdbase_str += 12;\n&gt;  355:     if (!strncmp(dbase_str, \"a \", 2))\n   356: \tdbase_str += 2;\n   357:     else if (!strncmp(dbase_str, \"an \", 3))\n   358: \tdbase_str += 3;\n   359:     else if (!strncmp(dbase_str, \"the \", 4))\n   360: \tdbase_str += 4;"
+    "context": "src/pager.c:355:29\n        350:     else dbase_str = strcpy(newstr, inp);\n        351:     (void) lcase(dbase_str);\n        352: \n        353:     if (!strncmp(dbase_str, \"interior of \", 12))\n        354: \tdbase_str += 12;\nTARGET  355:     if (!strncmp(dbase_str, \"a \", 2))\n        356: \tdbase_str += 2;\n        357:     else if (!strncmp(dbase_str, \"an \", 3))\n        358: \tdbase_str += 3;\n        359:     else if (!strncmp(dbase_str, \"the \", 4))\n        360: \tdbase_str += 4;"
   },
   {
     "key": "L00357_01",
     "original": "an ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:357:34\n   352: \n   353:     if (!strncmp(dbase_str, \"interior of \", 12))\n   354: \tdbase_str += 12;\n   355:     if (!strncmp(dbase_str, \"a \", 2))\n   356: \tdbase_str += 2;\n&gt;  357:     else if (!strncmp(dbase_str, \"an \", 3))\n   358: \tdbase_str += 3;\n   359:     else if (!strncmp(dbase_str, \"the \", 4))\n   360: \tdbase_str += 4;\n   361:     if (!strncmp(dbase_str, \"tame \", 5))\n   362: \tdbase_str += 5;"
+    "context": "src/pager.c:357:34\n        352: \n        353:     if (!strncmp(dbase_str, \"interior of \", 12))\n        354: \tdbase_str += 12;\n        355:     if (!strncmp(dbase_str, \"a \", 2))\n        356: \tdbase_str += 2;\nTARGET  357:     else if (!strncmp(dbase_str, \"an \", 3))\n        358: \tdbase_str += 3;\n        359:     else if (!strncmp(dbase_str, \"the \", 4))\n        360: \tdbase_str += 4;\n        361:     if (!strncmp(dbase_str, \"tame \", 5))\n        362: \tdbase_str += 5;"
   },
   {
     "key": "L00359_01",
     "original": "the ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:359:34\n   354: \tdbase_str += 12;\n   355:     if (!strncmp(dbase_str, \"a \", 2))\n   356: \tdbase_str += 2;\n   357:     else if (!strncmp(dbase_str, \"an \", 3))\n   358: \tdbase_str += 3;\n&gt;  359:     else if (!strncmp(dbase_str, \"the \", 4))\n   360: \tdbase_str += 4;\n   361:     if (!strncmp(dbase_str, \"tame \", 5))\n   362: \tdbase_str += 5;\n   363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n   364: \tdbase_str += 9;"
+    "context": "src/pager.c:359:34\n        354: \tdbase_str += 12;\n        355:     if (!strncmp(dbase_str, \"a \", 2))\n        356: \tdbase_str += 2;\n        357:     else if (!strncmp(dbase_str, \"an \", 3))\n        358: \tdbase_str += 3;\nTARGET  359:     else if (!strncmp(dbase_str, \"the \", 4))\n        360: \tdbase_str += 4;\n        361:     if (!strncmp(dbase_str, \"tame \", 5))\n        362: \tdbase_str += 5;\n        363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n        364: \tdbase_str += 9;"
   },
   {
     "key": "L00361_01",
     "original": "tame ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:361:29\n   356: \tdbase_str += 2;\n   357:     else if (!strncmp(dbase_str, \"an \", 3))\n   358: \tdbase_str += 3;\n   359:     else if (!strncmp(dbase_str, \"the \", 4))\n   360: \tdbase_str += 4;\n&gt;  361:     if (!strncmp(dbase_str, \"tame \", 5))\n   362: \tdbase_str += 5;\n   363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n   364: \tdbase_str += 9;\n   365:     if (!strncmp(dbase_str, \"invisible \", 10))\n   366: \tdbase_str += 10;"
+    "context": "src/pager.c:361:29\n        356: \tdbase_str += 2;\n        357:     else if (!strncmp(dbase_str, \"an \", 3))\n        358: \tdbase_str += 3;\n        359:     else if (!strncmp(dbase_str, \"the \", 4))\n        360: \tdbase_str += 4;\nTARGET  361:     if (!strncmp(dbase_str, \"tame \", 5))\n        362: \tdbase_str += 5;\n        363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n        364: \tdbase_str += 9;\n        365:     if (!strncmp(dbase_str, \"invisible \", 10))\n        366: \tdbase_str += 10;"
   },
   {
     "key": "L00363_01",
     "original": "peaceful ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:363:34\n   358: \tdbase_str += 3;\n   359:     else if (!strncmp(dbase_str, \"the \", 4))\n   360: \tdbase_str += 4;\n   361:     if (!strncmp(dbase_str, \"tame \", 5))\n   362: \tdbase_str += 5;\n&gt;  363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n   364: \tdbase_str += 9;\n   365:     if (!strncmp(dbase_str, \"invisible \", 10))\n   366: \tdbase_str += 10;\n   367:     if (!strncmp(dbase_str, \"statue of \", 10))\n   368: \tdbase_str[6] = '\\0';"
+    "context": "src/pager.c:363:34\n        358: \tdbase_str += 3;\n        359:     else if (!strncmp(dbase_str, \"the \", 4))\n        360: \tdbase_str += 4;\n        361:     if (!strncmp(dbase_str, \"tame \", 5))\n        362: \tdbase_str += 5;\nTARGET  363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n        364: \tdbase_str += 9;\n        365:     if (!strncmp(dbase_str, \"invisible \", 10))\n        366: \tdbase_str += 10;\n        367:     if (!strncmp(dbase_str, \"statue of \", 10))\n        368: \tdbase_str[6] = '\\0';"
   },
   {
     "key": "L00365_01",
     "original": "invisible ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:365:29\n   360: \tdbase_str += 4;\n   361:     if (!strncmp(dbase_str, \"tame \", 5))\n   362: \tdbase_str += 5;\n   363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n   364: \tdbase_str += 9;\n&gt;  365:     if (!strncmp(dbase_str, \"invisible \", 10))\n   366: \tdbase_str += 10;\n   367:     if (!strncmp(dbase_str, \"statue of \", 10))\n   368: \tdbase_str[6] = '\\0';\n   369:     else if (!strncmp(dbase_str, \"figurine of \", 12))\n   370: \tdbase_str[8] = '\\0';"
+    "context": "src/pager.c:365:29\n        360: \tdbase_str += 4;\n        361:     if (!strncmp(dbase_str, \"tame \", 5))\n        362: \tdbase_str += 5;\n        363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n        364: \tdbase_str += 9;\nTARGET  365:     if (!strncmp(dbase_str, \"invisible \", 10))\n        366: \tdbase_str += 10;\n        367:     if (!strncmp(dbase_str, \"statue of \", 10))\n        368: \tdbase_str[6] = '\\0';\n        369:     else if (!strncmp(dbase_str, \"figurine of \", 12))\n        370: \tdbase_str[8] = '\\0';"
   },
   {
     "key": "L00367_01",
     "original": "statue of ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:367:29\n   362: \tdbase_str += 5;\n   363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n   364: \tdbase_str += 9;\n   365:     if (!strncmp(dbase_str, \"invisible \", 10))\n   366: \tdbase_str += 10;\n&gt;  367:     if (!strncmp(dbase_str, \"statue of \", 10))\n   368: \tdbase_str[6] = '\\0';\n   369:     else if (!strncmp(dbase_str, \"figurine of \", 12))\n   370: \tdbase_str[8] = '\\0';\n   371: \n   372:     /* Make sure the name is non-empty. */"
+    "context": "src/pager.c:367:29\n        362: \tdbase_str += 5;\n        363:     else if (!strncmp(dbase_str, \"peaceful \", 9))\n        364: \tdbase_str += 9;\n        365:     if (!strncmp(dbase_str, \"invisible \", 10))\n        366: \tdbase_str += 10;\nTARGET  367:     if (!strncmp(dbase_str, \"statue of \", 10))\n        368: \tdbase_str[6] = '\\0';\n        369:     else if (!strncmp(dbase_str, \"figurine of \", 12))\n        370: \tdbase_str[8] = '\\0';\n        371: \n        372:     /* Make sure the name is non-empty. */"
   },
   {
     "key": "L00369_01",
     "original": "figurine of ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:369:34\n   364: \tdbase_str += 9;\n   365:     if (!strncmp(dbase_str, \"invisible \", 10))\n   366: \tdbase_str += 10;\n   367:     if (!strncmp(dbase_str, \"statue of \", 10))\n   368: \tdbase_str[6] = '\\0';\n&gt;  369:     else if (!strncmp(dbase_str, \"figurine of \", 12))\n   370: \tdbase_str[8] = '\\0';\n   371: \n   372:     /* Make sure the name is non-empty. */\n   373:     if (*dbase_str) {\n   374: \t/* adjust the input to remove \"named \" and convert to lower case */"
+    "context": "src/pager.c:369:34\n        364: \tdbase_str += 9;\n        365:     if (!strncmp(dbase_str, \"invisible \", 10))\n        366: \tdbase_str += 10;\n        367:     if (!strncmp(dbase_str, \"statue of \", 10))\n        368: \tdbase_str[6] = '\\0';\nTARGET  369:     else if (!strncmp(dbase_str, \"figurine of \", 12))\n        370: \tdbase_str[8] = '\\0';\n        371: \n        372:     /* Make sure the name is non-empty. */\n        373:     if (*dbase_str) {\n        374: \t/* adjust the input to remove \"named \" and convert to lower case */"
   },
   {
     "key": "L00377_01",
     "original": " named ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:377:31\n   372:     /* Make sure the name is non-empty. */\n   373:     if (*dbase_str) {\n   374: \t/* adjust the input to remove \"named \" and convert to lower case */\n   375: \tchar *alt = 0;\t/* alternate description */\n   376: \n&gt;  377: \tif ((ep = strstri(dbase_str, \" named \")) != 0)\n   378: \t    alt = ep + 7;\n   379: \telse\n   380: \t    ep = strstri(dbase_str, \" called \");\n   381: \tif (!ep) ep = strstri(dbase_str, \", \");\n   382: \tif (ep && ep &gt; dbase_str) *ep = '\\0';"
+    "context": "src/pager.c:377:31\n        372:     /* Make sure the name is non-empty. */\n        373:     if (*dbase_str) {\n        374: \t/* adjust the input to remove \"named \" and convert to lower case */\n        375: \tchar *alt = 0;\t/* alternate description */\n        376: \nTARGET  377: \tif ((ep = strstri(dbase_str, \" named \")) != 0)\n        378: \t    alt = ep + 7;\n        379: \telse\n        380: \t    ep = strstri(dbase_str, \" called \");\n        381: \tif (!ep) ep = strstri(dbase_str, \", \");\n        382: \tif (ep && ep &gt; dbase_str) *ep = '\\0';"
   },
   {
     "key": "L00380_01",
     "original": " called ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:380:30\n   375: \tchar *alt = 0;\t/* alternate description */\n   376: \n   377: \tif ((ep = strstri(dbase_str, \" named \")) != 0)\n   378: \t    alt = ep + 7;\n   379: \telse\n&gt;  380: \t    ep = strstri(dbase_str, \" called \");\n   381: \tif (!ep) ep = strstri(dbase_str, \", \");\n   382: \tif (ep && ep &gt; dbase_str) *ep = '\\0';\n   383: \n   384: \t/*\n   385: \t * If the object is named, then the name is the alternate description;"
+    "context": "src/pager.c:380:30\n        375: \tchar *alt = 0;\t/* alternate description */\n        376: \n        377: \tif ((ep = strstri(dbase_str, \" named \")) != 0)\n        378: \t    alt = ep + 7;\n        379: \telse\nTARGET  380: \t    ep = strstri(dbase_str, \" called \");\n        381: \tif (!ep) ep = strstri(dbase_str, \", \");\n        382: \tif (ep && ep &gt; dbase_str) *ep = '\\0';\n        383: \n        384: \t/*\n        385: \t * If the object is named, then the name is the alternate description;"
   },
   {
     "key": "L00401_01",
     "original": "can't read 'data' file",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:401:17\n   396: \t\t(void) lcase(alt);\n   397: \n   398: \t/* skip first record; read second */\n   399: \ttxt_offset = 0L;\n   400: \tif (!dlb_fgets(buf, BUFSZ, fp) || !dlb_fgets(buf, BUFSZ, fp)) {\n&gt;  401: \t    impossible(\"can't read 'data' file\");\n   402: \t    (void) dlb_fclose(fp);\n   403: \t    return;\n   404: \t} else if (sscanf(buf, \"%8lx\\n\", &txt_offset) &lt; 1 || txt_offset &lt;= 0)\n   405: \t    goto bad_data_file;\n   406: "
+    "context": "src/pager.c:401:17\n        396: \t\t(void) lcase(alt);\n        397: \n        398: \t/* skip first record; read second */\n        399: \ttxt_offset = 0L;\n        400: \tif (!dlb_fgets(buf, BUFSZ, fp) || !dlb_fgets(buf, BUFSZ, fp)) {\nTARGET  401: \t    impossible(\"can't read 'data' file\");\n        402: \t    (void) dlb_fclose(fp);\n        403: \t    return;\n        404: \t} else if (sscanf(buf, \"%8lx\\n\", &txt_offset) &lt; 1 || txt_offset &lt;= 0)\n        405: \t    goto bad_data_file;\n        406: "
   },
   {
     "key": "L00404_01",
     "original": "%8lx\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:404:25\n   399: \ttxt_offset = 0L;\n   400: \tif (!dlb_fgets(buf, BUFSZ, fp) || !dlb_fgets(buf, BUFSZ, fp)) {\n   401: \t    impossible(\"can't read 'data' file\");\n   402: \t    (void) dlb_fclose(fp);\n   403: \t    return;\n&gt;  404: \t} else if (sscanf(buf, \"%8lx\\n\", &txt_offset) &lt; 1 || txt_offset &lt;= 0)\n   405: \t    goto bad_data_file;\n   406: \n   407: \t/* look for the appropriate entry */\n   408: \twhile (dlb_fgets(buf,BUFSZ,fp)) {\n   409: \t    if (*buf == '.') break;  /* we passed last entry without success */"
+    "context": "src/pager.c:404:25\n        399: \ttxt_offset = 0L;\n        400: \tif (!dlb_fgets(buf, BUFSZ, fp) || !dlb_fgets(buf, BUFSZ, fp)) {\n        401: \t    impossible(\"can't read 'data' file\");\n        402: \t    (void) dlb_fclose(fp);\n        403: \t    return;\nTARGET  404: \t} else if (sscanf(buf, \"%8lx\\n\", &txt_offset) &lt; 1 || txt_offset &lt;= 0)\n        405: \t    goto bad_data_file;\n        406: \n        407: \t/* look for the appropriate entry */\n        408: \twhile (dlb_fgets(buf,BUFSZ,fp)) {\n        409: \t    if (*buf == '.') break;  /* we passed last entry without success */"
   },
   {
     "key": "L00442_01",
     "original": "%ld,%d\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:442:18\n   437: \n   438: \t/* skip over other possible matches for the info */\n   439: \tdo {\n   440: \t    if (!dlb_fgets(buf, BUFSZ, fp)) goto bad_data_file;\n   441: \t} while (!digit(*buf));\n&gt;  442: \tif (sscanf(buf, \"%ld,%d\\n\", &entry_offset, &entry_count) &lt; 2) {\n   443: bad_data_file:\timpossible(\"'data' file in wrong format\");\n   444: \t\t(void) dlb_fclose(fp);\n   445: \t\treturn;\n   446: \t}\n   447: "
+    "context": "src/pager.c:442:18\n        437: \n        438: \t/* skip over other possible matches for the info */\n        439: \tdo {\n        440: \t    if (!dlb_fgets(buf, BUFSZ, fp)) goto bad_data_file;\n        441: \t} while (!digit(*buf));\nTARGET  442: \tif (sscanf(buf, \"%ld,%d\\n\", &entry_offset, &entry_count) &lt; 2) {\n        443: bad_data_file:\timpossible(\"'data' file in wrong format\");\n        444: \t\t(void) dlb_fclose(fp);\n        445: \t\treturn;\n        446: \t}\n        447: "
   },
   {
     "key": "L00443_01",
     "original": "'data' file in wrong format",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:443:27\n   438: \t/* skip over other possible matches for the info */\n   439: \tdo {\n   440: \t    if (!dlb_fgets(buf, BUFSZ, fp)) goto bad_data_file;\n   441: \t} while (!digit(*buf));\n   442: \tif (sscanf(buf, \"%ld,%d\\n\", &entry_offset, &entry_count) &lt; 2) {\n&gt;  443: bad_data_file:\timpossible(\"'data' file in wrong format\");\n   444: \t\t(void) dlb_fclose(fp);\n   445: \t\treturn;\n   446: \t}\n   447: \n   448: \tif (user_typed_name || without_asking || yn(\"More info?\") == 'y') {"
+    "context": "src/pager.c:443:27\n        438: \t/* skip over other possible matches for the info */\n        439: \tdo {\n        440: \t    if (!dlb_fgets(buf, BUFSZ, fp)) goto bad_data_file;\n        441: \t} while (!digit(*buf));\n        442: \tif (sscanf(buf, \"%ld,%d\\n\", &entry_offset, &entry_count) &lt; 2) {\nTARGET  443: bad_data_file:\timpossible(\"'data' file in wrong format\");\n        444: \t\t(void) dlb_fclose(fp);\n        445: \t\treturn;\n        446: \t}\n        447: \n        448: \tif (user_typed_name || without_asking || yn(\"More info?\") == 'y') {"
   },
   {
     "key": "L00448_01",
     "original": "More info?",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:448:46\n   443: bad_data_file:\timpossible(\"'data' file in wrong format\");\n   444: \t\t(void) dlb_fclose(fp);\n   445: \t\treturn;\n   446: \t}\n   447: \n&gt;  448: \tif (user_typed_name || without_asking || yn(\"More info?\") == 'y') {\n   449: \t    winid datawin;\n   450: \n   451: \t    if (dlb_fseek(fp, txt_offset + entry_offset, SEEK_SET) &lt; 0) {\n   452: \t\tpline(\"? Seek error on 'data' file!\");\n   453: \t\t(void) dlb_fclose(fp);"
+    "context": "src/pager.c:448:46\n        443: bad_data_file:\timpossible(\"'data' file in wrong format\");\n        444: \t\t(void) dlb_fclose(fp);\n        445: \t\treturn;\n        446: \t}\n        447: \nTARGET  448: \tif (user_typed_name || without_asking || yn(\"More info?\") == 'y') {\n        449: \t    winid datawin;\n        450: \n        451: \t    if (dlb_fseek(fp, txt_offset + entry_offset, SEEK_SET) &lt; 0) {\n        452: \t\tpline(\"? Seek error on 'data' file!\");\n        453: \t\t(void) dlb_fclose(fp);"
   },
   {
     "key": "L00452_01",
     "original": "? Seek error on 'data' file!",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:452:9\n   447: \n   448: \tif (user_typed_name || without_asking || yn(\"More info?\") == 'y') {\n   449: \t    winid datawin;\n   450: \n   451: \t    if (dlb_fseek(fp, txt_offset + entry_offset, SEEK_SET) &lt; 0) {\n&gt;  452: \t\tpline(\"? Seek error on 'data' file!\");\n   453: \t\t(void) dlb_fclose(fp);\n   454: \t\treturn;\n   455: \t    }\n   456: \t    datawin = create_nhwindow(NHW_MENU);\n   457: \t    for (i = 0; i &lt; entry_count; i++) {"
+    "context": "src/pager.c:452:9\n        447: \n        448: \tif (user_typed_name || without_asking || yn(\"More info?\") == 'y') {\n        449: \t    winid datawin;\n        450: \n        451: \t    if (dlb_fseek(fp, txt_offset + entry_offset, SEEK_SET) &lt; 0) {\nTARGET  452: \t\tpline(\"? Seek error on 'data' file!\");\n        453: \t\t(void) dlb_fclose(fp);\n        454: \t\treturn;\n        455: \t    }\n        456: \t    datawin = create_nhwindow(NHW_MENU);\n        457: \t    for (i = 0; i &lt; entry_count; i++) {"
   },
   {
     "key": "L00467_01",
     "original": "I don't have any information on those things.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:467:8\n   462: \t    }\n   463: \t    display_nhwindow(datawin, FALSE);\n   464: \t    destroy_nhwindow(datawin);\n   465: \t}\n   466:     } else if (user_typed_name)\n&gt;  467: \tpline(\"I don't have any information on those things.\");\n   468: \n   469:     (void) dlb_fclose(fp);\n   470: }\n   471: \n   472: /* getpos() return values */"
+    "context": "src/pager.c:467:8\n        462: \t    }\n        463: \t    display_nhwindow(datawin, FALSE);\n        464: \t    destroy_nhwindow(datawin);\n        465: \t}\n        466:     } else if (user_typed_name)\nTARGET  467: \tpline(\"I don't have any information on those things.\");\n        468: \n        469:     (void) dlb_fclose(fp);\n        470: }\n        471: \n        472: /* getpos() return values */"
   },
   {
     "key": "L00479_01",
     "original": "an unknown object",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:479:42\n   474: #define LOOK_QUICK\t\t1\t/* ',' -- skip \"more info?\" */\n   475: #define LOOK_ONCE\t\t2\t/* ';' -- skip and stop looping */\n   476: #define LOOK_VERBOSE\t\t3\t/* ':' -- show more info w/o asking */\n   477: \n   478: /* also used by getpos hack in do_name.c */\n&gt;  479: const char what_is_an_unknown_object[] = \"an unknown object\";\n   480: \n   481: STATIC_OVL int\n   482: do_look(quick)\n   483:     boolean quick;\t/* use cursor && don't search for \"more info\" */\n   484: {"
+    "context": "src/pager.c:479:42\n        474: #define LOOK_QUICK\t\t1\t/* ',' -- skip \"more info?\" */\n        475: #define LOOK_ONCE\t\t2\t/* ';' -- skip and stop looping */\n        476: #define LOOK_VERBOSE\t\t3\t/* ':' -- show more info w/o asking */\n        477: \n        478: /* also used by getpos hack in do_name.c */\nTARGET  479: const char what_is_an_unknown_object[] = \"an unknown object\";\n        480: \n        481: STATIC_OVL int\n        482: do_look(quick)\n        483:     boolean quick;\t/* use cursor && don't search for \"more info\" */\n        484: {"
   },
   {
     "key": "L00497_01",
     "original": "the interior of a monster",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:497:39\n   492:     boolean save_verbose;\t/* saved value of flags.verbose */\n   493:     boolean from_screen;\t/* question from the screen */\n   494:     boolean need_to_look;\t/* need to get explan. from glyph */\n   495:     boolean hit_trap;\t\t/* true if found trap explanation */\n   496:     int skipped_venom;\t\t/* non-zero if we ignored \"splash of venom\" */\n&gt;  497:     static const char *mon_interior = \"the interior of a monster\";\n   498: \n   499:     if (quick) {\n   500: \tfrom_screen = TRUE;\t/* yes, we want to use the cursor */\n   501:     } else {\n   502: \ti = ynq(\"Specify unknown object by cursor?\");"
+    "context": "src/pager.c:497:39\n        492:     boolean save_verbose;\t/* saved value of flags.verbose */\n        493:     boolean from_screen;\t/* question from the screen */\n        494:     boolean need_to_look;\t/* need to get explan. from glyph */\n        495:     boolean hit_trap;\t\t/* true if found trap explanation */\n        496:     int skipped_venom;\t\t/* non-zero if we ignored \"splash of venom\" */\nTARGET  497:     static const char *mon_interior = \"the interior of a monster\";\n        498: \n        499:     if (quick) {\n        500: \tfrom_screen = TRUE;\t/* yes, we want to use the cursor */\n        501:     } else {\n        502: \ti = ynq(\"Specify unknown object by cursor?\");"
   },
   {
     "key": "L00502_01",
     "original": "Specify unknown object by cursor?",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:502:10\n   497:     static const char *mon_interior = \"the interior of a monster\";\n   498: \n   499:     if (quick) {\n   500: \tfrom_screen = TRUE;\t/* yes, we want to use the cursor */\n   501:     } else {\n&gt;  502: \ti = ynq(\"Specify unknown object by cursor?\");\n   503: \tif (i == 'q') return 0;\n   504: \tfrom_screen = (i == 'y');\n   505:     }\n   506: \n   507:     if (from_screen) {"
+    "context": "src/pager.c:502:10\n        497:     static const char *mon_interior = \"the interior of a monster\";\n        498: \n        499:     if (quick) {\n        500: \tfrom_screen = TRUE;\t/* yes, we want to use the cursor */\n        501:     } else {\nTARGET  502: \ti = ynq(\"Specify unknown object by cursor?\");\n        503: \tif (i == 'q') return 0;\n        504: \tfrom_screen = (i == 'y');\n        505:     }\n        506: \n        507:     if (from_screen) {"
   },
   {
     "key": "L00512_01",
     "original": "Specify what? (type the word)",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:512:9\n   507:     if (from_screen) {\n   508: \tcc.x = u.ux;\n   509: \tcc.y = u.uy;\n   510: \tsym = 0;\t\t/* gcc -Wall lint */\n   511:     } else {\n&gt;  512: \tgetlin(\"Specify what? (type the word)\", out_str);\n   513: \tif (out_str[0] == '\\0' || out_str[0] == '\\033')\n   514: \t    return 0;\n   515: \n   516: \tif (out_str[1]) {\t/* user typed in a complete string */\n   517: \t    checkfile(out_str, pm, TRUE, TRUE);"
+    "context": "src/pager.c:512:9\n        507:     if (from_screen) {\n        508: \tcc.x = u.ux;\n        509: \tcc.y = u.uy;\n        510: \tsym = 0;\t\t/* gcc -Wall lint */\n        511:     } else {\nTARGET  512: \tgetlin(\"Specify what? (type the word)\", out_str);\n        513: \tif (out_str[0] == '\\0' || out_str[0] == '\\033')\n        514: \t    return 0;\n        515: \n        516: \tif (out_str[1]) {\t/* user typed in a complete string */\n        517: \t    checkfile(out_str, pm, TRUE, TRUE);"
   },
   {
     "key": "L00541_01",
     "original": "Please move the cursor to %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:541:9\n   536: \n   537: \tif (from_screen) {\n   538: \t    int glyph;\t/* glyph at selected position */\n   539: \n   540: \t    if (flags.verbose)\n&gt;  541: \t\tpline(\"Please move the cursor to %s.\",\n   542: \t\t       what_is_an_unknown_object);\n   543: \t    else\n   544: \t\tpline(\"Pick an object.\");\n   545: \n   546: \t    ans = getpos(&cc, quick, what_is_an_unknown_object);"
+    "context": "src/pager.c:541:9\n        536: \n        537: \tif (from_screen) {\n        538: \t    int glyph;\t/* glyph at selected position */\n        539: \n        540: \t    if (flags.verbose)\nTARGET  541: \t\tpline(\"Please move the cursor to %s.\",\n        542: \t\t       what_is_an_unknown_object);\n        543: \t    else\n        544: \t\tpline(\"Pick an object.\");\n        545: \n        546: \t    ans = getpos(&cc, quick, what_is_an_unknown_object);"
   },
   {
     "key": "L00544_01",
     "original": "Pick an object.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:544:9\n   539: \n   540: \t    if (flags.verbose)\n   541: \t\tpline(\"Please move the cursor to %s.\",\n   542: \t\t       what_is_an_unknown_object);\n   543: \t    else\n&gt;  544: \t\tpline(\"Pick an object.\");\n   545: \n   546: \t    ans = getpos(&cc, quick, what_is_an_unknown_object);\n   547: \t    if (ans &lt; 0 || cc.x &lt; 0) {\n   548: \t\tflags.verbose = save_verbose;\n   549: \t\treturn 0;\t/* done */"
+    "context": "src/pager.c:544:9\n        539: \n        540: \t    if (flags.verbose)\n        541: \t\tpline(\"Please move the cursor to %s.\",\n        542: \t\t       what_is_an_unknown_object);\n        543: \t    else\nTARGET  544: \t\tpline(\"Pick an object.\");\n        545: \n        546: \t    ans = getpos(&cc, quick, what_is_an_unknown_object);\n        547: \t    if (ans &lt; 0 || cc.x &lt; 0) {\n        548: \t\tflags.verbose = save_verbose;\n        549: \t\treturn 0;\t/* done */"
   },
   {
     "key": "L00574_01",
     "original": "do_look:  bad glyph %d at (%d,%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:574:14\n   569: \t\tsym = DEF_INVISIBLE;\n   570: \t    } else if (glyph_is_warning(glyph)) {\n   571: \t\tsym = glyph_to_warning(glyph);\n   572: \t    \tsym = warnsyms[sym];\n   573: \t    } else {\n&gt;  574: \t\timpossible(\"do_look:  bad glyph %d at (%d,%d)\",\n   575: \t\t\t\t\t\tglyph, (int)cc.x, (int)cc.y);\n   576: \t\tsym = ' ';\n   577: \t    }\n   578: \t}\n   579: "
+    "context": "src/pager.c:574:14\n        569: \t\tsym = DEF_INVISIBLE;\n        570: \t    } else if (glyph_is_warning(glyph)) {\n        571: \t\tsym = glyph_to_warning(glyph);\n        572: \t    \tsym = warnsyms[sym];\n        573: \t    } else {\nTARGET  574: \t\timpossible(\"do_look:  bad glyph %d at (%d,%d)\",\n        575: \t\t\t\t\t\tglyph, (int)cc.x, (int)cc.y);\n        576: \t\tsym = ' ';\n        577: \t    }\n        578: \t}\n        579: "
   },
   {
     "key": "L00591_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:591:24\n   586: \tfor (i = 0; i &lt; MAXMCLASSES; i++) {\n   587: \t    if (sym == (from_screen ? monsyms[i] : def_monsyms[i]) &&\n   588: \t\tmonexplain[i]) {\n   589: \t\tneed_to_look = TRUE;\n   590: \t\tif (!found) {\n&gt;  591: \t\t    Sprintf(out_str, \"%c       %s\", sym, an(monexplain[i]));\n   592: \t\t    firstmatch = monexplain[i];\n   593: \t\t    found++;\n   594: \t\t} else {\n   595: \t\t    found += append_str(out_str, an(monexplain[i]));\n   596: \t\t}"
+    "context": "src/pager.c:591:24\n        586: \tfor (i = 0; i &lt; MAXMCLASSES; i++) {\n        587: \t    if (sym == (from_screen ? monsyms[i] : def_monsyms[i]) &&\n        588: \t\tmonexplain[i]) {\n        589: \t\tneed_to_look = TRUE;\n        590: \t\tif (!found) {\nTARGET  591: \t\t    Sprintf(out_str, \"%c       %s\", sym, an(monexplain[i]));\n        592: \t\t    firstmatch = monexplain[i];\n        593: \t\t    found++;\n        594: \t\t} else {\n        595: \t\t    found += append_str(out_str, an(monexplain[i]));\n        596: \t\t}"
   },
   {
     "key": "L00606_01",
     "original": "you",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:606:35\n   601: \t   symbol; firstmatch is assumed to already be set for '@' */\n   602: \tif ((from_screen ?\n   603: \t\t(sym == monsyms[S_HUMAN] && cc.x == u.ux && cc.y == u.uy) :\n   604: \t\t(sym == def_monsyms[S_HUMAN] && !iflags.showrace)) &&\n   605: \t    !(Race_if(PM_HUMAN) || Race_if(PM_ELF)) && !Upolyd)\n&gt;  606: \t    found += append_str(out_str, \"you\");\t/* tack on \"or you\" */\n   607: \n   608: \t/*\n   609: \t * Special case: if identifying from the screen, and we're swallowed,\n   610: \t * and looking at something other than our own symbol, then just say\n   611: \t * \"the interior of a monster\"."
+    "context": "src/pager.c:606:35\n        601: \t   symbol; firstmatch is assumed to already be set for '@' */\n        602: \tif ((from_screen ?\n        603: \t\t(sym == monsyms[S_HUMAN] && cc.x == u.ux && cc.y == u.uy) :\n        604: \t\t(sym == def_monsyms[S_HUMAN] && !iflags.showrace)) &&\n        605: \t    !(Race_if(PM_HUMAN) || Race_if(PM_ELF)) && !Upolyd)\nTARGET  606: \t    found += append_str(out_str, \"you\");\t/* tack on \"or you\" */\n        607: \n        608: \t/*\n        609: \t * Special case: if identifying from the screen, and we're swallowed,\n        610: \t * and looking at something other than our own symbol, then just say\n        611: \t * \"the interior of a monster\"."
   },
   {
     "key": "L00615_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:615:20\n   610: \t * and looking at something other than our own symbol, then just say\n   611: \t * \"the interior of a monster\".\n   612: \t */\n   613: \tif (u.uswallow && from_screen && is_swallow_sym(sym)) {\n   614: \t    if (!found) {\n&gt;  615: \t\tSprintf(out_str, \"%c       %s\", sym, mon_interior);\n   616: \t\tfirstmatch = mon_interior;\n   617: \t    } else {\n   618: \t\tfound += append_str(out_str, mon_interior);\n   619: \t    }\n   620: \t    need_to_look = TRUE;"
+    "context": "src/pager.c:615:20\n        610: \t * and looking at something other than our own symbol, then just say\n        611: \t * \"the interior of a monster\".\n        612: \t */\n        613: \tif (u.uswallow && from_screen && is_swallow_sym(sym)) {\n        614: \t    if (!found) {\nTARGET  615: \t\tSprintf(out_str, \"%c       %s\", sym, mon_interior);\n        616: \t\tfirstmatch = mon_interior;\n        617: \t    } else {\n        618: \t\tfound += append_str(out_str, mon_interior);\n        619: \t    }\n        620: \t    need_to_look = TRUE;"
   },
   {
     "key": "L00632_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:632:24\n   627: \t\tif (from_screen && i == VENOM_CLASS) {\n   628: \t\t    skipped_venom++;\n   629: \t\t    continue;\n   630: \t\t}\n   631: \t\tif (!found) {\n&gt;  632: \t\t    Sprintf(out_str, \"%c       %s\", sym, an(objexplain[i]));\n   633: \t\t    firstmatch = objexplain[i];\n   634: \t\t    found++;\n   635: \t\t} else {\n   636: \t\t    found += append_str(out_str, an(objexplain[i]));\n   637: \t\t}"
+    "context": "src/pager.c:632:24\n        627: \t\tif (from_screen && i == VENOM_CLASS) {\n        628: \t\t    skipped_venom++;\n        629: \t\t    continue;\n        630: \t\t}\n        631: \t\tif (!found) {\nTARGET  632: \t\t    Sprintf(out_str, \"%c       %s\", sym, an(objexplain[i]));\n        633: \t\t    firstmatch = objexplain[i];\n        634: \t\t    found++;\n        635: \t\t} else {\n        636: \t\t    found += append_str(out_str, an(objexplain[i]));\n        637: \t\t}"
   },
   {
     "key": "L00643_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:643:20\n   638: \t    }\n   639: \t}\n   640: \n   641: \tif (sym == DEF_INVISIBLE) {\n   642: \t    if (!found) {\n&gt;  643: \t\tSprintf(out_str, \"%c       %s\", sym, an(invisexplain));\n   644: \t\tfirstmatch = invisexplain;\n   645: \t\tfound++;\n   646: \t    } else {\n   647: \t\tfound += append_str(out_str, an(invisexplain));\n   648: \t    }"
+    "context": "src/pager.c:643:20\n        638: \t    }\n        639: \t}\n        640: \n        641: \tif (sym == DEF_INVISIBLE) {\n        642: \t    if (!found) {\nTARGET  643: \t\tSprintf(out_str, \"%c       %s\", sym, an(invisexplain));\n        644: \t\tfirstmatch = invisexplain;\n        645: \t\tfound++;\n        646: \t    } else {\n        647: \t\tfound += append_str(out_str, an(invisexplain));\n        648: \t    }"
   },
   {
     "key": "L00660_01",
     "original": "air",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:660:26\n   655: \tfor (hit_trap = FALSE, i = 0; i &lt; MAXPCHARS; i++) {\n   656: \t    x_str = defsyms[i].explanation;\n   657: \t    if (sym == (from_screen ? showsyms[i] : defsyms[i].sym) && *x_str) {\n   658: \t\t/* avoid \"an air\", \"a water\", or \"a floor of a room\" */\n   659: \t\tint article = (i == S_room) ? 2 :\t\t/* 2=&gt;\"the\" */\n&gt;  660: \t\t\t      !(strcmp(x_str, \"air\") == 0 ||\t/* 1=&gt;\"an\"  */\n   661: \t\t\t\tstrcmp(x_str, \"water\") == 0);\t/* 0=&gt;(none)*/\n   662: \n   663: \t\tif (!found) {\n   664: \t\t    if (is_cmap_trap(i)) {\n   665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);"
+    "context": "src/pager.c:660:26\n        655: \tfor (hit_trap = FALSE, i = 0; i &lt; MAXPCHARS; i++) {\n        656: \t    x_str = defsyms[i].explanation;\n        657: \t    if (sym == (from_screen ? showsyms[i] : defsyms[i].sym) && *x_str) {\n        658: \t\t/* avoid \"an air\", \"a water\", or \"a floor of a room\" */\n        659: \t\tint article = (i == S_room) ? 2 :\t\t/* 2=&gt;\"the\" */\nTARGET  660: \t\t\t      !(strcmp(x_str, \"air\") == 0 ||\t/* 1=&gt;\"an\"  */\n        661: \t\t\t\tstrcmp(x_str, \"water\") == 0);\t/* 0=&gt;(none)*/\n        662: \n        663: \t\tif (!found) {\n        664: \t\t    if (is_cmap_trap(i)) {\n        665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);"
   },
   {
     "key": "L00661_01",
     "original": "water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:661:19\n   656: \t    x_str = defsyms[i].explanation;\n   657: \t    if (sym == (from_screen ? showsyms[i] : defsyms[i].sym) && *x_str) {\n   658: \t\t/* avoid \"an air\", \"a water\", or \"a floor of a room\" */\n   659: \t\tint article = (i == S_room) ? 2 :\t\t/* 2=&gt;\"the\" */\n   660: \t\t\t      !(strcmp(x_str, \"air\") == 0 ||\t/* 1=&gt;\"an\"  */\n&gt;  661: \t\t\t\tstrcmp(x_str, \"water\") == 0);\t/* 0=&gt;(none)*/\n   662: \n   663: \t\tif (!found) {\n   664: \t\t    if (is_cmap_trap(i)) {\n   665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n   666: \t\t\thit_trap = TRUE;"
+    "context": "src/pager.c:661:19\n        656: \t    x_str = defsyms[i].explanation;\n        657: \t    if (sym == (from_screen ? showsyms[i] : defsyms[i].sym) && *x_str) {\n        658: \t\t/* avoid \"an air\", \"a water\", or \"a floor of a room\" */\n        659: \t\tint article = (i == S_room) ? 2 :\t\t/* 2=&gt;\"the\" */\n        660: \t\t\t      !(strcmp(x_str, \"air\") == 0 ||\t/* 1=&gt;\"an\"  */\nTARGET  661: \t\t\t\tstrcmp(x_str, \"water\") == 0);\t/* 0=&gt;(none)*/\n        662: \n        663: \t\tif (!found) {\n        664: \t\t    if (is_cmap_trap(i)) {\n        665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n        666: \t\t\thit_trap = TRUE;"
   },
   {
     "key": "L00665_01",
     "original": "%c       a trap",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:665:21\n   660: \t\t\t      !(strcmp(x_str, \"air\") == 0 ||\t/* 1=&gt;\"an\"  */\n   661: \t\t\t\tstrcmp(x_str, \"water\") == 0);\t/* 0=&gt;(none)*/\n   662: \n   663: \t\tif (!found) {\n   664: \t\t    if (is_cmap_trap(i)) {\n&gt;  665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n   666: \t\t\thit_trap = TRUE;\n   667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n   668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n   669: \t\t    } else {\n   670: \t\t\tSprintf(out_str, \"%c       %s\", sym,"
+    "context": "src/pager.c:665:21\n        660: \t\t\t      !(strcmp(x_str, \"air\") == 0 ||\t/* 1=&gt;\"an\"  */\n        661: \t\t\t\tstrcmp(x_str, \"water\") == 0);\t/* 0=&gt;(none)*/\n        662: \n        663: \t\tif (!found) {\n        664: \t\t    if (is_cmap_trap(i)) {\nTARGET  665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n        666: \t\t\thit_trap = TRUE;\n        667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n        668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n        669: \t\t    } else {\n        670: \t\t\tSprintf(out_str, \"%c       %s\", sym,"
   },
   {
     "key": "L00667_01",
     "original": "water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:667:54\n   662: \n   663: \t\tif (!found) {\n   664: \t\t    if (is_cmap_trap(i)) {\n   665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n   666: \t\t\thit_trap = TRUE;\n&gt;  667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n   668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n   669: \t\t    } else {\n   670: \t\t\tSprintf(out_str, \"%c       %s\", sym,\n   671: \t\t\t\tarticle == 2 ? the(x_str) :\n   672: \t\t\t\tarticle == 1 ? an(x_str) : x_str);"
+    "context": "src/pager.c:667:54\n        662: \n        663: \t\tif (!found) {\n        664: \t\t    if (is_cmap_trap(i)) {\n        665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n        666: \t\t\thit_trap = TRUE;\nTARGET  667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n        668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n        669: \t\t    } else {\n        670: \t\t\tSprintf(out_str, \"%c       %s\", sym,\n        671: \t\t\t\tarticle == 2 ? the(x_str) :\n        672: \t\t\t\tarticle == 1 ? an(x_str) : x_str);"
   },
   {
     "key": "L00668_01",
     "original": "%c       sparkling water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:668:21\n   663: \t\tif (!found) {\n   664: \t\t    if (is_cmap_trap(i)) {\n   665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n   666: \t\t\thit_trap = TRUE;\n   667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n&gt;  668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n   669: \t\t    } else {\n   670: \t\t\tSprintf(out_str, \"%c       %s\", sym,\n   671: \t\t\t\tarticle == 2 ? the(x_str) :\n   672: \t\t\t\tarticle == 1 ? an(x_str) : x_str);\n   673: \t\t    }"
+    "context": "src/pager.c:668:21\n        663: \t\tif (!found) {\n        664: \t\t    if (is_cmap_trap(i)) {\n        665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n        666: \t\t\thit_trap = TRUE;\n        667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\nTARGET  668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n        669: \t\t    } else {\n        670: \t\t\tSprintf(out_str, \"%c       %s\", sym,\n        671: \t\t\t\tarticle == 2 ? the(x_str) :\n        672: \t\t\t\tarticle == 1 ? an(x_str) : x_str);\n        673: \t\t    }"
   },
   {
     "key": "L00670_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:670:21\n   665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n   666: \t\t\thit_trap = TRUE;\n   667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n   668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n   669: \t\t    } else {\n&gt;  670: \t\t\tSprintf(out_str, \"%c       %s\", sym,\n   671: \t\t\t\tarticle == 2 ? the(x_str) :\n   672: \t\t\t\tarticle == 1 ? an(x_str) : x_str);\n   673: \t\t    }\n   674: \t\t    firstmatch = x_str;\n   675: \t\t    found++;"
+    "context": "src/pager.c:670:21\n        665: \t\t\tSprintf(out_str, \"%c       a trap\", sym);\n        666: \t\t\thit_trap = TRUE;\n        667: \t\t    } else if (level.flags.lethe && !strcmp(x_str, \"water\")) {\n        668: \t\t\tSprintf(out_str, \"%c       sparkling water\", sym);\n        669: \t\t    } else {\nTARGET  670: \t\t\tSprintf(out_str, \"%c       %s\", sym,\n        671: \t\t\t\tarticle == 2 ? the(x_str) :\n        672: \t\t\t\tarticle == 1 ? an(x_str) : x_str);\n        673: \t\t    }\n        674: \t\t    firstmatch = x_str;\n        675: \t\t    found++;"
   },
   {
     "key": "L00678_01",
     "original": "water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:678:47\n   673: \t\t    }\n   674: \t\t    firstmatch = x_str;\n   675: \t\t    found++;\n   676: \t\t} else if (!u.uswallow && !(hit_trap && is_cmap_trap(i)) &&\n   677: \t\t\t   !(found &gt;= 3 && is_cmap_drawbridge(i))) {\n&gt;  678: \t\t    if (level.flags.lethe && !strcmp(x_str, \"water\"))\n   679: \t\t\tfound += append_str(out_str, \"sparkling water\");\n   680: \t\t    else\n   681: \t\t    \tfound += append_str(out_str,\n   682: \t\t\t\t\tarticle == 2 ? the(x_str) :\n   683: \t\t\t\t\tarticle == 1 ? an(x_str) : x_str);"
+    "context": "src/pager.c:678:47\n        673: \t\t    }\n        674: \t\t    firstmatch = x_str;\n        675: \t\t    found++;\n        676: \t\t} else if (!u.uswallow && !(hit_trap && is_cmap_trap(i)) &&\n        677: \t\t\t   !(found &gt;= 3 && is_cmap_drawbridge(i))) {\nTARGET  678: \t\t    if (level.flags.lethe && !strcmp(x_str, \"water\"))\n        679: \t\t\tfound += append_str(out_str, \"sparkling water\");\n        680: \t\t    else\n        681: \t\t    \tfound += append_str(out_str,\n        682: \t\t\t\t\tarticle == 2 ? the(x_str) :\n        683: \t\t\t\t\tarticle == 1 ? an(x_str) : x_str);"
   },
   {
     "key": "L00679_01",
     "original": "sparkling water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:679:33\n   674: \t\t    firstmatch = x_str;\n   675: \t\t    found++;\n   676: \t\t} else if (!u.uswallow && !(hit_trap && is_cmap_trap(i)) &&\n   677: \t\t\t   !(found &gt;= 3 && is_cmap_drawbridge(i))) {\n   678: \t\t    if (level.flags.lethe && !strcmp(x_str, \"water\"))\n&gt;  679: \t\t\tfound += append_str(out_str, \"sparkling water\");\n   680: \t\t    else\n   681: \t\t    \tfound += append_str(out_str,\n   682: \t\t\t\t\tarticle == 2 ? the(x_str) :\n   683: \t\t\t\t\tarticle == 1 ? an(x_str) : x_str);\n   684: \t\t    if (is_cmap_trap(i)) hit_trap = TRUE;"
+    "context": "src/pager.c:679:33\n        674: \t\t    firstmatch = x_str;\n        675: \t\t    found++;\n        676: \t\t} else if (!u.uswallow && !(hit_trap && is_cmap_trap(i)) &&\n        677: \t\t\t   !(found &gt;= 3 && is_cmap_drawbridge(i))) {\n        678: \t\t    if (level.flags.lethe && !strcmp(x_str, \"water\"))\nTARGET  679: \t\t\tfound += append_str(out_str, \"sparkling water\");\n        680: \t\t    else\n        681: \t\t    \tfound += append_str(out_str,\n        682: \t\t\t\t\tarticle == 2 ? the(x_str) :\n        683: \t\t\t\t\tarticle == 1 ? an(x_str) : x_str);\n        684: \t\t    if (is_cmap_trap(i)) hit_trap = TRUE;"
   },
   {
     "key": "L00697_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:697:21\n   692: \t/* Now check for warning symbols */\n   693: \tfor (i = 1; i &lt; WARNCOUNT; i++) {\n   694: \t    x_str = def_warnsyms[i].explanation;\n   695: \t    if (sym == (from_screen ? warnsyms[i] : def_warnsyms[i].sym)) {\n   696: \t\tif (!found) {\n&gt;  697: \t\t\tSprintf(out_str, \"%c       %s\",\n   698: \t\t\t\tsym, def_warnsyms[i].explanation);\n   699: \t\t\tfirstmatch = def_warnsyms[i].explanation;\n   700: \t\t\tfound++;\n   701: \t\t} else {\n   702: \t\t\tfound += append_str(out_str, def_warnsyms[i].explanation);"
+    "context": "src/pager.c:697:21\n        692: \t/* Now check for warning symbols */\n        693: \tfor (i = 1; i &lt; WARNCOUNT; i++) {\n        694: \t    x_str = def_warnsyms[i].explanation;\n        695: \t    if (sym == (from_screen ? warnsyms[i] : def_warnsyms[i].sym)) {\n        696: \t\tif (!found) {\nTARGET  697: \t\t\tSprintf(out_str, \"%c       %s\",\n        698: \t\t\t\tsym, def_warnsyms[i].explanation);\n        699: \t\t\tfirstmatch = def_warnsyms[i].explanation;\n        700: \t\t\tfound++;\n        701: \t\t} else {\n        702: \t\t\tfound += append_str(out_str, def_warnsyms[i].explanation);"
   },
   {
     "key": "L00707_01",
     "original": " co-located with a boulder",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:707:20\n   702: \t\t\tfound += append_str(out_str, def_warnsyms[i].explanation);\n   703: \t\t}\n   704: \t\t/* Kludge: warning trumps boulders on the display.\n   705: \t\t   Reveal the boulder too or player can get confused */\n   706: \t\tif (from_screen && sobj_at(BOULDER, cc.x, cc.y))\n&gt;  707: \t\t\tStrcat(out_str, \" co-located with a boulder\");\n   708: \t\tbreak;\t/* out of for loop*/\n   709: \t    }\n   710: \t}\n   711:     \n   712: \t/* if we ignored venom and list turned out to be short, put it back */"
+    "context": "src/pager.c:707:20\n        702: \t\t\tfound += append_str(out_str, def_warnsyms[i].explanation);\n        703: \t\t}\n        704: \t\t/* Kludge: warning trumps boulders on the display.\n        705: \t\t   Reveal the boulder too or player can get confused */\n        706: \t\tif (from_screen && sobj_at(BOULDER, cc.x, cc.y))\nTARGET  707: \t\t\tStrcat(out_str, \" co-located with a boulder\");\n        708: \t\tbreak;\t/* out of for loop*/\n        709: \t    }\n        710: \t}\n        711:     \n        712: \t/* if we ignored venom and list turned out to be short, put it back */"
   },
   {
     "key": "L00716_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:716:20\n   711:     \n   712: \t/* if we ignored venom and list turned out to be short, put it back */\n   713: \tif (skipped_venom && found &lt; 2) {\n   714: \t    x_str = objexplain[VENOM_CLASS];\n   715: \t    if (!found) {\n&gt;  716: \t\tSprintf(out_str, \"%c       %s\", sym, an(x_str));\n   717: \t\tfirstmatch = x_str;\n   718: \t\tfound++;\n   719: \t    } else {\n   720: \t\tfound += append_str(out_str, an(x_str));\n   721: \t    }"
+    "context": "src/pager.c:716:20\n        711:     \n        712: \t/* if we ignored venom and list turned out to be short, put it back */\n        713: \tif (skipped_venom && found &lt; 2) {\n        714: \t    x_str = objexplain[VENOM_CLASS];\n        715: \t    if (!found) {\nTARGET  716: \t\tSprintf(out_str, \"%c       %s\", sym, an(x_str));\n        717: \t\tfirstmatch = x_str;\n        718: \t\tfound++;\n        719: \t    } else {\n        720: \t\tfound += append_str(out_str, an(x_str));\n        721: \t    }"
   },
   {
     "key": "L00727_01",
     "original": "boulder",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:727:16\n   722: \t}\n   723: \n   724: \t/* handle optional boulder symbol as a special case */ \n   725: \tif (iflags.bouldersym && sym == iflags.bouldersym) {\n   726: \t    if (!found) {\n&gt;  727: \t\tfirstmatch = \"boulder\";\n   728: \t\tSprintf(out_str, \"%c       %s\", sym, an(firstmatch));\n   729: \t\tfound++;\n   730: \t    } else {\n   731: \t\tfound += append_str(out_str, \"boulder\");\n   732: \t    }"
+    "context": "src/pager.c:727:16\n        722: \t}\n        723: \n        724: \t/* handle optional boulder symbol as a special case */ \n        725: \tif (iflags.bouldersym && sym == iflags.bouldersym) {\n        726: \t    if (!found) {\nTARGET  727: \t\tfirstmatch = \"boulder\";\n        728: \t\tSprintf(out_str, \"%c       %s\", sym, an(firstmatch));\n        729: \t\tfound++;\n        730: \t    } else {\n        731: \t\tfound += append_str(out_str, \"boulder\");\n        732: \t    }"
   },
   {
     "key": "L00728_01",
     "original": "%c       %s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:728:20\n   723: \n   724: \t/* handle optional boulder symbol as a special case */ \n   725: \tif (iflags.bouldersym && sym == iflags.bouldersym) {\n   726: \t    if (!found) {\n   727: \t\tfirstmatch = \"boulder\";\n&gt;  728: \t\tSprintf(out_str, \"%c       %s\", sym, an(firstmatch));\n   729: \t\tfound++;\n   730: \t    } else {\n   731: \t\tfound += append_str(out_str, \"boulder\");\n   732: \t    }\n   733: \t}"
+    "context": "src/pager.c:728:20\n        723: \n        724: \t/* handle optional boulder symbol as a special case */ \n        725: \tif (iflags.bouldersym && sym == iflags.bouldersym) {\n        726: \t    if (!found) {\n        727: \t\tfirstmatch = \"boulder\";\nTARGET  728: \t\tSprintf(out_str, \"%c       %s\", sym, an(firstmatch));\n        729: \t\tfound++;\n        730: \t    } else {\n        731: \t\tfound += append_str(out_str, \"boulder\");\n        732: \t    }\n        733: \t}"
   },
   {
     "key": "L00731_01",
     "original": "boulder",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:731:32\n   726: \t    if (!found) {\n   727: \t\tfirstmatch = \"boulder\";\n   728: \t\tSprintf(out_str, \"%c       %s\", sym, an(firstmatch));\n   729: \t\tfound++;\n   730: \t    } else {\n&gt;  731: \t\tfound += append_str(out_str, \"boulder\");\n   732: \t    }\n   733: \t}\n   734: \t\n   735: \t/*\n   736: \t * If we are looking at the screen, follow multiple possibilities or"
+    "context": "src/pager.c:731:32\n        726: \t    if (!found) {\n        727: \t\tfirstmatch = \"boulder\";\n        728: \t\tSprintf(out_str, \"%c       %s\", sym, an(firstmatch));\n        729: \t\tfound++;\n        730: \t    } else {\nTARGET  731: \t\tfound += append_str(out_str, \"boulder\");\n        732: \t    }\n        733: \t}\n        734: \t\n        735: \t/*\n        736: \t * If we are looking at the screen, follow multiple possibilities or"
   },
   {
     "key": "L00747_01",
     "original": " (%s)",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:747:25\n   742: \t\tchar temp_buf[BUFSZ];\n   743: \n   744: \t\tpm = lookat(cc.x, cc.y, look_buf, monbuf);\n   745: \t\tfirstmatch = look_buf;\n   746: \t\tif (*firstmatch) {\n&gt;  747: \t\t    Sprintf(temp_buf, \" (%s)\", firstmatch);\n   748: \t\t    (void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n   749: \t\t    found = 1;\t/* we have something to look up */\n   750: \t\t}\n   751: \t\tif (monbuf[0]) {\n   752: \t\t    Sprintf(temp_buf, \" [seen: %s]\", monbuf);"
+    "context": "src/pager.c:747:25\n        742: \t\tchar temp_buf[BUFSZ];\n        743: \n        744: \t\tpm = lookat(cc.x, cc.y, look_buf, monbuf);\n        745: \t\tfirstmatch = look_buf;\n        746: \t\tif (*firstmatch) {\nTARGET  747: \t\t    Sprintf(temp_buf, \" (%s)\", firstmatch);\n        748: \t\t    (void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n        749: \t\t    found = 1;\t/* we have something to look up */\n        750: \t\t}\n        751: \t\tif (monbuf[0]) {\n        752: \t\t    Sprintf(temp_buf, \" [seen: %s]\", monbuf);"
   },
   {
     "key": "L00752_01",
     "original": " [seen: %s]",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:752:25\n   747: \t\t    Sprintf(temp_buf, \" (%s)\", firstmatch);\n   748: \t\t    (void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n   749: \t\t    found = 1;\t/* we have something to look up */\n   750: \t\t}\n   751: \t\tif (monbuf[0]) {\n&gt;  752: \t\t    Sprintf(temp_buf, \" [seen: %s]\", monbuf);\n   753: \t\t    (void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n   754: \t\t}\n   755: #ifdef WIZARD\n   756: \t\tif (wizard && pm) {\n   757: \t\t    struct monst *mtmp = m_at(cc.x, cc.y);"
+    "context": "src/pager.c:752:25\n        747: \t\t    Sprintf(temp_buf, \" (%s)\", firstmatch);\n        748: \t\t    (void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n        749: \t\t    found = 1;\t/* we have something to look up */\n        750: \t\t}\n        751: \t\tif (monbuf[0]) {\nTARGET  752: \t\t    Sprintf(temp_buf, \" [seen: %s]\", monbuf);\n        753: \t\t    (void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n        754: \t\t}\n        755: #ifdef WIZARD\n        756: \t\tif (wizard && pm) {\n        757: \t\t    struct monst *mtmp = m_at(cc.x, cc.y);"
   },
   {
     "key": "L00759_01",
     "original": " [polymorphed from a %s]",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:759:22\n   754: \t\t}\n   755: #ifdef WIZARD\n   756: \t\tif (wizard && pm) {\n   757: \t\t    struct monst *mtmp = m_at(cc.x, cc.y);\n   758: \t\t    if (mtmp && mtmp-&gt;oldmonnm != monsndx(pm)) {\n&gt;  759: \t\t\tSprintf(temp_buf, \" [polymorphed from a %s]\",\n   760: \t\t\t\tmons[mtmp-&gt;oldmonnm].mname);\n   761: \t\t\t(void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n   762: \t\t    }\n   763: \t\t}\n   764: #endif"
+    "context": "src/pager.c:759:22\n        754: \t\t}\n        755: #ifdef WIZARD\n        756: \t\tif (wizard && pm) {\n        757: \t\t    struct monst *mtmp = m_at(cc.x, cc.y);\n        758: \t\t    if (mtmp && mtmp-&gt;oldmonnm != monsndx(pm)) {\nTARGET  759: \t\t\tSprintf(temp_buf, \" [polymorphed from a %s]\",\n        760: \t\t\t\tmons[mtmp-&gt;oldmonnm].mname);\n        761: \t\t\t(void)strncat(out_str, temp_buf, BUFSZ-strlen(out_str)-1);\n        762: \t\t    }\n        763: \t\t}\n        764: #endif"
   },
   {
     "key": "L00770_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:770:12\n   765: \t    }\n   766: \t}\n   767: \n   768: \t/* Finally, print out our explanation. */\n   769: \tif (found) {\n&gt;  770: \t    pline(\"%s\", out_str);\n   771: \t    /* check the data file for information about this thing */\n   772: \t    if (found == 1 && ans != LOOK_QUICK && ans != LOOK_ONCE &&\n   773: \t\t\t(ans == LOOK_VERBOSE || (flags.help && !quick))) {\n   774: \t\tchar temp_buf[BUFSZ];\n   775: \t\tStrcpy(temp_buf, level.flags.lethe "
+    "context": "src/pager.c:770:12\n        765: \t    }\n        766: \t}\n        767: \n        768: \t/* Finally, print out our explanation. */\n        769: \tif (found) {\nTARGET  770: \t    pline(\"%s\", out_str);\n        771: \t    /* check the data file for information about this thing */\n        772: \t    if (found == 1 && ans != LOOK_QUICK && ans != LOOK_ONCE &&\n        773: \t\t\t(ans == LOOK_VERBOSE || (flags.help && !quick))) {\n        774: \t\tchar temp_buf[BUFSZ];\n        775: \t\tStrcpy(temp_buf, level.flags.lethe "
   },
   {
     "key": "L00776_01",
     "original": "water",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:776:29\n   771: \t    /* check the data file for information about this thing */\n   772: \t    if (found == 1 && ans != LOOK_QUICK && ans != LOOK_ONCE &&\n   773: \t\t\t(ans == LOOK_VERBOSE || (flags.help && !quick))) {\n   774: \t\tchar temp_buf[BUFSZ];\n   775: \t\tStrcpy(temp_buf, level.flags.lethe \n&gt;  776: \t\t\t\t\t&& !strcmp(firstmatch, \"water\")?\n   777: \t\t\t\t\"lethe\" : firstmatch);\n   778: \t\tcheckfile(temp_buf, pm, FALSE, (boolean)(ans == LOOK_VERBOSE));\n   779: \t    }\n   780: \t} else {\n   781: \t    pline(\"I've never heard of such things.\");"
+    "context": "src/pager.c:776:29\n        771: \t    /* check the data file for information about this thing */\n        772: \t    if (found == 1 && ans != LOOK_QUICK && ans != LOOK_ONCE &&\n        773: \t\t\t(ans == LOOK_VERBOSE || (flags.help && !quick))) {\n        774: \t\tchar temp_buf[BUFSZ];\n        775: \t\tStrcpy(temp_buf, level.flags.lethe \nTARGET  776: \t\t\t\t\t&& !strcmp(firstmatch, \"water\")?\n        777: \t\t\t\t\"lethe\" : firstmatch);\n        778: \t\tcheckfile(temp_buf, pm, FALSE, (boolean)(ans == LOOK_VERBOSE));\n        779: \t    }\n        780: \t} else {\n        781: \t    pline(\"I've never heard of such things.\");"
   },
   {
     "key": "L00777_01",
     "original": "lethe",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:777:5\n   772: \t    if (found == 1 && ans != LOOK_QUICK && ans != LOOK_ONCE &&\n   773: \t\t\t(ans == LOOK_VERBOSE || (flags.help && !quick))) {\n   774: \t\tchar temp_buf[BUFSZ];\n   775: \t\tStrcpy(temp_buf, level.flags.lethe \n   776: \t\t\t\t\t&& !strcmp(firstmatch, \"water\")?\n&gt;  777: \t\t\t\t\"lethe\" : firstmatch);\n   778: \t\tcheckfile(temp_buf, pm, FALSE, (boolean)(ans == LOOK_VERBOSE));\n   779: \t    }\n   780: \t} else {\n   781: \t    pline(\"I've never heard of such things.\");\n   782: \t}"
+    "context": "src/pager.c:777:5\n        772: \t    if (found == 1 && ans != LOOK_QUICK && ans != LOOK_ONCE &&\n        773: \t\t\t(ans == LOOK_VERBOSE || (flags.help && !quick))) {\n        774: \t\tchar temp_buf[BUFSZ];\n        775: \t\tStrcpy(temp_buf, level.flags.lethe \n        776: \t\t\t\t\t&& !strcmp(firstmatch, \"water\")?\nTARGET  777: \t\t\t\t\"lethe\" : firstmatch);\n        778: \t\tcheckfile(temp_buf, pm, FALSE, (boolean)(ans == LOOK_VERBOSE));\n        779: \t    }\n        780: \t} else {\n        781: \t    pline(\"I've never heard of such things.\");\n        782: \t}"
   },
   {
     "key": "L00781_01",
     "original": "I've never heard of such things.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:781:12\n   776: \t\t\t\t\t&& !strcmp(firstmatch, \"water\")?\n   777: \t\t\t\t\"lethe\" : firstmatch);\n   778: \t\tcheckfile(temp_buf, pm, FALSE, (boolean)(ans == LOOK_VERBOSE));\n   779: \t    }\n   780: \t} else {\n&gt;  781: \t    pline(\"I've never heard of such things.\");\n   782: \t}\n   783: \n   784:     } while (from_screen && !quick && ans != LOOK_ONCE);\n   785: \n   786:     flags.verbose = save_verbose;"
+    "context": "src/pager.c:781:12\n        776: \t\t\t\t\t&& !strcmp(firstmatch, \"water\")?\n        777: \t\t\t\t\"lethe\" : firstmatch);\n        778: \t\tcheckfile(temp_buf, pm, FALSE, (boolean)(ans == LOOK_VERBOSE));\n        779: \t    }\n        780: \t} else {\nTARGET  781: \t    pline(\"I've never heard of such things.\");\n        782: \t}\n        783: \n        784:     } while (from_screen && !quick && ans != LOOK_ONCE);\n        785: \n        786:     flags.verbose = save_verbose;"
   },
   {
     "key": "L00821_01",
     "original": "That is %s%s%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:821:9\n   816: \t\tif (u.dz) {\n   817: \t\t    if (u.dz &lt; 0 ? (tt == TRAPDOOR || tt == HOLE) :\n   818: \t\t\t    tt == ROCKTRAP) break;\n   819: \t\t}\n   820: \t\ttt = what_trap(tt);\n&gt;  821: \t\tpline(\"That is %s%s%s.\",\n   822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n   823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n   824: \t\t\t  /* trap doors & spiked pits can't be made by\n   825: \t\t\t     player, and should be considered at least\n   826: \t\t\t     as much \"set\" as \"dug\" anyway */"
+    "context": "src/pager.c:821:9\n        816: \t\tif (u.dz) {\n        817: \t\t    if (u.dz &lt; 0 ? (tt == TRAPDOOR || tt == HOLE) :\n        818: \t\t\t    tt == ROCKTRAP) break;\n        819: \t\t}\n        820: \t\ttt = what_trap(tt);\nTARGET  821: \t\tpline(\"That is %s%s%s.\",\n        822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n        823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n        824: \t\t\t  /* trap doors & spiked pits can't be made by\n        825: \t\t\t     player, and should be considered at least\n        826: \t\t\t     as much \"set\" as \"dug\" anyway */"
   },
   {
     "key": "L00823_01",
     "original": " woven",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:823:46\n   818: \t\t\t    tt == ROCKTRAP) break;\n   819: \t\t}\n   820: \t\ttt = what_trap(tt);\n   821: \t\tpline(\"That is %s%s%s.\",\n   822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n&gt;  823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n   824: \t\t\t  /* trap doors & spiked pits can't be made by\n   825: \t\t\t     player, and should be considered at least\n   826: \t\t\t     as much \"set\" as \"dug\" anyway */\n   827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n   828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");"
+    "context": "src/pager.c:823:46\n        818: \t\t\t    tt == ROCKTRAP) break;\n        819: \t\t}\n        820: \t\ttt = what_trap(tt);\n        821: \t\tpline(\"That is %s%s%s.\",\n        822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\nTARGET  823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n        824: \t\t\t  /* trap doors & spiked pits can't be made by\n        825: \t\t\t     player, and should be considered at least\n        826: \t\t\t     as much \"set\" as \"dug\" anyway */\n        827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n        828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");"
   },
   {
     "key": "L00827_01",
     "original": " dug",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:827:34\n   822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n   823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n   824: \t\t\t  /* trap doors & spiked pits can't be made by\n   825: \t\t\t     player, and should be considered at least\n   826: \t\t\t     as much \"set\" as \"dug\" anyway */\n&gt;  827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n   828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n   829: \t\treturn 0;\n   830: \t    }\n   831: \tpline(\"I can't see a trap there.\");\n   832: \treturn 0;"
+    "context": "src/pager.c:827:34\n        822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n        823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n        824: \t\t\t  /* trap doors & spiked pits can't be made by\n        825: \t\t\t     player, and should be considered at least\n        826: \t\t\t     as much \"set\" as \"dug\" anyway */\nTARGET  827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n        828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n        829: \t\treturn 0;\n        830: \t    }\n        831: \tpline(\"I can't see a trap there.\");\n        832: \treturn 0;"
   },
   {
     "key": "L00827_02",
     "original": " set",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:827:43\n   822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n   823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n   824: \t\t\t  /* trap doors & spiked pits can't be made by\n   825: \t\t\t     player, and should be considered at least\n   826: \t\t\t     as much \"set\" as \"dug\" anyway */\n&gt;  827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n   828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n   829: \t\treturn 0;\n   830: \t    }\n   831: \tpline(\"I can't see a trap there.\");\n   832: \treturn 0;"
+    "context": "src/pager.c:827:43\n        822: \t\t      an(defsyms[trap_to_defsym(tt)].explanation),\n        823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n        824: \t\t\t  /* trap doors & spiked pits can't be made by\n        825: \t\t\t     player, and should be considered at least\n        826: \t\t\t     as much \"set\" as \"dug\" anyway */\nTARGET  827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n        828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n        829: \t\treturn 0;\n        830: \t    }\n        831: \tpline(\"I can't see a trap there.\");\n        832: \treturn 0;"
   },
   {
     "key": "L00828_01",
     "original": " by you",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:828:32\n   823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n   824: \t\t\t  /* trap doors & spiked pits can't be made by\n   825: \t\t\t     player, and should be considered at least\n   826: \t\t\t     as much \"set\" as \"dug\" anyway */\n   827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n&gt;  828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n   829: \t\treturn 0;\n   830: \t    }\n   831: \tpline(\"I can't see a trap there.\");\n   832: \treturn 0;\n   833: }"
+    "context": "src/pager.c:828:32\n        823: \t\t      !trap-&gt;madeby_u ? \"\" : (tt == WEB) ? \" woven\" :\n        824: \t\t\t  /* trap doors & spiked pits can't be made by\n        825: \t\t\t     player, and should be considered at least\n        826: \t\t\t     as much \"set\" as \"dug\" anyway */\n        827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\nTARGET  828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n        829: \t\treturn 0;\n        830: \t    }\n        831: \tpline(\"I can't see a trap there.\");\n        832: \treturn 0;\n        833: }"
   },
   {
     "key": "L00831_01",
     "original": "I can't see a trap there.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:831:8\n   826: \t\t\t     as much \"set\" as \"dug\" anyway */\n   827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n   828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n   829: \t\treturn 0;\n   830: \t    }\n&gt;  831: \tpline(\"I can't see a trap there.\");\n   832: \treturn 0;\n   833: }\n   834: \n   835: char *\n   836: dowhatdoes_core(q, cbuf)"
+    "context": "src/pager.c:831:8\n        826: \t\t\t     as much \"set\" as \"dug\" anyway */\n        827: \t\t\t  (tt == HOLE || tt == PIT) ? \" dug\" : \" set\",\n        828: \t\t      !trap-&gt;madeby_u ? \"\" : \" by you\");\n        829: \t\treturn 0;\n        830: \t    }\nTARGET  831: \tpline(\"I can't see a trap there.\");\n        832: \treturn 0;\n        833: }\n        834: \n        835: char *\n        836: dowhatdoes_core(q, cbuf)"
   },
   {
     "key": "L00844_01",
     "original": "r",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:844:54\n   839: {\n   840: \tdlb *fp;\n   841: \tchar bufr[BUFSZ];\n   842: \tregister char *buf = &bufr[6], *ep, ctrl, meta;\n   843: \n&gt;  844: \tfp = dlb_fopen_area(NH_CMDHELPAREA, NH_CMDHELPFILE, \"r\");\n   845: \tif (!fp) {\n   846: \t\tpline(\"Cannot open data file!\");\n   847: \t\treturn 0;\n   848: \t}\n   849: "
+    "context": "src/pager.c:844:54\n        839: {\n        840: \tdlb *fp;\n        841: \tchar bufr[BUFSZ];\n        842: \tregister char *buf = &bufr[6], *ep, ctrl, meta;\n        843: \nTARGET  844: \tfp = dlb_fopen_area(NH_CMDHELPAREA, NH_CMDHELPFILE, \"r\");\n        845: \tif (!fp) {\n        846: \t\tpline(\"Cannot open data file!\");\n        847: \t\treturn 0;\n        848: \t}\n        849: "
   },
   {
     "key": "L00846_01",
     "original": "Cannot open data file!",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:846:9\n   841: \tchar bufr[BUFSZ];\n   842: \tregister char *buf = &bufr[6], *ep, ctrl, meta;\n   843: \n   844: \tfp = dlb_fopen_area(NH_CMDHELPAREA, NH_CMDHELPFILE, \"r\");\n   845: \tif (!fp) {\n&gt;  846: \t\tpline(\"Cannot open data file!\");\n   847: \t\treturn 0;\n   848: \t}\n   849: \n   850:   \tctrl = ((q &lt;= '\\033') ? (q - 1 + 'A') : 0);\n   851: \tmeta = ((0x80 & q) ? (0x7f & q) : 0);"
+    "context": "src/pager.c:846:9\n        841: \tchar bufr[BUFSZ];\n        842: \tregister char *buf = &bufr[6], *ep, ctrl, meta;\n        843: \n        844: \tfp = dlb_fopen_area(NH_CMDHELPAREA, NH_CMDHELPFILE, \"r\");\n        845: \tif (!fp) {\nTARGET  846: \t\tpline(\"Cannot open data file!\");\n        847: \t\treturn 0;\n        848: \t}\n        849: \n        850:   \tctrl = ((q &lt;= '\\033') ? (q - 1 + 'A') : 0);\n        851: \tmeta = ((0x80 & q) ? (0x7f & q) : 0);"
   },
   {
     "key": "L00866_01",
     "original": "M-?     ",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:866:24\n   861: \t\t\tbuf = bufr + 1;\n   862: \t\t\t(void) strncpy(buf, \"^?      \", 8);\n   863: \t\t\tbuf[1] = ctrl;\n   864: \t\t} else if (meta && buf[3] == '\\t'){\n   865: \t\t\tbuf = bufr + 2;\n&gt;  866: \t\t\t(void) strncpy(buf, \"M-?     \", 8);\n   867: \t\t\tbuf[2] = meta;\n   868: \t\t} else if(buf[1] == '\\t'){\n   869: \t\t\tbuf = bufr;\n   870: \t\t\tbuf[0] = q;\n   871: \t\t\t(void) strncpy(buf+1, \"       \", 7);"
+    "context": "src/pager.c:866:24\n        861: \t\t\tbuf = bufr + 1;\n        862: \t\t\t(void) strncpy(buf, \"^?      \", 8);\n        863: \t\t\tbuf[1] = ctrl;\n        864: \t\t} else if (meta && buf[3] == '\\t'){\n        865: \t\t\tbuf = bufr + 2;\nTARGET  866: \t\t\t(void) strncpy(buf, \"M-?     \", 8);\n        867: \t\t\tbuf[2] = meta;\n        868: \t\t} else if(buf[1] == '\\t'){\n        869: \t\t\tbuf = bufr;\n        870: \t\t\tbuf[0] = q;\n        871: \t\t\t(void) strncpy(buf+1, \"       \", 7);"
   },
   {
     "key": "L00891_01",
     "original": "What command?",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:891:18\n   886: \tchar q, *reslt;\n   887: \n   888: #if defined(UNIX) || defined(VMS)\n   889: \tintroff();\n   890: #endif\n&gt;  891: \tq = yn_function(\"What command?\", (char *)0, '\\0');\n   892: #if defined(UNIX) || defined(VMS)\n   893: \tintron();\n   894: #endif\n   895: \treslt = dowhatdoes_core(q, bufr);\n   896: \tif (reslt)"
+    "context": "src/pager.c:891:18\n        886: \tchar q, *reslt;\n        887: \n        888: #if defined(UNIX) || defined(VMS)\n        889: \tintroff();\n        890: #endif\nTARGET  891: \tq = yn_function(\"What command?\", (char *)0, '\\0');\n        892: #if defined(UNIX) || defined(VMS)\n        893: \tintron();\n        894: #endif\n        895: \treslt = dowhatdoes_core(q, bufr);\n        896: \tif (reslt)"
   },
   {
     "key": "L00897_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:897:9\n   892: #if defined(UNIX) || defined(VMS)\n   893: \tintron();\n   894: #endif\n   895: \treslt = dowhatdoes_core(q, bufr);\n   896: \tif (reslt)\n&gt;  897: \t\tpline(\"%s\", reslt);\n   898: \telse\n   899: \t\tpline(\"I've never heard of such commands.\");\n   900: \treturn 0;\n   901: }\n   902: "
+    "context": "src/pager.c:897:9\n        892: #if defined(UNIX) || defined(VMS)\n        893: \tintron();\n        894: #endif\n        895: \treslt = dowhatdoes_core(q, bufr);\n        896: \tif (reslt)\nTARGET  897: \t\tpline(\"%s\", reslt);\n        898: \telse\n        899: \t\tpline(\"I've never heard of such commands.\");\n        900: \treturn 0;\n        901: }\n        902: "
   },
   {
     "key": "L00899_01",
     "original": "I've never heard of such commands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:899:9\n   894: #endif\n   895: \treslt = dowhatdoes_core(q, bufr);\n   896: \tif (reslt)\n   897: \t\tpline(\"%s\", reslt);\n   898: \telse\n&gt;  899: \t\tpline(\"I've never heard of such commands.\");\n   900: \treturn 0;\n   901: }\n   902: \n   903: /* data for help_menu() */\n   904: static const char *help_menu_items[] = {"
+    "context": "src/pager.c:899:9\n        894: #endif\n        895: \treslt = dowhatdoes_core(q, bufr);\n        896: \tif (reslt)\n        897: \t\tpline(\"%s\", reslt);\n        898: \telse\nTARGET  899: \t\tpline(\"I've never heard of such commands.\");\n        900: \treturn 0;\n        901: }\n        902: \n        903: /* data for help_menu() */\n        904: static const char *help_menu_items[] = {"
   },
   {
     "key": "L00905_01",
     "original": "Long description of the game and commands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:905:8\n   900: \treturn 0;\n   901: }\n   902: \n   903: /* data for help_menu() */\n   904: static const char *help_menu_items[] = {\n&gt;  905: /* 0*/\t\"Long description of the game and commands.\",\n   906: /* 1*/\t\"List of game commands.\",\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\","
+    "context": "src/pager.c:905:8\n        900: \treturn 0;\n        901: }\n        902: \n        903: /* data for help_menu() */\n        904: static const char *help_menu_items[] = {\nTARGET  905: /* 0*/\t\"Long description of the game and commands.\",\n        906: /* 1*/\t\"List of game commands.\",\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\","
   },
   {
     "key": "L00906_01",
     "original": "List of game commands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:906:8\n   901: }\n   902: \n   903: /* data for help_menu() */\n   904: static const char *help_menu_items[] = {\n   905: /* 0*/\t\"Long description of the game and commands.\",\n&gt;  906: /* 1*/\t\"List of game commands.\",\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\","
+    "context": "src/pager.c:906:8\n        901: }\n        902: \n        903: /* data for help_menu() */\n        904: static const char *help_menu_items[] = {\n        905: /* 0*/\t\"Long description of the game and commands.\",\nTARGET  906: /* 1*/\t\"List of game commands.\",\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\","
   },
   {
     "key": "L00907_01",
     "original": "Concise history of Slash'EM.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:907:8\n   902: \n   903: /* data for help_menu() */\n   904: static const char *help_menu_items[] = {\n   905: /* 0*/\t\"Long description of the game and commands.\",\n   906: /* 1*/\t\"List of game commands.\",\n&gt;  907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\","
+    "context": "src/pager.c:907:8\n        902: \n        903: /* data for help_menu() */\n        904: static const char *help_menu_items[] = {\n        905: /* 0*/\t\"Long description of the game and commands.\",\n        906: /* 1*/\t\"List of game commands.\",\nTARGET  907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\","
   },
   {
     "key": "L00908_01",
     "original": "Info on a character in the game display.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:908:8\n   903: /* data for help_menu() */\n   904: static const char *help_menu_items[] = {\n   905: /* 0*/\t\"Long description of the game and commands.\",\n   906: /* 1*/\t\"List of game commands.\",\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n&gt;  908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\",\n   913: /* 8*/\t\"The NetHack license.\","
+    "context": "src/pager.c:908:8\n        903: /* data for help_menu() */\n        904: static const char *help_menu_items[] = {\n        905: /* 0*/\t\"Long description of the game and commands.\",\n        906: /* 1*/\t\"List of game commands.\",\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\nTARGET  908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\",\n        913: /* 8*/\t\"The NetHack license.\","
   },
   {
     "key": "L00909_01",
     "original": "Info on what a given key does.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:909:8\n   904: static const char *help_menu_items[] = {\n   905: /* 0*/\t\"Long description of the game and commands.\",\n   906: /* 1*/\t\"List of game commands.\",\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n&gt;  909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\",\n   913: /* 8*/\t\"The NetHack license.\",\n   914: #ifndef MAC"
+    "context": "src/pager.c:909:8\n        904: static const char *help_menu_items[] = {\n        905: /* 0*/\t\"Long description of the game and commands.\",\n        906: /* 1*/\t\"List of game commands.\",\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\nTARGET  909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\",\n        913: /* 8*/\t\"The NetHack license.\",\n        914: #ifndef MAC"
   },
   {
     "key": "L00910_01",
     "original": "List of game options.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:910:8\n   905: /* 0*/\t\"Long description of the game and commands.\",\n   906: /* 1*/\t\"List of game commands.\",\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n&gt;  910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\",\n   913: /* 8*/\t\"The NetHack license.\",\n   914: #ifndef MAC\n   915: /*WAC Add access to txt guidebook*/"
+    "context": "src/pager.c:910:8\n        905: /* 0*/\t\"Long description of the game and commands.\",\n        906: /* 1*/\t\"List of game commands.\",\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\nTARGET  910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\",\n        913: /* 8*/\t\"The NetHack license.\",\n        914: #ifndef MAC\n        915: /*WAC Add access to txt guidebook*/"
   },
   {
     "key": "L00911_01",
     "original": "Longer explanation of game options.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:911:8\n   906: /* 1*/\t\"List of game commands.\",\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n&gt;  911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\",\n   913: /* 8*/\t\"The NetHack license.\",\n   914: #ifndef MAC\n   915: /*WAC Add access to txt guidebook*/\n   916: /* 9*/  \"The Slash'EM Guidebook.\","
+    "context": "src/pager.c:911:8\n        906: /* 1*/\t\"List of game commands.\",\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\nTARGET  911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\",\n        913: /* 8*/\t\"The NetHack license.\",\n        914: #ifndef MAC\n        915: /*WAC Add access to txt guidebook*/\n        916: /* 9*/  \"The Slash'EM Guidebook.\","
   },
   {
     "key": "L00912_01",
     "original": "List of extended commands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:912:8\n   907: /* 2*/\t\"Concise history of Slash'EM.\",\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\",\n&gt;  912: /* 7*/\t\"List of extended commands.\",\n   913: /* 8*/\t\"The NetHack license.\",\n   914: #ifndef MAC\n   915: /*WAC Add access to txt guidebook*/\n   916: /* 9*/  \"The Slash'EM Guidebook.\",\n   917: #endif"
+    "context": "src/pager.c:912:8\n        907: /* 2*/\t\"Concise history of Slash'EM.\",\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\",\nTARGET  912: /* 7*/\t\"List of extended commands.\",\n        913: /* 8*/\t\"The NetHack license.\",\n        914: #ifndef MAC\n        915: /*WAC Add access to txt guidebook*/\n        916: /* 9*/  \"The Slash'EM Guidebook.\",\n        917: #endif"
   },
   {
     "key": "L00913_01",
     "original": "The NetHack license.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:913:8\n   908: /* 3*/\t\"Info on a character in the game display.\",\n   909: /* 4*/\t\"Info on what a given key does.\",\n   910: /* 5*/\t\"List of game options.\",\n   911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\",\n&gt;  913: /* 8*/\t\"The NetHack license.\",\n   914: #ifndef MAC\n   915: /*WAC Add access to txt guidebook*/\n   916: /* 9*/  \"The Slash'EM Guidebook.\",\n   917: #endif\n   918: #ifdef PORT_HELP"
+    "context": "src/pager.c:913:8\n        908: /* 3*/\t\"Info on a character in the game display.\",\n        909: /* 4*/\t\"Info on what a given key does.\",\n        910: /* 5*/\t\"List of game options.\",\n        911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\",\nTARGET  913: /* 8*/\t\"The NetHack license.\",\n        914: #ifndef MAC\n        915: /*WAC Add access to txt guidebook*/\n        916: /* 9*/  \"The Slash'EM Guidebook.\",\n        917: #endif\n        918: #ifdef PORT_HELP"
   },
   {
     "key": "L00916_01",
     "original": "The Slash'EM Guidebook.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:916:9\n   911: /* 6*/\t\"Longer explanation of game options.\",\n   912: /* 7*/\t\"List of extended commands.\",\n   913: /* 8*/\t\"The NetHack license.\",\n   914: #ifndef MAC\n   915: /*WAC Add access to txt guidebook*/\n&gt;  916: /* 9*/  \"The Slash'EM Guidebook.\",\n   917: #endif\n   918: #ifdef PORT_HELP\n   919: \t\"%s-specific help and commands.\",\n   920: #endif\n   921: #ifdef WIZARD"
+    "context": "src/pager.c:916:9\n        911: /* 6*/\t\"Longer explanation of game options.\",\n        912: /* 7*/\t\"List of extended commands.\",\n        913: /* 8*/\t\"The NetHack license.\",\n        914: #ifndef MAC\n        915: /*WAC Add access to txt guidebook*/\nTARGET  916: /* 9*/  \"The Slash'EM Guidebook.\",\n        917: #endif\n        918: #ifdef PORT_HELP\n        919: \t\"%s-specific help and commands.\",\n        920: #endif\n        921: #ifdef WIZARD"
   },
   {
     "key": "L00919_01",
     "original": "%s-specific help and commands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:919:2\n   914: #ifndef MAC\n   915: /*WAC Add access to txt guidebook*/\n   916: /* 9*/  \"The Slash'EM Guidebook.\",\n   917: #endif\n   918: #ifdef PORT_HELP\n&gt;  919: \t\"%s-specific help and commands.\",\n   920: #endif\n   921: #ifdef WIZARD\n   922: \t\"List of wizard-mode commands.\",\n   923: #endif\n   924: \t\"\","
+    "context": "src/pager.c:919:2\n        914: #ifndef MAC\n        915: /*WAC Add access to txt guidebook*/\n        916: /* 9*/  \"The Slash'EM Guidebook.\",\n        917: #endif\n        918: #ifdef PORT_HELP\nTARGET  919: \t\"%s-specific help and commands.\",\n        920: #endif\n        921: #ifdef WIZARD\n        922: \t\"List of wizard-mode commands.\",\n        923: #endif\n        924: \t\"\","
   },
   {
     "key": "L00922_01",
     "original": "List of wizard-mode commands.",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:922:2\n   917: #endif\n   918: #ifdef PORT_HELP\n   919: \t\"%s-specific help and commands.\",\n   920: #endif\n   921: #ifdef WIZARD\n&gt;  922: \t\"List of wizard-mode commands.\",\n   923: #endif\n   924: \t\"\",\n   925: \t(char *)0\n   926: };\n   927: "
+    "context": "src/pager.c:922:2\n        917: #endif\n        918: #ifdef PORT_HELP\n        919: \t\"%s-specific help and commands.\",\n        920: #endif\n        921: #ifdef WIZARD\nTARGET  922: \t\"List of wizard-mode commands.\",\n        923: #endif\n        924: \t\"\",\n        925: \t(char *)0\n        926: };\n        927: "
   },
   {
     "key": "L00975_01",
     "original": "Select one item:",
     "translation": "",
     "stage": 0,
-    "context": "src/pager.c:975:19\n   970: \t    {\n   971: \t\tany.a_int = (*help_menu_items[i]) ? i+1 : 0;\n   972: \t\tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0,\n   973: \t\t\tATR_NONE, help_menu_items[i], MENU_UNSELECTED);\n   974: \t    }\n&gt;  975: \tend_menu(tmpwin, \"Select one item:\");\n   976: \tn = select_menu(tmpwin, PICK_ONE, &selected);\n   977: \tdestroy_nhwindow(tmpwin);\n   978: \tif (n &gt; 0) {\n   979: \t    *sel = selected[0].item.a_int - 1;\n   980: \t    free((genericptr_t)selected);"
+    "context": "src/pager.c:975:19\n        970: \t    {\n        971: \t\tany.a_int = (*help_menu_items[i]) ? i+1 : 0;\n        972: \t\tadd_menu(tmpwin, NO_GLYPH, &any, 0, 0,\n        973: \t\t\tATR_NONE, help_menu_items[i], MENU_UNSELECTED);\n        974: \t    }\nTARGET  975: \tend_menu(tmpwin, \"Select one item:\");\n        976: \tn = select_menu(tmpwin, PICK_ONE, &selected);\n        977: \tdestroy_nhwindow(tmpwin);\n        978: \tif (n &gt; 0) {\n        979: \t    *sel = selected[0].item.a_int - 1;\n        980: \t    free((genericptr_t)selected);"
   }
 ]

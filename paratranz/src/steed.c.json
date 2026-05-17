@@ -4,447 +4,447 @@
     "original": "aren't skilled enough to reach from %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:21:10\n    16: \n    17: /* caller has decided that hero can't reach something while mounted */\n    18: void\n    19: rider_cant_reach()\n    20: {\n&gt;   21:      You(\"aren't skilled enough to reach from %s.\", y_monnam(u.usteed));\n    22: }\n    23: \n    24: /*** Putting the saddle on ***/\n    25: \n    26: /* Can this monster wear a saddle? */"
+    "context": "src/steed.c:21:10\n         16: \n         17: /* caller has decided that hero can't reach something while mounted */\n         18: void\n         19: rider_cant_reach()\n         20: {\nTARGET   21:      You(\"aren't skilled enough to reach from %s.\", y_monnam(u.usteed));\n         22: }\n         23: \n         24: /*** Putting the saddle on ***/\n         25: \n         26: /* Can this monster wear a saddle? */"
   },
   {
     "key": "L00052_01",
     "original": "have no hands!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:52:7\n    47: \tconst char *s;\n    48: \n    49: \n    50: \t/* Can you use it? */\n    51: \tif (nohands(youmonst.data)) {\n&gt;   52: \t\tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n    53: \t\treturn 0;\n    54: \t} else if (!freehand()) {\n    55: \t\tYou(\"have no free %s.\", body_part(HAND));\n    56: \t\treturn 0;\n    57: \t}"
+    "context": "src/steed.c:52:7\n         47: \tconst char *s;\n         48: \n         49: \n         50: \t/* Can you use it? */\n         51: \tif (nohands(youmonst.data)) {\nTARGET   52: \t\tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n         53: \t\treturn 0;\n         54: \t} else if (!freehand()) {\n         55: \t\tYou(\"have no free %s.\", body_part(HAND));\n         56: \t\treturn 0;\n         57: \t}"
   },
   {
     "key": "L00055_01",
     "original": "have no free %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:55:7\n    50: \t/* Can you use it? */\n    51: \tif (nohands(youmonst.data)) {\n    52: \t\tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n    53: \t\treturn 0;\n    54: \t} else if (!freehand()) {\n&gt;   55: \t\tYou(\"have no free %s.\", body_part(HAND));\n    56: \t\treturn 0;\n    57: \t}\n    58: \n    59: \t/* Select an animal */\n    60: \tif (u.uswallow || Underwater || !getdir((char *)0)) {"
+    "context": "src/steed.c:55:7\n         50: \t/* Can you use it? */\n         51: \tif (nohands(youmonst.data)) {\n         52: \t\tYou(\"have no hands!\");\t/* not `body_part(HAND)' */\n         53: \t\treturn 0;\n         54: \t} else if (!freehand()) {\nTARGET   55: \t\tYou(\"have no free %s.\", body_part(HAND));\n         56: \t\treturn 0;\n         57: \t}\n         58: \n         59: \t/* Select an animal */\n         60: \tif (u.uswallow || Underwater || !getdir((char *)0)) {"
   },
   {
     "key": "L00065_01",
     "original": "Saddle yourself?  Very funny...",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:65:12\n    60: \tif (u.uswallow || Underwater || !getdir((char *)0)) {\n    61: \t    pline(Never_mind);\n    62: \t    return 0;\n    63: \t}\n    64: \tif (!u.dx && !u.dy) {\n&gt;   65: \t    pline(\"Saddle yourself?  Very funny...\");\n    66: \t    return 0;\n    67: \t}\n    68: \tif (!isok(u.ux+u.dx, u.uy+u.dy) ||\n    69: \t\t\t!(mtmp = m_at(u.ux+u.dx, u.uy+u.dy)) ||\n    70: \t\t\t!canspotmon(mtmp)) {"
+    "context": "src/steed.c:65:12\n         60: \tif (u.uswallow || Underwater || !getdir((char *)0)) {\n         61: \t    pline(Never_mind);\n         62: \t    return 0;\n         63: \t}\n         64: \tif (!u.dx && !u.dy) {\nTARGET   65: \t    pline(\"Saddle yourself?  Very funny...\");\n         66: \t    return 0;\n         67: \t}\n         68: \tif (!isok(u.ux+u.dx, u.uy+u.dy) ||\n         69: \t\t\t!(mtmp = m_at(u.ux+u.dx, u.uy+u.dy)) ||\n         70: \t\t\t!canspotmon(mtmp)) {"
   },
   {
     "key": "L00071_01",
     "original": "I see nobody there.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:71:12\n    66: \t    return 0;\n    67: \t}\n    68: \tif (!isok(u.ux+u.dx, u.uy+u.dy) ||\n    69: \t\t\t!(mtmp = m_at(u.ux+u.dx, u.uy+u.dy)) ||\n    70: \t\t\t!canspotmon(mtmp)) {\n&gt;   71: \t    pline(\"I see nobody there.\");\n    72: \t    return 1;\n    73: \t}\n    74: \n    75: \t/* Is this a valid monster? */\n    76: \tif (mtmp-&gt;misc_worn_check & W_SADDLE ||"
+    "context": "src/steed.c:71:12\n         66: \t    return 0;\n         67: \t}\n         68: \tif (!isok(u.ux+u.dx, u.uy+u.dy) ||\n         69: \t\t\t!(mtmp = m_at(u.ux+u.dx, u.uy+u.dy)) ||\n         70: \t\t\t!canspotmon(mtmp)) {\nTARGET   71: \t    pline(\"I see nobody there.\");\n         72: \t    return 1;\n         73: \t}\n         74: \n         75: \t/* Is this a valid monster? */\n         76: \tif (mtmp-&gt;misc_worn_check & W_SADDLE ||"
   },
   {
     "key": "L00078_01",
     "original": "%s doesn't need another one.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:78:12\n    73: \t}\n    74: \n    75: \t/* Is this a valid monster? */\n    76: \tif (mtmp-&gt;misc_worn_check & W_SADDLE ||\n    77: \t\t\twhich_armor(mtmp, W_SADDLE)) {\n&gt;   78: \t    pline(\"%s doesn't need another one.\", Monnam(mtmp));\n    79: \t    return 1;\n    80: \t}\n    81: \tptr = mtmp-&gt;data;\n    82: \tif (touch_petrifies(ptr) && !uarmg && !Stone_resistance) {\n    83: \t    char kbuf[BUFSZ];"
+    "context": "src/steed.c:78:12\n         73: \t}\n         74: \n         75: \t/* Is this a valid monster? */\n         76: \tif (mtmp-&gt;misc_worn_check & W_SADDLE ||\n         77: \t\t\twhich_armor(mtmp, W_SADDLE)) {\nTARGET   78: \t    pline(\"%s doesn't need another one.\", Monnam(mtmp));\n         79: \t    return 1;\n         80: \t}\n         81: \tptr = mtmp-&gt;data;\n         82: \tif (touch_petrifies(ptr) && !uarmg && !Stone_resistance) {\n         83: \t    char kbuf[BUFSZ];"
   },
   {
     "key": "L00085_01",
     "original": "touch %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:85:10\n    80: \t}\n    81: \tptr = mtmp-&gt;data;\n    82: \tif (touch_petrifies(ptr) && !uarmg && !Stone_resistance) {\n    83: \t    char kbuf[BUFSZ];\n    84: \n&gt;   85: \t    You(\"touch %s.\", mon_nam(mtmp));\n    86:  \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n    87: \t\tSprintf(kbuf, \"attempting to saddle %s\", an(mtmp-&gt;data-&gt;mname));\n    88: \t\tinstapetrify(kbuf);\n    89:  \t    }\n    90: \t}"
+    "context": "src/steed.c:85:10\n         80: \t}\n         81: \tptr = mtmp-&gt;data;\n         82: \tif (touch_petrifies(ptr) && !uarmg && !Stone_resistance) {\n         83: \t    char kbuf[BUFSZ];\n         84: \nTARGET   85: \t    You(\"touch %s.\", mon_nam(mtmp));\n         86:  \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n         87: \t\tSprintf(kbuf, \"attempting to saddle %s\", an(mtmp-&gt;data-&gt;mname));\n         88: \t\tinstapetrify(kbuf);\n         89:  \t    }\n         90: \t}"
   },
   {
     "key": "L00087_01",
     "original": "attempting to saddle %s",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:87:17\n    82: \tif (touch_petrifies(ptr) && !uarmg && !Stone_resistance) {\n    83: \t    char kbuf[BUFSZ];\n    84: \n    85: \t    You(\"touch %s.\", mon_nam(mtmp));\n    86:  \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\n&gt;   87: \t\tSprintf(kbuf, \"attempting to saddle %s\", an(mtmp-&gt;data-&gt;mname));\n    88: \t\tinstapetrify(kbuf);\n    89:  \t    }\n    90: \t}\n    91: \tif (ptr == &mons[PM_INCUBUS] || ptr == &mons[PM_SUCCUBUS]) {\n    92: \t    pline(\"Shame on you!\");"
+    "context": "src/steed.c:87:17\n         82: \tif (touch_petrifies(ptr) && !uarmg && !Stone_resistance) {\n         83: \t    char kbuf[BUFSZ];\n         84: \n         85: \t    You(\"touch %s.\", mon_nam(mtmp));\n         86:  \t    if (!(poly_when_stoned(youmonst.data) && polymon(PM_STONE_GOLEM))) {\nTARGET   87: \t\tSprintf(kbuf, \"attempting to saddle %s\", an(mtmp-&gt;data-&gt;mname));\n         88: \t\tinstapetrify(kbuf);\n         89:  \t    }\n         90: \t}\n         91: \tif (ptr == &mons[PM_INCUBUS] || ptr == &mons[PM_SUCCUBUS]) {\n         92: \t    pline(\"Shame on you!\");"
   },
   {
     "key": "L00092_01",
     "original": "Shame on you!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:92:12\n    87: \t\tSprintf(kbuf, \"attempting to saddle %s\", an(mtmp-&gt;data-&gt;mname));\n    88: \t\tinstapetrify(kbuf);\n    89:  \t    }\n    90: \t}\n    91: \tif (ptr == &mons[PM_INCUBUS] || ptr == &mons[PM_SUCCUBUS]) {\n&gt;   92: \t    pline(\"Shame on you!\");\n    93: \t    exercise(A_WIS, FALSE);\n    94: \t    return 1;\n    95: \t}\n    96: \tif (mtmp-&gt;isminion || mtmp-&gt;isshk || mtmp-&gt;ispriest ||\n    97: \t\t\tmtmp-&gt;isgd || mtmp-&gt;iswiz) {"
+    "context": "src/steed.c:92:12\n         87: \t\tSprintf(kbuf, \"attempting to saddle %s\", an(mtmp-&gt;data-&gt;mname));\n         88: \t\tinstapetrify(kbuf);\n         89:  \t    }\n         90: \t}\n         91: \tif (ptr == &mons[PM_INCUBUS] || ptr == &mons[PM_SUCCUBUS]) {\nTARGET   92: \t    pline(\"Shame on you!\");\n         93: \t    exercise(A_WIS, FALSE);\n         94: \t    return 1;\n         95: \t}\n         96: \tif (mtmp-&gt;isminion || mtmp-&gt;isshk || mtmp-&gt;ispriest ||\n         97: \t\t\tmtmp-&gt;isgd || mtmp-&gt;iswiz) {"
   },
   {
     "key": "L00098_01",
     "original": "I think %s would mind.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:98:12\n    93: \t    exercise(A_WIS, FALSE);\n    94: \t    return 1;\n    95: \t}\n    96: \tif (mtmp-&gt;isminion || mtmp-&gt;isshk || mtmp-&gt;ispriest ||\n    97: \t\t\tmtmp-&gt;isgd || mtmp-&gt;iswiz) {\n&gt;   98: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n    99: \t    return 1;\n   100: \t}\n   101: \tif (!can_saddle(mtmp)) {\n   102: \t\tYou_cant(\"saddle such a creature.\");\n   103: \t\treturn 1;"
+    "context": "src/steed.c:98:12\n         93: \t    exercise(A_WIS, FALSE);\n         94: \t    return 1;\n         95: \t}\n         96: \tif (mtmp-&gt;isminion || mtmp-&gt;isshk || mtmp-&gt;ispriest ||\n         97: \t\t\tmtmp-&gt;isgd || mtmp-&gt;iswiz) {\nTARGET   98: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n         99: \t    return 1;\n        100: \t}\n        101: \tif (!can_saddle(mtmp)) {\n        102: \t\tYou_cant(\"saddle such a creature.\");\n        103: \t\treturn 1;"
   },
   {
     "key": "L00102_01",
     "original": "saddle such a creature.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:102:12\n    97: \t\t\tmtmp-&gt;isgd || mtmp-&gt;iswiz) {\n    98: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n    99: \t    return 1;\n   100: \t}\n   101: \tif (!can_saddle(mtmp)) {\n&gt;  102: \t\tYou_cant(\"saddle such a creature.\");\n   103: \t\treturn 1;\n   104: \t}\n   105: \n   106: \t/* Calculate your chance */\n   107: \tchance = ACURR(A_DEX) + ACURR(A_CHA)/2 + 2*mtmp-&gt;mtame;"
+    "context": "src/steed.c:102:12\n         97: \t\t\tmtmp-&gt;isgd || mtmp-&gt;iswiz) {\n         98: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n         99: \t    return 1;\n        100: \t}\n        101: \tif (!can_saddle(mtmp)) {\nTARGET  102: \t\tYou_cant(\"saddle such a creature.\");\n        103: \t\treturn 1;\n        104: \t}\n        105: \n        106: \t/* Calculate your chance */\n        107: \tchance = ACURR(A_DEX) + ACURR(A_CHA)/2 + 2*mtmp-&gt;mtame;"
   },
   {
     "key": "L00128_01",
     "original": "riding ",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:128:15\n   123: \t}\n   124: \tif (Confusion || Fumbling || Glib)\n   125: \t    chance -= 20;\n   126: \telse if (uarmg &&\n   127: \t\t(s = OBJ_DESCR(objects[uarmg-&gt;otyp])) != (char *)0 &&\n&gt;  128: \t\t!strncmp(s, \"riding \", 7))\n   129: \t    /* Bonus for wearing \"riding\" (but not fumbling) gloves */\n   130: \t    chance += 10;\n   131: \telse if (uarmf &&\n   132: \t\t(s = OBJ_DESCR(objects[uarmf-&gt;otyp])) != (char *)0 &&\n   133: \t\t!strncmp(s, \"riding \", 7))"
+    "context": "src/steed.c:128:15\n        123: \t}\n        124: \tif (Confusion || Fumbling || Glib)\n        125: \t    chance -= 20;\n        126: \telse if (uarmg &&\n        127: \t\t(s = OBJ_DESCR(objects[uarmg-&gt;otyp])) != (char *)0 &&\nTARGET  128: \t\t!strncmp(s, \"riding \", 7))\n        129: \t    /* Bonus for wearing \"riding\" (but not fumbling) gloves */\n        130: \t    chance += 10;\n        131: \telse if (uarmf &&\n        132: \t\t(s = OBJ_DESCR(objects[uarmf-&gt;otyp])) != (char *)0 &&\n        133: \t\t!strncmp(s, \"riding \", 7))"
   },
   {
     "key": "L00133_01",
     "original": "riding ",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:133:15\n   128: \t\t!strncmp(s, \"riding \", 7))\n   129: \t    /* Bonus for wearing \"riding\" (but not fumbling) gloves */\n   130: \t    chance += 10;\n   131: \telse if (uarmf &&\n   132: \t\t(s = OBJ_DESCR(objects[uarmf-&gt;otyp])) != (char *)0 &&\n&gt;  133: \t\t!strncmp(s, \"riding \", 7))\n   134: \t    /* ... or for \"riding boots\" */\n   135: \t    chance += 10;\n   136: \tif (otmp-&gt;cursed)\n   137: \t    chance -= 50;\n   138: "
+    "context": "src/steed.c:133:15\n        128: \t\t!strncmp(s, \"riding \", 7))\n        129: \t    /* Bonus for wearing \"riding\" (but not fumbling) gloves */\n        130: \t    chance += 10;\n        131: \telse if (uarmf &&\n        132: \t\t(s = OBJ_DESCR(objects[uarmf-&gt;otyp])) != (char *)0 &&\nTARGET  133: \t\t!strncmp(s, \"riding \", 7))\n        134: \t    /* ... or for \"riding boots\" */\n        135: \t    chance += 10;\n        136: \tif (otmp-&gt;cursed)\n        137: \t    chance -= 50;\n        138: "
   },
   {
     "key": "L00141_01",
     "original": "put the saddle on %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:141:10\n   136: \tif (otmp-&gt;cursed)\n   137: \t    chance -= 50;\n   138: \n   139: \t/* Make the attempt */\n   140: \tif (rn2(100) &lt; chance) {\n&gt;  141: \t    You(\"put the saddle on %s.\", mon_nam(mtmp));\n   142: \t    if (otmp-&gt;owornmask) remove_worn_item(otmp, FALSE);\n   143: \t    freeinv(otmp);\n   144: \t    /* mpickobj may free otmp it if merges, but we have already\n   145: \t       checked for a saddle above, so no merger should happen */\n   146: \t    (void) mpickobj(mtmp, otmp);"
+    "context": "src/steed.c:141:10\n        136: \tif (otmp-&gt;cursed)\n        137: \t    chance -= 50;\n        138: \n        139: \t/* Make the attempt */\n        140: \tif (rn2(100) &lt; chance) {\nTARGET  141: \t    You(\"put the saddle on %s.\", mon_nam(mtmp));\n        142: \t    if (otmp-&gt;owornmask) remove_worn_item(otmp, FALSE);\n        143: \t    freeinv(otmp);\n        144: \t    /* mpickobj may free otmp it if merges, but we have already\n        145: \t       checked for a saddle above, so no merger should happen */\n        146: \t    (void) mpickobj(mtmp, otmp);"
   },
   {
     "key": "L00152_01",
     "original": "%s resists!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:152:12\n   147: \t    mtmp-&gt;misc_worn_check |= W_SADDLE;\n   148: \t    otmp-&gt;owornmask = W_SADDLE;\n   149: \t    otmp-&gt;leashmon = mtmp-&gt;m_id;\n   150: \t    update_mon_intrinsics(mtmp, otmp, TRUE, FALSE);\n   151: \t} else\n&gt;  152: \t    pline(\"%s resists!\", Monnam(mtmp));\n   153: \treturn 1;\n   154: }\n   155: \n   156: \n   157: /*** Riding the monster ***/"
+    "context": "src/steed.c:152:12\n        147: \t    mtmp-&gt;misc_worn_check |= W_SADDLE;\n        148: \t    otmp-&gt;owornmask = W_SADDLE;\n        149: \t    otmp-&gt;leashmon = mtmp-&gt;m_id;\n        150: \t    update_mon_intrinsics(mtmp, otmp, TRUE, FALSE);\n        151: \t} else\nTARGET  152: \t    pline(\"%s resists!\", Monnam(mtmp));\n        153: \treturn 1;\n        154: }\n        155: \n        156: \n        157: /*** Riding the monster ***/"
   },
   {
     "key": "L00179_01",
     "original": "Force the mount to succeed?",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:179:19\n   174: \n   175: \tif (u.usteed)\n   176: \t    dismount_steed(DISMOUNT_BYCHOICE);\n   177: \telse if (getdir((char *)0) && isok(u.ux+u.dx, u.uy+u.dy)) {\n   178: #ifdef WIZARD\n&gt;  179: \tif (wizard && yn(\"Force the mount to succeed?\") == 'y')\n   180: \t\tforcemount = TRUE;\n   181: #endif\n   182: \t    return (mount_steed(m_at(u.ux+u.dx, u.uy+u.dy), forcemount));\n   183: \t} else\n   184: \t    return 0;"
+    "context": "src/steed.c:179:19\n        174: \n        175: \tif (u.usteed)\n        176: \t    dismount_steed(DISMOUNT_BYCHOICE);\n        177: \telse if (getdir((char *)0) && isok(u.ux+u.dx, u.uy+u.dy)) {\n        178: #ifdef WIZARD\nTARGET  179: \tif (wizard && yn(\"Force the mount to succeed?\") == 'y')\n        180: \t\tforcemount = TRUE;\n        181: #endif\n        182: \t    return (mount_steed(m_at(u.ux+u.dx, u.uy+u.dy), forcemount));\n        183: \t} else\n        184: \t    return 0;"
   },
   {
     "key": "L00201_01",
     "original": "are already riding %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:201:10\n   196: \tchar buf[BUFSZ];\n   197: \tstruct permonst *ptr;\n   198: \n   199: \t/* Sanity checks */\n   200: \tif (u.usteed) {\n&gt;  201: \t    You(\"are already riding %s.\", mon_nam(u.usteed));\n   202: \t    return (FALSE);\n   203: \t}\n   204: \n   205: \t/* Is the player in the right form? */\n   206: \tif (Hallucination && !force) {"
+    "context": "src/steed.c:201:10\n        196: \tchar buf[BUFSZ];\n        197: \tstruct permonst *ptr;\n        198: \n        199: \t/* Sanity checks */\n        200: \tif (u.usteed) {\nTARGET  201: \t    You(\"are already riding %s.\", mon_nam(u.usteed));\n        202: \t    return (FALSE);\n        203: \t}\n        204: \n        205: \t/* Is the player in the right form? */\n        206: \tif (Hallucination && !force) {"
   },
   {
     "key": "L00207_01",
     "original": "Maybe you should find a designated driver.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:207:12\n   202: \t    return (FALSE);\n   203: \t}\n   204: \n   205: \t/* Is the player in the right form? */\n   206: \tif (Hallucination && !force) {\n&gt;  207: \t    pline(\"Maybe you should find a designated driver.\");\n   208: \t    return (FALSE);\n   209: \t}\n   210: \t/* While riding Wounded_legs refers to the steed's,\n   211: \t * not the hero's legs.\n   212: \t * That opens up a potential abuse where the player"
+    "context": "src/steed.c:207:12\n        202: \t    return (FALSE);\n        203: \t}\n        204: \n        205: \t/* Is the player in the right form? */\n        206: \tif (Hallucination && !force) {\nTARGET  207: \t    pline(\"Maybe you should find a designated driver.\");\n        208: \t    return (FALSE);\n        209: \t}\n        210: \t/* While riding Wounded_legs refers to the steed's,\n        211: \t * not the hero's legs.\n        212: \t * That opens up a potential abuse where the player"
   },
   {
     "key": "L00221_01",
     "original": "%s are in no shape for riding.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:221:11\n   216: \t * By preventing a hero with Wounded_legs from\n   217: \t * mounting a steed, the potential for abuse is\n   218: \t * minimized, if not eliminated altogether.\n   219: \t */\n   220: \tif (Wounded_legs) {\n&gt;  221: \t    Your(\"%s are in no shape for riding.\", makeplural(body_part(LEG)));\n   222: #ifdef WIZARD\n   223: \t    if (force && wizard && yn(\"Heal your legs?\") == 'y')\n   224: \t\tHWounded_legs = EWounded_legs = 0;\n   225: \t    else\n   226: #endif"
+    "context": "src/steed.c:221:11\n        216: \t * By preventing a hero with Wounded_legs from\n        217: \t * mounting a steed, the potential for abuse is\n        218: \t * minimized, if not eliminated altogether.\n        219: \t */\n        220: \tif (Wounded_legs) {\nTARGET  221: \t    Your(\"%s are in no shape for riding.\", makeplural(body_part(LEG)));\n        222: #ifdef WIZARD\n        223: \t    if (force && wizard && yn(\"Heal your legs?\") == 'y')\n        224: \t\tHWounded_legs = EWounded_legs = 0;\n        225: \t    else\n        226: #endif"
   },
   {
     "key": "L00223_01",
     "original": "Heal your legs?",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:223:32\n   218: \t * minimized, if not eliminated altogether.\n   219: \t */\n   220: \tif (Wounded_legs) {\n   221: \t    Your(\"%s are in no shape for riding.\", makeplural(body_part(LEG)));\n   222: #ifdef WIZARD\n&gt;  223: \t    if (force && wizard && yn(\"Heal your legs?\") == 'y')\n   224: \t\tHWounded_legs = EWounded_legs = 0;\n   225: \t    else\n   226: #endif\n   227: \t    return (FALSE);\n   228: \t}"
+    "context": "src/steed.c:223:32\n        218: \t * minimized, if not eliminated altogether.\n        219: \t */\n        220: \tif (Wounded_legs) {\n        221: \t    Your(\"%s are in no shape for riding.\", makeplural(body_part(LEG)));\n        222: #ifdef WIZARD\nTARGET  223: \t    if (force && wizard && yn(\"Heal your legs?\") == 'y')\n        224: \t\tHWounded_legs = EWounded_legs = 0;\n        225: \t    else\n        226: #endif\n        227: \t    return (FALSE);\n        228: \t}"
   },
   {
     "key": "L00232_01",
     "original": "won't fit on a saddle.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:232:10\n   227: \t    return (FALSE);\n   228: \t}\n   229: \n   230: \tif (Upolyd && (!humanoid(youmonst.data) || verysmall(youmonst.data) ||\n   231: \t\t\tbigmonst(youmonst.data) || slithy(youmonst.data))) {\n&gt;  232: \t    You(\"won't fit on a saddle.\");\n   233: \t    return (FALSE);\n   234: \t}\n   235: \tif(!force && (near_capacity() &gt; SLT_ENCUMBER)) {\n   236: \t    You_cant(\"do that while carrying so much stuff.\");\n   237: \t    return (FALSE);"
+    "context": "src/steed.c:232:10\n        227: \t    return (FALSE);\n        228: \t}\n        229: \n        230: \tif (Upolyd && (!humanoid(youmonst.data) || verysmall(youmonst.data) ||\n        231: \t\t\tbigmonst(youmonst.data) || slithy(youmonst.data))) {\nTARGET  232: \t    You(\"won't fit on a saddle.\");\n        233: \t    return (FALSE);\n        234: \t}\n        235: \tif(!force && (near_capacity() &gt; SLT_ENCUMBER)) {\n        236: \t    You_cant(\"do that while carrying so much stuff.\");\n        237: \t    return (FALSE);"
   },
   {
     "key": "L00236_01",
     "original": "do that while carrying so much stuff.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:236:15\n   231: \t\t\tbigmonst(youmonst.data) || slithy(youmonst.data))) {\n   232: \t    You(\"won't fit on a saddle.\");\n   233: \t    return (FALSE);\n   234: \t}\n   235: \tif(!force && (near_capacity() &gt; SLT_ENCUMBER)) {\n&gt;  236: \t    You_cant(\"do that while carrying so much stuff.\");\n   237: \t    return (FALSE);\n   238: \t}\n   239: \n   240: \t/* Can the player reach and see the monster? */\n   241: \tif (!mtmp || (!force && ((Blind && !Blind_telepat) ||"
+    "context": "src/steed.c:236:15\n        231: \t\t\tbigmonst(youmonst.data) || slithy(youmonst.data))) {\n        232: \t    You(\"won't fit on a saddle.\");\n        233: \t    return (FALSE);\n        234: \t}\n        235: \tif(!force && (near_capacity() &gt; SLT_ENCUMBER)) {\nTARGET  236: \t    You_cant(\"do that while carrying so much stuff.\");\n        237: \t    return (FALSE);\n        238: \t}\n        239: \n        240: \t/* Can the player reach and see the monster? */\n        241: \tif (!mtmp || (!force && ((Blind && !Blind_telepat) ||"
   },
   {
     "key": "L00245_01",
     "original": "I see nobody there.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:245:12\n   240: \t/* Can the player reach and see the monster? */\n   241: \tif (!mtmp || (!force && ((Blind && !Blind_telepat) ||\n   242: \t\tmtmp-&gt;mundetected ||\n   243: \t\tmtmp-&gt;m_ap_type == M_AP_FURNITURE ||\n   244: \t\tmtmp-&gt;m_ap_type == M_AP_OBJECT))) {\n&gt;  245: \t    pline(\"I see nobody there.\");\n   246: \t    return (FALSE);\n   247: \t}\n   248: \tif (u.uswallow || u.ustuck || u.utrap || Punished ||\n   249: \t    !test_move(u.ux, u.uy, mtmp-&gt;mx-u.ux, mtmp-&gt;my-u.uy, TEST_MOVE)) {\n   250: \t    if (Punished || !(u.uswallow || u.ustuck || u.utrap))"
+    "context": "src/steed.c:245:12\n        240: \t/* Can the player reach and see the monster? */\n        241: \tif (!mtmp || (!force && ((Blind && !Blind_telepat) ||\n        242: \t\tmtmp-&gt;mundetected ||\n        243: \t\tmtmp-&gt;m_ap_type == M_AP_FURNITURE ||\n        244: \t\tmtmp-&gt;m_ap_type == M_AP_OBJECT))) {\nTARGET  245: \t    pline(\"I see nobody there.\");\n        246: \t    return (FALSE);\n        247: \t}\n        248: \tif (u.uswallow || u.ustuck || u.utrap || Punished ||\n        249: \t    !test_move(u.ux, u.uy, mtmp-&gt;mx-u.ux, mtmp-&gt;my-u.uy, TEST_MOVE)) {\n        250: \t    if (Punished || !(u.uswallow || u.ustuck || u.utrap))"
   },
   {
     "key": "L00251_01",
     "original": "are unable to swing your %s over.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:251:7\n   246: \t    return (FALSE);\n   247: \t}\n   248: \tif (u.uswallow || u.ustuck || u.utrap || Punished ||\n   249: \t    !test_move(u.ux, u.uy, mtmp-&gt;mx-u.ux, mtmp-&gt;my-u.uy, TEST_MOVE)) {\n   250: \t    if (Punished || !(u.uswallow || u.ustuck || u.utrap))\n&gt;  251: \t\tYou(\"are unable to swing your %s over.\", body_part(LEG)); \n   252: \t    else\n   253: \t\tYou(\"are stuck here for now.\");\n   254: \t    return (FALSE);\n   255: \t}\n   256: "
+    "context": "src/steed.c:251:7\n        246: \t    return (FALSE);\n        247: \t}\n        248: \tif (u.uswallow || u.ustuck || u.utrap || Punished ||\n        249: \t    !test_move(u.ux, u.uy, mtmp-&gt;mx-u.ux, mtmp-&gt;my-u.uy, TEST_MOVE)) {\n        250: \t    if (Punished || !(u.uswallow || u.ustuck || u.utrap))\nTARGET  251: \t\tYou(\"are unable to swing your %s over.\", body_part(LEG)); \n        252: \t    else\n        253: \t\tYou(\"are stuck here for now.\");\n        254: \t    return (FALSE);\n        255: \t}\n        256: "
   },
   {
     "key": "L00253_01",
     "original": "are stuck here for now.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:253:7\n   248: \tif (u.uswallow || u.ustuck || u.utrap || Punished ||\n   249: \t    !test_move(u.ux, u.uy, mtmp-&gt;mx-u.ux, mtmp-&gt;my-u.uy, TEST_MOVE)) {\n   250: \t    if (Punished || !(u.uswallow || u.ustuck || u.utrap))\n   251: \t\tYou(\"are unable to swing your %s over.\", body_part(LEG)); \n   252: \t    else\n&gt;  253: \t\tYou(\"are stuck here for now.\");\n   254: \t    return (FALSE);\n   255: \t}\n   256: \n   257: \t/* Is this a valid monster? */\n   258: \totmp = which_armor(mtmp, W_SADDLE);"
+    "context": "src/steed.c:253:7\n        248: \tif (u.uswallow || u.ustuck || u.utrap || Punished ||\n        249: \t    !test_move(u.ux, u.uy, mtmp-&gt;mx-u.ux, mtmp-&gt;my-u.uy, TEST_MOVE)) {\n        250: \t    if (Punished || !(u.uswallow || u.ustuck || u.utrap))\n        251: \t\tYou(\"are unable to swing your %s over.\", body_part(LEG)); \n        252: \t    else\nTARGET  253: \t\tYou(\"are stuck here for now.\");\n        254: \t    return (FALSE);\n        255: \t}\n        256: \n        257: \t/* Is this a valid monster? */\n        258: \totmp = which_armor(mtmp, W_SADDLE);"
   },
   {
     "key": "L00260_01",
     "original": "%s is not saddled.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:260:12\n   255: \t}\n   256: \n   257: \t/* Is this a valid monster? */\n   258: \totmp = which_armor(mtmp, W_SADDLE);\n   259: \tif (!otmp) {\n&gt;  260: \t    pline(\"%s is not saddled.\", Monnam(mtmp));\n   261: \t    return (FALSE);\n   262: \t}\n   263: \tptr = mtmp-&gt;data;\n   264: \tif (touch_petrifies(ptr) && !Stone_resistance) {\n   265: \t    char kbuf[BUFSZ];"
+    "context": "src/steed.c:260:12\n        255: \t}\n        256: \n        257: \t/* Is this a valid monster? */\n        258: \totmp = which_armor(mtmp, W_SADDLE);\n        259: \tif (!otmp) {\nTARGET  260: \t    pline(\"%s is not saddled.\", Monnam(mtmp));\n        261: \t    return (FALSE);\n        262: \t}\n        263: \tptr = mtmp-&gt;data;\n        264: \tif (touch_petrifies(ptr) && !Stone_resistance) {\n        265: \t    char kbuf[BUFSZ];"
   },
   {
     "key": "L00267_01",
     "original": "touch %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:267:10\n   262: \t}\n   263: \tptr = mtmp-&gt;data;\n   264: \tif (touch_petrifies(ptr) && !Stone_resistance) {\n   265: \t    char kbuf[BUFSZ];\n   266: \n&gt;  267: \t    You(\"touch %s.\", mon_nam(mtmp));\n   268: \t    Sprintf(kbuf, \"attempting to ride %s\", an(mtmp-&gt;data-&gt;mname));\n   269: \t    instapetrify(kbuf);\n   270: \t}\n   271: \tif (!mtmp-&gt;mtame || mtmp-&gt;isminion) {\n   272: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));"
+    "context": "src/steed.c:267:10\n        262: \t}\n        263: \tptr = mtmp-&gt;data;\n        264: \tif (touch_petrifies(ptr) && !Stone_resistance) {\n        265: \t    char kbuf[BUFSZ];\n        266: \nTARGET  267: \t    You(\"touch %s.\", mon_nam(mtmp));\n        268: \t    Sprintf(kbuf, \"attempting to ride %s\", an(mtmp-&gt;data-&gt;mname));\n        269: \t    instapetrify(kbuf);\n        270: \t}\n        271: \tif (!mtmp-&gt;mtame || mtmp-&gt;isminion) {\n        272: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));"
   },
   {
     "key": "L00268_01",
     "original": "attempting to ride %s",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:268:20\n   263: \tptr = mtmp-&gt;data;\n   264: \tif (touch_petrifies(ptr) && !Stone_resistance) {\n   265: \t    char kbuf[BUFSZ];\n   266: \n   267: \t    You(\"touch %s.\", mon_nam(mtmp));\n&gt;  268: \t    Sprintf(kbuf, \"attempting to ride %s\", an(mtmp-&gt;data-&gt;mname));\n   269: \t    instapetrify(kbuf);\n   270: \t}\n   271: \tif (!mtmp-&gt;mtame || mtmp-&gt;isminion) {\n   272: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n   273: \t    return (FALSE);"
+    "context": "src/steed.c:268:20\n        263: \tptr = mtmp-&gt;data;\n        264: \tif (touch_petrifies(ptr) && !Stone_resistance) {\n        265: \t    char kbuf[BUFSZ];\n        266: \n        267: \t    You(\"touch %s.\", mon_nam(mtmp));\nTARGET  268: \t    Sprintf(kbuf, \"attempting to ride %s\", an(mtmp-&gt;data-&gt;mname));\n        269: \t    instapetrify(kbuf);\n        270: \t}\n        271: \tif (!mtmp-&gt;mtame || mtmp-&gt;isminion) {\n        272: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n        273: \t    return (FALSE);"
   },
   {
     "key": "L00272_01",
     "original": "I think %s would mind.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:272:12\n   267: \t    You(\"touch %s.\", mon_nam(mtmp));\n   268: \t    Sprintf(kbuf, \"attempting to ride %s\", an(mtmp-&gt;data-&gt;mname));\n   269: \t    instapetrify(kbuf);\n   270: \t}\n   271: \tif (!mtmp-&gt;mtame || mtmp-&gt;isminion) {\n&gt;  272: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n   273: \t    return (FALSE);\n   274: \t}\n   275: \tif (mtmp-&gt;mtrapped) {\n   276: \t    struct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n   277: "
+    "context": "src/steed.c:272:12\n        267: \t    You(\"touch %s.\", mon_nam(mtmp));\n        268: \t    Sprintf(kbuf, \"attempting to ride %s\", an(mtmp-&gt;data-&gt;mname));\n        269: \t    instapetrify(kbuf);\n        270: \t}\n        271: \tif (!mtmp-&gt;mtame || mtmp-&gt;isminion) {\nTARGET  272: \t    pline(\"I think %s would mind.\", mon_nam(mtmp));\n        273: \t    return (FALSE);\n        274: \t}\n        275: \tif (mtmp-&gt;mtrapped) {\n        276: \t    struct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n        277: "
   },
   {
     "key": "L00278_01",
     "original": "mount %s while %s's trapped in %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:278:15\n   273: \t    return (FALSE);\n   274: \t}\n   275: \tif (mtmp-&gt;mtrapped) {\n   276: \t    struct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n   277: \n&gt;  278: \t    You_cant(\"mount %s while %s's trapped in %s.\",\n   279: \t\t     mon_nam(mtmp), mhe(mtmp),\n   280: \t\t     an(defsyms[trap_to_defsym(t-&gt;ttyp)].explanation));\n   281: \t    return (FALSE);\n   282: \t}\n   283: "
+    "context": "src/steed.c:278:15\n        273: \t    return (FALSE);\n        274: \t}\n        275: \tif (mtmp-&gt;mtrapped) {\n        276: \t    struct trap *t = t_at(mtmp-&gt;mx, mtmp-&gt;my);\n        277: \nTARGET  278: \t    You_cant(\"mount %s while %s's trapped in %s.\",\n        279: \t\t     mon_nam(mtmp), mhe(mtmp),\n        280: \t\t     an(defsyms[trap_to_defsym(t-&gt;ttyp)].explanation));\n        281: \t    return (FALSE);\n        282: \t}\n        283: "
   },
   {
     "key": "L00287_01",
     "original": "%s resists%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:287:12\n   282: \t}\n   283: \n   284: \tif (!force && !Role_if(PM_KNIGHT) && !(--mtmp-&gt;mtame)) {\n   285: \t    /* no longer tame */\n   286: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n&gt;  287: \t    pline(\"%s resists%s!\", Monnam(mtmp),\n   288: \t\t  mtmp-&gt;mleashed ? \" and its leash comes off\" : \"\");\n   289: \t    if (mtmp-&gt;mleashed) m_unleash(mtmp, FALSE);\n   290: \t    return (FALSE);\n   291: \t}\n   292: \tif (!force && Underwater && !is_swimmer(ptr)) {"
+    "context": "src/steed.c:287:12\n        282: \t}\n        283: \n        284: \tif (!force && !Role_if(PM_KNIGHT) && !(--mtmp-&gt;mtame)) {\n        285: \t    /* no longer tame */\n        286: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\nTARGET  287: \t    pline(\"%s resists%s!\", Monnam(mtmp),\n        288: \t\t  mtmp-&gt;mleashed ? \" and its leash comes off\" : \"\");\n        289: \t    if (mtmp-&gt;mleashed) m_unleash(mtmp, FALSE);\n        290: \t    return (FALSE);\n        291: \t}\n        292: \tif (!force && Underwater && !is_swimmer(ptr)) {"
   },
   {
     "key": "L00288_01",
     "original": " and its leash comes off",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:288:22\n   283: \n   284: \tif (!force && !Role_if(PM_KNIGHT) && !(--mtmp-&gt;mtame)) {\n   285: \t    /* no longer tame */\n   286: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n   287: \t    pline(\"%s resists%s!\", Monnam(mtmp),\n&gt;  288: \t\t  mtmp-&gt;mleashed ? \" and its leash comes off\" : \"\");\n   289: \t    if (mtmp-&gt;mleashed) m_unleash(mtmp, FALSE);\n   290: \t    return (FALSE);\n   291: \t}\n   292: \tif (!force && Underwater && !is_swimmer(ptr)) {\n   293: \t    You_cant(\"ride that creature while under water.\");"
+    "context": "src/steed.c:288:22\n        283: \n        284: \tif (!force && !Role_if(PM_KNIGHT) && !(--mtmp-&gt;mtame)) {\n        285: \t    /* no longer tame */\n        286: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n        287: \t    pline(\"%s resists%s!\", Monnam(mtmp),\nTARGET  288: \t\t  mtmp-&gt;mleashed ? \" and its leash comes off\" : \"\");\n        289: \t    if (mtmp-&gt;mleashed) m_unleash(mtmp, FALSE);\n        290: \t    return (FALSE);\n        291: \t}\n        292: \tif (!force && Underwater && !is_swimmer(ptr)) {\n        293: \t    You_cant(\"ride that creature while under water.\");"
   },
   {
     "key": "L00293_01",
     "original": "ride that creature while under water.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:293:15\n   288: \t\t  mtmp-&gt;mleashed ? \" and its leash comes off\" : \"\");\n   289: \t    if (mtmp-&gt;mleashed) m_unleash(mtmp, FALSE);\n   290: \t    return (FALSE);\n   291: \t}\n   292: \tif (!force && Underwater && !is_swimmer(ptr)) {\n&gt;  293: \t    You_cant(\"ride that creature while under water.\");\n   294: \t    return (FALSE);\n   295: \t}\n   296: \tif (!can_saddle(mtmp) || !can_ride(mtmp)) {\n   297: \t    You_cant(\"ride such a creature.\");\n   298: \t    return (0);"
+    "context": "src/steed.c:293:15\n        288: \t\t  mtmp-&gt;mleashed ? \" and its leash comes off\" : \"\");\n        289: \t    if (mtmp-&gt;mleashed) m_unleash(mtmp, FALSE);\n        290: \t    return (FALSE);\n        291: \t}\n        292: \tif (!force && Underwater && !is_swimmer(ptr)) {\nTARGET  293: \t    You_cant(\"ride that creature while under water.\");\n        294: \t    return (FALSE);\n        295: \t}\n        296: \tif (!can_saddle(mtmp) || !can_ride(mtmp)) {\n        297: \t    You_cant(\"ride such a creature.\");\n        298: \t    return (0);"
   },
   {
     "key": "L00297_01",
     "original": "ride such a creature.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:297:15\n   292: \tif (!force && Underwater && !is_swimmer(ptr)) {\n   293: \t    You_cant(\"ride that creature while under water.\");\n   294: \t    return (FALSE);\n   295: \t}\n   296: \tif (!can_saddle(mtmp) || !can_ride(mtmp)) {\n&gt;  297: \t    You_cant(\"ride such a creature.\");\n   298: \t    return (0);\n   299: \t}\n   300: \n   301: \t/* Is the player impaired? */\n   302: \tif (!force && !is_floater(ptr) && !is_flyer(ptr) &&"
+    "context": "src/steed.c:297:15\n        292: \tif (!force && Underwater && !is_swimmer(ptr)) {\n        293: \t    You_cant(\"ride that creature while under water.\");\n        294: \t    return (FALSE);\n        295: \t}\n        296: \tif (!can_saddle(mtmp) || !can_ride(mtmp)) {\nTARGET  297: \t    You_cant(\"ride such a creature.\");\n        298: \t    return (0);\n        299: \t}\n        300: \n        301: \t/* Is the player impaired? */\n        302: \tif (!force && !is_floater(ptr) && !is_flyer(ptr) &&"
   },
   {
     "key": "L00304_01",
     "original": "cannot reach %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:304:10\n   299: \t}\n   300: \n   301: \t/* Is the player impaired? */\n   302: \tif (!force && !is_floater(ptr) && !is_flyer(ptr) &&\n   303: \t\t\tLevitation && !Lev_at_will) {\n&gt;  304: \t    You(\"cannot reach %s.\", mon_nam(mtmp));\n   305: \t    return (FALSE);\n   306: \t}\n   307: \tif (!force && uarm && is_metallic(uarm) &&\n   308: \t\t\tgreatest_erosion(uarm)) {\n   309: \t    Your(\"%s armor is too stiff to be able to mount %s.\","
+    "context": "src/steed.c:304:10\n        299: \t}\n        300: \n        301: \t/* Is the player impaired? */\n        302: \tif (!force && !is_floater(ptr) && !is_flyer(ptr) &&\n        303: \t\t\tLevitation && !Lev_at_will) {\nTARGET  304: \t    You(\"cannot reach %s.\", mon_nam(mtmp));\n        305: \t    return (FALSE);\n        306: \t}\n        307: \tif (!force && uarm && is_metallic(uarm) &&\n        308: \t\t\tgreatest_erosion(uarm)) {\n        309: \t    Your(\"%s armor is too stiff to be able to mount %s.\","
   },
   {
     "key": "L00309_01",
     "original": "%s armor is too stiff to be able to mount %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:309:11\n   304: \t    You(\"cannot reach %s.\", mon_nam(mtmp));\n   305: \t    return (FALSE);\n   306: \t}\n   307: \tif (!force && uarm && is_metallic(uarm) &&\n   308: \t\t\tgreatest_erosion(uarm)) {\n&gt;  309: \t    Your(\"%s armor is too stiff to be able to mount %s.\",\n   310: \t\t\tuarm-&gt;oeroded ? \"rusty\" : \"corroded\",\n   311: \t\t\tmon_nam(mtmp));\n   312: \t    return (FALSE);\n   313: \t}\n   314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||"
+    "context": "src/steed.c:309:11\n        304: \t    You(\"cannot reach %s.\", mon_nam(mtmp));\n        305: \t    return (FALSE);\n        306: \t}\n        307: \tif (!force && uarm && is_metallic(uarm) &&\n        308: \t\t\tgreatest_erosion(uarm)) {\nTARGET  309: \t    Your(\"%s armor is too stiff to be able to mount %s.\",\n        310: \t\t\tuarm-&gt;oeroded ? \"rusty\" : \"corroded\",\n        311: \t\t\tmon_nam(mtmp));\n        312: \t    return (FALSE);\n        313: \t}\n        314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||"
   },
   {
     "key": "L00310_01",
     "original": "rusty",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:310:20\n   305: \t    return (FALSE);\n   306: \t}\n   307: \tif (!force && uarm && is_metallic(uarm) &&\n   308: \t\t\tgreatest_erosion(uarm)) {\n   309: \t    Your(\"%s armor is too stiff to be able to mount %s.\",\n&gt;  310: \t\t\tuarm-&gt;oeroded ? \"rusty\" : \"corroded\",\n   311: \t\t\tmon_nam(mtmp));\n   312: \t    return (FALSE);\n   313: \t}\n   314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||\n   315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {"
+    "context": "src/steed.c:310:20\n        305: \t    return (FALSE);\n        306: \t}\n        307: \tif (!force && uarm && is_metallic(uarm) &&\n        308: \t\t\tgreatest_erosion(uarm)) {\n        309: \t    Your(\"%s armor is too stiff to be able to mount %s.\",\nTARGET  310: \t\t\tuarm-&gt;oeroded ? \"rusty\" : \"corroded\",\n        311: \t\t\tmon_nam(mtmp));\n        312: \t    return (FALSE);\n        313: \t}\n        314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||\n        315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {"
   },
   {
     "key": "L00310_02",
     "original": "corroded",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:310:30\n   305: \t    return (FALSE);\n   306: \t}\n   307: \tif (!force && uarm && is_metallic(uarm) &&\n   308: \t\t\tgreatest_erosion(uarm)) {\n   309: \t    Your(\"%s armor is too stiff to be able to mount %s.\",\n&gt;  310: \t\t\tuarm-&gt;oeroded ? \"rusty\" : \"corroded\",\n   311: \t\t\tmon_nam(mtmp));\n   312: \t    return (FALSE);\n   313: \t}\n   314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||\n   315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {"
+    "context": "src/steed.c:310:30\n        305: \t    return (FALSE);\n        306: \t}\n        307: \tif (!force && uarm && is_metallic(uarm) &&\n        308: \t\t\tgreatest_erosion(uarm)) {\n        309: \t    Your(\"%s armor is too stiff to be able to mount %s.\",\nTARGET  310: \t\t\tuarm-&gt;oeroded ? \"rusty\" : \"corroded\",\n        311: \t\t\tmon_nam(mtmp));\n        312: \t    return (FALSE);\n        313: \t}\n        314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||\n        315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {"
   },
   {
     "key": "L00317_01",
     "original": "%s slips away from you.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:317:9\n   312: \t    return (FALSE);\n   313: \t}\n   314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||\n   315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {\n   316: \t    if (Levitation) {\n&gt;  317: \t\tpline(\"%s slips away from you.\", Monnam(mtmp));\n   318: \t\treturn FALSE;\n   319: \t    }\n   320: \t    You(\"slip while trying to get on %s.\", mon_nam(mtmp));\n   321: \n   322: \t    Sprintf(buf, \"slipped while mounting %s\","
+    "context": "src/steed.c:317:9\n        312: \t    return (FALSE);\n        313: \t}\n        314: \tif (!force && (Confusion || Fumbling || Glib || Wounded_legs ||\n        315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {\n        316: \t    if (Levitation) {\nTARGET  317: \t\tpline(\"%s slips away from you.\", Monnam(mtmp));\n        318: \t\treturn FALSE;\n        319: \t    }\n        320: \t    You(\"slip while trying to get on %s.\", mon_nam(mtmp));\n        321: \n        322: \t    Sprintf(buf, \"slipped while mounting %s\","
   },
   {
     "key": "L00320_01",
     "original": "slip while trying to get on %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:320:10\n   315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {\n   316: \t    if (Levitation) {\n   317: \t\tpline(\"%s slips away from you.\", Monnam(mtmp));\n   318: \t\treturn FALSE;\n   319: \t    }\n&gt;  320: \t    You(\"slip while trying to get on %s.\", mon_nam(mtmp));\n   321: \n   322: \t    Sprintf(buf, \"slipped while mounting %s\",\n   323: \t\t    /* \"a saddled mumak\" or \"a saddled pony called Dobbin\" */\n   324: \t\t    x_monnam(mtmp, ARTICLE_A, (char *)0,\n   325: \t\t\tSUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_HALLUCINATION,"
+    "context": "src/steed.c:320:10\n        315: \t\totmp-&gt;cursed || (u.ulevel+mtmp-&gt;mtame &lt; rnd(MAXULEV/2+5)))) {\n        316: \t    if (Levitation) {\n        317: \t\tpline(\"%s slips away from you.\", Monnam(mtmp));\n        318: \t\treturn FALSE;\n        319: \t    }\nTARGET  320: \t    You(\"slip while trying to get on %s.\", mon_nam(mtmp));\n        321: \n        322: \t    Sprintf(buf, \"slipped while mounting %s\",\n        323: \t\t    /* \"a saddled mumak\" or \"a saddled pony called Dobbin\" */\n        324: \t\t    x_monnam(mtmp, ARTICLE_A, (char *)0,\n        325: \t\t\tSUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_HALLUCINATION,"
   },
   {
     "key": "L00322_01",
     "original": "slipped while mounting %s",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:322:19\n   317: \t\tpline(\"%s slips away from you.\", Monnam(mtmp));\n   318: \t\treturn FALSE;\n   319: \t    }\n   320: \t    You(\"slip while trying to get on %s.\", mon_nam(mtmp));\n   321: \n&gt;  322: \t    Sprintf(buf, \"slipped while mounting %s\",\n   323: \t\t    /* \"a saddled mumak\" or \"a saddled pony called Dobbin\" */\n   324: \t\t    x_monnam(mtmp, ARTICLE_A, (char *)0,\n   325: \t\t\tSUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_HALLUCINATION,\n   326: \t\t\t     TRUE));\n   327: \t    losehp(rn1(5,10), buf, NO_KILLER_PREFIX);"
+    "context": "src/steed.c:322:19\n        317: \t\tpline(\"%s slips away from you.\", Monnam(mtmp));\n        318: \t\treturn FALSE;\n        319: \t    }\n        320: \t    You(\"slip while trying to get on %s.\", mon_nam(mtmp));\n        321: \nTARGET  322: \t    Sprintf(buf, \"slipped while mounting %s\",\n        323: \t\t    /* \"a saddled mumak\" or \"a saddled pony called Dobbin\" */\n        324: \t\t    x_monnam(mtmp, ARTICLE_A, (char *)0,\n        325: \t\t\tSUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_HALLUCINATION,\n        326: \t\t\t     TRUE));\n        327: \t    losehp(rn1(5,10), buf, NO_KILLER_PREFIX);"
   },
   {
     "key": "L00335_01",
     "original": "%s magically floats up!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:335:13\n   330: \n   331: \t/* Success */\n   332: \tif (!force) {\n   333: \t    if (Levitation && !is_floater(ptr) && !is_flyer(ptr))\n   334: \t    \t/* Must have Lev_at_will at this point */\n&gt;  335: \t    \tpline(\"%s magically floats up!\", Monnam(mtmp));\n   336: \t    You(\"mount %s.\", mon_nam(mtmp));\n   337: \t}\n   338: \t/* setuwep handles polearms differently when you're mounted */\n   339: \tif (uwep && is_pole(uwep)) unweapon = FALSE;\n   340: \tu.usteed = mtmp;"
+    "context": "src/steed.c:335:13\n        330: \n        331: \t/* Success */\n        332: \tif (!force) {\n        333: \t    if (Levitation && !is_floater(ptr) && !is_flyer(ptr))\n        334: \t    \t/* Must have Lev_at_will at this point */\nTARGET  335: \t    \tpline(\"%s magically floats up!\", Monnam(mtmp));\n        336: \t    You(\"mount %s.\", mon_nam(mtmp));\n        337: \t}\n        338: \t/* setuwep handles polearms differently when you're mounted */\n        339: \tif (uwep && is_pole(uwep)) unweapon = FALSE;\n        340: \tu.usteed = mtmp;"
   },
   {
     "key": "L00336_01",
     "original": "mount %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:336:10\n   331: \t/* Success */\n   332: \tif (!force) {\n   333: \t    if (Levitation && !is_floater(ptr) && !is_flyer(ptr))\n   334: \t    \t/* Must have Lev_at_will at this point */\n   335: \t    \tpline(\"%s magically floats up!\", Monnam(mtmp));\n&gt;  336: \t    You(\"mount %s.\", mon_nam(mtmp));\n   337: \t}\n   338: \t/* setuwep handles polearms differently when you're mounted */\n   339: \tif (uwep && is_pole(uwep)) unweapon = FALSE;\n   340: \tu.usteed = mtmp;\n   341: \tremove_monster(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/steed.c:336:10\n        331: \t/* Success */\n        332: \tif (!force) {\n        333: \t    if (Levitation && !is_floater(ptr) && !is_flyer(ptr))\n        334: \t    \t/* Must have Lev_at_will at this point */\n        335: \t    \tpline(\"%s magically floats up!\", Monnam(mtmp));\nTARGET  336: \t    You(\"mount %s.\", mon_nam(mtmp));\n        337: \t}\n        338: \t/* setuwep handles polearms differently when you're mounted */\n        339: \tif (uwep && is_pole(uwep)) unweapon = FALSE;\n        340: \tu.usteed = mtmp;\n        341: \tremove_monster(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L00437_01",
     "original": "%s stirs.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:437:13\n   432: \t\telse {\n   433: \t\t    u.usteed-&gt;mfrozen = 0;\n   434: \t\t    u.usteed-&gt;mcanmove = 1;\n   435: \t\t}\n   436: \t\tif (u.usteed-&gt;msleeping || !u.usteed-&gt;mcanmove)\n&gt;  437: \t\t    pline(\"%s stirs.\", He);\n   438: \t\telse\n   439: \t\t    pline(\"%s rouses %sself!\", He, mhim(u.usteed));\n   440: \t    } else\n   441: \t\tpline(\"%s does not respond.\", He);\n   442: \t    return;"
+    "context": "src/steed.c:437:13\n        432: \t\telse {\n        433: \t\t    u.usteed-&gt;mfrozen = 0;\n        434: \t\t    u.usteed-&gt;mcanmove = 1;\n        435: \t\t}\n        436: \t\tif (u.usteed-&gt;msleeping || !u.usteed-&gt;mcanmove)\nTARGET  437: \t\t    pline(\"%s stirs.\", He);\n        438: \t\telse\n        439: \t\t    pline(\"%s rouses %sself!\", He, mhim(u.usteed));\n        440: \t    } else\n        441: \t\tpline(\"%s does not respond.\", He);\n        442: \t    return;"
   },
   {
     "key": "L00439_01",
     "original": "%s rouses %sself!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:439:13\n   434: \t\t    u.usteed-&gt;mcanmove = 1;\n   435: \t\t}\n   436: \t\tif (u.usteed-&gt;msleeping || !u.usteed-&gt;mcanmove)\n   437: \t\t    pline(\"%s stirs.\", He);\n   438: \t\telse\n&gt;  439: \t\t    pline(\"%s rouses %sself!\", He, mhim(u.usteed));\n   440: \t    } else\n   441: \t\tpline(\"%s does not respond.\", He);\n   442: \t    return;\n   443: \t}\n   444: "
+    "context": "src/steed.c:439:13\n        434: \t\t    u.usteed-&gt;mcanmove = 1;\n        435: \t\t}\n        436: \t\tif (u.usteed-&gt;msleeping || !u.usteed-&gt;mcanmove)\n        437: \t\t    pline(\"%s stirs.\", He);\n        438: \t\telse\nTARGET  439: \t\t    pline(\"%s rouses %sself!\", He, mhim(u.usteed));\n        440: \t    } else\n        441: \t\tpline(\"%s does not respond.\", He);\n        442: \t    return;\n        443: \t}\n        444: "
   },
   {
     "key": "L00441_01",
     "original": "%s does not respond.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:441:9\n   436: \t\tif (u.usteed-&gt;msleeping || !u.usteed-&gt;mcanmove)\n   437: \t\t    pline(\"%s stirs.\", He);\n   438: \t\telse\n   439: \t\t    pline(\"%s rouses %sself!\", He, mhim(u.usteed));\n   440: \t    } else\n&gt;  441: \t\tpline(\"%s does not respond.\", He);\n   442: \t    return;\n   443: \t}\n   444: \n   445: \t/* Make the steed less tame and check if it resists */\n   446: \tif (u.usteed-&gt;mtame) u.usteed-&gt;mtame--;"
+    "context": "src/steed.c:441:9\n        436: \t\tif (u.usteed-&gt;msleeping || !u.usteed-&gt;mcanmove)\n        437: \t\t    pline(\"%s stirs.\", He);\n        438: \t\telse\n        439: \t\t    pline(\"%s rouses %sself!\", He, mhim(u.usteed));\n        440: \t    } else\nTARGET  441: \t\tpline(\"%s does not respond.\", He);\n        442: \t    return;\n        443: \t}\n        444: \n        445: \t/* Make the steed less tame and check if it resists */\n        446: \tif (u.usteed-&gt;mtame) u.usteed-&gt;mtame--;"
   },
   {
     "key": "L00454_01",
     "original": "%s gallops!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:454:8\n   449: \t    newsym(u.usteed-&gt;mx, u.usteed-&gt;my);\n   450: \t    dismount_steed(DISMOUNT_THROWN);\n   451: \t    return;\n   452: \t}\n   453: \n&gt;  454: \tpline(\"%s gallops!\", Monnam(u.usteed));\n   455: \tu.ugallop += rn1(20, 30);\n   456: \treturn;\n   457: }\n   458: \n   459: /* Stop riding the current steed */"
+    "context": "src/steed.c:454:8\n        449: \t    newsym(u.usteed-&gt;mx, u.usteed-&gt;my);\n        450: \t    dismount_steed(DISMOUNT_THROWN);\n        451: \t    return;\n        452: \t}\n        453: \nTARGET  454: \tpline(\"%s gallops!\", Monnam(u.usteed));\n        455: \tu.ugallop += rn1(20, 30);\n        456: \treturn;\n        457: }\n        458: \n        459: /* Stop riding the current steed */"
   },
   {
     "key": "L00467_01",
     "original": "fall",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:467:21\n   462: \tint reason;\t\t/* Player was thrown off etc. */\n   463: {\n   464: \tstruct monst *mtmp;\n   465: \tstruct obj *otmp;\n   466: \tcoord cc;\n&gt;  467: \tconst char *verb = \"fall\";\n   468: \tboolean repair_leg_damage = TRUE;\n   469: \tunsigned save_utrap = u.utrap;\n   470: \tboolean have_spot = landing_spot(&cc,reason,0);\n   471: \t\n   472: \tmtmp = u.usteed;\t\t/* make a copy of steed pointer */"
+    "context": "src/steed.c:467:21\n        462: \tint reason;\t\t/* Player was thrown off etc. */\n        463: {\n        464: \tstruct monst *mtmp;\n        465: \tstruct obj *otmp;\n        466: \tcoord cc;\nTARGET  467: \tconst char *verb = \"fall\";\n        468: \tboolean repair_leg_damage = TRUE;\n        469: \tunsigned save_utrap = u.utrap;\n        470: \tboolean have_spot = landing_spot(&cc,reason,0);\n        471: \t\n        472: \tmtmp = u.usteed;\t\t/* make a copy of steed pointer */"
   },
   {
     "key": "L00481_01",
     "original": "are thrown",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:481:10\n   476: \n   477: \t/* Check the reason for dismounting */\n   478: \totmp = which_armor(mtmp, W_SADDLE);\n   479: \tswitch (reason) {\n   480: \t    case DISMOUNT_THROWN:\n&gt;  481: \t\tverb = \"are thrown\";\n   482: \t    case DISMOUNT_FELL:\n   483: \t\tYou(\"%s off of %s!\", verb, mon_nam(mtmp));\n   484: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n   485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n   486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));"
+    "context": "src/steed.c:481:10\n        476: \n        477: \t/* Check the reason for dismounting */\n        478: \totmp = which_armor(mtmp, W_SADDLE);\n        479: \tswitch (reason) {\n        480: \t    case DISMOUNT_THROWN:\nTARGET  481: \t\tverb = \"are thrown\";\n        482: \t    case DISMOUNT_FELL:\n        483: \t\tYou(\"%s off of %s!\", verb, mon_nam(mtmp));\n        484: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n        485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n        486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));"
   },
   {
     "key": "L00483_01",
     "original": "%s off of %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:483:7\n   478: \totmp = which_armor(mtmp, W_SADDLE);\n   479: \tswitch (reason) {\n   480: \t    case DISMOUNT_THROWN:\n   481: \t\tverb = \"are thrown\";\n   482: \t    case DISMOUNT_FELL:\n&gt;  483: \t\tYou(\"%s off of %s!\", verb, mon_nam(mtmp));\n   484: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n   485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n   486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));\n   487: \t\trepair_leg_damage = FALSE;\n   488: \t\tbreak;"
+    "context": "src/steed.c:483:7\n        478: \totmp = which_armor(mtmp, W_SADDLE);\n        479: \tswitch (reason) {\n        480: \t    case DISMOUNT_THROWN:\n        481: \t\tverb = \"are thrown\";\n        482: \t    case DISMOUNT_FELL:\nTARGET  483: \t\tYou(\"%s off of %s!\", verb, mon_nam(mtmp));\n        484: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n        485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n        486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));\n        487: \t\trepair_leg_damage = FALSE;\n        488: \t\tbreak;"
   },
   {
     "key": "L00485_01",
     "original": "riding accident",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:485:22\n   480: \t    case DISMOUNT_THROWN:\n   481: \t\tverb = \"are thrown\";\n   482: \t    case DISMOUNT_FELL:\n   483: \t\tYou(\"%s off of %s!\", verb, mon_nam(mtmp));\n   484: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n&gt;  485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n   486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));\n   487: \t\trepair_leg_damage = FALSE;\n   488: \t\tbreak;\n   489: \t    case DISMOUNT_POLY:\n   490: \t\tYou(\"can no longer ride %s.\", mon_nam(u.usteed));"
+    "context": "src/steed.c:485:22\n        480: \t    case DISMOUNT_THROWN:\n        481: \t\tverb = \"are thrown\";\n        482: \t    case DISMOUNT_FELL:\n        483: \t\tYou(\"%s off of %s!\", verb, mon_nam(mtmp));\n        484: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\nTARGET  485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n        486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));\n        487: \t\trepair_leg_damage = FALSE;\n        488: \t\tbreak;\n        489: \t    case DISMOUNT_POLY:\n        490: \t\tYou(\"can no longer ride %s.\", mon_nam(u.usteed));"
   },
   {
     "key": "L00490_01",
     "original": "can no longer ride %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:490:7\n   485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n   486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));\n   487: \t\trepair_leg_damage = FALSE;\n   488: \t\tbreak;\n   489: \t    case DISMOUNT_POLY:\n&gt;  490: \t\tYou(\"can no longer ride %s.\", mon_nam(u.usteed));\n   491: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n   492: \t\tbreak;\n   493: \t    case DISMOUNT_ENGULFED:\n   494: \t\t/* caller displays message */\n   495: \t\tbreak;"
+    "context": "src/steed.c:490:7\n        485: \t\tlosehp(rn1(10,10), \"riding accident\", KILLED_BY_AN);\n        486: \t\tset_wounded_legs(BOTH_SIDES, (int)HWounded_legs + rn1(5,5));\n        487: \t\trepair_leg_damage = FALSE;\n        488: \t\tbreak;\n        489: \t    case DISMOUNT_POLY:\nTARGET  490: \t\tYou(\"can no longer ride %s.\", mon_nam(u.usteed));\n        491: \t\tif (!have_spot) have_spot = landing_spot(&cc,reason,1);\n        492: \t\tbreak;\n        493: \t    case DISMOUNT_ENGULFED:\n        494: \t\t/* caller displays message */\n        495: \t\tbreak;"
   },
   {
     "key": "L00505_01",
     "original": "can't.  The saddle %s cursed.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:505:11\n   500: \t\t/* no messages, just make it so */\n   501: \t\tbreak;\n   502: \t    case DISMOUNT_BYCHOICE:\n   503: \t    default:\n   504: \t\tif (otmp && otmp-&gt;cursed) {\n&gt;  505: \t\t    You(\"can't.  The saddle %s cursed.\",\n   506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n   507: \t\t    otmp-&gt;bknown = TRUE;\n   508: \t\t    return;\n   509: \t\t}\n   510: \t\tif (!have_spot) {"
+    "context": "src/steed.c:505:11\n        500: \t\t/* no messages, just make it so */\n        501: \t\tbreak;\n        502: \t    case DISMOUNT_BYCHOICE:\n        503: \t    default:\n        504: \t\tif (otmp && otmp-&gt;cursed) {\nTARGET  505: \t\t    You(\"can't.  The saddle %s cursed.\",\n        506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n        507: \t\t    otmp-&gt;bknown = TRUE;\n        508: \t\t    return;\n        509: \t\t}\n        510: \t\tif (!have_spot) {"
   },
   {
     "key": "L00506_01",
     "original": "is",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:506:19\n   501: \t\tbreak;\n   502: \t    case DISMOUNT_BYCHOICE:\n   503: \t    default:\n   504: \t\tif (otmp && otmp-&gt;cursed) {\n   505: \t\t    You(\"can't.  The saddle %s cursed.\",\n&gt;  506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n   507: \t\t    otmp-&gt;bknown = TRUE;\n   508: \t\t    return;\n   509: \t\t}\n   510: \t\tif (!have_spot) {\n   511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");"
+    "context": "src/steed.c:506:19\n        501: \t\tbreak;\n        502: \t    case DISMOUNT_BYCHOICE:\n        503: \t    default:\n        504: \t\tif (otmp && otmp-&gt;cursed) {\n        505: \t\t    You(\"can't.  The saddle %s cursed.\",\nTARGET  506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n        507: \t\t    otmp-&gt;bknown = TRUE;\n        508: \t\t    return;\n        509: \t\t}\n        510: \t\tif (!have_spot) {\n        511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");"
   },
   {
     "key": "L00506_02",
     "original": "seems to be",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:506:26\n   501: \t\tbreak;\n   502: \t    case DISMOUNT_BYCHOICE:\n   503: \t    default:\n   504: \t\tif (otmp && otmp-&gt;cursed) {\n   505: \t\t    You(\"can't.  The saddle %s cursed.\",\n&gt;  506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n   507: \t\t    otmp-&gt;bknown = TRUE;\n   508: \t\t    return;\n   509: \t\t}\n   510: \t\tif (!have_spot) {\n   511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");"
+    "context": "src/steed.c:506:26\n        501: \t\tbreak;\n        502: \t    case DISMOUNT_BYCHOICE:\n        503: \t    default:\n        504: \t\tif (otmp && otmp-&gt;cursed) {\n        505: \t\t    You(\"can't.  The saddle %s cursed.\",\nTARGET  506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n        507: \t\t    otmp-&gt;bknown = TRUE;\n        508: \t\t    return;\n        509: \t\t}\n        510: \t\tif (!have_spot) {\n        511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");"
   },
   {
     "key": "L00511_01",
     "original": "can't. There isn't anywhere for you to stand.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:511:11\n   506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n   507: \t\t    otmp-&gt;bknown = TRUE;\n   508: \t\t    return;\n   509: \t\t}\n   510: \t\tif (!have_spot) {\n&gt;  511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");\n   512: \t\t    return;\n   513: \t\t}\n   514: \t\tif (!mtmp-&gt;mnamelth) {\n   515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n   516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));"
+    "context": "src/steed.c:511:11\n        506: \t\t\totmp-&gt;bknown ? \"is\" : \"seems to be\");\n        507: \t\t    otmp-&gt;bknown = TRUE;\n        508: \t\t    return;\n        509: \t\t}\n        510: \t\tif (!have_spot) {\nTARGET  511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");\n        512: \t\t    return;\n        513: \t\t}\n        514: \t\tif (!mtmp-&gt;mnamelth) {\n        515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n        516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));"
   },
   {
     "key": "L00515_01",
     "original": "You've been through the dungeon on %s with no name.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:515:10\n   510: \t\tif (!have_spot) {\n   511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");\n   512: \t\t    return;\n   513: \t\t}\n   514: \t\tif (!mtmp-&gt;mnamelth) {\n&gt;  515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n   516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));\n   517: \t\t\tif (Hallucination)\n   518: \t\t\t\tpline(\"It felt good to get out of the rain.\");\n   519: \t\t} else\n   520: \t\t\tYou(\"dismount %s.\", mon_nam(mtmp));"
+    "context": "src/steed.c:515:10\n        510: \t\tif (!have_spot) {\n        511: \t\t    You(\"can't. There isn't anywhere for you to stand.\");\n        512: \t\t    return;\n        513: \t\t}\n        514: \t\tif (!mtmp-&gt;mnamelth) {\nTARGET  515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n        516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));\n        517: \t\t\tif (Hallucination)\n        518: \t\t\t\tpline(\"It felt good to get out of the rain.\");\n        519: \t\t} else\n        520: \t\t\tYou(\"dismount %s.\", mon_nam(mtmp));"
   },
   {
     "key": "L00518_01",
     "original": "It felt good to get out of the rain.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:518:11\n   513: \t\t}\n   514: \t\tif (!mtmp-&gt;mnamelth) {\n   515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n   516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));\n   517: \t\t\tif (Hallucination)\n&gt;  518: \t\t\t\tpline(\"It felt good to get out of the rain.\");\n   519: \t\t} else\n   520: \t\t\tYou(\"dismount %s.\", mon_nam(mtmp));\n   521: \t}\n   522: \t/* While riding these refer to the steed's legs\n   523: \t * so after dismounting they refer to the player's"
+    "context": "src/steed.c:518:11\n        513: \t\t}\n        514: \t\tif (!mtmp-&gt;mnamelth) {\n        515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n        516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));\n        517: \t\t\tif (Hallucination)\nTARGET  518: \t\t\t\tpline(\"It felt good to get out of the rain.\");\n        519: \t\t} else\n        520: \t\t\tYou(\"dismount %s.\", mon_nam(mtmp));\n        521: \t}\n        522: \t/* While riding these refer to the steed's legs\n        523: \t * so after dismounting they refer to the player's"
   },
   {
     "key": "L00520_01",
     "original": "dismount %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:520:8\n   515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n   516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));\n   517: \t\t\tif (Hallucination)\n   518: \t\t\t\tpline(\"It felt good to get out of the rain.\");\n   519: \t\t} else\n&gt;  520: \t\t\tYou(\"dismount %s.\", mon_nam(mtmp));\n   521: \t}\n   522: \t/* While riding these refer to the steed's legs\n   523: \t * so after dismounting they refer to the player's\n   524: \t * legs once again.\n   525: \t */"
+    "context": "src/steed.c:520:8\n        515: \t\t\tpline(\"You've been through the dungeon on %s with no name.\",\n        516: \t\t\t\tan(mtmp-&gt;data-&gt;mname));\n        517: \t\t\tif (Hallucination)\n        518: \t\t\t\tpline(\"It felt good to get out of the rain.\");\n        519: \t\t} else\nTARGET  520: \t\t\tYou(\"dismount %s.\", mon_nam(mtmp));\n        521: \t}\n        522: \t/* While riding these refer to the steed's legs\n        523: \t * so after dismounting they refer to the player's\n        524: \t * legs once again.\n        525: \t */"
   },
   {
     "key": "L00551_01",
     "original": "%s falls into the %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:551:14\n   546: \n   547: \t\t/* The steed may drop into water/lava */\n   548: \t\tif (!is_flyer(mdat) && !is_floater(mdat) && !is_clinger(mdat)) {\n   549: \t\t    if (is_pool(u.ux, u.uy)) {\n   550: \t\t\tif (!Underwater)\n&gt;  551: \t\t\t    pline(\"%s falls into the %s!\", Monnam(mtmp),\n   552: \t\t\t\t\t\t\tsurface(u.ux, u.uy));\n   553: \t\t\tif (!is_swimmer(mdat) && !amphibious(mdat)) {\n   554: \t\t\t    killed(mtmp);\n   555: \t\t\t    adjalign(-1);\n   556: \t\t\t}"
+    "context": "src/steed.c:551:14\n        546: \n        547: \t\t/* The steed may drop into water/lava */\n        548: \t\tif (!is_flyer(mdat) && !is_floater(mdat) && !is_clinger(mdat)) {\n        549: \t\t    if (is_pool(u.ux, u.uy)) {\n        550: \t\t\tif (!Underwater)\nTARGET  551: \t\t\t    pline(\"%s falls into the %s!\", Monnam(mtmp),\n        552: \t\t\t\t\t\t\tsurface(u.ux, u.uy));\n        553: \t\t\tif (!is_swimmer(mdat) && !amphibious(mdat)) {\n        554: \t\t\t    killed(mtmp);\n        555: \t\t\t    adjalign(-1);\n        556: \t\t\t}"
   },
   {
     "key": "L00558_01",
     "original": "%s is pulled into the lava!",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:558:10\n   553: \t\t\tif (!is_swimmer(mdat) && !amphibious(mdat)) {\n   554: \t\t\t    killed(mtmp);\n   555: \t\t\t    adjalign(-1);\n   556: \t\t\t}\n   557: \t\t    } else if (is_lava(u.ux, u.uy)) {\n&gt;  558: \t\t\tpline(\"%s is pulled into the lava!\", Monnam(mtmp));\n   559: \t\t\tif (!likes_lava(mdat)) {\n   560: \t\t\t    killed(mtmp);\n   561: \t\t\t    adjalign(-1);\n   562: \t\t\t}\n   563: \t\t    }"
+    "context": "src/steed.c:558:10\n        553: \t\t\tif (!is_swimmer(mdat) && !amphibious(mdat)) {\n        554: \t\t\t    killed(mtmp);\n        555: \t\t\t    adjalign(-1);\n        556: \t\t\t}\n        557: \t\t    } else if (is_lava(u.ux, u.uy)) {\nTARGET  558: \t\t\tpline(\"%s is pulled into the lava!\", Monnam(mtmp));\n        559: \t\t\tif (!likes_lava(mdat)) {\n        560: \t\t\t    killed(mtmp);\n        561: \t\t\t    adjalign(-1);\n        562: \t\t\t}\n        563: \t\t    }"
   },
   {
     "key": "L00630_01",
     "original": "placing %s onto map?",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:630:13\n   625: int x, y;\n   626: {\n   627:     if (mon == u.usteed ||\n   628: \t    /* special case is for convoluted vault guard handling */\n   629: \t    (DEADMONSTER(mon) && !(mon-&gt;isgd && x == 0 && y == 0))) {\n&gt;  630: \timpossible(\"placing %s onto map?\",\n   631: \t\t   (mon == u.usteed) ? \"steed\" : \"defunct monster\");\n   632: \treturn;\n   633:     }\n   634:     mon-&gt;mx = x, mon-&gt;my = y;\n   635:     level.monsters[x][y] = mon;"
+    "context": "src/steed.c:630:13\n        625: int x, y;\n        626: {\n        627:     if (mon == u.usteed ||\n        628: \t    /* special case is for convoluted vault guard handling */\n        629: \t    (DEADMONSTER(mon) && !(mon-&gt;isgd && x == 0 && y == 0))) {\nTARGET  630: \timpossible(\"placing %s onto map?\",\n        631: \t\t   (mon == u.usteed) ? \"steed\" : \"defunct monster\");\n        632: \treturn;\n        633:     }\n        634:     mon-&gt;mx = x, mon-&gt;my = y;\n        635:     level.monsters[x][y] = mon;"
   },
   {
     "key": "L00631_01",
     "original": "steed",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:631:26\n   626: {\n   627:     if (mon == u.usteed ||\n   628: \t    /* special case is for convoluted vault guard handling */\n   629: \t    (DEADMONSTER(mon) && !(mon-&gt;isgd && x == 0 && y == 0))) {\n   630: \timpossible(\"placing %s onto map?\",\n&gt;  631: \t\t   (mon == u.usteed) ? \"steed\" : \"defunct monster\");\n   632: \treturn;\n   633:     }\n   634:     mon-&gt;mx = x, mon-&gt;my = y;\n   635:     level.monsters[x][y] = mon;\n   636: }"
+    "context": "src/steed.c:631:26\n        626: {\n        627:     if (mon == u.usteed ||\n        628: \t    /* special case is for convoluted vault guard handling */\n        629: \t    (DEADMONSTER(mon) && !(mon-&gt;isgd && x == 0 && y == 0))) {\n        630: \timpossible(\"placing %s onto map?\",\nTARGET  631: \t\t   (mon == u.usteed) ? \"steed\" : \"defunct monster\");\n        632: \treturn;\n        633:     }\n        634:     mon-&gt;mx = x, mon-&gt;my = y;\n        635:     level.monsters[x][y] = mon;\n        636: }"
   },
   {
     "key": "L00631_02",
     "original": "defunct monster",
     "translation": "",
     "stage": 0,
-    "context": "src/steed.c:631:36\n   626: {\n   627:     if (mon == u.usteed ||\n   628: \t    /* special case is for convoluted vault guard handling */\n   629: \t    (DEADMONSTER(mon) && !(mon-&gt;isgd && x == 0 && y == 0))) {\n   630: \timpossible(\"placing %s onto map?\",\n&gt;  631: \t\t   (mon == u.usteed) ? \"steed\" : \"defunct monster\");\n   632: \treturn;\n   633:     }\n   634:     mon-&gt;mx = x, mon-&gt;my = y;\n   635:     level.monsters[x][y] = mon;\n   636: }"
+    "context": "src/steed.c:631:36\n        626: {\n        627:     if (mon == u.usteed ||\n        628: \t    /* special case is for convoluted vault guard handling */\n        629: \t    (DEADMONSTER(mon) && !(mon-&gt;isgd && x == 0 && y == 0))) {\n        630: \timpossible(\"placing %s onto map?\",\nTARGET  631: \t\t   (mon == u.usteed) ? \"steed\" : \"defunct monster\");\n        632: \treturn;\n        633:     }\n        634:     mon-&gt;mx = x, mon-&gt;my = y;\n        635:     level.monsters[x][y] = mon;\n        636: }"
   }
 ]

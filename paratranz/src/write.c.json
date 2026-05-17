@@ -4,13 +4,13 @@
     "original": "scroll",
     "translation": "",
     "stage": 0,
-    "context": "src/write.c:99:55\n    94: \n    95: \t/* get paper to write on */\n    96: \tpaper = getobj(write_on,\"可以用魔笔书写的\");\n    97: \tif(!paper)\n    98: \t\treturn(0);\n&gt;   99: \ttypeword = (paper-&gt;oclass == SPBOOK_CLASS) ? \"法术书\" : \"scroll\";\n   100: \tif(Blind && !paper-&gt;dknown) {\n   101: \t\tYou(\"并不知道%s上到底写没写东西！\", typeword);\n   102: \t\treturn(1);\n   103: \t}\n   104: \tpaper-&gt;dknown = 1;"
+    "context": "src/write.c:99:55\n         94: \n         95: \t/* get paper to write on */\n         96: \tpaper = getobj(write_on,\"可以用魔笔书写的\");\n         97: \tif(!paper)\n         98: \t\treturn(0);\nTARGET   99: \ttypeword = (paper-&gt;oclass == SPBOOK_CLASS) ? \"法术书\" : \"scroll\";\n        100: \tif(Blind && !paper-&gt;dknown) {\n        101: \t\tYou(\"并不知道%s上到底写没写东西！\", typeword);\n        102: \t\treturn(1);\n        103: \t}\n        104: \tpaper-&gt;dknown = 1;"
   },
   {
     "key": "L00119_01",
     "original": "spellbook ",
     "translation": "",
     "stage": 0,
-    "context": "src/write.c:119:25\n   114: \t(void)mungspaces(namebuf);\t/* remove any excess whitespace */\n   115: \tif(namebuf[0] == '\\033' || !namebuf[0])\n   116: \t\treturn(1);\n   117: \tnm = namebuf;\n   118: \tif (!strncmpi(nm, \"卷轴\", 7)) nm += 7;\n&gt;  119: \telse if (!strncmpi(nm, \"spellbook \", 10)) nm += 10;\n   120: \tif (!strncmpi(nm, \"\", 3)) nm += 3;\n   121: \n   122: \tif ((bp = strstri(nm, \"防具抚摸\")) != 0) {\n   123: \t\t(void)strncpy(bp, \"防具附魔\", 7);\t/* won't add '\\0' */\n   124: \t\t(void)mungspaces(bp + 1);\t/* remove the extra space */"
+    "context": "src/write.c:119:25\n        114: \t(void)mungspaces(namebuf);\t/* remove any excess whitespace */\n        115: \tif(namebuf[0] == '\\033' || !namebuf[0])\n        116: \t\treturn(1);\n        117: \tnm = namebuf;\n        118: \tif (!strncmpi(nm, \"卷轴\", 7)) nm += 7;\nTARGET  119: \telse if (!strncmpi(nm, \"spellbook \", 10)) nm += 10;\n        120: \tif (!strncmpi(nm, \"\", 3)) nm += 3;\n        121: \n        122: \tif ((bp = strstri(nm, \"防具抚摸\")) != 0) {\n        123: \t\t(void)strncpy(bp, \"防具附魔\", 7);\t/* won't add '\\0' */\n        124: \t\t(void)mungspaces(bp + 1);\t/* remove the extra space */"
   }
 ]

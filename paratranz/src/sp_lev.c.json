@@ -4,216 +4,216 @@
     "original": "get_location:  can't find a place!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:242:9\n   237: \t\t\t    }\n   238: \t\t\t    if (!within_bounded_area(*x,*y,x1,y1,x2,y2))\n   239: \t\t\t\tgoto found_it;\n   240: \t\t\t}\n   241: \t\t    }\n&gt;  242: \t\tpanic(\"get_location:  can't find a place!\");\n   243: \t    }\n   244: \t} else {\t\t\t/* random location */\n   245: \t    do {\n   246: \t\t*x = xstart + rn2((int)xsize);\n   247: \t\t*y = ystart + rn2((int)ysize);"
+    "context": "src/sp_lev.c:242:9\n        237: \t\t\t    }\n        238: \t\t\t    if (!within_bounded_area(*x,*y,x1,y1,x2,y2))\n        239: \t\t\t\tgoto found_it;\n        240: \t\t\t}\n        241: \t\t    }\nTARGET  242: \t\tpanic(\"get_location:  can't find a place!\");\n        243: \t    }\n        244: \t} else {\t\t\t/* random location */\n        245: \t    do {\n        246: \t\t*x = xstart + rn2((int)xsize);\n        247: \t\t*y = ystart + rn2((int)ysize);"
   },
   {
     "key": "L00259_01",
     "original": "get_location:  can't find a place!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:259:9\n   254: \t\t    for (yy = 0; yy &lt; ysize; yy++) {\n   255: \t\t\t*x = xstart + xx;\n   256: \t\t\t*y = ystart + yy;\n   257: \t\t\tif (is_ok_location(*x,*y,humidity)) goto found_it;\n   258: \t\t    }\n&gt;  259: \t\tpanic(\"get_location:  can't find a place!\");\n   260: \t    }\n   261: \t}\n   262: found_it:;\n   263: \n   264: \tif (!isok(*x,*y)) {"
+    "context": "src/sp_lev.c:259:9\n        254: \t\t    for (yy = 0; yy &lt; ysize; yy++) {\n        255: \t\t\t*x = xstart + xx;\n        256: \t\t\t*y = ystart + yy;\n        257: \t\t\tif (is_ok_location(*x,*y,humidity)) goto found_it;\n        258: \t\t    }\nTARGET  259: \t\tpanic(\"get_location:  can't find a place!\");\n        260: \t    }\n        261: \t}\n        262: found_it:;\n        263: \n        264: \tif (!isok(*x,*y)) {"
   },
   {
     "key": "L00265_01",
     "original": "get_location:  (%d,%d) out of bounds",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:265:17\n   260: \t    }\n   261: \t}\n   262: found_it:;\n   263: \n   264: \tif (!isok(*x,*y)) {\n&gt;  265: \t    impossible(\"get_location:  (%d,%d) out of bounds\", *x, *y);\n   266: \t    *x = x_maze_max; *y = y_maze_max;\n   267: \t}\n   268: \treturn TRUE;\n   269: }\n   270: "
+    "context": "src/sp_lev.c:265:17\n        260: \t    }\n        261: \t}\n        262: found_it:;\n        263: \n        264: \tif (!isok(*x,*y)) {\nTARGET  265: \t    impossible(\"get_location:  (%d,%d) out of bounds\", *x, *y);\n        266: \t    *x = x_maze_max; *y = y_maze_max;\n        267: \t}\n        268: \treturn TRUE;\n        269: }\n        270: "
   },
   {
     "key": "L00339_01",
     "original": "get_room_loc : can't find a place!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:339:13\n   334: \tif (*x &lt;0 && *y &lt;0) {\n   335: \t\tif (somexy(croom, &c)) {\n   336: \t\t\t*x = c.x;\n   337: \t\t\t*y = c.y;\n   338: \t\t} else\n&gt;  339: \t\t    panic(\"get_room_loc : can't find a place!\");\n   340: \t} else {\n   341: \t\tif (*x &lt; 0)\n   342: \t\t    *x = rn2(croom-&gt;hx - croom-&gt;lx + 1);\n   343: \t\tif (*y &lt; 0)\n   344: \t\t    *y = rn2(croom-&gt;hy - croom-&gt;ly + 1);"
+    "context": "src/sp_lev.c:339:13\n        334: \tif (*x &lt;0 && *y &lt;0) {\n        335: \t\tif (somexy(croom, &c)) {\n        336: \t\t\t*x = c.x;\n        337: \t\t\t*y = c.y;\n        338: \t\t} else\nTARGET  339: \t\t    panic(\"get_room_loc : can't find a place!\");\n        340: \t} else {\n        341: \t\tif (*x &lt; 0)\n        342: \t\t    *x = rn2(croom-&gt;hx - croom-&gt;lx + 1);\n        343: \t\tif (*y &lt; 0)\n        344: \t\t    *y = rn2(croom-&gt;hy - croom-&gt;ly + 1);"
   },
   {
     "key": "L00369_01",
     "original": "get_free_room_loc:  can't find a place!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:369:12\n   364: \t    try_x = *x,  try_y = *y;\n   365: \t    get_room_loc(&try_x, &try_y, croom);\n   366: \t} while (levl[try_x][try_y].typ != ROOM && ++trycnt &lt;= 100);\n   367: \n   368: \tif (trycnt &gt; 100)\n&gt;  369: \t    panic(\"get_free_room_loc:  can't find a place!\");\n   370: \t*x = try_x,  *y = try_y;\n   371: }\n   372: \n   373: boolean\n   374: check_room(lowx, ddx, lowy, ddy, vault)"
+    "context": "src/sp_lev.c:369:12\n        364: \t    try_x = *x,  try_y = *y;\n        365: \t    get_room_loc(&try_x, &try_y, croom);\n        366: \t} while (levl[try_x][try_y].typ != ROOM && ++trycnt &lt;= 100);\n        367: \n        368: \tif (trycnt &gt; 100)\nTARGET  369: \t    panic(\"get_free_room_loc:  can't find a place!\");\n        370: \t*x = try_x,  *y = try_y;\n        371: }\n        372: \n        373: boolean\n        374: check_room(lowx, ddx, lowy, ddy, vault)"
   },
   {
     "key": "L00403_01",
     "original": "strange area [%d,%d] in check_room.",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:403:20\n   398: \t\tlev = &levl[x][y];\n   399: \t\tfor (; y &lt;= ymax; y++) {\n   400: \t\t\tif (lev++-&gt;typ) {\n   401: #ifdef DEBUG\n   402: \t\t\t\tif(!vault)\n&gt;  403: \t\t\t\t    debugpline(\"strange area [%d,%d] in check_room.\",x,y);\n   404: #endif\n   405: \t\t\t\tif (!rn2(3))\treturn FALSE;\n   406: \t\t\t\tif (x &lt; *lowx)\n   407: \t\t\t\t    *lowx = x + xlim + 1;\n   408: \t\t\t\telse"
+    "context": "src/sp_lev.c:403:20\n        398: \t\tlev = &levl[x][y];\n        399: \t\tfor (; y &lt;= ymax; y++) {\n        400: \t\t\tif (lev++-&gt;typ) {\n        401: #ifdef DEBUG\n        402: \t\t\t\tif(!vault)\nTARGET  403: \t\t\t\t    debugpline(\"strange area [%d,%d] in check_room.\",x,y);\n        404: #endif\n        405: \t\t\t\tif (!rn2(3))\treturn FALSE;\n        406: \t\t\t\tif (x &lt; *lowx)\n        407: \t\t\t\t    *lowx = x + xlim + 1;\n        408: \t\t\t\telse"
   },
   {
     "key": "L00478_01",
     "original": "No more rects...",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:478:16\n   473: \t\t\txchar hx, hy, lx, ly, dx, dy;\n   474: \t\t\tr1 = rnd_rect(); /* Get a random rectangle */\n   475: \n   476: \t\t\tif (!r1) { /* No more free rectangles ! */\n   477: #ifdef DEBUG\n&gt;  478: \t\t\t\tdebugpline(\"No more rects...\");\n   479: #endif\n   480: \t\t\t\treturn FALSE;\n   481: \t\t\t}\n   482: \t\t\thx = r1-&gt;hx;\n   483: \t\t\thy = r1-&gt;hy;"
+    "context": "src/sp_lev.c:478:16\n        473: \t\t\txchar hx, hy, lx, ly, dx, dy;\n        474: \t\t\tr1 = rnd_rect(); /* Get a random rectangle */\n        475: \n        476: \t\t\tif (!r1) { /* No more free rectangles ! */\n        477: #ifdef DEBUG\nTARGET  478: \t\t\t\tdebugpline(\"No more rects...\");\n        479: #endif\n        480: \t\t\t\treturn FALSE;\n        481: \t\t\t}\n        482: \t\t\thx = r1-&gt;hx;\n        483: \t\t\thy = r1-&gt;hy;"
   },
   {
     "key": "L00714_01",
     "original": "create_door: No wall for door!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:714:10\n   709: \t\t\tx = broom-&gt;hx + 1;\n   710: \t\t\ty = broom-&gt;ly + dpos;\n   711: \t\t\tbreak;\n   712: \t\t      default:\n   713: \t\t\tx = y = 0;\n&gt;  714: \t\t\tpanic(\"create_door: No wall for door!\");\n   715: \t\t\tbreak;\n   716: \t\t}\n   717: \t\tif (okdoor(x,y))\n   718: \t\t    break;\n   719: \t} while (++trycnt &lt;= 100);"
+    "context": "src/sp_lev.c:714:10\n        709: \t\t\tx = broom-&gt;hx + 1;\n        710: \t\t\ty = broom-&gt;ly + dpos;\n        711: \t\t\tbreak;\n        712: \t\t      default:\n        713: \t\t\tx = y = 0;\nTARGET  714: \t\t\tpanic(\"create_door: No wall for door!\");\n        715: \t\t\tbreak;\n        716: \t\t}\n        717: \t\tif (okdoor(x,y))\n        718: \t\t    break;\n        719: \t} while (++trycnt &lt;= 100);"
   },
   {
     "key": "L00721_01",
     "original": "create_door: Can't find a proper place!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:721:14\n   716: \t\t}\n   717: \t\tif (okdoor(x,y))\n   718: \t\t    break;\n   719: \t} while (++trycnt &lt;= 100);\n   720: \tif (trycnt &gt; 100) {\n&gt;  721: \t\timpossible(\"create_door: Can't find a proper place!\");\n   722: \t\treturn;\n   723: \t}\n   724: \ti = add_door(x,y,broom);\n   725: \tdoors[i].arti_key = dd-&gt;arti_key;\n   726: \tlevl[x][y].typ = (dd-&gt;secret ? SDOOR : DOOR);"
+    "context": "src/sp_lev.c:721:14\n        716: \t\t}\n        717: \t\tif (okdoor(x,y))\n        718: \t\t    break;\n        719: \t} while (++trycnt &lt;= 100);\n        720: \tif (trycnt &gt; 100) {\nTARGET  721: \t\timpossible(\"create_door: Can't find a proper place!\");\n        722: \t\treturn;\n        723: \t}\n        724: \ti = add_door(x,y,broom);\n        725: \tdoors[i].arti_key = dd-&gt;arti_key;\n        726: \tlevl[x][y].typ = (dd-&gt;secret ? SDOOR : DOOR);"
   },
   {
     "key": "L00768_01",
     "original": "couldn't create secret door on any walls 0x%x",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:768:16\n   763: \t    add_door(sx,sy,croom);\n   764: \t    return;\n   765: \t}\n   766:     }\n   767: \n&gt;  768:     impossible(\"couldn't create secret door on any walls 0x%x\", walls);\n   769: }\n   770: \n   771: /*\n   772:  * Create a trap in a room.\n   773:  */"
+    "context": "src/sp_lev.c:768:16\n        763: \t    add_door(sx,sy,croom);\n        764: \t    return;\n        765: \t}\n        766:     }\n        767: \nTARGET  768:     impossible(\"couldn't create secret door on any walls 0x%x\", walls);\n        769: }\n        770: \n        771: /*\n        772:  * Create a trap in a room.\n        773:  */"
   },
   {
     "key": "L00838_01",
     "original": "create_monster: unknown monster class '%c'",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:838:12\n   833: \t    class = (char) def_char_to_monclass(rmonst[- m-&gt;class - 1]);\n   834: \telse\n   835: \t    class = 0;\n   836: \n   837: \tif (class == MAXMCLASSES)\n&gt;  838: \t    panic(\"create_monster: unknown monster class '%c'\", m-&gt;class);\n   839: \n   840: \tamask = (m-&gt;align == AM_SPLEV_CO) ?\n   841: \t\t\tAlign2amask(u.ualignbase[A_ORIGINAL]) :\n   842: \t\t(m-&gt;align == AM_SPLEV_NONCO) ?\n   843: \t\t\tAlign2amask(noncoalignment(u.ualignbase[A_ORIGINAL])) :"
+    "context": "src/sp_lev.c:838:12\n        833: \t    class = (char) def_char_to_monclass(rmonst[- m-&gt;class - 1]);\n        834: \telse\n        835: \t    class = 0;\n        836: \n        837: \tif (class == MAXMCLASSES)\nTARGET  838: \t    panic(\"create_monster: unknown monster class '%c'\", m-&gt;class);\n        839: \n        840: \tamask = (m-&gt;align == AM_SPLEV_CO) ?\n        841: \t\t\tAlign2amask(u.ualignbase[A_ORIGINAL]) :\n        842: \t\t(m-&gt;align == AM_SPLEV_NONCO) ?\n        843: \t\t\tAlign2amask(noncoalignment(u.ualignbase[A_ORIGINAL])) :"
   },
   {
     "key": "L00927_01",
     "original": "create_monster: mon has an appearance, \\\"%s\\\", but no type",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:927:3\n   922: \t\tint i;\n   923: \n   924: \t\tswitch (m-&gt;appear) {\n   925: \t\t    case M_AP_NOTHING:\n   926: \t\t\timpossible(\n&gt;  927: \t\t\"create_monster: mon has an appearance, \\\"%s\\\", but no type\",\n   928: \t\t\t\tm-&gt;appear_as.str);\n   929: \t\t\tbreak;\n   930: \n   931: \t\t    case M_AP_FURNITURE:\n   932: \t\t\tfor (i = 0; i &lt; MAXPCHARS; i++)"
+    "context": "src/sp_lev.c:927:3\n        922: \t\tint i;\n        923: \n        924: \t\tswitch (m-&gt;appear) {\n        925: \t\t    case M_AP_NOTHING:\n        926: \t\t\timpossible(\nTARGET  927: \t\t\"create_monster: mon has an appearance, \\\"%s\\\", but no type\",\n        928: \t\t\t\tm-&gt;appear_as.str);\n        929: \t\t\tbreak;\n        930: \n        931: \t\t    case M_AP_FURNITURE:\n        932: \t\t\tfor (i = 0; i &lt; MAXPCHARS; i++)"
   },
   {
     "key": "L00938_01",
     "original": "create_monster: can't find feature \\\"%s\\\"",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:938:5\n   933: \t\t\t    if (!strcmp(defsyms[i].explanation,\n   934: \t\t\t\t\tm-&gt;appear_as.str))\n   935: \t\t\t\tbreak;\n   936: \t\t\tif (i == MAXPCHARS) {\n   937: \t\t\t    impossible(\n&gt;  938: \t\t\t\t\"create_monster: can't find feature \\\"%s\\\"\",\n   939: \t\t\t\tm-&gt;appear_as.str);\n   940: \t\t\t} else {\n   941: \t\t\t    mtmp-&gt;m_ap_type = M_AP_FURNITURE;\n   942: \t\t\t    mtmp-&gt;mappearance = i;\n   943: \t\t\t}"
+    "context": "src/sp_lev.c:938:5\n        933: \t\t\t    if (!strcmp(defsyms[i].explanation,\n        934: \t\t\t\t\tm-&gt;appear_as.str))\n        935: \t\t\t\tbreak;\n        936: \t\t\tif (i == MAXPCHARS) {\n        937: \t\t\t    impossible(\nTARGET  938: \t\t\t\t\"create_monster: can't find feature \\\"%s\\\"\",\n        939: \t\t\t\tm-&gt;appear_as.str);\n        940: \t\t\t} else {\n        941: \t\t\t    mtmp-&gt;m_ap_type = M_AP_FURNITURE;\n        942: \t\t\t    mtmp-&gt;mappearance = i;\n        943: \t\t\t}"
   },
   {
     "key": "L00953_01",
     "original": "create_monster: can't find object \\\"%s\\\"",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:953:5\n   948: \t\t\t    if (OBJ_NAME(objects[i]) &&\n   949: \t\t\t\t!strcmp(OBJ_NAME(objects[i]),m-&gt;appear_as.str))\n   950: \t\t\t\tbreak;\n   951: \t\t\tif (i == NUM_OBJECTS) {\n   952: \t\t\t    impossible(\n&gt;  953: \t\t\t\t\"create_monster: can't find object \\\"%s\\\"\",\n   954: \t\t\t\tm-&gt;appear_as.str);\n   955: \t\t\t} else {\n   956: \t\t\t    mtmp-&gt;m_ap_type = M_AP_OBJECT;\n   957: \t\t\t    mtmp-&gt;mappearance = i;\n   958: \t\t\t}"
+    "context": "src/sp_lev.c:953:5\n        948: \t\t\t    if (OBJ_NAME(objects[i]) &&\n        949: \t\t\t\t!strcmp(OBJ_NAME(objects[i]),m-&gt;appear_as.str))\n        950: \t\t\t\tbreak;\n        951: \t\t\tif (i == NUM_OBJECTS) {\n        952: \t\t\t    impossible(\nTARGET  953: \t\t\t\t\"create_monster: can't find object \\\"%s\\\"\",\n        954: \t\t\t\tm-&gt;appear_as.str);\n        955: \t\t\t} else {\n        956: \t\t\t    mtmp-&gt;m_ap_type = M_AP_OBJECT;\n        957: \t\t\t    mtmp-&gt;mappearance = i;\n        958: \t\t\t}"
   },
   {
     "key": "L00966_01",
     "original": "create_monster: unimplemented mon appear type [%d,\\\"%s\\\"]",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:966:3\n   961: \t\t    case M_AP_MONSTER:\n   962: \t\t\t/* note: mimics don't appear as monsters! */\n   963: \t\t\t/*\t (but chameleons can :-)\t  */\n   964: \t\t    default:\n   965: \t\t\timpossible(\n&gt;  966: \t\t\"create_monster: unimplemented mon appear type [%d,\\\"%s\\\"]\",\n   967: \t\t\t\tm-&gt;appear, m-&gt;appear_as.str);\n   968: \t\t\tbreak;\n   969: \t\t}\n   970: \t\tif (does_block(x, y, &levl[x][y]))\n   971: \t\t    block_point(x, y);"
+    "context": "src/sp_lev.c:966:3\n        961: \t\t    case M_AP_MONSTER:\n        962: \t\t\t/* note: mimics don't appear as monsters! */\n        963: \t\t\t/*\t (but chameleons can :-)\t  */\n        964: \t\t    default:\n        965: \t\t\timpossible(\nTARGET  966: \t\t\"create_monster: unimplemented mon appear type [%d,\\\"%s\\\"]\",\n        967: \t\t\t\tm-&gt;appear, m-&gt;appear_as.str);\n        968: \t\t\tbreak;\n        969: \t\t}\n        970: \t\tif (does_block(x, y, &levl[x][y]))\n        971: \t\t    block_point(x, y);"
   },
   {
     "key": "L01041_01",
     "original": "create_object:  unexpected object class '%c'",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1041:9\n  1036: \t     * class characters.  We must convert them to the internal format.\n  1037: \t     */\n  1038: \t    char oclass = (char) def_char_to_objclass(c);\n  1039: \n  1040: \t    if (oclass == MAXOCLASSES)\n&gt; 1041: \t\tpanic(\"create_object:  unexpected object class '%c'\",c);\n  1042: \n  1043: \t    /* KMH -- Create piles of gold properly */\n  1044: \t    /* Bruce Cox/WAC - some clean ups */\n  1045: \t    if (oclass == COIN_CLASS && !o-&gt;containment) {\n  1046: \t\tmkgold(0L, x, y);"
+    "context": "src/sp_lev.c:1041:9\n       1036: \t     * class characters.  We must convert them to the internal format.\n       1037: \t     */\n       1038: \t    char oclass = (char) def_char_to_objclass(c);\n       1039: \n       1040: \t    if (oclass == MAXOCLASSES)\nTARGET 1041: \t\tpanic(\"create_object:  unexpected object class '%c'\",c);\n       1042: \n       1043: \t    /* KMH -- Create piles of gold properly */\n       1044: \t    /* Bruce Cox/WAC - some clean ups */\n       1045: \t    if (oclass == COIN_CLASS && !o-&gt;containment) {\n       1046: \t\tmkgold(0L, x, y);"
   },
   {
     "key": "L01092_01",
     "original": "create_object: no container",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1092:18\n  1087: \t    static struct obj *container = 0;\n  1088: \n  1089: \t    /* contents */\n  1090: \t    case 1:\n  1091: \t\tif (!container) {\n&gt; 1092: \t\t    impossible(\"create_object: no container\");\n  1093: \t\t    break;\n  1094: \t\t}\n  1095: \t\tremove_object(otmp);\n  1096: \t\t(void) add_to_container(container, otmp);\n  1097: \t\tgoto o_done;\t\t/* don't stack, but do other cleanup */"
+    "context": "src/sp_lev.c:1092:18\n       1087: \t    static struct obj *container = 0;\n       1088: \n       1089: \t    /* contents */\n       1090: \t    case 1:\n       1091: \t\tif (!container) {\nTARGET 1092: \t\t    impossible(\"create_object: no container\");\n       1093: \t\t    break;\n       1094: \t\t}\n       1095: \t\tremove_object(otmp);\n       1096: \t\t(void) add_to_container(container, otmp);\n       1097: \t\tgoto o_done;\t\t/* don't stack, but do other cleanup */"
   },
   {
     "key": "L01106_01",
     "original": "containment type %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1106:26\n  1101: \t\tcontainer = otmp;\n  1102: \t\tbreak;\n  1103: \t    /* nothing */\n  1104: \t    case 0: break;\n  1105: \n&gt; 1106: \t    default: impossible(\"containment type %d?\", (int) o-&gt;containment);\n  1107: \t}\n  1108: \n  1109: \t/* Medusa level special case: statues are petrified monsters, so they\n  1110: \t * are not stone-resistant and have monster inventory.  They also lack\n  1111: \t * other contents, but that can be specified as an empty container."
+    "context": "src/sp_lev.c:1106:26\n       1101: \t\tcontainer = otmp;\n       1102: \t\tbreak;\n       1103: \t    /* nothing */\n       1104: \t    case 0: break;\n       1105: \nTARGET 1106: \t    default: impossible(\"containment type %d?\", (int) o-&gt;containment);\n       1107: \t}\n       1108: \n       1109: \t/* Medusa level special case: statues are petrified monsters, so they\n       1110: \t * are not stone-resistant and have monster inventory.  They also lack\n       1111: \t * other contents, but that can be specified as an empty container."
   },
   {
     "key": "L01366_01",
     "original": "search_door: Bad wall!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1366:9\n  1361: \t\txx = croom-&gt;lx - 1;\n  1362: \t\tyy = croom-&gt;ly;\n  1363: \t\tbreak;\n  1364: \t      default:\n  1365: \t\tdx = dy = xx = yy = 0;\n&gt; 1366: \t\tpanic(\"search_door: Bad wall!\");\n  1367: \t\tbreak;\n  1368: \t}\n  1369: \twhile (xx &lt;= croom-&gt;hx+1 && yy &lt;= croom-&gt;hy+1) {\n  1370: \t\tif (IS_DOOR(levl[xx][yy].typ) || levl[xx][yy].typ == SDOOR) {\n  1371: \t\t\t*x = xx;"
+    "context": "src/sp_lev.c:1366:9\n       1361: \t\txx = croom-&gt;lx - 1;\n       1362: \t\tyy = croom-&gt;ly;\n       1363: \t\tbreak;\n       1364: \t      default:\n       1365: \t\tdx = dy = xx = yy = 0;\nTARGET 1366: \t\tpanic(\"search_door: Bad wall!\");\n       1367: \t\tbreak;\n       1368: \t}\n       1369: \twhile (xx &lt;= croom-&gt;hx+1 && yy &lt;= croom-&gt;hy+1) {\n       1370: \t\tif (IS_DOOR(levl[xx][yy].typ) || levl[xx][yy].typ == SDOOR) {\n       1371: \t\t\t*x = xx;"
   },
   {
     "key": "L01402_01",
     "original": "dig_corridor: bad coords : (%d,%d) (%d,%d).",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1402:14\n  1397: \ttx = dest-&gt;x; ty = dest-&gt;y;\n  1398: \tif (xx &lt;= 0 || yy &lt;= 0 || tx &lt;= 0 || ty &lt;= 0 ||\n  1399: \t    xx &gt; COLNO-1 || tx &gt; COLNO-1 ||\n  1400: \t    yy &gt; ROWNO-1 || ty &gt; ROWNO-1) {\n  1401: #ifdef DEBUG\n&gt; 1402: \t\tdebugpline(\"dig_corridor: bad coords : (%d,%d) (%d,%d).\",\n  1403: \t\t\t   xx,yy,tx,ty);\n  1404: #endif\n  1405: \t\treturn FALSE;\n  1406: \t}\n  1407: \tif (tx &gt; xx)\t\tdx = 1;"
+    "context": "src/sp_lev.c:1402:14\n       1397: \ttx = dest-&gt;x; ty = dest-&gt;y;\n       1398: \tif (xx &lt;= 0 || yy &lt;= 0 || tx &lt;= 0 || ty &lt;= 0 ||\n       1399: \t    xx &gt; COLNO-1 || tx &gt; COLNO-1 ||\n       1400: \t    yy &gt; ROWNO-1 || ty &gt; ROWNO-1) {\n       1401: #ifdef DEBUG\nTARGET 1402: \t\tdebugpline(\"dig_corridor: bad coords : (%d,%d) (%d,%d).\",\n       1403: \t\t\t   xx,yy,tx,ty);\n       1404: #endif\n       1405: \t\treturn FALSE;\n       1406: \t}\n       1407: \tif (tx &gt; xx)\t\tdx = 1;"
   },
   {
     "key": "L01512_01",
     "original": "Couldn't find dnstair room in fix_stair_rooms!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1512:12\n  1507: \t\tdnstairs_room = croom;\n  1508: \t\tbreak;\n  1509: \t    }\n  1510: \t}\n  1511: \tif(i == nroom)\n&gt; 1512: \t    panic(\"Couldn't find dnstair room in fix_stair_rooms!\");\n  1513:     }\n  1514:     if(xupstair &&\n  1515:        !((upstairs_room-&gt;lx &lt;= xupstair && xupstair &lt;= upstairs_room-&gt;hx) &&\n  1516: \t (upstairs_room-&gt;ly &lt;= yupstair && yupstair &lt;= upstairs_room-&gt;hy))) {\n  1517: \tfor(i=0; i &lt; nroom; i++) {"
+    "context": "src/sp_lev.c:1512:12\n       1507: \t\tdnstairs_room = croom;\n       1508: \t\tbreak;\n       1509: \t    }\n       1510: \t}\n       1511: \tif(i == nroom)\nTARGET 1512: \t    panic(\"Couldn't find dnstair room in fix_stair_rooms!\");\n       1513:     }\n       1514:     if(xupstair &&\n       1515:        !((upstairs_room-&gt;lx &lt;= xupstair && xupstair &lt;= upstairs_room-&gt;hx) &&\n       1516: \t (upstairs_room-&gt;ly &lt;= yupstair && yupstair &lt;= upstairs_room-&gt;hy))) {\n       1517: \tfor(i=0; i &lt; nroom; i++) {"
   },
   {
     "key": "L01526_01",
     "original": "Couldn't find upstair room in fix_stair_rooms!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:1526:12\n  1521: \t\tupstairs_room = croom;\n  1522: \t\tbreak;\n  1523: \t    }\n  1524: \t}\n  1525: \tif(i == nroom)\n&gt; 1526: \t    panic(\"Couldn't find upstair room in fix_stair_rooms!\");\n  1527:     }\n  1528: }\n  1529: \n  1530: /*\n  1531:  * Corridors always start from a door. But it can end anywhere..."
+    "context": "src/sp_lev.c:1526:12\n       1521: \t\tupstairs_room = croom;\n       1522: \t\tbreak;\n       1523: \t    }\n       1524: \t}\n       1525: \tif(i == nroom)\nTARGET 1526: \t    panic(\"Couldn't find upstair room in fix_stair_rooms!\");\n       1527:     }\n       1528: }\n       1529: \n       1530: /*\n       1531:  * Corridors always start from a door. But it can end anywhere..."
   },
   {
     "key": "L02254_01",
     "original": "load_maze error: numpart = %d",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2254:8\n  2249: \n  2250:     /* Start reading the file */\n  2251:     Fread((genericptr_t) &numpart, 1, sizeof(numpart), fd);\n  2252: \t\t\t\t\t\t/* Number of parts */\n  2253:     if (!numpart || numpart &gt; 9)\n&gt; 2254: \tpanic(\"load_maze error: numpart = %d\", (int) numpart);\n  2255: \n  2256:     while (numpart--) {\n  2257: \tFread((genericptr_t) &halign, 1, sizeof(halign), fd);\n  2258: \t\t\t\t\t/* Horizontal alignment */\n  2259: \tFread((genericptr_t) &valign, 1, sizeof(valign), fd);"
+    "context": "src/sp_lev.c:2254:8\n       2249: \n       2250:     /* Start reading the file */\n       2251:     Fread((genericptr_t) &numpart, 1, sizeof(numpart), fd);\n       2252: \t\t\t\t\t\t/* Number of parts */\n       2253:     if (!numpart || numpart &gt; 9)\nTARGET 2254: \tpanic(\"load_maze error: numpart = %d\", (int) numpart);\n       2255: \n       2256:     while (numpart--) {\n       2257: \tFread((genericptr_t) &halign, 1, sizeof(halign), fd);\n       2258: \t\t\t\t\t/* Horizontal alignment */\n       2259: \tFread((genericptr_t) &valign, 1, sizeof(valign), fd);"
   },
   {
     "key": "L02284_01",
     "original": "reading special level with ysize too large",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2284:9\n  2279: \tif ((ystart &lt; 0) || (ystart + ysize &gt; ROWNO)) {\n  2280: \t    /* try to move the start a bit */\n  2281: \t    ystart += (ystart &gt; 0) ? -2 : 2;\n  2282: \t    if(ysize == ROWNO) ystart = 0;\n  2283: \t    if(ystart &lt; 0 || ystart + ysize &gt; ROWNO)\n&gt; 2284: \t\tpanic(\"reading special level with ysize too large\");\n  2285: \t}\n  2286: \n  2287: \t/*\n  2288: \t * If any CROSSWALLs are found, must change to ROOM after REGION's\n  2289: \t * are laid out.  CROSSWALLS are used to specify \"invisible\""
+    "context": "src/sp_lev.c:2284:9\n       2279: \tif ((ystart &lt; 0) || (ystart + ysize &gt; ROWNO)) {\n       2280: \t    /* try to move the start a bit */\n       2281: \t    ystart += (ystart &gt; 0) ? -2 : 2;\n       2282: \t    if(ysize == ROWNO) ystart = 0;\n       2283: \t    if(ystart &lt; 0 || ystart + ysize &gt; ROWNO)\nTARGET 2284: \t\tpanic(\"reading special level with ysize too large\");\n       2285: \t}\n       2286: \n       2287: \t/*\n       2288: \t * If any CROSSWALLs are found, must change to ROOM after REGION's\n       2289: \t * are laid out.  CROSSWALLS are used to specify \"invisible\""
   },
   {
     "key": "L02387_01",
     "original": "reading special level with region located nowhere",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2387:9\n  2382: \t\t\t\t      &tmplregion.delarea.y1, DRY|WET);\n  2383: \t\tfound &= get_location(&tmplregion.delarea.x2,\n  2384: \t\t\t\t      &tmplregion.delarea.y2, DRY|WET);\n  2385: \t    }\n  2386: \t    if (!found)\n&gt; 2387: \t\tpanic(\"reading special level with region located nowhere\");\n  2388: \t    lregions[(int)n] = tmplregion;\n  2389: \t}\n  2390: \n  2391: \t/* random level region registers */\n  2392: \tFread((genericptr_t) &n, 1, sizeof(n), fd);\t"
+    "context": "src/sp_lev.c:2387:9\n       2382: \t\t\t\t      &tmplregion.delarea.y1, DRY|WET);\n       2383: \t\tfound &= get_location(&tmplregion.delarea.x2,\n       2384: \t\t\t\t      &tmplregion.delarea.y2, DRY|WET);\n       2385: \t    }\n       2386: \t    if (!found)\nTARGET 2387: \t\tpanic(\"reading special level with region located nowhere\");\n       2388: \t    lregions[(int)n] = tmplregion;\n       2389: \t}\n       2390: \n       2391: \t/* random level region registers */\n       2392: \tFread((genericptr_t) &n, 1, sizeof(n), fd);\t"
   },
   {
     "key": "L02405_01",
     "original": "reading special level with random region located nowhere",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2405:13\n  2400: \t\t    Fread((genericptr_t) tmplregion.rname.str, size, 1, fd);\n  2401: \t\t    tmplregion.rname.str[size] = '\\0';\n  2402: \t\t} else\n  2403: \t\t    tmplregion.rname.str = (char *) 0;\n  2404: \t\tif (!found)\n&gt; 2405: \t\t    panic(\"reading special level with random region located nowhere\");\n  2406: \t\t(void) memcpy((genericptr_t)&rarea[(int)tmpn - n - 1],\n  2407: \t\t\t(genericptr_t)&tmplregion, sizeof(lev_region));\n  2408: \t    }\n  2409: \t}\n  2410: "
+    "context": "src/sp_lev.c:2405:13\n       2400: \t\t    Fread((genericptr_t) tmplregion.rname.str, size, 1, fd);\n       2401: \t\t    tmplregion.rname.str[size] = '\\0';\n       2402: \t\t} else\n       2403: \t\t    tmplregion.rname.str = (char *) 0;\n       2404: \t\tif (!found)\nTARGET 2405: \t\t    panic(\"reading special level with random region located nowhere\");\n       2406: \t\t(void) memcpy((genericptr_t)&rarea[(int)tmpn - n - 1],\n       2407: \t\t\t(genericptr_t)&tmplregion, sizeof(lev_region));\n       2408: \t    }\n       2409: \t}\n       2410: "
   },
   {
     "key": "L02459_01",
     "original": "reading special level with region located nowhere",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2459:13\n  2454: \t\t    tmpregion.rlit = (rnd(1+abs(depth(&u.uz))) &lt; 11 && rn2(77))\n  2455: \t\t\t? TRUE : FALSE;\n  2456: \n  2457: \t\tif (!get_location(&tmpregion.x1, &tmpregion.y1, DRY|WET) ||\n  2458: \t\t  !get_location(&tmpregion.x2, &tmpregion.y2, DRY|WET))\n&gt; 2459: \t\t    panic(\"reading special level with region located nowhere\");\n  2460: \n  2461: \t\t/* for an ordinary room, `prefilled' is a flag to force\n  2462: \t\t   an actual room to be created (such rooms are used to\n  2463: \t\t   control placement of migrating monster arrivals) */\n  2464: \t\troom_not_needed = (tmpregion.rtype == OROOM &&"
+    "context": "src/sp_lev.c:2459:13\n       2454: \t\t    tmpregion.rlit = (rnd(1+abs(depth(&u.uz))) &lt; 11 && rn2(77))\n       2455: \t\t\t? TRUE : FALSE;\n       2456: \n       2457: \t\tif (!get_location(&tmpregion.x1, &tmpregion.y1, DRY|WET) ||\n       2458: \t\t  !get_location(&tmpregion.x2, &tmpregion.y2, DRY|WET))\nTARGET 2459: \t\t    panic(\"reading special level with region located nowhere\");\n       2460: \n       2461: \t\t/* for an ordinary room, `prefilled' is a flag to force\n       2462: \t\t   an actual room to be created (such rooms are used to\n       2463: \t\t   control placement of migrating monster arrivals) */\n       2464: \t\troom_not_needed = (tmpregion.rtype == OROOM &&"
   },
   {
     "key": "L02468_01",
     "original": "Too many rooms on new level!",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2468:15\n  2463: \t\t   control placement of migrating monster arrivals) */\n  2464: \t\troom_not_needed = (tmpregion.rtype == OROOM &&\n  2465: \t\t\t\t   !tmpregion.rirreg && !prefilled);\n  2466: \t\tif (room_not_needed || nroom &gt;= MAXNROFROOMS) {\n  2467: \t\t    if (!room_not_needed)\n&gt; 2468: \t\t\timpossible(\"Too many rooms on new level!\");\n  2469: \t\t    light_region(&tmpregion);\n  2470: \t\t    continue;\n  2471: \t\t}\n  2472: \n  2473: \t\ttroom = &rooms[nroom];"
+    "context": "src/sp_lev.c:2468:15\n       2463: \t\t   control placement of migrating monster arrivals) */\n       2464: \t\troom_not_needed = (tmpregion.rtype == OROOM &&\n       2465: \t\t\t\t   !tmpregion.rirreg && !prefilled);\n       2466: \t\tif (room_not_needed || nroom &gt;= MAXNROFROOMS) {\n       2467: \t\t    if (!room_not_needed)\nTARGET 2468: \t\t\timpossible(\"Too many rooms on new level!\");\n       2469: \t\t    light_region(&tmpregion);\n       2470: \t\t    continue;\n       2471: \t\t}\n       2472: \n       2473: \t\ttroom = &rooms[nroom];"
   },
   {
     "key": "L02540_01",
     "original": "Too many doors?",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2540:15\n  2535: \t\t    }\n  2536: \t\t    croom++;\n  2537: \t\t}\n  2538: \t\tif (xi &lt; 0) {\t/* Not in any room */\n  2539: \t\t    if (doorindex &gt;= DOORMAX)\n&gt; 2540: \t\t\timpossible(\"Too many doors?\");\n  2541: \t\t    else {\n  2542: \t\t\txi = add_door(x, y, (struct mkroom *)0);\n  2543: \t\t\tdoors[xi].arti_key = tmpdoor.arti_key;\n  2544: \t\t    }\n  2545: \t\t}"
+    "context": "src/sp_lev.c:2540:15\n       2535: \t\t    }\n       2536: \t\t    croom++;\n       2537: \t\t}\n       2538: \t\tif (xi &lt; 0) {\t/* Not in any room */\n       2539: \t\t    if (doorindex &gt;= DOORMAX)\nTARGET 2540: \t\t\timpossible(\"Too many doors?\");\n       2541: \t\t    else {\n       2542: \t\t\txi = add_door(x, y, (struct mkroom *)0);\n       2543: \t\t\tdoors[xi].arti_key = tmpdoor.arti_key;\n       2544: \t\t    }\n       2545: \t\t}"
   },
   {
     "key": "L02569_01",
     "original": "Cannot create drawbridge.",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2569:18\n  2564: \t\tFread((genericptr_t)&tmpdb, 1, sizeof(tmpdb), fd);\n  2565: \n  2566: \t\tx = tmpdb.x;  y = tmpdb.y;\n  2567: \t\tif (get_location(&x, &y, DRY|WET)) {\n  2568: \t\tif (!create_drawbridge(x, y, tmpdb.dir, tmpdb.db_open))\n&gt; 2569: \t\t    impossible(\"Cannot create drawbridge.\");\n  2570: \t}\n  2571: \t}\n  2572: \n  2573: \tFread((genericptr_t) &n, 1, sizeof(n), fd);\n  2574: \t\t\t\t\t\t/* Number of mazewalks */"
+    "context": "src/sp_lev.c:2569:18\n       2564: \t\tFread((genericptr_t)&tmpdb, 1, sizeof(tmpdb), fd);\n       2565: \n       2566: \t\tx = tmpdb.x;  y = tmpdb.y;\n       2567: \t\tif (get_location(&x, &y, DRY|WET)) {\n       2568: \t\tif (!create_drawbridge(x, y, tmpdb.dir, tmpdb.db_open))\nTARGET 2569: \t\t    impossible(\"Cannot create drawbridge.\");\n       2570: \t}\n       2571: \t}\n       2572: \n       2573: \tFread((genericptr_t) &n, 1, sizeof(n), fd);\n       2574: \t\t\t\t\t\t/* Number of mazewalks */"
   },
   {
     "key": "L02716_01",
     "original": "load_maze: bad MAZEWALK direction",
     "translation": "",
     "stage": 0,
-    "context": "src/sp_lev.c:2716:18\n  2711: \t    switch (dir) {\n  2712: \t\tcase W_NORTH: --y; break;\n  2713: \t\tcase W_SOUTH: y++; break;\n  2714: \t\tcase W_EAST:  x++; break;\n  2715: \t\tcase W_WEST:  --x; break;\n&gt; 2716: \t\tdefault: panic(\"load_maze: bad MAZEWALK direction\");\n  2717: \t    }\n  2718: \n  2719: \t    if(!IS_DOOR(levl[x][y].typ)) {\n  2720: #ifndef WALLIFIED_MAZE\n  2721: \t\tlevl[x][y].typ = CORR;"
+    "context": "src/sp_lev.c:2716:18\n       2711: \t    switch (dir) {\n       2712: \t\tcase W_NORTH: --y; break;\n       2713: \t\tcase W_SOUTH: y++; break;\n       2714: \t\tcase W_EAST:  x++; break;\n       2715: \t\tcase W_WEST:  --x; break;\nTARGET 2716: \t\tdefault: panic(\"load_maze: bad MAZEWALK direction\");\n       2717: \t    }\n       2718: \n       2719: \t    if(!IS_DOOR(levl[x][y].typ)) {\n       2720: #ifndef WALLIFIED_MAZE\n       2721: \t\tlevl[x][y].typ = CORR;"
   }
 ]

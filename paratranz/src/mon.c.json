@@ -4,965 +4,965 @@
     "original": "%s recently regrown horn crumbles to dust.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:210:13\n   205: \t    case PM_WHITE_UNICORN:\n   206: \t    case PM_GRAY_UNICORN:\n   207: \t    case PM_BLACK_UNICORN:\n   208: \t\tif (mtmp-&gt;mrevived && rn2(20)) {\n   209: \t\t\tif (canseemon(mtmp))\n&gt;  210: \t\t\t   pline(\"%s recently regrown horn crumbles to dust.\",\n   211: \t\t\t\ts_suffix(Monnam(mtmp)));\n   212: \t\t} else\n   213: \t\t\t(void) mksobj_at(UNICORN_HORN, x, y, TRUE, FALSE);\n   214: \t\tgoto default_1;\n   215: \t    case PM_LONG_WORM:"
+    "context": "src/mon.c:210:13\n        205: \t    case PM_WHITE_UNICORN:\n        206: \t    case PM_GRAY_UNICORN:\n        207: \t    case PM_BLACK_UNICORN:\n        208: \t\tif (mtmp-&gt;mrevived && rn2(20)) {\n        209: \t\t\tif (canseemon(mtmp))\nTARGET  210: \t\t\t   pline(\"%s recently regrown horn crumbles to dust.\",\n        211: \t\t\t\ts_suffix(Monnam(mtmp)));\n        212: \t\t} else\n        213: \t\t\t(void) mksobj_at(UNICORN_HORN, x, y, TRUE, FALSE);\n        214: \t\tgoto default_1;\n        215: \t    case PM_LONG_WORM:"
   },
   {
     "key": "L00270_01",
     "original": "%s something spring forth from the corpse of %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:270:9\n   265: \n   266: \t\t\t/* KMH -- the legend of Medusa and Pegasus */\n   267: \t\t\t/* Only when Medusa leaves a corpse */\n   268: \t\t\tmtmp2 = makemon(&mons[PM_PEGASUS], x, y, 0);\n   269: \t\t\tif (mtmp2) {\n&gt;  270: \t\t\t\tYou(\"%s something spring forth from the corpse of %s.\",\n   271: \t\t\t\t\t\tBlind ? \"sense\" : \"see\", mon_nam(mtmp));\n   272: \t\t\t\tmtmp2-&gt;mpeaceful = 1;\n   273: \t\t\t\tmtmp2-&gt;mtame = 0;\n   274: \t\t\t}\n   275: \t\t\tgoto default_1;"
+    "context": "src/mon.c:270:9\n        265: \n        266: \t\t\t/* KMH -- the legend of Medusa and Pegasus */\n        267: \t\t\t/* Only when Medusa leaves a corpse */\n        268: \t\t\tmtmp2 = makemon(&mons[PM_PEGASUS], x, y, 0);\n        269: \t\t\tif (mtmp2) {\nTARGET  270: \t\t\t\tYou(\"%s something spring forth from the corpse of %s.\",\n        271: \t\t\t\t\t\tBlind ? \"sense\" : \"see\", mon_nam(mtmp));\n        272: \t\t\t\tmtmp2-&gt;mpeaceful = 1;\n        273: \t\t\t\tmtmp2-&gt;mtame = 0;\n        274: \t\t\t}\n        275: \t\t\tgoto default_1;"
   },
   {
     "key": "L00271_01",
     "original": "sense",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:271:15\n   266: \t\t\t/* KMH -- the legend of Medusa and Pegasus */\n   267: \t\t\t/* Only when Medusa leaves a corpse */\n   268: \t\t\tmtmp2 = makemon(&mons[PM_PEGASUS], x, y, 0);\n   269: \t\t\tif (mtmp2) {\n   270: \t\t\t\tYou(\"%s something spring forth from the corpse of %s.\",\n&gt;  271: \t\t\t\t\t\tBlind ? \"sense\" : \"see\", mon_nam(mtmp));\n   272: \t\t\t\tmtmp2-&gt;mpeaceful = 1;\n   273: \t\t\t\tmtmp2-&gt;mtame = 0;\n   274: \t\t\t}\n   275: \t\t\tgoto default_1;\n   276: \t\t}"
+    "context": "src/mon.c:271:15\n        266: \t\t\t/* KMH -- the legend of Medusa and Pegasus */\n        267: \t\t\t/* Only when Medusa leaves a corpse */\n        268: \t\t\tmtmp2 = makemon(&mons[PM_PEGASUS], x, y, 0);\n        269: \t\t\tif (mtmp2) {\n        270: \t\t\t\tYou(\"%s something spring forth from the corpse of %s.\",\nTARGET  271: \t\t\t\t\t\tBlind ? \"sense\" : \"see\", mon_nam(mtmp));\n        272: \t\t\t\tmtmp2-&gt;mpeaceful = 1;\n        273: \t\t\t\tmtmp2-&gt;mtame = 0;\n        274: \t\t\t}\n        275: \t\t\tgoto default_1;\n        276: \t\t}"
   },
   {
     "key": "L00271_02",
     "original": "see",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:271:25\n   266: \t\t\t/* KMH -- the legend of Medusa and Pegasus */\n   267: \t\t\t/* Only when Medusa leaves a corpse */\n   268: \t\t\tmtmp2 = makemon(&mons[PM_PEGASUS], x, y, 0);\n   269: \t\t\tif (mtmp2) {\n   270: \t\t\t\tYou(\"%s something spring forth from the corpse of %s.\",\n&gt;  271: \t\t\t\t\t\tBlind ? \"sense\" : \"see\", mon_nam(mtmp));\n   272: \t\t\t\tmtmp2-&gt;mpeaceful = 1;\n   273: \t\t\t\tmtmp2-&gt;mtame = 0;\n   274: \t\t\t}\n   275: \t\t\tgoto default_1;\n   276: \t\t}"
+    "context": "src/mon.c:271:25\n        266: \t\t\t/* KMH -- the legend of Medusa and Pegasus */\n        267: \t\t\t/* Only when Medusa leaves a corpse */\n        268: \t\t\tmtmp2 = makemon(&mons[PM_PEGASUS], x, y, 0);\n        269: \t\t\tif (mtmp2) {\n        270: \t\t\t\tYou(\"%s something spring forth from the corpse of %s.\",\nTARGET  271: \t\t\t\t\t\tBlind ? \"sense\" : \"see\", mon_nam(mtmp));\n        272: \t\t\t\tmtmp2-&gt;mpeaceful = 1;\n        273: \t\t\t\tmtmp2-&gt;mtame = 0;\n        274: \t\t\t}\n        275: \t\t\tgoto default_1;\n        276: \t\t}"
   },
   {
     "key": "L00278_01",
     "original": "All that remains is her horn...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:278:10\n   273: \t\t\t\tmtmp2-&gt;mtame = 0;\n   274: \t\t\t}\n   275: \t\t\tgoto default_1;\n   276: \t\t}\n   277: \t    case PM_NIGHTMARE:\n&gt;  278: \t\t\tpline(\"All that remains is her horn...\");\n   279: \t\t\tobj = oname(mksobj(UNICORN_HORN, TRUE, FALSE),\n   280: \t\t\t\t\tartiname(ART_NIGHTHORN));\n   281: \t\t\tgoto initspecial;\n   282: \t    case PM_BEHOLDER:\n   283: \t\t\tpline(\"All that remains is a single eye...\");"
+    "context": "src/mon.c:278:10\n        273: \t\t\t\tmtmp2-&gt;mtame = 0;\n        274: \t\t\t}\n        275: \t\t\tgoto default_1;\n        276: \t\t}\n        277: \t    case PM_NIGHTMARE:\nTARGET  278: \t\t\tpline(\"All that remains is her horn...\");\n        279: \t\t\tobj = oname(mksobj(UNICORN_HORN, TRUE, FALSE),\n        280: \t\t\t\t\tartiname(ART_NIGHTHORN));\n        281: \t\t\tgoto initspecial;\n        282: \t    case PM_BEHOLDER:\n        283: \t\t\tpline(\"All that remains is a single eye...\");"
   },
   {
     "key": "L00283_01",
     "original": "All that remains is a single eye...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:283:10\n   278: \t\t\tpline(\"All that remains is her horn...\");\n   279: \t\t\tobj = oname(mksobj(UNICORN_HORN, TRUE, FALSE),\n   280: \t\t\t\t\tartiname(ART_NIGHTHORN));\n   281: \t\t\tgoto initspecial;\n   282: \t    case PM_BEHOLDER:\n&gt;  283: \t\t\tpline(\"All that remains is a single eye...\");\n   284: \t\t\tobj = oname(mksobj(EYEBALL, TRUE, FALSE),\n   285: \t\t\t\t\tartiname(ART_EYE_OF_THE_BEHOLDER));\n   286: \t\t\tgoto initspecial;\n   287: \t    case PM_VECNA:\n   288: \t\t\tpline(\"All that remains is a hand...\");"
+    "context": "src/mon.c:283:10\n        278: \t\t\tpline(\"All that remains is her horn...\");\n        279: \t\t\tobj = oname(mksobj(UNICORN_HORN, TRUE, FALSE),\n        280: \t\t\t\t\tartiname(ART_NIGHTHORN));\n        281: \t\t\tgoto initspecial;\n        282: \t    case PM_BEHOLDER:\nTARGET  283: \t\t\tpline(\"All that remains is a single eye...\");\n        284: \t\t\tobj = oname(mksobj(EYEBALL, TRUE, FALSE),\n        285: \t\t\t\t\tartiname(ART_EYE_OF_THE_BEHOLDER));\n        286: \t\t\tgoto initspecial;\n        287: \t    case PM_VECNA:\n        288: \t\t\tpline(\"All that remains is a hand...\");"
   },
   {
     "key": "L00288_01",
     "original": "All that remains is a hand...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:288:10\n   283: \t\t\tpline(\"All that remains is a single eye...\");\n   284: \t\t\tobj = oname(mksobj(EYEBALL, TRUE, FALSE),\n   285: \t\t\t\t\tartiname(ART_EYE_OF_THE_BEHOLDER));\n   286: \t\t\tgoto initspecial;\n   287: \t    case PM_VECNA:\n&gt;  288: \t\t\tpline(\"All that remains is a hand...\");\n   289: \t\t\tobj = oname(mksobj(SEVERED_HAND, TRUE, FALSE),\n   290: \t\t\t\t\tartiname(ART_HAND_OF_VECNA));\n   291: \t\tinitspecial:\n   292: \t\t\tobj-&gt;quan = 1;\n   293: \t\t\tcurse(obj);"
+    "context": "src/mon.c:288:10\n        283: \t\t\tpline(\"All that remains is a single eye...\");\n        284: \t\t\tobj = oname(mksobj(EYEBALL, TRUE, FALSE),\n        285: \t\t\t\t\tartiname(ART_EYE_OF_THE_BEHOLDER));\n        286: \t\t\tgoto initspecial;\n        287: \t    case PM_VECNA:\nTARGET  288: \t\t\tpline(\"All that remains is a hand...\");\n        289: \t\t\tobj = oname(mksobj(SEVERED_HAND, TRUE, FALSE),\n        290: \t\t\t\t\tartiname(ART_HAND_OF_VECNA));\n        291: \t\tinitspecial:\n        292: \t\t\tobj-&gt;quan = 1;\n        293: \t\t\tcurse(obj);"
   },
   {
     "key": "L00514_01",
     "original": "%s rusts.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:514:12\n   509: \tif (inpool) water_damage(mtmp-&gt;minvent, FALSE, FALSE);\n   510: \treturn (0);\n   511:     } else if (mtmp-&gt;data == &mons[PM_IRON_GOLEM] && inpool && !rn2(5)) {\n   512: \tint dam = d(2,6);\n   513: \tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n&gt;  514: \t    pline(\"%s rusts.\", Monnam(mtmp));\n   515: \tmtmp-&gt;mhp -= dam;\n   516: \tif (mtmp-&gt;mhpmax &gt; dam) mtmp-&gt;mhpmax -= dam;\n   517: \tif (mtmp-&gt;mhp &lt; 1) {\n   518: \t    mondead(mtmp);\n   519: \t    if (mtmp-&gt;mhp &lt; 1) return (1);"
+    "context": "src/mon.c:514:12\n        509: \tif (inpool) water_damage(mtmp-&gt;minvent, FALSE, FALSE);\n        510: \treturn (0);\n        511:     } else if (mtmp-&gt;data == &mons[PM_IRON_GOLEM] && inpool && !rn2(5)) {\n        512: \tint dam = d(2,6);\n        513: \tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\nTARGET  514: \t    pline(\"%s rusts.\", Monnam(mtmp));\n        515: \tmtmp-&gt;mhp -= dam;\n        516: \tif (mtmp-&gt;mhpmax &gt; dam) mtmp-&gt;mhpmax -= dam;\n        517: \tif (mtmp-&gt;mhp &lt; 1) {\n        518: \t    mondead(mtmp);\n        519: \t    if (mtmp-&gt;mhp &lt; 1) return (1);"
   },
   {
     "key": "L00534_01",
     "original": "%s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:534:13\n   529: \t * themselves  --ALI\n   530: \t */\n   531: \tif (!is_clinger(mtmp-&gt;data) && !likes_lava(mtmp-&gt;data)) {\n   532: \t    if (!resists_fire(mtmp)) {\n   533: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n&gt;  534: \t\t    pline(\"%s %s.\", Monnam(mtmp),\n   535: \t\t\t  mtmp-&gt;data == &mons[PM_WATER_ELEMENTAL] ?\n   536: \t\t\t  \"boils away\" : \"burns to a crisp\");\n   537: \t\tmondead(mtmp);\n   538: \t    }\n   539: \t    else {"
+    "context": "src/mon.c:534:13\n        529: \t * themselves  --ALI\n        530: \t */\n        531: \tif (!is_clinger(mtmp-&gt;data) && !likes_lava(mtmp-&gt;data)) {\n        532: \t    if (!resists_fire(mtmp)) {\n        533: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\nTARGET  534: \t\t    pline(\"%s %s.\", Monnam(mtmp),\n        535: \t\t\t  mtmp-&gt;data == &mons[PM_WATER_ELEMENTAL] ?\n        536: \t\t\t  \"boils away\" : \"burns to a crisp\");\n        537: \t\tmondead(mtmp);\n        538: \t    }\n        539: \t    else {"
   },
   {
     "key": "L00536_01",
     "original": "boils away",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:536:6\n   531: \tif (!is_clinger(mtmp-&gt;data) && !likes_lava(mtmp-&gt;data)) {\n   532: \t    if (!resists_fire(mtmp)) {\n   533: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n   534: \t\t    pline(\"%s %s.\", Monnam(mtmp),\n   535: \t\t\t  mtmp-&gt;data == &mons[PM_WATER_ELEMENTAL] ?\n&gt;  536: \t\t\t  \"boils away\" : \"burns to a crisp\");\n   537: \t\tmondead(mtmp);\n   538: \t    }\n   539: \t    else {\n   540: \t\tif (--mtmp-&gt;mhp &lt; 1) {\n   541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))"
+    "context": "src/mon.c:536:6\n        531: \tif (!is_clinger(mtmp-&gt;data) && !likes_lava(mtmp-&gt;data)) {\n        532: \t    if (!resists_fire(mtmp)) {\n        533: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n        534: \t\t    pline(\"%s %s.\", Monnam(mtmp),\n        535: \t\t\t  mtmp-&gt;data == &mons[PM_WATER_ELEMENTAL] ?\nTARGET  536: \t\t\t  \"boils away\" : \"burns to a crisp\");\n        537: \t\tmondead(mtmp);\n        538: \t    }\n        539: \t    else {\n        540: \t\tif (--mtmp-&gt;mhp &lt; 1) {\n        541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))"
   },
   {
     "key": "L00536_02",
     "original": "burns to a crisp",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:536:21\n   531: \tif (!is_clinger(mtmp-&gt;data) && !likes_lava(mtmp-&gt;data)) {\n   532: \t    if (!resists_fire(mtmp)) {\n   533: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n   534: \t\t    pline(\"%s %s.\", Monnam(mtmp),\n   535: \t\t\t  mtmp-&gt;data == &mons[PM_WATER_ELEMENTAL] ?\n&gt;  536: \t\t\t  \"boils away\" : \"burns to a crisp\");\n   537: \t\tmondead(mtmp);\n   538: \t    }\n   539: \t    else {\n   540: \t\tif (--mtmp-&gt;mhp &lt; 1) {\n   541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))"
+    "context": "src/mon.c:536:21\n        531: \tif (!is_clinger(mtmp-&gt;data) && !likes_lava(mtmp-&gt;data)) {\n        532: \t    if (!resists_fire(mtmp)) {\n        533: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n        534: \t\t    pline(\"%s %s.\", Monnam(mtmp),\n        535: \t\t\t  mtmp-&gt;data == &mons[PM_WATER_ELEMENTAL] ?\nTARGET  536: \t\t\t  \"boils away\" : \"burns to a crisp\");\n        537: \t\tmondead(mtmp);\n        538: \t    }\n        539: \t    else {\n        540: \t\tif (--mtmp-&gt;mhp &lt; 1) {\n        541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))"
   },
   {
     "key": "L00542_01",
     "original": "%s surrenders to the fire.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:542:10\n   537: \t\tmondead(mtmp);\n   538: \t    }\n   539: \t    else {\n   540: \t\tif (--mtmp-&gt;mhp &lt; 1) {\n   541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n&gt;  542: \t\t\tpline(\"%s surrenders to the fire.\", Monnam(mtmp));\n   543: \t\t    mondead(mtmp);\n   544: \t\t}\n   545: \t\telse if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n   546: \t\t    pline(\"%s burns slightly.\", Monnam(mtmp));\n   547: \t    }"
+    "context": "src/mon.c:542:10\n        537: \t\tmondead(mtmp);\n        538: \t    }\n        539: \t    else {\n        540: \t\tif (--mtmp-&gt;mhp &lt; 1) {\n        541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\nTARGET  542: \t\t\tpline(\"%s surrenders to the fire.\", Monnam(mtmp));\n        543: \t\t    mondead(mtmp);\n        544: \t\t}\n        545: \t\telse if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n        546: \t\t    pline(\"%s burns slightly.\", Monnam(mtmp));\n        547: \t    }"
   },
   {
     "key": "L00546_01",
     "original": "%s burns slightly.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:546:13\n   541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n   542: \t\t\tpline(\"%s surrenders to the fire.\", Monnam(mtmp));\n   543: \t\t    mondead(mtmp);\n   544: \t\t}\n   545: \t\telse if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n&gt;  546: \t\t    pline(\"%s burns slightly.\", Monnam(mtmp));\n   547: \t    }\n   548: \t    if (mtmp-&gt;mhp &gt; 0) {\n   549: \t\t(void) fire_damage(mtmp-&gt;minvent, FALSE, FALSE,\n   550: \t\t\t\t\t\tmtmp-&gt;mx, mtmp-&gt;my);\n   551: \t\t(void) rloc(mtmp, FALSE);"
+    "context": "src/mon.c:546:13\n        541: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\n        542: \t\t\tpline(\"%s surrenders to the fire.\", Monnam(mtmp));\n        543: \t\t    mondead(mtmp);\n        544: \t\t}\n        545: \t\telse if (cansee(mtmp-&gt;mx,mtmp-&gt;my))\nTARGET  546: \t\t    pline(\"%s burns slightly.\", Monnam(mtmp));\n        547: \t    }\n        548: \t    if (mtmp-&gt;mhp &gt; 0) {\n        549: \t\t(void) fire_damage(mtmp-&gt;minvent, FALSE, FALSE,\n        550: \t\t\t\t\t\tmtmp-&gt;mx, mtmp-&gt;my);\n        551: \t\t(void) rloc(mtmp, FALSE);"
   },
   {
     "key": "L00569_01",
     "original": "%s sinks as water rushes in and flushes you out.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:569:9\n   564: \t\t    pline(\"%s被淹死了。\", Monnam(mtmp));\n   565: \t    }\n   566: \t    if (u.ustuck && u.uswallow && u.ustuck == mtmp) {\n   567: \t    /* This can happen after a purple worm plucks you off a\n   568: \t\tflying steed while you are over water. */\n&gt;  569: \t\tpline(\"%s sinks as water rushes in and flushes you out.\",\n   570: \t\t\tMonnam(mtmp));\n   571: \t    }\n   572: \t    mondead(mtmp);\n   573: \t    if (mtmp-&gt;mhp &gt; 0) {\n   574: \t\t(void) rloc(mtmp, FALSE);"
+    "context": "src/mon.c:569:9\n        564: \t\t    pline(\"%s被淹死了。\", Monnam(mtmp));\n        565: \t    }\n        566: \t    if (u.ustuck && u.uswallow && u.ustuck == mtmp) {\n        567: \t    /* This can happen after a purple worm plucks you off a\n        568: \t\tflying steed while you are over water. */\nTARGET  569: \t\tpline(\"%s sinks as water rushes in and flushes you out.\",\n        570: \t\t\tMonnam(mtmp));\n        571: \t    }\n        572: \t    mondead(mtmp);\n        573: \t    if (mtmp-&gt;mhp &gt; 0) {\n        574: \t\t(void) rloc(mtmp, FALSE);"
   },
   {
     "key": "L00783_01",
     "original": "%s eats %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:783:10\n   778: \t\tcontinue;\n   779: \t    if (is_metallic(otmp) && !obj_resists(otmp, 5, 95) &&\n   780: \t\ttouch_artifact(otmp,mtmp)) {\n   781: \t\tif (mtmp-&gt;data == &mons[PM_RUST_MONSTER] && otmp-&gt;oerodeproof) {\n   782: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose) {\n&gt;  783: \t\t\tpline(\"%s eats %s!\",\n   784: \t\t\t\tMonnam(mtmp),\n   785: \t\t\t\tdistant_name(otmp,doname));\n   786: \t\t    }\n   787: \t\t    /* The object's rustproofing is gone now */\n   788: \t\t    otmp-&gt;oerodeproof = 0;"
+    "context": "src/mon.c:783:10\n        778: \t\tcontinue;\n        779: \t    if (is_metallic(otmp) && !obj_resists(otmp, 5, 95) &&\n        780: \t\ttouch_artifact(otmp,mtmp)) {\n        781: \t\tif (mtmp-&gt;data == &mons[PM_RUST_MONSTER] && otmp-&gt;oerodeproof) {\n        782: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose) {\nTARGET  783: \t\t\tpline(\"%s eats %s!\",\n        784: \t\t\t\tMonnam(mtmp),\n        785: \t\t\t\tdistant_name(otmp,doname));\n        786: \t\t    }\n        787: \t\t    /* The object's rustproofing is gone now */\n        788: \t\t    otmp-&gt;oerodeproof = 0;"
   },
   {
     "key": "L00791_01",
     "original": "%s spits %s out in disgust!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:791:10\n   786: \t\t    }\n   787: \t\t    /* The object's rustproofing is gone now */\n   788: \t\t    otmp-&gt;oerodeproof = 0;\n   789: \t\t    mtmp-&gt;mstun = 1;\n   790: \t\t    if (canseemon(mtmp) && flags.verbose) {\n&gt;  791: \t\t\tpline(\"%s spits %s out in disgust!\",\n   792: \t\t\t      Monnam(mtmp), distant_name(otmp,doname));\n   793: \t\t    }\n   794: \t\t/* KMH -- Don't eat indigestible/choking objects */\n   795: \t\t} else if (otmp-&gt;otyp != AMULET_OF_STRANGULATION &&\n   796: \t\t\t\totmp-&gt;otyp != RIN_SLOW_DIGESTION) {"
+    "context": "src/mon.c:791:10\n        786: \t\t    }\n        787: \t\t    /* The object's rustproofing is gone now */\n        788: \t\t    otmp-&gt;oerodeproof = 0;\n        789: \t\t    mtmp-&gt;mstun = 1;\n        790: \t\t    if (canseemon(mtmp) && flags.verbose) {\nTARGET  791: \t\t\tpline(\"%s spits %s out in disgust!\",\n        792: \t\t\t      Monnam(mtmp), distant_name(otmp,doname));\n        793: \t\t    }\n        794: \t\t/* KMH -- Don't eat indigestible/choking objects */\n        795: \t\t} else if (otmp-&gt;otyp != AMULET_OF_STRANGULATION &&\n        796: \t\t\t\totmp-&gt;otyp != RIN_SLOW_DIGESTION) {"
   },
   {
     "key": "L00798_01",
     "original": "%s eats %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:798:10\n   793: \t\t    }\n   794: \t\t/* KMH -- Don't eat indigestible/choking objects */\n   795: \t\t} else if (otmp-&gt;otyp != AMULET_OF_STRANGULATION &&\n   796: \t\t\t\totmp-&gt;otyp != RIN_SLOW_DIGESTION) {\n   797: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n&gt;  798: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n   799: \t\t\t\tdistant_name(otmp,doname));\n   800: \t\t    else if (flags.soundok && flags.verbose)\n   801: \t\t\tYou_hear(\"a crunching sound.\");\n   802: \t\t    mtmp-&gt;meating = otmp-&gt;owt/2 + 1;\n   803: \t\t    /* Heal up to the object's weight in hp */"
+    "context": "src/mon.c:798:10\n        793: \t\t    }\n        794: \t\t/* KMH -- Don't eat indigestible/choking objects */\n        795: \t\t} else if (otmp-&gt;otyp != AMULET_OF_STRANGULATION &&\n        796: \t\t\t\totmp-&gt;otyp != RIN_SLOW_DIGESTION) {\n        797: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\nTARGET  798: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n        799: \t\t\t\tdistant_name(otmp,doname));\n        800: \t\t    else if (flags.soundok && flags.verbose)\n        801: \t\t\tYou_hear(\"a crunching sound.\");\n        802: \t\t    mtmp-&gt;meating = otmp-&gt;owt/2 + 1;\n        803: \t\t    /* Heal up to the object's weight in hp */"
   },
   {
     "key": "L00801_01",
     "original": "a crunching sound.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:801:13\n   796: \t\t\t\totmp-&gt;otyp != RIN_SLOW_DIGESTION) {\n   797: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n   798: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n   799: \t\t\t\tdistant_name(otmp,doname));\n   800: \t\t    else if (flags.soundok && flags.verbose)\n&gt;  801: \t\t\tYou_hear(\"a crunching sound.\");\n   802: \t\t    mtmp-&gt;meating = otmp-&gt;owt/2 + 1;\n   803: \t\t    /* Heal up to the object's weight in hp */\n   804: \t\t    if (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax) {\n   805: \t\t\tmtmp-&gt;mhp += objects[otmp-&gt;otyp].oc_weight;\n   806: \t\t\tif (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = mtmp-&gt;mhpmax;"
+    "context": "src/mon.c:801:13\n        796: \t\t\t\totmp-&gt;otyp != RIN_SLOW_DIGESTION) {\n        797: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n        798: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n        799: \t\t\t\tdistant_name(otmp,doname));\n        800: \t\t    else if (flags.soundok && flags.verbose)\nTARGET  801: \t\t\tYou_hear(\"a crunching sound.\");\n        802: \t\t    mtmp-&gt;meating = otmp-&gt;owt/2 + 1;\n        803: \t\t    /* Heal up to the object's weight in hp */\n        804: \t\t    if (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax) {\n        805: \t\t\tmtmp-&gt;mhp += objects[otmp-&gt;otyp].oc_weight;\n        806: \t\t\tif (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = mtmp-&gt;mhpmax;"
   },
   {
     "key": "L00834_01",
     "original": "%s turns to stone!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:834:15\n   829: \t\t\t    if (poly_when_stoned(ptr)) {\n   830: \t\t\t\tmon_to_stone(mtmp);\n   831: \t\t\t\tptr = mtmp-&gt;data;\n   832: \t\t\t    } else if (!resists_ston(mtmp)) {\n   833: \t\t\t\tif (canseemon(mtmp))\n&gt;  834: \t\t\t\t    pline(\"%s turns to stone!\", Monnam(mtmp));\n   835: \t\t\t\tmonstone(mtmp);\n   836: \t\t\t\tptr = (struct permonst *)0;\n   837: \t\t\t    }\n   838: \t\t\t} else if (heal) {\n   839: \t\t\t    mtmp-&gt;mhp = mtmp-&gt;mhpmax;"
+    "context": "src/mon.c:834:15\n        829: \t\t\t    if (poly_when_stoned(ptr)) {\n        830: \t\t\t\tmon_to_stone(mtmp);\n        831: \t\t\t\tptr = mtmp-&gt;data;\n        832: \t\t\t    } else if (!resists_ston(mtmp)) {\n        833: \t\t\t\tif (canseemon(mtmp))\nTARGET  834: \t\t\t\t    pline(\"%s turns to stone!\", Monnam(mtmp));\n        835: \t\t\t\tmonstone(mtmp);\n        836: \t\t\t\tptr = (struct permonst *)0;\n        837: \t\t\t    }\n        838: \t\t\t} else if (heal) {\n        839: \t\t\t    mtmp-&gt;mhp = mtmp-&gt;mhpmax;"
   },
   {
     "key": "L00869_01",
     "original": "%s eats %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:869:10\n   864: \tfor (otmp = level.objects[mtmp-&gt;mx][mtmp-&gt;my];\n   865: \t\t\t\t\t\t    otmp; otmp = otmp-&gt;nexthere)\n   866: \t       if (otmp-&gt;otyp == CORPSE &&\n   867: \t\t  otmp-&gt;age+50 &lt;= monstermoves) {\n   868: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n&gt;  869: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n   870: \t\t\t\tdistant_name(otmp,doname));\n   871: \t\t    else if (flags.soundok && flags.verbose)\n   872: \t\t\tYou(\"hear an awful gobbling noise!\");\n   873: \t\t    mtmp-&gt;meating = 2;\n   874: \t\t    delobj(otmp);"
+    "context": "src/mon.c:869:10\n        864: \tfor (otmp = level.objects[mtmp-&gt;mx][mtmp-&gt;my];\n        865: \t\t\t\t\t\t    otmp; otmp = otmp-&gt;nexthere)\n        866: \t       if (otmp-&gt;otyp == CORPSE &&\n        867: \t\t  otmp-&gt;age+50 &lt;= monstermoves) {\n        868: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\nTARGET  869: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n        870: \t\t\t\tdistant_name(otmp,doname));\n        871: \t\t    else if (flags.soundok && flags.verbose)\n        872: \t\t\tYou(\"hear an awful gobbling noise!\");\n        873: \t\t    mtmp-&gt;meating = 2;\n        874: \t\t    delobj(otmp);"
   },
   {
     "key": "L00872_01",
     "original": "hear an awful gobbling noise!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:872:8\n   867: \t\t  otmp-&gt;age+50 &lt;= monstermoves) {\n   868: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n   869: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n   870: \t\t\t\tdistant_name(otmp,doname));\n   871: \t\t    else if (flags.soundok && flags.verbose)\n&gt;  872: \t\t\tYou(\"hear an awful gobbling noise!\");\n   873: \t\t    mtmp-&gt;meating = 2;\n   874: \t\t    delobj(otmp);\n   875: \t\t    break; /* only eat one at a time... */\n   876: \t\t  }\n   877:       newsym(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/mon.c:872:8\n        867: \t\t  otmp-&gt;age+50 &lt;= monstermoves) {\n        868: \t\t    if (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n        869: \t\t\tpline(\"%s eats %s!\", Monnam(mtmp),\n        870: \t\t\t\tdistant_name(otmp,doname));\n        871: \t\t    else if (flags.soundok && flags.verbose)\nTARGET  872: \t\t\tYou(\"hear an awful gobbling noise!\");\n        873: \t\t    mtmp-&gt;meating = 2;\n        874: \t\t    delobj(otmp);\n        875: \t\t    break; /* only eat one at a time... */\n        876: \t\t  }\n        877:       newsym(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L00907_01",
     "original": "%s eats %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:907:13\n   902: \t\tif (otmp-&gt;otyp == AMULET_OF_STRANGULATION ||\n   903: \t\t\t\totmp-&gt;otyp == RIN_SLOW_DIGESTION)\n   904: \t\t    continue;\n   905: \t\t++count;\n   906: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n&gt;  907: \t\t    pline(\"%s eats %s!\", Monnam(mtmp),\n   908: \t\t\t    distant_name(otmp, doname));\n   909: \t\telse if (flags.soundok && flags.verbose)\n   910: \t\t    You_hear(\"a slurping sound.\");\n   911: \t\t/* Heal up to the object's weight in hp */\n   912: \t\tif (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax) {"
+    "context": "src/mon.c:907:13\n        902: \t\tif (otmp-&gt;otyp == AMULET_OF_STRANGULATION ||\n        903: \t\t\t\totmp-&gt;otyp == RIN_SLOW_DIGESTION)\n        904: \t\t    continue;\n        905: \t\t++count;\n        906: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\nTARGET  907: \t\t    pline(\"%s eats %s!\", Monnam(mtmp),\n        908: \t\t\t    distant_name(otmp, doname));\n        909: \t\telse if (flags.soundok && flags.verbose)\n        910: \t\t    You_hear(\"a slurping sound.\");\n        911: \t\t/* Heal up to the object's weight in hp */\n        912: \t\tif (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax) {"
   },
   {
     "key": "L00910_01",
     "original": "a slurping sound.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:910:16\n   905: \t\t++count;\n   906: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n   907: \t\t    pline(\"%s eats %s!\", Monnam(mtmp),\n   908: \t\t\t    distant_name(otmp, doname));\n   909: \t\telse if (flags.soundok && flags.verbose)\n&gt;  910: \t\t    You_hear(\"a slurping sound.\");\n   911: \t\t/* Heal up to the object's weight in hp */\n   912: \t\tif (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax) {\n   913: \t\t    mtmp-&gt;mhp += objects[otmp-&gt;otyp].oc_weight;\n   914: \t\t    if (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = mtmp-&gt;mhpmax;\n   915: \t\t}"
+    "context": "src/mon.c:910:16\n        905: \t\t++count;\n        906: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n        907: \t\t    pline(\"%s eats %s!\", Monnam(mtmp),\n        908: \t\t\t    distant_name(otmp, doname));\n        909: \t\telse if (flags.soundok && flags.verbose)\nTARGET  910: \t\t    You_hear(\"a slurping sound.\");\n        911: \t\t/* Heal up to the object's weight in hp */\n        912: \t\tif (mtmp-&gt;mhp &lt; mtmp-&gt;mhpmax) {\n        913: \t\t    mtmp-&gt;mhp += objects[otmp-&gt;otyp].oc_weight;\n        914: \t\t    if (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = mtmp-&gt;mhpmax;\n        915: \t\t}"
   },
   {
     "key": "L00953_01",
     "original": "%s engulfs %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:953:17\n   948: \t\t    return !ptr ? 2 : 1;\n   949: \t    } else if (otmp-&gt;oclass != ROCK_CLASS &&\n   950: \t\t\t\t    otmp != uball && otmp != uchain) {\n   951: \t\t++ecount;\n   952: \t\tif (ecount == 1) {\n&gt;  953: \t\t\tSprintf(buf, \"%s engulfs %s.\", Monnam(mtmp),\n   954: \t\t\t    distant_name(otmp,doname));\n   955: \t\t} else if (ecount == 2)\n   956: \t\t\tSprintf(buf, \"%s engulfs several objects.\", Monnam(mtmp));\n   957: \t\tobj_extract_self(otmp);\n   958: \t\t(void) mpickobj(mtmp, otmp);\t/* slurp */"
+    "context": "src/mon.c:953:17\n        948: \t\t    return !ptr ? 2 : 1;\n        949: \t    } else if (otmp-&gt;oclass != ROCK_CLASS &&\n        950: \t\t\t\t    otmp != uball && otmp != uchain) {\n        951: \t\t++ecount;\n        952: \t\tif (ecount == 1) {\nTARGET  953: \t\t\tSprintf(buf, \"%s engulfs %s.\", Monnam(mtmp),\n        954: \t\t\t    distant_name(otmp,doname));\n        955: \t\t} else if (ecount == 2)\n        956: \t\t\tSprintf(buf, \"%s engulfs several objects.\", Monnam(mtmp));\n        957: \t\tobj_extract_self(otmp);\n        958: \t\t(void) mpickobj(mtmp, otmp);\t/* slurp */"
   },
   {
     "key": "L00956_01",
     "original": "%s engulfs several objects.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:956:17\n   951: \t\t++ecount;\n   952: \t\tif (ecount == 1) {\n   953: \t\t\tSprintf(buf, \"%s engulfs %s.\", Monnam(mtmp),\n   954: \t\t\t    distant_name(otmp,doname));\n   955: \t\t} else if (ecount == 2)\n&gt;  956: \t\t\tSprintf(buf, \"%s engulfs several objects.\", Monnam(mtmp));\n   957: \t\tobj_extract_self(otmp);\n   958: \t\t(void) mpickobj(mtmp, otmp);\t/* slurp */\n   959: \t    }\n   960: \t    /* Engulf & devour is instant, so don't set meating */\n   961: \t    if (mtmp-&gt;minvis) newsym(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/mon.c:956:17\n        951: \t\t++ecount;\n        952: \t\tif (ecount == 1) {\n        953: \t\t\tSprintf(buf, \"%s engulfs %s.\", Monnam(mtmp),\n        954: \t\t\t    distant_name(otmp,doname));\n        955: \t\t} else if (ecount == 2)\nTARGET  956: \t\t\tSprintf(buf, \"%s engulfs several objects.\", Monnam(mtmp));\n        957: \t\tobj_extract_self(otmp);\n        958: \t\t(void) mpickobj(mtmp, otmp);\t/* slurp */\n        959: \t    }\n        960: \t    /* Engulf & devour is instant, so don't set meating */\n        961: \t    if (mtmp-&gt;minvis) newsym(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L00965_01",
     "original": "%s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:965:9\n   960: \t    /* Engulf & devour is instant, so don't set meating */\n   961: \t    if (mtmp-&gt;minvis) newsym(mtmp-&gt;mx, mtmp-&gt;my);\n   962: \t}\n   963: \tif (ecount &gt; 0) {\n   964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n&gt;  965: \t\tpline(\"%s\", buf);\n   966: \t    else if (flags.soundok && flags.verbose)\n   967: \t    \tYou_hear(\"%s slurping sound%s.\",\n   968: \t\t\tecount == 1 ? \"a\" : \"several\",\n   969: \t\t\tecount == 1 ? \"\" : \"s\");\n   970: \t}"
+    "context": "src/mon.c:965:9\n        960: \t    /* Engulf & devour is instant, so don't set meating */\n        961: \t    if (mtmp-&gt;minvis) newsym(mtmp-&gt;mx, mtmp-&gt;my);\n        962: \t}\n        963: \tif (ecount &gt; 0) {\n        964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\nTARGET  965: \t\tpline(\"%s\", buf);\n        966: \t    else if (flags.soundok && flags.verbose)\n        967: \t    \tYou_hear(\"%s slurping sound%s.\",\n        968: \t\t\tecount == 1 ? \"a\" : \"several\",\n        969: \t\t\tecount == 1 ? \"\" : \"s\");\n        970: \t}"
   },
   {
     "key": "L00967_01",
     "original": "%s slurping sound%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:967:16\n   962: \t}\n   963: \tif (ecount &gt; 0) {\n   964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n   965: \t\tpline(\"%s\", buf);\n   966: \t    else if (flags.soundok && flags.verbose)\n&gt;  967: \t    \tYou_hear(\"%s slurping sound%s.\",\n   968: \t\t\tecount == 1 ? \"a\" : \"several\",\n   969: \t\t\tecount == 1 ? \"\" : \"s\");\n   970: \t}\n   971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n   972: }"
+    "context": "src/mon.c:967:16\n        962: \t}\n        963: \tif (ecount &gt; 0) {\n        964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n        965: \t\tpline(\"%s\", buf);\n        966: \t    else if (flags.soundok && flags.verbose)\nTARGET  967: \t    \tYou_hear(\"%s slurping sound%s.\",\n        968: \t\t\tecount == 1 ? \"a\" : \"several\",\n        969: \t\t\tecount == 1 ? \"\" : \"s\");\n        970: \t}\n        971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n        972: }"
   },
   {
     "key": "L00968_01",
     "original": "a",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:968:18\n   963: \tif (ecount &gt; 0) {\n   964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n   965: \t\tpline(\"%s\", buf);\n   966: \t    else if (flags.soundok && flags.verbose)\n   967: \t    \tYou_hear(\"%s slurping sound%s.\",\n&gt;  968: \t\t\tecount == 1 ? \"a\" : \"several\",\n   969: \t\t\tecount == 1 ? \"\" : \"s\");\n   970: \t}\n   971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n   972: }\n   973: "
+    "context": "src/mon.c:968:18\n        963: \tif (ecount &gt; 0) {\n        964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n        965: \t\tpline(\"%s\", buf);\n        966: \t    else if (flags.soundok && flags.verbose)\n        967: \t    \tYou_hear(\"%s slurping sound%s.\",\nTARGET  968: \t\t\tecount == 1 ? \"a\" : \"several\",\n        969: \t\t\tecount == 1 ? \"\" : \"s\");\n        970: \t}\n        971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n        972: }\n        973: "
   },
   {
     "key": "L00968_02",
     "original": "several",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:968:24\n   963: \tif (ecount &gt; 0) {\n   964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n   965: \t\tpline(\"%s\", buf);\n   966: \t    else if (flags.soundok && flags.verbose)\n   967: \t    \tYou_hear(\"%s slurping sound%s.\",\n&gt;  968: \t\t\tecount == 1 ? \"a\" : \"several\",\n   969: \t\t\tecount == 1 ? \"\" : \"s\");\n   970: \t}\n   971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n   972: }\n   973: "
+    "context": "src/mon.c:968:24\n        963: \tif (ecount &gt; 0) {\n        964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n        965: \t\tpline(\"%s\", buf);\n        966: \t    else if (flags.soundok && flags.verbose)\n        967: \t    \tYou_hear(\"%s slurping sound%s.\",\nTARGET  968: \t\t\tecount == 1 ? \"a\" : \"several\",\n        969: \t\t\tecount == 1 ? \"\" : \"s\");\n        970: \t}\n        971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n        972: }\n        973: "
   },
   {
     "key": "L00969_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:969:23\n   964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n   965: \t\tpline(\"%s\", buf);\n   966: \t    else if (flags.soundok && flags.verbose)\n   967: \t    \tYou_hear(\"%s slurping sound%s.\",\n   968: \t\t\tecount == 1 ? \"a\" : \"several\",\n&gt;  969: \t\t\tecount == 1 ? \"\" : \"s\");\n   970: \t}\n   971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n   972: }\n   973: \n   974: void"
+    "context": "src/mon.c:969:23\n        964: \t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my) && flags.verbose && buf[0])\n        965: \t\tpline(\"%s\", buf);\n        966: \t    else if (flags.soundok && flags.verbose)\n        967: \t    \tYou_hear(\"%s slurping sound%s.\",\n        968: \t\t\tecount == 1 ? \"a\" : \"several\",\nTARGET  969: \t\t\tecount == 1 ? \"\" : \"s\");\n        970: \t}\n        971: \treturn ((count &gt; 0) || (ecount &gt; 0)) ? 1 : 0;\n        972: }\n        973: \n        974: void"
   },
   {
     "key": "L00992_01",
     "original": "%s picks up some %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:992:9\n   987:         obj_extract_self(gold);\n   988:         add_to_minv(mtmp, gold);\n   989: #endif\n   990: \tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) ) {\n   991: \t    if (flags.verbose && !mtmp-&gt;isgd)\n&gt;  992: \t\tpline(\"%s picks up some %s.\", Monnam(mtmp),\n   993: \t\t\tmat_idx == GOLD ? \"gold\" : \"money\");\n   994: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n   995: \t}\n   996:     }\n   997: }"
+    "context": "src/mon.c:992:9\n        987:         obj_extract_self(gold);\n        988:         add_to_minv(mtmp, gold);\n        989: #endif\n        990: \tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) ) {\n        991: \t    if (flags.verbose && !mtmp-&gt;isgd)\nTARGET  992: \t\tpline(\"%s picks up some %s.\", Monnam(mtmp),\n        993: \t\t\tmat_idx == GOLD ? \"gold\" : \"money\");\n        994: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n        995: \t}\n        996:     }\n        997: }"
   },
   {
     "key": "L00993_01",
     "original": "gold",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:993:22\n   988:         add_to_minv(mtmp, gold);\n   989: #endif\n   990: \tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) ) {\n   991: \t    if (flags.verbose && !mtmp-&gt;isgd)\n   992: \t\tpline(\"%s picks up some %s.\", Monnam(mtmp),\n&gt;  993: \t\t\tmat_idx == GOLD ? \"gold\" : \"money\");\n   994: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n   995: \t}\n   996:     }\n   997: }\n   998: #endif /* OVLB */"
+    "context": "src/mon.c:993:22\n        988:         add_to_minv(mtmp, gold);\n        989: #endif\n        990: \tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) ) {\n        991: \t    if (flags.verbose && !mtmp-&gt;isgd)\n        992: \t\tpline(\"%s picks up some %s.\", Monnam(mtmp),\nTARGET  993: \t\t\tmat_idx == GOLD ? \"gold\" : \"money\");\n        994: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n        995: \t}\n        996:     }\n        997: }\n        998: #endif /* OVLB */"
   },
   {
     "key": "L00993_02",
     "original": "money",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:993:31\n   988:         add_to_minv(mtmp, gold);\n   989: #endif\n   990: \tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) ) {\n   991: \t    if (flags.verbose && !mtmp-&gt;isgd)\n   992: \t\tpline(\"%s picks up some %s.\", Monnam(mtmp),\n&gt;  993: \t\t\tmat_idx == GOLD ? \"gold\" : \"money\");\n   994: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n   995: \t}\n   996:     }\n   997: }\n   998: #endif /* OVLB */"
+    "context": "src/mon.c:993:31\n        988:         add_to_minv(mtmp, gold);\n        989: #endif\n        990: \tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) ) {\n        991: \t    if (flags.verbose && !mtmp-&gt;isgd)\n        992: \t\tpline(\"%s picks up some %s.\", Monnam(mtmp),\nTARGET  993: \t\t\tmat_idx == GOLD ? \"gold\" : \"money\");\n        994: \t    newsym(mtmp-&gt;mx, mtmp-&gt;my);\n        995: \t}\n        996:     }\n        997: }\n        998: #endif /* OVLB */"
   },
   {
     "key": "L01028_01",
     "original": "%s picks up %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1028:10\n  1023: \t\tif (is_pool(mtmp-&gt;mx,mtmp-&gt;my)) continue;\n  1024: #ifdef INVISIBLE_OBJECTS\n  1025: \t\tif (otmp-&gt;oinvis && !perceives(mtmp-&gt;data)) continue;\n  1026: #endif\n  1027: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\n&gt; 1028: \t\t\tpline(\"%s picks up %s.\", Monnam(mtmp),\n  1029: \t\t\t      (distu(mtmp-&gt;mx, mtmp-&gt;my) &lt;= 5) ?\n  1030: \t\t\t\tdoname(otmp) : distant_name(otmp, doname));\n  1031: \t\tobj_extract_self(otmp);\n  1032: \t\t/* unblock point after extract, before pickup */\n  1033: \t\tif (otmp-&gt;otyp == BOULDER)"
+    "context": "src/mon.c:1028:10\n       1023: \t\tif (is_pool(mtmp-&gt;mx,mtmp-&gt;my)) continue;\n       1024: #ifdef INVISIBLE_OBJECTS\n       1025: \t\tif (otmp-&gt;oinvis && !perceives(mtmp-&gt;data)) continue;\n       1026: #endif\n       1027: \t\tif (cansee(mtmp-&gt;mx,mtmp-&gt;my) && flags.verbose)\nTARGET 1028: \t\t\tpline(\"%s picks up %s.\", Monnam(mtmp),\n       1029: \t\t\t      (distu(mtmp-&gt;mx, mtmp-&gt;my) &lt;= 5) ?\n       1030: \t\t\t\tdoname(otmp) : distant_name(otmp, doname));\n       1031: \t\tobj_extract_self(otmp);\n       1032: \t\t/* unblock point after extract, before pickup */\n       1033: \t\tif (otmp-&gt;otyp == BOULDER)"
   },
   {
     "key": "L01308_01",
     "original": "A monster looked at a very strange trap of type %d.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1308:12\n  1303: \t\t * neither avoided nor marked in info[].\n  1304: \t\t */\n  1305: \t\t{ register struct trap *ttmp = t_at(nx, ny);\n  1306: \t\t    if(ttmp) {\n  1307: \t\t\tif(ttmp-&gt;ttyp &gt;= TRAPNUM || ttmp-&gt;ttyp == 0)  {\n&gt; 1308: impossible(\"A monster looked at a very strange trap of type %d.\", ttmp-&gt;ttyp);\n  1309: \t\t\t    continue;\n  1310: \t\t\t}\n  1311: \t\t\tif ((ttmp-&gt;ttyp != RUST_TRAP\n  1312: \t\t\t\t\t|| mdat == &mons[PM_FLAMING_SPHERE]\n  1313: \t\t\t\t\t|| mdat == &mons[PM_IRON_GOLEM])"
+    "context": "src/mon.c:1308:12\n       1303: \t\t * neither avoided nor marked in info[].\n       1304: \t\t */\n       1305: \t\t{ register struct trap *ttmp = t_at(nx, ny);\n       1306: \t\t    if(ttmp) {\n       1307: \t\t\tif(ttmp-&gt;ttyp &gt;= TRAPNUM || ttmp-&gt;ttyp == 0)  {\nTARGET 1308: impossible(\"A monster looked at a very strange trap of type %d.\", ttmp-&gt;ttyp);\n       1309: \t\t\t    continue;\n       1310: \t\t\t}\n       1311: \t\t\tif ((ttmp-&gt;ttyp != RUST_TRAP\n       1312: \t\t\t\t\t|| mdat == &mons[PM_FLAMING_SPHERE]\n       1313: \t\t\t\t\t|| mdat == &mons[PM_IRON_GOLEM])"
   },
   {
     "key": "L01423_01",
     "original": "dmonsfree: %d removed doesn't match %d pending",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1423:13\n  1418: \t} else\n  1419: \t    mtmp = &(*mtmp)-&gt;nmon;\n  1420:     }\n  1421: \n  1422:     if (count != iflags.purge_monsters)\n&gt; 1423: \timpossible(\"dmonsfree: %d removed doesn't match %d pending\",\n  1424: \t\t   count, iflags.purge_monsters);\n  1425:     iflags.purge_monsters = 0;\n  1426: }\n  1427: \n  1428: #endif /* OVL1 */"
+    "context": "src/mon.c:1423:13\n       1418: \t} else\n       1419: \t    mtmp = &(*mtmp)-&gt;nmon;\n       1420:     }\n       1421: \n       1422:     if (count != iflags.purge_monsters)\nTARGET 1423: \timpossible(\"dmonsfree: %d removed doesn't match %d pending\",\n       1424: \t\t   count, iflags.purge_monsters);\n       1425:     iflags.purge_monsters = 0;\n       1426: }\n       1427: \n       1428: #endif /* OVL1 */"
   },
   {
     "key": "L01443_01",
     "original": "replmon: minvent inconsistency",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1443:12\n  1438: \n  1439:     /* transfer the monster's inventory */\n  1440:     for (otmp = mtmp2-&gt;minvent; otmp; otmp = otmp-&gt;nobj) {\n  1441: #ifdef DEBUG\n  1442: \tif (otmp-&gt;where != OBJ_MINVENT || otmp-&gt;ocarry != mtmp)\n&gt; 1443: \t    panic(\"replmon: minvent inconsistency\");\n  1444: #endif\n  1445: \totmp-&gt;ocarry = mtmp2;\n  1446:     }\n  1447:     mtmp-&gt;minvent = 0;\n  1448: "
+    "context": "src/mon.c:1443:12\n       1438: \n       1439:     /* transfer the monster's inventory */\n       1440:     for (otmp = mtmp2-&gt;minvent; otmp; otmp = otmp-&gt;nobj) {\n       1441: #ifdef DEBUG\n       1442: \tif (otmp-&gt;where != OBJ_MINVENT || otmp-&gt;ocarry != mtmp)\nTARGET 1443: \t    panic(\"replmon: minvent inconsistency\");\n       1444: #endif\n       1445: \totmp-&gt;ocarry = mtmp2;\n       1446:     }\n       1447:     mtmp-&gt;minvent = 0;\n       1448: "
   },
   {
     "key": "L01491_01",
     "original": "relmon: no fmon available.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1491:41\n  1486: relmon(mon)\n  1487: register struct monst *mon;\n  1488: {\n  1489: \tregister struct monst *mtmp;\n  1490: \n&gt; 1491: \tif (fmon == (struct monst *)0)  panic (\"relmon: no fmon available.\");\n  1492: \n  1493: \tremove_monster(mon-&gt;mx, mon-&gt;my);\n  1494: \n  1495: \tif(mon == fmon) fmon = fmon-&gt;nmon;\n  1496: \telse {"
+    "context": "src/mon.c:1491:41\n       1486: relmon(mon)\n       1487: register struct monst *mon;\n       1488: {\n       1489: \tregister struct monst *mtmp;\n       1490: \nTARGET 1491: \tif (fmon == (struct monst *)0)  panic (\"relmon: no fmon available.\");\n       1492: \n       1493: \tremove_monster(mon-&gt;mx, mon-&gt;my);\n       1494: \n       1495: \tif(mon == fmon) fmon = fmon-&gt;nmon;\n       1496: \telse {"
   },
   {
     "key": "L01499_01",
     "original": "relmon: mon not in list.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1499:18\n  1494: \n  1495: \tif(mon == fmon) fmon = fmon-&gt;nmon;\n  1496: \telse {\n  1497: \t\tfor(mtmp = fmon; mtmp && mtmp-&gt;nmon != mon; mtmp = mtmp-&gt;nmon) ;\n  1498: \t\tif(mtmp)    mtmp-&gt;nmon = mon-&gt;nmon;\n&gt; 1499: \t\telse\t    panic(\"relmon: mon not in list.\");\n  1500: \t}\n  1501: }\n  1502: \n  1503: /* remove effects of mtmp from other data structures */\n  1504: STATIC_OVL void"
+    "context": "src/mon.c:1499:18\n       1494: \n       1495: \tif(mon == fmon) fmon = fmon-&gt;nmon;\n       1496: \telse {\n       1497: \t\tfor(mtmp = fmon; mtmp && mtmp-&gt;nmon != mon; mtmp = mtmp-&gt;nmon) ;\n       1498: \t\tif(mtmp)    mtmp-&gt;nmon = mon-&gt;nmon;\nTARGET 1499: \t\telse\t    panic(\"relmon: mon not in list.\");\n       1500: \t}\n       1501: }\n       1502: \n       1503: /* remove effects of mtmp from other data structures */\n       1504: STATIC_OVL void"
   },
   {
     "key": "L01558_01",
     "original": "But wait...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1558:10\n  1553: \t\t/* [ALI] Always treat swallower as visible for consistency */\n  1554: \t\t/* with unpoly_monster(). */\n  1555: \t\tvisible = u.uswallow && u.ustuck == mtmp ||\n  1556: \t\t\tcansee(mtmp-&gt;mx, mtmp-&gt;my);\n  1557: \t\tif (visible) {\n&gt; 1558: \t\t\tpline(\"But wait...\");\n  1559: \t\t\tpline(\"%s medallion begins to glow!\",\n  1560: \t\t\t\ts_suffix(Monnam(mtmp)));\n  1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n  1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n  1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))"
+    "context": "src/mon.c:1558:10\n       1553: \t\t/* [ALI] Always treat swallower as visible for consistency */\n       1554: \t\t/* with unpoly_monster(). */\n       1555: \t\tvisible = u.uswallow && u.ustuck == mtmp ||\n       1556: \t\t\tcansee(mtmp-&gt;mx, mtmp-&gt;my);\n       1557: \t\tif (visible) {\nTARGET 1558: \t\t\tpline(\"But wait...\");\n       1559: \t\t\tpline(\"%s medallion begins to glow!\",\n       1560: \t\t\t\ts_suffix(Monnam(mtmp)));\n       1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n       1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n       1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))"
   },
   {
     "key": "L01559_01",
     "original": "%s medallion begins to glow!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1559:10\n  1554: \t\t/* with unpoly_monster(). */\n  1555: \t\tvisible = u.uswallow && u.ustuck == mtmp ||\n  1556: \t\t\tcansee(mtmp-&gt;mx, mtmp-&gt;my);\n  1557: \t\tif (visible) {\n  1558: \t\t\tpline(\"But wait...\");\n&gt; 1559: \t\t\tpline(\"%s medallion begins to glow!\",\n  1560: \t\t\t\ts_suffix(Monnam(mtmp)));\n  1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n  1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n  1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n  1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));"
+    "context": "src/mon.c:1559:10\n       1554: \t\t/* with unpoly_monster(). */\n       1555: \t\tvisible = u.uswallow && u.ustuck == mtmp ||\n       1556: \t\t\tcansee(mtmp-&gt;mx, mtmp-&gt;my);\n       1557: \t\tif (visible) {\n       1558: \t\t\tpline(\"But wait...\");\nTARGET 1559: \t\t\tpline(\"%s medallion begins to glow!\",\n       1560: \t\t\t\ts_suffix(Monnam(mtmp)));\n       1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n       1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n       1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n       1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));"
   },
   {
     "key": "L01564_01",
     "original": "%s reconstitutes!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1564:11\n  1559: \t\t\tpline(\"%s medallion begins to glow!\",\n  1560: \t\t\t\ts_suffix(Monnam(mtmp)));\n  1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n  1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n  1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n&gt; 1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));\n  1565: \t\t\telse\n  1566: \t\t\t\tpline(\"%s looks much better!\", Monnam(mtmp));\n  1567: \t\t\tpline_The(\"medallion crumbles to dust!\");\n  1568: \t\t}\n  1569: \t\tm_useup(mtmp, lifesave);"
+    "context": "src/mon.c:1564:11\n       1559: \t\t\tpline(\"%s medallion begins to glow!\",\n       1560: \t\t\t\ts_suffix(Monnam(mtmp)));\n       1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n       1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n       1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\nTARGET 1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));\n       1565: \t\t\telse\n       1566: \t\t\t\tpline(\"%s looks much better!\", Monnam(mtmp));\n       1567: \t\t\tpline_The(\"medallion crumbles to dust!\");\n       1568: \t\t}\n       1569: \t\tm_useup(mtmp, lifesave);"
   },
   {
     "key": "L01566_01",
     "original": "%s looks much better!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1566:11\n  1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n  1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n  1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n  1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));\n  1565: \t\t\telse\n&gt; 1566: \t\t\t\tpline(\"%s looks much better!\", Monnam(mtmp));\n  1567: \t\t\tpline_The(\"medallion crumbles to dust!\");\n  1568: \t\t}\n  1569: \t\tm_useup(mtmp, lifesave);\n  1570: \t\tmtmp-&gt;mcanmove = 1;\n  1571: \t\tmtmp-&gt;mfrozen = 0;"
+    "context": "src/mon.c:1566:11\n       1561: \t\t\tmakeknown(AMULET_OF_LIFE_SAVING);\n       1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n       1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n       1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));\n       1565: \t\t\telse\nTARGET 1566: \t\t\t\tpline(\"%s looks much better!\", Monnam(mtmp));\n       1567: \t\t\tpline_The(\"medallion crumbles to dust!\");\n       1568: \t\t}\n       1569: \t\tm_useup(mtmp, lifesave);\n       1570: \t\tmtmp-&gt;mcanmove = 1;\n       1571: \t\tmtmp-&gt;mfrozen = 0;"
   },
   {
     "key": "L01567_01",
     "original": "medallion crumbles to dust!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1567:14\n  1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n  1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n  1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));\n  1565: \t\t\telse\n  1566: \t\t\t\tpline(\"%s looks much better!\", Monnam(mtmp));\n&gt; 1567: \t\t\tpline_The(\"medallion crumbles to dust!\");\n  1568: \t\t}\n  1569: \t\tm_useup(mtmp, lifesave);\n  1570: \t\tmtmp-&gt;mcanmove = 1;\n  1571: \t\tmtmp-&gt;mfrozen = 0;\n  1572: \t\tif (mtmp-&gt;mtame && !mtmp-&gt;isminion) {"
+    "context": "src/mon.c:1567:14\n       1562: \t\t\tif (attacktype(mtmp-&gt;data, AT_EXPL)\n       1563: \t\t\t    || attacktype(mtmp-&gt;data, AT_BOOM))\n       1564: \t\t\t\tpline(\"%s reconstitutes!\", Monnam(mtmp));\n       1565: \t\t\telse\n       1566: \t\t\t\tpline(\"%s looks much better!\", Monnam(mtmp));\nTARGET 1567: \t\t\tpline_The(\"medallion crumbles to dust!\");\n       1568: \t\t}\n       1569: \t\tm_useup(mtmp, lifesave);\n       1570: \t\tmtmp-&gt;mcanmove = 1;\n       1571: \t\tmtmp-&gt;mfrozen = 0;\n       1572: \t\tif (mtmp-&gt;mtame && !mtmp-&gt;isminion) {"
   },
   {
     "key": "L01579_01",
     "original": "Unfortunately %s is still genocided...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1579:14\n  1574: \t\t}\n  1575: \t\tif (mtmp-&gt;mhpmax &lt;= 0) mtmp-&gt;mhpmax = 10;\n  1576: \t\tmtmp-&gt;mhp = mtmp-&gt;mhpmax;\n  1577: \t\tif (mvitals[monsndx(mtmp-&gt;data)].mvflags & G_GENOD) {\n  1578: \t\t\tif (visible)\n&gt; 1579: \t\t\t    pline(\"Unfortunately %s is still genocided...\",\n  1580: \t\t\t\tmon_nam(mtmp));\n  1581: \t\t} else\n  1582: \t\t\treturn;\n  1583: \t}\n  1584: \tmtmp-&gt;mhp = 0;"
+    "context": "src/mon.c:1579:14\n       1574: \t\t}\n       1575: \t\tif (mtmp-&gt;mhpmax &lt;= 0) mtmp-&gt;mhpmax = 10;\n       1576: \t\tmtmp-&gt;mhp = mtmp-&gt;mhpmax;\n       1577: \t\tif (mvitals[monsndx(mtmp-&gt;data)].mvflags & G_GENOD) {\n       1578: \t\t\tif (visible)\nTARGET 1579: \t\t\t    pline(\"Unfortunately %s is still genocided...\",\n       1580: \t\t\t\tmon_nam(mtmp));\n       1581: \t\t} else\n       1582: \t\t\treturn;\n       1583: \t}\n       1584: \tmtmp-&gt;mhp = 0;"
   },
   {
     "key": "L01606_01",
     "original": "But wait...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1606:9\n  1601: \t     * message about breaking out of the \"new\" monster.\n  1602: \t     */\n  1603: \t    visible = u.uswallow && u.ustuck == mtmp || cansee(mtmp-&gt;mx,mtmp-&gt;my);\n  1604: \t    mtmp-&gt;mhp = mtmp-&gt;mhpmax;\n  1605: \t    if (visible)\n&gt; 1606: \t\tpline(\"But wait...\");\n  1607: \t    if (newcham(mtmp, &mons[mtmp-&gt;oldmonnm], FALSE, visible))\n  1608: \t\tmtmp-&gt;mhp = mtmp-&gt;mhpmax/2;\n  1609: \t    else {\n  1610: \t\tif (visible)\n  1611: \t\t    pline(\"%s shudders!\", Monnam(mtmp));"
+    "context": "src/mon.c:1606:9\n       1601: \t     * message about breaking out of the \"new\" monster.\n       1602: \t     */\n       1603: \t    visible = u.uswallow && u.ustuck == mtmp || cansee(mtmp-&gt;mx,mtmp-&gt;my);\n       1604: \t    mtmp-&gt;mhp = mtmp-&gt;mhpmax;\n       1605: \t    if (visible)\nTARGET 1606: \t\tpline(\"But wait...\");\n       1607: \t    if (newcham(mtmp, &mons[mtmp-&gt;oldmonnm], FALSE, visible))\n       1608: \t\tmtmp-&gt;mhp = mtmp-&gt;mhpmax/2;\n       1609: \t    else {\n       1610: \t\tif (visible)\n       1611: \t\t    pline(\"%s shudders!\", Monnam(mtmp));"
   },
   {
     "key": "L01611_01",
     "original": "%s shudders!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1611:13\n  1606: \t\tpline(\"But wait...\");\n  1607: \t    if (newcham(mtmp, &mons[mtmp-&gt;oldmonnm], FALSE, visible))\n  1608: \t\tmtmp-&gt;mhp = mtmp-&gt;mhpmax/2;\n  1609: \t    else {\n  1610: \t\tif (visible)\n&gt; 1611: \t\t    pline(\"%s shudders!\", Monnam(mtmp));\n  1612: \t\tmtmp-&gt;mhp = 0;\n  1613: \t    }\n  1614: \t}\n  1615: }\n  1616: "
+    "context": "src/mon.c:1611:13\n       1606: \t\tpline(\"But wait...\");\n       1607: \t    if (newcham(mtmp, &mons[mtmp-&gt;oldmonnm], FALSE, visible))\n       1608: \t\tmtmp-&gt;mhp = mtmp-&gt;mhpmax/2;\n       1609: \t    else {\n       1610: \t\tif (visible)\nTARGET 1611: \t\t    pline(\"%s shudders!\", Monnam(mtmp));\n       1612: \t\tmtmp-&gt;mhp = 0;\n       1613: \t    }\n       1614: \t}\n       1615: }\n       1616: "
   },
   {
     "key": "L01726_01",
     "original": "%s body crumbles into dust.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1726:9\n  1721: \tstruct permonst *mdat = mon-&gt;data;\n  1722: \tint i, tmp;\n  1723: \n  1724: \tif (mdat == &mons[PM_VLAD_THE_IMPALER] || mdat-&gt;mlet == S_LICH) {\n  1725: \t    if (cansee(mon-&gt;mx, mon-&gt;my) && !was_swallowed)\n&gt; 1726: \t\tpline(\"%s body crumbles into dust.\", s_suffix(Monnam(mon)));\n  1727: \t    /* KMH -- make_corpse() handles Vecna */\n  1728: \t    return (mdat == &mons[PM_VECNA]);\n  1729: \t}\n  1730: \n  1731: \t/* Gas spores always explode upon death */"
+    "context": "src/mon.c:1726:9\n       1721: \tstruct permonst *mdat = mon-&gt;data;\n       1722: \tint i, tmp;\n       1723: \n       1724: \tif (mdat == &mons[PM_VLAD_THE_IMPALER] || mdat-&gt;mlet == S_LICH) {\n       1725: \t    if (cansee(mon-&gt;mx, mon-&gt;my) && !was_swallowed)\nTARGET 1726: \t\tpline(\"%s body crumbles into dust.\", s_suffix(Monnam(mon)));\n       1727: \t    /* KMH -- make_corpse() handles Vecna */\n       1728: \t    return (mdat == &mons[PM_VECNA]);\n       1729: \t}\n       1730: \n       1731: \t/* Gas spores always explode upon death */"
   },
   {
     "key": "L01742_01",
     "original": "is an explosion in your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1742:10\n  1737: \t    \telse if(mdat-&gt;mattk[i].damd)\n  1738: \t    \t    tmp = d((int)mdat-&gt;mlevel+1, (int)mdat-&gt;mattk[i].damd);\n  1739: \t    \telse tmp = 0;\n  1740: \t\tif (was_swallowed && magr) {\n  1741: \t\t    if (magr == &youmonst) {\n&gt; 1742: \t\t\tThere(\"is an explosion in your %s!\",\n  1743: \t\t\t      body_part(STOMACH));\n  1744: \t\t\tSprintf(killer_buf, \"%s explosion\",\n  1745: \t\t\t\ts_suffix(mdat-&gt;mname));\n  1746: \t\t\tif (Half_physical_damage) tmp = (tmp+1) / 2;\n  1747: \t\t\tlosehp(tmp, killer_buf, KILLED_BY_AN);"
+    "context": "src/mon.c:1742:10\n       1737: \t    \telse if(mdat-&gt;mattk[i].damd)\n       1738: \t    \t    tmp = d((int)mdat-&gt;mlevel+1, (int)mdat-&gt;mattk[i].damd);\n       1739: \t    \telse tmp = 0;\n       1740: \t\tif (was_swallowed && magr) {\n       1741: \t\t    if (magr == &youmonst) {\nTARGET 1742: \t\t\tThere(\"is an explosion in your %s!\",\n       1743: \t\t\t      body_part(STOMACH));\n       1744: \t\t\tSprintf(killer_buf, \"%s explosion\",\n       1745: \t\t\t\ts_suffix(mdat-&gt;mname));\n       1746: \t\t\tif (Half_physical_damage) tmp = (tmp+1) / 2;\n       1747: \t\t\tlosehp(tmp, killer_buf, KILLED_BY_AN);"
   },
   {
     "key": "L01744_01",
     "original": "%s explosion",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1744:24\n  1739: \t    \telse tmp = 0;\n  1740: \t\tif (was_swallowed && magr) {\n  1741: \t\t    if (magr == &youmonst) {\n  1742: \t\t\tThere(\"is an explosion in your %s!\",\n  1743: \t\t\t      body_part(STOMACH));\n&gt; 1744: \t\t\tSprintf(killer_buf, \"%s explosion\",\n  1745: \t\t\t\ts_suffix(mdat-&gt;mname));\n  1746: \t\t\tif (Half_physical_damage) tmp = (tmp+1) / 2;\n  1747: \t\t\tlosehp(tmp, killer_buf, KILLED_BY_AN);\n  1748: \t\t    } else {\n  1749: \t\t\tif (flags.soundok) You_hear(\"an explosion.\");"
+    "context": "src/mon.c:1744:24\n       1739: \t    \telse tmp = 0;\n       1740: \t\tif (was_swallowed && magr) {\n       1741: \t\t    if (magr == &youmonst) {\n       1742: \t\t\tThere(\"is an explosion in your %s!\",\n       1743: \t\t\t      body_part(STOMACH));\nTARGET 1744: \t\t\tSprintf(killer_buf, \"%s explosion\",\n       1745: \t\t\t\ts_suffix(mdat-&gt;mname));\n       1746: \t\t\tif (Half_physical_damage) tmp = (tmp+1) / 2;\n       1747: \t\t\tlosehp(tmp, killer_buf, KILLED_BY_AN);\n       1748: \t\t    } else {\n       1749: \t\t\tif (flags.soundok) You_hear(\"an explosion.\");"
   },
   {
     "key": "L01749_01",
     "original": "an explosion.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1749:32\n  1744: \t\t\tSprintf(killer_buf, \"%s explosion\",\n  1745: \t\t\t\ts_suffix(mdat-&gt;mname));\n  1746: \t\t\tif (Half_physical_damage) tmp = (tmp+1) / 2;\n  1747: \t\t\tlosehp(tmp, killer_buf, KILLED_BY_AN);\n  1748: \t\t    } else {\n&gt; 1749: \t\t\tif (flags.soundok) You_hear(\"an explosion.\");\n  1750: \t\t\tmagr-&gt;mhp -= tmp;\n  1751: \t\t\tif (magr-&gt;mhp &lt; 1) mondied(magr);\n  1752: \t\t\tif (magr-&gt;mhp &lt; 1) { /* maybe lifesaved */\n  1753: \t\t\t    if (canspotmon(magr))\n  1754: \t\t\t\tpline(\"%s rips open!\", Monnam(magr));"
+    "context": "src/mon.c:1749:32\n       1744: \t\t\tSprintf(killer_buf, \"%s explosion\",\n       1745: \t\t\t\ts_suffix(mdat-&gt;mname));\n       1746: \t\t\tif (Half_physical_damage) tmp = (tmp+1) / 2;\n       1747: \t\t\tlosehp(tmp, killer_buf, KILLED_BY_AN);\n       1748: \t\t    } else {\nTARGET 1749: \t\t\tif (flags.soundok) You_hear(\"an explosion.\");\n       1750: \t\t\tmagr-&gt;mhp -= tmp;\n       1751: \t\t\tif (magr-&gt;mhp &lt; 1) mondied(magr);\n       1752: \t\t\tif (magr-&gt;mhp &lt; 1) { /* maybe lifesaved */\n       1753: \t\t\t    if (canspotmon(magr))\n       1754: \t\t\t\tpline(\"%s rips open!\", Monnam(magr));"
   },
   {
     "key": "L01754_01",
     "original": "%s rips open!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1754:11\n  1749: \t\t\tif (flags.soundok) You_hear(\"an explosion.\");\n  1750: \t\t\tmagr-&gt;mhp -= tmp;\n  1751: \t\t\tif (magr-&gt;mhp &lt; 1) mondied(magr);\n  1752: \t\t\tif (magr-&gt;mhp &lt; 1) { /* maybe lifesaved */\n  1753: \t\t\t    if (canspotmon(magr))\n&gt; 1754: \t\t\t\tpline(\"%s rips open!\", Monnam(magr));\n  1755: \t\t\t} else if (canseemon(magr))\n  1756: \t\t\t    pline(\"%s seems to have indigestion.\",\n  1757: \t\t\t\t  Monnam(magr));\n  1758: \t\t    }\n  1759: "
+    "context": "src/mon.c:1754:11\n       1749: \t\t\tif (flags.soundok) You_hear(\"an explosion.\");\n       1750: \t\t\tmagr-&gt;mhp -= tmp;\n       1751: \t\t\tif (magr-&gt;mhp &lt; 1) mondied(magr);\n       1752: \t\t\tif (magr-&gt;mhp &lt; 1) { /* maybe lifesaved */\n       1753: \t\t\t    if (canspotmon(magr))\nTARGET 1754: \t\t\t\tpline(\"%s rips open!\", Monnam(magr));\n       1755: \t\t\t} else if (canseemon(magr))\n       1756: \t\t\t    pline(\"%s seems to have indigestion.\",\n       1757: \t\t\t\t  Monnam(magr));\n       1758: \t\t    }\n       1759: "
   },
   {
     "key": "L01756_01",
     "original": "%s seems to have indigestion.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1756:14\n  1751: \t\t\tif (magr-&gt;mhp &lt; 1) mondied(magr);\n  1752: \t\t\tif (magr-&gt;mhp &lt; 1) { /* maybe lifesaved */\n  1753: \t\t\t    if (canspotmon(magr))\n  1754: \t\t\t\tpline(\"%s rips open!\", Monnam(magr));\n  1755: \t\t\t} else if (canseemon(magr))\n&gt; 1756: \t\t\t    pline(\"%s seems to have indigestion.\",\n  1757: \t\t\t\t  Monnam(magr));\n  1758: \t\t    }\n  1759: \n  1760: \t\t    return FALSE;\n  1761: \t\t}"
+    "context": "src/mon.c:1756:14\n       1751: \t\t\tif (magr-&gt;mhp &lt; 1) mondied(magr);\n       1752: \t\t\tif (magr-&gt;mhp &lt; 1) { /* maybe lifesaved */\n       1753: \t\t\t    if (canspotmon(magr))\n       1754: \t\t\t\tpline(\"%s rips open!\", Monnam(magr));\n       1755: \t\t\t} else if (canseemon(magr))\nTARGET 1756: \t\t\t    pline(\"%s seems to have indigestion.\",\n       1757: \t\t\t\t  Monnam(magr));\n       1758: \t\t    }\n       1759: \n       1760: \t\t    return FALSE;\n       1761: \t\t}"
   },
   {
     "key": "L01763_01",
     "original": "%s explosion",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1763:27\n  1758: \t\t    }\n  1759: \n  1760: \t\t    return FALSE;\n  1761: \t\t}\n  1762: \n&gt; 1763: \t    \tSprintf(killer_buf, \"%s explosion\", s_suffix(mdat-&gt;mname));\n  1764: \t    \tkiller = killer_buf;\n  1765: \t    \tkiller_format = KILLED_BY_AN;\n  1766: \t    \texplode(mon-&gt;mx, mon-&gt;my, -1, tmp, MON_EXPLODE, EXPL_NOXIOUS); \n  1767: \t    \treturn (FALSE);\n  1768: \t    }"
+    "context": "src/mon.c:1763:27\n       1758: \t\t    }\n       1759: \n       1760: \t\t    return FALSE;\n       1761: \t\t}\n       1762: \nTARGET 1763: \t    \tSprintf(killer_buf, \"%s explosion\", s_suffix(mdat-&gt;mname));\n       1764: \t    \tkiller = killer_buf;\n       1765: \t    \tkiller_format = KILLED_BY_AN;\n       1766: \t    \texplode(mon-&gt;mx, mon-&gt;my, -1, tmp, MON_EXPLODE, EXPL_NOXIOUS); \n       1767: \t    \treturn (FALSE);\n       1768: \t    }"
   },
   {
     "key": "L01774_01",
     "original": "%s body deliquesces into a cloud of noxious gas!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1774:9\n  1769:   \t}\n  1770: \n  1771: \t/* Cthulhu Deliquesces... */\n  1772: \tif (mdat == &mons[PM_CTHULHU]) {\n  1773: \t    if (cansee(mon-&gt;mx, mon-&gt;my))\n&gt; 1774: \t\tpline(\"%s body deliquesces into a cloud of noxious gas!\",\n  1775: \t\t\ts_suffix(Monnam(mon)));\n  1776: \t    else\n  1777: \t\tYou_hear(\"hissing and bubbling!\");\n  1778: \t    /* ...into a stinking cloud... */\n  1779: \t    (void) create_cthulhu_death_cloud(mon-&gt;mx, mon-&gt;my, 3, 8);"
+    "context": "src/mon.c:1774:9\n       1769:   \t}\n       1770: \n       1771: \t/* Cthulhu Deliquesces... */\n       1772: \tif (mdat == &mons[PM_CTHULHU]) {\n       1773: \t    if (cansee(mon-&gt;mx, mon-&gt;my))\nTARGET 1774: \t\tpline(\"%s body deliquesces into a cloud of noxious gas!\",\n       1775: \t\t\ts_suffix(Monnam(mon)));\n       1776: \t    else\n       1777: \t\tYou_hear(\"hissing and bubbling!\");\n       1778: \t    /* ...into a stinking cloud... */\n       1779: \t    (void) create_cthulhu_death_cloud(mon-&gt;mx, mon-&gt;my, 3, 8);"
   },
   {
     "key": "L01777_01",
     "original": "hissing and bubbling!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1777:12\n  1772: \tif (mdat == &mons[PM_CTHULHU]) {\n  1773: \t    if (cansee(mon-&gt;mx, mon-&gt;my))\n  1774: \t\tpline(\"%s body deliquesces into a cloud of noxious gas!\",\n  1775: \t\t\ts_suffix(Monnam(mon)));\n  1776: \t    else\n&gt; 1777: \t\tYou_hear(\"hissing and bubbling!\");\n  1778: \t    /* ...into a stinking cloud... */\n  1779: \t    (void) create_cthulhu_death_cloud(mon-&gt;mx, mon-&gt;my, 3, 8);\n  1780: \t    return (FALSE);\n  1781: \t}\n  1782: "
+    "context": "src/mon.c:1777:12\n       1772: \tif (mdat == &mons[PM_CTHULHU]) {\n       1773: \t    if (cansee(mon-&gt;mx, mon-&gt;my))\n       1774: \t\tpline(\"%s body deliquesces into a cloud of noxious gas!\",\n       1775: \t\t\ts_suffix(Monnam(mon)));\n       1776: \t    else\nTARGET 1777: \t\tYou_hear(\"hissing and bubbling!\");\n       1778: \t    /* ...into a stinking cloud... */\n       1779: \t    (void) create_cthulhu_death_cloud(mon-&gt;mx, mon-&gt;my, 3, 8);\n       1780: \t    return (FALSE);\n       1781: \t}\n       1782: "
   },
   {
     "key": "L01869_01",
     "original": "fall",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1869:32\n  1864: \t\t    if (obj-&gt;otyp == BOULDER ||\n  1865: #if 0\t\t\t\t/* monsters don't carry statues */\n  1866:      (obj-&gt;otyp == STATUE && mons[obj-&gt;corpsenm].msize &gt;= mdef-&gt;data-&gt;msize) ||\n  1867: #endif\n  1868: \t\t\t\tobj_resists(obj, 0, 0)) {\n&gt; 1869: \t\t\tif (flooreffects(obj, x, y, \"fall\")) continue;\n  1870: \t\t\tplace_object(obj, x, y);\n  1871: \t\t    } else {\n  1872: \t\t\tif (obj-&gt;lamplit) end_burn(obj, TRUE);\n  1873: \t\t\tobj-&gt;nobj = oldminvent;\n  1874: \t\t\toldminvent = obj;"
+    "context": "src/mon.c:1869:32\n       1864: \t\t    if (obj-&gt;otyp == BOULDER ||\n       1865: #if 0\t\t\t\t/* monsters don't carry statues */\n       1866:      (obj-&gt;otyp == STATUE && mons[obj-&gt;corpsenm].msize &gt;= mdef-&gt;data-&gt;msize) ||\n       1867: #endif\n       1868: \t\t\t\tobj_resists(obj, 0, 0)) {\nTARGET 1869: \t\t\tif (flooreffects(obj, x, y, \"fall\")) continue;\n       1870: \t\t\tplace_object(obj, x, y);\n       1871: \t\t    } else {\n       1872: \t\t\tif (obj-&gt;lamplit) end_burn(obj, TRUE);\n       1873: \t\t\tobj-&gt;nobj = oldminvent;\n       1874: \t\t\toldminvent = obj;"
   },
   {
     "key": "L01915_01",
     "original": "%s through an opening in the new %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1915:8\n  1910: \tif (u.uswallow && u.ustuck == mdef) wasinside = TRUE;\n  1911: \t(void) stop_timer(UNPOLY_MON, (genericptr_t) mdef);\n  1912: \tmondead(mdef);\n  1913: \tif (wasinside) {\n  1914: \t\tif (is_animal(mdef-&gt;data))\n&gt; 1915: \t\t\tYou(\"%s through an opening in the new %s.\",\n  1916: \t\t\t\tlocomotion(youmonst.data, \"jump\"),\n  1917: \t\t\t\txname(otmp));\n  1918: \t}\n  1919: }\n  1920: "
+    "context": "src/mon.c:1915:8\n       1910: \tif (u.uswallow && u.ustuck == mdef) wasinside = TRUE;\n       1911: \t(void) stop_timer(UNPOLY_MON, (genericptr_t) mdef);\n       1912: \tmondead(mdef);\n       1913: \tif (wasinside) {\n       1914: \t\tif (is_animal(mdef-&gt;data))\nTARGET 1915: \t\t\tYou(\"%s through an opening in the new %s.\",\n       1916: \t\t\t\tlocomotion(youmonst.data, \"jump\"),\n       1917: \t\t\t\txname(otmp));\n       1918: \t}\n       1919: }\n       1920: "
   },
   {
     "key": "L01916_01",
     "original": "jump",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1916:31\n  1911: \t(void) stop_timer(UNPOLY_MON, (genericptr_t) mdef);\n  1912: \tmondead(mdef);\n  1913: \tif (wasinside) {\n  1914: \t\tif (is_animal(mdef-&gt;data))\n  1915: \t\t\tYou(\"%s through an opening in the new %s.\",\n&gt; 1916: \t\t\t\tlocomotion(youmonst.data, \"jump\"),\n  1917: \t\t\t\txname(otmp));\n  1918: \t}\n  1919: }\n  1920: \n  1921: /* another monster has killed the monster mdef */"
+    "context": "src/mon.c:1916:31\n       1911: \t(void) stop_timer(UNPOLY_MON, (genericptr_t) mdef);\n       1912: \tmondead(mdef);\n       1913: \tif (wasinside) {\n       1914: \t\tif (is_animal(mdef-&gt;data))\n       1915: \t\t\tYou(\"%s through an opening in the new %s.\",\nTARGET 1916: \t\t\t\tlocomotion(youmonst.data, \"jump\"),\n       1917: \t\t\t\txname(otmp));\n       1918: \t}\n       1919: }\n       1920: \n       1921: /* another monster has killed the monster mdef */"
   },
   {
     "key": "L01932_01",
     "original": "%s is %s%s%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1932:12\n  1927: {\n  1928: \tboolean be_sad = FALSE;\t\t/* true if unseen pet is killed */\n  1929: \n  1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1931: \t\t&& fltxt)\n&gt; 1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\n  1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n  1934: \t\t    *fltxt ? \" by the \" : \"\",\n  1935: \t\t    fltxt\n  1936: \t\t );\n  1937: \telse"
+    "context": "src/mon.c:1932:12\n       1927: {\n       1928: \tboolean be_sad = FALSE;\t\t/* true if unseen pet is killed */\n       1929: \n       1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1931: \t\t&& fltxt)\nTARGET 1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\n       1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n       1934: \t\t    *fltxt ? \" by the \" : \"\",\n       1935: \t\t    fltxt\n       1936: \t\t );\n       1937: \telse"
   },
   {
     "key": "L01933_01",
     "original": "destroyed",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1933:28\n  1928: \tboolean be_sad = FALSE;\t\t/* true if unseen pet is killed */\n  1929: \n  1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1931: \t\t&& fltxt)\n  1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\n&gt; 1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n  1934: \t\t    *fltxt ? \" by the \" : \"\",\n  1935: \t\t    fltxt\n  1936: \t\t );\n  1937: \telse\n  1938: \t    be_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell);"
+    "context": "src/mon.c:1933:28\n       1928: \tboolean be_sad = FALSE;\t\t/* true if unseen pet is killed */\n       1929: \n       1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1931: \t\t&& fltxt)\n       1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\nTARGET 1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n       1934: \t\t    *fltxt ? \" by the \" : \"\",\n       1935: \t\t    fltxt\n       1936: \t\t );\n       1937: \telse\n       1938: \t    be_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell);"
   },
   {
     "key": "L01933_02",
     "original": "killed",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1933:42\n  1928: \tboolean be_sad = FALSE;\t\t/* true if unseen pet is killed */\n  1929: \n  1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1931: \t\t&& fltxt)\n  1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\n&gt; 1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n  1934: \t\t    *fltxt ? \" by the \" : \"\",\n  1935: \t\t    fltxt\n  1936: \t\t );\n  1937: \telse\n  1938: \t    be_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell);"
+    "context": "src/mon.c:1933:42\n       1928: \tboolean be_sad = FALSE;\t\t/* true if unseen pet is killed */\n       1929: \n       1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1931: \t\t&& fltxt)\n       1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\nTARGET 1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n       1934: \t\t    *fltxt ? \" by the \" : \"\",\n       1935: \t\t    fltxt\n       1936: \t\t );\n       1937: \telse\n       1938: \t    be_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell);"
   },
   {
     "key": "L01934_01",
     "original": " by the ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1934:16\n  1929: \n  1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1931: \t\t&& fltxt)\n  1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\n  1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n&gt; 1934: \t\t    *fltxt ? \" by the \" : \"\",\n  1935: \t\t    fltxt\n  1936: \t\t );\n  1937: \telse\n  1938: \t    be_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell);\n  1939: "
+    "context": "src/mon.c:1934:16\n       1929: \n       1930: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1931: \t\t&& fltxt)\n       1932: \t    pline(\"%s is %s%s%s!\", Monnam(mdef),\n       1933: \t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\nTARGET 1934: \t\t    *fltxt ? \" by the \" : \"\",\n       1935: \t\t    fltxt\n       1936: \t\t );\n       1937: \telse\n       1938: \t    be_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell);\n       1939: "
   },
   {
     "key": "L01947_01",
     "original": "have a sad feeling for a moment, then it passes.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1947:10\n  1942: \t    mondead(mdef);\n  1943: \telse\n  1944: \t    mondied(mdef);\n  1945: \n  1946: \tif (be_sad && mdef-&gt;mhp &lt;= 0)\n&gt; 1947: \t    You(\"have a sad feeling for a moment, then it passes.\");\n  1948: }\n  1949: \n  1950: \n  1951: /* WAC -- another monster has killed the monster mdef and you get exp. */\n  1952: void"
+    "context": "src/mon.c:1947:10\n       1942: \t    mondead(mdef);\n       1943: \telse\n       1944: \t    mondied(mdef);\n       1945: \n       1946: \tif (be_sad && mdef-&gt;mhp &lt;= 0)\nTARGET 1947: \t    You(\"have a sad feeling for a moment, then it passes.\");\n       1948: }\n       1949: \n       1950: \n       1951: /* WAC -- another monster has killed the monster mdef and you get exp. */\n       1952: void"
   },
   {
     "key": "L01962_01",
     "original": "%s is %s%s%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1962:9\n  1957: {\n  1958: \tboolean be_sad = FALSE;         /* true if unseen pet is killed */\n  1959: \n  1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1961: \t\t\t&& fltxt)\n&gt; 1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\n  1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n  1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n  1965: \t\t\t\tfltxt);\n  1966: \telse\n  1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); "
+    "context": "src/mon.c:1962:9\n       1957: {\n       1958: \tboolean be_sad = FALSE;         /* true if unseen pet is killed */\n       1959: \n       1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1961: \t\t\t&& fltxt)\nTARGET 1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\n       1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n       1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n       1965: \t\t\t\tfltxt);\n       1966: \telse\n       1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); "
   },
   {
     "key": "L01963_01",
     "original": "destroyed",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1963:29\n  1958: \tboolean be_sad = FALSE;         /* true if unseen pet is killed */\n  1959: \n  1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1961: \t\t\t&& fltxt)\n  1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\n&gt; 1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n  1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n  1965: \t\t\t\tfltxt);\n  1966: \telse\n  1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); \n  1968: "
+    "context": "src/mon.c:1963:29\n       1958: \tboolean be_sad = FALSE;         /* true if unseen pet is killed */\n       1959: \n       1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1961: \t\t\t&& fltxt)\n       1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\nTARGET 1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n       1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n       1965: \t\t\t\tfltxt);\n       1966: \telse\n       1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); \n       1968: "
   },
   {
     "key": "L01963_02",
     "original": "killed",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1963:43\n  1958: \tboolean be_sad = FALSE;         /* true if unseen pet is killed */\n  1959: \n  1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1961: \t\t\t&& fltxt)\n  1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\n&gt; 1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n  1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n  1965: \t\t\t\tfltxt);\n  1966: \telse\n  1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); \n  1968: "
+    "context": "src/mon.c:1963:43\n       1958: \tboolean be_sad = FALSE;         /* true if unseen pet is killed */\n       1959: \n       1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1961: \t\t\t&& fltxt)\n       1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\nTARGET 1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n       1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n       1965: \t\t\t\tfltxt);\n       1966: \telse\n       1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); \n       1968: "
   },
   {
     "key": "L01964_01",
     "original": " by the ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1964:14\n  1959: \n  1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n  1961: \t\t\t&& fltxt)\n  1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\n  1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\n&gt; 1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n  1965: \t\t\t\tfltxt);\n  1966: \telse\n  1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); \n  1968: \n  1969: \t/* no corpses if digested or disintegrated */"
+    "context": "src/mon.c:1964:14\n       1959: \n       1960: \tif ((mdef-&gt;wormno ? worm_known(mdef) : cansee(mdef-&gt;mx, mdef-&gt;my))\n       1961: \t\t\t&& fltxt)\n       1962: \t\tpline(\"%s is %s%s%s!\", Monnam(mdef),\n       1963: \t\t\t\tnonliving(mdef-&gt;data) ? \"destroyed\" : \"killed\",\nTARGET 1964: \t\t\t\t*fltxt ? \" by the \" : \"\",\n       1965: \t\t\t\tfltxt);\n       1966: \telse\n       1967: \t\tbe_sad = (mdef-&gt;mtame != 0 && !mdef-&gt;isspell); \n       1968: \n       1969: \t/* no corpses if digested or disintegrated */"
   },
   {
     "key": "L01976_01",
     "original": "have a sad feeling for a moment, then it passes.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:1976:7\n  1971: \t\txkilled(mdef,2);\n  1972: \telse\n  1973: \t\txkilled(mdef,0);\n  1974: \n  1975: \tif (be_sad && mdef-&gt;mhp &lt;= 0)\n&gt; 1976: \t\tYou(\"have a sad feeling for a moment, then it passes.\");\n  1977: }\n  1978: \n  1979: \n  1980: void\n  1981: unstuck(mtmp)"
+    "context": "src/mon.c:1976:7\n       1971: \t\txkilled(mdef,2);\n       1972: \telse\n       1973: \t\txkilled(mdef,0);\n       1974: \n       1975: \tif (be_sad && mdef-&gt;mhp &lt;= 0)\nTARGET 1976: \t\tYou(\"have a sad feeling for a moment, then it passes.\");\n       1977: }\n       1978: \n       1979: \n       1980: void\n       1981: unstuck(mtmp)"
   },
   {
     "key": "L02028_01",
     "original": "destroy",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2028:49\n  2023: \n  2024: \t/* KMH, conduct */\n  2025: \tu.uconduct.killer++;\n  2026: \n  2027: \tif (dest & 1) {\n&gt; 2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n  2029: \n  2030: \t    if (!wasinside && !canspotmon(mtmp))\n  2031: \t\tYou(\"%s it!\", verb);\n  2032: \t    else {\n  2033: \t\tYou(\"%s %s!\", verb,"
+    "context": "src/mon.c:2028:49\n       2023: \n       2024: \t/* KMH, conduct */\n       2025: \tu.uconduct.killer++;\n       2026: \n       2027: \tif (dest & 1) {\nTARGET 2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n       2029: \n       2030: \t    if (!wasinside && !canspotmon(mtmp))\n       2031: \t\tYou(\"%s it!\", verb);\n       2032: \t    else {\n       2033: \t\tYou(\"%s %s!\", verb,"
   },
   {
     "key": "L02028_02",
     "original": "kill",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2028:61\n  2023: \n  2024: \t/* KMH, conduct */\n  2025: \tu.uconduct.killer++;\n  2026: \n  2027: \tif (dest & 1) {\n&gt; 2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n  2029: \n  2030: \t    if (!wasinside && !canspotmon(mtmp))\n  2031: \t\tYou(\"%s it!\", verb);\n  2032: \t    else {\n  2033: \t\tYou(\"%s %s!\", verb,"
+    "context": "src/mon.c:2028:61\n       2023: \n       2024: \t/* KMH, conduct */\n       2025: \tu.uconduct.killer++;\n       2026: \n       2027: \tif (dest & 1) {\nTARGET 2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n       2029: \n       2030: \t    if (!wasinside && !canspotmon(mtmp))\n       2031: \t\tYou(\"%s it!\", verb);\n       2032: \t    else {\n       2033: \t\tYou(\"%s %s!\", verb,"
   },
   {
     "key": "L02031_01",
     "original": "%s it!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2031:7\n  2026: \n  2027: \tif (dest & 1) {\n  2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n  2029: \n  2030: \t    if (!wasinside && !canspotmon(mtmp))\n&gt; 2031: \t\tYou(\"%s it!\", verb);\n  2032: \t    else {\n  2033: \t\tYou(\"%s %s!\", verb,\n  2034: \t\t    !mtmp-&gt;mtame ? mon_nam(mtmp) :\n  2035: \t\t\tx_monnam(mtmp,\n  2036: \t\t\t\t mtmp-&gt;mnamelth ? ARTICLE_NONE : ARTICLE_THE,"
+    "context": "src/mon.c:2031:7\n       2026: \n       2027: \tif (dest & 1) {\n       2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n       2029: \n       2030: \t    if (!wasinside && !canspotmon(mtmp))\nTARGET 2031: \t\tYou(\"%s it!\", verb);\n       2032: \t    else {\n       2033: \t\tYou(\"%s %s!\", verb,\n       2034: \t\t    !mtmp-&gt;mtame ? mon_nam(mtmp) :\n       2035: \t\t\tx_monnam(mtmp,\n       2036: \t\t\t\t mtmp-&gt;mnamelth ? ARTICLE_NONE : ARTICLE_THE,"
   },
   {
     "key": "L02033_01",
     "original": "%s %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2033:7\n  2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n  2029: \n  2030: \t    if (!wasinside && !canspotmon(mtmp))\n  2031: \t\tYou(\"%s it!\", verb);\n  2032: \t    else {\n&gt; 2033: \t\tYou(\"%s %s!\", verb,\n  2034: \t\t    !mtmp-&gt;mtame ? mon_nam(mtmp) :\n  2035: \t\t\tx_monnam(mtmp,\n  2036: \t\t\t\t mtmp-&gt;mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n  2037: \t\t\t\t \"poor\",\n  2038: \t\t\t\t mtmp-&gt;mnamelth ? SUPPRESS_SADDLE : 0,"
+    "context": "src/mon.c:2033:7\n       2028: \t    const char *verb = nonliving(mtmp-&gt;data) ? \"destroy\" : \"kill\";\n       2029: \n       2030: \t    if (!wasinside && !canspotmon(mtmp))\n       2031: \t\tYou(\"%s it!\", verb);\n       2032: \t    else {\nTARGET 2033: \t\tYou(\"%s %s!\", verb,\n       2034: \t\t    !mtmp-&gt;mtame ? mon_nam(mtmp) :\n       2035: \t\t\tx_monnam(mtmp,\n       2036: \t\t\t\t mtmp-&gt;mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n       2037: \t\t\t\t \"poor\",\n       2038: \t\t\t\t mtmp-&gt;mnamelth ? SUPPRESS_SADDLE : 0,"
   },
   {
     "key": "L02037_01",
     "original": "poor",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2037:6\n  2032: \t    else {\n  2033: \t\tYou(\"%s %s!\", verb,\n  2034: \t\t    !mtmp-&gt;mtame ? mon_nam(mtmp) :\n  2035: \t\t\tx_monnam(mtmp,\n  2036: \t\t\t\t mtmp-&gt;mnamelth ? ARTICLE_NONE : ARTICLE_THE,\n&gt; 2037: \t\t\t\t \"poor\",\n  2038: \t\t\t\t mtmp-&gt;mnamelth ? SUPPRESS_SADDLE : 0,\n  2039: \t\t\t\t FALSE));\n  2040: \t    }\n  2041: \t}\n  2042: "
+    "context": "src/mon.c:2037:6\n       2032: \t    else {\n       2033: \t\tYou(\"%s %s!\", verb,\n       2034: \t\t    !mtmp-&gt;mtame ? mon_nam(mtmp) :\n       2035: \t\t\tx_monnam(mtmp,\n       2036: \t\t\t\t mtmp-&gt;mnamelth ? ARTICLE_NONE : ARTICLE_THE,\nTARGET 2037: \t\t\t\t \"poor\",\n       2038: \t\t\t\t mtmp-&gt;mnamelth ? SUPPRESS_SADDLE : 0,\n       2039: \t\t\t\t FALSE));\n       2040: \t    }\n       2041: \t}\n       2042: "
   },
   {
     "key": "L02068_01",
     "original": "Maybe not...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2068:13\n  2063: \t\t * appears only when you kill it (as opposed to visible\n  2064: \t\t * lifesaving which always appears).\n  2065: \t\t */\n  2066: \t\tstoned = FALSE;\n  2067: \t\tif ((!u.uswallow || u.ustuck != mtmp) && !cansee(x, y))\n&gt; 2068: \t\t    pline(\"Maybe not...\");\n  2069: \t\treturn;\n  2070: \t}\n  2071: \n  2072: \tmdat = mtmp-&gt;data; /* note: mondead can change mtmp-&gt;data */\n  2073: \tmndx = monsndx(mdat);"
+    "context": "src/mon.c:2068:13\n       2063: \t\t * appears only when you kill it (as opposed to visible\n       2064: \t\t * lifesaving which always appears).\n       2065: \t\t */\n       2066: \t\tstoned = FALSE;\n       2067: \t\tif ((!u.uswallow || u.ustuck != mtmp) && !cansee(x, y))\nTARGET 2068: \t\t    pline(\"Maybe not...\");\n       2069: \t\treturn;\n       2070: \t}\n       2071: \n       2072: \tmdat = mtmp-&gt;data; /* note: mondead can change mtmp-&gt;data */\n       2073: \tmndx = monsndx(mdat);"
   },
   {
     "key": "L02131_01",
     "original": "murderer!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2131:7\n  2126: \tif(is_human(mdat) && (!always_hostile(mdat) && mtmp-&gt;malign &lt;= 0) &&\n  2127: \t   (mndx &lt; PM_ARCHEOLOGIST || mndx &gt; PM_WIZARD) &&\n  2128: \t   u.ualign.type != A_CHAOTIC) {\n  2129: \t\tHTelepat &= ~INTRINSIC;\n  2130: \t\tchange_luck(-2);\n&gt; 2131: \t\tYou(\"murderer!\");\n  2132: \t\tif (Blind && !Blind_telepat)\n  2133: \t\t    see_monsters(); /* Can't sense monsters any more. */\n  2134: \t}\n  2135: \tif((mtmp-&gt;mpeaceful && !rn2(2)) || mtmp-&gt;mtame)\tchange_luck(-1);\n  2136: \tif (is_unicorn(mdat) &&"
+    "context": "src/mon.c:2131:7\n       2126: \tif(is_human(mdat) && (!always_hostile(mdat) && mtmp-&gt;malign &lt;= 0) &&\n       2127: \t   (mndx &lt; PM_ARCHEOLOGIST || mndx &gt; PM_WIZARD) &&\n       2128: \t   u.ualign.type != A_CHAOTIC) {\n       2129: \t\tHTelepat &= ~INTRINSIC;\n       2130: \t\tchange_luck(-2);\nTARGET 2131: \t\tYou(\"murderer!\");\n       2132: \t\tif (Blind && !Blind_telepat)\n       2133: \t\t    see_monsters(); /* Can't sense monsters any more. */\n       2134: \t}\n       2135: \tif((mtmp-&gt;mpeaceful && !rn2(2)) || mtmp-&gt;mtame)\tchange_luck(-1);\n       2136: \tif (is_unicorn(mdat) &&"
   },
   {
     "key": "L02139_01",
     "original": "guilty...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2139:12\n  2134: \t}\n  2135: \tif((mtmp-&gt;mpeaceful && !rn2(2)) || mtmp-&gt;mtame)\tchange_luck(-1);\n  2136: \tif (is_unicorn(mdat) &&\n  2137: \t\t\t\tsgn(u.ualign.type) == sgn(mdat-&gt;maligntyp)) {\n  2138: \t\tchange_luck(-5);\n&gt; 2139: \t\tYou_feel(\"guilty...\");\n  2140: \t}\n  2141: \t/* give experience points */\n  2142: \ttmp = experience(mtmp, (int)mvitals[mndx].died + 1);\n  2143: \tmore_experienced(tmp, 0);\n  2144: \tnewexplevel();\t\t/* will decide if you go up */"
+    "context": "src/mon.c:2139:12\n       2134: \t}\n       2135: \tif((mtmp-&gt;mpeaceful && !rn2(2)) || mtmp-&gt;mtame)\tchange_luck(-1);\n       2136: \tif (is_unicorn(mdat) &&\n       2137: \t\t\t\tsgn(u.ualign.type) == sgn(mdat-&gt;maligntyp)) {\n       2138: \t\tchange_luck(-5);\nTARGET 2139: \t\tYou_feel(\"guilty...\");\n       2140: \t}\n       2141: \t/* give experience points */\n       2142: \ttmp = experience(mtmp, (int)mvitals[mndx].died + 1);\n       2143: \tmore_experienced(tmp, 0);\n       2144: \tnewexplevel();\t\t/* will decide if you go up */"
   },
   {
     "key": "L02149_01",
     "original": "That was %sa bad idea...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2149:12\n  2144: \tnewexplevel();\t\t/* will decide if you go up */\n  2145: \n  2146: \t/* adjust alignment points */\n  2147: \tif (mtmp-&gt;m_id == quest_status.leader_m_id) {\t\t/* REAL BAD! */\n  2148: \t    adjalign(-(u.ualign.record+(int)ALIGNLIM/2));\n&gt; 2149: \t    pline(\"That was %sa bad idea...\",\n  2150: \t    \t\tu.uevent.qcompleted ? \"probably \" : \"\");\n  2151: \t} else if (mdat-&gt;msound == MS_NEMESIS)\t/* Real good! */\n  2152: \t    adjalign((int)(ALIGNLIM/4));\n  2153: \telse if (mdat-&gt;msound == MS_GUARDIAN) {\t/* Bad */\n  2154: \t    adjalign(-(int)(ALIGNLIM/8));"
+    "context": "src/mon.c:2149:12\n       2144: \tnewexplevel();\t\t/* will decide if you go up */\n       2145: \n       2146: \t/* adjust alignment points */\n       2147: \tif (mtmp-&gt;m_id == quest_status.leader_m_id) {\t\t/* REAL BAD! */\n       2148: \t    adjalign(-(u.ualign.record+(int)ALIGNLIM/2));\nTARGET 2149: \t    pline(\"That was %sa bad idea...\",\n       2150: \t    \t\tu.uevent.qcompleted ? \"probably \" : \"\");\n       2151: \t} else if (mdat-&gt;msound == MS_NEMESIS)\t/* Real good! */\n       2152: \t    adjalign((int)(ALIGNLIM/4));\n       2153: \telse if (mdat-&gt;msound == MS_GUARDIAN) {\t/* Bad */\n       2154: \t    adjalign(-(int)(ALIGNLIM/8));"
   },
   {
     "key": "L02150_01",
     "original": "probably ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2150:30\n  2145: \n  2146: \t/* adjust alignment points */\n  2147: \tif (mtmp-&gt;m_id == quest_status.leader_m_id) {\t\t/* REAL BAD! */\n  2148: \t    adjalign(-(u.ualign.record+(int)ALIGNLIM/2));\n  2149: \t    pline(\"That was %sa bad idea...\",\n&gt; 2150: \t    \t\tu.uevent.qcompleted ? \"probably \" : \"\");\n  2151: \t} else if (mdat-&gt;msound == MS_NEMESIS)\t/* Real good! */\n  2152: \t    adjalign((int)(ALIGNLIM/4));\n  2153: \telse if (mdat-&gt;msound == MS_GUARDIAN) {\t/* Bad */\n  2154: \t    adjalign(-(int)(ALIGNLIM/8));\n  2155: \t    if (!Hallucination) pline(\"That was probably a bad idea...\");"
+    "context": "src/mon.c:2150:30\n       2145: \n       2146: \t/* adjust alignment points */\n       2147: \tif (mtmp-&gt;m_id == quest_status.leader_m_id) {\t\t/* REAL BAD! */\n       2148: \t    adjalign(-(u.ualign.record+(int)ALIGNLIM/2));\n       2149: \t    pline(\"That was %sa bad idea...\",\nTARGET 2150: \t    \t\tu.uevent.qcompleted ? \"probably \" : \"\");\n       2151: \t} else if (mdat-&gt;msound == MS_NEMESIS)\t/* Real good! */\n       2152: \t    adjalign((int)(ALIGNLIM/4));\n       2153: \telse if (mdat-&gt;msound == MS_GUARDIAN) {\t/* Bad */\n       2154: \t    adjalign(-(int)(ALIGNLIM/8));\n       2155: \t    if (!Hallucination) pline(\"That was probably a bad idea...\");"
   },
   {
     "key": "L02155_01",
     "original": "That was probably a bad idea...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2155:32\n  2150: \t    \t\tu.uevent.qcompleted ? \"probably \" : \"\");\n  2151: \t} else if (mdat-&gt;msound == MS_NEMESIS)\t/* Real good! */\n  2152: \t    adjalign((int)(ALIGNLIM/4));\n  2153: \telse if (mdat-&gt;msound == MS_GUARDIAN) {\t/* Bad */\n  2154: \t    adjalign(-(int)(ALIGNLIM/8));\n&gt; 2155: \t    if (!Hallucination) pline(\"That was probably a bad idea...\");\n  2156: \t    else pline(\"哎呦呦小宝宝犯错错啦！\");\n  2157: \t} else if (mtmp-&gt;ispriest) {\n  2158: \t\tadjalign((p_coaligned(mtmp)) ? -2 : 2);\n  2159: \t\t/* cancel divine protection for killing your priest */\n  2160: \t\tif (p_coaligned(mtmp)) u.ublessed = 0;"
+    "context": "src/mon.c:2155:32\n       2150: \t    \t\tu.uevent.qcompleted ? \"probably \" : \"\");\n       2151: \t} else if (mdat-&gt;msound == MS_NEMESIS)\t/* Real good! */\n       2152: \t    adjalign((int)(ALIGNLIM/4));\n       2153: \telse if (mdat-&gt;msound == MS_GUARDIAN) {\t/* Bad */\n       2154: \t    adjalign(-(int)(ALIGNLIM/8));\nTARGET 2155: \t    if (!Hallucination) pline(\"That was probably a bad idea...\");\n       2156: \t    else pline(\"哎呦呦小宝宝犯错错啦！\");\n       2157: \t} else if (mtmp-&gt;ispriest) {\n       2158: \t\tadjalign((p_coaligned(mtmp)) ? -2 : 2);\n       2159: \t\t/* cancel divine protection for killing your priest */\n       2160: \t\tif (p_coaligned(mtmp)) u.ublessed = 0;"
   },
   {
     "key": "L02166_01",
     "original": "the rumble of distant thunder...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2166:32\n  2161: \t\tif (mdat-&gt;maligntyp == A_NONE)\n  2162: \t\t\tadjalign((int)(ALIGNLIM / 4));\t\t/* BIG bonus */\n  2163: \t} else if (mtmp-&gt;mtame) {\n  2164: \t\tadjalign(-15);\t/* bad!! */\n  2165: \t\t/* your god is mighty displeased... */\n&gt; 2166: \t\tif (!Hallucination) You_hear(\"the rumble of distant thunder...\");\n  2167: \t\telse You_hear(\"the studio audience applaud!\");\n  2168: \t} else if (mtmp-&gt;mpeaceful) {\n  2169: \t\tadjalign(-5);\n  2170: \t\tif (!Hallucination) pline(\"The gods will probably not appreciate this...\");\n  2171: \t\telse pline(\"哎呦呦小宝宝犯错错啦！\");"
+    "context": "src/mon.c:2166:32\n       2161: \t\tif (mdat-&gt;maligntyp == A_NONE)\n       2162: \t\t\tadjalign((int)(ALIGNLIM / 4));\t\t/* BIG bonus */\n       2163: \t} else if (mtmp-&gt;mtame) {\n       2164: \t\tadjalign(-15);\t/* bad!! */\n       2165: \t\t/* your god is mighty displeased... */\nTARGET 2166: \t\tif (!Hallucination) You_hear(\"the rumble of distant thunder...\");\n       2167: \t\telse You_hear(\"the studio audience applaud!\");\n       2168: \t} else if (mtmp-&gt;mpeaceful) {\n       2169: \t\tadjalign(-5);\n       2170: \t\tif (!Hallucination) pline(\"The gods will probably not appreciate this...\");\n       2171: \t\telse pline(\"哎呦呦小宝宝犯错错啦！\");"
   },
   {
     "key": "L02167_01",
     "original": "the studio audience applaud!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2167:17\n  2162: \t\t\tadjalign((int)(ALIGNLIM / 4));\t\t/* BIG bonus */\n  2163: \t} else if (mtmp-&gt;mtame) {\n  2164: \t\tadjalign(-15);\t/* bad!! */\n  2165: \t\t/* your god is mighty displeased... */\n  2166: \t\tif (!Hallucination) You_hear(\"the rumble of distant thunder...\");\n&gt; 2167: \t\telse You_hear(\"the studio audience applaud!\");\n  2168: \t} else if (mtmp-&gt;mpeaceful) {\n  2169: \t\tadjalign(-5);\n  2170: \t\tif (!Hallucination) pline(\"The gods will probably not appreciate this...\");\n  2171: \t\telse pline(\"哎呦呦小宝宝犯错错啦！\");\n  2172: \t}"
+    "context": "src/mon.c:2167:17\n       2162: \t\t\tadjalign((int)(ALIGNLIM / 4));\t\t/* BIG bonus */\n       2163: \t} else if (mtmp-&gt;mtame) {\n       2164: \t\tadjalign(-15);\t/* bad!! */\n       2165: \t\t/* your god is mighty displeased... */\n       2166: \t\tif (!Hallucination) You_hear(\"the rumble of distant thunder...\");\nTARGET 2167: \t\telse You_hear(\"the studio audience applaud!\");\n       2168: \t} else if (mtmp-&gt;mpeaceful) {\n       2169: \t\tadjalign(-5);\n       2170: \t\tif (!Hallucination) pline(\"The gods will probably not appreciate this...\");\n       2171: \t\telse pline(\"哎呦呦小宝宝犯错错啦！\");\n       2172: \t}"
   },
   {
     "key": "L02170_01",
     "original": "The gods will probably not appreciate this...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2170:29\n  2165: \t\t/* your god is mighty displeased... */\n  2166: \t\tif (!Hallucination) You_hear(\"the rumble of distant thunder...\");\n  2167: \t\telse You_hear(\"the studio audience applaud!\");\n  2168: \t} else if (mtmp-&gt;mpeaceful) {\n  2169: \t\tadjalign(-5);\n&gt; 2170: \t\tif (!Hallucination) pline(\"The gods will probably not appreciate this...\");\n  2171: \t\telse pline(\"哎呦呦小宝宝犯错错啦！\");\n  2172: \t}\n  2173: \n  2174: \t/* malign was already adjusted for u.ualign.type and randomization */\n  2175: \tadjalign(mtmp-&gt;malign);"
+    "context": "src/mon.c:2170:29\n       2165: \t\t/* your god is mighty displeased... */\n       2166: \t\tif (!Hallucination) You_hear(\"the rumble of distant thunder...\");\n       2167: \t\telse You_hear(\"the studio audience applaud!\");\n       2168: \t} else if (mtmp-&gt;mpeaceful) {\n       2169: \t\tadjalign(-5);\nTARGET 2170: \t\tif (!Hallucination) pline(\"The gods will probably not appreciate this...\");\n       2171: \t\telse pline(\"哎呦呦小宝宝犯错错啦！\");\n       2172: \t}\n       2173: \n       2174: \t/* malign was already adjusted for u.ualign.type and randomization */\n       2175: \tadjalign(mtmp-&gt;malign);"
   },
   {
     "key": "L02189_01",
     "original": "%s solidifies...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2189:12\n  2184:     boolean polymorphed = mtmp-&gt;oldmonnm != monsndx(mtmp-&gt;data);\n  2185: \n  2186:     if(mtmp-&gt;data-&gt;mlet == S_GOLEM) {\n  2187: \t/* it's a golem, and not a stone golem */\n  2188: \tif(canseemon(mtmp))\n&gt; 2189: \t    pline(\"%s solidifies...\", Monnam(mtmp));\n  2190: \tif (newcham(mtmp, &mons[PM_STONE_GOLEM], FALSE, FALSE)) {\n  2191: \t    if (!polymorphed)\n  2192: \t\tmtmp-&gt;oldmonnm = PM_STONE_GOLEM;    /* Change is permanent */\n  2193: \t    if(canseemon(mtmp))\n  2194: \t\tpline(\"Now it's %s.\", an(mtmp-&gt;data-&gt;mname));"
+    "context": "src/mon.c:2189:12\n       2184:     boolean polymorphed = mtmp-&gt;oldmonnm != monsndx(mtmp-&gt;data);\n       2185: \n       2186:     if(mtmp-&gt;data-&gt;mlet == S_GOLEM) {\n       2187: \t/* it's a golem, and not a stone golem */\n       2188: \tif(canseemon(mtmp))\nTARGET 2189: \t    pline(\"%s solidifies...\", Monnam(mtmp));\n       2190: \tif (newcham(mtmp, &mons[PM_STONE_GOLEM], FALSE, FALSE)) {\n       2191: \t    if (!polymorphed)\n       2192: \t\tmtmp-&gt;oldmonnm = PM_STONE_GOLEM;    /* Change is permanent */\n       2193: \t    if(canseemon(mtmp))\n       2194: \t\tpline(\"Now it's %s.\", an(mtmp-&gt;data-&gt;mname));"
   },
   {
     "key": "L02194_01",
     "original": "Now it's %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2194:9\n  2189: \t    pline(\"%s solidifies...\", Monnam(mtmp));\n  2190: \tif (newcham(mtmp, &mons[PM_STONE_GOLEM], FALSE, FALSE)) {\n  2191: \t    if (!polymorphed)\n  2192: \t\tmtmp-&gt;oldmonnm = PM_STONE_GOLEM;    /* Change is permanent */\n  2193: \t    if(canseemon(mtmp))\n&gt; 2194: \t\tpline(\"Now it's %s.\", an(mtmp-&gt;data-&gt;mname));\n  2195: \t} else {\n  2196: \t    if(canseemon(mtmp))\n  2197: \t\tpline(\"... and returns to normal.\");\n  2198: \t}\n  2199:     } else"
+    "context": "src/mon.c:2194:9\n       2189: \t    pline(\"%s solidifies...\", Monnam(mtmp));\n       2190: \tif (newcham(mtmp, &mons[PM_STONE_GOLEM], FALSE, FALSE)) {\n       2191: \t    if (!polymorphed)\n       2192: \t\tmtmp-&gt;oldmonnm = PM_STONE_GOLEM;    /* Change is permanent */\n       2193: \t    if(canseemon(mtmp))\nTARGET 2194: \t\tpline(\"Now it's %s.\", an(mtmp-&gt;data-&gt;mname));\n       2195: \t} else {\n       2196: \t    if(canseemon(mtmp))\n       2197: \t\tpline(\"... and returns to normal.\");\n       2198: \t}\n       2199:     } else"
   },
   {
     "key": "L02197_01",
     "original": "... and returns to normal.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2197:9\n  2192: \t\tmtmp-&gt;oldmonnm = PM_STONE_GOLEM;    /* Change is permanent */\n  2193: \t    if(canseemon(mtmp))\n  2194: \t\tpline(\"Now it's %s.\", an(mtmp-&gt;data-&gt;mname));\n  2195: \t} else {\n  2196: \t    if(canseemon(mtmp))\n&gt; 2197: \t\tpline(\"... and returns to normal.\");\n  2198: \t}\n  2199:     } else\n  2200: \timpossible(\"Can't polystone %s!\", a_monnam(mtmp));\n  2201: }\n  2202: "
+    "context": "src/mon.c:2197:9\n       2192: \t\tmtmp-&gt;oldmonnm = PM_STONE_GOLEM;    /* Change is permanent */\n       2193: \t    if(canseemon(mtmp))\n       2194: \t\tpline(\"Now it's %s.\", an(mtmp-&gt;data-&gt;mname));\n       2195: \t} else {\n       2196: \t    if(canseemon(mtmp))\nTARGET 2197: \t\tpline(\"... and returns to normal.\");\n       2198: \t}\n       2199:     } else\n       2200: \timpossible(\"Can't polystone %s!\", a_monnam(mtmp));\n       2201: }\n       2202: "
   },
   {
     "key": "L02200_01",
     "original": "Can't polystone %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2200:13\n  2195: \t} else {\n  2196: \t    if(canseemon(mtmp))\n  2197: \t\tpline(\"... and returns to normal.\");\n  2198: \t}\n  2199:     } else\n&gt; 2200: \timpossible(\"Can't polystone %s!\", a_monnam(mtmp));\n  2201: }\n  2202: \n  2203: void\n  2204: mnexto(mtmp)\t/* Make monster mtmp next to you (if possible) */\n  2205: \tstruct monst *mtmp;"
+    "context": "src/mon.c:2200:13\n       2195: \t} else {\n       2196: \t    if(canseemon(mtmp))\n       2197: \t\tpline(\"... and returns to normal.\");\n       2198: \t}\n       2199:     } else\nTARGET 2200: \timpossible(\"Can't polystone %s!\", a_monnam(mtmp));\n       2201: }\n       2202: \n       2203: void\n       2204: mnexto(mtmp)\t/* Make monster mtmp next to you (if possible) */\n       2205: \tstruct monst *mtmp;"
   },
   {
     "key": "L02275_01",
     "original": " feel weaker",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2275:2\n  2270: }\n  2271: \n  2272: \n  2273: static const char *poiseff[] = {\n  2274: \n&gt; 2275: \t\" feel weaker\", \"r brain is on fire\",\n  2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n  2277: \t\" feel very sick\", \" break out in hives\"\n  2278: };\n  2279: \n  2280: void"
+    "context": "src/mon.c:2275:2\n       2270: }\n       2271: \n       2272: \n       2273: static const char *poiseff[] = {\n       2274: \nTARGET 2275: \t\" feel weaker\", \"r brain is on fire\",\n       2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n       2277: \t\" feel very sick\", \" break out in hives\"\n       2278: };\n       2279: \n       2280: void"
   },
   {
     "key": "L02275_02",
     "original": "r brain is on fire",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2275:18\n  2270: }\n  2271: \n  2272: \n  2273: static const char *poiseff[] = {\n  2274: \n&gt; 2275: \t\" feel weaker\", \"r brain is on fire\",\n  2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n  2277: \t\" feel very sick\", \" break out in hives\"\n  2278: };\n  2279: \n  2280: void"
+    "context": "src/mon.c:2275:18\n       2270: }\n       2271: \n       2272: \n       2273: static const char *poiseff[] = {\n       2274: \nTARGET 2275: \t\" feel weaker\", \"r brain is on fire\",\n       2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n       2277: \t\" feel very sick\", \" break out in hives\"\n       2278: };\n       2279: \n       2280: void"
   },
   {
     "key": "L02276_01",
     "original": "r judgement is impaired",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2276:2\n  2271: \n  2272: \n  2273: static const char *poiseff[] = {\n  2274: \n  2275: \t\" feel weaker\", \"r brain is on fire\",\n&gt; 2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n  2277: \t\" feel very sick\", \" break out in hives\"\n  2278: };\n  2279: \n  2280: void\n  2281: poisontell(typ)"
+    "context": "src/mon.c:2276:2\n       2271: \n       2272: \n       2273: static const char *poiseff[] = {\n       2274: \n       2275: \t\" feel weaker\", \"r brain is on fire\",\nTARGET 2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n       2277: \t\" feel very sick\", \" break out in hives\"\n       2278: };\n       2279: \n       2280: void\n       2281: poisontell(typ)"
   },
   {
     "key": "L02276_02",
     "original": "r muscles won't obey you",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2276:29\n  2271: \n  2272: \n  2273: static const char *poiseff[] = {\n  2274: \n  2275: \t\" feel weaker\", \"r brain is on fire\",\n&gt; 2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n  2277: \t\" feel very sick\", \" break out in hives\"\n  2278: };\n  2279: \n  2280: void\n  2281: poisontell(typ)"
+    "context": "src/mon.c:2276:29\n       2271: \n       2272: \n       2273: static const char *poiseff[] = {\n       2274: \n       2275: \t\" feel weaker\", \"r brain is on fire\",\nTARGET 2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n       2277: \t\" feel very sick\", \" break out in hives\"\n       2278: };\n       2279: \n       2280: void\n       2281: poisontell(typ)"
   },
   {
     "key": "L02277_01",
     "original": " feel very sick",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2277:2\n  2272: \n  2273: static const char *poiseff[] = {\n  2274: \n  2275: \t\" feel weaker\", \"r brain is on fire\",\n  2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n&gt; 2277: \t\" feel very sick\", \" break out in hives\"\n  2278: };\n  2279: \n  2280: void\n  2281: poisontell(typ)\n  2282: "
+    "context": "src/mon.c:2277:2\n       2272: \n       2273: static const char *poiseff[] = {\n       2274: \n       2275: \t\" feel weaker\", \"r brain is on fire\",\n       2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\nTARGET 2277: \t\" feel very sick\", \" break out in hives\"\n       2278: };\n       2279: \n       2280: void\n       2281: poisontell(typ)\n       2282: "
   },
   {
     "key": "L02277_02",
     "original": " break out in hives",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2277:21\n  2272: \n  2273: static const char *poiseff[] = {\n  2274: \n  2275: \t\" feel weaker\", \"r brain is on fire\",\n  2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\n&gt; 2277: \t\" feel very sick\", \" break out in hives\"\n  2278: };\n  2279: \n  2280: void\n  2281: poisontell(typ)\n  2282: "
+    "context": "src/mon.c:2277:21\n       2272: \n       2273: static const char *poiseff[] = {\n       2274: \n       2275: \t\" feel weaker\", \"r brain is on fire\",\n       2276: \t\"r judgement is impaired\", \"r muscles won't obey you\",\nTARGET 2277: \t\" feel very sick\", \" break out in hives\"\n       2278: };\n       2279: \n       2280: void\n       2281: poisontell(typ)\n       2282: "
   },
   {
     "key": "L02285_01",
     "original": "You%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2285:8\n  2280: void\n  2281: poisontell(typ)\n  2282: \n  2283: \tint\ttyp;\n  2284: {\n&gt; 2285: \tpline(\"You%s.\", poiseff[typ]);\n  2286: }\n  2287: \n  2288: void\n  2289: poisoned(string, typ, pname, fatal)\n  2290: const char *string, *pname;"
+    "context": "src/mon.c:2285:8\n       2280: void\n       2281: poisontell(typ)\n       2282: \n       2283: \tint\ttyp;\n       2284: {\nTARGET 2285: \tpline(\"You%s.\", poiseff[typ]);\n       2286: }\n       2287: \n       2288: void\n       2289: poisoned(string, typ, pname, fatal)\n       2290: const char *string, *pname;"
   },
   {
     "key": "L02297_01",
     "original": "blast",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2297:20\n  2292: {\n  2293: \tint i, plural, kprefix = KILLED_BY_AN;\n  2294: \tboolean thrown_weapon = (fatal &lt; 0);\n  2295: \n  2296: \tif (thrown_weapon) fatal = -fatal;\n&gt; 2297: \tif(strcmp(string, \"blast\") && !thrown_weapon) {\n  2298: \t    /* 'blast' has already given a 'poison gas' message */\n  2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n  2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n  2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n  2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \","
+    "context": "src/mon.c:2297:20\n       2292: {\n       2293: \tint i, plural, kprefix = KILLED_BY_AN;\n       2294: \tboolean thrown_weapon = (fatal &lt; 0);\n       2295: \n       2296: \tif (thrown_weapon) fatal = -fatal;\nTARGET 2297: \tif(strcmp(string, \"blast\") && !thrown_weapon) {\n       2298: \t    /* 'blast' has already given a 'poison gas' message */\n       2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n       2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n       2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n       2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \","
   },
   {
     "key": "L02302_01",
     "original": "%s%s %s poisoned!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2302:12\n  2297: \tif(strcmp(string, \"blast\") && !thrown_weapon) {\n  2298: \t    /* 'blast' has already given a 'poison gas' message */\n  2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n  2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n  2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n&gt; 2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n  2303: \t\t\tstring, plural ? \"were\" : \"was\");\n  2304: \t}\n  2305: \n  2306: \tif(Poison_resistance) {\n  2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);"
+    "context": "src/mon.c:2302:12\n       2297: \tif(strcmp(string, \"blast\") && !thrown_weapon) {\n       2298: \t    /* 'blast' has already given a 'poison gas' message */\n       2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n       2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n       2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\nTARGET 2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n       2303: \t\t\tstring, plural ? \"were\" : \"was\");\n       2304: \t}\n       2305: \n       2306: \tif(Poison_resistance) {\n       2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);"
   },
   {
     "key": "L02302_02",
     "original": "The ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2302:62\n  2297: \tif(strcmp(string, \"blast\") && !thrown_weapon) {\n  2298: \t    /* 'blast' has already given a 'poison gas' message */\n  2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n  2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n  2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n&gt; 2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n  2303: \t\t\tstring, plural ? \"were\" : \"was\");\n  2304: \t}\n  2305: \n  2306: \tif(Poison_resistance) {\n  2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);"
+    "context": "src/mon.c:2302:62\n       2297: \tif(strcmp(string, \"blast\") && !thrown_weapon) {\n       2298: \t    /* 'blast' has already given a 'poison gas' message */\n       2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n       2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n       2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\nTARGET 2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n       2303: \t\t\tstring, plural ? \"were\" : \"was\");\n       2304: \t}\n       2305: \n       2306: \tif(Poison_resistance) {\n       2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);"
   },
   {
     "key": "L02303_01",
     "original": "were",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2303:21\n  2298: \t    /* 'blast' has already given a 'poison gas' message */\n  2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n  2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n  2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n  2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n&gt; 2303: \t\t\tstring, plural ? \"were\" : \"was\");\n  2304: \t}\n  2305: \n  2306: \tif(Poison_resistance) {\n  2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);\n  2308: \t\tpline_The(\"毒素好像对你无效。\");"
+    "context": "src/mon.c:2303:21\n       2298: \t    /* 'blast' has already given a 'poison gas' message */\n       2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n       2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n       2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n       2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\nTARGET 2303: \t\t\tstring, plural ? \"were\" : \"was\");\n       2304: \t}\n       2305: \n       2306: \tif(Poison_resistance) {\n       2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);\n       2308: \t\tpline_The(\"毒素好像对你无效。\");"
   },
   {
     "key": "L02303_02",
     "original": "was",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2303:30\n  2298: \t    /* 'blast' has already given a 'poison gas' message */\n  2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n  2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n  2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n  2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n&gt; 2303: \t\t\tstring, plural ? \"were\" : \"was\");\n  2304: \t}\n  2305: \n  2306: \tif(Poison_resistance) {\n  2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);\n  2308: \t\tpline_The(\"毒素好像对你无效。\");"
+    "context": "src/mon.c:2303:30\n       2298: \t    /* 'blast' has already given a 'poison gas' message */\n       2299: \t    /* so have \"poison arrow\", \"poison dart\", etc... */\n       2300: \t    plural = (string[strlen(string) - 1] == 's')? 1 : 0;\n       2301: \t    /* avoid \"The\" Orcus's sting was poisoned... */\n       2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\nTARGET 2303: \t\t\tstring, plural ? \"were\" : \"was\");\n       2304: \t}\n       2305: \n       2306: \tif(Poison_resistance) {\n       2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);\n       2308: \t\tpline_The(\"毒素好像对你无效。\");"
   },
   {
     "key": "L02307_01",
     "original": "blast",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2307:22\n  2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n  2303: \t\t\tstring, plural ? \"were\" : \"was\");\n  2304: \t}\n  2305: \n  2306: \tif(Poison_resistance) {\n&gt; 2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);\n  2308: \t\tpline_The(\"毒素好像对你无效。\");\n  2309: \t\treturn;\n  2310: \t}\n  2311: \t/* suppress killer prefix if it already has one */\n  2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {"
+    "context": "src/mon.c:2307:22\n       2302: \t    pline(\"%s%s %s poisoned!\", isupper((int)*string) ? \"\" : \"The \",\n       2303: \t\t\tstring, plural ? \"were\" : \"was\");\n       2304: \t}\n       2305: \n       2306: \tif(Poison_resistance) {\nTARGET 2307: \t\tif(!strcmp(string, \"blast\")) shieldeff(u.ux, u.uy);\n       2308: \t\tpline_The(\"毒素好像对你无效。\");\n       2309: \t\treturn;\n       2310: \t}\n       2311: \t/* suppress killer prefix if it already has one */\n       2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {"
   },
   {
     "key": "L02315_01",
     "original": "the ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2315:30\n  2310: \t}\n  2311: \t/* suppress killer prefix if it already has one */\n  2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {\n  2313: \t    kprefix = KILLED_BY;\n  2314: \t    if (!type_is_pname(&mons[i])) pname = the(pname);\n&gt; 2315: \t} else if (!strncmpi(pname, \"the \", 4) ||\n  2316: \t    !strncmpi(pname, \"an \", 3) ||\n  2317: \t    !strncmpi(pname, \"a \", 2)) {\n  2318: \t    /*[ does this need a plural check too? ]*/\n  2319: \t    kprefix = KILLED_BY;\n  2320: \t}"
+    "context": "src/mon.c:2315:30\n       2310: \t}\n       2311: \t/* suppress killer prefix if it already has one */\n       2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {\n       2313: \t    kprefix = KILLED_BY;\n       2314: \t    if (!type_is_pname(&mons[i])) pname = the(pname);\nTARGET 2315: \t} else if (!strncmpi(pname, \"the \", 4) ||\n       2316: \t    !strncmpi(pname, \"an \", 3) ||\n       2317: \t    !strncmpi(pname, \"a \", 2)) {\n       2318: \t    /*[ does this need a plural check too? ]*/\n       2319: \t    kprefix = KILLED_BY;\n       2320: \t}"
   },
   {
     "key": "L02316_01",
     "original": "an ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2316:23\n  2311: \t/* suppress killer prefix if it already has one */\n  2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {\n  2313: \t    kprefix = KILLED_BY;\n  2314: \t    if (!type_is_pname(&mons[i])) pname = the(pname);\n  2315: \t} else if (!strncmpi(pname, \"the \", 4) ||\n&gt; 2316: \t    !strncmpi(pname, \"an \", 3) ||\n  2317: \t    !strncmpi(pname, \"a \", 2)) {\n  2318: \t    /*[ does this need a plural check too? ]*/\n  2319: \t    kprefix = KILLED_BY;\n  2320: \t}\n  2321: \ti = rn2(fatal + 20*thrown_weapon);"
+    "context": "src/mon.c:2316:23\n       2311: \t/* suppress killer prefix if it already has one */\n       2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {\n       2313: \t    kprefix = KILLED_BY;\n       2314: \t    if (!type_is_pname(&mons[i])) pname = the(pname);\n       2315: \t} else if (!strncmpi(pname, \"the \", 4) ||\nTARGET 2316: \t    !strncmpi(pname, \"an \", 3) ||\n       2317: \t    !strncmpi(pname, \"a \", 2)) {\n       2318: \t    /*[ does this need a plural check too? ]*/\n       2319: \t    kprefix = KILLED_BY;\n       2320: \t}\n       2321: \ti = rn2(fatal + 20*thrown_weapon);"
   },
   {
     "key": "L02317_01",
     "original": "a ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2317:23\n  2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {\n  2313: \t    kprefix = KILLED_BY;\n  2314: \t    if (!type_is_pname(&mons[i])) pname = the(pname);\n  2315: \t} else if (!strncmpi(pname, \"the \", 4) ||\n  2316: \t    !strncmpi(pname, \"an \", 3) ||\n&gt; 2317: \t    !strncmpi(pname, \"a \", 2)) {\n  2318: \t    /*[ does this need a plural check too? ]*/\n  2319: \t    kprefix = KILLED_BY;\n  2320: \t}\n  2321: \ti = rn2(fatal + 20*thrown_weapon);\n  2322: \tif(i == 0 && typ != A_CHA) {"
+    "context": "src/mon.c:2317:23\n       2312: \tif ((i = name_to_mon(pname)) &gt;= LOW_PM && mons[i].geno & G_UNIQ) {\n       2313: \t    kprefix = KILLED_BY;\n       2314: \t    if (!type_is_pname(&mons[i])) pname = the(pname);\n       2315: \t} else if (!strncmpi(pname, \"the \", 4) ||\n       2316: \t    !strncmpi(pname, \"an \", 3) ||\nTARGET 2317: \t    !strncmpi(pname, \"a \", 2)) {\n       2318: \t    /*[ does this need a plural check too? ]*/\n       2319: \t    kprefix = KILLED_BY;\n       2320: \t}\n       2321: \ti = rn2(fatal + 20*thrown_weapon);\n       2322: \tif(i == 0 && typ != A_CHA) {"
   },
   {
     "key": "L02324_01",
     "original": "You are unharmed!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2324:12\n  2319: \t    kprefix = KILLED_BY;\n  2320: \t}\n  2321: \ti = rn2(fatal + 20*thrown_weapon);\n  2322: \tif(i == 0 && typ != A_CHA) {\n  2323: \t\tif (Invulnerable)\n&gt; 2324: \t\t   pline(\"You are unharmed!\");\n  2325: \t\telse {\n  2326: \t\tu.uhp = -1;\n  2327: \t\tpline_The(\"poison was deadly...\");\n  2328: \t\t}\n  2329: \t} else if(i &lt;= 5) {"
+    "context": "src/mon.c:2324:12\n       2319: \t    kprefix = KILLED_BY;\n       2320: \t}\n       2321: \ti = rn2(fatal + 20*thrown_weapon);\n       2322: \tif(i == 0 && typ != A_CHA) {\n       2323: \t\tif (Invulnerable)\nTARGET 2324: \t\t   pline(\"You are unharmed!\");\n       2325: \t\telse {\n       2326: \t\tu.uhp = -1;\n       2327: \t\tpline_The(\"poison was deadly...\");\n       2328: \t\t}\n       2329: \t} else if(i &lt;= 5) {"
   },
   {
     "key": "L02327_01",
     "original": "poison was deadly...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2327:13\n  2322: \tif(i == 0 && typ != A_CHA) {\n  2323: \t\tif (Invulnerable)\n  2324: \t\t   pline(\"You are unharmed!\");\n  2325: \t\telse {\n  2326: \t\tu.uhp = -1;\n&gt; 2327: \t\tpline_The(\"poison was deadly...\");\n  2328: \t\t}\n  2329: \t} else if(i &lt;= 5) {\n  2330: \t\t/* Check that a stat change was made */\n  2331: \t\tif (adjattrib(typ, thrown_weapon ? -1 : -rn1(3,3), 1))\n  2332: \t\t    pline(\"You%s!\", poiseff[typ]);"
+    "context": "src/mon.c:2327:13\n       2322: \tif(i == 0 && typ != A_CHA) {\n       2323: \t\tif (Invulnerable)\n       2324: \t\t   pline(\"You are unharmed!\");\n       2325: \t\telse {\n       2326: \t\tu.uhp = -1;\nTARGET 2327: \t\tpline_The(\"poison was deadly...\");\n       2328: \t\t}\n       2329: \t} else if(i &lt;= 5) {\n       2330: \t\t/* Check that a stat change was made */\n       2331: \t\tif (adjattrib(typ, thrown_weapon ? -1 : -rn1(3,3), 1))\n       2332: \t\t    pline(\"You%s!\", poiseff[typ]);"
   },
   {
     "key": "L02332_01",
     "original": "You%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2332:13\n  2327: \t\tpline_The(\"poison was deadly...\");\n  2328: \t\t}\n  2329: \t} else if(i &lt;= 5) {\n  2330: \t\t/* Check that a stat change was made */\n  2331: \t\tif (adjattrib(typ, thrown_weapon ? -1 : -rn1(3,3), 1))\n&gt; 2332: \t\t    pline(\"You%s!\", poiseff[typ]);\n  2333: \t} else {\n  2334: \t\ti = thrown_weapon ? rnd(6) : rn1(10,6);\n  2335: \t\tif(Half_physical_damage) i = (i+1) / 2;\n  2336: \t\tlosehp(i, pname, kprefix);\n  2337: \t}"
+    "context": "src/mon.c:2332:13\n       2327: \t\tpline_The(\"poison was deadly...\");\n       2328: \t\t}\n       2329: \t} else if(i &lt;= 5) {\n       2330: \t\t/* Check that a stat change was made */\n       2331: \t\tif (adjattrib(typ, thrown_weapon ? -1 : -rn1(3,3), 1))\nTARGET 2332: \t\t    pline(\"You%s!\", poiseff[typ]);\n       2333: \t} else {\n       2334: \t\ti = thrown_weapon ? rnd(6) : rn1(10,6);\n       2335: \t\tif(Half_physical_damage) i = (i+1) / 2;\n       2336: \t\tlosehp(i, pname, kprefix);\n       2337: \t}"
   },
   {
     "key": "L02342_01",
     "original": "poison",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2342:23\n  2337: \t}\n  2338: \tif(u.uhp &lt; 1) {\n  2339: \t\tkiller_format = kprefix;\n  2340: \t\tkiller = pname;\n  2341: \t\t/* \"Poisoned by a poisoned ___\" is redundant */\n&gt; 2342: \t\tdone(strstri(pname, \"poison\") ? DIED : POISONING);\n  2343: \t}\n  2344: \t(void) encumber_msg();\n  2345: }\n  2346: \n  2347: /* monster responds to player action; not the same as a passive attack */"
+    "context": "src/mon.c:2342:23\n       2337: \t}\n       2338: \tif(u.uhp &lt; 1) {\n       2339: \t\tkiller_format = kprefix;\n       2340: \t\tkiller = pname;\n       2341: \t\t/* \"Poisoned by a poisoned ___\" is redundant */\nTARGET 2342: \t\tdone(strstri(pname, \"poison\") ? DIED : POISONING);\n       2343: \t}\n       2344: \t(void) encumber_msg();\n       2345: }\n       2346: \n       2347: /* monster responds to player action; not the same as a passive attack */"
   },
   {
     "key": "L02355_01",
     "original": "%s shrieks.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2355:12\n  2350: m_respond(mtmp)\n  2351: register struct monst *mtmp;\n  2352: {\n  2353:     if(mtmp-&gt;data-&gt;msound == MS_SHRIEK) {\n  2354: \tif(flags.soundok) {\n&gt; 2355: \t    pline(\"%s shrieks.\", Monnam(mtmp));\n  2356: \t    stop_occupation();\n  2357: \t}\n  2358: \t/* [Tom] took out the weird purple worm thing and lowered prob from 10 */        \n  2359: \tif (!rn2(8)) {\n  2360: /*          if (!rn2(13))"
+    "context": "src/mon.c:2355:12\n       2350: m_respond(mtmp)\n       2351: register struct monst *mtmp;\n       2352: {\n       2353:     if(mtmp-&gt;data-&gt;msound == MS_SHRIEK) {\n       2354: \tif(flags.soundok) {\nTARGET 2355: \t    pline(\"%s shrieks.\", Monnam(mtmp));\n       2356: \t    stop_occupation();\n       2357: \t}\n       2358: \t/* [Tom] took out the weird purple worm thing and lowered prob from 10 */        \n       2359: \tif (!rn2(8)) {\n       2360: /*          if (!rn2(13))"
   },
   {
     "key": "L02405_01",
     "original": "%s gets angry!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2405:13\n  2400: \t\tadjalign(-1);\t\t/* attacking peaceful monsters is bad */\n  2401: \t}\n  2402: \n  2403: \tif (couldsee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  2404: \t\tif (humanoid(mtmp-&gt;data) || mtmp-&gt;isshk || mtmp-&gt;isgd)\n&gt; 2405: \t\t    pline(\"%s gets angry!\", Monnam(mtmp));\n  2406: \t\telse if (flags.verbose && flags.soundok) growl(mtmp);\n  2407: \t}\n  2408: \n  2409: #ifdef BLACKMARKET\n  2410: \t/* Don't misbehave in the Black Market or else... */"
+    "context": "src/mon.c:2405:13\n       2400: \t\tadjalign(-1);\t\t/* attacking peaceful monsters is bad */\n       2401: \t}\n       2402: \n       2403: \tif (couldsee(mtmp-&gt;mx, mtmp-&gt;my)) {\n       2404: \t\tif (humanoid(mtmp-&gt;data) || mtmp-&gt;isshk || mtmp-&gt;isgd)\nTARGET 2405: \t\t    pline(\"%s gets angry!\", Monnam(mtmp));\n       2406: \t\telse if (flags.verbose && flags.soundok) growl(mtmp);\n       2407: \t}\n       2408: \n       2409: #ifdef BLACKMARKET\n       2410: \t/* Don't misbehave in the Black Market or else... */"
   },
   {
     "key": "L02438_01",
     "original": "%s appear%s to be angry too...",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2438:13\n  2433: \t\tif (!DEADMONSTER(mon) && mon-&gt;data == q_guardian && mon-&gt;mpeaceful) {\n  2434: \t\t    mon-&gt;mpeaceful = 0;\n  2435: \t\t    if (canseemon(mon)) ++got_mad;\n  2436: \t\t}\n  2437: \t    if (got_mad && !Hallucination)\n&gt; 2438: \t\tpline_The(\"%s appear%s to be angry too...\",\n  2439: \t\t      got_mad == 1 ? q_guardian-&gt;mname :\n  2440: \t\t\t\t    makeplural(q_guardian-&gt;mname),\n  2441: \t\t      got_mad == 1 ? \"s\" : \"\");\n  2442: \t}\n  2443: }"
+    "context": "src/mon.c:2438:13\n       2433: \t\tif (!DEADMONSTER(mon) && mon-&gt;data == q_guardian && mon-&gt;mpeaceful) {\n       2434: \t\t    mon-&gt;mpeaceful = 0;\n       2435: \t\t    if (canseemon(mon)) ++got_mad;\n       2436: \t\t}\n       2437: \t    if (got_mad && !Hallucination)\nTARGET 2438: \t\tpline_The(\"%s appear%s to be angry too...\",\n       2439: \t\t      got_mad == 1 ? q_guardian-&gt;mname :\n       2440: \t\t\t\t    makeplural(q_guardian-&gt;mname),\n       2441: \t\t      got_mad == 1 ? \"s\" : \"\");\n       2442: \t}\n       2443: }"
   },
   {
     "key": "L02441_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2441:24\n  2436: \t\t}\n  2437: \t    if (got_mad && !Hallucination)\n  2438: \t\tpline_The(\"%s appear%s to be angry too...\",\n  2439: \t\t      got_mad == 1 ? q_guardian-&gt;mname :\n  2440: \t\t\t\t    makeplural(q_guardian-&gt;mname),\n&gt; 2441: \t\t      got_mad == 1 ? \"s\" : \"\");\n  2442: \t}\n  2443: }\n  2444: \n  2445: void\n  2446: wakeup(mtmp)"
+    "context": "src/mon.c:2441:24\n       2436: \t\t}\n       2437: \t    if (got_mad && !Hallucination)\n       2438: \t\tpline_The(\"%s appear%s to be angry too...\",\n       2439: \t\t      got_mad == 1 ? q_guardian-&gt;mname :\n       2440: \t\t\t\t    makeplural(q_guardian-&gt;mname),\nTARGET 2441: \t\t      got_mad == 1 ? \"s\" : \"\");\n       2442: \t}\n       2443: }\n       2444: \n       2445: void\n       2446: wakeup(mtmp)"
   },
   {
     "key": "L02670_01",
     "original": "Change %s into what kind of monster? [type the name]",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2670:5\n  2665: \tif (wizard && iflags.mon_polycontrol) {\n  2666: \t\tchar pprompt[BUFSZ], buf[BUFSZ];\n  2667: \t\tint tries = 0;\n  2668: \t\tdo {\n  2669: \t\t\tSprintf(pprompt,\n&gt; 2670: \t\t\t\t\"Change %s into what kind of monster? [type the name]\",\n  2671: \t\t\t\tmon_nam(mon));\n  2672: \t\t\tgetlin(pprompt,buf);\n  2673: \t\t\tmndx = name_to_mon(buf);\n  2674: \t\t\tif (mndx &lt; LOW_PM)\n  2675: \t\t\t\tYou(\"cannot polymorph %s into that.\", mon_nam(mon));"
+    "context": "src/mon.c:2670:5\n       2665: \tif (wizard && iflags.mon_polycontrol) {\n       2666: \t\tchar pprompt[BUFSZ], buf[BUFSZ];\n       2667: \t\tint tries = 0;\n       2668: \t\tdo {\n       2669: \t\t\tSprintf(pprompt,\nTARGET 2670: \t\t\t\t\"Change %s into what kind of monster? [type the name]\",\n       2671: \t\t\t\tmon_nam(mon));\n       2672: \t\t\tgetlin(pprompt,buf);\n       2673: \t\t\tmndx = name_to_mon(buf);\n       2674: \t\t\tif (mndx &lt; LOW_PM)\n       2675: \t\t\t\tYou(\"cannot polymorph %s into that.\", mon_nam(mon));"
   },
   {
     "key": "L02675_01",
     "original": "cannot polymorph %s into that.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2675:9\n  2670: \t\t\t\t\"Change %s into what kind of monster? [type the name]\",\n  2671: \t\t\t\tmon_nam(mon));\n  2672: \t\t\tgetlin(pprompt,buf);\n  2673: \t\t\tmndx = name_to_mon(buf);\n  2674: \t\t\tif (mndx &lt; LOW_PM)\n&gt; 2675: \t\t\t\tYou(\"cannot polymorph %s into that.\", mon_nam(mon));\n  2676: \t\t\telse break;\n  2677: \t\t} while(++tries &lt; 5);\n  2678: \t\tif (tries==5) pline(thats_enough_tries);\n  2679: \t}\n  2680: #endif /*WIZARD*/"
+    "context": "src/mon.c:2675:9\n       2670: \t\t\t\t\"Change %s into what kind of monster? [type the name]\",\n       2671: \t\t\t\tmon_nam(mon));\n       2672: \t\t\tgetlin(pprompt,buf);\n       2673: \t\t\tmndx = name_to_mon(buf);\n       2674: \t\t\tif (mndx &lt; LOW_PM)\nTARGET 2675: \t\t\t\tYou(\"cannot polymorph %s into that.\", mon_nam(mon));\n       2676: \t\t\telse break;\n       2677: \t\t} while(++tries &lt; 5);\n       2678: \t\tif (tries==5) pline(thats_enough_tries);\n       2679: \t}\n       2680: #endif /*WIZARD*/"
   },
   {
     "key": "L02840_01",
     "original": "You touch %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2840:13\n  2835: \tif (u.usteed) {\n  2836: \t    if (touch_petrifies(u.usteed-&gt;data) &&\n  2837: \t    \t\t!Stone_resistance && rnl(3)) {\n  2838: \t    \tchar buf[BUFSZ];\n  2839: \n&gt; 2840: \t    \tpline(\"You touch %s.\", mon_nam(u.usteed));\n  2841: \t    \tSprintf(buf, \"riding %s\", an(u.usteed-&gt;data-&gt;mname));\n  2842: \t    \tinstapetrify(buf);\n  2843:  \t    }\n  2844: \t    if (!can_ride(u.usteed)) dismount_steed(DISMOUNT_POLY);\n  2845: \t}"
+    "context": "src/mon.c:2840:13\n       2835: \tif (u.usteed) {\n       2836: \t    if (touch_petrifies(u.usteed-&gt;data) &&\n       2837: \t    \t\t!Stone_resistance && rnl(3)) {\n       2838: \t    \tchar buf[BUFSZ];\n       2839: \nTARGET 2840: \t    \tpline(\"You touch %s.\", mon_nam(u.usteed));\n       2841: \t    \tSprintf(buf, \"riding %s\", an(u.usteed-&gt;data-&gt;mname));\n       2842: \t    \tinstapetrify(buf);\n       2843:  \t    }\n       2844: \t    if (!can_ride(u.usteed)) dismount_steed(DISMOUNT_POLY);\n       2845: \t}"
   },
   {
     "key": "L02841_01",
     "original": "riding %s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2841:20\n  2836: \t    if (touch_petrifies(u.usteed-&gt;data) &&\n  2837: \t    \t\t!Stone_resistance && rnl(3)) {\n  2838: \t    \tchar buf[BUFSZ];\n  2839: \n  2840: \t    \tpline(\"You touch %s.\", mon_nam(u.usteed));\n&gt; 2841: \t    \tSprintf(buf, \"riding %s\", an(u.usteed-&gt;data-&gt;mname));\n  2842: \t    \tinstapetrify(buf);\n  2843:  \t    }\n  2844: \t    if (!can_ride(u.usteed)) dismount_steed(DISMOUNT_POLY);\n  2845: \t}\n  2846: #endif"
+    "context": "src/mon.c:2841:20\n       2836: \t    if (touch_petrifies(u.usteed-&gt;data) &&\n       2837: \t    \t\t!Stone_resistance && rnl(3)) {\n       2838: \t    \tchar buf[BUFSZ];\n       2839: \n       2840: \t    \tpline(\"You touch %s.\", mon_nam(u.usteed));\nTARGET 2841: \t    \tSprintf(buf, \"riding %s\", an(u.usteed-&gt;data-&gt;mname));\n       2842: \t    \tinstapetrify(buf);\n       2843:  \t    }\n       2844: \t    if (!can_ride(u.usteed)) dismount_steed(DISMOUNT_POLY);\n       2845: \t}\n       2846: #endif"
   },
   {
     "key": "L02867_01",
     "original": "%s is suddenly very %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2867:9\n  2862: \n  2863: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n  2864: \n  2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n  2866: \t    if (alt_mesg && is_mplayer(mdat))\n&gt; 2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n  2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n  2869: \t    else if (alt_mesg)\n  2870: \t\tpline(\"%s changes into a %s!\", oldname,\n  2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {"
+    "context": "src/mon.c:2867:9\n       2862: \n       2863: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n       2864: \n       2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n       2866: \t    if (alt_mesg && is_mplayer(mdat))\nTARGET 2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n       2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n       2869: \t    else if (alt_mesg)\n       2870: \t\tpline(\"%s changes into a %s!\", oldname,\n       2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {"
   },
   {
     "key": "L02868_01",
     "original": "feminine",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2868:19\n  2863: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n  2864: \n  2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n  2866: \t    if (alt_mesg && is_mplayer(mdat))\n  2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n&gt; 2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n  2869: \t    else if (alt_mesg)\n  2870: \t\tpline(\"%s changes into a %s!\", oldname,\n  2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {\n  2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;"
+    "context": "src/mon.c:2868:19\n       2863: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n       2864: \n       2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n       2866: \t    if (alt_mesg && is_mplayer(mdat))\n       2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\nTARGET 2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n       2869: \t    else if (alt_mesg)\n       2870: \t\tpline(\"%s changes into a %s!\", oldname,\n       2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {\n       2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;"
   },
   {
     "key": "L02868_02",
     "original": "masculine",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2868:32\n  2863: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n  2864: \n  2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n  2866: \t    if (alt_mesg && is_mplayer(mdat))\n  2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n&gt; 2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n  2869: \t    else if (alt_mesg)\n  2870: \t\tpline(\"%s changes into a %s!\", oldname,\n  2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {\n  2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;"
+    "context": "src/mon.c:2868:32\n       2863: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n       2864: \n       2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n       2866: \t    if (alt_mesg && is_mplayer(mdat))\n       2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\nTARGET 2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n       2869: \t    else if (alt_mesg)\n       2870: \t\tpline(\"%s changes into a %s!\", oldname,\n       2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {\n       2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;"
   },
   {
     "key": "L02870_01",
     "original": "%s changes into a %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2870:9\n  2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n  2866: \t    if (alt_mesg && is_mplayer(mdat))\n  2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n  2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n  2869: \t    else if (alt_mesg)\n&gt; 2870: \t\tpline(\"%s changes into a %s!\", oldname,\n  2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {\n  2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n  2874: \t    mtmp-&gt;mnamelth = 0;\n  2875: \t    pline(\"%s turns into %s!\", oldname,"
+    "context": "src/mon.c:2870:9\n       2865: \tif (msg && (u.uswallow && mtmp == u.ustuck || canspotmon(mtmp))) {\n       2866: \t    if (alt_mesg && is_mplayer(mdat))\n       2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n       2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n       2869: \t    else if (alt_mesg)\nTARGET 2870: \t\tpline(\"%s changes into a %s!\", oldname,\n       2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {\n       2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n       2874: \t    mtmp-&gt;mnamelth = 0;\n       2875: \t    pline(\"%s turns into %s!\", oldname,"
   },
   {
     "key": "L02871_01",
     "original": "human",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2871:21\n  2866: \t    if (alt_mesg && is_mplayer(mdat))\n  2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n  2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n  2869: \t    else if (alt_mesg)\n  2870: \t\tpline(\"%s changes into a %s!\", oldname,\n&gt; 2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {\n  2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n  2874: \t    mtmp-&gt;mnamelth = 0;\n  2875: \t    pline(\"%s turns into %s!\", oldname,\n  2876: \t\t  mdat == &mons[PM_GREEN_SLIME] ? \"slime\" :"
+    "context": "src/mon.c:2871:21\n       2866: \t    if (alt_mesg && is_mplayer(mdat))\n       2867: \t\tpline(\"%s is suddenly very %s!\", oldname,\n       2868: \t\t\tmtmp-&gt;female ? \"feminine\" : \"masculine\");\n       2869: \t    else if (alt_mesg)\n       2870: \t\tpline(\"%s changes into a %s!\", oldname,\nTARGET 2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {\n       2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n       2874: \t    mtmp-&gt;mnamelth = 0;\n       2875: \t    pline(\"%s turns into %s!\", oldname,\n       2876: \t\t  mdat == &mons[PM_GREEN_SLIME] ? \"slime\" :"
   },
   {
     "key": "L02875_01",
     "original": "%s turns into %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2875:12\n  2870: \t\tpline(\"%s changes into a %s!\", oldname,\n  2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {\n  2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n  2874: \t    mtmp-&gt;mnamelth = 0;\n&gt; 2875: \t    pline(\"%s turns into %s!\", oldname,\n  2876: \t\t  mdat == &mons[PM_GREEN_SLIME] ? \"slime\" :\n  2877: \t\t  x_monnam(mtmp, ARTICLE_A, (char*)0, SUPPRESS_SADDLE, FALSE));\n  2878: \t    mtmp-&gt;mnamelth = save_mnamelth;\n  2879: \t    }\n  2880: \t} else if (msg && couldsee)"
+    "context": "src/mon.c:2875:12\n       2870: \t\tpline(\"%s changes into a %s!\", oldname,\n       2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {\n       2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n       2874: \t    mtmp-&gt;mnamelth = 0;\nTARGET 2875: \t    pline(\"%s turns into %s!\", oldname,\n       2876: \t\t  mdat == &mons[PM_GREEN_SLIME] ? \"slime\" :\n       2877: \t\t  x_monnam(mtmp, ARTICLE_A, (char*)0, SUPPRESS_SADDLE, FALSE));\n       2878: \t    mtmp-&gt;mnamelth = save_mnamelth;\n       2879: \t    }\n       2880: \t} else if (msg && couldsee)"
   },
   {
     "key": "L02876_01",
     "original": "slime",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2876:37\n  2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n  2872: \t    else {\n  2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n  2874: \t    mtmp-&gt;mnamelth = 0;\n  2875: \t    pline(\"%s turns into %s!\", oldname,\n&gt; 2876: \t\t  mdat == &mons[PM_GREEN_SLIME] ? \"slime\" :\n  2877: \t\t  x_monnam(mtmp, ARTICLE_A, (char*)0, SUPPRESS_SADDLE, FALSE));\n  2878: \t    mtmp-&gt;mnamelth = save_mnamelth;\n  2879: \t    }\n  2880: \t} else if (msg && couldsee)\n  2881: \t    /* No message if we only sensed the monster previously */"
+    "context": "src/mon.c:2876:37\n       2871: \t\t\tis_human(mdat) ? \"human\" : mdat-&gt;mname + 4);\n       2872: \t    else {\n       2873: \t    uchar save_mnamelth = mtmp-&gt;mnamelth;\n       2874: \t    mtmp-&gt;mnamelth = 0;\n       2875: \t    pline(\"%s turns into %s!\", oldname,\nTARGET 2876: \t\t  mdat == &mons[PM_GREEN_SLIME] ? \"slime\" :\n       2877: \t\t  x_monnam(mtmp, ARTICLE_A, (char*)0, SUPPRESS_SADDLE, FALSE));\n       2878: \t    mtmp-&gt;mnamelth = save_mnamelth;\n       2879: \t    }\n       2880: \t} else if (msg && couldsee)\n       2881: \t    /* No message if we only sensed the monster previously */"
   },
   {
     "key": "L02882_01",
     "original": "%s suddenly disappears!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2882:12\n  2877: \t\t  x_monnam(mtmp, ARTICLE_A, (char*)0, SUPPRESS_SADDLE, FALSE));\n  2878: \t    mtmp-&gt;mnamelth = save_mnamelth;\n  2879: \t    }\n  2880: \t} else if (msg && couldsee)\n  2881: \t    /* No message if we only sensed the monster previously */\n&gt; 2882: \t    pline(\"%s suddenly disappears!\", oldname);\n  2883: \n  2884: \t/* [ALI] In Slash'EM, this must come _after_ \"&lt;mon&gt; turns into &lt;mon&gt;\"\n  2885: \t * since it's possible to get both messages.\n  2886: \t */\n  2887: \tif (u.ustuck == mtmp) {"
+    "context": "src/mon.c:2882:12\n       2877: \t\t  x_monnam(mtmp, ARTICLE_A, (char*)0, SUPPRESS_SADDLE, FALSE));\n       2878: \t    mtmp-&gt;mnamelth = save_mnamelth;\n       2879: \t    }\n       2880: \t} else if (msg && couldsee)\n       2881: \t    /* No message if we only sensed the monster previously */\nTARGET 2882: \t    pline(\"%s suddenly disappears!\", oldname);\n       2883: \n       2884: \t/* [ALI] In Slash'EM, this must come _after_ \"&lt;mon&gt; turns into &lt;mon&gt;\"\n       2885: \t * since it's possible to get both messages.\n       2886: \t */\n       2887: \tif (u.ustuck == mtmp) {"
   },
   {
     "key": "L02894_01",
     "original": "break out of %s%s!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2894:10\n  2889: \t\t\tif(!attacktype(mdat,AT_ENGL)) {\n  2890: \t\t\t\t/* Does mdat care? */\n  2891: \t\t\t\tif (!noncorporeal(mdat) && !amorphous(mdat) &&\n  2892: \t\t\t\t    !is_whirly(mdat) &&\n  2893: \t\t\t\t    (mdat != &mons[PM_YELLOW_LIGHT])) {\n&gt; 2894: \t\t\t\t\tYou(\"break out of %s%s!\", mon_nam(mtmp),\n  2895: \t\t\t\t\t    (is_animal(mdat)?\n  2896: \t\t\t\t\t    \"'s stomach\" : \"\"));\n  2897: \t\t\t\t\tmtmp-&gt;mhp = 1;  /* almost dead */\n  2898: \t\t\t\t}\n  2899: \t\t\t\texpels(mtmp, olddata, FALSE);"
+    "context": "src/mon.c:2894:10\n       2889: \t\t\tif(!attacktype(mdat,AT_ENGL)) {\n       2890: \t\t\t\t/* Does mdat care? */\n       2891: \t\t\t\tif (!noncorporeal(mdat) && !amorphous(mdat) &&\n       2892: \t\t\t\t    !is_whirly(mdat) &&\n       2893: \t\t\t\t    (mdat != &mons[PM_YELLOW_LIGHT])) {\nTARGET 2894: \t\t\t\t\tYou(\"break out of %s%s!\", mon_nam(mtmp),\n       2895: \t\t\t\t\t    (is_animal(mdat)?\n       2896: \t\t\t\t\t    \"'s stomach\" : \"\"));\n       2897: \t\t\t\t\tmtmp-&gt;mhp = 1;  /* almost dead */\n       2898: \t\t\t\t}\n       2899: \t\t\t\texpels(mtmp, olddata, FALSE);"
   },
   {
     "key": "L02896_01",
     "original": "'s stomach",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2896:10\n  2891: \t\t\t\tif (!noncorporeal(mdat) && !amorphous(mdat) &&\n  2892: \t\t\t\t    !is_whirly(mdat) &&\n  2893: \t\t\t\t    (mdat != &mons[PM_YELLOW_LIGHT])) {\n  2894: \t\t\t\t\tYou(\"break out of %s%s!\", mon_nam(mtmp),\n  2895: \t\t\t\t\t    (is_animal(mdat)?\n&gt; 2896: \t\t\t\t\t    \"'s stomach\" : \"\"));\n  2897: \t\t\t\t\tmtmp-&gt;mhp = 1;  /* almost dead */\n  2898: \t\t\t\t}\n  2899: \t\t\t\texpels(mtmp, olddata, FALSE);\n  2900: \t\t\t} else {\n  2901: \t\t\t\t/* update swallow glyphs for new monster */"
+    "context": "src/mon.c:2896:10\n       2891: \t\t\t\tif (!noncorporeal(mdat) && !amorphous(mdat) &&\n       2892: \t\t\t\t    !is_whirly(mdat) &&\n       2893: \t\t\t\t    (mdat != &mons[PM_YELLOW_LIGHT])) {\n       2894: \t\t\t\t\tYou(\"break out of %s%s!\", mon_nam(mtmp),\n       2895: \t\t\t\t\t    (is_animal(mdat)?\nTARGET 2896: \t\t\t\t\t    \"'s stomach\" : \"\"));\n       2897: \t\t\t\t\tmtmp-&gt;mhp = 1;  /* almost dead */\n       2898: \t\t\t\t}\n       2899: \t\t\t\texpels(mtmp, olddata, FALSE);\n       2900: \t\t\t} else {\n       2901: \t\t\t\t/* update swallow glyphs for new monster */"
   },
   {
     "key": "L02911_01",
     "original": "No longer petrify-resistant, ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:2911:23\n  2906: \t}\n  2907: \n  2908: \tpossibly_unwield(mtmp, polyspot);\t/* might lose use of weapon */\n  2909: \tmon_break_armor(mtmp, polyspot);\n  2910: \tif (!(mtmp-&gt;misc_worn_check & W_ARMG))\n&gt; 2911: \t    mselftouch(mtmp, \"No longer petrify-resistant, \",\n  2912: \t\t\t!flags.mon_moving);\n  2913: \tm_dowear(mtmp, FALSE);\n  2914: \n  2915: \t/* This ought to re-test can_carry() on each item in the inventory\n  2916: \t * rather than just checking ex-giants & boulders, but that'd be"
+    "context": "src/mon.c:2911:23\n       2906: \t}\n       2907: \n       2908: \tpossibly_unwield(mtmp, polyspot);\t/* might lose use of weapon */\n       2909: \tmon_break_armor(mtmp, polyspot);\n       2910: \tif (!(mtmp-&gt;misc_worn_check & W_ARMG))\nTARGET 2911: \t    mselftouch(mtmp, \"No longer petrify-resistant, \",\n       2912: \t\t\t!flags.mon_moving);\n       2913: \tm_dowear(mtmp, FALSE);\n       2914: \n       2915: \t/* This ought to re-test can_carry() on each item in the inventory\n       2916: \t * rather than just checking ex-giants & boulders, but that'd be"
   },
   {
     "key": "L03107_01",
     "original": "%s seems healthier.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3107:9\n  3102:     if (heal) {\n  3103: \tif (mon-&gt;mhp &lt; mon-&gt;mhpmax) {\n  3104: \t    mon-&gt;mhp += dam;\n  3105: \t    if (mon-&gt;mhp &gt; mon-&gt;mhpmax) mon-&gt;mhp = mon-&gt;mhpmax;\n  3106: \t    if (cansee(mon-&gt;mx, mon-&gt;my))\n&gt; 3107: \t\tpline(\"%s seems healthier.\", Monnam(mon));\n  3108: \t}\n  3109:     }\n  3110: }\n  3111: \n  3112: boolean"
+    "context": "src/mon.c:3107:9\n       3102:     if (heal) {\n       3103: \tif (mon-&gt;mhp &lt; mon-&gt;mhpmax) {\n       3104: \t    mon-&gt;mhp += dam;\n       3105: \t    if (mon-&gt;mhp &gt; mon-&gt;mhpmax) mon-&gt;mhp = mon-&gt;mhpmax;\n       3106: \t    if (cansee(mon-&gt;mx, mon-&gt;my))\nTARGET 3107: \t\tpline(\"%s seems healthier.\", Monnam(mon));\n       3108: \t}\n       3109:     }\n       3110: }\n       3111: \n       3112: boolean"
   },
   {
     "key": "L03138_01",
     "original": "guard%s wake%s up!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3138:22\n  3133: \t\t\tmtmp-&gt;mpeaceful = 0;\n  3134: \t\t}\n  3135: \t}\n  3136: \tif(ct) {\n  3137: \t    if(!silent) { /* do we want pline msgs? */\n&gt; 3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n  3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)"
+    "context": "src/mon.c:3138:22\n       3133: \t\t\tmtmp-&gt;mpeaceful = 0;\n       3134: \t\t}\n       3135: \t}\n       3136: \tif(ct) {\n       3137: \t    if(!silent) { /* do we want pline msgs? */\nTARGET 3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n       3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)"
   },
   {
     "key": "L03139_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3139:17\n  3134: \t\t}\n  3135: \t}\n  3136: \tif(ct) {\n  3137: \t    if(!silent) { /* do we want pline msgs? */\n  3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n&gt; 3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\","
+    "context": "src/mon.c:3139:17\n       3134: \t\t}\n       3135: \t}\n       3136: \tif(ct) {\n       3137: \t    if(!silent) { /* do we want pline msgs? */\n       3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\nTARGET 3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\","
   },
   {
     "key": "L03139_02",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3139:39\n  3134: \t\t}\n  3135: \t}\n  3136: \tif(ct) {\n  3137: \t    if(!silent) { /* do we want pline msgs? */\n  3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n&gt; 3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\","
+    "context": "src/mon.c:3139:39\n       3134: \t\t}\n       3135: \t}\n       3136: \tif(ct) {\n       3137: \t    if(!silent) { /* do we want pline msgs? */\n       3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\nTARGET 3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\","
   },
   {
     "key": "L03141_01",
     "original": "guard%s get%s angry!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3141:22\n  3136: \tif(ct) {\n  3137: \t    if(!silent) { /* do we want pline msgs? */\n  3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n  3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n&gt; 3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n  3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)"
+    "context": "src/mon.c:3141:22\n       3136: \tif(ct) {\n       3137: \t    if(!silent) { /* do we want pline msgs? */\n       3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n       3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\nTARGET 3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n       3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)"
   },
   {
     "key": "L03142_01",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3142:21\n  3137: \t    if(!silent) { /* do we want pline msgs? */\n  3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n  3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n&gt; 3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n  3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)\n  3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");"
+    "context": "src/mon.c:3142:21\n       3137: \t    if(!silent) { /* do we want pline msgs? */\n       3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n       3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\nTARGET 3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n       3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)\n       3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");"
   },
   {
     "key": "L03142_02",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3142:37\n  3137: \t    if(!silent) { /* do we want pline msgs? */\n  3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n  3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n&gt; 3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n  3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)\n  3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");"
+    "context": "src/mon.c:3142:37\n       3137: \t    if(!silent) { /* do we want pline msgs? */\n       3138: \t\tif(slct) pline_The(\"guard%s wake%s up!\",\n       3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\nTARGET 3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n       3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)\n       3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");"
   },
   {
     "key": "L03144_01",
     "original": "see %sangry guard%s approaching!",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3144:9\n  3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n&gt; 3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n  3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)\n  3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n  3148: \t    }\n  3149: \t    return(TRUE);"
+    "context": "src/mon.c:3144:9\n       3139: \t\t\t\t slct &gt; 1 ? \"s\" : \"\", slct == 1 ? \"s\" : \"\");\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\nTARGET 3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n       3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)\n       3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n       3148: \t    }\n       3149: \t    return(TRUE);"
   },
   {
     "key": "L03145_01",
     "original": "an ",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3145:18\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n&gt; 3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)\n  3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n  3148: \t    }\n  3149: \t    return(TRUE);\n  3150: \t}"
+    "context": "src/mon.c:3145:18\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\nTARGET 3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)\n       3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n       3148: \t    }\n       3149: \t    return(TRUE);\n       3150: \t}"
   },
   {
     "key": "L03145_02",
     "original": "s",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3145:40\n  3140: \t\tif(nct || sct) {\n  3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n&gt; 3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)\n  3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n  3148: \t    }\n  3149: \t    return(TRUE);\n  3150: \t}"
+    "context": "src/mon.c:3145:40\n       3140: \t\tif(nct || sct) {\n       3141: \t\t\tif(nct) pline_The(\"guard%s get%s angry!\",\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\nTARGET 3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)\n       3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n       3148: \t    }\n       3149: \t    return(TRUE);\n       3150: \t}"
   },
   {
     "key": "L03147_01",
     "original": "the shrill sound of a guard's whistle.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3147:13\n  3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n  3143: \t\t\telse if(!Blind)\n  3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n  3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n  3146: \t\t} else if(flags.soundok)\n&gt; 3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n  3148: \t    }\n  3149: \t    return(TRUE);\n  3150: \t}\n  3151: \treturn(FALSE);\n  3152: }"
+    "context": "src/mon.c:3147:13\n       3142: \t\t\t\tnct == 1 ? \"\" : \"s\", nct == 1 ? \"s\" : \"\");\n       3143: \t\t\telse if(!Blind)\n       3144: \t\t\t\tYou(\"see %sangry guard%s approaching!\",\n       3145: \t\t\t\t  sct == 1 ? \"an \" : \"\", sct &gt; 1 ? \"s\" : \"\");\n       3146: \t\t} else if(flags.soundok)\nTARGET 3147: \t\t\tYou_hear(\"the shrill sound of a guard's whistle.\");\n       3148: \t    }\n       3149: \t    return(TRUE);\n       3150: \t}\n       3151: \treturn(FALSE);\n       3152: }"
   },
   {
     "key": "L03181_01",
     "original": "%s seems a more vivid %s than before.",
     "translation": "",
     "stage": 0,
-    "context": "src/mon.c:3181:13\n  3176: \t    case M_AP_FURNITURE:\n  3177: \t    case M_AP_MONSTER:\n  3178: \t\tbreak;\n  3179: \t    case M_AP_OBJECT:\n  3180: \t\tif (otyp == SPE_HEALING || otyp == SPE_EXTRA_HEALING) {\n&gt; 3181: \t\t    pline(\"%s seems a more vivid %s than before.\",\n  3182: \t\t\t\tThe(simple_typename(ap)),\n  3183: \t\t\t\tc_obj_colors[objects[ap].oc_color]);\n  3184: \t\t}\n  3185: \t\tbreak;\n  3186: \t}"
+    "context": "src/mon.c:3181:13\n       3176: \t    case M_AP_FURNITURE:\n       3177: \t    case M_AP_MONSTER:\n       3178: \t\tbreak;\n       3179: \t    case M_AP_OBJECT:\n       3180: \t\tif (otyp == SPE_HEALING || otyp == SPE_EXTRA_HEALING) {\nTARGET 3181: \t\t    pline(\"%s seems a more vivid %s than before.\",\n       3182: \t\t\t\tThe(simple_typename(ap)),\n       3183: \t\t\t\tc_obj_colors[objects[ap].oc_color]);\n       3184: \t\t}\n       3185: \t\tbreak;\n       3186: \t}"
   }
 ]

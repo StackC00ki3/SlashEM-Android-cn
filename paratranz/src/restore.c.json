@@ -4,188 +4,188 @@
     "original": "inven_inuse: !in_use gold in inventory",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:113:18\n   108: \t    otmp2 = otmp-&gt;nobj;\n   109: #ifndef GOLDOBJ\n   110: \t    if (otmp-&gt;oclass == COIN_CLASS) {\n   111: \t\t/* in_use gold is created by some menu operations */\n   112: \t\tif (!otmp-&gt;in_use) {\n&gt;  113: \t\t    impossible(\"inven_inuse: !in_use gold in inventory\");\n   114: \t\t}\n   115: \t\textract_nobj(otmp, &invent);\n   116: \t\totmp-&gt;in_use = FALSE;\n   117: \t\tdealloc_obj(otmp);\n   118: \t    } else"
+    "context": "src/restore.c:113:18\n        108: \t    otmp2 = otmp-&gt;nobj;\n        109: #ifndef GOLDOBJ\n        110: \t    if (otmp-&gt;oclass == COIN_CLASS) {\n        111: \t\t/* in_use gold is created by some menu operations */\n        112: \t\tif (!otmp-&gt;in_use) {\nTARGET  113: \t\t    impossible(\"inven_inuse: !in_use gold in inventory\");\n        114: \t\t}\n        115: \t\textract_nobj(otmp, &invent);\n        116: \t\totmp-&gt;in_use = FALSE;\n        117: \t\tdealloc_obj(otmp);\n        118: \t    } else"
   },
   {
     "key": "L00121_01",
     "original": "Finishing off %s...",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:121:23\n   116: \t\totmp-&gt;in_use = FALSE;\n   117: \t\tdealloc_obj(otmp);\n   118: \t    } else\n   119: #endif /* GOLDOBJ */\n   120: \t    if (otmp-&gt;in_use) {\n&gt;  121: \t\tif (!quietly) pline(\"Finishing off %s...\", xname(otmp));\n   122: \t\tuseup(otmp);\n   123: \t    }\n   124: \t}\n   125: }\n   126: "
+    "context": "src/restore.c:121:23\n        116: \t\totmp-&gt;in_use = FALSE;\n        117: \t\tdealloc_obj(otmp);\n        118: \t    } else\n        119: #endif /* GOLDOBJ */\n        120: \t    if (otmp-&gt;in_use) {\nTARGET  121: \t\tif (!quietly) pline(\"Finishing off %s...\", xname(otmp));\n        122: \t\tuseup(otmp);\n        123: \t    }\n        124: \t}\n        125: }\n        126: "
   },
   {
     "key": "L00236_01",
     "original": "Restobjchn: error reading objchn.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:236:14\n   231: \t\tif (otmp-&gt;bypass) otmp-&gt;bypass = 0;\n   232: \n   233: \t\totmp2 = otmp;\n   234: \t}\n   235: \tif(first && otmp2-&gt;nobj){\n&gt;  236: \t\timpossible(\"Restobjchn: error reading objchn.\");\n   237: \t\totmp2-&gt;nobj = 0;\n   238: \t}\n   239: \n   240: \treturn(first);\n   241: }"
+    "context": "src/restore.c:236:14\n        231: \t\tif (otmp-&gt;bypass) otmp-&gt;bypass = 0;\n        232: \n        233: \t\totmp2 = otmp;\n        234: \t}\n        235: \tif(first && otmp2-&gt;nobj){\nTARGET  236: \t\timpossible(\"Restobjchn: error reading objchn.\");\n        237: \t\totmp2-&gt;nobj = 0;\n        238: \t}\n        239: \n        240: \treturn(first);\n        241: }"
   },
   {
     "key": "L00308_01",
     "original": "Restmonchn: error reading monchn.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:308:14\n   303: \t\tif (mtmp-&gt;isgyp && ghostly) gypsy_init(mtmp);\n   304: \n   305: \t\tmtmp2 = mtmp;\n   306: \t}\n   307: \tif(first && mtmp2-&gt;nmon){\n&gt;  308: \t\timpossible(\"Restmonchn: error reading monchn.\");\n   309: \t\tmtmp2-&gt;nmon = 0;\n   310: \t}\n   311: \treturn(first);\n   312: }\n   313: "
+    "context": "src/restore.c:308:14\n        303: \t\tif (mtmp-&gt;isgyp && ghostly) gypsy_init(mtmp);\n        304: \n        305: \t\tmtmp2 = mtmp;\n        306: \t}\n        307: \tif(first && mtmp2-&gt;nmon){\nTARGET  308: \t\timpossible(\"Restmonchn: error reading monchn.\");\n        309: \t\tmtmp2-&gt;nmon = 0;\n        310: \t}\n        311: \treturn(first);\n        312: }\n        313: "
   },
   {
     "key": "L00353_01",
     "original": "no old fruit?",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:353:24\n   348: \tregister struct fruit *oldf;\n   349: \n   350: \tfor (oldf = oldfruit; oldf; oldf = oldf-&gt;nextf)\n   351: \t\tif (oldf-&gt;fid == otmp-&gt;spe) break;\n   352: \n&gt;  353: \tif (!oldf) impossible(\"no old fruit?\");\n   354: \telse otmp-&gt;spe = fruitadd(oldf-&gt;fname);\n   355: }\n   356: \n   357: STATIC_OVL\n   358: boolean"
+    "context": "src/restore.c:353:24\n        348: \tregister struct fruit *oldf;\n        349: \n        350: \tfor (oldf = oldfruit; oldf; oldf = oldf-&gt;nextf)\n        351: \t\tif (oldf-&gt;fid == otmp-&gt;spe) break;\n        352: \nTARGET  353: \tif (!oldf) impossible(\"no old fruit?\");\n        354: \telse otmp-&gt;spe = fruitadd(oldf-&gt;fname);\n        355: }\n        356: \n        357: STATIC_OVL\n        358: boolean"
   },
   {
     "key": "L00372_01",
     "original": "Saved game was not yours.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:372:12\n   367: \n   368: \tmread(fd, (genericptr_t) &uid, sizeof uid);\n   369: \tif (uid != getuid()) {\t\t/* strange ... */\n   370: \t    /* for wizard mode, issue a reminder; for others, treat it\n   371: \t       as an attempt to cheat and refuse to restore this file */\n&gt;  372: \t    pline(\"Saved game was not yours.\");\n   373: #ifdef WIZARD\n   374: \tif(!wizard)\n   375: #endif\n   376: \t\treturn FALSE;\n   377: \t}"
+    "context": "src/restore.c:372:12\n        367: \n        368: \tmread(fd, (genericptr_t) &uid, sizeof uid);\n        369: \tif (uid != getuid()) {\t\t/* strange ... */\n        370: \t    /* for wizard mode, issue a reminder; for others, treat it\n        371: \t       as an attempt to cheat and refuse to restore this file */\nTARGET  372: \t    pline(\"Saved game was not yours.\");\n        373: #ifdef WIZARD\n        374: \tif(!wizard)\n        375: #endif\n        376: \t\treturn FALSE;\n        377: \t}"
   },
   {
     "key": "L00425_01",
     "original": "obj(%s),",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:425:11\n   420: \t/* this comes after inventory has been loaded */\n   421: \tfor(otmp = invent; otmp; otmp = otmp-&gt;nobj)\n   422: \t\tif(otmp-&gt;owornmask)\n   423: #ifdef DEBUG\n   424: \t\t{\n&gt;  425: \t\t\tpline (\"obj(%s),\", xname(otmp));\n   426: #endif\n   427: \t\t\tsetworn(otmp, otmp-&gt;owornmask);\n   428: #ifdef DEBUG\n   429: \t\t}\n   430: #endif"
+    "context": "src/restore.c:425:11\n        420: \t/* this comes after inventory has been loaded */\n        421: \tfor(otmp = invent; otmp; otmp = otmp-&gt;nobj)\n        422: \t\tif(otmp-&gt;owornmask)\n        423: #ifdef DEBUG\n        424: \t\t{\nTARGET  425: \t\t\tpline (\"obj(%s),\", xname(otmp));\n        426: #endif\n        427: \t\t\tsetworn(otmp, otmp-&gt;owornmask);\n        428: #ifdef DEBUG\n        429: \t\t}\n        430: #endif"
   },
   {
     "key": "L00488_01",
     "original": "Cannot find the monster ustuck.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:488:20\n   483: \tregister struct monst *mtmp;\n   484: \n   485: \tif (stuckid) {\n   486: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon)\n   487: \t\t\tif (mtmp-&gt;m_id == stuckid) break;\n&gt;  488: \t\tif (!mtmp) panic(\"Cannot find the monster ustuck.\");\n   489: \t\tsetustuck(mtmp);\n   490: \t}\n   491: #ifdef STEED\n   492: \tif (steedid) {\n   493: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon)"
+    "context": "src/restore.c:488:20\n        483: \tregister struct monst *mtmp;\n        484: \n        485: \tif (stuckid) {\n        486: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon)\n        487: \t\t\tif (mtmp-&gt;m_id == stuckid) break;\nTARGET  488: \t\tif (!mtmp) panic(\"Cannot find the monster ustuck.\");\n        489: \t\tsetustuck(mtmp);\n        490: \t}\n        491: #ifdef STEED\n        492: \tif (steedid) {\n        493: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon)"
   },
   {
     "key": "L00495_01",
     "original": "Cannot find the monster usteed.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:495:20\n   490: \t}\n   491: #ifdef STEED\n   492: \tif (steedid) {\n   493: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon)\n   494: \t\t\tif (mtmp-&gt;m_id == steedid) break;\n&gt;  495: \t\tif (!mtmp) panic(\"Cannot find the monster usteed.\");\n   496: \t\tu.usteed = mtmp;\n   497: \t\tremove_monster(mtmp-&gt;mx, mtmp-&gt;my);\n   498: \t}\n   499: #endif\n   500: }"
+    "context": "src/restore.c:495:20\n        490: \t}\n        491: #ifdef STEED\n        492: \tif (steedid) {\n        493: \t\tfor (mtmp = fmon; mtmp; mtmp = mtmp-&gt;nmon)\n        494: \t\t\tif (mtmp-&gt;m_id == steedid) break;\nTARGET  495: \t\tif (!mtmp) panic(\"Cannot find the monster usteed.\");\n        496: \t\tu.usteed = mtmp;\n        497: \t\tremove_monster(mtmp-&gt;mx, mtmp-&gt;my);\n        498: \t}\n        499: #endif\n        500: }"
   },
   {
     "key": "L00518_01",
     "original": "restlevelfile: %s",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:518:9\n   513: \n   514: \tnfd = create_levelfile(ltmp, whynot);\n   515: \tif (nfd &lt; 0) {\n   516: \t\t/* BUG: should suppress any attempt to write a panic\n   517: \t\t   save file if file creation is now failing... */\n&gt;  518: \t\tpanic(\"restlevelfile: %s\", whynot);\n   519: \t}\n   520: #ifdef MFLOPPY\n   521: \tif (!savelev(nfd, ltmp, COUNT_SAVE)) {\n   522: \n   523: \t\t/* The savelev can't proceed because the size required"
+    "context": "src/restore.c:518:9\n        513: \n        514: \tnfd = create_levelfile(ltmp, whynot);\n        515: \tif (nfd &lt; 0) {\n        516: \t\t/* BUG: should suppress any attempt to write a panic\n        517: \t\t   save file if file creation is now failing... */\nTARGET  518: \t\tpanic(\"restlevelfile: %s\", whynot);\n        519: \t}\n        520: #ifdef MFLOPPY\n        521: \tif (!savelev(nfd, ltmp, COUNT_SAVE)) {\n        522: \n        523: \t\t/* The savelev can't proceed because the size required"
   },
   {
     "key": "L00526_01",
     "original": "Not enough space on `%s' to restore your game.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:526:9\n   521: \tif (!savelev(nfd, ltmp, COUNT_SAVE)) {\n   522: \n   523: \t\t/* The savelev can't proceed because the size required\n   524: \t\t * is greater than the available disk space.\n   525: \t\t */\n&gt;  526: \t\tpline(\"Not enough space on `%s' to restore your game.\",\n   527: \t\t\tlevels);\n   528: \n   529: \t\t/* Remove levels and bones that may have been created.\n   530: \t\t */\n   531: \t\t(void) close(nfd);"
+    "context": "src/restore.c:526:9\n        521: \tif (!savelev(nfd, ltmp, COUNT_SAVE)) {\n        522: \n        523: \t\t/* The savelev can't proceed because the size required\n        524: \t\t * is greater than the available disk space.\n        525: \t\t */\nTARGET  526: \t\tpline(\"Not enough space on `%s' to restore your game.\",\n        527: \t\t\tlevels);\n        528: \n        529: \t\t/* Remove levels and bones that may have been created.\n        530: \t\t */\n        531: \t\t(void) close(nfd);"
   },
   {
     "key": "L00556_01",
     "original": "Be seeing you...",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:556:10\n   551: \t\t\treturn dorecover(fd);\t/* 0 or 1 */\n   552: \t\t} else\n   553: #endif\n   554: \t\t{\n   555: # endif\n&gt;  556: \t\t\tpline(\"Be seeing you...\");\n   557: \t\t\tterminate(EXIT_SUCCESS);\n   558: # ifndef AMIGA\n   559: \t\t}\n   560: # endif\n   561: \t}"
+    "context": "src/restore.c:556:10\n        551: \t\t\treturn dorecover(fd);\t/* 0 or 1 */\n        552: \t\t} else\n        553: #endif\n        554: \t\t{\n        555: # endif\nTARGET  556: \t\t\tpline(\"Be seeing you...\");\n        557: \t\t\tterminate(EXIT_SUCCESS);\n        558: # ifndef AMIGA\n        559: \t\t}\n        560: # endif\n        561: \t}"
   },
   {
     "key": "L00627_01",
     "original": "tty",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:627:16\n   622: \t/* moved lower */\n   623: \tcurs(WIN_MAP, 1, 1);\n   624: \tdotcnt = 0;\n   625: \tdotrow = 2;\n   626: # ifdef TTY_GRAPHICS\n&gt;  627: \tif (!strncmpi(\"tty\", windowprocs.name, 3))\n   628:     \t  putstr(WIN_MAP, 0, \"Restoring:\");\n   629: # endif\n   630: #endif\n   631: \twhile(1) {\n   632: #ifdef ZEROCOMP"
+    "context": "src/restore.c:627:16\n        622: \t/* moved lower */\n        623: \tcurs(WIN_MAP, 1, 1);\n        624: \tdotcnt = 0;\n        625: \tdotrow = 2;\n        626: # ifdef TTY_GRAPHICS\nTARGET  627: \tif (!strncmpi(\"tty\", windowprocs.name, 3))\n        628:     \t  putstr(WIN_MAP, 0, \"Restoring:\");\n        629: # endif\n        630: #endif\n        631: \twhile(1) {\n        632: #ifdef ZEROCOMP"
   },
   {
     "key": "L00628_01",
     "original": "Restoring:",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:628:27\n   623: \tcurs(WIN_MAP, 1, 1);\n   624: \tdotcnt = 0;\n   625: \tdotrow = 2;\n   626: # ifdef TTY_GRAPHICS\n   627: \tif (!strncmpi(\"tty\", windowprocs.name, 3))\n&gt;  628:     \t  putstr(WIN_MAP, 0, \"Restoring:\");\n   629: # endif\n   630: #endif\n   631: \twhile(1) {\n   632: #ifdef ZEROCOMP\n   633: \t\tif(mread(fd, (genericptr_t) &lt;mp, sizeof ltmp) &lt; 0)"
+    "context": "src/restore.c:628:27\n        623: \tcurs(WIN_MAP, 1, 1);\n        624: \tdotcnt = 0;\n        625: \tdotrow = 2;\n        626: # ifdef TTY_GRAPHICS\n        627: \tif (!strncmpi(\"tty\", windowprocs.name, 3))\nTARGET  628:     \t  putstr(WIN_MAP, 0, \"Restoring:\");\n        629: # endif\n        630: #endif\n        631: \twhile(1) {\n        632: #ifdef ZEROCOMP\n        633: \t\tif(mread(fd, (genericptr_t) &lt;mp, sizeof ltmp) &lt; 0)"
   },
   {
     "key": "L00640_01",
     "original": "tty",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:640:17\n   635: \t\tif(read(fd, (genericptr_t) &lt;mp, sizeof ltmp) != sizeof ltmp)\n   636: #endif\n   637: \t\t\tbreak;\n   638: \t\tgetlev(fd, 0, ltmp, FALSE);\n   639: #if defined(MICRO) && defined(TTY_GRAPHICS)\n&gt;  640: \t\tif (!strncmpi(\"tty\", windowprocs.name, 3)) {\n   641: \t\tcurs(WIN_MAP, 1+dotcnt++, dotrow);\n   642: \t\tif (dotcnt &gt;= (COLNO - 1)) {\n   643: \t\t\tdotrow++;\n   644: \t\t\tdotcnt = 0;\n   645: \t\t}"
+    "context": "src/restore.c:640:17\n        635: \t\tif(read(fd, (genericptr_t) &lt;mp, sizeof ltmp) != sizeof ltmp)\n        636: #endif\n        637: \t\t\tbreak;\n        638: \t\tgetlev(fd, 0, ltmp, FALSE);\n        639: #if defined(MICRO) && defined(TTY_GRAPHICS)\nTARGET  640: \t\tif (!strncmpi(\"tty\", windowprocs.name, 3)) {\n        641: \t\tcurs(WIN_MAP, 1+dotcnt++, dotrow);\n        642: \t\tif (dotcnt &gt;= (COLNO - 1)) {\n        643: \t\t\tdotrow++;\n        644: \t\t\tdotcnt = 0;\n        645: \t\t}"
   },
   {
     "key": "L00685_01",
     "original": "return to level %d in %s%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:685:6\n   680: \t * weight/carrying capacities will be calculated by dereferencing\n   681: \t * garbage pointers.\n   682: \t * Side effect of this is that you don't see this message until after the\n   683: \t * all the levels are loaded\n   684: \t */\n&gt;  685: \tYou(\"return to level %d in %s%s.\",\n   686: \t\tdepth(&u.uz), dungeons[u.uz.dnum].dname,\n   687: \t\tflags.debug ? \" while in debug mode\" :\n   688: \t\tflags.explore ? \" while in explore mode\" : \"\");\n   689: \n   690: #ifdef MFLOPPY"
+    "context": "src/restore.c:685:6\n        680: \t * weight/carrying capacities will be calculated by dereferencing\n        681: \t * garbage pointers.\n        682: \t * Side effect of this is that you don't see this message until after the\n        683: \t * all the levels are loaded\n        684: \t */\nTARGET  685: \tYou(\"return to level %d in %s%s.\",\n        686: \t\tdepth(&u.uz), dungeons[u.uz.dnum].dname,\n        687: \t\tflags.debug ? \" while in debug mode\" :\n        688: \t\tflags.explore ? \" while in explore mode\" : \"\");\n        689: \n        690: #ifdef MFLOPPY"
   },
   {
     "key": "L00687_01",
     "original": " while in debug mode",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:687:17\n   682: \t * Side effect of this is that you don't see this message until after the\n   683: \t * all the levels are loaded\n   684: \t */\n   685: \tYou(\"return to level %d in %s%s.\",\n   686: \t\tdepth(&u.uz), dungeons[u.uz.dnum].dname,\n&gt;  687: \t\tflags.debug ? \" while in debug mode\" :\n   688: \t\tflags.explore ? \" while in explore mode\" : \"\");\n   689: \n   690: #ifdef MFLOPPY\n   691: \tgameDiskPrompt();\n   692: #endif"
+    "context": "src/restore.c:687:17\n        682: \t * Side effect of this is that you don't see this message until after the\n        683: \t * all the levels are loaded\n        684: \t */\n        685: \tYou(\"return to level %d in %s%s.\",\n        686: \t\tdepth(&u.uz), dungeons[u.uz.dnum].dname,\nTARGET  687: \t\tflags.debug ? \" while in debug mode\" :\n        688: \t\tflags.explore ? \" while in explore mode\" : \"\");\n        689: \n        690: #ifdef MFLOPPY\n        691: \tgameDiskPrompt();\n        692: #endif"
   },
   {
     "key": "L00688_01",
     "original": " while in explore mode",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:688:19\n   683: \t * all the levels are loaded\n   684: \t */\n   685: \tYou(\"return to level %d in %s%s.\",\n   686: \t\tdepth(&u.uz), dungeons[u.uz.dnum].dname,\n   687: \t\tflags.debug ? \" while in debug mode\" :\n&gt;  688: \t\tflags.explore ? \" while in explore mode\" : \"\");\n   689: \n   690: #ifdef MFLOPPY\n   691: \tgameDiskPrompt();\n   692: #endif\n   693: \tmax_rank_sz(); /* to recompute mrank_sz (botl.c) */"
+    "context": "src/restore.c:688:19\n        683: \t * all the levels are loaded\n        684: \t */\n        685: \tYou(\"return to level %d in %s%s.\",\n        686: \t\tdepth(&u.uz), dungeons[u.uz.dnum].dname,\n        687: \t\tflags.debug ? \" while in debug mode\" :\nTARGET  688: \t\tflags.explore ? \" while in explore mode\" : \"\");\n        689: \n        690: #ifdef MFLOPPY\n        691: \tgameDiskPrompt();\n        692: #endif\n        693: \tmax_rank_sz(); /* to recompute mrank_sz (botl.c) */"
   },
   {
     "key": "L00729_01",
     "original": "Somebody is trying some trickery here...",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:729:8\n   724: void\n   725: trickery(reason)\n   726: char *reason;\n   727: {\n   728: \tpline(\"奇怪，这地图是不是和我存储的有区别啊？\");\n&gt;  729: \tpline(\"Somebody is trying some trickery here...\");\n   730: \tpline(\"这把游戏作废得了。\");\n   731: \tkiller = reason;\n   732: \tdone(TRICKED);\n   733: }\n   734: "
+    "context": "src/restore.c:729:8\n        724: void\n        725: trickery(reason)\n        726: char *reason;\n        727: {\n        728: \tpline(\"奇怪，这地图是不是和我存储的有区别啊？\");\nTARGET  729: \tpline(\"Somebody is trying some trickery here...\");\n        730: \tpline(\"这把游戏作废得了。\");\n        731: \tkiller = reason;\n        732: \tdone(TRICKED);\n        733: }\n        734: "
   },
   {
     "key": "L00775_01",
     "original": "PID (%d) doesn't match saved PID (%d)!",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:775:21\n   770: #endif\n   771: \tif ((pid && pid != hpid) || (lev && dlvl != lev)) {\n   772: \t    char trickbuf[BUFSZ];\n   773: \n   774: \t\t\tif (pid && pid != hpid)\n&gt;  775: \t\tSprintf(trickbuf, \"PID (%d) doesn't match saved PID (%d)!\",\n   776: \t\t\thpid, pid);\n   777: \t    else\n   778: \t\tSprintf(trickbuf, \"This is level %d, not %d!\", dlvl, lev);\n   779: #ifdef WIZARD\n   780: \t    if (wizard) pline(trickbuf);"
+    "context": "src/restore.c:775:21\n        770: #endif\n        771: \tif ((pid && pid != hpid) || (lev && dlvl != lev)) {\n        772: \t    char trickbuf[BUFSZ];\n        773: \n        774: \t\t\tif (pid && pid != hpid)\nTARGET  775: \t\tSprintf(trickbuf, \"PID (%d) doesn't match saved PID (%d)!\",\n        776: \t\t\thpid, pid);\n        777: \t    else\n        778: \t\tSprintf(trickbuf, \"This is level %d, not %d!\", dlvl, lev);\n        779: #ifdef WIZARD\n        780: \t    if (wizard) pline(trickbuf);"
   },
   {
     "key": "L00778_01",
     "original": "This is level %d, not %d!",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:778:21\n   773: \n   774: \t\t\tif (pid && pid != hpid)\n   775: \t\tSprintf(trickbuf, \"PID (%d) doesn't match saved PID (%d)!\",\n   776: \t\t\thpid, pid);\n   777: \t    else\n&gt;  778: \t\tSprintf(trickbuf, \"This is level %d, not %d!\", dlvl, lev);\n   779: #ifdef WIZARD\n   780: \t    if (wizard) pline(trickbuf);\n   781: #endif\n   782: \t    trickery(trickbuf);\n   783: \t}"
+    "context": "src/restore.c:778:21\n        773: \n        774: \t\t\tif (pid && pid != hpid)\n        775: \t\tSprintf(trickbuf, \"PID (%d) doesn't match saved PID (%d)!\",\n        776: \t\t\thpid, pid);\n        777: \t    else\nTARGET  778: \t\tSprintf(trickbuf, \"This is level %d, not %d!\", dlvl, lev);\n        779: #ifdef WIZARD\n        780: \t    if (wizard) pline(trickbuf);\n        781: #endif\n        782: \t    trickery(trickbuf);\n        783: \t}"
   },
   {
     "key": "L00927_01",
     "original": "getlev: need portal but none found",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:927:21\n   922: \t\t    {\n   923: \t\t\tregister struct trap *ttmp;\n   924: \t\t\tfor(ttmp = ftrap; ttmp; ttmp = ttmp-&gt;ntrap)\n   925: \t\t\t    if (ttmp-&gt;ttyp == MAGIC_PORTAL)\n   926: \t\t\t\tbreak;\n&gt;  927: \t\t\tif (!ttmp) panic(\"getlev: need portal but none found\");\n   928: \t\t\tassign_level(&ttmp-&gt;dst, &lt;mp);\n   929: \t\t    }\n   930: \t\t    break;\n   931: \t\t}\n   932: \t    } else if (!br) {"
+    "context": "src/restore.c:927:21\n        922: \t\t    {\n        923: \t\t\tregister struct trap *ttmp;\n        924: \t\t\tfor(ttmp = ftrap; ttmp; ttmp = ttmp-&gt;ntrap)\n        925: \t\t\t    if (ttmp-&gt;ttyp == MAGIC_PORTAL)\n        926: \t\t\t\tbreak;\nTARGET  927: \t\t\tif (!ttmp) panic(\"getlev: need portal but none found\");\n        928: \t\t\tassign_level(&ttmp-&gt;dst, &lt;mp);\n        929: \t\t    }\n        930: \t\t    break;\n        931: \t\t}\n        932: \t    } else if (!br) {"
   },
   {
     "key": "L01065_01",
     "original": "EOF on file #%d.\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:1065:9\n  1060: {\n  1061:     if (inbufp &gt;= inbufsz) {\n  1062: \tinbufsz = read(mreadfd, (genericptr_t)inbuf, sizeof inbuf);\n  1063: \tif (!inbufsz) {\n  1064: \t    if (inbufp &gt; sizeof inbuf)\n&gt; 1065: \t\terror(\"EOF on file #%d.\\n\", mreadfd);\n  1066: \t    inbufp = 1 + sizeof inbuf;  /* exactly one warning :-) */\n  1067: \t    return -1;\n  1068: \t}\n  1069: \tinbufp = 0;\n  1070:     }"
+    "context": "src/restore.c:1065:9\n       1060: {\n       1061:     if (inbufp &gt;= inbufsz) {\n       1062: \tinbufsz = read(mreadfd, (genericptr_t)inbuf, sizeof inbuf);\n       1063: \tif (!inbufsz) {\n       1064: \t    if (inbufp &gt; sizeof inbuf)\nTARGET 1065: \t\terror(\"EOF on file #%d.\\n\", mreadfd);\n       1066: \t    inbufp = 1 + sizeof inbuf;  /* exactly one warning :-) */\n       1067: \t    return -1;\n       1068: \t}\n       1069: \tinbufp = 0;\n       1070:     }"
   },
   {
     "key": "L01089_01",
     "original": "Restore error; mread attempting to read file %d.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:1089:23\n  1084: int fd;\n  1085: genericptr_t buf;\n  1086: register unsigned len;\n  1087: {\n  1088:     /*register int readlen = 0;*/\n&gt; 1089:     if (fd &lt; 0) error(\"Restore error; mread attempting to read file %d.\", fd);\n  1090:     mreadfd = fd;\n  1091:     while (len--) {\n  1092: \tif (inrunlength &gt; 0) {\n  1093: \t    inrunlength--;\n  1094: \t    *(*((char **)&buf))++ = '\\0';"
+    "context": "src/restore.c:1089:23\n       1084: int fd;\n       1085: genericptr_t buf;\n       1086: register unsigned len;\n       1087: {\n       1088:     /*register int readlen = 0;*/\nTARGET 1089:     if (fd &lt; 0) error(\"Restore error; mread attempting to read file %d.\", fd);\n       1090:     mreadfd = fd;\n       1091:     while (len--) {\n       1092: \tif (inrunlength &gt; 0) {\n       1093: \t    inrunlength--;\n       1094: \t    *(*((char **)&buf))++ = '\\0';"
   },
   {
     "key": "L01130_01",
     "original": "Read %d instead of %u bytes.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:1130:9\n  1125: \tif(rlen != len){\n  1126: #else /* e.g. SYSV, __TURBOC__ */\n  1127: \trlen = read(fd, buf, (unsigned) len);\n  1128: \tif((unsigned)rlen != len){\n  1129: #endif\n&gt; 1130: \t\tpline(\"Read %d instead of %u bytes.\", rlen, len);\n  1131: \t\tif(restoring) {\n  1132: \t\t\t(void) close(fd);\n  1133: \t\t\t(void) delete_savefile();\n  1134: \t\t\terror(\"Error restoring old game.\");\n  1135: \t\t}"
+    "context": "src/restore.c:1130:9\n       1125: \tif(rlen != len){\n       1126: #else /* e.g. SYSV, __TURBOC__ */\n       1127: \trlen = read(fd, buf, (unsigned) len);\n       1128: \tif((unsigned)rlen != len){\n       1129: #endif\nTARGET 1130: \t\tpline(\"Read %d instead of %u bytes.\", rlen, len);\n       1131: \t\tif(restoring) {\n       1132: \t\t\t(void) close(fd);\n       1133: \t\t\t(void) delete_savefile();\n       1134: \t\t\terror(\"Error restoring old game.\");\n       1135: \t\t}"
   },
   {
     "key": "L01134_01",
     "original": "Error restoring old game.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:1134:10\n  1129: #endif\n  1130: \t\tpline(\"Read %d instead of %u bytes.\", rlen, len);\n  1131: \t\tif(restoring) {\n  1132: \t\t\t(void) close(fd);\n  1133: \t\t\t(void) delete_savefile();\n&gt; 1134: \t\t\terror(\"Error restoring old game.\");\n  1135: \t\t}\n  1136: \t\tpanic(\"Error reading level file.\");\n  1137: \t}\n  1138: }\n  1139: #endif /* ZEROCOMP */"
+    "context": "src/restore.c:1134:10\n       1129: #endif\n       1130: \t\tpline(\"Read %d instead of %u bytes.\", rlen, len);\n       1131: \t\tif(restoring) {\n       1132: \t\t\t(void) close(fd);\n       1133: \t\t\t(void) delete_savefile();\nTARGET 1134: \t\t\terror(\"Error restoring old game.\");\n       1135: \t\t}\n       1136: \t\tpanic(\"Error reading level file.\");\n       1137: \t}\n       1138: }\n       1139: #endif /* ZEROCOMP */"
   },
   {
     "key": "L01136_01",
     "original": "Error reading level file.",
     "translation": "",
     "stage": 0,
-    "context": "src/restore.c:1136:9\n  1131: \t\tif(restoring) {\n  1132: \t\t\t(void) close(fd);\n  1133: \t\t\t(void) delete_savefile();\n  1134: \t\t\terror(\"Error restoring old game.\");\n  1135: \t\t}\n&gt; 1136: \t\tpanic(\"Error reading level file.\");\n  1137: \t}\n  1138: }\n  1139: #endif /* ZEROCOMP */\n  1140: \n  1141: /*restore.c*/"
+    "context": "src/restore.c:1136:9\n       1131: \t\tif(restoring) {\n       1132: \t\t\t(void) close(fd);\n       1133: \t\t\t(void) delete_savefile();\n       1134: \t\t\terror(\"Error restoring old game.\");\n       1135: \t\t}\nTARGET 1136: \t\tpanic(\"Error reading level file.\");\n       1137: \t}\n       1138: }\n       1139: #endif /* ZEROCOMP */\n       1140: \n       1141: /*restore.c*/"
   }
 ]

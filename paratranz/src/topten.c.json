@@ -4,853 +4,853 @@
     "original": "killed by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:86:2\n    81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n&gt;   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: "
+    "context": "src/topten.c:86:2\n         81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\nTARGET   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: "
   },
   {
     "key": "L00086_02",
     "original": "betrayed by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:86:16\n    81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n&gt;   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: "
+    "context": "src/topten.c:86:16\n         81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\nTARGET   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: "
   },
   {
     "key": "L00086_03",
     "original": "choked on ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:86:32\n    81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n&gt;   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: "
+    "context": "src/topten.c:86:32\n         81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\nTARGET   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: "
   },
   {
     "key": "L00086_04",
     "original": "poisoned by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:86:46\n    81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n&gt;   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: "
+    "context": "src/topten.c:86:46\n         81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\nTARGET   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: "
   },
   {
     "key": "L00086_05",
     "original": "died of ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:86:62\n    81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n&gt;   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: "
+    "context": "src/topten.c:86:62\n         81: STATIC_DCL void FDECL(nsb_unmung_line,(char*));\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\nTARGET   86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: "
   },
   {
     "key": "L00087_01",
     "original": "drowned in ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:87:2\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n&gt;   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;"
+    "context": "src/topten.c:87:2\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \nTARGET   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;"
   },
   {
     "key": "L00087_02",
     "original": "burned by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:87:17\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n&gt;   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;"
+    "context": "src/topten.c:87:17\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \nTARGET   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;"
   },
   {
     "key": "L00087_03",
     "original": "dissolved in ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:87:31\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n&gt;   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;"
+    "context": "src/topten.c:87:31\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \nTARGET   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;"
   },
   {
     "key": "L00087_04",
     "original": "crushed to death by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:87:48\n    82: #endif\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n&gt;   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n    88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;"
+    "context": "src/topten.c:87:48\n         82: #endif\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \nTARGET   87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n         88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;"
   },
   {
     "key": "L00088_01",
     "original": "petrified by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:88:2\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n&gt;   88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;\n    93: "
+    "context": "src/topten.c:88:2\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \nTARGET   88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;\n         93: "
   },
   {
     "key": "L00088_02",
     "original": "turned to slime by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:88:19\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n&gt;   88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;\n    93: "
+    "context": "src/topten.c:88:19\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \nTARGET   88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;\n         93: "
   },
   {
     "key": "L00088_03",
     "original": "killed by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:88:42\n    83: \n    84: /* must fit with end.c; used in rip.c */\n    85: NEARDATA const char * const killed_by_prefix[] = {\n    86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n    87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \n&gt;   88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n    89: \t\"\", \"\", \"\", \"\", \"\"\n    90: };\n    91: \n    92: static winid toptenwin = WIN_ERR;\n    93: "
+    "context": "src/topten.c:88:42\n         83: \n         84: /* must fit with end.c; used in rip.c */\n         85: NEARDATA const char * const killed_by_prefix[] = {\n         86: \t\"killed by \", \"betrayed by \", \"choked on \", \"poisoned by \", \"died of \", \n         87: \t\"drowned in \", \"burned by \", \"dissolved in \", \"crushed to death by \", \nTARGET   88: \t\"petrified by \", \"turned to slime by \", \"killed by \", \n         89: \t\"\", \"\", \"\", \"\", \"\"\n         90: };\n         91: \n         92: static winid toptenwin = WIN_ERR;\n         93: "
   },
   {
     "key": "L00161_01",
     "original": "%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:161:28\n   156: readentry(rfile,tt)\n   157: FILE *rfile;\n   158: struct toptenentry *tt;\n   159: {\n   160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n&gt;  161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n   162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n   163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n   164: #else\n   165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n   166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";"
+    "context": "src/topten.c:161:28\n        156: readentry(rfile,tt)\n        157: FILE *rfile;\n        158: struct toptenentry *tt;\n        159: {\n        160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\nTARGET  161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n        162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n        163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n        164: #else\n        165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n        166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";"
   },
   {
     "key": "L00162_01",
     "original": "%s %c %s %s%*c",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:162:31\n   157: FILE *rfile;\n   158: struct toptenentry *tt;\n   159: {\n   160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n   161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n&gt;  162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n   163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n   164: #else\n   165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n   166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n   167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";"
+    "context": "src/topten.c:162:31\n        157: FILE *rfile;\n        158: struct toptenentry *tt;\n        159: {\n        160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n        161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\nTARGET  162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n        163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n        164: #else\n        165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n        166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n        167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";"
   },
   {
     "key": "L00163_01",
     "original": "%s %s %s %s %s %s%*c",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:163:30\n   158: struct toptenentry *tt;\n   159: {\n   160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n   161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n   162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n&gt;  163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n   164: #else\n   165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n   166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n   167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n   168: #endif"
+    "context": "src/topten.c:163:30\n        158: struct toptenentry *tt;\n        159: {\n        160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n        161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n        162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\nTARGET  163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n        164: #else\n        165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n        166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n        167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n        168: #endif"
   },
   {
     "key": "L00165_01",
     "original": "%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:165:28\n   160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n   161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n   162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n   163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n   164: #else\n&gt;  165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n   166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n   167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n   168: #endif\n   169: \n   170: #ifdef UPDATE_RECORD_IN_PLACE"
+    "context": "src/topten.c:165:28\n        160: #ifdef NO_SCAN_BRACK\t\t/* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n        161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n        162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n        163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n        164: #else\nTARGET  165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n        166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n        167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n        168: #endif\n        169: \n        170: #ifdef UPDATE_RECORD_IN_PLACE"
   },
   {
     "key": "L00166_01",
     "original": "%s %c %[^,],%[^\\n]%*c",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:166:31\n   161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n   162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n   163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n   164: #else\n   165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n&gt;  166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n   167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n   168: #endif\n   169: \n   170: #ifdef UPDATE_RECORD_IN_PLACE\n   171: \t/* note: fscanf() below must read the record's terminating newline */"
+    "context": "src/topten.c:166:31\n        161: \tstatic const char fmt[] = \"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d%*c\";\n        162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n        163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n        164: #else\n        165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\nTARGET  166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n        167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n        168: #endif\n        169: \n        170: #ifdef UPDATE_RECORD_IN_PLACE\n        171: \t/* note: fscanf() below must read the record's terminating newline */"
   },
   {
     "key": "L00167_01",
     "original": "%s %s %s %s %[^,],%[^\\n]%*c",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:167:30\n   162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n   163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n   164: #else\n   165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n   166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\n&gt;  167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n   168: #endif\n   169: \n   170: #ifdef UPDATE_RECORD_IN_PLACE\n   171: \t/* note: fscanf() below must read the record's terminating newline */\n   172: \tfinal_fpos = tt-&gt;fpos = ftell(rfile);"
+    "context": "src/topten.c:167:30\n        162: \tstatic const char fmt005[] = \"%s %c %s %s%*c\";\n        163: \tstatic const char fmt33[] = \"%s %s %s %s %s %s%*c\";\n        164: #else\n        165: \tstatic const char fmt[] = \"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \";\n        166: \tstatic const char fmt005[] = \"%s %c %[^,],%[^\\n]%*c\";\nTARGET  167: \tstatic const char fmt33[] = \"%s %s %s %s %[^,],%[^\\n]%*c\";\n        168: #endif\n        169: \n        170: #ifdef UPDATE_RECORD_IN_PLACE\n        171: \t/* note: fscanf() below must read the record's terminating newline */\n        172: \tfinal_fpos = tt-&gt;fpos = ftell(rfile);"
   },
   {
     "key": "L00202_01",
     "original": "Mal",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:202:51\n   197: \t\t    tt-&gt;plrole[1] = '\\0';\n   198: \t\t    if ((i = str2role(tt-&gt;plrole)) &gt;= 0)\n   199: \t\t\tStrcpy(tt-&gt;plrole, roles[i].filecode);\n   200: \t\t    tt-&gt;plrole[ROLESZ] = 0;\n   201: \t\t    Strcpy(tt-&gt;plrace, \"?\");\n&gt;  202: \t\t    Strcpy(tt-&gt;plgend, (tt-&gt;plgend[0] == 'M') ? \"Mal\" : \"Fem\");\n   203: \t\t    Strcpy(tt-&gt;plalign, \"?\");\n   204: \t\t} else if (fscanf(rfile, fmt33,\n   205: \t\t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend,\n   206: \t\t\t\ttt-&gt;plalign, tt-&gt;name, tt-&gt;death) != 6)\n   207: \t\t\ttt-&gt;points = 0;"
+    "context": "src/topten.c:202:51\n        197: \t\t    tt-&gt;plrole[1] = '\\0';\n        198: \t\t    if ((i = str2role(tt-&gt;plrole)) &gt;= 0)\n        199: \t\t\tStrcpy(tt-&gt;plrole, roles[i].filecode);\n        200: \t\t    tt-&gt;plrole[ROLESZ] = 0;\n        201: \t\t    Strcpy(tt-&gt;plrace, \"?\");\nTARGET  202: \t\t    Strcpy(tt-&gt;plgend, (tt-&gt;plgend[0] == 'M') ? \"Mal\" : \"Fem\");\n        203: \t\t    Strcpy(tt-&gt;plalign, \"?\");\n        204: \t\t} else if (fscanf(rfile, fmt33,\n        205: \t\t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend,\n        206: \t\t\t\ttt-&gt;plalign, tt-&gt;name, tt-&gt;death) != 6)\n        207: \t\t\ttt-&gt;points = 0;"
   },
   {
     "key": "L00202_02",
     "original": "Fem",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:202:59\n   197: \t\t    tt-&gt;plrole[1] = '\\0';\n   198: \t\t    if ((i = str2role(tt-&gt;plrole)) &gt;= 0)\n   199: \t\t\tStrcpy(tt-&gt;plrole, roles[i].filecode);\n   200: \t\t    tt-&gt;plrole[ROLESZ] = 0;\n   201: \t\t    Strcpy(tt-&gt;plrace, \"?\");\n&gt;  202: \t\t    Strcpy(tt-&gt;plgend, (tt-&gt;plgend[0] == 'M') ? \"Mal\" : \"Fem\");\n   203: \t\t    Strcpy(tt-&gt;plalign, \"?\");\n   204: \t\t} else if (fscanf(rfile, fmt33,\n   205: \t\t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend,\n   206: \t\t\t\ttt-&gt;plalign, tt-&gt;name, tt-&gt;death) != 6)\n   207: \t\t\ttt-&gt;points = 0;"
+    "context": "src/topten.c:202:59\n        197: \t\t    tt-&gt;plrole[1] = '\\0';\n        198: \t\t    if ((i = str2role(tt-&gt;plrole)) &gt;= 0)\n        199: \t\t\tStrcpy(tt-&gt;plrole, roles[i].filecode);\n        200: \t\t    tt-&gt;plrole[ROLESZ] = 0;\n        201: \t\t    Strcpy(tt-&gt;plrace, \"?\");\nTARGET  202: \t\t    Strcpy(tt-&gt;plgend, (tt-&gt;plgend[0] == 'M') ? \"Mal\" : \"Fem\");\n        203: \t\t    Strcpy(tt-&gt;plalign, \"?\");\n        204: \t\t} else if (fscanf(rfile, fmt33,\n        205: \t\t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend,\n        206: \t\t\t\ttt-&gt;plalign, tt-&gt;name, tt-&gt;death) != 6)\n        207: \t\t\ttt-&gt;points = 0;"
   },
   {
     "key": "L00221_01",
     "original": " Conduct=",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:221:21\n   216: \t\tif(tt-&gt;points &gt; 0) {\n   217: \t\t\t/* If the string \"Conduct=%d\" appears, set tt-&gt;conduct and remove that\n   218: \t\t\t * portion of the string */\n   219: \t\t\tchar *dp, *dp2;\n   220: \t\t\tfor(dp = tt-&gt;death; *dp; dp++) {\n&gt;  221: \t\t\t\tif(!strncmp(dp, \" Conduct=\", 9)) {\n   222: \t\t\t\t\tdp2 = dp + 9;\n   223: \t\t\t\t\tsscanf(dp2, \"%d\", &tt-&gt;conduct);\n   224: \t\t\t\t\t/* Find trailing null or space */\n   225: \t\t\t\t\twhile(*dp2 && *dp2 != ' ')\n   226: \t\t\t\t\t\tdp2++;"
+    "context": "src/topten.c:221:21\n        216: \t\tif(tt-&gt;points &gt; 0) {\n        217: \t\t\t/* If the string \"Conduct=%d\" appears, set tt-&gt;conduct and remove that\n        218: \t\t\t * portion of the string */\n        219: \t\t\tchar *dp, *dp2;\n        220: \t\t\tfor(dp = tt-&gt;death; *dp; dp++) {\nTARGET  221: \t\t\t\tif(!strncmp(dp, \" Conduct=\", 9)) {\n        222: \t\t\t\t\tdp2 = dp + 9;\n        223: \t\t\t\t\tsscanf(dp2, \"%d\", &tt-&gt;conduct);\n        224: \t\t\t\t\t/* Find trailing null or space */\n        225: \t\t\t\t\twhile(*dp2 && *dp2 != ' ')\n        226: \t\t\t\t\t\tdp2++;"
   },
   {
     "key": "L00223_01",
     "original": "%d",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:223:18\n   218: \t\t\t * portion of the string */\n   219: \t\t\tchar *dp, *dp2;\n   220: \t\t\tfor(dp = tt-&gt;death; *dp; dp++) {\n   221: \t\t\t\tif(!strncmp(dp, \" Conduct=\", 9)) {\n   222: \t\t\t\t\tdp2 = dp + 9;\n&gt;  223: \t\t\t\t\tsscanf(dp2, \"%d\", &tt-&gt;conduct);\n   224: \t\t\t\t\t/* Find trailing null or space */\n   225: \t\t\t\t\twhile(*dp2 && *dp2 != ' ')\n   226: \t\t\t\t\t\tdp2++;\n   227: \n   228: \t\t\t\t\t/* Cut out the \" Conduct=\" portion of the death string */"
+    "context": "src/topten.c:223:18\n        218: \t\t\t * portion of the string */\n        219: \t\t\tchar *dp, *dp2;\n        220: \t\t\tfor(dp = tt-&gt;death; *dp; dp++) {\n        221: \t\t\t\tif(!strncmp(dp, \" Conduct=\", 9)) {\n        222: \t\t\t\t\tdp2 = dp + 9;\nTARGET  223: \t\t\t\t\tsscanf(dp2, \"%d\", &tt-&gt;conduct);\n        224: \t\t\t\t\t/* Find trailing null or space */\n        225: \t\t\t\t\twhile(*dp2 && *dp2 != ' ')\n        226: \t\t\t\t\t\tdp2++;\n        227: \n        228: \t\t\t\t\t/* Cut out the \" Conduct=\" portion of the death string */"
   },
   {
     "key": "L00263_01",
     "original": " Conduct=%d",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:263:14\n   258: {\n   259: #ifdef RECORD_CONDUCT\n   260: \tchar *cp = eos(tt-&gt;death);\n   261: \n   262: \t/* Add a trailing \" Conduct=%d\" to tt-&gt;death */\n&gt;  263: \tSprintf(cp, \" Conduct=%d\", tt-&gt;conduct);\n   264: #endif\n   265: \n   266: #ifdef NO_SCAN_BRACK\n   267: \tnsb_mung_line(tt-&gt;name);\n   268: \tnsb_mung_line(tt-&gt;death);"
+    "context": "src/topten.c:263:14\n        258: {\n        259: #ifdef RECORD_CONDUCT\n        260: \tchar *cp = eos(tt-&gt;death);\n        261: \n        262: \t/* Add a trailing \" Conduct=%d\" to tt-&gt;death */\nTARGET  263: \tSprintf(cp, \" Conduct=%d\", tt-&gt;conduct);\n        264: #endif\n        265: \n        266: #ifdef NO_SCAN_BRACK\n        267: \tnsb_mung_line(tt-&gt;name);\n        268: \tnsb_mung_line(tt-&gt;death);"
   },
   {
     "key": "L00270_01",
     "original": "%d %d %d %ld %d %d %d %d %d %d %ld %ld %d ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:270:23\n   265: \n   266: #ifdef NO_SCAN_BRACK\n   267: \tnsb_mung_line(tt-&gt;name);\n   268: \tnsb_mung_line(tt-&gt;death);\n   269: \t                   /* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n&gt;  270: \t(void) fprintf(rfile,\"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d \",\n   271: #else\n   272: \t(void) fprintf(rfile,\"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \",\n   273: #endif\n   274: \t\ttt-&gt;ver_major, tt-&gt;ver_minor, tt-&gt;patchlevel,\n   275: \t\ttt-&gt;points, tt-&gt;deathdnum, tt-&gt;deathlev,"
+    "context": "src/topten.c:270:23\n        265: \n        266: #ifdef NO_SCAN_BRACK\n        267: \tnsb_mung_line(tt-&gt;name);\n        268: \tnsb_mung_line(tt-&gt;death);\n        269: \t                   /* Version_ Pts DgnLevs_ Hp___ Died__Born id */\nTARGET  270: \t(void) fprintf(rfile,\"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d \",\n        271: #else\n        272: \t(void) fprintf(rfile,\"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \",\n        273: #endif\n        274: \t\ttt-&gt;ver_major, tt-&gt;ver_minor, tt-&gt;patchlevel,\n        275: \t\ttt-&gt;points, tt-&gt;deathdnum, tt-&gt;deathlev,"
   },
   {
     "key": "L00272_01",
     "original": "%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:272:23\n   267: \tnsb_mung_line(tt-&gt;name);\n   268: \tnsb_mung_line(tt-&gt;death);\n   269: \t                   /* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n   270: \t(void) fprintf(rfile,\"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d \",\n   271: #else\n&gt;  272: \t(void) fprintf(rfile,\"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \",\n   273: #endif\n   274: \t\ttt-&gt;ver_major, tt-&gt;ver_minor, tt-&gt;patchlevel,\n   275: \t\ttt-&gt;points, tt-&gt;deathdnum, tt-&gt;deathlev,\n   276: \t\ttt-&gt;maxlvl, tt-&gt;hp, tt-&gt;maxhp, tt-&gt;deaths,\n   277: \t\ttt-&gt;deathdate, tt-&gt;birthdate, tt-&gt;uid);"
+    "context": "src/topten.c:272:23\n        267: \tnsb_mung_line(tt-&gt;name);\n        268: \tnsb_mung_line(tt-&gt;death);\n        269: \t                   /* Version_ Pts DgnLevs_ Hp___ Died__Born id */\n        270: \t(void) fprintf(rfile,\"%d %d %d %ld %d %d %d %d %d %d %ld %ld %d \",\n        271: #else\nTARGET  272: \t(void) fprintf(rfile,\"%d.%d.%d %ld %d %d %d %d %d %d %ld %ld %d \",\n        273: #endif\n        274: \t\ttt-&gt;ver_major, tt-&gt;ver_minor, tt-&gt;patchlevel,\n        275: \t\ttt-&gt;points, tt-&gt;deathdnum, tt-&gt;deathlev,\n        276: \t\ttt-&gt;maxlvl, tt-&gt;hp, tt-&gt;maxhp, tt-&gt;deaths,\n        277: \t\ttt-&gt;deathdate, tt-&gt;birthdate, tt-&gt;uid);"
   },
   {
     "key": "L00280_01",
     "original": "%s %c %s %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:280:24\n   275: \t\ttt-&gt;points, tt-&gt;deathdnum, tt-&gt;deathlev,\n   276: \t\ttt-&gt;maxlvl, tt-&gt;hp, tt-&gt;maxhp, tt-&gt;deaths,\n   277: \t\ttt-&gt;deathdate, tt-&gt;birthdate, tt-&gt;uid);\n   278: \tif (!tt-&gt;ver_major && !tt-&gt;ver_minor && tt-&gt;patchlevel &lt; 6)\n   279: #ifdef NO_SCAN_BRACK\n&gt;  280: \t\t(void) fprintf(rfile,\"%s %c %s %s\\n\",\n   281: #else\n   282: \t\t(void) fprintf(rfile,\"%s %c %s,%s\\n\",\n   283: #endif\n   284: \t\t\ttt-&gt;plrole, tt-&gt;plgend[0],\n   285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);"
+    "context": "src/topten.c:280:24\n        275: \t\ttt-&gt;points, tt-&gt;deathdnum, tt-&gt;deathlev,\n        276: \t\ttt-&gt;maxlvl, tt-&gt;hp, tt-&gt;maxhp, tt-&gt;deaths,\n        277: \t\ttt-&gt;deathdate, tt-&gt;birthdate, tt-&gt;uid);\n        278: \tif (!tt-&gt;ver_major && !tt-&gt;ver_minor && tt-&gt;patchlevel &lt; 6)\n        279: #ifdef NO_SCAN_BRACK\nTARGET  280: \t\t(void) fprintf(rfile,\"%s %c %s %s\\n\",\n        281: #else\n        282: \t\t(void) fprintf(rfile,\"%s %c %s,%s\\n\",\n        283: #endif\n        284: \t\t\ttt-&gt;plrole, tt-&gt;plgend[0],\n        285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);"
   },
   {
     "key": "L00282_01",
     "original": "%s %c %s,%s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:282:24\n   277: \t\ttt-&gt;deathdate, tt-&gt;birthdate, tt-&gt;uid);\n   278: \tif (!tt-&gt;ver_major && !tt-&gt;ver_minor && tt-&gt;patchlevel &lt; 6)\n   279: #ifdef NO_SCAN_BRACK\n   280: \t\t(void) fprintf(rfile,\"%s %c %s %s\\n\",\n   281: #else\n&gt;  282: \t\t(void) fprintf(rfile,\"%s %c %s,%s\\n\",\n   283: #endif\n   284: \t\t\ttt-&gt;plrole, tt-&gt;plgend[0],\n   285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n   286: \telse\n   287: #ifdef NO_SCAN_BRACK"
+    "context": "src/topten.c:282:24\n        277: \t\ttt-&gt;deathdate, tt-&gt;birthdate, tt-&gt;uid);\n        278: \tif (!tt-&gt;ver_major && !tt-&gt;ver_minor && tt-&gt;patchlevel &lt; 6)\n        279: #ifdef NO_SCAN_BRACK\n        280: \t\t(void) fprintf(rfile,\"%s %c %s %s\\n\",\n        281: #else\nTARGET  282: \t\t(void) fprintf(rfile,\"%s %c %s,%s\\n\",\n        283: #endif\n        284: \t\t\ttt-&gt;plrole, tt-&gt;plgend[0],\n        285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n        286: \telse\n        287: #ifdef NO_SCAN_BRACK"
   },
   {
     "key": "L00288_01",
     "original": "%s %s %s %s %s %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:288:24\n   283: #endif\n   284: \t\t\ttt-&gt;plrole, tt-&gt;plgend[0],\n   285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n   286: \telse\n   287: #ifdef NO_SCAN_BRACK\n&gt;  288: \t\t(void) fprintf(rfile,\"%s %s %s %s %s %s\\n\",\n   289: #else\n   290: \t\t(void) fprintf(rfile,\"%s %s %s %s %s,%s\\n\",\n   291: #endif\n   292: \t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend, tt-&gt;plalign,\n   293: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);"
+    "context": "src/topten.c:288:24\n        283: #endif\n        284: \t\t\ttt-&gt;plrole, tt-&gt;plgend[0],\n        285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n        286: \telse\n        287: #ifdef NO_SCAN_BRACK\nTARGET  288: \t\t(void) fprintf(rfile,\"%s %s %s %s %s %s\\n\",\n        289: #else\n        290: \t\t(void) fprintf(rfile,\"%s %s %s %s %s,%s\\n\",\n        291: #endif\n        292: \t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend, tt-&gt;plalign,\n        293: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);"
   },
   {
     "key": "L00290_01",
     "original": "%s %s %s %s %s,%s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:290:24\n   285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n   286: \telse\n   287: #ifdef NO_SCAN_BRACK\n   288: \t\t(void) fprintf(rfile,\"%s %s %s %s %s %s\\n\",\n   289: #else\n&gt;  290: \t\t(void) fprintf(rfile,\"%s %s %s %s %s,%s\\n\",\n   291: #endif\n   292: \t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend, tt-&gt;plalign,\n   293: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n   294: \n   295: #ifdef NO_SCAN_BRACK"
+    "context": "src/topten.c:290:24\n        285: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n        286: \telse\n        287: #ifdef NO_SCAN_BRACK\n        288: \t\t(void) fprintf(rfile,\"%s %s %s %s %s %s\\n\",\n        289: #else\nTARGET  290: \t\t(void) fprintf(rfile,\"%s %s %s %s %s,%s\\n\",\n        291: #endif\n        292: \t\t\ttt-&gt;plrole, tt-&gt;plrace, tt-&gt;plgend, tt-&gt;plalign,\n        293: \t\t\tonlyspace(tt-&gt;name) ? \"_\" : tt-&gt;name, tt-&gt;death);\n        294: \n        295: #ifdef NO_SCAN_BRACK"
   },
   {
     "key": "L00396_01",
     "original": "bad killer format?",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:396:23\n   391: \tt0-&gt;plalign[ROLESZ] = '\\0';\n   392: \t(void) strncpy(t0-&gt;name, plname, NAMSZ);\n   393: \tt0-&gt;name[NAMSZ] = '\\0';\n   394: \tt0-&gt;death[0] = '\\0';\n   395: \tswitch (killer_format) {\n&gt;  396: \t\tdefault: impossible(\"bad killer format?\");\n   397: \t\tcase KILLED_BY_AN:\n   398: \t\t\tStrcat(t0-&gt;death, killed_by_prefix[how]);\n   399: \t\t\t(void) strncat(t0-&gt;death, an(killer),\n   400: \t\t\t\t\t\tDTHSZ-strlen(t0-&gt;death));\n   401: \t\t\tbreak;"
+    "context": "src/topten.c:396:23\n        391: \tt0-&gt;plalign[ROLESZ] = '\\0';\n        392: \t(void) strncpy(t0-&gt;name, plname, NAMSZ);\n        393: \tt0-&gt;name[NAMSZ] = '\\0';\n        394: \tt0-&gt;death[0] = '\\0';\n        395: \tswitch (killer_format) {\nTARGET  396: \t\tdefault: impossible(\"bad killer format?\");\n        397: \t\tcase KILLED_BY_AN:\n        398: \t\t\tStrcat(t0-&gt;death, killed_by_prefix[how]);\n        399: \t\t\t(void) strncat(t0-&gt;death, an(killer),\n        400: \t\t\t\t\t\tDTHSZ-strlen(t0-&gt;death));\n        401: \t\t\tbreak;"
   },
   {
     "key": "L00427_01",
     "original": "a",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:427:57\n   422: #ifdef FILE_AREAS\n   423: \tif (lock_file_area(LOGAREA, LOGFILE, 10)) {\n   424: #else\n   425: \tif (lock_file(LOGFILE, SCOREPREFIX, 10)) {\n   426: #endif\n&gt;  427: \t    if(!(lfile = fopen_datafile_area(LOGAREA, LOGFILE, \"a\", SCOREPREFIX))) {\n   428: \t\tHUP raw_print(\"Cannot open log file!\");\n   429: \t    } else {\n   430: \t\twriteentry(lfile, t0);\n   431: \t\t(void) fclose(lfile);\n   432: \t    }"
+    "context": "src/topten.c:427:57\n        422: #ifdef FILE_AREAS\n        423: \tif (lock_file_area(LOGAREA, LOGFILE, 10)) {\n        424: #else\n        425: \tif (lock_file(LOGFILE, SCOREPREFIX, 10)) {\n        426: #endif\nTARGET  427: \t    if(!(lfile = fopen_datafile_area(LOGAREA, LOGFILE, \"a\", SCOREPREFIX))) {\n        428: \t\tHUP raw_print(\"Cannot open log file!\");\n        429: \t    } else {\n        430: \t\twriteentry(lfile, t0);\n        431: \t\t(void) fclose(lfile);\n        432: \t    }"
   },
   {
     "key": "L00428_01",
     "original": "Cannot open log file!",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:428:17\n   423: \tif (lock_file_area(LOGAREA, LOGFILE, 10)) {\n   424: #else\n   425: \tif (lock_file(LOGFILE, SCOREPREFIX, 10)) {\n   426: #endif\n   427: \t    if(!(lfile = fopen_datafile_area(LOGAREA, LOGFILE, \"a\", SCOREPREFIX))) {\n&gt;  428: \t\tHUP raw_print(\"Cannot open log file!\");\n   429: \t    } else {\n   430: \t\twriteentry(lfile, t0);\n   431: \t\t(void) fclose(lfile);\n   432: \t    }\n   433: \t    unlock_file_area(LOGAREA, LOGFILE);"
+    "context": "src/topten.c:428:17\n        423: \tif (lock_file_area(LOGAREA, LOGFILE, 10)) {\n        424: #else\n        425: \tif (lock_file(LOGFILE, SCOREPREFIX, 10)) {\n        426: #endif\n        427: \t    if(!(lfile = fopen_datafile_area(LOGAREA, LOGFILE, \"a\", SCOREPREFIX))) {\nTARGET  428: \t\tHUP raw_print(\"Cannot open log file!\");\n        429: \t    } else {\n        430: \t\twriteentry(lfile, t0);\n        431: \t\t(void) fclose(lfile);\n        432: \t    }\n        433: \t    unlock_file_area(LOGAREA, LOGFILE);"
   },
   {
     "key": "L00442_01",
     "original": "Since you were in %s mode, the score list will not be checked.",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:442:8\n   437: \tif (wizard || discover) {\n   438: \t    if (how != PANICKED) HUP {\n   439: \t\tchar pbuf[BUFSZ];\n   440: \t\ttopten_print(\"\");\n   441: \t\tSprintf(pbuf,\n&gt;  442: \t      \"Since you were in %s mode, the score list will not be checked.\",\n   443: \t\t    wizard ? \"wizard\" : \"discover\");\n   444: \t\ttopten_print(pbuf);\n   445: \t    }\n   446: \t    goto showwin;\n   447: \t}"
+    "context": "src/topten.c:442:8\n        437: \tif (wizard || discover) {\n        438: \t    if (how != PANICKED) HUP {\n        439: \t\tchar pbuf[BUFSZ];\n        440: \t\ttopten_print(\"\");\n        441: \t\tSprintf(pbuf,\nTARGET  442: \t      \"Since you were in %s mode, the score list will not be checked.\",\n        443: \t\t    wizard ? \"wizard\" : \"discover\");\n        444: \t\ttopten_print(pbuf);\n        445: \t    }\n        446: \t    goto showwin;\n        447: \t}"
   },
   {
     "key": "L00443_01",
     "original": "wizard",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:443:16\n   438: \t    if (how != PANICKED) HUP {\n   439: \t\tchar pbuf[BUFSZ];\n   440: \t\ttopten_print(\"\");\n   441: \t\tSprintf(pbuf,\n   442: \t      \"Since you were in %s mode, the score list will not be checked.\",\n&gt;  443: \t\t    wizard ? \"wizard\" : \"discover\");\n   444: \t\ttopten_print(pbuf);\n   445: \t    }\n   446: \t    goto showwin;\n   447: \t}\n   448: "
+    "context": "src/topten.c:443:16\n        438: \t    if (how != PANICKED) HUP {\n        439: \t\tchar pbuf[BUFSZ];\n        440: \t\ttopten_print(\"\");\n        441: \t\tSprintf(pbuf,\n        442: \t      \"Since you were in %s mode, the score list will not be checked.\",\nTARGET  443: \t\t    wizard ? \"wizard\" : \"discover\");\n        444: \t\ttopten_print(pbuf);\n        445: \t    }\n        446: \t    goto showwin;\n        447: \t}\n        448: "
   },
   {
     "key": "L00443_02",
     "original": "discover",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:443:27\n   438: \t    if (how != PANICKED) HUP {\n   439: \t\tchar pbuf[BUFSZ];\n   440: \t\ttopten_print(\"\");\n   441: \t\tSprintf(pbuf,\n   442: \t      \"Since you were in %s mode, the score list will not be checked.\",\n&gt;  443: \t\t    wizard ? \"wizard\" : \"discover\");\n   444: \t\ttopten_print(pbuf);\n   445: \t    }\n   446: \t    goto showwin;\n   447: \t}\n   448: "
+    "context": "src/topten.c:443:27\n        438: \t    if (how != PANICKED) HUP {\n        439: \t\tchar pbuf[BUFSZ];\n        440: \t\ttopten_print(\"\");\n        441: \t\tSprintf(pbuf,\n        442: \t      \"Since you were in %s mode, the score list will not be checked.\",\nTARGET  443: \t\t    wizard ? \"wizard\" : \"discover\");\n        444: \t\ttopten_print(pbuf);\n        445: \t    }\n        446: \t    goto showwin;\n        447: \t}\n        448: "
   },
   {
     "key": "L00457_01",
     "original": "r+",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:457:57\n   452: \tif (!lock_file(NH_RECORD, SCOREPREFIX, 60))\n   453: #endif\n   454: \t\tgoto destroywin;\n   455: \n   456: #ifdef UPDATE_RECORD_IN_PLACE\n&gt;  457: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r+\", SCOREPREFIX);\n   458: #else\n   459: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n   460: #endif\n   461: \n   462: \tif (!rfile) {"
+    "context": "src/topten.c:457:57\n        452: \tif (!lock_file(NH_RECORD, SCOREPREFIX, 60))\n        453: #endif\n        454: \t\tgoto destroywin;\n        455: \n        456: #ifdef UPDATE_RECORD_IN_PLACE\nTARGET  457: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r+\", SCOREPREFIX);\n        458: #else\n        459: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n        460: #endif\n        461: \n        462: \tif (!rfile) {"
   },
   {
     "key": "L00459_01",
     "original": "r",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:459:57\n   454: \t\tgoto destroywin;\n   455: \n   456: #ifdef UPDATE_RECORD_IN_PLACE\n   457: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r+\", SCOREPREFIX);\n   458: #else\n&gt;  459: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n   460: #endif\n   461: \n   462: \tif (!rfile) {\n   463: \t\tHUP raw_print(\"Cannot open record file!\");\n   464: \t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);"
+    "context": "src/topten.c:459:57\n        454: \t\tgoto destroywin;\n        455: \n        456: #ifdef UPDATE_RECORD_IN_PLACE\n        457: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r+\", SCOREPREFIX);\n        458: #else\nTARGET  459: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n        460: #endif\n        461: \n        462: \tif (!rfile) {\n        463: \t\tHUP raw_print(\"Cannot open record file!\");\n        464: \t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);"
   },
   {
     "key": "L00463_01",
     "original": "Cannot open record file!",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:463:17\n   458: #else\n   459: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n   460: #endif\n   461: \n   462: \tif (!rfile) {\n&gt;  463: \t\tHUP raw_print(\"Cannot open record file!\");\n   464: \t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);\n   465: \t\tgoto destroywin;\n   466: \t}\n   467: \n   468: \tHUP topten_print(\"\");"
+    "context": "src/topten.c:463:17\n        458: #else\n        459: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n        460: #endif\n        461: \n        462: \tif (!rfile) {\nTARGET  463: \t\tHUP raw_print(\"Cannot open record file!\");\n        464: \t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);\n        465: \t\tgoto destroywin;\n        466: \t}\n        467: \n        468: \tHUP topten_print(\"\");"
   },
   {
     "key": "L00509_01",
     "original": "You didn't beat your previous score of %ld points.",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:509:6\n   504: \t\t\trank0 = 0;\n   505: \t\t\trank1 = rank;\n   506: \t\t\tHUP {\n   507: \t\t\t    char pbuf[BUFSZ];\n   508: \t\t\t    Sprintf(pbuf,\n&gt;  509: \t\t\t  \"You didn't beat your previous score of %ld points.\",\n   510: \t\t\t\t    t1-&gt;points);\n   511: \t\t\t    topten_print(pbuf);\n   512: \t\t\t    topten_print(\"\");\n   513: \t\t\t}\n   514: \t\t    }"
+    "context": "src/topten.c:509:6\n        504: \t\t\trank0 = 0;\n        505: \t\t\trank1 = rank;\n        506: \t\t\tHUP {\n        507: \t\t\t    char pbuf[BUFSZ];\n        508: \t\t\t    Sprintf(pbuf,\nTARGET  509: \t\t\t  \"You didn't beat your previous score of %ld points.\",\n        510: \t\t\t\t    t1-&gt;points);\n        511: \t\t\t    topten_print(pbuf);\n        512: \t\t\t    topten_print(\"\");\n        513: \t\t\t}\n        514: \t\t    }"
   },
   {
     "key": "L00536_01",
     "original": "w",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:536:63\n   531: #ifdef UPDATE_RECORD_IN_PLACE\n   532: \t\t(void) fseek(rfile, (t0-&gt;fpos &gt;= 0 ?\n   533: \t\t\t\t     t0-&gt;fpos : final_fpos), SEEK_SET);\n   534: #else\n   535: \t\t(void) fclose(rfile);\n&gt;  536: \t\tif(!(rfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"w\", SCOREPREFIX))){\n   537: \t\t\tHUP raw_print(\"Cannot write record file\");\n   538: \t\t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);\n   539: \t\t\tfree_ttlist(tt_head);\n   540: \t\t\tgoto destroywin;\n   541: \t\t}"
+    "context": "src/topten.c:536:63\n        531: #ifdef UPDATE_RECORD_IN_PLACE\n        532: \t\t(void) fseek(rfile, (t0-&gt;fpos &gt;= 0 ?\n        533: \t\t\t\t     t0-&gt;fpos : final_fpos), SEEK_SET);\n        534: #else\n        535: \t\t(void) fclose(rfile);\nTARGET  536: \t\tif(!(rfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"w\", SCOREPREFIX))){\n        537: \t\t\tHUP raw_print(\"Cannot write record file\");\n        538: \t\t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);\n        539: \t\t\tfree_ttlist(tt_head);\n        540: \t\t\tgoto destroywin;\n        541: \t\t}"
   },
   {
     "key": "L00537_01",
     "original": "Cannot write record file",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:537:18\n   532: \t\t(void) fseek(rfile, (t0-&gt;fpos &gt;= 0 ?\n   533: \t\t\t\t     t0-&gt;fpos : final_fpos), SEEK_SET);\n   534: #else\n   535: \t\t(void) fclose(rfile);\n   536: \t\tif(!(rfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"w\", SCOREPREFIX))){\n&gt;  537: \t\t\tHUP raw_print(\"Cannot write record file\");\n   538: \t\t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);\n   539: \t\t\tfree_ttlist(tt_head);\n   540: \t\t\tgoto destroywin;\n   541: \t\t}\n   542: #endif\t/* UPDATE_RECORD_IN_PLACE */"
+    "context": "src/topten.c:537:18\n        532: \t\t(void) fseek(rfile, (t0-&gt;fpos &gt;= 0 ?\n        533: \t\t\t\t     t0-&gt;fpos : final_fpos), SEEK_SET);\n        534: #else\n        535: \t\t(void) fclose(rfile);\n        536: \t\tif(!(rfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"w\", SCOREPREFIX))){\nTARGET  537: \t\t\tHUP raw_print(\"Cannot write record file\");\n        538: \t\t\tunlock_file_area(NH_RECORD_AREA, NH_RECORD);\n        539: \t\t\tfree_ttlist(tt_head);\n        540: \t\t\tgoto destroywin;\n        541: \t\t}\n        542: #endif\t/* UPDATE_RECORD_IN_PLACE */"
   },
   {
     "key": "L00545_01",
     "original": "You made the top ten list!",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:545:17\n   540: \t\t\tgoto destroywin;\n   541: \t\t}\n   542: #endif\t/* UPDATE_RECORD_IN_PLACE */\n   543: \t\tif(!done_stopprint) if(rank0 &gt; 0){\n   544: \t\t    if(rank0 &lt;= 10)\n&gt;  545: \t\t\ttopten_print(\"You made the top ten list!\");\n   546: \t\t    else {\n   547: \t\t\tchar pbuf[BUFSZ];\n   548: \t\t\tSprintf(pbuf,\n   549: \t\t\t  \"You reached the %d%s place on the top %d list.\",\n   550: \t\t\t\trank0, ordin(rank0), ENTRYMAX);"
+    "context": "src/topten.c:545:17\n        540: \t\t\tgoto destroywin;\n        541: \t\t}\n        542: #endif\t/* UPDATE_RECORD_IN_PLACE */\n        543: \t\tif(!done_stopprint) if(rank0 &gt; 0){\n        544: \t\t    if(rank0 &lt;= 10)\nTARGET  545: \t\t\ttopten_print(\"You made the top ten list!\");\n        546: \t\t    else {\n        547: \t\t\tchar pbuf[BUFSZ];\n        548: \t\t\tSprintf(pbuf,\n        549: \t\t\t  \"You reached the %d%s place on the top %d list.\",\n        550: \t\t\t\trank0, ordin(rank0), ENTRYMAX);"
   },
   {
     "key": "L00549_01",
     "original": "You reached the %d%s place on the top %d list.",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:549:6\n   544: \t\t    if(rank0 &lt;= 10)\n   545: \t\t\ttopten_print(\"You made the top ten list!\");\n   546: \t\t    else {\n   547: \t\t\tchar pbuf[BUFSZ];\n   548: \t\t\tSprintf(pbuf,\n&gt;  549: \t\t\t  \"You reached the %d%s place on the top %d list.\",\n   550: \t\t\t\trank0, ordin(rank0), ENTRYMAX);\n   551: \t\t\ttopten_print(pbuf);\n   552: \t\t    }\n   553: \t\t    topten_print(\"\");\n   554: \t\t}"
+    "context": "src/topten.c:549:6\n        544: \t\t    if(rank0 &lt;= 10)\n        545: \t\t\ttopten_print(\"You made the top ten list!\");\n        546: \t\t    else {\n        547: \t\t\tchar pbuf[BUFSZ];\n        548: \t\t\tSprintf(pbuf,\nTARGET  549: \t\t\t  \"You reached the %d%s place on the top %d list.\",\n        550: \t\t\t\trank0, ordin(rank0), ENTRYMAX);\n        551: \t\t\ttopten_print(pbuf);\n        552: \t\t    }\n        553: \t\t    topten_print(\"\");\n        554: \t\t}"
   },
   {
     "key": "L00607_01",
     "original": "<eod>\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:607:24\n   602: \t    t1-&gt;maxlvl = t1-&gt;hp = t1-&gt;maxhp = t1-&gt;deaths = 0;\n   603: \t    t1-&gt;plrole[0] = t1-&gt;plrace[0] = t1-&gt;plgend[0] = t1-&gt;plalign[0] = '-';\n   604: \t    t1-&gt;plrole[1] = t1-&gt;plrace[1] = t1-&gt;plgend[1] = t1-&gt;plalign[1] = 0;\n   605: \t    t1-&gt;birthdate = t1-&gt;deathdate = yyyymmdd((time_t)0L);\n   606: \t    Strcpy(t1-&gt;name, \"@\");\n&gt;  607: \t    Strcpy(t1-&gt;death, \"&lt;eod&gt;\\n\");\n   608: \t    writeentry(rfile, t1);\n   609: \t    (void) fflush(rfile);\n   610: # endif\t/* TRUNCATE_FILE */\n   611: \t}\n   612: #endif\t/* UPDATE_RECORD_IN_PLACE */"
+    "context": "src/topten.c:607:24\n        602: \t    t1-&gt;maxlvl = t1-&gt;hp = t1-&gt;maxhp = t1-&gt;deaths = 0;\n        603: \t    t1-&gt;plrole[0] = t1-&gt;plrace[0] = t1-&gt;plgend[0] = t1-&gt;plalign[0] = '-';\n        604: \t    t1-&gt;plrole[1] = t1-&gt;plrace[1] = t1-&gt;plgend[1] = t1-&gt;plalign[1] = 0;\n        605: \t    t1-&gt;birthdate = t1-&gt;deathdate = yyyymmdd((time_t)0L);\n        606: \t    Strcpy(t1-&gt;name, \"@\");\nTARGET  607: \t    Strcpy(t1-&gt;death, \"&lt;eod&gt;\\n\");\n        608: \t    writeentry(rfile, t1);\n        609: \t    (void) fflush(rfile);\n        610: # endif\t/* TRUNCATE_FILE */\n        611: \t}\n        612: #endif\t/* UPDATE_RECORD_IN_PLACE */"
   },
   {
     "key": "L00633_01",
     "original": " No  Points     Name",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:633:18\n   628: outheader()\n   629: {\n   630: \tchar linebuf[BUFSZ];\n   631: \tregister char *bp;\n   632: \n&gt;  633: \tStrcpy(linebuf, \" No  Points     Name\");\n   634: \tbp = eos(linebuf);\n   635: \twhile(bp &lt; linebuf + COLNO - 9) *bp++ = ' ';\n   636: \tStrcpy(bp, \"Hp [max]\");\n   637: \ttopten_print(linebuf);\n   638: }"
+    "context": "src/topten.c:633:18\n        628: outheader()\n        629: {\n        630: \tchar linebuf[BUFSZ];\n        631: \tregister char *bp;\n        632: \nTARGET  633: \tStrcpy(linebuf, \" No  Points     Name\");\n        634: \tbp = eos(linebuf);\n        635: \twhile(bp &lt; linebuf + COLNO - 9) *bp++ = ' ';\n        636: \tStrcpy(bp, \"Hp [max]\");\n        637: \ttopten_print(linebuf);\n        638: }"
   },
   {
     "key": "L00636_01",
     "original": "Hp [max]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:636:13\n   631: \tregister char *bp;\n   632: \n   633: \tStrcpy(linebuf, \" No  Points     Name\");\n   634: \tbp = eos(linebuf);\n   635: \twhile(bp &lt; linebuf + COLNO - 9) *bp++ = ' ';\n&gt;  636: \tStrcpy(bp, \"Hp [max]\");\n   637: \ttopten_print(linebuf);\n   638: }\n   639: \n   640: /* so&gt;0: standout line; so=0: ordinary line */\n   641: STATIC_OVL void"
+    "context": "src/topten.c:636:13\n        631: \tregister char *bp;\n        632: \n        633: \tStrcpy(linebuf, \" No  Points     Name\");\n        634: \tbp = eos(linebuf);\n        635: \twhile(bp &lt; linebuf + COLNO - 9) *bp++ = ' ';\nTARGET  636: \tStrcpy(bp, \"Hp [max]\");\n        637: \ttopten_print(linebuf);\n        638: }\n        639: \n        640: /* so&gt;0: standout line; so=0: ordinary line */\n        641: STATIC_OVL void"
   },
   {
     "key": "L00654_01",
     "original": "%3d",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:654:34\n   649: \tchar *bp, hpbuf[24], linebuf3[BUFSZ];\n   650: \tint hppos, lngr;\n   651: \n   652: \n   653: \tlinebuf[0] = '\\0';\n&gt;  654: \tif (rank) Sprintf(eos(linebuf), \"%3d\", rank);\n   655: \telse Strcat(linebuf, \"   \");\n   656: \n   657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n   658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n   659: \tif (t1-&gt;plrace[0] != '?')"
+    "context": "src/topten.c:654:34\n        649: \tchar *bp, hpbuf[24], linebuf3[BUFSZ];\n        650: \tint hppos, lngr;\n        651: \n        652: \n        653: \tlinebuf[0] = '\\0';\nTARGET  654: \tif (rank) Sprintf(eos(linebuf), \"%3d\", rank);\n        655: \telse Strcat(linebuf, \"   \");\n        656: \n        657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n        658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n        659: \tif (t1-&gt;plrace[0] != '?')"
   },
   {
     "key": "L00657_01",
     "original": " %10ld  %.10s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:657:24\n   652: \n   653: \tlinebuf[0] = '\\0';\n   654: \tif (rank) Sprintf(eos(linebuf), \"%3d\", rank);\n   655: \telse Strcat(linebuf, \"   \");\n   656: \n&gt;  657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n   658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n   659: \tif (t1-&gt;plrace[0] != '?')\n   660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n   661: \t/* Printing of gender and alignment is intentional.  It has been\n   662: \t * part of the NetHack Geek Code, and illustrates a proper way to"
+    "context": "src/topten.c:657:24\n        652: \n        653: \tlinebuf[0] = '\\0';\n        654: \tif (rank) Sprintf(eos(linebuf), \"%3d\", rank);\n        655: \telse Strcat(linebuf, \"   \");\n        656: \nTARGET  657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n        658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n        659: \tif (t1-&gt;plrace[0] != '?')\n        660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n        661: \t/* Printing of gender and alignment is intentional.  It has been\n        662: \t * part of the NetHack Geek Code, and illustrates a proper way to"
   },
   {
     "key": "L00658_01",
     "original": "-%s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:658:24\n   653: \tlinebuf[0] = '\\0';\n   654: \tif (rank) Sprintf(eos(linebuf), \"%3d\", rank);\n   655: \telse Strcat(linebuf, \"   \");\n   656: \n   657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n&gt;  658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n   659: \tif (t1-&gt;plrace[0] != '?')\n   660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n   661: \t/* Printing of gender and alignment is intentional.  It has been\n   662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n   663: \t * specify a character from the command line."
+    "context": "src/topten.c:658:24\n        653: \tlinebuf[0] = '\\0';\n        654: \tif (rank) Sprintf(eos(linebuf), \"%3d\", rank);\n        655: \telse Strcat(linebuf, \"   \");\n        656: \n        657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\nTARGET  658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n        659: \tif (t1-&gt;plrace[0] != '?')\n        660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n        661: \t/* Printing of gender and alignment is intentional.  It has been\n        662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n        663: \t * specify a character from the command line."
   },
   {
     "key": "L00660_01",
     "original": "-%s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:660:25\n   655: \telse Strcat(linebuf, \"   \");\n   656: \n   657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n   658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n   659: \tif (t1-&gt;plrace[0] != '?')\n&gt;  660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n   661: \t/* Printing of gender and alignment is intentional.  It has been\n   662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n   663: \t * specify a character from the command line.\n   664: \t */\n   665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);"
+    "context": "src/topten.c:660:25\n        655: \telse Strcat(linebuf, \"   \");\n        656: \n        657: \tSprintf(eos(linebuf), \" %10ld  %.10s\", t1-&gt;points, t1-&gt;name);\n        658: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrole);\n        659: \tif (t1-&gt;plrace[0] != '?')\nTARGET  660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n        661: \t/* Printing of gender and alignment is intentional.  It has been\n        662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n        663: \t * specify a character from the command line.\n        664: \t */\n        665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);"
   },
   {
     "key": "L00665_01",
     "original": "-%s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:665:24\n   660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n   661: \t/* Printing of gender and alignment is intentional.  It has been\n   662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n   663: \t * specify a character from the command line.\n   664: \t */\n&gt;  665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);\n   666: \tif (t1-&gt;plalign[0] != '?')\n   667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n   668: \telse\n   669: \t\tStrcat(linebuf, \" \");\n   670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {"
+    "context": "src/topten.c:665:24\n        660: \t\tSprintf(eos(linebuf), \"-%s\", t1-&gt;plrace);\n        661: \t/* Printing of gender and alignment is intentional.  It has been\n        662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n        663: \t * specify a character from the command line.\n        664: \t */\nTARGET  665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);\n        666: \tif (t1-&gt;plalign[0] != '?')\n        667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n        668: \telse\n        669: \t\tStrcat(linebuf, \" \");\n        670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {"
   },
   {
     "key": "L00667_01",
     "original": "-%s ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:667:25\n   662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n   663: \t * specify a character from the command line.\n   664: \t */\n   665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);\n   666: \tif (t1-&gt;plalign[0] != '?')\n&gt;  667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n   668: \telse\n   669: \t\tStrcat(linebuf, \" \");\n   670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {\n   671: \t    Sprintf(eos(linebuf), \"escaped the dungeon %s[max level %d]\",\n   672: \t\t    !strncmp(\" (\", t1-&gt;death + 7, 2) ? t1-&gt;death + 7 + 2 : \"\","
+    "context": "src/topten.c:667:25\n        662: \t * part of the NetHack Geek Code, and illustrates a proper way to\n        663: \t * specify a character from the command line.\n        664: \t */\n        665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);\n        666: \tif (t1-&gt;plalign[0] != '?')\nTARGET  667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n        668: \telse\n        669: \t\tStrcat(linebuf, \" \");\n        670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {\n        671: \t    Sprintf(eos(linebuf), \"escaped the dungeon %s[max level %d]\",\n        672: \t\t    !strncmp(\" (\", t1-&gt;death + 7, 2) ? t1-&gt;death + 7 + 2 : \"\","
   },
   {
     "key": "L00670_01",
     "original": "escaped",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:670:15\n   665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);\n   666: \tif (t1-&gt;plalign[0] != '?')\n   667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n   668: \telse\n   669: \t\tStrcat(linebuf, \" \");\n&gt;  670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {\n   671: \t    Sprintf(eos(linebuf), \"escaped the dungeon %s[max level %d]\",\n   672: \t\t    !strncmp(\" (\", t1-&gt;death + 7, 2) ? t1-&gt;death + 7 + 2 : \"\",\n   673: \t\t    t1-&gt;maxlvl);\n   674: \t    /* fixup for closing paren in \"escaped... with...Amulet)[max...\" */\n   675: \t    if ((bp = index(linebuf, ')')) != 0)"
+    "context": "src/topten.c:670:15\n        665: \tSprintf(eos(linebuf), \"-%s\", t1-&gt;plgend);\n        666: \tif (t1-&gt;plalign[0] != '?')\n        667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n        668: \telse\n        669: \t\tStrcat(linebuf, \" \");\nTARGET  670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {\n        671: \t    Sprintf(eos(linebuf), \"escaped the dungeon %s[max level %d]\",\n        672: \t\t    !strncmp(\" (\", t1-&gt;death + 7, 2) ? t1-&gt;death + 7 + 2 : \"\",\n        673: \t\t    t1-&gt;maxlvl);\n        674: \t    /* fixup for closing paren in \"escaped... with...Amulet)[max...\" */\n        675: \t    if ((bp = index(linebuf, ')')) != 0)"
   },
   {
     "key": "L00671_01",
     "original": "escaped the dungeon %s[max level %d]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:671:28\n   666: \tif (t1-&gt;plalign[0] != '?')\n   667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n   668: \telse\n   669: \t\tStrcat(linebuf, \" \");\n   670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {\n&gt;  671: \t    Sprintf(eos(linebuf), \"escaped the dungeon %s[max level %d]\",\n   672: \t\t    !strncmp(\" (\", t1-&gt;death + 7, 2) ? t1-&gt;death + 7 + 2 : \"\",\n   673: \t\t    t1-&gt;maxlvl);\n   674: \t    /* fixup for closing paren in \"escaped... with...Amulet)[max...\" */\n   675: \t    if ((bp = index(linebuf, ')')) != 0)\n   676: \t\t*bp = (t1-&gt;deathdnum == astral_level.dnum) ? '\\0' : ' ';"
+    "context": "src/topten.c:671:28\n        666: \tif (t1-&gt;plalign[0] != '?')\n        667: \t\tSprintf(eos(linebuf), \"-%s \", t1-&gt;plalign);\n        668: \telse\n        669: \t\tStrcat(linebuf, \" \");\n        670: \tif (!strncmp(\"escaped\", t1-&gt;death, 7)) {\nTARGET  671: \t    Sprintf(eos(linebuf), \"escaped the dungeon %s[max level %d]\",\n        672: \t\t    !strncmp(\" (\", t1-&gt;death + 7, 2) ? t1-&gt;death + 7 + 2 : \"\",\n        673: \t\t    t1-&gt;maxlvl);\n        674: \t    /* fixup for closing paren in \"escaped... with...Amulet)[max...\" */\n        675: \t    if ((bp = index(linebuf, ')')) != 0)\n        676: \t\t*bp = (t1-&gt;deathdnum == astral_level.dnum) ? '\\0' : ' ';"
   },
   {
     "key": "L00678_01",
     "original": "ascended",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:678:22\n   673: \t\t    t1-&gt;maxlvl);\n   674: \t    /* fixup for closing paren in \"escaped... with...Amulet)[max...\" */\n   675: \t    if ((bp = index(linebuf, ')')) != 0)\n   676: \t\t*bp = (t1-&gt;deathdnum == astral_level.dnum) ? '\\0' : ' ';\n   677: \t    second_line = FALSE;\n&gt;  678: \t} else if (!strncmp(\"ascended\", t1-&gt;death, 8)) {\n   679: \n   680: #ifdef RECORD_CONDUCT\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;"
+    "context": "src/topten.c:678:22\n        673: \t\t    t1-&gt;maxlvl);\n        674: \t    /* fixup for closing paren in \"escaped... with...Amulet)[max...\" */\n        675: \t    if ((bp = index(linebuf, ')')) != 0)\n        676: \t\t*bp = (t1-&gt;deathdnum == astral_level.dnum) ? '\\0' : ' ';\n        677: \t    second_line = FALSE;\nTARGET  678: \t} else if (!strncmp(\"ascended\", t1-&gt;death, 8)) {\n        679: \n        680: #ifdef RECORD_CONDUCT\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;"
   },
   {
     "key": "L00686_01",
     "original": "Food",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:686:5\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n&gt;  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n   687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
+    "context": "src/topten.c:686:5\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\nTARGET  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n        687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
   },
   {
     "key": "L00686_02",
     "original": "Vgn",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:686:13\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n&gt;  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n   687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
+    "context": "src/topten.c:686:13\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\nTARGET  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n        687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
   },
   {
     "key": "L00686_03",
     "original": "Vgt",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:686:20\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n&gt;  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n   687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
+    "context": "src/topten.c:686:20\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\nTARGET  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n        687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
   },
   {
     "key": "L00686_04",
     "original": "Ath",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:686:27\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n&gt;  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n   687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
+    "context": "src/topten.c:686:27\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\nTARGET  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n        687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
   },
   {
     "key": "L00686_05",
     "original": "Weap",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:686:34\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n&gt;  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n   687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
+    "context": "src/topten.c:686:34\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\nTARGET  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n        687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
   },
   {
     "key": "L00686_06",
     "original": "Pac",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:686:42\n   681: \t\t/* Add a notation for conducts kept */\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n&gt;  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n   687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
+    "context": "src/topten.c:686:42\n        681: \t\t/* Add a notation for conducts kept */\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\nTARGET  686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n        687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {"
   },
   {
     "key": "L00687_01",
     "original": "Ill",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:687:5\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n   686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n&gt;  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n   692: \t\t\t\tskip = 0;"
+    "context": "src/topten.c:687:5\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\n        686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\nTARGET  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n        692: \t\t\t\tskip = 0;"
   },
   {
     "key": "L00687_02",
     "original": "Poly",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:687:12\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n   686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n&gt;  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n   692: \t\t\t\tskip = 0;"
+    "context": "src/topten.c:687:12\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\n        686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\nTARGET  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n        692: \t\t\t\tskip = 0;"
   },
   {
     "key": "L00687_03",
     "original": "Form",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:687:20\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n   686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n&gt;  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n   692: \t\t\t\tskip = 0;"
+    "context": "src/topten.c:687:20\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\n        686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\nTARGET  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n        692: \t\t\t\tskip = 0;"
   },
   {
     "key": "L00687_04",
     "original": "Wish",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:687:28\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n   686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n&gt;  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n   692: \t\t\t\tskip = 0;"
+    "context": "src/topten.c:687:28\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\n        686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\nTARGET  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n        692: \t\t\t\tskip = 0;"
   },
   {
     "key": "L00687_05",
     "original": "Art",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:687:36\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n   686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n&gt;  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n   692: \t\t\t\tskip = 0;"
+    "context": "src/topten.c:687:36\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\n        686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\nTARGET  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n        692: \t\t\t\tskip = 0;"
   },
   {
     "key": "L00687_06",
     "original": "Geno",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:687:43\n   682: \t\tif(t1-&gt;conduct != 4095) {\n   683: \t\t\tint i, m;\n   684: \t\t\tchar dash = 0, skip;\n   685: \t\t\tconst char *conduct_names[] = {\n   686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\n&gt;  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n   688: \t\t\t\tNULL };\n   689: \t\t\n   690: \t\t\tStrcat(eos(linebuf), \"(\");\n   691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n   692: \t\t\t\tskip = 0;"
+    "context": "src/topten.c:687:43\n        682: \t\tif(t1-&gt;conduct != 4095) {\n        683: \t\t\tint i, m;\n        684: \t\t\tchar dash = 0, skip;\n        685: \t\t\tconst char *conduct_names[] = {\n        686: \t\t\t\t\"Food\", \"Vgn\", \"Vgt\", \"Ath\", \"Weap\", \"Pac\",\nTARGET  687: \t\t\t\t\"Ill\", \"Poly\", \"Form\", \"Wish\", \"Art\", \"Geno\",\n        688: \t\t\t\tNULL };\n        689: \t\t\n        690: \t\t\tStrcat(eos(linebuf), \"(\");\n        691: \t\t\tfor(i = 0, m = 1; conduct_names[i]; i += skip + 1, m &lt;&lt;= (skip + 1)) {\n        692: \t\t\t\tskip = 0;"
   },
   {
     "key": "L00712_01",
     "original": "ascended to demigod%s-hood",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:712:28\n   707: \t\t\t}\n   708: \t\t\tStrcat(eos(linebuf), \") \");\n   709: \t\t}\n   710: #endif\n   711: \n&gt;  712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n   713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n   714: \t    second_line = FALSE;\n   715: \t} else {\n   716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n   717: \t\tStrcat(linebuf, \"quit\");"
+    "context": "src/topten.c:712:28\n        707: \t\t\t}\n        708: \t\t\tStrcat(eos(linebuf), \") \");\n        709: \t\t}\n        710: #endif\n        711: \nTARGET  712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n        713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n        714: \t    second_line = FALSE;\n        715: \t} else {\n        716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n        717: \t\tStrcat(linebuf, \"quit\");"
   },
   {
     "key": "L00713_01",
     "original": "dess",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:713:32\n   708: \t\t\tStrcat(eos(linebuf), \") \");\n   709: \t\t}\n   710: #endif\n   711: \n   712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n&gt;  713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n   714: \t    second_line = FALSE;\n   715: \t} else {\n   716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n   717: \t\tStrcat(linebuf, \"quit\");\n   718: \t\tsecond_line = FALSE;"
+    "context": "src/topten.c:713:32\n        708: \t\t\tStrcat(eos(linebuf), \") \");\n        709: \t\t}\n        710: #endif\n        711: \n        712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\nTARGET  713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n        714: \t    second_line = FALSE;\n        715: \t} else {\n        716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n        717: \t\tStrcat(linebuf, \"quit\");\n        718: \t\tsecond_line = FALSE;"
   },
   {
     "key": "L00716_01",
     "original": "quit",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:716:30\n   711: \n   712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n   713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n   714: \t    second_line = FALSE;\n   715: \t} else {\n&gt;  716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n   717: \t\tStrcat(linebuf, \"quit\");\n   718: \t\tsecond_line = FALSE;\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;"
+    "context": "src/topten.c:716:30\n        711: \n        712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n        713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n        714: \t    second_line = FALSE;\n        715: \t} else {\nTARGET  716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n        717: \t\tStrcat(linebuf, \"quit\");\n        718: \t\tsecond_line = FALSE;\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;"
   },
   {
     "key": "L00717_01",
     "original": "quit",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:717:19\n   712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n   713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n   714: \t    second_line = FALSE;\n   715: \t} else {\n   716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n&gt;  717: \t\tStrcat(linebuf, \"quit\");\n   718: \t\tsecond_line = FALSE;\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {"
+    "context": "src/topten.c:717:19\n        712: \t    Sprintf(eos(linebuf), \"ascended to demigod%s-hood\",\n        713: \t\t    (t1-&gt;plgend[0] == 'F') ? \"dess\" : \"\");\n        714: \t    second_line = FALSE;\n        715: \t} else {\n        716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\nTARGET  717: \t\tStrcat(linebuf, \"quit\");\n        718: \t\tsecond_line = FALSE;\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {"
   },
   {
     "key": "L00719_01",
     "original": "died of st",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:719:37\n   714: \t    second_line = FALSE;\n   715: \t} else {\n   716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n   717: \t\tStrcat(linebuf, \"quit\");\n   718: \t\tsecond_line = FALSE;\n&gt;  719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");"
+    "context": "src/topten.c:719:37\n        714: \t    second_line = FALSE;\n        715: \t} else {\n        716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n        717: \t\tStrcat(linebuf, \"quit\");\n        718: \t\tsecond_line = FALSE;\nTARGET  719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");"
   },
   {
     "key": "L00720_01",
     "original": "starved to death",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:720:19\n   715: \t} else {\n   716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n   717: \t\tStrcat(linebuf, \"quit\");\n   718: \t\tsecond_line = FALSE;\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n&gt;  720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {"
+    "context": "src/topten.c:720:19\n        715: \t} else {\n        716: \t    if (!strncmp(t1-&gt;death, \"quit\", 4)) {\n        717: \t\tStrcat(linebuf, \"quit\");\n        718: \t\tsecond_line = FALSE;\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\nTARGET  720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {"
   },
   {
     "key": "L00722_01",
     "original": "choked",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:722:37\n   717: \t\tStrcat(linebuf, \"quit\");\n   718: \t\tsecond_line = FALSE;\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n&gt;  722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {"
+    "context": "src/topten.c:722:37\n        717: \t\tStrcat(linebuf, \"quit\");\n        718: \t\tsecond_line = FALSE;\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\nTARGET  722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {"
   },
   {
     "key": "L00723_01",
     "original": "choked on h%s food",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:723:25\n   718: \t\tsecond_line = FALSE;\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n&gt;  723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");"
+    "context": "src/topten.c:723:25\n        718: \t\tsecond_line = FALSE;\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\nTARGET  723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");"
   },
   {
     "key": "L00724_01",
     "original": "er",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:724:29\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n&gt;  724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {"
+    "context": "src/topten.c:724:29\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\nTARGET  724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {"
   },
   {
     "key": "L00724_02",
     "original": "is",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:724:36\n   719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n&gt;  724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {"
+    "context": "src/topten.c:724:36\n        719: \t    } else if (!strncmp(t1-&gt;death, \"died of st\", 10)) {\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\nTARGET  724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {"
   },
   {
     "key": "L00725_01",
     "original": "poisoned",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:725:37\n   720: \t\tStrcat(linebuf, \"starved to death\");\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n&gt;  725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n   730: \t\tStrcat(linebuf, \"turned to stone\");"
+    "context": "src/topten.c:725:37\n        720: \t\tStrcat(linebuf, \"starved to death\");\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\nTARGET  725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n        730: \t\tStrcat(linebuf, \"turned to stone\");"
   },
   {
     "key": "L00726_01",
     "original": "was poisoned",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:726:19\n   721: \t\tsecond_line = FALSE;\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n&gt;  726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n   730: \t\tStrcat(linebuf, \"turned to stone\");\n   731: \t    } else Strcat(linebuf, \"died\");"
+    "context": "src/topten.c:726:19\n        721: \t\tsecond_line = FALSE;\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\nTARGET  726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n        730: \t\tStrcat(linebuf, \"turned to stone\");\n        731: \t    } else Strcat(linebuf, \"died\");"
   },
   {
     "key": "L00727_01",
     "original": "crushed",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:727:37\n   722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n&gt;  727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n   730: \t\tStrcat(linebuf, \"turned to stone\");\n   731: \t    } else Strcat(linebuf, \"died\");\n   732: "
+    "context": "src/topten.c:727:37\n        722: \t    } else if (!strncmp(t1-&gt;death, \"choked\", 6)) {\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\nTARGET  727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n        730: \t\tStrcat(linebuf, \"turned to stone\");\n        731: \t    } else Strcat(linebuf, \"died\");\n        732: "
   },
   {
     "key": "L00728_01",
     "original": "was crushed to death",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:728:19\n   723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n&gt;  728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n   730: \t\tStrcat(linebuf, \"turned to stone\");\n   731: \t    } else Strcat(linebuf, \"died\");\n   732: \n   733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {"
+    "context": "src/topten.c:728:19\n        723: \t\tSprintf(eos(linebuf), \"choked on h%s food\",\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\nTARGET  728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n        730: \t\tStrcat(linebuf, \"turned to stone\");\n        731: \t    } else Strcat(linebuf, \"died\");\n        732: \n        733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {"
   },
   {
     "key": "L00729_01",
     "original": "petrified by ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:729:37\n   724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n&gt;  729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n   730: \t\tStrcat(linebuf, \"turned to stone\");\n   731: \t    } else Strcat(linebuf, \"died\");\n   732: \n   733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n   734: \t\tint deathlev = t1-&gt;deathlev;"
+    "context": "src/topten.c:729:37\n        724: \t\t\t(t1-&gt;plgend[0] == 'F') ? \"er\" : \"is\");\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\nTARGET  729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n        730: \t\tStrcat(linebuf, \"turned to stone\");\n        731: \t    } else Strcat(linebuf, \"died\");\n        732: \n        733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n        734: \t\tint deathlev = t1-&gt;deathlev;"
   },
   {
     "key": "L00730_01",
     "original": "turned to stone",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:730:19\n   725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n&gt;  730: \t\tStrcat(linebuf, \"turned to stone\");\n   731: \t    } else Strcat(linebuf, \"died\");\n   732: \n   733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n   734: \t\tint deathlev = t1-&gt;deathlev;\n   735: \t\tconst char *arg, *fmt = \" on the Plane of %s\";"
+    "context": "src/topten.c:730:19\n        725: \t    } else if (!strncmp(t1-&gt;death, \"poisoned\", 8)) {\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\nTARGET  730: \t\tStrcat(linebuf, \"turned to stone\");\n        731: \t    } else Strcat(linebuf, \"died\");\n        732: \n        733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n        734: \t\tint deathlev = t1-&gt;deathlev;\n        735: \t\tconst char *arg, *fmt = \" on the Plane of %s\";"
   },
   {
     "key": "L00731_01",
     "original": "died",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:731:29\n   726: \t\tStrcat(linebuf, \"was poisoned\");\n   727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n   728: \t\tStrcat(linebuf, \"was crushed to death\");\n   729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n   730: \t\tStrcat(linebuf, \"turned to stone\");\n&gt;  731: \t    } else Strcat(linebuf, \"died\");\n   732: \n   733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n   734: \t\tint deathlev = t1-&gt;deathlev;\n   735: \t\tconst char *arg, *fmt = \" on the Plane of %s\";\n   736: "
+    "context": "src/topten.c:731:29\n        726: \t\tStrcat(linebuf, \"was poisoned\");\n        727: \t    } else if (!strncmp(t1-&gt;death, \"crushed\", 7)) {\n        728: \t\tStrcat(linebuf, \"was crushed to death\");\n        729: \t    } else if (!strncmp(t1-&gt;death, \"petrified by \", 13)) {\n        730: \t\tStrcat(linebuf, \"turned to stone\");\nTARGET  731: \t    } else Strcat(linebuf, \"died\");\n        732: \n        733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n        734: \t\tint deathlev = t1-&gt;deathlev;\n        735: \t\tconst char *arg, *fmt = \" on the Plane of %s\";\n        736: "
   },
   {
     "key": "L00735_01",
     "original": " on the Plane of %s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:735:27\n   730: \t\tStrcat(linebuf, \"turned to stone\");\n   731: \t    } else Strcat(linebuf, \"died\");\n   732: \n   733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n   734: \t\tint deathlev = t1-&gt;deathlev;\n&gt;  735: \t\tconst char *arg, *fmt = \" on the Plane of %s\";\n   736: \n   737: \t\tif (!t1-&gt;ver_major && !t1-&gt;ver_minor && t1-&gt;patchlevel &lt; 7)\n   738: \t\t\tdeathlev--;\n   739: \n   740: \t\tswitch (deathlev) {"
+    "context": "src/topten.c:735:27\n        730: \t\tStrcat(linebuf, \"turned to stone\");\n        731: \t    } else Strcat(linebuf, \"died\");\n        732: \n        733: \t    if (t1-&gt;deathdnum == astral_level.dnum) {\n        734: \t\tint deathlev = t1-&gt;deathlev;\nTARGET  735: \t\tconst char *arg, *fmt = \" on the Plane of %s\";\n        736: \n        737: \t\tif (!t1-&gt;ver_major && !t1-&gt;ver_minor && t1-&gt;patchlevel &lt; 7)\n        738: \t\t\tdeathlev--;\n        739: \n        740: \t\tswitch (deathlev) {"
   },
   {
     "key": "L00742_01",
     "original": " on the %s Plane",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:742:10\n   737: \t\tif (!t1-&gt;ver_major && !t1-&gt;ver_minor && t1-&gt;patchlevel &lt; 7)\n   738: \t\t\tdeathlev--;\n   739: \n   740: \t\tswitch (deathlev) {\n   741: \t\tcase -5:\n&gt;  742: \t\t\tfmt = \" on the %s Plane\";\n   743: \t\t\targ = \"Astral\";\tbreak;\n   744: \t\tcase -4:\n   745: \t\t\targ = \"Water\";\tbreak;\n   746: \t\tcase -3:\n   747: \t\t\targ = \"Fire\";\tbreak;"
+    "context": "src/topten.c:742:10\n        737: \t\tif (!t1-&gt;ver_major && !t1-&gt;ver_minor && t1-&gt;patchlevel &lt; 7)\n        738: \t\t\tdeathlev--;\n        739: \n        740: \t\tswitch (deathlev) {\n        741: \t\tcase -5:\nTARGET  742: \t\t\tfmt = \" on the %s Plane\";\n        743: \t\t\targ = \"Astral\";\tbreak;\n        744: \t\tcase -4:\n        745: \t\t\targ = \"Water\";\tbreak;\n        746: \t\tcase -3:\n        747: \t\t\targ = \"Fire\";\tbreak;"
   },
   {
     "key": "L00743_01",
     "original": "Astral",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:743:10\n   738: \t\t\tdeathlev--;\n   739: \n   740: \t\tswitch (deathlev) {\n   741: \t\tcase -5:\n   742: \t\t\tfmt = \" on the %s Plane\";\n&gt;  743: \t\t\targ = \"Astral\";\tbreak;\n   744: \t\tcase -4:\n   745: \t\t\targ = \"Water\";\tbreak;\n   746: \t\tcase -3:\n   747: \t\t\targ = \"Fire\";\tbreak;\n   748: \t\tcase -2:"
+    "context": "src/topten.c:743:10\n        738: \t\t\tdeathlev--;\n        739: \n        740: \t\tswitch (deathlev) {\n        741: \t\tcase -5:\n        742: \t\t\tfmt = \" on the %s Plane\";\nTARGET  743: \t\t\targ = \"Astral\";\tbreak;\n        744: \t\tcase -4:\n        745: \t\t\targ = \"Water\";\tbreak;\n        746: \t\tcase -3:\n        747: \t\t\targ = \"Fire\";\tbreak;\n        748: \t\tcase -2:"
   },
   {
     "key": "L00745_01",
     "original": "Water",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:745:10\n   740: \t\tswitch (deathlev) {\n   741: \t\tcase -5:\n   742: \t\t\tfmt = \" on the %s Plane\";\n   743: \t\t\targ = \"Astral\";\tbreak;\n   744: \t\tcase -4:\n&gt;  745: \t\t\targ = \"Water\";\tbreak;\n   746: \t\tcase -3:\n   747: \t\t\targ = \"Fire\";\tbreak;\n   748: \t\tcase -2:\n   749: \t\t\targ = \"Air\";\tbreak;\n   750: \t\tcase -1:"
+    "context": "src/topten.c:745:10\n        740: \t\tswitch (deathlev) {\n        741: \t\tcase -5:\n        742: \t\t\tfmt = \" on the %s Plane\";\n        743: \t\t\targ = \"Astral\";\tbreak;\n        744: \t\tcase -4:\nTARGET  745: \t\t\targ = \"Water\";\tbreak;\n        746: \t\tcase -3:\n        747: \t\t\targ = \"Fire\";\tbreak;\n        748: \t\tcase -2:\n        749: \t\t\targ = \"Air\";\tbreak;\n        750: \t\tcase -1:"
   },
   {
     "key": "L00747_01",
     "original": "Fire",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:747:10\n   742: \t\t\tfmt = \" on the %s Plane\";\n   743: \t\t\targ = \"Astral\";\tbreak;\n   744: \t\tcase -4:\n   745: \t\t\targ = \"Water\";\tbreak;\n   746: \t\tcase -3:\n&gt;  747: \t\t\targ = \"Fire\";\tbreak;\n   748: \t\tcase -2:\n   749: \t\t\targ = \"Air\";\tbreak;\n   750: \t\tcase -1:\n   751: \t\t\targ = \"Earth\";\tbreak;\n   752: \t\tdefault:"
+    "context": "src/topten.c:747:10\n        742: \t\t\tfmt = \" on the %s Plane\";\n        743: \t\t\targ = \"Astral\";\tbreak;\n        744: \t\tcase -4:\n        745: \t\t\targ = \"Water\";\tbreak;\n        746: \t\tcase -3:\nTARGET  747: \t\t\targ = \"Fire\";\tbreak;\n        748: \t\tcase -2:\n        749: \t\t\targ = \"Air\";\tbreak;\n        750: \t\tcase -1:\n        751: \t\t\targ = \"Earth\";\tbreak;\n        752: \t\tdefault:"
   },
   {
     "key": "L00749_01",
     "original": "Air",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:749:10\n   744: \t\tcase -4:\n   745: \t\t\targ = \"Water\";\tbreak;\n   746: \t\tcase -3:\n   747: \t\t\targ = \"Fire\";\tbreak;\n   748: \t\tcase -2:\n&gt;  749: \t\t\targ = \"Air\";\tbreak;\n   750: \t\tcase -1:\n   751: \t\t\targ = \"Earth\";\tbreak;\n   752: \t\tdefault:\n   753: \t\t\targ = \"Void\";\tbreak;\n   754: \t\t}"
+    "context": "src/topten.c:749:10\n        744: \t\tcase -4:\n        745: \t\t\targ = \"Water\";\tbreak;\n        746: \t\tcase -3:\n        747: \t\t\targ = \"Fire\";\tbreak;\n        748: \t\tcase -2:\nTARGET  749: \t\t\targ = \"Air\";\tbreak;\n        750: \t\tcase -1:\n        751: \t\t\targ = \"Earth\";\tbreak;\n        752: \t\tdefault:\n        753: \t\t\targ = \"Void\";\tbreak;\n        754: \t\t}"
   },
   {
     "key": "L00751_01",
     "original": "Earth",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:751:10\n   746: \t\tcase -3:\n   747: \t\t\targ = \"Fire\";\tbreak;\n   748: \t\tcase -2:\n   749: \t\t\targ = \"Air\";\tbreak;\n   750: \t\tcase -1:\n&gt;  751: \t\t\targ = \"Earth\";\tbreak;\n   752: \t\tdefault:\n   753: \t\t\targ = \"Void\";\tbreak;\n   754: \t\t}\n   755: \t\tSprintf(eos(linebuf), fmt, arg);\n   756: \t    } else {"
+    "context": "src/topten.c:751:10\n        746: \t\tcase -3:\n        747: \t\t\targ = \"Fire\";\tbreak;\n        748: \t\tcase -2:\n        749: \t\t\targ = \"Air\";\tbreak;\n        750: \t\tcase -1:\nTARGET  751: \t\t\targ = \"Earth\";\tbreak;\n        752: \t\tdefault:\n        753: \t\t\targ = \"Void\";\tbreak;\n        754: \t\t}\n        755: \t\tSprintf(eos(linebuf), fmt, arg);\n        756: \t    } else {"
   },
   {
     "key": "L00753_01",
     "original": "Void",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:753:10\n   748: \t\tcase -2:\n   749: \t\t\targ = \"Air\";\tbreak;\n   750: \t\tcase -1:\n   751: \t\t\targ = \"Earth\";\tbreak;\n   752: \t\tdefault:\n&gt;  753: \t\t\targ = \"Void\";\tbreak;\n   754: \t\t}\n   755: \t\tSprintf(eos(linebuf), fmt, arg);\n   756: \t    } else {\n   757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n   758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)"
+    "context": "src/topten.c:753:10\n        748: \t\tcase -2:\n        749: \t\t\targ = \"Air\";\tbreak;\n        750: \t\tcase -1:\n        751: \t\t\targ = \"Earth\";\tbreak;\n        752: \t\tdefault:\nTARGET  753: \t\t\targ = \"Void\";\tbreak;\n        754: \t\t}\n        755: \t\tSprintf(eos(linebuf), fmt, arg);\n        756: \t    } else {\n        757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n        758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)"
   },
   {
     "key": "L00757_01",
     "original": " in %s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:757:25\n   752: \t\tdefault:\n   753: \t\t\targ = \"Void\";\tbreak;\n   754: \t\t}\n   755: \t\tSprintf(eos(linebuf), fmt, arg);\n   756: \t    } else {\n&gt;  757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n   758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)\n   759: \t\t    Sprintf(eos(linebuf), \" on level %d\", t1-&gt;deathlev);\n   760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n   761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n   762: \t    }"
+    "context": "src/topten.c:757:25\n        752: \t\tdefault:\n        753: \t\t\targ = \"Void\";\tbreak;\n        754: \t\t}\n        755: \t\tSprintf(eos(linebuf), fmt, arg);\n        756: \t    } else {\nTARGET  757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n        758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)\n        759: \t\t    Sprintf(eos(linebuf), \" on level %d\", t1-&gt;deathlev);\n        760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n        761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n        762: \t    }"
   },
   {
     "key": "L00759_01",
     "original": " on level %d",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:759:29\n   754: \t\t}\n   755: \t\tSprintf(eos(linebuf), fmt, arg);\n   756: \t    } else {\n   757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n   758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)\n&gt;  759: \t\t    Sprintf(eos(linebuf), \" on level %d\", t1-&gt;deathlev);\n   760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n   761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n   762: \t    }\n   763: \n   764: \t    /* kludge for \"quit while already on Charon's boat\" */"
+    "context": "src/topten.c:759:29\n        754: \t\t}\n        755: \t\tSprintf(eos(linebuf), fmt, arg);\n        756: \t    } else {\n        757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n        758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)\nTARGET  759: \t\t    Sprintf(eos(linebuf), \" on level %d\", t1-&gt;deathlev);\n        760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n        761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n        762: \t    }\n        763: \n        764: \t    /* kludge for \"quit while already on Charon's boat\" */"
   },
   {
     "key": "L00761_01",
     "original": " [max %d]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:761:29\n   756: \t    } else {\n   757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n   758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)\n   759: \t\t    Sprintf(eos(linebuf), \" on level %d\", t1-&gt;deathlev);\n   760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n&gt;  761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n   762: \t    }\n   763: \n   764: \t    /* kludge for \"quit while already on Charon's boat\" */\n   765: \t    if (!strncmp(t1-&gt;death, \"quit \", 5))\n   766: \t\tStrcat(linebuf, t1-&gt;death + 4);"
+    "context": "src/topten.c:761:29\n        756: \t    } else {\n        757: \t\tSprintf(eos(linebuf), \" in %s\", dungeons[t1-&gt;deathdnum].dname);\n        758: \t\tif (t1-&gt;deathdnum != knox_level.dnum)\n        759: \t\t    Sprintf(eos(linebuf), \" on level %d\", t1-&gt;deathlev);\n        760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\nTARGET  761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n        762: \t    }\n        763: \n        764: \t    /* kludge for \"quit while already on Charon's boat\" */\n        765: \t    if (!strncmp(t1-&gt;death, \"quit \", 5))\n        766: \t\tStrcat(linebuf, t1-&gt;death + 4);"
   },
   {
     "key": "L00765_01",
     "original": "quit ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:765:30\n   760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n   761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n   762: \t    }\n   763: \n   764: \t    /* kludge for \"quit while already on Charon's boat\" */\n&gt;  765: \t    if (!strncmp(t1-&gt;death, \"quit \", 5))\n   766: \t\tStrcat(linebuf, t1-&gt;death + 4);\n   767: \t}\n   768: \tStrcat(linebuf, \".\");\n   769: \n   770: \t/* Quit, starved, ascended, and escaped contain no second line */"
+    "context": "src/topten.c:765:30\n        760: \t\tif (t1-&gt;deathlev != t1-&gt;maxlvl)\n        761: \t\t    Sprintf(eos(linebuf), \" [max %d]\", t1-&gt;maxlvl);\n        762: \t    }\n        763: \n        764: \t    /* kludge for \"quit while already on Charon's boat\" */\nTARGET  765: \t    if (!strncmp(t1-&gt;death, \"quit \", 5))\n        766: \t\tStrcat(linebuf, t1-&gt;death + 4);\n        767: \t}\n        768: \tStrcat(linebuf, \".\");\n        769: \n        770: \t/* Quit, starved, ascended, and escaped contain no second line */"
   },
   {
     "key": "L00772_01",
     "original": "  %c%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:772:28\n   767: \t}\n   768: \tStrcat(linebuf, \".\");\n   769: \n   770: \t/* Quit, starved, ascended, and escaped contain no second line */\n   771: \tif (second_line)\n&gt;  772: \t    Sprintf(eos(linebuf), \"  %c%s.\", highc(*(t1-&gt;death)), t1-&gt;death+1);\n   773: \n   774: \tlngr = (int)strlen(linebuf);\n   775: \tif (t1-&gt;hp &lt;= 0) hpbuf[0] = '-', hpbuf[1] = '\\0';\n   776: \telse Sprintf(hpbuf, \"%d\", t1-&gt;hp);\n   777: \t/* beginning of hp column after padding (not actually padded yet) */"
+    "context": "src/topten.c:772:28\n        767: \t}\n        768: \tStrcat(linebuf, \".\");\n        769: \n        770: \t/* Quit, starved, ascended, and escaped contain no second line */\n        771: \tif (second_line)\nTARGET  772: \t    Sprintf(eos(linebuf), \"  %c%s.\", highc(*(t1-&gt;death)), t1-&gt;death+1);\n        773: \n        774: \tlngr = (int)strlen(linebuf);\n        775: \tif (t1-&gt;hp &lt;= 0) hpbuf[0] = '-', hpbuf[1] = '\\0';\n        776: \telse Sprintf(hpbuf, \"%d\", t1-&gt;hp);\n        777: \t/* beginning of hp column after padding (not actually padded yet) */"
   },
   {
     "key": "L00776_01",
     "original": "%d",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:776:22\n   771: \tif (second_line)\n   772: \t    Sprintf(eos(linebuf), \"  %c%s.\", highc(*(t1-&gt;death)), t1-&gt;death+1);\n   773: \n   774: \tlngr = (int)strlen(linebuf);\n   775: \tif (t1-&gt;hp &lt;= 0) hpbuf[0] = '-', hpbuf[1] = '\\0';\n&gt;  776: \telse Sprintf(hpbuf, \"%d\", t1-&gt;hp);\n   777: \t/* beginning of hp column after padding (not actually padded yet) */\n   778: \thppos = COLNO - (sizeof(\"  Hp [max]\")-1); /* sizeof(str) includes \\0 */\n   779: \twhile (lngr &gt;= hppos) {\n   780: \t    for(bp = eos(linebuf);\n   781: \t\t    !(*bp == ' ' && (bp-linebuf &lt; hppos));"
+    "context": "src/topten.c:776:22\n        771: \tif (second_line)\n        772: \t    Sprintf(eos(linebuf), \"  %c%s.\", highc(*(t1-&gt;death)), t1-&gt;death+1);\n        773: \n        774: \tlngr = (int)strlen(linebuf);\n        775: \tif (t1-&gt;hp &lt;= 0) hpbuf[0] = '-', hpbuf[1] = '\\0';\nTARGET  776: \telse Sprintf(hpbuf, \"%d\", t1-&gt;hp);\n        777: \t/* beginning of hp column after padding (not actually padded yet) */\n        778: \thppos = COLNO - (sizeof(\"  Hp [max]\")-1); /* sizeof(str) includes \\0 */\n        779: \twhile (lngr &gt;= hppos) {\n        780: \t    for(bp = eos(linebuf);\n        781: \t\t    !(*bp == ' ' && (bp-linebuf &lt; hppos));"
   },
   {
     "key": "L00778_01",
     "original": "  Hp [max]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:778:26\n   773: \n   774: \tlngr = (int)strlen(linebuf);\n   775: \tif (t1-&gt;hp &lt;= 0) hpbuf[0] = '-', hpbuf[1] = '\\0';\n   776: \telse Sprintf(hpbuf, \"%d\", t1-&gt;hp);\n   777: \t/* beginning of hp column after padding (not actually padded yet) */\n&gt;  778: \thppos = COLNO - (sizeof(\"  Hp [max]\")-1); /* sizeof(str) includes \\0 */\n   779: \twhile (lngr &gt;= hppos) {\n   780: \t    for(bp = eos(linebuf);\n   781: \t\t    !(*bp == ' ' && (bp-linebuf &lt; hppos));\n   782: \t\t    bp--)\n   783: \t\t;"
+    "context": "src/topten.c:778:26\n        773: \n        774: \tlngr = (int)strlen(linebuf);\n        775: \tif (t1-&gt;hp &lt;= 0) hpbuf[0] = '-', hpbuf[1] = '\\0';\n        776: \telse Sprintf(hpbuf, \"%d\", t1-&gt;hp);\n        777: \t/* beginning of hp column after padding (not actually padded yet) */\nTARGET  778: \thppos = COLNO - (sizeof(\"  Hp [max]\")-1); /* sizeof(str) includes \\0 */\n        779: \twhile (lngr &gt;= hppos) {\n        780: \t    for(bp = eos(linebuf);\n        781: \t\t    !(*bp == ' ' && (bp-linebuf &lt; hppos));\n        782: \t\t    bp--)\n        783: \t\t;"
   },
   {
     "key": "L00786_01",
     "original": " [max",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:786:47\n   781: \t\t    !(*bp == ' ' && (bp-linebuf &lt; hppos));\n   782: \t\t    bp--)\n   783: \t\t;\n   784: \t    /* special case: if about to wrap in the middle of maximum\n   785: \t       dungeon depth reached, wrap in front of it instead */\n&gt;  786: \t    if (bp &gt; linebuf + 5 && !strncmp(bp - 5, \" [max\", 5)) bp -= 5;\n   787: \t    Strcpy(linebuf3, bp+1);\n   788: \t    *bp = 0;\n   789: \t    if (so) {\n   790: \t\twhile (bp &lt; linebuf + (COLNO-1)) *bp++ = ' ';\n   791: \t\t*bp = 0;"
+    "context": "src/topten.c:786:47\n        781: \t\t    !(*bp == ' ' && (bp-linebuf &lt; hppos));\n        782: \t\t    bp--)\n        783: \t\t;\n        784: \t    /* special case: if about to wrap in the middle of maximum\n        785: \t       dungeon depth reached, wrap in front of it instead */\nTARGET  786: \t    if (bp &gt; linebuf + 5 && !strncmp(bp - 5, \" [max\", 5)) bp -= 5;\n        787: \t    Strcpy(linebuf3, bp+1);\n        788: \t    *bp = 0;\n        789: \t    if (so) {\n        790: \t\twhile (bp &lt; linebuf + (COLNO-1)) *bp++ = ' ';\n        791: \t\t*bp = 0;"
   },
   {
     "key": "L00795_01",
     "original": "%15s %s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:795:23\n   790: \t\twhile (bp &lt; linebuf + (COLNO-1)) *bp++ = ' ';\n   791: \t\t*bp = 0;\n   792: \t\ttopten_print_bold(linebuf);\n   793: \t    } else\n   794: \t\ttopten_print(linebuf);\n&gt;  795: \t    Sprintf(linebuf, \"%15s %s\", \"\", linebuf3);\n   796: \t    lngr = strlen(linebuf);\n   797: \t}\n   798: \t/* beginning of hp column not including padding */\n   799: \thppos = COLNO - 7 - (int)strlen(hpbuf);\n   800: \tbp = eos(linebuf);"
+    "context": "src/topten.c:795:23\n        790: \t\twhile (bp &lt; linebuf + (COLNO-1)) *bp++ = ' ';\n        791: \t\t*bp = 0;\n        792: \t\ttopten_print_bold(linebuf);\n        793: \t    } else\n        794: \t\ttopten_print(linebuf);\nTARGET  795: \t    Sprintf(linebuf, \"%15s %s\", \"\", linebuf3);\n        796: \t    lngr = strlen(linebuf);\n        797: \t}\n        798: \t/* beginning of hp column not including padding */\n        799: \thppos = COLNO - 7 - (int)strlen(hpbuf);\n        800: \tbp = eos(linebuf);"
   },
   {
     "key": "L00806_01",
     "original": " %s[%d]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:806:23\n   801: \n   802: \tif (bp &lt;= linebuf + hppos) {\n   803: \t    /* pad any necessary blanks to the hit point entry */\n   804: \t    while (bp &lt; linebuf + hppos) *bp++ = ' ';\n   805: \t    Strcpy(bp, hpbuf);\n&gt;  806: \t    Sprintf(eos(bp), \" %s[%d]\",\n   807: \t\t    (t1-&gt;maxhp &lt; 10) ? \"  \" : (t1-&gt;maxhp &lt; 100) ? \" \" : \"\",\n   808: \t\t    t1-&gt;maxhp);\n   809: \t}\n   810: \n   811: \tif (so) {"
+    "context": "src/topten.c:806:23\n        801: \n        802: \tif (bp &lt;= linebuf + hppos) {\n        803: \t    /* pad any necessary blanks to the hit point entry */\n        804: \t    while (bp &lt; linebuf + hppos) *bp++ = ' ';\n        805: \t    Strcpy(bp, hpbuf);\nTARGET  806: \t    Sprintf(eos(bp), \" %s[%d]\",\n        807: \t\t    (t1-&gt;maxhp &lt; 10) ? \"  \" : (t1-&gt;maxhp &lt; 100) ? \" \" : \"\",\n        808: \t\t    t1-&gt;maxhp);\n        809: \t}\n        810: \n        811: \tif (so) {"
   },
   {
     "key": "L00843_01",
     "original": "prga",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:843:37\n   838: \tif (!playerct && t1-&gt;uid == uid)\n   839: \t\treturn 1;\n   840: #endif\n   841: \n   842: \tfor (i = 0; i &lt; playerct; i++) {\n&gt;  843: \t\tif (players[i][0] == '-' && index(\"prga\", players[i][1]) &&\n   844:                 players[i][2] == 0 && i + 1 &lt; playerct) {\n   845: \t\tchar *arg = (char *)players[i + 1];\n   846: \t\tif ((players[i][1] == 'p' &&\n   847: \t\t     str2role(arg) == str2role(t1-&gt;plrole)) ||\n   848: \t\t    (players[i][1] == 'r' &&"
+    "context": "src/topten.c:843:37\n        838: \tif (!playerct && t1-&gt;uid == uid)\n        839: \t\treturn 1;\n        840: #endif\n        841: \n        842: \tfor (i = 0; i &lt; playerct; i++) {\nTARGET  843: \t\tif (players[i][0] == '-' && index(\"prga\", players[i][1]) &&\n        844:                 players[i][2] == 0 && i + 1 &lt; playerct) {\n        845: \t\tchar *arg = (char *)players[i + 1];\n        846: \t\tif ((players[i][1] == 'p' &&\n        847: \t\t     str2role(arg) == str2role(t1-&gt;plrole)) ||\n        848: \t\t    (players[i][1] == 'r' &&"
   },
   {
     "key": "L00857_01",
     "original": "all",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:857:31\n   852: \t\t    (players[i][1] == 'a' &&\n   853: \t\t     str2align(arg) == str2align(t1-&gt;plalign)))\n   854: \t\t    return 1;\n   855: \t\ti++;\n   856: \t\t}\n&gt;  857: \t\telse if (strcmp(players[i], \"all\") == 0 ||\n   858: \t\t    strncmp(t1-&gt;name, players[i], NAMSZ) == 0 ||\n   859: \t\t    (players[i][0] == '-' &&\n   860: \t\t     players[i][1] == t1-&gt;plrole[0] &&\n   861: \t\t     players[i][2] == 0) ||\n   862: \t\t    (digit(players[i][0]) && rank &lt;= atoi(players[i])))"
+    "context": "src/topten.c:857:31\n        852: \t\t    (players[i][1] == 'a' &&\n        853: \t\t     str2align(arg) == str2align(t1-&gt;plalign)))\n        854: \t\t    return 1;\n        855: \t\ti++;\n        856: \t\t}\nTARGET  857: \t\telse if (strcmp(players[i], \"all\") == 0 ||\n        858: \t\t    strncmp(t1-&gt;name, players[i], NAMSZ) == 0 ||\n        859: \t\t    (players[i][0] == '-' &&\n        860: \t\t     players[i][1] == t1-&gt;plrole[0] &&\n        861: \t\t     players[i][2] == 0) ||\n        862: \t\t    (digit(players[i][0]) && rank &lt;= atoi(players[i])))"
   },
   {
     "key": "L00891_01",
     "original": "-s",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:891:35\n   886: \tint uid = -1;\n   887: #ifndef PERS_IS_UID\n   888: \tconst char *player0;\n   889: #endif\n   890: \n&gt;  891: \tif (argc &lt; 2 || strncmp(argv[1], \"-s\", 2)) {\n   892: \t\traw_printf(\"prscore: bad arguments (%d)\", argc);\n   893: \t\treturn;\n   894: \t}\n   895: \n   896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);"
+    "context": "src/topten.c:891:35\n        886: \tint uid = -1;\n        887: #ifndef PERS_IS_UID\n        888: \tconst char *player0;\n        889: #endif\n        890: \nTARGET  891: \tif (argc &lt; 2 || strncmp(argv[1], \"-s\", 2)) {\n        892: \t\traw_printf(\"prscore: bad arguments (%d)\", argc);\n        893: \t\treturn;\n        894: \t}\n        895: \n        896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);"
   },
   {
     "key": "L00892_01",
     "original": "prscore: bad arguments (%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:892:14\n   887: #ifndef PERS_IS_UID\n   888: \tconst char *player0;\n   889: #endif\n   890: \n   891: \tif (argc &lt; 2 || strncmp(argv[1], \"-s\", 2)) {\n&gt;  892: \t\traw_printf(\"prscore: bad arguments (%d)\", argc);\n   893: \t\treturn;\n   894: \t}\n   895: \n   896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n   897: \tif (!rfile) {"
+    "context": "src/topten.c:892:14\n        887: #ifndef PERS_IS_UID\n        888: \tconst char *player0;\n        889: #endif\n        890: \n        891: \tif (argc &lt; 2 || strncmp(argv[1], \"-s\", 2)) {\nTARGET  892: \t\traw_printf(\"prscore: bad arguments (%d)\", argc);\n        893: \t\treturn;\n        894: \t}\n        895: \n        896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n        897: \tif (!rfile) {"
   },
   {
     "key": "L00896_01",
     "original": "r",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:896:57\n   891: \tif (argc &lt; 2 || strncmp(argv[1], \"-s\", 2)) {\n   892: \t\traw_printf(\"prscore: bad arguments (%d)\", argc);\n   893: \t\treturn;\n   894: \t}\n   895: \n&gt;  896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n   897: \tif (!rfile) {\n   898: \t\traw_print(\"Cannot open record file!\");\n   899: \t\treturn;\n   900: \t}\n   901: "
+    "context": "src/topten.c:896:57\n        891: \tif (argc &lt; 2 || strncmp(argv[1], \"-s\", 2)) {\n        892: \t\traw_printf(\"prscore: bad arguments (%d)\", argc);\n        893: \t\treturn;\n        894: \t}\n        895: \nTARGET  896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n        897: \tif (!rfile) {\n        898: \t\traw_print(\"Cannot open record file!\");\n        899: \t\treturn;\n        900: \t}\n        901: "
   },
   {
     "key": "L00898_01",
     "original": "Cannot open record file!",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:898:13\n   893: \t\treturn;\n   894: \t}\n   895: \n   896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n   897: \tif (!rfile) {\n&gt;  898: \t\traw_print(\"Cannot open record file!\");\n   899: \t\treturn;\n   900: \t}\n   901: \n   902: #ifdef\tAMIGA\n   903: \t{"
+    "context": "src/topten.c:898:13\n        893: \t\treturn;\n        894: \t}\n        895: \n        896: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n        897: \tif (!rfile) {\nTARGET  898: \t\traw_print(\"Cannot open record file!\");\n        899: \t\treturn;\n        900: \t}\n        901: \n        902: #ifdef\tAMIGA\n        903: \t{"
   },
   {
     "key": "L00923_01",
     "original": "-v",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:923:35\n   918: \tif (!argv[1][2]){\t/* plain \"-s\" */\n   919: \t\targc--;\n   920: \t\targv++;\n   921: \t} else\targv[1] += 2;\n   922: \n&gt;  923: \tif (argc &gt; 1 && !strcmp(argv[1], \"-v\")) {\n   924: \t\tcurrent_ver = FALSE;\n   925: \t\targc--;\n   926: \t\targv++;\n   927: \t}\n   928: "
+    "context": "src/topten.c:923:35\n        918: \tif (!argv[1][2]){\t/* plain \"-s\" */\n        919: \t\targc--;\n        920: \t\targv++;\n        921: \t} else\targv[1] += 2;\n        922: \nTARGET  923: \tif (argc &gt; 1 && !strcmp(argv[1], \"-v\")) {\n        924: \t\tcurrent_ver = FALSE;\n        925: \t\targc--;\n        926: \t\targv++;\n        927: \t}\n        928: "
   },
   {
     "key": "L00938_01",
     "original": "all",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:938:14\n   933: \t\tplayers = (const char **)0;\n   934: #else\n   935: \t\tplayer0 = plname;\n   936: \t\tif (!*player0)\n   937: # ifdef AMIGA\n&gt;  938: \t\t\tplayer0 = \"all\";\t/* single user system */\n   939: # else\n   940: \t\t\tplayer0 = \"hackplayer\";\n   941: # endif\n   942: \t\tplayerct = 1;\n   943: \t\tplayers = &player0;"
+    "context": "src/topten.c:938:14\n        933: \t\tplayers = (const char **)0;\n        934: #else\n        935: \t\tplayer0 = plname;\n        936: \t\tif (!*player0)\n        937: # ifdef AMIGA\nTARGET  938: \t\t\tplayer0 = \"all\";\t/* single user system */\n        939: # else\n        940: \t\t\tplayer0 = \"hackplayer\";\n        941: # endif\n        942: \t\tplayerct = 1;\n        943: \t\tplayers = &player0;"
   },
   {
     "key": "L00940_01",
     "original": "hackplayer",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:940:14\n   935: \t\tplayer0 = plname;\n   936: \t\tif (!*player0)\n   937: # ifdef AMIGA\n   938: \t\t\tplayer0 = \"all\";\t/* single user system */\n   939: # else\n&gt;  940: \t\t\tplayer0 = \"hackplayer\";\n   941: # endif\n   942: \t\tplayerct = 1;\n   943: \t\tplayers = &player0;\n   944: #endif\n   945: \t} else {"
+    "context": "src/topten.c:940:14\n        935: \t\tplayer0 = plname;\n        936: \t\tif (!*player0)\n        937: # ifdef AMIGA\n        938: \t\t\tplayer0 = \"all\";\t/* single user system */\n        939: # else\nTARGET  940: \t\t\tplayer0 = \"hackplayer\";\n        941: # endif\n        942: \t\tplayerct = 1;\n        943: \t\tplayers = &player0;\n        944: #endif\n        945: \t} else {"
   },
   {
     "key": "L00976_01",
     "original": "Cannot find any %sentries for ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:976:20\n   971: \t    for (rank = 1; t1-&gt;points != 0; rank++, t1 = t1-&gt;tt_next) {\n   972: \t\tif (score_wanted(current_ver, rank, t1, playerct, players, uid))\n   973: \t\t    (void) outentry(rank, t1, 0);\n   974: \t    }\n   975: \t} else {\n&gt;  976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n   977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n   978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n   979: \t    else {\n   980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n   981: \t\tfor (i = 0; i &lt; playerct; i++) {"
+    "context": "src/topten.c:976:20\n        971: \t    for (rank = 1; t1-&gt;points != 0; rank++, t1 = t1-&gt;tt_next) {\n        972: \t\tif (score_wanted(current_ver, rank, t1, playerct, players, uid))\n        973: \t\t    (void) outentry(rank, t1, 0);\n        974: \t    }\n        975: \t} else {\nTARGET  976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n        977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n        978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n        979: \t    else {\n        980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n        981: \t\tfor (i = 0; i &lt; playerct; i++) {"
   },
   {
     "key": "L00977_01",
     "original": "current ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:977:19\n   972: \t\tif (score_wanted(current_ver, rank, t1, playerct, players, uid))\n   973: \t\t    (void) outentry(rank, t1, 0);\n   974: \t    }\n   975: \t} else {\n   976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n&gt;  977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n   978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n   979: \t    else {\n   980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n   981: \t\tfor (i = 0; i &lt; playerct; i++) {\n   982: \t\t    /* stop printing players if there are too many to fit */"
+    "context": "src/topten.c:977:19\n        972: \t\tif (score_wanted(current_ver, rank, t1, playerct, players, uid))\n        973: \t\t    (void) outentry(rank, t1, 0);\n        974: \t    }\n        975: \t} else {\n        976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\nTARGET  977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n        978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n        979: \t    else {\n        980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n        981: \t\tfor (i = 0; i &lt; playerct; i++) {\n        982: \t\t    /* stop printing players if there are too many to fit */"
   },
   {
     "key": "L00978_01",
     "original": "you.",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:978:37\n   973: \t\t    (void) outentry(rank, t1, 0);\n   974: \t    }\n   975: \t} else {\n   976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n   977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n&gt;  978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n   979: \t    else {\n   980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n   981: \t\tfor (i = 0; i &lt; playerct; i++) {\n   982: \t\t    /* stop printing players if there are too many to fit */\n   983: \t\t    if (strlen(pbuf) + strlen(players[i]) + 2 &gt;= BUFSZ) {"
+    "context": "src/topten.c:978:37\n        973: \t\t    (void) outentry(rank, t1, 0);\n        974: \t    }\n        975: \t} else {\n        976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n        977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\nTARGET  978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n        979: \t    else {\n        980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n        981: \t\tfor (i = 0; i &lt; playerct; i++) {\n        982: \t\t    /* stop printing players if there are too many to fit */\n        983: \t\t    if (strlen(pbuf) + strlen(players[i]) + 2 &gt;= BUFSZ) {"
   },
   {
     "key": "L00980_01",
     "original": "any of ",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:980:34\n   975: \t} else {\n   976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n   977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n   978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n   979: \t    else {\n&gt;  980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n   981: \t\tfor (i = 0; i &lt; playerct; i++) {\n   982: \t\t    /* stop printing players if there are too many to fit */\n   983: \t\t    if (strlen(pbuf) + strlen(players[i]) + 2 &gt;= BUFSZ) {\n   984: \t\t\tif (strlen(pbuf) &lt; BUFSZ-4) Strcat(pbuf, \"...\");\n   985: \t\t\telse Strcpy(pbuf+strlen(pbuf)-4, \"...\");"
+    "context": "src/topten.c:980:34\n        975: \t} else {\n        976: \t    Sprintf(pbuf, \"Cannot find any %sentries for \",\n        977: \t\t\t\tcurrent_ver ? \"current \" : \"\");\n        978: \t    if (playerct &lt; 1) Strcat(pbuf, \"you.\");\n        979: \t    else {\nTARGET  980: \t\tif (playerct &gt; 1) Strcat(pbuf, \"any of \");\n        981: \t\tfor (i = 0; i &lt; playerct; i++) {\n        982: \t\t    /* stop printing players if there are too many to fit */\n        983: \t\t    if (strlen(pbuf) + strlen(players[i]) + 2 &gt;= BUFSZ) {\n        984: \t\t\tif (strlen(pbuf) &lt; BUFSZ-4) Strcat(pbuf, \"...\");\n        985: \t\t\telse Strcpy(pbuf+strlen(pbuf)-4, \"...\");"
   },
   {
     "key": "L00991_01",
     "original": "prga",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:991:14\n   986: \t\t\tbreak;\n   987: \t\t    }\n   988: \t\t    Strcat(pbuf, players[i]);\n   989: \t\t    if (i &lt; playerct-1) {\n   990: \t\t\tif (players[i][0] == '-' &&\n&gt;  991: \t\t\t    index(\"prga\", players[i][1]) && players[i][2] == 0)\n   992: \t\t\t    Strcat(pbuf, \" \");\n   993: \t\t\telse Strcat(pbuf, \":\");\n   994: \t\t    }\n   995: \t\t}\n   996: \t    }"
+    "context": "src/topten.c:991:14\n        986: \t\t\tbreak;\n        987: \t\t    }\n        988: \t\t    Strcat(pbuf, players[i]);\n        989: \t\t    if (i &lt; playerct-1) {\n        990: \t\t\tif (players[i][0] == '-' &&\nTARGET  991: \t\t\t    index(\"prga\", players[i][1]) && players[i][2] == 0)\n        992: \t\t\t    Strcat(pbuf, \" \");\n        993: \t\t\telse Strcat(pbuf, \":\");\n        994: \t\t    }\n        995: \t\t}\n        996: \t    }"
   },
   {
     "key": "L00998_01",
     "original": "Usage: %s -s [-v] <playertypes> [maxrank] [playernames]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:998:17\n   993: \t\t\telse Strcat(pbuf, \":\");\n   994: \t\t    }\n   995: \t\t}\n   996: \t    }\n   997: \t    raw_print(pbuf);\n&gt;  998: \t    raw_printf(\"Usage: %s -s [-v] &lt;playertypes&gt; [maxrank] [playernames]\",\n   999: \n  1000: \t\t\t hname);\n  1001: \t    raw_printf(\"Player types are: [-p role] [-r race] [-g gender] [-a align]\");\n  1002: \t}\n  1003: \tfree_ttlist(tt_head);"
+    "context": "src/topten.c:998:17\n        993: \t\t\telse Strcat(pbuf, \":\");\n        994: \t\t    }\n        995: \t\t}\n        996: \t    }\n        997: \t    raw_print(pbuf);\nTARGET  998: \t    raw_printf(\"Usage: %s -s [-v] &lt;playertypes&gt; [maxrank] [playernames]\",\n        999: \n       1000: \t\t\t hname);\n       1001: \t    raw_printf(\"Player types are: [-p role] [-r race] [-g gender] [-a align]\");\n       1002: \t}\n       1003: \tfree_ttlist(tt_head);"
   },
   {
     "key": "L01001_01",
     "original": "Player types are: [-p role] [-r race] [-g gender] [-a align]",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:1001:17\n   996: \t    }\n   997: \t    raw_print(pbuf);\n   998: \t    raw_printf(\"Usage: %s -s [-v] &lt;playertypes&gt; [maxrank] [playernames]\",\n   999: \n  1000: \t\t\t hname);\n&gt; 1001: \t    raw_printf(\"Player types are: [-p role] [-r race] [-g gender] [-a align]\");\n  1002: \t}\n  1003: \tfree_ttlist(tt_head);\n  1004: #ifdef\tAMIGA\n  1005: \t{\n  1006: \t    extern winid amii_rawprwin;"
+    "context": "src/topten.c:1001:17\n        996: \t    }\n        997: \t    raw_print(pbuf);\n        998: \t    raw_printf(\"Usage: %s -s [-v] &lt;playertypes&gt; [maxrank] [playernames]\",\n        999: \n       1000: \t\t\t hname);\nTARGET 1001: \t    raw_printf(\"Player types are: [-p role] [-r race] [-g gender] [-a align]\");\n       1002: \t}\n       1003: \tfree_ttlist(tt_head);\n       1004: #ifdef\tAMIGA\n       1005: \t{\n       1006: \t    extern winid amii_rawprwin;"
   },
   {
     "key": "L01032_01",
     "original": "E",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:1032:20\n  1027: \t\t    return roles[i].malenum;\n  1028: \t\telse\n  1029: \t\t    return PM_HUMAN;\n  1030: \t    }\n  1031: \t/* this might be from a 3.2.x score for former Elf class */\n&gt; 1032: \tif (!strcmp(plch, \"E\")) return PM_RANGER;\n  1033: \n  1034: \timpossible(\"What weird role is this? (%s)\", plch);\n  1035: \treturn (PM_HUMAN_MUMMY);\n  1036: }\n  1037: "
+    "context": "src/topten.c:1032:20\n       1027: \t\t    return roles[i].malenum;\n       1028: \t\telse\n       1029: \t\t    return PM_HUMAN;\n       1030: \t    }\n       1031: \t/* this might be from a 3.2.x score for former Elf class */\nTARGET 1032: \tif (!strcmp(plch, \"E\")) return PM_RANGER;\n       1033: \n       1034: \timpossible(\"What weird role is this? (%s)\", plch);\n       1035: \treturn (PM_HUMAN_MUMMY);\n       1036: }\n       1037: "
   },
   {
     "key": "L01034_01",
     "original": "What weird role is this? (%s)",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:1034:13\n  1029: \t\t    return PM_HUMAN;\n  1030: \t    }\n  1031: \t/* this might be from a 3.2.x score for former Elf class */\n  1032: \tif (!strcmp(plch, \"E\")) return PM_RANGER;\n  1033: \n&gt; 1034: \timpossible(\"What weird role is this? (%s)\", plch);\n  1035: \treturn (PM_HUMAN_MUMMY);\n  1036: }\n  1037: \n  1038: /*\n  1039:  * Get a random player name and class from the high score list,"
+    "context": "src/topten.c:1034:13\n       1029: \t\t    return PM_HUMAN;\n       1030: \t    }\n       1031: \t/* this might be from a 3.2.x score for former Elf class */\n       1032: \tif (!strcmp(plch, \"E\")) return PM_RANGER;\n       1033: \nTARGET 1034: \timpossible(\"What weird role is this? (%s)\", plch);\n       1035: \treturn (PM_HUMAN_MUMMY);\n       1036: }\n       1037: \n       1038: /*\n       1039:  * Get a random player name and class from the high score list,"
   },
   {
     "key": "L01054_01",
     "original": "r",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:1054:57\n  1049: \tFILE *rfile;\n  1050: \tstruct toptenentry tt_buf;\n  1051: \n  1052: \tif (!otmp) return((struct obj *) 0);\n  1053: \n&gt; 1054: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n  1055: \tif (!rfile) {\n  1056: \t\timpossible(\"Cannot open record file!\");\n  1057: \t\treturn (struct obj *)0;\n  1058: \t}\n  1059: "
+    "context": "src/topten.c:1054:57\n       1049: \tFILE *rfile;\n       1050: \tstruct toptenentry tt_buf;\n       1051: \n       1052: \tif (!otmp) return((struct obj *) 0);\n       1053: \nTARGET 1054: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n       1055: \tif (!rfile) {\n       1056: \t\timpossible(\"Cannot open record file!\");\n       1057: \t\treturn (struct obj *)0;\n       1058: \t}\n       1059: "
   },
   {
     "key": "L01056_01",
     "original": "Cannot open record file!",
     "translation": "",
     "stage": 0,
-    "context": "src/topten.c:1056:14\n  1051: \n  1052: \tif (!otmp) return((struct obj *) 0);\n  1053: \n  1054: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n  1055: \tif (!rfile) {\n&gt; 1056: \t\timpossible(\"Cannot open record file!\");\n  1057: \t\treturn (struct obj *)0;\n  1058: \t}\n  1059: \n  1060: \ttt = &tt_buf;\n  1061: \trank = rnd(10);"
+    "context": "src/topten.c:1056:14\n       1051: \n       1052: \tif (!otmp) return((struct obj *) 0);\n       1053: \n       1054: \trfile = fopen_datafile_area(NH_RECORD_AREA, NH_RECORD, \"r\", SCOREPREFIX);\n       1055: \tif (!rfile) {\nTARGET 1056: \t\timpossible(\"Cannot open record file!\");\n       1057: \t\treturn (struct obj *)0;\n       1058: \t}\n       1059: \n       1060: \ttt = &tt_buf;\n       1061: \trank = rnd(10);"
   }
 ]

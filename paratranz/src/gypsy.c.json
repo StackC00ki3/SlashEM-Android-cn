@@ -4,20 +4,20 @@
     "original": "%ld",
     "translation": "",
     "stage": 0,
-    "context": "src/gypsy.c:109:21\n   104: \t\t\t\t\t\t\t\t\t\t\t\t\tu.ugold);\n   105: #else\n   106: \t\t\t\t\t\t\t\t\t\t\t\t\tumoney);\t\t\t\t\t\t\t\t\t\t\t\t\t\n   107: #endif\n   108: \tgetlin(prompt, buf);\n&gt;  109: \t(void) sscanf(buf, \"%ld\", &bet);\n   110: \n   111: \t/* Validate the amount */\n   112: \tif (bet == 0L) {\n   113: \t\tpline(\"算了。\");\n   114: \t\treturn (0L);"
+    "context": "src/gypsy.c:109:21\n        104: \t\t\t\t\t\t\t\t\t\t\t\t\tu.ugold);\n        105: #else\n        106: \t\t\t\t\t\t\t\t\t\t\t\t\tumoney);\t\t\t\t\t\t\t\t\t\t\t\t\t\n        107: #endif\n        108: \tgetlin(prompt, buf);\nTARGET  109: \t(void) sscanf(buf, \"%ld\", &bet);\n        110: \n        111: \t/* Validate the amount */\n        112: \tif (bet == 0L) {\n        113: \t\tpline(\"算了。\");\n        114: \t\treturn (0L);"
   },
   {
     "key": "L00144_01",
     "original": "A",
     "translation": "",
     "stage": 0,
-    "context": "src/gypsy.c:144:3\n   139: /* swords    batons      cups        coins                  (translated) */\n   140: /* spades    clubs       hearts      diamonds               French */\n   141: \n   142: \n   143: static const char *ranks[CARD_RANKS] =\n&gt;  144: { \"A\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\",\n   145:    /*none*/       \"骑士\",       \"皇后\", \"国王\" }; /* French */\n   146: /* page/princess  knight/prince  queen    king        Tarot */\n   147: \n   148: \n   149: static const char *trumps[CARD_TRUMPS] ="
+    "context": "src/gypsy.c:144:3\n        139: /* swords    batons      cups        coins                  (translated) */\n        140: /* spades    clubs       hearts      diamonds               French */\n        141: \n        142: \n        143: static const char *ranks[CARD_RANKS] =\nTARGET  144: { \"A\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\",\n        145:    /*none*/       \"骑士\",       \"皇后\", \"国王\" }; /* French */\n        146: /* page/princess  knight/prince  queen    king        Tarot */\n        147: \n        148: \n        149: static const char *trumps[CARD_TRUMPS] ="
   },
   {
     "key": "L00302_01",
     "original": "%ld",
     "translation": "",
     "stage": 0,
-    "context": "src/gypsy.c:302:22\n   297: #ifdef WIZARD\n   298: \tif (wizard) {\n   299: \t\tlong t = -1;\n   300: \n   301: \t\tgetlin(\"你想直接抽哪张塔罗牌？\", buf);\n&gt;  302: \t\t(void) sscanf(buf, \"%ld\", &t);\n   303: \t\tif (t &gt;= 0) card = t + CARD_SUITED;\n   304: \t}\n   305: #endif\n   306: \tcard_name(card, buf);\n   307: \tverbalize(\"你抽出了一张%s。\", buf);"
+    "context": "src/gypsy.c:302:22\n        297: #ifdef WIZARD\n        298: \tif (wizard) {\n        299: \t\tlong t = -1;\n        300: \n        301: \t\tgetlin(\"你想直接抽哪张塔罗牌？\", buf);\nTARGET  302: \t\t(void) sscanf(buf, \"%ld\", &t);\n        303: \t\tif (t &gt;= 0) card = t + CARD_SUITED;\n        304: \t}\n        305: #endif\n        306: \tcard_name(card, buf);\n        307: \tverbalize(\"你抽出了一张%s。\", buf);"
   }
 ]

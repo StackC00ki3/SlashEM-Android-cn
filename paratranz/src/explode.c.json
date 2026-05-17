@@ -4,342 +4,342 @@
     "original": "magical blast",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:262:17\n   257: \t    str = killer;\n   258: \t    killer = 0;\t\t/* set again later as needed */\n   259: \t    adtyp = AD_PHYS;\n   260: \t} else\n   261: \tswitch (abs(type) % 10) {\n&gt;  262: \t\tcase 0: str = \"magical blast\";\n   263: \t\t\tadtyp = AD_MAGM;\n   264: \t\t\tbreak;\n   265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n   266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n   267: \t\t\t\t\t\t\t\"fireball\";"
+    "context": "src/explode.c:262:17\n        257: \t    str = killer;\n        258: \t    killer = 0;\t\t/* set again later as needed */\n        259: \t    adtyp = AD_PHYS;\n        260: \t} else\n        261: \tswitch (abs(type) % 10) {\nTARGET  262: \t\tcase 0: str = \"magical blast\";\n        263: \t\t\tadtyp = AD_MAGM;\n        264: \t\t\tbreak;\n        265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n        266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n        267: \t\t\t\t\t\t\t\"fireball\";"
   },
   {
     "key": "L00265_01",
     "original": "burning oil",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:265:41\n   260: \t} else\n   261: \tswitch (abs(type) % 10) {\n   262: \t\tcase 0: str = \"magical blast\";\n   263: \t\t\tadtyp = AD_MAGM;\n   264: \t\t\tbreak;\n&gt;  265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n   266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n   267: \t\t\t\t\t\t\t\"fireball\";\n   268: \t\t\tadtyp = AD_FIRE;\n   269: \t\t\tbreak;\n   270: \t\tcase 2: str = \"ball of cold\";"
+    "context": "src/explode.c:265:41\n        260: \t} else\n        261: \tswitch (abs(type) % 10) {\n        262: \t\tcase 0: str = \"magical blast\";\n        263: \t\t\tadtyp = AD_MAGM;\n        264: \t\t\tbreak;\nTARGET  265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n        266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n        267: \t\t\t\t\t\t\t\"fireball\";\n        268: \t\t\tadtyp = AD_FIRE;\n        269: \t\t\tbreak;\n        270: \t\tcase 2: str = \"ball of cold\";"
   },
   {
     "key": "L00266_01",
     "original": "tower of flame",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:266:28\n   261: \tswitch (abs(type) % 10) {\n   262: \t\tcase 0: str = \"magical blast\";\n   263: \t\t\tadtyp = AD_MAGM;\n   264: \t\t\tbreak;\n   265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n&gt;  266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n   267: \t\t\t\t\t\t\t\"fireball\";\n   268: \t\t\tadtyp = AD_FIRE;\n   269: \t\t\tbreak;\n   270: \t\tcase 2: str = \"ball of cold\";\n   271: \t\t\tadtyp = AD_COLD;"
+    "context": "src/explode.c:266:28\n        261: \tswitch (abs(type) % 10) {\n        262: \t\tcase 0: str = \"magical blast\";\n        263: \t\t\tadtyp = AD_MAGM;\n        264: \t\t\tbreak;\n        265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\nTARGET  266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n        267: \t\t\t\t\t\t\t\"fireball\";\n        268: \t\t\tadtyp = AD_FIRE;\n        269: \t\t\tbreak;\n        270: \t\tcase 2: str = \"ball of cold\";\n        271: \t\t\tadtyp = AD_COLD;"
   },
   {
     "key": "L00267_01",
     "original": "fireball",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:267:8\n   262: \t\tcase 0: str = \"magical blast\";\n   263: \t\t\tadtyp = AD_MAGM;\n   264: \t\t\tbreak;\n   265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n   266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n&gt;  267: \t\t\t\t\t\t\t\"fireball\";\n   268: \t\t\tadtyp = AD_FIRE;\n   269: \t\t\tbreak;\n   270: \t\tcase 2: str = \"ball of cold\";\n   271: \t\t\tadtyp = AD_COLD;\n   272: \t\t\tbreak;"
+    "context": "src/explode.c:267:8\n        262: \t\tcase 0: str = \"magical blast\";\n        263: \t\t\tadtyp = AD_MAGM;\n        264: \t\t\tbreak;\n        265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n        266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\nTARGET  267: \t\t\t\t\t\t\t\"fireball\";\n        268: \t\t\tadtyp = AD_FIRE;\n        269: \t\t\tbreak;\n        270: \t\tcase 2: str = \"ball of cold\";\n        271: \t\t\tadtyp = AD_COLD;\n        272: \t\t\tbreak;"
   },
   {
     "key": "L00270_01",
     "original": "ball of cold",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:270:17\n   265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n   266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n   267: \t\t\t\t\t\t\t\"fireball\";\n   268: \t\t\tadtyp = AD_FIRE;\n   269: \t\t\tbreak;\n&gt;  270: \t\tcase 2: str = \"ball of cold\";\n   271: \t\t\tadtyp = AD_COLD;\n   272: \t\t\tbreak;\n   273: /* Assume that wands are death, others are disintegration */\n   274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n   275: \t\t\t\t\t\t\t\"disintegration field\";"
+    "context": "src/explode.c:270:17\n        265: \t\tcase 1: str =   olet == BURNING_OIL ?\t\"burning oil\" :\n        266: \t\t\t\tolet == SCROLL_CLASS ?\t\"tower of flame\" :\n        267: \t\t\t\t\t\t\t\"fireball\";\n        268: \t\t\tadtyp = AD_FIRE;\n        269: \t\t\tbreak;\nTARGET  270: \t\tcase 2: str = \"ball of cold\";\n        271: \t\t\tadtyp = AD_COLD;\n        272: \t\t\tbreak;\n        273: /* Assume that wands are death, others are disintegration */\n        274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n        275: \t\t\t\t\t\t\t\"disintegration field\";"
   },
   {
     "key": "L00274_01",
     "original": "death field",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:274:41\n   269: \t\t\tbreak;\n   270: \t\tcase 2: str = \"ball of cold\";\n   271: \t\t\tadtyp = AD_COLD;\n   272: \t\t\tbreak;\n   273: /* Assume that wands are death, others are disintegration */\n&gt;  274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n   275: \t\t\t\t\t\t\t\"disintegration field\";\n   276: \t\t\tadtyp = AD_DISN;\n   277: \t\t\tbreak;\n   278: \t\tcase 5: str = \"ball of lightning\";\n   279: \t\t\tadtyp = AD_ELEC;"
+    "context": "src/explode.c:274:41\n        269: \t\t\tbreak;\n        270: \t\tcase 2: str = \"ball of cold\";\n        271: \t\t\tadtyp = AD_COLD;\n        272: \t\t\tbreak;\n        273: /* Assume that wands are death, others are disintegration */\nTARGET  274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n        275: \t\t\t\t\t\t\t\"disintegration field\";\n        276: \t\t\tadtyp = AD_DISN;\n        277: \t\t\tbreak;\n        278: \t\tcase 5: str = \"ball of lightning\";\n        279: \t\t\tadtyp = AD_ELEC;"
   },
   {
     "key": "L00275_01",
     "original": "disintegration field",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:275:8\n   270: \t\tcase 2: str = \"ball of cold\";\n   271: \t\t\tadtyp = AD_COLD;\n   272: \t\t\tbreak;\n   273: /* Assume that wands are death, others are disintegration */\n   274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n&gt;  275: \t\t\t\t\t\t\t\"disintegration field\";\n   276: \t\t\tadtyp = AD_DISN;\n   277: \t\t\tbreak;\n   278: \t\tcase 5: str = \"ball of lightning\";\n   279: \t\t\tadtyp = AD_ELEC;\n   280: \t\t\tbreak;"
+    "context": "src/explode.c:275:8\n        270: \t\tcase 2: str = \"ball of cold\";\n        271: \t\t\tadtyp = AD_COLD;\n        272: \t\t\tbreak;\n        273: /* Assume that wands are death, others are disintegration */\n        274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\nTARGET  275: \t\t\t\t\t\t\t\"disintegration field\";\n        276: \t\t\tadtyp = AD_DISN;\n        277: \t\t\tbreak;\n        278: \t\tcase 5: str = \"ball of lightning\";\n        279: \t\t\tadtyp = AD_ELEC;\n        280: \t\t\tbreak;"
   },
   {
     "key": "L00278_01",
     "original": "ball of lightning",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:278:17\n   273: /* Assume that wands are death, others are disintegration */\n   274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n   275: \t\t\t\t\t\t\t\"disintegration field\";\n   276: \t\t\tadtyp = AD_DISN;\n   277: \t\t\tbreak;\n&gt;  278: \t\tcase 5: str = \"ball of lightning\";\n   279: \t\t\tadtyp = AD_ELEC;\n   280: \t\t\tbreak;\n   281: \t\tcase 6: str = \"poison gas cloud\";\n   282: \t\t\tadtyp = AD_DRST;\n   283: \t\t\tbreak;"
+    "context": "src/explode.c:278:17\n        273: /* Assume that wands are death, others are disintegration */\n        274: \t\tcase 4: str =  (olet == WAND_CLASS) ? \"death field\" :\n        275: \t\t\t\t\t\t\t\"disintegration field\";\n        276: \t\t\tadtyp = AD_DISN;\n        277: \t\t\tbreak;\nTARGET  278: \t\tcase 5: str = \"ball of lightning\";\n        279: \t\t\tadtyp = AD_ELEC;\n        280: \t\t\tbreak;\n        281: \t\tcase 6: str = \"poison gas cloud\";\n        282: \t\t\tadtyp = AD_DRST;\n        283: \t\t\tbreak;"
   },
   {
     "key": "L00281_01",
     "original": "poison gas cloud",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:281:17\n   276: \t\t\tadtyp = AD_DISN;\n   277: \t\t\tbreak;\n   278: \t\tcase 5: str = \"ball of lightning\";\n   279: \t\t\tadtyp = AD_ELEC;\n   280: \t\t\tbreak;\n&gt;  281: \t\tcase 6: str = \"poison gas cloud\";\n   282: \t\t\tadtyp = AD_DRST;\n   283: \t\t\tbreak;\n   284: \t\tcase 7: str = \"splash of acid\";\n   285: \t\t\tadtyp = AD_ACID;\n   286: \t\t\tbreak;"
+    "context": "src/explode.c:281:17\n        276: \t\t\tadtyp = AD_DISN;\n        277: \t\t\tbreak;\n        278: \t\tcase 5: str = \"ball of lightning\";\n        279: \t\t\tadtyp = AD_ELEC;\n        280: \t\t\tbreak;\nTARGET  281: \t\tcase 6: str = \"poison gas cloud\";\n        282: \t\t\tadtyp = AD_DRST;\n        283: \t\t\tbreak;\n        284: \t\tcase 7: str = \"splash of acid\";\n        285: \t\t\tadtyp = AD_ACID;\n        286: \t\t\tbreak;"
   },
   {
     "key": "L00284_01",
     "original": "splash of acid",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:284:17\n   279: \t\t\tadtyp = AD_ELEC;\n   280: \t\t\tbreak;\n   281: \t\tcase 6: str = \"poison gas cloud\";\n   282: \t\t\tadtyp = AD_DRST;\n   283: \t\t\tbreak;\n&gt;  284: \t\tcase 7: str = \"splash of acid\";\n   285: \t\t\tadtyp = AD_ACID;\n   286: \t\t\tbreak;\n   287: \t\tdefault: impossible(\"explosion base type %d?\", type); return;\n   288: \t}\n   289: "
+    "context": "src/explode.c:284:17\n        279: \t\t\tadtyp = AD_ELEC;\n        280: \t\t\tbreak;\n        281: \t\tcase 6: str = \"poison gas cloud\";\n        282: \t\t\tadtyp = AD_DRST;\n        283: \t\t\tbreak;\nTARGET  284: \t\tcase 7: str = \"splash of acid\";\n        285: \t\t\tadtyp = AD_ACID;\n        286: \t\t\tbreak;\n        287: \t\tdefault: impossible(\"explosion base type %d?\", type); return;\n        288: \t}\n        289: "
   },
   {
     "key": "L00287_01",
     "original": "explosion base type %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:287:23\n   282: \t\t\tadtyp = AD_DRST;\n   283: \t\t\tbreak;\n   284: \t\tcase 7: str = \"splash of acid\";\n   285: \t\t\tadtyp = AD_ACID;\n   286: \t\t\tbreak;\n&gt;  287: \t\tdefault: impossible(\"explosion base type %d?\", type); return;\n   288: \t}\n   289: \n   290: /*WAC add light source for fire*/\n   291: #ifdef LIGHT_SRC_SPELL\n   292:         if ((!remote) && ((adtyp == AD_FIRE) || (adtyp == AD_ELEC))) {"
+    "context": "src/explode.c:287:23\n        282: \t\t\tadtyp = AD_DRST;\n        283: \t\t\tbreak;\n        284: \t\tcase 7: str = \"splash of acid\";\n        285: \t\t\tadtyp = AD_ACID;\n        286: \t\t\tbreak;\nTARGET  287: \t\tdefault: impossible(\"explosion base type %d?\", type); return;\n        288: \t}\n        289: \n        290: /*WAC add light source for fire*/\n        291: #ifdef LIGHT_SRC_SPELL\n        292:         if ((!remote) && ((adtyp == AD_FIRE) || (adtyp == AD_ELEC))) {"
   },
   {
     "key": "L00331_01",
     "original": "explosion type %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:331:16\n   326: \t\t\t\tbreak;\n   327: \t\t\tcase AD_ACID:\n   328: \t\t\t\texplmask = !!Acid_resistance;\n   329: \t\t\t\tbreak;\n   330: \t\t\tdefault:\n&gt;  331: \t\t\t\timpossible(\"explosion type %d?\", adtyp);\n   332: \t\t\t\tbreak;\n   333: \t\t    }\n   334: \t\t}\n   335: \n   336: \t\tmtmp = m_at(xi, yi);"
+    "context": "src/explode.c:331:16\n        326: \t\t\t\tbreak;\n        327: \t\t\tcase AD_ACID:\n        328: \t\t\t\texplmask = !!Acid_resistance;\n        329: \t\t\t\tbreak;\n        330: \t\t\tdefault:\nTARGET  331: \t\t\t\timpossible(\"explosion type %d?\", adtyp);\n        332: \t\t\t\tbreak;\n        333: \t\t    }\n        334: \t\t}\n        335: \n        336: \t\tmtmp = m_at(xi, yi);"
   },
   {
     "key": "L00369_01",
     "original": "explosion type %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:369:16\n   364: \t\t\t\tbreak;\n   365: \t\t\tcase AD_ACID:\n   366: \t\t\t\texplmask |= resists_acid(mtmp);\n   367: \t\t\t\tbreak;\n   368: \t\t\tdefault:\n&gt;  369: \t\t\t\timpossible(\"explosion type %d?\", adtyp);\n   370: \t\t\t\tbreak;\n   371: \t\t    }\n   372: \t\t}\n   373: \t\tif (mtmp && cansee(xi,yi) && !canspotmon(mtmp))\n   374: \t\t    map_invisible(xi, yi);"
+    "context": "src/explode.c:369:16\n        364: \t\t\t\tbreak;\n        365: \t\t\tcase AD_ACID:\n        366: \t\t\t\texplmask |= resists_acid(mtmp);\n        367: \t\t\t\tbreak;\n        368: \t\t\tdefault:\nTARGET  369: \t\t\t\timpossible(\"explosion type %d?\", adtyp);\n        370: \t\t\t\tbreak;\n        371: \t\t    }\n        372: \t\t}\n        373: \t\tif (mtmp && cansee(xi,yi) && !canspotmon(mtmp))\n        374: \t\t    map_invisible(xi, yi);"
   },
   {
     "key": "L00446_01",
     "original": "explosion",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:446:9\n   441: #ifdef ALLEG_FX\n   442: \t    }\n   443: #endif\n   444: \t} else if (!remote) {\n   445: \t    if (olet == MON_EXPLODE) {\n&gt;  446: \t\tstr = \"explosion\";\n   447: \t\tgeneric = TRUE;\n   448: \t    }\n   449: \t    if (flags.soundok)\n   450: \t\tYou_hear(is_pool(x, y) ? \"a muffled explosion.\" : \"a blast.\");\n   451: \t}"
+    "context": "src/explode.c:446:9\n        441: #ifdef ALLEG_FX\n        442: \t    }\n        443: #endif\n        444: \t} else if (!remote) {\n        445: \t    if (olet == MON_EXPLODE) {\nTARGET  446: \t\tstr = \"explosion\";\n        447: \t\tgeneric = TRUE;\n        448: \t    }\n        449: \t    if (flags.soundok)\n        450: \t\tYou_hear(is_pool(x, y) ? \"a muffled explosion.\" : \"a blast.\");\n        451: \t}"
   },
   {
     "key": "L00450_01",
     "original": "a muffled explosion.",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:450:28\n   445: \t    if (olet == MON_EXPLODE) {\n   446: \t\tstr = \"explosion\";\n   447: \t\tgeneric = TRUE;\n   448: \t    }\n   449: \t    if (flags.soundok)\n&gt;  450: \t\tYou_hear(is_pool(x, y) ? \"a muffled explosion.\" : \"a blast.\");\n   451: \t}\n   452: \n   453: \t    if (dam) for(i = 0; i &lt; area-&gt;nlocations; i++) {\n   454: \t\txi = area-&gt;locations[i].x;\n   455: \t\tyi = area-&gt;locations[i].y;"
+    "context": "src/explode.c:450:28\n        445: \t    if (olet == MON_EXPLODE) {\n        446: \t\tstr = \"explosion\";\n        447: \t\tgeneric = TRUE;\n        448: \t    }\n        449: \t    if (flags.soundok)\nTARGET  450: \t\tYou_hear(is_pool(x, y) ? \"a muffled explosion.\" : \"a blast.\");\n        451: \t}\n        452: \n        453: \t    if (dam) for(i = 0; i &lt; area-&gt;nlocations; i++) {\n        454: \t\txi = area-&gt;locations[i].x;\n        455: \t\tyi = area-&gt;locations[i].y;"
   },
   {
     "key": "L00450_02",
     "original": "a blast.",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:450:53\n   445: \t    if (olet == MON_EXPLODE) {\n   446: \t\tstr = \"explosion\";\n   447: \t\tgeneric = TRUE;\n   448: \t    }\n   449: \t    if (flags.soundok)\n&gt;  450: \t\tYou_hear(is_pool(x, y) ? \"a muffled explosion.\" : \"a blast.\");\n   451: \t}\n   452: \n   453: \t    if (dam) for(i = 0; i &lt; area-&gt;nlocations; i++) {\n   454: \t\txi = area-&gt;locations[i].x;\n   455: \t\tyi = area-&gt;locations[i].y;"
+    "context": "src/explode.c:450:53\n        445: \t    if (olet == MON_EXPLODE) {\n        446: \t\tstr = \"explosion\";\n        447: \t\tgeneric = TRUE;\n        448: \t    }\n        449: \t    if (flags.soundok)\nTARGET  450: \t\tYou_hear(is_pool(x, y) ? \"a muffled explosion.\" : \"a blast.\");\n        451: \t}\n        452: \n        453: \t    if (dam) for(i = 0; i &lt; area-&gt;nlocations; i++) {\n        454: \t\txi = area-&gt;locations[i].x;\n        455: \t\tyi = area-&gt;locations[i].y;"
   },
   {
     "key": "L00473_01",
     "original": "%s gets %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:473:24\n   468: #endif\n   469: \t\tif (!mtmp) continue;\n   470: \t\tif (DEADMONSTER(mtmp)) continue;\n   471: \t\tif (u.uswallow && mtmp == u.ustuck) {\n   472: \t\t\tif (is_animal(u.ustuck-&gt;data))\n&gt;  473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n   474: \t\t\t\t      Monnam(u.ustuck),\n   475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :"
+    "context": "src/explode.c:473:24\n        468: #endif\n        469: \t\tif (!mtmp) continue;\n        470: \t\tif (DEADMONSTER(mtmp)) continue;\n        471: \t\tif (u.uswallow && mtmp == u.ustuck) {\n        472: \t\t\tif (is_animal(u.ustuck-&gt;data))\nTARGET  473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n        474: \t\t\t\t      Monnam(u.ustuck),\n        475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :"
   },
   {
     "key": "L00475_01",
     "original": "heartburn",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:475:32\n   470: \t\tif (DEADMONSTER(mtmp)) continue;\n   471: \t\tif (u.uswallow && mtmp == u.ustuck) {\n   472: \t\t\tif (is_animal(u.ustuck-&gt;data))\n   473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n   474: \t\t\t\t      Monnam(u.ustuck),\n&gt;  475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :"
+    "context": "src/explode.c:475:32\n        470: \t\tif (DEADMONSTER(mtmp)) continue;\n        471: \t\tif (u.uswallow && mtmp == u.ustuck) {\n        472: \t\t\tif (is_animal(u.ustuck-&gt;data))\n        473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n        474: \t\t\t\t      Monnam(u.ustuck),\nTARGET  475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :"
   },
   {
     "key": "L00476_01",
     "original": "chilly",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:476:32\n   471: \t\tif (u.uswallow && mtmp == u.ustuck) {\n   472: \t\t\tif (is_animal(u.ustuck-&gt;data))\n   473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n   474: \t\t\t\t      Monnam(u.ustuck),\n   475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n&gt;  476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :"
+    "context": "src/explode.c:476:32\n        471: \t\tif (u.uswallow && mtmp == u.ustuck) {\n        472: \t\t\tif (is_animal(u.ustuck-&gt;data))\n        473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n        474: \t\t\t\t      Monnam(u.ustuck),\n        475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\nTARGET  476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :"
   },
   {
     "key": "L00478_01",
     "original": "irradiated by pure energy",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:478:12\n   473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n   474: \t\t\t\t      Monnam(u.ustuck),\n   475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n&gt;  478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse"
+    "context": "src/explode.c:478:12\n        473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n        474: \t\t\t\t      Monnam(u.ustuck),\n        475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\nTARGET  478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse"
   },
   {
     "key": "L00478_02",
     "original": "perforated",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:478:42\n   473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n   474: \t\t\t\t      Monnam(u.ustuck),\n   475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n&gt;  478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse"
+    "context": "src/explode.c:478:42\n        473: \t\t\t\tif (!silent) pline(\"%s gets %s!\",\n        474: \t\t\t\t      Monnam(u.ustuck),\n        475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\nTARGET  478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse"
   },
   {
     "key": "L00479_01",
     "original": "shocked",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:479:32\n   474: \t\t\t\t      Monnam(u.ustuck),\n   475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n&gt;  479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\","
+    "context": "src/explode.c:479:32\n        474: \t\t\t\t      Monnam(u.ustuck),\n        475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\nTARGET  479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\","
   },
   {
     "key": "L00480_01",
     "original": "poisoned",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:480:32\n   475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n&gt;  480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),"
+    "context": "src/explode.c:480:32\n        475: \t\t\t\t      (adtyp == AD_FIRE) ? \"heartburn\" :\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\nTARGET  480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),"
   },
   {
     "key": "L00481_01",
     "original": "an upset stomach",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:481:32\n   476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n&gt;  481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :"
+    "context": "src/explode.c:481:32\n        476: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\nTARGET  481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :"
   },
   {
     "key": "L00482_01",
     "original": "fried",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:482:12\n   477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n&gt;  482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :"
+    "context": "src/explode.c:482:12\n        477: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        478: \t\t\t\t       \"irradiated by pure energy\" : \"perforated\") :\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\nTARGET  482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :"
   },
   {
     "key": "L00484_01",
     "original": "%s gets slightly %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:484:24\n   479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n&gt;  484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :"
+    "context": "src/explode.c:484:24\n        479: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        480: \t\t\t\t      (adtyp == AD_DRST) ? \"poisoned\" :\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\nTARGET  484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :"
   },
   {
     "key": "L00486_01",
     "original": "toasted",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:486:32\n   481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n&gt;  486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :"
+    "context": "src/explode.c:486:32\n        481: \t\t\t\t      (adtyp == AD_ACID) ? \"an upset stomach\" :\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\nTARGET  486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :"
   },
   {
     "key": "L00487_01",
     "original": "chilly",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:487:32\n   482: \t\t\t\t       \"fried\");\n   483: \t\t\telse\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n&gt;  487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :"
+    "context": "src/explode.c:487:32\n        482: \t\t\t\t       \"fried\");\n        483: \t\t\telse\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\nTARGET  487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :"
   },
   {
     "key": "L00489_01",
     "original": "overwhelmed by pure energy",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:489:12\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n&gt;  489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n   493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {"
+    "context": "src/explode.c:489:12\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\nTARGET  489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n        493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {"
   },
   {
     "key": "L00489_02",
     "original": "perforated",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:489:43\n   484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n&gt;  489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n   493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {"
+    "context": "src/explode.c:489:43\n        484: \t\t\t\tif (!silent) pline(\"%s gets slightly %s!\",\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\nTARGET  489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n        493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {"
   },
   {
     "key": "L00490_01",
     "original": "shocked",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:490:32\n   485: \t\t\t\t      Monnam(u.ustuck),\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n&gt;  490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n   493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {\n   495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);"
+    "context": "src/explode.c:490:32\n        485: \t\t\t\t      Monnam(u.ustuck),\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\nTARGET  490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n        493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {\n        495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);"
   },
   {
     "key": "L00491_01",
     "original": "intoxicated",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:491:32\n   486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n&gt;  491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n   493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {\n   495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n   496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);"
+    "context": "src/explode.c:491:32\n        486: \t\t\t\t      (adtyp == AD_FIRE) ? \"toasted\" :\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\nTARGET  491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n        493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {\n        495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n        496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);"
   },
   {
     "key": "L00492_01",
     "original": "burned",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:492:32\n   487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n&gt;  492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n   493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {\n   495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n   496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);\n   497: \t\t}"
+    "context": "src/explode.c:492:32\n        487: \t\t\t\t      (adtyp == AD_COLD) ? \"chilly\" :\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\nTARGET  492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n        493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {\n        495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n        496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);\n        497: \t\t}"
   },
   {
     "key": "L00493_01",
     "original": "fried",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:493:12\n   488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n   489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n   490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n&gt;  493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {\n   495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n   496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);\n   497: \t\t}\n   498: "
+    "context": "src/explode.c:493:12\n        488: \t\t\t\t      (adtyp == AD_DISN) ? ((olet == WAND_CLASS) ?\n        489: \t\t\t\t       \"overwhelmed by pure energy\" : \"perforated\") :\n        490: \t\t\t\t      (adtyp == AD_ELEC) ? \"shocked\" :\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\nTARGET  493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {\n        495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n        496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);\n        497: \t\t}\n        498: "
   },
   {
     "key": "L00496_01",
     "original": "%s is caught in the %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:496:13\n   491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n   492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n   493: \t\t\t\t       \"fried\");\n   494: \t\t} else if (!silent && cansee(xi, yi)) {\n   495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n&gt;  496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);\n   497: \t\t}\n   498: \n   499: \t\tidamres += destroy_mitem(mtmp, SCROLL_CLASS, (int) adtyp);\n   500: \t\tidamres += destroy_mitem(mtmp, SPBOOK_CLASS, (int) adtyp);\n   501: \t\tidamnonres += destroy_mitem(mtmp, POTION_CLASS, (int) adtyp);"
+    "context": "src/explode.c:496:13\n        491: \t\t\t\t      (adtyp == AD_DRST) ? \"intoxicated\" :\n        492: \t\t\t\t      (adtyp == AD_ACID) ? \"burned\" :\n        493: \t\t\t\t       \"fried\");\n        494: \t\t} else if (!silent && cansee(xi, yi)) {\n        495: \t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\nTARGET  496: \t\t    pline(\"%s is caught in the %s!\", Monnam(mtmp), str);\n        497: \t\t}\n        498: \n        499: \t\tidamres += destroy_mitem(mtmp, SCROLL_CLASS, (int) adtyp);\n        500: \t\tidamres += destroy_mitem(mtmp, SPBOOK_CLASS, (int) adtyp);\n        501: \t\tidamnonres += destroy_mitem(mtmp, POTION_CLASS, (int) adtyp);"
   },
   {
     "key": "L00517_01",
     "original": "%s resists the %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:517:11\n   512: \t\t */\n   513: \t\t\tint mdam = dam;\n   514: \n   515: \t\t\tif (resist(mtmp, olet, 0, FALSE)) {\n   516: \t\t\t    if (!silent && cansee(xi,yi))\n&gt;  517: \t\t\t\tpline(\"%s resists the %s!\", Monnam(mtmp), str);\n   518: \t\t\t    mdam = dam/2;\n   519: \t\t\t}\n   520: \t\t\tif (mtmp == u.ustuck)\n   521: \t\t\t\tmdam *= 2;\n   522: \t\t\tif (resists_cold(mtmp) && adtyp == AD_FIRE)"
+    "context": "src/explode.c:517:11\n        512: \t\t */\n        513: \t\t\tint mdam = dam;\n        514: \n        515: \t\t\tif (resist(mtmp, olet, 0, FALSE)) {\n        516: \t\t\t    if (!silent && cansee(xi,yi))\nTARGET  517: \t\t\t\tpline(\"%s resists the %s!\", Monnam(mtmp), str);\n        518: \t\t\t    mdam = dam/2;\n        519: \t\t\t}\n        520: \t\t\tif (mtmp == u.ustuck)\n        521: \t\t\t\tmdam *= 2;\n        522: \t\t\tif (resists_cold(mtmp) && adtyp == AD_FIRE)"
   },
   {
     "key": "L00557_01",
     "original": "are caught in the %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:557:8\n   552: \tif (uhurt) {\n   553: \t\t/* [ALI] Give message if it's a weapon (grenade) exploding */\n   554: \t\tif ((type &gt;= 0 || adtyp == AD_PHYS || olet == WEAPON_CLASS) &&\n   555: \t\t    /* gas spores */\n   556: \t\t\t\tflags.verbose && olet != SCROLL_CLASS)\n&gt;  557: \t\t\tYou(\"are caught in the %s!\", str);\n   558: \t\t/* do property damage first, in case we end up leaving bones */\n   559: \t\tif (adtyp == AD_FIRE) burn_away_slime();\n   560: \t\tif (Invulnerable) {\n   561: \t\t    damu = 0;\n   562: \t\t    You(\"are unharmed!\");"
+    "context": "src/explode.c:557:8\n        552: \tif (uhurt) {\n        553: \t\t/* [ALI] Give message if it's a weapon (grenade) exploding */\n        554: \t\tif ((type &gt;= 0 || adtyp == AD_PHYS || olet == WEAPON_CLASS) &&\n        555: \t\t    /* gas spores */\n        556: \t\t\t\tflags.verbose && olet != SCROLL_CLASS)\nTARGET  557: \t\t\tYou(\"are caught in the %s!\", str);\n        558: \t\t/* do property damage first, in case we end up leaving bones */\n        559: \t\tif (adtyp == AD_FIRE) burn_away_slime();\n        560: \t\tif (Invulnerable) {\n        561: \t\t    damu = 0;\n        562: \t\t    You(\"are unharmed!\");"
   },
   {
     "key": "L00562_01",
     "original": "are unharmed!",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:562:11\n   557: \t\t\tYou(\"are caught in the %s!\", str);\n   558: \t\t/* do property damage first, in case we end up leaving bones */\n   559: \t\tif (adtyp == AD_FIRE) burn_away_slime();\n   560: \t\tif (Invulnerable) {\n   561: \t\t    damu = 0;\n&gt;  562: \t\t    You(\"are unharmed!\");\n   563: \t\t} else if (Half_physical_damage && adtyp == AD_PHYS)\n   564: \t\t    damu = (damu+1) / 2;\n   565: \t\tif (adtyp == AD_FIRE) (void) burnarmor(&youmonst);\n   566: \t\tdestroy_item(SCROLL_CLASS, (int) adtyp);\n   567: \t\tdestroy_item(SPBOOK_CLASS, (int) adtyp);"
+    "context": "src/explode.c:562:11\n        557: \t\t\tYou(\"are caught in the %s!\", str);\n        558: \t\t/* do property damage first, in case we end up leaving bones */\n        559: \t\tif (adtyp == AD_FIRE) burn_away_slime();\n        560: \t\tif (Invulnerable) {\n        561: \t\t    damu = 0;\nTARGET  562: \t\t    You(\"are unharmed!\");\n        563: \t\t} else if (Half_physical_damage && adtyp == AD_PHYS)\n        564: \t\t    damu = (damu+1) / 2;\n        565: \t\tif (adtyp == AD_FIRE) (void) burnarmor(&youmonst);\n        566: \t\tdestroy_item(SCROLL_CLASS, (int) adtyp);\n        567: \t\tdestroy_item(SPBOOK_CLASS, (int) adtyp);"
   },
   {
     "key": "L00581_01",
     "original": "[%d pts.]",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:581:32\n   576: \t\t    \tu.mh  -= damu;\n   577: \t\t    else\n   578: \t\t\tu.uhp -= damu;\n   579: \t\t    flags.botl = 1;\n   580: #ifdef SHOW_DMG                \n&gt;  581: \t\t    if (flags.showdmg) pline(\"[%d pts.]\", damu);\n   582: #endif\n   583: \t\t}\n   584: \n   585: \t\tif (u.uhp &lt;= 0 || (Upolyd && u.mh &lt;= 0)) {\n   586: \t\t    if (Upolyd) {"
+    "context": "src/explode.c:581:32\n        576: \t\t    \tu.mh  -= damu;\n        577: \t\t    else\n        578: \t\t\tu.uhp -= damu;\n        579: \t\t    flags.botl = 1;\n        580: #ifdef SHOW_DMG                \nTARGET  581: \t\t    if (flags.showdmg) pline(\"[%d pts.]\", damu);\n        582: #endif\n        583: \t\t}\n        584: \n        585: \t\tif (u.uhp &lt;= 0 || (Upolyd && u.mh &lt;= 0)) {\n        586: \t\t    if (Upolyd) {"
   },
   {
     "key": "L00601_01",
     "original": "caught %sself in %s own %s",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:601:28\n   596: \t\t\t    if (str != killer_buf && !generic)\n   597: \t\t\t\tStrcpy(killer_buf, str);\n   598: \t\t\t    killer_format = KILLED_BY_AN;\n   599: \t\t\t} else if (type &gt;= 0 && olet != SCROLL_CLASS && yours) {\n   600: \t\t\t    killer_format = NO_KILLER_PREFIX;\n&gt;  601: \t\t\t    Sprintf(killer_buf, \"caught %sself in %s own %s\",\n   602: \t\t\t\t    uhim(), uhis(), str);\n   603: \t\t\t} else if (olet != BURNING_OIL) {\n   604: \t\t\t    killer_format = KILLED_BY_AN;\n   605: \t\t\t    Strcpy(killer_buf, str);\n   606: \t\t\t} else {"
+    "context": "src/explode.c:601:28\n        596: \t\t\t    if (str != killer_buf && !generic)\n        597: \t\t\t\tStrcpy(killer_buf, str);\n        598: \t\t\t    killer_format = KILLED_BY_AN;\n        599: \t\t\t} else if (type &gt;= 0 && olet != SCROLL_CLASS && yours) {\n        600: \t\t\t    killer_format = NO_KILLER_PREFIX;\nTARGET  601: \t\t\t    Sprintf(killer_buf, \"caught %sself in %s own %s\",\n        602: \t\t\t\t    uhim(), uhis(), str);\n        603: \t\t\t} else if (olet != BURNING_OIL) {\n        604: \t\t\t    killer_format = KILLED_BY_AN;\n        605: \t\t\t    Strcpy(killer_buf, str);\n        606: \t\t\t} else {"
   },
   {
     "key": "L00620_01",
     "original": "burn away",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:620:37\n   615: \t\t}\n   616: \t\texercise(A_STR, FALSE);\n   617: \t}\n   618: \n   619: \tif (shopdamage) {\n&gt;  620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n   621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\n   622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n   623: \t\t\t       FALSE);\n   624: \t}\n   625: "
+    "context": "src/explode.c:620:37\n        615: \t\t}\n        616: \t\texercise(A_STR, FALSE);\n        617: \t}\n        618: \n        619: \tif (shopdamage) {\nTARGET  620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n        621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\n        622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n        623: \t\t\t       FALSE);\n        624: \t}\n        625: "
   },
   {
     "key": "L00621_01",
     "original": "shatter",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:621:30\n   616: \t\texercise(A_STR, FALSE);\n   617: \t}\n   618: \n   619: \tif (shopdamage) {\n   620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n&gt;  621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\n   622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n   623: \t\t\t       FALSE);\n   624: \t}\n   625: \n   626: \t/* explosions are noisy */"
+    "context": "src/explode.c:621:30\n        616: \t\texercise(A_STR, FALSE);\n        617: \t}\n        618: \n        619: \tif (shopdamage) {\n        620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\nTARGET  621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\n        622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n        623: \t\t\t       FALSE);\n        624: \t}\n        625: \n        626: \t/* explosions are noisy */"
   },
   {
     "key": "L00622_01",
     "original": "disintegrate",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:622:30\n   617: \t}\n   618: \n   619: \tif (shopdamage) {\n   620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n   621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\n&gt;  622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n   623: \t\t\t       FALSE);\n   624: \t}\n   625: \n   626: \t/* explosions are noisy */\n   627: \ti = dam * dam;"
+    "context": "src/explode.c:622:30\n        617: \t}\n        618: \n        619: \tif (shopdamage) {\n        620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n        621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\nTARGET  622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n        623: \t\t\t       FALSE);\n        624: \t}\n        625: \n        626: \t/* explosions are noisy */\n        627: \ti = dam * dam;"
   },
   {
     "key": "L00622_02",
     "original": "destroy",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:622:47\n   617: \t}\n   618: \n   619: \tif (shopdamage) {\n   620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n   621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\n&gt;  622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n   623: \t\t\t       FALSE);\n   624: \t}\n   625: \n   626: \t/* explosions are noisy */\n   627: \ti = dam * dam;"
+    "context": "src/explode.c:622:47\n        617: \t}\n        618: \n        619: \tif (shopdamage) {\n        620: \t\tpay_for_damage(adtyp == AD_FIRE ? \"burn away\" :\n        621: \t\t\t       adtyp == AD_COLD ? \"shatter\" :\nTARGET  622: \t\t\t       adtyp == AD_DISN ? \"disintegrate\" : \"destroy\",\n        623: \t\t\t       FALSE);\n        624: \t}\n        625: \n        626: \t/* explosions are noisy */\n        627: \ti = dam * dam;"
   },
   {
     "key": "L00695_01",
     "original": "%s apart.",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:695:13\n   690: \t    /* 9 in 10 chance of fracturing boulders or statues */\n   691: \t    if ((scflags & MAY_FRACTURE)\n   692: \t\t\t&& ((otmp-&gt;otyp == BOULDER) || (otmp-&gt;otyp == STATUE))\n   693: \t\t\t&& rn2(10)) {\n   694: \t\tif (otmp-&gt;otyp == BOULDER) {\n&gt;  695: \t\t    pline(\"%s apart.\", Tobjnam(otmp, \"break\"));\n   696: \t\t    fracture_rock(otmp);\n   697: \t\t    place_object(otmp, sx, sy);\n   698: \t\t    if ((otmp = sobj_at(BOULDER, sx, sy)) != 0) {\n   699: \t\t\t/* another boulder here, restack it to the top */\n   700: \t\t\tobj_extract_self(otmp);"
+    "context": "src/explode.c:695:13\n        690: \t    /* 9 in 10 chance of fracturing boulders or statues */\n        691: \t    if ((scflags & MAY_FRACTURE)\n        692: \t\t\t&& ((otmp-&gt;otyp == BOULDER) || (otmp-&gt;otyp == STATUE))\n        693: \t\t\t&& rn2(10)) {\n        694: \t\tif (otmp-&gt;otyp == BOULDER) {\nTARGET  695: \t\t    pline(\"%s apart.\", Tobjnam(otmp, \"break\"));\n        696: \t\t    fracture_rock(otmp);\n        697: \t\t    place_object(otmp, sx, sy);\n        698: \t\t    if ((otmp = sobj_at(BOULDER, sx, sy)) != 0) {\n        699: \t\t\t/* another boulder here, restack it to the top */\n        700: \t\t\tobj_extract_self(otmp);"
   },
   {
     "key": "L00695_02",
     "original": "break",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:695:40\n   690: \t    /* 9 in 10 chance of fracturing boulders or statues */\n   691: \t    if ((scflags & MAY_FRACTURE)\n   692: \t\t\t&& ((otmp-&gt;otyp == BOULDER) || (otmp-&gt;otyp == STATUE))\n   693: \t\t\t&& rn2(10)) {\n   694: \t\tif (otmp-&gt;otyp == BOULDER) {\n&gt;  695: \t\t    pline(\"%s apart.\", Tobjnam(otmp, \"break\"));\n   696: \t\t    fracture_rock(otmp);\n   697: \t\t    place_object(otmp, sx, sy);\n   698: \t\t    if ((otmp = sobj_at(BOULDER, sx, sy)) != 0) {\n   699: \t\t\t/* another boulder here, restack it to the top */\n   700: \t\t\tobj_extract_self(otmp);"
+    "context": "src/explode.c:695:40\n        690: \t    /* 9 in 10 chance of fracturing boulders or statues */\n        691: \t    if ((scflags & MAY_FRACTURE)\n        692: \t\t\t&& ((otmp-&gt;otyp == BOULDER) || (otmp-&gt;otyp == STATUE))\n        693: \t\t\t&& rn2(10)) {\n        694: \t\tif (otmp-&gt;otyp == BOULDER) {\nTARGET  695: \t\t    pline(\"%s apart.\", Tobjnam(otmp, \"break\"));\n        696: \t\t    fracture_rock(otmp);\n        697: \t\t    place_object(otmp, sx, sy);\n        698: \t\t    if ((otmp = sobj_at(BOULDER, sx, sy)) != 0) {\n        699: \t\t\t/* another boulder here, restack it to the top */\n        700: \t\t\tobj_extract_self(otmp);"
   },
   {
     "key": "L00708_01",
     "original": "%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:708:13\n   703: \t\t} else {\n   704: \t\t    struct trap *trap;\n   705: \n   706: \t\t    if ((trap = t_at(sx,sy)) && trap-&gt;ttyp == STATUE_TRAP)\n   707: \t\t\t    deltrap(trap);\n&gt;  708: \t\t    pline(\"%s.\", Tobjnam(otmp, \"crumble\"));\n   709: \t\t    (void) break_statue(otmp);\n   710: \t\t    place_object(otmp, sx, sy);\t/* put fragments on floor */\n   711: \t\t}\n   712: \t\tused_up = TRUE;\n   713: "
+    "context": "src/explode.c:708:13\n        703: \t\t} else {\n        704: \t\t    struct trap *trap;\n        705: \n        706: \t\t    if ((trap = t_at(sx,sy)) && trap-&gt;ttyp == STATUE_TRAP)\n        707: \t\t\t    deltrap(trap);\nTARGET  708: \t\t    pline(\"%s.\", Tobjnam(otmp, \"crumble\"));\n        709: \t\t    (void) break_statue(otmp);\n        710: \t\t    place_object(otmp, sx, sy);\t/* put fragments on floor */\n        711: \t\t}\n        712: \t\tused_up = TRUE;\n        713: "
   },
   {
     "key": "L00708_02",
     "original": "crumble",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:708:34\n   703: \t\t} else {\n   704: \t\t    struct trap *trap;\n   705: \n   706: \t\t    if ((trap = t_at(sx,sy)) && trap-&gt;ttyp == STATUE_TRAP)\n   707: \t\t\t    deltrap(trap);\n&gt;  708: \t\t    pline(\"%s.\", Tobjnam(otmp, \"crumble\"));\n   709: \t\t    (void) break_statue(otmp);\n   710: \t\t    place_object(otmp, sx, sy);\t/* put fragments on floor */\n   711: \t\t}\n   712: \t\tused_up = TRUE;\n   713: "
+    "context": "src/explode.c:708:34\n        703: \t\t} else {\n        704: \t\t    struct trap *trap;\n        705: \n        706: \t\t    if ((trap = t_at(sx,sy)) && trap-&gt;ttyp == STATUE_TRAP)\n        707: \t\t\t    deltrap(trap);\nTARGET  708: \t\t    pline(\"%s.\", Tobjnam(otmp, \"crumble\"));\n        709: \t\t    (void) break_statue(otmp);\n        710: \t\t    place_object(otmp, sx, sy);\t/* put fragments on floor */\n        711: \t\t}\n        712: \t\tused_up = TRUE;\n        713: "
   },
   {
     "key": "L01063_01",
     "original": "damage",
     "translation": "",
     "stage": 0,
-    "context": "src/explode.c:1063:37\n  1058: \tztype = isyou ? ZT_SPELL(ZT_POISON_GAS) : -ZT_SPELL(ZT_POISON_GAS);\n  1059: \tdo_explode(x, y, gas_area, ztype, d(3,6), WEAPON_CLASS,\n  1060: \t  EXPL_NOXIOUS, dest, isyou);\n  1061:     }\n  1062:     free_explode_region(gas_area);\n&gt; 1063:     if (shop_damage) pay_for_damage(\"damage\", FALSE);\n  1064: }\n  1065: \n  1066: void arm_bomb(obj, yours)\n  1067: struct obj *obj;\n  1068: boolean yours;"
+    "context": "src/explode.c:1063:37\n       1058: \tztype = isyou ? ZT_SPELL(ZT_POISON_GAS) : -ZT_SPELL(ZT_POISON_GAS);\n       1059: \tdo_explode(x, y, gas_area, ztype, d(3,6), WEAPON_CLASS,\n       1060: \t  EXPL_NOXIOUS, dest, isyou);\n       1061:     }\n       1062:     free_explode_region(gas_area);\nTARGET 1063:     if (shop_damage) pay_for_damage(\"damage\", FALSE);\n       1064: }\n       1065: \n       1066: void arm_bomb(obj, yours)\n       1067: struct obj *obj;\n       1068: boolean yours;"
   }
 ]

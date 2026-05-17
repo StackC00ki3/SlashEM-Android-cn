@@ -4,27 +4,27 @@
     "original": "%s %s %s%s",
     "translation": "",
     "stage": 0,
-    "context": "src/zap.c:3109:13\n  3104: {\n  3105: \tif((!cansee(bhitpos.x,bhitpos.y) && !canspotmon(mtmp) &&\n  3106: \t     !(u.uswallow && mtmp == u.ustuck))\n  3107: \t   || !flags.verbose)\n  3108: \t    pline(\"%s%s了它。 \", The(str), vtense(str, \"打中了\"));\n&gt; 3109: \telse pline(\"%s %s %s%s\", The(str), vtense(str, \"打中了\"),\n  3110: \t\t   mon_nam(mtmp), force);\n  3111: }\n  3112: \n  3113: void\n  3114: miss(str,mtmp)"
+    "context": "src/zap.c:3109:13\n       3104: {\n       3105: \tif((!cansee(bhitpos.x,bhitpos.y) && !canspotmon(mtmp) &&\n       3106: \t     !(u.uswallow && mtmp == u.ustuck))\n       3107: \t   || !flags.verbose)\n       3108: \t    pline(\"%s%s了它。 \", The(str), vtense(str, \"打中了\"));\nTARGET 3109: \telse pline(\"%s %s %s%s\", The(str), vtense(str, \"打中了\"),\n       3110: \t\t   mon_nam(mtmp), force);\n       3111: }\n       3112: \n       3113: void\n       3114: miss(str,mtmp)"
   },
   {
     "key": "L03118_01",
     "original": "%s %s %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/zap.c:3118:8\n  3113: void\n  3114: miss(str,mtmp)\n  3115: register const char *str;\n  3116: register struct monst *mtmp;\n  3117: {\n&gt; 3118: \tpline(\"%s %s %s.\", The(str), vtense(str, \"没打中\"),\n  3119: \t      ((cansee(bhitpos.x,bhitpos.y) || canspotmon(mtmp))\n  3120: \t       && flags.verbose) ?\n  3121: \t      mon_nam(mtmp) : \"它\");\n  3122: }\n  3123: #endif /*OVL0*/"
+    "context": "src/zap.c:3118:8\n       3113: void\n       3114: miss(str,mtmp)\n       3115: register const char *str;\n       3116: register struct monst *mtmp;\n       3117: {\nTARGET 3118: \tpline(\"%s %s %s.\", The(str), vtense(str, \"没打中\"),\n       3119: \t      ((cansee(bhitpos.x,bhitpos.y) || canspotmon(mtmp))\n       3120: \t       && flags.verbose) ?\n       3121: \t      mon_nam(mtmp) : \"它\");\n       3122: }\n       3123: #endif /*OVL0*/"
   },
   {
     "key": "L04683_01",
     "original": "%s %s %s！",
     "translation": "",
     "stage": 0,
-    "context": "src/zap.c:4683:9\n  4678: \t\t    if(!rn2(3)) cnt++;\n  4679: \n  4680: \t\tif(!cnt) continue;\n  4681: \t\tif(cnt == quan)\tmult = \"你的\";\n  4682: \t\telse\tmult = (cnt == 1L) ? \"你身上的一件\" : \"你身上的一些\";\n&gt; 4683: \t\tpline(\"%s %s %s！\", mult, xname(obj),\n  4684: \t\t\t(cnt &gt; 1L) ? destroy_strings[dindx*3 + 1]\n  4685: \t\t\t\t  : destroy_strings[dindx*3]);\n  4686: \t\tif(osym == POTION_CLASS && dmgtyp != AD_COLD) {\n  4687: \t\t    if (!breathless(youmonst.data) || haseyes(youmonst.data))\n  4688: \t\t    \tpotionbreathe(obj);"
+    "context": "src/zap.c:4683:9\n       4678: \t\t    if(!rn2(3)) cnt++;\n       4679: \n       4680: \t\tif(!cnt) continue;\n       4681: \t\tif(cnt == quan)\tmult = \"你的\";\n       4682: \t\telse\tmult = (cnt == 1L) ? \"你身上的一件\" : \"你身上的一些\";\nTARGET 4683: \t\tpline(\"%s %s %s！\", mult, xname(obj),\n       4684: \t\t\t(cnt &gt; 1L) ? destroy_strings[dindx*3 + 1]\n       4685: \t\t\t\t  : destroy_strings[dindx*3]);\n       4686: \t\tif(osym == POTION_CLASS && dmgtyp != AD_COLD) {\n       4687: \t\t    if (!breathless(youmonst.data) || haseyes(youmonst.data))\n       4688: \t\t    \tpotionbreathe(obj);"
   },
   {
     "key": "L04822_01",
     "original": "%s %s %s！",
     "translation": "",
     "stage": 0,
-    "context": "src/zap.c:4822:18\n  4817: \t    if(!skip) {\n  4818: \t\tfor(i = cnt = 0L; i &lt; quan; i++)\n  4819: \t\t    if(!rn2(3)) cnt++;\n  4820: \n  4821: \t\tif(!cnt) continue;\n&gt; 4822: \t\tif (vis) pline(\"%s %s %s！\",\n  4823: \t\t\ts_suffix(Monnam(mtmp)), xname(obj),\n  4824: \t\t\t(cnt &gt; 1L) ? destroy_strings[dindx*3 + 1]\n  4825: \t\t\t\t  : destroy_strings[dindx*3]);\n  4826: \t\tfor(i = 0; i &lt; cnt; i++) m_useup(mtmp, obj);\n  4827: \t    }"
+    "context": "src/zap.c:4822:18\n       4817: \t    if(!skip) {\n       4818: \t\tfor(i = cnt = 0L; i &lt; quan; i++)\n       4819: \t\t    if(!rn2(3)) cnt++;\n       4820: \n       4821: \t\tif(!cnt) continue;\nTARGET 4822: \t\tif (vis) pline(\"%s %s %s！\",\n       4823: \t\t\ts_suffix(Monnam(mtmp)), xname(obj),\n       4824: \t\t\t(cnt &gt; 1L) ? destroy_strings[dindx*3 + 1]\n       4825: \t\t\t\t  : destroy_strings[dindx*3]);\n       4826: \t\tfor(i = 0; i &lt; cnt; i++) m_useup(mtmp, obj);\n       4827: \t    }"
   }
 ]

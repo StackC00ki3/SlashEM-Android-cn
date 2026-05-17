@@ -4,853 +4,853 @@
     "original": "\\n#%d \\\"%s\\\" (%s):\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:75:22\n    70: \tint\ti;\n    71: \ts_level\t*x;\n    72: \tbranch *br;\n    73: \n    74: \tfor(i = 0; i &lt; n_dgns; i++)  {\n&gt;   75: \t    fprintf(stderr, \"\\n#%d \\\"%s\\\" (%s):\\n\", i,\n    76: \t\t\t\tDD.dname, DD.proto);\n    77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n    78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n    79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);"
+    "context": "src/dungeon.c:75:22\n         70: \tint\ti;\n         71: \ts_level\t*x;\n         72: \tbranch *br;\n         73: \n         74: \tfor(i = 0; i &lt; n_dgns; i++)  {\nTARGET   75: \t    fprintf(stderr, \"\\n#%d \\\"%s\\\" (%s):\\n\", i,\n         76: \t\t\t\tDD.dname, DD.proto);\n         77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n         78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n         79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);"
   },
   {
     "key": "L00077_01",
     "original": "    num_dunlevs %d, dunlev_ureached %d\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:77:22\n    72: \tbranch *br;\n    73: \n    74: \tfor(i = 0; i &lt; n_dgns; i++)  {\n    75: \t    fprintf(stderr, \"\\n#%d \\\"%s\\\" (%s):\\n\", i,\n    76: \t\t\t\tDD.dname, DD.proto);\n&gt;   77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n    78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n    79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);\n    81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n    82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\","
+    "context": "src/dungeon.c:77:22\n         72: \tbranch *br;\n         73: \n         74: \tfor(i = 0; i &lt; n_dgns; i++)  {\n         75: \t    fprintf(stderr, \"\\n#%d \\\"%s\\\" (%s):\\n\", i,\n         76: \t\t\t\tDD.dname, DD.proto);\nTARGET   77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n         78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n         79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);\n         81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n         82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\","
   },
   {
     "key": "L00079_01",
     "original": "    depth_start %d, ledger_start %d\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:79:22\n    74: \tfor(i = 0; i &lt; n_dgns; i++)  {\n    75: \t    fprintf(stderr, \"\\n#%d \\\"%s\\\" (%s):\\n\", i,\n    76: \t\t\t\tDD.dname, DD.proto);\n    77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n    78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n&gt;   79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);\n    81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n    82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n    83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n    84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");"
+    "context": "src/dungeon.c:79:22\n         74: \tfor(i = 0; i &lt; n_dgns; i++)  {\n         75: \t    fprintf(stderr, \"\\n#%d \\\"%s\\\" (%s):\\n\", i,\n         76: \t\t\t\tDD.dname, DD.proto);\n         77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n         78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\nTARGET   79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);\n         81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n         82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n         83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n         84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");"
   },
   {
     "key": "L00081_01",
     "original": "    flags:%s%s%s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:81:22\n    76: \t\t\t\tDD.dname, DD.proto);\n    77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n    78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n    79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);\n&gt;   81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n    82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n    83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n    84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n    85: \t    getchar();\n    86: \t}"
+    "context": "src/dungeon.c:81:22\n         76: \t\t\t\tDD.dname, DD.proto);\n         77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n         78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n         79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);\nTARGET   81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n         82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n         83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n         84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n         85: \t    getchar();\n         86: \t}"
   },
   {
     "key": "L00082_01",
     "original": " rogue_like",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:82:29\n    77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n    78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n    79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);\n    81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n&gt;   82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n    83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n    84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n    85: \t    getchar();\n    86: \t}\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");"
+    "context": "src/dungeon.c:82:29\n         77: \t    fprintf(stderr, \"    num_dunlevs %d, dunlev_ureached %d\\n\",\n         78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n         79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);\n         81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\nTARGET   82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n         83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n         84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n         85: \t    getchar();\n         86: \t}\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");"
   },
   {
     "key": "L00083_01",
     "original": " maze_like",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:83:29\n    78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n    79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);\n    81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n    82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n&gt;   83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n    84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n    85: \t    getchar();\n    86: \t}\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {"
+    "context": "src/dungeon.c:83:29\n         78: \t\t\t\tDD.num_dunlevs, DD.dunlev_ureached);\n         79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);\n         81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n         82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\nTARGET   83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n         84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n         85: \t    getchar();\n         86: \t}\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {"
   },
   {
     "key": "L00084_01",
     "original": " hellish",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:84:29\n    79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n    80: \t\t\t\tDD.depth_start, DD.ledger_start);\n    81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n    82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n    83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n&gt;   84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n    85: \t    getchar();\n    86: \t}\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);"
+    "context": "src/dungeon.c:84:29\n         79: \t    fprintf(stderr, \"    depth_start %d, ledger_start %d\\n\",\n         80: \t\t\t\tDD.depth_start, DD.ledger_start);\n         81: \t    fprintf(stderr, \"    flags:%s%s%s\\n\",\n         82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n         83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\nTARGET   84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n         85: \t    getchar();\n         86: \t}\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);"
   },
   {
     "key": "L00087_01",
     "original": "\\nSpecial levels:\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:87:17\n    82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n    83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n    84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n    85: \t    getchar();\n    86: \t}\n&gt;   87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\","
+    "context": "src/dungeon.c:87:17\n         82: \t\t    DD.flags.rogue_like ? \" rogue_like\" : \"\",\n         83: \t\t    DD.flags.maze_like  ? \" maze_like\"  : \"\",\n         84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n         85: \t    getchar();\n         86: \t}\nTARGET   87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\","
   },
   {
     "key": "L00089_01",
     "original": "%s (%d): ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:89:22\n    84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n    85: \t    getchar();\n    86: \t}\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n&gt;   89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\","
+    "context": "src/dungeon.c:89:22\n         84: \t\t    DD.flags.hellish    ? \" hellish\"    : \"\");\n         85: \t    getchar();\n         86: \t}\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\nTARGET   89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\","
   },
   {
     "key": "L00090_01",
     "original": "on %d, %d; ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:90:22\n    85: \t    getchar();\n    86: \t}\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n&gt;   90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");"
+    "context": "src/dungeon.c:90:22\n         85: \t    getchar();\n         86: \t}\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\nTARGET   90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");"
   },
   {
     "key": "L00091_01",
     "original": "flags:%s%s%s%s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:91:22\n    86: \t}\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n&gt;   91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();"
+    "context": "src/dungeon.c:91:22\n         86: \t}\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\nTARGET   91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();"
   },
   {
     "key": "L00092_01",
     "original": " rogue_like",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:92:29\n    87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n&gt;   92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();\n    97: \t}"
+    "context": "src/dungeon.c:92:29\n         87: \tfprintf(stderr,\"\\nSpecial levels:\\n\");\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\nTARGET   92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();\n         97: \t}"
   },
   {
     "key": "L00093_01",
     "original": " maze_like",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:93:29\n    88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n&gt;   93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();\n    97: \t}\n    98: \tfprintf(stderr,\"\\nBranches:\\n\");"
+    "context": "src/dungeon.c:93:29\n         88: \tfor(x = sp_levchn; x; x = x-&gt;next) {\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\nTARGET   93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();\n         97: \t}\n         98: \tfprintf(stderr,\"\\nBranches:\\n\");"
   },
   {
     "key": "L00094_01",
     "original": " hellish",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:94:29\n    89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n&gt;   94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();\n    97: \t}\n    98: \tfprintf(stderr,\"\\nBranches:\\n\");\n    99: \tfor (br = branches; br; br = br-&gt;next) {"
+    "context": "src/dungeon.c:94:29\n         89: \t    fprintf(stderr, \"%s (%d): \", x-&gt;proto, x-&gt;rndlevs);\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\nTARGET   94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();\n         97: \t}\n         98: \tfprintf(stderr,\"\\nBranches:\\n\");\n         99: \tfor (br = branches; br; br = br-&gt;next) {"
   },
   {
     "key": "L00095_01",
     "original": " town",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:95:29\n    90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n    91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n    92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n&gt;   95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();\n    97: \t}\n    98: \tfprintf(stderr,\"\\nBranches:\\n\");\n    99: \tfor (br = branches; br; br = br-&gt;next) {\n   100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\","
+    "context": "src/dungeon.c:95:29\n         90: \t    fprintf(stderr, \"on %d, %d; \", x-&gt;dlevel.dnum, x-&gt;dlevel.dlevel);\n         91: \t    fprintf(stderr, \"flags:%s%s%s%s\\n\",\n         92: \t\t    x-&gt;flags.rogue_like\t? \" rogue_like\" : \"\",\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\nTARGET   95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();\n         97: \t}\n         98: \tfprintf(stderr,\"\\nBranches:\\n\");\n         99: \tfor (br = branches; br; br = br-&gt;next) {\n        100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\","
   },
   {
     "key": "L00098_01",
     "original": "\\nBranches:\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:98:17\n    93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n    94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();\n    97: \t}\n&gt;   98: \tfprintf(stderr,\"\\nBranches:\\n\");\n    99: \tfor (br = branches; br; br = br-&gt;next) {\n   100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n   101: \t\tbr-&gt;id,\n   102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n   103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :"
+    "context": "src/dungeon.c:98:17\n         93: \t\t    x-&gt;flags.maze_like  ? \" maze_like\"  : \"\",\n         94: \t\t    x-&gt;flags.hellish    ? \" hellish\"    : \"\",\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();\n         97: \t}\nTARGET   98: \tfprintf(stderr,\"\\nBranches:\\n\");\n         99: \tfor (br = branches; br; br = br-&gt;next) {\n        100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n        101: \t\tbr-&gt;id,\n        102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n        103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :"
   },
   {
     "key": "L00100_01",
     "original": "%d: %s, end1 %d %d, end2 %d %d, %s\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:100:22\n    95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n    96: \t    getchar();\n    97: \t}\n    98: \tfprintf(stderr,\"\\nBranches:\\n\");\n    99: \tfor (br = branches; br; br = br-&gt;next) {\n&gt;  100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n   101: \t\tbr-&gt;id,\n   102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n   103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :"
+    "context": "src/dungeon.c:100:22\n         95: \t\t    x-&gt;flags.town       ? \" town\"       : \"\");\n         96: \t    getchar();\n         97: \t}\n         98: \tfprintf(stderr,\"\\nBranches:\\n\");\n         99: \tfor (br = branches; br; br = br-&gt;next) {\nTARGET  100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n        101: \t\tbr-&gt;id,\n        102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n        103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :"
   },
   {
     "key": "L00102_01",
     "original": "stair",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:102:26\n    97: \t}\n    98: \tfprintf(stderr,\"\\nBranches:\\n\");\n    99: \tfor (br = branches; br; br = br-&gt;next) {\n   100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n   101: \t\tbr-&gt;id,\n&gt;  102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n   103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n   106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,"
+    "context": "src/dungeon.c:102:26\n         97: \t}\n         98: \tfprintf(stderr,\"\\nBranches:\\n\");\n         99: \tfor (br = branches; br; br = br-&gt;next) {\n        100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n        101: \t\tbr-&gt;id,\nTARGET  102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n        103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n        106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,"
   },
   {
     "key": "L00103_01",
     "original": "no end1",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:103:32\n    98: \tfprintf(stderr,\"\\nBranches:\\n\");\n    99: \tfor (br = branches; br; br = br-&gt;next) {\n   100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n   101: \t\tbr-&gt;id,\n   102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n&gt;  103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n   106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,"
+    "context": "src/dungeon.c:103:32\n         98: \tfprintf(stderr,\"\\nBranches:\\n\");\n         99: \tfor (br = branches; br; br = br-&gt;next) {\n        100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n        101: \t\tbr-&gt;id,\n        102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\nTARGET  103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n        106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,"
   },
   {
     "key": "L00104_01",
     "original": "no end2",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:104:32\n    99: \tfor (br = branches; br; br = br-&gt;next) {\n   100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n   101: \t\tbr-&gt;id,\n   102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n   103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n&gt;  104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n   106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n   109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");"
+    "context": "src/dungeon.c:104:32\n         99: \tfor (br = branches; br; br = br-&gt;next) {\n        100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n        101: \t\tbr-&gt;id,\n        102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n        103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\nTARGET  104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n        106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n        109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");"
   },
   {
     "key": "L00105_01",
     "original": "portal",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:105:32\n   100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n   101: \t\tbr-&gt;id,\n   102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n   103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n&gt;  105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n   106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n   109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n   110: \t}"
+    "context": "src/dungeon.c:105:32\n        100: \t    fprintf(stderr, \"%d: %s, end1 %d %d, end2 %d %d, %s\\n\",\n        101: \t\tbr-&gt;id,\n        102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n        103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\nTARGET  105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n        106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n        109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n        110: \t}"
   },
   {
     "key": "L00106_01",
     "original": "unknown",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:106:11\n   101: \t\tbr-&gt;id,\n   102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n   103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n&gt;  106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n   109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n   110: \t}\n   111: \tgetchar();"
+    "context": "src/dungeon.c:106:11\n        101: \t\tbr-&gt;id,\n        102: \t\tbr-&gt;type == BR_STAIR ? \"stair\" :\n        103: \t\t    br-&gt;type == BR_NO_END1 ? \"no end1\" :\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\nTARGET  106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n        109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n        110: \t}\n        111: \tgetchar();"
   },
   {
     "key": "L00109_01",
     "original": "end1 up",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:109:17\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n   106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n&gt;  109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n   110: \t}\n   111: \tgetchar();\n   112: \tfprintf(stderr,\"\\nDone\\n\");\n   113: \tgetchar();\n   114: }"
+    "context": "src/dungeon.c:109:17\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n        106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\nTARGET  109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n        110: \t}\n        111: \tgetchar();\n        112: \tfprintf(stderr,\"\\nDone\\n\");\n        113: \tgetchar();\n        114: }"
   },
   {
     "key": "L00109_02",
     "original": "end1 down",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:109:29\n   104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n   105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n   106: \t\t\t\t\t     \"unknown\",\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n&gt;  109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n   110: \t}\n   111: \tgetchar();\n   112: \tfprintf(stderr,\"\\nDone\\n\");\n   113: \tgetchar();\n   114: }"
+    "context": "src/dungeon.c:109:29\n        104: \t\t    br-&gt;type == BR_NO_END2 ? \"no end2\" :\n        105: \t\t    br-&gt;type == BR_PORTAL  ? \"portal\"  :\n        106: \t\t\t\t\t     \"unknown\",\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\nTARGET  109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n        110: \t}\n        111: \tgetchar();\n        112: \tfprintf(stderr,\"\\nDone\\n\");\n        113: \tgetchar();\n        114: }"
   },
   {
     "key": "L00112_01",
     "original": "\\nDone\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:112:17\n   107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n   108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n   109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n   110: \t}\n   111: \tgetchar();\n&gt;  112: \tfprintf(stderr,\"\\nDone\\n\");\n   113: \tgetchar();\n   114: }\n   115: #endif\n   116: \n   117: /* Save the dungeon structures. */"
+    "context": "src/dungeon.c:112:17\n        107: \t\tbr-&gt;end1.dnum, br-&gt;end1.dlevel,\n        108: \t\tbr-&gt;end2.dnum, br-&gt;end2.dlevel,\n        109: \t\tbr-&gt;end1_up ? \"end1 up\" : \"end1 down\");\n        110: \t}\n        111: \tgetchar();\nTARGET  112: \tfprintf(stderr,\"\\nDone\\n\");\n        113: \tgetchar();\n        114: }\n        115: #endif\n        116: \n        117: /* Save the dungeon structures. */"
   },
   {
     "key": "L00184_01",
     "original": "level information count larger (%d) than allocated size",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:184:8\n   179: \tlast = curr;\n   180:     }\n   181: \n   182:     mread(fd, (genericptr_t) &count, sizeof(count));\n   183:     if (count &gt;= MAXLINFO)\n&gt;  184: \tpanic(\"level information count larger (%d) than allocated size\", count);\n   185:     mread(fd, (genericptr_t) level_info, (unsigned)count*sizeof(struct linfo));\n   186:     mread(fd, (genericptr_t) &inv_pos, sizeof inv_pos);\n   187: }\n   188: \n   189: static void"
+    "context": "src/dungeon.c:184:8\n        179: \tlast = curr;\n        180:     }\n        181: \n        182:     mread(fd, (genericptr_t) &count, sizeof(count));\n        183:     if (count &gt;= MAXLINFO)\nTARGET  184: \tpanic(\"level information count larger (%d) than allocated size\", count);\n        185:     mread(fd, (genericptr_t) level_info, (unsigned)count*sizeof(struct linfo));\n        186:     mread(fd, (genericptr_t) &inv_pos, sizeof inv_pos);\n        187: }\n        188: \n        189: static void"
   },
   {
     "key": "L00199_01",
     "original": "Premature EOF on dungeon description file!\\r\\nExpected %d bytes - got %d.",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:199:2\n   194: {\n   195: \tint cnt;\n   196: \n   197: \tif((cnt = dlb_fread(ptr, size, nitems, stream)) != nitems) {\n   198: \t    panic(\n&gt;  199:  \"Premature EOF on dungeon description file!\\r\\nExpected %d bytes - got %d.\",\n   200: \t\t  (size * nitems), (size * cnt));\n   201: \t    terminate(EXIT_FAILURE);\n   202: \t}\n   203: }\n   204: "
+    "context": "src/dungeon.c:199:2\n        194: {\n        195: \tint cnt;\n        196: \n        197: \tif((cnt = dlb_fread(ptr, size, nitems, stream)) != nitems) {\n        198: \t    panic(\nTARGET  199:  \"Premature EOF on dungeon description file!\\r\\nExpected %d bytes - got %d.\",\n        200: \t\t  (size * nitems), (size * cnt));\n        201: \t    terminate(EXIT_FAILURE);\n        202: \t}\n        203: }\n        204: "
   },
   {
     "key": "L00214_01",
     "original": "Couldn't resolve dungeon number for name \\\"%s\\\".",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:214:8\n   209: \txchar\ti;\n   210: \n   211: \tfor (i = 0; i &lt; n_dgns; i++)\n   212: \t    if (!strcmp(dungeons[i].dname, s)) return i;\n   213: \n&gt;  214: \tpanic(\"Couldn't resolve dungeon number for name \\\"%s\\\".\", s);\n   215: \t/*NOT REACHED*/\n   216: \treturn (xchar)0;\n   217: }\n   218: \n   219: s_level *"
+    "context": "src/dungeon.c:214:8\n        209: \txchar\ti;\n        210: \n        211: \tfor (i = 0; i &lt; n_dgns; i++)\n        212: \t    if (!strcmp(dungeons[i].dname, s)) return i;\n        213: \nTARGET  214: \tpanic(\"Couldn't resolve dungeon number for name \\\"%s\\\".\", s);\n        215: \t/*NOT REACHED*/\n        216: \treturn (xchar)0;\n        217: }\n        218: \n        219: s_level *"
   },
   {
     "key": "L00240_01",
     "original": "find_branch: can't find %s",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:240:32\n   235: \tint i;\n   236: \n   237: \tif (pd) {\n   238: \t    for (i = 0; i &lt; pd-&gt;n_brs; i++)\n   239: \t\tif (!strcmp(pd-&gt;tmpbranch[i].name, s)) break;\n&gt;  240: \t    if (i == pd-&gt;n_brs) panic(\"find_branch: can't find %s\", s);\n   241: \t} else {\n   242: \t    /* support for level tport by name */\n   243: \t    branch *br;\n   244: \t    const char *dnam;\n   245: "
+    "context": "src/dungeon.c:240:32\n        235: \tint i;\n        236: \n        237: \tif (pd) {\n        238: \t    for (i = 0; i &lt; pd-&gt;n_brs; i++)\n        239: \t\tif (!strcmp(pd-&gt;tmpbranch[i].name, s)) break;\nTARGET  240: \t    if (i == pd-&gt;n_brs) panic(\"find_branch: can't find %s\", s);\n        241: \t} else {\n        242: \t    /* support for level tport by name */\n        243: \t    branch *br;\n        244: \t    const char *dnam;\n        245: "
   },
   {
     "key": "L00249_01",
     "original": "The ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:249:21\n   244: \t    const char *dnam;\n   245: \n   246: \t    for (br = branches; br; br = br-&gt;next) {\n   247: \t\tdnam = dungeons[br-&gt;end2.dnum].dname;\n   248: \t\tif (!strcmpi(dnam, s) ||\n&gt;  249: \t\t\t(!strncmpi(dnam, \"The \", 4) && !strcmpi(dnam + 4, s)))\n   250: \t\t    break;\n   251: \t    }\n   252: \t    i = br ? ((ledger_no(&br-&gt;end1) &lt;&lt; 8) | ledger_no(&br-&gt;end2)) : -1;\n   253: \t}\n   254: \treturn i;"
+    "context": "src/dungeon.c:249:21\n        244: \t    const char *dnam;\n        245: \n        246: \t    for (br = branches; br; br = br-&gt;next) {\n        247: \t\tdnam = dungeons[br-&gt;end2.dnum].dname;\n        248: \t\tif (!strcmpi(dnam, s) ||\nTARGET  249: \t\t\t(!strncmpi(dnam, \"The \", 4) && !strcmpi(dnam + 4, s)))\n        250: \t\t    break;\n        251: \t    }\n        252: \t    i = br ? ((ledger_no(&br-&gt;end1) &lt;&lt; 8) | ledger_no(&br-&gt;end2)) : -1;\n        253: \t}\n        254: \treturn i;"
   },
   {
     "key": "L00278_01",
     "original": "level_range: empty chain level!",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:278:25\n   273: {\n   274: \tint lmax = dungeons[dgn].num_dunlevs;\n   275: \n   276: \tif (chain &gt;= 0) {\t\t /* relative to a special level */\n   277: \t    s_level *levtmp = pd-&gt;final_lev[chain];\n&gt;  278: \t    if (!levtmp) panic(\"level_range: empty chain level!\");\n   279: \n   280: \t    base += levtmp-&gt;dlevel.dlevel;\n   281: \t} else {\t\t\t/* absolute in the dungeon */\n   282: \t    /* from end of dungeon */\n   283: \t    if (base &lt; 0) base = (lmax + base + 1);"
+    "context": "src/dungeon.c:278:25\n        273: {\n        274: \tint lmax = dungeons[dgn].num_dunlevs;\n        275: \n        276: \tif (chain &gt;= 0) {\t\t /* relative to a special level */\n        277: \t    s_level *levtmp = pd-&gt;final_lev[chain];\nTARGET  278: \t    if (!levtmp) panic(\"level_range: empty chain level!\");\n        279: \n        280: \t    base += levtmp-&gt;dlevel.dlevel;\n        281: \t} else {\t\t\t/* absolute in the dungeon */\n        282: \t    /* from end of dungeon */\n        283: \t    if (base &lt; 0) base = (lmax + base + 1);"
   },
   {
     "key": "L00287_01",
     "original": "level_range: base value out of range",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:287:12\n   282: \t    /* from end of dungeon */\n   283: \t    if (base &lt; 0) base = (lmax + base + 1);\n   284: \t}\n   285: \n   286: \tif (base &lt; 1 || base &gt; lmax)\n&gt;  287: \t    panic(\"level_range: base value out of range\");\n   288: \n   289: \t*adjusted_base = base;\n   290: \n   291: \tif (rand == -1) {\t/* from base to end of dungeon */\n   292: \t    return (lmax - base + 1);"
+    "context": "src/dungeon.c:287:12\n        282: \t    /* from end of dungeon */\n        283: \t    if (base &lt; 0) base = (lmax + base + 1);\n        284: \t}\n        285: \n        286: \tif (base &lt; 1 || base &gt; lmax)\nTARGET  287: \t    panic(\"level_range: base value out of range\");\n        288: \n        289: \t*adjusted_base = base;\n        290: \n        291: \tif (rand == -1) {\t/* from base to end of dungeon */\n        292: \t    return (lmax - base + 1);"
   },
   {
     "key": "L00336_01",
     "original": "correct_branch_type: unknown branch type",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:336:16\n   331: \tcase TBR_STAIR:\t\treturn BR_STAIR;\n   332: \tcase TBR_NO_UP:\t\treturn tbr-&gt;up ? BR_NO_END1 : BR_NO_END2;\n   333: \tcase TBR_NO_DOWN:\treturn tbr-&gt;up ? BR_NO_END2 : BR_NO_END1;\n   334: \tcase TBR_PORTAL:\treturn BR_PORTAL;\n   335:     }\n&gt;  336:     impossible(\"correct_branch_type: unknown branch type\");\n   337:     return BR_STAIR;\n   338: }\n   339: \n   340: /*\n   341:  * Add the given branch to the branch list.  The branch list is ordered"
+    "context": "src/dungeon.c:336:16\n        331: \tcase TBR_STAIR:\t\treturn BR_STAIR;\n        332: \tcase TBR_NO_UP:\t\treturn tbr-&gt;up ? BR_NO_END1 : BR_NO_END2;\n        333: \tcase TBR_NO_DOWN:\treturn tbr-&gt;up ? BR_NO_END2 : BR_NO_END1;\n        334: \tcase TBR_PORTAL:\treturn BR_PORTAL;\n        335:     }\nTARGET  336:     impossible(\"correct_branch_type: unknown branch type\");\n        337:     return BR_STAIR;\n        338: }\n        339: \n        340: /*\n        341:  * Add the given branch to the branch list.  The branch list is ordered"
   },
   {
     "key": "L00358_01",
     "original": "insert_branch: not found",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:358:19\n   353: \n   354:     if (extract_first) {\n   355: \tfor (prev = 0, curr = branches; curr; prev = curr, curr = curr-&gt;next)\n   356: \t    if (curr == new_branch) break;\n   357: \n&gt;  358: \tif (!curr) panic(\"insert_branch: not found\");\n   359: \tif (prev)\n   360: \t    prev-&gt;next = curr-&gt;next;\n   361: \telse\n   362: \t    branches = curr-&gt;next;\n   363:     }"
+    "context": "src/dungeon.c:358:19\n        353: \n        354:     if (extract_first) {\n        355: \tfor (prev = 0, curr = branches; curr; prev = curr, curr = curr-&gt;next)\n        356: \t    if (curr == new_branch) break;\n        357: \nTARGET  358: \tif (!curr) panic(\"insert_branch: not found\");\n        359: \tif (prev)\n        360: \t    prev-&gt;next = curr-&gt;next;\n        361: \telse\n        362: \t    branches = curr-&gt;next;\n        363:     }"
   },
   {
     "key": "L00537_01",
     "original": "pick_level:  ran out of valid levels",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:537:11\n   532:     int nth;\n   533: {\n   534:     int i;\n   535:     for (i = 1; i &lt;= MAXLEVEL; i++)\n   536: \tif (map[i] && !nth--) return (xchar) i;\n&gt;  537:     panic(\"pick_level:  ran out of valid levels\");\n   538:     return 0;\n   539: }\n   540: \n   541: #ifdef DDEBUG\n   542: static void FDECL(indent,(int));"
+    "context": "src/dungeon.c:537:11\n        532:     int nth;\n        533: {\n        534:     int i;\n        535:     for (i = 1; i &lt;= MAXLEVEL; i++)\n        536: \tif (map[i] && !nth--) return (xchar) i;\nTARGET  537:     panic(\"pick_level:  ran out of valid levels\");\n        538:     return 0;\n        539: }\n        540: \n        541: #ifdef DDEBUG\n        542: static void FDECL(indent,(int));"
   },
   {
     "key": "L00584_01",
     "original": "%s: trying %d [ ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:584:17\n   579: \n   580:     for (; npossible; --npossible) {\n   581: \tlev-&gt;dlevel.dlevel = pick_level(map, rn2(npossible));\n   582: #ifdef DDEBUG\n   583: \tindent(proto_index-pd-&gt;start);\n&gt;  584: \tfprintf(stderr,\"%s: trying %d [ \", lev-&gt;proto, lev-&gt;dlevel.dlevel);\n   585: \tfor (i = 1; i &lt;= MAXLEVEL; i++)\n   586: \t    if (map[i]) fprintf(stderr,\"%d \", i);\n   587: \tfprintf(stderr,\"]\\n\");\n   588: #endif\n   589: \tif (place_level(proto_index+1, pd)) return TRUE;"
+    "context": "src/dungeon.c:584:17\n        579: \n        580:     for (; npossible; --npossible) {\n        581: \tlev-&gt;dlevel.dlevel = pick_level(map, rn2(npossible));\n        582: #ifdef DDEBUG\n        583: \tindent(proto_index-pd-&gt;start);\nTARGET  584: \tfprintf(stderr,\"%s: trying %d [ \", lev-&gt;proto, lev-&gt;dlevel.dlevel);\n        585: \tfor (i = 1; i &lt;= MAXLEVEL; i++)\n        586: \t    if (map[i]) fprintf(stderr,\"%d \", i);\n        587: \tfprintf(stderr,\"]\\n\");\n        588: #endif\n        589: \tif (place_level(proto_index+1, pd)) return TRUE;"
   },
   {
     "key": "L00586_01",
     "original": "%d ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:586:33\n   581: \tlev-&gt;dlevel.dlevel = pick_level(map, rn2(npossible));\n   582: #ifdef DDEBUG\n   583: \tindent(proto_index-pd-&gt;start);\n   584: \tfprintf(stderr,\"%s: trying %d [ \", lev-&gt;proto, lev-&gt;dlevel.dlevel);\n   585: \tfor (i = 1; i &lt;= MAXLEVEL; i++)\n&gt;  586: \t    if (map[i]) fprintf(stderr,\"%d \", i);\n   587: \tfprintf(stderr,\"]\\n\");\n   588: #endif\n   589: \tif (place_level(proto_index+1, pd)) return TRUE;\n   590: \tmap[lev-&gt;dlevel.dlevel] = FALSE;\t/* this choice didn't work */\n   591:     }"
+    "context": "src/dungeon.c:586:33\n        581: \tlev-&gt;dlevel.dlevel = pick_level(map, rn2(npossible));\n        582: #ifdef DDEBUG\n        583: \tindent(proto_index-pd-&gt;start);\n        584: \tfprintf(stderr,\"%s: trying %d [ \", lev-&gt;proto, lev-&gt;dlevel.dlevel);\n        585: \tfor (i = 1; i &lt;= MAXLEVEL; i++)\nTARGET  586: \t    if (map[i]) fprintf(stderr,\"%d \", i);\n        587: \tfprintf(stderr,\"]\\n\");\n        588: #endif\n        589: \tif (place_level(proto_index+1, pd)) return TRUE;\n        590: \tmap[lev-&gt;dlevel.dlevel] = FALSE;\t/* this choice didn't work */\n        591:     }"
   },
   {
     "key": "L00587_01",
     "original": "]\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:587:17\n   582: #ifdef DDEBUG\n   583: \tindent(proto_index-pd-&gt;start);\n   584: \tfprintf(stderr,\"%s: trying %d [ \", lev-&gt;proto, lev-&gt;dlevel.dlevel);\n   585: \tfor (i = 1; i &lt;= MAXLEVEL; i++)\n   586: \t    if (map[i]) fprintf(stderr,\"%d \", i);\n&gt;  587: \tfprintf(stderr,\"]\\n\");\n   588: #endif\n   589: \tif (place_level(proto_index+1, pd)) return TRUE;\n   590: \tmap[lev-&gt;dlevel.dlevel] = FALSE;\t/* this choice didn't work */\n   591:     }\n   592: #ifdef DDEBUG"
+    "context": "src/dungeon.c:587:17\n        582: #ifdef DDEBUG\n        583: \tindent(proto_index-pd-&gt;start);\n        584: \tfprintf(stderr,\"%s: trying %d [ \", lev-&gt;proto, lev-&gt;dlevel.dlevel);\n        585: \tfor (i = 1; i &lt;= MAXLEVEL; i++)\n        586: \t    if (map[i]) fprintf(stderr,\"%d \", i);\nTARGET  587: \tfprintf(stderr,\"]\\n\");\n        588: #endif\n        589: \tif (place_level(proto_index+1, pd)) return TRUE;\n        590: \tmap[lev-&gt;dlevel.dlevel] = FALSE;\t/* this choice didn't work */\n        591:     }\n        592: #ifdef DDEBUG"
   },
   {
     "key": "L00594_01",
     "original": "%s: failed\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:594:20\n   589: \tif (place_level(proto_index+1, pd)) return TRUE;\n   590: \tmap[lev-&gt;dlevel.dlevel] = FALSE;\t/* this choice didn't work */\n   591:     }\n   592: #ifdef DDEBUG\n   593:     indent(proto_index-pd-&gt;start);\n&gt;  594:     fprintf(stderr,\"%s: failed\\n\", lev-&gt;proto);\n   595: #endif\n   596:     return FALSE;\n   597: }\n   598: \n   599: "
+    "context": "src/dungeon.c:594:20\n        589: \tif (place_level(proto_index+1, pd)) return TRUE;\n        590: \tmap[lev-&gt;dlevel.dlevel] = FALSE;\t/* this choice didn't work */\n        591:     }\n        592: #ifdef DDEBUG\n        593:     indent(proto_index-pd-&gt;start);\nTARGET  594:     fprintf(stderr,\"%s: failed\\n\", lev-&gt;proto);\n        595: #endif\n        596:     return FALSE;\n        597: }\n        598: \n        599: "
   },
   {
     "key": "L00604_01",
     "original": "air",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:604:4\n   599: \n   600: struct level_map {\n   601: \tconst char *lev_name;\n   602: \td_level *lev_spec;\n   603: } level_map[] = {\n&gt;  604: \t{ \"air\",\t&air_level },\n   605: \t{ \"asmodeus\",\t&asmodeus_level },\n   606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },"
+    "context": "src/dungeon.c:604:4\n        599: \n        600: struct level_map {\n        601: \tconst char *lev_name;\n        602: \td_level *lev_spec;\n        603: } level_map[] = {\nTARGET  604: \t{ \"air\",\t&air_level },\n        605: \t{ \"asmodeus\",\t&asmodeus_level },\n        606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },"
   },
   {
     "key": "L00605_01",
     "original": "asmodeus",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:605:4\n   600: struct level_map {\n   601: \tconst char *lev_name;\n   602: \td_level *lev_spec;\n   603: } level_map[] = {\n   604: \t{ \"air\",\t&air_level },\n&gt;  605: \t{ \"asmodeus\",\t&asmodeus_level },\n   606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },"
+    "context": "src/dungeon.c:605:4\n        600: struct level_map {\n        601: \tconst char *lev_name;\n        602: \td_level *lev_spec;\n        603: } level_map[] = {\n        604: \t{ \"air\",\t&air_level },\nTARGET  605: \t{ \"asmodeus\",\t&asmodeus_level },\n        606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },"
   },
   {
     "key": "L00606_01",
     "original": "demogorg",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:606:4\n   601: \tconst char *lev_name;\n   602: \td_level *lev_spec;\n   603: } level_map[] = {\n   604: \t{ \"air\",\t&air_level },\n   605: \t{ \"asmodeus\",\t&asmodeus_level },\n&gt;  606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },"
+    "context": "src/dungeon.c:606:4\n        601: \tconst char *lev_name;\n        602: \td_level *lev_spec;\n        603: } level_map[] = {\n        604: \t{ \"air\",\t&air_level },\n        605: \t{ \"asmodeus\",\t&asmodeus_level },\nTARGET  606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },"
   },
   {
     "key": "L00607_01",
     "original": "geryon",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:607:4\n   602: \td_level *lev_spec;\n   603: } level_map[] = {\n   604: \t{ \"air\",\t&air_level },\n   605: \t{ \"asmodeus\",\t&asmodeus_level },\n   606: \t{ \"demogorg\",   &demogorgon_level },\n&gt;  607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },"
+    "context": "src/dungeon.c:607:4\n        602: \td_level *lev_spec;\n        603: } level_map[] = {\n        604: \t{ \"air\",\t&air_level },\n        605: \t{ \"asmodeus\",\t&asmodeus_level },\n        606: \t{ \"demogorg\",   &demogorgon_level },\nTARGET  607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },"
   },
   {
     "key": "L00608_01",
     "original": "dispater",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:608:4\n   603: } level_map[] = {\n   604: \t{ \"air\",\t&air_level },\n   605: \t{ \"asmodeus\",\t&asmodeus_level },\n   606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n&gt;  608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },"
+    "context": "src/dungeon.c:608:4\n        603: } level_map[] = {\n        604: \t{ \"air\",\t&air_level },\n        605: \t{ \"asmodeus\",\t&asmodeus_level },\n        606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\nTARGET  608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },"
   },
   {
     "key": "L00609_01",
     "original": "yeenoghu",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:609:4\n   604: \t{ \"air\",\t&air_level },\n   605: \t{ \"asmodeus\",\t&asmodeus_level },\n   606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n&gt;  609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },"
+    "context": "src/dungeon.c:609:4\n        604: \t{ \"air\",\t&air_level },\n        605: \t{ \"asmodeus\",\t&asmodeus_level },\n        606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\nTARGET  609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },"
   },
   {
     "key": "L00610_01",
     "original": "astral",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:610:4\n   605: \t{ \"asmodeus\",\t&asmodeus_level },\n   606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n&gt;  610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },"
+    "context": "src/dungeon.c:610:4\n        605: \t{ \"asmodeus\",\t&asmodeus_level },\n        606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\nTARGET  610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },"
   },
   {
     "key": "L00611_01",
     "original": "baalz",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:611:4\n   606: \t{ \"demogorg\",   &demogorgon_level },\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n&gt;  611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },"
+    "context": "src/dungeon.c:611:4\n        606: \t{ \"demogorg\",   &demogorgon_level },\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\nTARGET  611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },"
   },
   {
     "key": "L00612_01",
     "original": "bigroom",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:612:4\n   607: \t{ \"geryon\",     &geryon_level },\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n&gt;  612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },"
+    "context": "src/dungeon.c:612:4\n        607: \t{ \"geryon\",     &geryon_level },\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\nTARGET  612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },"
   },
   {
     "key": "L00613_01",
     "original": "castle",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:613:4\n   608: \t{ \"dispater\",   &dispater_level },\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n&gt;  613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },"
+    "context": "src/dungeon.c:613:4\n        608: \t{ \"dispater\",   &dispater_level },\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\nTARGET  613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },"
   },
   {
     "key": "L00614_01",
     "original": "earth",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:614:4\n   609: \t{ \"yeenoghu\",   &yeenoghu_level },\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n&gt;  614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        "
+    "context": "src/dungeon.c:614:4\n        609: \t{ \"yeenoghu\",   &yeenoghu_level },\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\nTARGET  614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        "
   },
   {
     "key": "L00615_01",
     "original": "fakewiz1",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:615:4\n   610: \t{ \"astral\",\t&astral_level },\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n&gt;  615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },"
+    "context": "src/dungeon.c:615:4\n        610: \t{ \"astral\",\t&astral_level },\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\nTARGET  615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },"
   },
   {
     "key": "L00616_01",
     "original": "fire",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:616:4\n   611: \t{ \"baalz\",\t&baalzebub_level },\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n&gt;  616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */"
+    "context": "src/dungeon.c:616:4\n        611: \t{ \"baalz\",\t&baalzebub_level },\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\nTARGET  616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */"
   },
   {
     "key": "L00617_01",
     "original": "juiblex",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:617:4\n   612: \t{ \"bigroom\",\t&bigroom_level },\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n&gt;  617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n   622: \t{ \"medusa\",\t&medusa_level },"
+    "context": "src/dungeon.c:617:4\n        612: \t{ \"bigroom\",\t&bigroom_level },\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\nTARGET  617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\n        622: \t{ \"medusa\",\t&medusa_level },"
   },
   {
     "key": "L00618_01",
     "original": "knox",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:618:4\n   613: \t{ \"castle\",\t&stronghold_level },\n   614: \t{ \"earth\",\t&earth_level },\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },\n&gt;  618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n   622: \t{ \"medusa\",\t&medusa_level },\n   623: \t{ \"mine_end\",   &mineend_level },        "
+    "context": "src/dungeon.c:618:4\n        613: \t{ \"castle\",\t&stronghold_level },\n        614: \t{ \"earth\",\t&earth_level },\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },\nTARGET  618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\n        622: \t{ \"medusa\",\t&medusa_level },\n        623: \t{ \"mine_end\",   &mineend_level },        "
   },
   {
     "key": "L00620_01",
     "original": "blkmar",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:620:4\n   615: \t{ \"fakewiz1\",\t&portal_level },\n   616: \t{ \"fire\",\t&fire_level },\n   617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n&gt;  620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n   622: \t{ \"medusa\",\t&medusa_level },\n   623: \t{ \"mine_end\",   &mineend_level },        \n   624: \t{ \"oracle\",\t&oracle_level },\n   625: \t{ \"orcus\",\t&orcus_level },"
+    "context": "src/dungeon.c:620:4\n        615: \t{ \"fakewiz1\",\t&portal_level },\n        616: \t{ \"fire\",\t&fire_level },\n        617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \nTARGET  620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\n        622: \t{ \"medusa\",\t&medusa_level },\n        623: \t{ \"mine_end\",   &mineend_level },        \n        624: \t{ \"oracle\",\t&oracle_level },\n        625: \t{ \"orcus\",\t&orcus_level },"
   },
   {
     "key": "L00622_01",
     "original": "medusa",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:622:4\n   617: \t{ \"juiblex\",\t&juiblex_level },\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n&gt;  622: \t{ \"medusa\",\t&medusa_level },\n   623: \t{ \"mine_end\",   &mineend_level },        \n   624: \t{ \"oracle\",\t&oracle_level },\n   625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },"
+    "context": "src/dungeon.c:622:4\n        617: \t{ \"juiblex\",\t&juiblex_level },\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\nTARGET  622: \t{ \"medusa\",\t&medusa_level },\n        623: \t{ \"mine_end\",   &mineend_level },        \n        624: \t{ \"oracle\",\t&oracle_level },\n        625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },"
   },
   {
     "key": "L00623_01",
     "original": "mine_end",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:623:4\n   618: \t{ \"knox\",\t&knox_level },\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n   622: \t{ \"medusa\",\t&medusa_level },\n&gt;  623: \t{ \"mine_end\",   &mineend_level },        \n   624: \t{ \"oracle\",\t&oracle_level },\n   625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif"
+    "context": "src/dungeon.c:623:4\n        618: \t{ \"knox\",\t&knox_level },\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\n        622: \t{ \"medusa\",\t&medusa_level },\nTARGET  623: \t{ \"mine_end\",   &mineend_level },        \n        624: \t{ \"oracle\",\t&oracle_level },\n        625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif"
   },
   {
     "key": "L00624_01",
     "original": "oracle",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:624:4\n   619: #ifdef BLACKMARKET        \n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n   622: \t{ \"medusa\",\t&medusa_level },\n   623: \t{ \"mine_end\",   &mineend_level },        \n&gt;  624: \t{ \"oracle\",\t&oracle_level },\n   625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },"
+    "context": "src/dungeon.c:624:4\n        619: #ifdef BLACKMARKET        \n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\n        622: \t{ \"medusa\",\t&medusa_level },\n        623: \t{ \"mine_end\",   &mineend_level },        \nTARGET  624: \t{ \"oracle\",\t&oracle_level },\n        625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },"
   },
   {
     "key": "L00625_01",
     "original": "orcus",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:625:4\n   620: \t{ \"blkmar\",     &blackmarket_level },\n   621: #endif /* BLACKMARKET */\n   622: \t{ \"medusa\",\t&medusa_level },\n   623: \t{ \"mine_end\",   &mineend_level },        \n   624: \t{ \"oracle\",\t&oracle_level },\n&gt;  625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },"
+    "context": "src/dungeon.c:625:4\n        620: \t{ \"blkmar\",     &blackmarket_level },\n        621: #endif /* BLACKMARKET */\n        622: \t{ \"medusa\",\t&medusa_level },\n        623: \t{ \"mine_end\",   &mineend_level },        \n        624: \t{ \"oracle\",\t&oracle_level },\nTARGET  625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },"
   },
   {
     "key": "L00627_01",
     "original": "rogue",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:627:4\n   622: \t{ \"medusa\",\t&medusa_level },\n   623: \t{ \"mine_end\",   &mineend_level },        \n   624: \t{ \"oracle\",\t&oracle_level },\n   625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n&gt;  627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },"
+    "context": "src/dungeon.c:627:4\n        622: \t{ \"medusa\",\t&medusa_level },\n        623: \t{ \"mine_end\",   &mineend_level },        \n        624: \t{ \"oracle\",\t&oracle_level },\n        625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\nTARGET  627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },"
   },
   {
     "key": "L00629_01",
     "original": "sanctum",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:629:4\n   624: \t{ \"oracle\",\t&oracle_level },\n   625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n&gt;  629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },"
+    "context": "src/dungeon.c:629:4\n        624: \t{ \"oracle\",\t&oracle_level },\n        625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\nTARGET  629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },"
   },
   {
     "key": "L00630_01",
     "original": "valley",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:630:4\n   625: \t{ \"orcus\",\t&orcus_level },\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },\n&gt;  630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },"
+    "context": "src/dungeon.c:630:4\n        625: \t{ \"orcus\",\t&orcus_level },\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },\nTARGET  630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },"
   },
   {
     "key": "L00631_01",
     "original": "water",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:631:4\n   626: #ifdef REINCARNATION\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },\n&gt;  631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },\n   636: \t{ \"beholder\",\t&neutral_quest_level },"
+    "context": "src/dungeon.c:631:4\n        626: #ifdef REINCARNATION\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },\nTARGET  631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },\n        636: \t{ \"beholder\",\t&neutral_quest_level },"
   },
   {
     "key": "L00632_01",
     "original": "wizard1",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:632:4\n   627: \t{ \"rogue\",\t&rogue_level },\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n&gt;  632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },\n   636: \t{ \"beholder\",\t&neutral_quest_level },\n   637: \t{ \"lich\",\t&chaotic_quest_level },"
+    "context": "src/dungeon.c:632:4\n        627: \t{ \"rogue\",\t&rogue_level },\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\nTARGET  632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },\n        636: \t{ \"beholder\",\t&neutral_quest_level },\n        637: \t{ \"lich\",\t&chaotic_quest_level },"
   },
   {
     "key": "L00633_01",
     "original": "wizard2",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:633:4\n   628: #endif\n   629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n&gt;  633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },\n   636: \t{ \"beholder\",\t&neutral_quest_level },\n   637: \t{ \"lich\",\t&chaotic_quest_level },\n   638: \t{ X_START,\t&qstart_level },"
+    "context": "src/dungeon.c:633:4\n        628: #endif\n        629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\nTARGET  633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },\n        636: \t{ \"beholder\",\t&neutral_quest_level },\n        637: \t{ \"lich\",\t&chaotic_quest_level },\n        638: \t{ X_START,\t&qstart_level },"
   },
   {
     "key": "L00634_01",
     "original": "wizard3",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:634:4\n   629: \t{ \"sanctum\",\t&sanctum_level },\n   630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n&gt;  634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },\n   636: \t{ \"beholder\",\t&neutral_quest_level },\n   637: \t{ \"lich\",\t&chaotic_quest_level },\n   638: \t{ X_START,\t&qstart_level },\n   639: \t{ X_LOCATE,\t&qlocate_level },"
+    "context": "src/dungeon.c:634:4\n        629: \t{ \"sanctum\",\t&sanctum_level },\n        630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\nTARGET  634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },\n        636: \t{ \"beholder\",\t&neutral_quest_level },\n        637: \t{ \"lich\",\t&chaotic_quest_level },\n        638: \t{ X_START,\t&qstart_level },\n        639: \t{ X_LOCATE,\t&qlocate_level },"
   },
   {
     "key": "L00635_01",
     "original": "nightmar",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:635:4\n   630: \t{ \"valley\",\t&valley_level },\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n&gt;  635: \t{ \"nightmar\",\t&lawful_quest_level },\n   636: \t{ \"beholder\",\t&neutral_quest_level },\n   637: \t{ \"lich\",\t&chaotic_quest_level },\n   638: \t{ X_START,\t&qstart_level },\n   639: \t{ X_LOCATE,\t&qlocate_level },\n   640: \t{ X_GOAL,\t&nemesis_level },"
+    "context": "src/dungeon.c:635:4\n        630: \t{ \"valley\",\t&valley_level },\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\nTARGET  635: \t{ \"nightmar\",\t&lawful_quest_level },\n        636: \t{ \"beholder\",\t&neutral_quest_level },\n        637: \t{ \"lich\",\t&chaotic_quest_level },\n        638: \t{ X_START,\t&qstart_level },\n        639: \t{ X_LOCATE,\t&qlocate_level },\n        640: \t{ X_GOAL,\t&nemesis_level },"
   },
   {
     "key": "L00636_01",
     "original": "beholder",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:636:4\n   631: \t{ \"water\",\t&water_level },\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },\n&gt;  636: \t{ \"beholder\",\t&neutral_quest_level },\n   637: \t{ \"lich\",\t&chaotic_quest_level },\n   638: \t{ X_START,\t&qstart_level },\n   639: \t{ X_LOCATE,\t&qlocate_level },\n   640: \t{ X_GOAL,\t&nemesis_level },\n   641: \t{ \"\",\t\t(d_level *)0 }"
+    "context": "src/dungeon.c:636:4\n        631: \t{ \"water\",\t&water_level },\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },\nTARGET  636: \t{ \"beholder\",\t&neutral_quest_level },\n        637: \t{ \"lich\",\t&chaotic_quest_level },\n        638: \t{ X_START,\t&qstart_level },\n        639: \t{ X_LOCATE,\t&qlocate_level },\n        640: \t{ X_GOAL,\t&nemesis_level },\n        641: \t{ \"\",\t\t(d_level *)0 }"
   },
   {
     "key": "L00637_01",
     "original": "lich",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:637:4\n   632: \t{ \"wizard1\",\t&wiz1_level },\n   633: \t{ \"wizard2\",\t&wiz2_level },\n   634: \t{ \"wizard3\",\t&wiz3_level },\n   635: \t{ \"nightmar\",\t&lawful_quest_level },\n   636: \t{ \"beholder\",\t&neutral_quest_level },\n&gt;  637: \t{ \"lich\",\t&chaotic_quest_level },\n   638: \t{ X_START,\t&qstart_level },\n   639: \t{ X_LOCATE,\t&qlocate_level },\n   640: \t{ X_GOAL,\t&nemesis_level },\n   641: \t{ \"\",\t\t(d_level *)0 }\n   642: };"
+    "context": "src/dungeon.c:637:4\n        632: \t{ \"wizard1\",\t&wiz1_level },\n        633: \t{ \"wizard2\",\t&wiz2_level },\n        634: \t{ \"wizard3\",\t&wiz3_level },\n        635: \t{ \"nightmar\",\t&lawful_quest_level },\n        636: \t{ \"beholder\",\t&neutral_quest_level },\nTARGET  637: \t{ \"lich\",\t&chaotic_quest_level },\n        638: \t{ X_START,\t&qstart_level },\n        639: \t{ X_LOCATE,\t&qlocate_level },\n        640: \t{ X_GOAL,\t&nemesis_level },\n        641: \t{ \"\",\t\t(d_level *)0 }\n        642: };"
   },
   {
     "key": "L00664_01",
     "original": "Cannot open dungeon description - \\\"%s",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:664:20\n   659: \tpd.n_levs = pd.n_brs = 0;\n   660: \n   661: \tdgn_file = dlb_fopen_area(DUNGEON_AREA, DUNGEON_FILE, RDBMODE);\n   662: \tif (!dgn_file) {\n   663: \t    char tbuf[BUFSZ];\n&gt;  664: \t    Sprintf(tbuf, \"Cannot open dungeon description - \\\"%s\",\n   665: \t\tDUNGEON_FILE);\n   666: #ifdef DLBRSRC /* using a resource from the executable */\n   667: \t    Strcat(tbuf, \"\\\" resource!\");\n   668: #else /* using a file or DLB file */\n   669: # if defined(DLB)"
+    "context": "src/dungeon.c:664:20\n        659: \tpd.n_levs = pd.n_brs = 0;\n        660: \n        661: \tdgn_file = dlb_fopen_area(DUNGEON_AREA, DUNGEON_FILE, RDBMODE);\n        662: \tif (!dgn_file) {\n        663: \t    char tbuf[BUFSZ];\nTARGET  664: \t    Sprintf(tbuf, \"Cannot open dungeon description - \\\"%s\",\n        665: \t\tDUNGEON_FILE);\n        666: #ifdef DLBRSRC /* using a resource from the executable */\n        667: \t    Strcat(tbuf, \"\\\" resource!\");\n        668: #else /* using a file or DLB file */\n        669: # if defined(DLB)"
   },
   {
     "key": "L00667_01",
     "original": "\\\" resource!",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:667:19\n   662: \tif (!dgn_file) {\n   663: \t    char tbuf[BUFSZ];\n   664: \t    Sprintf(tbuf, \"Cannot open dungeon description - \\\"%s\",\n   665: \t\tDUNGEON_FILE);\n   666: #ifdef DLBRSRC /* using a resource from the executable */\n&gt;  667: \t    Strcat(tbuf, \"\\\" resource!\");\n   668: #else /* using a file or DLB file */\n   669: # if defined(DLB)\n   670: \t    Strcat(tbuf, \"\\\" from \");\n   671: #  ifdef PREFIXES_IN_USE\n   672: \t    Strcat(tbuf, \"\\n\\\"\");"
+    "context": "src/dungeon.c:667:19\n        662: \tif (!dgn_file) {\n        663: \t    char tbuf[BUFSZ];\n        664: \t    Sprintf(tbuf, \"Cannot open dungeon description - \\\"%s\",\n        665: \t\tDUNGEON_FILE);\n        666: #ifdef DLBRSRC /* using a resource from the executable */\nTARGET  667: \t    Strcat(tbuf, \"\\\" resource!\");\n        668: #else /* using a file or DLB file */\n        669: # if defined(DLB)\n        670: \t    Strcat(tbuf, \"\\\" from \");\n        671: #  ifdef PREFIXES_IN_USE\n        672: \t    Strcat(tbuf, \"\\n\\\"\");"
   },
   {
     "key": "L00670_01",
     "original": "\\\" from ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:670:19\n   665: \t\tDUNGEON_FILE);\n   666: #ifdef DLBRSRC /* using a resource from the executable */\n   667: \t    Strcat(tbuf, \"\\\" resource!\");\n   668: #else /* using a file or DLB file */\n   669: # if defined(DLB)\n&gt;  670: \t    Strcat(tbuf, \"\\\" from \");\n   671: #  ifdef PREFIXES_IN_USE\n   672: \t    Strcat(tbuf, \"\\n\\\"\");\n   673: \t    if (fqn_prefix[DATAPREFIX]) Strcat(tbuf, fqn_prefix[DATAPREFIX]);\n   674: #  else\n   675: \t    Strcat(tbuf, \"\\\"\");"
+    "context": "src/dungeon.c:670:19\n        665: \t\tDUNGEON_FILE);\n        666: #ifdef DLBRSRC /* using a resource from the executable */\n        667: \t    Strcat(tbuf, \"\\\" resource!\");\n        668: #else /* using a file or DLB file */\n        669: # if defined(DLB)\nTARGET  670: \t    Strcat(tbuf, \"\\\" from \");\n        671: #  ifdef PREFIXES_IN_USE\n        672: \t    Strcat(tbuf, \"\\n\\\"\");\n        673: \t    if (fqn_prefix[DATAPREFIX]) Strcat(tbuf, fqn_prefix[DATAPREFIX]);\n        674: #  else\n        675: \t    Strcat(tbuf, \"\\\"\");"
   },
   {
     "key": "L00672_01",
     "original": "\\n\\\"",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:672:19\n   667: \t    Strcat(tbuf, \"\\\" resource!\");\n   668: #else /* using a file or DLB file */\n   669: # if defined(DLB)\n   670: \t    Strcat(tbuf, \"\\\" from \");\n   671: #  ifdef PREFIXES_IN_USE\n&gt;  672: \t    Strcat(tbuf, \"\\n\\\"\");\n   673: \t    if (fqn_prefix[DATAPREFIX]) Strcat(tbuf, fqn_prefix[DATAPREFIX]);\n   674: #  else\n   675: \t    Strcat(tbuf, \"\\\"\");\n   676: #  endif\n   677: \t    Strcat(tbuf, DLBFILE);"
+    "context": "src/dungeon.c:672:19\n        667: \t    Strcat(tbuf, \"\\\" resource!\");\n        668: #else /* using a file or DLB file */\n        669: # if defined(DLB)\n        670: \t    Strcat(tbuf, \"\\\" from \");\n        671: #  ifdef PREFIXES_IN_USE\nTARGET  672: \t    Strcat(tbuf, \"\\n\\\"\");\n        673: \t    if (fqn_prefix[DATAPREFIX]) Strcat(tbuf, fqn_prefix[DATAPREFIX]);\n        674: #  else\n        675: \t    Strcat(tbuf, \"\\\"\");\n        676: #  endif\n        677: \t    Strcat(tbuf, DLBFILE);"
   },
   {
     "key": "L00679_01",
     "original": "\\\" file!",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:679:19\n   674: #  else\n   675: \t    Strcat(tbuf, \"\\\"\");\n   676: #  endif\n   677: \t    Strcat(tbuf, DLBFILE);\n   678: # endif\n&gt;  679: \t    Strcat(tbuf, \"\\\" file!\");\n   680: #endif\n   681: #ifdef WIN32\n   682: \t    interject_assistance(1, INTERJECT_PANIC, (genericptr_t)tbuf,\n   683: \t\t\t\t (genericptr_t)fqn_prefix[DATAPREFIX]);\n   684: #endif"
+    "context": "src/dungeon.c:679:19\n        674: #  else\n        675: \t    Strcat(tbuf, \"\\\"\");\n        676: #  endif\n        677: \t    Strcat(tbuf, DLBFILE);\n        678: # endif\nTARGET  679: \t    Strcat(tbuf, \"\\\" file!\");\n        680: #endif\n        681: #ifdef WIN32\n        682: \t    interject_assistance(1, INTERJECT_PANIC, (genericptr_t)tbuf,\n        683: \t\t\t\t (genericptr_t)fqn_prefix[DATAPREFIX]);\n        684: #endif"
   },
   {
     "key": "L00696_01",
     "original": "Dungeon description not valid.",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:696:12\n   691: \t * check_version() they will be printed using pline(), which doesn't\n   692: \t * mix with the raw messages that might be already on the screen\n   693: \t */\n   694: \tif (iflags.window_inited) clear_nhwindow(WIN_MAP);\n   695: \tif (!check_version(&vers_info, DUNGEON_FILE, TRUE))\n&gt;  696: \t    panic(\"Dungeon description not valid.\");\n   697: \n   698: \t/*\n   699: \t * Read in each dungeon and transfer the results to the internal\n   700: \t * dungeon arrays.\n   701: \t */"
+    "context": "src/dungeon.c:696:12\n        691: \t * check_version() they will be printed using pline(), which doesn't\n        692: \t * mix with the raw messages that might be already on the screen\n        693: \t */\n        694: \tif (iflags.window_inited) clear_nhwindow(WIN_MAP);\n        695: \tif (!check_version(&vers_info, DUNGEON_FILE, TRUE))\nTARGET  696: \t    panic(\"Dungeon description not valid.\");\n        697: \n        698: \t/*\n        699: \t * Read in each dungeon and transfer the results to the internal\n        700: \t * dungeon arrays.\n        701: \t */"
   },
   {
     "key": "L00705_01",
     "original": "init_dungeons: too many dungeons",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:705:12\n   700: \t * dungeon arrays.\n   701: \t */\n   702: \tsp_levchn = (s_level *) 0;\n   703: \tFread((genericptr_t)&n_dgns, sizeof(int), 1, dgn_file);\n   704: \tif (n_dgns &gt;= MAXDUNGEON)\n&gt;  705: \t    panic(\"init_dungeons: too many dungeons\");\n   706: \n   707: \tfor (i = 0; i &lt; n_dgns; i++) {\n   708: \t    Fread((genericptr_t)&pd.tmpdungeon[i],\n   709: \t\t\t\t    sizeof(struct tmpdungeon), 1, dgn_file);\n   710: #ifdef WIZARD"
+    "context": "src/dungeon.c:705:12\n        700: \t * dungeon arrays.\n        701: \t */\n        702: \tsp_levchn = (s_level *) 0;\n        703: \tFread((genericptr_t)&n_dgns, sizeof(int), 1, dgn_file);\n        704: \tif (n_dgns &gt;= MAXDUNGEON)\nTARGET  705: \t    panic(\"init_dungeons: too many dungeons\");\n        706: \n        707: \tfor (i = 0; i &lt; n_dgns; i++) {\n        708: \t    Fread((genericptr_t)&pd.tmpdungeon[i],\n        709: \t\t\t\t    sizeof(struct tmpdungeon), 1, dgn_file);\n        710: #ifdef WIZARD"
   },
   {
     "key": "L00747_01",
     "original": "init_dungeons: too many levels",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:747:13\n   742: \t\tdungeons[i].ledger_start = dungeons[i-1].ledger_start +\n   743: \t\t\t\t\t      dungeons[i-1].num_dunlevs;\n   744: \t\tdungeons[i].dunlev_ureached = 0;\n   745: \n   746: \t\tif (dungeons[i].ledger_start + dungeons[i].num_dunlevs &gt; 127)\n&gt;  747: \t\t    panic(\"init_dungeons: too many levels\");\n   748: \t    }\n   749: \n   750: \t    dungeons[i].flags.hellish = !!(pd.tmpdungeon[i].flags & HELLISH);\n   751: \t    dungeons[i].flags.maze_like = !!(pd.tmpdungeon[i].flags & MAZELIKE);\n   752: \t    dungeons[i].flags.rogue_like = !!(pd.tmpdungeon[i].flags & ROGUELIKE);"
+    "context": "src/dungeon.c:747:13\n        742: \t\tdungeons[i].ledger_start = dungeons[i-1].ledger_start +\n        743: \t\t\t\t\t      dungeons[i-1].num_dunlevs;\n        744: \t\tdungeons[i].dunlev_ureached = 0;\n        745: \n        746: \t\tif (dungeons[i].ledger_start + dungeons[i].num_dunlevs &gt; 127)\nTARGET  747: \t\t    panic(\"init_dungeons: too many levels\");\n        748: \t    }\n        749: \n        750: \t    dungeons[i].flags.hellish = !!(pd.tmpdungeon[i].flags & HELLISH);\n        751: \t    dungeons[i].flags.maze_like = !!(pd.tmpdungeon[i].flags & MAZELIKE);\n        752: \t    dungeons[i].flags.rogue_like = !!(pd.tmpdungeon[i].flags & ROGUELIKE);"
   },
   {
     "key": "L00807_01",
     "original": "init_dungeon: too many special levels",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:807:9\n   802: \t\tdungeons[i].num_dunlevs = MAXLEVEL;\n   803: \n   804: \t    pd.start = pd.n_levs;\t/* save starting point */\n   805: \t    pd.n_levs += pd.tmpdungeon[i].levels;\n   806: \t    if (pd.n_levs &gt; LEV_LIMIT)\n&gt;  807: \t\tpanic(\"init_dungeon: too many special levels\");\n   808: \t    /*\n   809: \t     * Read in the prototype special levels.  Don't add generated\n   810: \t     * special levels until they are all placed.\n   811: \t     */\n   812: \t    for(; cl &lt; pd.n_levs; cl++) {"
+    "context": "src/dungeon.c:807:9\n        802: \t\tdungeons[i].num_dunlevs = MAXLEVEL;\n        803: \n        804: \t    pd.start = pd.n_levs;\t/* save starting point */\n        805: \t    pd.n_levs += pd.tmpdungeon[i].levels;\n        806: \t    if (pd.n_levs &gt; LEV_LIMIT)\nTARGET  807: \t\tpanic(\"init_dungeon: too many special levels\");\n        808: \t    /*\n        809: \t     * Read in the prototype special levels.  Don't add generated\n        810: \t     * special levels until they are all placed.\n        811: \t     */\n        812: \t    for(; cl &lt; pd.n_levs; cl++) {"
   },
   {
     "key": "L00823_01",
     "original": "init_dungeon:  couldn't place levels",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:823:9\n   818: \t     * Recursively place the generated levels for this dungeon.  This\n   819: \t     * routine will attempt all possible combinations before giving\n   820: \t     * up.\n   821: \t     */\n   822: \t    if (!place_level(pd.start, &pd))\n&gt;  823: \t\tpanic(\"init_dungeon:  couldn't place levels\");\n   824: #ifdef DDEBUG\n   825: \t    fprintf(stderr, \"--- end of dungeon %d ---\\n\", i);\n   826: \t    fflush(stderr);\n   827: \t    getchar();\n   828: #endif"
+    "context": "src/dungeon.c:823:9\n        818: \t     * Recursively place the generated levels for this dungeon.  This\n        819: \t     * routine will attempt all possible combinations before giving\n        820: \t     * up.\n        821: \t     */\n        822: \t    if (!place_level(pd.start, &pd))\nTARGET  823: \t\tpanic(\"init_dungeon:  couldn't place levels\");\n        824: #ifdef DDEBUG\n        825: \t    fprintf(stderr, \"--- end of dungeon %d ---\\n\", i);\n        826: \t    fflush(stderr);\n        827: \t    getchar();\n        828: #endif"
   },
   {
     "key": "L00825_01",
     "original": "--- end of dungeon %d ---\\n",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:825:22\n   820: \t     * up.\n   821: \t     */\n   822: \t    if (!place_level(pd.start, &pd))\n   823: \t\tpanic(\"init_dungeon:  couldn't place levels\");\n   824: #ifdef DDEBUG\n&gt;  825: \t    fprintf(stderr, \"--- end of dungeon %d ---\\n\", i);\n   826: \t    fflush(stderr);\n   827: \t    getchar();\n   828: #endif\n   829: \t    for (; pd.start &lt; pd.n_levs; pd.start++)\n   830: \t\tif (pd.final_lev[pd.start]) add_level(pd.final_lev[pd.start]);"
+    "context": "src/dungeon.c:825:22\n        820: \t     * up.\n        821: \t     */\n        822: \t    if (!place_level(pd.start, &pd))\n        823: \t\tpanic(\"init_dungeon:  couldn't place levels\");\n        824: #ifdef DDEBUG\nTARGET  825: \t    fprintf(stderr, \"--- end of dungeon %d ---\\n\", i);\n        826: \t    fflush(stderr);\n        827: \t    getchar();\n        828: #endif\n        829: \t    for (; pd.start &lt; pd.n_levs; pd.start++)\n        830: \t\tif (pd.final_lev[pd.start]) add_level(pd.final_lev[pd.start]);"
   },
   {
     "key": "L00835_01",
     "original": "init_dungeon: too many branches",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:835:9\n   830: \t\tif (pd.final_lev[pd.start]) add_level(pd.final_lev[pd.start]);\n   831: \n   832: \n   833: \t    pd.n_brs += pd.tmpdungeon[i].branches;\n   834: \t    if (pd.n_brs &gt; BRANCH_LIMIT)\n&gt;  835: \t\tpanic(\"init_dungeon: too many branches\");\n   836: \t    for(; cb &lt; pd.n_brs; cb++) {\n   837: \t\tint dgn;\n   838: \t\tFread((genericptr_t)&pd.tmpbranch[cb],\n   839: \t\t\t\t\tsizeof(struct tmpbranch), 1, dgn_file);\n   840: \t\tpd.tmpparent[cb] = i;"
+    "context": "src/dungeon.c:835:9\n        830: \t\tif (pd.final_lev[pd.start]) add_level(pd.final_lev[pd.start]);\n        831: \n        832: \n        833: \t    pd.n_brs += pd.tmpdungeon[i].branches;\n        834: \t    if (pd.n_brs &gt; BRANCH_LIMIT)\nTARGET  835: \t\tpanic(\"init_dungeon: too many branches\");\n        836: \t    for(; cb &lt; pd.n_brs; cb++) {\n        837: \t\tint dgn;\n        838: \t\tFread((genericptr_t)&pd.tmpbranch[cb],\n        839: \t\t\t\t\tsizeof(struct tmpbranch), 1, dgn_file);\n        840: \t\tpd.tmpparent[cb] = i;"
   },
   {
     "key": "L00861_01",
     "original": "x-",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:861:36\n   856: \t */\n   857: \tfor (lev_map = level_map; lev_map-&gt;lev_name[0]; lev_map++) {\n   858: \t\tx = find_level(lev_map-&gt;lev_name);\n   859: \t\tif (x) {\n   860: \t\t\tassign_level(lev_map-&gt;lev_spec, &x-&gt;dlevel);\n&gt;  861: \t\t\tif (!strncmp(lev_map-&gt;lev_name, \"x-\", 2)) {\n   862: \t\t\t\t/* This is where the name substitution on the\n   863: \t\t\t\t * levels of the quest dungeon occur.\n   864: \t\t\t\t */\n   865: \t\t\t\tSprintf(x-&gt;proto, \"%s%s\", urole.filecode, &lev_map-&gt;lev_name[1]);\n   866: \t\t\t} else if (lev_map-&gt;lev_spec == &knox_level) {"
+    "context": "src/dungeon.c:861:36\n        856: \t */\n        857: \tfor (lev_map = level_map; lev_map-&gt;lev_name[0]; lev_map++) {\n        858: \t\tx = find_level(lev_map-&gt;lev_name);\n        859: \t\tif (x) {\n        860: \t\t\tassign_level(lev_map-&gt;lev_spec, &x-&gt;dlevel);\nTARGET  861: \t\t\tif (!strncmp(lev_map-&gt;lev_name, \"x-\", 2)) {\n        862: \t\t\t\t/* This is where the name substitution on the\n        863: \t\t\t\t * levels of the quest dungeon occur.\n        864: \t\t\t\t */\n        865: \t\t\t\tSprintf(x-&gt;proto, \"%s%s\", urole.filecode, &lev_map-&gt;lev_name[1]);\n        866: \t\t\t} else if (lev_map-&gt;lev_spec == &knox_level) {"
   },
   {
     "key": "L00865_01",
     "original": "%s%s",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:865:23\n   860: \t\t\tassign_level(lev_map-&gt;lev_spec, &x-&gt;dlevel);\n   861: \t\t\tif (!strncmp(lev_map-&gt;lev_name, \"x-\", 2)) {\n   862: \t\t\t\t/* This is where the name substitution on the\n   863: \t\t\t\t * levels of the quest dungeon occur.\n   864: \t\t\t\t */\n&gt;  865: \t\t\t\tSprintf(x-&gt;proto, \"%s%s\", urole.filecode, &lev_map-&gt;lev_name[1]);\n   866: \t\t\t} else if (lev_map-&gt;lev_spec == &knox_level) {\n   867: \t\t\t\tbranch *br;\n   868: \t\t\t\t/*\n   869: \t\t\t\t * Kludge to allow floating Knox entrance.  We\n   870: \t\t\t\t * specify a floating entrance by the fact that"
+    "context": "src/dungeon.c:865:23\n        860: \t\t\tassign_level(lev_map-&gt;lev_spec, &x-&gt;dlevel);\n        861: \t\t\tif (!strncmp(lev_map-&gt;lev_name, \"x-\", 2)) {\n        862: \t\t\t\t/* This is where the name substitution on the\n        863: \t\t\t\t * levels of the quest dungeon occur.\n        864: \t\t\t\t */\nTARGET  865: \t\t\t\tSprintf(x-&gt;proto, \"%s%s\", urole.filecode, &lev_map-&gt;lev_name[1]);\n        866: \t\t\t} else if (lev_map-&gt;lev_spec == &knox_level) {\n        867: \t\t\t\tbranch *br;\n        868: \t\t\t\t/*\n        869: \t\t\t\t * Kludge to allow floating Knox entrance.  We\n        870: \t\t\t\t * specify a floating entrance by the fact that"
   },
   {
     "key": "L00886_01",
     "original": "The Quest",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:886:29\n   881: \t\t}\n   882: \t}\n   883: /*\n   884:  *\tI hate hardwiring these names. :-(\n   885:  */\n&gt;  886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n   887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n   888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n   889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n   890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n   891: /*"
+    "context": "src/dungeon.c:886:29\n        881: \t\t}\n        882: \t}\n        883: /*\n        884:  *\tI hate hardwiring these names. :-(\n        885:  */\nTARGET  886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n        887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n        888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n        889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n        890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n        891: /*"
   },
   {
     "key": "L00887_01",
     "original": "Sokoban",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:887:31\n   882: \t}\n   883: /*\n   884:  *\tI hate hardwiring these names. :-(\n   885:  */\n   886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n&gt;  887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n   888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n   889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n   890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n   891: /*\n   892: #ifdef BLACKMARKET"
+    "context": "src/dungeon.c:887:31\n        882: \t}\n        883: /*\n        884:  *\tI hate hardwiring these names. :-(\n        885:  */\n        886: \tquest_dnum = dname_to_dnum(\"The Quest\");\nTARGET  887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n        888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n        889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n        890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n        891: /*\n        892: #ifdef BLACKMARKET"
   },
   {
     "key": "L00888_01",
     "original": "The Gnomish Mines",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:888:29\n   883: /*\n   884:  *\tI hate hardwiring these names. :-(\n   885:  */\n   886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n   887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n&gt;  888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n   889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n   890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n   891: /*\n   892: #ifdef BLACKMARKET\n   893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");"
+    "context": "src/dungeon.c:888:29\n        883: /*\n        884:  *\tI hate hardwiring these names. :-(\n        885:  */\n        886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n        887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\nTARGET  888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n        889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n        890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n        891: /*\n        892: #ifdef BLACKMARKET\n        893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");"
   },
   {
     "key": "L00889_01",
     "original": "The Spider Caves",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:889:31\n   884:  *\tI hate hardwiring these names. :-(\n   885:  */\n   886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n   887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n   888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n&gt;  889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n   890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n   891: /*\n   892: #ifdef BLACKMARKET\n   893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");\n   894: #endif"
+    "context": "src/dungeon.c:889:31\n        884:  *\tI hate hardwiring these names. :-(\n        885:  */\n        886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n        887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n        888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\nTARGET  889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n        890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n        891: /*\n        892: #ifdef BLACKMARKET\n        893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");\n        894: #endif"
   },
   {
     "key": "L00890_01",
     "original": "Vlad's Tower",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:890:29\n   885:  */\n   886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n   887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n   888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n   889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \n&gt;  890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n   891: /*\n   892: #ifdef BLACKMARKET\n   893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");\n   894: #endif\n   895: */"
+    "context": "src/dungeon.c:890:29\n        885:  */\n        886: \tquest_dnum = dname_to_dnum(\"The Quest\");\n        887: \tsokoban_dnum = dname_to_dnum(\"Sokoban\");\n        888: \tmines_dnum = dname_to_dnum(\"The Gnomish Mines\");\n        889: \tspiders_dnum = dname_to_dnum(\"The Spider Caves\");        \nTARGET  890: \ttower_dnum = dname_to_dnum(\"Vlad's Tower\");\n        891: /*\n        892: #ifdef BLACKMARKET\n        893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");\n        894: #endif\n        895: */"
   },
   {
     "key": "L00898_01",
     "original": "dummy",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:898:22\n   893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");\n   894: #endif\n   895: */\n   896: \n   897: \t/* one special fixup for dummy surface level */\n&gt;  898: \tif ((x = find_level(\"dummy\")) != 0) {\n   899: \t    i = x-&gt;dlevel.dnum;\n   900: \t    /* the code above puts earth one level above dungeon level #1,\n   901: \t       making the dummy level overlay level 1; but the whole reason\n   902: \t       for having the dummy level is to make earth have depth -1\n   903: \t       instead of 0, so adjust the start point to shift endgame up */"
+    "context": "src/dungeon.c:898:22\n        893: \tblackmarket_dnum = dname_to_dnum(\"The Black Market\");\n        894: #endif\n        895: */\n        896: \n        897: \t/* one special fixup for dummy surface level */\nTARGET  898: \tif ((x = find_level(\"dummy\")) != 0) {\n        899: \t    i = x-&gt;dlevel.dnum;\n        900: \t    /* the code above puts earth one level above dungeon level #1,\n        901: \t       making the dummy level overlay level 1; but the whole reason\n        902: \t       for having the dummy level is to make earth have depth -1\n        903: \t       instead of 0, so adjust the start point to shift endgame up */"
   },
   {
     "key": "L00965_01",
     "original": "The Quest",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:965:36\n   960: \td_level tmp;\n   961: \tregister schar ret = 0;\n   962: \n   963: \tfor(i = 0; i &lt; n_dgns; i++) {\n   964: \t    if((tmp.dlevel = dungeons[i].dunlev_ureached) == 0) continue;\n&gt;  965: \t    if(!strcmp(dungeons[i].dname, \"The Quest\") && noquest) continue;\n   966: \n   967: \t    tmp.dnum = i;\n   968: \t    if(depth(&tmp) &gt; ret) ret = depth(&tmp);\n   969: \t}\n   970: \treturn((xchar) ret);"
+    "context": "src/dungeon.c:965:36\n        960: \td_level tmp;\n        961: \tregister schar ret = 0;\n        962: \n        963: \tfor(i = 0; i &lt; n_dgns; i++) {\n        964: \t    if((tmp.dlevel = dungeons[i].dunlev_ureached) == 0) continue;\nTARGET  965: \t    if(!strcmp(dungeons[i].dname, \"The Quest\") && noquest) continue;\n        966: \n        967: \t    tmp.dnum = i;\n        968: \t    if(depth(&tmp) &gt; ret) ret = depth(&tmp);\n        969: \t}\n        970: \treturn((xchar) ret);"
   },
   {
     "key": "L01012_01",
     "original": "level number out of range [ledger_to_dnum(%d)]",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1012:8\n  1007: \tfor (i = 0; i &lt; n_dgns; i++)\n  1008: \t    if (dungeons[i].ledger_start &lt; ledgerno &&\n  1009: \t\tledgerno &lt;= dungeons[i].ledger_start + dungeons[i].num_dunlevs)\n  1010: \t\treturn (xchar)i;\n  1011: \n&gt; 1012: \tpanic(\"level number out of range [ledger_to_dnum(%d)]\", (int)ledgerno);\n  1013: \t/*NOT REACHED*/\n  1014: \treturn (xchar)0;\n  1015: }\n  1016: \n  1017: /* return the level of the dungeon this ledgerno exists in */"
+    "context": "src/dungeon.c:1012:8\n       1007: \tfor (i = 0; i &lt; n_dgns; i++)\n       1008: \t    if (dungeons[i].ledger_start &lt; ledgerno &&\n       1009: \t\tledgerno &lt;= dungeons[i].ledger_start + dungeons[i].num_dunlevs)\n       1010: \t\treturn (xchar)i;\n       1011: \nTARGET 1012: \tpanic(\"level number out of range [ledger_to_dnum(%d)]\", (int)ledgerno);\n       1013: \t/*NOT REACHED*/\n       1014: \treturn (xchar)0;\n       1015: }\n       1016: \n       1017: /* return the level of the dungeon this ledgerno exists in */"
   },
   {
     "key": "L01106_01",
     "original": "prev_level: done(ESCAPED) at branch stairs dnum=%d dlevel=%d pos=%d,%d",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1106:13\n  1101: \t\t/* Taking an up dungeon branch. */\n  1102: \t\t/* KMH -- Upwards branches are okay if not level 1 */\n  1103: \t\t/* (Just make sure it doesn't go above depth 1) */\n  1104: \t\tif(!u.uz.dnum && u.uz.dlevel == 1 && !u.uhave.amulet) {\n  1105: #ifdef ANDROID\n&gt; 1106: \t\t\tdebuglog(\"prev_level: done(ESCAPED) at branch stairs dnum=%d dlevel=%d pos=%d,%d\",\n  1107: \t\t\t\tu.uz.dnum, u.uz.dlevel, u.ux, u.uy);\n  1108: #endif\n  1109: \t\t\tdone(ESCAPED);\n  1110: \t\t}\n  1111: \t\telse goto_level(&sstairs.tolev, at_stairs, FALSE, FALSE);"
+    "context": "src/dungeon.c:1106:13\n       1101: \t\t/* Taking an up dungeon branch. */\n       1102: \t\t/* KMH -- Upwards branches are okay if not level 1 */\n       1103: \t\t/* (Just make sure it doesn't go above depth 1) */\n       1104: \t\tif(!u.uz.dnum && u.uz.dlevel == 1 && !u.uhave.amulet) {\n       1105: #ifdef ANDROID\nTARGET 1106: \t\t\tdebuglog(\"prev_level: done(ESCAPED) at branch stairs dnum=%d dlevel=%d pos=%d,%d\",\n       1107: \t\t\t\tu.uz.dnum, u.uz.dlevel, u.ux, u.uy);\n       1108: #endif\n       1109: \t\t\tdone(ESCAPED);\n       1110: \t\t}\n       1111: \t\telse goto_level(&sstairs.tolev, at_stairs, FALSE, FALSE);"
   },
   {
     "key": "L01146_01",
     "original": "u_on_sstairs: picking random spot",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1146:12\n  1141: \t} else {\n  1142: \t    /* code stolen from goto_level */\n  1143: \t    int trycnt = 0;\n  1144: \t    xchar x, y;\n  1145: #ifdef DEBUG\n&gt; 1146: \t    pline(\"u_on_sstairs: picking random spot\");\n  1147: #endif\n  1148: #define badspot(x,y) ((levl[x][y].typ != ROOM && levl[x][y].typ != CORR) || MON_AT(x, y))\n  1149: \t    do {\n  1150: \t\tx = rnd(COLNO-1);\n  1151: \t\ty = rn2(ROWNO);"
+    "context": "src/dungeon.c:1146:12\n       1141: \t} else {\n       1142: \t    /* code stolen from goto_level */\n       1143: \t    int trycnt = 0;\n       1144: \t    xchar x, y;\n       1145: #ifdef DEBUG\nTARGET 1146: \t    pline(\"u_on_sstairs: picking random spot\");\n       1147: #endif\n       1148: #define badspot(x,y) ((levl[x][y].typ != ROOM && levl[x][y].typ != CORR) || MON_AT(x, y))\n       1149: \t    do {\n       1150: \t\tx = rnd(COLNO-1);\n       1151: \t\ty = rn2(ROWNO);"
   },
   {
     "key": "L01157_01",
     "original": "u_on_sstairs: could not relocate player!",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1157:12\n  1152: \t\tif (!badspot(x, y)) {\n  1153: \t\t    u_on_newpos(x, y);\n  1154: \t\t    return;\n  1155: \t\t}\n  1156: \t    } while (++trycnt &lt;= 500);\n&gt; 1157: \t    panic(\"u_on_sstairs: could not relocate player!\");\n  1158: #undef badspot\n  1159: \t}\n  1160: }\n  1161: \n  1162: void"
+    "context": "src/dungeon.c:1157:12\n       1152: \t\tif (!badspot(x, y)) {\n       1153: \t\t    u_on_newpos(x, y);\n       1154: \t\t    return;\n       1155: \t\t}\n       1156: \t    } while (++trycnt &lt;= 500);\nTARGET 1157: \t    panic(\"u_on_sstairs: could not relocate player!\");\n       1158: #undef badspot\n       1159: \t}\n       1160: }\n       1161: \n       1162: void"
   },
   {
     "key": "L01284_01",
     "original": "get_level: can't find parent dungeon",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1284:10\n  1279: \t\t     * unique.\n  1280: \t\t     */\n  1281: \t\t    for (br = branches; br; br = br-&gt;next)\n  1282: \t\t\tif (br-&gt;end2.dnum == dgn) break;\n  1283: \t\t    if (!br)\n&gt; 1284: \t\t\tpanic(\"get_level: can't find parent dungeon\");\n  1285: \n  1286: \t\t    dgn = br-&gt;end1.dnum;\n  1287: \t\t} while (levnum &lt; dungeons[dgn].depth_start);\n  1288: \t    }\n  1289: "
+    "context": "src/dungeon.c:1284:10\n       1279: \t\t     * unique.\n       1280: \t\t     */\n       1281: \t\t    for (br = branches; br; br = br-&gt;next)\n       1282: \t\t\tif (br-&gt;end2.dnum == dgn) break;\n       1283: \t\t    if (!br)\nTARGET 1284: \t\t\tpanic(\"get_level: can't find parent dungeon\");\n       1285: \n       1286: \t\t    dgn = br-&gt;end1.dnum;\n       1287: \t\t} while (levnum &lt; dungeons[dgn].depth_start);\n       1288: \t    }\n       1289: "
   },
   {
     "key": "L01346_01",
     "original": "dgn_entrance: can't find entrance to %s",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1346:20\n  1341: \n  1342:     /* Find the branch that connects to dungeon i's branch. */\n  1343:     for (br = branches; br; br = br-&gt;next)\n  1344: \tif (br-&gt;end2.dnum == dnum) break;\n  1345: \n&gt; 1346:     if (!br) panic(\"dgn_entrance: can't find entrance to %s\", s);\n  1347: \n  1348:     return br;\n  1349: }\n  1350: \n  1351: /*"
+    "context": "src/dungeon.c:1346:20\n       1341: \n       1342:     /* Find the branch that connects to dungeon i's branch. */\n       1343:     for (br = branches; br; br = br-&gt;next)\n       1344: \tif (br-&gt;end2.dnum == dnum) break;\n       1345: \nTARGET 1346:     if (!br) panic(\"dgn_entrance: can't find entrance to %s\", s);\n       1347: \n       1348:     return br;\n       1349: }\n       1350: \n       1351: /*"
   },
   {
     "key": "L01400_01",
     "original": "No boundary for Wizard's Tower?",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1400:17\n  1395: \t */\n  1396: \tif (dndest.nlx &gt; 0)\n  1397: \t    return (boolean)within_bounded_area(x, y, dndest.nlx, dndest.nly,\n  1398: \t\t\t\t\t\tdndest.nhx, dndest.nhy);\n  1399: \telse\n&gt; 1400: \t    impossible(\"No boundary for Wizard's Tower?\");\n  1401: \treturn FALSE;\n  1402: }\n  1403: \n  1404: #endif /* OVL1 */\n  1405: #ifdef OVL0"
+    "context": "src/dungeon.c:1400:17\n       1395: \t */\n       1396: \tif (dndest.nlx &gt; 0)\n       1397: \t    return (boolean)within_bounded_area(x, y, dndest.nlx, dndest.nly,\n       1398: \t\t\t\t\t\tdndest.nhx, dndest.nhy);\n       1399: \telse\nTARGET 1400: \t    impossible(\"No boundary for Wizard's Tower?\");\n       1401: \treturn FALSE;\n       1402: }\n       1403: \n       1404: #endif /* OVL1 */\n       1405: #ifdef OVL0"
   },
   {
     "key": "L01518_01",
     "original": "the ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1518:24\n  1513:     const char *p;\n  1514:     int idx, idxtoo;\n  1515:     char buf[BUFSZ];\n  1516: \n  1517:     /* allow strings like \"the oracle level\" to find \"oracle\" */\n&gt; 1518:     if (!strncmpi(nam, \"the \", 4)) nam += 4;\n  1519:     if ((p = strstri(nam, \" level\")) != 0 && p == eos((char*)nam) - 6) {\n  1520: \tnam = strcpy(buf, nam);\n  1521: \t*(eos(buf) - 6) = '\\0';\n  1522:     }\n  1523:     /* hell is the old name, and wouldn't match; gehennom would match its"
+    "context": "src/dungeon.c:1518:24\n       1513:     const char *p;\n       1514:     int idx, idxtoo;\n       1515:     char buf[BUFSZ];\n       1516: \n       1517:     /* allow strings like \"the oracle level\" to find \"oracle\" */\nTARGET 1518:     if (!strncmpi(nam, \"the \", 4)) nam += 4;\n       1519:     if ((p = strstri(nam, \" level\")) != 0 && p == eos((char*)nam) - 6) {\n       1520: \tnam = strcpy(buf, nam);\n       1521: \t*(eos(buf) - 6) = '\\0';\n       1522:     }\n       1523:     /* hell is the old name, and wouldn't match; gehennom would match its"
   },
   {
     "key": "L01519_01",
     "original": " level",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1519:27\n  1514:     int idx, idxtoo;\n  1515:     char buf[BUFSZ];\n  1516: \n  1517:     /* allow strings like \"the oracle level\" to find \"oracle\" */\n  1518:     if (!strncmpi(nam, \"the \", 4)) nam += 4;\n&gt; 1519:     if ((p = strstri(nam, \" level\")) != 0 && p == eos((char*)nam) - 6) {\n  1520: \tnam = strcpy(buf, nam);\n  1521: \t*(eos(buf) - 6) = '\\0';\n  1522:     }\n  1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n  1524:        branch, yielding the castle level instead of the valley of the dead */"
+    "context": "src/dungeon.c:1519:27\n       1514:     int idx, idxtoo;\n       1515:     char buf[BUFSZ];\n       1516: \n       1517:     /* allow strings like \"the oracle level\" to find \"oracle\" */\n       1518:     if (!strncmpi(nam, \"the \", 4)) nam += 4;\nTARGET 1519:     if ((p = strstri(nam, \" level\")) != 0 && p == eos((char*)nam) - 6) {\n       1520: \tnam = strcpy(buf, nam);\n       1521: \t*(eos(buf) - 6) = '\\0';\n       1522:     }\n       1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n       1524:        branch, yielding the castle level instead of the valley of the dead */"
   },
   {
     "key": "L01525_01",
     "original": "gehennom",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1525:23\n  1520: \tnam = strcpy(buf, nam);\n  1521: \t*(eos(buf) - 6) = '\\0';\n  1522:     }\n  1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n  1524:        branch, yielding the castle level instead of the valley of the dead */\n&gt; 1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n  1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n  1527: \telse nam = \"valley\";\n  1528:     }\n  1529: \n  1530:     if ((slev = find_level(nam)) != 0) {"
+    "context": "src/dungeon.c:1525:23\n       1520: \tnam = strcpy(buf, nam);\n       1521: \t*(eos(buf) - 6) = '\\0';\n       1522:     }\n       1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n       1524:        branch, yielding the castle level instead of the valley of the dead */\nTARGET 1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n       1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n       1527: \telse nam = \"valley\";\n       1528:     }\n       1529: \n       1530:     if ((slev = find_level(nam)) != 0) {"
   },
   {
     "key": "L01525_02",
     "original": "hell",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1525:52\n  1520: \tnam = strcpy(buf, nam);\n  1521: \t*(eos(buf) - 6) = '\\0';\n  1522:     }\n  1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n  1524:        branch, yielding the castle level instead of the valley of the dead */\n&gt; 1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n  1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n  1527: \telse nam = \"valley\";\n  1528:     }\n  1529: \n  1530:     if ((slev = find_level(nam)) != 0) {"
+    "context": "src/dungeon.c:1525:52\n       1520: \tnam = strcpy(buf, nam);\n       1521: \t*(eos(buf) - 6) = '\\0';\n       1522:     }\n       1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n       1524:        branch, yielding the castle level instead of the valley of the dead */\nTARGET 1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n       1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n       1527: \telse nam = \"valley\";\n       1528:     }\n       1529: \n       1530:     if ((slev = find_level(nam)) != 0) {"
   },
   {
     "key": "L01526_01",
     "original": " to Vlad's tower",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1526:31\n  1521: \t*(eos(buf) - 6) = '\\0';\n  1522:     }\n  1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n  1524:        branch, yielding the castle level instead of the valley of the dead */\n  1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n&gt; 1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n  1527: \telse nam = \"valley\";\n  1528:     }\n  1529: \n  1530:     if ((slev = find_level(nam)) != 0) {\n  1531: \tdlev = slev-&gt;dlevel;"
+    "context": "src/dungeon.c:1526:31\n       1521: \t*(eos(buf) - 6) = '\\0';\n       1522:     }\n       1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n       1524:        branch, yielding the castle level instead of the valley of the dead */\n       1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\nTARGET 1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n       1527: \telse nam = \"valley\";\n       1528:     }\n       1529: \n       1530:     if ((slev = find_level(nam)) != 0) {\n       1531: \tdlev = slev-&gt;dlevel;"
   },
   {
     "key": "L01527_01",
     "original": "valley",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1527:13\n  1522:     }\n  1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n  1524:        branch, yielding the castle level instead of the valley of the dead */\n  1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n  1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\n&gt; 1527: \telse nam = \"valley\";\n  1528:     }\n  1529: \n  1530:     if ((slev = find_level(nam)) != 0) {\n  1531: \tdlev = slev-&gt;dlevel;\n  1532: \tidx = ledger_no(&dlev);"
+    "context": "src/dungeon.c:1527:13\n       1522:     }\n       1523:     /* hell is the old name, and wouldn't match; gehennom would match its\n       1524:        branch, yielding the castle level instead of the valley of the dead */\n       1525:     if (!strcmpi(nam, \"gehennom\") || !strcmpi(nam, \"hell\")) {\n       1526: \tif (In_V_tower(&u.uz)) nam = \" to Vlad's tower\";  /* branch to... */\nTARGET 1527: \telse nam = \"valley\";\n       1528:     }\n       1529: \n       1530:     if ((slev = find_level(nam)) != 0) {\n       1531: \tdlev = slev-&gt;dlevel;\n       1532: \tidx = ledger_no(&dlev);"
   },
   {
     "key": "L01549_01",
     "original": " to ",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1549:35\n  1544: \t    lev = depth(&slev-&gt;dlevel);\n  1545: \t}\n  1546:     } else {\t/* not a specific level; try branch names */\n  1547: \tidx = find_branch(nam, (struct proto_dungeon *)0);\n  1548: \t/* \"&lt;branch&gt; to Xyzzy\" */\n&gt; 1549: \tif (idx &lt; 0 && (p = strstri(nam, \" to \")) != 0)\n  1550: \t    idx = find_branch(p + 4, (struct proto_dungeon *)0);\n  1551: \n  1552: \tif (idx &gt;= 0) {\n  1553: \t    idxtoo = (idx &gt;&gt; 8) & 0x00FF;\n  1554: \t    idx &= 0x00FF;"
+    "context": "src/dungeon.c:1549:35\n       1544: \t    lev = depth(&slev-&gt;dlevel);\n       1545: \t}\n       1546:     } else {\t/* not a specific level; try branch names */\n       1547: \tidx = find_branch(nam, (struct proto_dungeon *)0);\n       1548: \t/* \"&lt;branch&gt; to Xyzzy\" */\nTARGET 1549: \tif (idx &lt; 0 && (p = strstri(nam, \" to \")) != 0)\n       1550: \t    idx = find_branch(p + 4, (struct proto_dungeon *)0);\n       1551: \n       1552: \tif (idx &gt;= 0) {\n       1553: \t    idxtoo = (idx &gt;&gt; 8) & 0x00FF;\n       1554: \t    idx &= 0x00FF;"
   },
   {
     "key": "L01579_01",
     "original": "Portal",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1579:26\n  1574: STATIC_OVL const char *\n  1575: br_string(type)\n  1576:     int type;\n  1577: {\n  1578:     switch (type) {\n&gt; 1579: \tcase BR_PORTAL:\t return \"Portal\";\n  1580: \tcase BR_NO_END1: return \"Connection\";\n  1581: \tcase BR_NO_END2: return \"One way stair\";\n  1582: \tcase BR_STAIR:\t return \"Stair\";\n  1583:     }\n  1584:     return \" (unknown)\";"
+    "context": "src/dungeon.c:1579:26\n       1574: STATIC_OVL const char *\n       1575: br_string(type)\n       1576:     int type;\n       1577: {\n       1578:     switch (type) {\nTARGET 1579: \tcase BR_PORTAL:\t return \"Portal\";\n       1580: \tcase BR_NO_END1: return \"Connection\";\n       1581: \tcase BR_NO_END2: return \"One way stair\";\n       1582: \tcase BR_STAIR:\t return \"Stair\";\n       1583:     }\n       1584:     return \" (unknown)\";"
   },
   {
     "key": "L01580_01",
     "original": "Connection",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1580:26\n  1575: br_string(type)\n  1576:     int type;\n  1577: {\n  1578:     switch (type) {\n  1579: \tcase BR_PORTAL:\t return \"Portal\";\n&gt; 1580: \tcase BR_NO_END1: return \"Connection\";\n  1581: \tcase BR_NO_END2: return \"One way stair\";\n  1582: \tcase BR_STAIR:\t return \"Stair\";\n  1583:     }\n  1584:     return \" (unknown)\";\n  1585: }"
+    "context": "src/dungeon.c:1580:26\n       1575: br_string(type)\n       1576:     int type;\n       1577: {\n       1578:     switch (type) {\n       1579: \tcase BR_PORTAL:\t return \"Portal\";\nTARGET 1580: \tcase BR_NO_END1: return \"Connection\";\n       1581: \tcase BR_NO_END2: return \"One way stair\";\n       1582: \tcase BR_STAIR:\t return \"Stair\";\n       1583:     }\n       1584:     return \" (unknown)\";\n       1585: }"
   },
   {
     "key": "L01581_01",
     "original": "One way stair",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1581:26\n  1576:     int type;\n  1577: {\n  1578:     switch (type) {\n  1579: \tcase BR_PORTAL:\t return \"Portal\";\n  1580: \tcase BR_NO_END1: return \"Connection\";\n&gt; 1581: \tcase BR_NO_END2: return \"One way stair\";\n  1582: \tcase BR_STAIR:\t return \"Stair\";\n  1583:     }\n  1584:     return \" (unknown)\";\n  1585: }\n  1586: "
+    "context": "src/dungeon.c:1581:26\n       1576:     int type;\n       1577: {\n       1578:     switch (type) {\n       1579: \tcase BR_PORTAL:\t return \"Portal\";\n       1580: \tcase BR_NO_END1: return \"Connection\";\nTARGET 1581: \tcase BR_NO_END2: return \"One way stair\";\n       1582: \tcase BR_STAIR:\t return \"Stair\";\n       1583:     }\n       1584:     return \" (unknown)\";\n       1585: }\n       1586: "
   },
   {
     "key": "L01582_01",
     "original": "Stair",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1582:25\n  1577: {\n  1578:     switch (type) {\n  1579: \tcase BR_PORTAL:\t return \"Portal\";\n  1580: \tcase BR_NO_END1: return \"Connection\";\n  1581: \tcase BR_NO_END2: return \"One way stair\";\n&gt; 1582: \tcase BR_STAIR:\t return \"Stair\";\n  1583:     }\n  1584:     return \" (unknown)\";\n  1585: }\n  1586: \n  1587: /* Print all child branches between the lower and upper bounds. */"
+    "context": "src/dungeon.c:1582:25\n       1577: {\n       1578:     switch (type) {\n       1579: \tcase BR_PORTAL:\t return \"Portal\";\n       1580: \tcase BR_NO_END1: return \"Connection\";\n       1581: \tcase BR_NO_END2: return \"One way stair\";\nTARGET 1582: \tcase BR_STAIR:\t return \"Stair\";\n       1583:     }\n       1584:     return \" (unknown)\";\n       1585: }\n       1586: \n       1587: /* Print all child branches between the lower and upper bounds. */"
   },
   {
     "key": "L01584_01",
     "original": " (unknown)",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1584:12\n  1579: \tcase BR_PORTAL:\t return \"Portal\";\n  1580: \tcase BR_NO_END1: return \"Connection\";\n  1581: \tcase BR_NO_END2: return \"One way stair\";\n  1582: \tcase BR_STAIR:\t return \"Stair\";\n  1583:     }\n&gt; 1584:     return \" (unknown)\";\n  1585: }\n  1586: \n  1587: /* Print all child branches between the lower and upper bounds. */\n  1588: STATIC_OVL void\n  1589: print_branch(win, dnum, lower_bound, upper_bound, bymenu, lchoices)"
+    "context": "src/dungeon.c:1584:12\n       1579: \tcase BR_PORTAL:\t return \"Portal\";\n       1580: \tcase BR_NO_END1: return \"Connection\";\n       1581: \tcase BR_NO_END2: return \"One way stair\";\n       1582: \tcase BR_STAIR:\t return \"Stair\";\n       1583:     }\nTARGET 1584:     return \" (unknown)\";\n       1585: }\n       1586: \n       1587: /* Print all child branches between the lower and upper bounds. */\n       1588: STATIC_OVL void\n       1589: print_branch(win, dnum, lower_bound, upper_bound, bymenu, lchoices)"
   },
   {
     "key": "L01605_01",
     "original": "   %s to %s: %d",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1605:18\n  1600: \n  1601:     /* This assumes that end1 is the \"parent\". */\n  1602:     for (br = branches; br; br = br-&gt;next) {\n  1603: \tif (br-&gt;end1.dnum == dnum && lower_bound &lt; br-&gt;end1.dlevel &&\n  1604: \t\t\t\t\tbr-&gt;end1.dlevel &lt;= upper_bound) {\n&gt; 1605: \t    Sprintf(buf,\"   %s to %s: %d\",\n  1606: \t\t    br_string(br-&gt;type),\n  1607: \t\t    dungeons[br-&gt;end2.dnum].dname,\n  1608: \t\t    depth(&br-&gt;end1));\n  1609: \t    if (bymenu) {\n  1610: \t\tlchoices-&gt;lev[lchoices-&gt;idx] = br-&gt;end1.dlevel;"
+    "context": "src/dungeon.c:1605:18\n       1600: \n       1601:     /* This assumes that end1 is the \"parent\". */\n       1602:     for (br = branches; br; br = br-&gt;next) {\n       1603: \tif (br-&gt;end1.dnum == dnum && lower_bound &lt; br-&gt;end1.dlevel &&\n       1604: \t\t\t\t\tbr-&gt;end1.dlevel &lt;= upper_bound) {\nTARGET 1605: \t    Sprintf(buf,\"   %s to %s: %d\",\n       1606: \t\t    br_string(br-&gt;type),\n       1607: \t\t    dungeons[br-&gt;end2.dnum].dname,\n       1608: \t\t    depth(&br-&gt;end1));\n       1609: \t    if (bymenu) {\n       1610: \t\tlchoices-&gt;lev[lchoices-&gt;idx] = br-&gt;end1.dlevel;"
   },
   {
     "key": "L01652_01",
     "original": "%s: levels %d to %d",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1652:19\n  1647:     }\n  1648: \n  1649:     for (i = 0, dptr = dungeons; i &lt; n_dgns; i++, dptr++) {\n  1650: \tnlev = dptr-&gt;num_dunlevs;\n  1651: \tif (nlev &gt; 1)\n&gt; 1652: \t    Sprintf(buf, \"%s: levels %d to %d\", dptr-&gt;dname, dptr-&gt;depth_start,\n  1653: \t\t\t\t\t\tdptr-&gt;depth_start + nlev - 1);\n  1654: \telse\n  1655: \t    Sprintf(buf, \"%s: level %d\", dptr-&gt;dname, dptr-&gt;depth_start);\n  1656: \n  1657: \t/* Most entrances are uninteresting. */"
+    "context": "src/dungeon.c:1652:19\n       1647:     }\n       1648: \n       1649:     for (i = 0, dptr = dungeons; i &lt; n_dgns; i++, dptr++) {\n       1650: \tnlev = dptr-&gt;num_dunlevs;\n       1651: \tif (nlev &gt; 1)\nTARGET 1652: \t    Sprintf(buf, \"%s: levels %d to %d\", dptr-&gt;dname, dptr-&gt;depth_start,\n       1653: \t\t\t\t\t\tdptr-&gt;depth_start + nlev - 1);\n       1654: \telse\n       1655: \t    Sprintf(buf, \"%s: level %d\", dptr-&gt;dname, dptr-&gt;depth_start);\n       1656: \n       1657: \t/* Most entrances are uninteresting. */"
   },
   {
     "key": "L01655_01",
     "original": "%s: level %d",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1655:19\n  1650: \tnlev = dptr-&gt;num_dunlevs;\n  1651: \tif (nlev &gt; 1)\n  1652: \t    Sprintf(buf, \"%s: levels %d to %d\", dptr-&gt;dname, dptr-&gt;depth_start,\n  1653: \t\t\t\t\t\tdptr-&gt;depth_start + nlev - 1);\n  1654: \telse\n&gt; 1655: \t    Sprintf(buf, \"%s: level %d\", dptr-&gt;dname, dptr-&gt;depth_start);\n  1656: \n  1657: \t/* Most entrances are uninteresting. */\n  1658: \tif (dptr-&gt;entry_lev != 1) {\n  1659: \t    if (dptr-&gt;entry_lev == nlev)\n  1660: \t\tStrcat(buf, \", entrance from below\");"
+    "context": "src/dungeon.c:1655:19\n       1650: \tnlev = dptr-&gt;num_dunlevs;\n       1651: \tif (nlev &gt; 1)\n       1652: \t    Sprintf(buf, \"%s: levels %d to %d\", dptr-&gt;dname, dptr-&gt;depth_start,\n       1653: \t\t\t\t\t\tdptr-&gt;depth_start + nlev - 1);\n       1654: \telse\nTARGET 1655: \t    Sprintf(buf, \"%s: level %d\", dptr-&gt;dname, dptr-&gt;depth_start);\n       1656: \n       1657: \t/* Most entrances are uninteresting. */\n       1658: \tif (dptr-&gt;entry_lev != 1) {\n       1659: \t    if (dptr-&gt;entry_lev == nlev)\n       1660: \t\tStrcat(buf, \", entrance from below\");"
   },
   {
     "key": "L01660_01",
     "original": ", entrance from below",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1660:15\n  1655: \t    Sprintf(buf, \"%s: level %d\", dptr-&gt;dname, dptr-&gt;depth_start);\n  1656: \n  1657: \t/* Most entrances are uninteresting. */\n  1658: \tif (dptr-&gt;entry_lev != 1) {\n  1659: \t    if (dptr-&gt;entry_lev == nlev)\n&gt; 1660: \t\tStrcat(buf, \", entrance from below\");\n  1661: \t    else\n  1662: \t\tSprintf(eos(buf), \", entrance on %d\",\n  1663: \t\t\tdptr-&gt;depth_start + dptr-&gt;entry_lev - 1);\n  1664: \t}\n  1665: \tif (bymenu) {"
+    "context": "src/dungeon.c:1660:15\n       1655: \t    Sprintf(buf, \"%s: level %d\", dptr-&gt;dname, dptr-&gt;depth_start);\n       1656: \n       1657: \t/* Most entrances are uninteresting. */\n       1658: \tif (dptr-&gt;entry_lev != 1) {\n       1659: \t    if (dptr-&gt;entry_lev == nlev)\nTARGET 1660: \t\tStrcat(buf, \", entrance from below\");\n       1661: \t    else\n       1662: \t\tSprintf(eos(buf), \", entrance on %d\",\n       1663: \t\t\tdptr-&gt;depth_start + dptr-&gt;entry_lev - 1);\n       1664: \t}\n       1665: \tif (bymenu) {"
   },
   {
     "key": "L01662_01",
     "original": ", entrance on %d",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1662:21\n  1657: \t/* Most entrances are uninteresting. */\n  1658: \tif (dptr-&gt;entry_lev != 1) {\n  1659: \t    if (dptr-&gt;entry_lev == nlev)\n  1660: \t\tStrcat(buf, \", entrance from below\");\n  1661: \t    else\n&gt; 1662: \t\tSprintf(eos(buf), \", entrance on %d\",\n  1663: \t\t\tdptr-&gt;depth_start + dptr-&gt;entry_lev - 1);\n  1664: \t}\n  1665: \tif (bymenu) {\n  1666: \t    any.a_void = 0;\n  1667: \t    add_menu(win, NO_GLYPH, &any, 0, 0, iflags.menu_headings, buf, MENU_UNSELECTED);"
+    "context": "src/dungeon.c:1662:21\n       1657: \t/* Most entrances are uninteresting. */\n       1658: \tif (dptr-&gt;entry_lev != 1) {\n       1659: \t    if (dptr-&gt;entry_lev == nlev)\n       1660: \t\tStrcat(buf, \", entrance from below\");\n       1661: \t    else\nTARGET 1662: \t\tSprintf(eos(buf), \", entrance on %d\",\n       1663: \t\t\tdptr-&gt;depth_start + dptr-&gt;entry_lev - 1);\n       1664: \t}\n       1665: \tif (bymenu) {\n       1666: \t    any.a_void = 0;\n       1667: \t    add_menu(win, NO_GLYPH, &any, 0, 0, iflags.menu_headings, buf, MENU_UNSELECTED);"
   },
   {
     "key": "L01681_01",
     "original": "   %s: %d",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1681:19\n  1676: \t    if (slev-&gt;dlevel.dnum != i) continue;\n  1677: \n  1678: \t    /* print any branches before this level */\n  1679: \t    print_branch(win, i, last_level, slev-&gt;dlevel.dlevel, bymenu, &lchoices);\n  1680: \n&gt; 1681: \t    Sprintf(buf, \"   %s: %d\", slev-&gt;proto, depth(&slev-&gt;dlevel));\n  1682: \t    if (Is_stronghold(&slev-&gt;dlevel))\n  1683: \t\tSprintf(eos(buf), \" (tune %s)\", tune);\n  1684: \t    if (bymenu) {\n  1685: \t    \t/* If other floating branches are added, this will need to change */\n  1686: \t    \tif (i != knox_level.dnum) {"
+    "context": "src/dungeon.c:1681:19\n       1676: \t    if (slev-&gt;dlevel.dnum != i) continue;\n       1677: \n       1678: \t    /* print any branches before this level */\n       1679: \t    print_branch(win, i, last_level, slev-&gt;dlevel.dlevel, bymenu, &lchoices);\n       1680: \nTARGET 1681: \t    Sprintf(buf, \"   %s: %d\", slev-&gt;proto, depth(&slev-&gt;dlevel));\n       1682: \t    if (Is_stronghold(&slev-&gt;dlevel))\n       1683: \t\tSprintf(eos(buf), \" (tune %s)\", tune);\n       1684: \t    if (bymenu) {\n       1685: \t    \t/* If other floating branches are added, this will need to change */\n       1686: \t    \tif (i != knox_level.dnum) {"
   },
   {
     "key": "L01683_01",
     "original": " (tune %s)",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1683:21\n  1678: \t    /* print any branches before this level */\n  1679: \t    print_branch(win, i, last_level, slev-&gt;dlevel.dlevel, bymenu, &lchoices);\n  1680: \n  1681: \t    Sprintf(buf, \"   %s: %d\", slev-&gt;proto, depth(&slev-&gt;dlevel));\n  1682: \t    if (Is_stronghold(&slev-&gt;dlevel))\n&gt; 1683: \t\tSprintf(eos(buf), \" (tune %s)\", tune);\n  1684: \t    if (bymenu) {\n  1685: \t    \t/* If other floating branches are added, this will need to change */\n  1686: \t    \tif (i != knox_level.dnum) {\n  1687: \t\t\tlchoices.lev[lchoices.idx] = slev-&gt;dlevel.dlevel;\n  1688: \t\t\tlchoices.dgn[lchoices.idx] = i;"
+    "context": "src/dungeon.c:1683:21\n       1678: \t    /* print any branches before this level */\n       1679: \t    print_branch(win, i, last_level, slev-&gt;dlevel.dlevel, bymenu, &lchoices);\n       1680: \n       1681: \t    Sprintf(buf, \"   %s: %d\", slev-&gt;proto, depth(&slev-&gt;dlevel));\n       1682: \t    if (Is_stronghold(&slev-&gt;dlevel))\nTARGET 1683: \t\tSprintf(eos(buf), \" (tune %s)\", tune);\n       1684: \t    if (bymenu) {\n       1685: \t    \t/* If other floating branches are added, this will need to change */\n       1686: \t    \tif (i != knox_level.dnum) {\n       1687: \t\t\tlchoices.lev[lchoices.idx] = slev-&gt;dlevel.dlevel;\n       1688: \t\t\tlchoices.dgn[lchoices.idx] = i;"
   },
   {
     "key": "L01716_01",
     "original": "Floating branches",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1716:22\n  1711:     for (first = TRUE, br = branches; br; br = br-&gt;next) {\n  1712: \tif (br-&gt;end1.dnum == n_dgns) {\n  1713: \t    if (first) {\n  1714: \t    \tif (!bymenu) {\n  1715: \t\t    putstr(win, 0, \"\");\n&gt; 1716: \t\t    putstr(win, 0, \"Floating branches\");\n  1717: \t\t}\n  1718: \t\tfirst = FALSE;\n  1719: \t    }\n  1720: \t    Sprintf(buf, \"   %s to %s\",\n  1721: \t\t\tbr_string(br-&gt;type), dungeons[br-&gt;end2.dnum].dname);"
+    "context": "src/dungeon.c:1716:22\n       1711:     for (first = TRUE, br = branches; br; br = br-&gt;next) {\n       1712: \tif (br-&gt;end1.dnum == n_dgns) {\n       1713: \t    if (first) {\n       1714: \t    \tif (!bymenu) {\n       1715: \t\t    putstr(win, 0, \"\");\nTARGET 1716: \t\t    putstr(win, 0, \"Floating branches\");\n       1717: \t\t}\n       1718: \t\tfirst = FALSE;\n       1719: \t    }\n       1720: \t    Sprintf(buf, \"   %s to %s\",\n       1721: \t\t\tbr_string(br-&gt;type), dungeons[br-&gt;end2.dnum].dname);"
   },
   {
     "key": "L01720_01",
     "original": "   %s to %s",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1720:19\n  1715: \t\t    putstr(win, 0, \"\");\n  1716: \t\t    putstr(win, 0, \"Floating branches\");\n  1717: \t\t}\n  1718: \t\tfirst = FALSE;\n  1719: \t    }\n&gt; 1720: \t    Sprintf(buf, \"   %s to %s\",\n  1721: \t\t\tbr_string(br-&gt;type), dungeons[br-&gt;end2.dnum].dname);\n  1722: \t    if (!bymenu)\n  1723: \t\tputstr(win, 0, buf);\n  1724: \t}\n  1725:     }"
+    "context": "src/dungeon.c:1720:19\n       1715: \t\t    putstr(win, 0, \"\");\n       1716: \t\t    putstr(win, 0, \"Floating branches\");\n       1717: \t\t}\n       1718: \t\tfirst = FALSE;\n       1719: \t    }\nTARGET 1720: \t    Sprintf(buf, \"   %s to %s\",\n       1721: \t\t\tbr_string(br-&gt;type), dungeons[br-&gt;end2.dnum].dname);\n       1722: \t    if (!bymenu)\n       1723: \t\tputstr(win, 0, buf);\n       1724: \t}\n       1725:     }"
   },
   {
     "key": "L01731_01",
     "original": "Level teleport to where:",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1731:16\n  1726:     if (bymenu) {\n  1727:     \tint n;\n  1728: \tmenu_item *selected;\n  1729: \tint idx;\n  1730: \n&gt; 1731: \tend_menu(win, \"Level teleport to where:\");\n  1732: \tn = select_menu(win, PICK_ONE, &selected);\n  1733: \tdestroy_nhwindow(win);\n  1734: \tif (n &gt; 0) {\n  1735: \t\tidx = selected[0].item.a_int - 1;\n  1736: \t\tfree((genericptr_t)selected);"
+    "context": "src/dungeon.c:1731:16\n       1726:     if (bymenu) {\n       1727:     \tint n;\n       1728: \tmenu_item *selected;\n       1729: \tint idx;\n       1730: \nTARGET 1731: \tend_menu(win, \"Level teleport to where:\");\n       1732: \tn = select_menu(win, PICK_ONE, &selected);\n       1733: \tdestroy_nhwindow(win);\n       1734: \tif (n &gt; 0) {\n       1735: \t\tidx = selected[0].item.a_int - 1;\n       1736: \t\tfree((genericptr_t)selected);"
   },
   {
     "key": "L01749_01",
     "original": "Invocation position @ (%d,%d), hero @ (%d,%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1749:15\n  1744:     }\n  1745: \n  1746:     /* I hate searching for the invocation pos while debugging. -dean */\n  1747:     if (Invocation_lev(&u.uz)) {\n  1748: \tputstr(win, 0, \"\");\n&gt; 1749: \tSprintf(buf, \"Invocation position @ (%d,%d), hero @ (%d,%d)\",\n  1750: \t\tinv_pos.x, inv_pos.y, u.ux, u.uy);\n  1751: \tputstr(win, 0, buf);\n  1752:     }\n  1753:     /*\n  1754:      * The following is based on the assumption that the inter-level portals"
+    "context": "src/dungeon.c:1749:15\n       1744:     }\n       1745: \n       1746:     /* I hate searching for the invocation pos while debugging. -dean */\n       1747:     if (Invocation_lev(&u.uz)) {\n       1748: \tputstr(win, 0, \"\");\nTARGET 1749: \tSprintf(buf, \"Invocation position @ (%d,%d), hero @ (%d,%d)\",\n       1750: \t\tinv_pos.x, inv_pos.y, u.ux, u.uy);\n       1751: \tputstr(win, 0, buf);\n       1752:     }\n       1753:     /*\n       1754:      * The following is based on the assumption that the inter-level portals"
   },
   {
     "key": "L01766_01",
     "original": "Portal @ (%d,%d), hero @ (%d,%d)",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1766:19\n  1761: \tfor (trap = ftrap; trap; trap = trap-&gt;ntrap)\n  1762: \t    if (trap-&gt;ttyp == MAGIC_PORTAL) break;\n  1763: \n  1764: \tputstr(win, 0, \"\");\n  1765: \tif (trap)\n&gt; 1766: \t    Sprintf(buf, \"Portal @ (%d,%d), hero @ (%d,%d)\",\n  1767: \t\ttrap-&gt;tx, trap-&gt;ty, u.ux, u.uy);\n  1768: \telse\n  1769: \t    Sprintf(buf, \"No portal found.\");\n  1770: \tputstr(win, 0, buf);\n  1771:     }"
+    "context": "src/dungeon.c:1766:19\n       1761: \tfor (trap = ftrap; trap; trap = trap-&gt;ntrap)\n       1762: \t    if (trap-&gt;ttyp == MAGIC_PORTAL) break;\n       1763: \n       1764: \tputstr(win, 0, \"\");\n       1765: \tif (trap)\nTARGET 1766: \t    Sprintf(buf, \"Portal @ (%d,%d), hero @ (%d,%d)\",\n       1767: \t\ttrap-&gt;tx, trap-&gt;ty, u.ux, u.uy);\n       1768: \telse\n       1769: \t    Sprintf(buf, \"No portal found.\");\n       1770: \tputstr(win, 0, buf);\n       1771:     }"
   },
   {
     "key": "L01769_01",
     "original": "No portal found.",
     "translation": "",
     "stage": 0,
-    "context": "src/dungeon.c:1769:19\n  1764: \tputstr(win, 0, \"\");\n  1765: \tif (trap)\n  1766: \t    Sprintf(buf, \"Portal @ (%d,%d), hero @ (%d,%d)\",\n  1767: \t\ttrap-&gt;tx, trap-&gt;ty, u.ux, u.uy);\n  1768: \telse\n&gt; 1769: \t    Sprintf(buf, \"No portal found.\");\n  1770: \tputstr(win, 0, buf);\n  1771:     }\n  1772: \n  1773:     display_nhwindow(win, TRUE);\n  1774:     destroy_nhwindow(win);"
+    "context": "src/dungeon.c:1769:19\n       1764: \tputstr(win, 0, \"\");\n       1765: \tif (trap)\n       1766: \t    Sprintf(buf, \"Portal @ (%d,%d), hero @ (%d,%d)\",\n       1767: \t\ttrap-&gt;tx, trap-&gt;ty, u.ux, u.uy);\n       1768: \telse\nTARGET 1769: \t    Sprintf(buf, \"No portal found.\");\n       1770: \tputstr(win, 0, buf);\n       1771:     }\n       1772: \n       1773:     display_nhwindow(win, TRUE);\n       1774:     destroy_nhwindow(win);"
   }
 ]

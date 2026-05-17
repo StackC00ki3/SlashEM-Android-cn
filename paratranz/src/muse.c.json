@@ -4,1056 +4,1056 @@
     "original": "The potion turns out to be empty.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:70:33\n    65: \tif (!obj) return 0;\n    66: \tvis = cansee(mon-&gt;mx, mon-&gt;my);\n    67: \n    68: \tif (obj-&gt;oclass == POTION_CLASS) {\n    69: \t    coord cc;\n&gt;   70: \t    static const char *empty = \"The potion turns out to be empty.\";\n    71: \t    const char *potion_descr;\n    72: \t    struct monst *mtmp;\n    73: #define POTION_OCCUPANT_CHANCE(n) (13 + 2*(n))\t/* also in potion.c */\n    74: \n    75: \t    potion_descr = OBJ_DESCR(objects[obj-&gt;otyp]);"
+    "context": "src/muse.c:70:33\n         65: \tif (!obj) return 0;\n         66: \tvis = cansee(mon-&gt;mx, mon-&gt;my);\n         67: \n         68: \tif (obj-&gt;oclass == POTION_CLASS) {\n         69: \t    coord cc;\nTARGET   70: \t    static const char *empty = \"The potion turns out to be empty.\";\n         71: \t    const char *potion_descr;\n         72: \t    struct monst *mtmp;\n         73: #define POTION_OCCUPANT_CHANCE(n) (13 + 2*(n))\t/* also in potion.c */\n         74: \n         75: \t    potion_descr = OBJ_DESCR(objects[obj-&gt;otyp]);"
   },
   {
     "key": "L00076_01",
     "original": "milky",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:76:48\n    71: \t    const char *potion_descr;\n    72: \t    struct monst *mtmp;\n    73: #define POTION_OCCUPANT_CHANCE(n) (13 + 2*(n))\t/* also in potion.c */\n    74: \n    75: \t    potion_descr = OBJ_DESCR(objects[obj-&gt;otyp]);\n&gt;   76: \t    if (potion_descr && !strcmp(potion_descr, \"milky\")) {\n    77: \t        if ( flags.ghost_count &lt; MAXMONNO &&\n    78: \t\t    !rn2(POTION_OCCUPANT_CHANCE(flags.ghost_count))) {\n    79: \t\t    if (!enexto(&cc, mon-&gt;mx, mon-&gt;my, &mons[PM_GHOST])) return 0;\n    80: \t\t    mquaffmsg(mon, obj);\n    81: \t\t    m_useup(mon, obj);"
+    "context": "src/muse.c:76:48\n         71: \t    const char *potion_descr;\n         72: \t    struct monst *mtmp;\n         73: #define POTION_OCCUPANT_CHANCE(n) (13 + 2*(n))\t/* also in potion.c */\n         74: \n         75: \t    potion_descr = OBJ_DESCR(objects[obj-&gt;otyp]);\nTARGET   76: \t    if (potion_descr && !strcmp(potion_descr, \"milky\")) {\n         77: \t        if ( flags.ghost_count &lt; MAXMONNO &&\n         78: \t\t    !rn2(POTION_OCCUPANT_CHANCE(flags.ghost_count))) {\n         79: \t\t    if (!enexto(&cc, mon-&gt;mx, mon-&gt;my, &mons[PM_GHOST])) return 0;\n         80: \t\t    mquaffmsg(mon, obj);\n         81: \t\t    m_useup(mon, obj);"
   },
   {
     "key": "L00087_01",
     "original": "As %s opens the bottle, an enormous %s emerges!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:87:14\n    82: \t\t    mtmp = makemon(&mons[PM_GHOST], cc.x, cc.y, NO_MM_FLAGS);\n    83: \t\t    if (!mtmp) {\n    84: \t\t\tif (vis) pline(empty);\n    85: \t\t    } else {\n    86: \t\t\tif (vis) {\n&gt;   87: \t\t\t    pline(\"As %s opens the bottle, an enormous %s emerges!\",\n    88: \t\t\t       mon_nam(mon),\n    89: \t\t\t       Hallucination ? rndmonnam() : (const char *)\"ghost\");\n    90: \t\t\t    pline(\"%s is frightened to death, and unable to move.\",\n    91: \t\t\t\t    Monnam(mon));\n    92: \t\t\t}"
+    "context": "src/muse.c:87:14\n         82: \t\t    mtmp = makemon(&mons[PM_GHOST], cc.x, cc.y, NO_MM_FLAGS);\n         83: \t\t    if (!mtmp) {\n         84: \t\t\tif (vis) pline(empty);\n         85: \t\t    } else {\n         86: \t\t\tif (vis) {\nTARGET   87: \t\t\t    pline(\"As %s opens the bottle, an enormous %s emerges!\",\n         88: \t\t\t       mon_nam(mon),\n         89: \t\t\t       Hallucination ? rndmonnam() : (const char *)\"ghost\");\n         90: \t\t\t    pline(\"%s is frightened to death, and unable to move.\",\n         91: \t\t\t\t    Monnam(mon));\n         92: \t\t\t}"
   },
   {
     "key": "L00089_01",
     "original": "ghost",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:89:55\n    84: \t\t\tif (vis) pline(empty);\n    85: \t\t    } else {\n    86: \t\t\tif (vis) {\n    87: \t\t\t    pline(\"As %s opens the bottle, an enormous %s emerges!\",\n    88: \t\t\t       mon_nam(mon),\n&gt;   89: \t\t\t       Hallucination ? rndmonnam() : (const char *)\"ghost\");\n    90: \t\t\t    pline(\"%s is frightened to death, and unable to move.\",\n    91: \t\t\t\t    Monnam(mon));\n    92: \t\t\t}\n    93: \t\t\tmon-&gt;mcanmove = 0;\n    94: \t\t\tmon-&gt;mfrozen = 3;"
+    "context": "src/muse.c:89:55\n         84: \t\t\tif (vis) pline(empty);\n         85: \t\t    } else {\n         86: \t\t\tif (vis) {\n         87: \t\t\t    pline(\"As %s opens the bottle, an enormous %s emerges!\",\n         88: \t\t\t       mon_nam(mon),\nTARGET   89: \t\t\t       Hallucination ? rndmonnam() : (const char *)\"ghost\");\n         90: \t\t\t    pline(\"%s is frightened to death, and unable to move.\",\n         91: \t\t\t\t    Monnam(mon));\n         92: \t\t\t}\n         93: \t\t\tmon-&gt;mcanmove = 0;\n         94: \t\t\tmon-&gt;mfrozen = 3;"
   },
   {
     "key": "L00090_01",
     "original": "%s is frightened to death, and unable to move.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:90:14\n    85: \t\t    } else {\n    86: \t\t\tif (vis) {\n    87: \t\t\t    pline(\"As %s opens the bottle, an enormous %s emerges!\",\n    88: \t\t\t       mon_nam(mon),\n    89: \t\t\t       Hallucination ? rndmonnam() : (const char *)\"ghost\");\n&gt;   90: \t\t\t    pline(\"%s is frightened to death, and unable to move.\",\n    91: \t\t\t\t    Monnam(mon));\n    92: \t\t\t}\n    93: \t\t\tmon-&gt;mcanmove = 0;\n    94: \t\t\tmon-&gt;mfrozen = 3;\n    95: \t\t    }"
+    "context": "src/muse.c:90:14\n         85: \t\t    } else {\n         86: \t\t\tif (vis) {\n         87: \t\t\t    pline(\"As %s opens the bottle, an enormous %s emerges!\",\n         88: \t\t\t       mon_nam(mon),\n         89: \t\t\t       Hallucination ? rndmonnam() : (const char *)\"ghost\");\nTARGET   90: \t\t\t    pline(\"%s is frightened to death, and unable to move.\",\n         91: \t\t\t\t    Monnam(mon));\n         92: \t\t\t}\n         93: \t\t\tmon-&gt;mcanmove = 0;\n         94: \t\t\tmon-&gt;mfrozen = 3;\n         95: \t\t    }"
   },
   {
     "key": "L00099_01",
     "original": "smoky",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:99:48\n    94: \t\t\tmon-&gt;mfrozen = 3;\n    95: \t\t    }\n    96: \t\t    return 2;\n    97: \t\t}\n    98: \t    }\n&gt;   99: \t    if (potion_descr && !strcmp(potion_descr, \"smoky\") &&\n   100: \t\t    flags.djinni_count &lt; MAXMONNO &&\n   101: \t\t    !rn2(POTION_OCCUPANT_CHANCE(flags.djinni_count))) {\n   102: \t\tif (!enexto(&cc, mon-&gt;mx, mon-&gt;my, &mons[PM_DJINNI])) return 0;\n   103: \t\tmquaffmsg(mon, obj);\n   104: \t\tm_useup(mon, obj);"
+    "context": "src/muse.c:99:48\n         94: \t\t\tmon-&gt;mfrozen = 3;\n         95: \t\t    }\n         96: \t\t    return 2;\n         97: \t\t}\n         98: \t    }\nTARGET   99: \t    if (potion_descr && !strcmp(potion_descr, \"smoky\") &&\n        100: \t\t    flags.djinni_count &lt; MAXMONNO &&\n        101: \t\t    !rn2(POTION_OCCUPANT_CHANCE(flags.djinni_count))) {\n        102: \t\tif (!enexto(&cc, mon-&gt;mx, mon-&gt;my, &mons[PM_DJINNI])) return 0;\n        103: \t\tmquaffmsg(mon, obj);\n        104: \t\tm_useup(mon, obj);"
   },
   {
     "key": "L00110_01",
     "original": "In a cloud of smoke, %s emerges!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:110:10\n   105: \t\tmtmp = makemon(&mons[PM_DJINNI], cc.x, cc.y, NO_MM_FLAGS);\n   106: \t\tif (!mtmp) {\n   107: \t\t    if (vis) pline(empty);\n   108: \t\t} else {\n   109: \t\t    if (vis)\n&gt;  110: \t\t\tpline(\"In a cloud of smoke, %s emerges!\",\n   111: \t\t\t\t\t\t\ta_monnam(mtmp));\n   112: \t\t    pline(\"%s speaks.\", vis ? Monnam(mtmp) : Something);\n   113: \t\t/* I suspect few players will be upset that monsters */\n   114: \t\t/* can't wish for wands of death here.... */\n   115: \t\t    if (rn2(2)) {"
+    "context": "src/muse.c:110:10\n        105: \t\tmtmp = makemon(&mons[PM_DJINNI], cc.x, cc.y, NO_MM_FLAGS);\n        106: \t\tif (!mtmp) {\n        107: \t\t    if (vis) pline(empty);\n        108: \t\t} else {\n        109: \t\t    if (vis)\nTARGET  110: \t\t\tpline(\"In a cloud of smoke, %s emerges!\",\n        111: \t\t\t\t\t\t\ta_monnam(mtmp));\n        112: \t\t    pline(\"%s speaks.\", vis ? Monnam(mtmp) : Something);\n        113: \t\t/* I suspect few players will be upset that monsters */\n        114: \t\t/* can't wish for wands of death here.... */\n        115: \t\t    if (rn2(2)) {"
   },
   {
     "key": "L00112_01",
     "original": "%s speaks.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:112:13\n   107: \t\t    if (vis) pline(empty);\n   108: \t\t} else {\n   109: \t\t    if (vis)\n   110: \t\t\tpline(\"In a cloud of smoke, %s emerges!\",\n   111: \t\t\t\t\t\t\ta_monnam(mtmp));\n&gt;  112: \t\t    pline(\"%s speaks.\", vis ? Monnam(mtmp) : Something);\n   113: \t\t/* I suspect few players will be upset that monsters */\n   114: \t\t/* can't wish for wands of death here.... */\n   115: \t\t    if (rn2(2)) {\n   116: \t\t\tverbalize(\"You freed me!\");\n   117: \t\t\tmtmp-&gt;mpeaceful = 1;"
+    "context": "src/muse.c:112:13\n        107: \t\t    if (vis) pline(empty);\n        108: \t\t} else {\n        109: \t\t    if (vis)\n        110: \t\t\tpline(\"In a cloud of smoke, %s emerges!\",\n        111: \t\t\t\t\t\t\ta_monnam(mtmp));\nTARGET  112: \t\t    pline(\"%s speaks.\", vis ? Monnam(mtmp) : Something);\n        113: \t\t/* I suspect few players will be upset that monsters */\n        114: \t\t/* can't wish for wands of death here.... */\n        115: \t\t    if (rn2(2)) {\n        116: \t\t\tverbalize(\"You freed me!\");\n        117: \t\t\tmtmp-&gt;mpeaceful = 1;"
   },
   {
     "key": "L00116_01",
     "original": "You freed me!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:116:14\n   111: \t\t\t\t\t\t\ta_monnam(mtmp));\n   112: \t\t    pline(\"%s speaks.\", vis ? Monnam(mtmp) : Something);\n   113: \t\t/* I suspect few players will be upset that monsters */\n   114: \t\t/* can't wish for wands of death here.... */\n   115: \t\t    if (rn2(2)) {\n&gt;  116: \t\t\tverbalize(\"You freed me!\");\n   117: \t\t\tmtmp-&gt;mpeaceful = 1;\n   118: \t\t\tset_malign(mtmp);\n   119: \t\t    } else {\n   120: \t\t\tverbalize(\"It is about time.\");\n   121: \t\t\tif (vis) pline(\"%s vanishes.\", Monnam(mtmp));"
+    "context": "src/muse.c:116:14\n        111: \t\t\t\t\t\t\ta_monnam(mtmp));\n        112: \t\t    pline(\"%s speaks.\", vis ? Monnam(mtmp) : Something);\n        113: \t\t/* I suspect few players will be upset that monsters */\n        114: \t\t/* can't wish for wands of death here.... */\n        115: \t\t    if (rn2(2)) {\nTARGET  116: \t\t\tverbalize(\"You freed me!\");\n        117: \t\t\tmtmp-&gt;mpeaceful = 1;\n        118: \t\t\tset_malign(mtmp);\n        119: \t\t    } else {\n        120: \t\t\tverbalize(\"It is about time.\");\n        121: \t\t\tif (vis) pline(\"%s vanishes.\", Monnam(mtmp));"
   },
   {
     "key": "L00120_01",
     "original": "It is about time.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:120:14\n   115: \t\t    if (rn2(2)) {\n   116: \t\t\tverbalize(\"You freed me!\");\n   117: \t\t\tmtmp-&gt;mpeaceful = 1;\n   118: \t\t\tset_malign(mtmp);\n   119: \t\t    } else {\n&gt;  120: \t\t\tverbalize(\"It is about time.\");\n   121: \t\t\tif (vis) pline(\"%s vanishes.\", Monnam(mtmp));\n   122: \t\t\tmongone(mtmp);\n   123: \t\t    }\n   124: \t\t}\n   125: \t\treturn 2;"
+    "context": "src/muse.c:120:14\n        115: \t\t    if (rn2(2)) {\n        116: \t\t\tverbalize(\"You freed me!\");\n        117: \t\t\tmtmp-&gt;mpeaceful = 1;\n        118: \t\t\tset_malign(mtmp);\n        119: \t\t    } else {\nTARGET  120: \t\t\tverbalize(\"It is about time.\");\n        121: \t\t\tif (vis) pline(\"%s vanishes.\", Monnam(mtmp));\n        122: \t\t\tmongone(mtmp);\n        123: \t\t    }\n        124: \t\t}\n        125: \t\treturn 2;"
   },
   {
     "key": "L00121_01",
     "original": "%s vanishes.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:121:19\n   116: \t\t\tverbalize(\"You freed me!\");\n   117: \t\t\tmtmp-&gt;mpeaceful = 1;\n   118: \t\t\tset_malign(mtmp);\n   119: \t\t    } else {\n   120: \t\t\tverbalize(\"It is about time.\");\n&gt;  121: \t\t\tif (vis) pline(\"%s vanishes.\", Monnam(mtmp));\n   122: \t\t\tmongone(mtmp);\n   123: \t\t    }\n   124: \t\t}\n   125: \t\treturn 2;\n   126: \t    }"
+    "context": "src/muse.c:121:19\n        116: \t\t\tverbalize(\"You freed me!\");\n        117: \t\t\tmtmp-&gt;mpeaceful = 1;\n        118: \t\t\tset_malign(mtmp);\n        119: \t\t    } else {\n        120: \t\t\tverbalize(\"It is about time.\");\nTARGET  121: \t\t\tif (vis) pline(\"%s vanishes.\", Monnam(mtmp));\n        122: \t\t\tmongone(mtmp);\n        123: \t\t    }\n        124: \t\t}\n        125: \t\treturn 2;\n        126: \t    }"
   },
   {
     "key": "L00132_01",
     "original": "%s zaps %s, which suddenly explodes!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:132:18\n   127: \t}\n   128: \tif (obj-&gt;oclass == WAND_CLASS && obj-&gt;cursed && !rn2(100)) {\n   129: \t    int dam = d(obj-&gt;spe+2, 6);\n   130: \n   131: \t    if (flags.soundok) {\n&gt;  132: \t\tif (vis) pline(\"%s zaps %s, which suddenly explodes!\",\n   133: \t\t\tMonnam(mon), an(xname(obj)));\n   134: \t\telse You_hear(\"a zap and an explosion in the distance.\");\n   135: \t    }\n   136: \t    m_useup(mon, obj);\n   137: \t    if (mon-&gt;mhp &lt;= dam) {"
+    "context": "src/muse.c:132:18\n        127: \t}\n        128: \tif (obj-&gt;oclass == WAND_CLASS && obj-&gt;cursed && !rn2(100)) {\n        129: \t    int dam = d(obj-&gt;spe+2, 6);\n        130: \n        131: \t    if (flags.soundok) {\nTARGET  132: \t\tif (vis) pline(\"%s zaps %s, which suddenly explodes!\",\n        133: \t\t\tMonnam(mon), an(xname(obj)));\n        134: \t\telse You_hear(\"a zap and an explosion in the distance.\");\n        135: \t    }\n        136: \t    m_useup(mon, obj);\n        137: \t    if (mon-&gt;mhp &lt;= dam) {"
   },
   {
     "key": "L00134_01",
     "original": "a zap and an explosion in the distance.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:134:17\n   129: \t    int dam = d(obj-&gt;spe+2, 6);\n   130: \n   131: \t    if (flags.soundok) {\n   132: \t\tif (vis) pline(\"%s zaps %s, which suddenly explodes!\",\n   133: \t\t\tMonnam(mon), an(xname(obj)));\n&gt;  134: \t\telse You_hear(\"a zap and an explosion in the distance.\");\n   135: \t    }\n   136: \t    m_useup(mon, obj);\n   137: \t    if (mon-&gt;mhp &lt;= dam) {\n   138: \t\tmonkilled(mon, \"\", AD_RBRE);\n   139: \t\treturn 1;"
+    "context": "src/muse.c:134:17\n        129: \t    int dam = d(obj-&gt;spe+2, 6);\n        130: \n        131: \t    if (flags.soundok) {\n        132: \t\tif (vis) pline(\"%s zaps %s, which suddenly explodes!\",\n        133: \t\t\tMonnam(mon), an(xname(obj)));\nTARGET  134: \t\telse You_hear(\"a zap and an explosion in the distance.\");\n        135: \t    }\n        136: \t    m_useup(mon, obj);\n        137: \t    if (mon-&gt;mhp &lt;= dam) {\n        138: \t\tmonkilled(mon, \"\", AD_RBRE);\n        139: \t\treturn 1;"
   },
   {
     "key": "L00156_01",
     "original": "a %s zap.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:156:13\n   151: struct obj *otmp;\n   152: boolean self;\n   153: {\n   154: \tif (!canseemon(mtmp)) {\n   155: \t\tif (flags.soundok)\n&gt;  156: \t\t\tYou_hear(\"a %s zap.\",\n   157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\n   158: \t\t\t\t\t\"nearby\" : \"distant\");\n   159: \t} else if (self)\n   160: \t\tpline(\"%s zaps %sself with %s!\",\n   161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));"
+    "context": "src/muse.c:156:13\n        151: struct obj *otmp;\n        152: boolean self;\n        153: {\n        154: \tif (!canseemon(mtmp)) {\n        155: \t\tif (flags.soundok)\nTARGET  156: \t\t\tYou_hear(\"a %s zap.\",\n        157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\n        158: \t\t\t\t\t\"nearby\" : \"distant\");\n        159: \t} else if (self)\n        160: \t\tpline(\"%s zaps %sself with %s!\",\n        161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));"
   },
   {
     "key": "L00158_01",
     "original": "nearby",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:158:6\n   153: {\n   154: \tif (!canseemon(mtmp)) {\n   155: \t\tif (flags.soundok)\n   156: \t\t\tYou_hear(\"a %s zap.\",\n   157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\n&gt;  158: \t\t\t\t\t\"nearby\" : \"distant\");\n   159: \t} else if (self)\n   160: \t\tpline(\"%s zaps %sself with %s!\",\n   161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n   162: \telse {\n   163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));"
+    "context": "src/muse.c:158:6\n        153: {\n        154: \tif (!canseemon(mtmp)) {\n        155: \t\tif (flags.soundok)\n        156: \t\t\tYou_hear(\"a %s zap.\",\n        157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\nTARGET  158: \t\t\t\t\t\"nearby\" : \"distant\");\n        159: \t} else if (self)\n        160: \t\tpline(\"%s zaps %sself with %s!\",\n        161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n        162: \telse {\n        163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));"
   },
   {
     "key": "L00158_02",
     "original": "distant",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:158:17\n   153: {\n   154: \tif (!canseemon(mtmp)) {\n   155: \t\tif (flags.soundok)\n   156: \t\t\tYou_hear(\"a %s zap.\",\n   157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\n&gt;  158: \t\t\t\t\t\"nearby\" : \"distant\");\n   159: \t} else if (self)\n   160: \t\tpline(\"%s zaps %sself with %s!\",\n   161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n   162: \telse {\n   163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));"
+    "context": "src/muse.c:158:17\n        153: {\n        154: \tif (!canseemon(mtmp)) {\n        155: \t\tif (flags.soundok)\n        156: \t\t\tYou_hear(\"a %s zap.\",\n        157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\nTARGET  158: \t\t\t\t\t\"nearby\" : \"distant\");\n        159: \t} else if (self)\n        160: \t\tpline(\"%s zaps %sself with %s!\",\n        161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n        162: \telse {\n        163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));"
   },
   {
     "key": "L00160_01",
     "original": "%s zaps %sself with %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:160:9\n   155: \t\tif (flags.soundok)\n   156: \t\t\tYou_hear(\"a %s zap.\",\n   157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\n   158: \t\t\t\t\t\"nearby\" : \"distant\");\n   159: \t} else if (self)\n&gt;  160: \t\tpline(\"%s zaps %sself with %s!\",\n   161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n   162: \telse {\n   163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));\n   164: \t\tstop_occupation();\n   165: \t}"
+    "context": "src/muse.c:160:9\n        155: \t\tif (flags.soundok)\n        156: \t\t\tYou_hear(\"a %s zap.\",\n        157: \t\t\t\t\t(distu(mtmp-&gt;mx,mtmp-&gt;my) &lt;= (BOLT_LIM+1)*(BOLT_LIM+1)) ?\n        158: \t\t\t\t\t\"nearby\" : \"distant\");\n        159: \t} else if (self)\nTARGET  160: \t\tpline(\"%s zaps %sself with %s!\",\n        161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n        162: \telse {\n        163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));\n        164: \t\tstop_occupation();\n        165: \t}"
   },
   {
     "key": "L00163_01",
     "original": "%s zaps %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:163:9\n   158: \t\t\t\t\t\"nearby\" : \"distant\");\n   159: \t} else if (self)\n   160: \t\tpline(\"%s zaps %sself with %s!\",\n   161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n   162: \telse {\n&gt;  163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));\n   164: \t\tstop_occupation();\n   165: \t}\n   166: }\n   167: \n   168: STATIC_OVL void"
+    "context": "src/muse.c:163:9\n        158: \t\t\t\t\t\"nearby\" : \"distant\");\n        159: \t} else if (self)\n        160: \t\tpline(\"%s zaps %sself with %s!\",\n        161: \t\t      Monnam(mtmp), mhim(mtmp), doname(otmp));\n        162: \telse {\nTARGET  163: \t\tpline(\"%s zaps %s!\", Monnam(mtmp), an(xname(otmp)));\n        164: \t\tstop_occupation();\n        165: \t}\n        166: }\n        167: \n        168: STATIC_OVL void"
   },
   {
     "key": "L00195_01",
     "original": "%s reads %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:195:12\n   190: \tStrcpy(onambuf, singular(otmp, doname));\n   191: \tRole_switch = saverole;\n   192: \totmp-&gt;bknown = savebknown;\n   193: \n   194: \tif (vismon)\n&gt;  195: \t    pline(\"%s reads %s!\", Monnam(mtmp), onambuf);\n   196: \telse\n   197: \t    You_hear(\"%s reading %s.\",\n   198: \t\tx_monnam(mtmp, ARTICLE_A, (char *)0,\n   199: \t\t    (SUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_SADDLE), FALSE),\n   200: \t\tonambuf);"
+    "context": "src/muse.c:195:12\n        190: \tStrcpy(onambuf, singular(otmp, doname));\n        191: \tRole_switch = saverole;\n        192: \totmp-&gt;bknown = savebknown;\n        193: \n        194: \tif (vismon)\nTARGET  195: \t    pline(\"%s reads %s!\", Monnam(mtmp), onambuf);\n        196: \telse\n        197: \t    You_hear(\"%s reading %s.\",\n        198: \t\tx_monnam(mtmp, ARTICLE_A, (char *)0,\n        199: \t\t    (SUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_SADDLE), FALSE),\n        200: \t\tonambuf);"
   },
   {
     "key": "L00197_01",
     "original": "%s reading %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:197:15\n   192: \totmp-&gt;bknown = savebknown;\n   193: \n   194: \tif (vismon)\n   195: \t    pline(\"%s reads %s!\", Monnam(mtmp), onambuf);\n   196: \telse\n&gt;  197: \t    You_hear(\"%s reading %s.\",\n   198: \t\tx_monnam(mtmp, ARTICLE_A, (char *)0,\n   199: \t\t    (SUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_SADDLE), FALSE),\n   200: \t\tonambuf);\n   201: \n   202: \tif (mtmp-&gt;mconf)"
+    "context": "src/muse.c:197:15\n        192: \totmp-&gt;bknown = savebknown;\n        193: \n        194: \tif (vismon)\n        195: \t    pline(\"%s reads %s!\", Monnam(mtmp), onambuf);\n        196: \telse\nTARGET  197: \t    You_hear(\"%s reading %s.\",\n        198: \t\tx_monnam(mtmp, ARTICLE_A, (char *)0,\n        199: \t\t    (SUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_SADDLE), FALSE),\n        200: \t\tonambuf);\n        201: \n        202: \tif (mtmp-&gt;mconf)"
   },
   {
     "key": "L00203_01",
     "original": "Being confused, %s mispronounces the magic words...",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:203:12\n   198: \t\tx_monnam(mtmp, ARTICLE_A, (char *)0,\n   199: \t\t    (SUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_SADDLE), FALSE),\n   200: \t\tonambuf);\n   201: \n   202: \tif (mtmp-&gt;mconf)\n&gt;  203: \t    pline(\"Being confused, %s mispronounces the magic words...\",\n   204: \t\t  vismon ? mon_nam(mtmp) : mhe(mtmp));\n   205: }\n   206: \n   207: STATIC_OVL void\n   208: mquaffmsg(mtmp, otmp)"
+    "context": "src/muse.c:203:12\n        198: \t\tx_monnam(mtmp, ARTICLE_A, (char *)0,\n        199: \t\t    (SUPPRESS_IT|SUPPRESS_INVISIBLE|SUPPRESS_SADDLE), FALSE),\n        200: \t\tonambuf);\n        201: \n        202: \tif (mtmp-&gt;mconf)\nTARGET  203: \t    pline(\"Being confused, %s mispronounces the magic words...\",\n        204: \t\t  vismon ? mon_nam(mtmp) : mhe(mtmp));\n        205: }\n        206: \n        207: STATIC_OVL void\n        208: mquaffmsg(mtmp, otmp)"
   },
   {
     "key": "L00214_01",
     "original": "%s drinks %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:214:9\n   209: struct monst *mtmp;\n   210: struct obj *otmp;\n   211: {\n   212: \tif (canseemon(mtmp)) {\n   213: \t\totmp-&gt;dknown = 1;\n&gt;  214: \t\tpline(\"%s drinks %s!\", Monnam(mtmp), singular(otmp, doname));\n   215: \t} else\n   216: \t\tif (flags.soundok)\n   217: \t\t\tYou_hear(\"a chugging sound.\");\n   218: }\n   219: "
+    "context": "src/muse.c:214:9\n        209: struct monst *mtmp;\n        210: struct obj *otmp;\n        211: {\n        212: \tif (canseemon(mtmp)) {\n        213: \t\totmp-&gt;dknown = 1;\nTARGET  214: \t\tpline(\"%s drinks %s!\", Monnam(mtmp), singular(otmp, doname));\n        215: \t} else\n        216: \t\tif (flags.soundok)\n        217: \t\t\tYou_hear(\"a chugging sound.\");\n        218: }\n        219: "
   },
   {
     "key": "L00217_01",
     "original": "a chugging sound.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:217:13\n   212: \tif (canseemon(mtmp)) {\n   213: \t\totmp-&gt;dknown = 1;\n   214: \t\tpline(\"%s drinks %s!\", Monnam(mtmp), singular(otmp, doname));\n   215: \t} else\n   216: \t\tif (flags.soundok)\n&gt;  217: \t\t\tYou_hear(\"a chugging sound.\");\n   218: }\n   219: \n   220: /* Defines for various types of stuff.  The order in which monsters prefer\n   221:  * to use them is determined by the order of the code logic, not the\n   222:  * numerical order in which they are defined."
+    "context": "src/muse.c:217:13\n        212: \tif (canseemon(mtmp)) {\n        213: \t\totmp-&gt;dknown = 1;\n        214: \t\tpline(\"%s drinks %s!\", Monnam(mtmp), singular(otmp, doname));\n        215: \t} else\n        216: \t\tif (flags.soundok)\nTARGET  217: \t\t\tYou_hear(\"a chugging sound.\");\n        218: }\n        219: \n        220: /* Defines for various types of stuff.  The order in which monsters prefer\n        221:  * to use them is determined by the order of the code logic, not the\n        222:  * numerical order in which they are defined."
   },
   {
     "key": "L00570_01",
     "original": "%s can see again.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:570:21\n   565: struct monst *mtmp;\n   566: {\n   567: \tint i, fleetim, how = 0;\n   568: \tstruct obj *otmp = m.defensive;\n   569: \tboolean vis, vismon, oseen;\n&gt;  570: \tconst char *mcsa = \"%s can see again.\";\n   571: \n   572: \tif ((i = precheck(mtmp, otmp)) != 0) return i;\n   573: \tvis = cansee(mtmp-&gt;mx, mtmp-&gt;my);\n   574: \tvismon = canseemon(mtmp);\n   575: \toseen = otmp && vismon;"
+    "context": "src/muse.c:570:21\n        565: struct monst *mtmp;\n        566: {\n        567: \tint i, fleetim, how = 0;\n        568: \tstruct obj *otmp = m.defensive;\n        569: \tboolean vis, vismon, oseen;\nTARGET  570: \tconst char *mcsa = \"%s can see again.\";\n        571: \n        572: \tif ((i = precheck(mtmp, otmp)) != 0) return i;\n        573: \tvis = cansee(mtmp-&gt;mx, mtmp-&gt;my);\n        574: \tvismon = canseemon(mtmp);\n        575: \toseen = otmp && vismon;"
   },
   {
     "key": "L00587_01",
     "original": "%s uses a unicorn horn!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:587:10\n   582: \n   583: \tswitch(m.has_defense) {\n   584: \tcase MUSE_UNICORN_HORN:\n   585: \t\tif (vismon) {\n   586: \t\t    if (otmp)\n&gt;  587: \t\t\tpline(\"%s uses a unicorn horn!\", Monnam(mtmp));\n   588: \t\t    else\n   589: \t\t\tpline_The(\"tip of %s's horn glows!\", mon_nam(mtmp));\n   590: \t\t}\n   591: \t\tif (!mtmp-&gt;mcansee) {\n   592: \t\t    mtmp-&gt;mcansee = 1;"
+    "context": "src/muse.c:587:10\n        582: \n        583: \tswitch(m.has_defense) {\n        584: \tcase MUSE_UNICORN_HORN:\n        585: \t\tif (vismon) {\n        586: \t\t    if (otmp)\nTARGET  587: \t\t\tpline(\"%s uses a unicorn horn!\", Monnam(mtmp));\n        588: \t\t    else\n        589: \t\t\tpline_The(\"tip of %s's horn glows!\", mon_nam(mtmp));\n        590: \t\t}\n        591: \t\tif (!mtmp-&gt;mcansee) {\n        592: \t\t    mtmp-&gt;mcansee = 1;"
   },
   {
     "key": "L00589_01",
     "original": "tip of %s's horn glows!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:589:14\n   584: \tcase MUSE_UNICORN_HORN:\n   585: \t\tif (vismon) {\n   586: \t\t    if (otmp)\n   587: \t\t\tpline(\"%s uses a unicorn horn!\", Monnam(mtmp));\n   588: \t\t    else\n&gt;  589: \t\t\tpline_The(\"tip of %s's horn glows!\", mon_nam(mtmp));\n   590: \t\t}\n   591: \t\tif (!mtmp-&gt;mcansee) {\n   592: \t\t    mtmp-&gt;mcansee = 1;\n   593: \t\t    mtmp-&gt;mblinded = 0;\n   594: \t\t    if (vismon) pline(mcsa, Monnam(mtmp));"
+    "context": "src/muse.c:589:14\n        584: \tcase MUSE_UNICORN_HORN:\n        585: \t\tif (vismon) {\n        586: \t\t    if (otmp)\n        587: \t\t\tpline(\"%s uses a unicorn horn!\", Monnam(mtmp));\n        588: \t\t    else\nTARGET  589: \t\t\tpline_The(\"tip of %s's horn glows!\", mon_nam(mtmp));\n        590: \t\t}\n        591: \t\tif (!mtmp-&gt;mcansee) {\n        592: \t\t    mtmp-&gt;mcansee = 1;\n        593: \t\t    mtmp-&gt;mblinded = 0;\n        594: \t\t    if (vismon) pline(mcsa, Monnam(mtmp));"
   },
   {
     "key": "L00598_01",
     "original": "%s seems steadier now.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:598:10\n   593: \t\t    mtmp-&gt;mblinded = 0;\n   594: \t\t    if (vismon) pline(mcsa, Monnam(mtmp));\n   595: \t\t} else if (mtmp-&gt;mconf || mtmp-&gt;mstun) {\n   596: \t\t    mtmp-&gt;mconf = mtmp-&gt;mstun = 0;\n   597: \t\t    if (vismon)\n&gt;  598: \t\t\tpline(\"%s seems steadier now.\", Monnam(mtmp));\n   599: \t\t} else impossible(\"No need for unicorn horn?\");\n   600: \t\treturn 2;\n   601: \tcase MUSE_BUGLE:\n   602: \t\tif (vismon)\n   603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));"
+    "context": "src/muse.c:598:10\n        593: \t\t    mtmp-&gt;mblinded = 0;\n        594: \t\t    if (vismon) pline(mcsa, Monnam(mtmp));\n        595: \t\t} else if (mtmp-&gt;mconf || mtmp-&gt;mstun) {\n        596: \t\t    mtmp-&gt;mconf = mtmp-&gt;mstun = 0;\n        597: \t\t    if (vismon)\nTARGET  598: \t\t\tpline(\"%s seems steadier now.\", Monnam(mtmp));\n        599: \t\t} else impossible(\"No need for unicorn horn?\");\n        600: \t\treturn 2;\n        601: \tcase MUSE_BUGLE:\n        602: \t\tif (vismon)\n        603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));"
   },
   {
     "key": "L00599_01",
     "original": "No need for unicorn horn?",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:599:21\n   594: \t\t    if (vismon) pline(mcsa, Monnam(mtmp));\n   595: \t\t} else if (mtmp-&gt;mconf || mtmp-&gt;mstun) {\n   596: \t\t    mtmp-&gt;mconf = mtmp-&gt;mstun = 0;\n   597: \t\t    if (vismon)\n   598: \t\t\tpline(\"%s seems steadier now.\", Monnam(mtmp));\n&gt;  599: \t\t} else impossible(\"No need for unicorn horn?\");\n   600: \t\treturn 2;\n   601: \tcase MUSE_BUGLE:\n   602: \t\tif (vismon)\n   603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));\n   604: \t\telse if (flags.soundok)"
+    "context": "src/muse.c:599:21\n        594: \t\t    if (vismon) pline(mcsa, Monnam(mtmp));\n        595: \t\t} else if (mtmp-&gt;mconf || mtmp-&gt;mstun) {\n        596: \t\t    mtmp-&gt;mconf = mtmp-&gt;mstun = 0;\n        597: \t\t    if (vismon)\n        598: \t\t\tpline(\"%s seems steadier now.\", Monnam(mtmp));\nTARGET  599: \t\t} else impossible(\"No need for unicorn horn?\");\n        600: \t\treturn 2;\n        601: \tcase MUSE_BUGLE:\n        602: \t\tif (vismon)\n        603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));\n        604: \t\telse if (flags.soundok)"
   },
   {
     "key": "L00603_01",
     "original": "%s plays %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:603:10\n   598: \t\t\tpline(\"%s seems steadier now.\", Monnam(mtmp));\n   599: \t\t} else impossible(\"No need for unicorn horn?\");\n   600: \t\treturn 2;\n   601: \tcase MUSE_BUGLE:\n   602: \t\tif (vismon)\n&gt;  603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));\n   604: \t\telse if (flags.soundok)\n   605: \t\t\tYou_hear(\"a bugle playing reveille!\");\n   606: \t\tawaken_soldiers();\n   607: \t\treturn 2;\n   608: \tcase MUSE_WAN_TELEPORTATION_SELF:"
+    "context": "src/muse.c:603:10\n        598: \t\t\tpline(\"%s seems steadier now.\", Monnam(mtmp));\n        599: \t\t} else impossible(\"No need for unicorn horn?\");\n        600: \t\treturn 2;\n        601: \tcase MUSE_BUGLE:\n        602: \t\tif (vismon)\nTARGET  603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));\n        604: \t\telse if (flags.soundok)\n        605: \t\t\tYou_hear(\"a bugle playing reveille!\");\n        606: \t\tawaken_soldiers();\n        607: \t\treturn 2;\n        608: \tcase MUSE_WAN_TELEPORTATION_SELF:"
   },
   {
     "key": "L00605_01",
     "original": "a bugle playing reveille!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:605:13\n   600: \t\treturn 2;\n   601: \tcase MUSE_BUGLE:\n   602: \t\tif (vismon)\n   603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));\n   604: \t\telse if (flags.soundok)\n&gt;  605: \t\t\tYou_hear(\"a bugle playing reveille!\");\n   606: \t\tawaken_soldiers();\n   607: \t\treturn 2;\n   608: \tcase MUSE_WAN_TELEPORTATION_SELF:\n   609: \t\tif ((mtmp-&gt;isshk && inhishop(mtmp))\n   610: \t\t       || mtmp-&gt;isgd || mtmp-&gt;ispriest) return 2;"
+    "context": "src/muse.c:605:13\n        600: \t\treturn 2;\n        601: \tcase MUSE_BUGLE:\n        602: \t\tif (vismon)\n        603: \t\t\tpline(\"%s plays %s!\", Monnam(mtmp), doname(otmp));\n        604: \t\telse if (flags.soundok)\nTARGET  605: \t\t\tYou_hear(\"a bugle playing reveille!\");\n        606: \t\tawaken_soldiers();\n        607: \t\treturn 2;\n        608: \tcase MUSE_WAN_TELEPORTATION_SELF:\n        609: \t\tif ((mtmp-&gt;isshk && inhishop(mtmp))\n        610: \t\t       || mtmp-&gt;isgd || mtmp-&gt;ispriest) return 2;"
   },
   {
     "key": "L00630_01",
     "original": "%s seems disoriented for a moment.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:630:10\n   625: #if 0\n   626: \t\t\tmon_has_amulet(mtmp) ||\n   627: #endif\n   628: \t\t\tOn_W_tower_level(&u.uz)) && !rn2(3)) {\n   629: \t\t    if (vismon)\n&gt;  630: \t\t\tpline(\"%s seems disoriented for a moment.\",\n   631: \t\t\t\tMonnam(mtmp));\n   632: \t\t    return 2;\n   633: \t\t}\n   634: \t\tif (oseen && how) makeknown(how);\n   635: \t\t(void) rloc(mtmp, FALSE);"
+    "context": "src/muse.c:630:10\n        625: #if 0\n        626: \t\t\tmon_has_amulet(mtmp) ||\n        627: #endif\n        628: \t\t\tOn_W_tower_level(&u.uz)) && !rn2(3)) {\n        629: \t\t    if (vismon)\nTARGET  630: \t\t\tpline(\"%s seems disoriented for a moment.\",\n        631: \t\t\t\tMonnam(mtmp));\n        632: \t\t    return 2;\n        633: \t\t}\n        634: \t\tif (oseen && how) makeknown(how);\n        635: \t\t(void) rloc(mtmp, FALSE);"
   },
   {
     "key": "L00663_01",
     "original": "%s seems very disoriented for a moment.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:663:11\n   658: \t\t\tint nlev;\n   659: \t\t\td_level flev;\n   660: \n   661: \t\t\tif (mon_has_amulet(mtmp) || In_endgame(&u.uz)) {\n   662: \t\t\t    if (vismon)\n&gt;  663: \t\t\t\tpline(\"%s seems very disoriented for a moment.\",\n   664: \t\t\t\t\tMonnam(mtmp));\n   665: \t\t\t    return 2;\n   666: \t\t\t}\n   667: \t\t\tnlev = random_teleport_level();\n   668: \t\t\tif (nlev == depth(&u.uz)) {"
+    "context": "src/muse.c:663:11\n        658: \t\t\tint nlev;\n        659: \t\t\td_level flev;\n        660: \n        661: \t\t\tif (mon_has_amulet(mtmp) || In_endgame(&u.uz)) {\n        662: \t\t\t    if (vismon)\nTARGET  663: \t\t\t\tpline(\"%s seems very disoriented for a moment.\",\n        664: \t\t\t\t\tMonnam(mtmp));\n        665: \t\t\t    return 2;\n        666: \t\t\t}\n        667: \t\t\tnlev = random_teleport_level();\n        668: \t\t\tif (nlev == depth(&u.uz)) {"
   },
   {
     "key": "L00670_01",
     "original": "%s shudders for a moment.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:670:11\n   665: \t\t\t    return 2;\n   666: \t\t\t}\n   667: \t\t\tnlev = random_teleport_level();\n   668: \t\t\tif (nlev == depth(&u.uz)) {\n   669: \t\t\t    if (vismon)\n&gt;  670: \t\t\t\tpline(\"%s shudders for a moment.\",\n   671: \t\t\t\t\t\t\t\tMonnam(mtmp));\n   672: \t\t\t    return 2;\n   673: \t\t\t}\n   674: \t\t\tget_level(&flev, nlev);\n   675: \t\t\tmigrate_to_level(mtmp, ledger_no(&flev), MIGR_RANDOM,"
+    "context": "src/muse.c:670:11\n        665: \t\t\t    return 2;\n        666: \t\t\t}\n        667: \t\t\tnlev = random_teleport_level();\n        668: \t\t\tif (nlev == depth(&u.uz)) {\n        669: \t\t\t    if (vismon)\nTARGET  670: \t\t\t\tpline(\"%s shudders for a moment.\",\n        671: \t\t\t\t\t\t\t\tMonnam(mtmp));\n        672: \t\t\t    return 2;\n        673: \t\t\t}\n        674: \t\t\tget_level(&flev, nlev);\n        675: \t\t\tmigrate_to_level(mtmp, ledger_no(&flev), MIGR_RANDOM,"
   },
   {
     "key": "L00693_01",
     "original": "digging ray is ineffective.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:693:14\n   688: \t\tif (IS_FURNITURE(levl[mtmp-&gt;mx][mtmp-&gt;my].typ) ||\n   689: \t\t    IS_DRAWBRIDGE(levl[mtmp-&gt;mx][mtmp-&gt;my].typ) ||\n   690: \t\t    (is_drawbridge_wall(mtmp-&gt;mx, mtmp-&gt;my) &gt;= 0) ||\n   691: \t\t    (sstairs.sx && sstairs.sx == mtmp-&gt;mx &&\n   692: \t\t\t\t   sstairs.sy == mtmp-&gt;my)) {\n&gt;  693: \t\t\tpline_The(\"digging ray is ineffective.\");\n   694: \t\t\treturn 2;\n   695: \t\t}\n   696: \t\tif (!Can_dig_down(&u.uz)) {\n   697: \t\t    if(canseemon(mtmp))\n   698: \t\t\tpline_The(\"%s here is too hard to dig in.\","
+    "context": "src/muse.c:693:14\n        688: \t\tif (IS_FURNITURE(levl[mtmp-&gt;mx][mtmp-&gt;my].typ) ||\n        689: \t\t    IS_DRAWBRIDGE(levl[mtmp-&gt;mx][mtmp-&gt;my].typ) ||\n        690: \t\t    (is_drawbridge_wall(mtmp-&gt;mx, mtmp-&gt;my) &gt;= 0) ||\n        691: \t\t    (sstairs.sx && sstairs.sx == mtmp-&gt;mx &&\n        692: \t\t\t\t   sstairs.sy == mtmp-&gt;my)) {\nTARGET  693: \t\t\tpline_The(\"digging ray is ineffective.\");\n        694: \t\t\treturn 2;\n        695: \t\t}\n        696: \t\tif (!Can_dig_down(&u.uz)) {\n        697: \t\t    if(canseemon(mtmp))\n        698: \t\t\tpline_The(\"%s here is too hard to dig in.\","
   },
   {
     "key": "L00698_01",
     "original": "%s here is too hard to dig in.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:698:14\n   693: \t\t\tpline_The(\"digging ray is ineffective.\");\n   694: \t\t\treturn 2;\n   695: \t\t}\n   696: \t\tif (!Can_dig_down(&u.uz)) {\n   697: \t\t    if(canseemon(mtmp))\n&gt;  698: \t\t\tpline_The(\"%s here is too hard to dig in.\",\n   699: \t\t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   700: \t\t    return 2;\n   701: \t\t}\n   702: \t\tttmp = maketrap(mtmp-&gt;mx, mtmp-&gt;my, HOLE);\n   703: \t\tif (!ttmp) return 2;"
+    "context": "src/muse.c:698:14\n        693: \t\t\tpline_The(\"digging ray is ineffective.\");\n        694: \t\t\treturn 2;\n        695: \t\t}\n        696: \t\tif (!Can_dig_down(&u.uz)) {\n        697: \t\t    if(canseemon(mtmp))\nTARGET  698: \t\t\tpline_The(\"%s here is too hard to dig in.\",\n        699: \t\t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        700: \t\t    return 2;\n        701: \t\t}\n        702: \t\tttmp = maketrap(mtmp-&gt;mx, mtmp-&gt;my, HOLE);\n        703: \t\tif (!ttmp) return 2;"
   },
   {
     "key": "L00706_01",
     "original": "%s has made a hole in the %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:706:13\n   701: \t\t}\n   702: \t\tttmp = maketrap(mtmp-&gt;mx, mtmp-&gt;my, HOLE);\n   703: \t\tif (!ttmp) return 2;\n   704: \t\tseetrap(ttmp);\n   705: \t\tif (vis) {\n&gt;  706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n   707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n   709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n   710: \t\t} else if (flags.soundok)\n   711: \t\t\tYou_hear(\"%s crash through the %s.\", something,"
+    "context": "src/muse.c:706:13\n        701: \t\t}\n        702: \t\tttmp = maketrap(mtmp-&gt;mx, mtmp-&gt;my, HOLE);\n        703: \t\tif (!ttmp) return 2;\n        704: \t\tseetrap(ttmp);\n        705: \t\tif (vis) {\nTARGET  706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n        707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n        709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n        710: \t\t} else if (flags.soundok)\n        711: \t\t\tYou_hear(\"%s crash through the %s.\", something,"
   },
   {
     "key": "L00708_01",
     "original": "%s %s through...",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:708:13\n   703: \t\tif (!ttmp) return 2;\n   704: \t\tseetrap(ttmp);\n   705: \t\tif (vis) {\n   706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n   707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n&gt;  708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n   709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n   710: \t\t} else if (flags.soundok)\n   711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n   712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   713: \t\t/* we made sure that there is a level for mtmp to go to */"
+    "context": "src/muse.c:708:13\n        703: \t\tif (!ttmp) return 2;\n        704: \t\tseetrap(ttmp);\n        705: \t\tif (vis) {\n        706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n        707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\nTARGET  708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n        709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n        710: \t\t} else if (flags.soundok)\n        711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n        712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        713: \t\t/* we made sure that there is a level for mtmp to go to */"
   },
   {
     "key": "L00709_01",
     "original": "dives",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:709:29\n   704: \t\tseetrap(ttmp);\n   705: \t\tif (vis) {\n   706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n   707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n&gt;  709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n   710: \t\t} else if (flags.soundok)\n   711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n   712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   713: \t\t/* we made sure that there is a level for mtmp to go to */\n   714: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,"
+    "context": "src/muse.c:709:29\n        704: \t\tseetrap(ttmp);\n        705: \t\tif (vis) {\n        706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n        707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\nTARGET  709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n        710: \t\t} else if (flags.soundok)\n        711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n        712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        713: \t\t/* we made sure that there is a level for mtmp to go to */\n        714: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,"
   },
   {
     "key": "L00709_02",
     "original": "falls",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:709:39\n   704: \t\tseetrap(ttmp);\n   705: \t\tif (vis) {\n   706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n   707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n&gt;  709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n   710: \t\t} else if (flags.soundok)\n   711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n   712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   713: \t\t/* we made sure that there is a level for mtmp to go to */\n   714: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,"
+    "context": "src/muse.c:709:39\n        704: \t\tseetrap(ttmp);\n        705: \t\tif (vis) {\n        706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n        707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\nTARGET  709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n        710: \t\t} else if (flags.soundok)\n        711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n        712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        713: \t\t/* we made sure that there is a level for mtmp to go to */\n        714: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,"
   },
   {
     "key": "L00711_01",
     "original": "%s crash through the %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:711:13\n   706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n   707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n   709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n   710: \t\t} else if (flags.soundok)\n&gt;  711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n   712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n   713: \t\t/* we made sure that there is a level for mtmp to go to */\n   714: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n   715: \t\t\t\t MIGR_RANDOM, (coord *)0);\n   716: \t\treturn 2;"
+    "context": "src/muse.c:711:13\n        706: \t\t    pline(\"%s has made a hole in the %s.\", Monnam(mtmp),\n        707: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        708: \t\t    pline(\"%s %s through...\", Monnam(mtmp),\n        709: \t\t\t  is_flyer(mtmp-&gt;data) ? \"dives\" : \"falls\");\n        710: \t\t} else if (flags.soundok)\nTARGET  711: \t\t\tYou_hear(\"%s crash through the %s.\", something,\n        712: \t\t\t\tsurface(mtmp-&gt;mx, mtmp-&gt;my));\n        713: \t\t/* we made sure that there is a level for mtmp to go to */\n        714: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n        715: \t\t\t\t MIGR_RANDOM, (coord *)0);\n        716: \t\treturn 2;"
   },
   {
     "key": "L00793_01",
     "original": "%s %s into a %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:793:10\n   788: \t\tif (Is_botlevel(&u.uz)) return 0;\n   789: \t\tm_flee(mtmp);\n   790: \t\tif (vis) {\n   791: \t\t\tstruct trap *t;\n   792: \t\t\tt = t_at(trapx,trapy);\n&gt;  793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n   794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\n   795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n   796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n   797: \t\t\t    levl[trapx][trapy].typ = CORR;\n   798: \t\t\t    unblock_point(trapx, trapy);"
+    "context": "src/muse.c:793:10\n        788: \t\tif (Is_botlevel(&u.uz)) return 0;\n        789: \t\tm_flee(mtmp);\n        790: \t\tif (vis) {\n        791: \t\t\tstruct trap *t;\n        792: \t\t\tt = t_at(trapx,trapy);\nTARGET  793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n        794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\n        795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n        796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n        797: \t\t\t    levl[trapx][trapy].typ = CORR;\n        798: \t\t\t    unblock_point(trapx, trapy);"
   },
   {
     "key": "L00794_01",
     "original": "jump",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:794:38\n   789: \t\tm_flee(mtmp);\n   790: \t\tif (vis) {\n   791: \t\t\tstruct trap *t;\n   792: \t\t\tt = t_at(trapx,trapy);\n   793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n&gt;  794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\n   795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n   796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n   797: \t\t\t    levl[trapx][trapy].typ = CORR;\n   798: \t\t\t    unblock_point(trapx, trapy);\n   799: \t\t\t}"
+    "context": "src/muse.c:794:38\n        789: \t\tm_flee(mtmp);\n        790: \t\tif (vis) {\n        791: \t\t\tstruct trap *t;\n        792: \t\t\tt = t_at(trapx,trapy);\n        793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\nTARGET  794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\n        795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n        796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n        797: \t\t\t    levl[trapx][trapy].typ = CORR;\n        798: \t\t\t    unblock_point(trapx, trapy);\n        799: \t\t\t}"
   },
   {
     "key": "L00795_01",
     "original": "trap door",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:795:26\n   790: \t\tif (vis) {\n   791: \t\t\tstruct trap *t;\n   792: \t\t\tt = t_at(trapx,trapy);\n   793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n   794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\n&gt;  795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n   796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n   797: \t\t\t    levl[trapx][trapy].typ = CORR;\n   798: \t\t\t    unblock_point(trapx, trapy);\n   799: \t\t\t}\n   800: \t\t\tseetrap(t_at(trapx,trapy));"
+    "context": "src/muse.c:795:26\n        790: \t\tif (vis) {\n        791: \t\t\tstruct trap *t;\n        792: \t\t\tt = t_at(trapx,trapy);\n        793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n        794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\nTARGET  795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n        796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n        797: \t\t\t    levl[trapx][trapy].typ = CORR;\n        798: \t\t\t    unblock_point(trapx, trapy);\n        799: \t\t\t}\n        800: \t\t\tseetrap(t_at(trapx,trapy));"
   },
   {
     "key": "L00795_02",
     "original": "hole",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:795:40\n   790: \t\tif (vis) {\n   791: \t\t\tstruct trap *t;\n   792: \t\t\tt = t_at(trapx,trapy);\n   793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n   794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\n&gt;  795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n   796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n   797: \t\t\t    levl[trapx][trapy].typ = CORR;\n   798: \t\t\t    unblock_point(trapx, trapy);\n   799: \t\t\t}\n   800: \t\t\tseetrap(t_at(trapx,trapy));"
+    "context": "src/muse.c:795:40\n        790: \t\tif (vis) {\n        791: \t\t\tstruct trap *t;\n        792: \t\t\tt = t_at(trapx,trapy);\n        793: \t\t\tpline(\"%s %s into a %s!\", Monnam(mtmp),\n        794: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")),\nTARGET  795: \t\t\tt-&gt;ttyp == TRAPDOOR ? \"trap door\" : \"hole\");\n        796: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n        797: \t\t\t    levl[trapx][trapy].typ = CORR;\n        798: \t\t\t    unblock_point(trapx, trapy);\n        799: \t\t\t}\n        800: \t\t\tseetrap(t_at(trapx,trapy));"
   },
   {
     "key": "L00824_01",
     "original": "%s escapes the dungeon!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:824:14\n   819: \t\t */\n   820: \t\tif (ledger_no(&u.uz) == 1) {\n   821: \t\t\tif (mon_has_special(mtmp))\n   822: \t\t\t\treturn 0;\n   823: \t\t\tif (vismon)\n&gt;  824: \t\t\t    pline(\"%s escapes the dungeon!\", Monnam(mtmp));\n   825: \t\t\tmongone(mtmp);\n   826: \t\t\treturn 2;\n   827: \t\t}\n   828: \t\tm_flee(mtmp);\n   829: \t\tif (Inhell && mon_has_amulet(mtmp) && !rn2(4) &&"
+    "context": "src/muse.c:824:14\n        819: \t\t */\n        820: \t\tif (ledger_no(&u.uz) == 1) {\n        821: \t\t\tif (mon_has_special(mtmp))\n        822: \t\t\t\treturn 0;\n        823: \t\t\tif (vismon)\nTARGET  824: \t\t\t    pline(\"%s escapes the dungeon!\", Monnam(mtmp));\n        825: \t\t\tmongone(mtmp);\n        826: \t\t\treturn 2;\n        827: \t\t}\n        828: \t\tm_flee(mtmp);\n        829: \t\tif (Inhell && mon_has_amulet(mtmp) && !rn2(4) &&"
   },
   {
     "key": "L00832_01",
     "original": "As %s climbs the stairs, a mysterious force momentarily surrounds %s...",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:832:6\n   827: \t\t}\n   828: \t\tm_flee(mtmp);\n   829: \t\tif (Inhell && mon_has_amulet(mtmp) && !rn2(4) &&\n   830: \t\t\t(dunlev(&u.uz) &lt; dunlevs_in_dungeon(&u.uz) - 3)) {\n   831: \t\t    if (vismon) pline(\n&gt;  832:      \"As %s climbs the stairs, a mysterious force momentarily surrounds %s...\",\n   833: \t\t\t\t     mon_nam(mtmp), mhim(mtmp));\n   834: \t\t    /* simpler than for the player; this will usually be\n   835: \t\t       the Wizard and he'll immediately go right to the\n   836: \t\t       upstairs, so there's not much point in having any\n   837: \t\t       chance for a random position on the current level */"
+    "context": "src/muse.c:832:6\n        827: \t\t}\n        828: \t\tm_flee(mtmp);\n        829: \t\tif (Inhell && mon_has_amulet(mtmp) && !rn2(4) &&\n        830: \t\t\t(dunlev(&u.uz) &lt; dunlevs_in_dungeon(&u.uz) - 3)) {\n        831: \t\t    if (vismon) pline(\nTARGET  832:      \"As %s climbs the stairs, a mysterious force momentarily surrounds %s...\",\n        833: \t\t\t\t     mon_nam(mtmp), mhim(mtmp));\n        834: \t\t    /* simpler than for the player; this will usually be\n        835: \t\t       the Wizard and he'll immediately go right to the\n        836: \t\t       upstairs, so there's not much point in having any\n        837: \t\t       chance for a random position on the current level */"
   },
   {
     "key": "L00841_01",
     "original": "%s escapes upstairs!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:841:25\n   836: \t\t       upstairs, so there's not much point in having any\n   837: \t\t       chance for a random position on the current level */\n   838: \t\t    migrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n   839: \t\t\t\t     MIGR_RANDOM, (coord *)0);\n   840: \t\t} else {\n&gt;  841: \t\t    if (vismon) pline(\"%s escapes upstairs!\", Monnam(mtmp));\n   842: \t\t    migrate_to_level(mtmp, ledger_no(&u.uz) - 1,\n   843: \t\t\t\t     MIGR_STAIRS_DOWN, (coord *)0);\n   844: \t\t}\n   845: \t\treturn 2;\n   846: \tcase MUSE_DOWNSTAIRS:"
+    "context": "src/muse.c:841:25\n        836: \t\t       upstairs, so there's not much point in having any\n        837: \t\t       chance for a random position on the current level */\n        838: \t\t    migrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n        839: \t\t\t\t     MIGR_RANDOM, (coord *)0);\n        840: \t\t} else {\nTARGET  841: \t\t    if (vismon) pline(\"%s escapes upstairs!\", Monnam(mtmp));\n        842: \t\t    migrate_to_level(mtmp, ledger_no(&u.uz) - 1,\n        843: \t\t\t\t     MIGR_STAIRS_DOWN, (coord *)0);\n        844: \t\t}\n        845: \t\treturn 2;\n        846: \tcase MUSE_DOWNSTAIRS:"
   },
   {
     "key": "L00848_01",
     "original": "%s escapes downstairs!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:848:21\n   843: \t\t\t\t     MIGR_STAIRS_DOWN, (coord *)0);\n   844: \t\t}\n   845: \t\treturn 2;\n   846: \tcase MUSE_DOWNSTAIRS:\n   847: \t\tm_flee(mtmp);\n&gt;  848: \t\tif (vismon) pline(\"%s escapes downstairs!\", Monnam(mtmp));\n   849: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n   850: \t\t\t\t MIGR_STAIRS_UP, (coord *)0);\n   851: \t\treturn 2;\n   852: \tcase MUSE_UP_LADDER:\n   853: \t\tm_flee(mtmp);"
+    "context": "src/muse.c:848:21\n        843: \t\t\t\t     MIGR_STAIRS_DOWN, (coord *)0);\n        844: \t\t}\n        845: \t\treturn 2;\n        846: \tcase MUSE_DOWNSTAIRS:\n        847: \t\tm_flee(mtmp);\nTARGET  848: \t\tif (vismon) pline(\"%s escapes downstairs!\", Monnam(mtmp));\n        849: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n        850: \t\t\t\t MIGR_STAIRS_UP, (coord *)0);\n        851: \t\treturn 2;\n        852: \tcase MUSE_UP_LADDER:\n        853: \t\tm_flee(mtmp);"
   },
   {
     "key": "L00854_01",
     "original": "%s escapes up the ladder!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:854:21\n   849: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n   850: \t\t\t\t MIGR_STAIRS_UP, (coord *)0);\n   851: \t\treturn 2;\n   852: \tcase MUSE_UP_LADDER:\n   853: \t\tm_flee(mtmp);\n&gt;  854: \t\tif (vismon) pline(\"%s escapes up the ladder!\", Monnam(mtmp));\n   855: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) - 1,\n   856: \t\t\t\t MIGR_LADDER_DOWN, (coord *)0);\n   857: \t\treturn 2;\n   858: \tcase MUSE_DN_LADDER:\n   859: \t\tm_flee(mtmp);"
+    "context": "src/muse.c:854:21\n        849: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n        850: \t\t\t\t MIGR_STAIRS_UP, (coord *)0);\n        851: \t\treturn 2;\n        852: \tcase MUSE_UP_LADDER:\n        853: \t\tm_flee(mtmp);\nTARGET  854: \t\tif (vismon) pline(\"%s escapes up the ladder!\", Monnam(mtmp));\n        855: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) - 1,\n        856: \t\t\t\t MIGR_LADDER_DOWN, (coord *)0);\n        857: \t\treturn 2;\n        858: \tcase MUSE_DN_LADDER:\n        859: \t\tm_flee(mtmp);"
   },
   {
     "key": "L00860_01",
     "original": "%s escapes down the ladder!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:860:21\n   855: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) - 1,\n   856: \t\t\t\t MIGR_LADDER_DOWN, (coord *)0);\n   857: \t\treturn 2;\n   858: \tcase MUSE_DN_LADDER:\n   859: \t\tm_flee(mtmp);\n&gt;  860: \t\tif (vismon) pline(\"%s escapes down the ladder!\", Monnam(mtmp));\n   861: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n   862: \t\t\t\t MIGR_LADDER_UP, (coord *)0);\n   863: \t\treturn 2;\n   864: \tcase MUSE_SSTAIRS:\n   865: \t\tm_flee(mtmp);"
+    "context": "src/muse.c:860:21\n        855: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) - 1,\n        856: \t\t\t\t MIGR_LADDER_DOWN, (coord *)0);\n        857: \t\treturn 2;\n        858: \tcase MUSE_DN_LADDER:\n        859: \t\tm_flee(mtmp);\nTARGET  860: \t\tif (vismon) pline(\"%s escapes down the ladder!\", Monnam(mtmp));\n        861: \t\tmigrate_to_level(mtmp, ledger_no(&u.uz) + 1,\n        862: \t\t\t\t MIGR_LADDER_UP, (coord *)0);\n        863: \t\treturn 2;\n        864: \tcase MUSE_SSTAIRS:\n        865: \t\tm_flee(mtmp);"
   },
   {
     "key": "L00870_01",
     "original": "%s escapes upstairs!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:870:14\n   865: \t\tm_flee(mtmp);\n   866: \t\t/* the stairs leading up from the 1st level are */\n   867: \t\t/* regular stairs, not sstairs.\t\t\t*/\n   868: \t\tif (sstairs.up) {\n   869: \t\t\tif (vismon)\n&gt;  870: \t\t\t    pline(\"%s escapes upstairs!\", Monnam(mtmp));\n   871: \t\t\tif(Inhell) {\n   872: \t\t\t    migrate_to_level(mtmp, ledger_no(&sstairs.tolev),\n   873: \t\t\t\t\t     MIGR_RANDOM, (coord *)0);\n   874: \t\t\t    return 2;\n   875: \t\t\t}"
+    "context": "src/muse.c:870:14\n        865: \t\tm_flee(mtmp);\n        866: \t\t/* the stairs leading up from the 1st level are */\n        867: \t\t/* regular stairs, not sstairs.\t\t\t*/\n        868: \t\tif (sstairs.up) {\n        869: \t\t\tif (vismon)\nTARGET  870: \t\t\t    pline(\"%s escapes upstairs!\", Monnam(mtmp));\n        871: \t\t\tif(Inhell) {\n        872: \t\t\t    migrate_to_level(mtmp, ledger_no(&sstairs.tolev),\n        873: \t\t\t\t\t     MIGR_RANDOM, (coord *)0);\n        874: \t\t\t    return 2;\n        875: \t\t\t}"
   },
   {
     "key": "L00877_01",
     "original": "%s escapes downstairs!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:877:13\n   872: \t\t\t    migrate_to_level(mtmp, ledger_no(&sstairs.tolev),\n   873: \t\t\t\t\t     MIGR_RANDOM, (coord *)0);\n   874: \t\t\t    return 2;\n   875: \t\t\t}\n   876: \t\t} else\tif (vismon)\n&gt;  877: \t\t    pline(\"%s escapes downstairs!\", Monnam(mtmp));\n   878: \t\tmigrate_to_level(mtmp, ledger_no(&sstairs.tolev),\n   879: \t\t\t\t MIGR_SSTAIRS, (coord *)0);\n   880: \t\treturn 2;\n   881: \tcase MUSE_TELEPORT_TRAP:\n   882: \t\tm_flee(mtmp);"
+    "context": "src/muse.c:877:13\n        872: \t\t\t    migrate_to_level(mtmp, ledger_no(&sstairs.tolev),\n        873: \t\t\t\t\t     MIGR_RANDOM, (coord *)0);\n        874: \t\t\t    return 2;\n        875: \t\t\t}\n        876: \t\t} else\tif (vismon)\nTARGET  877: \t\t    pline(\"%s escapes downstairs!\", Monnam(mtmp));\n        878: \t\tmigrate_to_level(mtmp, ledger_no(&sstairs.tolev),\n        879: \t\t\t\t MIGR_SSTAIRS, (coord *)0);\n        880: \t\treturn 2;\n        881: \tcase MUSE_TELEPORT_TRAP:\n        882: \t\tm_flee(mtmp);"
   },
   {
     "key": "L00884_01",
     "original": "%s %s onto a teleport trap!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:884:10\n   879: \t\t\t\t MIGR_SSTAIRS, (coord *)0);\n   880: \t\treturn 2;\n   881: \tcase MUSE_TELEPORT_TRAP:\n   882: \t\tm_flee(mtmp);\n   883: \t\tif (vis) {\n&gt;  884: \t\t\tpline(\"%s %s onto a teleport trap!\", Monnam(mtmp),\n   885: \t\t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n   886: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n   887: \t\t\t    levl[trapx][trapy].typ = CORR;\n   888: \t\t\t    unblock_point(trapx, trapy);\n   889: \t\t\t}"
+    "context": "src/muse.c:884:10\n        879: \t\t\t\t MIGR_SSTAIRS, (coord *)0);\n        880: \t\treturn 2;\n        881: \tcase MUSE_TELEPORT_TRAP:\n        882: \t\tm_flee(mtmp);\n        883: \t\tif (vis) {\nTARGET  884: \t\t\tpline(\"%s %s onto a teleport trap!\", Monnam(mtmp),\n        885: \t\t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n        886: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n        887: \t\t\t    levl[trapx][trapy].typ = CORR;\n        888: \t\t\t    unblock_point(trapx, trapy);\n        889: \t\t\t}"
   },
   {
     "key": "L00885_01",
     "original": "jump",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:885:39\n   880: \t\treturn 2;\n   881: \tcase MUSE_TELEPORT_TRAP:\n   882: \t\tm_flee(mtmp);\n   883: \t\tif (vis) {\n   884: \t\t\tpline(\"%s %s onto a teleport trap!\", Monnam(mtmp),\n&gt;  885: \t\t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n   886: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n   887: \t\t\t    levl[trapx][trapy].typ = CORR;\n   888: \t\t\t    unblock_point(trapx, trapy);\n   889: \t\t\t}\n   890: \t\t\tseetrap(t_at(trapx,trapy));"
+    "context": "src/muse.c:885:39\n        880: \t\treturn 2;\n        881: \tcase MUSE_TELEPORT_TRAP:\n        882: \t\tm_flee(mtmp);\n        883: \t\tif (vis) {\n        884: \t\t\tpline(\"%s %s onto a teleport trap!\", Monnam(mtmp),\nTARGET  885: \t\t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n        886: \t\t\tif (levl[trapx][trapy].typ == SCORR) {\n        887: \t\t\t    levl[trapx][trapy].typ = CORR;\n        888: \t\t\t    unblock_point(trapx, trapy);\n        889: \t\t\t}\n        890: \t\t\tseetrap(t_at(trapx,trapy));"
   },
   {
     "key": "L00908_01",
     "original": "%s begins to look better.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:908:21\n   903: \t\totmp-&gt;spe--;\n   904: \t\ti = d(5,2) + 5 * !!bcsign(otmp);\n   905: \t\tmtmp-&gt;mhp += i;\n   906: \t\tif (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = ++mtmp-&gt;mhpmax;\n   907: \t\tif (!otmp-&gt;cursed) mtmp-&gt;mcansee = 1;\n&gt;  908: \t\tif (vismon) pline(\"%s begins to look better.\", Monnam(mtmp));\n   909: \t\tif (oseen) makeknown(WAN_HEALING);\n   910: \t\treturn 2;\n   911: \tcase MUSE_WAN_EXTRA_HEALING:\n   912: \t\tmzapmsg(mtmp, otmp, TRUE);\n   913: \t\totmp-&gt;spe--;"
+    "context": "src/muse.c:908:21\n        903: \t\totmp-&gt;spe--;\n        904: \t\ti = d(5,2) + 5 * !!bcsign(otmp);\n        905: \t\tmtmp-&gt;mhp += i;\n        906: \t\tif (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = ++mtmp-&gt;mhpmax;\n        907: \t\tif (!otmp-&gt;cursed) mtmp-&gt;mcansee = 1;\nTARGET  908: \t\tif (vismon) pline(\"%s begins to look better.\", Monnam(mtmp));\n        909: \t\tif (oseen) makeknown(WAN_HEALING);\n        910: \t\treturn 2;\n        911: \tcase MUSE_WAN_EXTRA_HEALING:\n        912: \t\tmzapmsg(mtmp, otmp, TRUE);\n        913: \t\totmp-&gt;spe--;"
   },
   {
     "key": "L00918_01",
     "original": "%s begins to look better.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:918:21\n   913: \t\totmp-&gt;spe--;\n   914: \t\ti = d(5,4) + 10 * !!bcsign(otmp);\n   915: \t\tmtmp-&gt;mhp += i;\n   916: \t\tif (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = ++mtmp-&gt;mhpmax;\n   917: \t\tif (!otmp-&gt;cursed) mtmp-&gt;mcansee = 1;\n&gt;  918: \t\tif (vismon) pline(\"%s begins to look better.\", Monnam(mtmp));\n   919: \t\tif (oseen) makeknown(WAN_EXTRA_HEALING);\n   920: \t\treturn 2;\n   921: \tcase MUSE_POT_HEALING:\n   922: \t\tmquaffmsg(mtmp, otmp);\n   923: \t\ti = d(6 + 2 * bcsign(otmp), 4);"
+    "context": "src/muse.c:918:21\n        913: \t\totmp-&gt;spe--;\n        914: \t\ti = d(5,4) + 10 * !!bcsign(otmp);\n        915: \t\tmtmp-&gt;mhp += i;\n        916: \t\tif (mtmp-&gt;mhp &gt; mtmp-&gt;mhpmax) mtmp-&gt;mhp = ++mtmp-&gt;mhpmax;\n        917: \t\tif (!otmp-&gt;cursed) mtmp-&gt;mcansee = 1;\nTARGET  918: \t\tif (vismon) pline(\"%s begins to look better.\", Monnam(mtmp));\n        919: \t\tif (oseen) makeknown(WAN_EXTRA_HEALING);\n        920: \t\treturn 2;\n        921: \tcase MUSE_POT_HEALING:\n        922: \t\tmquaffmsg(mtmp, otmp);\n        923: \t\ti = d(6 + 2 * bcsign(otmp), 4);"
   },
   {
     "key": "L00931_01",
     "original": "%s looks better.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:931:21\n   926: \t\tif (!otmp-&gt;cursed && !mtmp-&gt;mcansee) {\n   927: \t\t\tmtmp-&gt;mcansee = 1;\n   928: \t\t\tmtmp-&gt;mblinded = 0;\n   929: \t\t\tif (vismon) pline(mcsa, Monnam(mtmp));\n   930: \t\t}\n&gt;  931: \t\tif (vismon) pline(\"%s looks better.\", Monnam(mtmp));\n   932: \t\tif (oseen) makeknown(POT_HEALING);\n   933: \t\tm_useup(mtmp, otmp);\n   934: \t\treturn 2;\n   935: \tcase MUSE_POT_EXTRA_HEALING:\n   936: \t\tmquaffmsg(mtmp, otmp);"
+    "context": "src/muse.c:931:21\n        926: \t\tif (!otmp-&gt;cursed && !mtmp-&gt;mcansee) {\n        927: \t\t\tmtmp-&gt;mcansee = 1;\n        928: \t\t\tmtmp-&gt;mblinded = 0;\n        929: \t\t\tif (vismon) pline(mcsa, Monnam(mtmp));\n        930: \t\t}\nTARGET  931: \t\tif (vismon) pline(\"%s looks better.\", Monnam(mtmp));\n        932: \t\tif (oseen) makeknown(POT_HEALING);\n        933: \t\tm_useup(mtmp, otmp);\n        934: \t\treturn 2;\n        935: \tcase MUSE_POT_EXTRA_HEALING:\n        936: \t\tmquaffmsg(mtmp, otmp);"
   },
   {
     "key": "L00946_01",
     "original": "%s looks much better.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:946:21\n   941: \t\tif (!mtmp-&gt;mcansee) {\n   942: \t\t\tmtmp-&gt;mcansee = 1;\n   943: \t\t\tmtmp-&gt;mblinded = 0;\n   944: \t\t\tif (vismon) pline(mcsa, Monnam(mtmp));\n   945: \t\t}\n&gt;  946: \t\tif (vismon) pline(\"%s looks much better.\", Monnam(mtmp));\n   947: \t\tif (oseen) makeknown(POT_EXTRA_HEALING);\n   948: \t\tm_useup(mtmp, otmp);\n   949: \t\treturn 2;\n   950: \tcase MUSE_POT_FULL_HEALING:\n   951: \t\tmquaffmsg(mtmp, otmp);"
+    "context": "src/muse.c:946:21\n        941: \t\tif (!mtmp-&gt;mcansee) {\n        942: \t\t\tmtmp-&gt;mcansee = 1;\n        943: \t\t\tmtmp-&gt;mblinded = 0;\n        944: \t\t\tif (vismon) pline(mcsa, Monnam(mtmp));\n        945: \t\t}\nTARGET  946: \t\tif (vismon) pline(\"%s looks much better.\", Monnam(mtmp));\n        947: \t\tif (oseen) makeknown(POT_EXTRA_HEALING);\n        948: \t\tm_useup(mtmp, otmp);\n        949: \t\treturn 2;\n        950: \tcase MUSE_POT_FULL_HEALING:\n        951: \t\tmquaffmsg(mtmp, otmp);"
   },
   {
     "key": "L00959_01",
     "original": "%s looks completely healed.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:959:21\n   954: \t\tif (!mtmp-&gt;mcansee && otmp-&gt;otyp != POT_SICKNESS) {\n   955: \t\t\tmtmp-&gt;mcansee = 1;\n   956: \t\t\tmtmp-&gt;mblinded = 0;\n   957: \t\t\tif (vismon) pline(mcsa, Monnam(mtmp));\n   958: \t\t}\n&gt;  959: \t\tif (vismon) pline(\"%s looks completely healed.\", Monnam(mtmp));\n   960: \t\tif (oseen) makeknown(otmp-&gt;otyp);\n   961: \t\tm_useup(mtmp, otmp);\n   962: \t\treturn 2;\n   963: \tcase MUSE_POT_VAMPIRE_BLOOD:\n   964: \t\tmquaffmsg(mtmp, otmp);"
+    "context": "src/muse.c:959:21\n        954: \t\tif (!mtmp-&gt;mcansee && otmp-&gt;otyp != POT_SICKNESS) {\n        955: \t\t\tmtmp-&gt;mcansee = 1;\n        956: \t\t\tmtmp-&gt;mblinded = 0;\n        957: \t\t\tif (vismon) pline(mcsa, Monnam(mtmp));\n        958: \t\t}\nTARGET  959: \t\tif (vismon) pline(\"%s looks completely healed.\", Monnam(mtmp));\n        960: \t\tif (oseen) makeknown(otmp-&gt;otyp);\n        961: \t\tm_useup(mtmp, otmp);\n        962: \t\treturn 2;\n        963: \tcase MUSE_POT_VAMPIRE_BLOOD:\n        964: \t\tmquaffmsg(mtmp, otmp);"
   },
   {
     "key": "L00969_01",
     "original": "%s looks full of life.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:969:25\n   964: \t\tmquaffmsg(mtmp, otmp);\n   965: \t\tif (!otmp-&gt;cursed) {\n   966: \t\t    i = rnd(8) + rnd(2);\n   967: \t\t    mtmp-&gt;mhp += i;\n   968: \t\t    mtmp-&gt;mhpmax += i;\n&gt;  969: \t\t    if (vismon) pline(\"%s looks full of life.\", Monnam(mtmp));\n   970: \t\t}\n   971: \t\telse if (vismon)\n   972: \t\t    pline(\"%s discards the congealed blood in disgust.\", Monnam(mtmp));\n   973: \t\tif (oseen) makeknown(POT_VAMPIRE_BLOOD);\n   974: \t\tm_useup(mtmp, otmp);"
+    "context": "src/muse.c:969:25\n        964: \t\tmquaffmsg(mtmp, otmp);\n        965: \t\tif (!otmp-&gt;cursed) {\n        966: \t\t    i = rnd(8) + rnd(2);\n        967: \t\t    mtmp-&gt;mhp += i;\n        968: \t\t    mtmp-&gt;mhpmax += i;\nTARGET  969: \t\t    if (vismon) pline(\"%s looks full of life.\", Monnam(mtmp));\n        970: \t\t}\n        971: \t\telse if (vismon)\n        972: \t\t    pline(\"%s discards the congealed blood in disgust.\", Monnam(mtmp));\n        973: \t\tif (oseen) makeknown(POT_VAMPIRE_BLOOD);\n        974: \t\tm_useup(mtmp, otmp);"
   },
   {
     "key": "L00972_01",
     "original": "%s discards the congealed blood in disgust.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:972:13\n   967: \t\t    mtmp-&gt;mhp += i;\n   968: \t\t    mtmp-&gt;mhpmax += i;\n   969: \t\t    if (vismon) pline(\"%s looks full of life.\", Monnam(mtmp));\n   970: \t\t}\n   971: \t\telse if (vismon)\n&gt;  972: \t\t    pline(\"%s discards the congealed blood in disgust.\", Monnam(mtmp));\n   973: \t\tif (oseen) makeknown(POT_VAMPIRE_BLOOD);\n   974: \t\tm_useup(mtmp, otmp);\n   975: \t\treturn 2;\n   976: \tcase MUSE_LIZARD_CORPSE:\n   977: \t\t/* not actually called for its unstoning effect */"
+    "context": "src/muse.c:972:13\n        967: \t\t    mtmp-&gt;mhp += i;\n        968: \t\t    mtmp-&gt;mhpmax += i;\n        969: \t\t    if (vismon) pline(\"%s looks full of life.\", Monnam(mtmp));\n        970: \t\t}\n        971: \t\telse if (vismon)\nTARGET  972: \t\t    pline(\"%s discards the congealed blood in disgust.\", Monnam(mtmp));\n        973: \t\tif (oseen) makeknown(POT_VAMPIRE_BLOOD);\n        974: \t\tm_useup(mtmp, otmp);\n        975: \t\treturn 2;\n        976: \tcase MUSE_LIZARD_CORPSE:\n        977: \t\t/* not actually called for its unstoning effect */"
   },
   {
     "key": "L00981_01",
     "original": "%s wanted to perform action %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:981:22\n   976: \tcase MUSE_LIZARD_CORPSE:\n   977: \t\t/* not actually called for its unstoning effect */\n   978: \t\tmon_consume_unstone(mtmp, otmp, FALSE, FALSE);\n   979: \t\treturn 2;\n   980: \tcase 0: return 0; /* i.e. an exploded wand */\n&gt;  981: \tdefault: impossible(\"%s wanted to perform action %d?\", Monnam(mtmp),\n   982: \t\t\tm.has_defense);\n   983: \t\tbreak;\n   984: \t}\n   985: \treturn 0;\n   986: #undef m_flee"
+    "context": "src/muse.c:981:22\n        976: \tcase MUSE_LIZARD_CORPSE:\n        977: \t\t/* not actually called for its unstoning effect */\n        978: \t\tmon_consume_unstone(mtmp, otmp, FALSE, FALSE);\n        979: \t\treturn 2;\n        980: \tcase 0: return 0; /* i.e. an exploded wand */\nTARGET  981: \tdefault: impossible(\"%s wanted to perform action %d?\", Monnam(mtmp),\n        982: \t\t\tm.has_defense);\n        983: \t\tbreak;\n        984: \t}\n        985: \treturn 0;\n        986: #undef m_flee"
   },
   {
     "key": "L01239_01",
     "original": "Boing!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1239:14\n  1234: \t\treveal_invis = TRUE;\n  1235: \t\tif (mtmp == &youmonst) {\n  1236: \t\t\tif (zap_oseen) makeknown(WAN_STRIKING);\n  1237: \t\t\tif (Antimagic) {\n  1238: \t\t\t    shieldeff(u.ux, u.uy);\n&gt; 1239: \t\t\t    pline(\"Boing!\");\n  1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n  1241: \t\t\t    pline_The(\"wand hits you!\");\n  1242: \t\t\t    tmp = d(2,12);\n  1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n  1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);"
+    "context": "src/muse.c:1239:14\n       1234: \t\treveal_invis = TRUE;\n       1235: \t\tif (mtmp == &youmonst) {\n       1236: \t\t\tif (zap_oseen) makeknown(WAN_STRIKING);\n       1237: \t\t\tif (Antimagic) {\n       1238: \t\t\t    shieldeff(u.ux, u.uy);\nTARGET 1239: \t\t\t    pline(\"Boing!\");\n       1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n       1241: \t\t\t    pline_The(\"wand hits you!\");\n       1242: \t\t\t    tmp = d(2,12);\n       1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n       1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);"
   },
   {
     "key": "L01241_01",
     "original": "wand hits you!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1241:18\n  1236: \t\t\tif (zap_oseen) makeknown(WAN_STRIKING);\n  1237: \t\t\tif (Antimagic) {\n  1238: \t\t\t    shieldeff(u.ux, u.uy);\n  1239: \t\t\t    pline(\"Boing!\");\n  1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n&gt; 1241: \t\t\t    pline_The(\"wand hits you!\");\n  1242: \t\t\t    tmp = d(2,12);\n  1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n  1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);\n  1245: \t\t\t} else pline_The(\"wand misses you.\");\n  1246: \t\t\tstop_occupation();"
+    "context": "src/muse.c:1241:18\n       1236: \t\t\tif (zap_oseen) makeknown(WAN_STRIKING);\n       1237: \t\t\tif (Antimagic) {\n       1238: \t\t\t    shieldeff(u.ux, u.uy);\n       1239: \t\t\t    pline(\"Boing!\");\n       1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\nTARGET 1241: \t\t\t    pline_The(\"wand hits you!\");\n       1242: \t\t\t    tmp = d(2,12);\n       1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n       1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);\n       1245: \t\t\t} else pline_The(\"wand misses you.\");\n       1246: \t\t\tstop_occupation();"
   },
   {
     "key": "L01244_01",
     "original": "wand",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1244:20\n  1239: \t\t\t    pline(\"Boing!\");\n  1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n  1241: \t\t\t    pline_The(\"wand hits you!\");\n  1242: \t\t\t    tmp = d(2,12);\n  1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n&gt; 1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);\n  1245: \t\t\t} else pline_The(\"wand misses you.\");\n  1246: \t\t\tstop_occupation();\n  1247: \t\t\tnomul(0);\n  1248: \t\t} else if (resists_magm(mtmp)) {\n  1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/muse.c:1244:20\n       1239: \t\t\t    pline(\"Boing!\");\n       1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n       1241: \t\t\t    pline_The(\"wand hits you!\");\n       1242: \t\t\t    tmp = d(2,12);\n       1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\nTARGET 1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);\n       1245: \t\t\t} else pline_The(\"wand misses you.\");\n       1246: \t\t\tstop_occupation();\n       1247: \t\t\tnomul(0);\n       1248: \t\t} else if (resists_magm(mtmp)) {\n       1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L01245_01",
     "original": "wand misses you.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1245:21\n  1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n  1241: \t\t\t    pline_The(\"wand hits you!\");\n  1242: \t\t\t    tmp = d(2,12);\n  1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n  1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);\n&gt; 1245: \t\t\t} else pline_The(\"wand misses you.\");\n  1246: \t\t\tstop_occupation();\n  1247: \t\t\tnomul(0);\n  1248: \t\t} else if (resists_magm(mtmp)) {\n  1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n  1250: \t\t\tpline(\"Boing!\");"
+    "context": "src/muse.c:1245:21\n       1240: \t\t\t} else if (rnd(20) &lt; 10 + u.uac) {\n       1241: \t\t\t    pline_The(\"wand hits you!\");\n       1242: \t\t\t    tmp = d(2,12);\n       1243: \t\t\t    if(Half_spell_damage) tmp = (tmp+1) / 2;\n       1244: \t\t\t    losehp(tmp, \"wand\", KILLED_BY_AN);\nTARGET 1245: \t\t\t} else pline_The(\"wand misses you.\");\n       1246: \t\t\tstop_occupation();\n       1247: \t\t\tnomul(0);\n       1248: \t\t} else if (resists_magm(mtmp)) {\n       1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n       1250: \t\t\tpline(\"Boing!\");"
   },
   {
     "key": "L01250_01",
     "original": "Boing!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1250:10\n  1245: \t\t\t} else pline_The(\"wand misses you.\");\n  1246: \t\t\tstop_occupation();\n  1247: \t\t\tnomul(0);\n  1248: \t\t} else if (resists_magm(mtmp)) {\n  1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n&gt; 1250: \t\t\tpline(\"Boing!\");\n  1251: \t\t} else if (rnd(20) &lt; 10+find_mac(mtmp)) {\n  1252: \t\t\ttmp = d(2,12);\n  1253: \t\t\thit(\"wand\", mtmp, exclam(tmp));\n  1254: \t\t\t(void) resist(mtmp, otmp-&gt;oclass, tmp, TELL);\n  1255: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)"
+    "context": "src/muse.c:1250:10\n       1245: \t\t\t} else pline_The(\"wand misses you.\");\n       1246: \t\t\tstop_occupation();\n       1247: \t\t\tnomul(0);\n       1248: \t\t} else if (resists_magm(mtmp)) {\n       1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\nTARGET 1250: \t\t\tpline(\"Boing!\");\n       1251: \t\t} else if (rnd(20) &lt; 10+find_mac(mtmp)) {\n       1252: \t\t\ttmp = d(2,12);\n       1253: \t\t\thit(\"wand\", mtmp, exclam(tmp));\n       1254: \t\t\t(void) resist(mtmp, otmp-&gt;oclass, tmp, TELL);\n       1255: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)"
   },
   {
     "key": "L01253_01",
     "original": "wand",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1253:8\n  1248: \t\t} else if (resists_magm(mtmp)) {\n  1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n  1250: \t\t\tpline(\"Boing!\");\n  1251: \t\t} else if (rnd(20) &lt; 10+find_mac(mtmp)) {\n  1252: \t\t\ttmp = d(2,12);\n&gt; 1253: \t\t\thit(\"wand\", mtmp, exclam(tmp));\n  1254: \t\t\t(void) resist(mtmp, otmp-&gt;oclass, tmp, TELL);\n  1255: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n  1256: \t\t\t\tmakeknown(WAN_STRIKING);\n  1257: \t\t} else {\n  1258: \t\t\tmiss(\"wand\", mtmp);"
+    "context": "src/muse.c:1253:8\n       1248: \t\t} else if (resists_magm(mtmp)) {\n       1249: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n       1250: \t\t\tpline(\"Boing!\");\n       1251: \t\t} else if (rnd(20) &lt; 10+find_mac(mtmp)) {\n       1252: \t\t\ttmp = d(2,12);\nTARGET 1253: \t\t\thit(\"wand\", mtmp, exclam(tmp));\n       1254: \t\t\t(void) resist(mtmp, otmp-&gt;oclass, tmp, TELL);\n       1255: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n       1256: \t\t\t\tmakeknown(WAN_STRIKING);\n       1257: \t\t} else {\n       1258: \t\t\tmiss(\"wand\", mtmp);"
   },
   {
     "key": "L01258_01",
     "original": "wand",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1258:9\n  1253: \t\t\thit(\"wand\", mtmp, exclam(tmp));\n  1254: \t\t\t(void) resist(mtmp, otmp-&gt;oclass, tmp, TELL);\n  1255: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n  1256: \t\t\t\tmakeknown(WAN_STRIKING);\n  1257: \t\t} else {\n&gt; 1258: \t\t\tmiss(\"wand\", mtmp);\n  1259: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n  1260: \t\t\t\tmakeknown(WAN_STRIKING);\n  1261: \t\t}\n  1262: \t\tbreak;\n  1263: \tcase WAN_TELEPORTATION:"
+    "context": "src/muse.c:1258:9\n       1253: \t\t\thit(\"wand\", mtmp, exclam(tmp));\n       1254: \t\t\t(void) resist(mtmp, otmp-&gt;oclass, tmp, TELL);\n       1255: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n       1256: \t\t\t\tmakeknown(WAN_STRIKING);\n       1257: \t\t} else {\nTARGET 1258: \t\t\tmiss(\"wand\", mtmp);\n       1259: \t\t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n       1260: \t\t\t\tmakeknown(WAN_STRIKING);\n       1261: \t\t}\n       1262: \t\tbreak;\n       1263: \tcase WAN_TELEPORTATION:"
   },
   {
     "key": "L01272_01",
     "original": "%s resists the magic!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1272:11\n  1267: \t\t} else {\n  1268: \t\t\t/* for consistency with zap.c, don't identify */\n  1269: \t\t\tif (mtmp-&gt;ispriest &&\n  1270: \t\t\t\t*in_rooms(mtmp-&gt;mx, mtmp-&gt;my, TEMPLE)) {\n  1271: \t\t\t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my))\n&gt; 1272: \t\t\t\tpline(\"%s resists the magic!\", Monnam(mtmp));\n  1273: \t\t\t    mtmp-&gt;msleeping = 0;\n  1274: \t\t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n  1275: \t\t\t} else if (!tele_restrict(mtmp))\n  1276: \t\t\t    (void) rloc(mtmp, FALSE);\n  1277: \t\t}"
+    "context": "src/muse.c:1272:11\n       1267: \t\t} else {\n       1268: \t\t\t/* for consistency with zap.c, don't identify */\n       1269: \t\t\tif (mtmp-&gt;ispriest &&\n       1270: \t\t\t\t*in_rooms(mtmp-&gt;mx, mtmp-&gt;my, TEMPLE)) {\n       1271: \t\t\t    if (cansee(mtmp-&gt;mx, mtmp-&gt;my))\nTARGET 1272: \t\t\t\tpline(\"%s resists the magic!\", Monnam(mtmp));\n       1273: \t\t\t    mtmp-&gt;msleeping = 0;\n       1274: \t\t\t    if(mtmp-&gt;m_ap_type) seemimic(mtmp);\n       1275: \t\t\t} else if (!tele_restrict(mtmp))\n       1276: \t\t\t    (void) rloc(mtmp, FALSE);\n       1277: \t\t}"
   },
   {
     "key": "L01288_01",
     "original": "Boing!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1288:11\n  1283: \tcase WAN_DRAINING:\t/* KMH */\n  1284: \t\ttmp = d(2,6);\n  1285: \t\tif (mtmp == &youmonst) {\n  1286: \t\t\tif (Drain_resistance) {\n  1287: \t\t\t\tshieldeff(u.ux, u.uy);\n&gt; 1288: \t\t\t\tpline(\"Boing!\");\n  1289: \t\t\t} else\n  1290: \t\t\t\tlosexp(\"life drainage\", FALSE);\n  1291: \t\t\tif (zap_oseen)\n  1292: \t\t\t\tmakeknown(WAN_DRAINING);\n  1293: \t\t\tstop_occupation();"
+    "context": "src/muse.c:1288:11\n       1283: \tcase WAN_DRAINING:\t/* KMH */\n       1284: \t\ttmp = d(2,6);\n       1285: \t\tif (mtmp == &youmonst) {\n       1286: \t\t\tif (Drain_resistance) {\n       1287: \t\t\t\tshieldeff(u.ux, u.uy);\nTARGET 1288: \t\t\t\tpline(\"Boing!\");\n       1289: \t\t\t} else\n       1290: \t\t\t\tlosexp(\"life drainage\", FALSE);\n       1291: \t\t\tif (zap_oseen)\n       1292: \t\t\t\tmakeknown(WAN_DRAINING);\n       1293: \t\t\tstop_occupation();"
   },
   {
     "key": "L01290_01",
     "original": "life drainage",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1290:12\n  1285: \t\tif (mtmp == &youmonst) {\n  1286: \t\t\tif (Drain_resistance) {\n  1287: \t\t\t\tshieldeff(u.ux, u.uy);\n  1288: \t\t\t\tpline(\"Boing!\");\n  1289: \t\t\t} else\n&gt; 1290: \t\t\t\tlosexp(\"life drainage\", FALSE);\n  1291: \t\t\tif (zap_oseen)\n  1292: \t\t\t\tmakeknown(WAN_DRAINING);\n  1293: \t\t\tstop_occupation();\n  1294: \t\t\tnomul(0);\n  1295: \t\t\tbreak;"
+    "context": "src/muse.c:1290:12\n       1285: \t\tif (mtmp == &youmonst) {\n       1286: \t\t\tif (Drain_resistance) {\n       1287: \t\t\t\tshieldeff(u.ux, u.uy);\n       1288: \t\t\t\tpline(\"Boing!\");\n       1289: \t\t\t} else\nTARGET 1290: \t\t\t\tlosexp(\"life drainage\", FALSE);\n       1291: \t\t\tif (zap_oseen)\n       1292: \t\t\t\tmakeknown(WAN_DRAINING);\n       1293: \t\t\tstop_occupation();\n       1294: \t\t\tnomul(0);\n       1295: \t\t\tbreak;"
   },
   {
     "key": "L01307_01",
     "original": "%s suddenly seems weaker!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1307:12\n  1302: \t\t\tif (mtmp-&gt;mhpmax &lt;= 0 || mtmp-&gt;m_lev &lt;= 0)\n  1303: \t\t\t\tmonkilled(mtmp, \"\", AD_DRLI);\n  1304: \t\t\telse {\n  1305: \t\t\t\tmtmp-&gt;m_lev--;\n  1306: \t\t\t\tif (canseemon(mtmp)) {\n&gt; 1307: \t\t\t\t\tpline(\"%s suddenly seems weaker!\", Monnam(mtmp));\n  1308: \t\t\t\t}\n  1309: \t\t\t}\n  1310: \t\t}\n  1311: \t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n  1312: \t\t\tmakeknown(WAN_DRAINING);"
+    "context": "src/muse.c:1307:12\n       1302: \t\t\tif (mtmp-&gt;mhpmax &lt;= 0 || mtmp-&gt;m_lev &lt;= 0)\n       1303: \t\t\t\tmonkilled(mtmp, \"\", AD_DRLI);\n       1304: \t\t\telse {\n       1305: \t\t\t\tmtmp-&gt;m_lev--;\n       1306: \t\t\t\tif (canseemon(mtmp)) {\nTARGET 1307: \t\t\t\t\tpline(\"%s suddenly seems weaker!\", Monnam(mtmp));\n       1308: \t\t\t\t}\n       1309: \t\t\t}\n       1310: \t\t}\n       1311: \t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my) && zap_oseen)\n       1312: \t\t\tmakeknown(WAN_DRAINING);"
   },
   {
     "key": "L01464_01",
     "original": "%s plays a %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1464:10\n  1459: \t\treturn (mtmp-&gt;mhp &lt;= 0) ? 1 : 2;\n  1460: \tcase MUSE_FIRE_HORN:\n  1461: \tcase MUSE_FROST_HORN:\n  1462: \t\tif (oseen) {\n  1463: \t\t\tmakeknown(otmp-&gt;otyp);\n&gt; 1464: \t\t\tpline(\"%s plays a %s!\", Monnam(mtmp), xname(otmp));\n  1465: \t\t} else\n  1466: \t\t\tYou_hear(\"a horn being played.\");\n  1467: \t\totmp-&gt;spe--;\n  1468: \t\tm_using = TRUE;\n  1469: \t\tbuzz(-30 - ((otmp-&gt;otyp==FROST_HORN) ? AD_COLD-1 : AD_FIRE-1),"
+    "context": "src/muse.c:1464:10\n       1459: \t\treturn (mtmp-&gt;mhp &lt;= 0) ? 1 : 2;\n       1460: \tcase MUSE_FIRE_HORN:\n       1461: \tcase MUSE_FROST_HORN:\n       1462: \t\tif (oseen) {\n       1463: \t\t\tmakeknown(otmp-&gt;otyp);\nTARGET 1464: \t\t\tpline(\"%s plays a %s!\", Monnam(mtmp), xname(otmp));\n       1465: \t\t} else\n       1466: \t\t\tYou_hear(\"a horn being played.\");\n       1467: \t\totmp-&gt;spe--;\n       1468: \t\tm_using = TRUE;\n       1469: \t\tbuzz(-30 - ((otmp-&gt;otyp==FROST_HORN) ? AD_COLD-1 : AD_FIRE-1),"
   },
   {
     "key": "L01466_01",
     "original": "a horn being played.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1466:13\n  1461: \tcase MUSE_FROST_HORN:\n  1462: \t\tif (oseen) {\n  1463: \t\t\tmakeknown(otmp-&gt;otyp);\n  1464: \t\t\tpline(\"%s plays a %s!\", Monnam(mtmp), xname(otmp));\n  1465: \t\t} else\n&gt; 1466: \t\t\tYou_hear(\"a horn being played.\");\n  1467: \t\totmp-&gt;spe--;\n  1468: \t\tm_using = TRUE;\n  1469: \t\tbuzz(-30 - ((otmp-&gt;otyp==FROST_HORN) ? AD_COLD-1 : AD_FIRE-1),\n  1470: \t\t\trn1(6,6), mtmp-&gt;mx, mtmp-&gt;my,\n  1471: \t\t\tsgn(mtmp-&gt;mux-mtmp-&gt;mx), sgn(mtmp-&gt;muy-mtmp-&gt;my));"
+    "context": "src/muse.c:1466:13\n       1461: \tcase MUSE_FROST_HORN:\n       1462: \t\tif (oseen) {\n       1463: \t\t\tmakeknown(otmp-&gt;otyp);\n       1464: \t\t\tpline(\"%s plays a %s!\", Monnam(mtmp), xname(otmp));\n       1465: \t\t} else\nTARGET 1466: \t\t\tYou_hear(\"a horn being played.\");\n       1467: \t\totmp-&gt;spe--;\n       1468: \t\tm_using = TRUE;\n       1469: \t\tbuzz(-30 - ((otmp-&gt;otyp==FROST_HORN) ? AD_COLD-1 : AD_FIRE-1),\n       1470: \t\t\trn1(6,6), mtmp-&gt;mx, mtmp-&gt;my,\n       1471: \t\t\tsgn(mtmp-&gt;mux-mtmp-&gt;mx), sgn(mtmp-&gt;muy-mtmp-&gt;my));"
   },
   {
     "key": "L01496_01",
     "original": "%s rumbles %s %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1496:17\n  1491: \t\tint mmx = mtmp-&gt;mx, mmy = mtmp-&gt;my;\n  1492: \n  1493: \t\tmreadmsg(mtmp, otmp);\n  1494: \t    \t/* Identify the scroll */\n  1495: \t\tif (canspotmon(mtmp)) {\n&gt; 1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\n  1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n  1498: \t\t\t\tmon_nam(mtmp));\n  1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\","
+    "context": "src/muse.c:1496:17\n       1491: \t\tint mmx = mtmp-&gt;mx, mmy = mtmp-&gt;my;\n       1492: \n       1493: \t\tmreadmsg(mtmp, otmp);\n       1494: \t    \t/* Identify the scroll */\n       1495: \t\tif (canspotmon(mtmp)) {\nTARGET 1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\n       1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n       1498: \t\t\t\tmon_nam(mtmp));\n       1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n       1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\","
   },
   {
     "key": "L01497_01",
     "original": "around",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1497:25\n  1492: \n  1493: \t\tmreadmsg(mtmp, otmp);\n  1494: \t    \t/* Identify the scroll */\n  1495: \t\tif (canspotmon(mtmp)) {\n  1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\n&gt; 1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n  1498: \t\t\t\tmon_nam(mtmp));\n  1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\",\n  1502: \t\t\tceiling(mtmp-&gt;mx, mtmp-&gt;my));"
+    "context": "src/muse.c:1497:25\n       1492: \n       1493: \t\tmreadmsg(mtmp, otmp);\n       1494: \t    \t/* Identify the scroll */\n       1495: \t\tif (canspotmon(mtmp)) {\n       1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\nTARGET 1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n       1498: \t\t\t\tmon_nam(mtmp));\n       1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n       1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\",\n       1502: \t\t\tceiling(mtmp-&gt;mx, mtmp-&gt;my));"
   },
   {
     "key": "L01497_02",
     "original": "above",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1497:36\n  1492: \n  1493: \t\tmreadmsg(mtmp, otmp);\n  1494: \t    \t/* Identify the scroll */\n  1495: \t\tif (canspotmon(mtmp)) {\n  1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\n&gt; 1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n  1498: \t\t\t\tmon_nam(mtmp));\n  1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\",\n  1502: \t\t\tceiling(mtmp-&gt;mx, mtmp-&gt;my));"
+    "context": "src/muse.c:1497:36\n       1492: \n       1493: \t\tmreadmsg(mtmp, otmp);\n       1494: \t    \t/* Identify the scroll */\n       1495: \t\tif (canspotmon(mtmp)) {\n       1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\nTARGET 1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n       1498: \t\t\t\tmon_nam(mtmp));\n       1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n       1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\",\n       1502: \t\t\tceiling(mtmp-&gt;mx, mtmp-&gt;my));"
   },
   {
     "key": "L01501_01",
     "original": "%s rumbles in the middle of nowhere!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1501:17\n  1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\n  1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n  1498: \t\t\t\tmon_nam(mtmp));\n  1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n&gt; 1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\",\n  1502: \t\t\tceiling(mtmp-&gt;mx, mtmp-&gt;my));\n  1503: \t\t    if (mtmp-&gt;minvis)\n  1504: \t\t\tmap_invisible(mtmp-&gt;mx, mtmp-&gt;my);\n  1505: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1506: \t\t}"
+    "context": "src/muse.c:1501:17\n       1496: \t\t    pline_The(\"%s rumbles %s %s!\", ceiling(mtmp-&gt;mx, mtmp-&gt;my),\n       1497: \t    \t\t\totmp-&gt;blessed ? \"around\" : \"above\",\n       1498: \t\t\t\tmon_nam(mtmp));\n       1499: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1500: \t\t} else if (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\nTARGET 1501: \t\t    pline_The(\"%s rumbles in the middle of nowhere!\",\n       1502: \t\t\tceiling(mtmp-&gt;mx, mtmp-&gt;my));\n       1503: \t\t    if (mtmp-&gt;minvis)\n       1504: \t\t\tmap_invisible(mtmp-&gt;mx, mtmp-&gt;my);\n       1505: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1506: \t\t}"
   },
   {
     "key": "L01538_01",
     "original": "%s is hit by %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1538:15\n  1533: \t    \t    \t    \t\t!unsolid(mtmp2-&gt;data)) {\n  1534: \t\t\t\tstruct obj *helmet = which_armor(mtmp2, W_ARMH);\n  1535: \t\t\t\tint mdmg;\n  1536: \n  1537: \t\t\t\tif (cansee(mtmp2-&gt;mx, mtmp2-&gt;my)) {\n&gt; 1538: \t\t\t\t    pline(\"%s is hit by %s!\", Monnam(mtmp2),\n  1539: \t    \t    \t    \t\t\tdoname(otmp2));\n  1540: \t\t\t\t    if (mtmp2-&gt;minvis && !canspotmon(mtmp2))\n  1541: \t\t\t\t\tmap_invisible(mtmp2-&gt;mx, mtmp2-&gt;my);\n  1542: \t\t\t\t}\n  1543: \t    \t    \t    \tmdmg = dmgval(otmp2, mtmp2) * otmp2-&gt;quan;"
+    "context": "src/muse.c:1538:15\n       1533: \t    \t    \t    \t\t!unsolid(mtmp2-&gt;data)) {\n       1534: \t\t\t\tstruct obj *helmet = which_armor(mtmp2, W_ARMH);\n       1535: \t\t\t\tint mdmg;\n       1536: \n       1537: \t\t\t\tif (cansee(mtmp2-&gt;mx, mtmp2-&gt;my)) {\nTARGET 1538: \t\t\t\t    pline(\"%s is hit by %s!\", Monnam(mtmp2),\n       1539: \t    \t    \t    \t\t\tdoname(otmp2));\n       1540: \t\t\t\t    if (mtmp2-&gt;minvis && !canspotmon(mtmp2))\n       1541: \t\t\t\t\tmap_invisible(mtmp2-&gt;mx, mtmp2-&gt;my);\n       1542: \t\t\t\t}\n       1543: \t    \t    \t    \tmdmg = dmgval(otmp2, mtmp2) * otmp2-&gt;quan;"
   },
   {
     "key": "L01547_01",
     "original": "Fortunately, %s is wearing a hard helmet.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1547:16\n  1542: \t\t\t\t}\n  1543: \t    \t    \t    \tmdmg = dmgval(otmp2, mtmp2) * otmp2-&gt;quan;\n  1544: \t\t\t\tif (helmet) {\n  1545: \t\t\t\t    if(is_metallic(helmet)) {\n  1546: \t\t\t\t\tif (canspotmon(mtmp2))\n&gt; 1547: \t\t\t\t\t    pline(\"Fortunately, %s is wearing a hard helmet.\", mon_nam(mtmp2));\n  1548: \t\t\t\t\telse if (flags.soundok)\n  1549: \t\t\t\t\t    You_hear(\"a clanging sound.\");\n  1550: \t\t\t\t\tif (mdmg &gt; 2) mdmg = 2;\n  1551: \t\t\t\t    } else {\n  1552: \t\t\t\t\tif (canspotmon(mtmp2))"
+    "context": "src/muse.c:1547:16\n       1542: \t\t\t\t}\n       1543: \t    \t    \t    \tmdmg = dmgval(otmp2, mtmp2) * otmp2-&gt;quan;\n       1544: \t\t\t\tif (helmet) {\n       1545: \t\t\t\t    if(is_metallic(helmet)) {\n       1546: \t\t\t\t\tif (canspotmon(mtmp2))\nTARGET 1547: \t\t\t\t\t    pline(\"Fortunately, %s is wearing a hard helmet.\", mon_nam(mtmp2));\n       1548: \t\t\t\t\telse if (flags.soundok)\n       1549: \t\t\t\t\t    You_hear(\"a clanging sound.\");\n       1550: \t\t\t\t\tif (mdmg &gt; 2) mdmg = 2;\n       1551: \t\t\t\t    } else {\n       1552: \t\t\t\t\tif (canspotmon(mtmp2))"
   },
   {
     "key": "L01549_01",
     "original": "a clanging sound.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1549:19\n  1544: \t\t\t\tif (helmet) {\n  1545: \t\t\t\t    if(is_metallic(helmet)) {\n  1546: \t\t\t\t\tif (canspotmon(mtmp2))\n  1547: \t\t\t\t\t    pline(\"Fortunately, %s is wearing a hard helmet.\", mon_nam(mtmp2));\n  1548: \t\t\t\t\telse if (flags.soundok)\n&gt; 1549: \t\t\t\t\t    You_hear(\"a clanging sound.\");\n  1550: \t\t\t\t\tif (mdmg &gt; 2) mdmg = 2;\n  1551: \t\t\t\t    } else {\n  1552: \t\t\t\t\tif (canspotmon(mtmp2))\n  1553: \t\t\t\t\t    pline(\"%s's %s does not protect %s.\",\n  1554: \t\t\t\t\t\tMonnam(mtmp2), xname(helmet),"
+    "context": "src/muse.c:1549:19\n       1544: \t\t\t\tif (helmet) {\n       1545: \t\t\t\t    if(is_metallic(helmet)) {\n       1546: \t\t\t\t\tif (canspotmon(mtmp2))\n       1547: \t\t\t\t\t    pline(\"Fortunately, %s is wearing a hard helmet.\", mon_nam(mtmp2));\n       1548: \t\t\t\t\telse if (flags.soundok)\nTARGET 1549: \t\t\t\t\t    You_hear(\"a clanging sound.\");\n       1550: \t\t\t\t\tif (mdmg &gt; 2) mdmg = 2;\n       1551: \t\t\t\t    } else {\n       1552: \t\t\t\t\tif (canspotmon(mtmp2))\n       1553: \t\t\t\t\t    pline(\"%s's %s does not protect %s.\",\n       1554: \t\t\t\t\t\tMonnam(mtmp2), xname(helmet),"
   },
   {
     "key": "L01553_01",
     "original": "%s's %s does not protect %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1553:16\n  1548: \t\t\t\t\telse if (flags.soundok)\n  1549: \t\t\t\t\t    You_hear(\"a clanging sound.\");\n  1550: \t\t\t\t\tif (mdmg &gt; 2) mdmg = 2;\n  1551: \t\t\t\t    } else {\n  1552: \t\t\t\t\tif (canspotmon(mtmp2))\n&gt; 1553: \t\t\t\t\t    pline(\"%s's %s does not protect %s.\",\n  1554: \t\t\t\t\t\tMonnam(mtmp2), xname(helmet),\n  1555: \t\t\t\t\t\tmhim(mtmp2));\n  1556: \t\t\t\t    }\n  1557: \t\t\t\t}\n  1558: \t    \t    \t    \tmtmp2-&gt;mhp -= mdmg;"
+    "context": "src/muse.c:1553:16\n       1548: \t\t\t\t\telse if (flags.soundok)\n       1549: \t\t\t\t\t    You_hear(\"a clanging sound.\");\n       1550: \t\t\t\t\tif (mdmg &gt; 2) mdmg = 2;\n       1551: \t\t\t\t    } else {\n       1552: \t\t\t\t\tif (canspotmon(mtmp2))\nTARGET 1553: \t\t\t\t\t    pline(\"%s's %s does not protect %s.\",\n       1554: \t\t\t\t\t\tMonnam(mtmp2), xname(helmet),\n       1555: \t\t\t\t\t\tmhim(mtmp2));\n       1556: \t\t\t\t    }\n       1557: \t\t\t\t}\n       1558: \t    \t    \t    \tmtmp2-&gt;mhp -= mdmg;"
   },
   {
     "key": "L01560_01",
     "original": "%s is killed.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1560:15\n  1555: \t\t\t\t\t\tmhim(mtmp2));\n  1556: \t\t\t\t    }\n  1557: \t\t\t\t}\n  1558: \t    \t    \t    \tmtmp2-&gt;mhp -= mdmg;\n  1559: \t    \t    \t    \tif (mtmp2-&gt;mhp &lt;= 0) {\n&gt; 1560: \t\t\t\t    pline(\"%s is killed.\", Monnam(mtmp2));\n  1561: \t    \t    \t    \t    mondied(mtmp2);\n  1562: \t\t\t\t}\n  1563: \t    \t    \t    }\n  1564: \t    \t    \t    /* Drop the rock/boulder to the floor */\n  1565: \t    \t    \t    if (!flooreffects(otmp2, x, y, \"fall\")) {"
+    "context": "src/muse.c:1560:15\n       1555: \t\t\t\t\t\tmhim(mtmp2));\n       1556: \t\t\t\t    }\n       1557: \t\t\t\t}\n       1558: \t    \t    \t    \tmtmp2-&gt;mhp -= mdmg;\n       1559: \t    \t    \t    \tif (mtmp2-&gt;mhp &lt;= 0) {\nTARGET 1560: \t\t\t\t    pline(\"%s is killed.\", Monnam(mtmp2));\n       1561: \t    \t    \t    \t    mondied(mtmp2);\n       1562: \t\t\t\t}\n       1563: \t    \t    \t    }\n       1564: \t    \t    \t    /* Drop the rock/boulder to the floor */\n       1565: \t    \t    \t    if (!flooreffects(otmp2, x, y, \"fall\")) {"
   },
   {
     "key": "L01565_01",
     "original": "fall",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1565:47\n  1560: \t\t\t\t    pline(\"%s is killed.\", Monnam(mtmp2));\n  1561: \t    \t    \t    \t    mondied(mtmp2);\n  1562: \t\t\t\t}\n  1563: \t    \t    \t    }\n  1564: \t    \t    \t    /* Drop the rock/boulder to the floor */\n&gt; 1565: \t    \t    \t    if (!flooreffects(otmp2, x, y, \"fall\")) {\n  1566: \t    \t    \t    \tplace_object(otmp2, x, y);\n  1567: \t    \t    \t    \tstackobj(otmp2);\n  1568: \t    \t    \t    \tnewsym(x, y);  /* map the rock */\n  1569: \t    \t    \t    }\n  1570: \t    \t    \t}"
+    "context": "src/muse.c:1565:47\n       1560: \t\t\t\t    pline(\"%s is killed.\", Monnam(mtmp2));\n       1561: \t    \t    \t    \t    mondied(mtmp2);\n       1562: \t\t\t\t}\n       1563: \t    \t    \t    }\n       1564: \t    \t    \t    /* Drop the rock/boulder to the floor */\nTARGET 1565: \t    \t    \t    if (!flooreffects(otmp2, x, y, \"fall\")) {\n       1566: \t    \t    \t    \tplace_object(otmp2, x, y);\n       1567: \t    \t    \t    \tstackobj(otmp2);\n       1568: \t    \t    \t    \tnewsym(x, y);  /* map the rock */\n       1569: \t    \t    \t    }\n       1570: \t    \t    \t}"
   },
   {
     "key": "L01589_01",
     "original": "are hit by %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1589:8\n  1584: \t\t    otmp2-&gt;owt = weight(otmp2);\n  1585: \t\t    if (!amorphous(youmonst.data) &&\n  1586: \t\t\t    !Passes_walls &&\n  1587: \t\t\t    !noncorporeal(youmonst.data) &&\n  1588: \t\t\t    !unsolid(youmonst.data)) {\n&gt; 1589: \t\t\tYou(\"are hit by %s!\", doname(otmp2));\n  1590: \t\t\tdmg = dmgval(otmp2, &youmonst) * otmp2-&gt;quan;\n  1591: \t\t\tif (uarmh) {\n  1592: \t\t\t    if(is_metallic(uarmh)) {\n  1593: \t\t\t\tpline(\"Fortunately, you are wearing a hard helmet.\");\n  1594: \t\t\t\tif (dmg &gt; 2) dmg = 2;"
+    "context": "src/muse.c:1589:8\n       1584: \t\t    otmp2-&gt;owt = weight(otmp2);\n       1585: \t\t    if (!amorphous(youmonst.data) &&\n       1586: \t\t\t    !Passes_walls &&\n       1587: \t\t\t    !noncorporeal(youmonst.data) &&\n       1588: \t\t\t    !unsolid(youmonst.data)) {\nTARGET 1589: \t\t\tYou(\"are hit by %s!\", doname(otmp2));\n       1590: \t\t\tdmg = dmgval(otmp2, &youmonst) * otmp2-&gt;quan;\n       1591: \t\t\tif (uarmh) {\n       1592: \t\t\t    if(is_metallic(uarmh)) {\n       1593: \t\t\t\tpline(\"Fortunately, you are wearing a hard helmet.\");\n       1594: \t\t\t\tif (dmg &gt; 2) dmg = 2;"
   },
   {
     "key": "L01593_01",
     "original": "Fortunately, you are wearing a hard helmet.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1593:11\n  1588: \t\t\t    !unsolid(youmonst.data)) {\n  1589: \t\t\tYou(\"are hit by %s!\", doname(otmp2));\n  1590: \t\t\tdmg = dmgval(otmp2, &youmonst) * otmp2-&gt;quan;\n  1591: \t\t\tif (uarmh) {\n  1592: \t\t\t    if(is_metallic(uarmh)) {\n&gt; 1593: \t\t\t\tpline(\"Fortunately, you are wearing a hard helmet.\");\n  1594: \t\t\t\tif (dmg &gt; 2) dmg = 2;\n  1595: \t\t\t    } else if (flags.verbose) {\n  1596: \t\t\t\tYour(\"%s does not protect you.\",\n  1597: \t\t\t\t\t\txname(uarmh));\n  1598: \t\t\t    }"
+    "context": "src/muse.c:1593:11\n       1588: \t\t\t    !unsolid(youmonst.data)) {\n       1589: \t\t\tYou(\"are hit by %s!\", doname(otmp2));\n       1590: \t\t\tdmg = dmgval(otmp2, &youmonst) * otmp2-&gt;quan;\n       1591: \t\t\tif (uarmh) {\n       1592: \t\t\t    if(is_metallic(uarmh)) {\nTARGET 1593: \t\t\t\tpline(\"Fortunately, you are wearing a hard helmet.\");\n       1594: \t\t\t\tif (dmg &gt; 2) dmg = 2;\n       1595: \t\t\t    } else if (flags.verbose) {\n       1596: \t\t\t\tYour(\"%s does not protect you.\",\n       1597: \t\t\t\t\t\txname(uarmh));\n       1598: \t\t\t    }"
   },
   {
     "key": "L01596_01",
     "original": "%s does not protect you.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1596:10\n  1591: \t\t\tif (uarmh) {\n  1592: \t\t\t    if(is_metallic(uarmh)) {\n  1593: \t\t\t\tpline(\"Fortunately, you are wearing a hard helmet.\");\n  1594: \t\t\t\tif (dmg &gt; 2) dmg = 2;\n  1595: \t\t\t    } else if (flags.verbose) {\n&gt; 1596: \t\t\t\tYour(\"%s does not protect you.\",\n  1597: \t\t\t\t\t\txname(uarmh));\n  1598: \t\t\t    }\n  1599: \t\t\t}\n  1600: \t\t    } else\n  1601: \t\t\tdmg = 0;"
+    "context": "src/muse.c:1596:10\n       1591: \t\t\tif (uarmh) {\n       1592: \t\t\t    if(is_metallic(uarmh)) {\n       1593: \t\t\t\tpline(\"Fortunately, you are wearing a hard helmet.\");\n       1594: \t\t\t\tif (dmg &gt; 2) dmg = 2;\n       1595: \t\t\t    } else if (flags.verbose) {\nTARGET 1596: \t\t\t\tYour(\"%s does not protect you.\",\n       1597: \t\t\t\t\t\txname(uarmh));\n       1598: \t\t\t    }\n       1599: \t\t\t}\n       1600: \t\t    } else\n       1601: \t\t\tdmg = 0;"
   },
   {
     "key": "L01602_01",
     "original": "fall",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1602:44\n  1597: \t\t\t\t\t\txname(uarmh));\n  1598: \t\t\t    }\n  1599: \t\t\t}\n  1600: \t\t    } else\n  1601: \t\t\tdmg = 0;\n&gt; 1602: \t\t    if (!flooreffects(otmp2, u.ux, u.uy, \"fall\")) {\n  1603: \t\t\tplace_object(otmp2, u.ux, u.uy);\n  1604: \t\t\tstackobj(otmp2);\n  1605: \t\t\tnewsym(u.ux, u.uy);\n  1606: \t\t    }\n  1607: \t\t    if (dmg) losehp(dmg, \"scroll of earth\", KILLED_BY_AN);"
+    "context": "src/muse.c:1602:44\n       1597: \t\t\t\t\t\txname(uarmh));\n       1598: \t\t\t    }\n       1599: \t\t\t}\n       1600: \t\t    } else\n       1601: \t\t\tdmg = 0;\nTARGET 1602: \t\t    if (!flooreffects(otmp2, u.ux, u.uy, \"fall\")) {\n       1603: \t\t\tplace_object(otmp2, u.ux, u.uy);\n       1604: \t\t\tstackobj(otmp2);\n       1605: \t\t\tnewsym(u.ux, u.uy);\n       1606: \t\t    }\n       1607: \t\t    if (dmg) losehp(dmg, \"scroll of earth\", KILLED_BY_AN);"
   },
   {
     "key": "L01607_01",
     "original": "scroll of earth",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1607:28\n  1602: \t\t    if (!flooreffects(otmp2, u.ux, u.uy, \"fall\")) {\n  1603: \t\t\tplace_object(otmp2, u.ux, u.uy);\n  1604: \t\t\tstackobj(otmp2);\n  1605: \t\t\tnewsym(u.ux, u.uy);\n  1606: \t\t    }\n&gt; 1607: \t\t    if (dmg) losehp(dmg, \"scroll of earth\", KILLED_BY_AN);\n  1608: \t\t}\n  1609: \t    xxx_noobj:\n  1610: \n  1611: \t\treturn (mtmp-&gt;mhp &lt;= 0) ? 1 : 2;\n  1612: \t    }"
+    "context": "src/muse.c:1607:28\n       1602: \t\t    if (!flooreffects(otmp2, u.ux, u.uy, \"fall\")) {\n       1603: \t\t\tplace_object(otmp2, u.ux, u.uy);\n       1604: \t\t\tstackobj(otmp2);\n       1605: \t\t\tnewsym(u.ux, u.uy);\n       1606: \t\t    }\nTARGET 1607: \t\t    if (dmg) losehp(dmg, \"scroll of earth\", KILLED_BY_AN);\n       1608: \t\t}\n       1609: \t    xxx_noobj:\n       1610: \n       1611: \t\treturn (mtmp-&gt;mhp &lt;= 0) ? 1 : 2;\n       1612: \t    }"
   },
   {
     "key": "L01621_01",
     "original": "Oh, what a pretty fire!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1621:14\n  1616: \t\tboolean vis = cansee(mtmp-&gt;mx, mtmp-&gt;my);\n  1617: \n  1618: \t\tmreadmsg(mtmp, otmp);\n  1619: \t\tif (mtmp-&gt;mconf) {\n  1620: \t\t\tif (vis)\n&gt; 1621: \t\t\t    pline(\"Oh, what a pretty fire!\");\n  1622: \t\t} else {\n  1623: \t\t\tstruct monst *mtmp2;\n  1624: \t\t\tint num;\n  1625: \n  1626: \t\t\tif (vis)"
+    "context": "src/muse.c:1621:14\n       1616: \t\tboolean vis = cansee(mtmp-&gt;mx, mtmp-&gt;my);\n       1617: \n       1618: \t\tmreadmsg(mtmp, otmp);\n       1619: \t\tif (mtmp-&gt;mconf) {\n       1620: \t\t\tif (vis)\nTARGET 1621: \t\t\t    pline(\"Oh, what a pretty fire!\");\n       1622: \t\t} else {\n       1623: \t\t\tstruct monst *mtmp2;\n       1624: \t\t\tint num;\n       1625: \n       1626: \t\t\tif (vis)"
   },
   {
     "key": "L01627_01",
     "original": "scroll erupts in a tower of flame!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1627:18\n  1622: \t\t} else {\n  1623: \t\t\tstruct monst *mtmp2;\n  1624: \t\t\tint num;\n  1625: \n  1626: \t\t\tif (vis)\n&gt; 1627: \t\t\t    pline_The(\"scroll erupts in a tower of flame!\");\n  1628: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n  1629: \t\t\tpline(\"%s is uninjured.\", Monnam(mtmp));\n  1630: \t\t\t(void) destroy_mitem(mtmp, SCROLL_CLASS, AD_FIRE);\n  1631: \t\t\t(void) destroy_mitem(mtmp, SPBOOK_CLASS, AD_FIRE);\n  1632: \t\t\t(void) destroy_mitem(mtmp, POTION_CLASS, AD_FIRE);"
+    "context": "src/muse.c:1627:18\n       1622: \t\t} else {\n       1623: \t\t\tstruct monst *mtmp2;\n       1624: \t\t\tint num;\n       1625: \n       1626: \t\t\tif (vis)\nTARGET 1627: \t\t\t    pline_The(\"scroll erupts in a tower of flame!\");\n       1628: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n       1629: \t\t\tpline(\"%s is uninjured.\", Monnam(mtmp));\n       1630: \t\t\t(void) destroy_mitem(mtmp, SCROLL_CLASS, AD_FIRE);\n       1631: \t\t\t(void) destroy_mitem(mtmp, SPBOOK_CLASS, AD_FIRE);\n       1632: \t\t\t(void) destroy_mitem(mtmp, POTION_CLASS, AD_FIRE);"
   },
   {
     "key": "L01629_01",
     "original": "%s is uninjured.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1629:10\n  1624: \t\t\tint num;\n  1625: \n  1626: \t\t\tif (vis)\n  1627: \t\t\t    pline_The(\"scroll erupts in a tower of flame!\");\n  1628: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\n&gt; 1629: \t\t\tpline(\"%s is uninjured.\", Monnam(mtmp));\n  1630: \t\t\t(void) destroy_mitem(mtmp, SCROLL_CLASS, AD_FIRE);\n  1631: \t\t\t(void) destroy_mitem(mtmp, SPBOOK_CLASS, AD_FIRE);\n  1632: \t\t\t(void) destroy_mitem(mtmp, POTION_CLASS, AD_FIRE);\n  1633: \t\t\tnum = (2*(rn1(3, 3) + 2 * bcsign(otmp)) + 1)/3;\n  1634: \t\t\tif (Slimed) {"
+    "context": "src/muse.c:1629:10\n       1624: \t\t\tint num;\n       1625: \n       1626: \t\t\tif (vis)\n       1627: \t\t\t    pline_The(\"scroll erupts in a tower of flame!\");\n       1628: \t\t\tshieldeff(mtmp-&gt;mx, mtmp-&gt;my);\nTARGET 1629: \t\t\tpline(\"%s is uninjured.\", Monnam(mtmp));\n       1630: \t\t\t(void) destroy_mitem(mtmp, SCROLL_CLASS, AD_FIRE);\n       1631: \t\t\t(void) destroy_mitem(mtmp, SPBOOK_CLASS, AD_FIRE);\n       1632: \t\t\t(void) destroy_mitem(mtmp, POTION_CLASS, AD_FIRE);\n       1633: \t\t\tnum = (2*(rn1(3, 3) + 2 * bcsign(otmp)) + 1)/3;\n       1634: \t\t\tif (Slimed) {"
   },
   {
     "key": "L01635_01",
     "original": "slimy parts are burned away!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1635:15\n  1630: \t\t\t(void) destroy_mitem(mtmp, SCROLL_CLASS, AD_FIRE);\n  1631: \t\t\t(void) destroy_mitem(mtmp, SPBOOK_CLASS, AD_FIRE);\n  1632: \t\t\t(void) destroy_mitem(mtmp, POTION_CLASS, AD_FIRE);\n  1633: \t\t\tnum = (2*(rn1(3, 3) + 2 * bcsign(otmp)) + 1)/3;\n  1634: \t\t\tif (Slimed) {\n&gt; 1635: \t\t\t      Your(\"slimy parts are burned away!\");\n  1636: \t\t\t      Slimed = 0;\n  1637: \t\t\t}\n  1638: \t\t\tif (Fire_resistance)\n  1639: \t\t\t    You(\"are not harmed.\");\n  1640: \t\t\tburn_away_slime();"
+    "context": "src/muse.c:1635:15\n       1630: \t\t\t(void) destroy_mitem(mtmp, SCROLL_CLASS, AD_FIRE);\n       1631: \t\t\t(void) destroy_mitem(mtmp, SPBOOK_CLASS, AD_FIRE);\n       1632: \t\t\t(void) destroy_mitem(mtmp, POTION_CLASS, AD_FIRE);\n       1633: \t\t\tnum = (2*(rn1(3, 3) + 2 * bcsign(otmp)) + 1)/3;\n       1634: \t\t\tif (Slimed) {\nTARGET 1635: \t\t\t      Your(\"slimy parts are burned away!\");\n       1636: \t\t\t      Slimed = 0;\n       1637: \t\t\t}\n       1638: \t\t\tif (Fire_resistance)\n       1639: \t\t\t    You(\"are not harmed.\");\n       1640: \t\t\tburn_away_slime();"
   },
   {
     "key": "L01639_01",
     "original": "are not harmed.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1639:12\n  1634: \t\t\tif (Slimed) {\n  1635: \t\t\t      Your(\"slimy parts are burned away!\");\n  1636: \t\t\t      Slimed = 0;\n  1637: \t\t\t}\n  1638: \t\t\tif (Fire_resistance)\n&gt; 1639: \t\t\t    You(\"are not harmed.\");\n  1640: \t\t\tburn_away_slime();\n  1641: \t\t\tif (Half_spell_damage) num = (num+1) / 2;\n  1642: \t\t\telse losehp(num, \"scroll of fire\", KILLED_BY_AN);\n  1643: \t\t\tfor(mtmp2 = fmon; mtmp2; mtmp2 = mtmp2-&gt;nmon) {\n  1644: \t\t\t   if(DEADMONSTER(mtmp2)) continue;"
+    "context": "src/muse.c:1639:12\n       1634: \t\t\tif (Slimed) {\n       1635: \t\t\t      Your(\"slimy parts are burned away!\");\n       1636: \t\t\t      Slimed = 0;\n       1637: \t\t\t}\n       1638: \t\t\tif (Fire_resistance)\nTARGET 1639: \t\t\t    You(\"are not harmed.\");\n       1640: \t\t\tburn_away_slime();\n       1641: \t\t\tif (Half_spell_damage) num = (num+1) / 2;\n       1642: \t\t\telse losehp(num, \"scroll of fire\", KILLED_BY_AN);\n       1643: \t\t\tfor(mtmp2 = fmon; mtmp2; mtmp2 = mtmp2-&gt;nmon) {\n       1644: \t\t\t   if(DEADMONSTER(mtmp2)) continue;"
   },
   {
     "key": "L01642_01",
     "original": "scroll of fire",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1642:21\n  1637: \t\t\t}\n  1638: \t\t\tif (Fire_resistance)\n  1639: \t\t\t    You(\"are not harmed.\");\n  1640: \t\t\tburn_away_slime();\n  1641: \t\t\tif (Half_spell_damage) num = (num+1) / 2;\n&gt; 1642: \t\t\telse losehp(num, \"scroll of fire\", KILLED_BY_AN);\n  1643: \t\t\tfor(mtmp2 = fmon; mtmp2; mtmp2 = mtmp2-&gt;nmon) {\n  1644: \t\t\t   if(DEADMONSTER(mtmp2)) continue;\n  1645: \t\t\t   if(mtmp == mtmp2) continue;\n  1646: \t\t\t   if(dist2(mtmp2-&gt;mx,mtmp2-&gt;my,mtmp-&gt;mx,mtmp-&gt;my) &lt; 3){\n  1647: \t\t\t\tif (resists_fire(mtmp2)) continue;"
+    "context": "src/muse.c:1642:21\n       1637: \t\t\t}\n       1638: \t\t\tif (Fire_resistance)\n       1639: \t\t\t    You(\"are not harmed.\");\n       1640: \t\t\tburn_away_slime();\n       1641: \t\t\tif (Half_spell_damage) num = (num+1) / 2;\nTARGET 1642: \t\t\telse losehp(num, \"scroll of fire\", KILLED_BY_AN);\n       1643: \t\t\tfor(mtmp2 = fmon; mtmp2; mtmp2 = mtmp2-&gt;nmon) {\n       1644: \t\t\t   if(DEADMONSTER(mtmp2)) continue;\n       1645: \t\t\t   if(mtmp == mtmp2) continue;\n       1646: \t\t\t   if(dist2(mtmp2-&gt;mx,mtmp2-&gt;my,mtmp-&gt;mx,mtmp-&gt;my) &lt; 3){\n       1647: \t\t\t\tif (resists_fire(mtmp2)) continue;"
   },
   {
     "key": "L01674_01",
     "original": "%s hurls %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1674:10\n  1669: \t\t * sight, a problem not existing with wands because wand rays\n  1670: \t\t * are not objects.  Also set dknown in mthrowu.c.\n  1671: \t\t */\n  1672: \t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n  1673: \t\t\totmp-&gt;dknown = 1;\n&gt; 1674: \t\t\tpline(\"%s hurls %s!\", Monnam(mtmp),\n  1675: \t\t\t\t\t\tsingular(otmp, doname));\n  1676: \t\t}\n  1677: \t\tm_throw(mtmp, mtmp-&gt;mx, mtmp-&gt;my, sgn(mtmp-&gt;mux-mtmp-&gt;mx),\n  1678: \t\t\tsgn(mtmp-&gt;muy-mtmp-&gt;my),\n  1679: \t\t\tdistmin(mtmp-&gt;mx,mtmp-&gt;my,mtmp-&gt;mux,mtmp-&gt;muy), otmp);"
+    "context": "src/muse.c:1674:10\n       1669: \t\t * sight, a problem not existing with wands because wand rays\n       1670: \t\t * are not objects.  Also set dknown in mthrowu.c.\n       1671: \t\t */\n       1672: \t\tif (cansee(mtmp-&gt;mx, mtmp-&gt;my)) {\n       1673: \t\t\totmp-&gt;dknown = 1;\nTARGET 1674: \t\t\tpline(\"%s hurls %s!\", Monnam(mtmp),\n       1675: \t\t\t\t\t\tsingular(otmp, doname));\n       1676: \t\t}\n       1677: \t\tm_throw(mtmp, mtmp-&gt;mx, mtmp-&gt;my, sgn(mtmp-&gt;mux-mtmp-&gt;mx),\n       1678: \t\t\tsgn(mtmp-&gt;muy-mtmp-&gt;my),\n       1679: \t\t\tdistmin(mtmp-&gt;mx,mtmp-&gt;my,mtmp-&gt;mux,mtmp-&gt;muy), otmp);"
   },
   {
     "key": "L01682_01",
     "original": "%s wanted to perform action %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1682:22\n  1677: \t\tm_throw(mtmp, mtmp-&gt;mx, mtmp-&gt;my, sgn(mtmp-&gt;mux-mtmp-&gt;mx),\n  1678: \t\t\tsgn(mtmp-&gt;muy-mtmp-&gt;my),\n  1679: \t\t\tdistmin(mtmp-&gt;mx,mtmp-&gt;my,mtmp-&gt;mux,mtmp-&gt;muy), otmp);\n  1680: \t\treturn 2;\n  1681: \tcase 0: return 0; /* i.e. an exploded wand */\n&gt; 1682: \tdefault: impossible(\"%s wanted to perform action %d?\", Monnam(mtmp),\n  1683: \t\t\tm.has_offense);\n  1684: \t\tbreak;\n  1685: \t}\n  1686: \treturn 0;\n  1687: }"
+    "context": "src/muse.c:1682:22\n       1677: \t\tm_throw(mtmp, mtmp-&gt;mx, mtmp-&gt;my, sgn(mtmp-&gt;mux-mtmp-&gt;mx),\n       1678: \t\t\tsgn(mtmp-&gt;muy-mtmp-&gt;my),\n       1679: \t\t\tdistmin(mtmp-&gt;mx,mtmp-&gt;my,mtmp-&gt;mux,mtmp-&gt;muy), otmp);\n       1680: \t\treturn 2;\n       1681: \tcase 0: return 0; /* i.e. an exploded wand */\nTARGET 1682: \tdefault: impossible(\"%s wanted to perform action %d?\", Monnam(mtmp),\n       1683: \t\t\tm.has_offense);\n       1684: \t\tbreak;\n       1685: \t}\n       1686: \treturn 0;\n       1687: }"
   },
   {
     "key": "L01901_01",
     "original": "%s rises up, through the %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1901:14\n  1896: \n  1897: \t\t\tget_level(&tolevel, tolev);\n  1898: \t\t\t/* insurance against future changes... */\n  1899: \t\t\tif(on_level(&tolevel, &u.uz)) goto skipmsg;\n  1900: \t\t\tif (vismon) {\n&gt; 1901: \t\t\t    pline(\"%s rises up, through the %s!\",\n  1902: \t\t\t\t  Monnam(mtmp), ceiling(mtmp-&gt;mx, mtmp-&gt;my));\n  1903: \t\t\t    if(!objects[POT_GAIN_LEVEL].oc_name_known\n  1904: \t\t\t      && !objects[POT_GAIN_LEVEL].oc_uname)\n  1905: \t\t\t\tdocall(otmp);\n  1906: \t\t\t}"
+    "context": "src/muse.c:1901:14\n       1896: \n       1897: \t\t\tget_level(&tolevel, tolev);\n       1898: \t\t\t/* insurance against future changes... */\n       1899: \t\t\tif(on_level(&tolevel, &u.uz)) goto skipmsg;\n       1900: \t\t\tif (vismon) {\nTARGET 1901: \t\t\t    pline(\"%s rises up, through the %s!\",\n       1902: \t\t\t\t  Monnam(mtmp), ceiling(mtmp-&gt;mx, mtmp-&gt;my));\n       1903: \t\t\t    if(!objects[POT_GAIN_LEVEL].oc_name_known\n       1904: \t\t\t      && !objects[POT_GAIN_LEVEL].oc_uname)\n       1905: \t\t\t\tdocall(otmp);\n       1906: \t\t\t}"
   },
   {
     "key": "L01914_01",
     "original": "%s looks uneasy.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1914:14\n  1909: \t\t\t\t\t MIGR_RANDOM, (coord *)0);\n  1910: \t\t\treturn 2;\n  1911: \t\t    } else {\n  1912: skipmsg:\n  1913: \t\t\tif (vismon) {\n&gt; 1914: \t\t\t    pline(\"%s looks uneasy.\", Monnam(mtmp));\n  1915: \t\t\t    if(!objects[POT_GAIN_LEVEL].oc_name_known\n  1916: \t\t\t      && !objects[POT_GAIN_LEVEL].oc_uname)\n  1917: \t\t\t\tdocall(otmp);\n  1918: \t\t\t}\n  1919: \t\t\tm_useup(mtmp, otmp);"
+    "context": "src/muse.c:1914:14\n       1909: \t\t\t\t\t MIGR_RANDOM, (coord *)0);\n       1910: \t\t\treturn 2;\n       1911: \t\t    } else {\n       1912: skipmsg:\n       1913: \t\t\tif (vismon) {\nTARGET 1914: \t\t\t    pline(\"%s looks uneasy.\", Monnam(mtmp));\n       1915: \t\t\t    if(!objects[POT_GAIN_LEVEL].oc_name_known\n       1916: \t\t\t      && !objects[POT_GAIN_LEVEL].oc_uname)\n       1917: \t\t\t\tdocall(otmp);\n       1918: \t\t\t}\n       1919: \t\t\tm_useup(mtmp, otmp);"
   },
   {
     "key": "L01923_01",
     "original": "%s seems more experienced.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1923:21\n  1918: \t\t\t}\n  1919: \t\t\tm_useup(mtmp, otmp);\n  1920: \t\t\treturn 2;\n  1921: \t\t    }\n  1922: \t\t}\n&gt; 1923: \t\tif (vismon) pline(\"%s seems more experienced.\", Monnam(mtmp));\n  1924: \t\tif (oseen) makeknown(POT_GAIN_LEVEL);\n  1925: \t\tm_useup(mtmp, otmp);\n  1926: \t\tif (!grow_up(mtmp,(struct monst *)0)) return 1;\n  1927: \t\t\t/* grew into genocided monster */\n  1928: \t\treturn 2;"
+    "context": "src/muse.c:1923:21\n       1918: \t\t\t}\n       1919: \t\t\tm_useup(mtmp, otmp);\n       1920: \t\t\treturn 2;\n       1921: \t\t    }\n       1922: \t\t}\nTARGET 1923: \t\tif (vismon) pline(\"%s seems more experienced.\", Monnam(mtmp));\n       1924: \t\tif (oseen) makeknown(POT_GAIN_LEVEL);\n       1925: \t\tm_useup(mtmp, otmp);\n       1926: \t\tif (!grow_up(mtmp,(struct monst *)0)) return 1;\n       1927: \t\t\t/* grew into genocided monster */\n       1928: \t\treturn 2;"
   },
   {
     "key": "L01941_01",
     "original": "%s body takes on a %s transparency.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1941:10\n  1936: \t\t/* format monster's name before altering its visibility */\n  1937: \t\tStrcpy(nambuf, See_invisible ? Monnam(mtmp) : mon_nam(mtmp));\n  1938: \t\tmon_set_minvis(mtmp);\n  1939: \t\tif (vismon && mtmp-&gt;minvis) {\t/* was seen, now invisible */\n  1940: \t\t    if (See_invisible)\n&gt; 1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n  1942: \t\t\t      s_suffix(nambuf),\n  1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n  1944: \t\t    else\n  1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n  1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);"
+    "context": "src/muse.c:1941:10\n       1936: \t\t/* format monster's name before altering its visibility */\n       1937: \t\tStrcpy(nambuf, See_invisible ? Monnam(mtmp) : mon_nam(mtmp));\n       1938: \t\tmon_set_minvis(mtmp);\n       1939: \t\tif (vismon && mtmp-&gt;minvis) {\t/* was seen, now invisible */\n       1940: \t\t    if (See_invisible)\nTARGET 1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n       1942: \t\t\t      s_suffix(nambuf),\n       1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n       1944: \t\t    else\n       1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n       1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);"
   },
   {
     "key": "L01943_01",
     "original": "normal",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1943:26\n  1938: \t\tmon_set_minvis(mtmp);\n  1939: \t\tif (vismon && mtmp-&gt;minvis) {\t/* was seen, now invisible */\n  1940: \t\t    if (See_invisible)\n  1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n  1942: \t\t\t      s_suffix(nambuf),\n&gt; 1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n  1944: \t\t    else\n  1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n  1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1947: \t\t}\n  1948: \t\tif (otmp-&gt;otyp == POT_INVISIBILITY) {"
+    "context": "src/muse.c:1943:26\n       1938: \t\tmon_set_minvis(mtmp);\n       1939: \t\tif (vismon && mtmp-&gt;minvis) {\t/* was seen, now invisible */\n       1940: \t\t    if (See_invisible)\n       1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n       1942: \t\t\t      s_suffix(nambuf),\nTARGET 1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n       1944: \t\t    else\n       1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n       1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1947: \t\t}\n       1948: \t\tif (otmp-&gt;otyp == POT_INVISIBILITY) {"
   },
   {
     "key": "L01943_02",
     "original": "strange",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1943:37\n  1938: \t\tmon_set_minvis(mtmp);\n  1939: \t\tif (vismon && mtmp-&gt;minvis) {\t/* was seen, now invisible */\n  1940: \t\t    if (See_invisible)\n  1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n  1942: \t\t\t      s_suffix(nambuf),\n&gt; 1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n  1944: \t\t    else\n  1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n  1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1947: \t\t}\n  1948: \t\tif (otmp-&gt;otyp == POT_INVISIBILITY) {"
+    "context": "src/muse.c:1943:37\n       1938: \t\tmon_set_minvis(mtmp);\n       1939: \t\tif (vismon && mtmp-&gt;minvis) {\t/* was seen, now invisible */\n       1940: \t\t    if (See_invisible)\n       1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n       1942: \t\t\t      s_suffix(nambuf),\nTARGET 1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n       1944: \t\t    else\n       1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n       1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1947: \t\t}\n       1948: \t\tif (otmp-&gt;otyp == POT_INVISIBILITY) {"
   },
   {
     "key": "L01945_01",
     "original": "Suddenly you cannot see %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1945:10\n  1940: \t\t    if (See_invisible)\n  1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n  1942: \t\t\t      s_suffix(nambuf),\n  1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n  1944: \t\t    else\n&gt; 1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n  1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n  1947: \t\t}\n  1948: \t\tif (otmp-&gt;otyp == POT_INVISIBILITY) {\n  1949: \t\t    if (otmp-&gt;cursed) you_aggravate(mtmp);\n  1950: \t\t    m_useup(mtmp, otmp);"
+    "context": "src/muse.c:1945:10\n       1940: \t\t    if (See_invisible)\n       1941: \t\t\tpline(\"%s body takes on a %s transparency.\",\n       1942: \t\t\t      s_suffix(nambuf),\n       1943: \t\t\t      Hallucination ? \"normal\" : \"strange\");\n       1944: \t\t    else\nTARGET 1945: \t\t\tpline(\"Suddenly you cannot see %s.\", nambuf);\n       1946: \t\t    if (oseen) makeknown(otmp-&gt;otyp);\n       1947: \t\t}\n       1948: \t\tif (otmp-&gt;otyp == POT_INVISIBILITY) {\n       1949: \t\t    if (otmp-&gt;cursed) you_aggravate(mtmp);\n       1950: \t\t    m_useup(mtmp, otmp);"
   },
   {
     "key": "L01973_01",
     "original": "%s changes!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1973:32\n  1968: \t\tmzapmsg(mtmp, otmp, TRUE);\n  1969: \t\totmp-&gt;spe--;\n  1970: #if 0\n  1971: \t\t(void) newcham(mtmp, muse_newcham_mon(), TRUE, vismon);\n  1972: #else\n&gt; 1973: \t\t(void) mon_poly(mtmp, FALSE, \"%s changes!\");\n  1974: #endif\n  1975: \t\tif (oseen) makeknown(WAN_POLYMORPH);\n  1976: \t\treturn 2;\n  1977: \tcase MUSE_POT_POLYMORPH:\n  1978: \t\tmquaffmsg(mtmp, otmp);"
+    "context": "src/muse.c:1973:32\n       1968: \t\tmzapmsg(mtmp, otmp, TRUE);\n       1969: \t\totmp-&gt;spe--;\n       1970: #if 0\n       1971: \t\t(void) newcham(mtmp, muse_newcham_mon(), TRUE, vismon);\n       1972: #else\nTARGET 1973: \t\t(void) mon_poly(mtmp, FALSE, \"%s changes!\");\n       1974: #endif\n       1975: \t\tif (oseen) makeknown(WAN_POLYMORPH);\n       1976: \t\treturn 2;\n       1977: \tcase MUSE_POT_POLYMORPH:\n       1978: \t\tmquaffmsg(mtmp, otmp);"
   },
   {
     "key": "L01980_01",
     "original": "%s suddenly mutates!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1980:21\n  1975: \t\tif (oseen) makeknown(WAN_POLYMORPH);\n  1976: \t\treturn 2;\n  1977: \tcase MUSE_POT_POLYMORPH:\n  1978: \t\tmquaffmsg(mtmp, otmp);\n  1979: #if 0\n&gt; 1980: \t\tif (vismon) pline(\"%s suddenly mutates!\", Monnam(mtmp));\n  1981: \t\t(void) newcham(mtmp, muse_newcham_mon(mtmp), FALSE, vismon);\n  1982: #else\n  1983: \t\t(void) mon_poly(mtmp, FALSE, \"%s suddenly mutates!\");\n  1984: #endif\n  1985: \t\tif (oseen) makeknown(POT_POLYMORPH);"
+    "context": "src/muse.c:1980:21\n       1975: \t\tif (oseen) makeknown(WAN_POLYMORPH);\n       1976: \t\treturn 2;\n       1977: \tcase MUSE_POT_POLYMORPH:\n       1978: \t\tmquaffmsg(mtmp, otmp);\n       1979: #if 0\nTARGET 1980: \t\tif (vismon) pline(\"%s suddenly mutates!\", Monnam(mtmp));\n       1981: \t\t(void) newcham(mtmp, muse_newcham_mon(mtmp), FALSE, vismon);\n       1982: #else\n       1983: \t\t(void) mon_poly(mtmp, FALSE, \"%s suddenly mutates!\");\n       1984: #endif\n       1985: \t\tif (oseen) makeknown(POT_POLYMORPH);"
   },
   {
     "key": "L01983_01",
     "original": "%s suddenly mutates!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1983:32\n  1978: \t\tmquaffmsg(mtmp, otmp);\n  1979: #if 0\n  1980: \t\tif (vismon) pline(\"%s suddenly mutates!\", Monnam(mtmp));\n  1981: \t\t(void) newcham(mtmp, muse_newcham_mon(mtmp), FALSE, vismon);\n  1982: #else\n&gt; 1983: \t\t(void) mon_poly(mtmp, FALSE, \"%s suddenly mutates!\");\n  1984: #endif\n  1985: \t\tif (oseen) makeknown(POT_POLYMORPH);\n  1986: \t\tm_useup(mtmp, otmp);\n  1987: \t\treturn 2;\n  1988: \tcase MUSE_POLY_TRAP:"
+    "context": "src/muse.c:1983:32\n       1978: \t\tmquaffmsg(mtmp, otmp);\n       1979: #if 0\n       1980: \t\tif (vismon) pline(\"%s suddenly mutates!\", Monnam(mtmp));\n       1981: \t\t(void) newcham(mtmp, muse_newcham_mon(mtmp), FALSE, vismon);\n       1982: #else\nTARGET 1983: \t\t(void) mon_poly(mtmp, FALSE, \"%s suddenly mutates!\");\n       1984: #endif\n       1985: \t\tif (oseen) makeknown(POT_POLYMORPH);\n       1986: \t\tm_useup(mtmp, otmp);\n       1987: \t\treturn 2;\n       1988: \tcase MUSE_POLY_TRAP:"
   },
   {
     "key": "L01990_01",
     "original": "%s deliberately %s onto a polymorph trap!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1990:13\n  1985: \t\tif (oseen) makeknown(POT_POLYMORPH);\n  1986: \t\tm_useup(mtmp, otmp);\n  1987: \t\treturn 2;\n  1988: \tcase MUSE_POLY_TRAP:\n  1989: \t\tif (vismon)\n&gt; 1990: \t\t    pline(\"%s deliberately %s onto a polymorph trap!\",\n  1991: \t\t\tMonnam(mtmp),\n  1992: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n  1993: \t\tif (vis) seetrap(t_at(trapx,trapy));\n  1994: \n  1995: \t\t/*  don't use rloc() due to worms */"
+    "context": "src/muse.c:1990:13\n       1985: \t\tif (oseen) makeknown(POT_POLYMORPH);\n       1986: \t\tm_useup(mtmp, otmp);\n       1987: \t\treturn 2;\n       1988: \tcase MUSE_POLY_TRAP:\n       1989: \t\tif (vismon)\nTARGET 1990: \t\t    pline(\"%s deliberately %s onto a polymorph trap!\",\n       1991: \t\t\tMonnam(mtmp),\n       1992: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n       1993: \t\tif (vis) seetrap(t_at(trapx,trapy));\n       1994: \n       1995: \t\t/*  don't use rloc() due to worms */"
   },
   {
     "key": "L01992_01",
     "original": "jump",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:1992:38\n  1987: \t\treturn 2;\n  1988: \tcase MUSE_POLY_TRAP:\n  1989: \t\tif (vismon)\n  1990: \t\t    pline(\"%s deliberately %s onto a polymorph trap!\",\n  1991: \t\t\tMonnam(mtmp),\n&gt; 1992: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n  1993: \t\tif (vis) seetrap(t_at(trapx,trapy));\n  1994: \n  1995: \t\t/*  don't use rloc() due to worms */\n  1996: \t\tremove_monster(mtmp-&gt;mx, mtmp-&gt;my);\n  1997: \t\tnewsym(mtmp-&gt;mx, mtmp-&gt;my);"
+    "context": "src/muse.c:1992:38\n       1987: \t\treturn 2;\n       1988: \tcase MUSE_POLY_TRAP:\n       1989: \t\tif (vismon)\n       1990: \t\t    pline(\"%s deliberately %s onto a polymorph trap!\",\n       1991: \t\t\tMonnam(mtmp),\nTARGET 1992: \t\t\tmakeplural(locomotion(mtmp-&gt;data, \"jump\")));\n       1993: \t\tif (vis) seetrap(t_at(trapx,trapy));\n       1994: \n       1995: \t\t/*  don't use rloc() due to worms */\n       1996: \t\tremove_monster(mtmp-&gt;mx, mtmp-&gt;my);\n       1997: \t\tnewsym(mtmp-&gt;mx, mtmp-&gt;my);"
   },
   {
     "key": "L02005_01",
     "original": "%s changes!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2005:32\n  2000: \t\tnewsym(trapx, trapy);\n  2001: \n  2002: #if 0\n  2003: \t\t(void) newcham(mtmp, (struct permonst *)0, FALSE, vismon);\n  2004: #else\n&gt; 2005: \t\t(void) mon_poly(mtmp, FALSE, \"%s changes!\");\n  2006: #endif\n  2007: \t\treturn 2;\n  2008: \tcase MUSE_BULLWHIP:\n  2009: \t\t/* attempt to disarm hero */\n  2010: \t\tif (uwep && !rn2(5)) {"
+    "context": "src/muse.c:2005:32\n       2000: \t\tnewsym(trapx, trapy);\n       2001: \n       2002: #if 0\n       2003: \t\t(void) newcham(mtmp, (struct permonst *)0, FALSE, vismon);\n       2004: #else\nTARGET 2005: \t\t(void) mon_poly(mtmp, FALSE, \"%s changes!\");\n       2006: #endif\n       2007: \t\treturn 2;\n       2008: \tcase MUSE_BULLWHIP:\n       2009: \t\t/* attempt to disarm hero */\n       2010: \t\tif (uwep && !rn2(5)) {"
   },
   {
     "key": "L02011_01",
     "original": "The bullwhip",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2011:39\n  2006: #endif\n  2007: \t\treturn 2;\n  2008: \tcase MUSE_BULLWHIP:\n  2009: \t\t/* attempt to disarm hero */\n  2010: \t\tif (uwep && !rn2(5)) {\n&gt; 2011: \t\t    const char *The_whip = vismon ? \"The bullwhip\" : \"A whip\";\n  2012: \t\t    int where_to = rn2(4);\n  2013: \t\t    struct obj *obj = uwep;\n  2014: \t\t    const char *hand;\n  2015: \t\t    char the_weapon[BUFSZ];\n  2016: "
+    "context": "src/muse.c:2011:39\n       2006: #endif\n       2007: \t\treturn 2;\n       2008: \tcase MUSE_BULLWHIP:\n       2009: \t\t/* attempt to disarm hero */\n       2010: \t\tif (uwep && !rn2(5)) {\nTARGET 2011: \t\t    const char *The_whip = vismon ? \"The bullwhip\" : \"A whip\";\n       2012: \t\t    int where_to = rn2(4);\n       2013: \t\t    struct obj *obj = uwep;\n       2014: \t\t    const char *hand;\n       2015: \t\t    char the_weapon[BUFSZ];\n       2016: "
   },
   {
     "key": "L02011_02",
     "original": "A whip",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2011:56\n  2006: #endif\n  2007: \t\treturn 2;\n  2008: \tcase MUSE_BULLWHIP:\n  2009: \t\t/* attempt to disarm hero */\n  2010: \t\tif (uwep && !rn2(5)) {\n&gt; 2011: \t\t    const char *The_whip = vismon ? \"The bullwhip\" : \"A whip\";\n  2012: \t\t    int where_to = rn2(4);\n  2013: \t\t    struct obj *obj = uwep;\n  2014: \t\t    const char *hand;\n  2015: \t\t    char the_weapon[BUFSZ];\n  2016: "
+    "context": "src/muse.c:2011:56\n       2006: #endif\n       2007: \t\treturn 2;\n       2008: \tcase MUSE_BULLWHIP:\n       2009: \t\t/* attempt to disarm hero */\n       2010: \t\tif (uwep && !rn2(5)) {\nTARGET 2011: \t\t    const char *The_whip = vismon ? \"The bullwhip\" : \"A whip\";\n       2012: \t\t    int where_to = rn2(4);\n       2013: \t\t    struct obj *obj = uwep;\n       2014: \t\t    const char *hand;\n       2015: \t\t    char the_weapon[BUFSZ];\n       2016: "
   },
   {
     "key": "L02022_01",
     "original": "%s flicks a bullwhip towards your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2022:10\n  2017: \t\t    Strcpy(the_weapon, the(xname(obj)));\n  2018: \t\t    hand = body_part(HAND);\n  2019: \t\t    if (bimanual(obj)) hand = makeplural(hand);\n  2020: \n  2021: \t\t    if (vismon)\n&gt; 2022: \t\t\tpline(\"%s flicks a bullwhip towards your %s!\",\n  2023: \t\t\t      Monnam(mtmp), hand);\n  2024: \t\t    if (obj-&gt;otyp == HEAVY_IRON_BALL) {\n  2025: \t\t\tpline(\"%s fails to wrap around %s.\",\n  2026: \t\t\t      The_whip, the_weapon);\n  2027: \t\t\treturn 1;"
+    "context": "src/muse.c:2022:10\n       2017: \t\t    Strcpy(the_weapon, the(xname(obj)));\n       2018: \t\t    hand = body_part(HAND);\n       2019: \t\t    if (bimanual(obj)) hand = makeplural(hand);\n       2020: \n       2021: \t\t    if (vismon)\nTARGET 2022: \t\t\tpline(\"%s flicks a bullwhip towards your %s!\",\n       2023: \t\t\t      Monnam(mtmp), hand);\n       2024: \t\t    if (obj-&gt;otyp == HEAVY_IRON_BALL) {\n       2025: \t\t\tpline(\"%s fails to wrap around %s.\",\n       2026: \t\t\t      The_whip, the_weapon);\n       2027: \t\t\treturn 1;"
   },
   {
     "key": "L02025_01",
     "original": "%s fails to wrap around %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2025:10\n  2020: \n  2021: \t\t    if (vismon)\n  2022: \t\t\tpline(\"%s flicks a bullwhip towards your %s!\",\n  2023: \t\t\t      Monnam(mtmp), hand);\n  2024: \t\t    if (obj-&gt;otyp == HEAVY_IRON_BALL) {\n&gt; 2025: \t\t\tpline(\"%s fails to wrap around %s.\",\n  2026: \t\t\t      The_whip, the_weapon);\n  2027: \t\t\treturn 1;\n  2028: \t\t    }\n  2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n  2030: \t\t\t  The_whip, the_weapon);"
+    "context": "src/muse.c:2025:10\n       2020: \n       2021: \t\t    if (vismon)\n       2022: \t\t\tpline(\"%s flicks a bullwhip towards your %s!\",\n       2023: \t\t\t      Monnam(mtmp), hand);\n       2024: \t\t    if (obj-&gt;otyp == HEAVY_IRON_BALL) {\nTARGET 2025: \t\t\tpline(\"%s fails to wrap around %s.\",\n       2026: \t\t\t      The_whip, the_weapon);\n       2027: \t\t\treturn 1;\n       2028: \t\t    }\n       2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n       2030: \t\t\t  The_whip, the_weapon);"
   },
   {
     "key": "L02029_01",
     "original": "%s wraps around %s you're wielding!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2029:13\n  2024: \t\t    if (obj-&gt;otyp == HEAVY_IRON_BALL) {\n  2025: \t\t\tpline(\"%s fails to wrap around %s.\",\n  2026: \t\t\t      The_whip, the_weapon);\n  2027: \t\t\treturn 1;\n  2028: \t\t    }\n&gt; 2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n  2030: \t\t\t  The_whip, the_weapon);\n  2031: \t\t    if (welded(obj)) {\n  2032: \t\t\tpline(\"%s welded to your %s%c\",\n  2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n  2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');"
+    "context": "src/muse.c:2029:13\n       2024: \t\t    if (obj-&gt;otyp == HEAVY_IRON_BALL) {\n       2025: \t\t\tpline(\"%s fails to wrap around %s.\",\n       2026: \t\t\t      The_whip, the_weapon);\n       2027: \t\t\treturn 1;\n       2028: \t\t    }\nTARGET 2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n       2030: \t\t\t  The_whip, the_weapon);\n       2031: \t\t    if (welded(obj)) {\n       2032: \t\t\tpline(\"%s welded to your %s%c\",\n       2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n       2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');"
   },
   {
     "key": "L02032_01",
     "original": "%s welded to your %s%c",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2032:10\n  2027: \t\t\treturn 1;\n  2028: \t\t    }\n  2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n  2030: \t\t\t  The_whip, the_weapon);\n  2031: \t\t    if (welded(obj)) {\n&gt; 2032: \t\t\tpline(\"%s welded to your %s%c\",\n  2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n  2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n  2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n  2036: \t\t\twhere_to = 0;\n  2037: \t\t    }"
+    "context": "src/muse.c:2032:10\n       2027: \t\t\treturn 1;\n       2028: \t\t    }\n       2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n       2030: \t\t\t  The_whip, the_weapon);\n       2031: \t\t    if (welded(obj)) {\nTARGET 2032: \t\t\tpline(\"%s welded to your %s%c\",\n       2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n       2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n       2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n       2036: \t\t\twhere_to = 0;\n       2037: \t\t    }"
   },
   {
     "key": "L02033_01",
     "original": "It is",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2033:28\n  2028: \t\t    }\n  2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n  2030: \t\t\t  The_whip, the_weapon);\n  2031: \t\t    if (welded(obj)) {\n  2032: \t\t\tpline(\"%s welded to your %s%c\",\n&gt; 2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n  2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n  2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n  2036: \t\t\twhere_to = 0;\n  2037: \t\t    }\n  2038: \t\t    if (!where_to) {"
+    "context": "src/muse.c:2033:28\n       2028: \t\t    }\n       2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n       2030: \t\t\t  The_whip, the_weapon);\n       2031: \t\t    if (welded(obj)) {\n       2032: \t\t\tpline(\"%s welded to your %s%c\",\nTARGET 2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n       2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n       2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n       2036: \t\t\twhere_to = 0;\n       2037: \t\t    }\n       2038: \t\t    if (!where_to) {"
   },
   {
     "key": "L02033_02",
     "original": "They are",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2033:38\n  2028: \t\t    }\n  2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n  2030: \t\t\t  The_whip, the_weapon);\n  2031: \t\t    if (welded(obj)) {\n  2032: \t\t\tpline(\"%s welded to your %s%c\",\n&gt; 2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n  2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n  2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n  2036: \t\t\twhere_to = 0;\n  2037: \t\t    }\n  2038: \t\t    if (!where_to) {"
+    "context": "src/muse.c:2033:38\n       2028: \t\t    }\n       2029: \t\t    pline(\"%s wraps around %s you're wielding!\",\n       2030: \t\t\t  The_whip, the_weapon);\n       2031: \t\t    if (welded(obj)) {\n       2032: \t\t\tpline(\"%s welded to your %s%c\",\nTARGET 2033: \t\t\t      !is_plural(obj) ? \"It is\" : \"They are\",\n       2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n       2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n       2036: \t\t\twhere_to = 0;\n       2037: \t\t    }\n       2038: \t\t    if (!where_to) {"
   },
   {
     "key": "L02039_01",
     "original": "whip slips free.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2039:14\n  2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n  2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n  2036: \t\t\twhere_to = 0;\n  2037: \t\t    }\n  2038: \t\t    if (!where_to) {\n&gt; 2039: \t\t\tpline_The(\"whip slips free.\");  /* not `The_whip' */\n  2040: \t\t\treturn 1;\n  2041: \t\t    } else if (where_to == 3 && hates_silver(mtmp-&gt;data) &&\n  2042: \t\t\t    objects[obj-&gt;otyp].oc_material == SILVER) {\n  2043: \t\t\t/* this monster won't want to catch a silver\n  2044: \t\t\t   weapon; drop it at hero's feet instead */"
+    "context": "src/muse.c:2039:14\n       2034: \t\t\t      hand, !obj-&gt;bknown ? '!' : '.');\n       2035: \t\t\t/* obj-&gt;bknown = 1; */ /* welded() takes care of this */\n       2036: \t\t\twhere_to = 0;\n       2037: \t\t    }\n       2038: \t\t    if (!where_to) {\nTARGET 2039: \t\t\tpline_The(\"whip slips free.\");  /* not `The_whip' */\n       2040: \t\t\treturn 1;\n       2041: \t\t    } else if (where_to == 3 && hates_silver(mtmp-&gt;data) &&\n       2042: \t\t\t    objects[obj-&gt;otyp].oc_material == SILVER) {\n       2043: \t\t\t/* this monster won't want to catch a silver\n       2044: \t\t\t   weapon; drop it at hero's feet instead */"
   },
   {
     "key": "L02051_01",
     "original": "%s yanks %s from your %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2051:14\n  2046: \t\t    }\n  2047: \t\t    freeinv(obj);\n  2048: \t\t    uwepgone();\n  2049: \t\t    switch (where_to) {\n  2050: \t\t\tcase 1:\t\t/* onto floor beneath mon */\n&gt; 2051: \t\t\t    pline(\"%s yanks %s from your %s!\", Monnam(mtmp),\n  2052: \t\t\t\t  the_weapon, hand);\n  2053: \t\t\t    place_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n  2054: \t\t\t    break;\n  2055: \t\t\tcase 2:\t\t/* onto floor beneath you */\n  2056: \t\t\t    pline(\"%s yanks %s to the %s!\", Monnam(mtmp),"
+    "context": "src/muse.c:2051:14\n       2046: \t\t    }\n       2047: \t\t    freeinv(obj);\n       2048: \t\t    uwepgone();\n       2049: \t\t    switch (where_to) {\n       2050: \t\t\tcase 1:\t\t/* onto floor beneath mon */\nTARGET 2051: \t\t\t    pline(\"%s yanks %s from your %s!\", Monnam(mtmp),\n       2052: \t\t\t\t  the_weapon, hand);\n       2053: \t\t\t    place_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n       2054: \t\t\t    break;\n       2055: \t\t\tcase 2:\t\t/* onto floor beneath you */\n       2056: \t\t\t    pline(\"%s yanks %s to the %s!\", Monnam(mtmp),"
   },
   {
     "key": "L02056_01",
     "original": "%s yanks %s to the %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2056:14\n  2051: \t\t\t    pline(\"%s yanks %s from your %s!\", Monnam(mtmp),\n  2052: \t\t\t\t  the_weapon, hand);\n  2053: \t\t\t    place_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n  2054: \t\t\t    break;\n  2055: \t\t\tcase 2:\t\t/* onto floor beneath you */\n&gt; 2056: \t\t\t    pline(\"%s yanks %s to the %s!\", Monnam(mtmp),\n  2057: \t\t\t\t  the_weapon, surface(u.ux, u.uy));\n  2058: \t\t\t    dropy(obj);\n  2059: \t\t\t    break;\n  2060: \t\t\tcase 3:\t\t/* into mon's inventory */\n  2061: \t\t\t    pline(\"%s snatches %s!\", Monnam(mtmp),"
+    "context": "src/muse.c:2056:14\n       2051: \t\t\t    pline(\"%s yanks %s from your %s!\", Monnam(mtmp),\n       2052: \t\t\t\t  the_weapon, hand);\n       2053: \t\t\t    place_object(obj, mtmp-&gt;mx, mtmp-&gt;my);\n       2054: \t\t\t    break;\n       2055: \t\t\tcase 2:\t\t/* onto floor beneath you */\nTARGET 2056: \t\t\t    pline(\"%s yanks %s to the %s!\", Monnam(mtmp),\n       2057: \t\t\t\t  the_weapon, surface(u.ux, u.uy));\n       2058: \t\t\t    dropy(obj);\n       2059: \t\t\t    break;\n       2060: \t\t\tcase 3:\t\t/* into mon's inventory */\n       2061: \t\t\t    pline(\"%s snatches %s!\", Monnam(mtmp),"
   },
   {
     "key": "L02061_01",
     "original": "%s snatches %s!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2061:14\n  2056: \t\t\t    pline(\"%s yanks %s to the %s!\", Monnam(mtmp),\n  2057: \t\t\t\t  the_weapon, surface(u.ux, u.uy));\n  2058: \t\t\t    dropy(obj);\n  2059: \t\t\t    break;\n  2060: \t\t\tcase 3:\t\t/* into mon's inventory */\n&gt; 2061: \t\t\t    pline(\"%s snatches %s!\", Monnam(mtmp),\n  2062: \t\t\t\t  the_weapon);\n  2063: \t\t\t    (void) mpickobj(mtmp,obj);\n  2064: \t\t\t    break;\n  2065: \t\t    }\n  2066: \t\t    return 1;"
+    "context": "src/muse.c:2061:14\n       2056: \t\t\t    pline(\"%s yanks %s to the %s!\", Monnam(mtmp),\n       2057: \t\t\t\t  the_weapon, surface(u.ux, u.uy));\n       2058: \t\t\t    dropy(obj);\n       2059: \t\t\t    break;\n       2060: \t\t\tcase 3:\t\t/* into mon's inventory */\nTARGET 2061: \t\t\t    pline(\"%s snatches %s!\", Monnam(mtmp),\n       2062: \t\t\t\t  the_weapon);\n       2063: \t\t\t    (void) mpickobj(mtmp,obj);\n       2064: \t\t\t    break;\n       2065: \t\t    }\n       2066: \t\t    return 1;"
   },
   {
     "key": "L02070_01",
     "original": "%s wanted to perform action %d?",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2070:22\n  2065: \t\t    }\n  2066: \t\t    return 1;\n  2067: \t\t}\n  2068: \t\treturn 0;\n  2069: \tcase 0: return 0; /* i.e. an exploded wand */\n&gt; 2070: \tdefault: impossible(\"%s wanted to perform action %d?\", Monnam(mtmp),\n  2071: \t\t\tm.has_misc);\n  2072: \t\tbreak;\n  2073: \t}\n  2074: \treturn 0;\n  2075: }"
+    "context": "src/muse.c:2070:22\n       2065: \t\t    }\n       2066: \t\t    return 1;\n       2067: \t\t}\n       2068: \t\treturn 0;\n       2069: \tcase 0: return 0; /* i.e. an exploded wand */\nTARGET 2070: \tdefault: impossible(\"%s wanted to perform action %d?\", Monnam(mtmp),\n       2071: \t\t\tm.has_misc);\n       2072: \t\tbreak;\n       2073: \t}\n       2074: \treturn 0;\n       2075: }"
   },
   {
     "key": "L02081_01",
     "original": "For some reason, %s presence is known to you.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2081:8\n  2076: \n  2077: STATIC_OVL void\n  2078: you_aggravate(mtmp)\n  2079: struct monst *mtmp;\n  2080: {\n&gt; 2081: \tpline(\"For some reason, %s presence is known to you.\",\n  2082: \t\ts_suffix(noit_mon_nam(mtmp)));\n  2083: \tcls();\n  2084: #ifdef CLIPPING\n  2085: \tcliparound(mtmp-&gt;mx, mtmp-&gt;my);\n  2086: #endif"
+    "context": "src/muse.c:2081:8\n       2076: \n       2077: STATIC_OVL void\n       2078: you_aggravate(mtmp)\n       2079: struct monst *mtmp;\n       2080: {\nTARGET 2081: \tpline(\"For some reason, %s presence is known to you.\",\n       2082: \t\ts_suffix(noit_mon_nam(mtmp)));\n       2083: \tcls();\n       2084: #ifdef CLIPPING\n       2085: \tcliparound(mtmp-&gt;mx, mtmp-&gt;my);\n       2086: #endif"
   },
   {
     "key": "L02089_01",
     "original": "aggravated at %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2089:11\n  2084: #ifdef CLIPPING\n  2085: \tcliparound(mtmp-&gt;mx, mtmp-&gt;my);\n  2086: #endif\n  2087: \tshow_glyph(mtmp-&gt;mx, mtmp-&gt;my, mon_to_glyph(mtmp));\n  2088: \tdisplay_self();\n&gt; 2089: \tYou_feel(\"aggravated at %s.\", noit_mon_nam(mtmp));\n  2090: \tdisplay_nhwindow(WIN_MAP, TRUE);\n  2091: \tdocrt();\n  2092: \tif (unconscious()) {\n  2093: \t\tmulti = -1;\n  2094: \t\tnomovemsg ="
+    "context": "src/muse.c:2089:11\n       2084: #ifdef CLIPPING\n       2085: \tcliparound(mtmp-&gt;mx, mtmp-&gt;my);\n       2086: #endif\n       2087: \tshow_glyph(mtmp-&gt;mx, mtmp-&gt;my, mon_to_glyph(mtmp));\n       2088: \tdisplay_self();\nTARGET 2089: \tYou_feel(\"aggravated at %s.\", noit_mon_nam(mtmp));\n       2090: \tdisplay_nhwindow(WIN_MAP, TRUE);\n       2091: \tdocrt();\n       2092: \tif (unconscious()) {\n       2093: \t\tmulti = -1;\n       2094: \t\tnomovemsg ="
   },
   {
     "key": "L02095_01",
     "original": "Aggravated, you are jolted into full consciousness.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2095:9\n  2090: \tdisplay_nhwindow(WIN_MAP, TRUE);\n  2091: \tdocrt();\n  2092: \tif (unconscious()) {\n  2093: \t\tmulti = -1;\n  2094: \t\tnomovemsg =\n&gt; 2095: \t\t      \"Aggravated, you are jolted into full consciousness.\";\n  2096: \t}\n  2097: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n  2098: \tif (!canspotmon(mtmp))\n  2099: \t    map_invisible(mtmp-&gt;mx, mtmp-&gt;my);\n  2100: }"
+    "context": "src/muse.c:2095:9\n       2090: \tdisplay_nhwindow(WIN_MAP, TRUE);\n       2091: \tdocrt();\n       2092: \tif (unconscious()) {\n       2093: \t\tmulti = -1;\n       2094: \t\tnomovemsg =\nTARGET 2095: \t\t      \"Aggravated, you are jolted into full consciousness.\";\n       2096: \t}\n       2097: \tnewsym(mtmp-&gt;mx,mtmp-&gt;my);\n       2098: \tif (!canspotmon(mtmp))\n       2099: \t    map_invisible(mtmp-&gt;mx, mtmp-&gt;my);\n       2100: }"
   },
   {
     "key": "L02239_01",
     "original": "shield",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2239:38\n  2234: {\n  2235: \tstruct obj *orefl = which_armor(mon, W_ARMS);\n  2236: \n  2237: \tif (orefl && orefl-&gt;otyp == SHIELD_OF_REFLECTION) {\n  2238: \t    if (str) {\n&gt; 2239: \t\tpline(str, s_suffix(mon_nam(mon)), \"shield\");\n  2240: \t\tmakeknown(SHIELD_OF_REFLECTION);\n  2241: \t    }\n  2242: \t    return TRUE;\n  2243: \t} else if (arti_reflects(MON_WEP(mon))) {\n  2244: \t    /* due to wielded artifact weapon */"
+    "context": "src/muse.c:2239:38\n       2234: {\n       2235: \tstruct obj *orefl = which_armor(mon, W_ARMS);\n       2236: \n       2237: \tif (orefl && orefl-&gt;otyp == SHIELD_OF_REFLECTION) {\n       2238: \t    if (str) {\nTARGET 2239: \t\tpline(str, s_suffix(mon_nam(mon)), \"shield\");\n       2240: \t\tmakeknown(SHIELD_OF_REFLECTION);\n       2241: \t    }\n       2242: \t    return TRUE;\n       2243: \t} else if (arti_reflects(MON_WEP(mon))) {\n       2244: \t    /* due to wielded artifact weapon */"
   },
   {
     "key": "L02246_01",
     "original": "weapon",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2246:38\n  2241: \t    }\n  2242: \t    return TRUE;\n  2243: \t} else if (arti_reflects(MON_WEP(mon))) {\n  2244: \t    /* due to wielded artifact weapon */\n  2245: \t    if (str)\n&gt; 2246: \t\tpline(str, s_suffix(mon_nam(mon)), \"weapon\");\n  2247: \t    return TRUE;\n  2248: \t} else if ((orefl = which_armor(mon, W_AMUL)) &&\n  2249: \t\t\t\torefl-&gt;otyp == AMULET_OF_REFLECTION) {\n  2250: \t    if (str) {\n  2251: \t\tpline(str, s_suffix(mon_nam(mon)), \"amulet\");"
+    "context": "src/muse.c:2246:38\n       2241: \t    }\n       2242: \t    return TRUE;\n       2243: \t} else if (arti_reflects(MON_WEP(mon))) {\n       2244: \t    /* due to wielded artifact weapon */\n       2245: \t    if (str)\nTARGET 2246: \t\tpline(str, s_suffix(mon_nam(mon)), \"weapon\");\n       2247: \t    return TRUE;\n       2248: \t} else if ((orefl = which_armor(mon, W_AMUL)) &&\n       2249: \t\t\t\torefl-&gt;otyp == AMULET_OF_REFLECTION) {\n       2250: \t    if (str) {\n       2251: \t\tpline(str, s_suffix(mon_nam(mon)), \"amulet\");"
   },
   {
     "key": "L02251_01",
     "original": "amulet",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2251:38\n  2246: \t\tpline(str, s_suffix(mon_nam(mon)), \"weapon\");\n  2247: \t    return TRUE;\n  2248: \t} else if ((orefl = which_armor(mon, W_AMUL)) &&\n  2249: \t\t\t\torefl-&gt;otyp == AMULET_OF_REFLECTION) {\n  2250: \t    if (str) {\n&gt; 2251: \t\tpline(str, s_suffix(mon_nam(mon)), \"amulet\");\n  2252: \t\tmakeknown(AMULET_OF_REFLECTION);\n  2253: \t    }\n  2254: \t    return TRUE;\n  2255: \t} else if (mon-&gt;data == &mons[PM_NIGHTMARE]) {\n  2256: \t    pline(str,s_suffix(mon_nam(mon)),\"horn\");"
+    "context": "src/muse.c:2251:38\n       2246: \t\tpline(str, s_suffix(mon_nam(mon)), \"weapon\");\n       2247: \t    return TRUE;\n       2248: \t} else if ((orefl = which_armor(mon, W_AMUL)) &&\n       2249: \t\t\t\torefl-&gt;otyp == AMULET_OF_REFLECTION) {\n       2250: \t    if (str) {\nTARGET 2251: \t\tpline(str, s_suffix(mon_nam(mon)), \"amulet\");\n       2252: \t\tmakeknown(AMULET_OF_REFLECTION);\n       2253: \t    }\n       2254: \t    return TRUE;\n       2255: \t} else if (mon-&gt;data == &mons[PM_NIGHTMARE]) {\n       2256: \t    pline(str,s_suffix(mon_nam(mon)),\"horn\");"
   },
   {
     "key": "L02256_01",
     "original": "horn",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2256:39\n  2251: \t\tpline(str, s_suffix(mon_nam(mon)), \"amulet\");\n  2252: \t\tmakeknown(AMULET_OF_REFLECTION);\n  2253: \t    }\n  2254: \t    return TRUE;\n  2255: \t} else if (mon-&gt;data == &mons[PM_NIGHTMARE]) {\n&gt; 2256: \t    pline(str,s_suffix(mon_nam(mon)),\"horn\");\n  2257: \t    return TRUE;\n  2258: \t} else if ((orefl = which_armor(mon, W_ARM)) &&\n  2259: \t\t(orefl-&gt;otyp == SILVER_DRAGON_SCALES || orefl-&gt;otyp == SILVER_DRAGON_SCALE_MAIL)) {\n  2260: \t    if (str)\n  2261: \t\tpline(str, s_suffix(mon_nam(mon)), \"armor\");"
+    "context": "src/muse.c:2256:39\n       2251: \t\tpline(str, s_suffix(mon_nam(mon)), \"amulet\");\n       2252: \t\tmakeknown(AMULET_OF_REFLECTION);\n       2253: \t    }\n       2254: \t    return TRUE;\n       2255: \t} else if (mon-&gt;data == &mons[PM_NIGHTMARE]) {\nTARGET 2256: \t    pline(str,s_suffix(mon_nam(mon)),\"horn\");\n       2257: \t    return TRUE;\n       2258: \t} else if ((orefl = which_armor(mon, W_ARM)) &&\n       2259: \t\t(orefl-&gt;otyp == SILVER_DRAGON_SCALES || orefl-&gt;otyp == SILVER_DRAGON_SCALE_MAIL)) {\n       2260: \t    if (str)\n       2261: \t\tpline(str, s_suffix(mon_nam(mon)), \"armor\");"
   },
   {
     "key": "L02261_01",
     "original": "armor",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2261:38\n  2256: \t    pline(str,s_suffix(mon_nam(mon)),\"horn\");\n  2257: \t    return TRUE;\n  2258: \t} else if ((orefl = which_armor(mon, W_ARM)) &&\n  2259: \t\t(orefl-&gt;otyp == SILVER_DRAGON_SCALES || orefl-&gt;otyp == SILVER_DRAGON_SCALE_MAIL)) {\n  2260: \t    if (str)\n&gt; 2261: \t\tpline(str, s_suffix(mon_nam(mon)), \"armor\");\n  2262: \t    return TRUE;\n  2263: \t} else if (mon-&gt;data == &mons[PM_SILVER_DRAGON] ||\n  2264: \t\tmon-&gt;data == &mons[PM_CHROMATIC_DRAGON]) {\n  2265: \t    /* Silver dragons only reflect when mature; babies do not */\n  2266: \t    if (str)"
+    "context": "src/muse.c:2261:38\n       2256: \t    pline(str,s_suffix(mon_nam(mon)),\"horn\");\n       2257: \t    return TRUE;\n       2258: \t} else if ((orefl = which_armor(mon, W_ARM)) &&\n       2259: \t\t(orefl-&gt;otyp == SILVER_DRAGON_SCALES || orefl-&gt;otyp == SILVER_DRAGON_SCALE_MAIL)) {\n       2260: \t    if (str)\nTARGET 2261: \t\tpline(str, s_suffix(mon_nam(mon)), \"armor\");\n       2262: \t    return TRUE;\n       2263: \t} else if (mon-&gt;data == &mons[PM_SILVER_DRAGON] ||\n       2264: \t\tmon-&gt;data == &mons[PM_CHROMATIC_DRAGON]) {\n       2265: \t    /* Silver dragons only reflect when mature; babies do not */\n       2266: \t    if (str)"
   },
   {
     "key": "L02267_01",
     "original": "scales",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2267:38\n  2262: \t    return TRUE;\n  2263: \t} else if (mon-&gt;data == &mons[PM_SILVER_DRAGON] ||\n  2264: \t\tmon-&gt;data == &mons[PM_CHROMATIC_DRAGON]) {\n  2265: \t    /* Silver dragons only reflect when mature; babies do not */\n  2266: \t    if (str)\n&gt; 2267: \t\tpline(str, s_suffix(mon_nam(mon)), \"scales\");\n  2268: \t    return TRUE;\n  2269: \t} else if (mon-&gt;data == &mons[PM_DIAMOND_GOLEM]\n  2270: \t         || mon-&gt;data == &mons[PM_SAPPHIRE_GOLEM]\n  2271: \t         || mon-&gt;data == &mons[PM_CRYSTAL_GOLEM]) {\n  2272: \t    /* Some of the higher golems have intrinsic reflection */"
+    "context": "src/muse.c:2267:38\n       2262: \t    return TRUE;\n       2263: \t} else if (mon-&gt;data == &mons[PM_SILVER_DRAGON] ||\n       2264: \t\tmon-&gt;data == &mons[PM_CHROMATIC_DRAGON]) {\n       2265: \t    /* Silver dragons only reflect when mature; babies do not */\n       2266: \t    if (str)\nTARGET 2267: \t\tpline(str, s_suffix(mon_nam(mon)), \"scales\");\n       2268: \t    return TRUE;\n       2269: \t} else if (mon-&gt;data == &mons[PM_DIAMOND_GOLEM]\n       2270: \t         || mon-&gt;data == &mons[PM_SAPPHIRE_GOLEM]\n       2271: \t         || mon-&gt;data == &mons[PM_CRYSTAL_GOLEM]) {\n       2272: \t    /* Some of the higher golems have intrinsic reflection */"
   },
   {
     "key": "L02274_01",
     "original": "body",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2274:38\n  2269: \t} else if (mon-&gt;data == &mons[PM_DIAMOND_GOLEM]\n  2270: \t         || mon-&gt;data == &mons[PM_SAPPHIRE_GOLEM]\n  2271: \t         || mon-&gt;data == &mons[PM_CRYSTAL_GOLEM]) {\n  2272: \t    /* Some of the higher golems have intrinsic reflection */\n  2273: \t    if (str)\n&gt; 2274: \t\tpline(str, s_suffix(mon_nam(mon)), \"body\");\n  2275: \t    return TRUE;\n  2276: \t}\n  2277: \treturn FALSE;\n  2278: }\n  2279: "
+    "context": "src/muse.c:2274:38\n       2269: \t} else if (mon-&gt;data == &mons[PM_DIAMOND_GOLEM]\n       2270: \t         || mon-&gt;data == &mons[PM_SAPPHIRE_GOLEM]\n       2271: \t         || mon-&gt;data == &mons[PM_CRYSTAL_GOLEM]) {\n       2272: \t    /* Some of the higher golems have intrinsic reflection */\n       2273: \t    if (str)\nTARGET 2274: \t\tpline(str, s_suffix(mon_nam(mon)), \"body\");\n       2275: \t    return TRUE;\n       2276: \t}\n       2277: \treturn FALSE;\n       2278: }\n       2279: "
   },
   {
     "key": "L02287_01",
     "original": "shield",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2287:23\n  2282: const char *fmt, *str;\n  2283: {\n  2284: \t/* Check from outermost to innermost objects */\n  2285: \tif (EReflecting & W_ARMS) {\n  2286: \t    if (fmt && str) {\n&gt; 2287: \t    \tpline(fmt, str, \"shield\");\n  2288: \t    \tmakeknown(SHIELD_OF_REFLECTION);\n  2289: \t    }\n  2290: \t    return TRUE;\n  2291: \t} else if (EReflecting & W_WEP) {\n  2292: \t    /* Due to wielded artifact weapon */"
+    "context": "src/muse.c:2287:23\n       2282: const char *fmt, *str;\n       2283: {\n       2284: \t/* Check from outermost to innermost objects */\n       2285: \tif (EReflecting & W_ARMS) {\n       2286: \t    if (fmt && str) {\nTARGET 2287: \t    \tpline(fmt, str, \"shield\");\n       2288: \t    \tmakeknown(SHIELD_OF_REFLECTION);\n       2289: \t    }\n       2290: \t    return TRUE;\n       2291: \t} else if (EReflecting & W_WEP) {\n       2292: \t    /* Due to wielded artifact weapon */"
   },
   {
     "key": "L02294_01",
     "original": "weapon",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2294:23\n  2289: \t    }\n  2290: \t    return TRUE;\n  2291: \t} else if (EReflecting & W_WEP) {\n  2292: \t    /* Due to wielded artifact weapon */\n  2293: \t    if (fmt && str)\n&gt; 2294: \t    \tpline(fmt, str, \"weapon\");\n  2295: \t    return TRUE;\n  2296: \t} else if (EReflecting & W_AMUL) {\n  2297: \t    if (fmt && str) {\n  2298: \t    \tpline(fmt, str, \"medallion\");\n  2299: \t    \tmakeknown(AMULET_OF_REFLECTION);"
+    "context": "src/muse.c:2294:23\n       2289: \t    }\n       2290: \t    return TRUE;\n       2291: \t} else if (EReflecting & W_WEP) {\n       2292: \t    /* Due to wielded artifact weapon */\n       2293: \t    if (fmt && str)\nTARGET 2294: \t    \tpline(fmt, str, \"weapon\");\n       2295: \t    return TRUE;\n       2296: \t} else if (EReflecting & W_AMUL) {\n       2297: \t    if (fmt && str) {\n       2298: \t    \tpline(fmt, str, \"medallion\");\n       2299: \t    \tmakeknown(AMULET_OF_REFLECTION);"
   },
   {
     "key": "L02298_01",
     "original": "medallion",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2298:23\n  2293: \t    if (fmt && str)\n  2294: \t    \tpline(fmt, str, \"weapon\");\n  2295: \t    return TRUE;\n  2296: \t} else if (EReflecting & W_AMUL) {\n  2297: \t    if (fmt && str) {\n&gt; 2298: \t    \tpline(fmt, str, \"medallion\");\n  2299: \t    \tmakeknown(AMULET_OF_REFLECTION);\n  2300: \t    }\n  2301: \t    return TRUE;\n  2302: \t} else if (EReflecting & W_ARM) {\n  2303: \t    if (fmt && str)"
+    "context": "src/muse.c:2298:23\n       2293: \t    if (fmt && str)\n       2294: \t    \tpline(fmt, str, \"weapon\");\n       2295: \t    return TRUE;\n       2296: \t} else if (EReflecting & W_AMUL) {\n       2297: \t    if (fmt && str) {\nTARGET 2298: \t    \tpline(fmt, str, \"medallion\");\n       2299: \t    \tmakeknown(AMULET_OF_REFLECTION);\n       2300: \t    }\n       2301: \t    return TRUE;\n       2302: \t} else if (EReflecting & W_ARM) {\n       2303: \t    if (fmt && str)"
   },
   {
     "key": "L02304_01",
     "original": "armor",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2304:23\n  2299: \t    \tmakeknown(AMULET_OF_REFLECTION);\n  2300: \t    }\n  2301: \t    return TRUE;\n  2302: \t} else if (EReflecting & W_ARM) {\n  2303: \t    if (fmt && str)\n&gt; 2304: \t    \tpline(fmt, str, \"armor\");\n  2305: \t    return TRUE;\n  2306: \t} else if (youmonst.data == &mons[PM_SILVER_DRAGON]) {\n  2307: \t    if (fmt && str)\n  2308: \t    \tpline(fmt, str, \"scales\");\n  2309: \t    return TRUE;"
+    "context": "src/muse.c:2304:23\n       2299: \t    \tmakeknown(AMULET_OF_REFLECTION);\n       2300: \t    }\n       2301: \t    return TRUE;\n       2302: \t} else if (EReflecting & W_ARM) {\n       2303: \t    if (fmt && str)\nTARGET 2304: \t    \tpline(fmt, str, \"armor\");\n       2305: \t    return TRUE;\n       2306: \t} else if (youmonst.data == &mons[PM_SILVER_DRAGON]) {\n       2307: \t    if (fmt && str)\n       2308: \t    \tpline(fmt, str, \"scales\");\n       2309: \t    return TRUE;"
   },
   {
     "key": "L02308_01",
     "original": "scales",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2308:23\n  2303: \t    if (fmt && str)\n  2304: \t    \tpline(fmt, str, \"armor\");\n  2305: \t    return TRUE;\n  2306: \t} else if (youmonst.data == &mons[PM_SILVER_DRAGON]) {\n  2307: \t    if (fmt && str)\n&gt; 2308: \t    \tpline(fmt, str, \"scales\");\n  2309: \t    return TRUE;\n  2310: \t} else if (youmonst.data == &mons[PM_DIAMOND_GOLEM]\n  2311: \t         || youmonst.data == &mons[PM_SAPPHIRE_GOLEM]\n  2312: \t         || youmonst.data == &mons[PM_CRYSTAL_GOLEM]) {\n  2313: \t    if (fmt && str)"
+    "context": "src/muse.c:2308:23\n       2303: \t    if (fmt && str)\n       2304: \t    \tpline(fmt, str, \"armor\");\n       2305: \t    return TRUE;\n       2306: \t} else if (youmonst.data == &mons[PM_SILVER_DRAGON]) {\n       2307: \t    if (fmt && str)\nTARGET 2308: \t    \tpline(fmt, str, \"scales\");\n       2309: \t    return TRUE;\n       2310: \t} else if (youmonst.data == &mons[PM_DIAMOND_GOLEM]\n       2311: \t         || youmonst.data == &mons[PM_SAPPHIRE_GOLEM]\n       2312: \t         || youmonst.data == &mons[PM_CRYSTAL_GOLEM]) {\n       2313: \t    if (fmt && str)"
   },
   {
     "key": "L02314_01",
     "original": "body",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2314:23\n  2309: \t    return TRUE;\n  2310: \t} else if (youmonst.data == &mons[PM_DIAMOND_GOLEM]\n  2311: \t         || youmonst.data == &mons[PM_SAPPHIRE_GOLEM]\n  2312: \t         || youmonst.data == &mons[PM_CRYSTAL_GOLEM]) {\n  2313: \t    if (fmt && str)\n&gt; 2314: \t    \tpline(fmt, str, \"body\");\n  2315: \t    return TRUE;\n  2316: \t}\n  2317: \treturn FALSE;\n  2318: }\n  2319: "
+    "context": "src/muse.c:2314:23\n       2309: \t    return TRUE;\n       2310: \t} else if (youmonst.data == &mons[PM_DIAMOND_GOLEM]\n       2311: \t         || youmonst.data == &mons[PM_SAPPHIRE_GOLEM]\n       2312: \t         || youmonst.data == &mons[PM_CRYSTAL_GOLEM]) {\n       2313: \t    if (fmt && str)\nTARGET 2314: \t    \tpline(fmt, str, \"body\");\n       2315: \t    return TRUE;\n       2316: \t}\n       2317: \treturn FALSE;\n       2318: }\n       2319: "
   },
   {
     "key": "L02361_01",
     "original": "%s %ss %s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2361:8\n  2356: \n  2357:     if (canseemon(mon)) {\n  2358: \tlong save_quan = obj-&gt;quan;\n  2359: \n  2360: \tobj-&gt;quan = 1L;\n&gt; 2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n  2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n  2363: \t\t    distant_name(obj,doname));\n  2364: \tobj-&gt;quan = save_quan;\n  2365:     } else if (flags.soundok)\n  2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");"
+    "context": "src/muse.c:2361:8\n       2356: \n       2357:     if (canseemon(mon)) {\n       2358: \tlong save_quan = obj-&gt;quan;\n       2359: \n       2360: \tobj-&gt;quan = 1L;\nTARGET 2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n       2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n       2363: \t\t    distant_name(obj,doname));\n       2364: \tobj-&gt;quan = save_quan;\n       2365:     } else if (flags.soundok)\n       2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");"
   },
   {
     "key": "L02362_01",
     "original": "quaff",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2362:33\n  2357:     if (canseemon(mon)) {\n  2358: \tlong save_quan = obj-&gt;quan;\n  2359: \n  2360: \tobj-&gt;quan = 1L;\n  2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n&gt; 2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n  2363: \t\t    distant_name(obj,doname));\n  2364: \tobj-&gt;quan = save_quan;\n  2365:     } else if (flags.soundok)\n  2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n  2367:     m_useup(mon, obj);"
+    "context": "src/muse.c:2362:33\n       2357:     if (canseemon(mon)) {\n       2358: \tlong save_quan = obj-&gt;quan;\n       2359: \n       2360: \tobj-&gt;quan = 1L;\n       2361: \tpline(\"%s %ss %s.\", Monnam(mon),\nTARGET 2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n       2363: \t\t    distant_name(obj,doname));\n       2364: \tobj-&gt;quan = save_quan;\n       2365:     } else if (flags.soundok)\n       2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n       2367:     m_useup(mon, obj);"
   },
   {
     "key": "L02362_02",
     "original": "eat",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2362:43\n  2357:     if (canseemon(mon)) {\n  2358: \tlong save_quan = obj-&gt;quan;\n  2359: \n  2360: \tobj-&gt;quan = 1L;\n  2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n&gt; 2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n  2363: \t\t    distant_name(obj,doname));\n  2364: \tobj-&gt;quan = save_quan;\n  2365:     } else if (flags.soundok)\n  2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n  2367:     m_useup(mon, obj);"
+    "context": "src/muse.c:2362:43\n       2357:     if (canseemon(mon)) {\n       2358: \tlong save_quan = obj-&gt;quan;\n       2359: \n       2360: \tobj-&gt;quan = 1L;\n       2361: \tpline(\"%s %ss %s.\", Monnam(mon),\nTARGET 2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n       2363: \t\t    distant_name(obj,doname));\n       2364: \tobj-&gt;quan = save_quan;\n       2365:     } else if (flags.soundok)\n       2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n       2367:     m_useup(mon, obj);"
   },
   {
     "key": "L02366_01",
     "original": "%s.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2366:11\n  2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n  2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n  2363: \t\t    distant_name(obj,doname));\n  2364: \tobj-&gt;quan = save_quan;\n  2365:     } else if (flags.soundok)\n&gt; 2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n  2367:     m_useup(mon, obj);\n  2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n  2369: \t\t    !resists_acid(mon)) {\n  2370: \tmon-&gt;mhp -= rnd(15);\n  2371: \tpline(\"%s has a very bad case of stomach acid.\","
+    "context": "src/muse.c:2366:11\n       2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n       2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n       2363: \t\t    distant_name(obj,doname));\n       2364: \tobj-&gt;quan = save_quan;\n       2365:     } else if (flags.soundok)\nTARGET 2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n       2367:     m_useup(mon, obj);\n       2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n       2369: \t\t    !resists_acid(mon)) {\n       2370: \tmon-&gt;mhp -= rnd(15);\n       2371: \tpline(\"%s has a very bad case of stomach acid.\","
   },
   {
     "key": "L02366_02",
     "original": "drinking",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2366:44\n  2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n  2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n  2363: \t\t    distant_name(obj,doname));\n  2364: \tobj-&gt;quan = save_quan;\n  2365:     } else if (flags.soundok)\n&gt; 2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n  2367:     m_useup(mon, obj);\n  2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n  2369: \t\t    !resists_acid(mon)) {\n  2370: \tmon-&gt;mhp -= rnd(15);\n  2371: \tpline(\"%s has a very bad case of stomach acid.\","
+    "context": "src/muse.c:2366:44\n       2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n       2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n       2363: \t\t    distant_name(obj,doname));\n       2364: \tobj-&gt;quan = save_quan;\n       2365:     } else if (flags.soundok)\nTARGET 2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n       2367:     m_useup(mon, obj);\n       2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n       2369: \t\t    !resists_acid(mon)) {\n       2370: \tmon-&gt;mhp -= rnd(15);\n       2371: \tpline(\"%s has a very bad case of stomach acid.\","
   },
   {
     "key": "L02366_03",
     "original": "chewing",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2366:57\n  2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n  2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n  2363: \t\t    distant_name(obj,doname));\n  2364: \tobj-&gt;quan = save_quan;\n  2365:     } else if (flags.soundok)\n&gt; 2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n  2367:     m_useup(mon, obj);\n  2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n  2369: \t\t    !resists_acid(mon)) {\n  2370: \tmon-&gt;mhp -= rnd(15);\n  2371: \tpline(\"%s has a very bad case of stomach acid.\","
+    "context": "src/muse.c:2366:57\n       2361: \tpline(\"%s %ss %s.\", Monnam(mon),\n       2362: \t\t    (obj-&gt;otyp == POT_ACID) ? \"quaff\" : \"eat\",\n       2363: \t\t    distant_name(obj,doname));\n       2364: \tobj-&gt;quan = save_quan;\n       2365:     } else if (flags.soundok)\nTARGET 2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n       2367:     m_useup(mon, obj);\n       2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n       2369: \t\t    !resists_acid(mon)) {\n       2370: \tmon-&gt;mhp -= rnd(15);\n       2371: \tpline(\"%s has a very bad case of stomach acid.\","
   },
   {
     "key": "L02371_01",
     "original": "%s has a very bad case of stomach acid.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2371:8\n  2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n  2367:     m_useup(mon, obj);\n  2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n  2369: \t\t    !resists_acid(mon)) {\n  2370: \tmon-&gt;mhp -= rnd(15);\n&gt; 2371: \tpline(\"%s has a very bad case of stomach acid.\",\n  2372: \t    Monnam(mon));\n  2373:     }\n  2374:     if (mon-&gt;mhp &lt;= 0) {\n  2375: \tpline(\"%s dies!\", Monnam(mon));\n  2376: \tif (by_you) xkilled(mon, 0);"
+    "context": "src/muse.c:2371:8\n       2366: \tYou_hear(\"%s.\", (obj-&gt;otyp == POT_ACID) ? \"drinking\" : \"chewing\");\n       2367:     m_useup(mon, obj);\n       2368:     if (((obj-&gt;otyp == POT_ACID) || acidic(&mons[obj-&gt;corpsenm])) &&\n       2369: \t\t    !resists_acid(mon)) {\n       2370: \tmon-&gt;mhp -= rnd(15);\nTARGET 2371: \tpline(\"%s has a very bad case of stomach acid.\",\n       2372: \t    Monnam(mon));\n       2373:     }\n       2374:     if (mon-&gt;mhp &lt;= 0) {\n       2375: \tpline(\"%s dies!\", Monnam(mon));\n       2376: \tif (by_you) xkilled(mon, 0);"
   },
   {
     "key": "L02375_01",
     "original": "%s dies!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2375:8\n  2370: \tmon-&gt;mhp -= rnd(15);\n  2371: \tpline(\"%s has a very bad case of stomach acid.\",\n  2372: \t    Monnam(mon));\n  2373:     }\n  2374:     if (mon-&gt;mhp &lt;= 0) {\n&gt; 2375: \tpline(\"%s dies!\", Monnam(mon));\n  2376: \tif (by_you) xkilled(mon, 0);\n  2377: \telse mondead(mon);\n  2378: \treturn;\n  2379:     }\n  2380:     if (stoning && canseemon(mon)) {"
+    "context": "src/muse.c:2375:8\n       2370: \tmon-&gt;mhp -= rnd(15);\n       2371: \tpline(\"%s has a very bad case of stomach acid.\",\n       2372: \t    Monnam(mon));\n       2373:     }\n       2374:     if (mon-&gt;mhp &lt;= 0) {\nTARGET 2375: \tpline(\"%s dies!\", Monnam(mon));\n       2376: \tif (by_you) xkilled(mon, 0);\n       2377: \telse mondead(mon);\n       2378: \treturn;\n       2379:     }\n       2380:     if (stoning && canseemon(mon)) {"
   },
   {
     "key": "L02382_01",
     "original": "What a pity - %s just ruined a future piece of art!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2382:11\n  2377: \telse mondead(mon);\n  2378: \treturn;\n  2379:     }\n  2380:     if (stoning && canseemon(mon)) {\n  2381: \tif (Hallucination)\n&gt; 2382:     pline(\"What a pity - %s just ruined a future piece of art!\",\n  2383: \t    mon_nam(mon));\n  2384: \telse\n  2385: \t    pline(\"%s seems limber!\", Monnam(mon));\n  2386:     }\n  2387:     if (obj-&gt;otyp == CORPSE && obj-&gt;corpsenm == PM_LIZARD && mon-&gt;mconf) {"
+    "context": "src/muse.c:2382:11\n       2377: \telse mondead(mon);\n       2378: \treturn;\n       2379:     }\n       2380:     if (stoning && canseemon(mon)) {\n       2381: \tif (Hallucination)\nTARGET 2382:     pline(\"What a pity - %s just ruined a future piece of art!\",\n       2383: \t    mon_nam(mon));\n       2384: \telse\n       2385: \t    pline(\"%s seems limber!\", Monnam(mon));\n       2386:     }\n       2387:     if (obj-&gt;otyp == CORPSE && obj-&gt;corpsenm == PM_LIZARD && mon-&gt;mconf) {"
   },
   {
     "key": "L02385_01",
     "original": "%s seems limber!",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2385:12\n  2380:     if (stoning && canseemon(mon)) {\n  2381: \tif (Hallucination)\n  2382:     pline(\"What a pity - %s just ruined a future piece of art!\",\n  2383: \t    mon_nam(mon));\n  2384: \telse\n&gt; 2385: \t    pline(\"%s seems limber!\", Monnam(mon));\n  2386:     }\n  2387:     if (obj-&gt;otyp == CORPSE && obj-&gt;corpsenm == PM_LIZARD && mon-&gt;mconf) {\n  2388: \tmon-&gt;mconf = 0;\n  2389: \tif (canseemon(mon))\n  2390: \t    pline(\"%s seems steadier now.\", Monnam(mon));"
+    "context": "src/muse.c:2385:12\n       2380:     if (stoning && canseemon(mon)) {\n       2381: \tif (Hallucination)\n       2382:     pline(\"What a pity - %s just ruined a future piece of art!\",\n       2383: \t    mon_nam(mon));\n       2384: \telse\nTARGET 2385: \t    pline(\"%s seems limber!\", Monnam(mon));\n       2386:     }\n       2387:     if (obj-&gt;otyp == CORPSE && obj-&gt;corpsenm == PM_LIZARD && mon-&gt;mconf) {\n       2388: \tmon-&gt;mconf = 0;\n       2389: \tif (canseemon(mon))\n       2390: \t    pline(\"%s seems steadier now.\", Monnam(mon));"
   },
   {
     "key": "L02390_01",
     "original": "%s seems steadier now.",
     "translation": "",
     "stage": 0,
-    "context": "src/muse.c:2390:12\n  2385: \t    pline(\"%s seems limber!\", Monnam(mon));\n  2386:     }\n  2387:     if (obj-&gt;otyp == CORPSE && obj-&gt;corpsenm == PM_LIZARD && mon-&gt;mconf) {\n  2388: \tmon-&gt;mconf = 0;\n  2389: \tif (canseemon(mon))\n&gt; 2390: \t    pline(\"%s seems steadier now.\", Monnam(mon));\n  2391:     }\n  2392:     if (mon-&gt;mtame && !mon-&gt;isminion && nutrit &gt; 0) {\n  2393: \tstruct edog *edog = EDOG(mon);\n  2394: \n  2395: \tif (edog-&gt;hungrytime &lt; monstermoves) edog-&gt;hungrytime = monstermoves;"
+    "context": "src/muse.c:2390:12\n       2385: \t    pline(\"%s seems limber!\", Monnam(mon));\n       2386:     }\n       2387:     if (obj-&gt;otyp == CORPSE && obj-&gt;corpsenm == PM_LIZARD && mon-&gt;mconf) {\n       2388: \tmon-&gt;mconf = 0;\n       2389: \tif (canseemon(mon))\nTARGET 2390: \t    pline(\"%s seems steadier now.\", Monnam(mon));\n       2391:     }\n       2392:     if (mon-&gt;mtame && !mon-&gt;isminion && nutrit &gt; 0) {\n       2393: \tstruct edog *edog = EDOG(mon);\n       2394: \n       2395: \tif (edog-&gt;hungrytime &lt; monstermoves) edog-&gt;hungrytime = monstermoves;"
   }
 ]
