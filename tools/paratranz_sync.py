@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 from dataclasses import dataclass
@@ -74,6 +75,10 @@ def contains_cjk(text: str) -> bool:
 
 def is_translatable(text: str) -> bool:
     return contains_ascii_letters(text) and not contains_cjk(text)
+
+
+def normalize_generated_text(text: str) -> str:
+    return html.unescape(text)
 
 
 def build_line_starts(source: str) -> list[int]:
@@ -260,7 +265,7 @@ def collect_literals_from_text(path: Path, source: str, window: int) -> list[Lit
             index = current_index
             continue
 
-        original = "".join(parts)
+        original = normalize_generated_text("".join(parts))
         if is_translatable(original):
             context = build_context(path, lines, start_line, start_col, window)
             entries.append(
@@ -287,7 +292,7 @@ def build_context(
     context_lines = [f"{path.as_posix()}:{line_number}:{column_number}"]
     for lineno in range(start, end + 1):
         prefix = ">" if lineno == line_number else " "
-        text = lines[lineno - 1].rstrip("\n")
+        text = normalize_generated_text(lines[lineno - 1].rstrip("\n"))
         context_lines.append(f"{prefix}{lineno:5d}: {text}")
     return "\n".join(context_lines)
 

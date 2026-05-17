@@ -8,6 +8,10 @@ on:
         type: string
   workflow_dispatch:
   push:
+    paths-ignore:
+      - ".github/workflows/para2github.yml"
+      - "paratranz/**"
+      - "tools/**"
   pull_request:
 
 permissions:
